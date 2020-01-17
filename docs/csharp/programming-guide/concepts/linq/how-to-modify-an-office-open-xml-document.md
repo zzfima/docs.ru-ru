@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Изменение документа в формате Office Open XML (C#)
+title: Изменение документа в формате Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: cb80a450de104760f64c84e11829f6609d8ee177
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 620530b14513356dc9bb5d942e8db7691a03880d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253542"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345843"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>Практическое руководство. Изменение документа в формате Office Open XML (C#)
+# <a name="how-to-modify-an-office-open-xml-document-c"></a>Изменение документа в формате Office Open XML (C#)
 В этом разделе представлен пример, в котором открывается документ Office Open XML, затем он изменяется и сохраняется.  
   
  Дополнительные сведения об Office Open XML см. в руководстве по [пакету SDK для Open XML](https://github.com/OfficeDev/Open-XML-SDK) и на сайте [www.ericwhite.com](http://ericwhite.com/).  

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (C#)
+title: Как запросить самый большой файл или файлы в дереве папок (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 966138795dca53db99a0752b9bb7b85cc4601ee3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dee501dc8d0cabd718307b45c99ca049ae4250aa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592758"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344554"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (C#)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Как запросить самый большой файл или файлы в дереве папок (LINQ) (C#)
 В этом примере показано пять запросов, связанных с размером файла в байтах.  
   
 - Извлечение размера в байтах наибольшего файла.  

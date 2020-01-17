@@ -3,13 +3,12 @@ title: Телеметрия пакета SDK для .NET Core
 description: Сведения о функциях телеметрии пакета SDK для .NET Core, позволяющих собирать сведения об использовании для анализа, а также о собираемых данных и способе отключения этих функций.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.custom: seodec18
-ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281777"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714103"
 ---
 # <a name="net-core-sdk-telemetry"></a>Телеметрия пакета SDK для .NET Core
 

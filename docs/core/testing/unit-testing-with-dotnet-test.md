@@ -4,13 +4,12 @@ description: Сведения о концепциях модульного те�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.custom: seodec18
-ms.openlocfilehash: 420ab4c7f23ef3fd6cd26d91c2b4f075f1a205f5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835451"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714237"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit
 
@@ -194,7 +193,7 @@ Assert.False(result, "1 should not be prime");
 
 - Атрибут `[InlineData]` задает значения для этих входных данных.
 
-Чтобы не создавать новые тесты, примените указанные выше атрибуты xUnit для создания единой теории. Замените код
+Чтобы не создавать новые тесты, примените указанные выше атрибуты xUnit для создания единой теории. Замените представленный ниже код.
 
 ```csharp
 [Fact]
@@ -206,7 +205,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 }
 ```
 
-на новый код:
+следующим кодом:
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 

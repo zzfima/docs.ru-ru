@@ -2,19 +2,19 @@
 title: 'Пример XML-файла: заказчики и заказы (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: e6c1dd026a99c21afa788d6eea73cbc9d240987f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 01c1719bd67bbaf0d46dc6e3c23b5031afd271f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591156"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346500"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Пример XML-файла: заказчики и заказы (LINQ to XML)
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит сведения о заказчиках и заказах.  
   
  Раздел [Пример XSD-файла. Заказчики и заказы](./sample-xsd-file-customers-and-orders1.md) содержит XSD-файл, с помощью которого можно проверить этот документ. Здесь используются функции XSD `xs:key` и `xs:keyref` для установления того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связи между элементом `CustomerID` каждого из элементов `Order` и атрибутом `CustomerID` каждого из элементов `Customer`.  
   
- Пример написания запросов LINQ с использованием преимущества такой связи в предложении `Join` см. в разделе [Практическое руководство. Объединение двух коллекций (C#) (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
+ Пример написания запросов LINQ с использованием преимущества такой связи в предложении `Join` см. в статье [Практическое руководство. Объединение двух коллекций (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   

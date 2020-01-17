@@ -1,14 +1,14 @@
 ---
 title: Использование API автоматизированного машинного обучения в ML.NET
 description: API автоматизированного машинного обучения в ML.NET автоматизирует процесс создания моделей и создает модель, готовую к развертыванию. Сведения о параметрах, которые можно использовать для настройки задач автоматизированного машинного обучения.
-ms.date: 11/7/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977119"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636566"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Использование API автоматизированного машинного обучения в ML.NET
 
@@ -38,6 +38,7 @@ using Microsoft.ML.AutoML;
 * Двоичная классификация
 * Многоклассовая классификация
 * Регрессия
+* Рекомендация
 
 ## <a name="create-experiment-settings"></a>Создание параметров эксперимента
 
@@ -59,6 +60,12 @@ using Microsoft.ML.AutoML;
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
+  ```
+
+* Рекомендация
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
   ```
 
 ## <a name="configure-experiment-settings"></a>Настройка параметров эксперимента
@@ -110,12 +117,13 @@ using Microsoft.ML.AutoML;
 * [Поддерживаемые алгоритмы двоичной классификации](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Поддерживаемые алгоритмы многоклассовой классификации](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Поддерживаемые алгоритмы регрессии](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [Поддерживаемые алгоритмы рекомендаций](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>Метрика оптимизации
 
 Как показано в примере выше, метрика оптимизации определяет метрику, оптимизируемую при обучении модели. Доступная для выбора метрика оптимизации определяется выбранным вами типом задачи. Ниже приведен список доступных метрик.
 
-|[Двоичная классификация](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Многоклассовая классификация](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Регрессия](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[Двоичная классификация](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Многоклассовая классификация](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Рекомендации и регрессии](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Достоверность| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -219,7 +227,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 
 * [Метрики двоичной классификации](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Метрики многоклассовой классификации](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Метрики регрессии](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Метрики рекомендаций и регрессии](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>См. также
 

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Запрос файлов с указанным атрибутом или именем (C#)
+title: Как запросить файлы с указанными атрибутами или именем (C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: c1ecaad7e4fb4538331ba8f8076c9795acc52877
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8ecf3263dcee9b54d01dd0b577ba8bec2a199da9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592897"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346712"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Практическое руководство. Запрос файлов с указанным атрибутом или именем (C#)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Как запросить файлы с указанными атрибутами или именем (C#)
 В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов. Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.  
   
 ## <a name="example"></a>Пример  

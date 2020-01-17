@@ -1,18 +1,17 @@
 ---
-title: Практическое руководство. Отображение аргументов командной строки (Руководство по программированию на C#)
-ms.custom: seodec18
+title: Руководство по программированию на C#. Отображение аргументов командной строки
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: ba732930d08c74433d6ea7b38e7dc3a9fddf594c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923854"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712030"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Практическое руководство. Отображение аргументов командной строки (Руководство по программированию на C#)
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Руководство по программированию на C#. Отображение аргументов командной строки
 Аргументы, предоставляемые исполняемому файлу в командной строке, доступны через необязательный параметр для `Main`. Аргументы предоставляются в форме массива строк. Каждый элемент массива содержит один аргумент. Пробелы между аргументами удаляются. Например, рассмотрим следующие вызовы из командной строки вымышленного исполняемого файла:  
   
 |Ввод в командной строке|Массив строк, передаваемых в метод Main|  

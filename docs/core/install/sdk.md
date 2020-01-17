@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999065"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740562"
 ---
 # <a name="install-the-net-core-sdk"></a>Установка пакета SDK для .NET Core
 
@@ -44,9 +44,11 @@ ms.locfileid: "74999065"
 
 Вы можете установить пакет SDK для .NET Core с помощью множества стандартных диспетчеров пакетов Linux. Дополнительные сведения см. в статье [Диспетчер пакетов Linux — установка .NET Core](linux-package-managers.md).
 
+Установка с помощью диспетчера пакетов поддерживается только в архитектуре x64. Если вы устанавливаете пакет SDK для .NET Core с другой архитектурой, например ARM, следуйте инструкциям по [скачиванию и установке вручную](#download-and-manually-install). См. сведения о поддерживаемых архитектурах в описании [зависимостей и требований .NET Core](dependencies.md).
+
 ## <a name="download-and-manually-install"></a>Скачивание и установка вручную
 
-Чтобы извлечь пакет SDK и сделать команды доступными в терминале, сначала [скачайте](#all-net-core-downloads) двоичный выпуск .NET Core. Затем откройте терминал и выполните приведенные ниже команды.
+Чтобы извлечь пакет SDK и сделать команды .NET Core CLI доступными в терминале, сначала [скачайте](#all-net-core-downloads) двоичный выпуск .NET Core. Затем откройте терминал и выполните приведенные ниже команды.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -55,14 +57,14 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> Приведенные выше команды сделают команды пакета SDK для .NET доступными только для сеанса терминала, в котором производился запуск.
+> Приведенные выше команды `export` сделают команды .NET Core CLI доступными только для сеанса терминала, в котором производился запуск.
 >
-> Вы можете изменить профиль оболочки, чтобы добавить команды окончательно. Существует несколько различных оболочек, доступных для Linux, и каждая из них имеет свой профиль. Например:
+> Вы можете изменить профиль оболочки, чтобы добавить команды окончательно. Существует несколько различных оболочек, доступных для Linux, и каждая из них имеет свой профиль. Пример:
 >
 > - **Оболочка Bash**: *~/.bash_profile*, *~/.bashrc*
 > - **Оболочка Korn**: *~/.kshrc* или *.profile*
 > - **Оболочка Z**: *~/.zshrc* или *.zprofile*
-> 
+>
 > Измените соответствующий исходный файл оболочки и добавьте `:$HOME/dotnet` в конец существующего оператора `PATH`. Если оператор `PATH` не указан, добавьте новую строку с `export PATH=$PATH:$HOME/dotnet`.
 >
 > Кроме того, добавьте `export DOTNET_ROOT=$HOME/dotnet` в конец файла.
@@ -90,11 +92,11 @@ export PATH=$PATH:$HOME/dotnet
 
 Visual Studio может установить последнюю пакета SDK для .NET Core и среды выполнения .NET Core.
 
-- [Скачайте Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+- [Скачайте Visual Studio.](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 
 ### <a name="select-a-workload"></a>Выбор рабочей нагрузки
 
-При установке или изменении Visual Studio выберите одну из следующих рабочих нагрузок в зависимости от типа создаваемого приложения:
+При установке или изменении Visual Studio выберите одну или несколько из следующих рабочих нагрузок в зависимости от типа создаваемого приложения:
 
 - рабочая нагрузка **Кроссплатформенная разработка .NET Core** в разделе **Другие наборы инструментов**;
 - рабочая нагрузка **ASP.NET и разработка веб-приложений** в разделе **Веб-разработка и облако**;
@@ -131,7 +133,7 @@ Visual Studio Code — это эффективный и облегченный 
 
 [Сценарии dotnet-install](../tools/dotnet-install-script.md) используются для автоматизации установок пакета SDK и их осуществления без прав администратора. Вы можете скачать сценарий со [страницы справочника по сценариям dotnet-install](../tools/dotnet-install-script.md).
 
-Этот сценарий по умолчанию устанавливает последнюю версию [с долгосрочной поддержкой (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), которой сейчас является .NET Core 2.1. Чтобы установить текущий выпуск .NET Core, запустите сценарий с указанным ниже параметром.
+Этот сценарий по умолчанию устанавливает последнюю версию [с долгосрочной поддержкой (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), которой сейчас является .NET Core 3.1. Чтобы установить текущий выпуск .NET Core, запустите сценарий с указанным ниже параметром.
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -145,7 +147,7 @@ dotnet-install.ps1 -Channel Current
 
 [Сценарии dotnet-install](../tools/dotnet-install-script.md) используются для автоматизации установок пакета SDK и их осуществления без прав администратора. Вы можете скачать сценарий со [страницы справочника по сценариям dotnet-install](../tools/dotnet-install-script.md).
 
-Этот сценарий по умолчанию устанавливает последнюю версию [с долгосрочной поддержкой (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), которой сейчас является .NET Core 2.1. Чтобы установить текущий выпуск .NET Core, запустите сценарий с указанным ниже параметром.
+Этот сценарий по умолчанию устанавливает последнюю версию [с долгосрочной поддержкой (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), которой сейчас является .NET Core 3.1. Чтобы установить текущий выпуск .NET Core, запустите сценарий с указанным ниже параметром.
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -176,8 +178,7 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone pivot="os-windows"
 
-- [Учебник. Hello World на C#](../tutorials/with-visual-studio.md).
-- [Учебник. Hello World на Visual Basic](../tutorials/vb-with-visual-studio.md).
+- [Учебник. Hello World](../tutorials/with-visual-studio.md).
 - [Учебник. Создание приложения с помощью Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Учебник. Контейнеризация приложения .NET Core](../docker/build-container.md).
 

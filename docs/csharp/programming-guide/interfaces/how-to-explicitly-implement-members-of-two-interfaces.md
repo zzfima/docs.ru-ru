@@ -1,19 +1,18 @@
 ---
-title: Как выполнить явную реализацию членов двух интерфейсов (руководство по программированию на C#)
-ms.custom: seodec18
+title: Руководство по программированию на C#. Явная реализация элементов двух интерфейсов
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 1d4dd0485be1d859e3e9594ab1558a907b8f1f7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589194"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75701242"
 ---
-# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Как выполнить явную реализацию членов двух интерфейсов (руководство по программированию на C#)
+# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Руководство по программированию на C#. Явная реализация элементов двух интерфейсов
 Явная реализация [интерфейсов](../../language-reference/keywords/interface.md) позволяет разработчику реализовать два интерфейса с одинаковыми именами членов и создать отдельные реализации каждого члена интерфейса. В этом примере размеры поля выводятся в метрической и английской системе мер. [Класс](../../language-reference/keywords/class.md) Box реализует два интерфейса (IEnglishDimensions и IMetricDimensions), представляющие соответствующие системы мер. В обоих интерфейсах представлены члены с одинаковыми именами: Length и Width.  
   
 ## <a name="example"></a>Пример  
@@ -33,4 +32,4 @@ ms.locfileid: "69589194"
 - [Руководство по программированию на C#](../index.md)
 - [Классы и структуры](../classes-and-structs/index.md)
 - [Интерфейсы](./index.md)
-- [Практическое руководство. Явная реализация элементов интерфейса](./how-to-explicitly-implement-interface-members.md)
+- [Практическое руководство. Явная реализация членов интерфейса](./how-to-explicitly-implement-interface-members.md)

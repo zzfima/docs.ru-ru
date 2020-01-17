@@ -1,14 +1,14 @@
 ---
-title: Использование dotnet-svcutil.xmlserializer в .NET Core
+title: Использование dotnet-svcutil.xmlserializer
 description: Узнайте, как использовать пакет NuGet `dotnet-svcutil.xmlserializer`, чтобы предварительно генерировать сборку сериализации для проектов .NET Core.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117271"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344901"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Использование dotnet-svcutil.xmlserializer в .NET Core
 

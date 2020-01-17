@@ -1,15 +1,13 @@
 ---
 title: Критические изменения и библиотеки .NET
 description: Практические рекомендации по работе с критическими изменениями при создании библиотек .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104663"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740986"
 ---
 # <a name="breaking-changes"></a>Критические изменения
 
@@ -68,7 +66,7 @@ public class Task
 
 **❌ НЕЛЬЗЯ** изменять имя сборки.
 
-**❌ НЕЛЬЗЯ.** Не добавляйте, не удаляйте и не изменяйте ключ строгого именования.
+**❌ НЕЛЬЗЯ.** Не добавляйте, не удаляйте и не изменяйте ключ строгого именования.
 
 **✔️ РЕКОМЕНДУЕТСЯ** использовать абстрактные базовые классы вместо интерфейсов.
 
@@ -102,7 +100,7 @@ public class Document
 
 - [Соображения относительно версии и обновления для разработчиков на C#](../../csharp/whats-new/version-update-considerations.md)
 - [Полное руководство по критическим изменениям API в .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [Правила критических изменений CoreFX](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [Правила критических изменений .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Назад](versioning.md)

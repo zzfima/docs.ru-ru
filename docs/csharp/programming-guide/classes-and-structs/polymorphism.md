@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Полиморфизм
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f65082ad5094eb0aab28edeb06790a9af4019c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970342"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714733"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Полиморфизм (Руководство по программированию на C#)
 Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования. Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.  
@@ -58,7 +57,7 @@ ms.locfileid: "73970342"
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
- Доступ к скрытым членам базового класса можно по-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса. Например:  
+ Доступ к скрытым членам базового класса можно по-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса. Пример:  
   
  [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   

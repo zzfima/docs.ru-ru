@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552165"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901818"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP. Изменения SameSite в браузере влияют на проверку подлинности
 
 Для некоторых браузеров, таких как Chrome и Firefox, были внесены критические изменения в реализации `SameSite` для файлов cookie. Эти изменения негативно влияют на сценарии удаленной проверки подлинности, такие как OpenID Connect и WS-Federation, от которых нужно явно отказаться, отправив `SameSite=None`. Однако `SameSite=None` нарушает работу других браузеров в iOS 12 и некоторых более старых версий. Приложению требуется определить эти версии и опустить `SameSite`.
 
-Обсуждение этого вопроса см. на странице [aspnet/AspNetCore#14996](https://github.com/aspnet/AspNetCore/issues/14996).
+Обсуждение этого вопроса см. на странице [dotnet/aspnetcore#14996](https://github.com/dotnet/aspnetcore/issues/14996).
 
 #### <a name="version-introduced"></a>Представленная версия
 
@@ -32,7 +32,7 @@ ms.locfileid: "74552165"
 
 Изменения в браузере и спецификации, описанные выше.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Приложения, взаимодействующие с удаленными сайтами, например через стороннюю процедуру входа, должны:
 

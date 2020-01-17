@@ -1,6 +1,5 @@
 ---
-title: Практическое руководство. Руководство по программированию на C#. Создание файла или папки
-ms.custom: seodec18
+title: Руководство по программированию на C#. Создание файла или папки
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: c29d0638e2429119020fee5317d40a95b00e40ef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e0d0a7fbbc7e6a5c9a0bd00dec1188c5cfdcf896
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590103"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705253"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Создание файла или папки
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Руководство по программированию на C#. Создание файла или папки
 Вы можете программно создать на компьютере папку, вложенную папку и файл во вложенной папке, а затем записать данные в этот файл.  
   
 ## <a name="example"></a>Пример  

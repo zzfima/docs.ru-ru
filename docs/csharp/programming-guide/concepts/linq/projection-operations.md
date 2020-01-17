@@ -2,12 +2,12 @@
 title: Операции проекции (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 4b34f3e578e746d75bdad7baaf731d743830713c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a2a2ae762d63d5ff26c7018caef1a83558042fb5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591564"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346526"
 ---
 # <a name="projection-operations-c"></a>Операции проекции (C#)
 Проекцией называют операцию преобразования объекта в новую форму, которая часто состоит только из тех его свойств, которые будут использоваться впоследствии. С помощью проекции можно создать новый тип, построенный из каждого объекта. Вы можете проецировать свойство и выполнять над ним математические функции. Также можно проецировать исходный объект, не изменяя его.  
@@ -16,7 +16,7 @@ ms.locfileid: "69591564"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|ОПИСАНИЕ|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Выбрать|Проецирует значения, основанные на функции преобразования.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|Проецирует последовательности значений, основанных на функции преобразования, а затем выравнивает их в одну последовательность.|Использование нескольких предложений `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
@@ -164,5 +164,5 @@ static void SelectVsSelectMany()
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)
 - [предложение select](../../../language-reference/keywords/select-clause.md)
-- [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

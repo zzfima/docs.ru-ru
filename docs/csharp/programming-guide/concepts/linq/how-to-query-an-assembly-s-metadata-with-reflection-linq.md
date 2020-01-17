@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. запрос к метаданным сборки при помощи отражения (LINQ) (C#)
+title: Выполнение запроса к метаданным сборки при помощи отражения (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: fb0fb118eaabbd9d66c5c4a445b0393a69dd2355
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592910"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345687"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Практическое руководство. запрос к метаданным сборки при помощи отражения (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Выполнение запроса к метаданным сборки при помощи отражения (LINQ) (C#)
 
 API отражения библиотеки классов .NET Framework можно использовать для просмотра метаданных в сборке .NET и создания коллекций типов, членов типов, параметров и т. д., присутствующих в этой сборке. Поскольку эти коллекции поддерживают универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, их можно запрашивать с помощью LINQ.  
   

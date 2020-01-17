@@ -3,12 +3,12 @@ title: Основы выражения запроса (LINQ в C#)
 description: Общие сведения о понятиях, относящихся к выражениям запроса
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709121"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635864"
 ---
 # <a name="query-expression-basics"></a>Основы выражения запроса
 
@@ -170,7 +170,7 @@ ms.locfileid: "54709121"
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-Дополнительные сведения см. в разделе [Практическое руководство. Вложенный запрос в операции группирования](perform-a-subquery-on-a-grouping-operation.md).
+Дополнительные сведения см. в руководстве по [выполнению вложенного запроса в операции группирования](perform-a-subquery-on-a-grouping-operation.md).
 
 ## <a name="see-also"></a>См. также
 

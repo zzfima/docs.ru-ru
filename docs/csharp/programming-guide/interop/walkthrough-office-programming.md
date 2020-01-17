@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423188"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635357"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Пошаговое руководство. Программирование для Office (C# и Visual Basic)
 
@@ -106,7 +106,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 
          Разработчики не могут создавать собственные индексированные свойства. Эта возможность поддерживает только использование имеющихся индексированных свойств.
 
-         Дополнительные сведения см. в разделе [Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
+         Дополнительные сведения см. в статье [Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия (Руководство по программированию на C#)](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
 
 2. Добавьте в конец метода `DisplayInExcel` следующий код, чтобы ширина столбца изменялась в соответствии с содержимым.
 

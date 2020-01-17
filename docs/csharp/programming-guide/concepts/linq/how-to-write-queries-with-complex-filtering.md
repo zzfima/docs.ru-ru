@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Создание запросов со сложной фильтрацией (C#)
+title: Создание запросов со сложной фильтрацией (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a4918631fed21967b402c5c56cfb8a211d44c139
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253195"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337359"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a>Практическое руководство. Создание запросов со сложной фильтрацией (C#)
+# <a name="how-to-write-queries-with-complex-filtering-c"></a>Создание запросов со сложной фильтрацией (C#)
 Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией. Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением. В этом разделе приводится пример написания запроса с комплексной фильтрацией.  
   
 ## <a name="example"></a>Пример  

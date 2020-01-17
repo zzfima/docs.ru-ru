@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Создание запросов к XML в пространствах имен (C#)
+title: Создание запросов к XML в пространствах имен (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 1ded47ced44bebfda92b96f4dc908f1c1b2bbf6b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a8b8d55daaad1ae00e43fed897080ed7a62fafab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253199"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337374"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Практическое руководство. Создание запросов к XML в пространствах имен (C#)
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Создание запросов к XML в пространствах имен (C#)
 Для записи XML-запросов в пространстве имен необходимо использовать объекты <xref:System.Xml.Linq.XName> с правильно заданным пространством имен.  
   
  Что касается языка C#, то наиболее распространенный подход состоит в инициализации <xref:System.Xml.Linq.XNamespace> с помощью строки, содержащей URI, а затем использовании перегруженного оператора сложения для объединения пространства имен с локальным именем.  

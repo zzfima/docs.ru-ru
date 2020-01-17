@@ -1,16 +1,19 @@
 ---
-title: Пошаговое руководство. Создание пользовательских исключений с локализованными сообщениями об исключениях
+title: Создание пользовательских исключений с локализованными сообщениями об исключениях
 description: Узнайте, как создавать пользовательские исключения с локализованными сообщениями.
 author: Youssef1313
+dev_langs:
+- csharp
+- vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9360fccf27a0900d8380461e03baa5806ce1e0da
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141523"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708922"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Пошаговое руководство. Создание пользовательских исключений с локализованными сообщениями об исключениях
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Создание пользовательских исключений с локализованными сообщениями об исключениях
 
 Из этой статьи вы узнаете, как создавать пользовательские исключения, унаследованные от базового класса <xref:System.Exception>, с локализованными сообщениями о них с использованием вспомогательных сборок.
 
@@ -27,6 +30,13 @@ ms.locfileid: "73141523"
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+    End Class
+    ```
 
 1. Добавьте конструкторы по умолчанию:
 
@@ -42,6 +52,24 @@ ms.locfileid: "73141523"
         public StudentNotFoundException(string message, Exception inner)
             : base(message, inner) { }
     }
+    ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+    End Class
     ```
 
 1. Определите любые дополнительные свойства и конструкторы:
@@ -68,12 +96,41 @@ ms.locfileid: "73141523"
     }
     ```
 
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public ReadOnly Property StudentName As String
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+
+        Public Sub New(message As String, studentName As String)
+            Me.New(message)
+            StudentName = studentName
+        End Sub
+    End Class
+    ```
+
 ## <a name="create-localized-exception-messages"></a>Создание локализованных сообщений об исключениях
 
 Вы создали пользовательское исключение и можете вызывать его где угодно с помощью кода, подобного следующему:
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
+```
+
+```vb
+Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
 Проблема с предыдущей строкой заключается в том, что `"The student cannot be found."` — это просто константная строка. В локализованном приложении вам необходимо иметь разные сообщения в зависимости от языка и региональных параметров пользователя.
@@ -100,8 +157,8 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
     ```
 
-  > [!NOTE]
-  > Если имя проекта — `TestProject`, а файл ресурсов *ExceptionMessages.resx* находится в папке *Ресурсы* проекта, полное имя файла ресурсов — `TestProject.Resources.ExceptionMessages`.
+    > [!NOTE]
+    > Если имя проекта — `TestProject`, а файл ресурсов *ExceptionMessages.resx* находится в папке *Ресурсы* проекта, полное имя файла ресурсов — `TestProject.Resources.ExceptionMessages`.
 
 ## <a name="see-also"></a>См. также
 

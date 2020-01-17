@@ -1,20 +1,19 @@
 ---
-title: Практическое руководство. Выполнение кода очистки с использованием блока finally (руководство по программированию на C#)
-ms.custom: seodec18
+title: Руководство по программированию на C#. Выполнение кода очистки с использованием блока finally
 ms.date: 07/20/2015
 helpviewer_keywords:
 - try/finally blocks [C#]
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: e6adbb864b0450cdd1dbfcc56abdbad2034c5c7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d1ba761e64053d656ad4cd004133fc455a57c6f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590245"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705279"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Практическое руководство. Выполнение кода очистки с использованием блока finally (руководство по программированию на C#)
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Руководство по программированию на C#. Выполнение кода очистки с использованием блока finally
 Оператор `finally` позволяет гарантировать, что необходимая очистка объектов, как правило, объектов, занимающих внешние ресурсы, возникает немедленно, даже при создании исключения. Примером подобной очистки является вызов <xref:System.IO.Stream.Close%2A> для <xref:System.IO.FileStream> сразу после использования вместо ожидания сборки мусора, выполняемой для объекта средой CLR, следующим образом:  
   
  [!code-csharp[csProgGuideExceptions#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#16)]  

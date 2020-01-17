@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Запрос содержимого текстовых файлов в папке (LINQ) (C#)
+title: Как запросить содержимое текстовых файлов в папке (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 41be9aadcea3999cb7ea8c01460e72ff99e01765
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 9487e00ac4cb69180ad3744183a3ef8467cbac28
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140956"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347682"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Практическое руководство. Запрос содержимого текстовых файлов в папке (LINQ) (C#)
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Как запросить содержимое текстовых файлов в папке (LINQ) (C#)
 В этом примере показано, как запросить все файлы в указанном дереве каталогов, открыть каждый файл и проверить его содержимое. Этот способ позволяет создать индексы для содержимого дерева каталогов или обратить их порядок. В этом примере выполняется простой поиск строки. Более сложные типы сопоставления шаблонов можно выполнять с помощью регулярных выражений. Дополнительные сведения см. в разделе [Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Пример  

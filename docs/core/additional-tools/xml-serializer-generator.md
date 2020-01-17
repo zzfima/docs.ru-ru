@@ -4,13 +4,13 @@ description: Обзор генератора XML-сериализатора Ма
 author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522814"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714527"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Использование генератора XML-сериализатора Майкрософт в .NET Core
 
@@ -131,5 +131,5 @@ dotnet run
 ## <a name="related-resources"></a>Связанные ресурсы
 
 - [Введение в сериализацию XML](../../standard/serialization/introducing-xml-serialization.md)
-- [Практическое руководство. Сериализация с использованием XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [Сериализация с использованием XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
 - [Практическое руководство. Serialize Using XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md) (Сериализация с использованием XmlSerializer (Visual Basic))

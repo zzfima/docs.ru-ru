@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Извлечение значений элемента (LINQ to XML) (C#)
+title: Извлечение значений элемента (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: a7b36ea7bb602c241593da356b87d35baee8163f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253349"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347417"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Практическое руководство. Извлечение значений элемента (LINQ to XML) (C#)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Извлечение значений элемента (LINQ to XML) (C#)
 В этом разделе показано получение значений элементов. Это можно сделать двумя основными способами. Первый способ состоит в приведении <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute> к желаемому типу. Оператор явного преобразования, который преобразует содержимое элемента или атрибута в указанный тип и присваивает полученное значение указанной переменной. Иначе можно использовать свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> или <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
  Однако при использовании C# приведение, как правило, является лучшим подходом. В частности, становится проще написание кода, обеспечивающего получение значения элемента или атрибута, который может существовать или не существовать, после приведения элемента (или атрибута) к типу, допускающему значение NULL. Это демонстрирует последний пример из данного раздела. Однако нельзя так задать содержимое элемента через приведение, как через свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  

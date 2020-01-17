@@ -1,19 +1,18 @@
 ---
-title: Практическое руководство. Обход дерева каталогов (руководство по программированию на C#)
-ms.custom: seodec18
+title: Руководство по программированию на C#. Выполнение итерации по дереву папок
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: ec48b9ff5a9ebe352bf0361b9e52ee0fb48576a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923982"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712264"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Практическое руководство. Обход дерева каталогов (руководство по программированию на C#)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Руководство по программированию на C#. Выполнение итерации по дереву папок
 Под фразой "обход дерева каталогов" подразумевается доступ к каждому файлу в каждом вложенном подкаталоге в заданной корневой папке на любую глубину. Необязательно открывать каждый файл. Можно просто извлечь имя файла или подкаталога в виде значения `string` или получить дополнительную информацию в форме объекта <xref:System.IO.FileInfo?displayProperty=nameWithType> или <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]

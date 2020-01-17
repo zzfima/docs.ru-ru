@@ -1,20 +1,19 @@
 ---
-title: Практическое руководство. Как определить, представляет ли строка числовое значение (руководство по программированию на C#)
-ms.custom: seodec18
+title: Руководство по программированию в C#. Определение представления числового значения в строке
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 8fc5051893882a6dbdbb4c9097949794d4430a93
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bd89024a0a9bd62927d2d5e0eda248b57bb7d21d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252957"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711926"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Практическое руководство. Как определить, представляет ли строка числовое значение (руководство по программированию на C#)
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Руководство по программированию в C#. Определение представления числового значения в строке
 Чтобы определить, является ли строка допустимым представлением указанного числового типа, воспользуйтесь статическим методом `TryParse`, реализуемым всеми простыми числовыми типами, например <xref:System.DateTime> и <xref:System.Net.IPAddress>. В следующем примере показано, как определить, является ли число 108 допустимым типом [int](../../language-reference/builtin-types/integral-numeric-types.md).  
   
 ```csharp  
@@ -41,8 +40,8 @@ bool result = int.TryParse(s, out i); //i now = 108
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Преобразование массива байтов в значение типа int](../types/how-to-convert-a-byte-array-to-an-int.md)
+- [Преобразование массива байтов в значение типа int](../types/how-to-convert-a-byte-array-to-an-int.md)
 - [Практическое руководство. Преобразование строки в число](../types/how-to-convert-a-string-to-a-number.md)
-- [Практическое руководство. Преобразование из шестнадцатеричных строк в числовые типы](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [Преобразование из шестнадцатеричных строк в числовые типы](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
 - [Анализ числовых строк](../../../standard/base-types/parsing-numeric.md)
 - [Типы форматирования](../../../standard/base-types/formatting-types.md)

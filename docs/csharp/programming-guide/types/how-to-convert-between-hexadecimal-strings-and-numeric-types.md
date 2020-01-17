@@ -1,6 +1,5 @@
 ---
-title: Практическое руководство. Преобразование из шестнадцатеричных строк в числовые типы - руководство по программированию на C#
-ms.custom: seodec18
+title: Руководство по программированию на C#. Преобразование шестнадцатеричных значений из строкового типа в числовой тип
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 8b72734f9b617fed2ff65977c9a0e60f46424ae8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429438"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698525"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Практическое руководство. Преобразование из шестнадцатеричных строк в числовые типы (руководство по программированию на C#)
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Руководство по программированию на C#. Преобразование шестнадцатеричных значений из строкового типа в числовой тип
 В следующих примерах кода показано выполнение указанных ниже задач.  
   
 - Получение шестнадцатеричного значения каждого символа в [string](../../language-reference/builtin-types/reference-types.md).  
@@ -57,4 +56,4 @@ ms.locfileid: "74429438"
 
 - [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Типы](./index.md)
-- [Практическое руководство. Определение представления числового значения в строке](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Определение представления числового значения в строке](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

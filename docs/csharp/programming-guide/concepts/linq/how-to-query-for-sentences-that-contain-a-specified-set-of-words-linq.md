@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (C#)
+title: Как запросить предложения с указанным набором слов (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: e478364f07c08a334692ba54ae1a95880b95519e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592767"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347696"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (C#)
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Как запросить предложения с указанным набором слов (LINQ) (C#)
 В этом примере показан поиск предложений, содержащих совпадения для каждого из указанного набора слов в текстовом файле. Хотя массив терминов для поиска в этом примере жестко закодирован, его можно заполнять динамически во время выполнения. В этом примере запрос возвращает предложения, которые содержат слова "Historically", "data" и "integrated".  
   
 ## <a name="example"></a>Пример  

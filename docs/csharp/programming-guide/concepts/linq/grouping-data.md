@@ -2,12 +2,12 @@
 title: Группирование данных (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423409"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635747"
 ---
 # <a name="grouping-data-c"></a>Группирование данных (C#)
 Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.  
@@ -20,10 +20,10 @@ ms.locfileid: "73423409"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|ОПИСАНИЕ|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |GroupBy|Группирует элементы с общим атрибутом. Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> -или-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.|Неприменимо.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|ToLookup|Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.|Не применяется|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Пример синтаксиса выражения запроса  
  В следующем примере кода предложение `group by` используется для группирования целых чисел в списке на основании четности.  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)
 - [предложение group](../../../language-reference/keywords/group-clause.md)
-- [Практическое руководство. Создание вложенной группы](../../../linq/create-a-nested-group.md)
-- [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [Практическое руководство. Группировка результатов запросов](../../../linq/group-query-results.md)
-- [Практическое руководство. Вложенный запрос в операции группирования](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
-- [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Создание вложенной группы](../../../linq/create-a-nested-group.md)
+- [Группировка файлов по расширению (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Группировка результатов запросов](../../../linq/group-query-results.md)
+- [Вложенный запрос в операции группирования](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

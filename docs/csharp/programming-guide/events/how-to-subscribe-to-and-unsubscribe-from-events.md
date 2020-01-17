@@ -1,20 +1,19 @@
 ---
-title: Практическое руководство. Руководство по программированию на C#. Подписка и отмена подписки на события
-ms.custom: seodec18
+title: Руководство по программированию на C#. Подписка и отмена подписки на события
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590409"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705331"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Подписка и отмена подписки на события
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Руководство по программированию на C#. Подписка и отмена подписки на события
 Необходимость подписки на событие, опубликованное другим классом, может возникнуть, когда требуется написать пользовательский код, вызываемый при инициировании такого события. Например, можно подписаться на событие кнопки `click`, чтобы приложение выполняло некоторое действие при нажатии пользователем кнопки.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Подписка на события в интегрированной среде разработки Visual Studio  
@@ -102,6 +101,6 @@ ms.locfileid: "69590409"
 
 - [События](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [Практическое руководство. Публикация событий в соответствии с руководствами по .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Операторы - и -=](../../language-reference/operators/subtraction-operator.md)
 - [Операторы + и +=](../../language-reference/operators/addition-operator.md)

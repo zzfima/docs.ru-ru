@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (C#)
+title: Как использовать заметки для преобразования деревьев LINQ to XML в стиль XSLT (C#)
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: d6975601855e736082662ffb0319b5c6563cedc6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 109e1a49530f34e7197f8c975de8c04245b11734
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253263"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347285"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Практическое руководство. Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (C#)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Как использовать заметки для преобразования деревьев LINQ to XML в стиль XSLT (C#)
 Заметки можно использовать для упрощения преобразований XML-дерева.  
   
  Некоторые XML-документы рассматриваются как «предназначенные для обработки в виде документов со смешанным содержимым». При использовании таких документов не требуется знать форму дочерних узлов элемента. Например, узел, содержащий текст, может выглядеть так:  

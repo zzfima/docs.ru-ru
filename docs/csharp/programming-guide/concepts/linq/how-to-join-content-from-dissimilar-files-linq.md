@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
+title: Объединение содержимого из файлов разных форматов (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253549"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345888"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Объединение содержимого из файлов разных форматов (LINQ) (C#)
 
 В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа. Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл. Можно изменить пример для обработки любого типа структурированного текста.  
   

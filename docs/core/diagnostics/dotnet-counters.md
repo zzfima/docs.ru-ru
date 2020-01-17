@@ -1,15 +1,13 @@
 ---
 title: dotnet-counters (.NET Core)
 description: Сведения о том, как установить и использовать программу командной строки dotnet-counter.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: b2fab239713d9d19c580580496e73a91ceafcc52
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321540"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740806"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -17,7 +15,7 @@ ms.locfileid: "72321540"
 
 ## <a name="install-dotnet-counters"></a>Установка dotnet-counters
 
-Чтобы установить последнюю версию `dotnet-counters` [пакета NuGet](https://www.nuget.org/packages/dotnet-counters), используйте команду [dotnet tool install](../tools/dotnet-tool-install.md).
+Чтобы установить последнюю версию [пакета NuGet](https://www.nuget.org/packages/dotnet-counters) `dotnet-counters`, используйте команду [dotnet tool install](../tools/dotnet-tool-install.md).
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
@@ -29,7 +27,7 @@ dotnet tool install --global dotnet-counters
 dotnet-counters [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 `dotnet-counters` — это средство мониторинга производительности и первого уровня анализа производительности. Оно умеет отслеживать значения счетчиков производительности, опубликованные через API <xref:System.Diagnostics.Tracing.EventCounter>. Например, вы можете быстро отслеживать такие параметры, как загрузка ЦП или частота возникновения исключений в приложении .NET Core, чтобы обнаружить подозрительное поведение перед началом более серьезных расследований с помощью `PerfView` или `dotnet-trace`.
 
@@ -129,7 +127,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- Мониторинг значений `EventCounter` из определяемых пользователем `EventSource`: Дополнительные сведения см. в статье [Руководство. How to measure performance for very frequent events using EventCounters](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md) (Как измерять производительность для очень часто выполняемых событий с помощью EventCounters).
+- Мониторинг значений `EventCounter` из определяемых пользователем `EventSource`: Дополнительные сведения см. в статье [Руководство. How to measure performance for very frequent events using EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md) (Как измерять производительность для очень часто выполняемых событий с помощью EventCounters).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

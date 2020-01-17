@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (C#)
+title: Как запросить повторяющиеся файлы в дереве папок (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 3e7d1ee779f6e584bfc636963e038e31332bfca8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 7c84dba3e87077077f28bc2e665ea3774cf44d3b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216602"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347881"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (C#)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Как запросить повторяющиеся файлы в дереве папок (LINQ) (C#)
 Иногда файлы с одинаковыми именами могут находиться в нескольких папках. Например, в папке установки Visual Studio несколько папок содержат файл readme.htm. В этом примере показано, как запросить такие повторяющиеся имена файлов в указанной корневой папке. Во втором примере показано, как запросить файлы, размер и время последней записи которых также совпадают.  
   
 ## <a name="example"></a>Пример  

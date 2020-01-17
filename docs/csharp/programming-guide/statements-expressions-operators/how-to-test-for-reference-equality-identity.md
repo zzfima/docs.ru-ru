@@ -1,19 +1,18 @@
 ---
-title: Практическое руководство. Проверка на равенство (идентичность) ссылок (Руководство по программированию на C#)
-ms.custom: seodec18
+title: Руководство по программированию на C#. Тестирование на равенство (идентичность) ссылок
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 2b4b7b7bdd03077a78aa2a6375764fa86a885ef5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588638"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699058"
 ---
-# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Практическое руководство. Проверка на равенство (идентичность) ссылок (Руководство по программированию на C#)
+# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Руководство по программированию на C#. Тестирование на равенство (идентичность) ссылок
 Вам не требуется реализовывать настраиваемую логику, чтобы обеспечить поддержку проверки ссылок на равенство в типах. Эту возможность для всех типов реализует метод <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>.  
   
  В следующем примере показано, как проверить две переменные на *равенство ссылок*, то есть как определить, ссылаются ли они на один и тот же объект в памяти.  

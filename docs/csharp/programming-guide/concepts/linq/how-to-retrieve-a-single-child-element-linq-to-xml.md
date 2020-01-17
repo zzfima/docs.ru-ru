@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Извлечение одного дочернего элемента (LINQ to XML) (C#)
+title: Извлечение одного дочернего элемента (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 5f2f675f5ce4914124f62981a2591441260b6976
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592628"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347471"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Практическое руководство. Извлечение одного дочернего элемента (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Извлечение одного дочернего элемента (LINQ to XML) (C#)
 В этом разделе объясняется, как обеспечить получение отдельных дочерних элементов, когда известно имя этого дочернего элемента. Если известно имя дочернего элемента, а также то, что есть только один элемент с таким именем, удобнее получить один элемент, а не целую коллекцию.  
   
  Метод <xref:System.Xml.Linq.XContainer.Element%2A> возвращает первый дочерний элемент <xref:System.Xml.Linq.XElement> с указанным именем <xref:System.Xml.Linq.XName>.  

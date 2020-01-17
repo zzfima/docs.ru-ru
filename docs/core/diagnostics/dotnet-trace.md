@@ -1,15 +1,13 @@
 ---
 title: Программа dotnet-trace — .NET Core
 description: Установка и использование программы командной строки dotnet-trace.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 11/21/2019
-ms.openlocfilehash: 07eaec843e27f5d291b6d18fab53c43051794626
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428879"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714435"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Программа анализа производительности dotnet-trace
 
@@ -29,7 +27,7 @@ dotnet tool install --global dotnet-trace
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 Программа `dotnet-trace` —
 
@@ -98,7 +96,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 
 - **`--format {NetTrace|Speedscope}`**
 
-  Задает формат выходных данных для преобразования файла трассировки. Значение по умолчанию — `NetTrace`.
+  Задает формат выходных данных для преобразования файла трассировки. Значение по умолчанию — `NetTrace`.
 
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 

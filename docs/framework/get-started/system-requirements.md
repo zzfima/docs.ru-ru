@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 0137066b3a351d60bf1cc2e06640030ba1216d03
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960058"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545015"
 ---
 # <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 
@@ -96,7 +96,7 @@ ms.locfileid: "74960058"
 
  **Примечания.**
 
-- Windows Server 2012 включает .NET Framework 4.5, поэтому установка этого компонента не требуется. Аналогичным образом [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] включает .NET Framework 4.5.1.
+- Windows Server 2012 включает .NET Framework 4.5, поэтому установка этого компонента не требуется. Аналогично Windows Server 2012 R2 включает .NET Framework 4.5.1.
 
 - .NET Framework имеет ограниченную поддержку роли Server Core с Windows Server 2008 R2 с пакетом обновления 1 (SP1) или более поздней версии. Список неподдерживаемых API см. в разделе [Функции Server Core в .NET](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)).
 

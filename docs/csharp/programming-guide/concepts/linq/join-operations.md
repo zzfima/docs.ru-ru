@@ -2,12 +2,12 @@
 title: Операции соединения (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423384"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635604"
 ---
 # <a name="join-operations-c"></a>Операции соединения (C#)
 *Соединение* двух источников данных — это связь объектов в одном источнике данных с объектами, которые имеют общий атрибут в другом источнике данных.  
@@ -22,7 +22,7 @@ ms.locfileid: "73423384"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|ОПИСАНИЕ|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Join|Соединяет две последовательности на основании функций селектора ключа и извлекает пары значений.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Соединяет две последовательности на основании функций селектора ключа и группирует полученные при сопоставлении данные для каждого элемента.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
@@ -34,11 +34,11 @@ ms.locfileid: "73423384"
 - [Анонимные типы](../../classes-and-structs/anonymous-types.md)
 - [Формулировка запросов-объединений и запросов векторного произведения](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [предложение join](../../../language-reference/keywords/join-clause.md)
-- [Практическое руководство. Соединение с помощью составных ключей](../../../linq/join-by-using-composite-keys.md)
-- [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [Практическое руководство. Упорядочение результатов предложения соединения](../../../linq/order-the-results-of-a-join-clause.md)
-- [Практическое руководство. Выполнение пользовательских операций соединения](../../../linq/perform-custom-join-operations.md)
-- [Практическое руководство. Выполнение групповых соединений](../../../linq/perform-grouped-joins.md)
-- [Практическое руководство. Выполнение внутренних соединений](../../../linq/perform-inner-joins.md)
-- [Практическое руководство. Выполнение левых внешних соединений](../../../linq/perform-left-outer-joins.md)
-- [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Соединение с помощью составных ключей](../../../linq/join-by-using-composite-keys.md)
+- [Объединение содержимого из файлов разных форматов (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [Упорядочение результатов предложения соединения](../../../linq/order-the-results-of-a-join-clause.md)
+- [Выполнение пользовательских операций соединения](../../../linq/perform-custom-join-operations.md)
+- [Выполнение групповых соединений](../../../linq/perform-grouped-joins.md)
+- [Выполнение внутренних соединений](../../../linq/perform-inner-joins.md)
+- [Выполнение левых внешних соединений](../../../linq/perform-left-outer-joins.md)
+- [Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

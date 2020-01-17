@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: f103c96588bae167216d09a82973a4a7abfb5cc3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: db70596552ffd699156e1b7a55cb1e944596f077
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394042"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901766"
 ---
 ### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>Защита данных. DataProtection.AzureStorage использует новые API службы хранилища Azure
 
 <xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName> зависит от [библиотек службы хранилища Azure](https://github.com/Azure/azure-storage-net). Эти библиотеки переименовали свои сборки, пакеты и пространства имен. Начиная с ASP.NET Core 3.0, `Microsoft.AspNetCore.DataProtection.AzureStorage` использует новые API и пакеты с префиксом `Microsoft.Azure.Storage.`.
 
-Если у вас возникли вопросы об API службы хранилища Azure, см. страницу <https://github.com/Azure/azure-storage-net>. Обсуждение этого вопроса см. на странице [aspnet/AspNetCore#8472](https://github.com/aspnet/AspNetCore/issues/8472).
+Если у вас возникли вопросы об API службы хранилища Azure, см. страницу <https://github.com/Azure/azure-storage-net>. Обсуждение этого вопроса см. на странице [dotnet/aspnetcore#8472](https://github.com/dotnet/aspnetcore/issues/8472).
 
 #### <a name="version-introduced"></a>Представленная версия
 
@@ -28,7 +28,7 @@ ms.locfileid: "72394042"
 
 Это изменение позволяет `Microsoft.AspNetCore.DataProtection.AzureStorage` переходить к рекомендуемым пакетам службы хранилища Azure.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Если вам по-прежнему нужно использовать старые API службы хранилища Azure с ASP.NET Core 3.0, добавьте прямую зависимость в пакет [WindowsAzure.Storage](https://www.nuget.org/packages/WindowsAzure.Storage/). Этот пакет можно установить вместе с новыми API `Microsoft.Azure.Storage`.
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Нет
+Отсутствуют
 
 <!-- 
 

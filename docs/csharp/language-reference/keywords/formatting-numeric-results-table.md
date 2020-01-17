@@ -1,6 +1,5 @@
 ---
 title: Справочник по C#. Таблица форматирования числовых результатов
-ms.custom: seodec18
 description: Сведения об использовании строк стандартных числовых форматов C#
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -8,20 +7,20 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: eb93f0a4f3c66e9f7b295366a77b9fb099fc3a1e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422753"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713511"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Таблица форматирования числовых результатов (справочник по C#)
 
 В следующей таблице приводятся описатели поддерживаемых форматов для форматирования числовых результатов. Форматированный результат в последнем столбце соответствует формату "en-US" (<xref:System.Globalization.CultureInfo>).
 
-|Описатель формата|ОПИСАНИЕ|Примеры|Результат|  
+|Описатель формата|Описание|Примеры|Результат|  
 |----------------------|-----------------|--------------|------------|  
-|C или c|Валюта|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|C или c|Валюта|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2.50<br /><br /> (\\$2.50)|  
 |D или d|Decimal|`string s = $"{25:D5}";`|00025|  
 |E или e|Экспоненциальный|`string s = $"{250000:E2}";`|2.50E+005|  
 |F или f|С фиксированной запятой|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  

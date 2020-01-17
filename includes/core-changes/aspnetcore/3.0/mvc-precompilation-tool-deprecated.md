@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198553"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901945"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC. Средство предварительной компиляции устарело
 
@@ -28,9 +28,9 @@ ms.locfileid: "73198553"
 
 Пакет SDK для Razor дает больше возможностей и проверяет правильность файлов *.cshtml* во время сборки. Благодаря этому пакет SDK снижает время запуска приложения.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
-Если вы используете ASP.NET Core версии 2.1 или более поздней версии, обновите систему для применения встроенной поддержки предварительной компиляции в [пакете SDK для Razor](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0). Если ошибки или отсутствующие компоненты препятствуют миграции на пакет SDK для Razor, сообщите о проблеме а [aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues).
+Если вы используете ASP.NET Core версии 2.1 или более поздней версии, обновите систему для применения встроенной поддержки предварительной компиляции в [пакете SDK для Razor](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0). Если ошибки или отсутствующие компоненты препятствуют миграции на пакет SDK для Razor, сообщите о проблеме в [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues).
 
 #### <a name="category"></a>Категория
 
@@ -38,7 +38,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Нет
+Отсутствуют
 
 <!-- 
 

@@ -1,6 +1,5 @@
 ---
-title: Практическое руководство. Преобразование строки в число - руководство по программированию на C#
-ms.custom: seodec18
+title: Руководство по программированию на C#. Преобразование строки в число
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552414"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711874"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Практическое руководство. Преобразование строки в число (руководство по программированию на C#)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Руководство по программированию на C#. Преобразование строки в число
 
 Вы можете преобразовывать [строку](../../language-reference/builtin-types/reference-types.md) в число с помощью вызова метода `Parse` или `TryParse`, который можно найти в различных числовых типах (`int`, `long`, `double` и т. д.), или используя методы в классе <xref:System.Convert?displayProperty=nameWithType>.  
   
@@ -58,5 +57,5 @@ ms.locfileid: "74552414"
 ## <a name="see-also"></a>См. также
 
 - [Типы](./index.md)
-- [Практическое руководство. Определение представления числового значения в строке](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Определение представления числового значения в строке](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Пример: служебная программа форматирования .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)

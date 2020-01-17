@@ -2,12 +2,12 @@
 title: Новые возможности C# 7.1
 description: Обзор новых возможностей в C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105553"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714581"
 ---
 # <a name="whats-new-in-c-71"></a>Новые возможности C# 7.1
 
@@ -17,7 +17,7 @@ C# 7.1 — это первая доработанная версия для C#. 
 
 Новые языковые функции в этом выпуске
 
-- [`async` метод `Main`](#async-main)
+- [Метод `async` `Main`](#async-main)
   - Точка входа для приложения может иметь модификатор `async`.
 - [Литеральные выражения `default`](#default-literal-expressions)
   - Литеральные выражения по умолчанию можно использовать в выражениях значения по умолчанию, если можно вывести тип целевого объекта.

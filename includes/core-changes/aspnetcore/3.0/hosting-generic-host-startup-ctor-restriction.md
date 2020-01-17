@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: be9a79f6ead3e72d7ffaade758704f0c1e2477f0
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: d1ddba72ce25c5e01025d916d52f785b5a1a9e71
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394020"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902035"
 ---
 ### <a name="hosting-generic-host-restricts-startup-constructor-injection"></a>Размещение. Универсальный узел ограничивает внедрение через конструктор Startup
 
@@ -16,11 +16,11 @@ ms.locfileid: "72394020"
 
 **ASP.NET Core 2.x:**
 
-<https://github.com/aspnet/AspNetCore/blob/5cb615fcbe8559e49042e93394008077e30454c0/src/Templating/src/Microsoft.DotNet.Web.ProjectTemplates/content/EmptyWeb-CSharp/Program.cs#L20-L22>
+<https://github.com/dotnet/aspnetcore/blob/5cb615fcbe8559e49042e93394008077e30454c0/src/Templating/src/Microsoft.DotNet.Web.ProjectTemplates/content/EmptyWeb-CSharp/Program.cs#L20-L22>
 
 **ASP.NET Core 3.0:**
 
-<https://github.com/aspnet/AspNetCore/blob/b1ca2c1155da3920f0df5108b9fedbe82efaa11c/src/ProjectTemplates/Web.ProjectTemplates/content/EmptyWeb-CSharp/Program.cs#L19-L24>
+<https://github.com/dotnet/aspnetcore/blob/b1ca2c1155da3920f0df5108b9fedbe82efaa11c/src/ProjectTemplates/Web.ProjectTemplates/content/EmptyWeb-CSharp/Program.cs#L19-L24>
 
 `Host` использует контейнер внедрения зависимостей для сборки приложения. `WebHost` использует два контейнера: один для узла и один для приложения. В результате конструктор `Startup` теперь не поддерживает внедрение пользовательской службы. Можно внедрять только `IHostEnvironment`, `IWebHostEnvironment` или `IConfiguration`. Это изменение предотвращает такие проблемы, как дублирование создания одноэлементной службы.
 
@@ -32,9 +32,9 @@ ms.locfileid: "72394020"
 
 Это изменение является следствием перевода веб-стека на универсальную библиотеку узлов.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
-Внедряйте службы в подпись метода `Startup.Configure`. Например:
+Внедряйте службы в подпись метода `Startup.Configure`. Пример:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IOptions<MyOptions> options)
@@ -46,7 +46,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Нет
+Отсутствуют
 
 <!-- 
 

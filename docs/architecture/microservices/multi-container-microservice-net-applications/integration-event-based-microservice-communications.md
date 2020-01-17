@@ -2,12 +2,12 @@
 title: Реализация взаимодействия между микрослужбами на основе событий (события интеграции)
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | События интеграции для реализации взаимодействия между микрослужбами на основе событий.
 ms.date: 10/02/2018
-ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711227"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712407"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Реализация взаимодействия между микрослужбами на основе событий (события интеграции)
 
@@ -27,7 +27,7 @@ ms.locfileid: "74711227"
 
 Для реализации шины событий, предназначенной только для демонстрации принципа работы и используемой в среде разработки, как было показано на примере eShopOnContainers, достаточно простой реализации на основе системы RabbitMQ, работающей в контейнере. Однако для создания критически важных систем и систем в рабочей среде с высокой масштабируемостью может потребоваться оценить и использовать служебную шину Azure.
 
-Если вам необходима абстракция более высокого уровня и более широкий набор функций, например [Sagas](https://docs.particular.net/nservicebus/sagas/) для длительных рабочих процессов, которые упрощают распределенную разработку, можете воспользоваться другими коммерческими и открытыми реализациями служебной шины, например NServiceBus, MassTransit и Brighter. В этом случае обычно используются не ваши собственные абстракции, а абстракции и API, предоставляемые этими решениями высокого уровня (например, [абстракции простой шины событий в eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Поэтому можете обратиться к [вилке проекта eShopOnContainers, в которой используется NServiceBus](https://go.particular.net/eShopOnContainers) (дополнительный производный пример, реализованный Particular Software)
+Если вам необходима абстракция более высокого уровня и более широкий набор функций, например [Sagas](https://docs.particular.net/nservicebus/sagas/) для длительных рабочих процессов, которые упрощают распределенную разработку, можете воспользоваться другими коммерческими и открытыми реализациями служебной шины, например NServiceBus, MassTransit и Brighter. В этом случае обычно используются не ваши собственные абстракции, а абстракции и API, предоставляемые этими решениями высокого уровня (например, [абстракции простой шины событий в eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Поэтому можете обратиться к [вилке проекта eShopOnContainers, в которой используется NServiceBus](https://go.particular.net/eShopOnContainers) (дополнительный производный пример, реализованный Particular Software).
 
 Конечно, вы всегда можете создать собственные функции служебной шины на основе технологий низкого уровня, таких как RabbitMQ и Docker, но объем работы, необходимой для того, чтобы "изобрести велосипед", может быть слишком большим для пользовательского корпоративного приложения.
 
