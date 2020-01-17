@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Анализ строки (C#)
+title: Анализ строки (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 086a4baecee9ee927b08d6da53d16324ef32e8a8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140981"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345814"
 ---
-# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="c234f-102">Практическое руководство. Анализ строки (C#)</span><span class="sxs-lookup"><span data-stu-id="c234f-102">How to: Parse a String (C#)</span></span>
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="26edd-102">Анализ строки (C#)</span><span class="sxs-lookup"><span data-stu-id="26edd-102">How to parse a string (C#)</span></span>
 
-<span data-ttu-id="c234f-103">В этом разделе демонстрируется анализ строки для создания XML-дерева в C#.</span><span class="sxs-lookup"><span data-stu-id="c234f-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>
+<span data-ttu-id="26edd-103">В этом разделе демонстрируется анализ строки для создания XML-дерева в C#.</span><span class="sxs-lookup"><span data-stu-id="26edd-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c234f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="c234f-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="26edd-104">Пример</span><span class="sxs-lookup"><span data-stu-id="26edd-104">Example</span></span>
 
-<span data-ttu-id="c234f-105">В следующем коде C# показано, как выполнять синтаксический анализ строки XML.</span><span class="sxs-lookup"><span data-stu-id="c234f-105">The following C# code shows how to parse an XML string:</span></span>
+<span data-ttu-id="26edd-105">В следующем коде C# показано, как выполнять синтаксический анализ строки XML.</span><span class="sxs-lookup"><span data-stu-id="26edd-105">The following C# code shows how to parse an XML string:</span></span>
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,13 +47,13 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-<span data-ttu-id="c234f-106">Корневой узел `Contacts` содержит два узла `Contact`.</span><span class="sxs-lookup"><span data-stu-id="c234f-106">The root `Contacts` node has two `Contact` nodes.</span></span> <span data-ttu-id="c234f-107">Для доступа к определенным данным в проанализированном XML используйте метод [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements), который в этом случае возвращает дочерние элементы корневого узла `Contacts`.</span><span class="sxs-lookup"><span data-stu-id="c234f-107">To access some specific data in your parsed XML, use the [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) method, which in this case returns the child elements of the root `Contacts` node.</span></span> <span data-ttu-id="c234f-108">В следующем примере в окне консоли выводится первый узел `Contact`:</span><span class="sxs-lookup"><span data-stu-id="c234f-108">The following example prints the first `Contact` node to the console:</span></span>
+<span data-ttu-id="26edd-106">Корневой узел `Contacts` содержит два узла `Contact`.</span><span class="sxs-lookup"><span data-stu-id="26edd-106">The root `Contacts` node has two `Contact` nodes.</span></span> <span data-ttu-id="26edd-107">Для доступа к определенным данным в проанализированном XML используйте метод [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements), который в этом случае возвращает дочерние элементы корневого узла `Contacts`.</span><span class="sxs-lookup"><span data-stu-id="26edd-107">To access some specific data in your parsed XML, use the [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) method, which in this case returns the child elements of the root `Contacts` node.</span></span> <span data-ttu-id="26edd-108">В следующем примере в окне консоли выводится первый узел `Contact`:</span><span class="sxs-lookup"><span data-stu-id="26edd-108">The following example prints the first `Contact` node to the console:</span></span>
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c234f-109">См. также</span><span class="sxs-lookup"><span data-stu-id="c234f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26edd-109">См. также</span><span class="sxs-lookup"><span data-stu-id="26edd-109">See also</span></span>
 
-- [<span data-ttu-id="c234f-110">Практическое руководство. Поиск элементов с определенным атрибутом (C#)</span><span class="sxs-lookup"><span data-stu-id="c234f-110">How to find an element with a specific attribute (C#)</span></span>](how-to-find-an-element-with-a-specific-attribute.md)
+- [<span data-ttu-id="26edd-110">Практическое руководство. Поиск элементов с определенным атрибутом (C#)</span><span class="sxs-lookup"><span data-stu-id="26edd-110">How to find an element with a specific attribute (C#)</span></span>](how-to-find-an-element-with-a-specific-attribute.md)
