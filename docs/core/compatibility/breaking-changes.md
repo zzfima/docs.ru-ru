@@ -2,12 +2,12 @@
 title: Критические изменения .NET Core
 description: Сведения о критических изменениях в каждой версии .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900147"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937335"
 ---
 # <a name="breaking-change-selectors"></a>Средства выбора критических изменений
 
@@ -18,9 +18,6 @@ ms.locfileid: "75900147"
 Выберите текущую целевую версию .NET, а затем версию .NET Core, на которую вы хотите перейти:
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
-
-> [!TIP]
-> Если вы переносите приложение Windows Forms из .NET Framework в .NET Core, см. описание [критических изменений в Windows Forms (миграция с .NET Framework на .NET Core)](../porting/winforms-breaking-changes.md) (не используйте средство выбора версии).
 
 ## <a name="by-area"></a>По областям
 

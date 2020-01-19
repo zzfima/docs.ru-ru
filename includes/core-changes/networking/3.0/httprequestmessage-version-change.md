@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ff156afb3da4b921517fd841c5de2295265a8d7b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9aff20e35469f9e786f0f790fda4ffaa04e76e64
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567759"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116416"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Значение по умолчанию HttpRequestMessage.Version изменено на 1.1
 
@@ -20,7 +20,7 @@ ms.locfileid: "74567759"
 
 Начиная с .NET Core 3.0 номер версии по умолчанию, возвращаемый свойством <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName>, снова стал 1.1.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Обновите код, если он зависит от свойства <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName>, возвращающего значение по умолчанию 2.0.
 
@@ -38,5 +38,4 @@ a def
 
 - `P:System.Net.Http.HttpRequestMessage.Version`
 
--- >
-
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d888aba597cb6981828ca67fba04912cbcf7935f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d8cc506d60f3c24087ebde8ead345656fea0f484
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567442"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116350"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Типы из пространства имен Microsoft.VisualBasic.ApplicationServices недоступны
 
@@ -20,7 +20,7 @@ ms.locfileid: "74567442"
 
 Типы были удалены во избежание ненужных зависимостей сборок или критических изменений в последующих выпусках.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Если в вашем коде применяются типы <xref:Microsoft.VisualBasic.ApplicationServices> и их члены, вы можете использовать соответствующий тип или член из библиотеки классов .NET. Например, некоторые члены <xref:System.Environment?displayProperty=nameWithType> и <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> обеспечивают возможности, эквивалентные свойствам класса <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.
 
@@ -38,5 +38,4 @@ Visual Basic
 
 - `N:Microsoft.VisualBasic.ApplicationServices`
 
--- >
-
+-->

@@ -4,12 +4,12 @@ description: Используйте диспетчер пакетов для у�
 author: thraka
 ms.author: adegeo
 ms.date: 12/26/2019
-ms.openlocfilehash: cba07bafc32cc71a1cdaec08902284e105af4776
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ae0f6664c0545ceb047cd9b110fe3f26740e5816
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740670"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116168"
 ---
 # <a name="opensuse-15-package-manager---install-net-core"></a>Диспетчер пакетов openSUSE 15 — установка .NET Core
 
@@ -37,14 +37,6 @@ sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
-## <a name="dependency-error-with-net-core-31"></a>Ошибка зависимости в .NET Core 3.1
-
-В веб-канале пакетов .NET Core 3.1 для openSUSE возникла проблема с зависимостью**krb5**. Используйте следующую команду, чтобы установить правильные зависимости перед установкой .NET Core 3.1 или ASP.NET Core 3.1.
-
-```bash
-sudo zypper install https://packages.microsoft.com/opensuse/15/prod/dotnet-runtime-deps-3.1.0-opensuse.42-x64.rpm
-```
-
 ## <a name="install-the-net-core-sdk"></a>Установка пакета SDK для .NET Core
 
 Обновите продукты, доступные для установки, а затем установите пакет SDK для .NET Core. В терминале выполните приведенную ниже команду.
@@ -52,13 +44,6 @@ sudo zypper install https://packages.microsoft.com/opensuse/15/prod/dotnet-runti
 ```bash
 sudo zypper install dotnet-sdk-3.1
 ```
-
-> [!IMPORTANT]
-> В веб-канале пакетов .NET Core 3.1 для openSUSE возникла проблема с зависимостью**krb5**. Используйте следующую команду, чтобы установить правильные зависимости перед установкой пакета SDK для .NET Core 3.1.
->
-> ```bash
-> sudo zypper install https://packages.microsoft.com/opensuse/15/prod/dotnet-runtime-deps-3.1.0-opensuse.42-x64.rpm
-> ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>Установка среды выполнения ASP.NET Core
 
@@ -68,13 +53,6 @@ sudo zypper install dotnet-sdk-3.1
 sudo zypper install aspnetcore-runtime-3.1
 ```
 
-> [!IMPORTANT]
-> В веб-канале пакетов .NET Core 3.1 для openSUSE возникла проблема с зависимостью**krb5**. Используйте следующую команду, чтобы установить правильные зависимости перед установкой среды выполнения для ASP.NET Core 3.1.
->
-> ```bash
-> sudo zypper install https://packages.microsoft.com/opensuse/15/prod/dotnet-runtime-deps-3.1.0-opensuse.42-x64.rpm
-> ```
-
 ## <a name="install-the-net-core-runtime"></a>Установка среды выполнения .NET Core
 
 Обновите продукты, доступные для установки, а затем установите среду выполнения .NET Core. В терминале выполните приведенную ниже команду.
@@ -82,13 +60,6 @@ sudo zypper install aspnetcore-runtime-3.1
 ```bash
 sudo zypper install dotnet-runtime-3.1
 ```
-
-> [!IMPORTANT]
-> В веб-канале пакетов .NET Core 3.1 для openSUSE возникла проблема с зависимостью**krb5**. Используйте следующую команду, чтобы установить правильные зависимости перед установкой среды выполнения для .NET Core 3.1.
->
-> ```bash
-> sudo zypper install https://packages.microsoft.com/opensuse/15/prod/dotnet-runtime-deps-3.1.0-opensuse.42-x64.rpm
-> ```
 
 ## <a name="how-to-install-other-versions"></a>Установка других версий
 

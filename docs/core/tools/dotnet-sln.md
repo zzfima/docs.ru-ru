@@ -2,12 +2,12 @@
 title: Команда dotnet sln
 description: Команда dotnet-sln предоставляет удобный способ добавлять проекты в файл решений, удалять или перечислять их.
 ms.date: 10/29/2019
-ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c0badfeba1438a795106691a86c09a8b1675829b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191820"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937252"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -27,7 +27,7 @@ ms.locfileid: "73191820"
 dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 Команда `dotnet sln` предоставляет удобный способ добавлять проекты в файл решений, удалять или перечислять их.
 
@@ -137,38 +137,38 @@ dotnet sln list [-h|--help]
 
 ## <a name="examples"></a>Примеры
 
-Добавление проекта C# в решение:
+- Добавление проекта C# в решение:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj
+  ```
 
-Удаление проекта C# из решения:
+- Удаление проекта C# из решения:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  ```
 
-Добавление нескольких проектов C# в решение:
+- Добавление нескольких проектов C# в решение:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Удаление нескольких проектов C# из решения:
+- Удаление нескольких проектов C# из решения:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Добавление нескольких проектов C# в решение с помощью стандартной маски (только Unix/Linux):
+- Добавление нескольких проектов C# в решение с помощью стандартной маски (только Unix/Linux):
 
-```dotnetcli
-dotnet sln todo.sln add **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add **/*.csproj
+  ```
 
-Удаление нескольких проектов C# из решения с помощью стандартной маски (только Unix/Linux):
+- Удаление нескольких проектов C# из решения с помощью стандартной маски (только Unix/Linux):
 
-```dotnetcli
-dotnet sln todo.sln remove **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove **/*.csproj
+  ```
