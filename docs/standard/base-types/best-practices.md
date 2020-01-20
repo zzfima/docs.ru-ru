@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711497"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938003"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Рекомендации по использованию регулярных выражений в .NET
 
@@ -62,7 +62,7 @@ ms.locfileid: "75711497"
 Сердцем объектной модели регулярных выражений в .NET является класс <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, представляющий обработчик регулярных выражений. Часто производительность регулярного выражения зависит именно от того, как используется обработчик <xref:System.Text.RegularExpressions.Regex>. Определение регулярного выражения предполагает установление тесной взаимозависимости между обработчиком регулярных выражений и шаблоном регулярного выражения. Процесс установления этой взаимозависимости является затратным, независимо от того, происходит ли создание объекта <xref:System.Text.RegularExpressions.Regex> путем передачи его конструктору шаблона регулярного выражения или происходит вызов статического метода путем передачи ему шаблона регулярного выражения и входной строки.
 
 > [!NOTE]
-> Более подробно производительно интерпретированные и скомпилированные регулярные выражения рассматриваются в записи блога [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking (Оптимизация производительности регулярных выражений, часть 2. Грамотное использование поиска с возвратом)](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) в блоге команды BCL.
+> Более подробно производительно интерпретированные и скомпилированные регулярные выражения рассматриваются в записи блога [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking (Оптимизация производительности регулярных выражений, часть 2. Грамотное использование поиска с возвратом)](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) в блоге команды BCL.
 
 Можно установить связь между обработчиком регулярных выражений и конкретным шаблоном регулярного выражения, а затем использовать обработчик для поиска совпадения в тексте несколькими способами.
 
@@ -161,7 +161,7 @@ ms.locfileid: "75711497"
 Обычно обработчик регулярных выражений двигается по входной строке линейным образом, сравнивая ее с шаблоном регулярного выражения. Однако когда в шаблоне регулярного выражения используются неопределенные квантификаторы, такие как `*`, `+` или `?`, обработчик регулярных выражений может отбрасывать частичное совпадение и возвращаться к ранее сохраненному состоянию, чтобы искать совпадение с шаблоном целиком. Этот процесс известен как поиск с возвратом.
 
 > [!NOTE]
-> Дополнительные сведения о поиске с возвратом см. в статьях [Подробные сведения о поведении регулярных выражений](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) и [Поиск с возвратом в регулярных выражениях](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Поиска с возвратом подробно рассматривается в записи блога [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking (Оптимизация производительности регулярных выражений, часть 2. Грамотное использование поиска с возвратом)](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) в блоге команды BCL.
+> Дополнительные сведения о поиске с возвратом см. в статьях [Подробные сведения о поведении регулярных выражений](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) и [Поиск с возвратом в регулярных выражениях](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Поиска с возвратом подробно рассматривается в записи блога [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking (Оптимизация производительности регулярных выражений, часть 2. Грамотное использование поиска с возвратом)](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) в блоге команды BCL.
 
 Поддержка поиска с возвратом обеспечивает мощность и гибкость регулярных выражений. При этом ответственность за управление работой обработчика регулярных выражений лежит на разработчике регулярных выражений. Поскольку разработчики часто не отдают себе отчет в этой ответственности, неправильное или излишнее использование поиска с возвратом часто становится причиной снижения производительности регулярных выражений. В самом неблагоприятном случае время обработки может удваиваться при каждом добавлении символа во входную строку. Чрезмерно используя поиск с возвратом, очень легко создать программный аналог бесконечной петли, если входные данные почти совпадают с шаблоном регулярного выражения. Обработчик регулярных выражений может в течение часов или даже дней обрабатывать относительно короткую входную строку.
 
