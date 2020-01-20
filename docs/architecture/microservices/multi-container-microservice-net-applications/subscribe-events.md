@@ -2,12 +2,12 @@
 title: Подписка на события
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие сведения о публикации событий интеграции и подписке на них.
 ms.date: 10/02/2018
-ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737060"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937148"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
@@ -368,7 +368,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Рик Сейлинг (Rick Saling). Теорема CAP: почему в случае с облачными средами и Интернетом все иначе** \
-    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
+    <https://docs.microsoft.com/archive/blogs/rickatmicrosoft/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Эрик Брюер (Eric Brewer). CAP двенадцать лет спустя: Как изменились "правила"**  \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
