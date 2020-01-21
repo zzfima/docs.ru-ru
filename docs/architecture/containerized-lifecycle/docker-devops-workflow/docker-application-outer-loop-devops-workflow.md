@@ -2,12 +2,12 @@
 title: Действия в рабочем процессе внешнего цикла DevOps для приложения Docker
 description: Сведения об этапах, относящихся к "внешнему циклу" рабочего процесса DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738358"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936780"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Действия в рабочем процессе внешнего цикла DevOps для приложения Docker
 
@@ -91,7 +91,7 @@ Azure DevOps Services и Team Foundation Server поддерживают Git и 
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - Сборка образов Docker .NET Core Linux с использованием Azure DevOps Services: \
->   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+>   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Построение машины сборки Visual Studio Team Service на основе Linux с поддержкой Docker: \
 >   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>

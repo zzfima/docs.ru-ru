@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131500"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936846"
 ---
 # <a name="using-threads-and-threading"></a>Использование потоков и работа с потоками
 
@@ -28,11 +28,13 @@ ms.locfileid: "73131500"
 
 ## <a name="how-to-stop-a-thread"></a>Практическое руководство. Остановка потока
 
-Чтобы прервать выполнение потока, используйте метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Этот метод вызывает <xref:System.Threading.ThreadAbortException> в потоке, для которого был вызван. Дополнительные сведения см. в разделе [Уничтожение потоков](destroying-threads.md).
+Чтобы прервать выполнение потока, используйте метод <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Это единый способ совместной отмены потоков. Подробные сведения см. в статье [Отмена в управляемых потоках](cancellation-in-managed-threads.md).
 
-Начиная с .NET Framework 4 вы можете использовать <xref:System.Threading.CancellationToken?displayProperty=nameWithType> для совместной отмены потока. Подробные сведения см. в статье [Отмена в управляемых потоках](cancellation-in-managed-threads.md).
+Иногда выполнить совместную отмену потока невозможно, так как он выполняет код сторонних производителей, не поддерживающий такую отмену. В этом случае вы можете выполнить принудительное завершение. Чтобы принудительно завершить выполнение потока, воспользуйтесь методом <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> в .NET Framework. Этот метод вызывает <xref:System.Threading.ThreadAbortException> в потоке, для которого был вызван. Дополнительные сведения см. в разделе [Уничтожение потоков](destroying-threads.md). Метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> не поддерживается в .NET Core. Если необходимо принудительно завершить выполнение кода сторонних производителей в .NET Core, запустите его в отдельном процессе и воспользуйтесь <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
-Используйте метод <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, чтобы вызывающий поток ждал завершения потока, для которого был вызван метод.
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType> можно использовать только начиная с .NET Framework 4. Чтобы завершить поток в более ранних версиях .NET Framework, следует вручную реализовать совместную отмену с помощью методов синхронизации потоков. Например, вы можете создать изменяемое логическое поле `shouldStop` и использовать его для запроса остановки кода, выполняемого потоком. Дополнительные сведения см. в [справочнике по C#](../../csharp/language-reference/keywords/volatile.md) и в этой статье: <xref:System.Threading.Volatile?displayProperty=nameWithType>.
+
+Используйте метод <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, чтобы вызывающий поток ждал завершения останавливаемого потока.
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>Практическое руководство. Приостановка или прерывание потока
 
@@ -42,7 +44,7 @@ ms.locfileid: "73131500"
 
 В приведенной ниже таблице показаны некоторые свойства <xref:System.Threading.Thread>.  
   
-|Свойство.|ОПИСАНИЕ|  
+|Свойство.|Описание|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Возвращает `true`, если поток был запущен и не был завершен нормально либо был прерван.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Возвращает или задает логическое значение, которое указывает, является ли поток фоновым потоком. Фоновые потоки отличаются от основных потоков лишь тем, что они не влияют на завершение процесса. Когда обработка всех основных потоков закончена, общеязыковая среда выполнения завершает процесс, применяя метод <xref:System.Threading.Thread.Abort%2A> к тем фоновым потокам, которые еще продолжают существовать. См. дополнительные сведения об [основных и фоновых потоках](foreground-and-background-threads.md).|  

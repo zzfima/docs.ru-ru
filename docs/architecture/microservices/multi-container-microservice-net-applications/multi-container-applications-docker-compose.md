@@ -2,12 +2,12 @@
 title: Определение многоконтейнерного приложения с помощью docker-compose.yml
 description: Как указать композицию микрослужб для многоконтейнерного приложения с помощью docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737079"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116543"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml
 
@@ -141,7 +141,7 @@ services:
 
 #### <a name="development-environments"></a>Среды разработки
 
-При разработке приложений важно иметь возможность запускать приложение в изолированной среде разработки. Можно создать такую среду с помощью команды CLI docker-compose или использовать Visual Studio, в котором команда docker-compose применяется внутренним образом.
+При разработке приложений важно иметь возможность запускать приложение в изолированной среде разработки. Вы можете создать такую среду с помощью команды CLI docker-compose или использовать Visual Studio, в котором команда docker-compose применяется внутренним образом.
 
 Файл docker-compose.yml позволяет настраивать и документировать все зависимости служб вашего приложения (другие службы, кэш, базы данных, очереди и т. п.). С помощью команды CLI docker-compose вы можете создавать и запускать один или несколько контейнеров для каждой зависимости одной командой (docker-compose up).
 
@@ -151,7 +151,7 @@ services:
 
 Важной частью любого процесса непрерывного развертывания (CD) или непрерывной интеграции (CI) являются модульные тесты и интеграционные тесты. Для этих автоматических тестов требуется изолированная среда, чтобы на них не влияли пользователи или какие-либо изменения данных в приложении.
 
-Используя Docker Compose, можно очень просто создавать и уничтожать такую изолированную среду с помощью нескольких команд, выполненных в командной строке, или скриптов; например, с помощью следующих команд:
+Используя Docker Compose, можно очень просто создавать и уничтожать такую изолированную среду с помощью нескольких команд, выполненных в командной строке, или скриптов, например, с помощью следующих команд:
 
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Для команды docker-compose необходимо, чтобы каждая строка в ENV-файле была в формате \<переменная\>=\<значение\>.
 
-Обратите внимание, что значения, установленные в среде выполнения, всегда переопределяют значения, определенные в ENV-файле. Аналогичным образом значения, переданные с помощью аргументов командной строки, тоже переопределяют значения по умолчанию, заданные в ENV-файле.
+Значения, установленные в среде выполнения, всегда переопределяют значения, определенные в ENV-файле. Аналогичным образом значения, переданные с помощью аргументов командной строки, тоже переопределяют значения по умолчанию, заданные в ENV-файле.
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -470,7 +470,7 @@ ENTRYPOINT ["dotnet", "run"]
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Создание оптимизированных образов Docker в ASP.NET Core**  
-  <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
+  <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
 - **Создание образов Docker для приложений .NET Core**  
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
