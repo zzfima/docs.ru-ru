@@ -86,4 +86,4 @@ ms.locfileid: "75714071"
    > [!TIP]
    > Если каталог, содержащий *dotnet.exe*, не находится в системном пути, найдите расположение этого файла, введя `where dotnet.exe` в окне консоли.
 
-Дополнительные сведения о создании пакетов NuGet см. в статье [How to Create a NuGet Package with Cross Platform Tools](../deploying/creating-nuget-packages.md) (Создание пакета NuGet с помощью кроссплатформенных средств).
+Дополнительные сведения о создании пакетов NuGet см. в статье [Как создать пакет NuGet с помощью средств интерфейса командной строки (CLI) .NET Core](../deploying/creating-nuget-packages.md).

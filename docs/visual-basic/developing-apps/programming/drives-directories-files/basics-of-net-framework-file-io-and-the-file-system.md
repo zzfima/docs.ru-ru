@@ -41,7 +41,7 @@ ms.locfileid: "74348935"
 
 - **Поиск**. Вы можете запрашивать и изменять положение в потоке.
 
-Для получения дополнительной информации см. [Composing Streams](../../../../standard/io/composing-streams.md).
+Для получения дополнительной информации см. [статью Создание потоков](../../../../standard/io/composing-streams.md).
 
 ## <a name="types-of-streams"></a>Типы потоков
 
@@ -110,5 +110,5 @@ ms.locfileid: "74348935"
 
 - [Составление потоков](../../../../standard/io/composing-streams.md)
 - [Файловый и потоковый ввод-вывод](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Асинхронный файловый ввод-вывод](../../../../standard/io/asynchronous-file-i-o.md)
 - [Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

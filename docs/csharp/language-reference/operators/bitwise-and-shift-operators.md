@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345346"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115826"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Побитовые операторы и операторы сдвига (справочник по C#)
 
@@ -60,7 +60,7 @@ ms.locfileid: "75345346"
 
 ## <a name="left-shift-operator-"></a>Оператор сдвига влево \<\<
 
-Оператор `<<` сдвигает левый операнд влево на количество битов, определенное правым операндом.
+Оператор `<<` сдвигает левый операнд влево на [количество битов, определенное правым операндом](#shift-count-of-the-shift-operators).
 
 Операция сдвига влево отбрасывает старшие биты, которые находятся за пределами диапазона типа результата, и задает позиции пустых битов низкого порядка, равные нулю, как показано в следующем примере:
 
@@ -74,7 +74,7 @@ ms.locfileid: "75345346"
 
 ## <a name="right-shift-operator-"></a>Оператор сдвига вправо >>
 
-Оператор `>>` сдвигает левый операнд вправо на количество битов, определенное правым операндом.
+Оператор `>>` сдвигает левый операнд вправо на [количество битов, определенное правым операндом](#shift-count-of-the-shift-operators).
 
 Операция сдвига вправо удаляет младшие разряды, как показано в следующем примере:
 
@@ -169,6 +169,9 @@ x = x op y
 В следующем примере продемонстрировано такое поведение.
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> Как показано в предыдущем примере, результат операции сдвига может быть ненулевым, даже если значение правого операнда больше числа битов в левом операнде.
 
 ## <a name="enumeration-logical-operators"></a>Логические операторы перечисления
 

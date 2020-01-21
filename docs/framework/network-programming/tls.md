@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196380"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937696"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
@@ -185,7 +185,7 @@ WCF использует тот же сетевой стек, что вся пл
 
 Если невозможно задать один или оба параметра `AppContext`, вы можете управлять протоколами безопасности, которые использует приложение, с помощью разделов реестра Windows, описанных в этом разделе. Использование одного или двух параметров `AppContext` может оказаться невозможным, если приложение выполняется в .NET Framework 4.5.2 либо более ранних версиях или если невозможно изменить файл конфигурации. Чтобы настроить безопасность с помощью реестра, не указывайте значение протокола безопасности в коде, так как это переопределит параметры в реестре.
 
-Имена разделов реестра схожи с соответствующими именами параметров `AppContext`, но не содержат `DontEnable` в начале имени. Например, параметру `AppContext` `DontEnableSchUseStrongCrypto` соответствует раздел реестра [SchUseStrongCrypto](#schusestrongcrypto).
+Имена разделов реестра схожи с соответствующими именами параметров `AppContext`, но не содержат `DontEnable` в начале имени. Например, параметру `AppContext``DontEnableSchUseStrongCrypto` соответствует раздел реестра [SchUseStrongCrypto](#schusestrongcrypto).
 
 Эти разделы доступны во всех версиях .NET Framework с последними обновлениями для системы безопасности. Дополнительные сведения см. в разделе [Обновление системы безопасности](#security-updates).
 
@@ -241,7 +241,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>Флаг SCH_USE_STRONG_CRYPTO
 
-Если флаг `SCH_USE_STRONG_CRYPTO` включен (по умолчанию с помощью параметра `AppContext` или в реестре Windows), .NET Framework использует его, когда приложение запрашивает протокол безопасности TLS. Флаг `SCH_USE_STRONG_CRYPTO` может быть включен по умолчанию с помощью параметра `AppContext` или реестра. Операционная система передает флаг `Schannel`, чтобы отключать известные ненадежные алгоритмы шифрования, наборы шифров, версии протоколов TLS и SSL, которые могут быть включены для улучшения взаимодействия. Дополнительные сведения можно найти в разделе
+Если флаг `SCH_USE_STRONG_CRYPTO` включен (по умолчанию с помощью параметра `AppContext` или в реестре Windows), .NET Framework использует его, когда приложение запрашивает протокол безопасности TLS. Флаг `SCH_USE_STRONG_CRYPTO` может быть включен по умолчанию с помощью параметра `AppContext` или реестра. Операционная система передает флаг `Schannel`, чтобы отключать известные ненадежные алгоритмы шифрования, наборы шифров, версии протоколов TLS и SSL, которые могут быть включены для улучшения взаимодействия. Дополнительные сведения можно найти в разделе 
 
 - [Secure Channel](/windows/desktop/SecAuthN/secure-channel)
 - [SCHANNEL_CRED structure](/windows/win32/api/schannel/ns-schannel-schannel_cred) (Структура SCHANNEL_CRED)
@@ -255,7 +255,7 @@ Windows Registry Editor Version 5.00
 Если нужно обновить .NET Framework, чтобы разрешить операционной системе выбирать подходящую версию TLS, установите как минимум следующее:
 
 - [пакет исправлений для .NET Framework за август 2017 г. (предварительная версия) для повышения качества](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/);
-- **или** [пакет исправлений для .NET Framework за сентябрь 2017 г. для повышения качества](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/).
+- **или**[пакет исправлений для .NET Framework за сентябрь 2017 г. для повышения качества](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/).
 
 См. также:
 

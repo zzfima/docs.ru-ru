@@ -4,16 +4,16 @@ description: Сведения о типах C#, допускающих знач
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740969"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964316"
 ---
 # <a name="nullable-value-types-c-reference"></a>Справочник по C#. Типы значений, допускающие значение NULL
 
-Тип значений, допускающий значение NULL, `T?` может представлять все значения своего [базового типа](../keywords/value-types.md) `T`, а также дополнительное значение [NULL](../keywords/null.md). Например, можно присвоить переменной `bool?` любое из следующих трех значений: `true`, `false` или `null`. Базовый тип значения `T` не может соответствовать типу значения, допускающему значение NULL.
+Тип значений, допускающий значение NULL, `T?` может представлять все значения своего [базового типа](../keywords/value-types.md) `T`, а также дополнительное значение [NULL](../keywords/null.md). Например, можно присвоить переменной `bool?` любое из следующих трех значений: `true`, `false` или `null`. Базовый тип значения `T` не может соответствовать типу значения, допускающему значение NULL.
 
 > [!NOTE]
 > В C# 8.0 появилась возможность использования ссылочных типов, допускающих значение NULL. Дополнительные сведения см. в статье [Ссылочные типы, допускающие значение NULL](../../nullable-references.md). Типы значений, допускающие значение NULL, доступны начиная с C# 2.
@@ -24,7 +24,7 @@ ms.locfileid: "73740969"
 
 ## <a name="declaration-and-assignment"></a>Назначение и объявление
 
-Так как тип значения можно неявно преобразовать в соответствующий тип значения, допускающий значение NULL, вы назначаете значение переменной такого типа значения так же, как для базового типа значения. Вы также можете присвоить значение `null`. Например:
+Так как тип значения можно неявно преобразовать в соответствующий тип значения, допускающий значение NULL, вы назначаете значение переменной такого типа значения так же, как для базового типа значения. Вы также можете присвоить значение `null`. Пример:
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "73740969"
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-Если вы хотите использовать [значение по умолчанию](../keywords/default-values-table.md) базового типа значения вместо `null`, воспользуйтесь методом <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
+Если вы хотите использовать [значение по умолчанию](default-values.md) базового типа значения вместо `null`, воспользуйтесь методом <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
 
 Вы можете явно привести тип значения, допускающий значение NULL, к типу, не допускающему значение NULL, как показано в примере ниже.
 
@@ -68,7 +68,7 @@ ms.locfileid: "73740969"
 
 ## <a name="lifted-operators"></a>Операторы с нулификацией
 
-Предопределенные унарные и бинарные операторы или любые перегруженные операторы, поддерживаемые типом значения `T`, также поддерживаются соответствующим типом значения, допускающим значение NULL, `T?`. Эти операторы, также называемые *операторами с нулификацией*, возвращают значение `null`, если один или оба операнда имеют значение `null`. В противном случае оператор использует содержащиеся значения операндов для вычисления результата. Например:
+Предопределенные унарные и бинарные операторы или любые перегруженные операторы, поддерживаемые типом значения `T`, также поддерживаются соответствующим типом значения, допускающим значение NULL, `T?`. Эти операторы, также называемые *операторами с нулификацией*, возвращают значение `null`, если один или оба операнда имеют значение `null`. В противном случае оператор использует содержащиеся значения операндов для вычисления результата. Пример:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -88,7 +88,7 @@ ms.locfileid: "73740969"
 
 ## <a name="boxing-and-unboxing"></a>Упаковка-преобразование и распаковка-преобразование
 
-Экземпляр типа значения, допускающего значение NULL, `T?` [упакован](../../programming-guide/types/boxing-and-unboxing.md) следующим образом:
+Экземпляр типа значения, допускающего значение NULL, `T?`[упакован](../../programming-guide/types/boxing-and-unboxing.md) следующим образом:
 
 - Если <xref:System.Nullable%601.HasValue%2A> возвращает `false`, создается пустая ссылка.
 - Если <xref:System.Nullable%601.HasValue%2A> возвращает `true`, упаковывается соответствующее значение базового типа `T`, а не экземпляр <xref:System.Nullable%601>.
@@ -133,7 +133,7 @@ ms.locfileid: "73740969"
 ## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
-- [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Что означает термин "расширенные"?)
+- [What exactly does 'lifted' mean?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean) (Что означает термин "расширенные"?)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

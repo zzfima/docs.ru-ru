@@ -4,16 +4,16 @@ description: Создания значения по умолчанию для т
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712719"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964621"
 ---
 # <a name="default-operator-c-reference"></a>Оператор default (справочник по C#)
 
-Оператор `default` создает значение [по умолчанию](../keywords/default-values-table.md) для типа. Оператор `default` принимает в качестве аргумента имя типа или параметр типа.
+Оператор `default` создает значение [по умолчанию](../builtin-types/default-values.md) для типа. Оператор `default` принимает в качестве аргумента имя типа или параметр типа.
 
 В следующем примере показано применение оператора `default`.
 
@@ -44,5 +44,5 @@ ms.locfileid: "75712719"
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
-- [Таблица значений по умолчанию](../keywords/default-values-table.md)
+- [Значения по умолчанию типов C#](../builtin-types/default-values.md)
 - [Универсальные шаблоны в .NET](../../../standard/generics/index.md)

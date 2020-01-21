@@ -42,7 +42,7 @@ ms.locfileid: "73091588"
 Вы также можете работать с отдельными битами целочисленного значения с помощью класса <xref:System.BitConverter?displayProperty=nameWithType>.  
 
 > [!NOTE]  
-> Целочисленные типы без знака не совместимы с CLS. Для получения дополнительной информации см. [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md).
+> Целочисленные типы без знака не совместимы с CLS. Для получения дополнительной информации см. [ статью Независимость от языка и независимые от языка компоненты](language-independence-and-language-independent-components.md).
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -96,4 +96,4 @@ ms.locfileid: "73091588"
 ## <a name="see-also"></a>См. также
 
 - [Основные сведения о приложениях .NET Framework](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [Строки стандартных числовых форматов](base-types/standard-numeric-format-strings.md)
