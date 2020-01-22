@@ -3,18 +3,18 @@ title: Технологии .NET Framework, недоступные в .NET Core
 description: Узнайте о технологиях .NET Framework, недоступных в .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777301"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936948"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Технологии .NET Framework, недоступные в .NET Core
 
 Некоторые технологии для библиотек .NET Framework недоступны для использования с .NET Core, например домены приложений, удаленное взаимодействие, управление доступом для кода (CAS), прозрачность безопасности и System.EnterpriseServices. Если в библиотеках применяются такие технологии, рассмотрите альтернативные подходы, описанные ниже. Дополнительные сведения о совместимости API см. в статье [Критические изменения .NET Core](../compatibility/breaking-changes.md).
 
-Тот факт, что API или технология сейчас не реализуются, не означает, что они намеренно не поддерживаются. Выполните поиск в репозиториях GitHub по .NET Core, чтобы выяснить, не является ли конкретная проблема, с которой вы столкнулись, преднамеренной. Если вы не нашли такого признака, отправьте запрос в [репозиторий dotnet/runtime](https://github.com/dotnet/runtime/issues), чтобы запросить конкретные API и функции. Проблемы при попытке переноса помечены меткой [port-to-core](https://github.com/dotnet/runtime/labels/port-to-core).
+Тот факт, что API или технология сейчас не реализуются, не означает, что они намеренно не поддерживаются. Выполните поиск в репозиториях GitHub по .NET Core, чтобы выяснить, не является ли конкретная проблема, с которой вы столкнулись, преднамеренной. Если вы не нашли такого признака, отправьте запрос на конкретные API и функции в [репозиторий dotnet/runtime](https://github.com/dotnet/runtime/issues). Проблемы при попытке переноса помечены меткой [port-to-core](https://github.com/dotnet/runtime/labels/port-to-core).
 
 ## <a name="appdomains"></a>Домены приложений
 
@@ -46,7 +46,6 @@ ms.locfileid: "75777301"
 
 Платформа .NET Core не поддерживает System.EnterpriseServices (COM+).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="see-also"></a>См. также
 
->[!div class="nextstepaction"]
->[Анализ зависимостей](third-party-deps.md)
+- [Общие сведения о переносе кода в .NET Core из .NET Framework](../porting/index.md)

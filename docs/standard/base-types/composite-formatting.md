@@ -88,8 +88,8 @@ ms.locfileid: "75338514"
 |Тип или категория типов|См.|  
 |---------------------------|---------|  
 |Типы даты и времени (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Типы перечисления (все типы, производные от <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Числовые типы (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Типы перечисления (все типы, производные от <xref:System.Enum?displayProperty=nameWithType>)|[Строки форматов перечисления](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Числовые типы (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Строки стандартного формата TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -170,4 +170,4 @@ ms.locfileid: "75338514"
 - [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Строки стандартного формата TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Строки форматов перечисления](../../../docs/standard/base-types/enumeration-format-strings.md)

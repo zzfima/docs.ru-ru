@@ -34,7 +34,7 @@ ms.locfileid: "73132914"
  [Смена регистра](../../../docs/standard/base-types/changing-case.md)  
  Описывает изменение регистра для символов в строке.  
   
- [Using the StringBuilder class](../../../docs/standard/base-types/stringbuilder.md) (Использование класса StringBuilder)  
+ [Использование класса StringBuilder в .NET](../../../docs/standard/base-types/stringbuilder.md)  
  Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.  
   
  [Практическое руководство. Выполнение базовых операций со строками](../../../docs/standard/base-types/basic-manipulations.md)  

@@ -92,5 +92,5 @@ ms.locfileid: "73127537"
 - [Практическое руководство. Возвращение значения из задачи](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)
 - [Потоки и работа с потоками](threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [Асинхронный файловый ввод-вывод](../io/asynchronous-file-i-o.md)
 - [Таймеры](timers.md)

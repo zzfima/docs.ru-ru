@@ -2,16 +2,21 @@
 title: Критические изменения Visual Basic — .NET Core
 description: Список критических изменений в языке Visual Basic, используемом с .NET Core.
 ms.date: 09/20/2019
-ms.openlocfilehash: e06f7a3d896a1f40f64c083f51997a231bc2f29d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: e5a8070bdcf69df3aab8efa45968e226dc8054d6
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567430"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116372"
 ---
 # <a name="visual-basic-breaking-changes"></a>Критические изменения Visual Basic
 
-Ниже приведен список критических изменений в Visual Basic по версиям .NET Core.
+Ниже приведен список критических изменений в Visual Basic.
+
+- [Типы из пространства имен Microsoft.VisualBasic.ApplicationServices теперь недоступны](#types-in-microsoftvisualbasicapplicationservices-namespace-not-available)
+- [Типы из пространства имен Microsoft.VisualBasic.Devices теперь недоступны](#types-in-microsoftvisualbasicdevices-namespace-not-available)
+- [Типы из пространства имен Microsoft.VisualBasic.MyServices теперь недоступны](#types-in-microsoftvisualbasicmyservices-namespace-not-available)
+- [Microsoft.VisualBasic.Constants.vbNewLine устарел](#microsoftvisualbasicconstantsvbnewline-is-obsolete)
 
 ## <a name="net-core-30-preview-9"></a>.NET Core 3.0 (предварительная версия 9)
 
@@ -24,6 +29,8 @@ ms.locfileid: "74567430"
 ***
 
 [!INCLUDE[Types in Microsoft.VisualBasic.MyServices namespace not available](~/includes/core-changes/visualbasic/3.0/microsoft.visualbasic.myservices-unavailable.md)]
+
+***
 
 ## <a name="net-core-30-preview-8"></a>.NET Core 3.0 (предварительная версия 8)
 

@@ -55,4 +55,4 @@ ms.locfileid: "75708182"
 
 - [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)
 - [Составление потоков](../../../docs/standard/io/composing-streams.md)
-- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Асинхронный файловый ввод-вывод](../../../docs/standard/io/asynchronous-file-i-o.md)

@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 265fc5bea97bf85bcb9cc8111f915e14297d9957
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3f0e8fb4d0d727b40cff5de7cfdc7529bf32dac4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643877"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937082"
 ---
-### <a name="switchsystemwindowsformsdonotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>Параметр совместимости Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl не поддерживается
+### <a name="donotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>Параметр совместимости DoNotLoadLatestRichEditControl не поддерживается
 
 Параметр совместимости `Switch.System.Windows.Forms.UseLegacyImages`, появившийся в .NET Framework 4.7.1, не поддерживается в Windows Forms в .NET Core 3.0.
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643877"
 
 3.0, предварительная версия 9
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Удалите параметр. Он не поддерживается, и альтернативного варианта нет.
 

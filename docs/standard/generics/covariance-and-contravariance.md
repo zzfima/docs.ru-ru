@@ -164,7 +164,7 @@ ms.locfileid: "75708401"
   
 ## <a name="see-also"></a>См. также
 
-- [Covariance and Contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md) (Ковариантность и контрвариантность (C#))
-- [Covariance and Contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md) (Ковариантность и контрвариантность (Visual Basic))
+- [Ковариация и контрвариантность (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [Ковариация и контрвариантность (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [Вариативность в делегатах (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [Вариативность в делегатах (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

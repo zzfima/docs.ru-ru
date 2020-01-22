@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342853"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936928"
 ---
 # <a name="whats-new-in-net-core-31"></a>Новые возможности .NET Core 3.1
 
@@ -72,4 +72,4 @@ Visual Studio для Mac также поддерживает и содержит
 ## <a name="next-steps"></a>Следующие шаги
 
 - [Изучите критические изменения при обновлении с .NET Core 3.0 и до NET Core 3.1.](../compatibility/3.0-3.1.md)
-- [Изучите критические отличия между версиями .NET Framework и .NET Core 3.0 для приложений Windows Forms.](../porting/winforms-breaking-changes.md)
+- [Изучите критические отличия между версиями NET Core 3.1 для приложений Windows Forms.](../compatibility/winforms.md#net-core-31)

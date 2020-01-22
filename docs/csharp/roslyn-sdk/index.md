@@ -64,9 +64,9 @@ ms.locfileid: "76163141"
 
 - [Изучение кода с помощью визуализатора синтаксиса](syntax-visualizer.md)
 - [Understand the .NET Compiler Platform SDK model](compiler-api-model.md) (Сведения о модели SDK для .NET Compiler Platform)
-- [Work with syntax](work-with-syntax.md) (Работа с синтаксисом)
-- [Work with semantics](work-with-semantics.md) (Работа с семантикой)
-- [Work with a workspace](work-with-workspace.md) (Использование рабочей области)
+- [Работа с синтаксисом](work-with-syntax.md)
+- [Работа с семантикой](work-with-semantics.md)
+- [Использование рабочей области](work-with-workspace.md)
 
 Чтобы приступить к работе, потребуется установить **пакет SDK для .NET Compiler Platform**:
 

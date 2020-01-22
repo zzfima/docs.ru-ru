@@ -86,7 +86,7 @@ ms.locfileid: "75348074"
 
 ## <a name="see-also"></a>См. также
 
-- [Parsing Strings](parsing-strings.md)
+- [Анализ строк в .NET](parsing-strings.md)
 - [Типы форматирования](formatting-types.md)
 - [Преобразование типов в .NET](type-conversion.md)
 - [Стандартные форматы даты и времени](standard-date-and-time-format-strings.md)

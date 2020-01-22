@@ -163,6 +163,6 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
 ## <a name="see-also"></a>См. также
 
 - [Как создать пользовательские исключения](how-to-create-user-defined-exceptions.md)
-- [Creating Satellite Assemblies for Desktop Apps](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) (Создание вспомогательных сборок для классических приложений)
+- [Создание вспомогательных сборок для приложений для настольных систем](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [base (справочник по C#)](../../csharp/language-reference/keywords/base.md)
 - [this (справочник по C#)](../../csharp/language-reference/keywords/this.md)

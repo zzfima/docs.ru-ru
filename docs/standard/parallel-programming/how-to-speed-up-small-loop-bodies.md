@@ -28,6 +28,6 @@ ms.locfileid: "73139751"
 
 - [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
-- [Iterators (C#)](../../csharp/programming-guide/concepts/iterators.md) (Итераторы (C#))
-- [Iterators (Visual Basic)](../../visual-basic/programming-guide/concepts/iterators.md) (Итераторы (Visual Basic))
+- [Итераторы (C#)](../../csharp/programming-guide/concepts/iterators.md)
+- [Итераторы (Visual Basic)](../../visual-basic/programming-guide/concepts/iterators.md)
 - [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
