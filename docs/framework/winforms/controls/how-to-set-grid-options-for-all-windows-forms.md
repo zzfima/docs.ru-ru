@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Установка параметров сетки для всех форм Windows Forms
+title: Настройка параметров сетки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -11,12 +11,12 @@ ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5a69bbd25677e91d0a0c792a1e3c67f948fc90cb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 14934763e6f17948dfc0494adae2a22d8352580d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460822"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744846"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Как задать параметры сетки для всех Windows Forms
 
@@ -30,6 +30,6 @@ ms.locfileid: "73460822"
 
    В области справа под заголовком **Параметры макета** можно задать параметры сетки по умолчанию для всех создаваемых форм. Эти параметры включают размер сетки, способ привязки элементов управления к нему и то, включен ли он по умолчанию. Кроме того, можно выбирать между режимами макета **SnapToGrid** и **линии привязки** . Дополнительные сведения о линиях привязки см. в разделе [Пошаговое руководство. Упорядочивание элементов управления в Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Параметры: конструктор Windows Forms](/visualstudio/ide/reference/options-windows-forms-designer)

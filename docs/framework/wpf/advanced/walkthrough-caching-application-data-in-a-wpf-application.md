@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Кэширование данных приложения WPF
+title: Кэширование данных приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b7d999f94e2f2ae410a16e537d51c0f890def4e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715890"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728056"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Пошаговое руководство. Кэширование данных приложения WPF
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.
@@ -40,7 +40,7 @@ ms.locfileid: "74715890"
 
 - Мониторинг пути к кэшированному файлу и уведомление экземпляра кэша об изменениях отслеживаемого элемента.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
  Для выполнения данного пошагового руководства требуется:
 
 - Visual Studio 2010.

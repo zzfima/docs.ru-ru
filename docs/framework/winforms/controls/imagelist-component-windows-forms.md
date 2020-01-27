@@ -1,16 +1,16 @@
 ---
-title: Компонент ImageList (Windows Forms)
+title: Компонент ImageList
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ImageList component [Windows Forms]
 - image controls
 ms.assetid: 83b48634-782b-464d-9b7d-568dc6e0bef2
-ms.openlocfilehash: 61939c427a8a74ef85f269d9e8788d4c3c3b3035
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2b540592f4e92b27e5e7cf8d92b3c2a123f83b4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971159"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728043"
 ---
 # <a name="imagelist-component-windows-forms"></a>Компонент ImageList (Windows Forms)
 Компонент `ImageList` в Windows Forms используется для хранения изображений, которые затем будут отображаться элементами управления. Список изображений позволяет написать код для создания единого согласованного каталога изображений.  
@@ -19,12 +19,12 @@ ms.locfileid: "61971159"
  [Общие сведения о компоненте ImageList](imagelist-component-overview-windows-forms.md)  
  Описание компонента, его основных возможностей и свойств.  
   
- [Практическое руководство. Добавление или удаление изображений с помощью компонента ImageList в Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)  
+ [Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)  
  Инструкции по добавлению и удалению изображений в списке изображений.  
   
- Также см. раздел [Как Добавление или удаление изображений из компонента ImageList с помощью конструктора](how-to-add-or-remove-imagelist-images-with-the-designer.md).  
+ См. также [руководство. Добавление и удаление изображений ImageList с помощью конструктора](how-to-add-or-remove-imagelist-images-with-the-designer.md).  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Forms.ImageList>  
  Описание класса и всех его членов.  
   

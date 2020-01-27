@@ -1,5 +1,5 @@
 ---
-title: Элемент управления MaskedTextBox (Windows Forms)
+title: Элемент управления MaskedTextBox
 ms.date: 03/30/2017
 f1_keywords:
 - MaskedTextBox
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e46c5b5ec670a58b571703e9920cb3ee90a13aa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780644"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744958"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>Элемент управления MaskedTextBox (Windows Forms)
-В этом разделе содержит ссылки на другие о `MaskedTextBox` элемента управления.  
+В этом разделе содержатся ссылки на другие сведения об элементе управления `MaskedTextBox`.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Пошаговое руководство: Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
- Демонстрирует ключевые действия `MaskedTextBox` элемента управления.  
+ [Пример. Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
+ Демонстрирует основные возможности элемента управления `MaskedTextBox`.  
   
- [Практическое руководство. Привязка данных к элементу управления MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
- Описание способа изменения формата данных, когда данные в базе данных не соответствует формату, ожидаемому определения маски.  
+ [Практическое руководство. Связывание данных с элементом управления MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
+ Демонстрирует, как переформатировать данные, если данные в базе данных не соответствуют формату, ожидаемому определением маски.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Forms.MaskedTextBox>  
- Основной класс для реализации элемента управления текста с маской.  
+ Основной класс для реализации элемента управления "текстовое поле с маской".  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  

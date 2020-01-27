@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Проверка данных, вводимых с помощью элемента управления DataGrid, в Windows Forms
+title: Проверка входных данных с помощью элемента управления DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3958089007401d2e977c9c96f07c9196e6216596
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796478"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728295"
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Практическое руководство. Проверка данных, вводимых с помощью элемента управления DataGrid, в Windows Forms
 
 > [!NOTE]
 > Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
-Существует два типа проверки входных данных, доступных для Windows Forms <xref:System.Windows.Forms.DataGrid> элемента управления. Если пользователь пытается получить введите значение, которое относится к типу данных неприемлемой для ячейки, например, строку в целое число, новое неправильное значение заменяется старое значение. Такого рода проверку входных данных выполняется автоматически и не могут быть изменены.
+Для элемента управления Windows Forms <xref:System.Windows.Forms.DataGrid> доступны два типа проверки входных данных. Если пользователь пытается ввести значение, имеющее недопустимый тип данных для ячейки, например строку в целое число, новое недопустимое значение заменяется на старое значение. Такой тип проверки ввода выполняется автоматически и не может быть настроен.
 
-Проверки входных данных другого типа может использоваться для отклонения любых недопустимых значений, например 0 значение в поле, которое должно быть больше или равно 1, либо неподходящей строки. Это делается в наборе данных, написав обработчик событий для <xref:System.Data.DataTable.ColumnChanging> или <xref:System.Data.DataTable.RowChanging> событий. В примере ниже используется <xref:System.Data.DataTable.ColumnChanging> события так, как недопустимые значения запрещены для столбца «Продукт» в частности. Можно использовать <xref:System.Data.DataTable.RowChanging> событие для проверки, что значение столбца «Дата окончания» более поздней, чем столбец «Дата начала» в той же строке.
+Другой тип проверки ввода можно использовать для отклонения любых неприемлемых данных, например значения 0 в поле, которое должно быть больше или равно 1, или недопустимой строки. Это делается в наборе данных путем написания обработчика событий для события <xref:System.Data.DataTable.ColumnChanging> или <xref:System.Data.DataTable.RowChanging>. В приведенном ниже примере используется событие <xref:System.Data.DataTable.ColumnChanging>, поскольку неприемлемое значение не разрешено для столбца «Product» в частности. Событие <xref:System.Data.DataTable.RowChanging> можно использовать для проверки того, что значение столбца "Дата окончания" позже, чем столбец "Дата начала" в той же строке.
 
 ## <a name="to-validate-user-input"></a>Проверка вводимых пользователем данных
 
-1. Написание кода для обработки <xref:System.Data.DataTable.ColumnChanging> событий для соответствующей таблицы. При обнаружении несоответствия вводимых данных, вызвать <xref:System.Data.DataRow.SetColumnError%2A> метод <xref:System.Data.DataRow> объекта.
+1. Напишите код, обрабатывающий событие <xref:System.Data.DataTable.ColumnChanging> для соответствующей таблицы. При обнаружении недопустимых входных данных вызовите метод <xref:System.Data.DataRow.SetColumnError%2A> объекта <xref:System.Data.DataRow>.
 
     ```vb
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _
@@ -68,7 +68,7 @@ ms.locfileid: "61796478"
 
 2. Подключите обработчик событий к событию.
 
-    Поместите следующий код либо в формы <xref:System.Windows.Forms.Form.Load> события или его конструктор.
+    Поместите следующий код в событие <xref:System.Windows.Forms.Form.Load> формы или в конструктор.
 
     ```vb
     ' Assumes the grid is bound to a dataset called customersDataSet1
@@ -84,7 +84,7 @@ ms.locfileid: "61796478"
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>

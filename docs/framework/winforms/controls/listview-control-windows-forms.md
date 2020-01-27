@@ -1,5 +1,5 @@
 ---
-title: Элемент управления ListView (Windows Forms)
+title: Элемент управления ListView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lists
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: a5f20ec34a1b4b41ec1aee667b5d4bfb0c3eebb1
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 009739f78f334d09a9f7e4f0e9f171669014b909
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960355"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745142"
 ---
 # <a name="listview-control-windows-forms"></a>Элемент управления ListView (Windows Forms)
 Элемент управления `ListView` Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)  
  Описывается элемент управления, его основные возможности и свойства.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74960355"
   
 - [Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>Справочники  
+## <a name="reference"></a>Справочные сведения  
  Класс <xref:System.Windows.Forms.ListView>  
  Описание класса и всех его членов.  
   

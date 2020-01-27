@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms
+title: Отображение веб-ссылок с помощью элемента управления RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: ce71981f7b233d3e168689c766128646eed3e981
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 78a07a250744018f121b03f2973b1661ed6bf764
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046190"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745529"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms
 
-Элемент управления <xref:System.Windows.Forms.RichTextBox> Windows Forms может отображать веб-ссылки как цветные и подчеркнутые. Можно написать код, открывающий окно браузера, в котором отображается веб-сайт, указанный в тексте ссылки при щелчке ссылки.
+Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> может отображать веб-ссылки как цветные и подчеркнутые. Можно написать код, открывающий окно браузера, в котором отображается веб-сайт, указанный в тексте ссылки при щелчке ссылки.
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Ссылка на веб-страницу с помощью элемента управления RichTextBox
 
@@ -27,14 +27,14 @@ ms.locfileid: "70046190"
 
 2. Убедитесь, <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> что свойство имеет `true` значение (по умолчанию).
 
-3. Создайте новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.
+3. Создайте новый глобальный экземпляр объекта <xref:System.Diagnostics.Process>.
 
 4. Напишите обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> события, которое отправляет браузеру нужный текст.
 
-    В приведенном ниже <xref:System.Windows.Forms.RichTextBox.LinkClicked> примере событие открывает экземпляр Internet Explorer по URL-адресу, указанному <xref:System.Windows.Forms.RichTextBox.Text%2A> в свойстве <xref:System.Windows.Forms.RichTextBox> элемента управления. В этом примере предполагается наличие формы <xref:System.Windows.Forms.RichTextBox> с элементом управления.
+    В приведенном ниже примере событие <xref:System.Windows.Forms.RichTextBox.LinkClicked> открывает экземпляр Internet Explorer по URL-адресу, указанному в свойстве <xref:System.Windows.Forms.RichTextBox.Text%2A> элемента управления <xref:System.Windows.Forms.RichTextBox>. В этом примере предполагается, что форма имеет элемент управления <xref:System.Windows.Forms.RichTextBox>.
 
     > [!IMPORTANT]
-    > При вызове <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метода возникает <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).
+    > При вызове метода <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> возникает исключение <xref:System.Security.SecurityException>, если код выполняется в контексте частичного доверия из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -75,7 +75,7 @@ ms.locfileid: "70046190"
        }
     ```
 
-    (Визуальный C++элемент) Для этого необходимо инициализировать `p`процесс, добавив в конструктор формы следующую инструкцию:
+    (Визуальный C++элемент) Необходимо инициализировать процесс `p`, который можно сделать, включив в конструктор формы следующую инструкцию:
 
     ```cpp
     p = gcnew System::Diagnostics::Process();
@@ -117,7 +117,7 @@ ms.locfileid: "70046190"
     }
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>

@@ -1,5 +1,5 @@
 ---
-title: Элемент управления ComboBox (Windows Forms)
+title: Элемент управления ComboBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drop-down lists [Windows Forms], Windows Forms
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df56a777c40cd41af6086e8adbcb0a733660df6e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956043"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746186"
 ---
 # <a name="combobox-control-windows-forms"></a>Элемент управления ComboBox (Windows Forms)
-Windows Forms `ComboBox` элемент управления используется для отображения данных в раскрывающемся поле со списком. По умолчанию `ComboBox` элемент управления отображается в виде двух частей: верхняя часть представляет собой текстовое поле, которое пользователь может ввести элемент списка. Вторая часть — полем со списком, отображающий список элементов, из которых пользователь может выбрать его.  
+Элемент управления `ComboBox` Windows Forms используется для вывода данных в раскрывающемся поле со списком. По умолчанию элемент управления `ComboBox` отображается в двух частях: Верхняя часть — это текстовое поле, позволяющее пользователю ввести элемент списка. Вторая часть — это поле со списком, в котором отображается список элементов, из которых пользователь может выбрать один из них.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления ComboBox](combobox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Индивидуальное в элементе управления ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
- Демонстрирует пользовательское рисование текста в `ComboBox` элемента управления.  
+ [Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ Демонстрирует пользовательское рисование текста в элементе управления `ComboBox`.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  Класс <xref:System.Windows.Forms.ComboBox>  
  Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)  
- Предоставляет список вещей, которые можно сделать с помощью списков, поля со списком и списки.  
+ Предоставляет список действий, которые можно выполнить с помощью списков, полей со списками и списков с установленными флажками.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
