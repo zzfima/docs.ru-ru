@@ -1,5 +1,5 @@
 ---
-title: Элемент управления ListBox (Windows Forms)
+title: Элемент управления ListBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms]
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36ae8140a2d81aafe983b5f1f56e180a0f91e96c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012819"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745174"
 ---
-# <a name="listbox-control-windows-forms"></a><span data-ttu-id="18e62-102">Элемент управления ListBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="18e62-102">ListBox Control (Windows Forms)</span></span>
-<span data-ttu-id="18e62-103">Windows Forms `ListBox` элемент управления отображает список элементов, из которых пользователь может выбрать один или несколько.</span><span class="sxs-lookup"><span data-stu-id="18e62-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  
+# <a name="listbox-control-windows-forms"></a><span data-ttu-id="37e6f-102">Элемент управления ListBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="37e6f-102">ListBox Control (Windows Forms)</span></span>
+<span data-ttu-id="37e6f-103">Элемент управления `ListBox` Windows Forms отображает список элементов, из которых пользователь может выбрать один или несколько.</span><span class="sxs-lookup"><span data-stu-id="37e6f-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="18e62-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="18e62-104">In This Section</span></span>  
- [<span data-ttu-id="18e62-105">Общие сведения об элементе управления ListBox</span><span class="sxs-lookup"><span data-stu-id="18e62-105">ListBox Control Overview</span></span>](listbox-control-overview-windows-forms.md)  
- <span data-ttu-id="18e62-106">Описание элемента управления, его основных возможностей и свойств.</span><span class="sxs-lookup"><span data-stu-id="18e62-106">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="37e6f-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="37e6f-104">In This Section</span></span>  
+ [<span data-ttu-id="37e6f-105">Общие сведения об элементе управления ListBox</span><span class="sxs-lookup"><span data-stu-id="37e6f-105">ListBox Control Overview</span></span>](listbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="37e6f-106">Описание элемента управления, его основных возможностей и свойств.</span><span class="sxs-lookup"><span data-stu-id="37e6f-106">Explains what this control is and its key features and properties.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="18e62-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="18e62-107">Reference</span></span>  
- <span data-ttu-id="18e62-108">Класс <xref:System.Windows.Forms.ListBox></span><span class="sxs-lookup"><span data-stu-id="18e62-108"><xref:System.Windows.Forms.ListBox> class</span></span>  
- <span data-ttu-id="18e62-109">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="18e62-109">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="37e6f-107">Справочные сведения</span><span class="sxs-lookup"><span data-stu-id="37e6f-107">Reference</span></span>  
+ <span data-ttu-id="37e6f-108">Класс <xref:System.Windows.Forms.ListBox></span><span class="sxs-lookup"><span data-stu-id="37e6f-108"><xref:System.Windows.Forms.ListBox> class</span></span>  
+ <span data-ttu-id="37e6f-109">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="37e6f-109">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="18e62-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="18e62-110">Related Sections</span></span>  
- [<span data-ttu-id="18e62-111">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="18e62-111">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
- <span data-ttu-id="18e62-112">Предоставляет список вещей, которые можно сделать с помощью списков, поля со списком и списки.</span><span class="sxs-lookup"><span data-stu-id="18e62-112">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="37e6f-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="37e6f-110">Related Sections</span></span>  
+ [<span data-ttu-id="37e6f-111">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="37e6f-111">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="37e6f-112">Предоставляет список действий, которые можно выполнить с помощью списков, полей со списками и списков с установленными флажками.</span><span class="sxs-lookup"><span data-stu-id="37e6f-112">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>

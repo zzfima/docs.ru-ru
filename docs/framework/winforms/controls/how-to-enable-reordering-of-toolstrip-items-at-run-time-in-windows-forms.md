@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Разрешение переупорядочения элементов ToolStrip во время выполнения в Windows Forms
+title: Практическое руководство. Разрешение переупорядочения элементов ToolStrip во время выполнения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - toolbars [Windows Forms], rearranging controls
 - ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
-ms.openlocfilehash: 46a5a70206e7620341a484912c7fada82d64747a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44b52bf997819f090569d08eb395d8af18f61370
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609853"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745485"
 ---
-# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a><span data-ttu-id="665ad-102">Практическое руководство. Разрешение переупорядочения элементов ToolStrip во время выполнения в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="665ad-102">How to: Enable Reordering of ToolStrip Items at Run Time in Windows Forms</span></span>
-<span data-ttu-id="665ad-103">Вы можете включить пользователя для изменения порядка <xref:System.Windows.Forms.ToolStripItem> элементов управления в <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="665ad-103">You can enable the user to rearrange <xref:System.Windows.Forms.ToolStripItem> controls on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a><span data-ttu-id="e191c-102">Практическое руководство. Разрешение переупорядочения элементов ToolStrip во время выполнения в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e191c-102">How to: Enable Reordering of ToolStrip Items at Run Time in Windows Forms</span></span>
+<span data-ttu-id="e191c-103">Вы можете разрешить пользователю изменять порядок элементов управления <xref:System.Windows.Forms.ToolStripItem> на <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="e191c-103">You can enable the user to rearrange <xref:System.Windows.Forms.ToolStripItem> controls on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a><span data-ttu-id="665ad-104">Для включения элементов ToolStripItem во время выполнения</span><span class="sxs-lookup"><span data-stu-id="665ad-104">To enable ToolStripItem rearrangement at run time</span></span>  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a><span data-ttu-id="e191c-104">Включение перестановки элементов ToolStripItem во время выполнения</span><span class="sxs-lookup"><span data-stu-id="e191c-104">To enable ToolStripItem rearrangement at run time</span></span>  
   
-- <span data-ttu-id="665ad-105">Задайте для свойства <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="665ad-105">Set the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property to `true`.</span></span> <span data-ttu-id="665ad-106">По умолчанию <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> является `false`.</span><span class="sxs-lookup"><span data-stu-id="665ad-106">By default, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> is `false`.</span></span>  
+- <span data-ttu-id="e191c-105">Задайте для свойства <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="e191c-105">Set the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property to `true`.</span></span> <span data-ttu-id="e191c-106">По умолчанию <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.</span><span class="sxs-lookup"><span data-stu-id="e191c-106">By default, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> is `false`.</span></span>  
   
-     <span data-ttu-id="665ad-107">Во время выполнения пользователь удерживает клавишу ALT и левую кнопку мыши для перетаскивания <xref:System.Windows.Forms.ToolStripItem> в другое расположение на <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="665ad-107">At run time, the user holds down the ALT key and the left mouse button to drag a <xref:System.Windows.Forms.ToolStripItem> to a different location on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+     <span data-ttu-id="e191c-107">Во время выполнения пользователь удерживает нажатой клавишу ALT и левую кнопку мыши для перетаскивания <xref:System.Windows.Forms.ToolStripItem> в другое место на <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="e191c-107">At run time, the user holds down the ALT key and the left mouse button to drag a <xref:System.Windows.Forms.ToolStripItem> to a different location on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  
@@ -34,10 +34,10 @@ ms.locfileid: "64609853"
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="665ad-108">См. также</span><span class="sxs-lookup"><span data-stu-id="665ad-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e191c-108">См. также:</span><span class="sxs-lookup"><span data-stu-id="e191c-108">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>
-- [<span data-ttu-id="665ad-109">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="665ad-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="665ad-110">Архитектура элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="665ad-110">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="665ad-111">Технологии, положенные в основу работы элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="665ad-111">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="e191c-109">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="e191c-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="e191c-110">Архитектура элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="e191c-110">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="e191c-111">Технологии, положенные в основу работы элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="e191c-111">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
