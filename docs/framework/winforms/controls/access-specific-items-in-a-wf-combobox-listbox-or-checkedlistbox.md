@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms
+title: Доступ к конкретным элементам в элементе управления ComboBox, ListBox или CheckedListBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67673ec7f136f1466d4fd091e691324c53e7de06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011831"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746323"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms
-Доступ к определенным элементам в поле со списком Windows Forms, поле со списком или список с установленными флажками является важнейшей задачей. Он позволяет программно определить с помощью списка, в любом месте.  
+Получение доступа к конкретным элементам в поле со списком Windows Forms, списка или списка флажков является важнейшей задачей. Он позволяет программно определить, что находится в списке, в любой заданной позиции.  
   
-### <a name="to-access-a-specific-item"></a>Для доступа к определенного элемента  
+### <a name="to-access-a-specific-item"></a>Доступ к определенному элементу  
   
-1. Запрос `Items` коллекции с помощью индекса определенного элемента:  
+1. Запросите коллекцию `Items`, используя индекс указанного элемента:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,7 +51,7 @@ ms.locfileid: "62011831"
        }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

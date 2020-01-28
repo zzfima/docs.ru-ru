@@ -1,5 +1,6 @@
 ---
-title: Пошаговое руководство. Упорядочение содержимого WPF для формы Windows Forms во время разработки
+title: Размещение содержимого WPF на Windows Forms во время разработки
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -12,18 +13,18 @@ ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c9db49ae299870479a5cfa6372c25d793a92ff8f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5a6b12def45052e117fb149555946ea42d6cd3c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460680"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746816"
 ---
 # <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. размещение содержимого WPF на Windows Forms во время разработки
 
 В этой статье показано, как использовать функции макета Windows Forms, такие как привязка и линии привязки, для упорядочения элементов управления Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -46,7 +47,7 @@ ms.locfileid: "73460680"
 
 4. Присвойте свойству <xref:System.Windows.Controls.Control.Background%2A> значение **Blue**.
 
-5. Выполните построение проекта.
+5. Постройте проект.
 
 ## <a name="host-wpf-controls-in-a-layout-panel"></a>Размещение элементов управления WPF на панели макета
 
@@ -128,7 +129,7 @@ ms.locfileid: "73460680"
 
     Дополнительные сведения см. [в разделе инструкции. привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

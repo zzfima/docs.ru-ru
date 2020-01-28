@@ -1,5 +1,5 @@
 ---
-title: Windows Forms и неуправляемые приложения
+title: Неуправляемые приложения
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls [Windows Forms]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, unmanaged
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
-ms.openlocfilehash: 65465f22b1806d385523c894cce2103afe33c2f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17dc20653d1628dfd460a9891e1b0a21c0ebecbd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746734"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746364"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Windows Forms и неуправляемые приложения
 Приложения и элементы управления Windows Forms могут взаимодействовать с неуправляемыми приложениями, но с некоторыми оговорками. В следующих разделах описываются сценарии и конфигурации, которые поддерживаются и не поддерживаются элементами управления и приложениями Windows Forms.  
@@ -25,12 +25,12 @@ ms.locfileid: "61746734"
  [Практическое руководство. Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)  
  Пример кода, который демонстрирует использование метода <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> для запуска формы Windows Forms в неуправляемом приложении.  
   
- [Практическое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  Пример кода, демонстрирующий выполнение формы Windows Forms в отдельном потоке.  
   
- Также см. в разделе [Пошаговое руководство: Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
+ См. также [Пошаговое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  
  Используется для создания отдельного потока для формы Windows Forms.  
   

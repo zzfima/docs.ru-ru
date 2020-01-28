@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о компоненте FolderBrowserDialog (Windows Forms)
+title: Общие сведения о компоненте FolderBrowserDialog
 ms.date: 03/30/2017
 f1_keywords:
 - FolderBrowserDialog
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - directories [Windows Forms], enabling browsing in applications
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-ms.openlocfilehash: cd89980ccad7e6c73094c1fb462d93cee8094959
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8b017ba08ae4205e930ac00177c89a89fde17d3b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210399"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745725"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>Общие сведения о компоненте FolderBrowserDialog (Windows Forms)
 
-Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> компонент — это модальное диалоговое окно, которое используется для просмотра и выбора папки. Новые папки можно также создать изнутри <xref:System.Windows.Forms.FolderBrowserDialog> компонента.
+Компонент Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> является модальным диалоговым окном, используемым для обзора и выбора папок. Новые папки также можно создавать в компоненте <xref:System.Windows.Forms.FolderBrowserDialog>.
 
 > [!NOTE]
-> Чтобы выбрать файлы, а не папки, используйте [OpenFileDialog](openfiledialog-component-windows-forms.md) компонента.
+> Для выбора файлов вместо папок используйте компонент [OpenFileDialog](openfiledialog-component-windows-forms.md) .
 
-<xref:System.Windows.Forms.FolderBrowserDialog> Компонент отображается во время выполнения с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод. Задать <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> свойства, чтобы определить самую верхнюю папку и все вложенные папки, которые будут отображаться в представлении в виде дерева диалогового окна. После отображения диалоговое окно можно использовать <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> свойство, чтобы получить путь к папке, которая была выбрана.
+Компонент <xref:System.Windows.Forms.FolderBrowserDialog> отображается во время выполнения с помощью метода <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>. Задайте свойство <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>, чтобы определить самую верхнюю папку и все вложенные папки, которые будут отображаться в представлении в виде дерева диалогового окна. После отображения диалогового окна можно использовать свойство <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>, чтобы получить путь к выбранной папке.
 
-При добавлении в форму, <xref:System.Windows.Forms.FolderBrowserDialog> компонент появится в области в нижней части конструктора Windows Forms в Visual Studio.
+При добавлении в форму <xref:System.Windows.Forms.FolderBrowserDialog> компонент отображается в области в нижней части конструктор Windows Forms в Visual Studio.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Практическое руководство. Выберите папки с помощью компонента FolderBrowserDialog в Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
 - [Компонент FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отслеживание изменения атрибутов форматирования текста в элементе управления RichTextBox в Windows Forms
+title: Определение изменения атрибутов форматирования в элементе управления RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972293"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746037"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отслеживание изменения атрибутов форматирования текста в элементе управления RichTextBox в Windows Forms
-Обычно используются в Windows Forms <xref:System.Windows.Forms.RichTextBox> управления используется для форматирования текста с помощью атрибутов, таких как параметры шрифт или стиль абзаца. Приложение может потребоваться для отслеживания изменений в целях отображения панели инструментов, как и множество текстовых приложений форматирования текста.  
+Обычно элемент управления "Windows Forms <xref:System.Windows.Forms.RichTextBox>" используется для форматирования текста с такими атрибутами, как параметры шрифта или стили абзацев. Приложению может потребоваться отслеживание любых изменений в форматировании текста для отображения панели инструментов, как во многих приложениях для обработки текстов.  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a>Реагировать на изменения атрибутов форматирования  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a>Реагирование на изменения атрибутов форматирования  
   
-1. Написание кода в <xref:System.Windows.Forms.RichTextBox.SelectionChanged> обработчик событий может выполнять соответствующие действия в зависимости от значения атрибута. В следующем примере изменяется внешний вид кнопки на панели инструментов в зависимости от значения <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> свойство. Кнопки панели инструментов будут обновлены только в том случае, когда курсор перемещается в элементе управления.  
+1. Напишите код в обработчике событий <xref:System.Windows.Forms.RichTextBox.SelectionChanged>, чтобы выполнить соответствующее действие в зависимости от значения атрибута. В следующем примере изменяется внешний вид кнопки панели инструментов в зависимости от значения свойства <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>. Кнопка панели инструментов будет обновлена только при перемещении точки вставки в элемент управления.  
   
-     В приведенном ниже примере предполагается, что форма <xref:System.Windows.Forms.RichTextBox> управления и <xref:System.Windows.Forms.ToolBar> элемент управления, содержащий кнопку панели инструментов. Дополнительные сведения о панели инструментов и кнопки панели инструментов, см. в разделе [как: Добавление кнопок в элемент управления ToolBar](how-to-add-buttons-to-a-toolbar-control.md).  
+     В приведенном ниже примере предполагается, что форма содержит элемент управления <xref:System.Windows.Forms.RichTextBox> и элемент управления <xref:System.Windows.Forms.ToolBar>, содержащий кнопку панели инструментов. Дополнительные сведения о панелях инструментов и кнопках панели инструментов см. [в разделе как добавить кнопки в элемент управления ToolBar](how-to-add-buttons-to-a-toolbar-control.md).  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -80,7 +80,7 @@ ms.locfileid: "61972293"
        }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>

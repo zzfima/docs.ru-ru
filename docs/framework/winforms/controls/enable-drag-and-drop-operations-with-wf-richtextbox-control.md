@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms
+title: Включение операций перетаскивания с помощью элемента управления RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: d1b8f3e1d0ef7d0f83db4a742ab76a05e42f761b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3c17560dee012912aea2938654f1dc4dc56e0725
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053683"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745818"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms
 Операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> Windows Forms выполняются путем обработки событий <xref:System.Windows.Forms.RichTextBox.DragEnter> и <xref:System.Windows.Forms.RichTextBox.DragDrop> . Таким образом, операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> являются очень простыми.  
@@ -62,7 +62,7 @@ ms.locfileid: "66053683"
        }  
     ```  
   
-     (Visual C# и визуальное C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C# элемент C++и визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -138,7 +138,7 @@ ms.locfileid: "66053683"
        }  
     ```  
   
-     (Visual C# и визуальное C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C# элемент C++и визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -164,9 +164,9 @@ ms.locfileid: "66053683"
   
      После отпускания кнопки мыши выделенный текст удаляется (то есть инициируется событие <xref:System.Windows.Forms.RichTextBox.DragDrop> ) и вставляется в элемент управления <xref:System.Windows.Forms.RichTextBox> .  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [Практическое руководство. Выполнение операции перетаскивания и вставки между приложениями](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Практическое руководство. Выполнение операции перетаскивания между приложениями](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

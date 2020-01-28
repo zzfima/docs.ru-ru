@@ -1,5 +1,5 @@
 ---
-title: Определение событий в элементах управления Windows Forms
+title: Определение события в элементах управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 4235c8b3c513509023388112071e78cfd079ec6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d45c369e1fc82ee009a85b5b35fe6aa754873436
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972345"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746076"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Определение событий в элементах управления Windows Forms
-Дополнительные сведения о пользовательских событиях см. в разделе [события](../../../standard/events/index.md). При определении события, не имеющего связанных данных, необходимо использовать базовый тип данных о событиях, <xref:System.EventArgs> и <xref:System.EventHandler> в качестве делегата события. Все, что остается только определить член события и защищенный `On` *EventName* метод, который вызывает событие.  
+Дополнительные сведения об определении пользовательских событий см. в разделе [события](../../../standard/events/index.md). При определении события, не имеющего связанных данных, необходимо использовать базовый тип данных о событиях, <xref:System.EventArgs> и <xref:System.EventHandler> в качестве делегата события. Все, что остается, — определить член события и защищенный метод `On`*EventName* , который вызывает событие.  
   
- В следующем фрагменте кода показано, как пользовательский элемент управления `FlashTrackBar` определяет пользовательское событие, `ValueChanged`. Для получения полного кода для `FlashTrackBar` пример, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ В следующем фрагменте кода показано, как пользовательский элемент управления `FlashTrackBar` определяет пользовательское событие, `ValueChanged`. Полный код образца `FlashTrackBar` см. в разделе [как создать элемент управления Windows Forms, отображающий ход выполнения](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ```vb  
 Option Explicit  
@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События элементов управления Windows Forms](events-in-windows-forms-controls.md)
 - [События](../../../standard/events/index.md)

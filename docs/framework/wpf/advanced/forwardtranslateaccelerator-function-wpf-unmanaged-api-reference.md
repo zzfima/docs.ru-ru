@@ -1,5 +1,6 @@
 ---
-title: Функция ForwardTranslateAccelerator (WPF Справочник по неуправляемым API)
+title: Функция Форвардтранслатеакцелератор — Справочник по неуправляемым API в WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 4bb7e665bb836dc5f95b14f39179f1d4b9f8173d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960918"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747037"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Функция ForwardTranslateAccelerator (WPF Справочник по неуправляемым API)
-Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для использования непосредственно из программного кода.  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Функция Форвардтранслатеакцелератор (Справочник по неуправляемым интерфейсам API WPF)
+Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для непосредственного использования из кода.  
   
- Используется инфраструктурой Windows Presentation Foundation (WPF) для управления windows.  
+ Используется инфраструктурой Windows Presentation Foundation (WPF) для управления Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,23 +31,23 @@ HRESULT ForwardTranslateAccelerator(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- pMsg  
+ пмсг  
  Указатель на сообщение.  
   
- appUnhandled  
- `true` Если приложение уже получил возможность для обработки входящего сообщения, но не предусмотрена. в противном случае `false`.  
+ аппунхандлед  
+ `true`, когда приложению уже предоставлен шанс обработать входное сообщение, но оно не обработано. в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. в разделе [системные требования .NET Framework](../../get-started/system-requirements.md).  
+ **Платформы:** См. [.NET Framework требования к системе](../../get-started/system-requirements.md).  
   
- **БИБЛИОТЕКА DLL:**  
+ **КОМПОНОВКИ**  
   
- В .NET Framework 3.0 и 3.5: PresentationHostDLL.dll  
+ В .NET Framework 3,0 и 3,5: Пресентатионхостдлл. dll  
   
- В .NET Framework 4 и более поздних версий: PresentationHost_v0400.dll  
+ В .NET Framework 4 и более поздних версиях: PresentationHost_v0400. dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Версия .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по неуправляемым API WPF](wpf-unmanaged-api-reference.md)

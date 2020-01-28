@@ -1,5 +1,6 @@
 ---
-title: Руководство. Создание первого приложения WPF в Visual Studio 2019 — .NET Framework
+title: Создание первого приложения WPF в Visual Studio 2019 — .NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336811"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746973"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Руководство. Создание первого приложения WPF в Visual Studio 2019
 
@@ -83,7 +84,7 @@ ms.locfileid: "75336811"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Откройте файл *MainWindow.xaml*.
+3. Откройте файл *MainWindow. XAML*.
 
     Этот XAML-файл является главным окном приложения и отображает содержимое, созданное на страницах. Класс <xref:System.Windows.Window> определяет свойства окна, такие как заголовок, размер или значок, а также обрабатывает события, такие как закрытие или скрытие.
 
@@ -151,7 +152,7 @@ ms.locfileid: "75336811"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Откройте файл *MainWindow.xaml*.
+1. Откройте файл *MainWindow. XAML*.
 
 1. Добавьте свойство <xref:System.Windows.Navigation.NavigationWindow.Source%2A> в элемент <xref:System.Windows.Navigation.NavigationWindow> и задайте для него значение "`ExpenseItHome.xaml`".
 
@@ -263,7 +264,7 @@ ms.locfileid: "75336811"
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a>Добавление элементов управления
+## <a name="add-controls"></a>Добавить элементы управления
 
 В этом разделе вы обновите пользовательский интерфейс домашней страницы, чтобы отобразить список людей, в которых вы выбрали одного пользователя для отображения отчета о расходах. Элементы управления — это объекты пользовательского интерфейса, позволяющие пользователям взаимодействовать с приложением. Более подробную информацию см. в разделе [Элементы управления](../controls/index.md).
 

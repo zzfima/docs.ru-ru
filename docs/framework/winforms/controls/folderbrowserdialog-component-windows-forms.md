@@ -1,5 +1,5 @@
 ---
-title: Компонент FolderBrowserDialog (Windows Forms)
+title: Компонент FolderBrowserDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - folders [Windows Forms], browsing
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - browsing folders
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
-ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c218edb639edb9b630527c2e77125358400cf3e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011337"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745721"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>Компонент FolderBrowserDialog (Windows Forms)
-Windows Forms `FolderBrowserDialog` компонент отображает интерфейс, с помощью которого пользователи могут Обзор и выберите папку или создайте новую. Это дополнение к [компонента OpenFileDialog](openfiledialog-component-windows-forms.md) компонент, который используется для просмотра и выбора файлов.  
+Компонент Windows Forms `FolderBrowserDialog` отображает интерфейс, с помощью которого пользователи могут просматривать и выбирать папку или создавать новую. Это дополнение к компоненту [компонента OpenFileDialog](openfiledialog-component-windows-forms.md) , который используется для обзора и выбора файлов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о компоненте FolderBrowserDialog (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Выберите папки с помощью компонента FolderBrowserDialog в Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
- Объясняется, как программно извлечь выбранную папку из диалогового окна, а также работать с некоторыми другие дополнительные свойства компонента.  
+ [Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
+ Объясняет, как программным способом извлечь выбранную папку из диалогового окна, а также работать с некоторыми другими дополнительными свойствами компонента.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
  Описание класса и всех его членов.  
   

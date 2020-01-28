@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Связывание с веб-службой с помощью компонента BindingSource в Windows Forms
+title: Привязка к веб-службе с помощью BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 94564ba2614e335da36828912e43fb9db7eca91b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 0680c73e578577cf40158761f6c635fe30ff9f4d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833993"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746680"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Практическое руководство. Связывание с веб-службой с помощью компонента BindingSource в Windows Forms
 Компонент <xref:System.Windows.Forms.BindingSource> можно использовать, если необходимо привязать элемент управления Windows Form к результатам вызова веб-служб XML. Эта процедура аналогична привязке компонента <xref:System.Windows.Forms.BindingSource> к типу. Необходимо создать клиентский прокси, который содержит методы и типы, предоставляемые веб-службой. Клиентский прокси веб-службы можно создать либо непосредственно в самой веб-службе (ASMX-файл) или с помощью файла языка описания веб-служб (WSDL-файл). Кроме того, клиентский прокси должен предоставлять доступ к полям сложных типов, используемых веб-службой, в виде общих свойств. Затем <xref:System.Windows.Forms.BindingSource> привязывается к одному из типов, доступных в прокси веб-службы.  
@@ -28,11 +28,11 @@ ms.locfileid: "66833993"
   
 2. Добавьте в форму компонент <xref:System.Windows.Forms.BindingSource>.  
   
-3. Откройте командную строку Windows Software Development Kit (SDK) и перейдите к каталогу в форму.  
+3. Откройте командную строку пакета средств разработки программного обеспечения Windows (SDK) и перейдите в тот же каталог, в котором находится ваша форма.  
   
 4. С помощью средства WSDL введите `wsdl` и URL-адрес для ASMX- или WSDL-файла веб-службы, пространство имен приложения и при необходимости язык, с которым вы работаете.  
   
-     В следующем примере кода используется веб-службы, расположенный `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Например, для C# типа `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` или для Visual Basic введите `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Передача пути в качестве аргумента для средства WSDL создаст клиентский прокси в том же каталоге и с тем пространством имен, что и у приложения, и на указанном языке. Если вы используете Visual Studio, добавьте файл в проект.  
+     В следующем примере кода используется веб-служба, расположенная по адресу `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Например, для C# типа `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` или для Visual Basic введите `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Передача пути в качестве аргумента для средства WSDL создаст клиентский прокси в том же каталоге и с тем пространством имен, что и у приложения, и на указанном языке. Если вы используете Visual Studio, добавьте файл в проект.  
   
 5. Выберите тип для привязки в клиентском прокси.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66833993"
   
 - ссылки на сборки System, System.Drawing, System.Web.Services, System.Windows.Forms и System.XML.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Компонент BindingSource](bindingsource-component.md)
-- [Практическое руководство. Привязка элемента управления Windows Forms к типу](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Практическое руководство. Связывание элемента управления с типом в Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)

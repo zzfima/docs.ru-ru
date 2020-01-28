@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
+title: Как копировать пиксели для снижения мерцания
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299041e7038d5bd5b9824d668b3f47d842030ac7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950150"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746483"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
 При анимации простого графика пользователи иногда могут столкнуться с мерцанием или другими нежелательными визуальными эффектами. Одним из способов ограничения этой проблемы является использование на графике процесса "BitBlt". BitBlt — это перенос битовых блоков цветовых данных из исходного прямоугольника пикселей в целевой прямоугольник пикселей.  
   
- При использовании Windows Forms BitBlt выполняется с помощью <xref:System.Drawing.Graphics.CopyFromScreen%2A> метода <xref:System.Drawing.Graphics> класса. В параметрах метода указываются источник и назначение (точки), размер копируемой области и графический объект, используемый для рисования новой фигуры.  
+ С Windows Forms BitBlt выполняется с помощью метода <xref:System.Drawing.Graphics.CopyFromScreen%2A> класса <xref:System.Drawing.Graphics>. В параметрах метода указываются источник и назначение (точки), размер копируемой области и графический объект, используемый для рисования новой фигуры.  
   
- В приведенном ниже примере фигура рисуется на форме в своем <xref:System.Windows.Forms.Control.Paint> обработчике событий. <xref:System.Drawing.Graphics.CopyFromScreen%2A> Затем метод используется для дублирования фигуры.  
+ В приведенном ниже примере фигура рисуется на форме в своем <xref:System.Windows.Forms.Control.Paint> обработчике событий. Затем для дублирования фигуры используется метод <xref:System.Drawing.Graphics.CopyFromScreen%2A>.  
   
 > [!NOTE]
-> Присвоение <xref:System.Windows.Forms.Control.DoubleBuffered%2A> свойству формы значения `true` приведет к двойному буферизации графического кода <xref:System.Windows.Forms.Control.Paint> в событии. Несмотря на то, что при использовании приведенного ниже кода не будет выигрыша в производительности различимый, при работе с более сложным графическим кодом следует учитывать следующее.  
+> Присвоение свойству <xref:System.Windows.Forms.Control.DoubleBuffered%2A> формы значения `true` приведет к двойному буферизации графического кода в событии <xref:System.Windows.Forms.Control.Paint>. Несмотря на то, что при использовании приведенного ниже кода не будет выигрыша в производительности различимый, при работе с более сложным графическим кодом следует учитывать следующее.  
   
 ## <a name="example"></a>Пример  
   
@@ -60,9 +60,9 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Приведенный выше код выполняется в обработчике <xref:System.Windows.Forms.Control.Paint> событий формы, чтобы графические объекты сохранялись при перерисовке формы. Таким образом, не следует вызывать связанные с графиком методы в <xref:System.Windows.Forms.Form.Load> обработчике событий, так как рисуемое содержимое не будет перерисовано при изменении размера формы или ее скрытии другой формой.  
+ Приведенный выше код выполняется в обработчике событий <xref:System.Windows.Forms.Control.Paint> формы, чтобы графические объекты сохранялись при перерисовке формы. Таким образом, не следует вызывать методы, связанные с графикой, в обработчике событий <xref:System.Windows.Forms.Form.Load>, поскольку рисуемое содержимое не будет перерисовано при изменении размера формы или ее скрытии другой формой.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

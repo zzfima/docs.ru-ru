@@ -1,5 +1,6 @@
 ---
 title: Ошибки времени разработки в конструктор Windows Forms
+titleSuffix: ''
 ms.date: 09/09/2019
 f1_keywords:
 - DTELErrorList
@@ -11,12 +12,12 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0dd112f89071f6981b438a79f350dfab02af73d5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2a39c76d011c6d129f91647fabe3f129245b9466
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460109"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746097"
 ---
 # <a name="windows-forms-designer-error-page"></a>Страница ошибки конструктор Windows Forms
 
@@ -405,7 +406,7 @@ Visual Studio не удалось добавить ссылку. Чтобы ис
 
 Visual Studio загрузил класс, но класс не может быть спроектирован. Вместо этого измените класс в представлении кода, щелкнув правой кнопкой мыши класс и выбрав пункт **Просмотреть код**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Разработка Windows Forms элементов управления с помощью конструктора](developing-windows-forms-controls-at-design-time.md)
 - [Форум конструктор Windows Forms](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)

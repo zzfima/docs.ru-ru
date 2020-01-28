@@ -1,5 +1,5 @@
 ---
-title: Размещение элементов управления в Windows Forms
+title: Макет элементов управления
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms]
@@ -7,35 +7,35 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 - Padding property [Windows Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-ms.openlocfilehash: d1a3954c8eda87bdda9fa17df1bd2b3858c43619
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed8603e997e7d0c1ed7a2ebda6dc960726d32f45
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012832"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745247"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Размещение элементов управления в Windows Forms
 
-Точное расположение элементов управления на форме является важным для многих приложений. <xref:System.Windows.Forms?displayProperty=nameWithType> Пространство имен предоставляет множество средств форматирования для выполнения этой задачи.
+Точное расположение элементов управления на форме является важным для многих приложений. Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> предоставляет множество инструментов макета для выполнения этой задачи.
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Свойство AutoSize](autosize-property-overview.md)\
-Описывает <xref:System.Windows.Forms.Control.AutoSize%2A> свойство и его роль в макете.
+[Общие сведения о свойстве AutoSize](autosize-property-overview.md)\
+Описывает свойство <xref:System.Windows.Forms.Control.AutoSize%2A> и его роль в макете.
 
-[Поля и заполнение элементов управления в формах Windows Forms](margin-and-padding-in-windows-forms-controls.md)\
-Описывает <xref:System.Windows.Forms.Control.Margin%2A> и <xref:System.Windows.Forms.Control.Padding%2A> свойства и их роли в макете.
+[Поля и заполнения в элементах управления Windows Forms](margin-and-padding-in-windows-forms-controls.md)\
+Описывает свойства <xref:System.Windows.Forms.Control.Margin%2A> и <xref:System.Windows.Forms.Control.Padding%2A> и их роли в макете.
 
-[Практическое руководство. Выравнивание элементов управления по границам формы](how-to-align-a-control-to-the-edges-of-forms.md)\
-Демонстрирует использование <xref:System.Windows.Forms.Control.Dock%2A> свойства выравнивания элемента управления по краю занимаемой им формы.
+[Как выровняйте элемент управления по краям форм](how-to-align-a-control-to-the-edges-of-forms.md)\
+Демонстрирует использование свойства <xref:System.Windows.Forms.Control.Dock%2A> для согласования элемента управления с границей занимаемой им формы.
 
-[Практическое руководство. Создание рамки вокруг форм Windows элемента управления](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
-Демонстрирует использование <xref:System.Windows.Forms.Control.Padding%2A> свойств для структуры элемента управления.
+[Как создать границу вокруг элемента управления Windows Forms с помощью заполнения](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
+Демонстрирует использование свойства <xref:System.Windows.Forms.Control.Padding%2A> для структурирования элемента управления.
 
-[Практическое руководство. Реализация пользовательского механизма размещения](how-to-implement-a-custom-layout-engine.md)\
-Демонстрируется способ реализации <xref:System.Windows.Forms.Layout.LayoutEngine> для упорядочения элементов управления Windows Forms.
+[Как реализовать пользовательский обработчик макетов](how-to-implement-a-custom-layout-engine.md)\
+Демонстрирует реализацию <xref:System.Windows.Forms.Layout.LayoutEngine> для упорядочения элементов управления Windows Forms.
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочные сведения
 
 <xref:System.Windows.Forms.TableLayoutPanel>\
 Справочная документация по элементу управления <xref:System.Windows.Forms.TableLayoutPanel>.
@@ -43,9 +43,9 @@ ms.locfileid: "62012832"
 <xref:System.Windows.Forms.FlowLayoutPanel>\
 Справочная документация по элементу управления <xref:System.Windows.Forms.FlowLayoutPanel>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Практическое руководство. Разработка макета формы Windows, с учетом будущей локализации](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Практическое руководство. Формирование макета формы Windows Forms с учетом будущей локализации](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
 - [Автоматическое изменение размеров элемента управления TableLayoutPanel](autosize-behavior-in-the-tablelayoutpanel-control.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Привязка элементов управления в формах Windows Forms
+title: Привязка элементов управления
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
@@ -15,12 +15,12 @@ ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 15f12cb0d389344351c4ddf97ee9db37882de460
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7c307d8c5b3bc32e15e6de048c434854ef1bbc65
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459678"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747185"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Как привязать элементы управления к Windows Forms
 
@@ -54,7 +54,7 @@ ms.locfileid: "73459678"
 
 Наследуемые элементы управления должны быть `Protected` для привязки. Чтобы изменить уровень доступа элемента управления, задайте его свойство `Modifiers` в окне **Свойства** .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элементы управления Windows Forms](index.md)
 - [Свойство AutoSize](autosize-property-overview.md)
