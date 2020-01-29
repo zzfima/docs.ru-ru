@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: Использование и отладка сборок с возможностью выгрузки в .NET Core
           href: ../standard/assembly/unloadability-howto.md
-- name: "Сборка .NET\_Core из исходного кода"
-  href: build/index.md
+- name: Упаковка дистрибутивов .NET Core
   items:
-    - name: Упаковка дистрибутивов .NET Core
-      href: build/distribution-packaging.md
-- name: "VS\_2015/project.json docs"
-  href: ../project-json.md
+    - name: Обзор
+      href: distribution-packaging.md

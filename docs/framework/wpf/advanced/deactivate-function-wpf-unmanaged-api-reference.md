@@ -1,5 +1,6 @@
 ---
-title: Функция Deactivate (WPF Справочник по неуправляемым API)
+title: Функция деактивации — Справочник по неуправляемым API в WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,35 +9,35 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
-ms.openlocfilehash: ec1811998a60cda21c54a8e94e566ff4d06aa863
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc1f347526f161fe2d0b7d7c8e08a1c1829ec08e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928769"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737985"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="fef4d-102">Функция Deactivate (WPF Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="fef4d-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="fef4d-103">Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="fef4d-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="5b5d9-102">Функция Deactivate (Справочник по неуправляемым ИНТЕРФЕЙСам WPF)</span><span class="sxs-lookup"><span data-stu-id="5b5d9-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="5b5d9-103">Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для непосредственного использования из кода.</span><span class="sxs-lookup"><span data-stu-id="5b5d9-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="fef4d-104">Используется инфраструктурой Windows Presentation Foundation (WPF) для управления windows.</span><span class="sxs-lookup"><span data-stu-id="fef4d-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="5b5d9-104">Используется инфраструктурой Windows Presentation Foundation (WPF) для управления Windows.</span><span class="sxs-lookup"><span data-stu-id="5b5d9-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fef4d-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fef4d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b5d9-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5b5d9-105">Syntax</span></span>  
   
 ```cpp  
 void Deactivate()  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="fef4d-106">Требования</span><span class="sxs-lookup"><span data-stu-id="fef4d-106">Requirements</span></span>  
- <span data-ttu-id="fef4d-107">**Платформы:** См. в разделе [системные требования .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fef4d-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b5d9-106">Требования</span><span class="sxs-lookup"><span data-stu-id="5b5d9-106">Requirements</span></span>  
+ <span data-ttu-id="5b5d9-107">**Платформы:** См. [.NET Framework требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b5d9-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fef4d-108">**БИБЛИОТЕКА DLL:**</span><span class="sxs-lookup"><span data-stu-id="fef4d-108">**DLL:**</span></span>  
+ <span data-ttu-id="5b5d9-108">**КОМПОНОВКИ**</span><span class="sxs-lookup"><span data-stu-id="5b5d9-108">**DLL:**</span></span>  
   
- <span data-ttu-id="fef4d-109">В .NET Framework 3.0 и 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="fef4d-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="5b5d9-109">В .NET Framework 3,0 и 3,5: Пресентатионхостдлл. dll</span><span class="sxs-lookup"><span data-stu-id="5b5d9-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="fef4d-110">В .NET Framework 4 и более поздних версий: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="fef4d-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="5b5d9-110">В .NET Framework 4 и более поздних версиях: PresentationHost_v0400. dll</span><span class="sxs-lookup"><span data-stu-id="5b5d9-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="fef4d-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fef4d-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="5b5d9-111">**Версия .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b5d9-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fef4d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="fef4d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b5d9-112">См. также:</span><span class="sxs-lookup"><span data-stu-id="5b5d9-112">See also</span></span>
 
-- [<span data-ttu-id="fef4d-113">Справочник по неуправляемым API WPF</span><span class="sxs-lookup"><span data-stu-id="fef4d-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="5b5d9-113">Справочник по неуправляемым API WPF</span><span class="sxs-lookup"><span data-stu-id="5b5d9-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

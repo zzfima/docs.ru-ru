@@ -1317,14 +1317,15 @@
           items:
             - name: Типы значений
               items:
-                - name: Характеристики типов значений
-                  href: language-reference/keywords/value-types.md
+                - name: Обзор
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: Целочисленные типы
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: Числовые типы с плавающей запятой
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: Встроенные числовые преобразования
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1364,8 +1365,6 @@
               items:
                 - name: Таблица встроенных типов
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Таблица типов значений
-                  href: language-reference/keywords/value-types-table.md
                 - name: Таблица форматирования числовых результатов
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Модификаторы
