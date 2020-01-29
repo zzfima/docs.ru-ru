@@ -2,16 +2,16 @@
 title: dotnet-counters (.NET Core)
 description: Сведения о том, как установить и использовать программу командной строки dotnet-counter.
 ms.date: 10/14/2019
-ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740806"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737707"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
-**Эта статья относится к ✓** SDK для .NET Core 3.0 и более поздних версий
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 3.0 и более поздних версий
 
 ## <a name="install-dotnet-counters"></a>Установка dotnet-counters
 

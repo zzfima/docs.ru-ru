@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Скрытие заголовков столбцов элемента управления DataGridView в Windows Forms
+title: Скрытие заголовков столбцов в элементе управления DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - column headers [Windows Forms], hiding
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
-ms.openlocfilehash: 888ff59d42f44db652d3188e016b9e10a9590139
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d84c93b0ad1c9ef456c73dd29af1de4857778999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651674"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736593"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Скрытие заголовков столбцов элемента управления DataGridView в Windows Forms
-Иногда требуется отобразить <xref:System.Windows.Forms.DataGridView> без заголовков столбцов. В <xref:System.Windows.Forms.DataGridView> элемента управления, <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> значение свойства определяет, отображаются ли заголовки столбцов.  
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Сокрытие заголовков столбцов элемента управления DataGridView в Windows Forms
+Иногда может потребоваться отобразить <xref:System.Windows.Forms.DataGridView> без заголовков столбцов. В элементе управления <xref:System.Windows.Forms.DataGridView> значение свойства <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> определяет, отображаются ли заголовки столбцов.  
   
-### <a name="to-hide-the-column-headers"></a>Чтобы скрыть заголовки столбцов  
+### <a name="to-hide-the-column-headers"></a>Скрытие заголовков столбцов  
   
 - Задайте для свойства <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> значение `false`.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64651674"
   
 - ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>

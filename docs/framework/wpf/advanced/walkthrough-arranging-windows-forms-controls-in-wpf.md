@@ -1,5 +1,6 @@
 ---
-title: Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
+title: Упорядочение элементов управления Windows Forms в WPF
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197838"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735288"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
 
@@ -40,7 +41,7 @@ ms.locfileid: "73197838"
 
 По завершении вы получите представление о [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ных функциях макета в приложениях на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -149,7 +150,7 @@ ms.locfileid: "73197838"
 
 2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> зарисовывается поверх элемента Label.
 
-## <a name="docking"></a>Закрепление
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент поддерживает закрепление [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Задайте присоединенное свойство <xref:System.Windows.Controls.DockPanel.Dock%2A>, чтобы закрепить размещаемый элемент управления в элементе <xref:System.Windows.Controls.DockPanel>.
 
@@ -255,7 +256,7 @@ ms.locfileid: "73197838"
 
 4. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> заполняет <xref:System.Windows.Controls.DockPanel>и <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает свои дочерние элементы управления в <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>по умолчанию.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

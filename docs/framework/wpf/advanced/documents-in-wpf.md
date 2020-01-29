@@ -1,5 +1,5 @@
 ---
-title: Документы в WPF
+title: Документы
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974684"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737966"
 ---
 # <a name="documents-in-wpf"></a>Документы в WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предлагает широкий спектр возможностей документов, позволяющих создавать высокоточные материалы, которые упрощают доступ и чтение, чем в предыдущих поколениях Windows. В дополнение к расширенным возможностям и повышенному качеству [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет интегрированные службы для отображения, упаковки и обеспечения безопасности документов. В этом разделе содержатся вводные сведения о типах и упаковке документов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "73974684"
  Отображение содержимого документа нефиксированного формата поддерживается тремя элементами управления: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>и <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> включает функции, позволяющие пользователю динамически выбирать между различными режимами просмотра, в том числе одностраничным (страничным) режимом просмотра, двумя страницами (формат чтения книги) и непрерывной прокруткой (без нижних колонтитулов). режим просмотра.  Дополнительные сведения об этих режимах просмотра см. в разделе <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Если не требуется возможность динамического переключения между разными режимами просмотра, <xref:System.Windows.Controls.FlowDocumentPageViewer> и <xref:System.Windows.Controls.FlowDocumentScrollViewer> предоставляют более легкие средства просмотра содержимого потока, которые исправлены в определенном режиме просмотра.  
+ <xref:System.Windows.Controls.FlowDocumentReader> включает функции, позволяющие пользователю динамически выбирать между различными режимами просмотра, в том числе одностраничным (страничным) режимом просмотра, двумя страницами (формат чтения книги), режимом просмотра с непрерывной прокруткой (без нижнего).  Дополнительные сведения об этих режимах просмотра см. в разделе <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Если не требуется возможность динамического переключения между разными режимами просмотра, <xref:System.Windows.Controls.FlowDocumentPageViewer> и <xref:System.Windows.Controls.FlowDocumentScrollViewer> предоставляют более легкие средства просмотра содержимого потока, которые исправлены в определенном режиме просмотра.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer и FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer> отображает содержимое в режиме просмотра на странице, в то время как <xref:System.Windows.Controls.FlowDocumentScrollViewer> отображает содержимое в режиме непрерывной прокрутки.  <xref:System.Windows.Controls.FlowDocumentPageViewer> и <xref:System.Windows.Controls.FlowDocumentScrollViewer> фиксированы в определенном режиме просмотра. Сравните с <xref:System.Windows.Controls.FlowDocumentReader>, который включает в себя функции, позволяющие пользователю динамически выбирать между различными режимами просмотра (в соответствии с перечислением <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>) за счет более ресурсоемких ресурсов, чем <xref:System.Windows.Controls.FlowDocumentPageViewer> или <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
@@ -55,7 +55,7 @@ ms.locfileid: "73974684"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Текст в пользовательском интерфейсе  
- Текст можно добавлять не только в документы, но и использовать в интерфейсе приложений, например в формах. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется множество элементов управления для рисования текста на экране. Каждый элемент управления предназначен для различных сценариев и имеет свой собственный список функций и ограничений. Как правило, элемент <xref:System.Windows.Controls.TextBlock> следует использовать, если требуется ограниченная поддержка текста, например краткое предложение в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> можно использовать, если требуется минимальная поддержка текста. Дополнительные сведения см. в разделе [Общие сведения о классе TextBlock](../controls/textblock-overview.md).  
+ Текст можно добавлять не только в документы, но и использовать в интерфейсе приложений, например в формах. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество элементов управления для отображения текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений. Как правило, элемент <xref:System.Windows.Controls.TextBlock> следует использовать, если требуется ограниченная поддержка текста, например краткое предложение в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> можно использовать, если требуется минимальная поддержка текста. Дополнительные сведения см. в разделе [Общие сведения о классе TextBlock](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Упаковка документов  
@@ -135,7 +135,7 @@ ms.locfileid: "73974684"
   
 - Маршрутизация документов непосредственно на совместимый с XPS принтер.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
@@ -144,7 +144,7 @@ ms.locfileid: "73974684"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Текст](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Общие сведения о документах нефиксированного формата](flow-document-overview.md)
 - [Общие сведения о печати](printing-overview.md)
 - [Сериализация и хранение документов](document-serialization-and-storage.md)

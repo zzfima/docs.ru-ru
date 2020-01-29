@@ -1,5 +1,6 @@
 ---
-title: Функция LoadFromHistory (WPF Справочник по неуправляемым API)
+title: Функция Лоадфромхистори — Справочник по неуправляемым API в WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: a4480d54390aea2771e2939b0a0825f6c49c3564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7807e073d1f09ac6a6213aee6d86d53cc75a3c56
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766136"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727930"
 ---
-# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>Функция LoadFromHistory (WPF Справочник по неуправляемым API)
-Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для использования непосредственно из программного кода.  
+# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>Функция Лоадфромхистори (Справочник по неуправляемым интерфейсам API WPF)
+Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для непосредственного использования из кода.  
   
- Используется инфраструктурой Windows Presentation Foundation (WPF) для управления windows.  
+ Используется инфраструктурой Windows Presentation Foundation (WPF) для управления Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,23 +31,23 @@ HRESULT LoadFromHistory_export(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- pHistoryStream  
- Указатель на поток данных предыстории.  
+ фистористреам  
+ Указатель на поток данных журнала.  
   
- pBindCtx  
+ пбиндкткс  
  Указатель на контекст привязки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. в разделе [системные требования .NET Framework](../../get-started/system-requirements.md).  
+ **Платформы:** См. [.NET Framework требования к системе](../../get-started/system-requirements.md).  
   
- **БИБЛИОТЕКА DLL:**  
+ **КОМПОНОВКИ**  
   
- В .NET Framework 3.0 и 3.5: PresentationHostDLL.dll  
+ В .NET Framework 3,0 и 3,5: Пресентатионхостдлл. dll  
   
- В .NET Framework 4 и более поздних версий: PresentationHost_v0400.dll  
+ В .NET Framework 4 и более поздних версиях: PresentationHost_v0400. dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Версия .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по неуправляемым API WPF](wpf-unmanaged-api-reference.md)

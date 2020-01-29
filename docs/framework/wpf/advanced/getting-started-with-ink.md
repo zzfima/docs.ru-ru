@@ -1,5 +1,5 @@
 ---
-title: Создание InkCanvas в приложении WPF в Visual Studio
+title: Создание InkCanvas в Visual Studio
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b8087d6db04f7024b9ee48f28002bee04045a14b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920253"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737889"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Начало работы с рукописным вводом в WPF
 
 Windows Presentation Foundation (WPF) имеет функцию рукописного ввода, которая упрощает внедрение цифровых рукописных данных в приложение.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Чтобы использовать следующие примеры, сначала установите [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Кроме того, он помогает понять, как писать базовые приложения WPF. Сведения о начале работы с WPF см. в разделе [Пошаговое руководство. мое первое классическое приложение WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Быстрое начало
+## <a name="quick-start"></a>Краткое руководство по
 
 Этот раздел поможет вам написать простое приложение WPF, собирающее рукописный ввод.
 
@@ -32,7 +32,7 @@ Windows Presentation Foundation (WPF) имеет функцию рукописн
 
 Создание приложения WPF, поддерживающего рукописный ввод:
 
-1. Запустите Visual Studio.
+1. Откройте Visual Studio.
 
 2. Создайте новое **приложение WPF**.
 
@@ -108,7 +108,7 @@ Windows Presentation Foundation (WPF) имеет функцию рукописн
 
 1. Постройте приложение, нажав клавишу **F5**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Рукописный ввод](digital-ink.md)
 - [Сбор рукописных данных](collecting-ink.md)

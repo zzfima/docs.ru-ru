@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Многоуровневое расположение объектов в формах Windows Forms
+title: Создание слоев объектов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5b8f6c00e70df94ae3a82c2c195fa781f0840a53
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1615b9c4df222edd95cda9bceae622ba6f1d8d78
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458353"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736338"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Как выполнять слои объектов на Windows Forms
 
@@ -53,7 +53,7 @@ txtFirstName->BringToFront();
 > [!NOTE]
 > Windows Forms поддерживает *Включение элементов управления*. Включение элемента управления включает в себя размещение нескольких элементов управления внутри содержащего их элемента управления, например число элементов управления <xref:System.Windows.Forms.RadioButton> в элементе управления <xref:System.Windows.Forms.GroupBox>. Затем можно послойировать элементы управления внутри содержащего его элемента управления. Перемещение поля группы также приводит к перемещению элементов управления, так как они находятся внутри него.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элементы управления Windows Forms](index.md)
 - [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

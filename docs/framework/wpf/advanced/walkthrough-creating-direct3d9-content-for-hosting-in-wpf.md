@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF
+title: Создание содержимого Direct3D9 для размещения
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 847ee74da5b295c2c9d3824b3df74f94bc98a4db
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991396"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727921"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF
 В этом пошаговом руководстве показано, как создать содержимое Direct3D9, которое подходит для размещения в приложении Windows Presentation Foundation (WPF). Дополнительные сведения о размещении содержимого Direct3D9 в приложениях WPF см. в разделе [взаимодействие WPF и Direct3D9](wpf-and-direct3d9-interoperation.md).
@@ -25,7 +25,7 @@ ms.locfileid: "70991396"
 
  По завершении у вас будет библиотека DLL, содержащая содержимое Direct3D9 для использования в приложении WPF.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
 - Visual Studio 2010.
@@ -37,7 +37,7 @@ ms.locfileid: "70991396"
 
 #### <a name="to-create-the-direct3d9-project"></a>Создание проекта Direct3D9
 
-1. Создайте новый проект Win32 в C++ с именем `D3DContent`.
+1. Создайте новый проект Win32 в C++ именованном `D3DContent`.
 
      Откроется мастер приложений Win32 и отобразится экран приветствия.
 
@@ -65,9 +65,9 @@ ms.locfileid: "70991396"
 
 10. Выберите **входной** узел.
 
-11. В поле **Дополнительные зависимости** добавьте `d3d9.lib` файлы и `d3dx9.lib` .
+11. В поле **Дополнительные зависимости** добавьте файлы `d3d9.lib` и `d3dx9.lib`.
 
-12. В Обозреватель решений добавьте новый файл определения модуля (DEF) с именем `D3DContent.def` в проект.
+12. В обозреватель решений добавьте в проект новый файл определения модуля (DEF) с именем `D3DContent.def`.
 
 ## <a name="creating-the-direct3d9-content"></a>Создание содержимого Direct3D9
  Чтобы обеспечить максимальную производительность, содержимое Direct3D9 должно использовать определенные параметры. В следующем коде показано, как создать поверхность Direct3D9 с лучшими характеристиками производительности. Дополнительные сведения см. в разделе [вопросы производительности для совместимости с Direct3D9 и WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md).
@@ -76,7 +76,7 @@ ms.locfileid: "70991396"
 
 1. С помощью обозреватель решений добавьте в C++ проект три класса с именем:
 
-     `CRenderer`(с виртуальным деструктором)
+     `CRenderer` (с виртуальным деструктором)
 
      `CRendererManager`
 
@@ -133,14 +133,14 @@ ms.locfileid: "70991396"
     Destroy
     ```
 
-12. Выполните построение проекта.
+12. Постройте проект.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- Размещение содержимого Direct3D9 в приложении WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение содержимого Direct3D9 в WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
+- Размещение содержимого Direct3D9 в приложении WPF. Дополнительные сведения см. [в разделе Пошаговое руководство. размещение содержимого Direct3D9 в WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [Пошаговое руководство: Размещение содержимого Direct3D9 в WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Пошаговое руководство. Размещение содержимого Direct3D9 в WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

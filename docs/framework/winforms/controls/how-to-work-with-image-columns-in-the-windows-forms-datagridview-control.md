@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView в Windows Forms
+title: Работа со столбцами изображений в элементе управления DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: 110422000fad3d52d936302cca7a3d635f44b917
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0ec51b825c476576a224b43c5431ba230018ef7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591397"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728256"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView в Windows Forms
 В примере кода ниже показано, как использовать столбцы изображений <xref:System.Windows.Forms.DataGridView> в интерактивном пользовательском интерфейсе. В примере также демонстрируются возможности изменения размера и расположения изображения с помощью <xref:System.Windows.Forms.DataGridViewImageColumn>.  
@@ -30,9 +30,9 @@ ms.locfileid: "65591397"
   
 - ссылки на сборки System и System.Windows.Forms;  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - [Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [Практическое руководство. Отображение изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

@@ -1,17 +1,17 @@
 ---
-title: Компонент Timer (Windows Forms)
+title: Компонент Timer
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Timer component [Windows Forms]
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 52a6b006b78856c9e14e13ce3e7a4dd2f1d2809e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6e42675567935f08ea7246e14cb7ac5abde23ee
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009582"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735493"
 ---
 # <a name="timer-component-windows-forms"></a>Компонент Timer (Windows Forms)
 Компонент Windows Forms <xref:System.Windows.Forms.Timer> вызывает событие через определенные интервалы времени. Этот компонент предназначен для работы в среде Windows Forms.  
@@ -23,10 +23,10 @@ ms.locfileid: "62009582"
  [Ограничения свойства Interval компонента Timer в Windows Forms](limitations-of-the-timer-component-interval-property.md)  
  Описываются известные ограничения на интервал таймера, которые могут влиять на его применение.  
   
- [Практическое руководство. Выполните процедуры, заданной периодичностью с помощью компонента Timer в Windows Forms](run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ [Выполнение операций с заданной периодичностью с помощью компонента Timer в Windows Forms](run-procedures-at-set-intervals-with-wf-timer-component.md)  
  Описывается, как настроить отклик на интервалы таймера в приложениях Windows.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  Класс <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>  
  Справочная информация о классе, используемом для таймеров форм Windows Forms, и его членах.  
   

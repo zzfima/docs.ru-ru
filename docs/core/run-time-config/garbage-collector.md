@@ -3,12 +3,12 @@ title: Параметры конфигурации сборщика мусора
 description: Сведения о параметрах времени выполнения, определяющих, как сборщик мусора управляет памятью для приложений .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900098"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733517"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Параметры конфигурации времени выполнения для сборки мусора
 
@@ -38,10 +38,13 @@ ms.locfileid: "75900098"
 | | Имя параметра | Значения | Представленная версия |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Server` | `false` — рабочая станция<br/>`true` — сервер | .NET Core 1.0 |
+| **Свойство MSBuild** | `ServerGarbageCollection` | `false` — рабочая станция<br/>`true` — сервер | .NET Core 1.0 |
 | **Переменная среды** | `COMPlus_gcServer` | `0` — рабочая станция<br/>`1` — сервер | .NET Core 1.0 |
 | **app.config для .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` — рабочая станция<br/>`true` — сервер |  |
 
-Пример.
+### <a name="examples"></a>Примеры
+
+Файл *runtimeconfig.json*
 
 ```json
 {
@@ -53,6 +56,18 @@ ms.locfileid: "75900098"
 }
 ```
 
+Файл проекта:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - Указывает, включена ли фоновая (параллельная) сборка мусора.
@@ -62,10 +77,13 @@ ms.locfileid: "75900098"
 | | Имя параметра | Значения | Представленная версия |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Concurrent` | `true` —фоновая сборка мусора<br/>`false` — непараллельная сборка мусора | .NET Core 1.0 |
+| **Свойство MSBuild** | `ConcurrentGarbageCollection` | `true` —фоновая сборка мусора<br/>`false` — непараллельная сборка мусора | .NET Core 1.0 |
 | **Переменная среды** | `COMPlus_gcConcurrent` | `true` —фоновая сборка мусора<br/>`false` — непараллельная сборка мусора | .NET Core 1.0 |
 | **app.config для .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` —фоновая сборка мусора<br/>`false` — непараллельная сборка мусора |  |
 
-Пример.
+### <a name="examples"></a>Примеры
+
+Файл *runtimeconfig.json*
 
 ```json
 {
@@ -75,6 +93,18 @@ ms.locfileid: "75900098"
       }
    }
 }
+```
+
+Файл проекта:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>Управление использованием ресурсов
@@ -261,10 +291,13 @@ ms.locfileid: "75900098"
 
 | | Имя параметра | Значения | Представленная версия |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.RetainVM` | `false` — возвращение операционной системе<br/>`true` — помещение в режим ожидания| .NET Core 1.0 |
+| **runtimeconfig.json** | `System.GC.RetainVM` | `false` — возвращение операционной системе<br/>`true` — помещение в режим ожидания | .NET Core 1.0 |
+| **Свойство MSBuild** | `RetainVMGarbageCollection` | `false` — возвращение операционной системе<br/>`true` — помещение в режим ожидания | .NET Core 1.0 |
 | **Переменная среды** | `COMPlus_GCRetainVM` | `0` — возвращение операционной системе<br/>`1` — помещение в режим ожидания | .NET Core 1.0 |
 
-Пример.
+### <a name="examples"></a>Примеры
+
+Файл *runtimeconfig.json*
 
 ```json
 {
@@ -274,6 +307,18 @@ ms.locfileid: "75900098"
       }
    }
 }
+```
+
+Файл проекта:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>Большие страницы

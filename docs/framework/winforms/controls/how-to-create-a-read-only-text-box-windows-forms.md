@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Создание текстового поля, доступного только для чтения (Windows Forms)
+title: Практическое руководство. Создание текстового поля только для чтения
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TextBox control [Windows Forms], read-only
 - read-only text boxes
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
-ms.openlocfilehash: 18d2f5ed2530957487ac25c3eb6240f8bc50a938
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 17ae9524009c687cd62fb315f842e188e120ac68
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971946"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731273"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Практическое руководство. Создание текстового поля, доступного только для чтения (Windows Forms)
 
@@ -19,18 +19,18 @@ ms.locfileid: "68971946"
 
 ## <a name="to-create-a-read-only-text-box"></a>Создание текстового поля, доступного только для чтения
 
-1. Присвойте <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> свойству <xref:System.Windows.Forms.TextBox> элемента управления значение `true`. Если свойство имеет значение `true`, пользователи по-прежнему могут прокручивать и выделять текст в текстовом поле, не разрешая изменения. Команда **копирования** работает в текстовом поле, но команды вырезания и **вставки** не используются.
+1. Задайте для свойства <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> элемента управления <xref:System.Windows.Forms.TextBox> значение `true`. Если свойство имеет значение `true`, пользователи по-прежнему могут прокручивать и выделять текст в текстовом поле, не разрешая изменения. Команда **копирования** работает в текстовом поле, но команды **вырезания** и **вставки** не используются.
 
     > [!NOTE]
-    > <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Свойство влияет только на взаимодействие с пользователем во время выполнения. Вы по-прежнему можете изменить содержимое текстового поля программно во время выполнения <xref:System.Windows.Forms.TextBox.Text%2A> , изменив свойство текстового поля.
+    > Свойство <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> влияет только на взаимодействие с пользователем во время выполнения. Вы по-прежнему можете изменить содержимое текстового поля программно во время выполнения, изменив свойство <xref:System.Windows.Forms.TextBox.Text%2A> текстового поля.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.TextBox>
 - [Общие сведения об элементе управления TextBox](textbox-control-overview-windows-forms.md)
-- [Практическое руководство. Управление точкой вставки в элементе управления TextBox Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Практическое руководство. Создание текстового поля пароля с помощью элемента управления TextBox Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Заключить кавычки в строку](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Практическое руководство. Выделение текста в элементе управления TextBox Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Просмотр нескольких строк в элементе управления TextBox Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Добавление кавычек в строку](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Элемент управления TextBox](textbox-control-windows-forms.md)

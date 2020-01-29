@@ -1,16 +1,16 @@
 ---
-title: Элемент управления ToolBar (Windows Forms)
+title: Элемент управления ToolBar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 13a56af0e52897a6fd4e11516fbf4c0b8f6d6b5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 027c96bb49e9446244e4b08ba93c551ef043b3c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929564"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735456"
 ---
 # <a name="toolbar-control-windows-forms"></a>Элемент управления ToolBar (Windows Forms)
 > [!NOTE]
@@ -28,15 +28,15 @@ ms.locfileid: "69929564"
  [Практическое руководство. Добавление кнопок в элемент управления ToolBar](how-to-add-buttons-to-a-toolbar-control.md)  
  Описываются способы добавления кнопок в элемент управления `ToolBar`.  
   
- [Практическое руководство. Определение значка для кнопки на панели инструментов](how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Практическое руководство. Определение значка для кнопки элемента управления ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)  
  Описываются способы отображения значков на кнопках элемента управления `ToolBar`.  
   
- [Практическое руководство. События меню триггера для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Практическое руководство. Активация событий меню для кнопок элемента управления ToolBar](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Инструкции по написанию кода для определения нажатой пользователем кнопки элемента управления `ToolBar`.  
   
- Также см. раздел [Как Определение значка для кнопки панели инструментов с помощью конструктора](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [инструкции: Добавление кнопок в элемент управления ToolBar с помощью конструктора](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
+ Также см. раздел [как определить значок для кнопки панели инструментов с помощью конструктора](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [как добавить кнопки в элемент управления ToolBar с помощью конструктора](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  Класс <xref:System.Windows.Forms.ToolBar>  
  Справочная информация о классе и его членах.  
   

@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о Windows Forms и неуправляемых приложениях
+title: Общие сведения о неуправляемых приложениях
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0b4c3e738848be1ead2adeb1945e168c9db60071
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592503"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732535"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Общие сведения о Windows Forms и неуправляемых приложениях
 Приложения и элементы управления Windows Forms могут взаимодействовать с неуправляемыми приложениями, но с некоторыми оговорками. В следующих разделах описываются сценарии и конфигурации, которые поддерживаются и не поддерживаются элементами управления и приложениями Windows Forms.  
@@ -47,17 +47,17 @@ ms.locfileid: "65592503"
  Цикл обработки сообщений приложения является внутренним циклом программы, который получает сообщения из очереди сообщений потока, преобразует их и отправляет приложению для обработки. Архитектура цикла обработки сообщений для формы Windows Forms отличается от архитектуры, используемой в более ранних приложениях, таких как приложения Visual Basic 6.0 и приложения MFC. Сообщения окна, которые отправляются в цикл обработки сообщений, могут обрабатываться не так, как ожидает форма Windows Forms. Таким образом, может наблюдаться неожиданное поведение. Могут не работать некоторые сочетания клавиш и некоторые действия мыши, а также могут не возникать некоторые события.  
   
 ## <a name="resolving-interoperability-issues"></a>Устранение проблем взаимодействия  
- Эти проблемы можно устранить путем отображения формы в цикле обработки сообщений .NET Framework, которые созданы с помощью <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> метод.  
+ Эти проблемы можно устранить, отобразив форму в .NET Framework цикле сообщений, который создается с помощью метода <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.  
   
  Чтобы исправить работу формы Windows Forms из клиентского приложения COM, необходимо запустить его в цикле обработки сообщений Windows Forms. Для этого воспользуйтесь одним из перечисленных ниже подходов.  
   
 - Используйте метод <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> для отображения Windows Form. Дополнительные сведения см. в разделе [Практическое руководство. Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
   
-- Запускайте каждую форму Windows Forms в новом потоке. Дополнительные сведения см. в разделе [Практическое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Запускайте каждую форму Windows Forms в новом потоке. Подробнее см. в разделе [Практическое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Windows Forms и неуправляемые приложения](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
 - [COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Примеры COM-взаимодействия](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
@@ -66,4 +66,4 @@ ms.locfileid: "65592503"
 - [Упаковка сборки для модели COM](../../interop/packaging-an-assembly-for-com.md)
 - [Регистрация сборок в COM](../../interop/registering-assemblies-with-com.md)
 - [Практическое руководство. Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Практическое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

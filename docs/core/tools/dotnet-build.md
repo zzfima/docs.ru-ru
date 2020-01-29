@@ -2,16 +2,16 @@
 title: Команда dotnet build
 description: Команда dotnet build выполняет сборку проекта и всех его зависимостей.
 ms.date: 10/14/2019
-ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454212"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734314"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Эта статья относится к ✓** SDK для .NET Core 1.x и более поздних версий
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 1.x и более поздних версий
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "73454212"
 
 ```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
-    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 Команда `dotnet build` выполняет сборку проекта и его зависимостей в набор двоичных файлов. Эти двоичные файлы содержат код проекта в виде файлов на промежуточном языке (IL) с расширением *DLL*.  В зависимости от типа и параметров проекта могут быть включены другие файлы, например:
 
@@ -121,7 +121,7 @@ dotnet build [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Задает уровень детализации MSBuild. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `minimal`.
+  Задает уровень детализации MSBuild. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `minimal`.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -153,7 +153,7 @@ dotnet build [-h|--help]
   dotnet build --source c:\packages\mypackages
   ```
 
-- Выполните сборку проекта и задайте версию 1.2.3.4 для сборки с помощью [параметра MSBuild](#msbuild) `-p`:
+- Выполните сборку проекта и задайте версию 1.2.3.4 для сборки с помощью параметра `-p` [MSBuild](#msbuild).
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

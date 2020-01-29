@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Замораживание столбцов элемента управления DataGridView в Windows Forms
+title: Закрепить столбцы в элементе управления DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: a83c5078d67be40fda2ae3382b8124594ee78103
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6d1a98e5c4332078c6012cb7c9ed836108abd86c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966661"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736741"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Замораживание столбцов элемента управления DataGridView в Windows Forms
 При просмотре пользователями данных, отображаемых в элементе управления Windows Forms <xref:System.Windows.Forms.DataGridView>, им порой требуется часто обращаться к одному столбцу или набору столбцов. Например, при просмотре таблицы сведений о пользователе, содержащей много столбцов, может быть желательно, чтобы имя пользователя отображалось постоянно при прокручивании остальных столбцов за пределы видимости.  
@@ -26,7 +26,7 @@ ms.locfileid: "69966661"
   
  Свойство <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> столбца определяет, должен ли он отображаться в сетке постоянно.  
   
- Эта задача поддерживается в Visual Studio.  Также см. раздел [Как Закрепление столбцов в элементе управления Windows Forms DataGridView с помощью](freeze-columns-in-the-datagrid-using-the-designer.md)конструктора.  
+ Эта задача поддерживается в Visual Studio.  См. также раздел [как заморозить столбцы в элементе управления Windows Forms DataGridView с помощью конструктора](freeze-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-freeze-a-column-programmatically"></a>Программное закрепление столбца  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69966661"
   
 - ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - [Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Практическое руководство. Включение изменения порядка столбцов в элементе управления Windows Forms DataGridView](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Разрешение переупорядочивания столбцов элемента управления DataGridView в Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

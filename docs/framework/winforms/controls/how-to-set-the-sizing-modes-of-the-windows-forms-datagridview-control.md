@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms
+title: Установка режимов изменения размера элемента управления DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: 76d71a7c3c37f53854cf4fd9c6d8300831572d51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 15b084afa4149ac43d40aeae7f35f0eaff5ac0e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591628"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738400"
 ---
 # <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms
 Следующие процедуры демонстрируют некоторые распространенные сценарии для настройки или комбинирования параметров изменения размеров, доступных для элемента управления <xref:System.Windows.Forms.DataGridView> и для определенных столбцов в элементе управления.  
@@ -56,7 +56,7 @@ ms.locfileid: "65591628"
   
 - ссылки на сборки System и System.Windows.Forms;  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms
+title: Пошаговое руководство. Обработка ошибок, происходящих во время ввода данных в элементе управления DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: cee6fe3b049378fa7bbe2585a3607049eaf231bc
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 77a4dcd9cf069ed8bbee6c49aa41db619c8e12ff
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046079"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738734"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Пример. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms
 
-Обработка ошибок из базового хранилища данных является обязательной функцией для приложения ввода данных. Элемент управления <xref:System.Windows.Forms.DataGridView> Windows Forms делает это простым, предоставляя <xref:System.Windows.Forms.DataGridView.DataError> событие, которое возникает, когда хранилище данных обнаруживает нарушение ограничения или бизнес-правило.
+Обработка ошибок из базового хранилища данных является обязательной функцией для приложения ввода данных. Элемент управления Windows Forms <xref:System.Windows.Forms.DataGridView> упрощает эту задачу, предоставляя событие <xref:System.Windows.Forms.DataGridView.DataError>, которое возникает, когда хранилище данных обнаруживает нарушение ограничения или бизнес-правило.
 
-В этом пошаговом руководстве вы получите строки из `Customers` таблицы в образце базы данных Northwind и отобразите их <xref:System.Windows.Forms.DataGridView> в элементе управления. При обнаружении `CustomerID` повторяющегося значения в новой строке или измененной существующей строке <xref:System.Windows.Forms.DataGridView.DataError> возникает событие, которое будет обработано отображением <xref:System.Windows.Forms.MessageBox> , описывающим исключение.
+В этом пошаговом руководстве вы получите строки из таблицы `Customers` образца базы данных Northwind и отобразите их в элементе управления <xref:System.Windows.Forms.DataGridView>. При обнаружении повторяющегося `CustomerID` значения в новой строке или измененной существующей строке возникает событие <xref:System.Windows.Forms.DataGridView.DataError>, которое будет обрабатываться с помощью <xref:System.Windows.Forms.MessageBox>, описывающего исключение.
 
-Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Обрабатывайте ошибки, возникающие при вводе данных в элементе](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)управления Windows Forms DataGridView.
+Сведения о копировании кода в этом разделе в виде одного списка см. в разделе [как управлять ошибками, происходящими при вводе данных в элементе управления Windows Forms DataGridView](handle-errors-that-occur-during-data-entry-in-the-datagrid.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 Для выполнения данного пошагового руководства требуется:
 
@@ -37,9 +37,9 @@ ms.locfileid: "70046079"
 
 #### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a>Обработку ошибок ввода данных в элементе управления DataGridView
 
-1. Создайте класс, производный от <xref:System.Windows.Forms.Form> и <xref:System.Windows.Forms.DataGridView> содержащий элемент управления и <xref:System.Windows.Forms.BindingSource> компонент.
+1. Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержащий элемент управления <xref:System.Windows.Forms.DataGridView> и компонент <xref:System.Windows.Forms.BindingSource>.
 
-    Следующий пример кода предоставляет базовую инициализацию и включает `Main` метод.
+    В следующем примере кода показана базовая инициализация и включается метод `Main`.
 
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#01)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#01)]
@@ -48,7 +48,7 @@ ms.locfileid: "70046079"
 
 2. Реализуйте метод в определении класса формы для обработки сведений о подключении к базе данных.
 
-    В `GetData` этом примере кода используется метод, который возвращает <xref:System.Data.DataTable> заполненный объект. Убедитесь, что для `connectionString` переменной задано значение, подходящее для вашей базы данных.
+    В этом примере кода используется метод `GetData`, который возвращает заполненный объект <xref:System.Data.DataTable>. Убедитесь, что для переменной `connectionString` задано значение, подходящее для вашей базы данных.
 
     > [!IMPORTANT]
     > Хранение конфиденциальных сведений (например, пароля) в строке подключения может повлиять на безопасность приложения. Использование проверки подлинности Windows (также называемой встроенными средствами безопасности) — более безопасный способ управления доступом к базе данных. Дополнительные сведения см. в разделе [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md).
@@ -56,12 +56,12 @@ ms.locfileid: "70046079"
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]
 
-3. Реализуйте обработчик для <xref:System.Windows.Forms.Form.Load> события формы, которое инициализирует <xref:System.Windows.Forms.DataGridView> и <xref:System.Windows.Forms.BindingSource> и настраивает привязку данных.
+3. Реализуйте обработчик для события <xref:System.Windows.Forms.Form.Load> формы, которое инициализирует <xref:System.Windows.Forms.DataGridView> и <xref:System.Windows.Forms.BindingSource> и настраивает привязку данных.
 
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#10)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#10)]
 
-4. Обработайте <xref:System.Windows.Forms.DataGridView>событиев <xref:System.Windows.Forms.DataGridView.DataError> .
+4. Обработайте событие <xref:System.Windows.Forms.DataGridView.DataError> в <xref:System.Windows.Forms.DataGridView>.
 
     Если контекст ошибки является операцией фиксации, отобразите ошибку в <xref:System.Windows.Forms.MessageBox>.
 
@@ -74,29 +74,29 @@ ms.locfileid: "70046079"
 
 #### <a name="to-test-the-form"></a>Тестирование формы
 
-- Нажмите клавишу F5 для запуска приложения.
+- Нажмите клавишу F5, чтобы запустить приложение.
 
-  Вы увидите <xref:System.Windows.Forms.DataGridView> элемент управления, заполненный данными из таблицы Customers. Если ввести повторяющееся значение для `CustomerID` и сохранить изменения, значение ячейки будет автоматически отменено, и <xref:System.Windows.Forms.MessageBox> появится сообщение, отображающее ошибку ввода данных.
+  Вы увидите <xref:System.Windows.Forms.DataGridView> элемент управления, заполненный данными из таблицы Customers. Если ввести повторяющееся значение для `CustomerID` и сохранить изменения, значение ячейки будет автоматически отменено, и появится <xref:System.Windows.Forms.MessageBox>, отображающая ошибку ввода данных.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Это приложение предоставляет базовое представление о <xref:System.Windows.Forms.DataGridView> возможностях элемента управления. Внешний вид и поведение <xref:System.Windows.Forms.DataGridView> элемента управления можно настроить несколькими способами.
+Это приложение предоставляет базовое представление о возможностях элемента управления <xref:System.Windows.Forms.DataGridView>. Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами.
 
-- Изменение стилей границ и заголовков. Дополнительные сведения см. в разделе [Практическое руководство. Измените стили границ и линий сетки в элементе управления](change-the-border-and-gridline-styles-in-the-datagrid.md)Windows Forms DataGridView.
+- Изменение стилей границ и заголовков. Дополнительные сведения см. в разделе [инструкции. изменение стилей границ и линий сетки в элементе управления Windows Forms DataGridView](change-the-border-and-gridline-styles-in-the-datagrid.md).
 
-- Разрешение или запрет на ввод данных пользователем <xref:System.Windows.Forms.DataGridView> для элемента управления. Дополнительные сведения см. в разделе [Практическое руководство. Предотвращение добавления и удаления строк в элементе управления](prevent-row-addition-and-deletion-datagridview.md)Windows Forms DataGridView и [последующее: Сделать столбцы только для чтения в элементе управления](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)Windows Forms DataGridView.
+- Включение или ограничение ввода данных пользователем для элемента управления <xref:System.Windows.Forms.DataGridView>. Дополнительные сведения см. в статьях [как предотвратить добавление и удаление строк в элементе управления Windows Forms DataGridView](prevent-row-addition-and-deletion-datagridview.md)и [как сделать столбцы доступны только для чтения в элементе управления Windows Forms DataGridView](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).
 
-- Проверка входных данных пользователя <xref:System.Windows.Forms.DataGridView> для элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Проверка данных в элементе управления](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)Windows Forms DataGridView.
+- Проверьте введенные пользователем данные в элементе управления <xref:System.Windows.Forms.DataGridView>. Дополнительные сведения см. в разделе [Пошаговое руководство. Проверка данных в элементе управления Windows Forms DataGridView](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).
 
-- Обрабатывайте очень большие наборы данных с помощью виртуального режима. Дополнительные сведения см. в разделе [Пошаговое руководство: Реализация виртуального режима в элементе управления](implementing-virtual-mode-wf-datagridview-control.md)Windows Forms DataGridView.
+- Обрабатывайте очень большие наборы данных с помощью виртуального режима. Дополнительные сведения см. [в разделе Пошаговое руководство. Реализация виртуального режима в элементе управления Windows Forms DataGridView](implementing-virtual-mode-wf-datagridview-control.md).
 
-- Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [Практическое руководство. Настройка внешнего вида ячеек в элементе управления](customize-the-appearance-of-cells-in-the-datagrid.md) Windows Forms DataGridView и [выполнение следующих действий: Задайте стили ячеек по умолчанию для элемента управления](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)Windows Forms DataGridView.
+- Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [как настроить внешний вид ячеек в элементе управления Windows Forms DataGridView](customize-the-appearance-of-cells-in-the-datagrid.md) и [как задать стили ячеек по умолчанию для элемента управления Windows Forms DataGridView](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Ввод данных с помощью элемента управления DataGridView в Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Обработку ошибок, происходящих во время ввода данных в элементе управления Windows Forms DataGridView](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [Пошаговое руководство: Проверка данных в элементе управления Windows Forms DataGridView](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Обработка ошибок, связанных с вводом данных в элемент управления DataGridView, в Windows Forms](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Пример. Проверка данных элемента управления DataGridView в Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md)

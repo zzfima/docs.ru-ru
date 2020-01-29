@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание таблицы подстановки для элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms
+title: Создание таблицы подстановок для элемента управления ComboBox, ListBox или CheckedListBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bbbc66a56c7ce269c2dabd593db88f96907d755
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011493"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737371"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Создание таблицы подстановки для элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms
 Иногда полезно отображать данные в удобном для пользователя формате в форме Windows Forms и при этом сохранять их в формате, требуемом в используемой программе. Например, в бланке заказа продуктов питания могут отображаться элементы меню с названиями продуктов в списке. Однако таблица данных регистрации заказа будет содержать уникальные идентификаторы, представляющие продукты питания. В таблице ниже представлен пример хранения и отображения данных бланка заказа продуктов питания.  
@@ -33,16 +33,16 @@ ms.locfileid: "62011493"
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|name|  
+|ИДЕНТИФИКАТОР|Name|  
 |--------|----------|  
 |12|Картофель|  
 |13|Цыпленок|  
   
- В этом случае одна таблица **OrderDetailsTable**, содержит фактические сведения, важные с отображения и сохранения. Однако с целью экономии места они представлены в неудобном для восприятия виде. Другая таблица, **ItemTable**, содержит только связанные сведения о том, какой идентификатор номер эквивалент для определения имени качества пищевых продуктов и ничего о заказах на фактический качества пищевых продуктов.  
+ В этом сценарии одна таблица, **ордердетаилстабле**, хранит фактические сведения, которые будут связаны с отображением и сохранением. Однако с целью экономии места они представлены в неудобном для восприятия виде. Другая таблица, **итемтабле**, содержит только сведения о том, какой идентификационный номер эквивалентен имени нектара, и ничего о фактическом заказе на возврат.  
   
- **ItemTable** подключен к <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, или <xref:System.Windows.Forms.CheckedListBox> управления с помощью трех свойств. `DataSource` Свойство содержит имя этой таблицы. `DisplayMember` Свойство содержит столбец данных таблицы, который будет отображаться в элементе управления (название продукта). `ValueMember` Свойство содержит столбец данных таблицы, в которой хранится информация (номер идентификатора).  
+ **Итемтабле** подключается к <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>или <xref:System.Windows.Forms.CheckedListBox> управления через три свойства. Свойство `DataSource` содержит имя этой таблицы. Свойство `DisplayMember` содержит столбец данных этой таблицы, который необходимо отобразить в элементе управления (имя пищи). Свойство `ValueMember` содержит столбец данных этой таблицы с сохраненными данными (ИДЕНТИФИКАТОРом).  
   
- **OrderDetailsTable** подключен к элементу управления с помощью коллекции привязок, через <xref:System.Windows.Forms.Control.DataBindings%2A> свойство. При добавлении объекта привязки в коллекцию свойство элемента управления соединиться элемент данных (столбец идентификаторов) в источнике данных ( **OrderDetailsTable**). Когда в элементе управления делается выбор, в этой таблице сохраняются вводимые данные.  
+ **Ордердетаилстабле** подключается к элементу управления по коллекции привязок, доступ к которому осуществляется через свойство <xref:System.Windows.Forms.Control.DataBindings%2A>. При добавлении объекта привязки в коллекцию свойство элемента управления подключается к определенному элементу данных (столбцу с ИДЕНТИФИКАЦИОНными номерами) в источнике данных ( **ордердетаилстабле**). Когда в элементе управления делается выбор, в этой таблице сохраняются вводимые данные.  
   
 ### <a name="to-create-a-lookup-table"></a>Создание таблицы подстановок  
   
@@ -50,17 +50,17 @@ ms.locfileid: "62011493"
   
 2. Произведите подключение к источнику данных.  
   
-3. Установите связь между данными в двух таблицах. См. в разделе [Знакомство с объектами DataRelation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120)).  
+3. Установите связь между данными в двух таблицах. См. статью [Общие сведения об объектах DataRelation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120)).  
   
 4. Задайте перечисленные ниже свойства. Их можно задать в коде или в конструкторе.  
   
-    |Свойство|Параметр|  
+    |Идентификаторы|Параметр|  
     |--------------|-------------|  
-    |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Таблица, в которой содержатся сведения о том, какому коду соответствует тот или иной элемент. В приведенном выше сценарии это `ItemTable`.|  
-    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Столбец таблицы источника данных, который необходимо отобразить в элементе управления. В приведенном выше сценарии это `"Name"` (Чтобы задать в коде, используйте кавычки).|  
-    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Столбец таблицы источника данных, который содержит сохраняемую информацию. В приведенном выше сценарии это `"ID"` (Чтобы задать в коде, используйте кавычки).|  
+    |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Таблица, в которой содержатся сведения о том, какому коду соответствует тот или иной элемент. В предыдущем сценарии это `ItemTable`.|  
+    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Столбец таблицы источника данных, который необходимо отобразить в элементе управления. В предыдущем сценарии это `"Name"` (для задания в коде используйте кавычки).|  
+    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Столбец таблицы источника данных, который содержит сохраняемую информацию. В предыдущем сценарии это `"ID"` (для задания в коде используйте кавычки).|  
   
-5. В процедуре вызовите метод <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> класса <xref:System.Windows.Forms.ControlBindingsCollection> для привязки свойства <xref:System.Windows.Forms.ListControl.SelectedValue%2A> элемента управления к таблице, в которой регистрируются данные, вводимые в форме. Также это можно сделать в конструкторе, а не в коде, обратившись к элемента управления <xref:System.Windows.Forms.Control.DataBindings%2A> свойство в **свойства** окна. В приведенном выше сценарии это `OrderDetailsTable`, а столбец `"ItemID"`.  
+5. В процедуре вызовите метод <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> класса <xref:System.Windows.Forms.ControlBindingsCollection> для привязки свойства <xref:System.Windows.Forms.ListControl.SelectedValue%2A> элемента управления к таблице, в которой регистрируются данные, вводимые в форме. Это также можно сделать в конструкторе, а не в коде, обратившись к свойству <xref:System.Windows.Forms.Control.DataBindings%2A> элемента управления в окне **Свойства** . В предыдущем сценарии это `OrderDetailsTable`, а столбец — `"ItemID"`.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  
@@ -70,7 +70,7 @@ ms.locfileid: "62011493"
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Привязка данных и Windows Forms](../data-binding-and-windows-forms.md)
 - [Общие сведения об элементе управления ListBox](listbox-control-overview-windows-forms.md)

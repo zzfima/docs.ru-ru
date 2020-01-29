@@ -1,5 +1,5 @@
 ---
-title: Порядок событий в формах Windows Forms
+title: Порядок событий
 ms.date: 03/30/2017
 helpviewer_keywords:
 - events [Windows Forms], order of
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 28eb451c7edd740664f80f8ec35c60192764043c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 618ac5a6a6a32ae1a53fc60ac80700d7648c81a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949878"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734856"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Порядок событий в формах Windows Forms
 Особый интерес для разработчиков представляет порядок, в котором вызываются события в приложениях Windows Forms, для обеспечения обработки каждого из этих событий в свою очередь. Если ситуация требует аккуратной обработки событий, например когда производится перерисовка части формы, то необходимо знать точный порядок, в котором вызываются события во время выполнения. В этом разделе приведены некоторые сведения о порядке событий, возникающих на нескольких важных этапах жизненного цикла приложений и элементов управления. Конкретные сведения о порядке событий ввода мыши см. [в разделе события мыши в Windows Forms](mouse-events-in-windows-forms.md). Общие сведения о событиях в Windows Forms см. в разделе [Общие сведения о событиях](events-overview-windows-forms.md). Дополнительные сведения о описывающего обработчиков событий см. в разделе [Общие сведения об обработчиках событий](event-handlers-overview-windows-forms.md).  
@@ -80,6 +80,6 @@ ms.locfileid: "69949878"
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)

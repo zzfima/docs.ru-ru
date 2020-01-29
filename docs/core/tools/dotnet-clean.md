@@ -2,16 +2,16 @@
 title: Команда dotnet clean
 description: Команда dotnet clean очищает текущий каталог.
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117742"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734249"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Этот раздел относится к: ✓** пакету SDK для .NET Core 1.x и более поздних версий
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 1.x и более поздних версий
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "71117742"
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 Команда `dotnet clean` очищает выходные данные предыдущей сборки. Она реализуется как [целевой объект MSBuild](/visualstudio/msbuild/msbuild-targets), поэтому при выполнении команды проект получает оценку. Очищаются только выходные данные, созданные во время сборки. Очищаются папки с промежуточными (*obj*) и окончательными выходными данными (*bin*).
 
@@ -71,7 +71,7 @@ dotnet clean [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Задает уровень детализации MSBuild. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `normal`.
+  Задает уровень детализации MSBuild. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `normal`.
 
 ## <a name="examples"></a>Примеры
 

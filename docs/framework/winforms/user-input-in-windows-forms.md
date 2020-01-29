@@ -1,5 +1,5 @@
 ---
-title: Ввод данных пользователем в Windows Forms
+title: Ввод данных пользователем
 ms.date: 03/30/2017
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: 5b66e60fa2d28528a9e60d20bb101bc2d19bec3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddcda02cbce56e47b0041f8738e2027139e34719
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967002"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734728"
 ---
 # <a name="user-input-in-windows-forms"></a>Ввод данных пользователем в Windows Forms
 В Windows Forms включена модель ввода пользователя, основанная на событиях, которые возникают во время обработки соответствующих сообщений Windows. Здесь приведены ссылки на разделы с информацией о вводе с помощью мыши и клавиатуры, включая примеры кода, демонстрирующие выполнение определенных задач.  
@@ -30,11 +30,11 @@ ms.locfileid: "61967002"
  [Практическое руководство. Имитация событий мыши и клавиатуры в коде](how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  Показано несколько различных способов программной имитации ввода с помощью мыши и клавиатуры.  
   
- [Практическое руководство. Обрабатывать события пользовательского ввода в элементах управления Windows Forms](how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ [Практическое руководство. Обработка событий пользовательского ввода в элементах управления Windows Forms](how-to-handle-user-input-events-in-windows-forms-controls.md)  
  Пример кода, который обрабатывает большую часть событий пользовательского ввода и сообщает сведения о каждом событии.  
   
  [Проверка введенных пользователем данных в Windows Forms](user-input-validation-in-windows-forms.md)  
  Описываются методы проверки пользовательского ввода в приложениях Windows Forms.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- Также см. в разделе [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md).
+ См. также раздел [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md).

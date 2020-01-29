@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d384aa2daea17581402dc45dc3104a0d97f77f3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035447"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727883"
 ---
 # <a name="net-docs"></a>Документация по .NET
 
@@ -20,9 +20,7 @@ ms.locfileid: "73035447"
 
 Чтобы внести свой вклад, ознакомьтесь с предложениями в разделе [Проекты для участников сообщества .NET](https://github.com/dotnet/docs/projects/35). В [руководстве для участников](CONTRIBUTING.md) приведены инструкции по используемым процедурам. 
 
-Если вы хотите перенести существующий код, предназначенный для .NET Framework, из [коллекции кода](https://code.msdn.microsoft.com) в приложения .NET Core, которые хранятся в нашем [репозитории примеров](https://github.com/dotnet/samples) и доступны для скачивания из [обозревателя примеров](https://docs.microsoft.com/samples/browse), см. проект [миграции коллекции кода](https://github.com/dotnet/docs/projects/88). 
-
-Мы ожидаем, что [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) и [Unity](https://docs.unity3d.com/Manual/index.html) также будут использовать эту документацию.
+Если вы хотите перенести существующий код, предназначенный для .NET Framework, из сайта [устаревшей коллекции кода](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired) в приложения .NET Core, которые хранятся в нашем [репозитории примеров](https://github.com/dotnet/samples) и доступны для скачивания из [обозревателя примеров](https://docs.microsoft.com/samples/browse), см. проект [миграции коллекции кода](https://github.com/dotnet/docs/projects/88). Примеры из коллекции кода были перемещены в организацию [Microsoft Archive](https://github.com/microsoftarchive?q=msdn-code-gallery).
 
 Ожидаемое поведение в нашем сообществе определяется правилами поведения Contributor Covenant, принятыми в этом проекте.
 Дополнительные сведения см. в разделе [Правила поведения .NET Foundation](https://dotnetfoundation.org/code-of-conduct).

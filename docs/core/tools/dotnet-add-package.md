@@ -2,16 +2,16 @@
 title: Команда dotnet add package
 description: Команду dotnet add package удобно использовать для добавления ссылки на пакет NuGet в проект.
 ms.date: 06/26/2019
-ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117799"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733327"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Эта статья относится к ✓** SDK для .NET Core 1.x и более поздних версий
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 1.x и более поздних версий
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "71117799"
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 Команда `dotnet add package` предоставляет удобный способ для добавления ссылки на пакет в файл проекта. После запуска этой команды выполняется проверка совместимости, чтобы убедиться, что пакет совместим со всеми платформами в проекте. Если проверка проходит успешно, в файл проекта добавляется элемент `<PackageReference>` и выполняется команда [dotnet restore](dotnet-restore.md).
 

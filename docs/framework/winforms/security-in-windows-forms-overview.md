@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о безопасности в Windows Forms
+title: Обзор безопасности
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972132"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734852"
 ---
 # <a name="security-in-windows-forms-overview"></a>Общие сведения о безопасности в Windows Forms
 
@@ -77,15 +77,15 @@ ms.locfileid: "70972132"
 
 Выбор технологии зависит от среды развертывания. Подробнее см. в разделе [Выбор стратегии развертывания ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-По умолчанию приложения ClickOnce, развернутые с помощью Visual Studio или средств .NET Framework SDK (Mage. exe и MageUI. exe), настроены на выполнение на клиентском компьютере с полным доверием. При развертывании приложения с помощью частичного доверия или с помощью только некоторых дополнительных разрешений необходимо изменить эту настройку по умолчанию. Это можно сделать с помощью Visual Studio или средства .NET Framework SDK для программы MageUI. exe при настройке развертывания. Дополнительные сведения об использовании MageUI. exe см. в разделе [пошаговое руководство. Развертывание приложения](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)ClickOnce вручную.  Также см. раздел [Как Задайте пользовательские разрешения для приложения](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) ClickOnce или [выполните следующие действия. Задайте пользовательские разрешения для приложения](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)ClickOnce.
+По умолчанию приложения ClickOnce, развернутые с помощью Visual Studio или средств .NET Framework SDK (Mage. exe и MageUI. exe), настроены на выполнение на клиентском компьютере с полным доверием. При развертывании приложения с помощью частичного доверия или с помощью только некоторых дополнительных разрешений необходимо изменить эту настройку по умолчанию. Это можно сделать с помощью Visual Studio или средства .NET Framework SDK для программы MageUI. exe при настройке развертывания. Дополнительные сведения об использовании MageUI. exe см. в разделе [Пошаговое руководство. Развертывание приложения ClickOnce вручную](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  См. также разделы [Практическое руководство. Установка пользовательских разрешений для приложения ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) или [Практическое руководство. Установка пользовательских разрешений для приложения ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Дополнительные сведения о аспектах безопасности ClickOnce и повышении разрешений см. в разделе [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Подробнее о развертывании доверенных приложений см. в разделе [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Тестирование приложения
 
-Если приложение Windows Forms развернуто с помощью Visual Studio, можно включить отладку в режиме частичного доверия или ограниченный набор разрешений из среды разработки.  Также см. раздел [Как отладить приложение ClickOnce с ограниченными разрешениями](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
+Если приложение Windows Forms развернуто с помощью Visual Studio, можно включить отладку в режиме частичного доверия или ограниченный набор разрешений из среды разработки.  См. также [руководство. Отладка приложения ClickOnce с ограниченными разрешениями](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Безопасность Windows Forms](windows-forms-security.md)
 - [Основы управления доступом для кода](../misc/code-access-security-basics.md)

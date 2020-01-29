@@ -1,16 +1,16 @@
 ---
-title: Обработка событий в Visual Basic и WPF
+title: Обработку событий в Visual Basic
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 959ef66f41f6c5f06e18a202109fba058c522d1d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559863"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735411"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Обработка событий в Visual Basic и WPF
 В частности, для языка Microsoft Visual Basic .NET можно использовать ключевое слово `Handles` для конкретного языка, чтобы связать обработчики событий с экземплярами, а не присоединять обработчики событий с атрибутами или использовать метод <xref:System.Windows.UIElement.AddHandler%2A>. Однако метод присоединения обработчиков к экземплярам `Handles` имеет некоторые ограничения, так как синтаксис `Handles` не поддерживает некоторые возможности перенаправленных событий системы событий [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

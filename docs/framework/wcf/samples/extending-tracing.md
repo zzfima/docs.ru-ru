@@ -2,12 +2,12 @@
 title: Расширение трассировки
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 64f9d18b68e5f2604631a72579eb45bf7f7b8372
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c6d62f6c334261b0dc897a1c1a2cd71d40ee4f51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716398"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734924"
 ---
 # <a name="extending-tracing"></a>Расширение трассировки
 В этом примере показано, как расширить функцию трассировки Windows Communication Foundation (WCF) путем написания пользовательских трассировок действий в клиенте и в коде службы. Это позволяет пользователю создавать действия трассировки и группировать трассировки в логические пакеты работ. Кроме того, возможно согласование действий с помощью передач (в рамках одной конечной точки) и распространения (между конечными точками). В этом образце трассировка включается как для клиента, так и для службы. Дополнительные сведения о включении трассировки в файлах конфигурации клиента и службы см. в разделе [Трассировка и ведение журнала сообщений](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -98,4 +98,4 @@ ms.locfileid: "74716398"
   
 ## <a name="see-also"></a>См. также:
 
-- [Примеры мониторинга AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Примеры мониторинга AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

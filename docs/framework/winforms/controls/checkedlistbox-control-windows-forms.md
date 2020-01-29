@@ -1,5 +1,5 @@
 ---
-title: Элемент управления CheckedListBox (Windows Forms)
+title: Элемент управления CheckedListBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], reference
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 069c0a2332f7035ce59f17058f388f9fb452b720
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956459"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736996"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>Элемент управления CheckedListBox (Windows Forms)
-Windows Forms `CheckedListBox` элемент управления отображает список элементов, таких как <xref:System.Windows.Forms.ListBox> управления, а также может отображаться флажок рядом с элементами списка.  
+Элемент управления Windows Forms `CheckedListBox` отображает список элементов, например элемент управления <xref:System.Windows.Forms.ListBox>, а также флажки рядом с элементами списка.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления CheckedListBox](checkedlistbox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Определить, какие элементы в элементе управления CheckedListBox Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- В этой статье описывается шаг по списку, чтобы определить, какие элементы установлены.  
+ [Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ Описывает, как выполнить пошаговое выполнение списка, чтобы определить, какие элементы отмечены флажками.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  Класс <xref:System.Windows.Forms.CheckedListBox>  
  Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)  
- Предоставляет список вещей, которые можно сделать с помощью списков, поля со списком и списки.  
+ Предоставляет список действий, которые можно выполнить с помощью списков, полей со списками и списков с установленными флажками.  
   
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

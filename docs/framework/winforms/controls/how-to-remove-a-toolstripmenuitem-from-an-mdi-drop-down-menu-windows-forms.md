@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Удаление элемента ToolStripMenuItem из раскрывающегося меню MDI (Windows Forms)
+title: Практическое руководство. Удаление элемента ToolStripMenuItem из меню MDI-приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: 378410977c31a446b34bf907dfd438a2a799c84a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3198195cf0991734826508aa65818505bf2038c8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662289"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735852"
 ---
-# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Практическое руководство. Удаление элемента ToolStripMenuItem из раскрывающегося меню MDI (Windows Forms)
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Практическое руководство. Удаление элемента ToolStripMenuItem из меню MDI-приложения (Windows Forms)
 В некоторых приложениях вид дочернего окна многодокументного интерфейса (MDI) может отличаться от родительского окна MDI. Например, родительским окном MDI может быть электронная таблица, а дочерним окном MDI — диаграмма. В этом случае может потребоваться дополнить содержимое меню родительского окна MDI содержимым меню дочерней MDI-формы, по мере того как активируются дочерние окна MDI различных типов.  
   
- В следующей процедуре используется <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойств, чтобы удалить элемент меню из раскрывающегося списка части родительского меню MDI. Восстановление удаленных пунктов меню родительского меню MDI закрытии дочернего окна MDI.  
+ В следующей процедуре используются свойства <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> для удаления пункта меню из раскрывающейся части родительского меню MDI. При закрытии дочернего окна MDI удаленные элементы меню восстанавливаются в родительском меню MDI.  
   
-### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>Для удаления элемента управления из меню MDI  
+### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>Удаление объекта MenuStrip из раскрывающегося меню MDI  
   
 1. Создайте форму и присвойте ее свойству <xref:System.Windows.Forms.Form.IsMdiContainer%2A> значение `true`.  
   
@@ -30,27 +30,27 @@ ms.locfileid: "64662289"
   
 3. Добавьте пункт меню верхнего уровня в `Form1`<xref:System.Windows.Forms.MenuStrip> и присвойте его свойству <xref:System.Windows.Forms.Control.Text%2A> значение `&File`.  
   
-4. Добавьте три элемента вложенного меню для `&File` пункта меню и задайте их <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойства `&Open`, `&Import from`, и `E&xit`.  
+4. Добавьте три пункта подменю в элемент меню `&File` и задайте для свойств <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&Open`, `&Import from`и `E&xit`.  
   
-5. Добавьте два подменю к `&Import from` подменю и задайте их <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойства `&Word` и `&Excel`.  
+5. Добавьте два пункта подменю в элемент вложенного меню `&Import from` и задайте для свойств <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&Word` и `&Excel`.  
   
 6. Добавьте в проект форму, добавьте <xref:System.Windows.Forms.MenuStrip> на форму и присвойте его свойству <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> элемента `Form2`<xref:System.Windows.Forms.MenuStrip> значение `true`.  
   
 7. Добавьте пункт меню верхнего уровня в `Form2`<xref:System.Windows.Forms.MenuStrip> и присвойте его свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&File`.  
   
-8. Добавить `&Import from` пункт подменю `&File` меню `Form2`и добавьте `&Word` пункт подменю `&File` меню.  
+8. Добавьте элемент подменю `&Import from` в меню `&File` `Form2`и добавьте пункт подменю `&Word` в меню `&File`.  
   
-9. Задайте <xref:System.Windows.Forms.MergeAction> и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойства `Form2` пункты меню, как показано в следующей таблице.  
+9. Задайте свойства <xref:System.Windows.Forms.MergeAction> и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> пунктов меню `Form2`, как показано в следующей таблице.  
   
-    |Пункт меню Form2|Значение MergeAction|Значение MergeIndex|  
+    |Пункт меню Form2|Значение Мержеактион|Значение Мержеиндекс|  
     |---------------------|-----------------------|----------------------|  
-    |Файл|MatchOnly|-1|  
-    |Импорт из|MatchOnly|-1|  
-    |Слово|Удалить|-1|  
+    |File|матчонли|-1|  
+    |Импорт из|матчонли|-1|  
+    |Word|Удаление|-1|  
   
-10. В `Form1`, создайте обработчик событий для <xref:System.Windows.Forms.Control.Click> событие `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. В `Form1`Создайте обработчик событий для <xref:System.Windows.Forms.Control.Click> события `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-11. В обработчик событий вставьте код, аналогичный приведенному в следующем примере кода для создания и отображения новых экземпляров `Form2` качестве дочерних окон MDI `Form1`:  
+11. В обработчике событий вставьте код, аналогичный следующему примеру кода, чтобы создать и отобразить новые экземпляры `Form2` как дочерние элементы MDI `Form1`:  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -94,7 +94,7 @@ ms.locfileid: "64662289"
   
 - ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Практическое руководство. Создание родительских MDI-форм](../advanced/how-to-create-mdi-parent-forms.md)
 - [Практическое руководство. Создание дочерних MDI-форм](../advanced/how-to-create-mdi-child-forms.md)

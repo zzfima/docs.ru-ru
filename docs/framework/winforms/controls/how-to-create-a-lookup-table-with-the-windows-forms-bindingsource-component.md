@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms
+title: Создание таблицы подстановок с помощью компонента BindingSource
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 33b9e4e98a8a3f8c0d5dd6433ebbf15c049b608e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf2bfa6cf3f56a38b55f8c87004c42a46172891
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643063"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736811"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms
 Таблица подстановки — это таблица данных, в одном из столбцов которой отображаются данные из записей в связанной таблице. В следующих процедурах для отображения поля с отношением по внешнему ключу от родительской к дочерней таблице используется элемент управления <xref:System.Windows.Forms.ComboBox>.  
@@ -49,7 +49,7 @@ ms.locfileid: "64643063"
   
 ### <a name="to-create-the-user-interface"></a>Создание пользовательского интерфейса  
   
-1. Из **элементов**, перетащите <xref:System.Windows.Forms.ComboBox> на форму.  
+1. Из **панели элементов**перетащите элемент управления <xref:System.Windows.Forms.ComboBox> на форму.  
   
      Этот элемент управления будет отображать столбец из родительской таблицы.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "64643063"
   
 8. Свяжите элементы управления, кроме <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.BindingNavigator>, с полями сведений из элемента <xref:System.Windows.Forms.BindingSource> дочерней таблицы (например, `OrdersBindingSource`), которые необходимо отобразить.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.BindingSource>
 - [Компонент BindingSource](bindingsource-component.md)

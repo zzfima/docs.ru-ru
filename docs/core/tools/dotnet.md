@@ -2,12 +2,12 @@
 title: Команда dotnet
 description: Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании.
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117511"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734063"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -45,7 +45,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 `dotnet` — это средство для управления исходным кодом .NET и двоичными объектами. Он предоставляет команды, выполняющие определенные задачи, такие как [`dotnet build`](dotnet-build.md) и [`dotnet run`](dotnet-run.md). Каждая команда определяет свои аргументы. Введите `--help` после каждой команды для доступа к краткой справочной документации.
 
@@ -107,7 +107,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 Путь к файлу *runtimeconfig.json*.
 
-Файл *runtimeconfig.json* представляет собой файл конфигурации, содержащий параметры конфигурации среды выполнения. Дополнительные сведения см. в разделе [Файлы конфигурации среды выполнения](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) на GitHub.
+Файл *runtimeconfig.json* представляет собой файл конфигурации, содержащий параметры среды выполнения. Дополнительные сведения см. в статье [Параметры конфигурации среды выполнения .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -157,7 +157,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 Путь к файлу *runtimeconfig.json*.
 
-Файл *runtimeconfig.json* представляет собой файл конфигурации, содержащий параметры конфигурации среды выполнения. Дополнительные сведения см. в разделе [Файлы конфигурации среды выполнения](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) на GitHub.
+Файл *runtimeconfig.json* представляет собой файл конфигурации, содержащий параметры среды выполнения. Дополнительные сведения см. в статье [Параметры конфигурации среды выполнения .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -199,7 +199,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 Путь к файлу *runtimeconfig.json*.
 
-Файл *runtimeconfig.json* представляет собой файл конфигурации, содержащий параметры конфигурации среды выполнения. Дополнительные сведения см. в разделе [Файлы конфигурации среды выполнения](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) на GitHub.
+Файл *runtimeconfig.json* представляет собой файл конфигурации, содержащий параметры среды выполнения. Дополнительные сведения см. в статье [Параметры конфигурации среды выполнения .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -399,3 +399,4 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 ## <a name="see-also"></a>См. также
 
 - [Файлы конфигурации среды выполнения](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Параметры конфигурации среды выполнения .NET Core](../run-time-config/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Поля и заполнение в элементах управления Windows Forms
+title: Поля и заполнение в элементах управления
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Padding property [Windows Forms]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: bf1f88f6efcedd740bff92dda391470391f16ce5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02cabccd0d51a3501a8aafb8733a5273deef6c49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752522"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728574"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Поля и заполнение в элементах управления Windows Forms
 Точное расположение элементов управления на форме является важным для многих приложений. Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> предоставляет множество возможностей компоновки для решения этой задачи. Свойства <xref:System.Windows.Forms.Control.Margin%2A> и <xref:System.Windows.Forms.Control.Padding%2A> — одни из наиболее важных.  
@@ -23,11 +23,11 @@ ms.locfileid: "61752522"
   
  На рисунке ниже демонстрируется значение свойств <xref:System.Windows.Forms.Control.Padding%2A> и <xref:System.Windows.Forms.Control.Margin%2A> элемента управления.  
   
- ![И заполнение для Windows Forms элементы управления](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Заполнение и маржа для элементов управления Windows Forms](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Эта возможность поддерживается во время разработки в Visual Studio. Также см. в разделе [Пошаговое руководство: Размещение Windows Forms элементы управления с помощью свойств Padding, Margins и свойство AutoSize](windows-forms-controls-padding-autosize.md).  
+ Эта возможность поддерживается во время разработки в Visual Studio. См. также раздел [Пошаговое руководство. размещение элементов управления Windows Forms с заполнением, полями и свойством AutoSize](windows-forms-controls-padding-autosize.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
