@@ -65,9 +65,9 @@ ms.locfileid: "55479791"
 
 ### <a name="mutex-class"></a>Mutex класс
 
-Класс <xref:System.Threading.Mutex?displayProperty=nameWithType>, как и <xref:System.Threading.Monitor> предоставляет монопольный доступ к общему ресурсу. С помощью вызова одной из перегрузок метода [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) можно запросить владение мьютексом. Как и <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> реализует привязку потока и поток, который получил мьютекс, должен освободить его, вызвав метод <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
+Класс <xref:System.Threading.Mutex?displayProperty=nameWithType>, как и <xref:System.Threading.Monitor> предоставляет монопольный доступ к общему ресурсу. С помощью вызова одной из перегрузок метода [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) можно запросить владение мьютексом. Как и <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> сохраняют информацию о том, какие потоки ими владеют. И поток, который владеет мьютексом, должен освободить его, вызвав метод <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
 
-В отличие от <xref:System.Threading.Monitor>, класс <xref:System.Threading.Mutex> может использоваться для внутрипроцессной синхронизации. Для этого нужно использовать именованный мьютекс, который виден в операционной системе. Чтобы создать экземпляр именованного мьютекса, используйте [конструктор Mutex](<xref:System.Threading.Mutex.%23ctor%2A>), который задает имя. Также можно вызвать метод <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType>, чтобы открыть существующий именованный системный мьютекс.
+В отличие от <xref:System.Threading.Monitor>, класс <xref:System.Threading.Mutex> может использоваться для межпроцессной синхронизации. Для этого нужно использовать именованный мьютекс, который виден в операционной системе. Чтобы создать экземпляр именованного мьютекса, используйте [конструктор Mutex](<xref:System.Threading.Mutex.%23ctor%2A>), который задает имя. Также можно вызвать метод <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType>, чтобы открыть существующий именованный системный мьютекс.
   
 Дополнительные сведения см. в статье о [мьютексах](mutexes.md) и справочной документации по API <xref:System.Threading.Mutex>.
 
@@ -87,7 +87,7 @@ ms.locfileid: "55479791"
 
 Классы <xref:System.Threading.Semaphore?displayProperty=nameWithType> и <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> ограничивают число потоков, которые могут одновременно обращаться к ресурсу или пулу ресурсов. Дополнительные потоки, запрашивающие ресурс, ожидают освобождения семафора любым из потоков. Так как семафор не реализует привязку потока, поток может занять семафор, а другой поток может его освободить.
 
-<xref:System.Threading.SemaphoreSlim> — это упрощенная альтернатива<xref:System.Threading.Semaphore>, которую можно использовать для синхронизации в рамках одного процесса.
+<xref:System.Threading.SemaphoreSlim> — это упрощенная альтернатива <xref:System.Threading.Semaphore>, которую можно использовать для синхронизации в рамках одного процесса.
 
 В Windows можно использовать <xref:System.Threading.Semaphore> для внутрипроцессной синхронизации. Для этого необходимо создать экземпляр <xref:System.Threading.Semaphore>, выполняющий роль именованного системного семафора. Это можно сделать с помощью [конструкторов Semaphore](<xref:System.Threading.Semaphore.%23ctor%2A>), которые задают имя или метод <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>. <xref:System.Threading.SemaphoreSlim> не поддерживает именованные системные семафоры.
 
