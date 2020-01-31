@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-ms.openlocfilehash: d52c19f8663a776215241ddb16f3aa9ba00c0d36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d29f4095a1d615285f4c4ff30e36b91404036949
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137341"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788411"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>Метод ICorDebugManagedCallback::EvalComplete
 Уведомляет отладчик о завершении оценки.  
@@ -54,6 +54,6 @@ HRESULT EvalComplete (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Интерфейс ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

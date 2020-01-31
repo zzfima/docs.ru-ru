@@ -1,15 +1,15 @@
 ---
-title: 'Метод метод icordebugsymbolprovider:: Жетобжектсизе'
+title: Метод ICorDebugSymbolProvider::GetObjectSize
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-ms.openlocfilehash: a5c0fe6d73302abbfabe2272cc878d6fd8f5fdec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fce7410b5ae9571af0c8a5963596e2af41737798
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138821"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791568"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>Метод метод icordebugsymbolprovider:: Жетобжектсизе
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>Метод ICorDebugSymbolProvider::GetObjectSize
 Возвращает размер объекта для объекта на основе его сигнатуры TypeSpec.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -46,7 +46,7 @@ HRESULT GetObjectSize(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

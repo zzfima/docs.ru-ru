@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140502"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790650"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Метод ICorPublishAppDomainEnum::Next
 Возвращает указанное количество доменов приложений, которые в данный момент существуют в процессе, начиная с текущей позиции.  
@@ -41,7 +41,7 @@ HRESULT Next (
  окне Число извлекаемых элементов.  
   
  `objects`  
- заполняет Указатель на массив полученных объектов [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) , каждый из которых представляет домен приложения.  
+ заполняет Указатель на массив полученных объектов [ICorPublishAppDomain](icorpublishappdomain-interface.md) , каждый из которых представляет домен приложения.  
   
  `pceltFetched`  
  заполняет Указатель на число фактически возвращенных доменов приложений. Это значение может быть равно null, если `celt` является одним.  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+- [Интерфейс ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)

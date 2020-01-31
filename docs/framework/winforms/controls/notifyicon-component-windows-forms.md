@@ -1,5 +1,5 @@
 ---
-title: Компонент NotifyIcon (Windows Forms)
+title: Компонент NotifyIcon
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application icons [Windows Forms], background processes
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - NotifyIcon component
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
-ms.openlocfilehash: b1237a1280142cf65002ca307179b054a8fb7dd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61fc4a53a16c3e7df8e0141cecb497a6a85fc5cb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627815"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744947"
 ---
 # <a name="notifyicon-component-windows-forms"></a>Компонент NotifyIcon (Windows Forms)
-Windows Forms `NotifyIcon` компонент отображает значки в области уведомлений панели задач для процессов, выполняемых в фоновом режиме и обычно не имеют пользовательских интерфейсов. Примером такого процесса является антивирусная программа, доступ к которой можно получить, щелкнув значок в области уведомлений о состоянии на панели задач.  
+Компонент Windows Forms `NotifyIcon` отображает значки в области уведомлений о состоянии на панели задач для процессов, выполняемых в фоновом режиме и не имеющих пользовательских интерфейсов. Примером такого процесса является антивирусная программа, доступ к которой можно получить, щелкнув значок в области уведомлений о состоянии на панели задач.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о компоненте управления NotifyIcon](notifyicon-component-overview-windows-forms.md)  
- Основные понятия `NotifyIcon` компонент, который позволяет пользователям видеть значки для процессов, выполняющихся в фоновом режиме, у которых нет пользовательского интерфейса.  
+ Общие понятия компонента `NotifyIcon`, позволяющего пользователям видеть значки для процессов, выполняемых в фоновом режиме, не имеющих пользовательского интерфейса.  
   
- [Практическое руководство. Добавление значков приложения на панели задач с помощью компонента NotifyIcon в Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- Пошаговые инструкции по заданию значка, отображаемого `NotifyIcon` компонента.  
+ [Практическое руководство. Добавление значков приложения на панель задач с помощью компонента NotifyIcon в Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
+ Пошаговые инструкции по установке значка, отображаемого компонентом `NotifyIcon`.  
   
  [Практическое руководство. Связывание контекстного меню с компонентом NotifyIcon в Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- Пошаговые инструкции по добавлению контекстного меню, чтобы `NotifyIcon` компонента.  
+ Пошаговые инструкции по добавлению контекстного меню к `NotifyIcon` компоненту.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Forms.NotifyIcon>  
  Справочная информация о классе и его членах.  
   

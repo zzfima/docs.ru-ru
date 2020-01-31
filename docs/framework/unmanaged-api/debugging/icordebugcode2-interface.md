@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-ms.openlocfilehash: 7f0570b668cc33ca509c8522d1ba35ebcfca2453
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a9ce778cfa1aed4dcf6117c4fe2eca23ccda37a3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125576"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777952"
 ---
 # <a name="icordebugcode2-interface"></a>Интерфейс ICorDebugCode2
 
@@ -29,8 +29,8 @@ ms.locfileid: "73125576"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|Возвращает фрагменты кода, из которого состоит этот объект кода.|  
-|[Метод GetCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|Возвращает флаги, указывающие условия, при которых этот объект кода был либо JIT-скомпилирован, либо создан с помощью генератора образов в машинном коде (Ngen. exe).|  
+|[Метод GetCodeChunks](icordebugcode2-getcodechunks-method.md)|Возвращает фрагменты кода, из которого состоит этот объект кода.|  
+|[Метод GetCompilerFlags](icordebugcode2-getcompilerflags-method.md)|Возвращает флаги, указывающие условия, при которых этот объект кода был либо JIT-скомпилирован, либо создан с помощью генератора образов в машинном коде (Ngen. exe).|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73125576"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugCode3](icordebugcode3-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

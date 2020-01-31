@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: 5d66503487e1b997e2b8cc7d3d46e210a4dbbe05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2ed32449c4a133e6e72ec44f9cb57f49de22164a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132753"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778232"
 ---
 # <a name="cordebugplatform-enumeration"></a>Перечисление CorDebugPlatform
-Предоставляет значения целевой платформы, используемые методом [ICorDebugDataTarget::](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) WebMethod.  
+Предоставляет значения целевой платформы, используемые методом [ICorDebugDataTarget::](icordebugdatatarget-getplatform-method.md) WebMethod.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +39,7 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -62,6 +62,6 @@ typedef enum CorDebugPlatform
   
  Члены `CORDB_PLATFORM_WINDOWS_ARM` и `CORDB_PLATFORM_MAC_AMD64` доступны в платформе .NET Framework версии 4.5.2 и более поздних.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Перечисления отладки](debugging-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-ms.openlocfilehash: fa317e1217ac0a9ca46bfeb312446534b1fca63a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 482afd09ce370fb1247864b9ac2032ee7e3a1dca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131563"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788275"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>Метод ICorDebugManagedCallback2::ExceptionUnwind
 Предоставляет уведомление о состоянии во время процесса очистки исключения.  
@@ -47,7 +47,7 @@ HRESULT ExceptionUnwind (
  окне Значение перечисления Кордебужексцептионунвиндкаллбакктипе, указывающее событие, сигнальное функцией обратного вызова на этапе очистки.  
   
  `dwFlags`  
- окне Значение перечисления [кордебужексцептионфлагс](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) , которое указывает дополнительные сведения об исключении.  
+ окне Значение перечисления [кордебужексцептионфлагс](cordebugexceptionflags-enumeration.md) , которое указывает дополнительные сведения об исключении.  
   
 ## <a name="remarks"></a>Заметки  
  `ExceptionUnwind` вызывается в различных точках на этапе очистки процесса обработки исключений. `ExceptionUnwind` можно вызывать более одного раза при очистке одного исключения.  
@@ -63,7 +63,7 @@ HRESULT ExceptionUnwind (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Интерфейс ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
+- [Интерфейс ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

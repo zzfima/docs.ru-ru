@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: 278320391615eddaa8ba878ef87f802f30cddb95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3eace2d91b3bb6e637a659b8b49a31450ebc2c42
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122029"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783719"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>Метод ICorDebugDataTarget::GetThreadContext
 Возвращает текущий контекст потока для указанного потока.  
@@ -49,7 +49,7 @@ HRESULT GetThreadContext(
  заполняет Буфер, в котором будет храниться контекст потока.  
   
 ## <a name="remarks"></a>Заметки  
- На платформах Windows `pContext` должен быть структурой `CONTEXT` (определенной в WinNT. h), подходящей для типа компьютера, указанного в методе [ICorDebugDataTarget::-Platform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . `contextFlags` должны иметь те же значения, что и поле `ContextFlags` структуры `CONTEXT`. Структура `CONTEXT` зависит от процессора; Дополнительные сведения см. в файле WinNT. h.  
+ На платформах Windows `pContext` должен быть структурой `CONTEXT` (определенной в WinNT. h), подходящей для типа компьютера, указанного в методе [ICorDebugDataTarget::-Platform](icordebugdatatarget-getplatform-method.md) . `contextFlags` должны иметь те же значения, что и поле `ContextFlags` структуры `CONTEXT`. Структура `CONTEXT` зависит от процессора; Дополнительные сведения см. в файле WinNT. h.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,8 +60,8 @@ HRESULT GetThreadContext(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейс ICorDebugDataTarget](icordebugdatatarget-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)
