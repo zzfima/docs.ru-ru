@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 644b5ed751caaf1809250244b37badc8037b0f57
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132674"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792343"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>Метод ICorDebugProcess5::GetTypeFields
 Предоставляет сведения о полях, принадлежащих типу.  
@@ -41,13 +41,13 @@ HRESULT GetTypeFields(
  окне Идентификатор типа, сведения о поле которого извлекаются.  
   
  `celt`  
- окне Число объектов [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) , сведения о полях которых необходимо получить.  
+ окне Число объектов [COR_FIELD](cor-field-structure.md) , сведения о полях которых нужно получить.  
   
  `fields`  
- заполняет Массив объектов [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) , которые предоставляют сведения о полях, принадлежащих типу.  
+ заполняет Массив объектов [COR_FIELD](cor-field-structure.md) , которые предоставляют сведения о полях, принадлежащих типу.  
   
  `pceltNeeded`  
- заполняет Указатель на число объектов [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) , включаемых в `fields`.  
+ заполняет Указатель на число объектов [COR_FIELD](cor-field-structure.md) , включаемых в `fields`.  
   
 ## <a name="remarks"></a>Заметки  
  Параметр `celt`, который указывает количество полей, сведения о полях которых использует метод для заполнения `fields`, должны соответствовать значению поля `COR_TYPE_LAYOUT::numFields`.  
@@ -61,7 +61,7 @@ HRESULT GetTypeFields(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugProcess5](icordebugprocess5-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

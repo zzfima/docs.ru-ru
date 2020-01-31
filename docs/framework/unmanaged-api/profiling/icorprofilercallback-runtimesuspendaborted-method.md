@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a8a4277-345b-448b-a028-fc8cff9998aa
 topic_type:
 - apiref
-ms.openlocfilehash: fb09a9422f2aeec239f9aef25fb61c731e0aa2e9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 285bdd3f2a96d3c6cb0039382d9944e48c49971a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430608"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865913"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>Метод ICorProfilerCallback::RuntimeSuspendAborted
 Уведомляет профилировщик о том, что среда выполнения прервал приостановленную приостановку среды выполнения.  
@@ -34,7 +34,7 @@ HRESULT RuntimeSuspendAborted();
 ## <a name="remarks"></a>Заметки  
  Приостановка во время выполнения может быть прервана, если два потока одновременно пытаются приостановить выполнение.  
   
- Обратный вызов [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) или обратный вызов `RuntimeSuspendAborted` выполняется в одном потоке после обратного вызова [ICorProfilerCallback:: рунтимесуспендстартед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) .  
+ Обратный вызов [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) или обратный вызов `RuntimeSuspendAborted` выполняется в одном потоке после обратного вызова [ICorProfilerCallback:: рунтимесуспендстартед](icorprofilercallback-runtimesuspendstarted-method.md) .  
   
  Функция обратного вызова `RuntimeSuspendAborted` будет гарантированно выполняться в том же потоке, что и обратный вызов `RuntimeSuspendStarted`.  
   
@@ -47,6 +47,6 @@ HRESULT RuntimeSuspendAborted();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

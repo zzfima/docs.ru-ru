@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 97b127c9a6aac0a0fefe25faf294791dcd2c8e41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 839cd574e5352b74b47cd6242d5706bc6405d439
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436030"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862923"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Метод ICorProfilerInfo2::GetArrayObjectInfo
 Возвращает подробные сведения об объекте массива.  
@@ -64,7 +64,7 @@ HRESULT GetArrayObjectInfo(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](icorprofilerinfo2-interface.md)

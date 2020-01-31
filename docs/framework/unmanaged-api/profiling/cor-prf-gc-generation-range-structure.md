@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e7e07273-8d10-4a68-807e-59634e3f8c5e
 topic_type:
 - apiref
-ms.openlocfilehash: 0bdb8cd02e0beb69e3ec594b0aadd741a5f0d924
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 682aac9729519e0861ae6e6f60df78a30063c278
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428336"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867217"
 ---
 # <a name="cor_prf_gc_generation_range-structure"></a>Структура COR_PRF_GC_GENERATION_RANGE
 Описывает диапазон (т. е., блок) памяти, который занимается сборкой мусора.  
@@ -35,17 +35,17 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
 } COR_PRF_GC_GENERATION_RANGE;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`generation`|Значение перечисления [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) , указывающее поколение, к которому принадлежит блок памяти.|  
+|`generation`|Значение перечисления [COR_PRF_GC_GENERATION](cor-prf-gc-generation-enumeration.md) , указывающее поколение, к которому принадлежит блок памяти.|  
 |`rangeStart`|Идентификатор объекта, указывающего начальное расположение блока памяти.|  
 |`rangeLength`|Указатель на целое число, задающее размер используемой части блока памяти (то есть объема памяти, используемого в блоке).|  
 |`rangeLengthReserved`|Указатель на целое число, задающее размер блока памяти (то есть объема памяти, зарезервированного для блока).|  
   
-## <a name="remarks"></a>Примечания  
- Значение `rangeLength` гарантируется точно, только если [ICorProfilerInfo2:: GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) или [ICorProfilerInfo2:: GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), оба из которых используют структуру `COR_PRF_GC_GENERATION_RANGE`, вызываются из метода [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) или [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) .  
+## <a name="remarks"></a>Заметки  
+ Значение `rangeLength` гарантируется точно, только если [ICorProfilerInfo2:: GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) или [ICorProfilerInfo2:: GetObjectGeneration](icorprofilerinfo2-getobjectgeneration-method.md), оба из которых используют структуру `COR_PRF_GC_GENERATION_RANGE`, вызываются из метода [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) или [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -58,4 +58,4 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 ## <a name="see-also"></a>См. также:
 
-- [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [Структуры профилирования](profiling-structures.md)

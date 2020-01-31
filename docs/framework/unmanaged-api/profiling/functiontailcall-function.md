@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: c83a55a74542d94559b50b89ef784de0bd55d0db
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd03eccc923049c4a49062d18bd11659f3316e8a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427346"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866827"
 ---
 # <a name="functiontailcall-function"></a>Функция FunctionTailcall
 Уведомляет профилировщик о том, что выполняемая в данный момент функция собирается выполнить вызов другой функции с префиксом tail.  
   
 > [!NOTE]
-> Функция `FunctionTailcall` устарела в .NET Framework версии 2,0. Он будет продолжать работать, но будет приводить к снижению производительности. Вместо этого используйте функцию [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) .  
+> Функция `FunctionTailcall` устарела в .NET Framework версии 2,0. Он будет продолжать работать, но будет приводить к снижению производительности. Вместо этого используйте функцию [FunctionTailcall2](functiontailcall2-function.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,12 +35,14 @@ void __stdcall FunctionTailcall (
 );  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `funcID`  
- окне Идентификатор выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.  
-  
+## <a name="parameters"></a>Параметры
+
+- `funcID`
+
+  \[в] идентификатор выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.
+
 ## <a name="remarks"></a>Заметки  
- Целевая функция вызова с префиксом tail будет использовать текущий кадр стека и будет возвращаться непосредственно вызывающему объекту функции, которая выполнила вызов с префиксом tail. Это означает, что обратный вызов [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) не будет выдаваться для функции, которая является целевым объектом для вызова с префиксом tail.  
+ Целевая функция вызова с префиксом tail будет использовать текущий кадр стека и будет возвращаться непосредственно вызывающему объекту функции, которая выполнила вызов с префиксом tail. Это означает, что обратный вызов [FunctionLeave](functionleave-function.md) не будет выдаваться для функции, которая является целевым объектом для вызова с префиксом tail.  
   
  Функция `FunctionTailcall` является обратным вызовом. его необходимо реализовать. Реализация должна использовать атрибут класса хранения `__declspec`(`naked`).  
   
@@ -63,9 +65,9 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework версии:** 1,1, 1,0  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Функция FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [Функция FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [Метод SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Функция FunctionEnter2](functionenter2-function.md)
+- [Функция FunctionLeave2](functionleave2-function.md)
+- [Метод SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Глобальные статические функции профилирования](profiling-global-static-functions.md)

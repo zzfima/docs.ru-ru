@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a9e0ea7-a9e2-4817-b1c4-fcf15b215ea9
 topic_type:
 - apiref
-ms.openlocfilehash: 12c9b30dc72d1ccf7bfa79ca0745ba3f2c2290c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 05d8c44655d8670194035c336bd62ae5d53bfec3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435874"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862975"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>Метод ICorProfilerInfo2::GetAppDomainStaticAddress
 Возвращает адрес указанного поля статического домена приложения, которое находится в области заданного домена приложения.  
@@ -48,7 +48,7 @@ RESULT GetAppDomainStaticAddress(
  `ppAddress`  
  заполняет Указатель на адрес статического поля в пределах указанного домена приложения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Метод `GetAppDomainStaticAddress` может возвращать одно из следующих данных:  
   
 - CORPROF_E_DATAINCOMPLETE HRESULT, если заданному статическому полю не назначен адрес в указанном контексте.  
@@ -66,7 +66,7 @@ RESULT GetAppDomainStaticAddress(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](icorprofilerinfo2-interface.md)

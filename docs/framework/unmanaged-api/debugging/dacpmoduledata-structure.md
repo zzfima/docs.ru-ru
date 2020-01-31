@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 2e27082ba4c35bc10eb65139b2af6c81c10d79a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739122"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793808"
 ---
 # <a name="dacpmoduledata-structure"></a>Структура DacpModuleData
 
-Определяет транспорт буфера для модуля сведения среды выполнения.
+Определяет транспортный буфер для сведений о среде выполнения модуля.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -45,21 +45,21 @@ struct DacpModuleData
 | Член    | Описание                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | Адрес объекта модуля.                                           |
-| `File`    | Указатель на переносимого исполняемого (PE) файла.                       |
-| `ilBase`  | Адрес загруженного образа базовый.                                 |
-| `payLoad` | Буфер полезных данных для дополнительного модуля сведения, используемые средой выполнения. |
+| `File`    | Указатель на переносимый исполняемый файл (PE).                       |
+| `ilBase`  | Адрес базы загруженного образа.                                 |
+| `payLoad` | Буфер полезных данных для дополнительных сведений о модулях, используемых средой выполнения. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Эта структура находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек. Чтобы использовать его, определите структуру, как указано выше.
+Эта структура находится внутри среды выполнения и не предоставляется через все файлы заголовков или библиотек. Чтобы использовать его, определите структуру, как указано выше.
 
 ## <a name="requirements"></a>Требования
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** None  
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Заголовок:** None  
 **Библиотека:** None  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Отладка](index.md)
+- [Структуры отладки](debugging-structures.md)

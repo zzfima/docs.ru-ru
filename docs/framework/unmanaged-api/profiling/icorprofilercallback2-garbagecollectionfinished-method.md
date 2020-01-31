@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a5758ea-2354-43c0-92a3-32c9909d64e1
 topic_type:
 - apiref
-ms.openlocfilehash: 1217bb30be8b88f8ba1cf21f03f2531778358d4b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 30f2e675532848c2dbb1f055a0f1489cf3b2baa1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439840"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865796"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>Метод ICorProfilerCallback2::GarbageCollectionFinished
 Уведомляет профилировщик о завершении сборки мусора и выдает для него все обратные вызовы сборки мусора.  
@@ -31,7 +31,7 @@ ms.locfileid: "74439840"
 HRESULT GarbageCollectionFinished();  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Профилировщик может быть защищен для проверки объектов в их конечном расположении при вызове метода `GarbageCollectionFinished`.  
   
 ## <a name="requirements"></a>Требования  
@@ -45,5 +45,5 @@ HRESULT GarbageCollectionFinished();
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback2](icorprofilercallback2-interface.md)

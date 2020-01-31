@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: d21e0d3d0370ec7c1b223be29099f6b99822463b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d190c5b558c7c523be09267e59eab7c5611563a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132109"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793855"
 ---
 # <a name="createcordbobject-function"></a>Функция CreateCordbObject
-Создает интерфейс отладчика ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)), который предоставляет функциональные возможности для создания экземпляра управляемого сеанса отладки на удаленном процессе.  
+Создает интерфейс отладчика ([ICorDebug](icordebug-interface.md)), который предоставляет функциональные возможности для создания экземпляра управляемого сеанса отладки на удаленном процессе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] Версия отладчика целевого процесса. Для удаленной отладки этот параметр должен иметь значение CorDebugVersion_2_0.  
   
  `ppCordb`  
- заполняет Указатель на указатель на объект, который будет приведен к интерфейсу [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) и возвращен.  
+ заполняет Указатель на указатель на объект, который будет приведен к интерфейсу [ICorDebug](icordebug-interface.md) и возвращен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -56,7 +56,7 @@ HRESULT CordbCreateObject (
  Прочие сбои.  
   
 ## <a name="remarks"></a>Заметки  
- Интерфейс [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) , возвращаемый в `ppCordb`, является интерфейсом отладки верхнего уровня для всех управляемых служб отладки.  
+ Интерфейс [ICorDebug](icordebug-interface.md) , возвращаемый в `ppCordb`, является интерфейсом отладки верхнего уровня для всех управляемых служб отладки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: 3c57021061c1566b369cdd43847e3994cf54e2da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66d544bbc0511ea76565376c8f10294f1758026b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139675"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792576"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>Метод ICorDebugProcess::SetThreadContext
 Задает контекст для данного потока в этом процессе.  
@@ -48,7 +48,7 @@ HRESULT SetThreadContext(
  Контекст указывает архитектуру процессора, на котором работает поток.  
   
 ## <a name="remarks"></a>Заметки  
- Отладчик должен вызывать этот метод вместо функции Win32 `SetThreadContext`, так как поток может находиться в состоянии "перехвачено", в котором его контекст был временно изменен. Этот метод следует использовать только в том случае, если поток находится в машинном коде. Используйте [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) для потоков в управляемом коде. Никогда не нужно изменять контекст потока во время события нестандартного управления (OOB).  
+ Отладчик должен вызывать этот метод вместо функции Win32 `SetThreadContext`, так как поток может находиться в состоянии "перехвачено", в котором его контекст был временно изменен. Этот метод следует использовать только в том случае, если поток находится в машинном коде. Используйте [ICorDebugRegisterSet](icordebugregisterset-interface.md) для потоков в управляемом коде. Никогда не нужно изменять контекст потока во время события нестандартного управления (OOB).  
   
  Передаваемые данные должны быть структурой контекста для текущей платформы.  
   

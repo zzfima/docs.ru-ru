@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: eaf0ae2a1b86234495c1804cff8b74331b3e8021
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1cf3f2b62b388b6c2d6fcd75b1b07a67d5b2e49f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445278"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866707"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Метод ICorProfilerCallback::AppDomainCreationFinished
 Уведомляет профилировщик о том, что домен приложения создан.  
@@ -33,14 +33,17 @@ HRESULT AppDomainCreationFinished(
     [in] HRESULT     hrStatus);   
 ```  
   
-## <a name="parameters"></a>Параметры  
- `appDomainId`  
- окне Идентифицирует созданный домен.  
-  
- `hrStatus`  
- окне Значение HRESULT, указывающее, успешно ли выполнено создание домена приложения.  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="parameters"></a>Параметры
+
+- `appDomainId`
+
+  \[в] определяет домен, который был создан.
+
+- `hrStatus`
+
+  \[in] значение HRESULT, указывающее, успешно ли выполнено создание домена приложения.
+
+## <a name="remarks"></a>Заметки  
  Идентификатор приложения не является допустимым для запроса информации, пока не будет вызван метод `AppDomainCreationFinished`.  
   
  Некоторые части загрузки домена приложения могут продолжаться после обратного вызова `AppDomainCreationFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает, что первая часть создания домена приложения успешно выполнена.  
@@ -56,4 +59,4 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1677798abdb8994d34c82a71e97a2c858209c18e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139207"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790387"
 ---
 # <a name="logginglevelenum-enumeration"></a>Перечисление LoggingLevelEnum
 Указывает уровень важности описательного сообщения, записанного в журнале событий при регистрации события управляемым потоком.  
@@ -44,7 +44,7 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -63,7 +63,7 @@ typedef enum LoggingLevelEnum {
 |`LPanicLevel`|Сообщение имеет уровень тревоги.|  
   
 ## <a name="remarks"></a>Заметки  
- Среда CLR вызывает метод [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) , чтобы уведомить отладчик о том, что управляемый поток зарегистрировал событие. Среда CLR передает значение перечисления `LoggingLevelEnum`, чтобы указать степень серьезности сообщения, которое управляемый поток записал в журнал событий.  
+ Среда CLR вызывает метод [ICorDebugManagedCallback:: LogMessage](icordebugmanagedcallback-logmessage-method.md) , чтобы уведомить отладчик о том, что управляемый поток зарегистрировал событие. Среда CLR передает значение перечисления `LoggingLevelEnum`, чтобы указать степень серьезности сообщения, которое управляемый поток записал в журнал событий.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,7 +74,7 @@ typedef enum LoggingLevelEnum {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Diagnostics.EventLog>
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Перечисления отладки](debugging-enumerations.md)

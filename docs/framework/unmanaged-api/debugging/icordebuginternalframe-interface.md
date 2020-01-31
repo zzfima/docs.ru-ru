@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb4772ca-0d54-4185-b738-7a6ffe9ea85a
 topic_type:
 - apiref
-ms.openlocfilehash: b1ee5a155afa4e33340108e7295adef2309986cf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6bc24450cdda2e3ed324256b53b2d137d1eb90e4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122707"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788487"
 ---
 # <a name="icordebuginternalframe-interface"></a>Интерфейс ICorDebugInternalFrame
 
@@ -29,7 +29,7 @@ ms.locfileid: "73122707"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Возвращает тип этого внутреннего кадра.|  
+|[Метод GetFrameType](icordebuginternalframe-getframetype-method.md)|Возвращает тип этого внутреннего кадра.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -45,6 +45,6 @@ ms.locfileid: "73122707"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbdf853b-d1a4-4828-8ef7-53d121d8e6ae
 topic_type:
 - apiref
-ms.openlocfilehash: 9c96cacf508ef5c056a1ff4469247393fdfb9e9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 948628f469eecabfbbe792dcc3edf2e1204ffc36
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444472"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865965"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>Метод ICorProfilerCallback::RootReferences
 Уведомляет профилировщик о получении сведений о корневых ссылках после сборки мусора.  
@@ -40,12 +40,12 @@ HRESULT RootReferences(
  `rootRefIds`  
  окне Массив идентификаторов объектов, ссылающихся либо на статический объект, либо на объект в стеке.  
   
-## <a name="remarks"></a>Примечания  
- Для уведомления профилировщика вызываются `RootReferences` и [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) . Как правило, профилировщики реализуют один или другой, но не оба, так как сведения, передаваемые в `RootReferences2`, являются надмножеством, передаваемыми `RootReferences`.  
+## <a name="remarks"></a>Заметки  
+ Для уведомления профилировщика вызываются `RootReferences` и [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) . Как правило, профилировщики реализуют один или другой, но не оба, так как сведения, передаваемые в `RootReferences2`, являются надмножеством, передаваемыми `RootReferences`.  
   
  Массив `rootRefIds` может содержать объект null. Например, все ссылки на объекты, объявленные в стеке, рассматриваются сборщиком мусора как корни и всегда будут сообщать о них.  
   
- Идентификаторы объектов, возвращаемые `RootReferences`, недопустимы в самом обратном вызове, так как сборка мусора может находиться в процессе перемещения объектов из старых адресов в новые адреса. Таким образом, профилировщики не должны пытаться проверять объекты во время вызова `RootReferences`. При вызове [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) все объекты были перемещены в новые расположения и могут быть безопасно проверены.  
+ Идентификаторы объектов, возвращаемые `RootReferences`, недопустимы в самом обратном вызове, так как сборка мусора может находиться в процессе перемещения объектов из старых адресов в новые адреса. Таким образом, профилировщики не должны пытаться проверять объекты во время вызова `RootReferences`. При вызове [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) все объекты были перемещены в новые расположения и могут быть безопасно проверены.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -58,4 +58,4 @@ HRESULT RootReferences(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-ms.openlocfilehash: cd43dce995c2bc9a45a0c8134a91b20cb1dec26e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 585b3d605d0df9169c12ca10198846ec0a7fe6d4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111430"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793613"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Метод ICLRDebugging::OpenVirtualProcess
 Возвращает интерфейс ICorDebugProcess, соответствующий загруженному в процесс модулю среды CLR.  
@@ -44,7 +44,7 @@ HRESULT OpenVirtualProcess(
  окне Базовый адрес модуля в целевом процессе. COR_E_NOT_CLR будет возвращен, если указанный модуль не является модулем CLR.  
   
  `pDataTarget`  
- окне Абстракция целевого объекта данных, позволяющая управляемому отладчику проверять состояние процесса. В отладчике должен быть реализован интерфейс [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) . Необходимо реализовать интерфейс [иклрдебуггинглибрарипровидер](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) для поддержки сценариев, в которых отлаживаемая среда CLR не установлена локально на компьютере.  
+ окне Абстракция целевого объекта данных, позволяющая управляемому отладчику проверять состояние процесса. В отладчике должен быть реализован интерфейс [ICorDebugDataTarget](icordebugdatatarget-interface.md) . Необходимо реализовать интерфейс [иклрдебуггинглибрарипровидер](iclrdebugginglibraryprovider-interface.md) для поддержки сценариев, в которых отлаживаемая среда CLR не установлена локально на компьютере.  
   
  `pLibraryProvider`  
  окне Интерфейс обратного вызова поставщика библиотеки, позволяющий находить и загружать библиотеки отладки для конкретных версий по запросу. Этот параметр является обязательным только в том случае, если `ppProcess` или `pFlags` не `null`.  
@@ -59,12 +59,12 @@ HRESULT OpenVirtualProcess(
  заполняет Указатель на COM-интерфейс, идентифицируемый `riidProcess`.  
   
  `pVersion`  
- [вход, выход] Версия среды CLR. На входе это значение можно `null`. Он также может указывать на структуру [CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) , в которой поле `wStructVersion` структуры должно быть инициализировано равным 0 (нулю).  
+ [вход, выход] Версия среды CLR. На входе это значение можно `null`. Он также может указывать на структуру [CLR_DEBUGGING_VERSION](clr-debugging-version-structure.md) . в этом случае поле `wStructVersion` структуры должно быть инициализировано значением 0 (ноль).  
   
  В выходных данных Возвращаемая структура `CLR_DEBUGGING_VERSION` будет заполнена сведениями о версии для среды CLR.  
   
  `pdwFlags`  
- заполняет Информационные флаги для указанной среды выполнения. Описание флагов см. в разделе [CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) .  
+ заполняет Информационные флаги для указанной среды выполнения. Описание флагов см. в [CLR_DEBUGGING_PROCESS_FLAGS](clr-debugging-process-flags-enumeration.md) разделе.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -72,8 +72,8 @@ HRESULT OpenVirtualProcess(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|Свойство `pDataTarget` имеет значение `null`.|  
-|CORDBG_E_LIBRARY_PROVIDER_ERROR|Обратный вызов [иклрдебуггинглибрарипровидер](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) возвращает ошибку или не предоставляет допустимый маркер.|  
+|E_POINTER|Параметр `pDataTarget` имеет значение `null`.|  
+|CORDBG_E_LIBRARY_PROVIDER_ERROR|Обратный вызов [иклрдебуггинглибрарипровидер](iclrdebugginglibraryprovider-interface.md) возвращает ошибку или не предоставляет допустимый маркер.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` не реализует необходимые интерфейсы целевых данных для этой версии среды выполнения.|  
 |CORDBG_E_NOT_CLR|Указанный модуль не является модулем CLR. Это значение HRESULT также возвращается, если модуль среды CLR не удается обнаружить из-за повреждения памяти, модуль недоступен или версия среды CLR позже версии оболочки совместимости.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Эта версия среды выполнения не поддерживает эту модель отладки. В настоящее время модель отладки не поддерживается версиями CLR до .NET Framework 4. После этой ошибки по-прежнему будет задано правильное значение параметра `pwszVersion` Output.|  
@@ -94,7 +94,7 @@ HRESULT OpenVirtualProcess(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 536d2357-1b97-49e0-a10c-c860aed74e6e
 topic_type:
 - apiref
-ms.openlocfilehash: 1f3cf3db5df610e57a957147f0ab79121679e00b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c25a03ef5bbba18da31787c911f83a1348badd4b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138702"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791453"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a>Метод ICorDebugThread2::InterceptCurrentException
 Позволяет отладчику перехватить текущее исключение в этом потоке.  
@@ -38,7 +38,7 @@ HRESULT InterceptCurrentException (
  окне Указатель на объект ICorDebugFrame, представляющий активный кадр стека.  
   
 ## <a name="remarks"></a>Заметки  
- Метод `InterceptCurrentException` может быть вызван между обратным вызовом исключения ([ICorDebugManagedCallback:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) или [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) и связанным вызовом [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
+ Метод `InterceptCurrentException` может быть вызван между обратным вызовом исключения ([ICorDebugManagedCallback:: Exception](icordebugmanagedcallback-exception-method.md) или [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md)) и связанным вызовом [ICorDebugController:: Continue](icordebugcontroller-continue-method.md).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

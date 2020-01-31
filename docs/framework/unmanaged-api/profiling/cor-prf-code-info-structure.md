@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf30e27c-1f7e-43a2-ba1e-01e4137301db
 topic_type:
 - apiref
-ms.openlocfilehash: 643c9d7104c374d9141a604083f3fdcd540156c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eaab5b7faeac3dd0fb64f0a387f437af44e7bc12
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428384"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867312"
 ---
 # <a name="cor_prf_code_info-structure"></a>Структура COR_PRF_CODE_INFO
 Представляет один непрерывный блок машинного кода, хранящийся в памяти.  
@@ -33,7 +33,7 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -51,4 +51,4 @@ typedef struct _COR_PRF_CODE_INFO {
   
 ## <a name="see-also"></a>См. также:
 
-- [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [Структуры профилирования](profiling-structures.md)

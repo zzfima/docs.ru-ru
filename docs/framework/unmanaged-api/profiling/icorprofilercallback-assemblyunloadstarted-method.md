@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 4c14b3e8b9d0116d638e2983955598a6c51c405a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 0a677e33950f178b916a5e9e9cbb7bd918c1349b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790209"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866615"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>Метод ICorProfilerCallback::AssemblyUnloadStarted
 Уведомляет профилировщик о выгрузке сборки.  
@@ -52,5 +52,5 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод AssemblyUnloadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод AssemblyUnloadFinished](icorprofilercallback-assemblyunloadfinished-method.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Метод Икордебугмержедассемблирекорд:: with index'
+title: Метод ICorDebugMergedAssemblyRecord::GetIndex
 ms.date: 03/30/2017
 ms.assetid: 98701444-b9bc-4978-9548-89ac3394147d
-ms.openlocfilehash: 236bd8b22d6c3ec783d787f6c906ede3193cfc1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8fb5ace27fbf7fbebdaca5822af99cd6673e8cf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131411"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793124"
 ---
-# <a name="icordebugmergedassemblyrecordgetindex-method"></a>Метод Икордебугмержедассемблирекорд:: with index
+# <a name="icordebugmergedassemblyrecordgetindex-method"></a>Метод ICorDebugMergedAssemblyRecord::GetIndex
 Возвращает индекс префикса сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,7 +39,7 @@ HRESULT GetIndex(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-ms.openlocfilehash: e25cbfabc10da0c7b1095a956583bb5c7450dba9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 62973a36e899b1a8c618888e5245bfc00d8ad777
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445807"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866075"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Метод ICorProfilerCallback::RemotingClientReceivingReply
 Уведомляет профилировщик, что серверная часть вызова удаленного взаимодействия завершена, клиент принимает ответ и готов к его обработке.  
@@ -35,7 +35,7 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- окне Значение, которое будет соответствовать значению, указанному в параметре [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) в следующих условиях:  
+ окне Значение, которое будет соответствовать значению, указанному в параметре [ICorProfilerCallback:: RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md) в следующих условиях:  
   
 - Файлы Cookie GUID удаленного взаимодействия активны.  
   
@@ -57,6 +57,6 @@ HRESULT RemotingClientReceivingReply(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

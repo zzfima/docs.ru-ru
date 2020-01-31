@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 1149298b4c5e521b37aae6ec48d463f395f18ae3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c5182fd44f0cc2ad7b836bbcbddc469c89dbacb7
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439568"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865705"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>Метод ICorProfilerCallback2::ThreadNameChanged
 Уведомляет профилировщик кода о том, что имя потока изменилось.  
@@ -55,5 +55,5 @@ HRESULT ThreadNameChanged(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback2](icorprofilercallback2-interface.md)

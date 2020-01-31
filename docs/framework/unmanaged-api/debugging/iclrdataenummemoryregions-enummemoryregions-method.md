@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-ms.openlocfilehash: 693ec07176f80711709cd9b85c6886bea8be74b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2b2bbe8bcecf71f6d3016fb35dfbf5ba1353aea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122964"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785640"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>Метод ICLRDataEnumMemoryRegions::EnumMemoryRegions
 Перечисляет указанные области памяти.  
@@ -37,7 +37,7 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="parameters"></a>Параметры  
  `callback`  
- окне Указатель на экземпляр [иклрдатаенуммеморирегионскаллбакк](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) , вызываемый этим методом для каждой области памяти, перечисленной для уведомления отладчика о результатах.  
+ окне Указатель на экземпляр [иклрдатаенуммеморирегионскаллбакк](iclrdataenummemoryregionscallback-interface.md) , вызываемый этим методом для каждой области памяти, перечисленной для уведомления отладчика о результатах.  
   
  Перечисление областей памяти продолжится, даже если обратный вызов указывает на сбой.  
   
@@ -45,10 +45,10 @@ HRESULT EnumMemoryRegions (
  окне Не используется.  
   
  `clrFlags`  
- окне Значение перечисления [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) , указывающее области памяти для перечисления.  
+ окне Значение перечисления [CLRDataEnumMemoryFlags](clrdataenummemoryflags-enumeration.md) , указывающее области памяти для перечисления.  
   
 ## <a name="remarks"></a>Заметки  
- Этот метод использует указанный экземпляр [иклрдатаенуммеморирегионскаллбакк](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) для уведомления вызывающего объекта о результатах.  
+ Этот метод использует указанный экземпляр [иклрдатаенуммеморирегионскаллбакк](iclrdataenummemoryregionscallback-interface.md) для уведомления вызывающего объекта о результатах.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -59,6 +59,6 @@ HRESULT EnumMemoryRegions (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICLRDataEnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)
+- [Интерфейс ICLRDataEnumMemoryRegions](iclrdataenummemoryregions-interface.md)

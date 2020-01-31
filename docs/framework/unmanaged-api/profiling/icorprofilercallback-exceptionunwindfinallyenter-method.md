@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-ms.openlocfilehash: 93136401597b7b9871fb1483851734e2080b1f0f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: ab7c8cbc41967af04c4c9a8813f32b9b1f01c6a1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790103"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866355"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>Метод ICorProfilerCallback::ExceptionUnwindFinallyEnter
 Уведомляет профилировщик о том, что фаза очистки при обработке исключений вводит `finally` предложение, содержащееся в указанной функции.  
@@ -54,6 +54,6 @@ HRESULT ExceptionUnwindFinallyEnter(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)
-- [Метод ExceptionUnwindFinallyLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)
+- [Метод ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)

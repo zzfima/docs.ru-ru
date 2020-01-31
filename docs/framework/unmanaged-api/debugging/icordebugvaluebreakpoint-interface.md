@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: cee421ef7d7c856ba90dc21f4e9dc25ae6fe1a9b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1bb5a6fd0550f7c25d46fa31ca11a10cec54986
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140198"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791073"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>Интерфейс ICorDebugValueBreakpoint
 Расширяет интерфейс Икордебугбреакпоинт для предоставления доступа к конкретным значениям.  
@@ -28,7 +28,7 @@ ms.locfileid: "73140198"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Возвращает указатель интерфейса на объект ICorDebugValue, представляющий значение объекта, для которого задана точка останова.|  
+|[Метод GetValue](icordebugvaluebreakpoint-getvalue-method.md)|Возвращает указатель интерфейса на объект ICorDebugValue, представляющий значение объекта, для которого задана точка останова.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -44,6 +44,6 @@ ms.locfileid: "73140198"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

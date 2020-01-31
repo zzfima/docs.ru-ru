@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf56646-7e5f-46c4-8340-f3a04e88920f
 topic_type:
 - apiref
-ms.openlocfilehash: 11ce2fdccbf24fd688376cc3256f6db79a7cc352
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b2fca16b3b859df8bd7409149eb5a3cf7b011c5c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447856"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864587"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>Метод ICorProfilerFunctionControl::SetILInstrumentedCodeMap
 Устанавливает карту кода для указанной функции с помощью указанных записей карты языка CIL.  
@@ -38,9 +38,9 @@ HRESULT SetILInstrumentedCodeMap(
  [в] Количество записей в карте.  
   
  `rgILMapEntries`  
- [в] Массив записей COR_IL_MAP, выделенный вызывающим объектом. Интерпретация этих записей такая же, как и для метода [ICorProfilerInfo:: сетилинструментедкодемап](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) .  
+ [в] Массив записей COR_IL_MAP, выделенный вызывающим объектом. Интерпретация этих записей такая же, как и для метода [ICorProfilerInfo:: сетилинструментедкодемап](icorprofilerinfo-setilinstrumentedcodemap-method.md) .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Установка сопоставления путем вызова этого метода позволяет отладчику получить сопоставление путем вызова [ICorDebugILCode2:: GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md). Кроме того, он позволяет отладчику использовать сопоставление внутренним образом при вычислении смещений промежуточного языка для трассировок стека и времени существования переменных.  
   
 ## <a name="requirements"></a>Требования  
@@ -54,4 +54,4 @@ HRESULT SetILInstrumentedCodeMap(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)

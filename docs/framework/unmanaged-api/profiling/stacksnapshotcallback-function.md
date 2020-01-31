@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-ms.openlocfilehash: c0cec9eb7bb8bbc94b255152a9b4d79108bdd1b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 49e154ade91ea1a207645f924bd8aea1dbdb635c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427078"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868126"
 ---
 # <a name="stacksnapshotcallback-function"></a>Функция StackSnapshotCallback
-Предоставляет профилировщику сведения о каждом управляемом кадре и каждом запуске неуправляемых кадров в стеке во время прохода стека, который инициируется методом [ICorProfilerInfo2::D остаккснапшот](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) .  
+Предоставляет профилировщику сведения о каждом управляемом кадре и каждом запуске неуправляемых кадров в стеке во время прохода стека, который инициируется методом [ICorProfilerInfo2::D остаккснапшот](icorprofilerinfo2-dostacksnapshot-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,7 +58,7 @@ HRESULT __stdcall StackSnapshotCallback (
  `clientData`  
  окне Указатель на данные клиента, которые передаются непосредственно через `ICorProfilerInfo2::DoStackSnapshot`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Функция `StackSnapshotCallback` реализуется модулем записи профилировщика. Необходимо ограничить сложность работы, выполненной в `StackSnapshotCallback`. Например, при использовании `ICorProfilerInfo2::DoStackSnapshot` в асинхронном режиме целевой поток может удерживать блокировки. Если код в `StackSnapshotCallback` требует одних и тех же блокировок, может возникнуть взаимоблокировка.  
   
  Метод `ICorProfilerInfo2::DoStackSnapshot` вызывает функцию `StackSnapshotCallback` один раз для каждого управляемого кадра или один раз для каждого запуска неуправляемых фреймов. Если `StackSnapshotCallback` вызывается для запуска неуправляемых кадров, профилировщик может использовать контекст Register (на который ссылается параметр `context`) для выполнения собственного анализа неуправляемого стека. В этом случае структура Win32 `CONTEXT` представляет состояние ЦП для последнего отправленного кадра в рамках выполнения неуправляемых кадров. Несмотря на то, что структура Win32 `CONTEXT` включает значения для всех регистров, следует полагаться только на значения регистра указателя стека, регистра указателя кадра, регистра указателя инструкций и неизменяемых (то есть сохраненных) целочисленных регистров.  
@@ -74,5 +74,5 @@ HRESULT __stdcall StackSnapshotCallback (
   
 ## <a name="see-also"></a>См. также:
 
-- [Метод DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Метод DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)
+- [Глобальные статические функции профилирования](profiling-global-static-functions.md)

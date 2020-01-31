@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d4d498c1d75625b2abc37dc1f4c88d73b58ec675
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 95473a8ce8d5fd7540228ecd9767448e51b5b326
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790017"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868988"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>Метод ICorProfilerInfo10:: Жетлохобжектсизесрешолд
 
@@ -50,4 +50,4 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Интерфейс ICorProfilerInfo10](icorprofilerinfo10-interface.md)

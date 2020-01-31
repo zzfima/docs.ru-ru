@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 66a08cf60ae4ca9bb6e373d230d0819ee6f9b28c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790013"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861688"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>Метод ICorProfilerInfo8:: Жетдинамикфунктионинфо
 
@@ -82,4 +82,4 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo8](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [Интерфейс ICorProfilerInfo8](icorprofilerinfo8-interface.md)

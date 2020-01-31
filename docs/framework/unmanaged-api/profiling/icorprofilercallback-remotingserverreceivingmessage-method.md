@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-ms.openlocfilehash: 2c2eb7d0dc04d813b1ce91fb1acf4b171f244592
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e045a99de9ad30516fd12a7b490e26c860bde7e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445758"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866017"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Метод ICorProfilerCallback::RemotingServerReceivingMessage
 Уведомляет профилировщик о том, что процесс получил удаленный вызов метода или запрос на активацию.  
@@ -35,7 +35,7 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- окне Значение, которое будет соответствовать значению, указанному в параметре [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) в следующих условиях:  
+ окне Значение, которое будет соответствовать значению, указанному в параметре [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md) в следующих условиях:  
   
 - Файлы Cookie GUID удаленного взаимодействия активны.  
   
@@ -48,7 +48,7 @@ HRESULT RemotingClientSendingMessage(
  `fIsAsync`  
  окне Значение, которое `true`, если вызов является асинхронным; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если запрос сообщения является асинхронным, запрос может обслуживаться любым произвольным потоком.  
   
 ## <a name="requirements"></a>Требования  
@@ -62,4 +62,4 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

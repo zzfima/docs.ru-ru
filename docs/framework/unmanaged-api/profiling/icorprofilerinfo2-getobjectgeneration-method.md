@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0d25f76-0bd5-4aa6-96cf-bfec0e1de28b
 topic_type:
 - apiref
-ms.openlocfilehash: fdfd3715220785a1fa5285b19e677bf0dc190719
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b75de955e3b6857c9cc1b5411df4b0f262c4cb9a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433084"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862702"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>Метод ICorProfilerInfo2::GetObjectGeneration
 Возвращает сегмент кучи, который содержит указанный объект.  
@@ -38,10 +38,10 @@ HRESULT GetObjectGeneration(
  окне Идентификатор объекта.  
   
  `range`  
- заполняет Указатель на структуру [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) , описывающую диапазон (т. е. блок) памяти в поколении, которое является сборкой мусора. Этот диапазон содержит указанный объект.  
+ заполняет Указатель на структуру [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) , описывающую диапазон (т. е. блок) памяти в поколении, которое является сборкой мусора. Этот диапазон содержит указанный объект.  
   
-## <a name="remarks"></a>Примечания  
- Метод `GetObjectGeneration` может быть вызван из любого обратного вызова профилировщика при условии, что сборка мусора не выполняется. То есть он может быть вызван из любого обратного вызова, за исключением тех, которые происходят между [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) и [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
+## <a name="remarks"></a>Заметки  
+ Метод `GetObjectGeneration` может быть вызван из любого обратного вызова профилировщика при условии, что сборка мусора не выполняется. То есть он может быть вызван из любого обратного вызова, за исключением тех, которые происходят между [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) и [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -54,5 +54,5 @@ HRESULT GetObjectGeneration(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](icorprofilerinfo2-interface.md)

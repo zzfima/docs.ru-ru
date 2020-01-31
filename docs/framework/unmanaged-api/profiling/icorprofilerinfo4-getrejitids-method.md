@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: f6d26abba649b608858fde8beaac750600493869
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9069498a4f62f4d9dbb50a7075323b14c3cc5ab9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442865"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868451"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Метод ICorProfilerInfo4::GetReJITIDs
 Возвращает массив идентификаторов, которые определяют все все повторно скомпилированные версии указанной функции, которые все еще выделены. Сюда входят JIT-повторно скомпилированные версии функций, которые впоследствии были отменены, но еще не освобождены (например, если домен приложения, содержащий функцию, которая содержит возвращенные функции, все еще используется).  
@@ -48,7 +48,7 @@ HRESULT GetReJITIDs (
  `reJitIds`  
  заполняет Выделенный вызывающим объектом массив, который будет содержать JIT-перекомпилированные идентификаторы для указанной функции.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  `GetReJITIDs` перечисляет активные JIT-повторно скомпилированные идентификаторы для данного экземпляра функции. Она соответствует той же схеме использования, что и другие функции `ICorProfilerInfo`, принимающие буферы, выделенные вызывающим объектом.  
   
 ## <a name="requirements"></a>Требования  
@@ -60,8 +60,8 @@ HRESULT GetReJITIDs (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Интерфейс ICorProfilerInfo4](icorprofilerinfo4-interface.md)
+- [Интерфейсы профилирования](profiling-interfaces.md)
+- [Профилирование](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8632799b68ae8f92835d1774472bc1432d886f3b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137610"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793484"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>Метод ICorDebugEval2::CreateValueForType
 Возвращает указатель на новый объект ICorDebugValue указанного типа с начальным значением нуль или null.  
@@ -42,7 +42,7 @@ HRESULT CreateValueForType (
  заполняет Указатель на адрес объекта `ICorDebugValue`, представляющего значение.  
   
 ## <a name="remarks"></a>Заметки  
- `CreateValueForType` обобщает [ICorDebugEval:: креатевалуе](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , позволяя указать произвольный тип объекта, включая сконструированные типы, такие как `List<int>`. Единственная цель этого метода — создать значение, которое может быть передано в вычисление функции.  
+ `CreateValueForType` обобщает [ICorDebugEval:: креатевалуе](icordebugeval-createvalue-method.md) , позволяя указать произвольный тип объекта, включая сконструированные типы, такие как `List<int>`. Единственная цель этого метода — создать значение, которое может быть передано в вычисление функции.  
   
  Тип должен быть классом или типом значения. Этот метод нельзя использовать для создания значений массива или строковых значений.  
   

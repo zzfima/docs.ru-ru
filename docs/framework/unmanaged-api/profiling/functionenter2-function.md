@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: f4deec3e2b49b5cd6a924af8024e775c5c549f97
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6cd35c180b8a322b3402b050c6d6840073010b1f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440859"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866987"
 ---
 # <a name="functionenter2-function"></a>Функция FunctionEnter2
-Уведомляет профилировщик о передаче управления в функцию и предоставляет сведения о кадре стека и аргументах функции. Эта функция заменяет функцию [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) .  
+Уведомляет профилировщик о передаче управления в функцию и предоставляет сведения о кадре стека и аргументах функции. Эта функция заменяет функцию [FunctionEnter](functionenter-function.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,23 +35,28 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `funcId`  
- окне Идентификатор функции, которой передается элемент управления.  
+## <a name="parameters"></a>Параметры
+
+- `funcId`
+
+  \[в] идентификатор функции, для которой передается элемент управления.
+
+- `clientData`
+
+  \[in] идентификатор повторно сопоставленной функции, которую профилировщик указал ранее с помощью функции [FunctionIDMapper](functionidmapper-function.md) .
   
- `clientData`  
- окне Идентификатор повторно сопоставленной функции, заданный ранее профилировщиком с помощью функции [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) .  
+- `func`
+
+  \[in] `COR_PRF_FRAME_INFO` значение, указывающее на сведения о кадре стека.
   
- `func`  
- окне Значение `COR_PRF_FRAME_INFO`, указывающее на сведения о кадре стека.  
+  Профилировщик должен рассматривать это как непрозрачный маркер, который можно передать обратно в подсистему выполнения метода [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
- Профилировщик должен рассматривать это как непрозрачный маркер, который можно передать обратно в подсистему выполнения метода [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
-  
- `argumentInfo`  
- окне Указатель на структуру [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) , указывающую расположения в памяти аргументов функции.  
-  
- Чтобы получить доступ к сведениям об аргументах, необходимо установить флаг `COR_PRF_ENABLE_FUNCTION_ARGS`. Профилировщик может использовать метод [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) для установки флагов событий.  
-  
+- `argumentInfo`
+
+  \[в] указатель на структуру [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) , указывающую расположения в памяти аргументов функции.
+
+  Чтобы получить доступ к сведениям об аргументах, необходимо установить флаг `COR_PRF_ENABLE_FUNCTION_ARGS`. Профилировщик может использовать метод [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) для установки флагов событий.
+
 ## <a name="remarks"></a>Заметки  
  Значения параметров `func` и `argumentInfo` недопустимы после возврата функции `FunctionEnter2`, поскольку значения могут измениться или быть уничтожены.  
   
@@ -76,9 +81,9 @@ void __stdcall FunctionEnter2 (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Функция FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [Функция FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [Метод SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Функция FunctionLeave2](functionleave2-function.md)
+- [Функция FunctionTailcall2](functiontailcall2-function.md)
+- [Метод SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Глобальные статические функции профилирования](profiling-global-static-functions.md)

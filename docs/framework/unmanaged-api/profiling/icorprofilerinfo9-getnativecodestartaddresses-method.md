@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444719"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868282"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>Метод ICorProfilerInfo9:: Жетнативекодестартаддрессес
 
@@ -32,22 +32,27 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-`functionId` \
-окне Идентификатор функции, для которой должны возвращаться начальные адреса машинного кода.
+- `functionId`
 
-`reJitId` \
-[in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора.
+  \[в] идентификатор функции, для которой должны возвращаться начальные адреса машинного кода.
 
-`cCodeStartAddresses` \
-[in] Максимальный размер массива `codeStartAddresses`.
+- `reJitId`
 
-`pcCodeStartAddresses` \
-заполняет Количество доступных адресов.
+  \[in] Идентификация JIT-повторно скомпилированной функции.
 
-`codeStartAddresses` \
-заполняет Массив `UINT_PTR`, каждый из которых является начальным адресом для собственного тела для указанной функции.
+- `cCodeStartAddresses`
+
+  \[в] максимальный размер массива `codeStartAddresses`.
+
+- `pcCodeStartAddresses`
+
+  \[out] количество доступных адресов.
+
+- `codeStartAddresses`
+
+  \[out] массив `UINT_PTR`, каждый из которых является начальным адресом для заданной функции в машинном тексте.
 
 ## <a name="remarks"></a>Заметки
 
@@ -63,6 +68,6 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 **Версии .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [Интерфейс ICorProfilerInfo9](icorprofilerinfo9-interface.md)

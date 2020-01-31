@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-ms.openlocfilehash: 6cc3ec1c802c28b74248380aa7f686e675a92f1d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fb849c78636d5e29f58a70f59aa4cb3cd22df40
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088842"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784739"
 ---
 # <a name="icordebugappdomainenum-interface"></a>Интерфейс ICorDebugAppDomainEnum
 
@@ -29,7 +29,7 @@ ms.locfileid: "73088842"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Возвращает указанное число доменов приложений из коллекции, начиная с текущей позиции курсора.|  
+|[Метод Next](icordebugappdomainenum-next-method.md)|Возвращает указанное число доменов приложений из коллекции, начиная с текущей позиции курсора.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73088842"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebug](icordebug-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

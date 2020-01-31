@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-ms.openlocfilehash: 8377ead42c752d8ebe9813d9e00662b94339f8a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e2aaf902afd71a4a81f7d64ef3fec046aacc91fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137241"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792533"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>Метод ICorDebugProcess2::ClearUnmanagedBreakpoint
 Удаляет ранее установленную точку останова по указанному адресу.  
@@ -38,7 +38,7 @@ HRESULT ClearUnmanagedBreakpoint (
  окне Значение `CORDB_ADDRESS`, указывающее адрес, по которому была задана точка останова.  
   
 ## <a name="remarks"></a>Заметки  
- Указанная точка останова была ранее задана предыдущим вызовом метода [ICorDebugProcess2:: сетунманажедбреакпоинт](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Указанная точка останова была ранее задана предыдущим вызовом метода [ICorDebugProcess2:: сетунманажедбреакпоинт](icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
  Метод `ClearUnmanagedBreakpoint` можно вызвать во время выполнения отлаживаемого процесса.  
   

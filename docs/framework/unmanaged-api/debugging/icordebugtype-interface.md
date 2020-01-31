@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 4f3f553ed5dc93433610365e0dae5bee54863de5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8210e67f4bdd615ff65d9bd3474043fc45fd8883
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129627"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791262"
 ---
 # <a name="icordebugtype-interface"></a>Интерфейс ICorDebugType
 Представляет тип — базовый или сложный (то есть определяемый пользователем). Если тип универсален, интерфейс `ICorDebugType` представляет универсальный тип с экземплярами.  
@@ -28,13 +28,13 @@ ms.locfileid: "73129627"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|Возвращает указатель интерфейса на ICorDebugTypeEnum, который ссылается на универсальные параметры <xref:System.Type> класса, на который ссылается этот `ICorDebugType`.|  
-|[Метод GetBase](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|Возвращает указатель интерфейса на `ICorDebugType`, ссылающийся на базовый класс класса, на который ссылается этот `ICorDebugType`, если он существует.|  
-|[Метод GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|Возвращает указатель интерфейса на объект ICorDebugClass, который ссылается на типизированный конструктор этого `ICorDebugType`.|  
-|[Метод GetFirstTypeParameter](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|Возвращает указатель интерфейса на `ICorDebugType`, который ссылается на первый универсальный параметр <xref:System.Type> для конструктора класса, на который ссылается этот `ICorDebugType`.|  
-|[Метод GetRank](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|Возвращает число измерений в типе массива.|  
-|[Метод GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|Возвращает указатель интерфейса на объект ICorDebugValue, содержащий значение статического поля, на которое ссылается заданный токен поля в указанном кадре стека.|  
-|[Метод GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|Возвращает значение Корелементтипе, описывающее собственный тип среды CLR <xref:System.Type> на которую ссылается этот `ICorDebugType`.|  
+|[Метод EnumerateTypeParameters](icordebugtype-enumeratetypeparameters-method.md)|Возвращает указатель интерфейса на ICorDebugTypeEnum, который ссылается на универсальные параметры <xref:System.Type> класса, на который ссылается этот `ICorDebugType`.|  
+|[Метод GetBase](icordebugtype-getbase-method.md)|Возвращает указатель интерфейса на `ICorDebugType`, ссылающийся на базовый класс класса, на который ссылается этот `ICorDebugType`, если он существует.|  
+|[Метод GetClass](icordebugtype-getclass-method.md)|Возвращает указатель интерфейса на объект ICorDebugClass, который ссылается на типизированный конструктор этого `ICorDebugType`.|  
+|[Метод GetFirstTypeParameter](icordebugtype-getfirsttypeparameter-method.md)|Возвращает указатель интерфейса на `ICorDebugType`, который ссылается на первый универсальный параметр <xref:System.Type> для конструктора класса, на который ссылается этот `ICorDebugType`.|  
+|[Метод GetRank](icordebugtype-getrank-method.md)|Возвращает число измерений в типе массива.|  
+|[Метод GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md)|Возвращает указатель интерфейса на объект ICorDebugValue, содержащий значение статического поля, на которое ссылается заданный токен поля в указанном кадре стека.|  
+|[Метод GetType](icordebugtype-gettype-method.md)|Возвращает значение Корелементтипе, описывающее собственный тип среды CLR <xref:System.Type> на которую ссылается этот `ICorDebugType`.|  
   
 ## <a name="remarks"></a>Заметки  
  Если тип является универсальным, `ICorDebugClass` представляет тип, не являющийся экземпляром. Интерфейс `ICorDebugType` представляет экземпляр универсального типа. Например, хэш-таблица\<K, V > будет представлена `ICorDebugClass`, тогда как Hashtable\<Int32, строка > будет представлена `ICorDebugType`.  
@@ -53,6 +53,6 @@ ms.locfileid: "73129627"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

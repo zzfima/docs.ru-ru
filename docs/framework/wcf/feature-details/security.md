@@ -6,24 +6,24 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f79ac28af45e8c05922373955c5317095d2c682
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748472"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744634"
 ---
 # <a name="windows-communication-foundation-security"></a>Безопасность Windows Communication Foundation
-В этом разделе описываются средства безопасности Windows Communication Foundation (WCF) и способы их использования для защиты сообщений.  
+В подразделах этого раздела описываются функции безопасности Windows Communication Foundation (WCF) и способы их использования для защиты сообщений.  
   
- Дополнительные сведения о Windows Server AppFabric и безопасности, см. в разделе [безопасности-модель для Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Дополнительные сведения о Windows Server AppFabric и безопасности см. в статье [модель безопасности для Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- Описывает средства безопасности в WCF.  
+ Описание функций безопасности в WCF.  
   
  [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- Описывает основные термины и понятия, используемые в системе безопасности WCF.  
+ Описывает основные термины и понятия, используемые в безопасности WCF.  
   
  [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  Описание сценариев и топологий, которые можно настроить с помощью WCF.  
@@ -34,10 +34,10 @@ ms.locfileid: "61748472"
  [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  Описание привязок с точки зрения безопасности, в том числе демонстрация создания настраиваемых привязок безопасности.  
   
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Описывает способ защиты сообщений с помощью средств безопасности WCF.  
+ [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ Описывает, как защитить сообщения с помощью функций безопасности WCF.  
   
- [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Примеры типичных задач, связанных с проверкой подлинности.  
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "61748472"
  Основы федерации и принципы создания клиентов, взаимодействующих с федеративными серверами.  
   
  [Частичное доверие](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- В этой статье описывается выполнение сценариев с частичным доверием и ограничения WCF, при выполнении с частичным доверием.  
+ Описывает, как выполнять частично доверенные сценарии и ограничения WCF при выполнении частичного доверия.  
   
  [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Принципы аудита событий безопасности.  
@@ -55,7 +55,7 @@ ms.locfileid: "61748472"
  [Руководство и рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Рекомендации по созданию безопасных приложений WCF.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
@@ -69,6 +69,6 @@ ms.locfileid: "61748472"
   
  [Концептуальный обзор](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Настройка приложения](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

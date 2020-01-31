@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 94d175ec58f35b7e807786c221437d05c605c0bc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c076937d6431adf1750793d47ece88dc82edf95c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974216"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794104"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Пошаговое руководство: сопоставление свойств с помощью элемента WindowsFormsHost
 
-В этом пошаговом руководстве показано, как использовать свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>, чтобы сопоставлять свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с соответствующими свойствами размещенного элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+В этом пошаговом руководстве показано, как использовать свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>, чтобы сопоставлять свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с соответствующими свойствами размещенного элемента управления Windows Forms.
 
 В данном пошаговом руководстве представлены следующие задачи.
 
@@ -35,9 +35,9 @@ ms.locfileid: "73974216"
 
 Полный листинг кода задач, показанных в этом пошаговом руководстве, см. в разделе [сопоставление свойств с помощью примера элемента WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
 
-По завершении вы сможете сопоставлять [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойства с соответствующими свойствами размещенного элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+По завершении вы сможете сопоставлять [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойства с соответствующими свойствами размещенного элемента управления Windows Forms.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
@@ -53,7 +53,7 @@ ms.locfileid: "73974216"
 
 ## <a name="defining-the-application-layout"></a>Определение макета приложения
 
-Приложение на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]использует элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> для размещения элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Приложение на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]использует элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> для размещения элемента управления Windows Forms.
 
 ### <a name="to-define-the-application-layout"></a>Определение макета приложения
 
@@ -83,7 +83,7 @@ ms.locfileid: "73974216"
 
      Метод `AddClipMapping` добавляет новое сопоставление для свойства <xref:System.Windows.UIElement.Clip%2A>.
 
-     Метод `OnClipChange` преобразует свойство <xref:System.Windows.UIElement.Clip%2A> в свойство [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A>.
+     Метод `OnClipChange` преобразует свойство <xref:System.Windows.UIElement.Clip%2A> в свойство Windows Forms<xref:System.Windows.Forms.Control.Region%2A>.
 
      Метод `Window1_SizeChanged` обрабатывает событие <xref:System.Windows.FrameworkElement.SizeChanged> окна и изменяет размер вырезанной области в соответствии с окном приложения.
 
@@ -113,7 +113,7 @@ ms.locfileid: "73974216"
 
      Метод `ReplaceFlowDirectionMapping` заменяет сопоставление по умолчанию для свойства <xref:System.Windows.FrameworkElement.FlowDirection%2A>.
 
-     Метод `OnFlowDirectionChange` преобразует свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A> в свойство [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A>.
+     Метод `OnFlowDirectionChange` преобразует свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A> в свойство Windows Forms<xref:System.Windows.Forms.Control.RightToLeft%2A>.
 
      Метод `cb_CheckedChanged` обрабатывает событие <xref:System.Windows.Forms.CheckBox.CheckedChanged> в элементе управления <xref:System.Windows.Forms.CheckBox>. Он назначает свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A> на основе значения свойства <xref:System.Windows.Forms.CheckBox.CheckState%2A>
 
@@ -145,7 +145,7 @@ ms.locfileid: "73974216"
 
      Метод `WindowLoaded` обрабатывает событие <xref:System.Windows.FrameworkElement.Loaded> и выполняет следующую инициализацию.
 
-    - Создает элемент управления <xref:System.Windows.Forms.CheckBox> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+    - Создает элемент управления<xref:System.Windows.Forms.CheckBox> Windows Forms.
 
     - Вызывает методы, ранее определенные в руководстве, для настройки сопоставлений свойств.
 
@@ -153,7 +153,7 @@ ms.locfileid: "73974216"
 
 2. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его. Установите флажок, чтобы увидеть результат сопоставления <xref:System.Windows.FrameworkElement.FlowDirection%2A>. При установке флажка меняется ориентация макета по горизонтали.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>

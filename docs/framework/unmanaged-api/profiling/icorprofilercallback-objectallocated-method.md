@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-ms.openlocfilehash: 66643bbb8dbc914b2e0e48a7f0c87630fe95e5d3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 38d9e83e9fa0e9cd0586fb10a6fd79c29bead4a6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445850"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866108"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>Метод ICorProfilerCallback::ObjectAllocated
 Уведомляет профилировщик о том, что для объекта выделена память в куче.  
@@ -40,7 +40,7 @@ HRESULT ObjectAllocated(
  `classId`  
  окне Идентификатор класса, экземпляр которого является объектом.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Метод `ObjectedAllocated` не вызывается для выделений из стека или неуправляемой памяти. Параметр `classId` может ссылаться на класс в управляемом коде, который еще не был загружен. Профилировщик получит обратный вызов загрузки класса для этого класса сразу после `ObjectAllocated` обратного вызова.  
   
 ## <a name="requirements"></a>Требования  
@@ -52,8 +52,8 @@ HRESULT ObjectAllocated(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
-- [Метод ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод ClassLoadStarted](icorprofilercallback-classloadstarted-method.md)
+- [Метод ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)

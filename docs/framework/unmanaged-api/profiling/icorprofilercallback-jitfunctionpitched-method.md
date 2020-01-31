@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-ms.openlocfilehash: 9bb3934be4a2f4de4a3a235a00522c801331e1eb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cda629b7a6560ca5d731cd88cffc2cffd3486d8a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448428"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866225"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>Метод ICorProfilerCallback::JITFunctionPitched
 Оповещает профилировщик о том, что JIT-скомпилированная функция была удалена из памяти.  
@@ -36,7 +36,7 @@ HRESULT JITFunctionPitched(
  `functionId`  
  окне Идентификатор удаленной функции.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если вызывается Удаленная функция, профилировщик получит новые события JIT-компиляции при повторной компиляции функции. В настоящее время JIT-компилятор среды CLR не удаляет функции из памяти, поэтому этот обратный вызов сейчас не используется и не будет получен профилировщиком.  
   
  Значение `functionId` недопустимо, пока функция не будет перекомпилирована. При повторной компиляции функции будет использоваться то же значение `functionId`.  
@@ -52,4 +52,4 @@ HRESULT JITFunctionPitched(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

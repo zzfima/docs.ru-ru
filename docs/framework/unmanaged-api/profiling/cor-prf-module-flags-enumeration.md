@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: bdbf93ba4df50cf26538f0e527fdc3c982bb274e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f6fb469aa9d6d40b762bfd2feec28c28299732f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447332"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867117"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>Перечисление COR_PRF_MODULE_FLAGS
 Указывает свойства модуля.  
@@ -39,7 +39,7 @@ typedef enum
 }   COR_PRF_MODULE_FLAGS;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -51,8 +51,8 @@ typedef enum
 |COR_PRF_MODULE_FLAT_LAYOUT|Структура модуля в памяти плоская, но не сопоставлена. Если в модуле установлен этот бит, профилировщики, считывающие информацию непосредственно из заголовка переносимого исполняемого файла (PE), должны быть внимательны при интерпретации относительных виртуальных адресов (RVA) в заголовке.|  
 |COR_PRF_MODULE_WINDOWS_RUNTIME|Флаг типа содержимого среда выполнения Windows задается в метаданных для сборки этого модуля. Это происходит для всех модулей метаданных Windows (. winmd).|  
   
-## <a name="remarks"></a>Примечания  
- Биты из COR_PRF_MODULE_FLAGS возвращаются профилировщику в выходном параметре `pdwModuleFlags` метода [ICorProfilerInfo3:: GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) . Некоторые сочетания двух или более флагов возможны, но не все сочетания возможны.  
+## <a name="remarks"></a>Заметки  
+ Биты из COR_PRF_MODULE_FLAGS возвращаются профилировщику в выходном параметре `pdwModuleFlags` метода [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) . Некоторые сочетания двух или более флагов возможны, но не все сочетания возможны.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -65,4 +65,4 @@ typedef enum
   
 ## <a name="see-also"></a>См. также:
 
-- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Перечисления профилирования](profiling-enumerations.md)

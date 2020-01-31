@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-ms.openlocfilehash: 6d8b408675127cde399a8346f2b9734a0e038cb5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1c3c311fd431b6c0b18af3d6516973b2471cfabd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427142"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867066"
 ---
 # <a name="cor_prf_transition_reason-enumeration"></a>Перечисление COR_PRF_TRANSITION_REASON
 Указывает причину перехода из управляемого в неуправляемый код или наоборот.  
@@ -33,15 +33,15 @@ typedef enum {
 } COR_PRF_TRANSITION_REASON;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_TRANSITION_CALL`|Переход происходит из-за вызова функции.|  
 |`COR_PRF_TRANSITION_RETURN`|Переход происходит из-за возврата из функции.|  
   
-## <a name="remarks"></a>Примечания  
- Когда происходит переход, профилировщик получает обратный вызов [ICorProfilerCallback:: манажедтаунманажедтранситион](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) или [ICorProfilerCallback:: унманажедтоманажедтранситион](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) , который предоставляет значение перечисления `COR_PRF_TRANSITION_REASON`, чтобы указать причину перехода.  
+## <a name="remarks"></a>Заметки  
+ Когда происходит переход, профилировщик получает обратный вызов [ICorProfilerCallback:: манажедтаунманажедтранситион](icorprofilercallback-managedtounmanagedtransition-method.md) или [ICorProfilerCallback:: унманажедтоманажедтранситион](icorprofilercallback-unmanagedtomanagedtransition-method.md) , который предоставляет значение перечисления `COR_PRF_TRANSITION_REASON`, чтобы указать причину перехода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

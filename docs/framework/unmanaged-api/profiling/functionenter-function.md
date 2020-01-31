@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 38ed7de647aabefc95f515d9aa627b0e9c8d9015
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440815"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790261"
 ---
 # <a name="functionenter-function"></a>Функция FunctionEnter
 Уведомляет профилировщик о передаче управления в функцию.  
@@ -35,10 +35,12 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `funcID`  
- окне Идентификатор функции, которой передается элемент управления.  
-  
+## <a name="parameters"></a>Параметры
+
+- `funcID`
+
+  \[в] идентификатор функции, для которой передается элемент управления.
+
 ## <a name="remarks"></a>Заметки  
  Функция `FunctionEnter` является обратным вызовом. его необходимо реализовать. Реализация должна использовать атрибут класса хранения `__declspec`(`naked`).  
   
@@ -61,7 +63,7 @@ void __stdcall FunctionEnter (
   
  **.NET Framework версии:** 1,1, 1,0  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Функция FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [Функция FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

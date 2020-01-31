@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 79be2572f52ec509d9551261074204bf62ad5388
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445062"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866550"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>Метод ICorProfilerCallback::COMClassicVTableCreated
 Уведомляет профилировщик о том, что для указанного IID и класса был создан объект vtable COM-взаимодействия.  
@@ -35,19 +35,24 @@ HRESULT COMClassicVTableCreated(
     [in] ULONG   cSlots);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `wrappedClasId`  
- окне Идентификатор класса, для которого была создана таблица vtable.  
-  
- `implementedIID`  
- окне Идентификатор интерфейса, реализуемого классом. Это значение может быть равно NULL, если интерфейс является только внутренним.  
-  
- `pVTable`  
- окне Указатель на начало таблицы vtable.  
-  
- `cSlots`  
- окне Число слотов в таблице vtable.  
-  
+## <a name="parameters"></a>Параметры
+
+- `wrappedClasId`
+
+  \[в] идентификатор класса, для которого была создана таблица vtable.
+
+- `implementedIID`
+
+  \[в] идентификатор интерфейса, реализуемого классом. Это значение может быть равно NULL, если интерфейс является только внутренним.
+
+- `pVTable`
+
+  \[в] указатель на начало таблицы vtable.
+
+- `cSlots`
+
+  \[в] число слотов в таблице vtable.
+
 ## <a name="remarks"></a>Заметки  
  Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
   
@@ -62,7 +67,7 @@ HRESULT COMClassicVTableCreated(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод COMClassicVTableDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод COMClassicVTableDestroyed](icorprofilercallback-comclassicvtabledestroyed-method.md)

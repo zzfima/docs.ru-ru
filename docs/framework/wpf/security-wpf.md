@@ -1,5 +1,5 @@
 ---
-title: Безопасность (WPF)
+title: по безопасности
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a49634fd955b0dc1f4cac5c785d49c24d16bbc60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636777"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868048"
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
 <a name="introduction"></a>При разработке изолированных приложений Windows Presentation Foundation (WPF) и обозревателей, размещенных в браузере, необходимо учитывать модель безопасности. Автономные приложения WPF выполняются с неограниченными разрешениями (набор разрешений**FULLTRUST** ЦС), а также развернут с помощью установщик Windows (. msi), XCOPY или ClickOnce. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Однако ведущее приложение с полным доверием может создать <xref:System.AppDomain> частичного доверия с помощью модели надстройки .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о](./app-development/wpf-add-ins-overview.md)надстройках WPF.  
@@ -184,7 +184,7 @@ ms.locfileid: "75636777"
  Элементы управления функциями применяются процессом, создающим экземпляр объекта ActiveX WebBrowser. Таким образом, при создании автономного приложения, которое может переходить к ненадежному содержимому, следует рассмотреть возможность включения дополнительных элементов управления функциями.  
   
 > [!NOTE]
-> Эта рекомендация основана на общих рекомендациях по безопасности узлов MSHTML и SHDOCVW. Дополнительные сведения см. [в разделе вопросы и ответы по безопасности главного узла MSHTML: часть I из II](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) и [часто задаваемые вопросы о безопасности узла MSHTML: часть II из II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
+> Эта рекомендация основана на общих рекомендациях по безопасности узлов MSHTML и SHDOCVW. Дополнительные сведения см. [в разделе вопросы и ответы по безопасности главного узла MSHTML: часть I из II](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/) и [часто задаваемые вопросы о безопасности узла MSHTML: часть II из II](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/).  
   
  Для исполняемого файла можно включить следующие элементы управления функциями путем установки значения реестра равным 1.  
   
