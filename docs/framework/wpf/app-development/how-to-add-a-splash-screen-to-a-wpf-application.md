@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление в WPF-приложение экрана-заставки
+title: Добавление экрана-заставки
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 3120ee64d65822d323800a89466c6b707169aaaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947905"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740447"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="02c9a-102">Практическое руководство. Добавление в WPF-приложение экрана-заставки</span><span class="sxs-lookup"><span data-stu-id="02c9a-102">How to: Add a Splash Screen to a WPF Application</span></span>
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="2ec99-102">Практическое руководство. Добавление в WPF-приложение экрана-заставки</span><span class="sxs-lookup"><span data-stu-id="2ec99-102">How to: Add a Splash Screen to a WPF Application</span></span>
 
-<span data-ttu-id="02c9a-103">В этом разделе показано, как добавить окно запуска, или *экран-заставка*, приложение Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="02c9a-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>
+<span data-ttu-id="2ec99-103">В этом разделе показано, как добавить окно запуска или *экран-заставку*в приложение Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="2ec99-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>
 
-## <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="02c9a-104">Чтобы добавить существующий образ в качестве экрана-заставки</span><span class="sxs-lookup"><span data-stu-id="02c9a-104">To add an existing image as a splash screen</span></span>
+## <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="2ec99-104">Добавление существующего изображения в качестве экрана-заставки</span><span class="sxs-lookup"><span data-stu-id="2ec99-104">To add an existing image as a splash screen</span></span>
 
-1. <span data-ttu-id="02c9a-105">Создайте или найдите изображение, которое будет использоваться для экрана-заставки.</span><span class="sxs-lookup"><span data-stu-id="02c9a-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="02c9a-106">Можно использовать любой формат изображения, который поддерживается в Windows Imaging Component (WIC).</span><span class="sxs-lookup"><span data-stu-id="02c9a-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="02c9a-107">Например можно использовать формат BMP, GIF, JPEG, PNG и TIFF.</span><span class="sxs-lookup"><span data-stu-id="02c9a-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>
+1. <span data-ttu-id="2ec99-105">Создайте или найдите изображение, которое вы хотите использовать для экрана-заставки.</span><span class="sxs-lookup"><span data-stu-id="2ec99-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="2ec99-106">Можно использовать любой формат изображения, поддерживаемый компонентом Windows Imaging Component (WIC).</span><span class="sxs-lookup"><span data-stu-id="2ec99-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="2ec99-107">Например, можно использовать формат BMP, GIF, JPEG, PNG или TIFF.</span><span class="sxs-lookup"><span data-stu-id="2ec99-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>
 
-2. <span data-ttu-id="02c9a-108">Добавьте файл изображения в проект приложения WPF.</span><span class="sxs-lookup"><span data-stu-id="02c9a-108">Add the image file to the WPF Application project.</span></span>
+2. <span data-ttu-id="2ec99-108">Добавьте файл изображения в проект приложения WPF.</span><span class="sxs-lookup"><span data-stu-id="2ec99-108">Add the image file to the WPF Application project.</span></span>
 
-3. <span data-ttu-id="02c9a-109">В **обозревателе решений**, выберите изображение.</span><span class="sxs-lookup"><span data-stu-id="02c9a-109">In **Solution Explorer**, select the image.</span></span>
+3. <span data-ttu-id="2ec99-109">В **Обозреватель решений**выберите изображение.</span><span class="sxs-lookup"><span data-stu-id="2ec99-109">In **Solution Explorer**, select the image.</span></span>
 
-4. <span data-ttu-id="02c9a-110">В окне «Свойства» щелкните стрелку раскрывающегося списка для **действие при построении** свойство.</span><span class="sxs-lookup"><span data-stu-id="02c9a-110">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>
+4. <span data-ttu-id="2ec99-110">В окно свойств щелкните стрелку раскрывающегося списка для свойства **действие сборки** .</span><span class="sxs-lookup"><span data-stu-id="2ec99-110">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>
 
-5. <span data-ttu-id="02c9a-111">Выберите **экран-заставка** из раскрывающегося списка.</span><span class="sxs-lookup"><span data-stu-id="02c9a-111">Select **SplashScreen** from the drop-down list.</span></span>
+5. <span data-ttu-id="2ec99-111">Выберите **SplashScreen** из раскрывающегося списка.</span><span class="sxs-lookup"><span data-stu-id="2ec99-111">Select **SplashScreen** from the drop-down list.</span></span>
 
-6. <span data-ttu-id="02c9a-112">Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="02c9a-112">Press **F5** to build and run the application.</span></span>
+6. <span data-ttu-id="2ec99-112">Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="2ec99-112">Press **F5** to build and run the application.</span></span>
 
-     <span data-ttu-id="02c9a-113">Изображение экрана-заставки отображается в центре экрана, исчезнет, когда появится окно основного приложения.</span><span class="sxs-lookup"><span data-stu-id="02c9a-113">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>
+     <span data-ttu-id="2ec99-113">Изображение экрана-заставки отображается в центре экрана, а затем исчезает при появлении главного окна приложения.</span><span class="sxs-lookup"><span data-stu-id="2ec99-113">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>
 
-## <a name="to-exclude-the-splash-screen-from-build"></a><span data-ttu-id="02c9a-114">Чтобы исключить из сборки на экране-заставке</span><span class="sxs-lookup"><span data-stu-id="02c9a-114">To exclude the splash screen from build</span></span>
+## <a name="to-exclude-the-splash-screen-from-build"></a><span data-ttu-id="2ec99-114">Исключение экрана-заставки из сборки</span><span class="sxs-lookup"><span data-stu-id="2ec99-114">To exclude the splash screen from build</span></span>
 
-1. <span data-ttu-id="02c9a-115">В **обозревателе решений**, выберите изображение экрана-заставки.</span><span class="sxs-lookup"><span data-stu-id="02c9a-115">In **Solution Explorer**, select the splash screen image.</span></span>
+1. <span data-ttu-id="2ec99-115">В **Обозреватель решений**выберите изображение экрана-заставки.</span><span class="sxs-lookup"><span data-stu-id="2ec99-115">In **Solution Explorer**, select the splash screen image.</span></span>
 
-2. <span data-ttu-id="02c9a-116">В **свойства** окне **действие при построении** для **None**.</span><span class="sxs-lookup"><span data-stu-id="02c9a-116">In the **Properties** window, set the **Build Action** to **None**.</span></span>
+2. <span data-ttu-id="2ec99-116">В окне **Свойства** задайте для **действия сборки** значение **нет**.</span><span class="sxs-lookup"><span data-stu-id="2ec99-116">In the **Properties** window, set the **Build Action** to **None**.</span></span>
 
-## <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="02c9a-117">Для удаления заставки из приложения</span><span class="sxs-lookup"><span data-stu-id="02c9a-117">To remove the splash screen from an application</span></span>
+## <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="2ec99-117">Удаление экрана-заставки из приложения</span><span class="sxs-lookup"><span data-stu-id="2ec99-117">To remove the splash screen from an application</span></span>
 
-<span data-ttu-id="02c9a-118">В **обозревателе решений**, удалить изображение экрана-заставки.</span><span class="sxs-lookup"><span data-stu-id="02c9a-118">In **Solution Explorer**, delete the splash screen image.</span></span>
+<span data-ttu-id="2ec99-118">В **Обозреватель решений**удалите изображение экрана-заставки.</span><span class="sxs-lookup"><span data-stu-id="2ec99-118">In **Solution Explorer**, delete the splash screen image.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="02c9a-119">См. также</span><span class="sxs-lookup"><span data-stu-id="02c9a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ec99-119">См. также:</span><span class="sxs-lookup"><span data-stu-id="2ec99-119">See also</span></span>
 
 - <xref:System.Windows.SplashScreen>
-- <span data-ttu-id="02c9a-120">[Практическое руководство. Добавление существующих элементов в проект](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="02c9a-120">[How to: Add Existing Items to a Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span></span>
+- <span data-ttu-id="2ec99-120">[Как добавить существующие элементы в проект](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="2ec99-120">[How to: Add Existing Items to a Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span></span>

@@ -111,6 +111,8 @@
           href: native-interop/qualify-net-types-for-interoperation.md
     - name: Применение атрибутов взаимодействия
       href: native-interop/apply-interop-attributes.md
+    - name: Исключения
+      href: native-interop/exceptions-interoperability.md
 - name: Коллекции и структуры данных
   href: collections/
 - name: Числовые значения в .NET
@@ -139,7 +141,7 @@
   href: data/sqlite/
 - name: XML-документы и данные
   href: data/xml/
-- name: Безопасность
+- name: безопасность
   href: security/
 - name: Сериализация
   href: serialization/

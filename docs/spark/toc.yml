@@ -29,6 +29,8 @@
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Отправка заданий в Databricks
       href: how-to-guides/databricks-deploy-methods.md
+    - name: Развертывание двоичных файлов рабочей роли и UDF
+      href: how-to-guides/deploy-worker-udf-binaries.md
 - name: Справочник
   items:
     - name: Справочник по интерфейсам API
