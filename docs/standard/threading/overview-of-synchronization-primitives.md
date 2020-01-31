@@ -120,7 +120,7 @@ ms.locfileid: "73106596"
 
 Дополнительные сведения см. в статье о [CountdownEvent](countdownevent.md) и справочной документации по API <xref:System.Threading.CountdownEvent>.
 
-### <a name="barrier-class"></a>Класс Barrier	
+### <a name="barrier-class"></a>Класс Barrier
 
 Класс <xref:System.Threading.Barrier?displayProperty=nameWithType> представляет барьер выполнения потоков. Поток, который вызывает метод <xref:System.Threading.Barrier.SignalAndWait%2A?displayProperty=nameWithType>, сообщает, что он достиг барьера и ожидает, пока другие участвующие потоки не достигнут барьера. Когда все участвующие потоки достигают барьера, их выполнение продолжается, а барьер сбрасывается и может использоваться повторно.
 
