@@ -1,5 +1,5 @@
 ---
-title: Создание обработчиков событий в Windows Forms
+title: Создание обработчиков событий
 ms.date: 03/30/2017
 helpviewer_keywords:
 - event handling [Windows Forms]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 6b1d146dfd9d51641bc9eb5d8be4cd2508c223a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90acb3c7691acbcb528ae66692af67c2fb28eeaf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963482"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742332"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Создание обработчиков событий в Windows Forms
 
@@ -27,16 +27,16 @@ ms.locfileid: "69963482"
  [Общие сведения об обработчиках событий](event-handlers-overview-windows-forms.md)\
  Описывает порядок обработки событий.
 
- [Практическое руководство. Создание обработчиков событий во время выполнения для Windows Forms](how-to-create-event-handlers-at-run-time-for-windows-forms.md)\
+ [Практические руководства. Создание обработчиков событий во время выполнения для Windows Forms](how-to-create-event-handlers-at-run-time-for-windows-forms.md)\
  Динамически выдает инструкции по реагированию на системные или пользовательские события.
 
- [Практическое руководство. Подключение нескольких событий к одному обработчику событий в Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)\
+ [Как подключить несколько событий к одному обработчику событий в Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)\
  Выдает инструкции по назначению одной и той же функциональности нескольким элементам управления с помощью событий.
 
  [Порядок событий в Windows Forms](order-of-events-in-windows-forms.md)\
  Описывает порядок порождения событий в элементах управления Windows Forms.
 
- [Практическое руководство. Создание обработчиков событий с помощью](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)) конструктора описывает, как использовать конструктор Windows Forms для создания обработчиков событий.
+ [Инструкции. Создание обработчиков событий с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)) Описывает, как использовать конструктор Windows Forms для создания обработчиков событий.
 
 ## <a name="related-sections"></a>Связанные разделы
 

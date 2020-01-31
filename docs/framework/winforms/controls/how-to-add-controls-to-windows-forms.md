@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление элементов управления в формы Windows Forms
+title: Добавление элементов управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: bfe9449ecc862c361719d27dba2f5ed9af563957
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046053"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743956"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Практическое руководство. Добавление элементов управления в формы Windows Forms
 
@@ -22,7 +22,7 @@ ms.locfileid: "70046053"
 
 ## <a name="to-draw-a-control-on-a-form"></a>Рисование элемента управления в форме
 
-1. Откройте форму. Дополнительные сведения см. в разделе [Практическое руководство. Отображение Windows Forms в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+1. Откройте форму. Дополнительные сведения см. в разделе [Практическое руководство. Отображение форм Windows Forms в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
 
 2. В **области элементов**щелкните элемент управления, который необходимо добавить в форму.
 
@@ -35,7 +35,7 @@ ms.locfileid: "70046053"
 
 ## <a name="to-drag-a-control-to-a-form"></a>Чтобы перетащить элемент управления на форму
 
-1. Откройте форму. Дополнительные сведения см. в разделе [Практическое руководство. Отображение Windows Forms в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+1. Откройте форму. Дополнительные сведения см. в разделе [Практическое руководство. Отображение форм Windows Forms в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
 
 2. На **панели элементов**щелкните нужный элемент управления и перетащите его в форму.
 
@@ -87,9 +87,9 @@ ms.locfileid: "70046053"
     > [!IMPORTANT]
     > Создание ссылки на вредоносный элемент `UserControl` может поставить локальный компьютер под угрозу атаки по сети. Это может произойти только в том случае, если злоумышленник создаст небезопасный пользовательский элемент управления, а затем вы по ошибке добавите его в проект.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элементы управления Windows Forms](index.md)
-- [Практическое руководство. Изменить размер элементов управления на Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Практическое руководство. Установка текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Практическое руководство. Изменение размера элементов управления в формах Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

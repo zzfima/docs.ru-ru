@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение того, какой узел TreeView был выбран (Windows Forms)
+title: Практическое руководство. Определение того, какой узел элемента управления TreeView был выбран щелчком мыши
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: ab93158daf987e2f19516b8fb3abf80bfe79a12c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7a0e2b69bbec0eb03d40bee2c8e2d4bc9c3558f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967334"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742016"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Практическое руководство. Определение того, какой узел TreeView был выбран (Windows Forms)
-При работе с элементом управления <xref:System.Windows.Forms.TreeView> Windows Forms распространенной задачей является определение того, какой узел был выбран, и ответ соответствующим образом.  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Практическое руководство. Определение узла TreeView, выбранного щелчком мыши (Windows Forms)
+При работе с элементом управления <xref:System.Windows.Forms.TreeView> Windows Forms, распространенной задачей является определение того, какой узел был выбран, и ответ соответствующим образом.  
   
 ### <a name="to-determine-which-treeview-node-was-clicked"></a>Определение того, какой узел TreeView был выбран  
   
-1. <xref:System.EventArgs> Используйте объект для возврата ссылки на объект узла, который щелкнули.  
+1. Используйте объект <xref:System.EventArgs>, чтобы получить ссылку на объект узла, который щелкнули.  
   
-2. Определите, какой узел был выбран, путем проверки <xref:System.Windows.Forms.TreeViewEventArgs> класса, который содержит данные, связанные с событием.  
+2. Определите, какой узел был выбран, проверив класс <xref:System.Windows.Forms.TreeViewEventArgs>, который содержит данные, связанные с событием.  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -56,8 +56,8 @@ ms.locfileid: "69967334"
     ```  
   
     > [!NOTE]
-    > В качестве альтернативы можно использовать <xref:System.Windows.Forms.MouseEventArgs> <xref:System.Windows.Forms.Control.MouseDown> событие <xref:System.Drawing.Point.X%2A> или <xref:System.Windows.Forms.Control.MouseUp> для получения значений и <xref:System.Drawing.Point.Y%2A> координат, в <xref:System.Drawing.Point> которых произошло нажатие. Затем используйте <xref:System.Windows.Forms.TreeView> <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> метод элемента управления, чтобы определить, какой узел был выбран.  
+    > В качестве альтернативы можно использовать <xref:System.Windows.Forms.MouseEventArgs> события <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.MouseUp> для получения <xref:System.Drawing.Point.X%2A> и <xref:System.Drawing.Point.Y%2A> значений координат <xref:System.Drawing.Point>, в которых произошло нажатие. Затем используйте метод <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> элемента управления <xref:System.Windows.Forms.TreeView>, чтобы определить, какой узел был выбран.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элемент управления TreeView](treeview-control-windows-forms.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 2579bed9ae432a2b9460c421c6ee5bdc40d1e149
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b55ac1d895bfecbe74be447bd06f4aa22b9d04f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121836"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790795"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Метод ICoreClrDebugTarget::EnumRuntimes
 Перечисляет среды CLR в указанном процессе, который выполняется на удаленном компьютере.  
@@ -39,13 +39,13 @@ HRESULT EnumRuntimes (
   
 ## <a name="parameters"></a>Параметры  
  `dwInternalProcessID`  
- [in] Внутренний идентификатор процесса, для которого требуется перечислить среды выполнения. Это будет `m_dwInternalID` из соответствующего [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
+ [in] Внутренний идентификатор процесса, для которого требуется перечислить среды выполнения. Это будет `m_dwInternalID` из соответствующего [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md).  
   
  `pcRuntimes`  
  [out] Число сред выполнения, возвращаемых в `ppRuntimes`. Это значение может быть 0 (ноль).  
   
  `ppRuntimes`  
- заполняет Массив структур [кореклрдебугрунтимеинфо](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) , представляющих среды выполнения, загруженные в удаленном целевом процессе.  
+ заполняет Массив структур [кореклрдебугрунтимеинфо](coreclrdebugruntimeinfo-structure.md) , представляющих среды выполнения, загруженные в удаленном целевом процессе.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -61,7 +61,7 @@ HRESULT EnumRuntimes (
  Прочие сбои.  
   
 ## <a name="remarks"></a>Заметки  
- Чтобы освободить память, выделенную этим методом, вызовите метод [ICoreClrDebugTarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) .  
+ Чтобы освободить память, выделенную этим методом, вызовите метод [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,6 +72,6 @@ HRESULT EnumRuntimes (
   
  **.NET Framework версии:** 3,5 SP1  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [Интерфейс ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)

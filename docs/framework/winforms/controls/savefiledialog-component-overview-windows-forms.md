@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о компоненте SaveFileDialog (Windows Forms)
+title: Общие сведения о компоненте SaveFileDialog
 ms.date: 03/30/2017
 f1_keywords:
 - SaveFileDialog
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Save File dialog box [Windows Forms], displaying
 - SaveFileDialog component [Windows Forms], about SaveFileDialog
 ms.assetid: be7a625f-46fd-4d06-9985-b613dcbf9bd2
-ms.openlocfilehash: 1e4269129f17c10056af2765c7a0e74537918ae5
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 7609c29b7e932ecee7dc8a289617094bd8d480e2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211610"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743099"
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a>Общие сведения о компоненте SaveFileDialog (Windows Forms)
 
-Компонент Windows Forms <xref:System.Windows.Forms.SaveFileDialog> является стандартным диалоговым окном. Это так же, как стандартный **сохранить файл** диалоговое окно, используемое с Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.
+Компонент Windows Forms <xref:System.Windows.Forms.SaveFileDialog> является стандартным диалоговым окном. Это то же самое, что и стандартное диалоговое окно « **Сохранение файла** », используемое Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.
 
-## <a name="working-with-the-savefiledialog-component"></a>Работа с помощью компонента SaveFileDialog
+## <a name="working-with-the-savefiledialog-component"></a>Работа с компонентом SaveFileDialog
 
-Компонент используется в качестве простого решения для пользователям сохранять файлы вместо того чтобы настраивать собственные диалоговое окно. Опираясь на стандартные диалоговые окна Windows, основные функциональные возможности приложения, созданные хорошо знакомы пользователям. Однако имейте в виду, что при с помощью <xref:System.Windows.Forms.SaveFileDialog> компонента, необходимо написать свою собственную логику для сохранения файлов.
+Используйте его как простое решение, позволяющее пользователям сохранять файлы вместо настройки собственного диалогового окна. Полагаться на стандартные диалоговые окна Windows, основные функциональные возможности создаваемых приложений будут сразу же знакомы пользователям. Однако имейте в виду, что при использовании компонента <xref:System.Windows.Forms.SaveFileDialog> необходимо написать собственную логику сохранения файлов.
 
-Можно использовать <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод, чтобы отобразить диалоговое окно во время выполнения. Файл можно открыть в режиме чтения и записи с помощью <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> метод.
+Для вывода диалогового окна во время выполнения можно использовать метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>. Файл можно открыть в режиме чтения и записи с помощью метода <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>.
 
-При добавлении в форму, <xref:System.Windows.Forms.SaveFileDialog> компонент появится в области в нижней части конструктора Windows Forms в Visual Studio.
+При добавлении в форму <xref:System.Windows.Forms.SaveFileDialog> компонент отображается в области в нижней части конструктор Windows Forms в Visual Studio.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [Компонент SaveFileDialog](savefiledialog-component-windows-forms.md)

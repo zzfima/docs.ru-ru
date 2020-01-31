@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130053"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744572"
 ---
 # <a name="reflection-in-net"></a>Отражение в .NET
 
-Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType> позволяют получить информацию о загруженных [сборках](../../standard/assembly/index.md) и типах, определенных в них, таких как [классы](../../standard/base-types/common-type-system.md#classes), [интерфейсы](../../standard/base-types/common-type-system.md#interfaces) и [типы значений](../../csharp/language-reference/keywords/value-types.md). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.
+Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType>позволяют получать сведения о загруженных [сборках](../../standard/assembly/index.md) и определенных в них типах, таких как [классы](../../standard/base-types/common-type-system.md#classes), [интерфейсы](../../standard/base-types/common-type-system.md#interfaces)и типы значений (т. е. [структуры](../../standard/base-types/common-type-system.md#structures) и [перечисления](../../standard/base-types/common-type-system.md#enumerations)). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.
   
 Загрузчик [среды CLR](../../standard/clr.md) управляет [доменами приложений](../app-domains/application-domains.md), которые образуют определенные границы вокруг объектов с одной и той же областью приложения. В частности, он загружает каждую сборку в соответствующий домен приложения и контролирует распределение памяти для иерархии типов в каждой сборке.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73130053"
   
 <a name="related_topics"></a>   
 
-## <a name="related-topics"></a>См. также  
+## <a name="related-topics"></a>Связанные разделы  
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
@@ -83,7 +83,7 @@ ms.locfileid: "73130053"
 |[Практическое руководство. Подключение делегата с помощью отражения](how-to-hook-up-a-delegate-using-reflection.md)|Объясняется, как создать делегат для метода и привязать его к событию. Также объясняется, как создать метод обработки событий во время выполнения с помощью <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Предоставление динамических методов и сборок](emitting-dynamic-methods-and-assemblies.md)|Объясняется, как создавать динамические сборки и динамические методы.|  
   
-## <a name="reference"></a>Справочники  
+## <a name="reference"></a>Справочные сведения  
 
 <xref:System.Type?displayProperty=nameWithType>  
   

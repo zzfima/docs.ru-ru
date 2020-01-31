@@ -1,42 +1,42 @@
 ---
-title: Оптимизация производительности элемента управления DataGridView в Windows Forms
+title: Настройка производительности в элементе управления DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], performance tuning
 - performance [Windows Forms], DataGridView control
 - performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
-ms.openlocfilehash: 79f74db4ebd095156207a6218f59c0e9ae423085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ad86c4cd606bcf074473c97371ec27bcc5605b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012650"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744276"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Оптимизация производительности элемента управления DataGridView в Windows Forms
-При работе с большими объемами данных, `DataGridView` управления можно будет использовать большой объем памяти, если использовать осторожно. На клиентах с ограниченным объемом памяти некоторые из этих затрат можно избежать за счет отключения функций, имеющих требовательных к памяти. Вы также можете управлять, некоторые или все данные обслуживания и извлечения задач вручную с помощью виртуального режима для настройки использования памяти для вашего сценария.  
+При работе с большими объемами данных элемент управления `DataGridView` может использовать большой объем памяти, если он не используется осторожно. На клиентах с ограниченным объемом памяти можно избежать некоторых из этих издержек, избегая использования функций с высокими затратами на память. Вы также можете самостоятельно управлять некоторыми или всеми задачами по обслуживанию и извлечению данных с помощью виртуального режима, чтобы настроить использование памяти для сценария.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- Описывает использование `DataGridView` управления способом, который позволяет избежать ненужных памяти использования и снижения производительности при работе с большими объемами данных.  
+ Описывает использование элемента управления `DataGridView` способом, который позволяет избежать ненужного использования памяти и снижения производительности при работе с большими объемами данных.  
   
  [Виртуальный режим элемента управления DataGridView в Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)  
- В этой статье описывается использование виртуального режима для добавления или замены стандартный механизм привязки данных.  
+ Описывает, как использовать виртуальный режим для дополнения или замены стандартного механизма привязки данных.  
   
- [Пошаговое руководство: Реализация виртуального режима для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)  
- В этой статье описывается реализация обработчиков для нескольких событий в виртуальном режиме. Также показано, как реализовать отката на уровне строк и фиксации для изменения пользователем.  
+ [Пошаговое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)  
+ Описывает, как реализовать обработчики для нескольких событий виртуального режима. Также демонстрируется, как реализовать откат и фиксацию на уровне строк для пользовательских изменений.  
   
  [Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
- В этой статье описывается загрузка данных по требованию, что полезно при наличии дополнительных данных для отображения, чем может уместиться в памяти доступных клиентских.  
+ Описывает, как загружать данные по требованию, что полезно при наличии большего объема данных, чем может храниться доступная память клиента.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
- Содержит справочную документацию по <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойство.  
+ Содержит справочную документацию по свойству <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Режимы отображения данных в элементе управления DataGridView в Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

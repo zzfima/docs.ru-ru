@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о кистях WPF
+title: Обзор кистей
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458629"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746205"
 ---
 # <a name="wpf-brushes-overview"></a>Общие сведения о кистях WPF
 Все, что видно на экране, видимо, так как оно было закрашено кистью. Например, кисть используется для описания фона кнопки, переднего плана текста и заливки фигуры. В этом разделе приводятся основные понятия рисования с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кистей и приведены примеры. Кисти позволяют заполнять объекты [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] различными изображениями, начиная с просто сплошного цвета и заканчивая сложными наборами шаблонов и изображений.  
@@ -26,7 +26,7 @@ ms.locfileid: "73458629"
   
  Большинство визуальных объектов позволяют указать, как они рисуются. В следующей таблице перечислены некоторые распространенные объекты и свойства, с помощью которых можно использовать <xref:System.Windows.Media.Brush>.  
   
-|Class|Свойства кисти|  
+|Класс|Свойства кисти|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
@@ -160,7 +160,7 @@ ms.locfileid: "73458629"
   
  Дополнительные сведения о том, почему <xref:System.Windows.Media.VisualBrush> объекты не могут быть заморожены, см. на странице типа <xref:System.Windows.Media.VisualBrush>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
@@ -170,5 +170,5 @@ ms.locfileid: "73458629"
 - [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Пример ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Разделы практического руководства](brushes-how-to-topics.md)
+- [Практические руководства](brushes-how-to-topics.md)
 - [Дополнительные рекомендации по повышению производительности](../advanced/optimizing-performance-other-recommendations.md)

@@ -1,5 +1,5 @@
 ---
-title: Поддержка двунаправленного письма для приложений Windows Forms
+title: Поддержка двунаправленного письма
 ms.date: 09/30/2017
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8b2e842fc08be78b74cede85927352fafca7bc8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197488"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742075"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений на основе Windows, поддерживающих двунаправленные (справа налево) языки, такие как арабский и иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.
@@ -42,7 +42,7 @@ Visual Studio можно использовать для создания при
 |<xref:System.Windows.Forms.Form>|Задает порядок чтения справа налево и обращает полосы прокрутки.|Зеркально отражает форму.|Да|
 |<xref:System.Windows.Forms.GroupBox>|Подпись отображается по правому краю. Дочерние элементы управления могут наследовать это свойство.|Используйте <xref:System.Windows.Forms.TableLayoutPanel> в элементе управления для поддержки зеркального отображения справа налево.|Нет|
 |<xref:System.Windows.Forms.HScrollBar>|Запускается с полосой прокрутки (бегунком) по правому краю.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.ImageList>|Не требуется.|Не влияет.|Нет|
+|<xref:System.Windows.Forms.ImageList>|Не требуется|Не влияет.|Нет|
 |<xref:System.Windows.Forms.Label>|Отображение по правому краю. Обращает значения <xref:System.Windows.Forms.Label.TextAlign%2A> и <xref:System.Windows.Forms.Label.ImageAlign%2A>.|Не влияет.|Нет|
 |<xref:System.Windows.Forms.LinkLabel>|Отображение по правому краю. Обращает значения <xref:System.Windows.Forms.Label.TextAlign%2A> и <xref:System.Windows.Forms.Label.ImageAlign%2A>.|Не влияет.|Нет|
 |<xref:System.Windows.Forms.ListBox>|Элементы выравниваются по правому краю.|Не влияет.|Нет|
@@ -68,7 +68,7 @@ Visual Studio можно использовать для создания при
 |<xref:System.Windows.Forms.StatusBar>|Не поддерживается; используйте <xref:System.Windows.Forms.StatusStrip>.|Не влияет; используйте <xref:System.Windows.Forms.StatusStrip>.|Нет|
 |<xref:System.Windows.Forms.TabControl>|Не изменяется этим свойством.|Зеркально отражает элемент управления.|Да|
 |<xref:System.Windows.Forms.TextBox>|Отображение текста справа налево с порядком чтения справа налево.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.Timer>|Не требуется.|Не требуется.|Нет|
+|<xref:System.Windows.Forms.Timer>|Не требуется|Не требуется|Нет|
 |<xref:System.Windows.Forms.ToolBar>|Не изменяется этим свойством; используйте <xref:System.Windows.Forms.ToolStrip>.|Не влияет; используйте <xref:System.Windows.Forms.ToolStrip>.|Да|
 |<xref:System.Windows.Forms.ToolTip>|Задает порядок чтения справа налево.|Не влияет.|Нет|
 |<xref:System.Windows.Forms.TrackBar>|Прокрутка или линейка начинается справа; если ориентация <xref:System.Windows.Forms.TrackBar.Orientation%2A> вертикальная, деления начинаются справа.|Не влияет.|Нет|
@@ -76,7 +76,7 @@ Visual Studio можно использовать для создания при
 |<xref:System.Windows.Forms.UserControl>|Вертикальная полоса прокрутки отображается слева; бегунок горизонтальной полосы прокрутки находится справа.|Прямая поддержка отсутствует; используйте <xref:System.Windows.Forms.TableLayoutPanel>.|Нет|
 |<xref:System.Windows.Forms.VScrollBar>|Отображается не в правой, а в левой части элементов управления с прокруткой.|Не влияет.|Нет|
 
-## <a name="encoding"></a>кодировка
+## <a name="encoding"></a>Encoding
  Windows Forms поддерживает Юникод, поэтому можно включить любой набор символов при создании приложений с двунаправленным письмом. Однако не все элементы управления Windows Forms поддерживают Юникод во всех платформах.
 
 ## <a name="gdi"></a>GDI+
@@ -115,6 +115,6 @@ Visual Studio можно использовать для создания при
 
  Некоторые элементы управления запечатаны. Как следствие, из них нельзя наследовать новый элемент управления. К ним относятся элементы управления <xref:System.Windows.Forms.ImageList> и <xref:System.Windows.Forms.ProgressBar>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Двухсторонний режим для веб-приложений ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))

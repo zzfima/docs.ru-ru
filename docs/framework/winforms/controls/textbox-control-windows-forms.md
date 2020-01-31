@@ -1,43 +1,43 @@
 ---
-title: Элемент управления TextBox (Windows Forms)
+title: Элемент управления TextBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-ms.openlocfilehash: b687f83562b3a6f9dd5993f2af1c55ffe6dc8042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bdca52e62b6e7b014d28478b291a1157486527b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932513"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742786"
 ---
 # <a name="textbox-control-windows-forms"></a>Элемент управления TextBox (Windows Forms)
-Текстовые поля форм Windows Forms используются для получения входных данных от пользователя или для отображения текста. `TextBox` Управления обычно используется для ввода и редактирования текста, несмотря на то, что его можно также сделать доступным только для чтения. Текстовые поля можно отобразить несколько строк, переноса текста по размеру элемента управления и добавлять основные элементы форматирования. `TextBox` Элемент управления позволяет единый формат, введенный в элементе управления или отображать текст.  
+Windows Forms текстовые поля используются для получения входных данных от пользователя или для вывода текста. Элемент управления `TextBox` обычно используется для редактируемого текста, хотя его также можно сделать доступным только для чтения. Текстовые поля могут отображать несколько строк, переносить текст в размер элемента управления и добавлять базовое форматирование. Элемент управления `TextBox` допускает один формат текста, отображаемого или вводимых в элементе управления.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления TextBox](textbox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- Инструкции по заданию, где отображается курсор, когда элемент управления редактированием сначала получает фокус.  
+ [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ Инструкции по указанию места, где точка вставки появляется при первом получении фокуса элементом управления "поле ввода".  
   
- [Практическое руководство. Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- Объясняется, как скрыть, введенных в текстовое поле.  
+ [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ Объясняет, как скрыть текст, вводимый в текстовое поле.  
   
- [Практическое руководство. Создать только для чтения текстовое поле](how-to-create-a-read-only-text-box-windows-forms.md)  
- Описывает способы предотвращения изменения содержимого текстового поля.  
+ [Практическое руководство. Создание текстового поля только для чтения](how-to-create-a-read-only-text-box-windows-forms.md)  
+ Описывает, как предотвратить изменение содержимого текстового поля.  
   
  [Практическое руководство. Добавление кавычек в строку](how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- Описание добавления кавычек в строку в текстовом поле.  
+ Описание добавления кавычек к строке в текстовом поле.  
   
- [Практическое руководство. Выделите текст в элементе управления Windows Forms TextBox](how-to-select-text-in-the-windows-forms-textbox-control.md)  
- В этой статье описывается выделение текста в текстовом поле.  
+ [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ Объясняет, как выделить текст в текстовом поле.  
   
- [Практическое руководство. Просмотр нескольких строк в элементе управления Windows Forms TextBox](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- В этой статье описывается создание текстового поля прокрутки.  
+ [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ Описывает, как сделать текстовое поле прокручиваемым.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  Класс <xref:System.Windows.Forms.TextBox>  
  Описание класса и всех его членов.  
   

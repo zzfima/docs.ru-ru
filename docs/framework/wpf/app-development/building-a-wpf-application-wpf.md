@@ -1,5 +1,5 @@
 ---
-title: Построение приложения WPF
+title: Компиляция приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 00c76dfcdcedc7ceaefaaae785368f8b343457a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636319"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744762"
 ---
-# <a name="building-a-wpf-application-wpf"></a>Построение приложения WPF
+# <a name="compile-a-wpf-application"></a>Компиляция приложения WPF
 
 Приложения Windows Presentation Foundation (WPF) могут быть построены как .NET Framework исполняемые файлы (exe), библиотеки (. dll) или сочетание обоих типов сборок. В этом разделе рассматривается создание приложений WPF и описываются ключевые шаги процесса сборки.
 

@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об элементе управления TrackBar (Windows Forms)
+title: Общие сведения об элементе управления TrackBar
 ms.date: 03/30/2017
 f1_keywords:
 - TrackBar
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6901405100df4633c84850757f55b756bc9a0199
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009270"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741466"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>Общие сведения об элементе управления TrackBar (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.TrackBar> элемент управления (также элемент управления «ползунок») используется для просмотра сведений большого объема или для визуальной настройки числовых параметров. <xref:System.Windows.Forms.TrackBar> Управления состоит из двух частей: ползунка и делений. Бегунок является часть, которая может настраиваться. Его положение соответствует <xref:System.Windows.Forms.TrackBar.Value%2A> свойство. Деления — это визуальные индикаторы, расположенные с регулярными интервалами. Ползунок перемещается с шагом, которые могут быть выровнены горизонтально или вертикально. Например можно использовать полосы прокрутки для управления мерцания курсора скорость или мыши скорости для системы.  
+Элемент управления Windows Forms <xref:System.Windows.Forms.TrackBar> (также иногда называемый элементом управления "ползунок") используется для навигации по большому объему информации или для визуальной настройки числового параметра. Элемент управления <xref:System.Windows.Forms.TrackBar> состоит из двух частей: бегунка, также называемого ползунком, и делений. Бегунок — это часть, которую можно изменить. Его расположение соответствует свойству <xref:System.Windows.Forms.TrackBar.Value%2A>. Деления — это визуальные индикаторы с регулярным интервалом. Линейка перемещается с указанным шагом приращения и может быть выравниваться по горизонтали или по вертикали. Например, полоса прокрутки может использоваться для управления скоростью мерцания курсора или скоростью мыши для системы.  
   
 ## <a name="key-properties"></a>Ключевые свойства  
- Ключевые свойства <xref:System.Windows.Forms.TrackBar> управления <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, и <xref:System.Windows.Forms.TrackBar.Maximum%2A>. <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> — это интервал делений. <xref:System.Windows.Forms.TrackBar.Minimum%2A> и <xref:System.Windows.Forms.TrackBar.Maximum%2A> — это наименьшее и наибольшее значения, которые могут быть представлены на полосе прокрутки.  
+ Ключевыми свойствами элемента управления <xref:System.Windows.Forms.TrackBar> являются <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>и <xref:System.Windows.Forms.TrackBar.Maximum%2A>. <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> — интервалы тактов. <xref:System.Windows.Forms.TrackBar.Minimum%2A> и <xref:System.Windows.Forms.TrackBar.Maximum%2A> — это наименьшие и максимальные значения, которые могут быть представлены на полосе прокрутки.  
   
- Два важных свойства: <xref:System.Windows.Forms.TrackBar.SmallChange%2A> и <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Значение <xref:System.Windows.Forms.TrackBar.SmallChange%2A> свойство — количество позиций, перемещается в ответ на нажатии клавиши влево или Стрелка вправо. Значение <xref:System.Windows.Forms.TrackBar.LargeChange%2A> свойство — количество позиций бегунка переходит в ответ на нажатии клавиши PAGE UP или PAGE DOWN или в ответ на мыши, нажимает на любой стороны от бегунка полосы прокрутки.  
+ Два других важных свойства — <xref:System.Windows.Forms.TrackBar.SmallChange%2A> и <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Значение свойства <xref:System.Windows.Forms.TrackBar.SmallChange%2A> — число позиций, на которое перемещается бегунок в ответ на нажатие клавиши со стрелкой влево или вправо. Значение свойства <xref:System.Windows.Forms.TrackBar.LargeChange%2A> — число позиций, на которое перемещается бегунок в ответ на нажатие клавиши PAGE UP или PAGE DOWN или в ответ на щелчок мыши на полосе прокрутки с любой стороны бегунка.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.TrackBar>
 - [Элемент управления TrackBar](trackbar-control-windows-forms.md)

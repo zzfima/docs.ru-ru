@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: ecbb90dab8ccbd9148461c1372e21c523f3835e3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6771edcca8159b0805018c16167b25c287d3152c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345312"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743744"
 ---
 # <a name="equality-operators-c-reference"></a>Операторы равенства (справочник по C#)
 
@@ -32,7 +32,7 @@ ms.locfileid: "75345312"
 
 ### <a name="value-types-equality"></a>Равенство типов значений
 
-Операнды [встроенных типов значений](../keywords/value-types-table.md) равны, если равны их значения.
+Операнды [встроенных типов значений](../builtin-types/value-types.md#built-in-value-types) равны, если равны их значения.
 
 [!code-csharp-interactive[value types equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ValueTypesEquality)]
 

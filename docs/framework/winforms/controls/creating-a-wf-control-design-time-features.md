@@ -1,5 +1,5 @@
 ---
-title: 'Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки'
+title: Создание элемента управления, использующего преимущества функций времени разработки Visual Studio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459521"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744075"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>Пошаговое руководство. Создание элемента управления, который использует преимущества функций времени разработки
 
@@ -36,7 +36,7 @@ ms.locfileid: "73459521"
 
 Полный листинг кода см. в разделе [как создать элемент управления Windows Forms, который использует преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Для выполнения этого пошагового руководства вам потребуется Visual Studio.
 
@@ -120,13 +120,13 @@ ms.locfileid: "73459521"
 
 3. Измените объявление `DemoMarqueeControl` для наследования от класса `MarqueeControl`.
 
-4. Выполните построение проекта.
+4. Постройте проект.
 
 5. Откройте форму Form1 в конструктор Windows Forms.
 
 6. Найдите вкладку **компоненты маркуиконтролтест** на **панели элементов** и откройте ее. Перетащите `DemoMarqueeControl` с **панели элементов** на форму.
 
-7. Выполните построение проекта.
+7. Постройте проект.
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>Настройка проекта для отладки во время разработки
 
@@ -554,7 +554,7 @@ ms.locfileid: "73459521"
 
 4. Перетащите экземпляр элемента управления `MarqueeText` на область конструктора `DemoMarqueeControl`.
 
-5. Постройте решение.
+5. Выполните сборку решения.
 
 6. Щелкните правой кнопкой мыши `DemoMarqueeControl` и в контекстном меню выберите пункт **запустить тест** , чтобы запустить анимацию. Нажмите кнопку " **Закрыть тест** ", чтобы прерывать анимацию.
 
@@ -608,7 +608,7 @@ ms.locfileid: "73459521"
 
 - Управление сериализацией элементов управления и созданием кода для них. Дополнительные сведения см. в разделе [Динамическое создание и компиляция исходного кода](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

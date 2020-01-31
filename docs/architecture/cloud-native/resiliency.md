@@ -2,12 +2,12 @@
 title: Устойчивость, ориентированная на облако
 description: Создание архитектуры облачных приложений .NET для Azure | Устойчивость машинного кода в облаке
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73841045"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781087"
 ---
 # <a name="cloud-native-resiliency"></a>Устойчивость, ориентированная на облако
 
@@ -41,5 +41,5 @@ ms.locfileid: "73841045"
 Поэтому ваше приложение и инфраструктура должны быть устойчивыми. В следующих разделах мы расскажем о защитных методах, которые можно добавить в приложение, и встроенных облачных функциях, которые можно использовать для подтверждения работы пользователя в виде маркеров.
 
 >[!div class="step-by-step"]
->[Назад](azure-data-storage.md)
+>[Назад](elastic-search-in-azure.md)
 >[Вперед](application-resiliency-patterns.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964748"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743973"
 ---
 # <a name="using-structs-c-programming-guide"></a>Использование структур (руководство по программированию на C#)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75964748"
 
 В отличие от классов, структуры не поддерживают наследование. Структура не может наследовать от другой структуры или класса и не может быть базовой для класса. Однако структуры наследуют от базового класса <xref:System.Object>. Структуры могут реализовывать интерфейсы именно так, как это делают классы.
 
-Нельзя объявить класс с помощью ключевого слова `struct`. В C# классы и структуры имеют разную семантику. Структура является типом значения, а класс — ссылочным типом. Для получения дополнительной информации см. [Типы значений](../../language-reference/keywords/value-types.md) и [Типы ссылок](../../language-reference/keywords/reference-types.md).
+Нельзя объявить класс с помощью ключевого слова `struct`. В C# классы и структуры имеют разную семантику. Структура является типом значения, а класс — ссылочным типом. Для получения дополнительной информации см. [Типы значений](../../language-reference/builtin-types/value-types.md) и [Типы ссылок](../../language-reference/keywords/reference-types.md).
 
 Если не требуется использовать семантику ссылочного типа, система может более эффективно обрабатывать небольшой класс, объявленный как структура.
 

@@ -1,17 +1,17 @@
 ---
-title: Функциональная классификация элементов управления Windows Forms
+title: Элементы управления по функциям
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], by function
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 366b7412a61cac9d3706500adaee34fa8659fba2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2341d49513b418c244ee7ab93c0858899502487
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922719"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741576"
 ---
 # <a name="windows-forms-controls-by-function"></a>Функциональная классификация элементов управления Windows Forms
 Windows Forms предлагает элементы управления и компоненты, которые выполняют ряд функций. В следующей таблице перечислены элементы управления Windows Forms и компоненты в соответствии с общими функциями. Кроме того, если существует несколько элементов управления, обслуживающих одну и ту же функцию, рекомендуемый элемент управления отображается с заметкой об элементе управления, который он заменяющий. В отдельной последующей таблице заменяемые элементы управления перечисляются с использованием их рекомендуемых замен.  
@@ -23,7 +23,7 @@ Windows Forms предлагает элементы управления и ко
   
 |Функция|Элемент управления|Описание|  
 |--------------|-------------|-----------------|  
-|Отображение данных|Элемент управления <xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Forms.DataGridView> Элемент управления предоставляет настраиваемую таблицу для отображения данных. <xref:System.Windows.Forms.DataGridView> Класс позволяет настраивать ячейки, строки, столбцы и границы. **Примечание.**  Элемент управления предоставляет множество базовых и дополнительных функций, отсутствующих <xref:System.Windows.Forms.DataGrid> в элементе управления. <xref:System.Windows.Forms.DataGridView> Дополнительные сведения см. [в разделе различия между элементами управления Windows Forms DataGridView и DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) .|  
+|Отображение данных|Элемент управления <xref:System.Windows.Forms.DataGridView>|Элемент управления <xref:System.Windows.Forms.DataGridView> предоставляет настраиваемую таблицу для отображения данных. Класс <xref:System.Windows.Forms.DataGridView> позволяет настраивать ячейки, строки, столбцы и границы. **Примечание.**  Элемент управления <xref:System.Windows.Forms.DataGridView> предоставляет множество основных и дополнительных функций, отсутствующих в элементе управления <xref:System.Windows.Forms.DataGrid>. Дополнительные сведения см. [в разделе различия между элементами управления Windows Forms DataGridView и DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) .|  
 |Привязка данных и Навигация|<xref:System.Windows.Forms.BindingSource>|Упрощает связывание элементов управления в форме с данными, предоставляя управление валютой, уведомление об изменениях и другие службы.|  
 ||Элемент управления <xref:System.Windows.Forms.BindingNavigator>|Предоставляет интерфейс типа панели инструментов для навигации и управления данными в форме.|  
 |Редактирование текста|Элемент управления <xref:System.Windows.Forms.TextBox>|Отображает текст, введенный во время разработки, который может быть изменен пользователями во время выполнения или изменен программным способом.|  
@@ -33,7 +33,7 @@ Windows Forms предлагает элементы управления и ко
 ||Элемент управления <xref:System.Windows.Forms.LinkLabel>|Отображает текст в виде веб-ссылки и активирует событие, когда пользователь щелкает Специальный текст. Обычно текст является ссылкой на другое окно или на веб-сайт.|  
 ||Элемент управления <xref:System.Windows.Forms.StatusStrip>|Отображает сведения о текущем состоянии приложения с помощью области в рамке, обычно в нижней части родительской формы.|  
 ||Элемент управления <xref:System.Windows.Forms.ProgressBar>|Отображает текущий ход выполнения операции для пользователя.|  
-|Отображение веб-страницы|Элемент управления <xref:System.Windows.Forms.WebBrowser>|Предоставляет пользователю возможность осуществлять навигацию по веб-страницам внутри формы.|  
+|Отображение веб-страницы|Элемент управления <xref:System.Windows.Forms.WebBrowser>|Позволяет пользователю осуществлять навигацию по веб-страницам внутри формы.|  
 |Выбор из списка|Элемент управления <xref:System.Windows.Forms.CheckedListBox>|Отображает прокручиваемый список элементов, каждый из которых сопровождается флажком.|  
 ||Элемент управления <xref:System.Windows.Forms.ComboBox>|Отображает раскрывающийся список элементов.|  
 ||Элемент управления <xref:System.Windows.Forms.DomainUpDown>|Отображает список текстовых элементов, которые пользователи могут прокручивать с помощью кнопок со стрелками вверх и вниз.|  
@@ -42,7 +42,7 @@ Windows Forms предлагает элементы управления и ко
 ||Элемент управления <xref:System.Windows.Forms.NumericUpDown>|Отображает список чисел, которые пользователи могут прокручивать с помощью кнопок со стрелками вверх и вниз.|  
 ||Элемент управления <xref:System.Windows.Forms.TreeView>|Отображает иерархическую коллекцию объектов Node, которые могут состоять из текста с дополнительными флажками или значками.|  
 |Отображение графики|Элемент управления <xref:System.Windows.Forms.PictureBox>|Отображает графические файлы, такие как точечные рисунки и значки, в кадре.|  
-|Хранилище графики|Элемент управления <xref:System.Windows.Forms.ImageList>|Служит репозиторием для образов. <xref:System.Windows.Forms.ImageList>элементы управления и содержащиеся в них изображения можно использовать повторно из одного приложения в другое.|  
+|Хранилище графики|Элемент управления <xref:System.Windows.Forms.ImageList>|Служит репозиторием для образов. <xref:System.Windows.Forms.ImageList> элементы управления и содержащиеся в них изображения можно повторно использовать из одного приложения к другому.|  
 |Параметр значения|Элемент управления <xref:System.Windows.Forms.CheckBox>|Отображает флажок и метку для текста. Обычно используется для задания параметров.|  
 ||Элемент управления <xref:System.Windows.Forms.CheckedListBox>|Отображает прокручиваемый список элементов, каждый из которых сопровождается флажком.|  
 ||Элемент управления <xref:System.Windows.Forms.RadioButton>|Отображает кнопку, которая может быть включена или выключена.|  
@@ -53,21 +53,21 @@ Windows Forms предлагает элементы управления и ко
 ||Элемент управления <xref:System.Windows.Forms.FontDialog>|Отображает диалоговое окно, позволяющее пользователям задать шрифт и его атрибуты.|  
 ||Элемент управления <xref:System.Windows.Forms.OpenFileDialog>|Отображает диалоговое окно, позволяющее пользователям переходить к файлу и выбирать его.|  
 ||Элемент управления <xref:System.Windows.Forms.PrintDialog>|Отображает диалоговое окно, позволяющее пользователям выбрать принтер и задать его атрибуты.|  
-||Элемент управления <xref:System.Windows.Forms.PrintPreviewDialog>|Отображает диалоговое окно, показывающее, как <xref:System.Drawing.Printing.PrintDocument> будет выглядеть компонент элемента управления при печати.|  
+||Элемент управления <xref:System.Windows.Forms.PrintPreviewDialog>|Отображает диалоговое окно, показывающее, как будет выглядеть элемент управления <xref:System.Drawing.Printing.PrintDocument> компонент при печати.|  
 ||Элемент управления <xref:System.Windows.Forms.FolderBrowserDialog>|Отображает диалоговое окно, позволяющее пользователям просматривать, создавать и в конечном итоге выбирать папку.|  
 ||Элемент управления <xref:System.Windows.Forms.SaveFileDialog>|Отображает диалоговое окно, позволяющее пользователям сохранять файл.|  
-|Элементы управления Menu|Элемент управления <xref:System.Windows.Forms.MenuStrip>|Создает настраиваемые меню. **Примечание.**  Объект <xref:System.Windows.Forms.MenuStrip> предназначен для <xref:System.Windows.Forms.MainMenu> замены элемента управления.|  
-||Элемент управления <xref:System.Windows.Forms.ContextMenuStrip>|Создает настраиваемые контекстные меню. **Примечание.**  Объект <xref:System.Windows.Forms.ContextMenuStrip> предназначен для <xref:System.Windows.Forms.ContextMenu> замены элемента управления.|  
+|Элементы управления Menu|Элемент управления <xref:System.Windows.Forms.MenuStrip>|Создает настраиваемые меню. **Примечание.**  <xref:System.Windows.Forms.MenuStrip> предназначен для замены элемента управления <xref:System.Windows.Forms.MainMenu>.|  
+||Элемент управления <xref:System.Windows.Forms.ContextMenuStrip>|Создает настраиваемые контекстные меню. **Примечание.**  <xref:System.Windows.Forms.ContextMenuStrip> предназначен для замены элемента управления <xref:System.Windows.Forms.ContextMenu>.|  
 |Команды|Элемент управления <xref:System.Windows.Forms.Button>|Запускает, останавливает или прерывает процесс.|  
 ||Элемент управления <xref:System.Windows.Forms.LinkLabel>|Отображает текст в виде веб-ссылки и активирует событие, когда пользователь щелкает Специальный текст. Обычно текст является ссылкой на другое окно или на веб-сайт.|  
 ||Элемент управления <xref:System.Windows.Forms.NotifyIcon>|Отображает значок в области уведомлений о состоянии панели задач, которая представляет приложение, выполняемое в фоновом режиме.|  
-||Элемент управления <xref:System.Windows.Forms.ToolStrip>|Создает панели инструментов, которые могут иметь Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer или пользовательский интерфейс, с темами или без них, а также с поддержкой переполнения и изменения порядка элементов во время выполнения. **Примечание.**  Элемент управления предназначен для <xref:System.Windows.Forms.ToolBar> замены элемента управления. <xref:System.Windows.Forms.ToolStrip>|  
+||Элемент управления <xref:System.Windows.Forms.ToolStrip>|Создает панели инструментов, которые могут иметь Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer или пользовательский интерфейс, с темами или без них, а также с поддержкой переполнения и изменения порядка элементов во время выполнения. **Примечание.**  Элемент управления <xref:System.Windows.Forms.ToolStrip> предназначен для замены элемента управления <xref:System.Windows.Forms.ToolBar>.|  
 |Справка пользователя|<xref:System.Windows.Forms.HelpProvider>|Обеспечивает для элементов управления всплывающее окно справки или окно оперативной справки.|  
 ||<xref:System.Windows.Forms.ToolTip>|Предоставляет всплывающее окно, в котором отображается краткое описание назначения элемента управления, когда пользователь наводит указатель мыши на элемент управления.|  
 |Группирование других элементов управления|Элемент управления <xref:System.Windows.Forms.Panel>|Группирует набор элементов управления на прокручиваемый кадр без метки.|  
 ||Элемент управления <xref:System.Windows.Forms.GroupBox>|Группирует набор элементов управления (например, переключателей) в непрокручиваемый фрейм с меткой.|  
 ||Элемент управления <xref:System.Windows.Forms.TabControl>|Предоставляет страницу с вкладками для эффективного упорядочения сгруппированных объектов и доступа к ним.|  
-||Элемент управления <xref:System.Windows.Forms.SplitContainer>|Предоставляет две панели, разделенные перемещаемой полосой. **Примечание.**  Элемент управления предназначен для <xref:System.Windows.Forms.Splitter> замены элемента управления. <xref:System.Windows.Forms.SplitContainer>|  
+||Элемент управления <xref:System.Windows.Forms.SplitContainer>|Предоставляет две панели, разделенные перемещаемой полосой. **Примечание.**  Элемент управления <xref:System.Windows.Forms.SplitContainer> предназначен для замены элемента управления <xref:System.Windows.Forms.Splitter>.|  
 ||Элемент управления <xref:System.Windows.Forms.TableLayoutPanel>|Представляет панель, в которой содержимое динамически отображается в сетке, состоящей из строк и столбцов.|  
 ||Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel>|Представляет панель, которая динамически располагает содержимое по горизонтали или вертикали.|  
 |Звук|Элемент управления <xref:System.Media.SoundPlayer>|Воспроизводит звуковые файлы в формате WAV. Звук может загружаться или воспроизводиться асинхронно.|  
@@ -84,7 +84,7 @@ Windows Forms предлагает элементы управления и ко
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |Макет формы|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)

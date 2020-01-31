@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Доступ к связанным объектам в строках DataGridView в Windows Forms
+title: Доступ к связанным объектам в строках DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], accessing bound objects
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
-ms.openlocfilehash: 244047f27b0eb109aba599bd26881046eb538163
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0b9a4becb78ae817141728467c1e9ea5b693476d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582620"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743161"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Практическое руководство. Доступ к связанным объектам в строках DataGridView в Windows Forms
 Иногда полезно отображать таблицу данных, которые хранятся в коллекции бизнес-объектов. При привязке элемента управления <xref:System.Windows.Forms.DataGridView> к такого рода коллекции каждое открытое свойство отображается в собственном столбце, если только оно не помечено как недоступное для просмотра с помощью <xref:System.ComponentModel.BrowsableAttribute>. Например, коллекция объектов `Customer` будет содержать такие столбцы, как **Имя** и **Адрес**.  
@@ -39,10 +39,10 @@ ms.locfileid: "65582620"
   
 - ссылки на сборки System и System.Windows.Forms;  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>
 - [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Привязка объектов к элементам управления DataGridView Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)
+- [Практическое руководство. Связывание объектов с элементами управления DataGridView в Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)

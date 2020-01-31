@@ -1,5 +1,5 @@
 ---
-title: Глобализация Windows Forms приложений
+title: Глобализация приложений
 description: В этом разделе представлен список разделов, относящихся к глобализации Windows Forms приложений.
 ms.date: 06/08/2018
 helpviewer_keywords:
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - world-ready applications
 - global applications [Windows Forms], creating Windows Forms
 ms.assetid: 72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5
-ms.openlocfilehash: 0e7794b731294e03515265ff33e82af4fde40efa
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: b4034f2269f99498e7058c1fa83e2d006ae7569c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956431"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742062"
 ---
 # <a name="globalizing-windows-forms-applications"></a>Глобализация Windows Forms приложений
 
 *Глобализация* — это процесс проектирования и разработки программного продукта, который работает с несколькими языками и региональными параметрами.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>В данном разделе
 
 [Международные шрифты в Windows Forms и элементах управления Windows](international-fonts-in-windows-forms-and-controls.md)  
 Объясняется, когда и как выбирать шрифты для отображения международных символов в формах Windows Forms.

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Связывание элемента управления ComboBox или ListBox с данными в Windows Forms
+title: Привязка элемента управления ComboBox или ListBox к данным
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: f361526c44f8fbb9ab282fe15ae109b67e8f01dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99d9b53b32d6faae888b134d4ed486980c05a75b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922743"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742032"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Практическое руководство. Связывание элемента управления ComboBox или ListBox с данными в Windows Forms
-Можно привязывать <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.ListBox> к данным для выполнения таких задач, как просмотр данных в базе данных, ввод новых данных или изменение существующих данных.  
+Можно привязать <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.ListBox> к данным для выполнения таких задач, как просмотр данных в базе данных, ввод новых данных или изменение существующих данных.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Привязка элемента управления ComboBox или ListBox  
   
-1. `DataSource` Задайте свойство для объекта источника данных. Возможные источники данных включают <xref:System.Windows.Forms.BindingSource> в себя привязку к данным, таблице данных, представлению данных, набору данных, диспетчеру представления данных, массиву или любому классу, <xref:System.Collections.IList> реализующему интерфейс. Дополнительные сведения см. [в разделе Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md).  
+1. Задайте для свойства `DataSource` объект источника данных. К возможным источникам данных относятся <xref:System.Windows.Forms.BindingSource>, привязанные к данным, таблицам данных, представлениям данных, набору данных, диспетчеру представления данных, массиву или любому классу, реализующему интерфейс <xref:System.Collections.IList>. Дополнительные сведения см. [в разделе Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md).  
   
-2. При привязке к таблице присвойте `DisplayMember` свойству имя столбца в источнике данных.  
+2. При привязке к таблице присвойте свойству `DisplayMember` имя столбца в источнике данных.  
   
      \- или -  
   
@@ -51,9 +51,9 @@ ms.locfileid: "69922743"
     ```  
   
     > [!NOTE]
-    > При привязке к источнику данных, который не реализует <xref:System.ComponentModel.IBindingList> интерфейс, например <xref:System.Collections.ArrayList>, данные привязанного элемента управления не будут обновляться при обновлении источника данных. Например, при наличии поля со списком, привязанного к <xref:System.Collections.ArrayList> <xref:System.Collections.ArrayList>, и к которому добавляются данные, эти новые элементы не будут отображаться в поле со списком. Однако можно принудительно обновить поле со списком, вызвав <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> методы и <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> <xref:System.Windows.Forms.BindingContext> в экземпляре класса, к которому привязан элемент управления.  
+    > При привязке к источнику данных, который не реализует интерфейс <xref:System.ComponentModel.IBindingList>, например <xref:System.Collections.ArrayList>, данные привязанного элемента управления не будут обновляться при обновлении источника данных. Например, если имеется поле со списком, привязанное к <xref:System.Collections.ArrayList> и данные добавляются в <xref:System.Collections.ArrayList>, эти новые элементы не будут отображаться в поле со списком. Однако можно принудительно обновить поле со списком, вызвав методы <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> и <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> в экземпляре <xref:System.Windows.Forms.BindingContext> класса, к которому привязан элемент управления.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

@@ -1,17 +1,17 @@
 ---
-title: Общие сведения об элементе управления PrintPreviewDialog (Windows Forms)
+title: Общие сведения об элементе управления PrintPreviewDialog
 ms.date: 01/08/2018
 f1_keywords:
 - PrintPreviewDialog
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-ms.openlocfilehash: 670886956e1b348895862c117ccf9cf586bde8bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6fb971493336cda1e04c720dd09147e650918c3a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141218"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741407"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Общие сведения об элементе управления PrintPreviewDialog (Windows Forms)
 
@@ -53,7 +53,7 @@ ms.locfileid: "73141218"
 
 Если для изменения параметров принтера используется событие <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings>, производительность элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> не повысится, даже если установлен параметр конфигурации оптимизации.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Общие сведения об элементе управления PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)

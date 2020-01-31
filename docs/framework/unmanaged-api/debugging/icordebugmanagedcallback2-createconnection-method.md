@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e98748b523b948dc002f2ebc4e2e79fc7d659918
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130592"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781594"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>Метод ICorDebugManagedCallback2::CreateConnection
 Уведомляет отладчик о создании нового соединения.  
@@ -48,7 +48,7 @@ HRESULT CreateConnection (
 ## <a name="remarks"></a>Заметки  
  Обратный вызов `CreateConnection` будет срабатывать в одном из следующих случаев.  
   
-- При присоединении отладчика к процессу, который содержит соединения. В этом случае среда выполнения создаст и отправит событие `CreateConnection` и событие [ICorDebugManagedCallback2:: чанжеконнектион](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) для каждого соединения в процессе.  
+- При присоединении отладчика к процессу, который содержит соединения. В этом случае среда выполнения создаст и отправит событие `CreateConnection` и событие [ICorDebugManagedCallback2:: чанжеконнектион](icordebugmanagedcallback2-changeconnection-method.md) для каждого соединения в процессе.  
   
 - Когда узел вызывает [ICLRDebugManager:: бегинконнектион](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
@@ -61,7 +61,7 @@ HRESULT CreateConnection (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Интерфейс ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
+- [Интерфейс ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

@@ -4,12 +4,12 @@ description: Общие сведения о дополнительных инс�
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714533"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740706"
 ---
 # <a name="net-core-additional-tools-overview"></a>Общие сведения о дополнительных инструментах .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "75714533"
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[Средство удаления .NET Core](uninstall-tool.md)
 
-С помощью [средства удаления .NET Core](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`) можно удалять пакеты SDK и среду выполнения .NET Core в системе с целью сохранить только нужные версии этих компонентов. Указать удаляемые версии можно с помощью ряда параметров.
+С помощью [средства удаления .NET Core](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) можно удалять пакеты SDK и среду выполнения .NET Core в системе с целью сохранить только нужные версии этих компонентов. Указать удаляемые версии можно с помощью ряда параметров.
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Инструмент WCF Web Service Reference](wcf-web-service-reference-guide.md)
 

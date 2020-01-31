@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 897fb56cacb51e98cf8f1778c3529617decb5ecb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89ce4eafa46be3e9ba7cdb06884034a521e43bca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138443"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777538"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>Метод ICorDebugHeapSegmentEnum::Next
-Возвращает указанное число экземпляров [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , содержащих сведения о регионах памяти управляемой кучи.  
+Возвращает указанное число экземпляров [COR_HEAPOBJECT](cor-heapobject-structure.md) , содержащих сведения о регионах памяти управляемой кучи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  окне Число извлекаемых сегментов.  
   
  сегменты  
- заполняет Массив указателей, каждый из которых указывает на объект [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , который предоставляет сведения о области памяти в управляемой куче.  
+ заполняет Массив указателей, каждый из которых указывает на объект [COR_HEAPOBJECT](cor-heapobject-structure.md) , который предоставляет сведения о области памяти в управляемой куче.  
   
  pceltFetched  
- заполняет Указатель на число объектов [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , фактически возвращаемых в `segments`. Это значение может быть `null`, если параметр `celt` имеет значение 1.  
+ заполняет Указатель на число объектов [COR_HEAPOBJECT](cor-heapobject-structure.md) , фактически возвращаемых в `segments`. Это значение может быть `null`, если параметр `celt` имеет значение 1.  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -55,7 +55,7 @@ HRESULT Next(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -1,19 +1,19 @@
 ---
-title: Компонент OpenFileDialog (Windows Forms)
+title: Компонент OpenFileDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: 0e13417e43e9cda79e9e253135e564990361dcf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936348"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744358"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>Компонент OpenFileDialog (Windows Forms)
-Компонент Windows Forms <xref:System.Windows.Forms.OpenFileDialog> является стандартным диалоговым окном. Он аналогичен **открыть файл** диалоговое окно, предоставляемые операционной системой Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
+Компонент Windows Forms <xref:System.Windows.Forms.OpenFileDialog> является стандартным диалоговым окном. Это то же диалоговое окно **открытия файла** , которое предоставляется операционной системой Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о компоненте OpenFileDialog](openfiledialog-component-overview-windows-forms.md)  
@@ -22,7 +22,7 @@ ms.locfileid: "61936348"
  [Практическое руководство. Открытие файлов с помощью компонента OpenFileDialog](how-to-open-files-using-the-openfiledialog-component.md)  
  Описание открытия файла во время выполнения с помощью экземпляра компонента <xref:System.Windows.Forms.OpenFileDialog>.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Forms.OpenFileDialog>  
  Содержит справочные сведения о классе <xref:System.Windows.Forms.OpenFileDialog> и его членах.  
   

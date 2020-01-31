@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Наследование форм Windows Forms
+title: Наследование форм
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 402386e16687162e25e16e5c30c787f7e721fbba
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: cc3a4cc75fd13e8f193a6920ed5b4a9bc8fd5d74
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306365"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743325"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Практическое руководство. Наследование форм Windows Forms
 
 Создание новых форм Windows Forms путем наследования базовых форм является удобным способом для дублирования уже созданного, минуя процесс повторного создания формы с нуля каждый раз, когда она необходима.
 
-Дополнительные сведения о наследовании форм во время разработки с помощью диалогового окна **«Выбор наследования** » и о том, как визуально различать уровни безопасности [наследуемых элементов управления, см. в разделе как Наследовать формы с помощью диалогового окна](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)Выбор наследования.
+Дополнительные сведения о наследовании форм во время разработки с помощью диалогового окна **Выбор компонентов для наследования** и как визуально различать уровни безопасности производных элементов управления см. в разделе [Практическое руководство. Наследование форм с помощью диалогового окна выбора наследования](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).
 
 > [!NOTE]
 > Для наследования из формы файл или пространство имен, содержащие эту форму, должны быть встроены в исполняемый файл или библиотеку DLL. Для сборки проекта выберите в меню **Сборка** пункт **Собрать**. Кроме того необходимо добавить ссылку на пространство имен к классу, наследующему форму.
@@ -42,7 +42,7 @@ ms.locfileid: "71306365"
 
  При наследовании форм следует помнить, что могут возникнуть проблемы с обработчиками событий, которые вызываются дважды, так как каждое событие обрабатывается базовым классом и производным классом. Дополнительные сведения о том, как избежать этой проблемы, см. в разделе [Устранение неполадок, связанных с унаследованными обработчиками событий в Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

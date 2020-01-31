@@ -1,5 +1,5 @@
 ---
-title: Справочные системы в приложениях Windows Forms
+title: Справочные системы
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], adding to Windows applications
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c97a22dbdbdcc0eb282b52e16c4ef40914b1d9e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937947"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742246"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Справочные системы в приложениях Windows Forms
-Один из наиболее важных преимуществ, как разработчик приложений, можно предоставить пользователям является исчерпывающая справочная система. Это, где они будет включить, когда они становятся путать или затруднений. Справочную систему в приложении Windows легко выполняется с помощью [компонент HelpProvider](../controls/helpprovider-component-windows-forms.md).  
+Одним из наиболее важных кауртесиес, как разработчик приложений, может быть предоставление пользователям возможности системы компетентного. Именно здесь они будут переключаться, когда они переходят в замешательство или не распознают. Предоставление справочной системы в приложении Windows легко осуществляется с помощью [компонента HelpProvider](../controls/helpprovider-component-windows-forms.md).  
   
 ## <a name="different-types-of-help"></a>Различные типы справки  
- Компонент <xref:System.Windows.Forms.HelpProvider> Windows Forms позволяет связать HTML-файл справки версии 1.x (CHM-файл, созданный с помощью средства HTML Help Workshop, или HTM-файл) с приложением Windows. <xref:System.Windows.Forms.HelpProvider> Компонент может использоваться для предоставления контекстной справки для элементов управления в формах Windows Forms или определенных элементов управления. Кроме того <xref:System.Windows.Forms.HelpProvider> компонента можно открыть файл справки для конкретной области, например на главную страницу содержимого, индекса или для функции поиска. Общие сведения о <xref:System.Windows.Forms.HelpProvider> компонента, см. в разделе [Общие сведения о компоненте HelpProvider](../controls/helpprovider-component-overview-windows-forms.md). Сведения о том, как использовать <xref:System.Windows.Forms.HelpProvider> компонент для отображения всплывающей справки в формах Windows Forms, см. в разделе [как: Отображение всплывающей справки](how-to-display-pop-up-help.md). Дополнительные сведения об использовании <xref:System.Windows.Forms.ToolTip> компонент для отображения справки для элемента управления, см. в разделе [подсказки справки с помощью элемента управления](control-help-using-tooltips.md).  
+ Компонент <xref:System.Windows.Forms.HelpProvider> Windows Forms позволяет связать HTML-файл справки версии 1.x (CHM-файл, созданный с помощью средства HTML Help Workshop, или HTM-файл) с приложением Windows. Компонент <xref:System.Windows.Forms.HelpProvider> можно использовать для предоставления контекстно-зависимой справки для элементов управления Windows Forms или конкретных элементов управления. Кроме того, компонент <xref:System.Windows.Forms.HelpProvider> может открыть файл справки для конкретных областей, таких как Главная страница оглавления, индекс или функция поиска. Общие сведения о компоненте <xref:System.Windows.Forms.HelpProvider> см. в статье Общие сведения о [компоненте HelpProvider](../controls/helpprovider-component-overview-windows-forms.md). Сведения об использовании компонента <xref:System.Windows.Forms.HelpProvider> для отображения всплывающей справки по Windows Forms см. в разделе [как отобразить всплывающую справку](how-to-display-pop-up-help.md). Сведения об использовании компонента <xref:System.Windows.Forms.ToolTip> для отображения справки, относящейся к конкретному элементу управления, см. в разделе [Справка по управлению с помощью подсказок](control-help-using-tooltips.md).  
   
- Можно создать файлы HTML Help 1.x с HTML Help Workshop. Дополнительные сведения о HTML-справки см. в разделе «HTML Help Workshop» или в других разделах «HTML Help» в библиотеке MSDN.  
+ Вы можете создать файлы HTML Help 1. x с помощью справки HTML. Дополнительные сведения о HTML-справке см. в подразделах «Справка HTML» или в других разделах «Справка HTML» в MSDN.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интеграция справки пользователя в формы Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Компонент HelpProvider](../controls/helpprovider-component-windows-forms.md)
