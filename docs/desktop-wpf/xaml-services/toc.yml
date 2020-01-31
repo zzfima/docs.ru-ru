@@ -76,7 +76,7 @@
           href: service-contexts-with-type-converters-and-markup-extensions.md
     - name: Универсальные шаблоны в XAML
       href: generics.md
-    - name: Определение пользовательских типов для использования со службами XAML .NET Framework
+    - name: Определение пользовательских типов для использования со службами XAML .NET
       href: define-custom-types.md
       items:
         - name: Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек
