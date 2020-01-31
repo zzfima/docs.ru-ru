@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms
+title: Добавление столбцов в элемент управления ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - columns [Windows Forms], adding to ListView controls
 - list views [Windows Forms], adding columns
 ms.assetid: 79174274-12ee-4a5d-80db-6ec02976d010
-ms.openlocfilehash: 5c87d43513f2125945145445c61f689cdd9d2aaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd438ffbadddfc37ec9eb15e59a908bb58472a45
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345746"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744587"
 ---
-# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a><span data-ttu-id="99457-102">Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="99457-102">How to: Add Columns to the Windows Forms ListView Control</span></span>
-<span data-ttu-id="99457-103">В представлении сведений о <xref:System.Windows.Forms.ListView> элемент управления может отображать несколько столбцов для каждого элемента списка.</span><span class="sxs-lookup"><span data-stu-id="99457-103">In the Details view, the <xref:System.Windows.Forms.ListView> control can display multiple columns for each list item.</span></span> <span data-ttu-id="99457-104">Столбцы можно использовать для отображения пользователю следующая информация о каждом элементе списка.</span><span class="sxs-lookup"><span data-stu-id="99457-104">You can use the columns to display to the user several types of information about each list item.</span></span> <span data-ttu-id="99457-105">Например в списке файлов можно отображать имя файла, тип файла, размер и Дата последнего изменения файла.</span><span class="sxs-lookup"><span data-stu-id="99457-105">For example, a list of files could display the file name, file type, size, and date the file was last modified.</span></span> <span data-ttu-id="99457-106">Сведения о заполнении столбцов после их создания см. в разделе [как: Отображение дополнительных данных в столбцах с помощью Windows Forms элемента управления ListView](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).</span><span class="sxs-lookup"><span data-stu-id="99457-106">For information about populating the columns after they are created, see [How to: Display Subitems in Columns with the Windows Forms ListView Control](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).</span></span>  
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a><span data-ttu-id="831d4-102">Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="831d4-102">How to: Add Columns to the Windows Forms ListView Control</span></span>
+<span data-ttu-id="831d4-103">В представлении Details элемент управления <xref:System.Windows.Forms.ListView> может отображать несколько столбцов для каждого элемента списка.</span><span class="sxs-lookup"><span data-stu-id="831d4-103">In the Details view, the <xref:System.Windows.Forms.ListView> control can display multiple columns for each list item.</span></span> <span data-ttu-id="831d4-104">Столбцы можно использовать для вывода нескольких типов сведений о каждом элементе списка.</span><span class="sxs-lookup"><span data-stu-id="831d4-104">You can use the columns to display to the user several types of information about each list item.</span></span> <span data-ttu-id="831d4-105">Например, список файлов может отображать имя файла, тип файла, размер и дату последнего изменения файла.</span><span class="sxs-lookup"><span data-stu-id="831d4-105">For example, a list of files could display the file name, file type, size, and date the file was last modified.</span></span> <span data-ttu-id="831d4-106">Сведения о заполнении столбцов после их создания см. в разделе [инструкции. Отображение подэлементов в столбцах с помощью элемента управления ListView Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).</span><span class="sxs-lookup"><span data-stu-id="831d4-106">For information about populating the columns after they are created, see [How to: Display Subitems in Columns with the Windows Forms ListView Control](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).</span></span>  
   
-### <a name="to-add-columns-programmatically"></a><span data-ttu-id="99457-107">Для добавления столбцов программным образом</span><span class="sxs-lookup"><span data-stu-id="99457-107">To add columns programmatically</span></span>  
+### <a name="to-add-columns-programmatically"></a><span data-ttu-id="831d4-107">Добавление столбцов программным способом</span><span class="sxs-lookup"><span data-stu-id="831d4-107">To add columns programmatically</span></span>  
   
-1. <span data-ttu-id="99457-108">Задайте в качестве <xref:System.Windows.Forms.ListView.View%2A> свойства <xref:System.Windows.Forms.View.Details>.</span><span class="sxs-lookup"><span data-stu-id="99457-108">Set the control's <xref:System.Windows.Forms.ListView.View%2A> property to <xref:System.Windows.Forms.View.Details>.</span></span>  
+1. <span data-ttu-id="831d4-108">Задайте для свойства <xref:System.Windows.Forms.ListView.View%2A> элемента управления значение <xref:System.Windows.Forms.View.Details>.</span><span class="sxs-lookup"><span data-stu-id="831d4-108">Set the control's <xref:System.Windows.Forms.ListView.View%2A> property to <xref:System.Windows.Forms.View.Details>.</span></span>  
   
-2. <span data-ttu-id="99457-109">Используйте <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> метод в представлении списка <xref:System.Windows.Forms.ListView.Columns%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="99457-109">Use the <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> method of the list view's <xref:System.Windows.Forms.ListView.Columns%2A> property.</span></span>  
+2. <span data-ttu-id="831d4-109">Используйте метод <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> свойства <xref:System.Windows.Forms.ListView.Columns%2A> представления списка.</span><span class="sxs-lookup"><span data-stu-id="831d4-109">Use the <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> method of the list view's <xref:System.Windows.Forms.ListView.Columns%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a><span data-ttu-id="99457-110">См. также</span><span class="sxs-lookup"><span data-stu-id="99457-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="831d4-110">См. также:</span><span class="sxs-lookup"><span data-stu-id="831d4-110">See also</span></span>
 
 - <xref:System.Windows.Forms.ListView>
-- [<span data-ttu-id="99457-111">Элемент управления ListView</span><span class="sxs-lookup"><span data-stu-id="99457-111">ListView Control</span></span>](listview-control-windows-forms.md)
-- [<span data-ttu-id="99457-112">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="99457-112">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
+- [<span data-ttu-id="831d4-111">Элемент управления ListView</span><span class="sxs-lookup"><span data-stu-id="831d4-111">ListView Control</span></span>](listview-control-windows-forms.md)
+- [<span data-ttu-id="831d4-112">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="831d4-112">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
