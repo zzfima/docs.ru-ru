@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e0ff90f99c1127b5a4626f47514ba7099b5d48af
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445115"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866602"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>Метод ICorProfilerCallback::ClassLoadFinished
 Уведомляет профилировщик о том, что загрузка класса завершена.  
@@ -33,13 +33,16 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `classId`  
- окне Идентифицирует загруженный класс.  
-  
- `hrStatus`  
- окне Значение HRESULT, указывающее, успешно ли загружен класс.  
-  
+## <a name="parameters"></a>Параметры
+
+- `classId`
+
+  \[в] определяет класс, который был загружен.
+
+- `hrStatus`
+
+  \[in] значение HRESULT, указывающее, успешно ли загружен класс.
+
 ## <a name="remarks"></a>Заметки  
  Значение `classId` недопустимо для информационного запроса, пока не будет вызван метод `ClassLoadFinished`.  
   
@@ -54,7 +57,7 @@ HRESULT ClassLoadFinished(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод ClassLoadStarted](icorprofilercallback-classloadstarted-method.md)

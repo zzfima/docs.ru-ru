@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7ff4ff607ab70b55cda1e2c4736ff773d4907a22
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197814"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794116"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Пошаговое руководство. Сопоставление свойств с помощью элемента управления ElementHost
 
-В этом пошаговом руководстве показано, как использовать свойство <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>, чтобы сопоставлять свойства [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] с соответствующими свойствами размещенного элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+В этом пошаговом руководстве показано, как использовать свойство <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>, чтобы сопоставлять свойства Windows Forms с соответствующими свойствами размещенного элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 В данном пошаговом руководстве представлены следующие задачи.
 
@@ -31,9 +31,9 @@ ms.locfileid: "73197814"
 
 Полный листинг кода задач, показанных в этом пошаговом руководстве, см. в разделе [сопоставление свойств с помощью примера элемента управления ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
-По завершении вы сможете сопоставлять [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свойства с соответствующими свойствами [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] размещенного элемента.
+По завершении вы сможете сопоставлять Windows Forms свойства с соответствующими свойствами [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] размещенного элемента.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
@@ -138,9 +138,9 @@ ms.locfileid: "73197814"
 
     - Присваивает начальные значения сопоставленным свойствам.
 
-2. Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.
+2. Нажмите клавишу F5 для построения и запуска приложения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>

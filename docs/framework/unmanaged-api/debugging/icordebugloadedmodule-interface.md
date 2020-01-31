@@ -2,12 +2,12 @@
 title: Интерфейс ICorDebugLoadedModule
 ms.date: 03/30/2017
 ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
-ms.openlocfilehash: 9fe36497844b9c33cefcf8c63711941196847525
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d3bdcec9e90dab337b595294d114de4bd3d531f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122615"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781990"
 ---
 # <a name="icordebugloadedmodule-interface"></a>Интерфейс ICorDebugLoadedModule
 Предоставляет сведения о загруженном модуле.  
@@ -16,9 +16,9 @@ ms.locfileid: "73122615"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetBaseAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getbaseaddress-method.md)|Получает базовый адрес загруженного модуля.|  
-|[Метод GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getname-method.md)|Получает имя загруженного модуля.|  
-|[Метод GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getsize-method.md)|Возвращает размер в байтах загруженного модуля.|  
+|[Метод GetBaseAddress](icordebugloadedmodule-getbaseaddress-method.md)|Получает базовый адрес загруженного модуля.|  
+|[Метод GetName](icordebugloadedmodule-getname-method.md)|Получает имя загруженного модуля.|  
+|[Метод GetSize](icordebugloadedmodule-getsize-method.md)|Возвращает размер в байтах загруженного модуля.|  
   
 ## <a name="remarks"></a>Заметки  
  Интерфейс `ICorDebugLoadedModule` реализуется с помощью отладчика и используется интерфейсами отладки среды CLR для получения сведений о загруженном модуле из отладчика.  
@@ -35,7 +35,7 @@ ms.locfileid: "73122615"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

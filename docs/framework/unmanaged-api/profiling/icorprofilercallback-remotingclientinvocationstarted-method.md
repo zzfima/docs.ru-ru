@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 796b63f3-c809-47f1-89cc-b23ad8eb5e79
 topic_type:
 - apiref
-ms.openlocfilehash: 5de291774f1e20b4c399c416f9f52657fa8a9a84
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 93bd1010374413f3f4ef7e1424ff8194dded8bb3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445823"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866061"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a>Метод ICorProfilerCallback::RemotingClientInvocationStarted
 Уведомляет профилировщик о начале удаленного вызова.  
@@ -31,16 +31,16 @@ ms.locfileid: "74445823"
 HRESULT RemotingClientInvocationStarted();  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Это событие одинаково для синхронных и асинхронных вызовов.  
   
  Каждая из следующих пар обратных вызовов будет выполняться в одном потоке:  
   
-- `RemotingClientInvocationStarted` и [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted` и [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
   
-- [ICorProfilerCallback:: ремотингклиентрецеивингрепли](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) и [ICorProfilerCallback:: ремотингклиентинвокатионфинишед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)  
+- [ICorProfilerCallback:: ремотингклиентрецеивингрепли](icorprofilercallback-remotingclientreceivingreply-method.md) и [ICorProfilerCallback:: ремотингклиентинвокатионфинишед](icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
-- [ICorProfilerCallback:: RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) и [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)  
+- [ICorProfilerCallback:: RemotingServerInvocationReturned](icorprofilercallback-remotingserverinvocationreturned-method.md) и [ICorProfilerCallback:: RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md)  
   
  При использовании обратных вызовов удаленного взаимодействия следует учитывать следующие моменты.  
   
@@ -57,6 +57,6 @@ HRESULT RemotingClientInvocationStarted();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

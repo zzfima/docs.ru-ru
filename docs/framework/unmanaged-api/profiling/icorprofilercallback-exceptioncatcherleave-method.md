@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f3dbdf5-db0c-4b07-bbb7-375de2a63673
 topic_type:
 - apiref
-ms.openlocfilehash: 7d61a6db8f42398a0d6e0d818605592f4fe71cf7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6b7aa7c60b5e861787d7a115d90a00d67cc48db0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445008"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866537"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a>Метод ICorProfilerCallback::ExceptionCatcherLeave
-Уведомляет профилировщик о том, что управление передается из соответствующего блока `catch`.  
+Уведомляет профилировщик, что управление передается за пределы соответствующего блока `catch`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74445008"
 HRESULT ExceptionCatcherLeave();  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
   
  Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
@@ -47,5 +47,5 @@ HRESULT ExceptionCatcherLeave();
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)

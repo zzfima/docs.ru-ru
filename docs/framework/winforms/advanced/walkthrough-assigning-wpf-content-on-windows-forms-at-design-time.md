@@ -1,5 +1,6 @@
 ---
-title: Пошаговое руководство. Назначение содержимого WPF в формах Windows Forms во время разработки
+title: Выберите элементы управления WPF для Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -11,18 +12,18 @@ ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0c1e0c91b7ab8bded677a86b597b02b9cb442d98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 19f1dfec282b025f5a1fa367ec5fa9a52472c691
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460675"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746812"
 ---
 # <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Назначение содержимого WPF на Windows Forms во время разработки
 
-В этой статье показано, как выбрать типы элементов управления Windows Presentation Foundation (WPF), которые должны отображаться в форме. Можно выбрать любые типы элементов управления WPF, включенные в проект.
+В этой статье показано, как выбрать типы элементов управления Windows Presentation Foundation (WPF), которые должны отображаться в форме. Можно выбрать любые типы элементов управления WPF, которые включены в проект.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -54,7 +55,7 @@ ms.locfileid: "73460675"
    > [!NOTE]
    > Обычно размещается более сложное содержимое WPF. Элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> используется здесь в целях наглядности.
 
-8. Выполните построение проекта.
+8. Постройте проект.
 
 ## <a name="select-wpf-controls"></a>Выбор элементов управления WPF
 
@@ -84,7 +85,7 @@ ms.locfileid: "73460675"
 
 9. В элементе управления `elementHost2` теперь будет размещен экземпляр типа `UserControl1`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

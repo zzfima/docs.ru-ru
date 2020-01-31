@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: 34886b8f99715abe1f1abaa062d465002fbf98a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 566d4323bfd76a2189e1a8280465eb2dcde2a03a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129735"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792677"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>Интерфейс ICorDebugObjectValue2
 
@@ -29,7 +29,7 @@ ms.locfileid: "73129735"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetVirtualMethodAndType](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` еще не реализована.|  
+|[Метод GetVirtualMethodAndType](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` еще не реализована.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -45,6 +45,6 @@ ms.locfileid: "73129735"
   
  **Версии .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

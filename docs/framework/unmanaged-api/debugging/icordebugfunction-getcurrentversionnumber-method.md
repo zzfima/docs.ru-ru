@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 0530ba742a739003bfa33079ad75cb1e6f5f5e59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e080e9aa89816b24aa2eb1b6b1be823922e86fb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124023"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794524"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>Метод ICorDebugFunction::GetCurrentVersionNumber
 Возвращает номер версии последнего изменения, внесенного в функцию, представленную этим объектом ICorDebugFunction.  
@@ -38,7 +38,7 @@ HRESULT GetCurrentVersionNumber (
  заполняет Указатель на целочисленное значение, которое является номером версии последнего изменения, внесенного в эту функцию.  
   
 ## <a name="remarks"></a>Заметки  
- Номер версии последнего изменения, внесенного в эту функцию, может быть больше номера версии самой функции. Для получения номера версии функции используйте метод [ICorDebugFunction2:: жетверсионнумбер](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) или метод [ICorDebugCode:: жетверсионнумбер](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) .  
+ Номер версии последнего изменения, внесенного в эту функцию, может быть больше номера версии самой функции. Для получения номера версии функции используйте метод [ICorDebugFunction2:: жетверсионнумбер](icordebugfunction2-getversionnumber-method.md) или метод [ICorDebugCode:: жетверсионнумбер](icordebugcode-getversionnumber-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

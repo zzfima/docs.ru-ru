@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: eb2b1e218314be01898ce90c4378fb713f9bf6ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba0e0b1b2bac785e28f41e09dda74841121a748d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137854"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794502"
 ---
 # <a name="icordebugfunction-interface"></a>Интерфейс ICorDebugFunction
 
@@ -29,17 +29,17 @@ ms.locfileid: "73137854"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|Создает точку останова в начале этой функции.|  
-|[Метод GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Возвращает объект ICorDebugClass, представляющий класс, членом которого является эта функция.|  
-|[Метод GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|Возвращает номер версии последнего изменения, внесенного в эту функцию.|  
-|[Метод GetILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Возвращает код MSIL для этой функции.|  
-|[Метод GetLocalVarSigToken](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|Возвращает маркер метаданных для сигнатуры локальной переменной функции, представленной данным экземпляром `ICorDebugFunction`.|  
-|[Метод GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Возвращает модуль, в котором определена эта функция.|  
-|[Метод GetNativeCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|Получает машинный код для этой функции.|  
-|[Метод GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|Возвращает маркер метаданных для этой функции.|  
+|[Метод CreateBreakpoint](icordebugfunction-createbreakpoint-method.md)|Создает точку останова в начале этой функции.|  
+|[Метод GetClass](icordebugfunction-getclass-method.md)|Возвращает объект ICorDebugClass, представляющий класс, членом которого является эта функция.|  
+|[Метод GetCurrentVersionNumber](icordebugfunction-getcurrentversionnumber-method.md)|Возвращает номер версии последнего изменения, внесенного в эту функцию.|  
+|[Метод GetILCode](icordebugfunction-getilcode-method.md)|Возвращает код MSIL для этой функции.|  
+|[Метод GetLocalVarSigToken](icordebugfunction-getlocalvarsigtoken-method.md)|Возвращает маркер метаданных для сигнатуры локальной переменной функции, представленной данным экземпляром `ICorDebugFunction`.|  
+|[Метод GetModule](icordebugfunction-getmodule-method.md)|Возвращает модуль, в котором определена эта функция.|  
+|[Метод GetNativeCode](icordebugfunction-getnativecode-method.md)|Получает машинный код для этой функции.|  
+|[Метод GetToken](icordebugfunction-gettoken-method.md)|Возвращает маркер метаданных для этой функции.|  
   
 ## <a name="remarks"></a>Заметки  
- Интерфейс `ICorDebugFunction` не представляет функцию с параметрами универсального типа. Например, экземпляр `ICorDebugFunction` будет представлять `Func<T>`, но не `Func<string>`. Вызовите метод [ICorDebugILFrame2:: енумератетипепараметерс](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md) , чтобы получить параметры универсального типа.  
+ Интерфейс `ICorDebugFunction` не представляет функцию с параметрами универсального типа. Например, экземпляр `ICorDebugFunction` будет представлять `Func<T>`, но не `Func<string>`. Вызовите метод [ICorDebugILFrame2:: енумератетипепараметерс](icordebugilframe2-enumeratetypeparameters-method.md) , чтобы получить параметры универсального типа.  
   
  Связь между маркером метаданных метода, `mdMethodDef`и `ICorDebugFunction`ным объектом метода зависит от того, разрешена ли функция "изменить и продолжить" для функции:  
   
@@ -59,6 +59,6 @@ ms.locfileid: "73137854"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

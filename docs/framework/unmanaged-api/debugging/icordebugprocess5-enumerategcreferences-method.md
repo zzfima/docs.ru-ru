@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81993f108ae9b59300b5d29402d7a423c3657757
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129667"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792437"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>Метод ICorDebugProcess5::EnumerateGCReferences
 Возвращает перечислитель для всех объектов, которые должны быть собраны в процессе сборки мусора.  
@@ -39,7 +39,7 @@ HRESULT EnumerateGCReferences(
  окне Логическое значение, указывающее, будут ли также перечисляться слабые ссылки. Если `enumerateWeakReferences` `true`, перечислитель `ppEnum` включает как строгие ссылки, так и слабые ссылки. Если `enumerateWeakReferences` `false`, перечислитель включает только строгие ссылки.  
   
  `ppEnum`  
- заполняет Указатель на адрес [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) , который является перечислителем для объектов, которые должны быть собраны в мусор.  
+ заполняет Указатель на адрес [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) , который является перечислителем для объектов, которые должны быть собраны в мусор.  
   
 ## <a name="remarks"></a>Заметки  
  Этот метод предоставляет способ определения полной цепочки корневых объектов для любого управляемого объекта в процессе и может использоваться для определения причины, по которой объект остается в рабочем состоянии.  
@@ -53,7 +53,7 @@ HRESULT EnumerateGCReferences(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugProcess5](icordebugprocess5-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -15,39 +15,39 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c8d6e36687fd43bbc59304eee64dd42eb78101e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8757642db6c4375cf55d1f7288669c4c8a752a38
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676527"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790394"
 ---
 # <a name="ixclrdatamodule-interface"></a>Интерфейс IXCLRDataModule
 
-Предоставляет методы для запроса на получение сведений о загруженном модуле.
+Предоставляет методы для запроса сведений о загруженном модуле.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="methods"></a>Методы
 
-| Метод                                                                                                                                | Описание:                                                         |
+| Метод                                                                                                                                | Описание                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [GetMethodDefinitionByToken](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-getmethoddefinitionbytoken-method.md) | Возвращает определение метода, соответствующей токену метаданных. |
-| [Запрос](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-request-method.md)                                       | Запросы, чтобы заполнить буфер с данными модуля.       |
-| [GetVersionId](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-getversionid-method.md)                             | Получает идентификатор версии модуля.                                       |
+| [жетмесоддефинитионбитокен](ixclrdatamodule-getmethoddefinitionbytoken-method.md) | Возвращает определение метода, соответствующее заданному маркеру метаданных. |
+| [Запрос](ixclrdatamodule-request-method.md)                                       | Запросы на заполнение буфера данными модуля.       |
+| [жетверсионид](ixclrdatamodule-getversionid-method.md)                             | Возвращает идентификатор версии модуля.                                       |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Этот интерфейс находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек. Однако это COM-интерфейс, наследуемый от `IUnknown` с идентификатором GUID `88E32849-0A0A-4cb0-9022-7CD2E9E139E2` , можно получить с помощью обычных механизмов COM.
+Этот интерфейс находится внутри среды выполнения и не предоставляется через все файлы заголовков или библиотек. Однако это COM-интерфейс, производный от `IUnknown` с GUID `88E32849-0A0A-4cb0-9022-7CD2E9E139E2`, который можно получить с помощью обычных механизмов COM.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** Нет  
-**Библиотека:** Нет  
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Заголовок:** None  
+**Библиотека:** None  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

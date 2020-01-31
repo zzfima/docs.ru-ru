@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: fed643ae52f50b1b8cd134880c644c8941da6f56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fcf0ab73c79a5fa116a89cdfcc2e73b17d9eabfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122879"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785495"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>Метод ICLRDataTarget::GetImageBase
 Возвращает адрес базовой памяти указанного образа.  
@@ -39,7 +39,7 @@ HRESULT GetImageBase (
  окне Имя файла образа, включая его путь.  
   
  `baseAddress`  
- заполняет Указатель на объект CLRDATA_ADDRESS, в котором хранится базовый адрес изображения.  
+ заполняет Указатель на CLRDATA_ADDRESS, в котором хранится базовый адрес изображения.  
   
 ## <a name="remarks"></a>Заметки  
  Имя файла изображения может содержать или не иметь пути. Если указан путь, сопоставление выполняется по всему пути; в противном случае сопоставление выполняется только с именем файла.  
@@ -53,6 +53,6 @@ HRESULT GetImageBase (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Интерфейс ICLRDataTarget](iclrdatatarget-interface.md)

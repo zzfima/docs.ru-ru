@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-ms.openlocfilehash: c7bf8e3ebedb17a4536b604909434c3e004fc828
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e787de6287dc5b3091d3671d3da2f2154b12e88
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439826"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869928"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>Метод ICorProfilerInfo::GetModuleMetaData
 Возвращает экземпляр интерфейса метаданных, сопоставляемый с указанным модулем.  
@@ -48,7 +48,7 @@ HRESULT GetModuleMetaData(
  `ppOut`  
  заполняет Указатель на адрес экземпляра интерфейса метаданных.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Можно запросить открытие метаданных в режиме чтения/записи, но это приведет к более медленному выполнению метаданных программы, так как изменения метаданных не могут быть оптимизированы по мере их постановки в компилятор.  
   
  Некоторые модули (например, модули ресурсов) не имеют метаданных. В таких случаях `GetModuleMetaData` возвратит значение HRESULT S_FALSE и значение NULL в *`ppOut`.  
@@ -64,4 +64,4 @@ HRESULT GetModuleMetaData(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)

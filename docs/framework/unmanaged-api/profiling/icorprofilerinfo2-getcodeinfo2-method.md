@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-ms.openlocfilehash: 5149e3fab023de42d03673ec5d3e5ae888a9ed5a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9295ea8b22f72529f55cbe13f6a79a0aa34d2fa0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433284"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868800"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>Метод ICorProfilerInfo2::GetCodeInfo2
 Получает экстенты машинного кода, связанного с указанным `FunctionID`.  
@@ -44,12 +44,12 @@ HRESULT GetCodeInfo2(
  [in] Размер массива `codeInfos`.  
   
  `pcCodeInfos`  
- заполняет Указатель на общее число доступных структур [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) .  
+ заполняет Указатель на общее число доступных структур [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) .  
   
  `codeInfos`  
  [out] Буфер, предоставляемый вызывающим объектом. После возврата метода он содержит массив структур `COR_PRF_CODE_INFO`, каждая из которых описывает блок машинного кода.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Экстенты сортируются в порядке возрастания смещения MCIL.  
   
  После возврата метода `GetCodeInfo2` необходимо убедиться, что буфер `codeInfos` был достаточно велик, чтобы вместить в себя все структуры `COR_PRF_CODE_INFO`. Для этого сравните значение параметра `cCodeInfos` со значением параметра `cchName`. Если значение `cCodeInfos`, деленное на размер структуры `COR_PRF_CODE_INFO`, меньше значения `pcCodeInfos`, выделите буфер `codeInfos` большего размера, обновите параметр `cCodeInfos`, задав новый, больший размер, и вызовите метод `GetCodeInfo2` снова.  
@@ -67,7 +67,7 @@ HRESULT GetCodeInfo2(
   
 ## <a name="see-also"></a>См. также:
 
-- [Метод GetCodeInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
-- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Метод GetCodeInfo3](icorprofilerinfo4-getcodeinfo3-method.md)
+- [Интерфейс ICorProfilerInfo2](icorprofilerinfo2-interface.md)
+- [Интерфейсы профилирования](profiling-interfaces.md)
+- [Профилирование](index.md)

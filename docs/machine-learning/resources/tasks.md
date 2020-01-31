@@ -2,12 +2,12 @@
 title: Задачи машинного обучения
 description: Изучите возможности задач машинного обучения и связанных задач, поддерживаемых в ML.NET.
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739630"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745103"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Задачи машинного обучения в ML.NET
 
@@ -85,6 +85,7 @@ ms.locfileid: "75739630"
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Входные и выходные данные многоклассовой классификации
 
@@ -219,3 +220,13 @@ ms.locfileid: "75739630"
 Вы можете обучить модель рекомендаций, используя следующий алгоритм:
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>Прогнозирование
+
+Задача прогнозирования использует предыдущие данные временных рядов, чтобы делать прогнозы о будущем поведении. Сценарии, применимые к прогнозированию, включают прогнозы погоды, прогнозы сезонных продаж и прогнозное обслуживание.
+
+### <a name="forecasting-trainers"></a>Алгоритмы обучения для прогнозирования
+
+Вы можете обучить модель прогнозирования, используя следующий алгоритм.
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

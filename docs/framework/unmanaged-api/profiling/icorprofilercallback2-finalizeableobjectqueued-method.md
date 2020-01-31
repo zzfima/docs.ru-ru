@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9093f920a8c14247bc51471da3682c7e500afa4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439858"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865809"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>Метод ICorProfilerCallback2::FinalizeableObjectQueued
 Уведомляет профилировщик кода о том, что объект с методом завершения был помещен в очередь в поток метода завершения для выполнения его `Finalize` метода.  
@@ -35,7 +35,7 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>Параметры  
  `finalizerFlags`  
- окне Значение перечисления [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) , описывающее аспекты метода завершения.  
+ окне Значение перечисления [COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md) , описывающее аспекты метода завершения.  
   
  `objectID`  
  окне Идентификатор объекта, который был поставлен в очередь.  
@@ -51,5 +51,5 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback2](icorprofilercallback2-interface.md)

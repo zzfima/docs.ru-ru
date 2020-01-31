@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0a4a5e0-4689-474b-b0f4-37ca0639c918
 topic_type:
 - apiref
-ms.openlocfilehash: 9aaf1a282435e3f52b2c2d8f3d17254b877e61cc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 772a7c08c934fda59a2764e1fbe22d3d2b08a620
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442771"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861506"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>Метод ICorProfilerModuleEnum::GetCount
 Возвращает число управляемых модулей, загруженных в приложение.  
@@ -44,7 +44,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Интерфейс ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)
+- [Интерфейсы профилирования](profiling-interfaces.md)

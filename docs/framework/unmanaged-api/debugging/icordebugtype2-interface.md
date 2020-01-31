@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110218"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791221"
 ---
 # <a name="icordebugtype2-interface"></a>Интерфейс ICorDebugType2
 Расширяет интерфейс ICorDebugType для получения идентификатора типа базового типа или сложного (определяемого пользователем) типа.  
@@ -28,7 +28,7 @@ ms.locfileid: "73110218"
   
 |Метод||  
 |------------|-|  
-|[Метод GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|Возвращает [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) для этого типа.|  
+|[Метод GetTypeID](icordebugtype2-gettypeid-method.md)|Возвращает [COR_TYPEID](cor-typeid-structure.md) для этого типа.|  
   
 ## <a name="remarks"></a>Заметки  
  Этот интерфейс является логическим расширением интерфейса ICorDebugType.  
@@ -37,7 +37,7 @@ ms.locfileid: "73110218"
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="example"></a>Пример  
- В следующем фрагменте кода показано использование метода [ICorDebugType2:: typeid](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) .  
+ В следующем фрагменте кода показано использование метода [ICorDebugType2:: typeid](icordebugtype2-gettypeid-method.md) .  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -61,6 +61,6 @@ pType2->GetTypeID(&id);
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

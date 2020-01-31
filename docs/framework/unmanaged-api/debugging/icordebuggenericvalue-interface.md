@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: 312b8b005998da44feb5ae24ab4a0a17bb948a3f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e60d4b128bf03ff81863e0c95815b2c204807583
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138574"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794473"
 ---
 # <a name="icordebuggenericvalue-interface"></a>Интерфейс ICorDebugGenericValue
 
@@ -29,8 +29,8 @@ ms.locfileid: "73138574"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Копирует значение в указанный буфер.|  
-|[Метод SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Копирует новое значение из указанного буфера.|  
+|[Метод GetValue](icordebuggenericvalue-getvalue-method.md)|Копирует значение в указанный буфер.|  
+|[Метод SetValue](icordebuggenericvalue-setvalue-method.md)|Копирует новое значение из указанного буфера.|  
   
 ## <a name="remarks"></a>Заметки  
  `ICorDebugGenericValue` является подинтерфейсом, так как он не является удаленным.  
@@ -51,6 +51,6 @@ ms.locfileid: "73138574"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

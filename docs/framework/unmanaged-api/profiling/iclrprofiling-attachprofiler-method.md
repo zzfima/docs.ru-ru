@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445950"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866768"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>Метод ICLRProfiling::AttachProfiler
 Подключает указанный профилировщик к указанному процессу.  
@@ -37,25 +37,32 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `dwProfileeProcessID`  
- [in] Идентификатор процесса, к которому следует подключить профилировщик. На 64-разрядном компьютере разрядность профилируемого процесса должна соответствовать разрядности инициирующего процесса, вызывающего метод `AttachProfiler`. Если учетная запись пользователя, в которой вызывается метод `AttachProfiler`, имеет права администратора, целевым процессом может быть любой процесс в системе. В противном случае целевой процесс должен принадлежать той же учетной записи пользователя.  
+## <a name="parameters"></a>Параметры
+
+- `dwProfileeProcessID`
+
+  \[в] идентификатор процесса, к которому должен быть присоединен профилировщик. На 64-разрядном компьютере разрядность профилируемого процесса должна соответствовать разрядности инициирующего процесса, вызывающего метод `AttachProfiler`. Если учетная запись пользователя, в которой вызывается метод `AttachProfiler`, имеет права администратора, целевым процессом может быть любой процесс в системе. В противном случае целевой процесс должен принадлежать той же учетной записи пользователя.
+
+- `dwMillisecondsMax`
+
+  \[в] интервал времени (в миллисекундах) для выполнения `AttachProfiler`. Инициирующий процесс должен передавать интервал времени, которого заведомо будет достаточно, чтобы конкретный профилировщик завершил свою инициализацию.
   
- `dwMillisecondsMax`  
- [in] Время в миллисекундах для завершения выполнения `AttachProfiler`. Инициирующий процесс должен передавать интервал времени, которого заведомо будет достаточно, чтобы конкретный профилировщик завершил свою инициализацию.  
-  
- `pClsidProfiler`  
- [in] Указатель на идентификатор CLSID загружаемого профилировщика. Инициирующий процесс может повторно использовать эту память после возврата метода `AttachProfiler`.  
-  
- `wszProfilerPath`  
- [in] Полный путь к загружаемому DLL-файлу профилировщика. Эта строка должна содержать не более 260 символов, включая символ конца строки null. Если в параметре `wszProfilerPath` задана пустая строка или значение null, среда CLR будет пытаться найти местоположение DLL-файла профилировщика путем поиска в реестре CLSID, на который указывает параметр `pClsidProfiler`.  
-  
- `pvClientData`  
- окне Указатель на данные, передаваемые профилировщику методом [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) . Инициирующий процесс может повторно использовать эту память после возврата метода `AttachProfiler`. Если параметр `pvClientData` имеет значение null, параметр `cbClientData` должен иметь значение 0 (ноль).  
-  
- `cbClientData`  
- [in] Размер в байтах данных, на которые указывает `pvClientData`.  
-  
+- `pClsidProfiler`
+
+  \[в] указатель на идентификатор CLSID загружаемого профилировщика. Инициирующий процесс может повторно использовать эту память после возврата метода `AttachProfiler`.
+
+- `wszProfilerPath`
+
+  \[in] полный путь к загружаемому файлу DLL профилировщика. Эта строка должна содержать не более 260 символов, включая символ конца строки null. Если в параметре `wszProfilerPath` задана пустая строка или значение null, среда CLR будет пытаться найти местоположение DLL-файла профилировщика путем поиска в реестре CLSID, на который указывает параметр `pClsidProfiler`.
+
+- `pvClientData`
+
+  \[в] указатель на данные, передаваемые профилировщику методом [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) . Инициирующий процесс может повторно использовать эту память после возврата метода `AttachProfiler`. Если параметр `pvClientData` имеет значение null, параметр `cbClientData` должен иметь значение 0 (ноль).
+
+- `cbClientData`
+
+  \[в] размер данных в байтах, на которые `pvClientData` указывает.
+
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие значения HRESULT.  
   
@@ -72,9 +79,9 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Время ожидания истекло, а загрузка профилировщика не началась. Можно повторить операцию подключения. Время ожидания истекает, когда метод завершения в целевом процессе выполняется дольше, чем задано в значении времени ожидания.|  
 |E_INVALIDARG|Как минимум один из следующих параметров имеет недопустимое значение.|  
 |E_FAIL|Произошел другой, не указанный сбой.|  
-|Другие коды ошибок|Если метод [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) профилировщика ВОЗВРАЩАЕТ значение HRESULT, которое указывает на сбой, `AttachProfiler` возвращает то же значение HRESULT. В этом случае E_NOTIMPL преобразуется в CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Другие коды ошибок|Если метод [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) профилировщика ВОЗВРАЩАЕТ значение HRESULT, которое указывает на сбой, `AttachProfiler` возвращает то же значение HRESULT. В этом случае E_NOTIMPL преобразуется в CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="memory-management"></a>Управление памятью  
  В соответствии с соглашениями COM объект, вызывающий метод `AttachProfiler` (например, код триггера, созданный разработчиком профилировщика), отвечает за выделение и освобождение памяти для данных, на которые указывает параметр `pvClientData`. Когда среда CLR выполняет вызов `AttachProfiler`, создается копия памяти, на которую указывает `pvClientData`, которая затем передается в целевой процесс. Когда среда CLR в целевом процессе получает собственную копию блока `pvClientData`, она передает этот блок в профилировщик с помощью метода `InitializeForAttach`, а затем освобождает свою копию блока `pvClientData` в целевом процессе.  
@@ -88,9 +95,9 @@ HRESULT AttachProfiler(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerInfo3](icorprofilerinfo3-interface.md)
+- [Интерфейсы профилирования](profiling-interfaces.md)
+- [Профилирование](index.md)

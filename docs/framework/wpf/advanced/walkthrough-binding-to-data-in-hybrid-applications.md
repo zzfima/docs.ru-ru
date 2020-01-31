@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976583"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794225"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Пошаговое руководство. Привязка к данным в гибридных приложениях
 
-Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от того, используется [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, включающих как [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], так и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ные элементы управления.
+Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от того, используется Windows Forms или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, включающих как Windows Forms, так и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ные элементы управления.
 
 В данном пошаговом руководстве представлены следующие задачи.
 
@@ -39,7 +39,7 @@ ms.locfileid: "73976583"
 
 Изучив этот раздел, вы будете иметь представление о функциях привязки данных в гибридных приложениях.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
@@ -61,7 +61,7 @@ ms.locfileid: "73976583"
 
 3. Откройте файл MainWindow. XAML в конструкторе WPF.
 
-4. В элементе <xref:System.Windows.Window> добавьте следующее сопоставление пространств имен [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+4. В элементе <xref:System.Windows.Window> добавьте следующее сопоставление пространств имен Windows Forms.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ ms.locfileid: "73976583"
 
 ## <a name="displaying-data-by-using-interoperation"></a>Отображение данных с помощью взаимодействия
 
-Заказы, соответствующие выбранному клиенту, отображаются в элементе управления <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> с именем `dataGridView1`. Элемент управления `dataGridView1` привязан к источнику данных в файле кода программной части. Элемент управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> является родительским для этого элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Заказы, соответствующие выбранному клиенту, отображаются в элементе управления <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> с именем `dataGridView1`. Элемент управления `dataGridView1` привязан к источнику данных в файле кода программной части. Элемент управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> является родительским для этого элемента управления Windows Forms.
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>Чтобы отобразить данные в элементе управления DataGridView, выполните следующие действия.
 
@@ -179,9 +179,9 @@ ms.locfileid: "73976583"
      [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]
 
-10. Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.
+10. Нажмите клавишу F5 для построения и запуска приложения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

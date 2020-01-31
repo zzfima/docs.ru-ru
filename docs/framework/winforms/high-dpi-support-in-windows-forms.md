@@ -1,5 +1,5 @@
 ---
-title: Поддержка высокого DPI в Windows Forms
+title: Поддержка высокого разрешения
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139081"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741897"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Поддержка высокого DPI в Windows Forms
 
@@ -60,7 +60,7 @@ ms.locfileid: "73139081"
 
 - Вызовите статический метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.
 
-  Это должен быть первый вызов метода в точке входа приложения. Пример:
+  Это должен быть первый вызов метода в точке входа приложения. Например:
 
   ```csharp
   static void Main()
@@ -128,7 +128,7 @@ Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Windows Forms добавить элемент конфигурации](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Настройка размера и масштаба формы Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

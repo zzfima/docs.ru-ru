@@ -1,15 +1,15 @@
 ---
-title: 'Метод Икордебугмержедассемблирекорд:: Жетсимпленаме'
+title: Метод ICorDebugMergedAssemblyRecord::GetSimpleName
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-ms.openlocfilehash: 565e27b47f2454dec1e4c2b89ee46ac5279b08b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 21e8ebeabd3b082361ca3307240cfca58835b066
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130551"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793092"
 ---
-# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>Метод Икордебугмержедассемблирекорд:: Жетсимпленаме
+# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>Метод ICorDebugMergedAssemblyRecord::GetSimpleName
 Получает простое имя сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -47,7 +47,7 @@ HRESULT GetSimpleName(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-ms.openlocfilehash: 805f9a5d1f2590a06bfa929c152bdfd13900531a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 28b9fb5a25981e5e37a5f1bbb797baeac45e0028
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134284"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793575"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>Метод ICorDebug::CanLaunchOrAttach
 Возвращает значение HRESULT, указывающее, возможен ли запуск нового процесса или присоединение к указанному существующему процессу в контексте текущего компьютера и конфигурации среды выполнения.  
@@ -42,7 +42,7 @@ HRESULT CanLaunchOrAttach (
  окне Передайте `true`, если планируется запуск с отладкой Win32, или для подключения с включенной отладкой Win32. в противном случае передайте `false`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если службы отладки определяют, что можно запустить новый процесс или присоединиться к заданному процессу, учитывая сведения о текущем компьютере и конфигурации среды выполнения. Возможные значения HRESULT:  
+ S_OK, если службы отладки определяют, что можно запустить новый процесс или присоединиться к заданному процессу, учитывая сведения о текущем компьютере и конфигурации среды выполнения. Возможные значения HRESULT:  
   
 - S_OK  
   
@@ -66,6 +66,6 @@ HRESULT CanLaunchOrAttach (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Интерфейс ICorDebug](icordebug-interface.md)
