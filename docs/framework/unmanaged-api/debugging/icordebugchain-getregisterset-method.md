@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bc4288b6-3331-4ae3-990d-e1d6e62ecb67
 topic_type:
 - apiref
-ms.openlocfilehash: d6ee36ac4d4510637e5f8240c3b8930a9bec7970
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1a435226fca775d7dd38a4c5dd35eac3078b092b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123835"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784302"
 ---
-# <a name="icordebugchaingetregisterset-method"></a><span data-ttu-id="e7fe6-102">Метод ICorDebugChain::GetRegisterSet</span><span class="sxs-lookup"><span data-stu-id="e7fe6-102">ICorDebugChain::GetRegisterSet Method</span></span>
-<span data-ttu-id="e7fe6-103">Возвращает набор регистров для активной части этой цепочки.</span><span class="sxs-lookup"><span data-stu-id="e7fe6-103">Gets the register set for the active part of this chain.</span></span>  
+# <a name="icordebugchaingetregisterset-method"></a><span data-ttu-id="1e909-102">Метод ICorDebugChain::GetRegisterSet</span><span class="sxs-lookup"><span data-stu-id="1e909-102">ICorDebugChain::GetRegisterSet Method</span></span>
+<span data-ttu-id="1e909-103">Возвращает набор регистров для активной части этой цепочки.</span><span class="sxs-lookup"><span data-stu-id="1e909-103">Gets the register set for the active part of this chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7fe6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e7fe6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e909-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1e909-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRegisterSet (  
@@ -33,15 +33,15 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e7fe6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e7fe6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1e909-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1e909-105">Parameters</span></span>  
  `ppRegisters`  
- <span data-ttu-id="e7fe6-106">заполняет Указатель на адрес объекта [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) , который представляет набор регистров для активной части этой цепочки.</span><span class="sxs-lookup"><span data-stu-id="e7fe6-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for the active part of this chain.</span></span>  
+ <span data-ttu-id="1e909-106">заполняет Указатель на адрес объекта [ICorDebugRegisterSet](icordebugregisterset-interface.md) , который представляет набор регистров для активной части этой цепочки.</span><span class="sxs-lookup"><span data-stu-id="1e909-106">[out] A pointer to the address of an [ICorDebugRegisterSet](icordebugregisterset-interface.md) object that represents the register set for the active part of this chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7fe6-107">Требования</span><span class="sxs-lookup"><span data-stu-id="e7fe6-107">Requirements</span></span>  
- <span data-ttu-id="e7fe6-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7fe6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e909-107">Требования</span><span class="sxs-lookup"><span data-stu-id="1e909-107">Requirements</span></span>  
+ <span data-ttu-id="1e909-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e909-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7fe6-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7fe6-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1e909-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1e909-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e7fe6-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7fe6-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1e909-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e909-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e7fe6-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7fe6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="1e909-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e909-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

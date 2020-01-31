@@ -15,39 +15,41 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 6a0f6dc9d2559bafed416d409063088d2f51c27d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 35dbed6a723f5319dc506a44198456e3794464fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445216"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790234"
 ---
-# <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="e798a-102">Метод ICorProfilerCallback::AppDomainCreationStarted</span><span class="sxs-lookup"><span data-stu-id="e798a-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
-<span data-ttu-id="e798a-103">Уведомляет профилировщик о том, что создается домен приложения.</span><span class="sxs-lookup"><span data-stu-id="e798a-103">Notifies the profiler that an application domain is being created.</span></span>  
+# <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="3e1e8-102">Метод ICorProfilerCallback::AppDomainCreationStarted</span><span class="sxs-lookup"><span data-stu-id="3e1e8-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
+<span data-ttu-id="3e1e8-103">Уведомляет профилировщик о том, что создается домен приложения.</span><span class="sxs-lookup"><span data-stu-id="3e1e8-103">Notifies the profiler that an application domain is being created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e798a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e798a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e1e8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3e1e8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AppDomainCreationStarted(  
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e798a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e798a-105">Parameters</span></span>  
- `appDomainId`  
- <span data-ttu-id="e798a-106">окне Определяет создаваемый домен.</span><span class="sxs-lookup"><span data-stu-id="e798a-106">[in] Identifies the domain which is being created.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="e798a-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="e798a-107">Remarks</span></span>  
- <span data-ttu-id="e798a-108">Идентификатор не является допустимым для запроса информации до вызова метода [ICorProfilerCallback:: аппдомаинкреатионфинишед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) .</span><span class="sxs-lookup"><span data-stu-id="e798a-108">The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="e798a-109">Требования</span><span class="sxs-lookup"><span data-stu-id="e798a-109">Requirements</span></span>  
- <span data-ttu-id="e798a-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e798a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="e798a-111">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e798a-111">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="e798a-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e798a-112">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="e798a-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e798a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e798a-114">См. также:</span><span class="sxs-lookup"><span data-stu-id="e798a-114">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="3e1e8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3e1e8-105">Parameters</span></span>
 
-- [<span data-ttu-id="e798a-115">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="e798a-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- `appDomainId`
+
+  <span data-ttu-id="3e1e8-106">\[в] определяет создаваемый домен.</span><span class="sxs-lookup"><span data-stu-id="3e1e8-106">\[in] Identifies the domain which is being created.</span></span>
+  
+## <a name="remarks"></a><span data-ttu-id="3e1e8-107">Заметки</span><span class="sxs-lookup"><span data-stu-id="3e1e8-107">Remarks</span></span>  
+ <span data-ttu-id="3e1e8-108">Идентификатор не является допустимым для запроса информации до вызова метода [ICorProfilerCallback:: аппдомаинкреатионфинишед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) .</span><span class="sxs-lookup"><span data-stu-id="3e1e8-108">The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="3e1e8-109">Требования</span><span class="sxs-lookup"><span data-stu-id="3e1e8-109">Requirements</span></span>  
+ <span data-ttu-id="3e1e8-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e1e8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="3e1e8-111">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3e1e8-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="3e1e8-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e1e8-112">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="3e1e8-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e1e8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="3e1e8-114">См. также:</span><span class="sxs-lookup"><span data-stu-id="3e1e8-114">See also</span></span>
+
+- [<span data-ttu-id="3e1e8-115">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="3e1e8-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
