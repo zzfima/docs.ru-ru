@@ -1,16 +1,16 @@
 ---
-title: Справочник по неуправляемым API WPF
+title: Справочник по неуправляемым API
 ms.date: 03/30/2017
 ms.assetid: 2a2e8274-6556-46a2-80d3-a1812903cbcf
-ms.openlocfilehash: 5a9a122f8df9786b457291b955c15bddb39696a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33f6624b68e7d3a4c2365eb7326089e97c03c471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780631"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744437"
 ---
 # <a name="wpf-unmanaged-api-reference"></a>Справочник по неуправляемым API WPF
-Библиотеки Windows Presentation Foundation (WPF) предоставляют ряд неуправляемые функции, которые предназначены только для внутреннего использования. Они не должны вызываться из пользовательского кода.  
+Библиотеки Windows Presentation Foundation (WPF) предоставляют несколько неуправляемых функций, предназначенных только для внутреннего использования. Их не следует вызывать из пользовательского кода.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Функция Activate](activate-function-wpf-unmanaged-api-reference.md)  
@@ -22,6 +22,6 @@ ms.locfileid: "61780631"
  [Функция SaveToHistory](savetohistory-function-wpf-unmanaged-api-reference.md)  
  [Функция SetFakeActiveWindow](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Дополнительно](index.md)

@@ -1,5 +1,5 @@
 ---
-title: Элемент управления TabControl (Windows Forms)
+title: Элемент управления TabControl
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TabControl control [Windows Forms]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: d00dbe1e450a2d4316709e92eff7dab488b36045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4f310629342e5302021bbc7dc5f92d473377397
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755380"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742811"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>Элемент управления TabControl (Windows Forms)
 Элемент управления `TabControl` Windows Forms используется для отображения нескольких вкладок, аналогичных разделителям в записной книжке или меткам в наборе папок в картотеке. Вкладки могут содержать изображения и другие элементы управления. Используйте элемент управления `TabControl` для создания страниц свойств.  
@@ -27,7 +27,7 @@ ms.locfileid: "61755380"
  [Практическое руководство. Добавление элемента управления на вкладку](how-to-add-a-control-to-a-tab-page.md)  
  Инструкции по отображению элементов управления на страницах вкладок.  
   
- [Практическое руководство. Добавление и удаление вкладок с помощью Windows Forms TabControl](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
  Инструкции по добавлению и удалению вкладок в конструкторе или в коде.  
   
  [Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
@@ -36,9 +36,9 @@ ms.locfileid: "61755380"
  [Практическое руководство. Блокировка доступа ко вкладкам](how-to-disable-tab-pages.md)  
  Объясняется, как ограничить доступ к вкладке, например на основе учетных данных пользователя.  
   
- Также см. раздел [Как Добавление и удаление вкладок с помощью элемента управления TabControl Windows Forms с помощью конструктора](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [как: Добавление элемента управления на страницу вкладки с помощью конструктора](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
+ Также см [. статью как добавлять и удалять вкладки с Windows Forms TabControl с помощью конструктора](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [как добавить элемент управления на страницу вкладки с помощью конструктора.](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  Класс <xref:System.Windows.Forms.TabControl>  
  Описание класса и всех его членов.  
   

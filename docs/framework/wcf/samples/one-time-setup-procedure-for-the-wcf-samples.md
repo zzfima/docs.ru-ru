@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544662"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744784"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 
@@ -24,7 +24,7 @@ ms.locfileid: "75544662"
 
 2. Убедитесь, что установлен .NET Framework 4. Выполните поиск в следующем каталоге версии 4.0 (или более поздней): **\виндовс\микрософт.нет\фрамеворк**
 
-3. Если Visual Studio 2012 не установлена, а операционная система не является Windows Server 2008 с пакетом обновления 2 (SP2) или более поздней версии, установите [исправление 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
+3. Убедитесь, что установлен Visual Studio 2012 или более поздней версии, либо установлена операционная система Windows Server 2008 SP2 или более поздней версии.
 
 4. Выполните следующие команды. Дополнительные сведения о том, почему должны выполняться эти команды, см. в разделе [сбой размещенной службы IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
 

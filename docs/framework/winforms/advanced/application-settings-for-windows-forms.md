@@ -1,5 +1,5 @@
 ---
-title: Параметры приложения для Windows Forms
+title: Настройки приложения
 ms.date: 04/07/2017
 f1_keywords:
 - ClientApplicationSettings
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: d64aebb1cb84b39a2e2fb9a6a8375c52d58699df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8a6a1ab69754d48017059d547a1f9e5e3889a606
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963230"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739720"
 ---
 # <a name="application-settings-for-windows-forms"></a>Параметры приложения для Windows Forms
 Параметры приложения в Windows Forms позволяют легко создавать, хранить и поддерживать настраиваемые приложения и параметры пользователей в клиенте. С помощью параметров приложения можно хранить не только данные приложения, например строки подключений к базам данных, но и пользовательские данные, такие как положение панелей инструментов и списки последних использовавшихся элементов.  
@@ -41,6 +41,6 @@ ms.locfileid: "69963230"
 [Раздел конфигурации Windows Forms](../../configure-apps/file-schema/winforms/index.md)    
 Документирует параметры для включения поддержки высокого DPI в Windows Formsном приложении, начиная с .NET Framework 4,7.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Windows Forms](../index.md)

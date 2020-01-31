@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об элементе управления PrintPreviewControl (Windows Forms)
+title: Общие сведения об элементе управления PrintPreviewControl
 ms.date: 03/30/2017
 f1_keywords:
 - PrintPreviewControl
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - print preview
 - PrintPreviewControl control
 ms.assetid: 4513c6c7-5e9b-4f4c-82ca-00f993a26955
-ms.openlocfilehash: e9f1c2ae912b6beeba70c318b94a3052e2f99acb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dfe5802a24d5ec85ed908fd04c5550e1fbec012
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012606"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741434"
 ---
 # <a name="printpreviewcontrol-control-overview-windows-forms"></a>Общие сведения об элементе управления PrintPreviewControl (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PrintPreviewControl> используется для отображения [PrintDocument](printdocument-component-windows-forms.md) как будет выглядеть при печати. У элемента управления <xref:System.Windows.Forms.PrintPreviewControl> нет кнопок и других элементов пользовательского интерфейса, поэтому обычно он используется только в том случае, если нужно реализовать собственный интерфейс предварительного просмотра. Стандартный пользовательский интерфейс, используйте <xref:System.Windows.Forms.PrintPreviewDialog> управления; см. в разделе [Обзор элемента управления PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md) Обзор.  
+<xref:System.Windows.Forms.PrintPreviewControl> Windows Forms используется для отображения [PrintDocument](printdocument-component-windows-forms.md) , как он будет выглядеть при печати. У элемента управления <xref:System.Windows.Forms.PrintPreviewControl> нет кнопок и других элементов пользовательского интерфейса, поэтому обычно он используется только в том случае, если нужно реализовать собственный интерфейс предварительного просмотра. Если нужен стандартный пользовательский интерфейс, используйте элемент управления <xref:System.Windows.Forms.PrintPreviewDialog>; Общие сведения см. в разделе [Общие сведения об элементе управления PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md) .  
   
 ## <a name="key-properties"></a>Ключевые свойства  
- Ключевое свойство элемента управления — <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, который задает документ, который необходимо просмотреть. Документ должен быть <xref:System.Drawing.Printing.PrintDocument> объекта. Общие сведения о создании документов для печати, см. в разделе [Общие сведения о компоненте PrintDocument](printdocument-component-overview-windows-forms.md) и [поддержка печати Windows Forms](../advanced/windows-forms-print-support.md). <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> И <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> свойства определяют число страниц, отображаемых по горизонтали и вертикали в элементе управления. Сглаживание может сделать текст более однородным, но оно может привести к замедлению отображения; Чтобы использовать его, задайте <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> свойства `true`.  
+ Ключевым свойством элемента управления является <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, которое задает предварительный просмотр документа. Документ должен быть объектом <xref:System.Drawing.Printing.PrintDocument>. Общие сведения о создании документов для печати см. в разделе [Общие сведения о компоненте PrintDocument](printdocument-component-overview-windows-forms.md) и [Windows Forms поддержка печати](../advanced/windows-forms-print-support.md). Свойства <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> и <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> определяют количество страниц, отображаемых на элементе управления по горизонтали и вертикали. Сглаживание может сделать текст более плавным, но он также может замедлить отображение. чтобы использовать его, присвойте свойству <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> значение `true`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
 - [Общие сведения об элементе управления PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md)

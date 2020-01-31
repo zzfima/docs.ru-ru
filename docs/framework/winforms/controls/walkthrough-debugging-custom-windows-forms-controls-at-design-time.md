@@ -1,5 +1,5 @@
 ---
-title: Пример. Отладка пользовательских элементов управления Windows Forms во время разработки
+title: Отладка пользовательских элементов управления во время разработки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d9e292a1219c24571bcb35db2fe357b0197c8812
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460611"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740194"
 ---
 # <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки
 
@@ -45,7 +45,7 @@ ms.locfileid: "73460611"
 
 3. В **Обозреватель решений**удалите элемент управления проекта по умолчанию, удалив файл кода с базовым именем UserControl1.
 
-4. Постройте решение.
+4. Выполните сборку решения.
 
 ## <a name="checkpoint"></a>Контрольная точка
 
@@ -91,7 +91,7 @@ ms.locfileid: "73460611"
     }
     ```
 
-2. Постройте решение.
+2. Выполните сборку решения.
 
 ## <a name="add-your-custom-control-to-the-host-form"></a>Добавление пользовательского элемента управления в форму размещения
 
@@ -149,6 +149,6 @@ ms.locfileid: "73460611"
 
 - Можно написать пользовательский конструктор для пользовательского элемента управления. Это дает полный контроль над процессом разработки с помощью расширяемой инфраструктуры конструктора, предоставляемой Visual Studio. Дополнительные сведения см. [в разделе Пошаговое руководство. Создание элемента управления Windows Forms, который использует преимущества функций времени разработки Visual Studio](creating-a-wf-control-design-time-features.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Пошаговое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](creating-a-wf-control-design-time-features.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711887"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745377"
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 
@@ -113,7 +113,7 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Дополнительные сведения о структурах см. в статье [Structs](../classes-and-structs/structs.md) (Структуры). См. дополнительные сведения о [типах значений](../../language-reference/keywords/value-types.md).
+Дополнительные сведения о структурах см. в статье [Structs](../classes-and-structs/structs.md) (Структуры). См. дополнительные сведения о [типах значений](../../language-reference/builtin-types/value-types.md).
 
 Еще одна категория типов значений — это [перечисления](../../language-reference/builtin-types/enum.md). Перечисление определяет набор именованных целочисленных констант. Например, перечисление <xref:System.IO.FileMode?displayProperty=nameWithType> из библиотеки классов .NET содержит набор именованных целочисленных констант, которые определяют правила открытия файла. В следующем примере представлено определение этого типа:
 
@@ -148,7 +148,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="types-of-literal-values"></a>Типы литеральных значений
 
-В C# литеральные значения получают тип от компилятора. Вы можете указать способ типизации числового литерала, добавив букву в конце числа. Например, чтобы значение 4,56 рассматривалось как значение с плавающей запятой, добавьте после этого числа букву "f" или "F": `4.56f`. Если буква отсутствует, компилятор самостоятельно выберет тип для литерала. Дополнительные сведения о том, какие типы могут быть указаны с буквенными суффиксами, см. на страницах справки по отдельным типам в разделе [Типы значений](../../language-reference/keywords/value-types.md).
+В C# литеральные значения получают тип от компилятора. Вы можете указать способ типизации числового литерала, добавив букву в конце числа. Например, чтобы значение 4,56 рассматривалось как значение с плавающей запятой, добавьте после этого числа букву "f" или "F": `4.56f`. Если буква отсутствует, компилятор самостоятельно выберет тип для литерала. Дополнительные сведения о том, какие типы могут быть указаны с буквенными суффиксами, см. в разделах [Целочисленные числовые типы](../../language-reference/builtin-types/integral-numeric-types.md) и [Числовые типы с плавающей запятой](../../language-reference/builtin-types/floating-point-numeric-types.md).
 
 Поскольку литералы являются типизированными и все типы в конечном счете являются производными от <xref:System.Object?displayProperty=nameWithType>, можно написать и скомпилировать следующий код:
 
@@ -185,7 +185,7 @@ stringList.Add(4);
 
 - [Использование типа dynamic](./using-type-dynamic.md)
 
-- [Типы значений](../../language-reference/keywords/value-types.md)
+- [Типы значений](../../language-reference/builtin-types/value-types.md)
 
 - [Ссылочные типы](../../language-reference/keywords/reference-types.md)
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: e41bb5ca0fdd999692395239304f50a6f745a4f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0944f3379c18cba56ab65fe40a5b94a64d8a8991
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088272"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778204"
 ---
 # <a name="icordebugarrayvalue-interface"></a>Интерфейс ICorDebugArrayValue
 
@@ -29,14 +29,14 @@ ms.locfileid: "73088272"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetBaseIndicies](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getbaseindicies-method.md)|Возвращает базовый индекс каждого измерения в массиве.|  
-|[Метод GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getcount-method.md)|Возвращает общее число элементов в массиве.|  
-|[Метод GetDimensions](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getdimensions-method.md)|Возвращает размеры массива.|  
-|[Метод GetElement](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelement-method.md)|Возвращает значение, представляющее заданный элемент в массиве.|  
-|[Метод GetElementAtPosition](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementatposition-method.md)|Возвращает элемент в заданной позиции, рассматривая массив как одномерный массив с отсчетом от нуля.|  
-|[Метод GetElementType](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementtype-method.md)|Возвращает простой тип элементов в массиве.|  
-|[Метод GetRank](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getrank-method.md)|Получает число измерений в массиве.|  
-|[Метод HasBaseIndicies](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-hasbaseindicies-method.md)|Определяет, имеет ли массив базовые индексы.|  
+|[Метод GetBaseIndicies](icordebugarrayvalue-getbaseindicies-method.md)|Возвращает базовый индекс каждого измерения в массиве.|  
+|[Метод GetCount](icordebugarrayvalue-getcount-method.md)|Возвращает общее число элементов в массиве.|  
+|[Метод GetDimensions](icordebugarrayvalue-getdimensions-method.md)|Возвращает размеры массива.|  
+|[Метод GetElement](icordebugarrayvalue-getelement-method.md)|Возвращает значение, представляющее заданный элемент в массиве.|  
+|[Метод GetElementAtPosition](icordebugarrayvalue-getelementatposition-method.md)|Возвращает элемент в заданной позиции, рассматривая массив как одномерный массив с отсчетом от нуля.|  
+|[Метод GetElementType](icordebugarrayvalue-getelementtype-method.md)|Возвращает простой тип элементов в массиве.|  
+|[Метод GetRank](icordebugarrayvalue-getrank-method.md)|Получает число измерений в массиве.|  
+|[Метод HasBaseIndicies](icordebugarrayvalue-hasbaseindicies-method.md)|Определяет, имеет ли массив базовые индексы.|  
   
 ## <a name="remarks"></a>Заметки  
  `ICorDebugArrayValue` поддерживает одномерные и многомерные массивы.  
@@ -53,6 +53,6 @@ ms.locfileid: "73088272"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

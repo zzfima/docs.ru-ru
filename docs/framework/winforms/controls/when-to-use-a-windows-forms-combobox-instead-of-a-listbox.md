@@ -1,5 +1,5 @@
 ---
-title: Применение элемента управления ComboBox вместо элемента управления ListBox в Windows Forms
+title: ComboBox и ListBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms], adding and removing items
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], accessing items
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-ms.openlocfilehash: 8a2429049acf1a22edde8d132ece17da4e91f1db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7087760a393bb58d83d899c1741c745fb28585bb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759834"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739924"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>Применение элемента управления ComboBox вместо элемента управления ListBox в Windows Forms
-<xref:System.Windows.Forms.ComboBox> И <xref:System.Windows.Forms.ListBox> элементы управления имеют аналогичные поведения, а в некоторых случаях они взаимозаменяемы. Бывают случаи, тем не менее, если одно из них подходит больше в задачу.  
+<xref:System.Windows.Forms.ComboBox> и элементы управления <xref:System.Windows.Forms.ListBox> имеют похожие поведения, и в некоторых случаях они могут быть взаимозаменяемыми. Однако бывают ситуации, когда один из них более подходит для задачи.  
   
- Как правило поле со списком используется, когда имеется список возможных вариантов, и поле со списком подходит, если вы хотите ограничить данные, вводимые в список. Поле со списком содержит текстовое поле, поэтому варианты, отсутствующие в списке могут быть введены в. Исключение возникает, когда <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> свойству <xref:System.Windows.Forms.ComboBoxStyle.DropDownList>. В этом случае элемент управления будет выберите элемент, при вводе его первую букву.  
+ Как правило, поле со списком подходит, если имеется список предлагаемых вариантов, и если необходимо ограничить входные данные на содержимое списка, то поле со списком подходит. Поле со списком содержит текстовое поле, поэтому варианты, отсутствующие в списке, можно вводить в. Исключением является то, что свойство <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> имеет значение <xref:System.Windows.Forms.ComboBoxStyle.DropDownList>. В этом случае элемент управления выберет элемент, если ввести его первую букву.  
   
- Кроме того поля со списком экономии места в форме. Так как полный список не отображается, пока пользователь не щелкнет стрелку вниз, поле со списком можно легко разместить на небольшом пространстве, где не уместится поле со списком. Исключение возникает, когда <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> свойству <xref:System.Windows.Forms.ComboBoxStyle.Simple>: полный список и поля со списком может занимать больше места, чем поле со списком.  
+ Кроме того, поля со списком сохраняют место в форме. Поскольку полный список не отображается до тех пор, пока пользователь не щелкнет стрелку вниз, поле со списком можно легко разместить в маленьком пространстве, в котором поле со списком не умещается. Исключением является то, что свойство <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> имеет значение <xref:System.Windows.Forms.ComboBoxStyle.Simple>: полный список отображается, а поле со списком занимает больше места, чем поле со списком.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Практическое руководство. Добавление и удаление элементов Windows Forms ComboBox, ListBox или элементе управления CheckedListBox](add-and-remove-items-from-a-wf-combobox.md)
-- [Практическое руководство. Сортировка содержимого элемента Windows Forms ComboBox, ListBox или элементе управления CheckedListBox](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
+- [Практическое руководство. Сортировка содержимого элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)

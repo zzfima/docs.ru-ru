@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-ms.openlocfilehash: 2ad4494cf3a429020099b4bd9d961341437fcd1e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c7fa25712858d1119b45fc742a5d23454b55273
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447786"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864471"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>Метод ICorProfilerFunctionEnum::Next
 Возвращает заданное число смежных функций из последовательной коллекции функций начиная с текущей позиции перечислителя в последовательности.  
@@ -49,7 +49,7 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|возвращены элементы `celt`.|  
+|S_OK|Возвращенные элементы `celt`.|  
 |S_FALSE|Было возвращено элементов менее, чем `celt`, что указывает, что перечисление завершено.|  
   
 ## <a name="requirements"></a>Требования  
@@ -61,7 +61,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Интерфейс ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md)
+- [Интерфейсы профилирования](profiling-interfaces.md)

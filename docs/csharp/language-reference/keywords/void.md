@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: 465aaeadca603f14432478a7e5496a9ef4589ebe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0624b547ee2586334ac35d366ae3c8dfd14963ee
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712862"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742760"
 ---
 # <a name="void-c-reference"></a>void (справочник по C#)
 
@@ -37,10 +37,9 @@ public void SampleMethod()
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Ключевые слова в C#](index.md)
+- [справочник по C#](../index.md)
+- [Ключевые слова C#](index.md)
 - [Ссылочные типы](reference-types.md)
-- [Типы значений](value-types.md)
+- [Типы значений](../builtin-types/value-types.md)
 - [Методы](../../programming-guide/classes-and-structs/methods.md)
 - [Небезопасный код и указатели](../../programming-guide/unsafe-code-pointers/index.md)

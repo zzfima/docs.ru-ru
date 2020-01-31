@@ -2,12 +2,12 @@
 title: Source Link и библиотеки .NET
 description: Практические рекомендации по использованию Source Link для повышения эффективности отладки для библиотек .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706443"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744551"
 ---
 # <a name="source-link"></a>Source Link
 
@@ -25,7 +25,7 @@ Source Link — это технология, которая дает возмо
 
 ![Ссылка на источник в обозревателе пакетов NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Ссылка на источник в обозревателе пакетов NuGet")
 
-**✔️ РЕКОМЕНДУЕТСЯ** использовать Source Link для добавления метаданных системы управления версиями в сборки и пакеты NuGet.
+✔ РЕКОМЕНДУЕТСЯ использовать Source Link для добавления метаданных системы управления версиями в сборки и пакеты NuGet.
 
 > [!TIP]
 > Вы можете дополнительно повысить эффективность отладки путем добавления атрибутов отладчика в типы.
@@ -34,7 +34,7 @@ Source Link — это технология, которая дает возмо
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> дает отладчику указание о сквозной обработке кода (вместо выполнения по шагам).
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> определяет, будет ли член отображаться в окнах переменных отладчика.
 
-**✔️ ДОПУСТИМО.** Публикация файлов символов (`*.pdb`).
+✔ РЕКОМЕНДУЕТСЯ публиковать файлы символов (`*.pdb`).
 
 > Для повышения качества отладки библиотеки следует публиковать файлы символов, а также использовать ссылки на источник. См. дополнительные сведения о [файлах и пакетах символов](./nuget.md#symbol-packages).
 

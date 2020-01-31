@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms
+title: Задание отступов, висячих отступов и маркированных абзацев с помощью элемента управления RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: 9d095e3561cd346e6dbd99d1be7468f6ad5725a6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4dcd5691f328eac6d94675c50ed41a7d7cc36596
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960458"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743013"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms
-Элемент управления <xref:System.Windows.Forms.RichTextBox> Windows Forms имеет множество параметров для форматирования отображаемого текста. Вы можете отформатировать выбранные абзацы как маркированные списки <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> , задав свойство. Можно также использовать <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>свойства, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>и <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> для установки отступов абзацев относительно левого и правого краев элемента управления и левого края других строк текста.  
+Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> имеет множество параметров для форматирования отображаемого текста. Вы можете форматировать выбранные абзацы как маркированные списки, установив свойство <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>. Можно также использовать свойства <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>и <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>, чтобы задать отступы абзацев относительно левого и правого краев элемента управления и левого края других строк текста.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Форматирование абзаца в виде маркированного списка  
   
@@ -41,11 +41,11 @@ ms.locfileid: "69960458"
   
 ### <a name="to-indent-a-paragraph"></a>Чтобы задать отступ абзаца  
   
-1. Задайте для <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> свойства целое число, представляющее расстояние в пикселях между левым краями элемента управления и левой границей текста.  
+1. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> целое число, представляющее расстояние в пикселях между левым краями элемента управления и левой границей текста.  
   
-2. Задайте для <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойства целое число, представляющее расстояние в пикселях между левым краями первой строки текста в абзаце и левым краями последующих строк в одном абзаце. Значение <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойства применяется только к строкам в абзаце, которые были заключены под первой строкой.  
+2. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> целое число, представляющее расстояние в пикселях между левым краями первой строки текста в абзаце и левым краями последующих строк в том же абзаце. Значение свойства <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> применяется только к строкам в абзаце, которые были заключены под первой строкой.  
   
-3. Задайте для <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> свойства целое число, представляющее расстояние в пикселях между правым ребром элемента управления и правым краю текста.  
+3. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> целое число, представляющее расстояние в пикселях между правым ребром элемента управления и правым краю текста.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -66,9 +66,9 @@ ms.locfileid: "69960458"
     ```  
   
     > [!NOTE]
-    > Все эти свойства влияют на все абзацы, содержащие выделенный текст, а также на текст, который будет вводиться после текущей позиции курсора. Например, когда пользователь выделяет слово в абзаце и затем изменяет параметры отступа, новые параметры будут применяться ко всему абзацу, который содержит это слово, а также ко всем абзацам, которые будут введены после выделенного абзаца. Дополнительные сведения о выборе текста программным способом <xref:System.Windows.Forms.TextBoxBase.Select%2A>см. в разделе.  
+    > Все эти свойства влияют на все абзацы, содержащие выделенный текст, а также на текст, который будет вводиться после текущей позиции курсора. Например, когда пользователь выделяет слово в абзаце и затем изменяет параметры отступа, новые параметры будут применяться ко всему абзацу, который содержит это слово, а также ко всем абзацам, которые будут введены после выделенного абзаца. Дополнительные сведения о программном выборе текста см. в разделе <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)

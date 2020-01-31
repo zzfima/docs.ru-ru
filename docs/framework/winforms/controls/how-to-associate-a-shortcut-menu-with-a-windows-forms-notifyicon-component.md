@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Связывание контекстного меню с компонентом NotifyIcon в Windows Forms
+title: Связывание контекстного меню с компонентом NotifyIcon
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,46 +10,46 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: bf5602d0526fdd97f0cc14382339095a793f13c3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 392c04f73feaec201033ad76f9419a0e070bec70
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922769"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742045"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Практическое руководство. Связывание контекстного меню с компонентом NotifyIcon в Windows Forms
 > [!NOTE]
-> Хотя <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> заменяют и добавляют функции к элементам управления и предыдущих версий и сохраняются для обратной совместимости и использования в будущем при выборе. <xref:System.Windows.Forms.ContextMenuStrip>  
+> Хотя <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> заменить и добавить функции в <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> элементы управления предыдущих версий, <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> сохраняются для обратной совместимости и использования в будущем при выборе.  
   
- <xref:System.Windows.Forms.NotifyIcon> Компонент отображает значок в области уведомлений о состоянии панели задач. Обычно приложения позволяют щелкнуть этот значок правой кнопкой мыши, чтобы отправить команды в приложение, которое оно представляет. Связав <xref:System.Windows.Forms.ContextMenu> компонент<xref:System.Windows.Forms.NotifyIcon> с компонентом, можно добавить эту функцию в приложения.  
+ Компонент <xref:System.Windows.Forms.NotifyIcon> отображает значок в области уведомления о состоянии панели задач. Обычно приложения позволяют щелкнуть этот значок правой кнопкой мыши, чтобы отправить команды в приложение, которое оно представляет. Связав компонент <xref:System.Windows.Forms.ContextMenu> с компонентом <xref:System.Windows.Forms.NotifyIcon>, можно добавить эту функцию в приложения.  
   
 > [!NOTE]
-> Если необходимо, чтобы приложение было свернуто при запуске при <xref:System.Windows.Forms.NotifyIcon> отображении экземпляра компонента на панели задач, установите <xref:System.Windows.Forms.Form.WindowState%2A> свойство основной формы в <xref:System.Windows.Forms.FormWindowState.Minimized> значение и убедитесь, <xref:System.Windows.Forms.NotifyIcon> что <xref:System.Windows.Forms.NotifyIcon.Visible%2A> свойство компонента имеет значение `true`.  
+> Если необходимо, чтобы приложение было свернуто при запуске при отображении экземпляра компонента <xref:System.Windows.Forms.NotifyIcon> на панели задач, установите для свойства <xref:System.Windows.Forms.Form.WindowState%2A> главной формы значение <xref:System.Windows.Forms.FormWindowState.Minimized> и убедитесь, что для свойства <xref:System.Windows.Forms.NotifyIcon.Visible%2A> компонента <xref:System.Windows.Forms.NotifyIcon> задано значение `true`.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Связывание контекстного меню с компонентом NotifyIcon во время разработки  
   
-1. Добавьте в форму <xref:System.Windows.Forms.NotifyIcon.Icon%2A> <xref:System.Windows.Forms.NotifyIcon.Visible%2A> компонент и задайте важные свойства, такие как свойства и. <xref:System.Windows.Forms.NotifyIcon>  
+1. Добавьте в форму компонент <xref:System.Windows.Forms.NotifyIcon> и задайте важные свойства, такие как свойства <xref:System.Windows.Forms.NotifyIcon.Icon%2A> и <xref:System.Windows.Forms.NotifyIcon.Visible%2A>.  
   
-     Дополнительные сведения см. в разделе [Практическое руководство. Добавьте значки приложений на панель задач с компонентом](app-icons-to-the-taskbar-with-wf-notifyicon.md)Windows Forms NotifyIcon.  
+     Дополнительные сведения см. в разделе [как добавить значки приложений на панель задач с помощью компонента Windows Forms NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
-2. <xref:System.Windows.Forms.ContextMenu> Добавьте компонент в форму Windows Forms.  
+2. Добавьте <xref:System.Windows.Forms.ContextMenu> компонент в форму Windows Forms.  
   
      Добавьте пункты меню в контекстное меню, представляющее команды, которые необходимо сделать доступными во время выполнения. Кроме того, это очень удобно для добавления улучшений меню к этим пунктам меню, таким как ключи доступа.  
   
-3. Присвойте <xref:System.Windows.Forms.NotifyIcon> свойству компонента значение, добавленное в контекстное меню. <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>  
+3. Задайте для свойства <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> компонента <xref:System.Windows.Forms.NotifyIcon> контекстное меню, которое вы добавили.  
   
      Если это свойство установлено, контекстное меню будет отображаться при нажатии значка на панели задач.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Связывание контекстного меню с компонентом NotifyIcon программным способом  
   
-1. Создайте экземпляр <xref:System.Windows.Forms.NotifyIcon> класса <xref:System.Windows.Forms.NotifyIcon> <xref:System.Windows.Forms.NotifyIcon.Icon%2A> <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.NotifyIcon.Visible%2A> и класс с любыми настройками свойств для приложения (и свойствами для компонента, элементы меню для элемента <xref:System.Windows.Forms.ContextMenu> компонент).  
+1. Создайте экземпляр класса <xref:System.Windows.Forms.NotifyIcon> и класс <xref:System.Windows.Forms.ContextMenu> с любыми настройками свойств для приложения (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> и <xref:System.Windows.Forms.NotifyIcon.Visible%2A> свойства для компонента <xref:System.Windows.Forms.NotifyIcon>, элементы меню для компонента <xref:System.Windows.Forms.ContextMenu>).  
   
-2. Присвойте <xref:System.Windows.Forms.NotifyIcon> свойству компонента значение, добавленное в контекстное меню. <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>  
+2. Задайте для свойства <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> компонента <xref:System.Windows.Forms.NotifyIcon> контекстное меню, которое вы добавили.  
   
      Если это свойство установлено, контекстное меню будет отображаться при нажатии значка на панели задач.  
   
     > [!NOTE]
-    > В следующем примере кода создается базовая структура меню. Вам потребуется настроить параметры меню для тех, которые соответствуют разрабатываемому приложению. Кроме того, необходимо написать код для управления <xref:System.Windows.Forms.MenuItem.Click> событиями этих пунктов меню.  
+    > В следующем примере кода создается базовая структура меню. Вам потребуется настроить параметры меню для тех, которые соответствуют разрабатываемому приложению. Кроме того, необходимо написать код для управления событиями <xref:System.Windows.Forms.MenuItem.Click> для этих пунктов меню.  
   
     ```vb  
     Public ContextMenu1 As New ContextMenu  
@@ -119,17 +119,17 @@ public:
 ```  
   
 > [!NOTE]
-> Для этого необходимо `notifyIcon1` выполнить `contextMenu1,` инициализацию, включив в конструктор формы следующие операторы:  
+> Необходимо инициализировать `notifyIcon1` и `contextMenu1,`, которые можно сделать, включив в конструктор формы следующие операторы:  
   
 ```cpp  
 notifyIcon1 = gcnew System::Windows::Forms::NotifyIcon();  
 contextMenu1 = gcnew System::Windows::Forms::ContextMenu();  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Практическое руководство. Добавление значков приложений на панель задач с компонентом Windows Forms NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Практическое руководство. Добавление значков приложения на панель задач с помощью компонента NotifyIcon в Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [Компонент NotifyIcon](notifyicon-component-windows-forms.md)
 - [Общие сведения о компоненте управления NotifyIcon](notifyicon-component-overview-windows-forms.md)

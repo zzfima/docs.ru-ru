@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)
+title: Отображение веб-страницы из элемента управления LinkLabel (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75373d55b7bc5ef11e39d5b9546996cb1c4f6f7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651802"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745925"
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)
-Этот пример отображает веб-страницы в браузере по умолчанию, когда пользователь щелкает форм Windows <xref:System.Windows.Forms.LinkLabel> элемента управления.  
+В этом примере отображается веб-страница в браузере по умолчанию, когда пользователь щелкает элемент управления Windows Forms <xref:System.Windows.Forms.LinkLabel>.  
   
 ## <a name="example"></a>Пример  
   
@@ -40,16 +40,16 @@ End Sub
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
-- Форму Windows с именем `Form1`.  
+- Форма Windows Forms с именем `Form1`.  
   
 - элемент управления <xref:System.Windows.Forms.LinkLabel> с именем `LinkLabel1`;  
   
 - Активное подключение к Интернету.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Вызов <xref:System.Diagnostics.Process.Start%2A> метод требует полного доверия. Дополнительные сведения см. в разделе <xref:System.Security.SecurityException>.  
+ Вызов метода <xref:System.Diagnostics.Process.Start%2A> требует полного доверия. Для получения дополнительной информации см. <xref:System.Security.SecurityException>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Элемент управления LinkLabel](linklabel-control-windows-forms.md)

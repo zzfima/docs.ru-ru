@@ -4,12 +4,12 @@ description: Узнайте, как запустить приложение .NET
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 679ee7660e96504768a781e1e384acab80362736
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337592"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743204"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Учебник. Начало работы с .NET для Apache Spark
 
@@ -94,7 +94,7 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ### <a name="5-install-net-for-apache-spark"></a>5. Установка .NET для Apache Spark
 
-Загрузите выпуск [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) со страницы выпусков .NET для Apache Spark в GitHub. Например, если у вас компьютер Windows и вы планируете использовать .NET Core, [загрузите выпуск netcoreapp 2.1 для Windows x64 ](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).
+Загрузите выпуск [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) со страницы выпусков .NET для Apache Spark в GitHub. Например, если у вас компьютер Windows и вы планируете использовать .NET Core, [загрузите выпуск netcoreapp 2.1 для Windows x64 ](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).
 
 Для извлечения Microsoft.Spark.Worker:
 

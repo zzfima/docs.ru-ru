@@ -1,5 +1,5 @@
 ---
-title: элемент управления DataGridView (Windows Forms)
+title: Элемент управления DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tables [Windows Forms]
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc40c0f08c0c11fa9acc94ce12caab8766658f1e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909198"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746948"
 ---
-# <a name="datagridview-control-windows-forms"></a>элемент управления DataGridView (Windows Forms)
+# <a name="datagridview-control-windows-forms"></a>Элемент управления DataGridView (Windows Forms)
 Элемент управления `DataGridView` предоставляет мощный и гибкий способ отображения данных в табличном формате. Элемент управления `DataGridView` можно использовать для отображения представлений небольшого объема данных только для чтения, либо можно масштабировать его для отображения редактируемого представления очень больших наборов данных.  
   
  Для того чтобы реализовать пользовательское поведение в приложениях, элемент управления `DataGridView` можно расширить несколькими способами. Например, можно программно задать собственные алгоритмы сортировки, можно создать собственные типы ячеек. Внешний вид элемента управления `DataGridView` легко настраивается заданием значений нескольких свойств. В качестве источника данных могут использоваться хранилища данных различных типов, также элемент управления `DataGridView` может работать без привязанного к нему  источника данных.  
@@ -73,15 +73,15 @@ ms.locfileid: "61909198"
  [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
  Описывает расширение возможностей и улучшения элемента управления `DataGridView`, который заменяет элемент управления <xref:System.Windows.Forms.DataGrid>.  
   
- Также см. в разделе [с помощью конструктора с помощью элемента управления DataGridView в Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md).  
+ См. также [Использование конструктора с элементом управления Windows Forms DataGridView](using-the-designer-with-the-windows-forms-datagridview-control.md).  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.BindingSource>  
  Содержит справочную документацию по компоненту <xref:System.Windows.Forms.BindingSource>. Элемент управления <xref:System.Windows.Forms.DataGridView> и компонент <xref:System.Windows.Forms.BindingSource> предназначены для совместной работы.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

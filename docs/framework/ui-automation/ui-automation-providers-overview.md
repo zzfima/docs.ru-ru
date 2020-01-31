@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 98208f1e1fa1b540bf3880e33478854128505233
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741748"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778785"
 ---
 # <a name="ui-automation-providers-overview"></a>Общие сведения о поставщиках автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "75741748"
   
  Поставщики автоматизации пользовательского интерфейса включают элементы управления для взаимодействия с клиентскими приложениями модели автоматизации пользовательского интерфейса. В целом каждый элемент управления или другой отдельный элемент в [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] представляется поставщиком. Поставщик предоставляет сведения об этом элементе и при необходимости реализует шаблоны элементов управления, которые позволяют клиентскому приложению взаимодействовать с этим элементом управления.  
   
- Клиентские приложения обычно не должны работать непосредственно с поставщиками. Большинство стандартных элементов управления в приложениях, использующих платформы Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]или [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], автоматически предоставляются [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] системе. Приложения, реализующие пользовательские элементы управления, могут также реализовывать поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для этих элементов управления, и клиентским приложениям не требуется предпринимать дополнительные действия для получения доступа к ним.  
+ Клиентские приложения обычно не должны работать непосредственно с поставщиками. Большинство стандартных элементов управления в приложениях, использующих платформы Win32, Windows Forms или [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], автоматически предоставляются [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] системе. Приложения, реализующие пользовательские элементы управления, могут также реализовывать поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для этих элементов управления, и клиентским приложениям не требуется предпринимать дополнительные действия для получения доступа к ним.  
   
- В этом разделе приводятся общие сведения о том, как разработчики элементов управления реализуют поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], особенно для элементов управления в [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] и окнах Win32.  
+ В этом разделе приводятся общие сведения о том, как разработчики элементов управления реализуют поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], особенно для элементов управления в Windows Forms и окнах Win32.  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>Типы поставщиков  

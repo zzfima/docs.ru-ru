@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Установка последовательности переходов в формах Windows Forms
+title: Задать порядок табуляции элементов управления
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -13,12 +13,12 @@ ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 026cff06a8d662cb40107fa76cf6d7989fe30cf1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5d53e411bda0279271e4f73e1842c52fd6d9b3a9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458520"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746828"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Как задать порядок табуляции на Windows Forms
 
@@ -55,7 +55,7 @@ ms.locfileid: "73458520"
 > [!NOTE]
 > Группа переключателей содержит одну позицию табуляции во время выполнения. Для выбранной кнопки (т. е. для кнопки со свойством <xref:System.Windows.Forms.RadioButton.Checked%2A>, установленным в `true`) свойство <xref:System.Windows.Forms.Control.TabStop%2A> автоматически устанавливается в `true`, а для других кнопок свойство <xref:System.Windows.Forms.Control.TabStop%2A> имеет значение `false`. Дополнительные сведения о группировании элементов управления <xref:System.Windows.Forms.RadioButton> см. [в разделе группирование Windows Forms элементов управления RadioButton для работы в виде набора](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элементы управления Windows Forms](index.md)
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
