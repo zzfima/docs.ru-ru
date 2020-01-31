@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 91b558b3-cea9-4106-be8c-3d628d904bfe
 topic_type:
 - apiref
-ms.openlocfilehash: 21683a038b84cae4b2bf51fabd451a4a7514eb89
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4cd2fd05dc193884ab73c9e92e43f67b3a42ca3a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137475"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783183"
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface"></a><span data-ttu-id="8c40b-102">Интерфейс ICorDebugEditAndContinueSnapshot</span><span class="sxs-lookup"><span data-stu-id="8c40b-102">ICorDebugEditAndContinueSnapshot Interface</span></span>
+# <a name="icordebugeditandcontinuesnapshot-interface"></a><span data-ttu-id="f8701-102">Интерфейс ICorDebugEditAndContinueSnapshot</span><span class="sxs-lookup"><span data-stu-id="f8701-102">ICorDebugEditAndContinueSnapshot Interface</span></span>
 
-<span data-ttu-id="8c40b-103">`ICorDebugEditAndContinueSnapshot` устарел.</span><span class="sxs-lookup"><span data-stu-id="8c40b-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="8c40b-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="8c40b-104">Do not use this interface.</span></span>  
+<span data-ttu-id="f8701-103">`ICorDebugEditAndContinueSnapshot` устарел.</span><span class="sxs-lookup"><span data-stu-id="f8701-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="f8701-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="f8701-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c40b-105">См. также</span><span class="sxs-lookup"><span data-stu-id="8c40b-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8701-105">См. также:</span><span class="sxs-lookup"><span data-stu-id="f8701-105">See also</span></span>
 
-- [<span data-ttu-id="8c40b-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="8c40b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f8701-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="f8701-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
