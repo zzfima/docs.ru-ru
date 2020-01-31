@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0afc1197-2a5b-424f-8b82-9cb59a7e00db
 topic_type:
 - apiref
-ms.openlocfilehash: 6999821412b3cdd614cb30858a0616c9f27a6baa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 841953625235406f013e9f140ad91c7b65680e47
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448107"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863957"
 ---
-# <a name="icorprofilerinfogetclassfromtoken-method"></a><span data-ttu-id="dbb29-102">Метод ICorProfilerInfo::GetClassFromToken</span><span class="sxs-lookup"><span data-stu-id="dbb29-102">ICorProfilerInfo::GetClassFromToken Method</span></span>
-<span data-ttu-id="dbb29-103">Возвращает идентификатор класса по заданному маркеру метаданных.</span><span class="sxs-lookup"><span data-stu-id="dbb29-103">Gets the ID of the class, given the metadata token.</span></span> <span data-ttu-id="dbb29-104">Этот метод является устаревшим в .NET Framework версии 2,0.</span><span class="sxs-lookup"><span data-stu-id="dbb29-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="dbb29-105">Вместо этого используйте [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) .</span><span class="sxs-lookup"><span data-stu-id="dbb29-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span></span>  
+# <a name="icorprofilerinfogetclassfromtoken-method"></a><span data-ttu-id="61859-102">Метод ICorProfilerInfo::GetClassFromToken</span><span class="sxs-lookup"><span data-stu-id="61859-102">ICorProfilerInfo::GetClassFromToken Method</span></span>
+<span data-ttu-id="61859-103">Возвращает идентификатор класса по заданному маркеру метаданных.</span><span class="sxs-lookup"><span data-stu-id="61859-103">Gets the ID of the class, given the metadata token.</span></span> <span data-ttu-id="61859-104">Этот метод является устаревшим в .NET Framework версии 2,0.</span><span class="sxs-lookup"><span data-stu-id="61859-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="61859-105">Вместо этого используйте [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) .</span><span class="sxs-lookup"><span data-stu-id="61859-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbb29-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dbb29-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61859-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="61859-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClassFromToken(  
@@ -34,28 +34,28 @@ HRESULT GetClassFromToken(
     [out] ClassID   *pClassId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dbb29-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="dbb29-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61859-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="61859-107">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="dbb29-108">окне Идентификатор модуля, содержащего класс.</span><span class="sxs-lookup"><span data-stu-id="dbb29-108">[in] The ID of the module that contains the class.</span></span>  
+ <span data-ttu-id="61859-108">окне Идентификатор модуля, содержащего класс.</span><span class="sxs-lookup"><span data-stu-id="61859-108">[in] The ID of the module that contains the class.</span></span>  
   
  `typeDef`  
- <span data-ttu-id="dbb29-109">окне Токен метаданных `mdTypeDef`, ссылающийся на класс.</span><span class="sxs-lookup"><span data-stu-id="dbb29-109">[in] An `mdTypeDef` metadata token that references the class.</span></span>  
+ <span data-ttu-id="61859-109">окне Токен метаданных `mdTypeDef`, ссылающийся на класс.</span><span class="sxs-lookup"><span data-stu-id="61859-109">[in] An `mdTypeDef` metadata token that references the class.</span></span>  
   
  `cTypeArgs`  
- <span data-ttu-id="dbb29-110">заполняет Указатель на идентификатор класса.</span><span class="sxs-lookup"><span data-stu-id="dbb29-110">[out] A pointer to the class ID.</span></span>  
+ <span data-ttu-id="61859-110">заполняет Указатель на идентификатор класса.</span><span class="sxs-lookup"><span data-stu-id="61859-110">[out] A pointer to the class ID.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="dbb29-111">Заметки</span><span class="sxs-lookup"><span data-stu-id="dbb29-111">Remarks</span></span>  
- <span data-ttu-id="dbb29-112">Этот метод устарел; Вместо этого используйте `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` для всех типов.</span><span class="sxs-lookup"><span data-stu-id="dbb29-112">This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="61859-111">Заметки</span><span class="sxs-lookup"><span data-stu-id="61859-111">Remarks</span></span>  
+ <span data-ttu-id="61859-112">Этот метод устарел; Вместо этого используйте `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` для всех типов.</span><span class="sxs-lookup"><span data-stu-id="61859-112">This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dbb29-113">Требования</span><span class="sxs-lookup"><span data-stu-id="dbb29-113">Requirements</span></span>  
- <span data-ttu-id="dbb29-114">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbb29-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61859-113">Требования</span><span class="sxs-lookup"><span data-stu-id="61859-113">Requirements</span></span>  
+ <span data-ttu-id="61859-114">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61859-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dbb29-115">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dbb29-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="61859-115">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="61859-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="dbb29-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbb29-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="61859-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61859-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dbb29-117">**.NET Framework версии:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="dbb29-117">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="61859-117">**.NET Framework версии:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="61859-117">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbb29-118">См. также</span><span class="sxs-lookup"><span data-stu-id="dbb29-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61859-118">См. также:</span><span class="sxs-lookup"><span data-stu-id="61859-118">See also</span></span>
 
-- [<span data-ttu-id="dbb29-119">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="dbb29-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="61859-119">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="61859-119">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)

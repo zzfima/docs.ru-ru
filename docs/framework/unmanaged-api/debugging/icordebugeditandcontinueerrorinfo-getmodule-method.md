@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 292f1255-5dfd-427f-844e-781d4b938f9a
 topic_type:
 - apiref
-ms.openlocfilehash: d6a04bdb68149fcc659fa45acc5856c3cebc9a56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d55fd18b55f5387353e014b169633fc44dae3ad7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137015"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783381"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="6c5c2-102">Метод ICorDebugEditAndContinueErrorInfo::GetModule</span><span class="sxs-lookup"><span data-stu-id="6c5c2-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
-<span data-ttu-id="6c5c2-103">`GetModule` устарел.</span><span class="sxs-lookup"><span data-stu-id="6c5c2-103">`GetModule` is obsolete.</span></span> <span data-ttu-id="6c5c2-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="6c5c2-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="289ea-102">Метод ICorDebugEditAndContinueErrorInfo::GetModule</span><span class="sxs-lookup"><span data-stu-id="289ea-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
+<span data-ttu-id="289ea-103">`GetModule` устарел.</span><span class="sxs-lookup"><span data-stu-id="289ea-103">`GetModule` is obsolete.</span></span> <span data-ttu-id="289ea-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="289ea-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c5c2-105">См. также</span><span class="sxs-lookup"><span data-stu-id="6c5c2-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="289ea-105">См. также:</span><span class="sxs-lookup"><span data-stu-id="289ea-105">See also</span></span>
 
-- [<span data-ttu-id="6c5c2-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="6c5c2-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="289ea-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="289ea-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

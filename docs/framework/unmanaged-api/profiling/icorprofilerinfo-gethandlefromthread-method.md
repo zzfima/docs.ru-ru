@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-ms.openlocfilehash: e508ccd81d25aa3d303456fa88554903ec71d633
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 038f922eaaeb7d660cfbdcc0facb89677bdd154e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439064"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863547"
 ---
-# <a name="icorprofilerinfogethandlefromthread-method"></a><span data-ttu-id="129e6-102">Метод ICorProfilerInfo::GetHandleFromThread</span><span class="sxs-lookup"><span data-stu-id="129e6-102">ICorProfilerInfo::GetHandleFromThread Method</span></span>
-<span data-ttu-id="129e6-103">Сопоставляет идентификатор потока с обработчиком потока Win32.</span><span class="sxs-lookup"><span data-stu-id="129e6-103">Maps the ID of a thread to a Win32 thread handle.</span></span>  
+# <a name="icorprofilerinfogethandlefromthread-method"></a><span data-ttu-id="eea13-102">Метод ICorProfilerInfo::GetHandleFromThread</span><span class="sxs-lookup"><span data-stu-id="eea13-102">ICorProfilerInfo::GetHandleFromThread Method</span></span>
+<span data-ttu-id="eea13-103">Сопоставляет идентификатор потока с обработчиком потока Win32.</span><span class="sxs-lookup"><span data-stu-id="eea13-103">Maps the ID of a thread to a Win32 thread handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="129e6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="129e6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eea13-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eea13-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHandleFromThread(  
@@ -33,25 +33,25 @@ HRESULT GetHandleFromThread(
     [out] HANDLE  *phThread);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="129e6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="129e6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eea13-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="eea13-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="129e6-106">окне Идентификатор потока для сопоставления.</span><span class="sxs-lookup"><span data-stu-id="129e6-106">[in] The thread ID to be mapped.</span></span>  
+ <span data-ttu-id="eea13-106">окне Идентификатор потока для сопоставления.</span><span class="sxs-lookup"><span data-stu-id="eea13-106">[in] The thread ID to be mapped.</span></span>  
   
  `phThread`  
- <span data-ttu-id="129e6-107">заполняет Указатель на обработчик потока Win32.</span><span class="sxs-lookup"><span data-stu-id="129e6-107">[out] A pointer to a Win32 thread handle.</span></span>  
+ <span data-ttu-id="eea13-107">заполняет Указатель на обработчик потока Win32.</span><span class="sxs-lookup"><span data-stu-id="eea13-107">[out] A pointer to a Win32 thread handle.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="129e6-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="129e6-108">Remarks</span></span>  
- <span data-ttu-id="129e6-109">Профилировщик должен вызвать функцию Win32 `DuplicateHandle` для маркера перед его использованием.</span><span class="sxs-lookup"><span data-stu-id="129e6-109">The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eea13-108">Заметки</span><span class="sxs-lookup"><span data-stu-id="eea13-108">Remarks</span></span>  
+ <span data-ttu-id="eea13-109">Профилировщик должен вызвать функцию Win32 `DuplicateHandle` для маркера перед его использованием.</span><span class="sxs-lookup"><span data-stu-id="eea13-109">The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="129e6-110">Требования</span><span class="sxs-lookup"><span data-stu-id="129e6-110">Requirements</span></span>  
- <span data-ttu-id="129e6-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="129e6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eea13-110">Требования</span><span class="sxs-lookup"><span data-stu-id="eea13-110">Requirements</span></span>  
+ <span data-ttu-id="eea13-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eea13-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="129e6-112">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="129e6-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="eea13-112">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="eea13-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="129e6-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="129e6-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eea13-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eea13-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="129e6-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="129e6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="eea13-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eea13-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="129e6-115">См. также</span><span class="sxs-lookup"><span data-stu-id="129e6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eea13-115">См. также:</span><span class="sxs-lookup"><span data-stu-id="eea13-115">See also</span></span>
 
-- [<span data-ttu-id="129e6-116">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="129e6-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="eea13-116">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="eea13-116">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)

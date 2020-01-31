@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 1149298b4c5e521b37aae6ec48d463f395f18ae3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c5182fd44f0cc2ad7b836bbcbddc469c89dbacb7
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439568"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865705"
 ---
-# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="0269a-102">Метод ICorProfilerCallback2::ThreadNameChanged</span><span class="sxs-lookup"><span data-stu-id="0269a-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
-<span data-ttu-id="0269a-103">Уведомляет профилировщик кода о том, что имя потока изменилось.</span><span class="sxs-lookup"><span data-stu-id="0269a-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
+# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="7dc9a-102">Метод ICorProfilerCallback2::ThreadNameChanged</span><span class="sxs-lookup"><span data-stu-id="7dc9a-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
+<span data-ttu-id="7dc9a-103">Уведомляет профилировщик кода о том, что имя потока изменилось.</span><span class="sxs-lookup"><span data-stu-id="7dc9a-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0269a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0269a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7dc9a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7dc9a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadNameChanged(  
@@ -34,26 +34,26 @@ HRESULT ThreadNameChanged(
     [in] WCHAR name[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0269a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0269a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7dc9a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7dc9a-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="0269a-106">окне Идентификатор потока.</span><span class="sxs-lookup"><span data-stu-id="0269a-106">[in] The ID of the thread.</span></span>  
+ <span data-ttu-id="7dc9a-106">окне Идентификатор потока.</span><span class="sxs-lookup"><span data-stu-id="7dc9a-106">[in] The ID of the thread.</span></span>  
   
  `cchName`  
- <span data-ttu-id="0269a-107">окне Длина нового имени потока.</span><span class="sxs-lookup"><span data-stu-id="0269a-107">[in] The length of the new name of the thread.</span></span>  
+ <span data-ttu-id="7dc9a-107">окне Длина нового имени потока.</span><span class="sxs-lookup"><span data-stu-id="7dc9a-107">[in] The length of the new name of the thread.</span></span>  
   
  `name`  
- <span data-ttu-id="0269a-108">окне Новое имя потока.</span><span class="sxs-lookup"><span data-stu-id="0269a-108">[in] The new name of the thread.</span></span> <span data-ttu-id="0269a-109">Имя не завершается нулем.</span><span class="sxs-lookup"><span data-stu-id="0269a-109">The name is not null-terminated.</span></span>  
+ <span data-ttu-id="7dc9a-108">окне Новое имя потока.</span><span class="sxs-lookup"><span data-stu-id="7dc9a-108">[in] The new name of the thread.</span></span> <span data-ttu-id="7dc9a-109">Имя не завершается нулем.</span><span class="sxs-lookup"><span data-stu-id="7dc9a-109">The name is not null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0269a-110">Требования</span><span class="sxs-lookup"><span data-stu-id="0269a-110">Requirements</span></span>  
- <span data-ttu-id="0269a-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0269a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7dc9a-110">Требования</span><span class="sxs-lookup"><span data-stu-id="7dc9a-110">Requirements</span></span>  
+ <span data-ttu-id="7dc9a-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7dc9a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0269a-112">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0269a-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="7dc9a-112">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7dc9a-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0269a-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0269a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7dc9a-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7dc9a-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0269a-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0269a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7dc9a-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7dc9a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0269a-115">См. также:</span><span class="sxs-lookup"><span data-stu-id="0269a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7dc9a-115">См. также:</span><span class="sxs-lookup"><span data-stu-id="7dc9a-115">See also</span></span>
 
-- [<span data-ttu-id="0269a-116">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="0269a-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="0269a-117">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="0269a-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="7dc9a-116">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="7dc9a-116">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="7dc9a-117">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="7dc9a-117">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)

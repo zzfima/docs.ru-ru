@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3e07b233-dd41-45ba-a4f9-662e4b006f1f
 topic_type:
 - apiref
-ms.openlocfilehash: 7b8b685e520d19ef1ba6b8caea2f26625eeba323
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4fb19e10c3c1e7775d52496e7e7a9c07e0f2b33c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137495"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788804"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="0d719-102">Метод ICorDebugEditAndContinueSnapshot::GetRwDataRVA</span><span class="sxs-lookup"><span data-stu-id="0d719-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
-<span data-ttu-id="0d719-103">`GetRwDataRVA` устарел.</span><span class="sxs-lookup"><span data-stu-id="0d719-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="0d719-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="0d719-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="a6e0b-102">Метод ICorDebugEditAndContinueSnapshot::GetRwDataRVA</span><span class="sxs-lookup"><span data-stu-id="a6e0b-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
+<span data-ttu-id="a6e0b-103">`GetRwDataRVA` устарел.</span><span class="sxs-lookup"><span data-stu-id="a6e0b-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="a6e0b-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="a6e0b-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d719-105">См. также</span><span class="sxs-lookup"><span data-stu-id="0d719-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6e0b-105">См. также:</span><span class="sxs-lookup"><span data-stu-id="a6e0b-105">See also</span></span>
 
-- [<span data-ttu-id="0d719-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="0d719-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="a6e0b-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="a6e0b-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
