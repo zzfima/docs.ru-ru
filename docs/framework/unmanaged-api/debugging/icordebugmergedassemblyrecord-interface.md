@@ -2,12 +2,12 @@
 title: Интерфейс ICorDebugMergedAssemblyRecord
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-ms.openlocfilehash: 8dc07cb8c2f57ee6f9598c727cbd6de38bf4625f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6d5d862110cd91e8ac81c96e50486be10c579903
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139198"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793058"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a>Интерфейс ICorDebugMergedAssemblyRecord
 Предоставляет сведения о сборке после слияния.  
@@ -16,12 +16,12 @@ ms.locfileid: "73139198"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetCulture](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getculture-method.md)|Возвращает строку с названием языка и региональных параметров сборки.|  
-|[Метод GetIndex](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getindex-method.md)|Возвращает индекс префикса сборки.|  
-|[Метод GetPublicKey](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickey-method.md)|Возвращает открытый ключ сборки.|  
-|[Метод GetPublicKeyToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickeytoken-method.md)|Возвращает токен открытого ключа сборки.|  
-|[Метод GetSimpleName](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getsimplename-method.md)|Получает простое имя сборки.|  
-|[Метод GetVersion](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getversion-method.md)|Возвращает сведения о версии сборки.|  
+|[Метод GetCulture](icordebugmergedassemblyrecord-getculture-method.md)|Возвращает строку с названием языка и региональных параметров сборки.|  
+|[Метод GetIndex](icordebugmergedassemblyrecord-getindex-method.md)|Возвращает индекс префикса сборки.|  
+|[Метод GetPublicKey](icordebugmergedassemblyrecord-getpublickey-method.md)|Возвращает открытый ключ сборки.|  
+|[Метод GetPublicKeyToken](icordebugmergedassemblyrecord-getpublickeytoken-method.md)|Возвращает токен открытого ключа сборки.|  
+|[Метод GetSimpleName](icordebugmergedassemblyrecord-getsimplename-method.md)|Получает простое имя сборки.|  
+|[Метод GetVersion](icordebugmergedassemblyrecord-getversion-method.md)|Возвращает сведения о версии сборки.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73139198"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Метод ICorDebugInstanceFieldSymbol:: resize'
+title: Метод ICorDebugInstanceFieldSymbol::GetSize
 ms.date: 03/30/2017
 ms.assetid: a4af1e3b-6a9f-4855-95ba-5317565c8e2b
-ms.openlocfilehash: 71828cd8486e2ff09190d23473dbab303b92f933
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: eb70c441441954e2ffce6ca832c58369c606b128
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139022"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782282"
 ---
-# <a name="icordebuginstancefieldsymbolgetsize-method"></a>Метод ICorDebugInstanceFieldSymbol:: resize
+# <a name="icordebuginstancefieldsymbolgetsize-method"></a>Метод ICorDebugInstanceFieldSymbol::GetSize
 Получает размер поля экземпляра в байтах.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,7 +38,7 @@ HRESULT GetSize(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugInstanceFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugInstanceFieldSymbol](icordebuginstancefieldsymbol-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

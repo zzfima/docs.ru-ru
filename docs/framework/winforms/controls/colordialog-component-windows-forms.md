@@ -6,12 +6,12 @@ helpviewer_keywords:
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: 0b44774fcace82f7e209440bc15705ad632bc223
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3ac758c353d235183041b6442d4472f863f7ca75
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736932"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870808"
 ---
 # <a name="colordialog-component-windows-forms"></a>Компонент ColorDialog (Windows Forms)
 Компонент Windows Forms <xref:System.Windows.Forms.ColorDialog> является предварительно настроенным диалоговым окном, позволяющим пользователю выбрать цвет из палитры и добавить пользовательские цвета в эту палитру. Это то же диалоговое окно, которое вы видите в других приложениях Windows для выбора цветов. Он используется в приложении Windows в качестве простого решения вместо настройки собственного диалогового окна.  
@@ -32,9 +32,6 @@ ms.locfileid: "76736932"
   
  <xref:System.Windows.Forms.ColorDialog>  
  Содержит справочные сведения о классе <xref:System.Windows.Forms.ColorDialog> и его членах.  
-  
- [Основной код для диалоговых окон Windows Forms](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
- Описываются элементы управления и компоненты диалоговых окон Windows Forms, а также код, необходимый для выполнения их основных функций  
-  
+ 
  [Элементы управления и компоненты диалоговых окон](dialog-box-controls-and-components-windows-forms.md)  
  Описание набора элементов управления для выполнения пользователем стандартных действий в приложении или системе.

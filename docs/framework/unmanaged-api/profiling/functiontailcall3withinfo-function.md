@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: 202aed64de78675c79f998afb4483e0d19b811de
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 33400f6b2700bbdbf9c2ccb8a61da192066c0e2f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445970"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790242"
 ---
 # <a name="functiontailcall3withinfo-function"></a>Функция FunctionTailcall3WithInfo
 Уведомляет профилировщик о том, что выполняемая в данный момент функция собирается выполнить вызов другой функции с префиксом tail, и предоставляет маркер, который может быть передан [методу ICorProfilerInfo3:: GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) для получения кадра стека.  
@@ -33,12 +33,15 @@ void __stdcall FunctionTailcall3WithInfo(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- `functionIDOrClientID`  
- окне Идентификатор выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.  
-  
- `eltInfo`  
- [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. Этот маркер действителен только во время обратного вызова, к которому он передается.  
-  
+
+- `functionIDOrClientID`
+
+  \[в] идентификатор выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.
+
+- `eltInfo`
+
+  \[in] непрозрачный маркер, представляющий сведения об определенном кадре стека. Этот маркер действителен только во время обратного вызова, к которому он передается.
+
 ## <a name="remarks"></a>Заметки  
  Метод обратного вызова `FunctionTailcall3WithInfo` уведомляет профилировщик о вызове функций и позволяет профилировщику использовать [метод ICorProfilerInfo3:: GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) для проверки кадра стека. Чтобы получить доступ к сведениям о кадрах стека, необходимо установить флаг `COR_PRF_ENABLE_FRAME_INFO`. Профилировщик может использовать [метод ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) для установки флагов событий, а затем использовать [метод ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) для регистрации реализации этой функции.  
   
@@ -63,7 +66,7 @@ void __stdcall FunctionTailcall3WithInfo(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)

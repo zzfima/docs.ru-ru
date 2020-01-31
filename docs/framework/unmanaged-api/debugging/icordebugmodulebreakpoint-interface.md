@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34667162-f314-475f-ae1b-ce9cb0fcbb83
 topic_type:
 - apiref
-ms.openlocfilehash: 2bc5c21d2e1256d0e79390bea10aafcdefbed0d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df3ad3fa4ef4eeee7e23ca1629da7a8b8ce09711
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110341"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792927"
 ---
 # <a name="icordebugmodulebreakpoint-interface"></a>Интерфейс ICorDebugModuleBreakpoint
 
@@ -29,7 +29,7 @@ ms.locfileid: "73110341"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Возвращает указатель интерфейса на объект ICorDebugModule, который ссылается на модуль, в котором задана эта точка останова.|  
+|[Метод GetModule](icordebugmodulebreakpoint-getmodule-method.md)|Возвращает указатель интерфейса на объект ICorDebugModule, который ссылается на модуль, в котором задана эта точка останова.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -45,6 +45,6 @@ ms.locfileid: "73110341"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

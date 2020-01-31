@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-ms.openlocfilehash: a3a1b658f4ab05c7029de907882fe5ab2513ccd8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32774aacecf3e56510bc6f0670538a44fde794c9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127886"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792988"
 ---
 # <a name="icordebugmodule2-interface"></a>Интерфейс ICorDebugModule2
 
@@ -29,11 +29,11 @@ ms.locfileid: "73127886"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|Применяет изменения в метаданных и изменения в коде промежуточного языка MSIL к выполняющемуся процессу.|  
-|[Метод GetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|Возвращает флаги, управляющие JIT-компиляцией для данного `ICorDebugModule2`.|  
-|[Метод ResolveAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|Разрешает сборку, на которую ссылается указанный токен метаданных.|  
-|[Метод SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|Задает флаги, управляющие JIT-компиляцией для этого `ICorDebugModule2`.|  
-|[Метод SetJMCStatus](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|Задает для состояния Только мой код (JMC) всех методов всех классов данного `ICorDebugModule2` указанное значение, за исключением тех, которые находятся в массиве `pTokens`, для которого задано обратное значение.|  
+|[Метод ApplyChanges](icordebugmodule2-applychanges-method.md)|Применяет изменения в метаданных и изменения в коде промежуточного языка MSIL к выполняющемуся процессу.|  
+|[Метод GetJITCompilerFlags](icordebugmodule2-getjitcompilerflags-method.md)|Возвращает флаги, управляющие JIT-компиляцией для данного `ICorDebugModule2`.|  
+|[Метод ResolveAssembly](icordebugmodule2-resolveassembly-method.md)|Разрешает сборку, на которую ссылается указанный токен метаданных.|  
+|[Метод SetJITCompilerFlags](icordebugmodule2-setjitcompilerflags-method.md)|Задает флаги, управляющие JIT-компиляцией для этого `ICorDebugModule2`.|  
+|[Метод SetJMCStatus](icordebugmodule2-setjmcstatus-method.md)|Задает для состояния Только мой код (JMC) всех методов всех классов данного `ICorDebugModule2` указанное значение, за исключением тех, которые находятся в массиве `pTokens`, для которого задано обратное значение.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -49,6 +49,6 @@ ms.locfileid: "73127886"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

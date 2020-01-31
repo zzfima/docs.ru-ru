@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f177d441da3bd967750781e487d9fed42bc132f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131902"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791950"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>Метод ICorDebugRemoteTarget::GetHostName
 Возвращает полное доменное имя или IPv4-адрес целевого компьютера удаленной отладки. В настоящее время IPV6 не поддерживается.  
@@ -40,7 +40,7 @@ HRESULT GetHostName (
  окне Размер `szHostName`ного буфера в символах. Если этот параметр имеет значение 0 (ноль), `szHostName` должен иметь значение null.  
   
  `pcchHostName`  
- заполняет Количество символов, включая знак завершения null, в имени узла или IP-адресе. Этот параметр может быть нулевым.  
+ заполняет Количество символов, включая знак завершения null, в имени узла или IP-адресе. Этот параметр может иметь значение null.  
   
  `szHostName`  
  заполняет Буфер, содержащий имя узла или IP-адрес.  
@@ -64,7 +64,7 @@ HRESULT GetHostName (
   
  **.NET Framework версии:** 3,5 SP1  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Интерфейс ICorDebugRemoteTarget](icordebugremotetarget-interface.md)
+- [Интерфейс ICorDebug](icordebug-interface.md)

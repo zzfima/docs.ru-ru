@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-ms.openlocfilehash: ec92214e33cd1acda8b2702d93deba1f0fb2aaa2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 642391bce99328f3700d1783054943b6a450b22b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111020"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789016"
 ---
 # <a name="iclrmetadatalocator-interface"></a>Интерфейс ICLRMetadataLocator
 Используется уровнем служб доступа к данным для определения местоположения метаданных сборок в целевом процессе.  
@@ -28,7 +28,7 @@ ms.locfileid: "73111020"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetMetadata](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Извлекает метаданные изображения из целевого процесса.|  
+|[Метод GetMetadata](iclrmetadatalocator-getmetadata-method.md)|Извлекает метаданные изображения из целевого процесса.|  
   
 ## <a name="remarks"></a>Заметки  
  Клиент API (то есть отладчик) должен реализовывать этот интерфейс для определенного целевого процесса по мере необходимости. Например, реализация для активного процесса будет отличаться от реализации дампа памяти.  
@@ -42,6 +42,6 @@ ms.locfileid: "73111020"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: fd224279b3df6c9e8e55cd81ebfbf2e5ea2428d5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 0ed7a0619816caab64361d7922d28b18c60ed453
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440777"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790273"
 ---
 # <a name="functionenter3-function"></a>Функция FunctionEnter3
 Уведомляет профилировщик о передаче управления в функцию.  
@@ -30,10 +30,12 @@ ms.locfileid: "74440777"
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `functionOrRemappedID`  
- окне Идентификатор функции, которой передается элемент управления.  
-  
+## <a name="parameters"></a>Параметры
+
+- `functionOrRemappedID`
+
+  \[в] идентификатор функции, для которой передается элемент управления.
+
 ## <a name="remarks"></a>Заметки  
  Функция обратного вызова `FunctionEnter3` уведомляет профилировщик о вызове функций, но не поддерживает проверку аргументов. Чтобы зарегистрировать реализацию этой функции, используйте [метод ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) .  
   
@@ -54,7 +56,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)

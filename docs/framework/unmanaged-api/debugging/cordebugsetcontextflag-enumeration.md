@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a443332e4f2b0351e99754fae610af39268bb105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097268"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789267"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>Перечисление CorDebugSetContextFlag
 Указывает происхождение контекста: взят из активного (или листового) кадра в стеке или был вычислен в результате освобождения другого кадра.  
@@ -34,7 +34,7 @@ typedef enum CorDebugSetContextFlag
 }  CorDebugSetContextFlag;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -42,7 +42,7 @@ typedef enum CorDebugSetContextFlag
 |SET_CONTEXT_FLAG_UNWIND_FRAME|Контекст был вычислен путем очистки от другого кадра.|  
   
 ## <a name="remarks"></a>Заметки  
- `CorDebugSetContextFlag` предоставляет значения, используемые методом [икордебугстакквалк:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) .  
+ `CorDebugSetContextFlag` предоставляет значения, используемые методом [икордебугстакквалк:: SetContext](icordebugstackwalk-setcontext-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,7 +53,7 @@ typedef enum CorDebugSetContextFlag
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Перечисления отладки](debugging-enumerations.md)
+- [Отладка](index.md)

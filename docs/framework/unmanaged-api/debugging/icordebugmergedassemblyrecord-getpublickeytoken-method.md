@@ -1,15 +1,15 @@
 ---
-title: 'Метод Икордебугмержедассемблирекорд:: Жетпубликкэйтокен'
+title: Метод ICorDebugMergedAssemblyRecord::GetPublicKeyToken
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-ms.openlocfilehash: 95ed1303b33b328d1f14ecea6cc318e14991cd54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 543083703cd0cbbce9dc0660383713202fa2f0b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129776"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793107"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Метод Икордебугмержедассемблирекорд:: Жетпубликкэйтокен
+# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Метод ICorDebugMergedAssemblyRecord::GetPublicKeyToken
 Возвращает токен открытого ключа сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -47,7 +47,7 @@ HRESULT GetPublicKeyToken(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

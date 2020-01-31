@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-ms.openlocfilehash: a8d651f19b7d4cb0cbe163c2fa59e1ef07ceb480
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c65ec69055b56b31a26ccf45e51ec43c4512a320
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140334"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790684"
 ---
 # <a name="icorpublishappdomain-interface"></a>Интерфейс ICorPublishAppDomain
 Представляет и предоставляет информацию о домене приложения.  
@@ -28,8 +28,8 @@ ms.locfileid: "73140334"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetId](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Возвращает уникальный идентификатор для этого `ICorPublishAppDomain`.|  
-|[Метод GetName](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Возвращает имя домена приложения, на который ссылается эта `ICorPublishAppDomain`.|  
+|[Метод GetID](icorpublishappdomain-getid-method.md)|Возвращает уникальный идентификатор для этого `ICorPublishAppDomain`.|  
+|[Метод GetName](icorpublishappdomain-getname-method.md)|Возвращает имя домена приложения, на который ссылается эта `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "73140334"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Кокласс CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Кокласс CorpubPublish](corpubpublish-coclass.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: 460162f0fbc9993635d1bce0c5b130358ced4fa7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a5573765486112a83f5ea7cc9258447692f72166
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448146"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864075"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>Метод ICorProfilerInfo::GetClassFromObject
 Возвращает `ClassID` объекта, учитывая его `ObjectID`.  
@@ -40,7 +40,7 @@ HRESULT GetClassFromObject(
  `pClassId`  
  заполняет Указатель на возвращаемый `ClassID`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Значение NULL `pClassId` указывает, что `objectId` имеет тип, выгружаемый.  
   
 ## <a name="requirements"></a>Требования  
@@ -54,4 +54,4 @@ HRESULT GetClassFromObject(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)

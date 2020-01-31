@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d4e7c055480ea611357d5d3e18ac4306acf4d0b0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113704"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785417"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>Метод ICLRDataTarget::GetTLSValue
 Возвращает значение из локального хранилища потока (TLS) указанного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  
@@ -57,6 +57,6 @@ HRESULT GetTLSValue (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Интерфейс ICLRDataTarget](iclrdatatarget-interface.md)

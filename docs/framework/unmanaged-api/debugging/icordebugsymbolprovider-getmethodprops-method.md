@@ -1,15 +1,15 @@
 ---
-title: 'Метод метод icordebugsymbolprovider:: Жетмесодпропс'
+title: Метод ICorDebugSymbolProvider::GetMethodProps
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-ms.openlocfilehash: 811106216e1e454ddf342af1578f74c80ba2acc9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 58642d0a9b1cfe1fd969f39fa7e5ab22a8dbfa05
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138831"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791587"
 ---
-# <a name="icordebugsymbolprovidergetmethodprops-method"></a>Метод метод icordebugsymbolprovider:: Жетмесодпропс
+# <a name="icordebugsymbolprovidergetmethodprops-method"></a>Метод ICorDebugSymbolProvider::GetMethodProps
 Возвращает сведения о свойствах метода, такие как токен метаданных метода и сведения о его универсальных параметрах, для указанного относительного виртуального адреса (RVA) в этом методе.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -59,8 +59,8 @@ HRESULT GetMethodProps(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Метод GetTypeProps](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
-- [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Метод GetTypeProps](icordebugsymbolprovider-gettypeprops-method.md)
+- [Интерфейс ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632321"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789614"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 
@@ -20,7 +20,7 @@ ms.locfileid: "75632321"
 
 В этом разделе описывается реализация серверного поставщика автоматизации пользовательского интерфейса для пользовательского элемента управления.
 
-Реализация для элементов Windows Presentation Foundation (WPF) и элементов, отличных от WPF (например, разработанных для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), является принципиально отличающимся. Элементы WPF обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] через класс, производный от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, не являющиеся элементами WPF, обеспечивают поддержку через реализации интерфейсов поставщиков.
+Реализация для элементов Windows Presentation Foundation (WPF) и элементов, отличных от WPF (например, разработанных для Windows Forms), является принципиально отличающимся. Элементы WPF обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] через класс, производный от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, не являющиеся элементами WPF, обеспечивают поддержку через реализации интерфейсов поставщиков.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ ms.locfileid: "75632321"
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Реализация поставщика элементами, отличными от WPF
 
-Пользовательские элементы управления, которые не являются частью платформы WPF, но написаны в управляемом коде (чаще всего это [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] элементы управления), обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] путем реализации интерфейсов. Каждый элемент должен реализовывать по крайней мере один из интерфейсов, перечисленных в первой таблице в следующем разделе. Кроме того, если элемент поддерживает один или несколько шаблонов элементов управления, он должен реализовать соответствующий интерфейс для каждого шаблона элемента управления.
+Пользовательские элементы управления, которые не являются частью платформы WPF, но написаны в управляемом коде (чаще всего это Windows Forms элементы управления), обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] путем реализации интерфейсов. Каждый элемент должен реализовывать по крайней мере один из интерфейсов, перечисленных в первой таблице в следующем разделе. Кроме того, если элемент поддерживает один или несколько шаблонов элементов управления, он должен реализовать соответствующий интерфейс для каждого шаблона элемента управления.
 
 Проект поставщика [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должен содержать ссылки на следующие сборки:
 
@@ -117,7 +117,7 @@ ms.locfileid: "75632321"
 > [!NOTE]
 > Простой элемент <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> или корневой элемент фрагмента, размещенного в окне, извлекается из окна. Однако элементам фрагмента ниже корневого элемента (например, элементы списка в поле со списком) необходимо предоставлять собственные идентификаторы. Для получения дополнительной информации см. <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
-> Для поставщиков, размещенных в элементе управления <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> , должен возвращаться [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . В этом случае поставщику окна по умолчанию может не удастся получить правильное значение.
+> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> должны возвращаться для поставщиков, размещенных в элементе управления Windows Forms. В этом случае поставщику окна по умолчанию может не удастся получить правильное значение.
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> обычно предоставляется поставщиком главного окна. Например, если пользовательский элемент управления является производным от <xref:System.Windows.Forms.Control>, имя будет производным от свойства `Text` элемента управления.
 

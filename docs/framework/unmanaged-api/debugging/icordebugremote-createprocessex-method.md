@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131295"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791980"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Метод ICorDebugRemote::CreateProcessEx
 Запускает процесс на удаленном компьютере в отладчике.  
@@ -47,7 +47,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>Параметры  
  `pRemoteTarget`  
- окне Указатель на [интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Используется для определения удаленного компьютера, на котором будет запущен процесс.  
+ окне Указатель на [интерфейс ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Используется для определения удаленного компьютера, на котором будет запущен процесс.  
   
  `lpApplicationName`  
  окне Указатель на строку, завершающуюся нулем, которая указывает модуль, выполняемый запущенным процессом. Модуль выполняется в контексте безопасности вызывающего процесса.  
@@ -104,9 +104,9 @@ HRESULT CreateProcessEx (
   
  **.NET Framework версии:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Интерфейс ICorDebugRemote](icordebugremote-interface.md)
+- [Интерфейс ICorDebug](icordebug-interface.md)
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

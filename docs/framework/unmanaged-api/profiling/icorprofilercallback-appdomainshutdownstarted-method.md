@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 6edf498d506a0ca914124a284c0da3f869f28130
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445184"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790220"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>Метод ICorProfilerCallback::AppDomainShutdownStarted
 Уведомляет профилировщик о том, что домен приложения выгружается из процесса.  
@@ -32,11 +32,13 @@ HRESULT AppDomainShutdownStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `appDomainId`  
- окне Определяет домен, в котором хранятся сборки приложения.  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="parameters"></a>Параметры
+
+- `appDomainId`
+
+  \[в] определяет домен, в котором хранятся сборки приложения.
+
+## <a name="remarks"></a>Заметки  
  Значение `appDomainId` недопустимо для запроса информации после возврата метода `AppDomainShutdownStarted` — это последний шанс профилировщика получить сведения об этом домене приложения.  
   
 ## <a name="requirements"></a>Требования  

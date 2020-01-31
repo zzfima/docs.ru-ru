@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744895"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794161"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>Пошаговое руководство. размещение часов WPF в Win32
 
@@ -86,7 +86,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)
 ```
 
-Этот атрибут указывает среде CLR, что при инициализации объектной модели компонента (COM) она должна использовать модель однопотокового подразделения (STA), которая необходима для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]).
+Этот атрибут указывает среде CLR, что при инициализации объектной модели компонента (COM) она должна использовать модель однопотокового подразделения (STA), которая необходима для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (и Windows Forms).
 
 ## <a name="create-a-windows-presentation-framework-page"></a>Создание страницы WPF
 

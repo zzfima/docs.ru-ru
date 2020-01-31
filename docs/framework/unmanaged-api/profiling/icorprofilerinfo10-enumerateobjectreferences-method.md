@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449854"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863313"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>Метод ICorProfilerInfo10:: Енумератеобжектреференцес
 
@@ -30,20 +30,23 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-`objectId` \
-окне Объект для перечисления ссылок.
+- `objectId`
 
-`callback` \
-окне Функция, которая будет вызываться со ссылками для объекта.
+  \[в] объект для перечисления ссылок.
 
-`clientData` \
-окне Данные, предоставленные профилировщиком, передаются функции `callback`.
+- `callback`
+
+  \[в] функция, которая будет вызываться со ссылками для объекта.
+
+- `clientData`
+
+  \[in] данные, предоставленные профилировщиком, передаются в функцию `callback`.
 
 ## <a name="remarks"></a>Заметки
 
-Метод `EnumerateObjectReferences` аналогичен [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), за исключением того, что он просматривает ссылки по запросу для профилировщика вместо предварительного выделения массива для хранения ссылок.
+Метод `EnumerateObjectReferences` аналогичен [ObjectReferences](icorprofilercallback-objectreferences-method.md), за исключением того, что он просматривает ссылки по запросу для профилировщика вместо предварительного выделения массива для хранения ссылок.
 
 ## <a name="requirements"></a>Требования
 
@@ -55,6 +58,6 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 **Версии .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Интерфейс ICorProfilerInfo10](icorprofilerinfo10-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-ms.openlocfilehash: b062faffc22e444bd4d3b4a0c67f2a08d7af3560
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ddfe8cee8fdbca910ffa4f6989b1359ae5f7b11f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131106"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794371"
 ---
 # <a name="icordebugheapvalue3-interface"></a>Интерфейс ICorDebugHeapValue3
 Предоставляет свойства блокировки монитора объектов. Этот интерфейс расширяет интерфейсы ICorDebugHeapValue и ICorDebugHeapValue2.  
@@ -28,8 +28,8 @@ ms.locfileid: "73131106"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetThreadOwningMonitorLock](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Возвращает управляемый поток, которому принадлежит блокировка монитора для этого объекта.|  
-|[Метод GetMonitorEventWaitList](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Предоставляет упорядоченный список потоков, поставленных в очередь на событие, связанное с блокировкой монитора.|  
+|[Метод GetThreadOwningMonitorLock](icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Возвращает управляемый поток, которому принадлежит блокировка монитора для этого объекта.|  
+|[Метод GetMonitorEventWaitList](icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Предоставляет упорядоченный список потоков, поставленных в очередь на событие, связанное с блокировкой монитора.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73131106"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

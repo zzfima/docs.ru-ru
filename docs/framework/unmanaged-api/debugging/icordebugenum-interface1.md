@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085262"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783007"
 ---
 # <a name="icordebugenum-interface"></a>Интерфейс ICorDebugEnum
 
@@ -29,10 +29,10 @@ ms.locfileid: "73085262"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Создает копию этого объекта `ICorDebugEnum`.|  
-|[Метод GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Возвращает число элементов в перечислении.|  
-|[Метод Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Перемещает курсор в начало перечисления.|  
-|[Метод Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Перемещает курсор вперед в перечислении на указанное число элементов.|  
+|[Метод Clone](icordebugenum-clone-method.md)|Создает копию этого объекта `ICorDebugEnum`.|  
+|[Метод GetCount](icordebugenum-getcount-method.md)|Возвращает число элементов в перечислении.|  
+|[Метод Reset](icordebugenum-reset-method.md)|Перемещает курсор в начало перечисления.|  
+|[Метод Skip](icordebugenum-skip-method.md)|Перемещает курсор вперед в перечислении на указанное число элементов.|  
   
 ## <a name="remarks"></a>Заметки  
  Следующие перечислители являются производными от `ICorDebugEnum`:  
@@ -41,7 +41,7 @@ ms.locfileid: "73085262"
   
 - ICorDebugAssemblyEnum  
   
-- [икордебугблоккингобжектенум](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
+- [икордебугблоккингобжектенум](icordebugblockingobjectenum-interface.md)  
   
 - ICorDebugBreakpointEnum  
   
@@ -51,17 +51,17 @@ ms.locfileid: "73085262"
   
 - ICorDebugErrorInfoEnum  
   
-- [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
+- [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)  
   
 - ICorDebugFrameEnum  
   
-- [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
+- [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)  
   
-- [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
+- [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md)  
   
-- [икордебугхеапенум](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
+- [икордебугхеапенум](icordebugheapenum-interface.md)  
   
-- [икордебугхеапсегментенум](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
+- [икордебугхеапсегментенум](icordebugheapsegmentenum-interface.md)  
   
 - "Икордебугмодулинум"  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73085262"
   
 - ICorDebugValueEnum  
   
-- [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+- [ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
@@ -91,6 +91,6 @@ ms.locfileid: "73085262"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

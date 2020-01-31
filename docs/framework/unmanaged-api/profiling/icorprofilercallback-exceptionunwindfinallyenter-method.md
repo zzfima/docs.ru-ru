@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-ms.openlocfilehash: 1f16add7b5a9d18e0c1eb33209b609e9bf7e18b0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 93136401597b7b9871fb1483851734e2080b1f0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445314"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790103"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>Метод ICorProfilerCallback::ExceptionUnwindFinallyEnter
 Уведомляет профилировщик о том, что фаза очистки при обработке исключений вводит `finally` предложение, содержащееся в указанной функции.  
@@ -32,11 +32,13 @@ HRESULT ExceptionUnwindFinallyEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `functionId`  
- окне Идентификатор функции, которая содержит предложение `finally`.  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="parameters"></a>Параметры
+
+- `functionId`
+
+  \[в] идентификатор функции, которая содержит предложение `finally`.
+
+## <a name="remarks"></a>Заметки  
  Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
   
  Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
@@ -50,7 +52,7 @@ HRESULT ExceptionUnwindFinallyEnter(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Метод GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)

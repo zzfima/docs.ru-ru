@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: bff270ff774692d058a36c7f47ab474b08bceb35
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9bcec66ff613d19c1198ac9849ca28c978f537
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088964"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788944"
 ---
 # <a name="icordebugappdomain2-interface"></a>Интерфейс ICorDebugAppDomain2
 
@@ -29,8 +29,8 @@ ms.locfileid: "73088964"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetArrayOrPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Возвращает массив указанного типа или указатель или ссылку на указанный тип.|  
-|[Метод GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Возвращает указатель на функцию с заданной сигнатурой.|  
+|[Метод GetArrayOrPointerType](icordebugappdomain2-getarrayorpointertype-method.md)|Возвращает массив указанного типа или указатель или ссылку на указанный тип.|  
+|[Метод GetFunctionPointerType](icordebugappdomain2-getfunctionpointertype-method.md)|Возвращает указатель на функцию с заданной сигнатурой.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -46,6 +46,6 @@ ms.locfileid: "73088964"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

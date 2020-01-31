@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-ms.openlocfilehash: 3f6320d6d962e40acf494acbb5c95adda62d1461
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 367584a01e368dc591c2e93acfcc6574f2fa1ec0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445286"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866325"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>Метод ICorProfilerCallback::ExceptionUnwindFunctionEnter
 Уведомляет профилировщик о том, что фаза очистки обработки исключений началась для очистки функции.  
@@ -32,11 +32,13 @@ HRESULT ExceptionUnwindFunctionEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `functionId`  
- окне Идентификатор перевернутой функции.  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="parameters"></a>Параметры
+
+- `functionId`
+
+  \[в] идентификатор функции, которая будет развернута.
+
+## <a name="remarks"></a>Заметки  
  Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
   
  Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
@@ -50,7 +52,7 @@ HRESULT ExceptionUnwindFunctionEnter(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод ExceptionUnwindFunctionLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод ExceptionUnwindFunctionLeave](icorprofilercallback-exceptionunwindfunctionleave-method.md)

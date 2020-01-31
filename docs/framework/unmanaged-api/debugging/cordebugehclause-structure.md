@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 197c33511a474eb8291e4361ebb3c21fb3720cae
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098860"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789428"
 ---
 # <a name="cordebugehclause-structure"></a>Структура CorDebugEHClause
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -38,7 +38,7 @@ typedef struct _CorDebugEHClause {
 } CorDebugEHClause;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -51,13 +51,13 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|Смещение в байтах от начала тела метода для обработчика исключений на основе фильтра.|  
   
 ## <a name="remarks"></a>Заметки  
- Массив значений `CoreDebugEHClause` возвращается методом [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) .  
+ Массив значений `CoreDebugEHClause` возвращается методом [GetEHClauses](icordebugilcode-getehclauses-method.md) .  
   
  Информация о предложении обработки исключений определяется спецификацией CLI. Дополнительные сведения см. в разделе [Standard ECMA-355: Common Language Infrastructure (CLI), 6-й выпуск](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Поле `flags` может содержать следующие флаги. Обратите внимание, что они не определены в CorDebug.idl или CorDebug.h.  
   
-|Flag|значения|Описание|  
+|Flag|{2&gt;Value&lt;2}|Описание|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Введенное предложение исключений.|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Фильтр исключений и предложение обработчика.|  
@@ -73,7 +73,7 @@ typedef struct _CorDebugEHClause {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Метод GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Метод GetEHClauses](icordebugilcode-getehclauses-method.md)
+- [Структуры отладки](debugging-structures.md)

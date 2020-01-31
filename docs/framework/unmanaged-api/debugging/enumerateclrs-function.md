@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122971"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789127"
 ---
 # <a name="enumerateclrs-function"></a>Функция EnumerateCLRs
 Предоставляет механизм для перечисления сред CLR в процессе.  
@@ -68,7 +68,7 @@ HRESULT EnumerateCLRs (
   
  В операционной системе Windows `debuggeePID` сопоставляется с идентификатором процесса ОС.  
   
- Память для `ppHandleArrayOut` и `ppStringArrayOut` выделяется этой функцией. Чтобы освободить выделенную память, необходимо вызвать [функцию клосеклренумератион](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
+ Память для `ppHandleArrayOut` и `ppStringArrayOut` выделяется этой функцией. Чтобы освободить выделенную память, необходимо вызвать [функцию клосеклренумератион](closeclrenumeration-function.md).  
   
  Эта функция может вызываться с параметрами обоих массивов, имеющими значение null, для возврата числа CLR в целевом процессе. Из этого числа вызывающий объект может определить размер буфера, который будет создан: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   

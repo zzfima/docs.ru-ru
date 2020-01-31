@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 112d530c765fc74ab4ea767cb3168977d1b45f47
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 737993ac80b26d490915af3e97fd6a9552246aee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138363"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792110"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>Метод ICorDebugRegisterSet::GetRegisters
 Возвращает значение каждого регистра (на компьютере, выполняющем в данный момент код), который задается битовой маской.  
@@ -60,7 +60,7 @@ HRESULT GetRegisters (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [Интерфейс ICorDebugRegisterSet](icordebugregisterset-interface.md)
+- [Интерфейс ICorDebugRegisterSet2](icordebugregisterset2-interface.md)

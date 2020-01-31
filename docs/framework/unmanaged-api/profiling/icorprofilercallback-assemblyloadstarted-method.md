@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: 34744132442440ef160841db5a50bf75355f2410
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 9899ea8afc739207ad0b70e9720e90e5c7f09fcf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445160"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790195"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>Метод ICorProfilerCallback::AssemblyLoadStarted
 Уведомляет профилировщик о загрузке сборки.  
@@ -32,11 +32,13 @@ HRESULT AssemblyLoadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `assemblyId`  
- окне Определяет загружаемую сборку.  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="parameters"></a>Параметры
+
+- `assemblyId`
+
+  \[в] определяет загружаемую сборку.
+
+## <a name="remarks"></a>Заметки  
  Значение `assemblyId` недопустимо для информационного запроса, пока не вызван метод [ICorProfilerCallback:: AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) .  
   
 ## <a name="requirements"></a>Требования  

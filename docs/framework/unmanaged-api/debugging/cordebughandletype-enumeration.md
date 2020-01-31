@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 15572037940f7c45ec5dcb7e34599756e15fd3bd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098174"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793915"
 ---
 # <a name="cordebughandletype-enumeration"></a>Перечисление CorDebugHandleType
 Указывает тип обработки.  
@@ -33,7 +33,7 @@ typedef enum CorDebugHandleType {
 } CorDebugHandleType;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -49,6 +49,6 @@ typedef enum CorDebugHandleType {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Перечисления отладки](debugging-enumerations.md)

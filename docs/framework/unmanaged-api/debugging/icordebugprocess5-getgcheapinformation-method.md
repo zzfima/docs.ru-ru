@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9538ceb-230a-4079-9cb2-903dbf5c1848
 topic_type:
 - apiref
-ms.openlocfilehash: 3aa9fe884b16a239f5105dd262edeb8fc3e4abaa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 703f159c5bc6b73dcd0e770bdeb61f676aae034c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084406"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792380"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>Метод ICorDebugProcess5::GetGCHeapInformation
 Содержит общие сведения о куче сборки мусора, включая возможность перечисления в данный момент.  
@@ -35,7 +35,7 @@ HRESULT GetGCHeapInformation(
   
 ## <a name="parameters"></a>Параметры  
  `pHeapInfo`  
- заполняет Указатель на значение [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) , предоставляющее общие сведения о куче сборки мусора.  
+ заполняет Указатель на [COR_HEAPINFO](cor-heapinfo-structure.md) значение, предоставляющее общие сведения о куче сборки мусора.  
   
 ## <a name="remarks"></a>Заметки  
  Перед перечислением областей кучи или отдельных куч необходимо вызвать метод `ICorDebugProcess5::GetGCHeapInformation`, чтобы убедиться в том, что структуры сборки мусора в этом процессе являются допустимыми. Невозможно выполнить обход кучи сборки мусора, пока выполняется сбор. В противном случае перечисление может собирать недопустимые структуры сборки мусора.  
@@ -49,7 +49,7 @@ HRESULT GetGCHeapInformation(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugProcess5](icordebugprocess5-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
