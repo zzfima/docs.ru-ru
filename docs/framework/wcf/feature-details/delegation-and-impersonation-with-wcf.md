@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 578957888daf7be20ab7418a46c533a011b3d2ac
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3fd90cde16afdfe32b9bd0533ba04e35928d2706
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964165"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920203"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Делегирование и олицетворение с использованием WCF
 *Олицетворение* - это стандартная техника, которую службы используют для ограничения клиентского доступа к ресурсам домена службы. В роли ресурсов домена службы могут выступать ресурсы компьютера, например локальные файлы (олицетворение), или ресурсы, расположенные на другом компьютере, например общая папка (делегирование). Пример приложения см. в разделе [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Пример использования олицетворения см. в разделе [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "75964165"
  Инфраструктура WCF может олицетворять вызывающий объект только в том случае, если вызывающий объект прошел проверку подлинности с учетными данными, которые можно сопоставить с учетной записью пользователя Windows. Если служба настроена на прохождение проверки подлинности с использованием учетных данных, которые невозможно сопоставить с учетной записью Windows, метод службы не выполняется.  
   
 > [!NOTE]
-> В [!INCLUDE[wxp](../../../../includes/wxp-md.md)]происходит сбой олицетворения, если создается маркер контекста безопасности с отслеживанием состояния, что приводит к появлению исключения <xref:System.InvalidOperationException>. Дополнительные сведения см. в разделе [неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+> В Windows XP олицетворение завершается сбоем, если создается SCT с отслеживанием состояния, что приводит к <xref:System.InvalidOperationException>. Дополнительные сведения см. в разделе [неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Олицетворение в методе службы: императивная модель  
  Иногда вызывающему объекту требуется олицетворять не весь метод службы, а лишь его часть. В этом случае необходимо получить удостоверение Windows вызывающего объекта внутри метода службы и императивно выполнить олицетворение. Для этого необходимо с помощью свойства <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> объекта <xref:System.ServiceModel.ServiceSecurityContext> возвратить экземпляр класса <xref:System.Security.Principal.WindowsIdentity> и вызвать метод <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> перед использованием этого экземпляра.  

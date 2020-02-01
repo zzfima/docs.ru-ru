@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 71dbf395f43c8028a703a342c032f2b8d022a61c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347086"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921292"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
 Чтобы сделать сертификат X. 509 доступным для Windows Communication Foundation (WCF), код приложения должен указать имя и расположение хранилища сертификатов. В некоторых случаях идентификатор процесса должен иметь доступ к файлу, который содержит закрытый ключ, связанный с сертификатом X.509. Чтобы получить закрытый ключ, связанный с сертификатом X. 509 в хранилище сертификатов, WCF должен иметь разрешение на это. По умолчанию доступ к закрытому ключу сертификата имеют только владелец и системная учетная запись.  
@@ -60,7 +60,7 @@ ms.locfileid: "75347086"
         |Клиент (консоль или приложение WinForms).|Текущий пользователь.|  
         |Служба, являющаяся резидентной.|Текущий пользователь.|  
         |Служба, размещенная в IIS 6,0 (Windows Server 2003) или IIS 7,0 (Windows Vista).|NETWORK SERVICE|  
-        |Служба, размещенная в IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Управляется с помощью элемента `<processModel>` в файле Machine.config. По умолчанию используется учетная запись ASPNET.|  
+        |Служба, размещенная в IIS 5. X (Windows XP).|Управляется с помощью элемента `<processModel>` в файле Machine.config. По умолчанию используется учетная запись ASPNET.|  
   
     5. Предоставьте доступ на чтение к файлу, содержащему закрытый ключ, для учетной записи, от имени которой выполняется WCF, используя такой инструмент, как icacls. exe.  
   

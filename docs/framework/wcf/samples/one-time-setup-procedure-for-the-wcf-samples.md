@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1d7b5f6cb5922bde4b002611209ea3464f8e457c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744784"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921171"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 
@@ -63,7 +63,7 @@ ms.locfileid: "76744784"
     > [!NOTE]
     > Если этот шаг не выполнен, построение всех образцов, размещенных в службах IIS, завершится с ошибкой. Убедитесь, что разрешения заданы правильно, или запустите и командную строку пакета SDK, и командную строку Visual Studio (2012) от имени администратора.
 
-11. Создайте на компьютере каталог C:\logs. Некоторые образцы могут ожидать его наличия. Убедитесь, что соответствующая учетная запись имеет разрешение на запись в этот каталог. Для Windows 7, Windows Vista и Windows Server 2008 R2 эта учетная запись является **сетевой службой**. Для Windows Server 2008 учетная запись — NT Authority\Network Service. Для [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и Windows Server 2003 учетная запись — ASPNET.
+11. Создайте на компьютере каталог C:\logs. Некоторые образцы могут ожидать его наличия. Убедитесь, что соответствующая учетная запись имеет разрешение на запись в этот каталог. Для Windows 7, Windows Vista и Windows Server 2008 R2 эта учетная запись является **сетевой службой**. Для Windows Server 2008 учетная запись — NT Authority\Network Service. Для Windows XP и Windows Server 2003 учетная запись — ASPNET.
 
 12. Запустите файл Setupcerttool.bat. Этот файл находится в папке \<InstallPath > \ WF_WCF_Samples \Вкф\сетуп\.  Этот скрипт выполнит следующие задачи.
 
