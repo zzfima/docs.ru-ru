@@ -1,15 +1,15 @@
 ---
 title: Развертывание приложения .NET для Apache Spark в Azure HDInsight
 description: Узнайте, как развернуть приложение .NET для Apache Spark в HDInsight.
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460719"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860782"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Учебник. Развертывание приложения .NET для Apache Spark в Azure HDInsight
 
@@ -57,7 +57,7 @@ ms.locfileid: "73460719"
 
 3. В разделе **Основные сведения** укажите следующие значения.
 
-    |Свойство.  |ОПИСАНИЕ  |
+    |Свойство.  |Описание  |
     |---------|---------|
     |Подписка  | В раскрывающемся списке выберите одну из активных подписок Azure. |
     |Группа ресурсов | Укажите, следует ли создать новую группу ресурсов или использовать имеющуюся. Группа ресурсов — это контейнер, содержащий связанные ресурсы для решения Azure. |
@@ -71,7 +71,7 @@ ms.locfileid: "73460719"
 
 4. По завершении выберите **Next: Storage >>** (Далее: хранилище), чтобы перейти на страницу **Хранилище**. На странице **Хранилище** укажите следующие значения.
 
-    |Свойство.  |ОПИСАНИЕ  |
+    |Свойство.  |Описание  |
     |---------|---------|
     |Тип первичного хранилища|Используйте значение **службы хранилища Azure** по умолчанию.|
     |Метод выбора|Используйте значение **Выбрать в списке** по умолчанию.|
@@ -148,7 +148,7 @@ ms.locfileid: "73460719"
 
 2. Выберите **+ Отправить новый** и укажите следующие значения.
 
-   |Свойство.  |ОПИСАНИЕ  |
+   |Свойство.  |Описание  |
    |---------|---------|
    | Тип скрипта |Другой|
    | name | Установка рабочей роли|
@@ -169,7 +169,7 @@ ms.locfileid: "73460719"
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
