@@ -3,12 +3,12 @@ title: Установка платформы .NET Framework в Windows 7 с па
 ms.custom: updateeachrelease
 description: Сведения об установке платформы .NET Framework в Windows 7 с пакетом обновления 1 (SP1).
 ms.date: 04/18/2019
-ms.openlocfilehash: 729e1ca86d6f7b4268ce2c8b601b700817501128
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77177b8c4a40f68eb139f5d765bcb421a4d6bb49
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716349"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965858"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Установка .NET Framework в Windows 7 с пакетом обновления 1 (SP1) и Windows Server 2008 R2
 
@@ -27,7 +27,7 @@ ms.locfileid: "75716349"
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 
-Платформа [.NET Framework 3.5](https://www.microsoft.com/download/details.aspx?id=21) входит в состав Windows 7.
+Платформа [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) входит в состав Windows 7.
 
 Платформа .NET Framework 3.5 поддерживает приложения, собранные для платформы .NET Framework версий с 1.0 по 3.5.
 

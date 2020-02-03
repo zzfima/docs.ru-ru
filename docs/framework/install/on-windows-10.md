@@ -3,12 +3,12 @@ title: Установка платформы .NET Framework в Windows 10
 description: Сведения об установке платформы .NET Framework в Windows 10 или Windows Server 2016.
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716370"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965975"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Установка платформы .NET Framework в Windows 10 и Windows Server 2016 и более поздней версии
 
@@ -50,7 +50,7 @@ ms.locfileid: "75716370"
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) является последней поддерживаемой версией платформы .NET Framework в Windows 10 1507 и 1511.
+[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) является последней поддерживаемой версией платформы .NET Framework в Windows 10 1507 и 1511.
 
 Платформа .NET Framework 4.6.2 поддерживает приложения, созданные для платформы .NET Framework версий с 4.0 по 4.6.2.
 
