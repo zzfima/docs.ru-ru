@@ -15,26 +15,26 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742098"
 ---
-# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="52721-102">Построение и развертывание приложений WPF</span><span class="sxs-lookup"><span data-stu-id="52721-102">Building and Deploying WPF Applications</span></span>
-<span data-ttu-id="52721-103">Модель сборки и развертывания предоставляет возможность создавать и развертывать приложения локально и удаленно, включая следующие:</span><span class="sxs-lookup"><span data-stu-id="52721-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
+# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="896a7-102">Построение и развертывание приложений WPF</span><span class="sxs-lookup"><span data-stu-id="896a7-102">Building and Deploying WPF Applications</span></span>
+<span data-ttu-id="896a7-103">Модель сборки и развертывания предоставляет возможность создавать и развертывать приложения локально и удаленно, включая следующие:</span><span class="sxs-lookup"><span data-stu-id="896a7-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
   
-- <span data-ttu-id="52721-104">MSBuild: система сборки .NET, расположенная в пространстве имен Microsoft. Build. Tasks. Windows.</span><span class="sxs-lookup"><span data-stu-id="52721-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
+- <span data-ttu-id="896a7-104">MSBuild: система сборки .NET, расположенная в пространстве имен Microsoft. Build. Tasks. Windows.</span><span class="sxs-lookup"><span data-stu-id="896a7-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
   
-- <span data-ttu-id="52721-105">Ресурсы: работа с ресурсами пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="52721-105">Resources: working with UI resources.</span></span>  
+- <span data-ttu-id="896a7-105">Ресурсы: работа с ресурсами пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="896a7-105">Resources: working with UI resources.</span></span>  
   
-- <span data-ttu-id="52721-106">Развертывание ClickOnce: система публикации и развертывания .NET.</span><span class="sxs-lookup"><span data-stu-id="52721-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
+- <span data-ttu-id="896a7-106">Развертывание ClickOnce: система публикации и развертывания .NET.</span><span class="sxs-lookup"><span data-stu-id="896a7-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="52721-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="52721-107">In This Section</span></span>  
- [<span data-ttu-id="52721-108">Построение приложения WPF</span><span class="sxs-lookup"><span data-stu-id="52721-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
- [<span data-ttu-id="52721-109">Развертывание приложений WPF</span><span class="sxs-lookup"><span data-stu-id="52721-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
- [<span data-ttu-id="52721-110">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="52721-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="896a7-107">в этом разделе</span><span class="sxs-lookup"><span data-stu-id="896a7-107">In This Section</span></span>  
+ [<span data-ttu-id="896a7-108">Построение приложения WPF</span><span class="sxs-lookup"><span data-stu-id="896a7-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="896a7-109">Развертывание приложений WPF</span><span class="sxs-lookup"><span data-stu-id="896a7-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="896a7-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="896a7-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="52721-111">Справочные сведения</span><span class="sxs-lookup"><span data-stu-id="52721-111">Reference</span></span>  
- <span data-ttu-id="52721-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="52721-112">MSBuild</span></span>  
+## <a name="reference"></a><span data-ttu-id="896a7-111">Справочник</span><span class="sxs-lookup"><span data-stu-id="896a7-111">Reference</span></span>  
+ <span data-ttu-id="896a7-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="896a7-112">MSBuild</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="52721-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="52721-113">Related Sections</span></span>  
- [<span data-ttu-id="52721-114">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="52721-114">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="52721-115">Windows в WPF</span><span class="sxs-lookup"><span data-stu-id="52721-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
-  [<span data-ttu-id="52721-116">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="52721-116">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="52721-117">Общие сведения о приложениях браузера WPF XAML</span><span class="sxs-lookup"><span data-stu-id="52721-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
-  [<span data-ttu-id="52721-118">Размещение</span><span class="sxs-lookup"><span data-stu-id="52721-118">Hosting</span></span>](hosting-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="896a7-113">См. также</span><span class="sxs-lookup"><span data-stu-id="896a7-113">Related Sections</span></span>  
+ [<span data-ttu-id="896a7-114">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="896a7-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="896a7-115">Windows в WPF</span><span class="sxs-lookup"><span data-stu-id="896a7-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="896a7-116">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="896a7-116">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="896a7-117">Общие сведения о приложениях браузера WPF XAML</span><span class="sxs-lookup"><span data-stu-id="896a7-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
+  [<span data-ttu-id="896a7-118">Размещение</span><span class="sxs-lookup"><span data-stu-id="896a7-118">Hosting</span></span>](hosting-wpf-applications.md)
