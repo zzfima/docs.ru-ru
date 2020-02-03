@@ -16,25 +16,25 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736593"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="fb2b9-102">Практическое руководство. Сокрытие заголовков столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fb2b9-102">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="fb2b9-103">Иногда может потребоваться отобразить <xref:System.Windows.Forms.DataGridView> без заголовков столбцов.</span><span class="sxs-lookup"><span data-stu-id="fb2b9-103">Sometimes you will want to display a <xref:System.Windows.Forms.DataGridView> without column headers.</span></span> <span data-ttu-id="fb2b9-104">В элементе управления <xref:System.Windows.Forms.DataGridView> значение свойства <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> определяет, отображаются ли заголовки столбцов.</span><span class="sxs-lookup"><span data-stu-id="fb2b9-104">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> property value determines whether the column headers are displayed.</span></span>  
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="19f76-102">Практическое руководство. Сокрытие заголовков столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="19f76-102">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="19f76-103">Иногда может потребоваться отобразить <xref:System.Windows.Forms.DataGridView> без заголовков столбцов.</span><span class="sxs-lookup"><span data-stu-id="19f76-103">Sometimes you will want to display a <xref:System.Windows.Forms.DataGridView> without column headers.</span></span> <span data-ttu-id="19f76-104">В элементе управления <xref:System.Windows.Forms.DataGridView> значение свойства <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> определяет, отображаются ли заголовки столбцов.</span><span class="sxs-lookup"><span data-stu-id="19f76-104">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> property value determines whether the column headers are displayed.</span></span>  
   
-### <a name="to-hide-the-column-headers"></a><span data-ttu-id="fb2b9-105">Скрытие заголовков столбцов</span><span class="sxs-lookup"><span data-stu-id="fb2b9-105">To hide the column headers</span></span>  
+### <a name="to-hide-the-column-headers"></a><span data-ttu-id="19f76-105">Скрытие заголовков столбцов</span><span class="sxs-lookup"><span data-stu-id="19f76-105">To hide the column headers</span></span>  
   
-- <span data-ttu-id="fb2b9-106">Задайте для свойства <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> значение `false`.</span><span class="sxs-lookup"><span data-stu-id="fb2b9-106">Set the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> property to `false`.</span></span>  
+- <span data-ttu-id="19f76-106">Установите свойство <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> в значение `false`.</span><span class="sxs-lookup"><span data-stu-id="19f76-106">Set the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> property to `false`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#062](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#062)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#062](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#062)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="fb2b9-107">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="fb2b9-107">Compiling the Code</span></span>  
- <span data-ttu-id="fb2b9-108">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="fb2b9-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="19f76-107">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="19f76-107">Compiling the Code</span></span>  
+ <span data-ttu-id="19f76-108">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="19f76-108">This example requires:</span></span>  
   
-- <span data-ttu-id="fb2b9-109">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;</span><span class="sxs-lookup"><span data-stu-id="fb2b9-109">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+- <span data-ttu-id="19f76-109">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;</span><span class="sxs-lookup"><span data-stu-id="19f76-109">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
-- <span data-ttu-id="fb2b9-110">ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fb2b9-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="19f76-110">ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="19f76-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb2b9-111">См. также:</span><span class="sxs-lookup"><span data-stu-id="fb2b9-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19f76-111">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="19f76-111">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="fb2b9-112">Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fb2b9-112">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [<span data-ttu-id="19f76-112">Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="19f76-112">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)

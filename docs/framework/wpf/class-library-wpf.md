@@ -12,28 +12,28 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742291"
 ---
-# <a name="class-library-wpf"></a><span data-ttu-id="dc226-102">Библиотека классов (WPF)</span><span class="sxs-lookup"><span data-stu-id="dc226-102">Class Library (WPF)</span></span>
-<span data-ttu-id="dc226-103">Следующие ссылки относятся к пространствам имен, содержащим [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API.</span><span class="sxs-lookup"><span data-stu-id="dc226-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
+# <a name="class-library-wpf"></a><span data-ttu-id="b00ce-102">Библиотека классов (WPF)</span><span class="sxs-lookup"><span data-stu-id="b00ce-102">Class Library (WPF)</span></span>
+<span data-ttu-id="b00ce-103">Следующие ссылки относятся к пространствам имен, содержащим [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API.</span><span class="sxs-lookup"><span data-stu-id="b00ce-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dc226-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="dc226-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b00ce-104">в этом разделе</span><span class="sxs-lookup"><span data-stu-id="b00ce-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="dc226-105">Справочные сведения</span><span class="sxs-lookup"><span data-stu-id="dc226-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b00ce-105">Справочник</span><span class="sxs-lookup"><span data-stu-id="b00ce-105">Reference</span></span>  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <span data-ttu-id="dc226-106"><xref:Microsoft.Win32> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-106"><xref:Microsoft.Win32> (shared)</span></span>  
+- <span data-ttu-id="b00ce-106"><xref:Microsoft.Win32> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-106"><xref:Microsoft.Win32> (shared)</span></span>  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <span data-ttu-id="dc226-107"><xref:System.Collections.ObjectModel> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
+- <span data-ttu-id="b00ce-107"><xref:System.Collections.ObjectModel> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
   
-- <span data-ttu-id="dc226-108"><xref:System.Collections.Specialized> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-108"><xref:System.Collections.Specialized> (shared)</span></span>  
+- <span data-ttu-id="b00ce-108"><xref:System.Collections.Specialized> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-108"><xref:System.Collections.Specialized> (shared)</span></span>  
   
-- <span data-ttu-id="dc226-109"><xref:System.ComponentModel> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-109"><xref:System.ComponentModel> (shared)</span></span>  
+- <span data-ttu-id="b00ce-109"><xref:System.ComponentModel> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-109"><xref:System.ComponentModel> (shared)</span></span>  
   
-- <span data-ttu-id="dc226-110"><xref:System.Diagnostics> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-110"><xref:System.Diagnostics> (shared)</span></span>  
+- <span data-ttu-id="b00ce-110"><xref:System.Diagnostics> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-110"><xref:System.Diagnostics> (shared)</span></span>  
   
-- <span data-ttu-id="dc226-111"><xref:System.IO> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-111"><xref:System.IO> (shared)</span></span>  
+- <span data-ttu-id="b00ce-111"><xref:System.IO> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-111"><xref:System.IO> (shared)</span></span>  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76742291"
   
 - <xref:System.Printing.Interop>  
   
-- <span data-ttu-id="dc226-112"><xref:System.Security.Permissions> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-112"><xref:System.Security.Permissions> (shared)</span></span>  
+- <span data-ttu-id="b00ce-112"><xref:System.Security.Permissions> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-112"><xref:System.Security.Permissions> (shared)</span></span>  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "76742291"
   
 - <xref:System.Windows.Interop>  
   
-- <span data-ttu-id="dc226-113"><xref:System.Windows.Markup> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-113"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="b00ce-113"><xref:System.Windows.Markup> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-113"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -123,10 +123,10 @@ ms.locfileid: "76742291"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a><span data-ttu-id="dc226-114">Поддержка XAML в .NET 4</span><span class="sxs-lookup"><span data-stu-id="dc226-114">XAML Support in .NET 4</span></span>  
- <span data-ttu-id="dc226-115">Следующие пространства имен содержат типы из сборки System. XAML.</span><span class="sxs-lookup"><span data-stu-id="dc226-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="dc226-116">System. XAML предоставляет общую поддержку языка XAML для платформ, таких как WPF, построенных на .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="dc226-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
+## <a name="xaml-support-in-net-4"></a><span data-ttu-id="b00ce-114">Поддержка XAML в .NET 4</span><span class="sxs-lookup"><span data-stu-id="b00ce-114">XAML Support in .NET 4</span></span>  
+ <span data-ttu-id="b00ce-115">Следующие пространства имен содержат типы из сборки System. XAML.</span><span class="sxs-lookup"><span data-stu-id="b00ce-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="b00ce-116">System. XAML предоставляет общую поддержку языка XAML для платформ, таких как WPF, построенных на .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="b00ce-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
   
-- <span data-ttu-id="dc226-117"><xref:System.Windows.Markup> (общий)</span><span class="sxs-lookup"><span data-stu-id="dc226-117"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="b00ce-117"><xref:System.Windows.Markup> (общий)</span><span class="sxs-lookup"><span data-stu-id="b00ce-117"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Xaml>  
   

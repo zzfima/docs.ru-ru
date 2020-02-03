@@ -17,104 +17,104 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739521"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="342bd-102">Как создать Windows Forms приложение из командной строки</span><span class="sxs-lookup"><span data-stu-id="342bd-102">How to: Create a Windows Forms application from the command line</span></span>
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="07a84-102">Как создать Windows Forms приложение из командной строки</span><span class="sxs-lookup"><span data-stu-id="07a84-102">How to: Create a Windows Forms application from the command line</span></span>
 
-<span data-ttu-id="342bd-103">В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки.</span><span class="sxs-lookup"><span data-stu-id="342bd-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="342bd-104">Visual Studio предлагает расширенную поддержку этих процедур.</span><span class="sxs-lookup"><span data-stu-id="342bd-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="342bd-105">См. также раздел [Пошаговое руководство. размещение элемента управления Windows Forms в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="342bd-105">Also see [Walkthrough: Hosting a Windows Forms Control in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span></span>
+<span data-ttu-id="07a84-103">В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки.</span><span class="sxs-lookup"><span data-stu-id="07a84-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="07a84-104">Visual Studio предлагает расширенную поддержку этих процедур.</span><span class="sxs-lookup"><span data-stu-id="07a84-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="07a84-105">См. также раздел [Пошаговое руководство. размещение элемента управления Windows Forms в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="07a84-105">Also see [Walkthrough: Hosting a Windows Forms Control in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span></span>
   
-## <a name="procedure"></a><span data-ttu-id="342bd-106">Процедура .</span><span class="sxs-lookup"><span data-stu-id="342bd-106">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="07a84-106">Процедура</span><span class="sxs-lookup"><span data-stu-id="07a84-106">Procedure</span></span>  
   
-#### <a name="to-create-the-form"></a><span data-ttu-id="342bd-107">Создание формы</span><span class="sxs-lookup"><span data-stu-id="342bd-107">To create the form</span></span>  
+#### <a name="to-create-the-form"></a><span data-ttu-id="07a84-107">Создание формы</span><span class="sxs-lookup"><span data-stu-id="07a84-107">To create the form</span></span>  
   
-1. <span data-ttu-id="342bd-108">В пустом файле кода введите следующие инструкции `Imports` или `using`:</span><span class="sxs-lookup"><span data-stu-id="342bd-108">In an empty code file, type the following `Imports` or `using` statements:</span></span>  
+1. <span data-ttu-id="07a84-108">В пустом файле кода введите следующие инструкции `Imports` или `using`:</span><span class="sxs-lookup"><span data-stu-id="07a84-108">In an empty code file, type the following `Imports` or `using` statements:</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2. <span data-ttu-id="342bd-109">Объявите класс с именем `Form1`, который наследуется от класса Form:</span><span class="sxs-lookup"><span data-stu-id="342bd-109">Declare a class named `Form1` that inherits from the Form class:</span></span>
+2. <span data-ttu-id="07a84-109">Объявите класс с именем `Form1`, который наследуется от класса Form:</span><span class="sxs-lookup"><span data-stu-id="07a84-109">Declare a class named `Form1` that inherits from the Form class:</span></span>
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. <span data-ttu-id="342bd-110">Создайте конструктор без параметров для `Form1`.</span><span class="sxs-lookup"><span data-stu-id="342bd-110">Create a parameterless constructor for `Form1`.</span></span>
+3. <span data-ttu-id="07a84-110">Создайте конструктор без параметров для `Form1`.</span><span class="sxs-lookup"><span data-stu-id="07a84-110">Create a parameterless constructor for `Form1`.</span></span>
   
-     <span data-ttu-id="342bd-111">В следующий процедуре будет добавлен дополнительный код конструктора.</span><span class="sxs-lookup"><span data-stu-id="342bd-111">You will add more code to the constructor in a subsequent procedure.</span></span>
+     <span data-ttu-id="07a84-111">В следующий процедуре будет добавлен дополнительный код конструктора.</span><span class="sxs-lookup"><span data-stu-id="07a84-111">You will add more code to the constructor in a subsequent procedure.</span></span>
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4. <span data-ttu-id="342bd-112">Добавьте в класс метод `Main`.</span><span class="sxs-lookup"><span data-stu-id="342bd-112">Add a `Main` method to the class.</span></span>
+4. <span data-ttu-id="07a84-112">Добавьте в класс метод `Main`.</span><span class="sxs-lookup"><span data-stu-id="07a84-112">Add a `Main` method to the class.</span></span>
   
-    1. <span data-ttu-id="342bd-113">Примените <xref:System.STAThreadAttribute> к методу C# `Main`, чтобы указать, что приложение Windows Forms является однопотоковым апартаментом.</span><span class="sxs-lookup"><span data-stu-id="342bd-113">Apply the <xref:System.STAThreadAttribute> to the C# `Main` method to specify your Windows Forms application is a single-threaded apartment.</span></span> <span data-ttu-id="342bd-114">(Атрибут не является обязательным в Visual Basic, так как приложения Windows Forms, разработанные с помощью Visual Basic, по умолчанию используют модель апартамента с одним потоком.)</span><span class="sxs-lookup"><span data-stu-id="342bd-114">(The attribute is not necessary in Visual Basic, since Windows forms applications developed with Visual Basic use a single-threaded apartment model by default.)</span></span>  
+    1. <span data-ttu-id="07a84-113">Примените <xref:System.STAThreadAttribute> к методу C# `Main`, чтобы указать, что приложение Windows Forms является однопотоковым апартаментом.</span><span class="sxs-lookup"><span data-stu-id="07a84-113">Apply the <xref:System.STAThreadAttribute> to the C# `Main` method to specify your Windows Forms application is a single-threaded apartment.</span></span> <span data-ttu-id="07a84-114">(Атрибут не является обязательным в Visual Basic, так как приложения Windows Forms, разработанные с помощью Visual Basic, по умолчанию используют модель апартамента с одним потоком.)</span><span class="sxs-lookup"><span data-stu-id="07a84-114">(The attribute is not necessary in Visual Basic, since Windows forms applications developed with Visual Basic use a single-threaded apartment model by default.)</span></span>  
   
-    2. <span data-ttu-id="342bd-115">Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, чтобы применить стили операционной системы к приложению.</span><span class="sxs-lookup"><span data-stu-id="342bd-115">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to apply operating system styles to your application.</span></span>  
+    2. <span data-ttu-id="07a84-115">Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, чтобы применить стили операционной системы к приложению.</span><span class="sxs-lookup"><span data-stu-id="07a84-115">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to apply operating system styles to your application.</span></span>  
   
-    3. <span data-ttu-id="342bd-116">Создайте экземпляр формы и запустите его.</span><span class="sxs-lookup"><span data-stu-id="342bd-116">Create an instance of the form and run it.</span></span>  
+    3. <span data-ttu-id="07a84-116">Создайте экземпляр формы и запустите его.</span><span class="sxs-lookup"><span data-stu-id="07a84-116">Create an instance of the form and run it.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="342bd-117">Компиляция и запуск приложения</span><span class="sxs-lookup"><span data-stu-id="342bd-117">To compile and run the application</span></span>  
+#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="07a84-117">Компиляция и запуск приложения</span><span class="sxs-lookup"><span data-stu-id="07a84-117">To compile and run the application</span></span>  
   
-1. <span data-ttu-id="342bd-118">В командной строке .NET Framework перейдите к папке, в которой содержится класс `Form1`.</span><span class="sxs-lookup"><span data-stu-id="342bd-118">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
+1. <span data-ttu-id="07a84-118">В командной строке .NET Framework перейдите к папке, в которой содержится класс `Form1`.</span><span class="sxs-lookup"><span data-stu-id="07a84-118">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
   
-2. <span data-ttu-id="342bd-119">Скомпилируйте форму.</span><span class="sxs-lookup"><span data-stu-id="342bd-119">Compile the form.</span></span>  
+2. <span data-ttu-id="07a84-119">Скомпилируйте форму.</span><span class="sxs-lookup"><span data-stu-id="07a84-119">Compile the form.</span></span>  
   
-    - <span data-ttu-id="342bd-120">При использовании C#введите: `csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="342bd-120">If you are using C#, type: `csc form1.cs`</span></span>  
+    - <span data-ttu-id="07a84-120">При использовании C#введите: `csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="07a84-120">If you are using C#, type: `csc form1.cs`</span></span>  
   
          `-or-`  
   
-    - <span data-ttu-id="342bd-121">Если используется Visual Basic, введите: `vbc form1.vb`</span><span class="sxs-lookup"><span data-stu-id="342bd-121">If you are using Visual Basic, type: `vbc form1.vb`</span></span>  
+    - <span data-ttu-id="07a84-121">Если используется Visual Basic, введите: `vbc form1.vb`</span><span class="sxs-lookup"><span data-stu-id="07a84-121">If you are using Visual Basic, type: `vbc form1.vb`</span></span>  
   
-3. <span data-ttu-id="342bd-122">В командной строке введите: `Form1.exe`</span><span class="sxs-lookup"><span data-stu-id="342bd-122">At the command prompt, type: `Form1.exe`</span></span>  
+3. <span data-ttu-id="07a84-122">В командной строке введите следующий текст: `Form1.exe`.</span><span class="sxs-lookup"><span data-stu-id="07a84-122">At the command prompt, type: `Form1.exe`</span></span>  
   
-## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="342bd-123">Добавление элемента управления и обработка события</span><span class="sxs-lookup"><span data-stu-id="342bd-123">Adding a control and handling an event</span></span>
+## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="07a84-123">Добавление элемента управления и обработка события</span><span class="sxs-lookup"><span data-stu-id="07a84-123">Adding a control and handling an event</span></span>
 
-<span data-ttu-id="342bd-124">В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее.</span><span class="sxs-lookup"><span data-stu-id="342bd-124">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="342bd-125">В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него.</span><span class="sxs-lookup"><span data-stu-id="342bd-125">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="342bd-126">Дополнительные сведения об элементах управления, которые можно добавить в Windows Forms, см. в разделе [элементы управления Windows Forms](./controls/index.md).</span><span class="sxs-lookup"><span data-stu-id="342bd-126">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](./controls/index.md).</span></span>
+<span data-ttu-id="07a84-124">В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее.</span><span class="sxs-lookup"><span data-stu-id="07a84-124">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="07a84-125">В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него.</span><span class="sxs-lookup"><span data-stu-id="07a84-125">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="07a84-126">Дополнительные сведения об элементах управления, которые можно добавить в Windows Forms, см. в разделе [элементы управления Windows Forms](./controls/index.md).</span><span class="sxs-lookup"><span data-stu-id="07a84-126">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](./controls/index.md).</span></span>
   
- <span data-ttu-id="342bd-127">Помимо понимания способов создания приложений Windows Forms, следует обладать общими знаниями о программировании на основе событий и способах обработки данных, введенных пользователем.</span><span class="sxs-lookup"><span data-stu-id="342bd-127">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="342bd-128">Дополнительные сведения см. в статьях [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)и [обработка входных данных пользователя](./controls/handling-user-input.md) .</span><span class="sxs-lookup"><span data-stu-id="342bd-128">For more information, see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md), and [Handling User Input](./controls/handling-user-input.md)</span></span>  
+ <span data-ttu-id="07a84-127">Помимо понимания способов создания приложений Windows Forms, следует обладать общими знаниями о программировании на основе событий и способах обработки данных, введенных пользователем.</span><span class="sxs-lookup"><span data-stu-id="07a84-127">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="07a84-128">Дополнительные сведения см. в статьях [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)и [обработка входных данных пользователя](./controls/handling-user-input.md) .</span><span class="sxs-lookup"><span data-stu-id="07a84-128">For more information, see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md), and [Handling User Input](./controls/handling-user-input.md)</span></span>  
   
-#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="342bd-129">Объявление элемента управления типа "Кнопка" и обработка событий щелчка мышью для нее</span><span class="sxs-lookup"><span data-stu-id="342bd-129">To declare a button control and handle its click event</span></span>  
+#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="07a84-129">Объявление элемента управления типа "Кнопка" и обработка событий щелчка мышью для нее</span><span class="sxs-lookup"><span data-stu-id="07a84-129">To declare a button control and handle its click event</span></span>  
   
-1. <span data-ttu-id="342bd-130">Объявите элемент управления типа "Кнопка" с именем `button1`.</span><span class="sxs-lookup"><span data-stu-id="342bd-130">Declare a button control named `button1`.</span></span>  
+1. <span data-ttu-id="07a84-130">Объявите элемент управления типа "Кнопка" с именем `button1`.</span><span class="sxs-lookup"><span data-stu-id="07a84-130">Declare a button control named `button1`.</span></span>  
   
-2. <span data-ttu-id="342bd-131">В конструкторе создайте кнопку и задайте ее свойства <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> и <xref:System.Windows.Forms.Control.Text%2A>.</span><span class="sxs-lookup"><span data-stu-id="342bd-131">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
+2. <span data-ttu-id="07a84-131">В конструкторе создайте кнопку и задайте ее свойства <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> и <xref:System.Windows.Forms.Control.Text%2A>.</span><span class="sxs-lookup"><span data-stu-id="07a84-131">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
   
-3. <span data-ttu-id="342bd-132">Добавьте кнопку в форму.</span><span class="sxs-lookup"><span data-stu-id="342bd-132">Add the button to the form.</span></span>  
+3. <span data-ttu-id="07a84-132">Добавьте кнопку в форму.</span><span class="sxs-lookup"><span data-stu-id="07a84-132">Add the button to the form.</span></span>  
   
-     <span data-ttu-id="342bd-133">В следующем примере кода показано, как объявить элемент управления Button:</span><span class="sxs-lookup"><span data-stu-id="342bd-133">The following code example demonstrates how to declare the button control:</span></span>
+     <span data-ttu-id="07a84-133">В следующем примере кода показано, как объявить элемент управления Button:</span><span class="sxs-lookup"><span data-stu-id="07a84-133">The following code example demonstrates how to declare the button control:</span></span>
   
      [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
-4. <span data-ttu-id="342bd-134">Создайте метод для обработки события <xref:System.Windows.Forms.Control.Click> для кнопки.</span><span class="sxs-lookup"><span data-stu-id="342bd-134">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
+4. <span data-ttu-id="07a84-134">Создайте метод для обработки события <xref:System.Windows.Forms.Control.Click> для кнопки.</span><span class="sxs-lookup"><span data-stu-id="07a84-134">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
   
-5. <span data-ttu-id="342bd-135">В обработчике событий щелчка мышью выведите элемент управления <xref:System.Windows.Forms.MessageBox> с сообщением "Здравствуй, мир".</span><span class="sxs-lookup"><span data-stu-id="342bd-135">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
+5. <span data-ttu-id="07a84-135">В обработчике событий щелчка мышью выведите элемент управления <xref:System.Windows.Forms.MessageBox> с сообщением "Здравствуй, мир".</span><span class="sxs-lookup"><span data-stu-id="07a84-135">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
   
-     <span data-ttu-id="342bd-136">В следующем примере кода показано, как обрабатывается событие Click элемента управления Button:</span><span class="sxs-lookup"><span data-stu-id="342bd-136">The following code example demonstrates how to handle the button control's click event:</span></span>
+     <span data-ttu-id="07a84-136">В следующем примере кода показано, как обрабатывается событие Click элемента управления Button:</span><span class="sxs-lookup"><span data-stu-id="07a84-136">The following code example demonstrates how to handle the button control's click event:</span></span>
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6. <span data-ttu-id="342bd-137">Свяжите событие <xref:System.Windows.Forms.Control.Click> с созданным методом.</span><span class="sxs-lookup"><span data-stu-id="342bd-137">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
+6. <span data-ttu-id="07a84-137">Свяжите событие <xref:System.Windows.Forms.Control.Click> с созданным методом.</span><span class="sxs-lookup"><span data-stu-id="07a84-137">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
   
-     <span data-ttu-id="342bd-138">В примере кода ниже показано, как связать событие с методом.</span><span class="sxs-lookup"><span data-stu-id="342bd-138">The following code example demonstrates how to associate the event with the method.</span></span>  
+     <span data-ttu-id="07a84-138">В примере кода ниже показано, как связать событие с методом.</span><span class="sxs-lookup"><span data-stu-id="07a84-138">The following code example demonstrates how to associate the event with the method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.FormWithButton#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
-7. <span data-ttu-id="342bd-139">Скомпилируйте и запустите приложение, как описано в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="342bd-139">Compile and run the application as described in the previous procedure.</span></span>  
+7. <span data-ttu-id="07a84-139">Скомпилируйте и запустите приложение, как описано в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="07a84-139">Compile and run the application as described in the previous procedure.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="342bd-140">Пример</span><span class="sxs-lookup"><span data-stu-id="342bd-140">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="07a84-140">Пример</span><span class="sxs-lookup"><span data-stu-id="07a84-140">Example</span></span>  
  
-<span data-ttu-id="342bd-141">В следующем примере кода приведен полный пример из предыдущих процедур.</span><span class="sxs-lookup"><span data-stu-id="342bd-141">The following code example is the complete example from the previous procedures:</span></span>
+<span data-ttu-id="07a84-141">В следующем примере кода приведен полный пример из предыдущих процедур.</span><span class="sxs-lookup"><span data-stu-id="07a84-141">The following code example is the complete example from the previous procedures:</span></span>
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="342bd-142">См. также:</span><span class="sxs-lookup"><span data-stu-id="342bd-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07a84-142">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="07a84-142">See also</span></span>
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [<span data-ttu-id="342bd-143">Изменение внешнего вида Windows Forms</span><span class="sxs-lookup"><span data-stu-id="342bd-143">Changing the Appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)
-- [<span data-ttu-id="342bd-144">Усовершенствование приложений Windows Forms</span><span class="sxs-lookup"><span data-stu-id="342bd-144">Enhancing Windows Forms Applications</span></span>](./advanced/index.md)
-- [<span data-ttu-id="342bd-145">Приступая к работе с Windows Forms</span><span class="sxs-lookup"><span data-stu-id="342bd-145">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)
+- [<span data-ttu-id="07a84-143">Изменение внешнего вида Windows Forms</span><span class="sxs-lookup"><span data-stu-id="07a84-143">Changing the Appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)
+- [<span data-ttu-id="07a84-144">Усовершенствование приложений Windows Forms</span><span class="sxs-lookup"><span data-stu-id="07a84-144">Enhancing Windows Forms Applications</span></span>](./advanced/index.md)
+- [<span data-ttu-id="07a84-145">Приступая к работе с Windows Forms</span><span class="sxs-lookup"><span data-stu-id="07a84-145">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)

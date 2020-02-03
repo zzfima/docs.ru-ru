@@ -23,15 +23,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76733686"
 ---
-# <a name="introduction-to-wpf-in-visual-studio"></a><span data-ttu-id="cd5c7-102">Введение в WPF в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cd5c7-102">Introduction to WPF in Visual Studio</span></span>
-<span data-ttu-id="cd5c7-103">Windows Presentation Foundation (WPF) в Visual Studio предоставляет разработчикам унифицированную модель программирования для создания настольных бизнес-приложений в Windows.</span><span class="sxs-lookup"><span data-stu-id="cd5c7-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
+# <a name="introduction-to-wpf-in-visual-studio"></a><span data-ttu-id="89917-102">Введение в WPF в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="89917-102">Introduction to WPF in Visual Studio</span></span>
+<span data-ttu-id="89917-103">Windows Presentation Foundation (WPF) в Visual Studio предоставляет разработчикам унифицированную модель программирования для создания настольных бизнес-приложений в Windows.</span><span class="sxs-lookup"><span data-stu-id="89917-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="cd5c7-104">Создание классических приложений с помощью Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="cd5c7-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="89917-104">Создание классических приложений с помощью Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="89917-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [<span data-ttu-id="cd5c7-105">Разработка XAML в Visual Studio и Blend для Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cd5c7-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="89917-105">Разработка XAML в Visual Studio и Blend для Visual Studio</span><span class="sxs-lookup"><span data-stu-id="89917-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="cd5c7-106">Введение в WPF</span><span class="sxs-lookup"><span data-stu-id="cd5c7-106">Introduction to WPF</span></span>](../introduction-to-wpf.md)  
+ [<span data-ttu-id="89917-106">Введение в WPF</span><span class="sxs-lookup"><span data-stu-id="89917-106">Introduction to WPF</span></span>](../introduction-to-wpf.md)  
   
- [<span data-ttu-id="cd5c7-107">WPF в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="cd5c7-107">WPF in the .NET Framework</span></span>](../index.md)  
+ [<span data-ttu-id="89917-107">WPF в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="89917-107">WPF in the .NET Framework</span></span>](../index.md)  
   
- [<span data-ttu-id="cd5c7-108">Получить Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cd5c7-108">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [<span data-ttu-id="89917-108">Получить Visual Studio</span><span class="sxs-lookup"><span data-stu-id="89917-108">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

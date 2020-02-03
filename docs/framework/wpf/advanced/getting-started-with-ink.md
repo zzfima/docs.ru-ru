@@ -16,43 +16,43 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737889"
 ---
-# <a name="get-started-with-ink-in-wpf"></a><span data-ttu-id="3e155-102">Начало работы с рукописным вводом в WPF</span><span class="sxs-lookup"><span data-stu-id="3e155-102">Get Started with Ink in WPF</span></span>
+# <a name="get-started-with-ink-in-wpf"></a><span data-ttu-id="a94eb-102">Начало работы с рукописным вводом в WPF</span><span class="sxs-lookup"><span data-stu-id="a94eb-102">Get Started with Ink in WPF</span></span>
 
-<span data-ttu-id="3e155-103">Windows Presentation Foundation (WPF) имеет функцию рукописного ввода, которая упрощает внедрение цифровых рукописных данных в приложение.</span><span class="sxs-lookup"><span data-stu-id="3e155-103">Windows Presentation Foundation (WPF) has an ink feature that makes it easy to incorporate digital ink into your app.</span></span>
+<span data-ttu-id="a94eb-103">Windows Presentation Foundation (WPF) имеет функцию рукописного ввода, которая упрощает внедрение цифровых рукописных данных в приложение.</span><span class="sxs-lookup"><span data-stu-id="a94eb-103">Windows Presentation Foundation (WPF) has an ink feature that makes it easy to incorporate digital ink into your app.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="3e155-104">Prerequisites</span><span class="sxs-lookup"><span data-stu-id="3e155-104">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="a94eb-104">предварительные требования</span><span class="sxs-lookup"><span data-stu-id="a94eb-104">Prerequisites</span></span>
 
-<span data-ttu-id="3e155-105">Чтобы использовать следующие примеры, сначала установите [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).</span><span class="sxs-lookup"><span data-stu-id="3e155-105">To use the following examples, first install [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).</span></span> <span data-ttu-id="3e155-106">Кроме того, он помогает понять, как писать базовые приложения WPF.</span><span class="sxs-lookup"><span data-stu-id="3e155-106">It also helps to know how to write basic WPF apps.</span></span> <span data-ttu-id="3e155-107">Сведения о начале работы с WPF см. в разделе [Пошаговое руководство. мое первое классическое приложение WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="3e155-107">For help getting started with WPF, see [Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>
+<span data-ttu-id="a94eb-105">Чтобы использовать следующие примеры, сначала установите [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).</span><span class="sxs-lookup"><span data-stu-id="a94eb-105">To use the following examples, first install [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).</span></span> <span data-ttu-id="a94eb-106">Кроме того, он помогает понять, как писать базовые приложения WPF.</span><span class="sxs-lookup"><span data-stu-id="a94eb-106">It also helps to know how to write basic WPF apps.</span></span> <span data-ttu-id="a94eb-107">Сведения о начале работы с WPF см. в разделе [Пошаговое руководство. мое первое классическое приложение WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="a94eb-107">For help getting started with WPF, see [Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>
 
-## <a name="quick-start"></a><span data-ttu-id="3e155-108">Краткое руководство по</span><span class="sxs-lookup"><span data-stu-id="3e155-108">Quick Start</span></span>
+## <a name="quick-start"></a><span data-ttu-id="a94eb-108">Быстрый запуск</span><span class="sxs-lookup"><span data-stu-id="a94eb-108">Quick Start</span></span>
 
-<span data-ttu-id="3e155-109">Этот раздел поможет вам написать простое приложение WPF, собирающее рукописный ввод.</span><span class="sxs-lookup"><span data-stu-id="3e155-109">This section helps you write a simple WPF application that collects ink.</span></span>
+<span data-ttu-id="a94eb-109">Этот раздел поможет вам написать простое приложение WPF, собирающее рукописный ввод.</span><span class="sxs-lookup"><span data-stu-id="a94eb-109">This section helps you write a simple WPF application that collects ink.</span></span>
 
-### <a name="got-ink"></a><span data-ttu-id="3e155-110">У вас есть рукописный ввод?</span><span class="sxs-lookup"><span data-stu-id="3e155-110">Got Ink?</span></span>
+### <a name="got-ink"></a><span data-ttu-id="a94eb-110">У вас есть рукописный ввод?</span><span class="sxs-lookup"><span data-stu-id="a94eb-110">Got Ink?</span></span>
 
-<span data-ttu-id="3e155-111">Создание приложения WPF, поддерживающего рукописный ввод:</span><span class="sxs-lookup"><span data-stu-id="3e155-111">To create a WPF app that supports ink:</span></span>
+<span data-ttu-id="a94eb-111">Создание приложения WPF, поддерживающего рукописный ввод:</span><span class="sxs-lookup"><span data-stu-id="a94eb-111">To create a WPF app that supports ink:</span></span>
 
-1. <span data-ttu-id="3e155-112">Откройте Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="3e155-112">Open Visual Studio.</span></span>
+1. <span data-ttu-id="a94eb-112">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a94eb-112">Open Visual Studio.</span></span>
 
-2. <span data-ttu-id="3e155-113">Создайте новое **приложение WPF**.</span><span class="sxs-lookup"><span data-stu-id="3e155-113">Create a new **WPF App**.</span></span>
+2. <span data-ttu-id="a94eb-113">Создайте новое **приложение WPF**.</span><span class="sxs-lookup"><span data-stu-id="a94eb-113">Create a new **WPF App**.</span></span>
 
-   <span data-ttu-id="3e155-114">В диалоговом окне **Новый проект** разверните узел **установленные** > **Visual C#**  или **Visual Basic** > **Windows Desktop** .</span><span class="sxs-lookup"><span data-stu-id="3e155-114">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="3e155-115">Затем выберите шаблон приложения **WPF (.NET Framework)** .</span><span class="sxs-lookup"><span data-stu-id="3e155-115">Then, select the **WPF App (.NET Framework)** app template.</span></span> <span data-ttu-id="3e155-116">Введите имя и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="3e155-116">Enter a name, and then select **OK**.</span></span>
+   <span data-ttu-id="a94eb-114">В диалоговом окне **Новый проект** разверните узел **установленные** > **Visual C#**  или **Visual Basic** > **Windows Desktop** .</span><span class="sxs-lookup"><span data-stu-id="a94eb-114">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="a94eb-115">Затем выберите шаблон приложения **WPF (.NET Framework)** .</span><span class="sxs-lookup"><span data-stu-id="a94eb-115">Then, select the **WPF App (.NET Framework)** app template.</span></span> <span data-ttu-id="a94eb-116">Введите имя и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="a94eb-116">Enter a name, and then select **OK**.</span></span>
 
-   <span data-ttu-id="3e155-117">Visual Studio создаст проект, а файл *MainWindow. XAML* откроется в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="3e155-117">Visual Studio creates the project, and *MainWindow.xaml* opens in the designer.</span></span>
+   <span data-ttu-id="a94eb-117">Visual Studio создаст проект, а файл *MainWindow. XAML* откроется в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="a94eb-117">Visual Studio creates the project, and *MainWindow.xaml* opens in the designer.</span></span>
 
-3. <span data-ttu-id="3e155-118">Введите `<InkCanvas/>` между тегами `<Grid>`.</span><span class="sxs-lookup"><span data-stu-id="3e155-118">Type `<InkCanvas/>` between the `<Grid>` tags.</span></span>
+3. <span data-ttu-id="a94eb-118">Введите `<InkCanvas/>` между тегами `<Grid>`.</span><span class="sxs-lookup"><span data-stu-id="a94eb-118">Type `<InkCanvas/>` between the `<Grid>` tags.</span></span>
 
    ![Конструктор XAML с тегом InkCanvas](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
-4. <span data-ttu-id="3e155-120">Нажмите клавишу **F5** , чтобы запустить приложение в отладчике.</span><span class="sxs-lookup"><span data-stu-id="3e155-120">Press **F5** to launch your application in the debugger.</span></span>
+4. <span data-ttu-id="a94eb-120">Нажмите клавишу **F5** , чтобы запустить приложение в отладчике.</span><span class="sxs-lookup"><span data-stu-id="a94eb-120">Press **F5** to launch your application in the debugger.</span></span>
 
-5. <span data-ttu-id="3e155-121">С помощью пера или мыши напишите **Hello World** в окне.</span><span class="sxs-lookup"><span data-stu-id="3e155-121">Using a stylus or mouse, write **hello world** in the window.</span></span>
+5. <span data-ttu-id="a94eb-121">С помощью пера или мыши напишите **Hello World** в окне.</span><span class="sxs-lookup"><span data-stu-id="a94eb-121">Using a stylus or mouse, write **hello world** in the window.</span></span>
 
-<span data-ttu-id="3e155-122">Вы написали рукописный эквивалент приложения "Hello World" только с 12 нажатиями!</span><span class="sxs-lookup"><span data-stu-id="3e155-122">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>
+<span data-ttu-id="a94eb-122">Вы написали рукописный эквивалент приложения "Hello World" только с 12 нажатиями!</span><span class="sxs-lookup"><span data-stu-id="a94eb-122">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>
 
-### <a name="spice-up-your-app"></a><span data-ttu-id="3e155-123">Воссоздание приложения</span><span class="sxs-lookup"><span data-stu-id="3e155-123">Spice Up Your App</span></span>
+### <a name="spice-up-your-app"></a><span data-ttu-id="a94eb-123">Воссоздание приложения</span><span class="sxs-lookup"><span data-stu-id="a94eb-123">Spice Up Your App</span></span>
 
-<span data-ttu-id="3e155-124">Давайте попробуем воспользоваться преимуществами некоторых функций WPF.</span><span class="sxs-lookup"><span data-stu-id="3e155-124">Let’s take advantage of some features of the WPF.</span></span> <span data-ttu-id="3e155-125">Замените все между открывающим и закрывающим \<окном > тегами следующей разметкой:</span><span class="sxs-lookup"><span data-stu-id="3e155-125">Replace everything between the opening and closing \<Window> tags with the following markup:</span></span>
+<span data-ttu-id="a94eb-124">Давайте попробуем воспользоваться преимуществами некоторых функций WPF.</span><span class="sxs-lookup"><span data-stu-id="a94eb-124">Let’s take advantage of some features of the WPF.</span></span> <span data-ttu-id="a94eb-125">Замените все между открывающим и закрывающим \<окном > тегами следующей разметкой:</span><span class="sxs-lookup"><span data-stu-id="a94eb-125">Replace everything between the opening and closing \<Window> tags with the following markup:</span></span>
 
 ```xaml
 <Page>
@@ -68,49 +68,49 @@ ms.locfileid: "76737889"
 </Page>
 ```
 
-<span data-ttu-id="3e155-126">Этот XAML создает фон градиентной кисти на поверхности рукописного ввода.</span><span class="sxs-lookup"><span data-stu-id="3e155-126">This XAML creates a gradient brush background on your inking surface.</span></span>
+<span data-ttu-id="a94eb-126">Этот XAML создает фон градиентной кисти на поверхности рукописного ввода.</span><span class="sxs-lookup"><span data-stu-id="a94eb-126">This XAML creates a gradient brush background on your inking surface.</span></span>
 
 ![Градиентные цвета на поверхности рукописного ввода в приложении WPF](./media/getting-started-with-ink/gradient-colors.png)
 
-### <a name="add-some-code-behind-the-xaml"></a><span data-ttu-id="3e155-128">Добавьте код, лежащий в основе XAML</span><span class="sxs-lookup"><span data-stu-id="3e155-128">Add Some Code Behind the XAML</span></span>
+### <a name="add-some-code-behind-the-xaml"></a><span data-ttu-id="a94eb-128">Добавьте код, лежащий в основе XAML</span><span class="sxs-lookup"><span data-stu-id="a94eb-128">Add Some Code Behind the XAML</span></span>
 
-<span data-ttu-id="3e155-129">Хотя XAML упрощает проектирование пользовательского интерфейса, любое реальное приложение должно добавлять код для работы с событиями.</span><span class="sxs-lookup"><span data-stu-id="3e155-129">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="3e155-130">Ниже приведен простой пример, который позволяет увеличить рукописный ввод в ответ на щелчок правой кнопкой мыши.</span><span class="sxs-lookup"><span data-stu-id="3e155-130">Here is a simple example that zooms in on the ink in response to a right-click from a mouse.</span></span>
+<span data-ttu-id="a94eb-129">Хотя XAML упрощает проектирование пользовательского интерфейса, любое реальное приложение должно добавлять код для работы с событиями.</span><span class="sxs-lookup"><span data-stu-id="a94eb-129">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="a94eb-130">Ниже приведен простой пример, который позволяет увеличить рукописный ввод в ответ на щелчок правой кнопкой мыши.</span><span class="sxs-lookup"><span data-stu-id="a94eb-130">Here is a simple example that zooms in on the ink in response to a right-click from a mouse.</span></span>
 
-1. <span data-ttu-id="3e155-131">Задайте обработчик `MouseRightButtonUp` в коде XAML:</span><span class="sxs-lookup"><span data-stu-id="3e155-131">Set the `MouseRightButtonUp` handler in your XAML:</span></span>
+1. <span data-ttu-id="a94eb-131">Задайте обработчик `MouseRightButtonUp` в коде XAML:</span><span class="sxs-lookup"><span data-stu-id="a94eb-131">Set the `MouseRightButtonUp` handler in your XAML:</span></span>
 
    [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
-1. <span data-ttu-id="3e155-132">В **Обозреватель решений**разверните MainWindow. XAML и откройте файл кода программной части (MainWindow.XAML.cs или MainWindow. XAML. vb).</span><span class="sxs-lookup"><span data-stu-id="3e155-132">In **Solution Explorer**, expand MainWindow.xaml and open the code-behind file (MainWindow.xaml.cs or MainWindow.xaml.vb).</span></span> <span data-ttu-id="3e155-133">Добавьте следующий код обработчика событий:</span><span class="sxs-lookup"><span data-stu-id="3e155-133">Add the following event handler code:</span></span>
+1. <span data-ttu-id="a94eb-132">В **Обозреватель решений**разверните MainWindow. XAML и откройте файл кода программной части (MainWindow.XAML.cs или MainWindow. XAML. vb).</span><span class="sxs-lookup"><span data-stu-id="a94eb-132">In **Solution Explorer**, expand MainWindow.xaml and open the code-behind file (MainWindow.xaml.cs or MainWindow.xaml.vb).</span></span> <span data-ttu-id="a94eb-133">Добавьте следующий код обработчика событий:</span><span class="sxs-lookup"><span data-stu-id="a94eb-133">Add the following event handler code:</span></span>
 
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. <span data-ttu-id="3e155-134">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="3e155-134">Run the application.</span></span> <span data-ttu-id="3e155-135">Добавьте рукописный ввод, а затем щелкните его правой кнопкой мыши или выполните нажатие клавиши с пером.</span><span class="sxs-lookup"><span data-stu-id="3e155-135">Add some ink, and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>
+1. <span data-ttu-id="a94eb-134">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="a94eb-134">Run the application.</span></span> <span data-ttu-id="a94eb-135">Добавьте рукописный ввод, а затем щелкните его правой кнопкой мыши или выполните нажатие клавиши с пером.</span><span class="sxs-lookup"><span data-stu-id="a94eb-135">Add some ink, and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>
 
-   <span data-ttu-id="3e155-136">Экран увеличивается при каждом щелчке правой кнопкой мыши.</span><span class="sxs-lookup"><span data-stu-id="3e155-136">The display zooms in each time you click with the right mouse button.</span></span>
+   <span data-ttu-id="a94eb-136">Экран увеличивается при каждом щелчке правой кнопкой мыши.</span><span class="sxs-lookup"><span data-stu-id="a94eb-136">The display zooms in each time you click with the right mouse button.</span></span>
 
-### <a name="use-procedural-code-instead-of-xaml"></a><span data-ttu-id="3e155-137">Использование процедурного кода вместо XAML</span><span class="sxs-lookup"><span data-stu-id="3e155-137">Use Procedural Code Instead of XAML</span></span>
+### <a name="use-procedural-code-instead-of-xaml"></a><span data-ttu-id="a94eb-137">Использование процедурного кода вместо XAML</span><span class="sxs-lookup"><span data-stu-id="a94eb-137">Use Procedural Code Instead of XAML</span></span>
 
-<span data-ttu-id="3e155-138">Вы можете получить доступ ко всем функциям WPF из процедурного кода.</span><span class="sxs-lookup"><span data-stu-id="3e155-138">You can access all WPF features from procedural code.</span></span> <span data-ttu-id="3e155-139">Выполните следующие действия, чтобы создать приложение "Привет для рукописного ввода" для WPF, которое вообще не использует XAML.</span><span class="sxs-lookup"><span data-stu-id="3e155-139">Follow these steps to create a "Hello Ink World" application for WPF that doesn’t use any XAML at all.</span></span>
+<span data-ttu-id="a94eb-138">Вы можете получить доступ ко всем функциям WPF из процедурного кода.</span><span class="sxs-lookup"><span data-stu-id="a94eb-138">You can access all WPF features from procedural code.</span></span> <span data-ttu-id="a94eb-139">Выполните следующие действия, чтобы создать приложение "Привет для рукописного ввода" для WPF, которое вообще не использует XAML.</span><span class="sxs-lookup"><span data-stu-id="a94eb-139">Follow these steps to create a "Hello Ink World" application for WPF that doesn’t use any XAML at all.</span></span>
 
-1. <span data-ttu-id="3e155-140">Создайте новый проект консольного приложения в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="3e155-140">Create a new console application project in Visual Studio.</span></span>
+1. <span data-ttu-id="a94eb-140">Создайте новый проект консольного приложения в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a94eb-140">Create a new console application project in Visual Studio.</span></span>
 
-   <span data-ttu-id="3e155-141">В диалоговом окне **Новый проект** разверните узел **установленные** > **Visual C#**  или **Visual Basic** > **Windows Desktop** .</span><span class="sxs-lookup"><span data-stu-id="3e155-141">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="3e155-142">Затем выберите шаблон приложения " **консольное приложение" (.NET Framework)** .</span><span class="sxs-lookup"><span data-stu-id="3e155-142">Then, select the **Console App (.NET Framework)** app template.</span></span> <span data-ttu-id="3e155-143">Введите имя и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="3e155-143">Enter a name, and then select **OK**.</span></span>
+   <span data-ttu-id="a94eb-141">В диалоговом окне **Новый проект** разверните узел **установленные** > **Visual C#**  или **Visual Basic** > **Windows Desktop** .</span><span class="sxs-lookup"><span data-stu-id="a94eb-141">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="a94eb-142">Затем выберите шаблон приложения " **консольное приложение" (.NET Framework)** .</span><span class="sxs-lookup"><span data-stu-id="a94eb-142">Then, select the **Console App (.NET Framework)** app template.</span></span> <span data-ttu-id="a94eb-143">Введите имя и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="a94eb-143">Enter a name, and then select **OK**.</span></span>
 
-1. <span data-ttu-id="3e155-144">Вставьте следующий код в файл Program.cs или Program. vb:</span><span class="sxs-lookup"><span data-stu-id="3e155-144">Paste the following code into the Program.cs or Program.vb file:</span></span>
+1. <span data-ttu-id="a94eb-144">Вставьте следующий код в файл Program.cs или Program. vb:</span><span class="sxs-lookup"><span data-stu-id="a94eb-144">Paste the following code into the Program.cs or Program.vb file:</span></span>
 
    [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
    [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
-1. <span data-ttu-id="3e155-145">Добавьте ссылки на сборки PresentationCore, PresentationFramework и WindowsBase, щелкнув правой кнопкой мыши **ссылки** в **Обозреватель решений** и выбрав **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="3e155-145">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies by right-clicking on **References** in **Solution Explorer** and choosing **Add Reference**.</span></span>
+1. <span data-ttu-id="a94eb-145">Добавьте ссылки на сборки PresentationCore, PresentationFramework и WindowsBase, щелкнув правой кнопкой мыши **ссылки** в **Обозреватель решений** и выбрав **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="a94eb-145">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies by right-clicking on **References** in **Solution Explorer** and choosing **Add Reference**.</span></span>
 
    ![Диспетчер ссылок, отображающий PresentationCore и PresentationFramework](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
-1. <span data-ttu-id="3e155-147">Постройте приложение, нажав клавишу **F5**.</span><span class="sxs-lookup"><span data-stu-id="3e155-147">Build the application by pressing **F5**.</span></span>
+1. <span data-ttu-id="a94eb-147">Постройте приложение, нажав клавишу **F5**.</span><span class="sxs-lookup"><span data-stu-id="a94eb-147">Build the application by pressing **F5**.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="3e155-148">См. также:</span><span class="sxs-lookup"><span data-stu-id="3e155-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a94eb-148">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="a94eb-148">See also</span></span>
 
-- [<span data-ttu-id="3e155-149">Рукописный ввод</span><span class="sxs-lookup"><span data-stu-id="3e155-149">Digital Ink</span></span>](digital-ink.md)
-- [<span data-ttu-id="3e155-150">Сбор рукописных данных</span><span class="sxs-lookup"><span data-stu-id="3e155-150">Collecting Ink</span></span>](collecting-ink.md)
-- [<span data-ttu-id="3e155-151">Распознавание рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="3e155-151">Handwriting Recognition</span></span>](handwriting-recognition.md)
-- [<span data-ttu-id="3e155-152">Хранение рукописных данных</span><span class="sxs-lookup"><span data-stu-id="3e155-152">Storing Ink</span></span>](storing-ink.md)
+- [<span data-ttu-id="a94eb-149">Рукописный ввод</span><span class="sxs-lookup"><span data-stu-id="a94eb-149">Digital Ink</span></span>](digital-ink.md)
+- [<span data-ttu-id="a94eb-150">Сбор рукописных данных</span><span class="sxs-lookup"><span data-stu-id="a94eb-150">Collecting Ink</span></span>](collecting-ink.md)
+- [<span data-ttu-id="a94eb-151">Распознавание рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="a94eb-151">Handwriting Recognition</span></span>](handwriting-recognition.md)
+- [<span data-ttu-id="a94eb-152">Хранение рукописных данных</span><span class="sxs-lookup"><span data-stu-id="a94eb-152">Storing Ink</span></span>](storing-ink.md)
