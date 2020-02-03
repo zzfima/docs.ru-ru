@@ -18,17 +18,17 @@ ms.locfileid: "76741217"
   
  Элемент управления Windows Forms <xref:System.Windows.Forms.ProgressBar> показывает ход выполнения действия, отображая соответствующее количество прямоугольников, расположенных на горизонтальной полосе. После завершения действия Панель заполняется. Индикаторы выполнения обычно используются, чтобы дать пользователю указание о том, как долго ожидать завершения завершенного действия — например, при загрузке большого файла.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления ProgressBar](progressbar-control-overview-windows-forms.md)  
  Основные понятия элемента управления <xref:System.Windows.Forms.ProgressBar>, позволяющего графически отображать ход выполнения операции.  
   
  [Практическое руководство. Установка значения, отображаемого c помощью элемента управления ProgressBar в Windows Forms](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
  Описывает ряд различных способов увеличения значения, отображаемого элементом управления <xref:System.Windows.Forms.ProgressBar>.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.ProgressBar>  
  Справочная информация о классе и его членах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

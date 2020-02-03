@@ -65,7 +65,7 @@ ms.locfileid: "76739226"
   
  Конструктор в этом примере кода содержит вызов `InitializeComponent`, который определяется при создании нового проекта Windows Forms в Visual Studio. Удалите эту строку кода, если вы создаете приложение в командной строке.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Автоматическое масштабирование в Windows Forms](automatic-scaling-in-windows-forms.md)

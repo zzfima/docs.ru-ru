@@ -19,7 +19,7 @@ ms.locfileid: "76746910"
 
 ## <a name="wpf-designer-walkthroughs"></a>Пошаговые руководства по конструктору WPF
 
-|Заголовок|Описание|
+|Title|Description|
 |-----------|-----------------|
 |[Пошаговое руководство. Создание простого приложения WPF с помощью конструктора WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Демонстрирует создание простого приложения WPF с помощью конструктора WPF.|
 |[Пошаговое руководство. Создание динамического макета](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Демонстрирует создание динамического макета с помощью элемента управления панели <xref:System.Windows.Controls.Grid>.|
@@ -29,7 +29,7 @@ ms.locfileid: "76746910"
 
 ## <a name="wpf-walkthroughs"></a>Пошаговые руководства по WPF
 
-|Заголовок|Описание|
+|Title|Description|
 |-----------|-----------------|
 |[Пошаговое руководство. Создание первого классического приложения WPF](walkthrough-my-first-wpf-desktop-application.md)|Демонстрирует создание приложения WPF с использованием многих общих функций WPF, включая элементы управления, макет и привязку данных.|
 |[Создание кнопки с помощью XAML](../controls/walkthrough-create-a-button-by-using-xaml.md)|Демонстрирует создание анимированной кнопки.|
@@ -38,7 +38,7 @@ ms.locfileid: "76746910"
 
 ## <a name="migration-and-interoperability-in-wpf"></a>Миграция и взаимодействие в WPF
 
-|Заголовок|Описание|
+|Title|Description|
 |-----------|-----------------|
 |[Пошаговое руководство. Размещение элемента управления Windows Forms в приложении WPF](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Демонстрирует размещение элемента управления Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> в приложении WPF.|
 |[Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Демонстрирует размещение Windows Forms составного элемента управления для ввода данных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложении.|
@@ -46,8 +46,8 @@ ms.locfileid: "76746910"
 |[Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Демонстрирует использование функций макета WPF для упорядочения элементов управления Windows Forms в гибридном приложении.|
 |[Пошаговое руководство. Привязка к данным в гибридных приложениях](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Демонстрирует использование привязки данных в гибридных приложениях, включающих как Windows Forms, так и элементы управления WPF.|
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
-|Заголовок|Описание|
+|Title|Description|
 |-----------|-----------------|
 |[Пошаговые руководства по Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Содержит связанный список пошаговых руководств для всех областей программирования в Visual Studio.|

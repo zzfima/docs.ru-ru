@@ -18,11 +18,11 @@ ms.locfileid: "76745561"
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Отображение полос прокрутки в элементе управления RichTextBox  
   
-1. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.Multiline%2A> значение `true`. Без типа полосы прокрутки, включая горизонтальное, будет отображаться, если свойство <xref:System.Windows.Forms.RichTextBox.Multiline%2A> имеет значение `false`.  
+1. Установите свойство <xref:System.Windows.Forms.RichTextBox.Multiline%2A> в значение `true`. Без типа полосы прокрутки, включая горизонтальное, будет отображаться, если свойство <xref:System.Windows.Forms.RichTextBox.Multiline%2A> имеет значение `false`.  
   
 2. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> соответствующее значение перечисления <xref:System.Windows.Forms.RichTextBoxScrollBars>.  
   
-    |{2&gt;Value&lt;2}|Описание|  
+    |Значение|Description|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (по умолчанию)|Отображает горизонтальную или вертикальную полосу прокрутки или оба значения, только если текст превышает ширину или длину элемента управления.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Никогда не отображает ни одного типа полосы прокрутки.|  
@@ -34,12 +34,12 @@ ms.locfileid: "76745561"
   
 3. Присвойте свойству <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> соответствующее значение.  
   
-    |{2&gt;Value&lt;2}|Описание|  
+    |Значение|Description|  
     |-----------|-----------------|  
     |`false`|Текст в элементе управления не корректируется автоматически в соответствии с шириной элемента управления, поэтому он прокручивается вправо, пока не будет достигнут разрыв строки. Используйте это значение, если выбраны горизонтальные полосы прокрутки или оба.|  
     |`true` (по умолчанию)|Текст в элементе управления автоматически настраивается в соответствии с шириной элемента управления. Горизонтальная полоса прокрутки не будет отображаться. Используйте это значение, если для отображения одного или нескольких абзацев выбраны вертикальные полосы прокрутки или нет.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>

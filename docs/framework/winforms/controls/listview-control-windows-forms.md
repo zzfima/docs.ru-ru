@@ -21,7 +21,7 @@ ms.locfileid: "76745142"
 # <a name="listview-control-windows-forms"></a>Элемент управления ListView (Windows Forms)
 Элемент управления `ListView` Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)  
  Описывается элемент управления, его основные возможности и свойства.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "76745142"
   
 - [Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.ListView>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
  Описывается, как выполнять наследование от элемента в представлении списка или узла дерева для добавления любых необходимых полей, методов или конструкторов.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "76745142"
  [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Инструкции по компоновке формы Windows Forms с несколькими панелями.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

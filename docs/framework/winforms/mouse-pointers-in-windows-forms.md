@@ -30,7 +30,7 @@ ms.locfileid: "76740955"
   
  Основной способ изменения указателя мыши заключается в присвоении свойству <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> или <xref:System.Windows.Forms.Control.DefaultCursor%2A> элемента управления нового <xref:System.Windows.Forms.Cursor>. Примеры изменения указателя мыши см. в примере кода в классе <xref:System.Windows.Forms.Cursor>. Кроме того, класс <xref:System.Windows.Forms.Cursors> предоставляет набор объектов <xref:System.Windows.Forms.Cursor> для многих различных типов указателей, например указатель, напоминающий руки. Чтобы отобразить указатель ожидания, который напоминает Песочные часы, когда указатель мыши находится на элементе управления, используйте свойство <xref:System.Windows.Forms.Control.UseWaitCursor%2A> класса <xref:System.Windows.Forms.Control>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Cursor>
 - [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)

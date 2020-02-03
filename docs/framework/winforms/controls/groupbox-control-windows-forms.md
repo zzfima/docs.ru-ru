@@ -16,20 +16,20 @@ ms.locfileid: "76745622"
 # <a name="groupbox-control-windows-forms"></a>Элемент управления GroupBox (Windows Forms)
 Windows Forms элементы управления <xref:System.Windows.Forms.GroupBox> используются для предоставления идентифицируемого группирования для других элементов управления. Как правило, для разделения формы по функциям используются поля групп. Например, у вас может быть форма заказа, в которой указываются параметры корреспонденции, такие как использование перевозчика в ночное время. Группирование всех параметров в поле группы дает пользователю логическую визуальную подсказку. Элемент управления <xref:System.Windows.Forms.GroupBox> аналогичен элементу управления <xref:System.Windows.Forms.Panel>; Тем не менее, только элемент управления <xref:System.Windows.Forms.GroupBox> отображает заголовок, а полосы прокрутки могут иметь только элемент управления <xref:System.Windows.Forms.Panel>.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления GroupBox](groupbox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
  [Практическое руководство. Группировка элементов управления с помощью элемента управления GroupBox в формах Windows Forms](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
  Описывает, как использовать этот элемент управления для группировки элементов управления.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.GroupBox>  
  Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.Panel>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

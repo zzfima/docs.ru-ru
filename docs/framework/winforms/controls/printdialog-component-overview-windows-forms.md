@@ -24,7 +24,7 @@ ms.locfileid: "76728676"
 
 При добавлении в форму <xref:System.Windows.Forms.PrintDialog> компонент отображается в области в нижней части конструктор Windows Forms в Visual Studio.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PrintDialog>
 - [Компонент PrintDialog](printdialog-component-windows-forms.md)

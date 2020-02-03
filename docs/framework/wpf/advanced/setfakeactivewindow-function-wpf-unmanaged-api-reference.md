@@ -31,7 +31,7 @@ void __stdcall SetFakeActiveWindow(
   
 ## <a name="parameters"></a>Параметры  
  hwnd  
- Обработчик окна.  
+ Дескриптор окна.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. [.NET Framework требования к системе](../../get-started/system-requirements.md).  
@@ -40,6 +40,6 @@ void __stdcall SetFakeActiveWindow(
   
  **Версия .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по неуправляемым API WPF](wpf-unmanaged-api-reference.md)

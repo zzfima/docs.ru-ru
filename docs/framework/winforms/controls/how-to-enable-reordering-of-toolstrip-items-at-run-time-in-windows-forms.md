@@ -22,7 +22,7 @@ ms.locfileid: "76745485"
   
 ### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>Включение перестановки элементов ToolStripItem во время выполнения  
   
-- Задайте для свойства <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> значение `true`. По умолчанию <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.  
+- Установите свойство <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> в значение `true`. По умолчанию <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.  
   
      Во время выполнения пользователь удерживает нажатой клавишу ALT и левую кнопку мыши для перетаскивания <xref:System.Windows.Forms.ToolStripItem> в другое место на <xref:System.Windows.Forms.ToolStrip>.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76745485"
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>

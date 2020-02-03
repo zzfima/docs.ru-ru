@@ -20,7 +20,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741503"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Практическое руководство. Добавление и удаление изображений с помощью компонента ImageList в Windows Forms
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms
 Компонент Windows Forms <xref:System.Windows.Forms.ImageList> обычно заполняется образами, прежде чем он будет связан с элементом управления. Однако можно добавлять и удалять изображения после связывания списка изображений с элементом управления.  
   
 > [!NOTE]
@@ -141,7 +141,7 @@ imageList1.Images.Clear();
 imageList1.Images.RemoveByKey("myPhoto");  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Компонент ImageList](imagelist-component-windows-forms.md)
 - [Общие сведения о компоненте ImageList](imagelist-component-overview-windows-forms.md)

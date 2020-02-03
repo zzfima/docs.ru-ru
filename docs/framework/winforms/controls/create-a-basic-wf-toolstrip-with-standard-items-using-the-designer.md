@@ -25,7 +25,7 @@ ms.locfileid: "76737386"
 
 3. В области **Задачи ToolStrip** выберите пункт **Вставить стандартные элементы**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)

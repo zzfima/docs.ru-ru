@@ -33,7 +33,7 @@ ms.locfileid: "76745949"
   
 - ссылки на сборки System, System.Drawing, System.Windows.Forms и System.Windows.Forms.VisualStyles.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Настройка элементов управления DataGridView в Windows Forms](customizing-the-windows-forms-datagridview-control.md)
 - [Архитектура элементов управления DataGridView](datagridview-control-architecture-windows-forms.md)

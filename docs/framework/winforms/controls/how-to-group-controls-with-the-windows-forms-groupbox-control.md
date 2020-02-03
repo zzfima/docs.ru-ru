@@ -32,7 +32,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.G
   
 3. Задайте для свойства <xref:System.Windows.Forms.GroupBox.Text%2A> поля группы соответствующий заголовок.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.GroupBox>
 - [Элемент управления GroupBox](groupbox-control-windows-forms.md)

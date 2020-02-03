@@ -27,19 +27,19 @@ ms.locfileid: "76745152"
   
  В следующей таблице перечислены некоторые элементы <xref:System.Windows.Forms.ListView> и представления, которые они являются допустимыми.  
   
-|Элемент ListView|Просмотрите .|  
+|Элемент ListView|Представление|  
 |---------------------|----------|  
-|Свойство<xref:System.Windows.Forms.ListView.Alignment%2A>|<xref:System.Windows.Forms.View.SmallIcon> или <xref:System.Windows.Forms.View.LargeIcon>|  
-|Свойство<xref:System.Windows.Forms.ListView.AutoArrange%2A>|<xref:System.Windows.Forms.View.SmallIcon> или <xref:System.Windows.Forms.View.LargeIcon>|  
-|Метод<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>|<xref:System.Windows.Forms.View.Details>|  
-|Свойство<xref:System.Windows.Forms.ListView.Columns%2A>|<xref:System.Windows.Forms.View.Details> или <xref:System.Windows.Forms.View.Tile>|  
+|Свойство <xref:System.Windows.Forms.ListView.Alignment%2A>|<xref:System.Windows.Forms.View.SmallIcon> либо <xref:System.Windows.Forms.View.LargeIcon>|  
+|Свойство <xref:System.Windows.Forms.ListView.AutoArrange%2A>|<xref:System.Windows.Forms.View.SmallIcon> либо <xref:System.Windows.Forms.View.LargeIcon>|  
+|Метод <xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>|<xref:System.Windows.Forms.View.Details>|  
+|Свойство <xref:System.Windows.Forms.ListView.Columns%2A>|<xref:System.Windows.Forms.View.Details> либо <xref:System.Windows.Forms.View.Tile>|  
 |Событие<xref:System.Windows.Forms.ListView.DrawSubItem>|<xref:System.Windows.Forms.View.Details>|  
-|Метод<xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List> или <xref:System.Windows.Forms.View.Tile>|  
-|Метод<xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> или <xref:System.Windows.Forms.View.LargeIcon>|  
-|Метод<xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> или <xref:System.Windows.Forms.View.Tile>|  
-|Свойство<xref:System.Windows.Forms.ListView.Groups%2A>|Все представления, кроме <xref:System.Windows.Forms.View.List>|  
-|Свойство<xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
-|Свойство<xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> или <xref:System.Windows.Forms.View.Tile>|  
+|Метод <xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List> или <xref:System.Windows.Forms.View.Tile>|  
+|Метод <xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> либо <xref:System.Windows.Forms.View.LargeIcon>|  
+|Метод <xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> либо <xref:System.Windows.Forms.View.Tile>|  
+|Свойство <xref:System.Windows.Forms.ListView.Groups%2A>|Все представления, кроме <xref:System.Windows.Forms.View.List>|  
+|Свойство <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
+|Свойство <xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> или <xref:System.Windows.Forms.View.Tile>|  
   
  Ключевым свойством элемента управления <xref:System.Windows.Forms.ListView> является <xref:System.Windows.Forms.ListView.Items%2A>, который содержит элементы, отображаемые элементом управления. Свойство <xref:System.Windows.Forms.ListView.SelectedItems%2A> содержит коллекцию элементов, выбранных в данный момент в элементе управления. Пользователь может выбрать несколько элементов, например, чтобы перетащить несколько элементов за раз в другой элемент управления, если свойство <xref:System.Windows.Forms.ListView.MultiSelect%2A> имеет значение `true`. Элемент управления <xref:System.Windows.Forms.ListView> может отображать флажки рядом с элементами, если свойство <xref:System.Windows.Forms.ListView.CheckBoxes%2A> имеет значение `true`.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "76745152"
   
  Элемент управления <xref:System.Windows.Forms.ListView> также поддерживает стили оформления и другие возможности, доступные на платформе Windows XP, включая группирование, мозаичное представление и метки вставки.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ListView>
 - [Элемент управления ListView](listview-control-windows-forms.md)

@@ -52,7 +52,7 @@ ms.locfileid: "76742028"
 
 4. В окне **Редактор типов пользовательского интерфейса источника данных**разверните узел <xref:System.Windows.Forms.BindingSource>, добавленный ранее, и выберите свойство связанного типа, которое необходимо привязать к свойству <xref:System.Windows.Forms.TextBox.Text%2A> <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Компонент BindingSource](bindingsource-component.md)
 - [Практическое руководство. Связывание элемента управления с типом в Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)

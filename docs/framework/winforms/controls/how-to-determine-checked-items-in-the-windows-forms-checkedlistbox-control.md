@@ -66,7 +66,7 @@ ms.locfileid: "76743250"
     }  
     ```  
   
-     - или  
+     - или -  
   
 2. Пройдите по коллекции <xref:System.Windows.Forms.CheckedListBox.Items%2A>, начиная с 0, так как коллекция отсчитывается от нуля, и вызовите метод <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> для каждого элемента. Обратите внимание, что этот метод предоставит номер элемента в общем списке, поэтому, если первый элемент в списке не установлен и второй элемент установлен, он будет отображать нечто вроде "Item 2 = MyListItem2".  
   
@@ -111,6 +111,6 @@ ms.locfileid: "76743250"
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)

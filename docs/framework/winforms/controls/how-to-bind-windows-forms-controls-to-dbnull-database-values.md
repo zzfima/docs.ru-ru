@@ -16,7 +16,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746665"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Практическое руководство. Привязка элементов управления Windows Forms к значениям DBNull
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Практическое руководство. Специальная обработка значений DBNull при связывании элементов управления с данными в Windows Forms
 Если элементы управления Windows Forms привязаны к источнику данных и источник данных возвращает значение <xref:System.DBNull>, соответствующее значение можно заменить без обработки, форматирования или анализа событий. Свойство <xref:System.Windows.Forms.Binding.NullValue%2A> преобразует <xref:System.DBNull> в указанный объект при форматировании или анализе значений источника данных.  
   
 ## <a name="example"></a>Пример  
@@ -32,7 +32,7 @@ ms.locfileid: "76746665"
   
 - ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Компонент BindingSource](bindingsource-component.md)
 - [Практическое руководство. Обработка ошибок и исключений, происходящих при связывании элементов управления с данными](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

@@ -97,7 +97,7 @@ ms.locfileid: "76746746"
   
      Этот код очистит изображение, даже если изображение было загружено в элемент управления во время разработки.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>

@@ -23,22 +23,22 @@ ms.locfileid: "76746169"
   
  Компонент Windows Forms `ContextMenu` используется для предоставления пользователям простого доступного контекстного меню часто используемых команд, связанных с выбранным объектом. Элементы в контекстном меню часто являются подмножеством элементов из главных меню, которые появляются в других частях приложения. Контекстные меню обычно доступны щелчком правой кнопкой мыши. На Windows Forms они связаны с другими элементами управления.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления ContextMenu](contextmenu-component-overview-windows-forms.md)  
  Основные понятия компонента `ContextMenu`, который позволяет пользователям создавать меню часто используемых команд, связанных с выбранным объектом.  
   
  [Практическое руководство. Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Объясняется, как добавлять и удалять элементы контекстного меню в Windows Forms.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.ContextMenu>  
  Содержит справочные сведения о классе <xref:System.Windows.Forms.ContextMenu> и его членах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

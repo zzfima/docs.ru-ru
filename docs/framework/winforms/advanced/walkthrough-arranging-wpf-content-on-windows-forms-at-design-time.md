@@ -24,7 +24,7 @@ ms.locfileid: "76746816"
 
 В этой статье показано, как использовать функции макета Windows Forms, такие как привязка и линии привязки, для упорядочения элементов управления Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -47,7 +47,7 @@ ms.locfileid: "76746816"
 
 4. Присвойте свойству <xref:System.Windows.Controls.Control.Background%2A> значение **Blue**.
 
-5. Постройте проект.
+5. Создайте проект.
 
 ## <a name="host-wpf-controls-in-a-layout-panel"></a>Размещение элементов управления WPF на панели макета
 
@@ -129,7 +129,7 @@ ms.locfileid: "76746816"
 
     Дополнительные сведения см. [в разделе инструкции. привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

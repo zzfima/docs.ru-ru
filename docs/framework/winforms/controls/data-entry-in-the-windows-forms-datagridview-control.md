@@ -16,7 +16,7 @@ ms.locfileid: "76743994"
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Ввод данных с помощью элемента управления DataGridView в Windows Forms
 Элемент управления `DataGridView` предоставляет несколько функций, позволяющих изменить то, как пользователи добавляют или изменяют данные в элементе управления. Например, можно сделать ввод данных более эффективным, предоставляя значения по умолчанию для новых строк и предупреждая пользователей при возникновении ошибок.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Определение режима редактирования для элемента управления DataGridView в Windows Forms](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  Описывает, как изменить способ, которым пользователи начинают изменять ячейки.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "76743994"
  [Пошаговое руководство. Обработка ошибок, связанных с вводом данных в элемент управления DataGridView, в Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  Описывает обработку ошибок ввода данных, происходящих из источника данных, когда пользователь пытается зафиксировать новое значение.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "76743994"
  <xref:System.Windows.Forms.DataGridView.CellValidating?displayProperty=nameWithType>  
  Содержит справочную документацию по событию <xref:System.Windows.Forms.DataGridView.CellValidating>.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Содержит разделы, описывающие заполнение элемента управления данными либо вручную, либо из внешнего источника данных.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

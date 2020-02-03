@@ -22,7 +22,7 @@ ms.locfileid: "76741902"
   
  Ключевыми методами <xref:System.Windows.Forms.ToolTip> компонента являются <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> и <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>. Можно использовать метод <xref:System.Windows.Forms.ToolTip.SetToolTip%2A>, чтобы задать всплывающие подсказки, отображаемые для элементов управления. Дополнительные сведения см. в разделе [как задать подсказки для элементов управления в форме Windows во время разработки](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Ключевыми свойствами являются <xref:System.Windows.Forms.ToolTip.Active%2A>, которые должны быть установлены в `true` для отображения всплывающей подсказки, и <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, которое задает продолжительность отображения строки подсказки, время, в течение которого пользователь должен указывать на элемент управления для отображения всплывающей подсказки, а также время, затрачиваемое на отображение последующих окон всплывающей подсказки. Дополнительные сведения см. в разделе [как изменить задержку Windows Forms компонента ToolTip](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolTip>
 - [Практическое руководство. Определение всплывающих подсказок для элементов управления в Windows Forms во время разработки](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

@@ -65,7 +65,7 @@ ms.locfileid: "76746608"
   
 - Задайте для свойства <xref:System.Windows.Forms.TabControl.Appearance%2A> <xref:System.Windows.Forms.TabControl> значение <xref:System.Windows.Forms.TabAppearance.Buttons> или <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления TabControl](tabcontrol-control-windows-forms.md)
 - [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)

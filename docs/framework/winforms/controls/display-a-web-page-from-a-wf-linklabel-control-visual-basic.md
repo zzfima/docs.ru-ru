@@ -46,10 +46,10 @@ End Sub
   
 - Активное подключение к Интернету.  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Вызов метода <xref:System.Diagnostics.Process.Start%2A> требует полного доверия. Для получения дополнительной информации см. <xref:System.Security.SecurityException>.  
+## <a name="net-framework-security"></a>Безопасность .NET Framework  
+ Вызов метода <xref:System.Diagnostics.Process.Start%2A> требует полного доверия. Дополнительные сведения см. в разделе <xref:System.Security.SecurityException>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Элемент управления LinkLabel](linklabel-control-windows-forms.md)

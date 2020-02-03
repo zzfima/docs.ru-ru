@@ -24,7 +24,7 @@ ms.locfileid: "76742405"
   
  Вы можете отменить и повторить большинство операций правки в элементе управления <xref:System.Windows.Forms.RichTextBox>, вызвав методы <xref:System.Windows.Forms.TextBoxBase.Undo%2A> и <xref:System.Windows.Forms.RichTextBox.Redo%2A>. Метод <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> позволяет определить, можно ли повторно применить последнюю операцию, отмененную пользователем, к элементу управления.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)

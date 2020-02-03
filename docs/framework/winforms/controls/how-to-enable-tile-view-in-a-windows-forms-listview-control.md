@@ -49,11 +49,11 @@ ms.locfileid: "76745466"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
-- ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms.  
   
 - файл значка с именем book.ico в том же каталоге, что и исполняемый файл.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>

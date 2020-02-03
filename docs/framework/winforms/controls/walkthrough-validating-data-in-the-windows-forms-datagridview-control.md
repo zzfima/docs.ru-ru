@@ -27,9 +27,9 @@ ms.locfileid: "76740103"
 
 Чтобы скопировать код из этого раздела в виде одного списка, см. раздел [как проверить данные в элементе управления Windows Forms DataGridView](how-to-validate-data-in-the-windows-forms-datagridview-control.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
-Для выполнения данного пошагового руководства требуется:
+Для выполнения задач этого руководства необходимы:
 
 - Доступ к серверу с образцом базы данных Northwind SQL Server.
 
@@ -78,7 +78,7 @@ ms.locfileid: "76740103"
 
   Вы увидите <xref:System.Windows.Forms.DataGridView> заполненные данными из таблицы `Customers`. Если дважды щелкнуть ячейку в столбце `CompanyName`, можно изменить значение. Если удалить все символы и нажать клавишу TAB, чтобы выйти из ячейки, <xref:System.Windows.Forms.DataGridView> не позволит выйти из нее. При вводе в ячейку непустой строки элемент управления <xref:System.Windows.Forms.DataGridView> позволяет выйти из ячейки.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Next Steps
 
 Это приложение предоставляет базовое представление о возможностях элемента управления <xref:System.Windows.Forms.DataGridView>. Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами.
 
@@ -92,7 +92,7 @@ ms.locfileid: "76740103"
 
 - Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [как настроить внешний вид ячеек в элементе управления Windows Forms DataGridView](customize-the-appearance-of-cells-in-the-datagrid.md) и [как задать стили шрифта и цвета в элементе управления Windows Forms DataGridView](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

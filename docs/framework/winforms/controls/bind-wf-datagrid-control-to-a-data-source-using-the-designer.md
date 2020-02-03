@@ -66,7 +66,7 @@ ms.locfileid: "76744086"
 
 3. Напишите код для заполнения набора данных.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления DataGrid](datagrid-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

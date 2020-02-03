@@ -150,7 +150,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ![Снимок экрана, показывающий стеклянную рамку, расширенную в приложение WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Обзор диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview)
 - [Общие сведения об размытии диспетчер окон рабочего стола](/windows/desktop/dwm/blur-ovw)

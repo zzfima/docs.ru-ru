@@ -96,7 +96,7 @@ button1->Left += 200;
 > [!NOTE]
 > Используйте свойство <xref:System.Windows.Forms.Control.Location%2A>, чтобы одновременно задать координаты X и Y элемента управления. Чтобы задать расположение по отдельности, используйте подсвойство <xref:System.Windows.Forms.Control.Left%2A> (**X**) или <xref:System.Windows.Forms.Control.Top%2A> (**Y**) элемента управления. Не пытайтесь неявно задать координаты X и Y структуры <xref:System.Drawing.Point>, представляющей расположение кнопки, так как эта структура содержит копию координат кнопки.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы управления Windows Forms](index.md)
 - [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

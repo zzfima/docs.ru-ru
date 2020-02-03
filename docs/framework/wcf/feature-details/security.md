@@ -18,8 +18,8 @@ ms.locfileid: "76744634"
   
  Дополнительные сведения о Windows Server AppFabric и безопасности см. в статье [модель безопасности для Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+## <a name="in-this-section"></a>в этом разделе  
+ [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Описание функций безопасности в WCF.  
   
  [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
@@ -34,10 +34,10 @@ ms.locfileid: "76744634"
  [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  Описание привязок с точки зрения безопасности, в том числе демонстрация создания настраиваемых привязок безопасности.  
   
- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  Описывает, как защитить сообщения с помощью функций безопасности WCF.  
   
- [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Аутентификация](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Примеры типичных задач, связанных с проверкой подлинности.  
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
@@ -55,20 +55,20 @@ ms.locfileid: "76744634"
  [Руководство и рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Рекомендации по созданию безопасных приложений WCF.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Подробные сведения о возможностях WCF](../../../../docs/framework/wcf/feature-details/index.md)  
   
  [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Руководство по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [Концептуальный обзор](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Настройка приложения](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

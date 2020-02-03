@@ -23,7 +23,7 @@ ms.locfileid: "76745222"
   
  Самым простым использованием элемента управления <xref:System.Windows.Forms.LinkLabel> является отображение одной ссылки с помощью свойства <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, но можно также отобразить несколько гиперссылок с помощью свойства <xref:System.Windows.Forms.LinkLabel.Links%2A>. Свойство <xref:System.Windows.Forms.LinkLabel.Links%2A> позволяет получить доступ к коллекции ссылок. Можно также указать данные в свойстве <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> каждого отдельного объекта <xref:System.Windows.Forms.LinkLabel.Link>. Значение свойства <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> можно использовать для хранения расположения файла, который необходимо отобразить, или адреса веб-сайта.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Общие сведения об элементе управления Label](label-control-overview-windows-forms.md)

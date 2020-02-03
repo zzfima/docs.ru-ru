@@ -62,7 +62,7 @@ private void Form1_Paint(System.Object sender,
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Приведенный выше код выполняется в обработчике событий <xref:System.Windows.Forms.Control.Paint> формы, чтобы графические объекты сохранялись при перерисовке формы. Таким образом, не следует вызывать методы, связанные с графикой, в обработчике событий <xref:System.Windows.Forms.Form.Load>, поскольку рисуемое содержимое не будет перерисовано при изменении размера формы или ее скрытии другой формой.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

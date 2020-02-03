@@ -28,7 +28,7 @@ ms.locfileid: "76745986"
 
 Если вам необходимо создать пользовательский элемент управления для использования в веб-формах, см. раздел [Разработка пользовательских серверных элементов управления ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Пошаговое руководство. Создание составного элемента управления](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
 Демонстрируется создание простого составного элемента управления в C#.
@@ -81,18 +81,18 @@ ms.locfileid: "76745986"
 [Разрешение вопросов, связанных с созданием элементов управления и компонентов](troubleshooting-control-and-component-authoring.md)\
 Демонстрируются диагностика и исправление распространенных проблем, возникающих при разработке пользовательского компонента или элемента управления.
 
-## <a name="reference"></a>Справочные сведения
+## <a name="reference"></a>Справочник
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 
 - <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)\
 Описывается создание пользовательских элементов управления с помощью .NET Framework.
 
-[Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
+[Независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md)\
 Основные сведения об общеязыковой среде выполнения (CLR), которая предназначена для упрощения создания и использования компонентов. Важным аспектом этого упрощения является расширение возможностей взаимодействия между компонентами, написанными на разных языках программирования. Спецификация CLS делает возможным создание инструментов и компонентов, которые работают с несколькими языками программирования.
 
 [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\

@@ -54,7 +54,7 @@ ms.locfileid: "76744258"
 
 6. Щелкните глиф смарт-тега. В контекстном меню, расположенном рядом с глифом, выберите элемент **ориентация разделителя по горизонтали** . Обратите внимание, что теперь Панель разделителя элемента управления <xref:System.Windows.Forms.SplitContainer> ориентирована горизонтально.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

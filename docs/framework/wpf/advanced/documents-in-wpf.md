@@ -55,7 +55,7 @@ ms.locfileid: "76737966"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Текст в пользовательском интерфейсе  
- Текст можно добавлять не только в документы, но и использовать в интерфейсе приложений, например в формах. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество элементов управления для отображения текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений. Как правило, элемент <xref:System.Windows.Controls.TextBlock> следует использовать, если требуется ограниченная поддержка текста, например краткое предложение в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> можно использовать, если требуется минимальная поддержка текста. Дополнительные сведения см. в разделе [Общие сведения о классе TextBlock](../controls/textblock-overview.md).  
+ Текст можно добавлять не только в документы, но и использовать в интерфейсе приложений, например в формах. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется множество элементов управления для рисования текста на экране. Каждый элемент управления предназначен для различных сценариев и имеет свой собственный список функций и ограничений. Как правило, элемент <xref:System.Windows.Controls.TextBlock> следует использовать, если требуется ограниченная поддержка текста, например краткое предложение в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> можно использовать, если требуется минимальная поддержка текста. Дополнительные сведения см. в разделе [Общие сведения о классе TextBlock](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Упаковка документов  
@@ -135,7 +135,7 @@ ms.locfileid: "76737966"
   
 - Маршрутизация документов непосредственно на совместимый с XPS принтер.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
@@ -144,7 +144,7 @@ ms.locfileid: "76737966"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Text](optimizing-performance-text.md)
+- [Текст](optimizing-performance-text.md)
 - [Общие сведения о документах нефиксированного формата](flow-document-overview.md)
 - [Общие сведения о печати](printing-overview.md)
 - [Сериализация и хранение документов](document-serialization-and-storage.md)

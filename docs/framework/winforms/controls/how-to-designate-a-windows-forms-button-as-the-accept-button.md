@@ -18,7 +18,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743267"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Практическое руководство. Создание кнопки принятия в Windows Forms
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Практическое руководство. Назначение кнопок принятия в Windows Forms
 В любой форме Windows Forms можно назначить элемент управления <xref:System.Windows.Forms.Button>, который будет кнопкой принять, также известный как кнопка по умолчанию. Когда пользователь нажимает клавишу ВВОД, нажата кнопка по умолчанию независимо от того, какой элемент управления формы имеет фокус.  
   
 > [!NOTE]
@@ -49,7 +49,7 @@ ms.locfileid: "76743267"
        }  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Общие сведения об элементе управления Button](button-control-overview-windows-forms.md)

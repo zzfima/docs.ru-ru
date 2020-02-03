@@ -20,7 +20,7 @@ ms.locfileid: "76736978"
   
  Список отмеченных флажков может содержать элементы, добавленные во время разработки с помощью **редактора коллекции строк** , или их элементы могут динамически добавляться из коллекции во время выполнения с помощью свойства <xref:System.Windows.Forms.CheckedListBox.Items%2A>. Дополнительные сведения см. в разделе [Добавление и удаление элементов элемента управления ComboBox Windows Forms, ListBox или CheckedListBox](add-and-remove-items-from-a-wf-combobox.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.CheckedListBox>
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>

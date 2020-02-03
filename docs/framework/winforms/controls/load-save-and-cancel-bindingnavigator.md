@@ -49,7 +49,7 @@ ms.locfileid: "76745130"
 
     4. Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> для каждой кнопки значение **Text**. Кроме того, можно задать для этого свойства значение **Image** или **имажеандтекст**и задать отображение изображения в свойстве <xref:System.Windows.Forms.ToolStripItem.Image%2A>.
 
-    5. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно. Кнопки добавляются в <xref:System.Windows.Forms.ToolStrip>.
+    5. Чтобы закрыть диалоговое окно, нажмите кнопку **ОК** . Кнопки добавляются в <xref:System.Windows.Forms.ToolStrip>.
 
 8. Щелкните форму правой кнопкой мыши и выберите команду **Просмотреть код**.
 
@@ -110,7 +110,7 @@ ms.locfileid: "76745130"
     > [!NOTE]
     > Метод <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> ограничивается строкой данных. Сохраните все изменения, внесенные при просмотре отдельной записи, прежде чем переходить к следующей записи.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

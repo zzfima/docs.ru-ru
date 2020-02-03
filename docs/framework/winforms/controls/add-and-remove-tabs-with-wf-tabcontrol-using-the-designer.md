@@ -24,11 +24,11 @@ ms.locfileid: "76746283"
 
 - На смарт-теге элемента управления щелкните **Добавить** вкладку или **Удалить вкладку** .
 
-     \- или -
+     -или-
 
      В окне **Свойства** нажмите кнопку **с многоточием** (![кнопку с многоточием (...) в окно свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом со свойством <xref:System.Windows.Forms.TabControl.TabPages%2A>, чтобы открыть **Редактор коллекции TabPage**. Нажмите кнопку **Добавить** или **Удалить** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления TabControl](tabcontrol-control-windows-forms.md)
 - [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)

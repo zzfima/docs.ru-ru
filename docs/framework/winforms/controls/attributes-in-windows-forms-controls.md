@@ -20,7 +20,7 @@ ms.locfileid: "76732125"
 ## <a name="attributes-for-control-and-component-properties"></a>Атрибуты для свойств элементов управления и компонентов  
  В следующей таблице представлены атрибуты, которые можно применять к свойствам или другим членам пользовательских элементов управления и компонентов. Пример использования этих атрибутов см. в разделе [Практическое руководство. Применение атрибутов в элементах управления Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
   
-|Атрибут|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Указывает значение, которое нужно передать в свойство, чтобы свойство получило свое значение из другого источника. Это называется *окружением*.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Указывает, должно ли отображаться свойство в окне **Свойства**.|  
@@ -30,7 +30,7 @@ ms.locfileid: "76732125"
 |<xref:System.ComponentModel.DisplayNameAttribute>|Указывает отображаемое имя для свойства, события или метода `public void`, у которого нет аргументов.|  
 |<xref:System.ComponentModel.EditorAttribute>|Указывает редактор, используемый для изменения свойства.|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|Указывает, что свойство или метод можно просматривать в редакторе.|  
-|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Указывает ключевое слово контекста для класса или члена.|  
+|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Указывает ключевое слово контекста для класса или элемента.|  
 |<xref:System.ComponentModel.LocalizableAttribute>|Указывает, должно ли быть локализовано свойство.|  
 |<xref:System.ComponentModel.PasswordPropertyTextAttribute>|Указывает, что текстовое представление объекта скрыто символами, например звездочками.|  
 |<xref:System.ComponentModel.ReadOnlyAttribute>|Указывает, предназначено ли свойство, к которому привязан этот атрибут, только для чтения или для чтения и записи во время разработки.|  
@@ -40,7 +40,7 @@ ms.locfileid: "76732125"
 ## <a name="attributes-for-data-binding-properties"></a>Атрибуты для свойств привязки данных  
  В следующей таблице представлены атрибуты, с помощью которых можно указывать, как пользовательские элементы управления и компоненты взаимодействуют с привязкой данных.  
   
-|Атрибут|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.BindableAttribute>|Указывает, используется ли обычно свойство для привязки.|  
 |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Указывает источник данных и свойства элемента данных для компонента.|  
@@ -51,7 +51,7 @@ ms.locfileid: "76732125"
 ## <a name="attributes-for-classes"></a>Атрибуты для классов  
  В следующей таблице представлены атрибуты, с помощью которых можно указать поведение пользовательских элементов управления и компонентов во время разработки.  
   
-|Атрибут|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.DefaultEventAttribute>|Задает событие по умолчанию для компонента.|  
 |<xref:System.ComponentModel.DefaultPropertyAttribute>|Задает свойство по умолчанию для компонента.|  
@@ -60,7 +60,7 @@ ms.locfileid: "76732125"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|Представляет атрибут элемента панели инструментов.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Задает строку фильтра и тип фильтра для элемента панели инструментов.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Attribute>
 - [Практическое руководство. Применение атрибутов к элементам управления Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)

@@ -52,14 +52,14 @@ ms.locfileid: "76742709"
 #### <a name="certificate"></a>Сертификат  
  В IIS предусмотрена функция, требующая, чтобы клиенты входили в систему с использованием сертификата. Эта возможность также позволяет IIS сопоставить сертификат клиента с учетной записью Windows. Дополнительные сведения о IIS 6,0 см. [в разделе Включение сертификатов клиентов в iis 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10)). Дополнительные сведения о IIS 7,0 см. [в разделе Настройка сертификатов сервера в IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
-#### <a name="digest"></a>Digest  
+#### <a name="digest"></a>Дайджест  
  Дайджест-проверка подлинности подобна обычной проверке подлинности, но имеет преимущество, заключающееся в передаче учетных данных в виде хэша, а не открытого текста. Дополнительные сведения о IIS 6,0 см. [в статье дайджест-проверка подлинности в iis 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)). Дополнительные сведения о IIS 7,0 см. в разделе [Настройка дайджест-проверки подлинности (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10)).  
   
-#### <a name="windows"></a>Портал  
+#### <a name="windows"></a>Windows  
  Соответствует встроенной проверке подлинности Windows в IIS. При задании этого значения также предполагается, что сервер находится в домене Windows, в котором для взаимодействия с контроллером домена используется протокол Kerberos. Если сервер не находится в домене с поддержкой Kerberos или происходит сбой системы Kerberos, можно использовать значение NTLM, описанное в следующем разделе. Дополнительные сведения о IIS 6,0 см. [в статье встроенная проверка подлинности Windows в iis 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10)). Дополнительные сведения о IIS 7,0 см. [в разделе Настройка сертификатов сервера в IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 #### <a name="ntlm"></a>NTLM  
- Это позволяет серверу использовать NTLM для проверки подлинности в случае сбоя протокола Kerberos. Дополнительные сведения о настройке служб IIS в IIS 6,0 см. в разделе [Принудительная проверка подлинности NTLM](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10)). Для IIS 7,0 проверка подлинности Windows включает проверку подлинности NTLM. Дополнительные сведения см. [в разделе Настройка сертификатов сервера в IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
+ Это позволяет серверу использовать NTLM для проверки подлинности в случае сбоя протокола Kerberos. Дополнительные сведения о настройке служб IIS в IIS 6,0 см. в разделе [Принудительная проверка подлинности NTLM](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10)). Для IIS 7,0 проверка подлинности Windows включает проверку подлинности NTLM. Дополнительные сведения см. в разделе [Настройка сертификатов сервера IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  Класс <xref:System.ServiceModel.WSHttpBinding> предназначен для взаимодействия со службами, реализующими спецификации WS-*. Безопасность транспорта для этой привязки обеспечивается посредством протокола SSL по протоколам HTTP или HTTPS. Чтобы создать приложение WCF, использующее SSL, используйте IIS для размещения приложения. В случае создания резидентного приложения используйте средство HttpCfg.exe для привязки сертификата X.509 к конкретному порту на компьютере. Номер порта указывается как часть приложения WCF в качестве адреса конечной точки. При использовании транспортного режима адрес конечной точки должен включать протокол HTTPS; в противном случае во время выполнения будет вызвано исключение. Дополнительные сведения см. в разделе [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -82,7 +82,7 @@ ms.locfileid: "76742709"
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>Клиент  
+#### <a name="client"></a>клиент  
  На клиенте следует задать сертификат с помощью метода <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> класса <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.  
   
 > [!NOTE]
@@ -120,6 +120,6 @@ ms.locfileid: "76742709"
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding и NetMsmqBinding  
  Полное обсуждение безопасности транспорта с помощью очереди сообщений (прежнее название — MSMQ) см. в разделе [Защита сообщений с использованием защиты транспорта](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

@@ -33,7 +33,7 @@ ms.locfileid: "76737371"
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ИДЕНТИФИКАТОР|Name|  
+|ID|Имя|  
 |--------|----------|  
 |12|Картофель|  
 |13|Цыпленок|  
@@ -54,7 +54,7 @@ ms.locfileid: "76737371"
   
 4. Задайте перечисленные ниже свойства. Их можно задать в коде или в конструкторе.  
   
-    |Идентификаторы|Параметр|  
+    |Свойство|Параметр|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Таблица, в которой содержатся сведения о том, какому коду соответствует тот или иной элемент. В предыдущем сценарии это `ItemTable`.|  
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Столбец таблицы источника данных, который необходимо отобразить в элементе управления. В предыдущем сценарии это `"Name"` (для задания в коде используйте кавычки).|  
@@ -70,7 +70,7 @@ ms.locfileid: "76737371"
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Привязка данных и Windows Forms](../data-binding-and-windows-forms.md)
 - [Общие сведения об элементе управления ListBox](listbox-control-overview-windows-forms.md)

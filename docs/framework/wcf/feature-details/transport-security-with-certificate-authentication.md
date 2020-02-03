@@ -21,14 +21,14 @@ ms.locfileid: "76742663"
   
  Дополнительные сведения об использовании сертификата со службой см. в разделе [Работа с](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) сертификатами и [инструкции. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). В следующей таблице описываются различные особенности этого сценария.  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Режим безопасности|Transport|  
-|Взаимодействие|С существующими службами и клиентами веб-служб.|  
+|Режим безопасности|Транспортировка|  
+|Совместимость|С существующими службами и клиентами веб-служб.|  
 |Проверка подлинности (сервера)<br /><br /> Проверка подлинности (клиента)|Да (с использованием SSL-сертификата)<br /><br /> Да (с использованием сертификата X.509)|  
 |Целостность данных|Да|  
 |Конфиденциальность данных|Да|  
-|Transport|HTTPS|  
+|Транспортировка|HTTPS|  
 |Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Настройка службы  
@@ -138,7 +138,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

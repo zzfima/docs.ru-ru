@@ -76,7 +76,7 @@ ms.locfileid: "76741517"
   
      Дополнительные сведения о Windows Forms заданий печати, в том числе о создании задания печати программным способом, см. в разделе <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Поддержка печати в Windows Forms](windows-forms-print-support.md)

@@ -61,9 +61,9 @@ ms.locfileid: "76728175"
   
 Для этого примера требуются:
   
-- ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStripControlHost>
 - [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)

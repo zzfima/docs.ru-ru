@@ -23,18 +23,18 @@ ms.locfileid: "76736996"
 # <a name="checkedlistbox-control-windows-forms"></a>Элемент управления CheckedListBox (Windows Forms)
 Элемент управления Windows Forms `CheckedListBox` отображает список элементов, например элемент управления <xref:System.Windows.Forms.ListBox>, а также флажки рядом с элементами списка.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления CheckedListBox](checkedlistbox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
  [Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  Описывает, как выполнить пошаговое выполнение списка, чтобы определить, какие элементы отмечены флажками.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.CheckedListBox>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)  
  Предоставляет список действий, которые можно выполнить с помощью списков, полей со списками и списков с установленными флажками.  
   

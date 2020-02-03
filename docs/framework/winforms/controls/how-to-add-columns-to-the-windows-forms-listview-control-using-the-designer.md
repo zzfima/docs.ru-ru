@@ -28,7 +28,7 @@ ms.locfileid: "76744605"
 
 3. Используйте кнопку **Добавить** , чтобы добавить новые столбцы. Затем можно выбрать заголовок столбца и задать его текст (заголовок столбца), выравнивание текста и ширину.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

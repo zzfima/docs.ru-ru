@@ -30,7 +30,7 @@ ms.locfileid: "76732298"
 
 4. Чтобы удалить элемент, выберите его и нажмите кнопку **Удалить** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)

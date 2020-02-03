@@ -42,7 +42,7 @@ ms.locfileid: "76746592"
     toolTip1->AutoPopDelay = 5000;  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления ToolTip](tooltip-component-overview-windows-forms.md)
 - [Практическое руководство. Определение всплывающих подсказок для элементов управления в Windows Forms во время разработки](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

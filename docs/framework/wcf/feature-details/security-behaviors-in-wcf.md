@@ -14,7 +14,7 @@ ms.locfileid: "76730952"
   
 - [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
-- [\<ClientCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+- [>\<ClientCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
 - [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "76730952"
   
 - Задайте набор допустимых универсальных кодов ресурса (URI), добавив их в данную коллекцию. Для этого вставьте [\<добавить >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) для каждого URI.  
   
- Для получения дополнительной информации см. <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ Дополнительные сведения см. в разделе <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  Дополнительные сведения об использовании этого элемента конфигурации см. в разделе [как настроить учетные данные на служба федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
@@ -217,7 +217,7 @@ ms.locfileid: "76730952"
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

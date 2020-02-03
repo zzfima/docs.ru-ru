@@ -32,7 +32,7 @@ ms.locfileid: "76745681"
     > [!NOTE]
     > Можно также закрепить столбец при его добавлении, выбрав **зафиксированное** поле в диалоговом окне **Добавление столбца** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>

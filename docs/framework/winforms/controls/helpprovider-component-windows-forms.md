@@ -16,20 +16,20 @@ ms.locfileid: "76745600"
 # <a name="helpprovider-component-windows-forms"></a>Компонент HelpProvider (Windows Forms)
 Компонент `HelpProvider` Windows Forms позволяет связать HTML-файл справки версии 1.x (CHM-файл, созданный с помощью средства HTML Help Workshop, или HTM-файл) с приложением Windows.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте HelpProvider](helpprovider-component-overview-windows-forms.md)  
  Общие понятия, связанные с компонентом `HelpProvider`, который позволяет связать HTML-файл справки с приложением Windows.  
   
  См. раздел [Справочные системы в Windows Forms приложениях](../advanced/help-systems-in-windows-forms-applications.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.HelpProvider>  
  Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.Help>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   

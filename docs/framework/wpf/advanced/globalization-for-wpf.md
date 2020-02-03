@@ -36,7 +36,7 @@ ms.locfileid: "76747054"
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Encoding
+### <a name="encoding"></a>Кодирование
  В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] поддерживается кодировка ASCII, Юникод UTF-16 и UTF-8. Оператор Encoding находится в начале [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] документа. Если атрибут кодировки и порядок байтов отсутствуют, по умолчанию в средстве синтаксического анализа используется кодировка UTF-8. Предпочтительные кодировки: UTF-8 и UTF-16. UTF-7 не поддерживается. В следующем примере показано, как задать кодировку UTF-8 в файле [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -56,7 +56,7 @@ ms.locfileid: "76747054"
 ```
 
 <a name="unicode"></a>
-### <a name="unicode"></a>Unicode
+### <a name="unicode"></a>Юникод
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] поддерживает все функции Юникода, включая суррогаты. Если кодировка может быть сопоставлена с Юникодом, она поддерживается. Например, GB18030 представляет определенные символы, которые сопоставляются расширениям A и B и парам суррогатов китайского, японского и корейского. Следовательно, этот набор символов полностью поддерживается. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение может использовать <xref:System.Globalization.StringInfo> для управления строками, не зная, есть ли у них суррогатные пары или самостоятельные символы.
 
 <a name="design_intl_ui_with_xaml"></a>
@@ -71,17 +71,17 @@ ms.locfileid: "76747054"
 
 - Арабский
 
-- бенгальский
+- Бенгальский
 
-- деванагари
+- Девангари
 
-- кириллица
+- Кириллица
 
 - Греческий
 
 - Гуджарати
 
-- гурмухи
+- Гурмукхи
 
 - Иврит
 
@@ -119,7 +119,7 @@ ms.locfileid: "76747054"
 
 - Старый хангыль (корейский)
 
-- бирманский
+- Мьянма
 
 - Сингальский
 
@@ -178,6 +178,6 @@ ms.locfileid: "76747054"
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения о глобализации и локализации WPF](wpf-globalization-and-localization-overview.md)

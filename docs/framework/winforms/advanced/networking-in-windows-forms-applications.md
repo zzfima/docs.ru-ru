@@ -1,5 +1,5 @@
 ---
-title: Возможности работы с сетями в
+title: Сеть
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
@@ -15,7 +15,7 @@ ms.locfileid: "76745010"
 # <a name="networking-in-windows-forms-applications"></a>Использование сети в приложениях Windows Forms
 .NET Framework предоставляет классы для отображения веб-страниц, загрузки веб-содержимого, взаимодействия с узлами FTP и использования веб-служб, что упрощает создание сетевых функций в приложении. Следующие ресурсы помогут вам понять сетевые технологии .NET Framework и как интегрировать их в Windows Forms.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Net>  
  Корневое пространство имен для классов в .NET Framework, обрабатывающих сетевые подключения.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "76745010"
  <xref:System.Windows.Forms.WebBrowser>  
  Управляемый класс-оболочка для элемента управления `WebBrowser`, который входит в состав Windows.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Сетевое программирование в .NET Framework](../../network-programming/index.md)  
  Введение в сетевые подключения в .NET Framework.  
   

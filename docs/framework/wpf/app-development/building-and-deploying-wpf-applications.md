@@ -24,15 +24,15 @@ ms.locfileid: "76742098"
   
 - Развертывание ClickOnce: система публикации и развертывания .NET.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Построение приложения WPF](building-a-wpf-application-wpf.md)  
  [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)  
- [Практические руководства](build-and-deploy-how-to-topics.md)  
+ [Разделы практического руководства](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  MSBuild  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Общие сведения об управлении приложением](application-management-overview.md)  
   [Windows в WPF](windows-in-wpf-applications.md)  
   [Общие сведения о переходах](navigation-overview.md)  

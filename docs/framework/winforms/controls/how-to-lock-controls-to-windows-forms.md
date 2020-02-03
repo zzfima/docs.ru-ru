@@ -47,7 +47,7 @@ ms.locfileid: "76736236"
 
 В окне **Свойства** выберите свойство **заблокировано** и нажмите кнопку **false**. (Двойной щелчок по имени переключает параметр свойства.)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы управления Windows Forms](index.md)
 - [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

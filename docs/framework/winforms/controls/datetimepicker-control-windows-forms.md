@@ -17,7 +17,7 @@ ms.locfileid: "76731970"
 # <a name="datetimepicker-control-windows-forms"></a>Элемент управления DateTimePicker (Windows Forms)
 Элемент управления Windows Forms `DateTimePicker` позволяет пользователю выбрать один элемент из списка дат или времени. При использовании для представления даты она появляется в двух частях: раскрывающемся списке с датой, представленной в тексте, и сетке, которая появляется при щелчке стрелки вниз рядом со списком.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления DateTimePicker](datetimepicker-control-overview-windows-forms.md)  
  Основные понятия, связанные с элементом управления `DateTimePicker`, который позволяет пользователям выбирать один элемент из списка дат или времени.  
   
@@ -30,14 +30,14 @@ ms.locfileid: "76731970"
  [Практическое руководство. Отображение времени с помощью элемента управления DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md)  
  Показывает, как `DateTimePicker` отображать только время.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DateTimePicker>  
  Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.MonthCalendar>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   

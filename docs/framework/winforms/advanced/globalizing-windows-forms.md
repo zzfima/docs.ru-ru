@@ -20,7 +20,7 @@ ms.locfileid: "76742062"
 
 *Глобализация* — это процесс проектирования и разработки программного продукта, который работает с несколькими языками и региональными параметрами.
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Международные шрифты в Windows Forms и элементах управления Windows](international-fonts-in-windows-forms-and-controls.md)  
 Объясняется, когда и как выбирать шрифты для отображения международных символов в формах Windows Forms.
@@ -31,7 +31,7 @@ ms.locfileid: "76742062"
 [Отображение азиатских символов с помощью свойства ImeMode](display-of-asian-characters-with-the-imemode-property.md)  
 Основные сведения о свойстве `ImeMode`, которое применяется для управления типом ввода, поддерживаемого формой или элементом управления Windows Forms.
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 - [Глобализация и локализация приложений .NET](../../../standard/globalization-localization/index.md)
 

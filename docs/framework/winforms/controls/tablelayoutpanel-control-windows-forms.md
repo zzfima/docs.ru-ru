@@ -19,7 +19,7 @@ ms.locfileid: "76735511"
 # <a name="tablelayoutpanel-control-windows-forms"></a>Элемент управления TableLayoutPanel (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> упорядочивает содержимое в сетке. Так как макет строится как во время разработки, так и во время выполнения, его можно изменять динамически по мере изменения среды приложения. Это позволяет пропорционально изменять размер элементов управления в панели, так чтобы они учитывали изменения, такие как изменение размера родительского элемента управления или длины текста в случае локализации.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления TableLayoutPanel](tablelayoutpanel-control-overview.md)  
  Основные понятия, связанные с элементом управления <xref:System.Windows.Forms.TableLayoutPanel>, который позволяет создавать макет со строками и столбцами.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "76735511"
   
 4. [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.TableLayoutPanel>.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "76735511"
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Локализация](../../../standard/globalization-localization/localization.md)  
  Обзор разделов, связанных с локализацией.  
   

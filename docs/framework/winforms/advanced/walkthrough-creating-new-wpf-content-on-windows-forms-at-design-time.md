@@ -23,7 +23,7 @@ ms.locfileid: "76746386"
 
 В этой статье показано, как создать элемент управления Windows Presentation Foundation (WPF) для использования в приложениях на основе Windows Forms.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -66,7 +66,7 @@ ms.locfileid: "76746386"
    > [!NOTE]
    > Обычно размещается более сложное содержимое WPF. Элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> используется здесь в целях наглядности.
 
-6. Постройте проект.
+6. Создайте проект.
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Добавление элемента управления WPF в форму Windows Forms
 
@@ -92,7 +92,7 @@ ms.locfileid: "76746386"
 
 5. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Windows Forms и WPF — это разные технологии, но они предназначены для тесного взаимодействия. Чтобы обеспечить расширенный внешний вид и поведение приложений, попробуйте выполнить следующие действия.
 
@@ -102,7 +102,7 @@ Windows Forms и WPF — это разные технологии, но они 
 
 - Изменение стиля оформления содержимого WPF. Дополнительные сведения см. в разделе [Пошаговое руководство. стилизация содержимого WPF](walkthrough-styling-wpf-content.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

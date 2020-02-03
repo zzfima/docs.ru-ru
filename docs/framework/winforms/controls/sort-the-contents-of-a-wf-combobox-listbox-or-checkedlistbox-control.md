@@ -22,11 +22,11 @@ Windows Forms элементы управления не сортируются,
   
 ### <a name="to-sort-the-list"></a>Сортировка списка  
   
-1. Задайте для свойства `Sorted` значение `true`.  
+1. Установите свойство `Sorted` в значение `true`.  
   
      Этот параметр перемещает все существующие элементы списка в отсортированном порядке.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

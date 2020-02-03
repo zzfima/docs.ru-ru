@@ -16,7 +16,7 @@ ms.locfileid: "76739787"
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Настройка размера и масштаба Windows Forms
 Этот раздел содержит ссылки на информацию об изменении размера формы Windows Forms.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Изменение размера формы в Windows Forms](how-to-resize-windows-forms.md)  
  Инструкции по указанию размера формы Windows Forms.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "76739787"
  [Поддержка высокого DPI в Windows Forms](high-dpi-support-in-windows-forms.md)    
  Обсуждается поддержка Windows Forms "для высокого DPI и динамического масштабирования. 
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Drawing.Size>  
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "76739787"
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Изменение внешнего вида Windows Forms](changing-the-appearance-of-windows-forms.md)  
  Ссылки на разделы, в которых описываются другие способы изменения внешнего вида форм Windows Forms.

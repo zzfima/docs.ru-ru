@@ -21,13 +21,13 @@ ms.locfileid: "76728105"
 
 ## <a name="using-imagelist-with-controls"></a>Использование компонента ImageList с элементами управления
 
-Список изображений можно использовать с любым элементом управления, который имеет свойство `ImageList` (или свойства <xref:System.Windows.Forms.ListView.SmallImageList%2A> и <xref:System.Windows.Forms.ListView.LargeImageList%2A>, если используется элемент управления <xref:System.Windows.Forms.ListView>). Элементы управления, которые могут быть связаны со списком изображений, включают: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton> и <xref:System.Windows.Forms.Label>. Чтобы связать список изображений с элементом управления, задайте для свойства `ImageList` элемента управления имя компонента <xref:System.Windows.Forms.ImageList>.
+Список изображений можно использовать с любым элементом управления, который имеет свойство `ImageList` (или свойства <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.ListView.SmallImageList%2A>, если используется элемент управления <xref:System.Windows.Forms.ListView.LargeImageList%2A>). Элементы управления, которые могут быть связаны со списком изображений, включают: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton> и <xref:System.Windows.Forms.Label>. Чтобы связать список изображений с элементом управления, задайте для свойства `ImageList` элемента управления имя компонента <xref:System.Windows.Forms.ImageList>.
 
 ## <a name="key-properties"></a>Ключевые свойства
 
 Основным свойством компонента <xref:System.Windows.Forms.ImageList> является <xref:System.Windows.Forms.ImageList.Images%2A>, которое содержит изображения для использования связанным элементом управления. Доступ к каждому отдельному изображению может осуществляться по значению индекса или ключу. Свойство <xref:System.Windows.Forms.ImageList.ColorDepth%2A> определяет количество цветов, которые используются для отрисовки изображений. Размер всех отображаемых изображений будет одинаковым (задается свойством <xref:System.Windows.Forms.ImageList.ImageSize%2A>). Изображения, размер которых больше заданного, масштабируются.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ImageList>
 - [Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

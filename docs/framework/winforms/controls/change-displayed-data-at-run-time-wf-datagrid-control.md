@@ -93,7 +93,7 @@ ms.locfileid: "76740589"
        }  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [DataSets в ADO.NET](../../data/adonet/ado-net-datasets.md)
 - [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

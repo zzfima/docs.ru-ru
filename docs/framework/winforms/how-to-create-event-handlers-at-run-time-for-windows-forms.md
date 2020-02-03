@@ -73,7 +73,7 @@ ms.locfileid: "76739506"
 
      Метод <xref:System.ComponentModel.EventHandlerList.AddHandler%2A>, показанный в приведенном выше коде Visual Basic, устанавливает обработчик событий щелчка для кнопки.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Общие сведения об обработчиках событий](event-handlers-overview-windows-forms.md)

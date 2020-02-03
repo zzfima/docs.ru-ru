@@ -15,17 +15,17 @@ ms.locfileid: "76728920"
 
 В статьях, приведенных в этом разделе, приводятся рекомендации и элементы, которые следует учитывать при создании приложений Secure Windows Communication Foundation (WCF). Дополнительные сведения о Windows Server AppFabric и безопасности см. в статье [модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
-## <a name="in-this-section"></a>Содержание раздела  
+## <a name="in-this-section"></a>В этом разделе  
  [Рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  Рекомендации по обеспечению безопасности приложений.  
   
  [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  Элементы, которые следует учитывать при создании приложения WCF.  
   
- [Особенности производительности](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
+ [Вопросы производительности](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  Сведения, касающиеся производительности и безопасности.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

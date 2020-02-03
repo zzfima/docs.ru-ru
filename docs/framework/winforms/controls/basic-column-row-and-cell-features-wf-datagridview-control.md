@@ -14,10 +14,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746226"
 ---
-# <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Базовые возможности столбцов, строк и ячеек элемента управления DataGridView в Windows Forms
+# <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms
 Многие базовые характеристики `DataGridView` ячеек, строк и столбцов можно изменить, задав отдельные свойства. В подразделах этого раздела описаны некоторые из наиболее часто используемых функций.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Скрытие столбцов элемента управления DataGridView в Windows Forms](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  Описывает, как предотвратить появление в элементе управления конкретных столбцов.  
   
@@ -42,18 +42,18 @@ ms.locfileid: "76746226"
  [Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  Описывает создание столбца изображений, который отображает значок в каждой ячейке.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGridView>  
  Содержит справочную документацию по элементу управления.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Базовое форматирование и оформление элемента управления DataGridView в Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  Разделы, описывающие способы изменения базового внешнего вида элемента управления и форматирования отображаемых данных ячейки.  
   
  [Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Разделы, описывающие программирование объектов ячеек, строк и столбцов.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

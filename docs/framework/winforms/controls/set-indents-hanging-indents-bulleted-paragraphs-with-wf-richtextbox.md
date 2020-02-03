@@ -25,7 +25,7 @@ ms.locfileid: "76743013"
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Форматирование абзаца в виде маркированного списка  
   
-1. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> значение `true`.  
+1. Установите свойство <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> в значение `true`.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -68,7 +68,7 @@ ms.locfileid: "76743013"
     > [!NOTE]
     > Все эти свойства влияют на все абзацы, содержащие выделенный текст, а также на текст, который будет вводиться после текущей позиции курсора. Например, когда пользователь выделяет слово в абзаце и затем изменяет параметры отступа, новые параметры будут применяться ко всему абзацу, который содержит это слово, а также ко всем абзацам, которые будут введены после выделенного абзаца. Дополнительные сведения о программном выборе текста см. в разделе <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)

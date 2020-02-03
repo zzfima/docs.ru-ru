@@ -49,7 +49,7 @@ ms.locfileid: "76732715"
   
 - Чтобы удалить выбранные вкладки, используйте метод <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> свойства <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   
-     \- или -  
+     -или-  
   
 - Чтобы удалить все вкладки, используйте метод <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> свойства <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "76732715"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление элемента управления на вкладку](how-to-add-a-control-to-a-tab-page.md)

@@ -28,7 +28,7 @@ ms.locfileid: "76746789"
   
 #### <a name="to-start-a-drag-operation"></a>Начало операции перетаскивания  
   
-1. В событии <xref:System.Windows.Forms.Control.MouseDown> для элемента управления, в котором начнется перетаскивание, используйте метод `DoDragDrop`, чтобы задать перетаскиваемые данные и разрешить перетаскивание разрешенных эффектов. Дополнительные сведения см. в разделах <xref:System.Windows.Forms.DragEventArgs.Data%2A> и <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1. В событии <xref:System.Windows.Forms.Control.MouseDown> для элемента управления, в котором начнется перетаскивание, используйте метод `DoDragDrop`, чтобы задать перетаскиваемые данные и разрешить перетаскивание разрешенных эффектов. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.DragEventArgs.Data%2A> и <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
      В следующем примере показан запуск операции перетаскивания. Элемент управления, в котором начинается перетаскивание, является элементом управления <xref:System.Windows.Forms.Button>, перетаскиваемые данные — это строка, представляющая свойство <xref:System.Windows.Forms.Control.Text%2A> элемента управления <xref:System.Windows.Forms.Button>, а допустимые эффекты — копирование или перемещение.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "76746789"
   
 1. Присвойте свойству <xref:System.Windows.Forms.Control.AllowDrop%2A> значение true.  
   
-2. В событии `DragEnter` для элемента управления, в котором будет выполняться перетаскивание, убедитесь, что перетаскиваемые данные имеют допустимый тип (в данном случае <xref:System.Windows.Forms.Control.Text%2A>). Затем код задает результат, который будет выполняться при выполнении перетаскивания в значение в перечислении <xref:System.Windows.Forms.DragDropEffects>. Для получения дополнительной информации см. <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. В событии `DragEnter` для элемента управления, в котором будет выполняться перетаскивание, убедитесь, что перетаскиваемые данные имеют допустимый тип (в данном случае <xref:System.Windows.Forms.Control.Text%2A>). Затем код задает результат, который будет выполняться при выполнении перетаскивания в значение в перечислении <xref:System.Windows.Forms.DragDropEffects>. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,9 +83,9 @@ ms.locfileid: "76746789"
     ```  
   
     > [!NOTE]
-    > Вы можете определить собственный <xref:System.Windows.Forms.DataFormats>, указав собственный объект в качестве параметра <xref:System.Object> метода <xref:System.Windows.Forms.DataObject.SetData%2A>. При этом необходимо убедиться, что указанный объект является сериализуемым. Для получения дополнительной информации см. <xref:System.Runtime.Serialization.ISerializable>.  
+    > Вы можете определить собственный <xref:System.Windows.Forms.DataFormats>, указав собственный объект в качестве параметра <xref:System.Object> метода <xref:System.Windows.Forms.DataObject.SetData%2A>. При этом необходимо убедиться, что указанный объект является сериализуемым. Дополнительные сведения см. в разделе <xref:System.Runtime.Serialization.ISerializable>.  
   
-3. В событии <xref:System.Windows.Forms.Control.DragDrop> для элемента управления, в котором будет выполняться перетаскивание, используйте метод <xref:System.Windows.Forms.DataObject.GetData%2A> для получения перетаскиваемых данных. Для получения дополнительной информации см. <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. В событии <xref:System.Windows.Forms.Control.DragDrop> для элемента управления, в котором будет выполняться перетаскивание, используйте метод <xref:System.Windows.Forms.DataObject.GetData%2A> для получения перетаскиваемых данных. Дополнительные сведения см. в разделе <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
      В приведенном ниже примере элемент управления <xref:System.Windows.Forms.TextBox> — это элемент управления, к которому выполняется перетаскивание (где произойдет перетаскивание). Этот код задает <xref:System.Windows.Forms.Control.Text%2A> свойство элемента управления <xref:System.Windows.Forms.TextBox>, равное перетаскиваемых данным.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76746789"
     > [!NOTE]
     > Кроме того, можно работать со свойством <xref:System.Windows.Forms.DragEventArgs.KeyState%2A>, чтобы в зависимости от нажатых клавиш во время операции перетаскивания были выполнены определенные эффекты (например, при нажатии клавиши CTRL в стандартном режиме копируется перетаскивание данных).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Добавление данных в буфер обмена](how-to-add-data-to-the-clipboard.md)
 - [Практическое руководство. Извлечение данных из буфера обмена](how-to-retrieve-data-from-the-clipboard.md)

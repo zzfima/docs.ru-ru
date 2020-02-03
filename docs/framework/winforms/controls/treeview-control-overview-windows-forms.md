@@ -21,7 +21,7 @@ ms.locfileid: "76743218"
 
 Ключевые свойства элемента управления <xref:System.Windows.Forms.TreeView> — это <xref:System.Windows.Forms.TreeView.Nodes%2A> и <xref:System.Windows.Forms.TreeView.SelectedNode%2A>. Свойство <xref:System.Windows.Forms.TreeView.Nodes%2A> содержит список узлов верхнего уровня в представлении дерева. Свойство <xref:System.Windows.Forms.TreeView.SelectedNode%2A> определяет выделенный в данный момент узел. Рядом с узлами могут отображаться значки. Элемент управления использует изображения из элемента <xref:System.Windows.Forms.ImageList>, указанного в свойстве <xref:System.Windows.Forms.TreeView.ImageList%2A> дерева. Свойство <xref:System.Windows.Forms.TreeView.ImageIndex%2A> задает изображение по умолчанию для узлов в представлении дерева. Дополнительные сведения о отображении изображений см. [в разделе как задать значки для элемента управления Windows Forms TreeView](how-to-set-icons-for-the-windows-forms-treeview-control.md). Если вы используете Visual Studio 2005, у вас есть доступ к большой библиотеке стандартных образов, которые можно использовать с элементом управления <xref:System.Windows.Forms.TreeView>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.TreeView>
 - [Элемент управления TreeView](treeview-control-windows-forms.md)

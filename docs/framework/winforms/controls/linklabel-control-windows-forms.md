@@ -18,7 +18,7 @@ ms.locfileid: "76745193"
 # <a name="linklabel-control-windows-forms"></a>Элемент управления LinkLabel (Windows Forms)
 Элемент управления Windows Forms `LinkLabel` позволяет добавлять веб-ссылки в приложения Windows Forms. Элемент управления `LinkLabel` можно использовать для всех элементов, для которых можно использовать элемент управления <xref:System.Windows.Forms.Label>. можно также задать часть текста в виде ссылки на объект или веб-страницу.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления LinkLabel](linklabel-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -31,10 +31,10 @@ ms.locfileid: "76745193"
  [Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
  Показывает, как отображать веб-страницу в браузере по умолчанию, когда пользователь щелкает элемент управления Windows Forms `LinkLabel`.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.LinkLabel>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Содержит полный список элементов управления Windows Forms со ссылками на сведения об их использовании.

@@ -23,9 +23,9 @@ ms.locfileid: "76745529"
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Ссылка на веб-страницу с помощью элемента управления RichTextBox
 
-1. Задайте для"http://www.microsoft.com/"свойства строку, содержащую допустимый URL-адрес (например, ). <xref:System.Windows.Forms.RichTextBox.Text%2A>
+1. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.Text%2A> строку, содержащую допустимый URL-адрес (например, "http://www.microsoft.com/").
 
-2. Убедитесь, <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> что свойство имеет `true` значение (по умолчанию).
+2. Убедитесь, что для свойства <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> задано значение `true` (по умолчанию).
 
 3. Создайте новый глобальный экземпляр объекта <xref:System.Diagnostics.Process>.
 
@@ -117,7 +117,7 @@ ms.locfileid: "76745529"
     }
     ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>

@@ -86,7 +86,7 @@ ms.locfileid: "76742470"
   
 - Можно реализовать собственные классы ячеек и столбцов для размещения элементов управления, отличных от тех, которые представлены встроенными типами столбцов. Дополнительные сведения см. [в разделе инструкции. размещение элементов управления в Windows Forms ячейках DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Общие сведения об элементе управления DataGridView](datagridview-control-overview-windows-forms.md)

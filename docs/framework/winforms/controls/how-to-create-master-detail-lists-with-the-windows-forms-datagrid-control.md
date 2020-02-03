@@ -70,7 +70,7 @@ ms.locfileid: "76730980"
     GridDetails->SetDataBinding(ds, "Customers.CustOrd");  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
 - [Общие сведения об элементе управления DataGrid](datagrid-control-overview-windows-forms.md)

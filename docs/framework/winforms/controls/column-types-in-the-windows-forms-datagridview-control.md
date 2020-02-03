@@ -13,7 +13,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743857"
 ---
-# <a name="column-types-in-the-windows-forms-datagridview-control"></a>Типы столбцов элемента управления DataGridView Windows Forms
+# <a name="column-types-in-the-windows-forms-datagridview-control"></a>Типы столбцов элемента управления DataGridView в Windows Forms
 Элемент управления <xref:System.Windows.Forms.DataGridView> использует несколько типов столбцов для вывода сведений и позволяет пользователям изменять или добавлять данные.  
   
  При привязке <xref:System.Windows.Forms.DataGridView> элемента управления и присвоении свойству <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> значения `true`столбцы автоматически создаются с использованием типов столбцов по умолчанию, соответствующих типам данных, содержащимся в связанном источнике данных.  
@@ -22,7 +22,7 @@ ms.locfileid: "76743857"
   
  В следующей таблице описаны различные классы столбцов, доступные для использования в элементе управления <xref:System.Windows.Forms.DataGridView>.  
   
-|Класс|Описание|  
+|Class|Description|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Используется со значениями, основанными на тексте. Создается автоматически при привязке к числам и строкам.|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Используется со значениями <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState>. Создается автоматически при привязке к значениям этих типов.|  
@@ -80,7 +80,7 @@ ms.locfileid: "76743857"
   
  Класс <xref:System.Windows.Forms.DataGridViewLinkColumn> предоставляет несколько свойств для изменения внешнего вида ссылок до, во время и после их нажатия.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

@@ -43,7 +43,7 @@ ms.locfileid: "76734553"
 
 Пошаговые инструкции по использованию этих возможностей можно найти в приведенных ниже разделах справки.
 
-|Описание|Раздел справки|
+|Description|Раздел справки|
 |-----------------|----------------|
 |Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
 |Использование элемента управления <xref:System.Windows.Forms.ToolStrip>|[Практическое руководство. Создание базового элемента управления ToolStrip со стандартными элементами с помощью конструктора](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
@@ -63,12 +63,12 @@ ms.locfileid: "76734553"
 
 Пошаговые инструкции по использованию этих возможностей можно найти в приведенных ниже разделах справки.
 
-|Описание|Раздел справки|
+|Description|Раздел справки|
 |-----------------|----------------|
 |Использование компонента <xref:System.Windows.Forms.BindingSource>|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](./controls/bind-wf-controls-with-the-bindingsource.md)|
 |Работа с источниками данных ADO.NET|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Использование окна "Источники данных"|[Привязка элементов управления Windows Forms к данным в Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|Использование параметров приложения|[Практическое руководство. Создание параметров приложения](./advanced/how-to-create-application-settings.md)|
+|Работа с параметрами приложения|[Практическое руководство. Создание параметров приложения](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Развертывание приложений на клиентских компьютерах
 
@@ -82,7 +82,7 @@ ms.locfileid: "76734553"
 
 Полное введение в ClickOnce см. в статье [безопасность и развертывание ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Пошаговые инструкции по использованию этих возможностей можно найти в приведенных ниже разделах справки.
 
-|Описание|Раздел справки|
+|Description|Раздел справки|
 |-----------------|----------------|
 |Развертывание приложения с помощью ClickOnce|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
 |Обновление развертывания ClickOnce|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
@@ -96,12 +96,12 @@ ms.locfileid: "76734553"
 
 Пошаговые инструкции по использованию этих возможностей можно найти в приведенных ниже разделах справки.
 
-|Описание|Раздел справки|
+|Description|Раздел справки|
 |-----------------|----------------|
 |Печать содержимого формы|[Практическое руководство. Печать графических изображений в Windows Forms](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Дополнительные сведения о безопасности форм Windows Forms|[Общие сведения о безопасности в Windows Forms](security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Приступая к работе с Windows Forms](getting-started-with-windows-forms.md)
 - [Создание новой формы Windows Forms](creating-a-new-windows-form.md)

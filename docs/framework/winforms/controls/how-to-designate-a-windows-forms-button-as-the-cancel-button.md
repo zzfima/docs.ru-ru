@@ -16,7 +16,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743258"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>Практическое руководство. Создание кнопки отмены в Windows Forms
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>Практическое руководство. Создание кнопки "Отмена" в Windows Forms
 В любой форме Windows Forms можно назначить элемент управления <xref:System.Windows.Forms.Button> в качестве кнопки отмены. Нажатие кнопки «отмена» происходит каждый раз, когда пользователь нажимает клавишу ESC, независимо от того, какой элемент управления формы имеет фокус. Такая кнопка обычно запрограммирована, позволяя пользователю быстро выйти из операции без фиксации каких-либо действий.  
   
 ### <a name="to-designate-the-cancel-button"></a>Назначение кнопки «Отмена»  
@@ -44,7 +44,7 @@ ms.locfileid: "76743258"
        }  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Общие сведения об элементе управления Button](button-control-overview-windows-forms.md)

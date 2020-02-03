@@ -25,7 +25,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.R
   
 2. Рисование <xref:System.Windows.Forms.RadioButton> элементов управления в <xref:System.Windows.Forms.GroupBox> или элементе управления <xref:System.Windows.Forms.Panel>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Общие сведения об элементе управления RadioButton](radiobutton-control-overview-windows-forms.md)

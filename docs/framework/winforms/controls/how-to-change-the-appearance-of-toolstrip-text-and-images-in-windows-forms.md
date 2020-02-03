@@ -25,7 +25,7 @@ ms.locfileid: "76746597"
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Определение того, что отображается в элементе ToolStripItem  
   
-- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> нужное значение. Возможные варианты: `Image`, `ImageAndText`, `None`и `Text`. Значение по умолчанию — `ImageAndText`.  
+- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> нужное значение. Возможные варианты: `Image`, `ImageAndText`, `None`и `Text`. Значение по умолчанию — `ImageAndText`.  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ ms.locfileid: "76746597"
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>Выровняйте текст по ToolStripItem  
   
-- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> нужное значение. Возможности — это любое сочетание верхнего, среднего и нижнего угла по левому краю, центру и правому. Значение по умолчанию — `MiddleCenter`.  
+- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> нужное значение. Возможности — это любое сочетание верхнего, среднего и нижнего угла по левому краю, центру и правому. Значение по умолчанию — `MiddleCenter`.  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ ms.locfileid: "76746597"
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>Выровняйте изображение по ToolStripItem  
   
-- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> нужное значение. Возможности — это любое сочетание верхнего, среднего и нижнего угла по левому краю, центру и правому. Значение по умолчанию — `MiddleLeft`.  
+- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> нужное значение. Возможности — это любое сочетание верхнего, среднего и нижнего угла по левому краю, центру и правому. Значение по умолчанию — `MiddleLeft`.  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ ms.locfileid: "76746597"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>Определение способа отображения текста и изображений по отношению друг к другу  
   
-- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> нужное значение. Возможные варианты: `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`и `TextBeforeImage`. Значение по умолчанию — `ImageBeforeText`.  
+- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> нужное значение. Возможные значения — `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage` и `TextBeforeImage`. Значение по умолчанию — `ImageBeforeText`.  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -75,7 +75,7 @@ ms.locfileid: "76746597"
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)

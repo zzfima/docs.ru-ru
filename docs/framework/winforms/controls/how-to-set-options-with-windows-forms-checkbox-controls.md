@@ -65,7 +65,7 @@ ms.locfileid: "76746767"
        }  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Общие сведения об элементе управления CheckBox](checkbox-control-overview-windows-forms.md)

@@ -46,7 +46,7 @@ ms.locfileid: "76746135"
   
 - Автоматически сортирует строки на основе базовых данных, когда пользователь щелкает заголовок столбца.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)

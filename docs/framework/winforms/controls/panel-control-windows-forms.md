@@ -16,7 +16,7 @@ ms.locfileid: "76744295"
 # <a name="panel-control-windows-forms"></a>Элемент управления Panel (Windows Forms)
 Windows Forms элементы управления `Panel` используются для предоставления идентифицируемого группирования для других элементов управления. Как правило, панели используются для разделения формы на функции. Элемент управления `Panel` аналогичен элементу управления <xref:System.Windows.Forms.GroupBox>; Тем не менее, только элемент управления `Panel` может иметь полосы прокрутки, а только элемент управления <xref:System.Windows.Forms.GroupBox> отображает заголовок.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления Panel](panel-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -29,11 +29,11 @@ Windows Forms элементы управления `Panel` используют
  [Практическое руководство. Установка фона панели](how-to-set-the-background-of-a-windows-forms-panel.md)  
  Описывает, как отобразить цвет фона и фоновое изображение на панели.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.Panel>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   

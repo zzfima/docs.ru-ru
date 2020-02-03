@@ -80,6 +80,6 @@ ms.locfileid: "76734856"
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)

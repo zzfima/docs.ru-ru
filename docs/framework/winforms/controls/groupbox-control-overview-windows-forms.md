@@ -22,6 +22,6 @@ Windows Forms элементы управления <xref:System.Windows.Forms.G
 ## <a name="groupbox-and-panel"></a>Группа и панель  
  Элемент управления <xref:System.Windows.Forms.GroupBox> аналогичен элементу управления <xref:System.Windows.Forms.Panel>; Тем не менее, только элемент управления <xref:System.Windows.Forms.GroupBox> отображает заголовок, а полосы прокрутки могут иметь только элемент управления <xref:System.Windows.Forms.Panel>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления GroupBox](groupbox-control-windows-forms.md)

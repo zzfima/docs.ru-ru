@@ -35,7 +35,7 @@ ms.locfileid: "76745590"
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     \- или -  
+     -или-  
   
 2. Используйте метод <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>, чтобы вставить элемент в список в указанной позиции.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76745590"
     domainUpDown1->Items->Insert(2, "rice");  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>

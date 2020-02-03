@@ -23,7 +23,7 @@ ms.locfileid: "76741466"
   
  Два других важных свойства — <xref:System.Windows.Forms.TrackBar.SmallChange%2A> и <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Значение свойства <xref:System.Windows.Forms.TrackBar.SmallChange%2A> — число позиций, на которое перемещается бегунок в ответ на нажатие клавиши со стрелкой влево или вправо. Значение свойства <xref:System.Windows.Forms.TrackBar.LargeChange%2A> — число позиций, на которое перемещается бегунок в ответ на нажатие клавиши PAGE UP или PAGE DOWN или в ответ на щелчок мыши на полосе прокрутки с любой стороны бегунка.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.TrackBar>
 - [Элемент управления TrackBar](trackbar-control-windows-forms.md)

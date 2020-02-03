@@ -12,10 +12,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76733870"
 ---
-# <a name="toolstrip-control-windows-forms"></a>{7&gt;Элемент управления ToolStrip (Windows Forms)&lt;7}
+# <a name="toolstrip-control-windows-forms"></a>Элемент управления ToolStrip (Windows Forms)
 Элементы управления <xref:System.Windows.Forms.ToolStrip> — это панели инструментов, на которых можно разместить меню, элементы управления и пользовательские элементы управления в приложениях Windows Forms.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76733870"
   
 - [Пример. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.ToolStrip>  
  Описание класса и всех его членов.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "76733870"
  <xref:System.Windows.Forms.ToolStripItem>  
  Описывает класс <xref:System.Windows.Forms.ToolStripItem> и содержит ссылки на все его члены.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

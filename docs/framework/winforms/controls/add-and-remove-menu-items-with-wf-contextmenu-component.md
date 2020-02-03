@@ -58,7 +58,7 @@ ms.locfileid: "76746270"
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     \- или -  
+     -или-  
   
 2. Используйте метод `Clear` коллекции `MenuItems` компонента <xref:System.Windows.Forms.ContextMenu>, чтобы удалить все элементы из меню.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "76746270"
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [Компонент ContextMenu](contextmenu-component-windows-forms.md)

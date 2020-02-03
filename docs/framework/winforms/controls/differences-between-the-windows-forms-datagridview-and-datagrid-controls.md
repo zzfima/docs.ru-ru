@@ -18,7 +18,7 @@ ms.locfileid: "76745967"
   
  В следующей таблице описаны некоторые основные функции, доступные в элементе управления <xref:System.Windows.Forms.DataGridView>, отсутствующие в элементе управления <xref:System.Windows.Forms.DataGrid>.  
   
-|Функция элемента управления DataGridView|Описание|  
+|Функция элемента управления DataGridView|Description|  
 |----------------------------------|-----------------|  
 |Несколько типов столбцов|Элемент управления <xref:System.Windows.Forms.DataGridView> предоставляет больше встроенных типов столбцов, чем элемент управления <xref:System.Windows.Forms.DataGrid>. Эти типы столбцов отвечают потребностям наиболее распространенных сценариев, но их также легче расширять или заменять, чем типы столбцов в элементе управления <xref:System.Windows.Forms.DataGrid>. Дополнительные сведения см. [в разделе Типы столбцов в элементе управления Windows Forms DataGridView](column-types-in-the-windows-forms-datagridview-control.md).|  
 |Несколько способов отобразить данные|Элемент управления <xref:System.Windows.Forms.DataGrid> ограничен отображением данных из внешнего источника данных. Однако элемент управления <xref:System.Windows.Forms.DataGridView> может отображать несвязанные данные, хранящиеся в элементе управления, данные из привязанного источника данных, а также связанные и непривязанные данные. Можно также реализовать виртуальный режим в элементе управления <xref:System.Windows.Forms.DataGridView>, чтобы обеспечить пользовательское управление данными. Дополнительные сведения см. [в разделе Режимы вывода данных в элементе управления Windows Forms DataGridView](data-display-modes-in-the-windows-forms-datagridview-control.md).|  
@@ -32,7 +32,7 @@ ms.locfileid: "76745967"
   
  Поскольку элемент управления <xref:System.Windows.Forms.DataGridView> имеет совершенно новую архитектуру, нет прямого пути преобразования, который позволит использовать настройки <xref:System.Windows.Forms.DataGrid> с элементом управления <xref:System.Windows.Forms.DataGridView>. Однако многие настройки <xref:System.Windows.Forms.DataGrid> не являются обязательными для элемента управления <xref:System.Windows.Forms.DataGridView>, поскольку доступны встроенные функции нового элемента управления. Если вы создали пользовательские типы столбцов для элемента управления <xref:System.Windows.Forms.DataGrid>, который вы хотите использовать с элементом управления <xref:System.Windows.Forms.DataGridView>, потребуется реализовать их снова с помощью новой архитектуры. Дополнительные сведения см. [в разделе Настройка элемента управления Windows Forms DataGridView](customizing-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>

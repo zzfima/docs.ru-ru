@@ -27,9 +27,9 @@ ms.locfileid: "76738734"
 
 Сведения о копировании кода в этом разделе в виде одного списка см. в разделе [как управлять ошибками, происходящими при вводе данных в элементе управления Windows Forms DataGridView](handle-errors-that-occur-during-data-entry-in-the-datagrid.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
-Для выполнения данного пошагового руководства требуется:
+Для выполнения задач этого руководства необходимы:
 
 - Доступ к серверу с образцом базы данных Northwind SQL Server.
 
@@ -74,11 +74,11 @@ ms.locfileid: "76738734"
 
 #### <a name="to-test-the-form"></a>Тестирование формы
 
-- Нажмите клавишу F5, чтобы запустить приложение.
+- Нажмите клавишу F5 для запуска приложения.
 
   Вы увидите <xref:System.Windows.Forms.DataGridView> элемент управления, заполненный данными из таблицы Customers. Если ввести повторяющееся значение для `CustomerID` и сохранить изменения, значение ячейки будет автоматически отменено, и появится <xref:System.Windows.Forms.MessageBox>, отображающая ошибку ввода данных.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Next Steps
 
 Это приложение предоставляет базовое представление о возможностях элемента управления <xref:System.Windows.Forms.DataGridView>. Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами.
 
@@ -92,7 +92,7 @@ ms.locfileid: "76738734"
 
 - Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [как настроить внешний вид ячеек в элементе управления Windows Forms DataGridView](customize-the-appearance-of-cells-in-the-datagrid.md) и [как задать стили ячеек по умолчанию для элемента управления Windows Forms DataGridView](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

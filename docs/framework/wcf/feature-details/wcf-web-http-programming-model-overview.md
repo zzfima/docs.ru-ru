@@ -39,7 +39,7 @@ ms.locfileid: "76739901"
   
 - a/z/c  
   
-- и т. д.  
+- и другие возможности.  
   
  В этом шаблоне запись в фигурных скобках ("{segment}") обозначает переменный сегмент, а не литеральное значение.  
   
@@ -103,7 +103,7 @@ interface ICustomer
   
 |Тип|Формат|  
 |----------|------------|  
-|<xref:System.Byte>|0 - 255|  
+|<xref:System.Byte>|0–255|  
 |<xref:System.SByte>|-128 - 127|  
 |<xref:System.Int16>|-32768 - 32767|  
 |<xref:System.Int32>|-2,147,483,648 - 2,147,483,647|  
@@ -113,7 +113,7 @@ interface ICustomer
 |<xref:System.UInt64>|0 - 18,446,744,073,709,551,615|  
 |<xref:System.Single>|-3.402823e38–3.402823e38 (экспоненциальная запись не требуется)|  
 |<xref:System.Double>|-1.79769313486232e308–1.79769313486232e308 (экспоненциальная запись не требуется)|  
-|<xref:System.Char>|Любой отдельный знак|  
+|<xref:System.Char>|Любой отдельный символ|  
 |<xref:System.Decimal>|Любое десятичное число в стандартной записи (без экспоненты)|  
 |<xref:System.Boolean>|True или False (с учетом регистра)|  
 |<xref:System.String>|Любая строка (пустая строка не поддерживается, преобразование не производится)|  
@@ -144,7 +144,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Устранение неполадок в модели программирования WCF WEB HTTP  
  Когда службы WCF WEB HTTP вызываются с помощью <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> для создания канала, <xref:System.ServiceModel.Description.WebHttpBehavior> использует адрес <xref:System.ServiceModel.EndpointAddress>, заданный в файле конфигурации, даже в случае, когда в <xref:System.ServiceModel.EndpointAddress> передается другой <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Синдикация WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

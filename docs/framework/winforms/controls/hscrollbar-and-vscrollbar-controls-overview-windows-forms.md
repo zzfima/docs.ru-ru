@@ -35,7 +35,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.S
   
  Когда пользователь нажимает один из клавиш со стрелками или щелкает одну из кнопок полосы прокрутки, свойство <xref:System.Windows.Forms.ScrollBar.Value%2A> изменяется в соответствии со значением, заданным в свойстве <xref:System.Windows.Forms.ScrollBar.SmallChange%2A>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>

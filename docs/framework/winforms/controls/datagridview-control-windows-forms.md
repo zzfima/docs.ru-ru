@@ -20,14 +20,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746948"
 ---
-# <a name="datagridview-control-windows-forms"></a>Элемент управления DataGridView (Windows Forms)
+# <a name="datagridview-control-windows-forms"></a>элемент управления DataGridView (Windows Forms)
 Элемент управления `DataGridView` предоставляет мощный и гибкий способ отображения данных в табличном формате. Элемент управления `DataGridView` можно использовать для отображения представлений небольшого объема данных только для чтения, либо можно масштабировать его для отображения редактируемого представления очень больших наборов данных.  
   
  Для того чтобы реализовать пользовательское поведение в приложениях, элемент управления `DataGridView` можно расширить несколькими способами. Например, можно программно задать собственные алгоритмы сортировки, можно создать собственные типы ячеек. Внешний вид элемента управления `DataGridView` легко настраивается заданием значений нескольких свойств. В качестве источника данных могут использоваться хранилища данных различных типов, также элемент управления `DataGridView` может работать без привязанного к нему  источника данных.  
   
  В подразделах данного раздела описываются принципы и методы применения возможностей `DataGridView` в приложениях.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления DataGridView](datagridview-control-overview-windows-forms.md)  
  Содержит разделы с описанием назначения и основных понятий элемента управления `DataGridView` Windows Forms.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "76746948"
   
  См. также [Использование конструктора с элементом управления Windows Forms DataGridView](using-the-designer-with-the-windows-forms-datagridview-control.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.BindingSource>  
  Содержит справочную документацию по компоненту <xref:System.Windows.Forms.BindingSource>. Элемент управления <xref:System.Windows.Forms.DataGridView> и компонент <xref:System.Windows.Forms.BindingSource> предназначены для совместной работы.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

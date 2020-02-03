@@ -17,7 +17,7 @@ ms.locfileid: "76744465"
 # <a name="treeview-control-windows-forms"></a>Элемент управления TreeView (Windows Forms)
 Элемент управления `TreeView` в Windows Forms выводит на экран иерархию узлов аналогично отображению файлов и папок на левой панели проводника в операционных системах Windows.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления TreeView](treeview-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -41,10 +41,10 @@ ms.locfileid: "76744465"
 
 См. также [инструкции по добавлению и удалению узлов с помощью элемента управления Windows Forms TreeView в конструкторе](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md)и [о том, как присоединить контекстное меню к TreeNode с помощью конструктора](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.TreeView>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

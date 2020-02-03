@@ -15,7 +15,7 @@ ms.locfileid: "76747244"
 # <a name="tooltip-component-windows-forms"></a>Компонент ToolTip (Windows Forms)
 Компонент <xref:System.Windows.Forms.ToolTip> в Windows Forms отображает текст при наведении указателя мыши на элементы управления. Компонент ToolTip можно связать с любым элементом управления. Пример использования этого компонента: для экономии места в форме можно настроить отображение маленького значка для кнопки и использовать компонент ToolTip для объяснения ее функции.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления ToolTip](tooltip-component-overview-windows-forms.md)  
  Основные понятия, связанные с компонентом <xref:System.Windows.Forms.ToolTip>, который позволяет пользователям просматривать текст при наведении указателя мыши на элемент управления.  
   
@@ -25,11 +25,11 @@ ms.locfileid: "76747244"
  [Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
  Описание настройки значений, определяющих время задержки отображения подсказки, а также время, в течение которого она отображается.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.ToolTip>  
  Справочная информация о классе и его членах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   

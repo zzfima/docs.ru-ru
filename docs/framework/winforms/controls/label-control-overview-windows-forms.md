@@ -23,7 +23,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.L
   
  Заголовок, отображаемый в метке, содержится в свойстве <xref:System.Windows.Forms.Label.Text%2A>. Свойство <xref:System.Windows.Forms.Label.TextAlign%2A> позволяет задать выравнивание текста внутри метки. Дополнительные сведения см. в разделе [как задать текст, отображаемый элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Label>
 - [Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)

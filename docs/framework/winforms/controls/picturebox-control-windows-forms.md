@@ -16,7 +16,7 @@ ms.locfileid: "76744235"
 # <a name="picturebox-control-windows-forms"></a>Элемент управления PictureBox (Windows Forms)
 Элемент управления Windows Forms `PictureBox` используется для вывода изображений в формате точечных рисунков, GIF, JPEG, метафайлов и значков.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления PictureBox](picturebox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -29,10 +29,10 @@ ms.locfileid: "76744235"
  [Практическое руководство. Загрузка изображения с помощью конструктора](how-to-load-a-picture-using-the-designer-windows-forms.md)  
  Описывает, как загружать и отображать изображение в форме во время разработки.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.PictureBox>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

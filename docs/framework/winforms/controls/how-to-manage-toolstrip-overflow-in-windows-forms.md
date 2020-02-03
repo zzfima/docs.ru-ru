@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736143"
 ---
-# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Практическое руководство. Управление областью переполнения в элементе управления ToolStrip в Windows Forms
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Практическое руководство. Определение действий, выполняемых в случае переполнения элемента управления ToolStrip, в Windows Forms
 
 Если все элементы элемента управления <xref:System.Windows.Forms.ToolStrip> не помещаются в выделенном пространстве, можно включить функцию переполнения на <xref:System.Windows.Forms.ToolStrip> и определить поведение переполнения конкретных <xref:System.Windows.Forms.ToolStripItem>.
 
@@ -25,13 +25,13 @@ ms.locfileid: "76736143"
 
 ## <a name="to-enable-overflow-on-a-toolstrip-control"></a>Включение переполнения для элемента управления ToolStrip
 
-- Убедитесь, что для свойства <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> не задано значение `false` для <xref:System.Windows.Forms.ToolStrip>. Значение по умолчанию — `True`.
+- Убедитесь, что для свойства <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> не задано значение `false` для <xref:System.Windows.Forms.ToolStrip>. Значение по умолчанию — `True`.
 
      Если <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> имеет `True` (значение по умолчанию), <xref:System.Windows.Forms.ToolStripItem> передается в раскрывающееся меню переполнения, если содержимое <xref:System.Windows.Forms.ToolStripItem> превышает ширину горизонтального <xref:System.Windows.Forms.ToolStrip> или высоты вертикального <xref:System.Windows.Forms.ToolStrip>.
 
 ## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>Указание поведения определенного элемента ToolStripItem в случае переполнения
 
-- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> <xref:System.Windows.Forms.ToolStripItem> нужное значение. Возможные варианты: `Always`, `Never`и `AsNeeded`. Значение по умолчанию — `AsNeeded`.
+- Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> <xref:System.Windows.Forms.ToolStripItem> нужное значение. Возможные варианты: `Always`, `Never`и `AsNeeded`. Значение по умолчанию — `AsNeeded`.
 
     ```vb
     toolStripTextBox1.Overflow = _
@@ -43,7 +43,7 @@ ms.locfileid: "76736143"
     System.Windows.Forms.ToolStripItemOverflow.Never;
     ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>

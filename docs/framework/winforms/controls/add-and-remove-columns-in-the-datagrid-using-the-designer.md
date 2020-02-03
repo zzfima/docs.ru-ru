@@ -38,7 +38,7 @@ ms.locfileid: "76732345"
 
 3. Нажмите кнопку **Удалить** , чтобы удалить столбец, что приведет к исчезновению его из конструктора.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Как создать проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)

@@ -19,7 +19,7 @@ ms.locfileid: "76731848"
 # <a name="properties-wpf"></a>Свойства (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства среды CLR. В совокупности эти службы обычно называются системой свойств WPF. Свойство, поддерживаемое системой свойств WPF, называется свойством зависимостей.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [Общие сведения о присоединенных свойствах](attached-properties-overview.md)
@@ -34,9 +34,9 @@ ms.locfileid: "76731848"
 - [Шаблоны безопасного конструктора для DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)
 - [Свойства зависимостей типа коллекции](collection-type-dependency-properties.md)
 - [Загрузка кода XAML и свойства зависимостей](xaml-loading-and-dependency-properties.md)
-- [Практические руководства](properties-how-to-topics.md)
+- [Разделы практического руководства](properties-how-to-topics.md)
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -45,7 +45,7 @@ ms.locfileid: "76731848"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Архитектура WPF](wpf-architecture.md)  
   [XAML в WPF](xaml-in-wpf.md)  
   [Базовые элементы](base-elements.md)  

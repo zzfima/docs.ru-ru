@@ -33,7 +33,7 @@ ms.locfileid: "76742154"
   
 - ссылки на сборки System, System.Data, System.Drawing, System.Windows.Forms и System.Xml.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView>

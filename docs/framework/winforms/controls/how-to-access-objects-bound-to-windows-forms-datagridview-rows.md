@@ -37,9 +37,9 @@ ms.locfileid: "76743161"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
-- ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewRow>

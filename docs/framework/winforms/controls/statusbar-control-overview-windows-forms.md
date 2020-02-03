@@ -25,7 +25,7 @@ ms.locfileid: "76742864"
   
  В строке состояния можно отобразить одно сообщение, задав для свойства <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> значение `false` (по умолчанию) и установив для свойства <xref:System.Windows.Forms.StatusBar.Text%2A> строки состояния текст, который должен отображаться в строке состояния. Можно разделить строку состояния на панели, чтобы отобразить более одного типа информации, задав для свойства <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> значение `true` и используя метод <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>

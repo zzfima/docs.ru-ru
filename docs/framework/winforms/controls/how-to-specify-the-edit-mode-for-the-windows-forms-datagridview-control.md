@@ -22,7 +22,7 @@ ms.locfileid: "76743763"
   
 - Элемент управления <xref:System.Windows.Forms.DataGridView> включен.  
   
-- Значение свойства <xref:System.Windows.Forms.DataGridView.EditMode%2A> не <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
+- Значение свойства <xref:System.Windows.Forms.DataGridView.EditMode%2A> не равно <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
 - Для свойств `ReadOnly` ячейки, строки, столбца и элемента управления устанавливается значение `false`.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "76743763"
   
 - ссылки на сборки <xref:System> и <xref:System.Windows.Forms>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>

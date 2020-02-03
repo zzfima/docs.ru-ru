@@ -18,7 +18,7 @@ ms.locfileid: "76745736"
   
  В подразделах этого раздела описываются принципы и методы реализации возможностей `FlowLayoutPanel` в приложениях.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления TableLayoutPanel](flowlayoutpanel-control-overview.md)  
  Основные понятия, связанные с элементом управления `FlowLayoutPanel`, который позволяет создавать макет с горизонтальной или вертикальной ориентацией.  
   
@@ -27,6 +27,6 @@ ms.locfileid: "76745736"
   
  См. также раздел [Пошаговое руководство. Упорядочивание элементов управления в Windows Forms с помощью FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.FlowLayoutPanel>.

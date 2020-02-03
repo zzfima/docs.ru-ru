@@ -18,7 +18,7 @@ ms.locfileid: "76746364"
 # <a name="windows-forms-and-unmanaged-applications"></a>Windows Forms и неуправляемые приложения
 Приложения и элементы управления Windows Forms могут взаимодействовать с неуправляемыми приложениями, но с некоторыми оговорками. В следующих разделах описываются сценарии и конфигурации, которые поддерживаются и не поддерживаются элементами управления и приложениями Windows Forms.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о Windows Forms и неуправляемых приложениях](windows-forms-and-unmanaged-applications-overview.md)  
  Общие сведения о том, как использовать и реализовывать элементы управления Windows Forms, которые работают с неуправляемыми приложениями.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "76746364"
   
  См. также [Пошаговое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  
  Используется для создания отдельного потока для формы Windows Forms.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "76746364"
  <xref:System.Windows.Forms.Control.Invoke%2A>  
  Выполняет маршалинг вызовов из неуправляемого приложения в форму.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Предоставление компонентов .NET Framework клиентам COM](../../interop/exposing-dotnet-components-to-com.md)  
  Общие сведения об использовании типов .NET Framework в неуправляемых приложениях.

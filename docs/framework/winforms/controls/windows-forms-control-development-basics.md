@@ -30,7 +30,7 @@ ms.locfileid: "76739915"
   
  Базовый класс для элементов управления Windows Forms, <xref:System.Windows.Forms.Control>, предоставляет сведения, необходимые для визуального отображения в приложениях на основе Windows на стороне клиента. <xref:System.Windows.Forms.Control> предоставляет дескриптор окна, обрабатывает маршрутизацию сообщений и предоставляет события мыши и клавиатуры, а также многие другие события пользовательского интерфейса. Он обеспечивает расширенный макет и имеет свойства, характерные для визуального отображения, такие как <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>и многие другие. Кроме того, он обеспечивает безопасность, поддержку потоков и взаимодействие с элементами управления ActiveX. Поскольку существенная часть инфраструктуры предоставляется базовым классом, разрабатывать собственные элементы управления Windows Forms довольно просто.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Разработка простого элемента управления форм Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
 - [Разработка составного элемента Windows Forms](developing-a-composite-windows-forms-control.md)

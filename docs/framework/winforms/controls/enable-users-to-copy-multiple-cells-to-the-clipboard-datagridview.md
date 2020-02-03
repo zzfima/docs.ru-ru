@@ -42,7 +42,7 @@ ms.locfileid: "76745782"
   
 - ссылки на сборки N:System и N:System.Windows.Forms.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>

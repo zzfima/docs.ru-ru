@@ -21,7 +21,7 @@ ms.locfileid: "76744947"
 # <a name="notifyicon-component-windows-forms"></a>Компонент NotifyIcon (Windows Forms)
 Компонент Windows Forms `NotifyIcon` отображает значки в области уведомлений о состоянии на панели задач для процессов, выполняемых в фоновом режиме и не имеющих пользовательских интерфейсов. Примером такого процесса является антивирусная программа, доступ к которой можно получить, щелкнув значок в области уведомлений о состоянии на панели задач.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте управления NotifyIcon](notifyicon-component-overview-windows-forms.md)  
  Общие понятия компонента `NotifyIcon`, позволяющего пользователям видеть значки для процессов, выполняемых в фоновом режиме, не имеющих пользовательского интерфейса.  
   
@@ -31,10 +31,10 @@ ms.locfileid: "76744947"
  [Практическое руководство. Связывание контекстного меню с компонентом NotifyIcon в Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
  Пошаговые инструкции по добавлению контекстного меню к `NotifyIcon` компоненту.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.NotifyIcon>  
  Справочная информация о классе и его членах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

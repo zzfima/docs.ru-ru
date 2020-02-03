@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Сопоставление пространств имен CLR с пространствами имен XML в сборке  
  WPF определяет атрибут CLR, который обрабатывается процессорами XAML для сопоставления нескольких пространств имен CLR с одним пространством имен XAML. Этот атрибут, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, помещается на уровне сборки в исходном коде, который создает сборку. Исходный код сборки WPF использует этот атрибут для соотнесения различных общих пространств имен, таких как <xref:System.Windows> и <xref:System.Windows.Controls>, к пространству имен `http://schemas.microsoft.com/winfx/2006/xaml/presentation`.  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> принимает два параметра: имя пространства имен XML/XAML и имя пространства имен CLR. Для соответствия нескольких пространств имен CLR одному и тому же пространству имен XML может существовать несколько <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. После сопоставления на члены этих пространств имен при желании можно ссылаться без указания полного имени, предоставляя соответствующий оператор `using` на странице с выделенным кодом разделяемого класса. Дополнительные сведения см. в разделе <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute> принимает два параметра: имя пространства имен XML/XAML и имя пространства имен CLR. Для соответствия нескольких пространств имен CLR одному и тому же пространству имен XML может существовать несколько <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. После сопоставления на члены этих пространств имен при желании можно ссылаться без указания полного имени, предоставляя соответствующий оператор `using` на странице с выделенным кодом разделяемого класса. Дополнительные сведения см. в статье <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Пространства имен конструктора и другие префиксы из шаблонов XAML  
  При работе в средах разработки или со средствами разработки для WPF XAML можно заметить, что в разметке XAML определены и другие пространства имен и префиксы XAML.  
@@ -135,7 +135,7 @@ End Namespace
   
  Скомпилированный BAML (сформированный с помощью PresentationBuildTask) использует все шаги, хотя BAML также не должен содержать неполные имена сборок.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Основные сведения о пространствах имен XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Общие сведения о языке XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Обзор XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

@@ -35,7 +35,7 @@ ms.locfileid: "76735766"
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     \- или -  
+     -или-  
   
 - Используйте метод <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A>, чтобы удалить элемент по его позиции.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76735766"
     domainUpDown1->Items->RemoveAt(0);  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>

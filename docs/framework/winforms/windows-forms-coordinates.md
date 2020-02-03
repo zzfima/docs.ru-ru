@@ -1,5 +1,5 @@
 ---
-title: Положения
+title: Координаты
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms coordinates
@@ -28,7 +28,7 @@ ms.locfileid: "76734661"
 ## <a name="mapping-from-one-type-of-coordinate-to-another"></a>Сопоставление одного типа координат с другим  
  Иногда может потребоваться выполнить преобразование координат экрана в клиентские координаты. Это можно легко сделать с помощью методов <xref:System.Windows.Forms.Control.PointToClient%2A> и <xref:System.Windows.Forms.Control.PointToScreen%2A>, доступных в классе <xref:System.Windows.Forms.Control>. Например, свойство <xref:System.Windows.Forms.Control.MousePosition%2A> <xref:System.Windows.Forms.Control> сообщается в координатах экрана, но может потребоваться преобразовать их в клиентские координаты.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

@@ -36,7 +36,7 @@ ms.locfileid: "76744075"
 
 Полный листинг кода см. в разделе [как создать элемент управления Windows Forms, который использует преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения этого пошагового руководства вам потребуется Visual Studio.
 
@@ -120,13 +120,13 @@ ms.locfileid: "76744075"
 
 3. Измените объявление `DemoMarqueeControl` для наследования от класса `MarqueeControl`.
 
-4. Постройте проект.
+4. Создайте проект.
 
 5. Откройте форму Form1 в конструктор Windows Forms.
 
 6. Найдите вкладку **компоненты маркуиконтролтест** на **панели элементов** и откройте ее. Перетащите `DemoMarqueeControl` с **панели элементов** на форму.
 
-7. Постройте проект.
+7. Создайте проект.
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>Настройка проекта для отладки во время разработки
 
@@ -138,7 +138,7 @@ ms.locfileid: "76744075"
 
 3. В разделе **действие при запуске** выберите **Запуск внешней программы**. Вы будете выполнять отладку отдельного экземпляра Visual Studio, поэтому нажмите кнопку с многоточием (![кнопку с многоточием (...) в окно свойств Visual Studio](./media/visual-studio-ellipsis-button.png)), чтобы найти интегрированную среду разработки Visual Studio. Имя исполняемого файла — devenv. exe, и если вы установили в расположение по умолчанию, его путь: *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE\devenv.exe*.
 
-4. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.
+4. Чтобы закрыть диалоговое окно, нажмите кнопку **ОК**.
 
 5. Щелкните правой кнопкой мыши проект Маркуиконтроллибрари и выберите **Назначить запускаемым проектом** , чтобы включить эту конфигурацию отладки.
 
@@ -233,7 +233,7 @@ ms.locfileid: "76744075"
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#140)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#140)]
 
-10. Реализовать интерфейс `IMarqueeWidget`.
+10. Реализуйте интерфейс `IMarqueeWidget`.
 
     Методы `StartMarquee` и `StopMarquee` вызывают методы <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> и <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> <xref:System.ComponentModel.BackgroundWorker> компонента для запуска и завершения анимации.
 
@@ -261,7 +261,7 @@ ms.locfileid: "76744075"
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
-14. Нажмите клавишу **F6** , чтобы создать решение.
+14. Нажмите клавишу **F6**, чтобы построить решение.
 
 ## <a name="create-the-marqueeborder-child-control"></a>Создание дочернего элемента управления Маркуибордер
 
@@ -299,7 +299,7 @@ ms.locfileid: "76744075"
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#40)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#40)]
 
-9. Реализовать интерфейс `IMarqueeWidget`.
+9. Реализуйте интерфейс `IMarqueeWidget`.
 
     Методы `StartMarquee` и `StopMarquee` вызывают методы <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> и <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> <xref:System.ComponentModel.BackgroundWorker> компонента для запуска и завершения анимации.
 
@@ -430,7 +430,7 @@ ms.locfileid: "76744075"
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>Добавление команд конструктора в пользовательский конструктор
 
-Команда конструктора — это команда меню, связанная с обработчиком событий. Команды конструктора добавляются в контекстное меню компонента во время разработки. Для получения дополнительной информации см. <xref:System.ComponentModel.Design.DesignerVerb>.
+Команда конструктора ― это команда меню, связанная с обработчиком событий. Команды конструктора добавляются в контекстное меню компонента во время разработки. Дополнительные сведения см. в разделе <xref:System.ComponentModel.Design.DesignerVerb>.
 
 В конструкторы вы добавите две команды конструктора: **запустить тест** и **закончить тест**. Эти команды позволяют просматривать поведение во время выполнения `MarqueeControl` во время разработки. Эти команды будут добавлены в `MarqueeControlRootDesigner`.
 
@@ -554,7 +554,7 @@ ms.locfileid: "76744075"
 
 4. Перетащите экземпляр элемента управления `MarqueeText` на область конструктора `DemoMarqueeControl`.
 
-5. Выполните сборку решения.
+5. Создайте решение.
 
 6. Щелкните правой кнопкой мыши `DemoMarqueeControl` и в контекстном меню выберите пункт **запустить тест** , чтобы запустить анимацию. Нажмите кнопку " **Закрыть тест** ", чтобы прерывать анимацию.
 
@@ -594,7 +594,7 @@ ms.locfileid: "76744075"
 
 13. Задайте проект `MarqueeControlTest` в качестве запускаемого проекта и запустите его. Вы увидите форму, отображающую `DemoMarqueeControl`. Нажмите кнопку **запустить** , чтобы запустить анимацию. Вы увидите, что текст мигает и индикаторы перемещаются вокруг границы.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В `MarqueeControlLibrary` демонстрируется простая реализация пользовательских элементов управления и связанных с ними конструкторов. Сделать этот пример более сложным можно несколькими способами:
 
@@ -608,7 +608,7 @@ ms.locfileid: "76744075"
 
 - Управление сериализацией элементов управления и созданием кода для них. Дополнительные сведения см. в разделе [Динамическое создание и компиляция исходного кода](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

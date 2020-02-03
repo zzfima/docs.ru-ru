@@ -23,7 +23,7 @@ ms.locfileid: "76746812"
 
 В этой статье показано, как выбрать типы элементов управления Windows Presentation Foundation (WPF), которые должны отображаться в форме. Можно выбрать любые типы элементов управления WPF, которые включены в проект.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -55,7 +55,7 @@ ms.locfileid: "76746812"
    > [!NOTE]
    > Обычно размещается более сложное содержимое WPF. Элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> используется здесь в целях наглядности.
 
-8. Постройте проект.
+8. Создайте проект.
 
 ## <a name="select-wpf-controls"></a>Выбор элементов управления WPF
 
@@ -85,7 +85,7 @@ ms.locfileid: "76746812"
 
 9. В элементе управления `elementHost2` теперь будет размещен экземпляр типа `UserControl1`.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -94,6 +94,6 @@ Press <ENTER> to terminate client.
 
 4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Пример создания клиентского приложения, который может вызывать эту службу, см. в разделе [как создать клиент](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Примеры размещения и сохраняемости AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

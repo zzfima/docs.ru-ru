@@ -12,7 +12,7 @@ ms.locfileid: "76744437"
 # <a name="wpf-unmanaged-api-reference"></a>Справочник по неуправляемым API WPF
 Библиотеки Windows Presentation Foundation (WPF) предоставляют несколько неуправляемых функций, предназначенных только для внутреннего использования. Их не следует вызывать из пользовательского кода.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Функция Activate](activate-function-wpf-unmanaged-api-reference.md)  
  [Функция CreateIDispatchSTAForwarder](createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
  [Функция Deactivate](deactivate-function-wpf-unmanaged-api-reference.md)  
@@ -22,6 +22,6 @@ ms.locfileid: "76744437"
  [Функция SaveToHistory](savetohistory-function-wpf-unmanaged-api-reference.md)  
  [Функция SetFakeActiveWindow](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Дополнительно](index.md)

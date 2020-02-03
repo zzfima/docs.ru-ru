@@ -57,7 +57,7 @@ ms.locfileid: "76742308"
   
 - <xref:System.Data.DataViewManager>. <xref:System.Data.DataViewManager> — это настраиваемое представление всей <xref:System.Data.DataSet>, аналогичное <xref:System.Data.DataView>, но с включенными связями. С помощью коллекции <xref:System.Data.DataViewManager.DataViewSettings%2A> можно задать фильтры по умолчанию и параметры сортировки для всех представлений, которые <xref:System.Data.DataViewManager> в данной таблице.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Уведомления об изменениях в привязке данных Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)

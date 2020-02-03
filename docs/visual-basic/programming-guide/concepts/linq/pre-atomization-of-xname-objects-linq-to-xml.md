@@ -33,7 +33,7 @@ Dim root2 As New XElement(root1, New XElement(data, New XAttribute(id, "1"), "4,
 Console.WriteLine(root2)
 ```
 
-В этом примере выводятся следующие данные:
+В примере получается следующий вывод.
 
 ```xml
 <Root>
@@ -59,7 +59,7 @@ Dim root2 As New XElement(root1, New XAttribute(XNamespace.Xmlns + "aw", aw),
 Console.WriteLine(root2)
 ```
 
-В этом примере выводятся следующие данные:
+В примере получается следующий вывод.
 
 ```xml
 <aw:Root xmlns:aw="http://www.adventure-works.com">
@@ -93,7 +93,7 @@ sw.Stop()
 Console.WriteLine($"Time to construct: {sw.ElapsedMilliseconds} milliseconds")
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Производительность (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)
 - [Атомарные объекты XName и XNamespace (LINQ to XML) (Visual Basic)](atomized-xname-and-xnamespace-objects-linq-to-xml.md)

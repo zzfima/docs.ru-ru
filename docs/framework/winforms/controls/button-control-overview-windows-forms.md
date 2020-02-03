@@ -21,7 +21,7 @@ ms.locfileid: "76747077"
   
  <xref:System.Windows.Forms.Button> элемент управления может также отображать изображения с помощью свойств <xref:System.Windows.Forms.ButtonBase.Image%2A> и <xref:System.Windows.Forms.ButtonBase.ImageList%2A>. Дополнительные сведения см. в разделе [как задать изображение, отображаемое элементом управления Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Button>
 - [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

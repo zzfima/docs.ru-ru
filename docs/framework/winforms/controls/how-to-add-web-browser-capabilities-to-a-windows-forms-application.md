@@ -34,7 +34,7 @@ ms.locfileid: "76747222"
   
 - ссылки на сборки `System`, `System.Drawing` и `System.Windows.Forms`.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.WebBrowser>
 - [Элемент управления WebBrowser](webbrowser-control-windows-forms.md)

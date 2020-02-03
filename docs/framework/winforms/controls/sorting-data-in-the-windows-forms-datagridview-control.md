@@ -17,7 +17,7 @@ ms.locfileid: "76742944"
 
 По умолчанию пользователи могут сортировать данные в элементе управления <xref:System.Windows.Forms.DataGridView>, щелкая заголовок столбца текстового поля (или нажав клавишу F3, когда в ячейке текстового поля нажимается .NET Framework 4.7.2 и более поздние версии). Можно изменить свойство <xref:System.Windows.Forms.DataGridViewColumn.SortMode> конкретных столбцов, чтобы разрешить пользователям сортировать по другим типам столбцов, если это имеет смысл. Можно также выполнять сортировку данных программным способом по любому столбцу или по нескольким столбцам.
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Установка режимов сортировки для столбцов элемента управления DataGridView в Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)  
 Описывает параметры сортировки данных в элементе управления.
@@ -28,7 +28,7 @@ ms.locfileid: "76742944"
 [Практическое руководство. Настройка сортировки данных элемента управления DataGridView в Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
 Описывает, как программно сортировать данные и как настраивать сортировку с помощью <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType>ного события или путем реализации интерфейса <xref:System.Collections.IComparer>.
 
-## <a name="reference"></a>Справочные сведения
+## <a name="reference"></a>Справочник
 
 <xref:System.Windows.Forms.DataGridView>  
 Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
@@ -42,7 +42,7 @@ ms.locfileid: "76742944"
 <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
 Содержит справочную документацию по перечислению <xref:System.Windows.Forms.DataGridViewColumnSortMode>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

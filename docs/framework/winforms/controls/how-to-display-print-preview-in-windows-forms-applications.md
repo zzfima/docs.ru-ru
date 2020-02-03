@@ -82,7 +82,7 @@ ms.locfileid: "76745569"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Компонент PrintDocument](printdocument-component-windows-forms.md)
 - [Элемент управления PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)

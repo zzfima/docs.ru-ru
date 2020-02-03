@@ -41,7 +41,7 @@ ms.locfileid: "76736684"
 
 3. Выберите свойство <xref:System.Windows.Forms.ListViewItem.Group%2A> и выберите группу из раскрывающегося списка.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>

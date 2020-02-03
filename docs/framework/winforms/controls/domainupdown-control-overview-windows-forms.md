@@ -27,7 +27,7 @@ ms.locfileid: "76745858"
   
  Этот элемент управления отображает только текстовые строки. Если требуется элемент управления, отображающий числовые значения, используйте элемент управления <xref:System.Windows.Forms.NumericUpDown>. Дополнительные сведения см. в разделе [Общие сведения об элементе управления NumericUpDown](numericupdown-control-overview-windows-forms.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - [Элемент управления DomainUpDown](domainupdown-control-windows-forms.md)

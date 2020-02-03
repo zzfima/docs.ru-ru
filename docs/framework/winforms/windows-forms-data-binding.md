@@ -17,7 +17,7 @@ ms.locfileid: "76734608"
 # <a name="windows-forms-data-binding"></a>Привязка данных Windows Forms
 Привязка данных в Windows Forms дает возможность отображать и изменять информацию из источника данных в элементах управления в форме. В Windows Forms можно выполнить привязку не только к традиционным источникам данных, но и к практически к любой структуре, содержащий данные.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)  
  Общие сведения о привязке данных в Windows Forms.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "76734608"
   
  См. также [интерфейсы, связанные с привязкой данных](interfaces-related-to-data-binding.md), [как перемещать данные в Windows Forms](how-to-navigate-data-in-windows-forms.md)и [как создавать элементы управления с простой привязкой в форме Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
  Описывает класс, представляющий связку между связываемым компонентом и источником данных.  
   
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>  
  Описывает класс, инкапсулирующий источник данных для привязки к элементам управления.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Компонент BindingSource](./controls/bindingsource-component.md)  
  Содержит список разделов, описывающих использование компонента <xref:System.Windows.Forms.BindingSource>.  
   

@@ -23,7 +23,7 @@ ms.locfileid: "76746063"
 
 2. В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.Form.AcceptButton%2A> формы имя элемента управления <xref:System.Windows.Forms.Button>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Общие сведения об элементе управления Button](button-control-overview-windows-forms.md)

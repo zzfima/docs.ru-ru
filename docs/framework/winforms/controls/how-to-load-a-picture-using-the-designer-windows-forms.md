@@ -23,9 +23,9 @@ ms.locfileid: "76736327"
 |---|---|
 |Bitmap|BMP|
 |Значок|ICO|
-|GIF|GIF|
+|GIF|.gif|
 |Метафайл|. WMF|
-|JPEG|JPG|
+|JPEG|.jpg|
 
 ## <a name="to-display-a-picture-at-design-time"></a>Отображение рисунка во время разработки
 
@@ -41,7 +41,7 @@ ms.locfileid: "76736327"
 
 1. В окне **Свойства** выберите свойство <xref:System.Windows.Forms.PictureBox.Image%2A>. Щелкните правой кнопкой мыши маленький эскиз изображения, который отображается слева от имени объекта Image, и выберите команду **сбросить**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Общие сведения об элементе управления PictureBox](picturebox-control-overview-windows-forms.md)

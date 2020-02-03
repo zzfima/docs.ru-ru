@@ -15,7 +15,7 @@ ms.locfileid: "76728043"
 # <a name="imagelist-component-windows-forms"></a>Компонент ImageList (Windows Forms)
 Компонент `ImageList` в Windows Forms используется для хранения изображений, которые затем будут отображаться элементами управления. Список изображений позволяет написать код для создания единого согласованного каталога изображений.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте ImageList](imagelist-component-overview-windows-forms.md)  
  Описание компонента, его основных возможностей и свойств.  
   
@@ -24,10 +24,10 @@ ms.locfileid: "76728043"
   
  См. также [руководство. Добавление и удаление изображений ImageList с помощью конструктора](how-to-add-or-remove-imagelist-images-with-the-designer.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.ImageList>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

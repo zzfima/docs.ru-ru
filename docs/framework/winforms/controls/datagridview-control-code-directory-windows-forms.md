@@ -22,7 +22,7 @@ ms.locfileid: "76742508"
   
  Дополнительные примеры кода доступны в справочной документации по библиотеке классов. Список основных классов и интерфейсов, связанных с элементом управления <xref:System.Windows.Forms.DataGridView>, см. в таблице в [сводке по технологиям элементов управления DataGridView](datagridview-control-technology-summary-windows-forms.md).  
   
-## <a name="codelist"></a>Список кодов  
+## <a name="codelist"></a>CodeList  
   
 ## <a name="unbound-data-examples"></a>Примеры несвязанных данных  
   
@@ -152,7 +152,7 @@ ms.locfileid: "76742508"
   
 - [Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Общие сведения об элементе управления DataGridView](datagridview-control-overview-windows-forms.md)

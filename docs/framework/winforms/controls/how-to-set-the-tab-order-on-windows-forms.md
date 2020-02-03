@@ -55,7 +55,7 @@ ms.locfileid: "76746828"
 > [!NOTE]
 > Группа переключателей содержит одну позицию табуляции во время выполнения. Для выбранной кнопки (т. е. для кнопки со свойством <xref:System.Windows.Forms.RadioButton.Checked%2A>, установленным в `true`) свойство <xref:System.Windows.Forms.Control.TabStop%2A> автоматически устанавливается в `true`, а для других кнопок свойство <xref:System.Windows.Forms.Control.TabStop%2A> имеет значение `false`. Дополнительные сведения о группировании элементов управления <xref:System.Windows.Forms.RadioButton> см. [в разделе группирование Windows Forms элементов управления RadioButton для работы в виде набора](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы управления Windows Forms](index.md)
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

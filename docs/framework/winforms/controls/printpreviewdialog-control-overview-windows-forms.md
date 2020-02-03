@@ -53,7 +53,7 @@ ms.locfileid: "76741407"
 
 Если для изменения параметров принтера используется событие <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings>, производительность элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> не повысится, даже если установлен параметр конфигурации оптимизации.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Общие сведения об элементе управления PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)

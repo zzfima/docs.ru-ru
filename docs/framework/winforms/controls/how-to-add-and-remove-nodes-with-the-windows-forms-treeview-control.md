@@ -18,7 +18,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76731961"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Практическое руководство. Добавление и удаление узлов с помощью элемента управления TreeView в Windows Forms
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Практическое руководство. Добавление и удаление узлов элемента управления TreeView в Windows Forms
 Windows Forms <xref:System.Windows.Forms.TreeView> элемент управления хранит узлы верхнего уровня в его <xref:System.Windows.Forms.TreeView.Nodes%2A> коллекции. Каждый <xref:System.Windows.Forms.TreeNode> также имеет собственную коллекцию <xref:System.Windows.Forms.TreeNode.Nodes%2A> для хранения своих дочерних узлов. Оба свойства коллекции имеют тип <xref:System.Windows.Forms.TreeNodeCollection>, который предоставляет стандартные элементы коллекции, позволяющие добавлять, удалять и переупорядочивать узлы на одном уровне иерархии узлов.  
   
 ### <a name="to-add-nodes-programmatically"></a>Добавление узлов программным способом  
@@ -70,7 +70,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> элемент управле
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления TreeView](treeview-control-windows-forms.md)
 - [Общие сведения об элементе управления TreeView](treeview-control-overview-windows-forms.md)

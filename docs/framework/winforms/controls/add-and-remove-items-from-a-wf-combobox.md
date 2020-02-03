@@ -40,7 +40,7 @@ ms.locfileid: "76746304"
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - или  
+     - или -  
   
 2. Вставьте строку или объект в нужную точку списка с помощью метода `Insert`:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "76746304"
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - или  
+     - или -  
   
 3. Присвойте `Items` коллекции весь массив:  
   
@@ -136,7 +136,7 @@ ms.locfileid: "76746304"
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

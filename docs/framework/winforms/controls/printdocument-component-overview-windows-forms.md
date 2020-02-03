@@ -24,11 +24,11 @@ ms.locfileid: "76728537"
 
 - Простые задания печати, такие как печать отдельного текстового файла. В этом случае необходимо добавить компонент <xref:System.Drawing.Printing.PrintDocument> в форму Windows Forms, а затем добавить программную логику, которая выводит файл в обработчике событий <xref:System.Drawing.Printing.PrintDocument.PrintPage>. Логика программирования должна завершающейся с помощью метода <xref:System.Drawing.Printing.PrintDocument.Print%2A> для печати документа. Этот метод отправляет на принтер объект <xref:System.Drawing.Graphics>, содержащийся в свойстве <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> класса <xref:System.Drawing.Printing.PrintPageEventArgs>. Пример, демонстрирующий печать текстового документа с помощью компонента <xref:System.Drawing.Printing.PrintDocument>, см. [в разделе Практические руководства. Печать многостраничного текстового файла в Windows Forms](../advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).
 
-- Более сложные задания печати, например ситуации, когда требуется повторное использование уже написанной логики печати. В этом случае необходимо создать новый компонент из компонента <xref:System.Drawing.Printing.PrintDocument> и переопределить (см. Дополнительные сведения о [переопределениях](../../../visual-basic/language-reference/modifiers/overrides.md) Visual Basic или [переопределении](../../../csharp/language-reference/keywords/override.md) для C#) <xref:System.Drawing.Printing.PrintDocument.PrintPage> события.
+- Более сложные задания печати, например ситуации, когда требуется повторное использование уже написанной логики печати. В этом случае необходимо создать новый компонент из <xref:System.Drawing.Printing.PrintDocument> компонента и переопределить (см. раздел [переопределения](../../../visual-basic/language-reference/modifiers/overrides.md) для Visual Basic или [переопределения](../../../csharp/language-reference/keywords/override.md) C#) события <xref:System.Drawing.Printing.PrintDocument.PrintPage>.
 
 При добавлении в форму <xref:System.Drawing.Printing.PrintDocument> компонент отображается в области в нижней части конструктор Windows Forms в Visual Studio.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>

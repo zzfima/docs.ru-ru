@@ -12,10 +12,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76731998"
 ---
-# <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Стандартная функциональность элемента управления DataGridView в Windows Forms
+# <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Базовое форматирование и оформление элемента управления DataGridView в Windows Forms
 Элемент управления `DataGridView` позволяет легко определить базовый вид ячеек и формат отображения значений ячеек. Можно определить стили оформления и форматирования для отдельных ячеек, для ячеек в определенных столбцах и строках или для всех ячеек в элементе управления, задав свойства `DataGridViewCellStyle` объектов, доступ к которым осуществляется через различные свойства элемента управления `DataGridView`. Кроме того, эти стили можно динамически изменить на основе таких факторов, как значение ячейки, обрабатывая событие `CellFormatting`.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms](change-the-border-and-gridline-styles-in-the-datagrid.md)  
  Описывает, как задать свойства `DataGridView`, определяющие внешний вид границы элемента управления и линий границ между ячейками.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "76731998"
  [Практическое руководство. Применение шаблонов строк для настройки отображения строк элемента управления DataGridView в Windows Forms](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  Описывает использование свойства `RowTemplate` для задания свойств строки, которые будут использоваться для всех строк в элементе управления.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "76731998"
  <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>  
  Содержит справочную документацию по свойству <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Настройка элементов управления DataGridView в Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
  Разделы, описывающие пользовательскую отрисовку ячеек и строк <xref:System.Windows.Forms.DataGridView>, а также создание производных ячеек, столбцов и типов строк.  
   
  [Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Содержит разделы, описывающие часто используемые свойства ячеек, строк и столбцов.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)

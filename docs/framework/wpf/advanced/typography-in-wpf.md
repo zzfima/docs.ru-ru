@@ -148,7 +148,7 @@ ms.locfileid: "76735531"
   
  Дополнительные сведения о создании пользовательского макета текста см. в разделе [Дополнительное форматирование текста](advanced-text-formatting.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
@@ -156,5 +156,5 @@ ms.locfileid: "76735531"
 - [Возможности шрифта OpenType](opentype-font-features.md)
 - [Рисование форматированного текста](drawing-formatted-text.md)
 - [Дополнительное форматирование текста](advanced-text-formatting.md)
-- [Text](optimizing-performance-text.md)
+- [Текст](optimizing-performance-text.md)
 - [Типография Майкрософт](https://docs.microsoft.com/typography/)

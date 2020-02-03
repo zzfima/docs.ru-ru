@@ -176,7 +176,7 @@ ms.locfileid: "76731336"
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Элемент управления SplitContainer](splitcontainer-control-windows-forms.md)

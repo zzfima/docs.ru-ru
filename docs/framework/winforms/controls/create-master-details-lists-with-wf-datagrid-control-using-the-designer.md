@@ -49,7 +49,7 @@ ms.locfileid: "76743384"
 
     2. Выберите связь (например, "Customers. Кусторд") между главной таблицей и таблицами сведений из раскрывающегося списка в свойстве <xref:System.Windows.Forms.DataGrid.DataMember%2A>. Чтобы увидеть связь, разверните узел, щелкнув знак плюса ( **+** ) рядом с главной таблицей в раскрывающемся списке.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
 - [Общие сведения об элементе управления DataGrid](datagrid-control-overview-windows-forms.md)

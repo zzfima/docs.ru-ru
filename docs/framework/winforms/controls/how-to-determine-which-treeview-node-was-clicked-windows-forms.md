@@ -58,6 +58,6 @@ ms.locfileid: "76742016"
     > [!NOTE]
     > В качестве альтернативы можно использовать <xref:System.Windows.Forms.MouseEventArgs> события <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.MouseUp> для получения <xref:System.Drawing.Point.X%2A> и <xref:System.Drawing.Point.Y%2A> значений координат <xref:System.Drawing.Point>, в которых произошло нажатие. Затем используйте метод <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> элемента управления <xref:System.Windows.Forms.TreeView>, чтобы определить, какой узел был выбран.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления TreeView](treeview-control-windows-forms.md)

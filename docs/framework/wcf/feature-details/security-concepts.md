@@ -12,7 +12,7 @@ ms.locfileid: "76730832"
 # <a name="security-concepts"></a>Основные понятия безопасности
 В этом разделе кратко описаны понятия, связанные с безопасностью Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Основные понятия безопасности, используемые в WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Высокоуровневый обзор принципов, используемых для реализации механизмов безопасности.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "76730832"
  [Терминология в сфере безопасности](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
  Глоссарий терминов, используемых при обсуждении безопасности WCF.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -33,11 +33,11 @@ ms.locfileid: "76730832"
   
  <xref:System.Security>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Security](../../../../docs/framework/wcf/feature-details/security.md)
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)
+- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

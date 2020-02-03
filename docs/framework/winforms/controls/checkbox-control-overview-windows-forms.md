@@ -24,7 +24,7 @@ ms.locfileid: "76737092"
   
  Элемент управления <xref:System.Windows.Forms.CheckBox> имеет два важных свойства: <xref:System.Windows.Forms.CheckBox.Checked%2A> и <xref:System.Windows.Forms.CheckBox.CheckState%2A>. Свойство <xref:System.Windows.Forms.CheckBox.Checked%2A> возвращает либо `true`, либо `false`. Свойство <xref:System.Windows.Forms.CheckBox.CheckState%2A> возвращает либо <xref:System.Windows.Forms.CheckState.Checked>, либо <xref:System.Windows.Forms.CheckState.Unchecked>; или, если свойство <xref:System.Windows.Forms.CheckBox.ThreeState%2A> имеет значение `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> также может возвращать <xref:System.Windows.Forms.CheckState.Indeterminate>. В неопределенном состоянии поле отображается с серым затененным видом, указывающим, что параметр недоступен.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)

@@ -24,7 +24,7 @@ ms.locfileid: "76743784"
   
  Если <xref:System.Windows.Forms.Label.AutoSize%2A> имеет значение `false`, слова, указанные в свойстве <xref:System.Windows.Forms.Label.Text%2A>, будут переноситься на следующую строку, если это возможно, но элемент управления не будет расти.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Общие сведения об элементе управления Label](label-control-overview-windows-forms.md)

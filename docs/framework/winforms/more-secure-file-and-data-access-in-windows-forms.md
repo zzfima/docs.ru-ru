@@ -39,7 +39,7 @@ ms.locfileid: "76743749"
   
  Класс <xref:System.Security.Permissions.FileDialogPermission> указывает, какой тип файлового диалогового окна может использовать приложение. В таблице ниже показаны значения, которые необходимо использовать для каждого класса <xref:System.Windows.Forms.FileDialog>.  
   
-|Класс|Необходимое значение для доступа|  
+|Class|Необходимое значение для доступа|  
 |-----------|---------------------------|  
 |<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Open>|  
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
@@ -358,7 +358,7 @@ public void Write()
   
  Так как в среде с частичным доверием доступ к реестру получить невозможно, могут потребоваться другие способы хранения данных. Для хранения параметров приложения используйте вместо реестра изолированное хранилище. Изолированное сохранение можно использовать также для хранения файлов, относящихся к приложению. Можно хранить общие сведения приложения о сервере или исходном сайте, так как по умолчанию приложение имеет право на доступ к исходному сайту.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Более безопасная печать в Windows Forms](more-secure-printing-in-windows-forms.md)
 - [Дополнительные вопросы безопасности в формах Windows Forms](additional-security-considerations-in-windows-forms.md)

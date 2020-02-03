@@ -22,7 +22,7 @@ ms.locfileid: "76745180"
   
  Чтобы добавить или удалить элементы в элементе управления <xref:System.Windows.Forms.ListBox>, используйте метод <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> или <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A>. Кроме того, можно добавить элементы в список с помощью свойства <xref:System.Windows.Forms.ListBox.Items%2A> во время разработки.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ListBox>
 - [Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms](add-and-remove-items-from-a-wf-combobox.md)

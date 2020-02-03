@@ -24,7 +24,7 @@ ms.locfileid: "76747024"
 
 Платформа [Windows Presentation Foundation](../index.md) выполняет сбор цифровых рукописных фрагментов, что является одной из основных ее функций. В этом разделе обсуждаются методы сбора рукописного ввода в Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы использовать следующие примеры, необходимо сначала установить Visual Studio и Windows SDK. Следует также понимать, как писать приложения для WPF. Дополнительные сведения о начале работы с WPF см. в разделе [Пошаговое руководство. мое первое классическое приложение WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
@@ -52,7 +52,7 @@ ms.locfileid: "76747024"
 
 <xref:System.Windows.Controls.InkCanvas> обеспечивает поддержку многих операций редактирования рукописных данных. Например, <xref:System.Windows.Controls.InkCanvas> поддерживает стирание в обратном пера, а дополнительный код не требуется для добавления функциональности в элемент.
 
-#### <a name="selection"></a>Выбранное
+#### <a name="selection"></a>Выбор
 
 Настройка режима выделения так же проста, как установка свойства <xref:System.Windows.Controls.InkCanvasEditingMode> для **выбора**.
 
@@ -88,7 +88,7 @@ ms.locfileid: "76747024"
 
 Обратите внимание на то, как <xref:System.Windows.Controls.StackPanel> помещает кнопки поверх <xref:System.Windows.Controls.InkCanvas>. При попытке рукописного ввода в верхней части кнопок <xref:System.Windows.Controls.InkCanvas> собирает и отображает рукописные данные позади кнопок. Это связано с тем, что кнопки являются одноуровневыми элементами <xref:System.Windows.Controls.InkCanvas>, а не дочерними. Кроме того, кнопки находятся выше в z-порядке, поэтому рукописные фрагменты отображаются позади них.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>
