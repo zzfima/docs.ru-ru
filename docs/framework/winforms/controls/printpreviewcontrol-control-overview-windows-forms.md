@@ -20,7 +20,7 @@ ms.locfileid: "76741434"
 ## <a name="key-properties"></a>Ключевые свойства  
  Ключевым свойством элемента управления является <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, которое задает предварительный просмотр документа. Документ должен быть объектом <xref:System.Drawing.Printing.PrintDocument>. Общие сведения о создании документов для печати см. в разделе [Общие сведения о компоненте PrintDocument](printdocument-component-overview-windows-forms.md) и [Windows Forms поддержка печати](../advanced/windows-forms-print-support.md). Свойства <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> и <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> определяют количество страниц, отображаемых на элементе управления по горизонтали и вертикали. Сглаживание может сделать текст более плавным, но он также может замедлить отображение. чтобы использовать его, присвойте свойству <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> значение `true`.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
 - [Общие сведения об элементе управления PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md)

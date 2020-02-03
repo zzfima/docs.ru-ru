@@ -38,10 +38,10 @@ ms.locfileid: "76732177"
   
 - ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Надежное программирование  
+## <a name="robust-programming"></a>Отказоустойчивость  
  При привязке элемента управления <xref:System.Windows.Forms.DataGridView> к внешнему источнику данных или предоставлении собственного источника данных путем реализации виртуального режима могут возникнуть проблемы с производительностью. Чтобы избежать снижения производительности при работе с большими объемами данных, обрабатывайте <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> событие, а не устанавливая <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> свойства нескольких ячеек. При обработке этого события получение значения ячейки <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> свойство вызывает событие и возвращает значение свойства <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>, как указано в обработчике событий.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>

@@ -28,7 +28,7 @@ ms.locfileid: "76740006"
   
 - Вызовите метод <xref:System.Windows.Forms.Button.PerformClick%2A>, чтобы программно нажать кнопку.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления Button](button-control-overview-windows-forms.md)
 - [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

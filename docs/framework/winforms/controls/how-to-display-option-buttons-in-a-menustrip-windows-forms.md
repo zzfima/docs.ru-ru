@@ -83,7 +83,7 @@ ms.locfileid: "76735522"
 
 - ссылки на сборки System, System.Drawing и System.Windows.Forms.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>

@@ -226,7 +226,7 @@ ms.locfileid: "76741631"
 
 Сначала задайте `NumberSubstitution.CultureSource="Text"`компонента приложения. Использование этого параметра гарантирует, что параметры не поступают из [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для текстовых элементов, которые по умолчанию имеют значение "User", например <xref:System.Windows.Controls.TextBlock>.
 
-Например:
+Пример:
 
 ```xaml
 <TextBlock

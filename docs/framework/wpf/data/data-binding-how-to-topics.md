@@ -18,7 +18,7 @@ ms.locfileid: "76733852"
 
 В подразделах этого раздела описывается использование привязки данных для привязки элементов к данным из различных источников данных в форме объектов среды CLR и XML.
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 - [Создание простой привязки](how-to-create-a-simple-binding.md)
 - [Указание источника привязки](how-to-specify-the-binding-source.md)
@@ -56,14 +56,14 @@ ms.locfileid: "76733852"
 - [Поиск элементов, созданных с использованием шаблона DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Привязка к веб-службе](how-to-bind-to-a-web-service.md)
 
-## <a name="reference"></a>Справочные сведения
+## <a name="reference"></a>Справочник
 
 - <xref:System.Windows.Data>
 - <xref:System.Windows.Data.Binding>
 - <xref:System.Windows.DataTemplate>
 - <xref:System.Windows.Controls.DataTemplateSelector>
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 - [Привязка данных в WPF](../../../desktop-wpf/data/data-binding-overview.md)
 - [Производительность привязки данных](../advanced/optimizing-performance-data-binding.md)

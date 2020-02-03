@@ -12,7 +12,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741530"
 ---
-# <a name="customizing-structure-marshaling"></a>Настройка маршалинга структур
+# <a name="customizing-structure-marshaling"></a>Настройка маршалинга структуры
 
 Иногда стандартные правила маршалинга структур не совсем подходят. В средах выполнения .NET предусмотрены точки расширения, которые позволяют настроить макет структуры и способ маршалинга полей.
 
@@ -247,7 +247,7 @@ struct UTF8String
 > [!NOTE]
 > Значение <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> доступно только на платформе .NET Framework 4.7 (или более поздних версий) или .NET Core 1.1 (или более поздних версий). Оно недоступно на платформе .NET Standard 2.0.
 
-Если вы работаете с API COM, возможно, вам потребуется маршалировать строку как `BSTR`. Вы можете маршалировать строку как `BSTR`, используя значение <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType>.
+Если вы работаете с API COM, возможно, вам потребуется маршалировать строку как `BSTR`. Вы можете маршалировать строку как <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType>, используя значение `BSTR`.
 
 ```csharp
 public struct BString
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-Если используется API на базе WinRT, возможно, потребуется маршалировать строку как `HSTRING`.  Вы можете маршалировать строку как `HSTRING`, используя значение <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>.
+Если используется API на базе WinRT, возможно, потребуется маршалировать строку как `HSTRING`.  Вы можете маршалировать строку как <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, используя значение `HSTRING`.
 
 ```csharp
 public struct HString

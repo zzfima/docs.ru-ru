@@ -23,7 +23,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.P
 ## <a name="key-properties"></a>Ключевые свойства  
  Чтобы отобразить полосы прокрутки, задайте для свойства <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> значение `true`. Внешний вид панели также можно настроить, задав свойства <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>и <xref:System.Windows.Forms.Panel.BorderStyle%2A>. Дополнительные сведения о свойствах <xref:System.Windows.Forms.Control.BackColor%2A> и <xref:System.Windows.Forms.Control.BackgroundImage%2A> см. в разделе [как задать фон панели](how-to-set-the-background-of-a-windows-forms-panel.md). Свойство <xref:System.Windows.Forms.Panel.BorderStyle%2A> определяет, отображается ли панель без видимой границы (<xref:System.Windows.Forms.BorderStyle.None>), простой линии (<xref:System.Windows.Forms.BorderStyle.FixedSingle>) или скрытой линии (<xref:System.Windows.Forms.BorderStyle.Fixed3D>).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Panel>
 - [Элемент управления GroupBox](groupbox-control-windows-forms.md)

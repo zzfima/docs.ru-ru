@@ -14,11 +14,11 @@ ms.locfileid: "76732365"
 # <a name="changing-the-appearance-of-windows-forms"></a>Изменение внешнего вида Windows Forms
 Внешний вид приложений Windows Forms можно настраивать различными способами. Например, можно изменять границы, прозрачность, форму, стиль или фоновое изображение.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Изменение границ в Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
  Показано, как изменить стиль границ формы.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.Form>  
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "76732365"
  <xref:System.Drawing.Color>  
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Настройка размера и масштаба формы Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)  
  Ссылки на разделы, в которых показано, как изменить размер и масштаб формы.  
   

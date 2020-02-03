@@ -84,7 +84,7 @@ ms.locfileid: "76728295"
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>

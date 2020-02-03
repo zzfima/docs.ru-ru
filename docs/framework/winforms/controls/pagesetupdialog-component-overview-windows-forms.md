@@ -24,7 +24,7 @@ ms.locfileid: "76744340"
 
 При добавлении в форму <xref:System.Windows.Forms.PageSetupDialog> компонент отображается в области в нижней части конструктор Windows Forms в Visual Studio.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)
+- [Компонент PageSetupDialog](pagesetupdialog-component-windows-forms.md)

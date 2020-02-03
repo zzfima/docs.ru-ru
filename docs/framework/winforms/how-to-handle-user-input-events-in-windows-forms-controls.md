@@ -29,6 +29,6 @@ ms.locfileid: "76739418"
   
 - ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Ввод данных пользователем в Windows Forms](user-input-in-windows-forms.md)

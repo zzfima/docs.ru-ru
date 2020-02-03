@@ -24,7 +24,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.R
   
  Элемент управления <xref:System.Windows.Forms.RadioButton> может выглядеть как кнопка команды, которая, по-видимому, была нажата, если выбрано свойство <xref:System.Windows.Forms.RadioButton.Appearance%2A> значение <xref:System.Windows.Forms.Appearance.Button>. Переключатели также могут отображать изображения с помощью свойств <xref:System.Windows.Forms.ButtonBase.Image%2A> и <xref:System.Windows.Forms.ButtonBase.ImageList%2A>. Дополнительные сведения см. в разделе [как задать изображение, отображаемое элементом управления Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Общие сведения об элементе управления Panel](panel-control-overview-windows-forms.md)

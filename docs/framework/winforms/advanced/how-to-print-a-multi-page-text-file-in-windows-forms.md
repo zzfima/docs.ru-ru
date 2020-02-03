@@ -60,7 +60,7 @@ ms.locfileid: "76740657"
   
 - Сведения о создании этого примера из командной строки для Visual Basic или визуального элемента C#см. в разделе [Сборка из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [Сборка из командной строки с помощью csc. exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Этот пример можно также построить в Visual Studio, вставляя код в новый проект.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

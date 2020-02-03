@@ -47,23 +47,23 @@ ms.locfileid: "76744722"
 Dim [ WithEvents ] variablelist
 ```
 
-## <a name="parts"></a>Части
+## <a name="parts"></a>Компоненты
 
 - `attributelist`
 
-  (Необязательный аргумент) См. [список атрибутов](attribute-list.md).
+  Необязательный параметр. См. [список атрибутов](attribute-list.md).
 
 - `accessmodifier`
 
-  (Необязательный аргумент) Ниже указаны доступные значения.
+  Необязательный параметр. Может применяться один из перечисленных ниже типов.
 
-  - [Public](../modifiers/public.md)
+  - [Открытый](../modifiers/public.md)
 
   - [Protected](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [Закрытые](../modifiers/private.md)
+  - [Частное](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  (Необязательный аргумент) См. раздел [Shared](../modifiers/shared.md).
+  Необязательный параметр. См. раздел [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  (Необязательный аргумент) См. раздел [Shadows](../modifiers/shadows.md).
+  Необязательный параметр. См. раздел [Shadows](../modifiers/shadows.md).
 
 - `Static`
 
-  (Необязательный аргумент) См. раздел [static](../modifiers/static.md).
+  Необязательный параметр. См. раздел [static](../modifiers/static.md).
 
 - `ReadOnly`
 
-  (Необязательный аргумент) См. раздел [ReadOnly](../modifiers/readonly.md).
+  Необязательный параметр. См. раздел [ReadOnly](../modifiers/readonly.md).
 
 - `WithEvents`
 
-  (Необязательный аргумент) Указывает, что это переменные объекта, которые ссылаются на экземпляры класса, которые могут создавать события. См. раздел [WithEvents](../modifiers/withevents.md).
+  Необязательный параметр. Указывает, что это переменные объекта, которые ссылаются на экземпляры класса, которые могут создавать события. См. раздел [WithEvents](../modifiers/withevents.md).
 
 - `variablelist`
 
-  Обязательное Список переменных, объявляемых в этой инструкции.
+  Обязательный элемент. Список переменных, объявляемых в этой инструкции.
 
   `variable [ , variable ... ]`
 
@@ -101,18 +101,18 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |Часть|Описание|
+  |Часть|Description|
   |---|---|
-  |`variablename`|Обязательное Имя переменной. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|(Необязательный аргумент) Список границ каждого измерения переменной массива.|
-  |`New`|(Необязательный аргумент) Создает новый экземпляр класса при выполнении инструкции `Dim`.|
-  |`datatype`|(Необязательный аргумент) Тип данных переменной.|
-  |`With`|(Необязательный аргумент) Представляет список инициализаторов объектов.|
-  |`propertyname`|(Необязательный аргумент) Имя свойства в классе, экземпляр которого вы вносите.|
+  |`variablename`|Обязательный элемент. Имя переменной. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`boundslist`|Необязательный параметр. Список границ каждого измерения переменной массива.|
+  |`New`|Необязательный параметр. Создает новый экземпляр класса при выполнении инструкции `Dim`.|
+  |`datatype`|Необязательный параметр. Тип данных переменной.|
+  |`With`|Необязательный параметр. Представляет список инициализаторов объектов.|
+  |`propertyname`|Необязательный параметр. Имя свойства в классе, экземпляр которого вы вносите.|
   |`propinitializer`|Требуется после `propertyname` =. Выражение, которое вычисляется и присваивается имени свойства.|
   |`initializer`|Необязательный, если не указан `New`. Выражение, которое вычисляется и присваивается переменной при ее создании.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Компилятор Visual Basic использует инструкцию `Dim` для определения типа данных переменной и других сведений, например кода, который может получить доступ к переменной. В следующем примере объявляется переменная для хранения `Integer` значения.
 
@@ -257,9 +257,9 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|
 |---|---|---|---|
-|Нет|Нет|`Dim qty`|Если [параметр optioned](option-strict-statement.md) имеет значение OFF (значение по умолчанию), то переменной присваивается значение `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|
-|Нет|Да|`Dim qty = 5`|Если [параметр Infer](option-infer-statement.md) имеет значение On (значение по умолчанию), переменная принимает тип данных инициализатора. См. раздел [определение локального типа](../../programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|
-|Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. См. таблицу далее в этом разделе.|
+|нет|нет|`Dim qty`|Если [параметр optioned](option-strict-statement.md) имеет значение OFF (значение по умолчанию), то переменной присваивается значение `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|
+|нет|Да|`Dim qty = 5`|Если [параметр Infer](option-infer-statement.md) имеет значение On (значение по умолчанию), переменная принимает тип данных инициализатора. См. раздел [определение локального типа](../../programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|
+|Да|нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. См. таблицу далее в этом разделе.|
 |Да|Да|`Dim qty  As Integer = 5`|Если тип данных инициализатора нельзя преобразовать в указанный тип данных, возникает ошибка времени компиляции.|
 
 Если указать тип данных, но не указать инициализатор, Visual Basic инициализирует переменную как значение по умолчанию для ее типа данных. В следующей таблице приведены значения инициализации по умолчанию.
@@ -325,7 +325,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Оператор Const](const-statement.md)
 - [Оператор reDim](redim-statement.md)

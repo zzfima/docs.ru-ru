@@ -22,7 +22,7 @@ ms.locfileid: "76732479"
   
  Формы производного класса можно создавать программно или с помощью выбора компонентов для визуального наследования.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Наследование форм Windows Forms](how-to-inherit-windows-forms.md)  
  Указания по созданию наследуемых форм в коде.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "76732479"
  [Практическое руководство. Использование свойств Modifiers и GenerateMember](how-to-use-the-modifiers-and-generatemember-properties.md)  
  Указания по использованию свойств `GenerateMember` и `Modifiers`, актуальных в случае, когда конструктор Windows Forms создает переменную-член для компонента.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Основы наследования (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  Описание способов определения классов Visual Basic, которые служат основой для других классов.  
   
- [класс](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  Описание принципов особенностей классов в C#, в которых разрешено единичное наследование.  
   
  [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  

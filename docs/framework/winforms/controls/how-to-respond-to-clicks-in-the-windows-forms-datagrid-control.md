@@ -140,7 +140,7 @@ ms.locfileid: "76735755"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
 - [Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

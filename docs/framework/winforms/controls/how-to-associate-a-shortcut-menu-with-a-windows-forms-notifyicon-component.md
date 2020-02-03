@@ -126,7 +126,7 @@ notifyIcon1 = gcnew System::Windows::Forms::NotifyIcon();
 contextMenu1 = gcnew System::Windows::Forms::ContextMenu();  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>

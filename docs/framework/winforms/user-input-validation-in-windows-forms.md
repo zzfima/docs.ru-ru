@@ -67,7 +67,7 @@ ms.locfileid: "76734689"
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Поведение неявной проверки по умолчанию для элементов управления Windows Forms  
  Различные элементы управления Windows Forms имеют разные значения по умолчанию для их свойства <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>. В следующей таблице показаны наиболее распространенные элементы управления и их значения по умолчанию.  
   
-|Элемент управления|Поведение проверки по умолчанию|  
+|Control|Поведение проверки по умолчанию|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
@@ -90,7 +90,7 @@ ms.locfileid: "76734689"
 > [!NOTE]
 > Если принудительно закрыть форму таким образом, все данные в элементах управления формы, которые еще не были сохранены, теряются. Кроме того, модальные формы не проверяют содержимое элементов управления при их закрытии. Вы по-прежнему можете использовать проверку элемента управления для блокировки фокуса на элемент управления, но не нужно беспокоиться о поведении, связанном с закрытием формы.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

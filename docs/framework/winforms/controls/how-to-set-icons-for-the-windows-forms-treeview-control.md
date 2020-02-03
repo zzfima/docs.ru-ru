@@ -68,7 +68,7 @@ ms.locfileid: "76737262"
     treeView1->SelectedNode->SelectedImageIndex = 1;  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления TreeView](treeview-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление и удаление узлов элемента управления TreeView в Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)

@@ -24,7 +24,7 @@ ms.locfileid: "76736295"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Практическое руководство. Загрузка файлов в элемент управления RichTextBox в Windows Forms
 
-Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> может отображать обычный текст, обычный текст в Юникоде или файл в формате RTF. Для этого вызовите метод <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> . Метод <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> можно также использовать для загрузки данных из потока. Для получения дополнительной информации см. <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> может отображать обычный текст, обычный текст в Юникоде или файл в формате RTF. Для этого вызовите метод <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> . Метод <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> можно также использовать для загрузки данных из потока. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Загрузка файла в элемент управления RichTextBox
 
@@ -81,7 +81,7 @@ ms.locfileid: "76736295"
     > [!IMPORTANT]
     > Для запуска этого процесса сборке может потребоваться уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> . При выполнении в контексте частичного доверия процесс может выдавать исключение из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>

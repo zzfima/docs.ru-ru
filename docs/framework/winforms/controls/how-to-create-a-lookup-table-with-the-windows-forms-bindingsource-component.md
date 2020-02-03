@@ -91,7 +91,7 @@ ms.locfileid: "76736811"
   
 8. Свяжите элементы управления, кроме <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.BindingNavigator>, с полями сведений из элемента <xref:System.Windows.Forms.BindingSource> дочерней таблицы (например, `OrdersBindingSource`), которые необходимо отобразить.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingSource>
 - [Компонент BindingSource](bindingsource-component.md)

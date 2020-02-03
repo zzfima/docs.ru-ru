@@ -77,7 +77,7 @@ ms.locfileid: "76741494"
   
 - Для сборки в форме, в которой размещен `AttributesDemoControl`, требуется ссылка на сборку `AttributesDemoControl`.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>

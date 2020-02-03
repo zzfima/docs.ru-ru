@@ -17,7 +17,7 @@ ms.locfileid: "76734728"
 # <a name="user-input-in-windows-forms"></a>Ввод данных пользователем в Windows Forms
 В Windows Forms включена модель ввода пользователя, основанная на событиях, которые возникают во время обработки соответствующих сообщений Windows. Здесь приведены ссылки на разделы с информацией о вводе с помощью мыши и клавиатуры, включая примеры кода, демонстрирующие выполнение определенных задач.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Ввод данных пользователем в приложении Windows Forms](user-input-in-a-windows-forms-application.md)  
  Содержит обзор событий пользовательского ввода и методов, которые обрабатывают сообщения Windows.  
   
@@ -36,5 +36,5 @@ ms.locfileid: "76734728"
  [Проверка введенных пользователем данных в Windows Forms](user-input-validation-in-windows-forms.md)  
  Описываются методы проверки пользовательского ввода в приложениях Windows Forms.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  См. также раздел [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md).
