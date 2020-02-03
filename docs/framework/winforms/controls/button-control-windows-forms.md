@@ -15,7 +15,7 @@ ms.locfileid: "76738018"
 # <a name="button-control-windows-forms"></a>Элемент управления Button (Windows Forms)
 Элемент управления Windows Forms `Button` позволяет пользователю щелкнуть его для выполнения действия. На элементе управления `Button` могут отображаться текст и изображения. При щелчке кнопки мышью элемент управления выглядит так, как будто его нажимают и отпускают.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления Button](button-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "76738018"
   
  См. также [инструкции по назначению кнопки Windows Forms в качестве кнопки Accept с помощью конструктора](designate-a-wf-button-as-the-accept-button-using-the-designer.md) и [инструкции: назначение Windows Formsной кнопки в качестве кнопки отмены с помощью конструктора](designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.Button>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   

@@ -23,7 +23,7 @@ ms.locfileid: "76743846"
   
  Чтобы добавить или удалить элементы в элементе управления <xref:System.Windows.Forms.ComboBox>, используйте метод <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> или <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A>. Кроме того, можно добавить элементы в список с помощью свойства <xref:System.Windows.Forms.ComboBox.Items%2A> в конструкторе.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ComboBox>
 - [Общие сведения об элементе управления ListBox](listbox-control-overview-windows-forms.md)

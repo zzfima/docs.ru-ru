@@ -32,11 +32,11 @@ ms.locfileid: "76743567"
 
  ✔️ гарантировать, что каждый тип является четко определенным набором связанных элементов, а не только случайным набором несвязанных функций.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
  [Выбор между](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) [абстрактным](../../../docs/standard/design-guidelines/abstract-class.md) классом класса и структурой конструктор [статических классов](../../../docs/standard/design-guidelines/static-class.md) [конструктор](../../../docs/standard/design-guidelines/interface.md) [структуры](../../../docs/standard/design-guidelines/struct.md) [перечисление](../../../docs/standard/design-guidelines/enum.md) структур [вложенных типов](../../../docs/standard/design-guidelines/nested-types.md) *© 2005, 2009 Корпорация Майкрософт. Все права защищены.*
 
  *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

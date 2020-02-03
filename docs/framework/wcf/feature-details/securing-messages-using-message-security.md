@@ -43,7 +43,7 @@ ms.locfileid: "76746442"
   
  На компьютере под управлением Windows имеется несколько типов хранилищ сертификатов. Дополнительные сведения о различных хранилищах см. в разделе [хранилища сертификатов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
-### <a name="windows"></a>Портал  
+### <a name="windows"></a>Windows  
  Тип учетных данных сообщений Windows использует протокол Kerberos.  
   
  Протокол Kerberos является механизмом обеспечения безопасности, проверяющим подлинность пользователей в домене и позволяющим пользователям, прошедшим проверку подлинности, устанавливать защищенные контексты с другими сущностями в домене.  
@@ -63,9 +63,9 @@ ms.locfileid: "76746442"
 ## <a name="using-transport-and-message-security"></a>Использование безопасности транспорта и сообщений  
  При применении одновременно и безопасности транспорта, и безопасности сообщений для обеспечения безопасности сообщения как на уровне транспорта, так и на уровне сообщений SOAP должен использоваться один и тот же сертификат.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Защита сообщений с использованием средств обеспечения безопасности транспорта](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [Безопасность сообщений при использовании очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

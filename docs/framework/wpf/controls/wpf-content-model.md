@@ -29,7 +29,7 @@ ms.locfileid: "76738281"
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется четыре класса, которые могут иметь произвольное содержимое. В следующей таблице перечислены классы, которые наследуются от <xref:System.Windows.Controls.Control>.  
   
-|Класс с произвольным содержимым|Content|  
+|Класс с произвольным содержимым|Содержимое|  
 |-------------------------------------------|-------------|  
 |<xref:System.Windows.Controls.ContentControl>|Один произвольный объект.|  
 |<xref:System.Windows.Controls.HeaderedContentControl>|Заголовок и один элемент, которые являются произвольными объектами.|  
@@ -137,9 +137,9 @@ ms.locfileid: "76738281"
   
 - Строка.  
   
-- Объект <xref:System.DateTime>.  
+- Объект <xref:System.DateTime> .  
   
-- Объект <xref:System.Windows.UIElement>.  
+- <xref:System.Windows.UIElement>.  
   
 - <xref:System.Windows.Controls.Panel>, содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
   
@@ -221,9 +221,9 @@ ms.locfileid: "76738281"
 ## <a name="classes-that-enable-users-to-enter-text"></a>Классы, позволяющие пользователям вводить текст  
  WPF предоставляет три основных элемента управления, которые позволяют пользователям вводить текст. Каждый из этих элементов управления отображает текст по-разному. В следующей таблице приведены эти три элемента управления с поддержкой ввода текста, их возможности по отображению текста и свойства, которые содержат текст этого элемента управления.  
   
-|Элемент управления|В каком виде отображается текст|Свойство содержимого|  
+|Control|В каком виде отображается текст|Свойство содержимого|  
 |-------------|--------------------------|----------------------|  
-|<xref:System.Windows.Controls.TextBox>|Обычный текст|<xref:System.Windows.Controls.TextBox.Text%2A>|  
+|<xref:System.Windows.Controls.TextBox>|с обычным текстом;|<xref:System.Windows.Controls.TextBox.Text%2A>|  
 |<xref:System.Windows.Controls.RichTextBox>|Форматированный текст|<xref:System.Windows.Controls.RichTextBox.Document%2A>|  
 |<xref:System.Windows.Controls.PasswordBox>|Скрытый текст (символы скрыты)|<xref:System.Windows.Controls.PasswordBox.Password%2A>|  
   
@@ -235,11 +235,11 @@ ms.locfileid: "76738281"
   
  В следующей таблице перечислены свойства содержимого для классов <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>и <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
-|Элемент управления|Свойство содержимого|Тип свойства содержимого|  
+|Control|Свойство содержимого|Тип свойства содержимого|  
 |-------------|----------------------|---------------------------|  
-|<xref:System.Windows.Controls.FlowDocumentPageViewer>|Document|<xref:System.Windows.Documents.IDocumentPaginatorSource>|  
-|<xref:System.Windows.Controls.FlowDocumentReader>|Document|<xref:System.Windows.Documents.FlowDocument>|  
-|<xref:System.Windows.Controls.FlowDocumentScrollViewer>|Document|<xref:System.Windows.Documents.FlowDocument>|  
+|<xref:System.Windows.Controls.FlowDocumentPageViewer>|Документ|<xref:System.Windows.Documents.IDocumentPaginatorSource>|  
+|<xref:System.Windows.Controls.FlowDocumentReader>|Документ|<xref:System.Windows.Documents.FlowDocument>|  
+|<xref:System.Windows.Controls.FlowDocumentScrollViewer>|Документ|<xref:System.Windows.Documents.FlowDocument>|  
   
  <xref:System.Windows.Documents.FlowDocument> реализует интерфейс <xref:System.Windows.Documents.IDocumentPaginatorSource>; Таким образом, все три класса могут принимать <xref:System.Windows.Documents.FlowDocument> как содержимое.  
   
@@ -247,6 +247,6 @@ ms.locfileid: "76738281"
 ## <a name="classes-that-format-your-text"></a>Классы, выполняющие форматирование пользовательского текста  
  <xref:System.Windows.Documents.TextElement> и связанные с ним классы позволяют форматировать текст. <xref:System.Windows.Documents.TextElement> объекты содержат и форматируют текст в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument>ных объектах. Двумя основными типами <xref:System.Windows.Documents.TextElement> объектов являются <xref:System.Windows.Documents.Block> элементы и элементы <xref:System.Windows.Documents.Inline>. Элемент <xref:System.Windows.Documents.Block> представляет блок текста, например абзац или список. Элемент <xref:System.Windows.Documents.Inline> представляет часть текста в блоке. Многие классы <xref:System.Windows.Documents.Inline> определяют форматирование текста, к которому они применяются. Каждая <xref:System.Windows.Documents.TextElement> имеет собственную модель содержимого. Подробнее см. в разделе [Общие сведения о модели содержимого TextElement](../advanced/textelement-content-model-overview.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Дополнительно](../advanced/index.md)

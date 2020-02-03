@@ -30,7 +30,7 @@ ms.locfileid: "76738652"
     > [!NOTE]
     > Можно также скрыть столбец при его добавлении, сняв флажок **видимый** в диалоговом окне **Добавление столбца** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>

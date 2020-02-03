@@ -17,7 +17,7 @@ ms.locfileid: "76742481"
   
  Отображение данных в табличном формате — это задача, которая, скорее всего, будет выполняться часто. Элемент управления `DataGridView` предназначен для полного решения для представления данных в сетке.  
   
-## <a name="keywords"></a>Ключевые слова  
+## <a name="keywords"></a>Keywords  
  DataGridView, BindingSource, таблица, ячейка, привязка данных, виртуальный режим  
   
 ## <a name="namespaces"></a>Пространства имен  
@@ -55,12 +55,12 @@ ms.locfileid: "76742481"
 |Представление данных|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
 |Расширяемость <xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
-## <a name="whats-new"></a>Новые возможности  
+## <a name="whats-new"></a>What's New  
  Элемент управления <xref:System.Windows.Forms.DataGridView> разработан как полноценное решение для отображения табличных данных с помощью Windows Forms. Рекомендуется использовать элемент управления <xref:System.Windows.Forms.DataGridView> перед другими решениями, например <xref:System.Windows.Forms.DataGrid>, при создании нового приложения. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Элемент управления <xref:System.Windows.Forms.DataGridView> может работать в тесном соединении с компонентом <xref:System.Windows.Forms.BindingSource>. Этот компонент предназначен для использования в качестве основного источника данных формы. Он может управлять взаимодействием между элементом управления <xref:System.Windows.Forms.DataGridView> и его источником данных независимо от типа источника данных.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления DataGridView](datagridview-control-overview-windows-forms.md)
 - [Архитектура элементов управления DataGridView](datagridview-control-architecture-windows-forms.md)

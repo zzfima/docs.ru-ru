@@ -44,7 +44,7 @@ ms.locfileid: "76740447"
 
 В **Обозреватель решений**удалите изображение экрана-заставки.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.SplashScreen>
 - [Как добавить существующие элементы в проект](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

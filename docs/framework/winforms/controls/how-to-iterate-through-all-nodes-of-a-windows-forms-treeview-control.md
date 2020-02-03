@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736362"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Практическое руководство. Перебор всех узлов элемента управления TreeView в Windows Forms
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms
 Иногда бывает полезно исследовать каждый узел в Windows Forms <xref:System.Windows.Forms.TreeView> элемента управления для выполнения некоторых вычислений по значениям узла. Выполнить эту операции можно с помощью рекурсивной процедуры (рекурсивного метода в C# и C++), которая перебирает каждый узел в каждой коллекции дерева.  
   
  Каждый объект <xref:System.Windows.Forms.TreeNode> в представлении в виде дерева имеет свойства, которые можно использовать для навигации по древовидному представлению: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>и <xref:System.Windows.Forms.TreeNode.Parent%2A>. Значением свойства <xref:System.Windows.Forms.TreeNode.Parent%2A> является родительский узел текущего узла. Дочерние узлы текущего узла, если таковые имеются, перечислены в его свойстве <xref:System.Windows.Forms.TreeNode.Nodes%2A>. Сам элемент управления <xref:System.Windows.Forms.TreeView> имеет свойство <xref:System.Windows.Forms.TreeView.TopNode%2A>, которое является корневым узлом всего представления в виде дерева.  
@@ -26,7 +26,7 @@ ms.locfileid: "76736362"
   
 1. Создайте рекурсивную процедуру (рекурсивный метод в C# и C++) для проверки каждого узла.  
   
-2. Вызовите процедуру.  
+2. Вызов процедуры.  
   
      В следующем примере показано, как распечатать свойство <xref:System.Windows.Forms.TreeNode.Text%2A> каждого <xref:System.Windows.Forms.TreeNode> объекта:  
   
@@ -123,7 +123,7 @@ ms.locfileid: "76736362"
        }  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления TreeView](treeview-control-windows-forms.md)
 - [Рекурсивные процедуры](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

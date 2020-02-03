@@ -1,5 +1,5 @@
 ---
-title: Начало работы
+title: Приступая к работе
 ms.date: 03/30/2017
 f1_keywords:
 - Designer_System.Windows.Forms.Design.FormDocumentDesigner
@@ -18,7 +18,7 @@ ms.locfileid: "76743473"
 # <a name="getting-started-with-windows-forms"></a>Приступая к работе с Windows Forms
 С помощью Windows Forms можно создавать мощные приложения на основе Windows. В следующих разделах подробно описано, как использовать возможности Windows Forms для отображения данных, управления вводом пользователя и развертывания приложений с повышенной безопасностью.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о Windows Forms](windows-forms-overview.md)  
  Содержит общие сведения о Windows Forms и интеллектуальных клиентских приложениях.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "76743473"
  [Практическое руководство. Доступ к коллекциям с ключом в Windows Forms](how-to-access-keyed-collections-in-windows-forms.md)  
  Демонстрирует доступ к коллекциям с ключами, а не индексами.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Усовершенствование приложений Windows Forms](./advanced/index.md)  
  Содержит ссылки на разделы, в которых описываются более сложные концепции создания Windows Forms приложений.

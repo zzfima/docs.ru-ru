@@ -39,7 +39,7 @@ ms.locfileid: "76742374"
 
 Свойство <xref:System.Windows.Forms.Control.AutoSize%2A> указывает элементу управления на автоматическое изменение размера в соответствии с его содержимым. Размер не будет меньше, чем значение исходного свойства <xref:System.Windows.Forms.Control.Size%2A>, и оно будет учитывать значение его свойства <xref:System.Windows.Forms.Control.Padding%2A>.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения этого пошагового руководства потребуется Visual Studio.
 
@@ -164,7 +164,7 @@ ms.locfileid: "76742374"
 
    <xref:System.Windows.Forms.Panel> элемент управления изменяется на новое расположение элемента управления <xref:System.Windows.Forms.Button>.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Существует множество других функций макета для упорядочения элементов управления в Windows Forms приложениях. Ниже приведены некоторые сочетания, которые можно использовать.
 
@@ -174,7 +174,7 @@ ms.locfileid: "76742374"
 
 - Поэкспериментируйте с закреплением дочерних элементов управления в элементе управления <xref:System.Windows.Forms.Panel>. Свойство <xref:System.Windows.Forms.Control.Padding%2A> является более общим реализацией свойства <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>, и вы можете удовлетворить, что это так, поместив дочерний элемент управления в элемент управления <xref:System.Windows.Forms.Panel> и установив для свойства <xref:System.Windows.Forms.Control.Dock%2A> дочернего элемента управления значение <xref:System.Windows.Forms.DockStyle.Fill>. Задайте для свойства <xref:System.Windows.Forms.Control.Padding%2A> элемента управления <xref:System.Windows.Forms.Panel> различные значения и обратите внимание на результат.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>

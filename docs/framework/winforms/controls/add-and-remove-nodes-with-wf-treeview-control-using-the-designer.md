@@ -32,7 +32,7 @@ ms.locfileid: "76732251"
 
 4. Чтобы удалить узлы, выберите узел для удаления и нажмите кнопку **Удалить** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления TreeView](treeview-control-windows-forms.md)
 - [Общие сведения об элементе управления TreeView](treeview-control-overview-windows-forms.md)

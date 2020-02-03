@@ -21,7 +21,7 @@ ms.locfileid: "76744250"
 ## <a name="key-properties-and-methods"></a>Ключевые свойства и методы  
  Отображаемое изображение определяется свойством <xref:System.Windows.Forms.PictureBox.Image%2A>, которое можно задать во время выполнения или во время разработки. Можно также указать образ, задав свойство <xref:System.Windows.Forms.PictureBox.ImageLocation%2A>, а затем синхронно загружая образ с помощью метода <xref:System.Windows.Forms.PictureBox.Load%2A> или асинхронно с помощью метода <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>. Свойство <xref:System.Windows.Forms.PictureBox.SizeMode%2A> определяет, каким образом изображение и элемент управления соответствуют друг другу. Дополнительные сведения см. в разделе [инструкции. изменение размера или размещения изображения во время выполнения](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Практическое руководство. Загрузка изображения с помощью конструктора](how-to-load-a-picture-using-the-designer-windows-forms.md)

@@ -57,7 +57,7 @@ ms.locfileid: "76731369"
 
 4. При привязке <xref:System.Windows.Forms.DataGridView> элемента управления к источнику данных, который, скорее всего, будет содержать значения NULL, заполните текстовое поле **значение NULL** . Это значение отображается, если значение ячейки равно пустой ссылке (`Nothing` в Visual Basic) или <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

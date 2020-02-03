@@ -15,7 +15,7 @@ ms.locfileid: "76742353"
 # <a name="windows-forms-controls-used-to-list-options"></a>Создание списка для выбора элементов в Windows Forms
 Вы можете добавить разнообразные элементы управления в форму Windows Forms, если вы хотите предоставить пользователям список вариантов для выбора. В зависимости от того, сколько требуется ограничить ввод пользователей, можно добавить элемент управления <xref:System.Windows.Forms.ListBox>, элемент управления <xref:System.Windows.Forms.ComboBox> или элемент управления <xref:System.Windows.Forms.CheckedListBox>. Используйте следующие ссылки, чтобы определить, какие элементы управления лучше подходят для ваших нужд.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Применение элемента управления ComboBox вместо элемента управления ListBox в Windows Forms](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  Рекомендует соответствующий элемент управления на основе списка в зависимости от потребностей и ограничений формы Windows Forms.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76742353"
  [Практическое руководство. Сортировка содержимого элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
  Объясняет, как сортировать данные списка в источнике данных.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.CheckedListBox>  
  Описание класса и всех его членов.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "76742353"
  <xref:System.Windows.Forms.ListBox>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Общие сведения об элементе управления CheckedListBox](checkedlistbox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   

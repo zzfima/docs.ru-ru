@@ -21,7 +21,7 @@ ms.locfileid: "76731576"
   
  Кроме того, [компонент ToolTip](../controls/tooltip-component-windows-forms.md) можно использовать для предоставления отдельной справки по элементам управления Windows Forms.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Руководство: предоставление справки в приложении Windows](how-to-provide-help-in-a-windows-application.md)  
  Объясняет, как использовать компонент `HelpProvider` для связывания элементов управления с файлами в справочной системе.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "76731576"
  [Отображение справки по элементам управления с помощью подсказок](control-help-using-tooltips.md)  
  Описывает использование компонента `ToolTip` для отображения справки, относящейся к конкретному элементу управления.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Компонент HelpProvider](../controls/helpprovider-component-windows-forms.md)  
  Основные сведения о компоненте `HelpProvider`.  
   

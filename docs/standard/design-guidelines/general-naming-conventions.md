@@ -57,21 +57,21 @@ ms.locfileid: "76741589"
 
  Например, метод, преобразуя в <xref:System.Int64>, должен иметь имя `ToInt64`, а не `ToLong` (так как <xref:System.Int64> является именем CLR C#для псевдонима `long`). В следующей таблице представлены несколько базовых типов данных, использующих имена типов CLR (а также соответствующие имена типов для C#, Visual Basic и C++).
 
-|C#|o Visual Basic.|C++|CLR|
+|C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
 |**byte**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**Integer**|**int**|**Int32**|
+|**int**|**Целое число**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
-|**float**|**Single**|**float**|**Single**|
+|**float**|**Один**|**float**|**Один**|
 |**double**|**Double**|**double**|**Double**|
-|**bool**|**Boolean**|**bool**|**Boolean**|
+|**bool**;|**Boolean**|**bool**;|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
-|**string**|**String**|**String**|**String**|
+|**строка**|**String**|**String**|**String**|
 |**object**|**Объект**|**Объект**|**Объект**|
 
  ✔️ использовать общее имя, например `value` или `item`, вместо повторения имени типа в редких случаях, когда идентификатор не имеет семантического значения, а тип параметра не важен.
@@ -97,7 +97,7 @@ ms.locfileid: "76741589"
 
  *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)

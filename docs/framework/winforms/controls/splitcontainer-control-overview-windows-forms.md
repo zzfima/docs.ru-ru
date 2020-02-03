@@ -38,18 +38,18 @@ ms.locfileid: "76742920"
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Часто используемые свойства, методы и события  
   
-|Name|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
-|Свойство<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Определяет, какая панель будет иметь тот же размер после изменения размера элемента управления <xref:System.Windows.Forms.SplitContainer>.|  
-|Свойство<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Определяет, можно ли перемещать разделитель с помощью клавиатуры или мыши.|  
-|Свойство<xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Определяет, расположен ли разделитель вертикально или горизонтально.|  
-|Свойство<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Определяет расстояние в пикселях от левого или верхнего края до перемещаемой полосы разделения.|  
-|Свойство<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Определяет минимальное расстояние (в пикселях), в течение которого разделитель может быть перемещен пользователем.|  
-|Свойство<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Определяет толщину (в пикселях) разделителя.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Определяет, какая панель будет иметь тот же размер после изменения размера элемента управления <xref:System.Windows.Forms.SplitContainer>.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Определяет, можно ли перемещать разделитель с помощью клавиатуры или мыши.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Определяет, расположен ли разделитель вертикально или горизонтально.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Определяет расстояние в пикселях от левого или верхнего края до перемещаемой полосы разделения.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Определяет минимальное расстояние (в пикселях), в течение которого разделитель может быть перемещен пользователем.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Определяет толщину (в пикселях) разделителя.|  
 |Событие<xref:System.Windows.Forms.SplitContainer.SplitterMoving>|Происходит при перемещении разделителя.|  
 |Событие<xref:System.Windows.Forms.SplitContainer.SplitterMoved>|Происходит при перемещении разделителя.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Элемент управления SplitContainer](splitcontainer-control-windows-forms.md)

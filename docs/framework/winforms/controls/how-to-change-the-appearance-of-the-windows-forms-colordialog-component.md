@@ -49,7 +49,7 @@ ms.locfileid: "76746636"
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [Компонент ColorDialog](colordialog-component-windows-forms.md)

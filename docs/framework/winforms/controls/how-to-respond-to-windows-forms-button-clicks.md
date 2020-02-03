@@ -55,7 +55,7 @@ ms.locfileid: "76735713"
        }  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления Button](button-control-overview-windows-forms.md)
 - [Способы активации элемента управления Button в Windows Forms](ways-to-select-a-windows-forms-button-control.md)

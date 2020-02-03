@@ -52,10 +52,10 @@ ms.locfileid: "76743080"
   
 - ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> и <xref:System.Text?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Надежное программирование  
+## <a name="robust-programming"></a>Отказоустойчивость  
  Коллекции, описанные в этом разделе, не работают эффективно при выборе большого количества ячеек, строк или столбцов. Дополнительные сведения об использовании этих коллекций с большими объемами данных см. в разделе рекомендации [по масштабированию элемента управления Windows Forms DataGridView](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>

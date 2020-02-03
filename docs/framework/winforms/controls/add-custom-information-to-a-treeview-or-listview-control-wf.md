@@ -130,7 +130,7 @@ ms.locfileid: "76732220"
        }  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления TreeView](treeview-control-windows-forms.md)
 - [Элемент управления ListView](listview-control-windows-forms.md)

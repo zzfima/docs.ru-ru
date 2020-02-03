@@ -104,7 +104,7 @@ ms.locfileid: "76741862"
 
  ❌ избегать реализации интерфейсов коллекций для типов со сложными API, не связанными с понятием коллекции.
 
- ❌ не наследовать от неуниверсальных базовых коллекций, таких как `CollectionBase`. Вместо этого используйте `Collection<T>`, `ReadOnlyCollection<T>`и `KeyedCollection<TKey,TItem>`.
+ ❌ не наследовать от неуниверсальных базовых коллекций, таких как `CollectionBase`. Используйте вместо них типы данных `Collection<T>`, `ReadOnlyCollection<T>` и `KeyedCollection<TKey,TItem>`.
 
 ### <a name="naming-custom-collections"></a>Именование пользовательских коллекций
  Коллекции (типы, реализующие `IEnumerable`) создаются главным образом по двум причинам: (1) для создания новой структуры данных с операциями, зависящими от структуры, и часто отличающимися характеристиками производительности, чем существующие структуры данных (например, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) и (2) для создания специализированной коллекции для хранения определенного набора элементов (например, <xref:System.Collections.Specialized.StringCollection>). Структуры данных чаще всего используются во внутренней реализации приложений и библиотек. Специализированные коллекции, главным образом, должны предоставляться в API-интерфейсах (как типы свойств и параметров).
@@ -127,7 +127,7 @@ ms.locfileid: "76741862"
 
  *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила использования](../../../docs/standard/design-guidelines/usage-guidelines.md)

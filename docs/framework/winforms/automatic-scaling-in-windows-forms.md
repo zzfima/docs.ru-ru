@@ -98,7 +98,7 @@ ms.locfileid: "76732372"
 
     - Можно переопределить метод <xref:System.Windows.Forms.Control.ScaleControl%2A> для изменения логики масштабирования текущего элемента управления.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
 - <xref:System.Windows.Forms.Control.Scale%2A>

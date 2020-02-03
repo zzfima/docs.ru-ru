@@ -36,7 +36,7 @@ ms.locfileid: "76743045"
     > [!NOTE]
     > Ячейки отображаются с использованием стилей, унаследованных от нескольких свойств. Дополнительные сведения о наследовании стилей см. [в разделе Стили ячеек в элементе управления Windows Forms DataGridView](cell-styles-in-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Стили ячеек элемента управления DataGridView в Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)

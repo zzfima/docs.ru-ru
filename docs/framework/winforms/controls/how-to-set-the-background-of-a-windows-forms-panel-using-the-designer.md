@@ -34,7 +34,7 @@ ms.locfileid: "76731921"
 
 6. В диалоговом окне **Открыть** выберите файл, который требуется отобразить.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

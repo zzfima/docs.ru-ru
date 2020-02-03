@@ -19,14 +19,14 @@ ms.locfileid: "76745174"
 # <a name="listbox-control-windows-forms"></a>Элемент управления ListBox (Windows Forms)
 Элемент управления `ListBox` Windows Forms отображает список элементов, из которых пользователь может выбрать один или несколько.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления ListBox](listbox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.ListBox>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)  
  Предоставляет список действий, которые можно выполнить с помощью списков, полей со списками и списков с установленными флажками.

@@ -19,7 +19,7 @@ ms.locfileid: "76743064"
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Выделение данных и операции с буфером обмена в элементе управления DataGridView в Windows Forms
 Элемент управления `DataGridView` предоставляет разнообразные параметры для настройки того, как пользователи могут выбирать ячейки, строки и столбцы. Например, можно включить единичное или множественное выделение, выбрать целые строки или столбцы, если пользователь щелкнул ячейки, или выбрать целые строки или столбцы только в том случае, если пользователи щелкают заголовки, что также позволяет выбрать ячейку. Если вы хотите предоставить собственный пользовательский интерфейс для выбора, можно отключить обычный выбор и все выбранные элементы программным способом. Кроме того, можно разрешить пользователям копировать выбранные значения в буфер обмена.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Режимы выделения содержимого элемента управления DataGridView в Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)  
  Описывает параметры для пользователя и программного выбора в элементе управления.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "76743064"
  [Практическое руководство. Разрешение копирования в буфер обмена нескольких ячеек элемента управления DataGridView в Windows Forms](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  Описывает, как включить поддержку буфера обмена в элементе управления.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "76743064"
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
  Содержит справочную документацию по классу <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Выполняемая по умолчанию обработка событий мыши и клавиатуры элементом управления DataGridView в Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

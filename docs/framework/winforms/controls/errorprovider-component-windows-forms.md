@@ -16,7 +16,7 @@ ms.locfileid: "76745768"
 # <a name="errorprovider-component-windows-forms"></a>Компонент ErrorProvider (Windows Forms)
 Компонент Windows Forms `ErrorProvider` используется для отображения пользователя в неагрессивном виде, что что-то не так. Обычно используется в сочетании с проверкой вводимых пользователем данных в форме или отображением ошибок в наборе данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте ErrorProvider](errorprovider-component-overview-windows-forms.md)  
  Объясняет, что такое компонент, а также его основные возможности и свойства.  
   
@@ -26,10 +26,10 @@ ms.locfileid: "76745768"
  [Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
  Инструкции по использованию компонента поставщика ошибок для вывода данных об ошибках.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.ErrorProvider>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

@@ -23,7 +23,7 @@ ms.locfileid: "76742513"
   
  Когда элементу управления `DataGrid` присвоен допустимый источник данных, этот элемент автоматически заполняется и создаются столбцы и строки, исходя из формы данных. Элемент управления `DataGrid` можно использовать для отображения одной таблицы или иерархических связей между набором таблиц.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления DataGrid](datagrid-control-overview-windows-forms.md)  
  Описание основных возможностей элемента управления `DataGrid`.  
   
@@ -66,18 +66,18 @@ ms.locfileid: "76742513"
  [Практическое руководство. Проверка данных, вводимых с помощью элемента управления DataGrid, в Windows Forms](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
  Описание способов проверки входных данных в наборе данных, привязанном к элементу управления `DataGrid`.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGrid>  
  Содержит общие сведения о классе <xref:System.Windows.Forms.DataGrid>.  
   
  <xref:System.Windows.Forms.DataGrid.DataSource%2A>  
  Предоставляет сведения об использовании этого свойства для привязки элемента управления <xref:System.Windows.Forms.DataGrid> к данным.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Привязка данных Windows Forms](../windows-forms-data-binding.md)  
  Ссылки на разделы о привязке данных в Windows Forms.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

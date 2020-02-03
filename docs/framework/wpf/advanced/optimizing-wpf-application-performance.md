@@ -20,7 +20,7 @@ ms.locfileid: "76743943"
 > [!NOTE]
 > Данные о производительности, приведенные в этом разделе, основаны на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложениях, работающих на ПК 2,8 ГГц с 512 ОЗУ и графической картой ATI Radeon 9700.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Планирование производительности приложения](planning-for-application-performance.md)  
   
  [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)  
@@ -31,9 +31,9 @@ ms.locfileid: "76743943"
   
  [Поведение объекта](optimizing-performance-object-behavior.md)  
   
- [Ресурсы приложений](optimizing-performance-application-resources.md)  
+ [Ресурсы приложения](optimizing-performance-application-resources.md)  
   
- [Text](optimizing-performance-text.md)  
+ [Текст](optimizing-performance-text.md)  
   
  [Привязка данных](optimizing-performance-data-binding.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76743943"
   
  [Время запуска приложения](application-startup-time.md)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

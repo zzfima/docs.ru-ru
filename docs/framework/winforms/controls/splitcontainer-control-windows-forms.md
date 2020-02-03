@@ -20,7 +20,7 @@ ms.locfileid: "76742903"
   
  С помощью элемента управления `SplitContainer` можно создавать сложные пользовательские интерфейсы. Часто выбор на одной панели определяет объекты, отображаемые на другой. Такой подход является весьма эффективным для отображения и просмотра информации. Две панели позволяют группировать информацию, а полоса или разделитель упрощают изменение размера панелей.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте SplitContainer](splitcontainer-control-overview-windows-forms.md)  
  Приводятся основные сведения об элементе управления `SplitContainer`, и описываются его часто используемые свойства, методы и события.  
   
@@ -35,11 +35,11 @@ ms.locfileid: "76742903"
   
  См. также раздел [как разделить окно по горизонтали с помощью конструктора](how-to-split-a-window-horizontally-using-the-designer.md), [как создать интерфейс в стиле проводника Windows в Windows Forms](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), [как создать пользовательский интерфейс с несколькими панелями Windows Forms с помощью конструктора](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.SplitContainer>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления Windows Forms](index.md)  
  Ссылки на разделы, посвященные элементам управления, которые предназначены специально для работы с Windows Forms.  
   

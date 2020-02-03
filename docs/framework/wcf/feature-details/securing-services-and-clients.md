@@ -14,7 +14,7 @@ ms.locfileid: "76746416"
 # <a name="securing-services-and-clients"></a>Защита служб и клиентов
 Сведения в этом разделе посвящены безопасности программирования в Windows Communication Foundation (WCF). Обычно обеспечение безопасности включает выбор подходящей предоставляемой системой привязки, задание свойств элемента безопасности и задание свойств поведений службы, управляющих извлечением учетных данных для использования службой или клиентом. Эти методы охватывают требования большинства пользователей для большинства сценариев, как показано в [типичных сценариях безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Если ваш сценарий требует больше возможностей, сначала ознакомьтесь [с возможностями безопасности с помощью пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md). Если решение не очевидно, см. раздел [расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md). При создании (или взаимодействии с) системой, использующей обширные утверждения, см. разделы в разделе [авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  Общие сведения о модели программирования, используемой для защиты сообщений.  
   
@@ -30,14 +30,14 @@ ms.locfileid: "76746416"
  [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Описание некоторых стандартных задач, которые требуется выполнять при использовании сертификатов X.509.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
  [Расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "76746416"
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

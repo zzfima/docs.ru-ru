@@ -16,7 +16,7 @@ ms.locfileid: "76741897"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Поддержка высокого DPI в Windows Forms
 
-Начиная с .NET Framework 4,7 Windows Forms включает улучшения для распространенных сценариев высокого и динамического DPI. Сюда входит следующее.
+Начиная с .NET Framework 4,7 Windows Forms включает улучшения для распространенных сценариев высокого и динамического DPI. К ним относятся следующие объекты.
 
 - Улучшения в масштабировании и компоновке нескольких элементов управления Windows Forms, таких как <xref:System.Windows.Forms.MonthCalendar> элемент управления и элемент управления <xref:System.Windows.Forms.CheckedListBox>.
 
@@ -60,7 +60,7 @@ ms.locfileid: "76741897"
 
 - Вызовите статический метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.
 
-  Это должен быть первый вызов метода в точке входа приложения. Например:
+  Это должен быть первый вызов метода в точке входа приложения. Пример:
 
   ```csharp
   static void Main()
@@ -94,7 +94,7 @@ ms.locfileid: "76741897"
 
 ## <a name="new-helper-methods-and-properties"></a>Новые вспомогательные методы и свойства
 
-В .NET Framework 4,7 также добавляется ряд новых вспомогательных методов и свойств, которые предоставляют сведения о масштабировании DPI и позволяют выполнять масштабирование DPI. Сюда входит следующее.
+В .NET Framework 4,7 также добавляется ряд новых вспомогательных методов и свойств, которые предоставляют сведения о масштабировании DPI и позволяют выполнять масштабирование DPI. К ним относятся следующие объекты.
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, который преобразует значение из логического устройства в пиксел.
 
@@ -128,7 +128,7 @@ Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Windows Forms добавить элемент конфигурации](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Настройка размера и масштаба формы Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

@@ -103,7 +103,7 @@ ms.locfileid: "76746686"
   
 3. Используемых Добавьте соответствующие стили таблиц и столбцов в сетку. Если стили таблиц отсутствуют, вы увидите таблицу, но с минимальным форматированием и отображением всех столбцов.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об элементе управления DataGrid](datagrid-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

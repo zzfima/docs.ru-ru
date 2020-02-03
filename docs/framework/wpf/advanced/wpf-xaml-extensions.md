@@ -16,7 +16,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744406"
 ---
 # <a name="wpf-xaml-extensions"></a>Расширения XAML WPF
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Привязка расширения разметки](binding-markup-extension.md)  
   [Расширение разметки ColorConvertedBitmap](colorconvertedbitmap-markup-extension.md)  
   [Расширение разметки ComponentResourceKey](componentresourcekey-markup-extension.md)  

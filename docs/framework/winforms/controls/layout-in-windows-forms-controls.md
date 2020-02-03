@@ -18,7 +18,7 @@ ms.locfileid: "76745247"
 
 Точное расположение элементов управления на форме является важным для многих приложений. Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> предоставляет множество инструментов макета для выполнения этой задачи.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Общие сведения о свойстве AutoSize](autosize-property-overview.md)\
 Описывает свойство <xref:System.Windows.Forms.Control.AutoSize%2A> и его роль в макете.
@@ -35,7 +35,7 @@ ms.locfileid: "76745247"
 [Как реализовать пользовательский обработчик макетов](how-to-implement-a-custom-layout-engine.md)\
 Демонстрирует реализацию <xref:System.Windows.Forms.Layout.LayoutEngine> для упорядочения элементов управления Windows Forms.
 
-## <a name="reference"></a>Справочные сведения
+## <a name="reference"></a>Справочник
 
 <xref:System.Windows.Forms.TableLayoutPanel>\
 Справочная документация по элементу управления <xref:System.Windows.Forms.TableLayoutPanel>.
@@ -43,7 +43,7 @@ ms.locfileid: "76745247"
 <xref:System.Windows.Forms.FlowLayoutPanel>\
 Справочная документация по элементу управления <xref:System.Windows.Forms.FlowLayoutPanel>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)

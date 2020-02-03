@@ -25,7 +25,7 @@ ms.locfileid: "76734940"
   
  Ключевым свойством элемента управления <xref:System.Windows.Forms.MonthCalendar> является <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, диапазон дат, выбранный в элементе управления. Значение <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> не может превышать максимальное число дней, которое может быть выбрано, задано в свойстве <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>. Самые ранние и последние даты, которые пользователь может выбрать, определяются свойствами <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> и <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.MonthCalendar>
 - [Элемент управления MonthCalendar](monthcalendar-control-windows-forms.md)

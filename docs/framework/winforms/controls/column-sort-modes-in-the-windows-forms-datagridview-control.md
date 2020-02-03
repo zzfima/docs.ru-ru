@@ -15,7 +15,7 @@ ms.locfileid: "76744191"
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Установка режимов сортировки для столбцов элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> столбцы имеют три режима сортировки. Режим сортировки для каждого столбца задается с помощью свойства <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> столбца, для которого можно задать одно из следующих <xref:System.Windows.Forms.DataGridViewColumnSortMode> значений перечисления.  
   
-|Значение`DataGridViewColumnSortMode`|Описание|  
+|Значение `DataGridViewColumnSortMode`|Description|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|По умолчанию для столбцов текстового поля. Если для выделения не используются заголовки столбцов, при щелчке заголовка столбца автоматически сортируются <xref:System.Windows.Forms.DataGridView> по этому столбцу и отображается глиф, указывающий порядок сортировки.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|По умолчанию для столбцов, не являющихся текстовыми полей. Этот столбец можно отсортировать программно; Однако он не предназначен для сортировки, поэтому для глифа сортировки не резервируется место.|  
@@ -58,7 +58,7 @@ ms.locfileid: "76744191"
 > [!NOTE]
 > Событие <xref:System.Windows.Forms.DataGridView.SortCompare> не возникает, если свойство <xref:System.Windows.Forms.DataGridView.DataSource%2A> задано или если значение свойства <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> равно `true`.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>

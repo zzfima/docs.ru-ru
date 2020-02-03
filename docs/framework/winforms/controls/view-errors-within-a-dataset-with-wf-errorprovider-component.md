@@ -62,7 +62,7 @@ ms.locfileid: "76745456"
     this.BindingContext [DataTable1].Position = 5;  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения о компоненте ErrorProvider](errorprovider-component-overview-windows-forms.md)
 - [Практическое руководство. Отображение значков ошибок при проверке введенных в форму данных с помощью компонента ErrorProvider в Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

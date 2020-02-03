@@ -53,7 +53,7 @@ ms.locfileid: "76742973"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Чтобы выполнить этот пример, вставьте код в форму, содержащую <xref:System.Windows.Forms.BindingSource> с именем `BindingSource1` и <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`. Обработайте событие <xref:System.Windows.Forms.Form.Load> для формы и вызовите `InitializeSortedFilteredBindingSource` в методе обработчика событий Load.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>

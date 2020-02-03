@@ -36,6 +36,6 @@ ms.locfileid: "76738727"
 > [!NOTE]
 > При указании пути к файлу справки в методе <xref:System.Windows.Forms.Help.ShowHelp%2A> или <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> свойства элемента управления <xref:System.Windows.Forms.HelpProvider> могут возникнуть проблемы с использованием относительного пути. Поэтому для указания файла справки следует использовать абсолютный путь к файлу.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Справочные системы в приложениях Windows Forms](../advanced/help-systems-in-windows-forms-applications.md)

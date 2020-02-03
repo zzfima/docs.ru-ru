@@ -17,7 +17,7 @@ ms.locfileid: "76745981"
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Элементы управления и компоненты диалоговых окон (Windows Forms)
 Перечисленные ниже элементы управления и компоненты Windows Forms представляют стандартные диалоговые окна. Чтобы получить дополнительную информацию о функциях, доступных в каждом диалоговом окне, щелкните соответствующую ссылку.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.ColorDialog>  
  Справочная информация о классе <xref:System.Windows.Forms.ColorDialog> и его членах.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "76745981"
  <xref:System.Windows.Forms.SaveFileDialog>  
  Справочная информация о классе <xref:System.Windows.Forms.SaveFileDialog> и его членах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Диалоговые окна в Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Инструкции по созданию диалогового окна для формы Windows Forms.  
   

@@ -62,7 +62,7 @@ ms.locfileid: "76731718"
   
  Сообщение, которое передается в приемник клавиатуры, может не отправляться в HWND, если вы добавили обработчики для этого сообщения с помощью метода <xref:System.Windows.Interop.HwndSource.AddHook%2A>. Сообщение может быть обработано на уровне приема сообщений напрямую и не отправлено в функцию `DispatchMessage`.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>

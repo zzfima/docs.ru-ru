@@ -44,7 +44,7 @@ ms.locfileid: "76739865"
 ## <a name="webgetattribute"></a>WebGetAttribute  
  Атрибут <xref:System.ServiceModel.Web.WebGetAttribute> служит для пометки операций служб, отвечающих на HTTP-запросы GET. Это пассивное поведение операции (методы <xref:System.ServiceModel.Description.IOperationBehavior> не выполняют никаких действий), добавляющее метаданные в описание операции. Применение атрибута <xref:System.ServiceModel.Web.WebGetAttribute> не имеет последствий, если в коллекцию поведения службы не добавлено поведение, выполняющее поиск метаданных в описании операции (например, <xref:System.ServiceModel.Description.WebHttpBehavior>). Атрибут <xref:System.ServiceModel.Web.WebGetAttribute> принимает необязательные параметры, показанные в следующей таблице.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |`BodyStyle`|Определяет, нужно ли заключать в оболочку запросы и ответы операции службы, к которой относится атрибут.|  
 |`RequestFormat`|Определяет, каким образом форматируются сообщения запросов.|  
@@ -59,7 +59,7 @@ ms.locfileid: "76739865"
   
  Атрибут <xref:System.ServiceModel.Web.WebInvokeAttribute> принимает необязательные параметры, показанные в следующей таблице.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |`BodyStyle`|Определяет, нужно ли заключать в оболочку запросы и ответы операции службы, к которой относится атрибут.|  
 |`Method`|Задает метод HTTP, которому сопоставлена операция службы.|  
@@ -96,11 +96,11 @@ ms.locfileid: "76739865"
 ## <a name="compatibility"></a>Совместимость  
  Модель программирования WCF WEB HTTP не использует сообщения на основе SOAP и поэтому не поддерживает протоколы WS-*. Тем не менее один контракт можно представить двумя различными конечными точками, одна из которых будет использовать протокол SOAP, а другая не будет. См. раздел [как предоставить контракт для SOAP и веб-клиентов](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) в качестве примера.  
   
-## <a name="security"></a>по безопасности  
+## <a name="security"></a>безопасность  
 
 Поскольку модель программирования WCF WEB HTTP не поддерживает протоколы WS-*, единственным способом защитить веб-службу, созданную на основе модели программирования WCF WEB HTTP, является предоставление службы с помощью SSL. Дополнительные сведения о настройке SSL в IIS 7,0 см. в статье [Реализация SSL в IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

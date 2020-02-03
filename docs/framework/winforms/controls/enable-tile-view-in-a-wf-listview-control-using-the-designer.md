@@ -30,7 +30,7 @@ ms.locfileid: "76745806"
 
 2. В окне **Свойства** выберите свойство <xref:System.Windows.Forms.ListView.View%2A> и щелкните **плитка**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)

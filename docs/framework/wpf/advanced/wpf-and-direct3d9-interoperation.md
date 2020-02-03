@@ -148,7 +148,7 @@ ms.locfileid: "76735183"
 > [!NOTE]
 > Если WPF полностью готовится к просмотру в программном обеспечении, <xref:System.Windows.Interop.D3DImage> не отображается, поскольку в WPF отсутствует интерфейсный буфер.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

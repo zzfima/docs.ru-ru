@@ -47,17 +47,17 @@ ms.locfileid: "76741761"
 
  В следующей таблице описаны правила капитализации для различных типов идентификаторов.
 
-|Идентификатор|Различает|Пример|
+|Идентификатор|Регистр|Пример|
 |----------------|------------|-------------|
 |Пространство имен|Pascal|`namespace System.Security { ... }`|
 |Тип|Pascal|`public class StreamReader { ... }`|
 |Интерфейс|Pascal|`public interface IEnumerable { ... }`|
 |Метод|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
-|Идентификаторы|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Свойство|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
+|Событие|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Поле|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Значение перечисления|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|Параметр|Нижнем|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|Параметр|"верблюжий" стиль.|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Преобразование сложных слов и общих терминов в прописные
  Большинство составных терминов рассматриваются как отдельные слова в целях капитализации.
@@ -66,7 +66,7 @@ ms.locfileid: "76741761"
 
  Это составные слова, написанные как одно слово, например конечная точка. В соответствии с рекомендациями по регистру рассматривайте составное слово с закрытой формой как одно слово. Используйте текущий словарь, чтобы определить, написано ли составное слово в закрытой форме.
 
-|Pascal|Нижнем|not|
+|Pascal|"верблюжий" стиль.|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -94,7 +94,7 @@ ms.locfileid: "76741761"
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|
 |`Writable`|`writable`|`Writeable`|
 
-## <a name="case-sensitivity"></a>Учет регистра
+## <a name="case-sensitivity"></a>Чувствительность к регистру
  Языки, которые могут выполняться в среде CLR, не должны поддерживать чувствительность к регистру, хотя и некоторые. Даже если ваш язык поддерживает, другие языки, которые могут получить доступ к вашей платформе, не поддерживаются. Все интерфейсы API, доступ к которым осуществляется извне, поэтому не могут полагаться только на регистр, чтобы различать два имени в одном контексте.
 
  ❌ не предполагается, что все языки программирования чувствительны к регистру. Это не так. Имена не могут отличаться только регистром.
@@ -103,7 +103,7 @@ ms.locfileid: "76741761"
 
  *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)

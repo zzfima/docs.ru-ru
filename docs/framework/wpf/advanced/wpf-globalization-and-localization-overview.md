@@ -170,7 +170,7 @@ ms.locfileid: "76744477"
 
 **Локализация диалогового окна "Выполнить"**
 
-**Анализ**
+**Синтаксический анализ**
 
 После сборки приложения первым шагом в локализации является анализ локализуемых ресурсов из вспомогательной сборки. Для целей этого раздела используйте образец средства LocBaml, который можно найти в [примере средства LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016). Обратите внимание, что LocBaml ― только демонстрационное средство, предназначенное помочь начать работу по созданию средства локализации, встраиваемого в процесс локализации. С помощью LocBaml выполните следующую команду для синтаксического анализа: **LocBaml/Парсе RunDialog. Resources. dll/out:** для создания файла "RunDialog. Resources. dll. csv".
 
@@ -178,29 +178,29 @@ ms.locfileid: "76744477"
 
 Для редактирования этого файла можно воспользоваться любым редактором CSV, поддерживающим Юникод. Исключите все записи с категорией локализации "Нет". Должны остаться следующие записи.
 
-|Ключ ресурса|Категория локализации|{2&gt;Value&lt;2}|
+|Ключ ресурса|Категория локализации|Значение|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Кнопка|ОК|
-|Button_2:System.Windows.Controls.Button.$Content|Кнопка|Cancel|
+|Button_1:System.Windows.Controls.Button.$Content|Кнопка|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Кнопка|Отмена|
 |Button_3:System.Windows.Controls.Button.$Content|Кнопка|Обзор...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Текст|Введите имя программы, папки, документа или ресурса Интернета, и Windows откроет их.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Текст|Открыть.|
-|Window_1:System.Windows.Window.Title|Заголовок|Запуск|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|текст|Введите имя программы, папки, документа или ресурса Интернета, и Windows откроет их.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|текст|Открыто:|
+|Window_1:System.Windows.Window.Title|Title|Run (Запустить)|
 
 Для локализации приложений в немецком языке потребуются следующие переводы.
 
-|Ключ ресурса|Категория локализации|{2&gt;Value&lt;2}|
+|Ключ ресурса|Категория локализации|Значение|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Кнопка|ОК|
+|Button_1:System.Windows.Controls.Button.$Content|Кнопка|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Кнопка|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Кнопка|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Текст|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Текст|Открыть.|
-|Window_1:System.Windows.Window.Title|Заголовок|Запуск|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|текст|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|текст|Открыть.|
+|Window_1:System.Windows.Window.Title|Title|Run (Запустить)|
 
-**Создание**
+**Generate**
 
 Последний шаг локализации включает создание только что локализованной вспомогательной сборки. Эту задачу можно решить с помощью следующей команды LocBaml.
 
@@ -267,9 +267,9 @@ ms.locfileid: "76744477"
 
 Этот комментарий связан с содержимым TextBlock_1 и в случае средства LocBaml (см. раздел [Локализация приложения](how-to-localize-an-application.md)) оно может отображаться в шестом столбце строки TextBlock_1 в файле Output. csv.
 
-|Ключ ресурса|Категория|Доступен для чтения|Возможность изменения|Комментарий|{2&gt;Value&lt;2}|
+|Ключ ресурса|Категория|Доступен для чтения|Изменяемый|Комментарий|Значение|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Текст|true|true|Этот символ используется в качестве декоративного правила.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|текст|TRUE|TRUE|Этот символ используется в качестве декоративного правила.|&#124;|
 
 Комментарии могут быть помещены в содержимое или в свойство любого элемента посредством следующего синтаксиса.
 
@@ -277,7 +277,7 @@ ms.locfileid: "76744477"
 
 **Атрибуты локализации**
 
-Разработчику или менеджеру локализации часто бывает необходимо управлять тем, что локализаторы могут читать и изменять. Например, может быть нежелательно, чтобы локализатор переводил название компании или юридическую формулировку. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеются атрибуты, позволяющие задать возможность чтения, возможность изменения, а также категорию содержимого или свойства элемента. Эти атрибуты можно использовать в средстве локализации для блокировки, скрытия или сортировки элементов. Для получения дополнительной информации см. <xref:System.Windows.Localization.Attributes%2A>. В этом примере средство LocBaml только выводит значения этих атрибутов. Во всех элементах управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эти атрибуты имеют значения по умолчанию, но их можно переопределять. Например, в следующем примере переопределяются атрибуты локализации по умолчанию для `TextBlock_1` и задается, что содержимое будет доступно для чтения, но не может быть изменено для локализаторов.
+Разработчику или менеджеру локализации часто бывает необходимо управлять тем, что локализаторы могут читать и изменять. Например, может быть нежелательно, чтобы локализатор переводил название компании или юридическую формулировку. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеются атрибуты, позволяющие задать возможность чтения, возможность изменения, а также категорию содержимого или свойства элемента. Эти атрибуты можно использовать в средстве локализации для блокировки, скрытия или сортировки элементов. Дополнительные сведения см. в разделе <xref:System.Windows.Localization.Attributes%2A>. В этом примере средство LocBaml только выводит значения этих атрибутов. Во всех элементах управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эти атрибуты имеют значения по умолчанию, но их можно переопределять. Например, в следующем примере переопределяются атрибуты локализации по умолчанию для `TextBlock_1` и задается, что содержимое будет доступно для чтения, но не может быть изменено для локализаторов.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -285,7 +285,7 @@ ms.locfileid: "76744477"
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-Атрибуты локализации по умолчанию, которые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляют, также могут быть переопределены с помощью кода, поэтому можно правильно задать значения по умолчанию для пользовательских элементов управления. Например:
+Атрибуты локализации по умолчанию, которые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляют, также могут быть переопределены с помощью кода, поэтому можно правильно задать значения по умолчанию для пользовательских элементов управления. Пример:
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

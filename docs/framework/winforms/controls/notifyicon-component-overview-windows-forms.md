@@ -29,7 +29,7 @@ ms.locfileid: "76742123"
 
 Чтобы показать всплывающую подсказку для <xref:System.Windows.Forms.NotifyIcon>, вызовите метод <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A>, указав длительность отображения подсказки. Также можно указать текст, значок и заголовок подсказки с помощью свойств <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> и <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A> соответственно. Компоненты <xref:System.Windows.Forms.NotifyIcon> также могут иметь связанные всплывающие подсказки и контекстные меню. Дополнительные сведения см. в разделе [Общие сведения о компоненте ToolTip](tooltip-component-overview-windows-forms.md) и [Общие сведения о компоненте ContextMenu](contextmenu-component-overview-windows-forms.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - [Компонент NotifyIcon](notifyicon-component-windows-forms.md)

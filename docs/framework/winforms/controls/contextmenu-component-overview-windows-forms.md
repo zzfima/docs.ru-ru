@@ -26,7 +26,7 @@ ms.locfileid: "76746196"
   
  Ключевым свойством <xref:System.Windows.Forms.ContextMenu> компонента является свойство <xref:System.Windows.Forms.Menu.MenuItems%2A>. Элементы меню можно добавлять путем программного создания объектов <xref:System.Windows.Forms.MenuItem> и их добавления в <xref:System.Windows.Forms.Menu.MenuItemCollection> контекстного меню. Поскольку элементы в контекстном меню обычно выводятся из других меню, чаще всего добавляются элементы в контекстное меню путем их копирования.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>

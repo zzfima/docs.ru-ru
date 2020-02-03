@@ -18,14 +18,14 @@ ms.locfileid: "76742139"
 > [!NOTE]
 > Компонент `BackgroundWorker` заменяет и добавляет функции в пространство имен <xref:System.Threading> и метод <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>. Однако они сохраняются для обратной совместимости и использования в будущем, если вы решили. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms.](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
  Показывает, как выполнять потокобезопасные вызовы элементов управления Windows Forms.  
   
  [Практическое руководство. Применение фонового потока для поиска файлов](how-to-use-a-background-thread-to-search-for-files.md)  
  Показывает, как использовать пространство имен <xref:System.Threading> и метод <xref:System.Windows.Forms.Control.BeginInvoke%2A> для асинхронного поиска файлов.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.ComponentModel.BackgroundWorker>  
  Документирует компонент, инкапсулирующий рабочий поток для асинхронных операций.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76742139"
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
  Документация по асинхронной загрузке изображения.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Практическое руководство. Фоновое выполнение операции](how-to-run-an-operation-in-the-background.md)  
  Показывает, как выполнить трудоемкую операцию с компонентом <xref:System.ComponentModel.BackgroundWorker>.  
   

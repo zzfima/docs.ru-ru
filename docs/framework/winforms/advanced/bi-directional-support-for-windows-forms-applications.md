@@ -27,56 +27,56 @@ Visual Studio можно использовать для создания при
 
 |Элемент управления или компонент|Влияние свойства RightToLeft|Влияние свойства RightToLeftLayout|Требуется ли отражение|
 |------------------------|------------------------------------|------------------------------------------|-------------------------|
-|<xref:System.Windows.Forms.Button>|Задает порядок чтения справа налево. Обращает значения <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> и <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.CheckBox>|Флажок отображается справа от текста.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.CheckedListBox>|Все флажки отображаются справа от текста.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.ColorDialog>|Не меняется; зависит от языка операционной системы.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.ComboBox>|Элементы в поле со списком выравниваются по правому краю.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.ContextMenu>|Отображается по правому краю с порядком чтения справа налево.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.DataGrid>|Отображается по правому краю с порядком чтения справа налево.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.DataGridView>|Влияет на расположение элемента управления и порядок чтения справа налево.|Не влияет.|Нет|
+|<xref:System.Windows.Forms.Button>|Задает порядок чтения справа налево. Обращает значения <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> и <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>.|Не влияет|нет|
+|<xref:System.Windows.Forms.CheckBox>|Флажок отображается справа от текста.|Не влияет|нет|
+|<xref:System.Windows.Forms.CheckedListBox>|Все флажки отображаются справа от текста.|Не влияет|нет|
+|<xref:System.Windows.Forms.ColorDialog>|Не меняется; зависит от языка операционной системы.|Не влияет|нет|
+|<xref:System.Windows.Forms.ComboBox>|Элементы в поле со списком выравниваются по правому краю.|Не влияет|нет|
+|<xref:System.Windows.Forms.ContextMenu>|Отображается по правому краю с порядком чтения справа налево.|Не влияет|нет|
+|<xref:System.Windows.Forms.DataGrid>|Отображается по правому краю с порядком чтения справа налево.|Не влияет|нет|
+|<xref:System.Windows.Forms.DataGridView>|Влияет на расположение элемента управления и порядок чтения справа налево.|Не влияет|нет|
 |<xref:System.Windows.Forms.DateTimePicker>|Не меняется; зависит от языка операционной системы.|Зеркально отражает элемент управления.|Да|
-|<xref:System.Windows.Forms.DomainUpDown>|Выравнивание кнопок "вверх" и "вниз" по левому краю.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.ErrorProvider>|Не поддерживаются|Не влияет.|Нет|
-|<xref:System.Windows.Forms.FontDialog>|Зависит от языка операционной системы.|Не влияет.|Нет|
+|<xref:System.Windows.Forms.DomainUpDown>|Выравнивание кнопок "вверх" и "вниз" по левому краю.|Не влияет|нет|
+|<xref:System.Windows.Forms.ErrorProvider>|Не поддерживается|Не влияет|нет|
+|<xref:System.Windows.Forms.FontDialog>|Зависит от языка операционной системы.|Не влияет|нет|
 |<xref:System.Windows.Forms.Form>|Задает порядок чтения справа налево и обращает полосы прокрутки.|Зеркально отражает форму.|Да|
-|<xref:System.Windows.Forms.GroupBox>|Подпись отображается по правому краю. Дочерние элементы управления могут наследовать это свойство.|Используйте <xref:System.Windows.Forms.TableLayoutPanel> в элементе управления для поддержки зеркального отображения справа налево.|Нет|
-|<xref:System.Windows.Forms.HScrollBar>|Запускается с полосой прокрутки (бегунком) по правому краю.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.ImageList>|Не требуется|Не влияет.|Нет|
-|<xref:System.Windows.Forms.Label>|Отображение по правому краю. Обращает значения <xref:System.Windows.Forms.Label.TextAlign%2A> и <xref:System.Windows.Forms.Label.ImageAlign%2A>.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.LinkLabel>|Отображение по правому краю. Обращает значения <xref:System.Windows.Forms.Label.TextAlign%2A> и <xref:System.Windows.Forms.Label.ImageAlign%2A>.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.ListBox>|Элементы выравниваются по правому краю.|Не влияет.|Нет|
+|<xref:System.Windows.Forms.GroupBox>|Подпись отображается по правому краю. Дочерние элементы управления могут наследовать это свойство.|Используйте <xref:System.Windows.Forms.TableLayoutPanel> в элементе управления для поддержки зеркального отображения справа налево.|нет|
+|<xref:System.Windows.Forms.HScrollBar>|Запускается с полосой прокрутки (бегунком) по правому краю.|Не влияет|нет|
+|<xref:System.Windows.Forms.ImageList>|Не требуется|Не влияет|нет|
+|<xref:System.Windows.Forms.Label>|Отображение по правому краю. Обращает значения <xref:System.Windows.Forms.Label.TextAlign%2A> и <xref:System.Windows.Forms.Label.ImageAlign%2A>.|Не влияет|нет|
+|<xref:System.Windows.Forms.LinkLabel>|Отображение по правому краю. Обращает значения <xref:System.Windows.Forms.Label.TextAlign%2A> и <xref:System.Windows.Forms.Label.ImageAlign%2A>.|Не влияет|нет|
+|<xref:System.Windows.Forms.ListBox>|Элементы выравниваются по правому краю.|Не влияет|нет|
 |<xref:System.Windows.Forms.ListView>|Устанавливает порядок чтения справа налево; элементы остаются выровненными по левому краю.|Зеркально отражает элемент управления.|Да|
-|<xref:System.Windows.Forms.MainMenu>|Отображение по правому краю с порядком чтения справа налево во время выполнения (не во время разработки).|Не влияет.|Нет|
-|<xref:System.Windows.Forms.MaskedTextBox>|Отображение текста справа налево.|Не влияет.|Нет|
+|<xref:System.Windows.Forms.MainMenu>|Отображение по правому краю с порядком чтения справа налево во время выполнения (не во время разработки).|Не влияет|нет|
+|<xref:System.Windows.Forms.MaskedTextBox>|Отображение текста справа налево.|Не влияет|нет|
 |<xref:System.Windows.Forms.MonthCalendar>|Не меняется; зависит от языка операционной системы.|Зеркально отражает элемент управления.|Да|
-|<xref:System.Windows.Forms.NotifyIcon>|Не поддерживаются|Не поддерживаются|Нет|
-|<xref:System.Windows.Forms.NumericUpDown>|Выравнивание кнопок "вверх" и "вниз" по левому краю.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.OpenFileDialog>|В операционных системах с письмом справа налево установка свойства <xref:System.Windows.Forms.Control.RightToLeft> в форме <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> локализации диалогового окна. |Не влияет.|Нет|
-|<xref:System.Windows.Forms.PageSetupDialog>|Не меняется; зависит от языка операционной системы.|Не влияет.|Нет|
+|<xref:System.Windows.Forms.NotifyIcon>|Не поддерживается|Не поддерживается|нет|
+|<xref:System.Windows.Forms.NumericUpDown>|Выравнивание кнопок "вверх" и "вниз" по левому краю.|Не влияет|нет|
+|<xref:System.Windows.Forms.OpenFileDialog>|В операционных системах с письмом справа налево установка свойства <xref:System.Windows.Forms.Control.RightToLeft> в форме <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> локализации диалогового окна. |Не влияет|нет|
+|<xref:System.Windows.Forms.PageSetupDialog>|Не меняется; зависит от языка операционной системы.|Не влияет|нет|
 |<xref:System.Windows.Forms.Panel>|Дочерние элементы управления могут наследовать это свойство.|Используйте <xref:System.Windows.Forms.TableLayoutPanel> в элементе управления для поддержки отображения справа налево.|Да|
-|<xref:System.Windows.Forms.PictureBox>|Не поддерживаются|Не влияет.|Нет|
-|<xref:System.Windows.Forms.PrintDialog>|Не меняется; зависит от языка операционной системы.|Не влияет.|Нет|
-|<xref:System.Drawing.Printing.PrintDocument>|Вертикальная полоса прокрутки располагается по левому краю, а горизонтальная полоса прокрутки начинается слева.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.PrintPreviewDialog>|Не поддерживаются|Не поддерживаются|Нет|
+|<xref:System.Windows.Forms.PictureBox>|Не поддерживается|Не влияет|нет|
+|<xref:System.Windows.Forms.PrintDialog>|Не меняется; зависит от языка операционной системы.|Не влияет|нет|
+|<xref:System.Drawing.Printing.PrintDocument>|Вертикальная полоса прокрутки располагается по левому краю, а горизонтальная полоса прокрутки начинается слева.|Не влияет|нет|
+|<xref:System.Windows.Forms.PrintPreviewDialog>|Не поддерживается|Не поддерживается|нет|
 |<xref:System.Windows.Forms.ProgressBar>|Не изменяется этим свойством.|Зеркально отражает элемент управления.|Да|
-|<xref:System.Windows.Forms.RadioButton>|Переключатель отображается справа от текста.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.RichTextBox>|Элементы управления, содержащие текст, отображаются справа налево с порядком чтения справа налево.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.SaveFileDialog>|Не меняется; зависит от языка операционной системы.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.SplitContainer>|Макет панели обращается; вертикальная полоса прокрутки отображается слева; горизонтальная полоса прокрутки начинается справа.|Используйте <xref:System.Windows.Forms.TableLayoutPanel>, чтобы отразить порядок чтения дочерних элементов управления.|Нет|
-|<xref:System.Windows.Forms.Splitter>|Не поддерживаются|Не влияет.|Нет|
-|<xref:System.Windows.Forms.StatusBar>|Не поддерживается; используйте <xref:System.Windows.Forms.StatusStrip>.|Не влияет; используйте <xref:System.Windows.Forms.StatusStrip>.|Нет|
+|<xref:System.Windows.Forms.RadioButton>|Переключатель отображается справа от текста.|Не влияет|нет|
+|<xref:System.Windows.Forms.RichTextBox>|Элементы управления, содержащие текст, отображаются справа налево с порядком чтения справа налево.|Не влияет|нет|
+|<xref:System.Windows.Forms.SaveFileDialog>|Не меняется; зависит от языка операционной системы.|Не влияет|нет|
+|<xref:System.Windows.Forms.SplitContainer>|Макет панели обращается; вертикальная полоса прокрутки отображается слева; горизонтальная полоса прокрутки начинается справа.|Используйте <xref:System.Windows.Forms.TableLayoutPanel>, чтобы отразить порядок чтения дочерних элементов управления.|нет|
+|<xref:System.Windows.Forms.Splitter>|Не поддерживается|Не влияет|нет|
+|<xref:System.Windows.Forms.StatusBar>|Не поддерживается; используйте <xref:System.Windows.Forms.StatusStrip>.|Не влияет; используйте <xref:System.Windows.Forms.StatusStrip>.|нет|
 |<xref:System.Windows.Forms.TabControl>|Не изменяется этим свойством.|Зеркально отражает элемент управления.|Да|
-|<xref:System.Windows.Forms.TextBox>|Отображение текста справа налево с порядком чтения справа налево.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.Timer>|Не требуется|Не требуется|Нет|
+|<xref:System.Windows.Forms.TextBox>|Отображение текста справа налево с порядком чтения справа налево.|Не влияет|нет|
+|<xref:System.Windows.Forms.Timer>|Не требуется|Не требуется|нет|
 |<xref:System.Windows.Forms.ToolBar>|Не изменяется этим свойством; используйте <xref:System.Windows.Forms.ToolStrip>.|Не влияет; используйте <xref:System.Windows.Forms.ToolStrip>.|Да|
-|<xref:System.Windows.Forms.ToolTip>|Задает порядок чтения справа налево.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.TrackBar>|Прокрутка или линейка начинается справа; если ориентация <xref:System.Windows.Forms.TrackBar.Orientation%2A> вертикальная, деления начинаются справа.|Не влияет.|Нет|
+|<xref:System.Windows.Forms.ToolTip>|Задает порядок чтения справа налево.|Не влияет|нет|
+|<xref:System.Windows.Forms.TrackBar>|Прокрутка или линейка начинается справа; если ориентация <xref:System.Windows.Forms.TrackBar.Orientation%2A> вертикальная, деления начинаются справа.|Не влияет|нет|
 |<xref:System.Windows.Forms.TreeView>|Задает только порядок чтения справа налево.|Зеркально отражает элемент управления.|Да|
-|<xref:System.Windows.Forms.UserControl>|Вертикальная полоса прокрутки отображается слева; бегунок горизонтальной полосы прокрутки находится справа.|Прямая поддержка отсутствует; используйте <xref:System.Windows.Forms.TableLayoutPanel>.|Нет|
-|<xref:System.Windows.Forms.VScrollBar>|Отображается не в правой, а в левой части элементов управления с прокруткой.|Не влияет.|Нет|
+|<xref:System.Windows.Forms.UserControl>|Вертикальная полоса прокрутки отображается слева; бегунок горизонтальной полосы прокрутки находится справа.|Прямая поддержка отсутствует; используйте <xref:System.Windows.Forms.TableLayoutPanel>.|нет|
+|<xref:System.Windows.Forms.VScrollBar>|Отображается не в правой, а в левой части элементов управления с прокруткой.|Не влияет|нет|
 
-## <a name="encoding"></a>Encoding
+## <a name="encoding"></a>Кодирование
  Windows Forms поддерживает Юникод, поэтому можно включить любой набор символов при создании приложений с двунаправленным письмом. Однако не все элементы управления Windows Forms поддерживают Юникод во всех платформах.
 
 ## <a name="gdi"></a>GDI+
@@ -88,7 +88,7 @@ Visual Studio можно использовать для создания при
  Окна сообщений также управляются операционной системой и поддерживают двунаправленный текст. Подписи кнопок в окнах сообщений основаны на текущих языковых параметрах. По умолчанию в окнах сообщений не используется порядок чтения справа налево, однако порядок чтения при отображении окон сообщений можно изменить с помощью параметра.
 
 ## <a name="righttoleft-scrollbars-and-scrollablecontrol"></a>RightToLeft, полосы прокрутки и ScrollableControl
- В настоящее время существует ограничение в Windows Forms, которое блокирует правильную работу всех классов, производных от <xref:System.Windows.Forms.ScrollableControl>, когда включено свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> и для <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> задано значение <xref:System.Windows.Forms.RightToLeft.Yes>. Предположим, что вы поместили элемент управления, например <xref:System.Windows.Forms.Panel>, или класс контейнера, производный от <xref:System.Windows.Forms.Panel> (такой как <xref:System.Windows.Forms.FlowLayoutPanel> или <xref:System.Windows.Forms.TableLayoutPanel>), в форму. Если задать значение <xref:System.Windows.Forms.RightToLeft.Yes> свойства <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> для контейнера, а затем значение <xref:System.Windows.Forms.AnchorStyles.Right> свойства <xref:System.Windows.Forms.Control.Anchor%2A> для одного или нескольких элементов управления внутри контейнера, то полоса прокрутки не появится вовсе. Класс, производный от <xref:System.Windows.Forms.ScrollableControl>, действует, как если бы свойству <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> было присвоено значение <xref:System.Windows.Forms.RightToLeft.No>.
+ В настоящее время существует ограничение в Windows Forms, которое блокирует правильную работу всех классов, производных от <xref:System.Windows.Forms.ScrollableControl>, когда включено свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> и для <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> задано значение <xref:System.Windows.Forms.RightToLeft.Yes>. Предположим, что вы поместили элемент управления, например <xref:System.Windows.Forms.Panel>, или класс контейнера, производный от <xref:System.Windows.Forms.Panel> (такой как <xref:System.Windows.Forms.FlowLayoutPanel> или <xref:System.Windows.Forms.TableLayoutPanel>), в форму. Если задать значение <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> свойства <xref:System.Windows.Forms.RightToLeft.Yes> для контейнера, а затем значение <xref:System.Windows.Forms.Control.Anchor%2A> свойства <xref:System.Windows.Forms.AnchorStyles.Right> для одного или нескольких элементов управления внутри контейнера, то полоса прокрутки не появится вовсе. Класс, производный от <xref:System.Windows.Forms.ScrollableControl>, действует, как если бы свойству <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> было присвоено значение <xref:System.Windows.Forms.RightToLeft.No>.
 
  В настоящее время единственным решением является вложение <xref:System.Windows.Forms.ScrollableControl> в другой <xref:System.Windows.Forms.ScrollableControl>. Например, если требуется, чтобы класс <xref:System.Windows.Forms.TableLayoutPanel> работал в такой ситуации, можно поместить его в элемент управления <xref:System.Windows.Forms.Panel> и задать для свойства <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> в элементе <xref:System.Windows.Forms.Panel> значение <xref:System.Windows.Forms.RightToLeft.Yes>.
 
@@ -115,6 +115,6 @@ Visual Studio можно использовать для создания при
 
  Некоторые элементы управления запечатаны. Как следствие, из них нельзя наследовать новый элемент управления. К ним относятся элементы управления <xref:System.Windows.Forms.ImageList> и <xref:System.Windows.Forms.ProgressBar>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Двухсторонний режим для веб-приложений ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))

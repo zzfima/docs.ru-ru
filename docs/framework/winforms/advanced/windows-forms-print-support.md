@@ -22,7 +22,7 @@ ms.locfileid: "76732491"
   
  Во время печати из приложения Windows компонент <xref:System.Drawing.Printing.PrintDocument> покажет диалоговое окно "Прервать печать", чтобы предупредить пользователей о том, что происходит печать, и разрешить отмену задания печати.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Создание стандартных заданий печати в Windows Forms](how-to-create-standard-windows-forms-print-jobs.md)  
  Объясняется, как использовать компонент <xref:System.Drawing.Printing.PrintDocument> для печати из формы Windows Forms.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "76732491"
  [Практическое руководство. Печать в Windows Forms с использованием предварительного просмотра](how-to-print-in-windows-forms-using-print-preview.md)  
  Показывает, как использовать <xref:System.Windows.Forms.PrintPreviewDialog> для печати документа.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Компонент PrintDocument](../controls/printdocument-component-windows-forms.md)  
  Объясняет использование компонента <xref:System.Drawing.Printing.PrintDocument>.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "76732491"
  [Элемент управления PrintPreviewDialog](../controls/printpreviewdialog-control-windows-forms.md)  
  Объясняет использование элемента управления <xref:System.Windows.Forms.PrintPreviewDialog>.  
   
- [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ [Компонент PageSetupDialog](../controls/pagesetupdialog-component-windows-forms.md)  
  Объясняет использование компонента <xref:System.Windows.Forms.PageSetupDialog>.  
   
  <xref:System.Drawing.Printing>  

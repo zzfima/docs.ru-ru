@@ -21,17 +21,17 @@ ms.locfileid: "76746154"
 ## <a name="the-datagridviewcellstyle-class"></a>Класс Датагридвиевцеллстиле  
  Класс <xref:System.Windows.Forms.DataGridViewCellStyle> содержит следующие свойства, связанные с визуальным стилем.  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
   
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
  Этот класс также содержит следующие свойства, связанные с форматированием:  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
   
 - <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
@@ -48,7 +48,7 @@ ms.locfileid: "76746154"
   
  В следующей таблице перечислены основные свойства, которые получают или устанавливают <xref:System.Windows.Forms.DataGridViewCellStyle> объектов.  
   
-|Идентификаторы|Классы|Описание|  
+|Свойство|Классы|Description|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>и производные классы|Возвращает или задает стили по умолчанию, используемые всеми ячейками во всем элементе управления (включая ячейки заголовка), в столбце или в строке.|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Возвращает или задает стили ячеек по умолчанию, используемые всеми строками в элементе управления. Сюда не входят ячейки заголовка.|  
@@ -81,7 +81,7 @@ ms.locfileid: "76746154"
   
 1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2. <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> или <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> либо <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
 3. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -144,7 +144,7 @@ ms.locfileid: "76746154"
 > [!NOTE]
 > Кэширование значений, хранящихся в свойстве <xref:System.Windows.Forms.DataGridViewCell.Style%2A> ячейки, имеет значение, независимо от того, задано ли конкретное значение стиля. Если вы временно заменили настройку стиля, ее восстановление в исходное состояние "не задано" гарантирует, что ячейка будет наследовать параметр стиля от более высокого уровня. Если необходимо определить фактический стиль, действующий для ячейки, независимо от того, унаследован ли этот стиль, используйте свойство <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> ячейки.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

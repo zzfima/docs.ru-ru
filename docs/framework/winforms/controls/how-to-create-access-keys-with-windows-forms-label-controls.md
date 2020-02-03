@@ -31,7 +31,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.L
   
 1. Сначала нарисуйте метку, а затем нарисуйте другой элемент управления.  
   
-     \- или -  
+     -или-  
   
      Нарисуйте элементы управления в любом порядке и присвойте свойству <xref:System.Windows.Forms.Control.TabIndex%2A> метки значение на единицу меньше, чем у другого элемента управления.  
   
@@ -63,7 +63,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.L
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Общие сведения об элементе управления Label](label-control-overview-windows-forms.md)

@@ -15,42 +15,42 @@ ms.locfileid: "76745443"
 С помощью виртуального режима можно управлять взаимодействием между элементом управления <xref:System.Windows.Forms.DataGridView> и пользовательским кэшем данных. Чтобы реализовать виртуальный режим, задайте для свойства <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> значение `true` и обработайте одно или несколько событий, описанных в этом разделе. Обычно обрабатывается по крайней мере событие `CellValueNeeded`, которое позволяет элементу управления выполнять поиск значений в кэше данных.  
   
 ## <a name="bound-mode-and-virtual-mode"></a>Связанный режим и виртуальный режим  
- Virtual mode is necessary only when you need to supplement or replace bound mode. In bound mode, you set the <xref:System.Windows.Forms.DataGridView.DataSource%2A> property and the control automatically loads the data from the specified source and submits user changes back to it. You can control which of the bound columns are displayed, and the data source itself typically handles operations such as sorting.  
+ Виртуальный режим необходим только в том случае, если требуется дополнить или заменить связанный режим. В режиме с привязкой вы задаете свойство <xref:System.Windows.Forms.DataGridView.DataSource%2A>, и элемент управления автоматически загружает данные из указанного источника и отправляет пользовательские изменения обратно в него. Можно управлять отображением связанных столбцов, а сам источник данных обычно обрабатывает такие операции, как сортировка.  
   
-## <a name="supplementing-bound-mode"></a>Supplementing Bound Mode  
- You can supplement bound mode by displaying unbound columns along with the bound columns. This is sometimes called "mixed mode" and is useful for displaying things like calculated values or user-interface (UI) controls.  
+## <a name="supplementing-bound-mode"></a>Дополнительный связанный режим  
+ Можно дополнить связанный режим, отображая несвязанные столбцы вместе с привязанными столбцами. Иногда это называется смешанным режимом и полезно для отображения таких элементов, как вычисляемые значения или элементы управления пользовательского интерфейса.  
   
- Because unbound columns are outside the data source, they are ignored by the data source's sorting operations. Therefore, when you enable sorting in mixed mode, you must manage the unbound data in a local cache and implement virtual mode to let the <xref:System.Windows.Forms.DataGridView> control interact with it.  
+ Поскольку несвязанные столбцы находятся за пределами источника данных, они игнорируются операциями сортировки источника данных. Таким образом, при включении сортировки в смешанном режиме необходимо управлять несвязанными данными в локальном кэше и реализовать виртуальный режим, чтобы позволить элементу управления <xref:System.Windows.Forms.DataGridView> взаимодействовать с ним.  
   
- For more information about using virtual mode to maintain the values in unbound columns, see the examples in the <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A?displayProperty=nameWithType> property and <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType> class reference topics.  
+ Дополнительные сведения об использовании виртуального режима для сохранения значений в несвязанных столбцах см. в примерах, приведенных в разделе <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A?displayProperty=nameWithType> свойства и <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType> справочные статьи по классам.  
   
-## <a name="replacing-bound-mode"></a>Replacing Bound Mode  
- If bound mode does not meet your performance needs, you can manage all your data in a custom cache through virtual-mode event handlers. For example, you can use virtual mode to implement a just-in-time data loading mechanism that retrieves only as much data from a networked database as is necessary for optimal performance. This scenario is particularly useful when working with large amounts of data over a slow network connection or with client machines that have a limited amount of RAM or storage space.  
+## <a name="replacing-bound-mode"></a>Замена связанного режима  
+ Если связанный режим не соответствует требованиям к производительности, вы можете управлять всеми данными в пользовательском кэше с помощью обработчиков событий виртуального режима. Например, можно использовать виртуальный режим для реализации механизма загрузки данных JIT, который извлекает только столько данных из сетевой базы данных, сколько необходимо для оптимальной производительности. Этот сценарий особенно полезен при работе с большими объемами данных через небольшое сетевое подключение или с клиентскими компьютерами с ограниченным объемом ОЗУ или дисковым пространством.  
   
- For more information about using virtual mode in a just-in-time scenario, see [Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
+ Дополнительные сведения об использовании виртуального режима в JIT-сценарии см. в разделе [Реализация виртуального режима с JIT-загрузкой данных в элементе управления Windows Forms DataGridView](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
-## <a name="virtual-mode-events"></a>Virtual-Mode Events  
- If your data is read-only, the `CellValueNeeded` event may be the only event you will need to handle. Additional virtual-mode events let you enable specific functionality like user edits, row addition and deletion, and row-level transactions.  
+## <a name="virtual-mode-events"></a>События виртуального режима  
+ Если данные доступны только для чтения, то событием `CellValueNeeded` может быть единственное событие, которое нужно будет обрабатывать. Дополнительные события виртуального режима позволяют включить определенные функции, такие как изменение пользователей, Добавление и удаление строк, а также транзакции на уровне строк.  
   
- Some standard <xref:System.Windows.Forms.DataGridView> events (such as events that occur when users add or delete rows, or when cell values are edited, parsed, validated, or formatted) are useful in virtual mode, as well. You can also handle events that let you maintain values not typically stored in a bound data source, such as cell ToolTip text, cell and row error text, cell and row shortcut menu data, and row height data.  
+ Некоторые стандартные <xref:System.Windows.Forms.DataGridView> события (такие как события, происходящие при добавлении или удалении пользователем строк или изменении значений ячеек, а также при редактировании, анализе, проверке или форматировании) полезны в виртуальном режиме. Кроме того, можно обрабатывать события, которые позволяют поддерживать значения, не хранящиеся в связанном источнике данных, например текст подсказки ячейки, текст ошибки ячейки и строки, данные контекстного меню ячеек и строк, а также данные высоты строк.  
   
- For more information about implementing virtual mode to manage read/write data with a row-level commit scope, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
+ Дополнительные сведения о реализации виртуального режима для управления данными чтения и записи с областью фиксации на уровне строк см. в разделе [Пошаговое руководство. Реализация виртуального режима в элементе управления Windows Forms DataGridView](implementing-virtual-mode-wf-datagridview-control.md).  
   
- For an example that implements virtual mode with a cell-level commit scope, see the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property reference topic.  
+ Пример, в котором реализуется виртуальный режим с областью фиксации на уровне ячейки, см. в разделе Справочник по свойствам <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
- The following events occur only when the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property is set to `true`.  
+ Следующие события происходят, только если свойство <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> имеет значение `true`.  
   
-|Event|Описание|  
+|Событие|Description|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Used by the control to retrieve a cell value from the data cache for display. This event occurs only for cells in unbound columns.|  
-|<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Used by the control to commit user input for a cell to the data cache. This event occurs only for cells in unbound columns.<br /><br /> Call the <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> method when changing a cached value outside of a <xref:System.Windows.Forms.DataGridView.CellValuePushed> event handler to ensure that the current value is displayed in the control and to apply any automatic sizing modes currently in effect.|  
-|<xref:System.Windows.Forms.DataGridView.NewRowNeeded>|Used by the control to indicate the need for a new row in the data cache.|  
-|<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>|Used by the control to determine whether a row has any uncommitted changes.|  
-|<xref:System.Windows.Forms.DataGridView.CancelRowEdit>|Used by the control to indicate that a row should revert to its cached values.|  
+|<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Используется элементом управления для получения значения ячейки из кэша данных для вывода. Это событие возникает только для ячеек в непривязанных столбцах.|  
+|<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Используется элементом управления для фиксации введенных пользователем данных для ячейки в кэш данных. Это событие возникает только для ячеек в непривязанных столбцах.<br /><br /> Вызовите метод <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> при изменении кэшированного значения за пределами <xref:System.Windows.Forms.DataGridView.CellValuePushed> обработчика событий, чтобы убедиться в том, что текущее значение отображается в элементе управления и для применения режимов автоматического изменения размеров, действующих в данный момент.|  
+|<xref:System.Windows.Forms.DataGridView.NewRowNeeded>|Используется элементом управления для указания необходимости в новой строке в кэше данных.|  
+|<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>|Используется элементом управления для определения, содержит ли строка незафиксированные изменения.|  
+|<xref:System.Windows.Forms.DataGridView.CancelRowEdit>|Используется элементом управления для указания на то, что строка должна вернуться к ее кэшированным значениям.|  
   
- The following events are useful in virtual mode, but can be used regardless of the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property setting.  
+ Следующие события полезны в виртуальном режиме, но могут использоваться независимо от значения свойства <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
-|события|Описание|  
+|События|Description|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|Используется элементом управления для указания на то, когда удаляются или добавляются строки, позволяя соответствующим образом обновить кэш данных.|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|Используется элементом управления для форматирования значений ячеек для вывода и анализа и проверки вводимых пользователем данных.|  
@@ -62,7 +62,7 @@ ms.locfileid: "76745443"
 ## <a name="best-practices-in-virtual-mode"></a>Рекомендации в виртуальном режиме  
  Если вы реализуете виртуальный режим для эффективной работы с большими объемами данных, необходимо также обеспечить эффективную работу с самим элементом управления <xref:System.Windows.Forms.DataGridView>. Дополнительные сведения о эффективном использовании стилей ячеек, автоматического изменения размера, выбора и совместного использования строк см. [в разделе рекомендации по масштабированию элемента управления Windows Forms DataGridView](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

@@ -242,7 +242,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Timer>
 - [Компонент Timer](timer-component-windows-forms.md)

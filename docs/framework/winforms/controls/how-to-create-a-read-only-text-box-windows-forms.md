@@ -24,7 +24,7 @@ ms.locfileid: "76731273"
     > [!NOTE]
     > Свойство <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> влияет только на взаимодействие с пользователем во время выполнения. Вы по-прежнему можете изменить содержимое текстового поля программно во время выполнения, изменив свойство <xref:System.Windows.Forms.TextBox.Text%2A> текстового поля.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.TextBox>
 - [Общие сведения об элементе управления TextBox](textbox-control-overview-windows-forms.md)

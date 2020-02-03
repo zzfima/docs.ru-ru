@@ -96,7 +96,7 @@ ms.locfileid: "76747204"
     dataGrid1->TableStyles->Add(ts1);
     ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
 - [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

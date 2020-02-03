@@ -16,7 +16,7 @@ ms.locfileid: "76739996"
 # <a name="webbrowser-control-windows-forms"></a>Общие сведения об элементе управления WebBrowser (Windows Forms)
 Элемент управления Windows Forms `WebBrowser` размещает веб-страницы и обеспечивает возможности веб-обзора для приложения.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления WebBrowser](webbrowser-control-overview.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "76739996"
  [Использование управляемой объектной модели HTML-документов](using-the-managed-html-document-object-model.md)  
  Содержит разделы, в которых описывается управление или создание HTML-страниц, размещенных в элементе управления <xref:System.Windows.Forms.WebBrowser>.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.WebBrowser>  
  Описание класса и всех его членов.  
   
@@ -78,6 +78,6 @@ ms.locfileid: "76739996"
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  Описывает это перечисление и все его значения.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

@@ -19,7 +19,7 @@ ms.locfileid: "76736961"
   
  Цвет, выбранный в диалоговом окне, возвращается в свойстве <xref:System.Windows.Forms.ColorDialog.Color%2A>. Если свойство <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> имеет значение `false`, кнопка "определить пользовательский цвет" будет отключена, а пользователь будет ограничен стандартными цветами палитры. Если свойство <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> имеет значение `true`, пользователь не может выбрать другие цвета. Чтобы отобразить диалоговое окно, необходимо вызвать его метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [Компонент ColorDialog](colordialog-component-windows-forms.md)

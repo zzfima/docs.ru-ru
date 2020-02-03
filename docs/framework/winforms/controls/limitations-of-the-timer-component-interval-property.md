@@ -28,7 +28,7 @@ ms.locfileid: "76745230"
   
 - Точность свойства <xref:System.Windows.Forms.Timer.Interval%2A> задается в миллисекундах. Некоторые компьютеры предоставляют счетчик высокого разрешения с разрешением выше миллисекунд. Доступность такого счетчика зависит от аппаратного процессора компьютера.
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Timer>
 - [Компонент Timer](timer-component-windows-forms.md)

@@ -37,14 +37,14 @@ ms.locfileid: "76735411"
 > Не используйте синтаксис `Handles` в Visual Basicном коде при указании обработчика событий для того же события в XAML. В таком случае обработчик событий вызывается дважды.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Как в WPF реализуются функциональные возможности ключевого слова Handles  
- При компиляции страницы [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] промежуточный файл объявляет ссылки `Friend` `WithEvents` на каждый элемент на странице, где имеется набор свойств <xref:System.Windows.FrameworkContentElement.Name%2A> (или объявленная [x:Name Directive](../../../desktop-wpf/xaml-services/xname-directive.md)). Каждый именованный экземпляр является потенциальным элементом, который можно присвоить обработчику с помощью `Handles`.  
+ При компиляции [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы промежуточный файл объявляет `Friend` `WithEvents` ссылки на каждый элемент на странице, у которого есть набор свойств <xref:System.Windows.FrameworkContentElement.Name%2A> (или объявленная [Директива x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) ). Каждый именованный экземпляр является потенциальным элементом, который можно присвоить обработчику с помощью `Handles`.  
   
 > [!NOTE]
 > В Visual Studio технология IntelliSense может показывать завершение для тех элементов, которые доступны для ссылки на `Handles` на странице. Но для того чтобы промежуточный файл смог заполнить все ссылки `Friends`, может потребоваться один проход компиляции.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Маркировка перенаправленных событий как обработанных и обработка классов](marking-routed-events-as-handled-and-class-handling.md)
 - [Общие сведения о перенаправленных событиях](routed-events-overview.md)
-- [Общие сведения о языке XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Обзор XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

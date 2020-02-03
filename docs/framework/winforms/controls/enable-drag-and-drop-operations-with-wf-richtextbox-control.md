@@ -164,7 +164,7 @@ ms.locfileid: "76745818"
   
      После отпускания кнопки мыши выделенный текст удаляется (то есть инициируется событие <xref:System.Windows.Forms.RichTextBox.DragDrop> ) и вставляется в элемент управления <xref:System.Windows.Forms.RichTextBox> .  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Практическое руководство. Выполнение операции перетаскивания между приложениями](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)

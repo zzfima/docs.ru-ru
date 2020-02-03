@@ -40,7 +40,7 @@ ms.locfileid: "76745519"
    > [!NOTE]
    > Наследуемые элементы управления должны быть `Protected`, чтобы их можно было закрепить. Чтобы изменить уровень доступа элемента управления, установите его свойство **Modifiers** в окне **свойства** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы управления Windows Forms](index.md)
 - [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

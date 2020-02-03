@@ -16,7 +16,7 @@ ms.locfileid: "76744276"
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Оптимизация производительности элемента управления DataGridView в Windows Forms
 При работе с большими объемами данных элемент управления `DataGridView` может использовать большой объем памяти, если он не используется осторожно. На клиентах с ограниченным объемом памяти можно избежать некоторых из этих издержек, избегая использования функций с высокими затратами на память. Вы также можете самостоятельно управлять некоторыми или всеми задачами по обслуживанию и извлечению данных с помощью виртуального режима, чтобы настроить использование памяти для сценария.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
  Описывает использование элемента управления `DataGridView` способом, который позволяет избежать ненужного использования памяти и снижения производительности при работе с большими объемами данных.  
   
@@ -29,14 +29,14 @@ ms.locfileid: "76744276"
  [Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
  Описывает, как загружать данные по требованию, что полезно при наличии большего объема данных, чем может храниться доступная память клиента.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  Содержит справочную документацию по свойству <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Режимы отображения данных в элементе управления DataGridView в Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

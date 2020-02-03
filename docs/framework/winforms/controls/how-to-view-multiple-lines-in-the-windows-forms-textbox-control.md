@@ -29,11 +29,11 @@ ms.locfileid: "76728284"
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Просмотр нескольких строк в элементе управления TextBox  
   
-1. Задайте для свойства <xref:System.Windows.Forms.TextBox.Multiline%2A> значение `true`. Если <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` (по умолчанию), то текст в элементе управления будет отображаться как один или несколько абзацев. в противном случае он будет отображаться в виде списка, в котором некоторые строки могут быть обрезаны по границе элемента управления.  
+1. Установите свойство <xref:System.Windows.Forms.TextBox.Multiline%2A> в значение `true`. Если <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` (по умолчанию), то текст в элементе управления будет отображаться как один или несколько абзацев. в противном случае он будет отображаться в виде списка, в котором некоторые строки могут быть обрезаны по границе элемента управления.  
   
 2. Присвойте свойству <xref:System.Windows.Forms.TextBox.ScrollBars%2A> соответствующее значение.  
   
-    |{2&gt;Value&lt;2}|Описание|  
+    |Значение|Description|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|Используйте это значение, если текст будет абзацем, который почти всегда соответствует элементу управления. Пользователь может использовать указатель мыши для перемещения внутри элемента управления, если текст слишком длинный, чтобы отобразить все одновременно.|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Используйте это значение, если требуется отобразить список строк, некоторые из которых могут быть длиннее ширины элемента управления <xref:System.Windows.Forms.TextBox>.|  
@@ -41,12 +41,12 @@ ms.locfileid: "76728284"
   
 3. Присвойте свойству <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> соответствующее значение.  
   
-    |{2&gt;Value&lt;2}|Описание|  
+    |Значение|Description|  
     |-----------|-----------------|  
     |`false`|Текст в элементе управления не будет автоматически заключаться в оболочку, поэтому он будет прокручиваться вправо до тех пор, пока не будет достигнут разрыв строки. Используйте это значение, если выбраны <xref:System.Windows.Forms.ScrollBars.Horizontal> полосы прокрутки или <xref:System.Windows.Forms.ScrollBars.Both>выше.|  
     |`true` (по умолчанию)|Горизонтальная полоса прокрутки не будет отображаться. Используйте это значение, если для отображения одного или нескольких абзацев выбраны <xref:System.Windows.Forms.ScrollBars.Vertical> полосы прокрутки или <xref:System.Windows.Forms.ScrollBars.None>выше.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.TextBox>
 - [Общие сведения об элементе управления TextBox](textbox-control-overview-windows-forms.md)

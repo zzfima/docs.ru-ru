@@ -15,7 +15,7 @@ ms.locfileid: "76744827"
 # <a name="enhancing-windows-forms-applications"></a>Усовершенствование приложений Windows Forms
 Windows Forms содержит много возможностей, которые можно использовать для улучшения приложений Windows в целях удовлетворения конкретных потребностей пользователей. В перечисленных ниже разделах описываются эти возможности и способы их использования.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)  
  Ссылки на разделы, в которых описано и показано, как используется графический интерфейс в формах Windows Forms.  
   
@@ -34,10 +34,10 @@ Windows Forms содержит много возможностей, которы
  [Глобализация Windows Forms приложений](globalizing-windows-forms.md)  
  Ссылки на разделы, в которых показано, как глобализировать приложения Windows Forms.  
   
- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms и неуправляемые приложения](windows-forms-and-unmanaged-applications.md)  
  Ссылки на разделы, в которых описано и показано, как получать доступ к COM-компонентам из приложений Windows Forms.  
   
- [Информация о системе и Windows Form](system-information-and-windows-forms.md)  
+ [Информация о системе и Windows Forms](system-information-and-windows-forms.md)  
  Описывается, как использовать сведения о системе в Windows Forms.  
   
  [Управление питанием в Windows Forms](power-management-in-windows-forms.md)  
@@ -58,7 +58,7 @@ Windows Forms содержит много возможностей, которы
  [Использование элементов управления WPF](using-wpf-controls.md)  
  Описывается, как использовать элементы управления WPF в приложениях Windows Forms.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Справочные системы в приложениях Windows Forms](help-systems-in-windows-forms-applications.md)  
  Ссылки на разделы, в которых описано и показано, как предоставить пользователю справку в приложениях Windows Forms.  
   

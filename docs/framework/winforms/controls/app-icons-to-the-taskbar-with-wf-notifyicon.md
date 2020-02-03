@@ -31,7 +31,7 @@ ms.locfileid: "76746244"
 
 1. Присвойте значение свойству <xref:System.Windows.Forms.NotifyIcon.Icon%2A>. Значение должно иметь тип `System.Drawing.Icon` и может быть загружено из файла ICO. Файл значка можно указать в коде или нажав кнопку с многоточием (![многоточием (...) в окно свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом со свойством <xref:System.Windows.Forms.NotifyIcon.Icon%2A> в окне " **Свойства** ", а затем выбрать файл в появившемся **диалоговом** окне.
 
-2. Задайте для свойства <xref:System.Windows.Forms.NotifyIcon.Visible%2A> значение `true`.
+2. Установите свойство <xref:System.Windows.Forms.NotifyIcon.Visible%2A> в значение `true`.
 
 3. Задайте для свойства <xref:System.Windows.Forms.NotifyIcon.Text%2A> соответствующую строку подсказки.
 
@@ -72,7 +72,7 @@ ms.locfileid: "76746244"
     notifyIcon1->Text = "Antivirus program";
     ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>

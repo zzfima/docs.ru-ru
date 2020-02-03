@@ -20,11 +20,11 @@ ms.locfileid: "76737889"
 
 Windows Presentation Foundation (WPF) имеет функцию рукописного ввода, которая упрощает внедрение цифровых рукописных данных в приложение.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы использовать следующие примеры, сначала установите [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Кроме того, он помогает понять, как писать базовые приложения WPF. Сведения о начале работы с WPF см. в разделе [Пошаговое руководство. мое первое классическое приложение WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Краткое руководство по
+## <a name="quick-start"></a>Быстрый запуск
 
 Этот раздел поможет вам написать простое приложение WPF, собирающее рукописный ввод.
 
@@ -32,7 +32,7 @@ Windows Presentation Foundation (WPF) имеет функцию рукописн
 
 Создание приложения WPF, поддерживающего рукописный ввод:
 
-1. Откройте Visual Studio.
+1. Запустите Visual Studio.
 
 2. Создайте новое **приложение WPF**.
 
@@ -108,7 +108,7 @@ Windows Presentation Foundation (WPF) имеет функцию рукописн
 
 1. Постройте приложение, нажав клавишу **F5**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Рукописный ввод](digital-ink.md)
 - [Сбор рукописных данных](collecting-ink.md)

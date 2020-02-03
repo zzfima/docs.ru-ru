@@ -15,7 +15,7 @@ ms.locfileid: "76747010"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Размещение содержимого Win32 в WPF
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 См. раздел [взаимодействие WPF и Win32](wpf-and-win32-interoperation.md).
 
@@ -368,6 +368,6 @@ public partial class Window1 : Window {
 
 ![Снимок экрана: приложение WPF работает.](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Взаимодействие WPF и Win32](wpf-and-win32-interoperation.md)

@@ -46,7 +46,7 @@ ms.locfileid: "76746653"
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Отображение текущей даты в нижней части элемента управления  
   
-- Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> значение `true`. Приведенный ниже пример переключает отображение и пропуск текущей даты при двойном щелчке на форме.  
+- Установите свойство <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> в значение `true`. Приведенный ниже пример переключает отображение и пропуск текущей даты при двойном щелчке на форме.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ ms.locfileid: "76746653"
   
 ### <a name="to-display-week-numbers"></a>Отображение номеров недель  
   
-- Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> значение `true`. Это свойство можно задать либо в коде, либо в окно свойств.  
+- Установите свойство <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> в значение `true`. Это свойство можно задать либо в коде, либо в окно свойств.  
   
      Номера недель отображаются в отдельном столбце слева от первого дня недели.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "76746653"
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления MonthCalendar](monthcalendar-control-windows-forms.md)
 - [Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

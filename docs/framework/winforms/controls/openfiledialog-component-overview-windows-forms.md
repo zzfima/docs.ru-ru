@@ -26,7 +26,7 @@ ms.locfileid: "76728434"
 
 При добавлении в форму <xref:System.Windows.Forms.OpenFileDialog> компонент отображается в области в нижней части конструктор Windows Forms в Visual Studio.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.OpenFileDialog>
 - [Компонент OpenFileDialog](openfiledialog-component-windows-forms.md)

@@ -34,7 +34,7 @@ ms.locfileid: "76734468"
   
  В следующей таблице приведены некоторые особо важные свойства <xref:System.Windows.Forms.MenuStrip> и связанных классов.  
   
-|Идентификаторы|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Возвращает или задает <xref:System.Windows.Forms.ToolStripMenuItem>, используемый для вывода списка дочерних MDI-форм.|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Возвращает или задает, как дочерние меню объединяются с родительскими меню в приложениях MDI.|  
@@ -42,19 +42,19 @@ ms.locfileid: "76734468"
 |<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Возвращает или задает значение, указывающее, является ли форма контейнером для дочерних форм MDI.|  
 |<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Возвращает или задает значение, указывающее, отображаются ли подсказки для <xref:System.Windows.Forms.MenuStrip>.|  
 |<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|Возвращает или задает значение, которое указывает, поддерживает ли <xref:System.Windows.Forms.MenuStrip> область переполнения.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Возвращает или задает сочетания клавиш, связанные с <xref:System.Windows.Forms.ToolStripMenuItem>.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Возвращает или задает значение, указывающее, отображаются ли сочетания клавиш, связанные с <xref:System.Windows.Forms.ToolStripMenuItem>, рядом с <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Получает или задает сочетания клавиш, связанные с элементом <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Получает или задает значение, определяющее, будет ли сочетание клавиш, связанное с данным элементом <xref:System.Windows.Forms.ToolStripMenuItem>, отображаться рядом с элементом <xref:System.Windows.Forms.ToolStripMenuItem>.|  
   
  В следующей таблице показаны важные <xref:System.Windows.Forms.MenuStrip> сопутствующие классы.  
   
-|Класс|Описание|  
+|Class|Description|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Представляет выбираемый параметр, отображаемый в <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|Представляет доступный для выбора параметр, отображаемый в объекте <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Представляет контекстное меню.|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|Представляет элемент управления, позволяющий пользователю выбрать один элемент из списка, который отображается, когда пользователь щелкает <xref:System.Windows.Forms.ToolStripDropDownButton> или пункт меню более высокого уровня.|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|Предоставляет базовые функциональные возможности для элементов управления, производных от <xref:System.Windows.Forms.ToolStripItem>, которые отображают раскрывающиеся элементы при щелчке.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

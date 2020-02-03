@@ -17,15 +17,15 @@ ms.locfileid: "76747143"
   
  Компонент `MainMenu` Windows Forms отображает меню во время выполнения.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте MainMenu](mainmenu-component-overview-windows-forms.md)  
  Объясняет, что такое компонент, а также его основные возможности и свойства.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.MainMenu>  
  Описание класса и всех его членов.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

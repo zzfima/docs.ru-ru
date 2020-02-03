@@ -24,7 +24,7 @@ ms.locfileid: "76745112"
 ## <a name="key-properties"></a>Ключевые свойства  
  Элемент меню можно назначить в качестве элемента по умолчанию, задав свойству <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> значение `true`. Элемент по умолчанию отображается полужирным шрифтом при щелчке меню. <xref:System.Windows.Forms.MenuItem.Checked%2A>ым свойством элемента меню является `true` или `false`, а также показывает, выбран ли этот пункт меню. Свойство <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> элемента меню настраивает внешний вид выбранного элемента: Если для <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> задано значение `true`, рядом с элементом появляется переключатель. Если <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> имеет значение `false`, рядом с элементом отображается галочка.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>

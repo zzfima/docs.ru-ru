@@ -92,7 +92,7 @@ ms.locfileid: "76745910"
   
 4. Запустите проект. Недопустимый тип (в этом примере нечисловые) данные в первом элементе управления, а затем на вкладку Second. Когда отображается значок ошибки, наведите указатель мыши на него, чтобы увидеть текст ошибки.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [Общие сведения о компоненте ErrorProvider](errorprovider-component-overview-windows-forms.md)

@@ -169,7 +169,7 @@ ms.locfileid: "76735230"
 
 Интерфейсы поддерживают только то, что происходит при переходе между областями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и Win32. В пределах области Win32 поведение табуляции полностью управляется логикой, реализованной в Win32, для табуляции, если таковая имеется.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>

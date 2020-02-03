@@ -30,7 +30,7 @@ ms.locfileid: "76735483"
   
  Элемент управления <xref:System.Windows.Forms.ToolBar> позволяет создавать панели инструментов, добавляя <xref:System.Windows.Forms.Button> объекты в коллекцию <xref:System.Windows.Forms.ToolBar.Buttons%2A>. Для добавления кнопок в элемент управления <xref:System.Windows.Forms.ToolBar> можно использовать редактор коллекций. каждому объекту <xref:System.Windows.Forms.Button> должен быть назначен текст или изображение, хотя можно назначить и то, и другое. Изображение предоставляется связанным компонентом [ImageList](imagelist-component-windows-forms.md). Во время выполнения можно добавлять или удалять кнопки из <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> с помощью методов <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> и <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A>. Чтобы программировать кнопки <xref:System.Windows.Forms.ToolBar>, добавьте код в события <xref:System.Windows.Forms.ToolBar.ButtonClick> <xref:System.Windows.Forms.ToolBar>, используя свойство <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> класса <xref:System.Windows.Forms.ToolBarButtonClickEventArgs>, чтобы определить, какая кнопка была нажата.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolBar>
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)

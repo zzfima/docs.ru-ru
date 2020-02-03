@@ -33,7 +33,7 @@ ms.locfileid: "76736876"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Description  
  Поведение размеров столбцов для различных сценариев можно настроить, используя соответствующие значения для свойств <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> и <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A>.  
   
  В следующем примере кода можно поэкспериментировать с различными значениями для свойств <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> и <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> различных столбцов. В этом примере элемент управления <xref:System.Windows.Forms.DataGridView> привязан к собственной коллекции <xref:System.Windows.Forms.DataGridView.Columns%2A>, а один столбец связан с каждым из свойств <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> и <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>. Каждый из столбцов также представлен строкой в элементе управления, и изменение значений в строке приведет к обновлению свойства соответствующего столбца, чтобы можно было увидеть взаимодействие значений.  
@@ -42,8 +42,8 @@ ms.locfileid: "76736876"
  [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
   
-### <a name="comments"></a>Comments  
- Использование этого демонстрационного приложения.  
+### <a name="comments"></a>Комментарии  
+ Использование демонстрационного приложения.  
   
 - Измените размер формы. Обратите внимание, как изменяется ширина столбцов и одновременно сохраняются пропорции, указанные значениями свойства <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "76736876"
   
 - ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>

@@ -54,7 +54,7 @@ ms.locfileid: "76747185"
 
 Наследуемые элементы управления должны быть `Protected` для привязки. Чтобы изменить уровень доступа элемента управления, задайте его свойство `Modifiers` в окне **Свойства** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы управления Windows Forms](index.md)
 - [Свойство AutoSize](autosize-property-overview.md)

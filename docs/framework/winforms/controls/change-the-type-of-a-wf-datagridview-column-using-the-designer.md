@@ -30,7 +30,7 @@ ms.locfileid: "76737132"
     > [!NOTE]
     > Свойство `ColumnType` — это свойство только для времени разработки, указывающее класс, представляющий тип столбца. Это не фактическое свойство, определенное в классе столбца.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

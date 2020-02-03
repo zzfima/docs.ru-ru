@@ -18,17 +18,17 @@ ms.locfileid: "76728151"
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>Элементы управления HScrollBar и VScrollBar (Windows Forms)
 Элементы управления Windows Forms в виде полос прокрутки используются для обеспечения удобного просмотра длинных списков элементов или большого объема данных с помощью горизонтальной или вертикальной прокрутки окна приложения либо элемента управления. Полосы прокрутки — это распространенный элемент интерфейса Windows.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементах управления HScrollBar и VScrollBar](hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
  Основные понятия элементов управления <xref:System.Windows.Forms.HScrollBar> и <xref:System.Windows.Forms.VScrollBar>, позволяющих пользователям выполнять прокрутку больших объемов информации по горизонтали и вертикали.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.HScrollBar>  
  Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.VScrollBar>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

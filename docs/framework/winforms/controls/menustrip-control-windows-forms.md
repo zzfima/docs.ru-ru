@@ -12,10 +12,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732788"
 ---
-# <a name="menustrip-control-windows-forms"></a>{4&gt;Элемент управления MenuStrip (Windows Forms)&lt;4}
+# <a name="menustrip-control-windows-forms"></a>Элемент управления MenuStrip (Windows Forms)
 Этот элемент управления группирует команды приложения и делает их легко доступными.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления MenuStrip](menustrip-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "76732788"
   
 - [Диалоговое окно «Задачи MenuStrip»](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.MenuStrip>  
  Описание возможностей класса <xref:System.Windows.Forms.MenuStrip>, который предоставляет систему меню для формы.  
   
@@ -79,6 +79,6 @@ ms.locfileid: "76732788"
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  Описание возможностей класса <xref:System.Windows.Forms.ToolStripMenuItem>, который представляет отдельные пункты, отображаемые в <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

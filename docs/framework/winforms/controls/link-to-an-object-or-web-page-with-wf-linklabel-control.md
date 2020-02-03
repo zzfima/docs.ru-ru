@@ -180,7 +180,7 @@ ms.locfileid: "76745211"
        }
     ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [Общие сведения об элементе управления LinkLabel](linklabel-control-overview-windows-forms.md)

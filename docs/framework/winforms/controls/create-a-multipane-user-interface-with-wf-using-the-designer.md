@@ -43,7 +43,7 @@ ms.locfileid: "76737273"
 
 На этом этапе разработки приложения был создан сложный пользовательский интерфейс. Следующий шаг продолжается в программировании самого приложения, возможно, путем подключения элемента управления <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ListView> элементов управления к определенному источнику данных. Дополнительные сведения о подключении элементов управления к данным см. в разделе [Привязка данных и Windows Forms](../data-binding-and-windows-forms.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Элемент управления SplitContainer](splitcontainer-control-windows-forms.md)

@@ -56,7 +56,7 @@ ms.locfileid: "76744395"
 
      Редактор типов пользовательского интерфейса **DataSource** закрывается, а набор данных, <xref:System.Windows.Forms.BindingSource> и адаптер таблицы, относящиеся к этому соединению с данными, добавляются в форму.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>

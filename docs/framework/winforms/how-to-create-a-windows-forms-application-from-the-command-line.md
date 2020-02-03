@@ -21,7 +21,7 @@ ms.locfileid: "76739521"
 
 В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  См. также раздел [Пошаговое руководство. размещение элемента управления Windows Forms в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
   
-## <a name="procedure"></a>Процедура .  
+## <a name="procedure"></a>Процедура  
   
 #### <a name="to-create-the-form"></a>Создание формы  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76739521"
   
     - Если используется Visual Basic, введите: `vbc form1.vb`  
   
-3. В командной строке введите: `Form1.exe`  
+3. В командной строке введите следующий текст: `Form1.exe`.  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработка события
 
@@ -111,7 +111,7 @@ ms.locfileid: "76739521"
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>

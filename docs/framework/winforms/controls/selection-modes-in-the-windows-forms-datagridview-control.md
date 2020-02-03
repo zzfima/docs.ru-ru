@@ -18,7 +18,7 @@ ms.locfileid: "76743036"
 
 Можно указать допустимые значения, задав для свойства <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> одно из следующих <xref:System.Windows.Forms.DataGridViewSelectionMode> значений перечисления.
 
-|Значение Датагридвиевселектионмоде|Описание|
+|Значение Датагридвиевселектионмоде|Description|
 |-------------------------------------|-----------------|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|При щелчке ячейки она выделяется. Заголовки строк и столбцов нельзя использовать для выбора.|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|При щелчке ячейки она выделяется. При щелчке заголовка столбца выделяется весь столбец. Заголовки столбцов нельзя использовать для сортировки.|
@@ -46,7 +46,7 @@ ms.locfileid: "76743036"
 > [!TIP]
 > Пример кода, демонстрирующий программное использование выбранных ячеек, можно найти в обзоре класса <xref:System.Windows.Forms.DataGridView>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>

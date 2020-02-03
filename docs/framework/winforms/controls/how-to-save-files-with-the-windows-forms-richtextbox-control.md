@@ -26,7 +26,7 @@ ms.locfileid: "76744819"
 
 Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> может записывать отображаемые сведения в одном из следующих форматов:
 
-- Обычный текст
+- с обычным текстом;
 
 - Обычный текст в Юникоде
 
@@ -36,7 +36,7 @@ ms.locfileid: "76744819"
 
 - Обычный текст с текстовым представлением объектов OLE
 
-Чтобы сохранить файл, вызовите метод <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. Можно также использовать метод **SaveFile** для сохранения данных в поток. Для получения дополнительной информации см. <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Чтобы сохранить файл, вызовите метод <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. Можно также использовать метод **SaveFile** для сохранения данных в поток. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Сохранение содержимого элемента управления в файле
 
@@ -88,7 +88,7 @@ ms.locfileid: "76744819"
     > [!IMPORTANT]
     > В этом примере создается файл (если файл отсутствует). Если приложению требуется создать файл, этому приложению требуется доступ для создания папки. Для задания разрешений используются списки управления доступом. Если файл уже существует, приложению требуется только доступ на запись, чем меньше привилегия. Там, где это возможно, более безопасно создавать файл во время развертывания и предоставлять доступ только для чтения к одному файлу, а не к папке. По тем же соображениям рекомендуется записывать данные в пользовательские папки, а не в коревую папку или папку Program Files.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>

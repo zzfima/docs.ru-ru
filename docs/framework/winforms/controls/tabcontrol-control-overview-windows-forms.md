@@ -22,7 +22,7 @@ ms.locfileid: "76742830"
 ## <a name="working-with-tabcontrol"></a>Работа с TabControl  
  Наиболее важным свойством <xref:System.Windows.Forms.TabControl> является <xref:System.Windows.Forms.TabControl.TabPages%2A>, который содержит отдельные вкладки. Каждая отдельная вкладка является объектом <xref:System.Windows.Forms.TabPage>. При нажатии на вкладку вызывается событие <xref:System.Windows.Forms.Control.Click> для этого <xref:System.Windows.Forms.TabPage> объекта.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.TabControl>
 - [Элемент управления TabControl](tabcontrol-control-windows-forms.md)

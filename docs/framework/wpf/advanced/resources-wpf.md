@@ -18,12 +18,12 @@ ms.locfileid: "76731775"
 # <a name="resources-wpf"></a>Ресурсы WPF.
 Ресурс — это объект, который можно повторно использовать в разных местах приложения. WPF поддерживает различные типы ресурсов. Эти ресурсы в основном являются двумя типами ресурсов: ресурсы XAML и файлы данных ресурсов. Примеры ресурсов XAML включают в себя кисти и стили. Файлы данных ресурсов являются неисполняемыми файлами данных, которые требуются приложению.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Ресурсы XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
- [Файлы ресурсов, содержимого и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [Файлы ресурсов, контента и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)  
  [URI типа "pack" в WPF](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.ResourceDictionary>  
   
  [Расширение разметки StaticResource](staticresource-markup-extension.md)  
@@ -32,5 +32,5 @@ ms.locfileid: "76731775"
   
  [Директива x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md)  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [XAML в WPF](xaml-in-wpf.md)

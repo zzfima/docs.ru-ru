@@ -27,7 +27,7 @@ ms.locfileid: "76743708"
 
 3. Чтобы запустить клиент, нажмите клавишу ВВОД.
 
-     Должны выводиться следующие данные:
+     Вы должны увидеть следующий результат.
 
     ```console
      Add(100,15.99) = 115.99
@@ -57,6 +57,6 @@ ms.locfileid: "76743708"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Примеры размещения и сохраняемости AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

@@ -38,6 +38,6 @@ void Deactivate()
   
  **Версия .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по неуправляемым API WPF](wpf-unmanaged-api-reference.md)

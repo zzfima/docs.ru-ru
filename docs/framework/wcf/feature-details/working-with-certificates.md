@@ -26,7 +26,7 @@ ms.locfileid: "76746890"
 
 ## <a name="viewing-certificates"></a>Просмотр сертификатов
 
-При работе с сертификатами зачастую необходимо просматривать их и проверять определенные свойства. Это легко выполняется с помощью консоли управления (MMC). (Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](how-to-view-certificates-with-the-mmc-snap-in.md).)
+При работе с сертификатами зачастую необходимо просматривать их и проверять определенные свойства. Это легко выполняется с помощью консоли управления (MMC). Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 ## <a name="certificate-stores"></a>Хранилища сертификатов
 
@@ -72,7 +72,7 @@ ms.locfileid: "76746890"
 
 При создании новой службы пользователь может использовать сертификат, который был выдан центром сертификации, отличным от доверенного, или сертификат издателя может отсутствовать в хранилище «Доверенные корневые центры сертификации». Предусмотрена возможность временного отключения механизма, проверяющего цепочку сертификатов для заданного сертификата; эта возможность должна использоваться только в процессе разработки. Чтобы отключить данный механизм, задайте для свойства `CertificateValidationMode` значение `PeerTrust` или `PeerOrChainTrust`. Эти режимы определяют, что сертификат может быть либо самостоятельно выданным (доверие одноранговой группы), либо являться частью цепочки доверия. Указанное свойство можно задать для любого из следующих классов.
 
-|Класс|Идентификаторы|
+|Class|Свойство|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -87,7 +87,7 @@ ms.locfileid: "76746890"
 
 - [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
 
-## <a name="custom-authentication"></a>Пользовательская проверка подлинности
+## <a name="custom-authentication"></a>Нестандартная проверка подлинности
 
 Свойство `CertificateValidationMode` также позволяет настроить способ проверки сертификатов. По умолчанию задано значение `ChainTrust`. Чтобы использовать значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, необходимо также установить атрибут `CustomCertificateValidatorType` для сборки и типа, которые используются при проверке сертификата. Для создания пользовательского проверяющего элемента управления необходимо наследование от абстрактного класса <xref:System.IdentityModel.Selectors.X509CertificateValidator>.
 
@@ -141,7 +141,7 @@ ms.locfileid: "76746890"
 
 В WCF часто требуется задать сертификат или набор сертификатов, который служба или клиент будут использовать для проверки подлинности, шифрования или подписи сообщения. Это можно сделать программно с помощью метода `SetCertificate` различных классов, представляющих сертификаты X.509. Следующие классы используют метод `SetCertificate` для задания сертификата.
 
-|Класс|Метод|
+|Class|Метод|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -188,10 +188,10 @@ ms.locfileid: "76746890"
 
 В первом выпуске WCF сопоставление выполняется без обращения к политике домена. Поэтому более старые приложения, которые работали при использовании первого выпуска, могут не работать, если включено сопоставление и сертификат X.509 не удовлетворяет требованиям политики домена.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -1,5 +1,5 @@
 ---
-title: Специальные возможности
+title: Возможности доступа
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, accessibility
@@ -15,18 +15,18 @@ ms.locfileid: "76746377"
 # <a name="windows-forms-accessibility"></a>Поддержка специальных возможностей в Windows Forms
 Специальные возможности Windows Forms позволяют вам сделать приложение доступным самым разным пользователям.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Пошаговое руководство. Создание приложения Windows с поддержкой специальных возможностей](walkthrough-creating-an-accessible-windows-based-application.md)  
  Описывает все функции, которые вам следует поддерживать для предоставления специальных возможностей.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:Accessibility>  
  Пространство имен, содержащее набор классов, связанных со специальными возможностями.  
   
  <xref:System.Windows.Forms.AccessibleObject>  
  Предоставляет сведения, которые приложения, предоставляющие специальные возможности, используют при настройке пользовательского интерфейса приложения для пользователей с ограниченными возможностями.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
  Описывает, как предоставить сведения, которые элементы управления Windows Forms могут использовать для помощи людям с ограниченными возможностями.  
   

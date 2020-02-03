@@ -75,11 +75,11 @@ ms.locfileid: "76740173"
   
 #### <a name="to-test-the-form"></a>Тестирование формы  
   
-- Нажмите клавишу F5, чтобы запустить приложение.  
+- Нажмите клавишу F5 для запуска приложения.  
   
      Вы увидите элемент управления <xref:System.Windows.Forms.DataGridView>, в котором отображаются песни, перечисленные в `PopulateDataGridView`. Можно добавлять новые строки с помощью кнопки **Добавить строку** , а также удалять выбранные строки с помощью кнопки **Удалить строку** . Несвязанным элементом управления <xref:System.Windows.Forms.DataGridView> является хранилище данных, и его данные не зависят от любого внешнего источника, например <xref:System.Data.DataSet> или массива.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  Это приложение предоставляет базовое представление о возможностях элемента управления <xref:System.Windows.Forms.DataGridView>. Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами.  
   
 - Изменение стилей границ и заголовков. Дополнительные сведения см. в разделе [инструкции. изменение стилей границ и линий сетки в элементе управления Windows Forms DataGridView](change-the-border-and-gridline-styles-in-the-datagrid.md).  
@@ -92,7 +92,7 @@ ms.locfileid: "76740173"
   
 - Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [как настроить внешний вид ячеек в элементе управления Windows Forms DataGridView](customize-the-appearance-of-cells-in-the-datagrid.md) и [как задать стили ячеек по умолчанию для элемента управления Windows Forms DataGridView](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)

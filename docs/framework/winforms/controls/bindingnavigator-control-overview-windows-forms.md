@@ -27,7 +27,7 @@ ms.locfileid: "76744097"
   
  В таблице ниже перечислены элементы управления и их функции.  
   
-|Элемент управления|Функция|  
+|Control|Компонент|  
 |-------------|--------------|  
 |Кнопка <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>|Вставляет новую строку в базовый источник данных.|  
 |Кнопка <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>|Удаляет текущую строку из базового источника данных.|  
@@ -42,7 +42,7 @@ ms.locfileid: "76744097"
   
  Если кнопки по умолчанию не удовлетворяют требованиям приложения или необходимо использовать дополнительные кнопки с иной функциональностью, можно создать собственные кнопки <xref:System.Windows.Forms.ToolStrip>. См. также [Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms](load-save-and-cancel-bindingnavigator.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

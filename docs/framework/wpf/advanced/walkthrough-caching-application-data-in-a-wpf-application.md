@@ -40,8 +40,8 @@ ms.locfileid: "76728056"
 
 - Мониторинг пути к кэшированному файлу и уведомление экземпляра кэша об изменениях отслеживаемого элемента.
 
-## <a name="prerequisites"></a>Prerequisites
- Для выполнения данного пошагового руководства требуется:
+## <a name="prerequisites"></a>предварительные требования
+ Для выполнения задач этого руководства необходимы:
 
 - Visual Studio 2010.
 
@@ -56,7 +56,7 @@ ms.locfileid: "76728056"
 
 #### <a name="to-create-a-wpf-application"></a>Создание приложения WPF
 
-1. Запустите Visual Studio.
+1. Запустите среду Visual Studio.
 
 2. В меню **файл** выберите пункт **создать**, а затем щелкните **Новый проект**.
 
@@ -288,7 +288,7 @@ ms.locfileid: "76728056"
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>Тестирование кэширования в приложении WPF
 
-1. Нажмите CTRL+F5, чтобы запустить приложение.
+1. Для запуска приложения нажмите сочетание клавиш CTRL+F5.
 
      Откроется окно `MainWindow`.
 
@@ -325,7 +325,7 @@ ms.locfileid: "76728056"
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

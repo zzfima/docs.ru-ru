@@ -1,5 +1,5 @@
 ---
-title: Элемент управления BindingNavigator
+title: BindingNavigator — элемент управления
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BindingNavigator control [Windows Forms]
@@ -18,7 +18,7 @@ ms.locfileid: "76744381"
   
  В этом разделе содержится обзор элемента управления `BindingNavigator` и проводятся пошаговые инструкции по его использованию для перехода по данным и перемещения в <xref:System.Data.DataSet>.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления BindingNavigator](bindingnavigator-control-overview-windows-forms.md)  
  Основные понятия, связанные с элементом управления `BindingNavigator`, позволяющим пользователям переходить по элементам источника данных.  
   
@@ -30,12 +30,12 @@ ms.locfileid: "76744381"
   
  См. также [Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms](load-save-and-cancel-bindingnavigator.md).  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.BindingNavigator>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.BindingNavigator>.  
   
  <xref:System.Windows.Forms.BindingSource>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.BindingSource>.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

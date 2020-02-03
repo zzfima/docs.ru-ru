@@ -26,7 +26,7 @@ ms.locfileid: "76743099"
 
 При добавлении в форму <xref:System.Windows.Forms.SaveFileDialog> компонент отображается в области в нижней части конструктор Windows Forms в Visual Studio.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [Компонент SaveFileDialog](savefiledialog-component-windows-forms.md)

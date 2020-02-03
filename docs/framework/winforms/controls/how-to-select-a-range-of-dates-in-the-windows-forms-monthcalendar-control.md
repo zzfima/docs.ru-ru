@@ -55,9 +55,9 @@ ms.locfileid: "76732893"
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     – или –  
+     –или–  
   
-     Задайте свойства <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> и <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>.  
+     Укажите свойства <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> и <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>.  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,7 +74,7 @@ ms.locfileid: "76732893"
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления MonthCalendar](monthcalendar-control-windows-forms.md)
 - [Практическое руководство. Изменение внешнего вида элемента управления MonthCalendar в Windows Forms](how-to-change-monthcalendar-control-appearance.md)

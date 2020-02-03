@@ -43,7 +43,7 @@ WCF поддерживает подмножество функций в прил
 
 WCF можно использовать для взаимодействия с удаленными серверами из приложений с частичным доверием, развернутых либо [развертыванием ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) , либо XBAP. Набор разрешений зоны Интернета включает <xref:System.Net.WebPermission> для исходного узла, который позволяет этим приложениям взаимодействовать с исходным сервером с помощью любой из поддерживаемых привязок WCF, описанных в статье [совместимость функций частичного доверия](partial-trust-feature-compatibility.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Управление доступом для кода](../../misc/code-access-security.md)
 - [Общие сведения о приложениях, размещенных в браузере Windows Presentation Foundation](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)

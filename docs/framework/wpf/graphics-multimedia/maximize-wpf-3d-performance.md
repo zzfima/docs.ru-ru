@@ -18,7 +18,7 @@ ms.locfileid: "76744593"
   
 ## <a name="performance-impact-high"></a>Влияние на производительность: высокая  
   
-|Идентификаторы|Рекомендация|  
+|Свойство|Рекомендация|  
 |-|-|  
 |<xref:System.Windows.Media.Brush>|Скорость кисти (от самой быстрой к самой медленной):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (кэшировано)<br /><br /> <xref:System.Windows.Media.VisualBrush> (кэшировано)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (не кэшировано)<br /><br /> <xref:System.Windows.Media.VisualBrush> (не кэшировано)|  
 |<xref:System.Windows.UIElement.ClipToBoundsProperty>|Установите `Viewport3D.ClipToBounds` в значение false, если нет необходимости [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] явным образом вырезать содержимое <xref:System.Windows.Controls.Viewport3D> в прямоугольник Viewport3D's. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обрезка с сглаживанием может быть очень высокой, и `ClipToBounds` по умолчанию включена (замедляют) на <xref:System.Windows.Controls.Viewport3D>.|  
@@ -26,13 +26,13 @@ ms.locfileid: "76744593"
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|Создавайте разные модели, только если они нуждаются в различных материалах или преобразованиях.  В противном случае попробуйте объединить множество экземпляров <xref:System.Windows.Media.Media3D.GeometryModel3D> с теми же материалами и преобразованиями в несколько более крупных экземпляров <xref:System.Windows.Media.Media3D.GeometryModel3D> и <xref:System.Windows.Media.Media3D.MeshGeometry3D>.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Анимация в виде сетки — изменение отдельных вершин сетки на основе каждого кадра — не всегда эффективно в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Чтобы уменьшить влияние уведомлений об изменениях на производительность при изменении каждой вершины, отсоедините сетку от визуального дерева, прежде чем выполнять изменение каждой вершины.  После изменения сетки повторно присоедините ее к визуальному дереву.  Кроме того, старайтесь не сокращать размер сеток, которые будут анимированы таким образом.|  
 |Трехмерное сглаживание|Чтобы увеличить скорость рендеринга, отключите многовыборочную выборку на <xref:System.Windows.Controls.Viewport3D>, установив для присоединенного свойства <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> значение `Aliased`.  По умолчанию Трехмерное сглаживание включено в Windows с 4 примерами на пиксель.|  
-|Текст|Динамический текст в трехмерной сцене (динамический, так как он находится в <xref:System.Windows.Media.DrawingBrush> или <xref:System.Windows.Media.VisualBrush>) может быть слишком высокой. Попробуйте использовать изображения текста (с помощью <xref:System.Windows.Media.Imaging.RenderTargetBitmap>), если текст не изменится.|  
+|текст|Динамический текст в трехмерной сцене (динамический, так как он находится в <xref:System.Windows.Media.DrawingBrush> или <xref:System.Windows.Media.VisualBrush>) может быть слишком высокой. Попробуйте использовать изображения текста (с помощью <xref:System.Windows.Media.Imaging.RenderTargetBitmap>), если текст не изменится.|  
 |<xref:System.Windows.Media.TileBrush>|Если необходимо использовать <xref:System.Windows.Media.VisualBrush> или <xref:System.Windows.Media.DrawingBrush> в трехмерной сцене, так как содержимое кисти не является статическим, попробуйте выполнить кэширование кисти (установив для присоединенного свойства <xref:System.Windows.Media.RenderOptions.CachingHint%2A> значение `Cache`).  Задайте минимальные и максимальные пороги недействительности шкалы (с присоединенными свойствами <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> и <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>), чтобы кэшированные кисти не создавались слишком часто, сохраняя требуемый уровень качества.  По умолчанию <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush> не кэшируются, то есть каждый раз, когда все, что закрашено кистью, необходимо повторно визуализировать, все содержимое этой кисти сначала должно быть повторно подготовлено к промежуточной поверхности.|  
 |<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> заставляет все затронутое содержимое подготавливаться к просмотру без аппаратного ускорения.  Для лучшей производительности не используйте <xref:System.Windows.Media.Effects.BitmapEffect>.|  
   
 ## <a name="performance-impact-medium"></a>Влияние на производительность: средний  
   
-|Идентификаторы|Рекомендация|  
+|Свойство|Рекомендация|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Если сетка определена как смежные треугольники с общими вершинами и эти вершины имеют одинаковое расположение, нормаль и координаты текстуры, определите каждую общую вершину только один раз, а затем определите треугольники по индексу с помощью <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>.|  
 |<xref:System.Windows.Media.ImageBrush>|Старайтесь максимально сокращать размеры текстур при наличии явного контроля над размером (при использовании <xref:System.Windows.Media.Imaging.RenderTargetBitmap> и (или) <xref:System.Windows.Media.ImageBrush>).  Обратите внимание, что текстуры с низким разрешением могут уменьшить качество визуального элемента, поэтому попробуйте найти правильный баланс между качеством и производительностью.|  
@@ -50,7 +50,7 @@ ms.locfileid: "76744593"
   
 ## <a name="performance-impact-low"></a>Влияние на производительность: низкое  
   
-|Идентификаторы|Рекомендация|  
+|Свойство|Рекомендация|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.Transform3DGroup>|Если анимация или привязка данных не нужна, вместо использования группы преобразования, содержащей несколько преобразований, используйте один <xref:System.Windows.Media.Media3D.MatrixTransform3D>, указав в качестве продукта все преобразования, которые в противном случае существуют в группе преобразования независимо друг от друга.|  
 |<xref:System.Windows.Media.Media3D.Light>|Сократите число источников света в сцене. Слишком много источников света в сцене принуждает [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] к отрисовке программного обеспечения.  Ограничения — примерно 110 <xref:System.Windows.Media.Media3D.DirectionalLight> объектов, 70 <xref:System.Windows.Media.Media3D.PointLight> объектов или 40 <xref:System.Windows.Media.Media3D.SpotLight> объектов.|  
@@ -59,6 +59,6 @@ ms.locfileid: "76744593"
 |Светлый|Черные лампочки не будут видны, но они будут добавляться к времени визуализации. Рассмотрите возможность опустить их.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Чтобы максимально сокращать время создания больших коллекций в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], например <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>MeshGeometry3D's, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>и <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, перед заполнением значения следует предварительно задать размер коллекций. Если это возможно, передайте конструкторам коллекций предварительно заполненные структуры данных, такие как массивы или списки.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Обзор трехмерной графики](3-d-graphics-overview.md)

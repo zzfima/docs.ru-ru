@@ -23,7 +23,7 @@ ms.locfileid: "76742246"
   
  Вы можете создать файлы HTML Help 1. x с помощью справки HTML. Дополнительные сведения о HTML-справке см. в подразделах «Справка HTML» или в других разделах «Справка HTML» в MSDN.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интеграция справки пользователя в формы Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Компонент HelpProvider](../controls/helpprovider-component-windows-forms.md)

@@ -31,6 +31,6 @@ enum PresentationHostCommands {
   
  PHCMDID_TABINTO предписывает среде PresentationHost переключить фокус на первый или последний фокусный элемент в своем содержимом в зависимости от состояния клавиши Shift.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
  [IWpfHostSupport](iwpfhostsupport.md)

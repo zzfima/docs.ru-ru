@@ -18,17 +18,17 @@ ms.locfileid: "76739006"
 # <a name="windows-in-wpf-applications"></a>Окна в приложениях WPF
 Пользователи взаимодействуют с приложениями через Windows. Основной целью окна является размещение и отображение содержимого. Тип содержимого, размещаемого в окне, зависит от типа данных, над которыми работает приложение, которое может включать мультимедиа, XAML страницы (XAML), веб-страницы, документы, таблицы базы данных и записи, а также сведения о системе.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об окнах WPF](wpf-windows-overview.md)  
  [Общие сведения о диалоговых окнах](dialog-boxes-overview.md)  
- [Практические руководства](window-management-how-to-topics.md)  
+ [Разделы практического руководства](window-management-how-to-topics.md)  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Общие сведения об управлении приложением](application-management-overview.md)  
   [Общие сведения о переходах](navigation-overview.md)  
   [Размещение](hosting-wpf-applications.md)  

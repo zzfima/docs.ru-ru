@@ -27,7 +27,7 @@ ms.locfileid: "76728574"
   
  Эта возможность поддерживается во время разработки в Visual Studio. См. также раздел [Пошаговое руководство. размещение элементов управления Windows Forms с заполнением, полями и свойством AutoSize](windows-forms-controls-padding-autosize.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>

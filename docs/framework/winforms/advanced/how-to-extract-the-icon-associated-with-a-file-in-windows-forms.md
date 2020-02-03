@@ -32,7 +32,7 @@ ms.locfileid: "76742539"
   
      Необходимо убедиться, что форма импортирует пространство имен <xref:System.IO>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
 - [Элемент управления ListView](../controls/listview-control-windows-forms.md)

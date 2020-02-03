@@ -68,7 +68,7 @@ ms.locfileid: "76744060"
   
 - ссылки на сборки System, System.Windows.Forms и System.Drawing.  
  
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>

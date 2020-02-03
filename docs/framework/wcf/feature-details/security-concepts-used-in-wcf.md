@@ -48,7 +48,7 @@ ms.locfileid: "76743880"
   
  Дополнительные сведения об этих разделах см. в разделе [механизмы управления доступом](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md) .  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

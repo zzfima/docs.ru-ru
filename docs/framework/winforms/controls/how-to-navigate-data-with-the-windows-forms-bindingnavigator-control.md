@@ -51,7 +51,7 @@ ms.locfileid: "76736009"
   
 - ссылки на сборки System, System.Data, System.Drawing, System.Windows.Forms и System.Xml.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md)

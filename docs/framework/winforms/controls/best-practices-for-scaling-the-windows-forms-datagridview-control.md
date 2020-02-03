@@ -142,7 +142,7 @@ ms.locfileid: "76744135"
 
 - Не вызывайте перегрузку `Sort(IComparer)` метода <xref:System.Windows.Forms.DataGridView.Sort%2A>. При сортировке с помощью пользовательского компаратора все строки становятся недоступными.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)

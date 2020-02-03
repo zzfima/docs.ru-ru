@@ -37,7 +37,7 @@ ms.locfileid: "76743024"
     numericUpDown1->Value = 55;  
     ```  
   
-     \- или -  
+     -или-  
   
 2. Вызовите метод <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> или <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>, чтобы увеличить или уменьшить значение на величину, указанную в свойстве <xref:System.Windows.Forms.NumericUpDown.Increment%2A>.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "76743024"
     }  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>

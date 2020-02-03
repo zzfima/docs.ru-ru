@@ -26,7 +26,7 @@ ms.locfileid: "76745788"
 > [!NOTE]
 > Компонент <xref:System.Windows.Forms.ErrorProvider> не предоставляет встроенную поддержку клиентов специальных возможностей. Чтобы сделать приложение доступным при использовании этого компонента, необходимо предоставить дополнительный, доступный механизм обратной связи.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ErrorProvider>
 - [Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

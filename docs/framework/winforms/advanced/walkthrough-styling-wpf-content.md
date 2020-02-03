@@ -20,7 +20,7 @@ ms.locfileid: "76732542"
 
 В этой статье показано, как применять стили к элементу управления Windows Presentation Foundation (WPF), размещенному в форме Windows Forms.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -45,7 +45,7 @@ ms.locfileid: "76732542"
 
 5. Добавьте второй элемент управления <xref:System.Windows.Controls.Button?displayProperty=nameWithType> в <xref:System.Windows.Controls.UserControl> и присвойте свойству <xref:System.Windows.Controls.ContentControl.Content%2A> значение **ОК**.
 
-6. Постройте проект.
+6. Создайте проект.
 
 ## <a name="apply-a-style-to-a-wpf-control"></a>Применение стиля к элементу управления WPF
 
@@ -124,7 +124,7 @@ ms.locfileid: "76732542"
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-1. Постройте проект.
+1. Создайте проект.
 
 1. Откройте `Form1` в конструкторе Windows Forms.
 
@@ -134,12 +134,12 @@ ms.locfileid: "76732542"
 
 1. Нажмите кнопки **ОК** и **Отмена** и просмотрите различия.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
 - [Использование элементов управления WPF](using-wpf-controls.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [Общие сведения о языке XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [Обзор XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [Использование стилей и шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

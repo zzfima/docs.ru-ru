@@ -18,9 +18,9 @@ ms.locfileid: "76741877"
 
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] — это язык разметки для декларативного программирования приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] реализует реализацию процессора XAML и обеспечивает поддержку языка XAML. Типы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализуются так, что они могут обеспечить резервное копирование требуемого типа для представления XAML. Как правило, большинство пользовательских интерфейсов приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] можно создать в разметке XAML.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 
-[Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)  
+[Обзор XAML (WPF)](xaml-overview-wpf.md)  
 [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)  
 [Код программной части и XAML в WPF](code-behind-and-xaml-in-wpf.md)  
 [Код XAML и пользовательские классы для WPF](xaml-and-custom-classes-for-wpf.md)  
@@ -35,7 +35,7 @@ ms.locfileid: "76741877"
 [Расширения XAML WPF](wpf-xaml-extensions.md)  
 [Возможности языка: совместимость разметки (mc:)](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
 
 [Архитектура WPF](wpf-architecture.md)  
 [Базовые элементы](base-elements.md)  
@@ -44,5 +44,5 @@ ms.locfileid: "76741877"
 [События](events-wpf.md)  
 [Ввод](input-wpf.md)  
 [Ресурсы](resources-wpf.md)  
-[Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+[Использование стилей и шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
 [Потоковая модель](threading-model.md)

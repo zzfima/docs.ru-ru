@@ -30,14 +30,14 @@ ms.locfileid: "76743397"
   
  В этом разделе описываются параметры командной строки, которые можно использовать с PresentationHost.exe.  
   
-## <a name="usage"></a>Метрики  
+## <a name="usage"></a>Использование  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|имя_файла|Путь к файлу, который нужно активировать. Также может быть URI.|  
+|filename|Путь к файлу, который нужно активировать. Также может быть URI.|  
 |-debug|При активации приложения не фиксирует его в хранилище и не запускает из хранилища. Работает только при активации локального файла.|  
 |-debugSecurityZoneURL \<url>|Используется со значением URL-адреса, чтобы указать PresentationHost. exe, что приложение должно быть отлажено, как если бы оно было развернуто с указанного URL-адреса. Это определяет как зону развертывания, так и исходный узел.|  
 |-embedding|Требуется для OLE. Если указан параметр `-event` или `-debug`, то не обязательно указывать параметр `-embedding`, поскольку он устанавливается внутренне.|  
@@ -58,6 +58,6 @@ ms.locfileid: "76743397"
 ### <a name="visual-studio-debugging-in-zone"></a>Visual Studio, отладка в зоне  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Security](../security-wpf.md)
+- [Безопасность](../security-wpf.md)

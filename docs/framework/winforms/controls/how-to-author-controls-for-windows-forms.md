@@ -50,7 +50,7 @@ ms.locfileid: "76746716"
 
 10. Упакуйте и разверните элемент управления. Дополнительные сведения см. [в разделе первое знакомство с развертыванием в Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Наследование класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Практическое руководство. Наследование класса Control](how-to-inherit-from-the-control-class.md)

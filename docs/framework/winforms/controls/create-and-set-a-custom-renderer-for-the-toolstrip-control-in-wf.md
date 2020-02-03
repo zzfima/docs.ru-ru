@@ -29,7 +29,7 @@ ms.locfileid: "76743420"
   
 1. Расширьте класс <xref:System.Windows.Forms.ToolStripRenderer>.  
   
-2. Реализуйте требуемую пользовательскую отрисовку, переопределив подходящую *для...* Члены  
+2. Реализуйте требуемую пользовательскую отрисовку, переопределив подходящую *для...* members  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -81,7 +81,7 @@ ms.locfileid: "76743420"
     ToolStripManager.Renderer = new RedTextRenderer();  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>

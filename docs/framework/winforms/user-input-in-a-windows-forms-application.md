@@ -31,7 +31,7 @@ ms.locfileid: "76734805"
   
  Сообщения клавиатуры и мыши также обрабатываются дополнительным набором переопределяемых методов, характерных для этих типов сообщений. Дополнительные сведения см. в разделе [как работают ввод с клавиатуры](how-keyboard-input-works.md) и [как работает ввод с помощью мыши в Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Ввод данных пользователем в Windows Forms](user-input-in-windows-forms.md)
 - [Ввод с клавиатуры в приложении Windows Forms](keyboard-input-in-a-windows-forms-application.md)

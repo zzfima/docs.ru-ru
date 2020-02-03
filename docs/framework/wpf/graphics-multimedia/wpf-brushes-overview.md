@@ -26,7 +26,7 @@ ms.locfileid: "76746205"
   
  Большинство визуальных объектов позволяют указать, как они рисуются. В следующей таблице перечислены некоторые распространенные объекты и свойства, с помощью которых можно использовать <xref:System.Windows.Media.Brush>.  
   
-|Класс|Свойства кисти|  
+|Class|Свойства кисти|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
@@ -160,15 +160,15 @@ ms.locfileid: "76746205"
   
  Дополнительные сведения о том, почему <xref:System.Windows.Media.VisualBrush> объекты не могут быть заморожены, см. на странице типа <xref:System.Windows.Media.VisualBrush>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
-- [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
+- [Общие сведения о закрашивании сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
+- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
 - [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Пример ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Практические руководства](brushes-how-to-topics.md)
+- [Разделы практического руководства](brushes-how-to-topics.md)
 - [Дополнительные рекомендации по повышению производительности](../advanced/optimizing-performance-other-recommendations.md)

@@ -53,7 +53,7 @@ ms.locfileid: "76742032"
     > [!NOTE]
     > При привязке к источнику данных, который не реализует интерфейс <xref:System.ComponentModel.IBindingList>, например <xref:System.Collections.ArrayList>, данные привязанного элемента управления не будут обновляться при обновлении источника данных. Например, если имеется поле со списком, привязанное к <xref:System.Collections.ArrayList> и данные добавляются в <xref:System.Collections.ArrayList>, эти новые элементы не будут отображаться в поле со списком. Однако можно принудительно обновить поле со списком, вызвав методы <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> и <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> в экземпляре <xref:System.Windows.Forms.BindingContext> класса, к которому привязан элемент управления.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

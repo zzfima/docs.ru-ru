@@ -37,7 +37,7 @@ ms.locfileid: "76739050"
   
  В следующей таблице описывается значение и типичное использование доступных действий слияния.  
   
-|Значение Мержеактион|Описание|Типичные случаи использования|  
+|Значение Мержеактион|Description|Типичное применение|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|Параметры Добавляет исходный элемент в конец коллекции целевого элемента.|Добавление пунктов меню в конец меню при активации некоторой части программы.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Добавляет исходный элемент в коллекцию целевого элемента в расположении, заданном свойством <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>, заданным для исходного элемента.|Добавление пунктов меню в середину или начало меню при активации некоторой части программы.<br /><br /> Если значение <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> одинаково для обоих пунктов меню, они добавляются в обратный порядок. Установите <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> соответствующим образом, чтобы сохранить исходный порядок.|  
@@ -53,7 +53,7 @@ ms.locfileid: "76739050"
   
  Вы можете активировать автоматическое слияние, активируя <xref:System.Windows.Forms.MenuStrip> в источнике MDI. После активации исходный <xref:System.Windows.Forms.MenuStrip> объединяется с объектом MDI. Когда новая форма становится активной, слияние возвращается в последнюю форму и активируется в новой форме. Это поведение можно контролировать, настроив свойство <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> по мере необходимости для каждого <xref:System.Windows.Forms.ToolStripItem>и установив свойство <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> для каждого <xref:System.Windows.Forms.MenuStrip>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>

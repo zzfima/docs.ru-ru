@@ -59,7 +59,7 @@ ms.locfileid: "76745881"
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     – или –  
+     –или–  
   
      Сделайте набор дат жирным, создав массив объектов <xref:System.DateTime> и назначив их одному из свойств.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "76745881"
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     – или –  
+     –или–  
   
      Удалите все даты, выделенные жирным шрифтом, из одного из трех списков, вызвав метод <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>или <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A>.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "76745881"
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления MonthCalendar](monthcalendar-control-windows-forms.md)
 - [Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

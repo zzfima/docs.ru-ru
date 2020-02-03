@@ -85,7 +85,7 @@ ms.locfileid: "76736480"
 
 1. Сохраните и проверьте элемент управления.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
 - [Практическое руководство. Наследование класса Control](how-to-inherit-from-the-control-class.md)

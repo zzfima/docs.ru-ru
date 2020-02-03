@@ -34,7 +34,7 @@ ms.locfileid: "76731186"
   
  В приведенной ниже таблице показаны пользовательские свойства, которые определяет `FlashTrackBar`.  
   
-|Идентификаторы|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |`AllowUserEdit`|Указывает, может ли пользователь изменить значение полосы прокрутки флеш-памяти, щелкнув его и перетащив.|  
 |`EndColor`|Определяет конечный цвет полосы прокрутки.|  
@@ -49,7 +49,7 @@ ms.locfileid: "76731186"
   
  В следующей таблице показаны дополнительные элементы, определяемые событием изменения свойства `FlashTrackBar:` и методом, который вызывает это событие.  
   
-|Член|Описание|  
+|Участник|Description|  
 |------------|-----------------|  
 |`ValueChanged`|Событие, которое возникает при изменении свойства `Value` полосы ползунка.|  
 |`OnValueChanged`|Метод, который вызывает событие `ValueChanged`.|  
@@ -92,7 +92,7 @@ ms.locfileid: "76731186"
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Основы разработки элементов управления форм Windows Forms](windows-forms-control-development-basics.md)

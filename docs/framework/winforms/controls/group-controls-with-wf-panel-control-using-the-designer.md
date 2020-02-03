@@ -26,7 +26,7 @@ Windows Forms элементы управления <xref:System.Windows.Forms.P
 
 3. Используемых Если вы хотите добавить на панель границу, задайте ее свойство <xref:System.Windows.Forms.BorderStyle>. Существует три варианта: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>и <xref:System.Windows.Forms.BorderStyle.None>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления Panel](panel-control-windows-forms.md)
 - [Общие сведения об элементе управления Panel](panel-control-overview-windows-forms.md)

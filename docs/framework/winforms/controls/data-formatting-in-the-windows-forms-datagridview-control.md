@@ -31,7 +31,7 @@ ms.locfileid: "76743984"
   
  Если синтаксический анализ по умолчанию определяемых пользователем значений не соответствует вашим потребностям, можно обработать событие <xref:System.Windows.Forms.DataGridView.CellParsing> элемента управления <xref:System.Windows.Forms.DataGridView>, чтобы обеспечить пользовательский синтаксический анализ.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

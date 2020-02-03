@@ -54,7 +54,7 @@ ms.locfileid: "76746264"
 
 5. В диалоговом окне **Свойства** редактора коллекции выберите <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> значение для столбца, который необходимо отобразить.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
 - [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

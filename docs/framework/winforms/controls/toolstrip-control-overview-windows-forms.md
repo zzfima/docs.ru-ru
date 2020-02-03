@@ -46,7 +46,7 @@ ms.locfileid: "76741074"
   
 ### <a name="important-toolstrip-members"></a>Важные элементы ToolStrip  
   
-|Name|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Возвращает или задает границу родительского контейнера, к которому прикреплена <xref:System.Windows.Forms.ToolStrip>.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Возвращает или задает значение, указывающее, будут ли операции перетаскивания и переупорядочения элементов обрабатываться классом <xref:System.Windows.Forms.ToolStrip> в закрытом режиме.|  
@@ -55,23 +55,23 @@ ms.locfileid: "76741074"
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|Возвращает значение, указывающее, отображает ли <xref:System.Windows.Forms.ToolStripItem> другие элементы в раскрывающемся списке при нажатии <xref:System.Windows.Forms.ToolStripItem>.|  
 |<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|Возвращает значение элемента <xref:System.Windows.Forms.ToolStripItem>, который является кнопкой переполнения для элемента управления <xref:System.Windows.Forms.ToolStrip> с включенной функцией переполнения.|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|Возвращает или задает <xref:System.Windows.Forms.ToolStripRenderer>, используемую для настройки внешнего вида и поведения (внешнего вида) <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Возвращает или задает стили рисования, применяемые к <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Возникает при изменении свойства <xref:System.Windows.Forms.ToolStrip.Renderer%2A>.|  
+|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Возвращает или задает стили оформления для элемента управления <xref:System.Windows.Forms.ToolStrip>.|  
+|<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Используется при изменении свойства <xref:System.Windows.Forms.ToolStrip.Renderer%2A>.|  
   
  Гибкость элемента управления <xref:System.Windows.Forms.ToolStrip> достигается за счет использования нескольких сопутствующих классов. Ниже приведены некоторые из наиболее значимых.  
   
 ### <a name="important-toolstrip-companion-classes"></a>Важные сопутствующие классы ToolStrip  
   
-|Name|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Заменяет и добавляет функциональные возможности в класс <xref:System.Windows.Forms.MainMenu>.|  
 |<xref:System.Windows.Forms.StatusStrip>|Заменяет и добавляет функциональные возможности в класс <xref:System.Windows.Forms.StatusBar>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Заменяет и добавляет функциональные возможности в класс <xref:System.Windows.Forms.ContextMenu>.|  
 |<xref:System.Windows.Forms.ToolStripItem>|Абстрактный базовый класс, который управляет событиями и макетом для всех элементов, которые могут содержаться в <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripControlHost>или <xref:System.Windows.Forms.ToolStripDropDown>.|  
 |<xref:System.Windows.Forms.ToolStripContainer>|Предоставляет контейнер с панелью на каждой стороне формы, в которой элементы управления могут быть упорядочены различными способами.|  
-|<xref:System.Windows.Forms.ToolStripRenderer>|Обрабатывает функциональные возможности рисования для <xref:System.Windows.Forms.ToolStrip> объектов.|  
+|<xref:System.Windows.Forms.ToolStripRenderer>|Выполняет функции рисования для объектов <xref:System.Windows.Forms.ToolStrip>.|  
 |<xref:System.Windows.Forms.ToolStripProfessionalRenderer>|Обеспечивает внешний вид в стиле Microsoft Office.|  
-|<xref:System.Windows.Forms.ToolStripManager>|Элементы управления <xref:System.Windows.Forms.ToolStrip> отрисовку и нависания, а также слияние <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>и объектов <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripManager>|Управляет отрисовкой и нависанием элемента управления <xref:System.Windows.Forms.ToolStrip>, а также слиянием объектов <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu> и <xref:System.Windows.Forms.ToolStripMenuItem>.|  
 |<xref:System.Windows.Forms.ToolStripManagerRenderMode>|Задает стиль рисования (настраиваемый, Windows XP или Microsoft Office Professional), применяемый к нескольким <xref:System.Windows.Forms.ToolStrip> объектам в форме.|  
 |<xref:System.Windows.Forms.ToolStripRenderMode>|Задает стиль рисования (настраиваемый, Windows XP или Microsoft Office Professional), применяемый к одному <xref:System.Windows.Forms.ToolStrip> объекту в форме.|  
 |<xref:System.Windows.Forms.ToolStripControlHost>|Содержит другие элементы управления, не <xref:System.Windows.Forms.ToolStrip> элементы управления, для которых требуется <xref:System.Windows.Forms.ToolStrip> функциональность.|  
@@ -79,7 +79,7 @@ ms.locfileid: "76741074"
   
  Дополнительные сведения см. в разделе Структура [технологии ToolStrip](toolstrip-technology-summary.md) и [архитектура элемента управления ToolStrip](toolstrip-control-architecture.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

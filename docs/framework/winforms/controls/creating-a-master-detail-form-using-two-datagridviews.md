@@ -25,9 +25,9 @@ ms.locfileid: "76740581"
 
 Чтобы скопировать код из этого раздела в виде одного списка, см. раздел [как создать форму "основной/подробности" с помощью двух элементов управления Windows Forms DataGridView](create-a-master-detail-form-using-two-datagridviews.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
-Для выполнения данного пошагового руководства требуется:
+Для выполнения задач этого руководства необходимы:
 
 - Доступ к серверу с образцом базы данных Northwind SQL Server.
 
@@ -65,7 +65,7 @@ ms.locfileid: "76740581"
 
   Вы увидите два элемента управления <xref:System.Windows.Forms.DataGridView>, один над другим. В верхней части представлены клиенты из таблицы Northwind `Customers`, а внизу — `Orders`, соответствующий выбранному клиенту. При выборе различных строк в верхнем <xref:System.Windows.Forms.DataGridView>содержимое нижнего <xref:System.Windows.Forms.DataGridView> меняется соответствующим образом.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Next Steps
 
 Это приложение предоставляет базовое представление о возможностях элемента управления <xref:System.Windows.Forms.DataGridView>. Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами.
 
@@ -79,7 +79,7 @@ ms.locfileid: "76740581"
 
 - Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [как настроить внешний вид ячеек в элементе управления Windows Forms DataGridView](customize-the-appearance-of-cells-in-the-datagrid.md) и [как задать стили ячеек по умолчанию для элемента управления Windows Forms DataGridView](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

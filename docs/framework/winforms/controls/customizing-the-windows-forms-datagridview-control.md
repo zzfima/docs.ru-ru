@@ -17,7 +17,7 @@ ms.locfileid: "76744021"
   
  Для самостоятельного заполнения ячеек и строк можно обрабатывать различные события рисования `DataGridView`. Чтобы изменить существующие функциональные возможности или предоставить новые функциональные возможности, можно создать собственные типы, производные от существующих типов `DataGridViewCell`, `DataGridViewColumn`и `DataGridViewRow`. Можно также предоставить новые возможности редактирования, создав производные типы, которые отображают выбираемый элемент управления, когда ячейка находится в режиме редактирования.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
  Описывает, как обрабатывать событие <xref:System.Windows.Forms.DataGridView.CellPainting> для ручного заполнения ячеек.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "76744021"
  [Практическое руководство. Размещение элементов управления в ячейках элемента управления DataGridView в Windows Forms](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  Описывает, как реализовать интерфейс `IDataGridViewEditingControl` и создавать пользовательские типы, производные от `DataGridViewCell` и `DataGridViewColumn` для отображения элемента управления <xref:System.Windows.Forms.DateTimePicker>, когда ячейка находится в режиме редактирования.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "76744021"
  <xref:System.Windows.Forms.IDataGridViewEditingControl>  
  Содержит справочную документацию по интерфейсу <xref:System.Windows.Forms.IDataGridViewEditingControl>.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Базовое форматирование и оформление элемента управления DataGridView в Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  Разделы, описывающие способы изменения базового внешнего вида элемента управления и форматирования отображаемых данных ячейки.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

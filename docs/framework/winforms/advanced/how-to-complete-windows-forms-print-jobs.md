@@ -80,7 +80,7 @@ ms.locfileid: "76746489"
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Поддержка печати в Windows Forms](windows-forms-print-support.md)

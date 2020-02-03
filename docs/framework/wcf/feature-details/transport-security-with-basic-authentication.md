@@ -17,17 +17,17 @@ ms.locfileid: "76742700"
   
  ![Снимок экрана, показывающий безопасность транспорта с обычной проверкой подлинности.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Режим безопасности|Transport|  
-|Взаимодействие|С существующими службами и клиентами веб-служб|  
+|Режим безопасности|Транспортировка|  
+|Совместимость|С существующими службами и клиентами веб-служб|  
 |Проверка подлинности (сервера)<br /><br /> Проверка подлинности (клиента)|Да (по протоколу HTTPS)<br /><br /> Да (по имени/паролю пользователя)|  
 |Целостность|Да|  
 |Конфиденциальность|Да|  
-|Transport|HTTPS|  
+|Транспортировка|HTTPS|  
 |Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Service  
+## <a name="service"></a>Служба  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономную службу, используя код без конфигурации.  
@@ -69,7 +69,7 @@ ms.locfileid: "76742700"
 </configuration>  
 ```  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>клиент  
   
 ### <a name="code"></a>Код  
  В следующем примере кода демонстрируется код клиента, который содержит имя и пароль пользователя. Обратите внимание, что пользователь должен предоставить действительные имя и пароль пользователя в Windows. В данном разделе не представлен код, возвращающий имя и пароль пользователя. Используйте диалоговое окно или другой интерфейс, чтобы запросить пользователя об этой информации.  
@@ -110,12 +110,12 @@ ms.locfileid: "76742700"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Практическое руководство. Настройка порта с использованием SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

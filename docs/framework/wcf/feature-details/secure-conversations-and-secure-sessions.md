@@ -16,7 +16,7 @@ ms.locfileid: "76746461"
   
  Дополнительные сведения о сеансах см. [в разделе Использование сеансов](../../../../docs/framework/wcf/using-sessions.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Сеансы, экземпляры и параллелизм](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [Практическое руководство. Создание службы, для которой требуются сеансы](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

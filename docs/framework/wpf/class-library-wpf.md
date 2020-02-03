@@ -15,9 +15,9 @@ ms.locfileid: "76742291"
 # <a name="class-library-wpf"></a>Библиотека классов (WPF)
 Следующие ссылки относятся к пространствам имен, содержащим [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   

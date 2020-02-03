@@ -23,7 +23,7 @@ ms.locfileid: "76728710"
     > [!NOTE]
     > Чтобы сделать элемент управления доступным только для чтения, снимите флажок **включить редактирование** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>

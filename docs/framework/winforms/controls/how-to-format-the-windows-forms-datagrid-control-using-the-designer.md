@@ -41,7 +41,7 @@ ms.locfileid: "76736793"
 
 2. В окне **Свойства** задайте следующие свойства, если это уместно.
 
-    |Идентификаторы|Описание|
+    |Свойство|Description|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Свойство `BackColor` определяет цвет строк сетки с четными номерами. Если для свойства <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> задан другой цвет, для каждой другой строки задается этот новый цвет (строки 1, 3, 5 и т. д.).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Цвет фона строк сетки с четными номерами (строки 0, 2, 4, 6 и т. д.).|
@@ -95,7 +95,7 @@ ms.locfileid: "76736793"
     > [!NOTE]
     > Дополнительные сведения о строках форматирования см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>

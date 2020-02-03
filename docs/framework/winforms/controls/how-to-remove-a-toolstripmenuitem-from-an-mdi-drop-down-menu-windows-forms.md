@@ -44,9 +44,9 @@ ms.locfileid: "76735852"
   
     |Пункт меню Form2|Значение Мержеактион|Значение Мержеиндекс|  
     |---------------------|-----------------------|----------------------|  
-    |File|матчонли|-1|  
+    |Файл|матчонли|-1|  
     |Импорт из|матчонли|-1|  
-    |Word|Удаление|-1|  
+    |Word|Удалить|-1|  
   
 10. В `Form1`Создайте обработчик событий для <xref:System.Windows.Forms.Control.Click> события `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "76735852"
   
 - ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Создание родительских MDI-форм](../advanced/how-to-create-mdi-parent-forms.md)
 - [Практическое руководство. Создание дочерних MDI-форм](../advanced/how-to-create-mdi-child-forms.md)

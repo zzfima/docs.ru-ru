@@ -15,7 +15,7 @@ ms.locfileid: "76743635"
 
  .NET Framework предлагает три основные технологии сериализации, оптимизированные для различных сценариев сериализации. В следующей таблице описаны эти технологии, а также связанные с ними основные типы Framework.
 
-|**Название технологии**|**Основные типы**|**Вариант**|
+|**Название технологии**|**Основные типы**|**Сценарии**|
 |-------------------------|--------------------|-------------------|
 |**Сериализация контракта данных**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Общее сохранение<br />Веб-службы<br />JSON|
 |**XML-сериализация**|<xref:System.Xml.Serialization.XmlSerializer>|Формат XML с полным контролем над формой XML|
@@ -102,7 +102,7 @@ public class Person : ISerializable
 
  *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила использования](../../../docs/standard/design-guidelines/usage-guidelines.md)

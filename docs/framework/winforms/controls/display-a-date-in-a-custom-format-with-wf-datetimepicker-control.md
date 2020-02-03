@@ -22,7 +22,7 @@ ms.locfileid: "76745934"
   
 ### <a name="to-display-a-custom-format"></a>Отображение пользовательского формата  
   
-1. Задайте для свойства <xref:System.Windows.Forms.DateTimePicker.Format%2A> значение `DateTimePickerFormat.Custom`.  
+1. Установите свойство <xref:System.Windows.Forms.DateTimePicker.Format%2A> в значение `DateTimePickerFormat.Custom`.  
   
 2. Задайте для свойства <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> строку формата.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "76745934"
   
      В зависимости от настройки языка и региональных параметров все символы, не заключенные в одинарные кавычки, могут быть изменены. Например, приведенная выше строка форматирования отображает текущую дату в формате "сегодня: 05:30:31 пятница марта 02, 2012" в английской (США) культуре. Обратите внимание, что первое двоеточие заключено в одинарные кавычки, так как оно не должно быть символом-разделителем, как в «чч: мм: СС». В другом языке и региональных параметрах формат может выглядеть как "сегодня: 05.30.31 пятница, 02 марта, 2012".  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DateTimePicker](datetimepicker-control-windows-forms.md)
 - [Практическое руководство. Отображение и ввод дат с помощью элемента управления DateTimePicker в Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

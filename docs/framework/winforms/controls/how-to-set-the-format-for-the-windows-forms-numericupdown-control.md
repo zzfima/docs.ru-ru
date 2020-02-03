@@ -38,7 +38,7 @@ ms.locfileid: "76742173"
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     \- или -  
+     -или-  
   
 - Отобразите шестнадцатеричное значение, задав для свойства <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> значение `true`.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "76742173"
     > [!NOTE]
     > Даже если значение отображается в форме как шестнадцатеричное, все тесты, выполняемые в свойстве <xref:System.Windows.Forms.NumericUpDown.Value%2A>, будут проверять его десятичное значение.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [Элемент управления NumericUpDown](numericupdown-control-windows-forms.md)

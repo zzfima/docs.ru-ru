@@ -180,15 +180,15 @@ ms.locfileid: "76740218"
 
 4. Выберите элемент управления в форме и переместите его вокруг других элементов управления. Обратите внимание, что линии привязки не отображаются.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Линии привязки предлагают интуитивно понятные средства для совмещения элементов управления в форме. Рекомендуется также дополнительно исследовать следующие моменты.
+Линии привязки предлагают интуитивно понятные средства для совмещения элементов управления в форме. Для лучшего изучения можно предложить следующее:
 
 - Попробуйте вложить элемент управления <xref:System.Windows.Forms.GroupBox> в другой элемент управления <xref:System.Windows.Forms.GroupBox>. Поместите элемент управления <xref:System.Windows.Forms.Button> в дочерний элемент управления <xref:System.Windows.Forms.GroupBox>, а другой — в родительский элемент управления <xref:System.Windows.Forms.GroupBox>. Переместите элементы управления <xref:System.Windows.Forms.Button>, чтобы увидеть, как линии привязки пересекают границы контейнера.
 
 - Создайте столбец элементов управления <xref:System.Windows.Forms.TextBox> и соответствующий столбец элементов управления <xref:System.Windows.Forms.Label>. Задайте для свойства <xref:System.Windows.Forms.Control.AutoSize%2A> <xref:System.Windows.Forms.Label> элементов управления значение `true`. Используйте линии привязки для перемещения элементов управления <xref:System.Windows.Forms.Label>, чтобы их отображаемый текст был согласован с текстом в элементах управления <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)

@@ -52,7 +52,7 @@ ms.locfileid: "76742496"
   
  Элемент управления <xref:System.Windows.Forms.DataGridView> обладает широкими возможностями настройки и расширяем, и предоставляет множество свойств, методов и событий для настройки внешнего вида и поведения. Если вы хотите, чтобы в приложении Windows Forms отображались табличные данные, рассмотрите возможность использования элемента управления <xref:System.Windows.Forms.DataGridView> перед другими (например, <xref:System.Windows.Forms.DataGrid>). Если вы отображаете маленькую сетку значений, доступных только для чтения, или если вы предоставляете пользователю возможность редактировать таблицу с миллионами записей, то элемент управления <xref:System.Windows.Forms.DataGridView> предоставит вам легко Программируемое, эффективное решение для памяти.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Технологическая сводка по элементам управления DataGridView](datagridview-control-technology-summary-windows-forms.md)  
  Суммирует основные понятия управления <xref:System.Windows.Forms.DataGridView> и использование связанных классов.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76742496"
  [Примеры кода для элемента управления DataGridView](datagridview-control-code-directory-windows-forms.md)  
  Содержит ссылки на примеры кода в документации по различным задачам <xref:System.Windows.Forms.DataGridView>. Примеры распределены на категории по типам задач.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
  Описание типов столбцов в Windows Forms элементе управления <xref:System.Windows.Forms.DataGridView>, используемых для вывода сведений и предоставления пользователям возможности изменять или добавлять данные.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "76742496"
  [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Разделы, описывающие, как эффективно использовать элемент управления, чтобы избежать снижения производительности при работе с большими объемами данных.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

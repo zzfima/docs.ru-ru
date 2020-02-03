@@ -19,14 +19,14 @@ Windows Forms приложения часто включают возможно�
   
  В следующей таблице показаны функциональные возможности, доступные для каждого уровня разрешений печати.  
   
-|PrintingPermissionLevel|Описание|  
+|PrintingPermissionLevel|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Предоставляет полный доступ ко всем установленным принтерам.|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Разрешает программную печать на принтере по умолчанию и более безопасную печать через диалоговое окно с ограниченным режимом печати. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Предоставляет печать только из более ограниченного диалогового окна. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Предотвращает доступ к принтерам. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Более безопасный доступ к файлам и данным в Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Дополнительные вопросы безопасности в формах Windows Forms](additional-security-considerations-in-windows-forms.md)

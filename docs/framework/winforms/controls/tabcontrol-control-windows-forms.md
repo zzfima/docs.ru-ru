@@ -20,7 +20,7 @@ ms.locfileid: "76742811"
 # <a name="tabcontrol-control-windows-forms"></a>Элемент управления TabControl (Windows Forms)
 Элемент управления `TabControl` Windows Forms используется для отображения нескольких вкладок, аналогичных разделителям в записной книжке или меткам в наборе папок в картотеке. Вкладки могут содержать изображения и другие элементы управления. Используйте элемент управления `TabControl` для создания страниц свойств.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "76742811"
   
  Также см [. статью как добавлять и удалять вкладки с Windows Forms TabControl с помощью конструктора](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [как добавить элемент управления на страницу вкладки с помощью конструктора.](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.TabControl>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Диалоговые окна в Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Список задач для диалоговых окон, в которых часто отображаются вкладки.  
   

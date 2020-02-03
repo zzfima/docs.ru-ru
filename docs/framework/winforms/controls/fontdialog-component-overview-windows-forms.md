@@ -23,7 +23,7 @@ ms.locfileid: "76745702"
 ## <a name="key-properties"></a>Ключевые свойства  
  Компонент имеет ряд свойств, которые настраивают его внешний вид. Свойства, заданные для выбора диалогового окна, <xref:System.Windows.Forms.FontDialog.Font%2A> и <xref:System.Windows.Forms.FontDialog.Color%2A>. Свойство <xref:System.Windows.Forms.FontDialog.Font%2A> задает шрифт, стиль, размер, скрипт и эффекты. Например, `Arial, 10pt, style=Italic, Strikeout`.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.FontDialog>
 - [Компонент FontDialog](fontdialog-component-windows-forms.md)

@@ -15,15 +15,15 @@ ms.locfileid: "76741447"
 # <a name="printdocument-component-windows-forms"></a>Компонент PrintDocument (Windows Forms)
 Компонент `PrintDocument` Windows Forms используется для задания свойств, описывающих печатаемое содержимое, и для печати документа в приложениях Windows. Его можно использовать в сочетании с компонентом <xref:System.Windows.Forms.PrintDialog> для управления всеми аспектами печати документа.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте PrintDocument](printdocument-component-overview-windows-forms.md)  
  Основные понятия, связанные с компонентом `PrintDocument`, который служит для задания свойств, описывающих печатаемое содержимое, и для запуска печати в приложении Windows.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Drawing.Printing.PrintDocument>  
  Справочная информация о классе и его членах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Поддержка печати в Windows Forms](../advanced/windows-forms-print-support.md)  
  Список ссылок на разделы, в которых описывается печать в Windows Forms.  
   

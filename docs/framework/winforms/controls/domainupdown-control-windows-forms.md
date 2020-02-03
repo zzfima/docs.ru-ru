@@ -22,7 +22,7 @@ ms.locfileid: "76745836"
   
  Этот элемент управления отображает только текстовые строки. Если требуется элемент управления, отображающий числовые значения, используйте элемент управления <xref:System.Windows.Forms.NumericUpDown>. Дополнительные сведения см. в разделе [элемент управления NumericUpDown](numericupdown-control-windows-forms.md) .  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления DomainUpDown](domainupdown-control-overview-windows-forms.md)  
  Основные понятия, связанные с элементом управления <xref:System.Windows.Forms.DomainUpDown>, который позволяет пользователям просматривать список текстовых строк и выбирать их из списка.  
   
@@ -32,13 +32,13 @@ ms.locfileid: "76745836"
  [Практическое руководство. Удаление элементов из элемента управления DomainUpDown в Windows Forms](how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
  Описывает, как удалить элементы из элемента управления <xref:System.Windows.Forms.DomainUpDown> в коде.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DomainUpDown>  
  Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.NumericUpDown>  
  Описывает этот класс и содержит ссылки на все его члены.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

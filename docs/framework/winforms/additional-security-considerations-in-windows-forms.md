@@ -22,7 +22,7 @@ ms.locfileid: "76739818"
 ## <a name="clipboard-access"></a>Доступ к буферу обмена  
  Класс <xref:System.Security.Permissions.UIPermission> управляет доступом к буферу обмена, а соответствующее значение перечисления <xref:System.Security.Permissions.UIPermissionClipboard> указывает уровень доступа. В следующей таблице приведены возможные уровни разрешения.  
   
-|Значение UIPermissionClipboard|Описание|  
+|Значение UIPermissionClipboard|Description|  
 |---------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>|Буфер обмена можно использовать без ограничений.|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|Буфер обмена можно использовать с некоторыми ограничениями. Возможность размещения данных в буфере обмена (операции с командами копирования и вырезания) не ограничена. Встроенные элементы управления, которые принимают операцию вставки, например текстовое поле, могут принимать данные из буфера обмена, но пользовательские элементы управления не могут программно считывать данные из буфера обмена.|  
@@ -35,7 +35,7 @@ ms.locfileid: "76739818"
   
  По умолчанию зона локальной интрасети получает <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> доступ, а зона Интернета — <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> доступ. Это означает, что в зоне Интернета приложение может выполнять большинство операций с окнами и пользовательским интерфейсом, но внешний вид окна будет изменяться. В измененном окне при первом запуске отображается всплывающее уведомление. В таком окне также изменен заголовок, а в строке заголовка должна быть кнопка "Закрыть". Всплывающее уведомление и строка заголовка информируют пользователя приложения о том, что данное приложение выполняется в режиме частичного доверия.  
   
-|Значение UIPermissionWindow|Описание|  
+|Значение UIPermissionWindow|Description|  
 |------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>|Пользователи могут использовать все окна и события пользовательского ввода без каких-либо ограничений.|  
 |<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>|Пользователи могут использовать для рисования только более безопасные окна верхнего уровня и дочерние окна, а также события пользовательского ввода для пользовательского интерфейса в таких окнах и дочерних окнах. Такие более безопасные окна имеют специальные метки, а также ограничения на минимальный и максимальный размер. Ограничения предотвращают потенциально опасные атаки с подменой, такие как имитация экранов входа в систему или системных настольных систем, и ограничение программного доступа к родительским окнам, интерфейсам API, связанным с фокусом, и использованию элемента управления <xref:System.Windows.Forms.ToolTip>|  
@@ -74,7 +74,7 @@ ms.locfileid: "76739818"
   
  Некоторые Windows Forms члены предоставляют неуправляемый доступ, для которого требуется разрешение <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>. В следующей таблице перечислены элементы пространства имен <xref:System.Windows.Forms>, для которых требуется разрешение. Дополнительные сведения о разрешениях, требуемых для элемента, см. в разделе документации по библиотеке классов .NET Framework.  
   
-|Компонент|Член|  
+|Компонент|Участник|  
 |---------------|------------|  
 |<xref:System.Windows.Forms.Application>|Метод -   <xref:System.Windows.Forms.Application.AddMessageFilter%2A><br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> свойство<br />Метод -   `Exit`<br />Метод -   <xref:System.Windows.Forms.Application.ExitThread%2A><br />событие -   <xref:System.Windows.Forms.Application.ThreadException>|  
 |<xref:System.Windows.Forms.CommonDialog>|Метод -   <xref:System.Windows.Forms.CommonDialog.HookProc%2A><br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ метод<br />Метод -   <xref:System.Windows.Forms.CommonDialog.Reset%2A><br />Метод -   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>|  
@@ -88,7 +88,7 @@ ms.locfileid: "76739818"
   
  Благодаря разрешению на вызов неуправляемого кода приложение может выполнять практически любые действия. Следовательно, разрешение на вызов неуправляемого кода должно предоставляться только приложениям из доверенного источника. Кроме того, в зависимости от приложения, часть функциональных возможностей приложения, вызывающих неуправляемый код, может быть необязательной или использоваться только в среде с полным доверием. Дополнительные сведения об опасных разрешениях см. в разделе [Опасные разрешения и администрирование политик](../misc/dangerous-permissions-and-policy-administration.md). Дополнительные сведения о повышении уровня разрешений см. в разделе [Общее администрирование политик безопасности](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Более безопасный доступ к файлам и данным в Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Более безопасная печать в Windows Forms](more-secure-printing-in-windows-forms.md)

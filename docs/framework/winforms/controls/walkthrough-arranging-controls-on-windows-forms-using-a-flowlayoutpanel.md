@@ -171,8 +171,8 @@ ms.locfileid: "76745400"
 
 6. Отпустите кнопку мыши. Теперь эти три элемента управления <xref:System.Windows.Forms.Button> вставлены в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> .
 
-## <a name="next-steps"></a>Дальнейшие действия
- Используя сочетание панелей макета и элементов управления, можно создавать сложные макеты. Рекомендуется также дополнительно исследовать следующие моменты.
+## <a name="next-steps"></a>Next Steps
+ Используя сочетание панелей макета и элементов управления, можно создавать сложные макеты. Для лучшего изучения можно предложить следующее:
 
 - Увеличьте размер элемента управления <xref:System.Windows.Forms.Button> и отметьте, как это отразится на макете.
 
@@ -182,7 +182,7 @@ ms.locfileid: "76745400"
 
 - Задайте для свойства <xref:System.Windows.Forms.Control.Visible%2A> одного из элементов управления значение `false` и обратите внимание, как в ответ перестраивается <xref:System.Windows.Forms.FlowLayoutPanel> .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>

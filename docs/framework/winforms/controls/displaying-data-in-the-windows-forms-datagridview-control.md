@@ -21,7 +21,7 @@ ms.locfileid: "76745870"
   
  Кроме того, можно отобразить данные с помощью стандартных форматов (например, формата валюты) или настроить форматирование отображения для представления данных, но вам потребуется (например, изменить цвет фона для отрицательных чисел или заменить строковые значения). с соответствующими образами).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Режимы отображения данных в элементе управления DataGridView в Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)  
  Описывает параметры заполнения элемента управления данными.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "76745870"
  [Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
  Описывает обработку события <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> для изменения внешнего вида ячеек в зависимости от их значений.  
   
-## <a name="reference"></a>Справочные сведения  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.DataGridView>  
  Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "76745870"
  <xref:System.Windows.Forms.BindingSource>  
  Содержит справочную документацию по компоненту <xref:System.Windows.Forms.BindingSource>.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Ввод данных с помощью элемента управления DataGridView в Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)  
  Разделы, в которых описывается изменение способов добавления и изменения данных в элементе управления.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
 - [Типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

@@ -16,7 +16,7 @@ ms.locfileid: "76746345"
 # <a name="clickonce-deployment-for-windows-forms"></a>Развертывание ClickOnce для форм Windows Forms
 В следующих разделах описывается технология ClickOnce, которая позволяет легко развертывать Windows Forms приложения на клиентских компьютерах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Выбор стратегии развертывания ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
  Предоставляет несколько вариантов развертывания приложений ClickOnce.  
   
@@ -59,10 +59,10 @@ ms.locfileid: "76746345"
  [Доступ к локальным и удаленным данным в приложениях ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
  Описывает, как получить доступ к локальным файлам данных и удаленным источникам данных из приложения ClickOnce.  
   
- [Практическое руководство. Включение файла данных в приложение ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Демонстрирует, как пометить файл, чтобы он был доступен в каталоге данных ClickOnce.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения о параметрах приложений](./advanced/application-settings-overview.md)
 - [Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)

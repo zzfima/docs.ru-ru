@@ -16,7 +16,7 @@ ms.locfileid: "76741167"
 # <a name="putting-controls-on-windows-forms"></a>Размещение элементов управления в формах Windows Forms
 Существует множество элементов управления, которые можно разместить Windows Forms в зависимости от потребностей приложения.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Практическое руководство. Добавление элементов управления в формы Windows Forms](how-to-add-controls-to-windows-forms.md)  
  Инструкции по присоединению элементов управления к форме.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76741167"
  [Вопросы размещения элемента управления ActiveX в форме Windows Forms](considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
  Описывает моменты, которые следует учитывать при планировании приложения, использующего элементы управления ActiveX.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления Windows Forms](index.md)  
  Содержит ссылки на вводные разделы, посвященные элементам управления и действиям, которые можно выполнять с ними.  
   
