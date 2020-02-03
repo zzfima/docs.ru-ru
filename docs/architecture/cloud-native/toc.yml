@@ -44,12 +44,16 @@
         - name: Инфраструктура связи для слоя взаимодействия между службами
           href: service-mesh-communication-infrastructure.md
     - name: Распределенные данные
-      href: distributed-data.md
+      href: null
       items:
-        - name: 'Шаблоны данных, ориентированные на облако'
-          href: data-patterns.md
-        - name: Хранилище данных в Azure
-          href: azure-data-storage.md
+        - name: Одна база данных для каждой микрослужбы
+          href: database-per-microservice.md
+        - name: Реляционные и Данные NoSQL
+          href: relational-vs-nosql-data.md
+        - name: 'Кэширование в приложении, ориентированном на облако'
+          href: azure-caching.md
+        - name: Эластичный поиск в Azure
+          href: elastic-search-in-azure.md
     - name: 'Устойчивость, ориентированная на облако'
       href: resiliency.md
       items:
@@ -70,7 +74,7 @@
           href: monitoring-azure-kubernetes.md
         - name: Azure Monitor
           href: azure-monitor.md
-    - name: идентификации
+    - name: Удостоверение
       href: identity.md
       items:
         - name: 'Проверка подлинности и авторизация в приложениях, ориентированных на облако'
@@ -79,7 +83,7 @@
           href: azure-active-directory.md
         - name: Сервер удостоверений
           href: identity-server.md
-    - name: Безопасность
+    - name: безопасность
       href: security.md
       items:
         - name: 'Безопасность Azure для приложений, ориентированных на облако'
