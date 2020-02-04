@@ -151,11 +151,11 @@
 - name: Развертывание приложений
   href: deploying/index.md
   items:
-    - name: Развертывание приложений с помощью средств интерфейса командной строки
+    - name: Публикация приложений с помощью CLI
       href: deploying/deploy-with-cli.md
     - name: Развертывание приложений с помощью Visual Studio
       href: deploying/deploy-with-vs.md
-    - name: Создание пакета NuGet с помощью кроссплатформенных средств
+    - name: Создание пакета NuGet с помощью CLI
       href: deploying/creating-nuget-packages.md
     - name: Обновление версии среды выполнения автономного развертывания
       href: deploying/runtime-patch-selection.md

@@ -31,6 +31,10 @@
       href: how-to-guides/databricks-deploy-methods.md
     - name: Развертывание двоичных файлов рабочей роли и UDF
       href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: Сборка приложения в Ubuntu
+      href: how-to-guides/ubuntu-instructions.md
+    - name: Сборка приложения в Windows
+      href: how-to-guides/windows-instructions.md
 - name: Справочник
   items:
     - name: Справочник по интерфейсам API

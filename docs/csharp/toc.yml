@@ -1430,7 +1430,7 @@
               items:
                 - name: if-else
                   href: language-reference/keywords/if-else.md
-                - name: Параметр
+                - name: switch
                   href: language-reference/keywords/switch.md
             - name: Операторы итерации
               items:
@@ -1446,7 +1446,7 @@
               items:
                 - name: break
                   href: language-reference/keywords/break.md
-                - name: Продолжение
+                - name: continue
                   href: language-reference/keywords/continue.md
                 - name: goto
                   href: language-reference/keywords/goto.md
@@ -1467,9 +1467,9 @@
                 - name: Обзор
                   displayName: checked unchecked
                   href: language-reference/keywords/checked-and-unchecked.md
-                - name: включен
+                - name: checked
                   href: language-reference/keywords/checked.md
-                - name: не включен
+                - name: unchecked
                   href: language-reference/keywords/unchecked.md
             - name: Оператор fixed
               href: language-reference/keywords/fixed-statement.md
@@ -1489,9 +1489,9 @@
               href: language-reference/keywords/out-parameter-modifier.md
         - name: 'Ключевые слова, используемые для пространств имен'
           items:
-            - name: пространство имен
+            - name: namespace
               href: language-reference/keywords/namespace.md
-            - name: С помощью
+            - name: using
               items:
                 - name: Контексты для using
                   href: language-reference/keywords/using.md
@@ -1505,13 +1505,13 @@
               href: language-reference/keywords/extern-alias.md
         - name: Ключевые слова тестирования типов
           items:
-            - name: — это
+            - name: is
               href: language-reference/keywords/is.md
         - name: Ключевые слова ограничений универсального типа
           items:
             - name: Ограничение new
               href: language-reference/keywords/new-constraint.md
-            - name: где
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: Ключевые слова доступа
           items:
@@ -1525,7 +1525,7 @@
               href: language-reference/keywords/null.md
             - name: True и False
               href: language-reference/builtin-types/bool.md
-            - name: значение по умолчанию
+            - name: default
               href: language-reference/keywords/default.md
         - name: Контекстные ключевые слова
           items:
@@ -1642,7 +1642,7 @@
         - name: оператор await
           href: language-reference/operators/await.md
           displayName: async
-        - name: оператор по умолчанию
+        - name: оператор default
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
         - name: Оператор delegate
