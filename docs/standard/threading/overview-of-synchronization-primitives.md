@@ -63,7 +63,8 @@ ms.locfileid: "73106596"
 
 ### <a name="mutex-class"></a>Mutex класс
 
-Класс <xref:System.Threading.Mutex?displayProperty=nameWithType>, как и <xref:System.Threading.Monitor>, предоставляет монопольный доступ к общему ресурсу. С помощью вызова одной из перегрузок метода [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) можно запросить владение мьютексом. Как и <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> реализует привязку потока, и поток, который получил мьютекс, должен освободить его, вызвав метод <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
+Как и <xref:System.Threading.Monitor?displayProperty=nameWithType>, класс <xref:System.Threading.Mutex> предоставляет монопольный доступ к общему ресурсу. С помощью вызова одной из перегрузок метода [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) можно запросить владение мьютексом. Как и <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> реализует привязку потока, и поток, который получил мьютекс, должен освободить его, вызвав метод <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
+
 
 В отличие от <xref:System.Threading.Monitor>, класс <xref:System.Threading.Mutex> может использоваться для межпроцессной синхронизации. Для этого нужно использовать именованный мьютекс, который виден в операционной системе. Чтобы создать экземпляр именованного мьютекса, используйте [конструктор Mutex](<xref:System.Threading.Mutex.%23ctor%2A>), который задает имя. Также можно вызвать метод <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType>, чтобы открыть существующий именованный системный мьютекс.
   
