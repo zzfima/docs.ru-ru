@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об элементе управления DataGridView (Windows Forms)
+title: Общие сведения об элементе управления DataGridView
 ms.date: 03/30/2017
 f1_keywords:
 - DataGridView
@@ -19,55 +19,55 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: 992bf57642c955a87cd7675e0bbe7c52131e8039
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 74de5b449525be9ff93fcbef0ddabd041470177c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969145"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742496"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Общие сведения об элементе управления DataGridView (Windows Forms)
 > [!NOTE]
 > Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- С помощью <xref:System.Windows.Forms.DataGridView> элемента управления можно отображать и редактировать табличные данные из различных типов источников данных.  
+ С помощью элемента управления <xref:System.Windows.Forms.DataGridView> можно отображать и редактировать табличные данные из различных типов источников данных.  
   
- Привязка данных к <xref:System.Windows.Forms.DataGridView> элементу управления проста и интуитивно понятна, и во многих случаях это так же <xref:System.Windows.Forms.DataGridView.DataSource%2A> просто, как установка свойства. При привязке к источнику данных, содержащему несколько списков или таблиц, задайте <xref:System.Windows.Forms.DataGridView.DataMember%2A> для свойства строку, указывающую список или таблицу для привязки.  
+ Привязка данных к элементу управления <xref:System.Windows.Forms.DataGridView> проста и интуитивно понятна, и во многих случаях это так же просто, как установка свойства <xref:System.Windows.Forms.DataGridView.DataSource%2A>. При привязке к источнику данных, содержащему несколько списков или таблиц, задайте для свойства <xref:System.Windows.Forms.DataGridView.DataMember%2A> строку, указывающую список или таблицу для привязки.  
   
- <xref:System.Windows.Forms.DataGridView> Элемент управления поддерживает стандартную модель привязки данных Windows Forms, поэтому она будет привязана к экземплярам классов, описанным в следующем списке:  
+ Элемент управления <xref:System.Windows.Forms.DataGridView> поддерживает стандартную Windows Forms модель привязки данных, поэтому она будет привязана к экземплярам классов, описанным в следующем списке:  
   
-- Любой класс, реализующий <xref:System.Collections.IList> интерфейс, в том числе одномерные массивы.  
+- Любой класс, реализующий интерфейс <xref:System.Collections.IList>, включая одномерные массивы.  
   
-- Любой класс, реализующий <xref:System.ComponentModel.IListSource> интерфейс, например <xref:System.Data.DataTable> классы и <xref:System.Data.DataSet> .  
+- Любой класс, реализующий интерфейс <xref:System.ComponentModel.IListSource>, например классы <xref:System.Data.DataTable> и <xref:System.Data.DataSet>.  
   
-- Любой класс, реализующий <xref:System.ComponentModel.IBindingList> интерфейс, например <xref:System.ComponentModel.BindingList%601> класс.  
+- Любой класс, реализующий интерфейс <xref:System.ComponentModel.IBindingList>, например класс <xref:System.ComponentModel.BindingList%601>.  
   
-- Любой класс, реализующий <xref:System.ComponentModel.IBindingListView> интерфейс, например <xref:System.Windows.Forms.BindingSource> класс.  
+- Любой класс, реализующий интерфейс <xref:System.ComponentModel.IBindingListView>, например класс <xref:System.Windows.Forms.BindingSource>.  
   
- Элемент управления поддерживает привязку данных к открытым свойствам объектов, возвращаемых этими интерфейсами, или к коллекции свойств, возвращаемой <xref:System.ComponentModel.ICustomTypeDescriptor> интерфейсом, если они реализованы в возвращаемых объектах. <xref:System.Windows.Forms.DataGridView>  
+ Элемент управления <xref:System.Windows.Forms.DataGridView> поддерживает привязку данных к открытым свойствам объектов, возвращаемых этими интерфейсами, или к коллекции свойств, возвращаемой интерфейсом <xref:System.ComponentModel.ICustomTypeDescriptor>, если они реализованы в возвращаемых объектах.  
   
- Как правило, выполняется привязка к <xref:System.Windows.Forms.BindingSource> компоненту и <xref:System.Windows.Forms.BindingSource> привязка компонента к другому источнику данных или заполнение его бизнес-объектами. <xref:System.Windows.Forms.BindingSource> Компонент является предпочтительным источником данных, поскольку он может выполнять привязку к различным источникам данных и может автоматически устранять множество проблем привязки данных. Дополнительные сведения см. в разделе [компонент BindingSource](bindingsource-component.md).  
+ Как правило, привязка выполняется к компоненту <xref:System.Windows.Forms.BindingSource> и привязывает <xref:System.Windows.Forms.BindingSource> компонент к другому источнику данных или заполняет его бизнес-объектами. Компонент <xref:System.Windows.Forms.BindingSource> является предпочтительным источником данных, так как он может быть привязан к широкому спектру источников данных и может автоматически устранять множество проблем привязки данных. Дополнительные сведения см. в разделе [компонент BindingSource](bindingsource-component.md).  
   
- Элемент управления можно также использовать в несвязанном режиме без базового хранилища данных. <xref:System.Windows.Forms.DataGridView> Пример кода, в котором используется несвязанный <xref:System.Windows.Forms.DataGridView> элемент управления, см. в разделе [пошаговое руководство. Создание непривязанного элемента управления](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)Windows Forms DataGridView.  
+ Элемент управления <xref:System.Windows.Forms.DataGridView> можно также использовать в *несвязанном* режиме без базового хранилища данных. Пример кода, в котором используется несвязанный <xref:System.Windows.Forms.DataGridView> элемент управления, см. в разделе [Пошаговое руководство. Создание непривязанного элемента управления DataGridView Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
   
- <xref:System.Windows.Forms.DataGridView> Элемент управления обладает широкими возможностями настройки и расширяем, и предоставляет множество свойств, методов и событий для настройки внешнего вида и поведения. Если вы хотите, чтобы в приложении Windows Forms отображались табличные данные, <xref:System.Windows.Forms.DataGridView> рассмотрите возможность использования элемента управления перед <xref:System.Windows.Forms.DataGrid>другими (например,). Если вы отображаете маленькую сетку значений, доступных только для чтения, или если вы предоставляете пользователю возможность редактировать таблицу с миллионами записей, <xref:System.Windows.Forms.DataGridView> элемент управления предоставит вам легко Программируемое, эффективное решение для памяти.  
+ Элемент управления <xref:System.Windows.Forms.DataGridView> обладает широкими возможностями настройки и расширяем, и предоставляет множество свойств, методов и событий для настройки внешнего вида и поведения. Если вы хотите, чтобы в приложении Windows Forms отображались табличные данные, рассмотрите возможность использования элемента управления <xref:System.Windows.Forms.DataGridView> перед другими (например, <xref:System.Windows.Forms.DataGrid>). Если вы отображаете маленькую сетку значений, доступных только для чтения, или если вы предоставляете пользователю возможность редактировать таблицу с миллионами записей, то элемент управления <xref:System.Windows.Forms.DataGridView> предоставит вам легко Программируемое, эффективное решение для памяти.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Технологическая сводка по элементам управления DataGridView](datagridview-control-technology-summary-windows-forms.md)  
- Обобщает основные понятия элементов управления и использование связанных классов. <xref:System.Windows.Forms.DataGridView>  
+ Суммирует основные понятия управления <xref:System.Windows.Forms.DataGridView> и использование связанных классов.  
   
  [Архитектура элементов управления DataGridView](datagridview-control-architecture-windows-forms.md)  
- Описывает архитектуру <xref:System.Windows.Forms.DataGridView> элемента управления, объясняя его иерархию типов и структуру наследования.  
+ Описывает архитектуру элемента управления <xref:System.Windows.Forms.DataGridView>, объясняя его иерархию типов и структуру наследования.  
   
  [Сценарии использования элементов управления DataGridView](datagridview-control-scenarios-windows-forms.md)  
- Описывает наиболее распространенные сценарии, в <xref:System.Windows.Forms.DataGridView> которых используются элементы управления.  
+ Описывает наиболее распространенные сценарии, в которых используются <xref:System.Windows.Forms.DataGridView> элементы управления.  
   
  [Примеры кода для элемента управления DataGridView](datagridview-control-code-directory-windows-forms.md)  
- Содержит ссылки на примеры кода в документации по различным <xref:System.Windows.Forms.DataGridView> задачам. Примеры распределены на категории по типам задач.  
+ Содержит ссылки на примеры кода в документации по различным задачам <xref:System.Windows.Forms.DataGridView>. Примеры распределены на категории по типам задач.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
- Описание типов столбцов в элементе управления Windows Forms <xref:System.Windows.Forms.DataGridView> , используемых для вывода сведений и предоставления пользователям возможности изменять или добавлять данные.  
+ Описание типов столбцов в Windows Forms элементе управления <xref:System.Windows.Forms.DataGridView>, используемых для вывода сведений и предоставления пользователям возможности изменять или добавлять данные.  
   
  [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Разделы, описывающие заполнение элемента управления данными вручную или из внешнего источника данных.  
@@ -78,7 +78,7 @@ ms.locfileid: "69969145"
  [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Разделы, описывающие, как эффективно использовать элемент управления, чтобы избежать снижения производительности при работе с большими объемами данных.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

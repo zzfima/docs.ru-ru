@@ -1,21 +1,21 @@
 ---
-title: Усовершенствование приложений Windows Forms
+title: Улучшение приложений
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c9287870d0a3852cf8dda21c4bd249eca09c114
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942913"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744827"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Усовершенствование приложений Windows Forms
 Windows Forms содержит много возможностей, которые можно использовать для улучшения приложений Windows в целях удовлетворения конкретных потребностей пользователей. В перечисленных ниже разделах описываются эти возможности и способы их использования.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)  
  Ссылки на разделы, в которых описано и показано, как используется графический интерфейс в формах Windows Forms.  
   
@@ -31,13 +31,13 @@ Windows Forms содержит много возможностей, которы
  [Использование сети в приложениях Windows Forms](networking-in-windows-forms-applications.md)  
  Ссылки на разделы, в которых описано и показано, как использовать сетевые возможности в Windows Forms.  
   
- [Глобализация приложений Windows Forms](globalizing-windows-forms.md)  
+ [Глобализация Windows Forms приложений](globalizing-windows-forms.md)  
  Ссылки на разделы, в которых показано, как глобализировать приложения Windows Forms.  
   
- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms и неуправляемые приложения](windows-forms-and-unmanaged-applications.md)  
  Ссылки на разделы, в которых описано и показано, как получать доступ к COM-компонентам из приложений Windows Forms.  
   
- [Информация о системе и Windows Form](system-information-and-windows-forms.md)  
+ [Информация о системе и Windows Forms](system-information-and-windows-forms.md)  
  Описывается, как использовать сведения о системе в Windows Forms.  
   
  [Управление питанием в Windows Forms](power-management-in-windows-forms.md)  
@@ -58,7 +58,7 @@ Windows Forms содержит много возможностей, которы
  [Использование элементов управления WPF](using-wpf-controls.md)  
  Описывается, как использовать элементы управления WPF в приложениях Windows Forms.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Справочные системы в приложениях Windows Forms](help-systems-in-windows-forms-applications.md)  
  Ссылки на разделы, в которых описано и показано, как предоставить пользователю справку в приложениях Windows Forms.  
   

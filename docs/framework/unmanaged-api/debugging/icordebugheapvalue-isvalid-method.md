@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7685d1b6d5458a4405fc5a4abdb2f3134618f01c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138399"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794405"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>Метод ICorDebugHeapValue::IsValid
 Возвращает значение, указывающее, является ли допустимым объект, представленный этим ICorDebugHeapValue.  
@@ -42,7 +42,7 @@ HRESULT IsValid (
 ## <a name="remarks"></a>Заметки  
  Значение недопустимо, если оно было освобождено сборщиком мусора.  
   
- Этот метод использовать не рекомендуется. В .NET Framework 2,0 все значения являются допустимыми до тех пор, пока не будет вызван метод [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , после чего значения становятся недействительными.  
+ Этот метод использовать не рекомендуется. В .NET Framework 2,0 все значения являются допустимыми до тех пор, пока не будет вызван метод [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) , после чего значения становятся недействительными.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

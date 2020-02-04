@@ -2,12 +2,12 @@
 title: Интерфейс ICorDebugDebugEvent
 ms.date: 03/30/2017
 ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
-ms.openlocfilehash: ea42faa4001fa880354690df1551de3be767e683
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bef057bdb3ff0919337dd15f2d930159ddaf1bcf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137038"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783394"
 ---
 # <a name="icordebugdebugevent-interface"></a>Интерфейс ICorDebugDebugEvent
 Определяет базовый интерфейс, из которого возникают все события отладки `ICorDebug`.  
@@ -16,15 +16,15 @@ ms.locfileid: "73137038"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)|Указывает тип события, который представляет этот объект `ICorDebugDebugEvent`.|  
-|[Метод GetThread](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-getthread-method.md)|Получает поток, в котором произошло событие.|  
+|[Метод GetEventKind](icordebugdebugevent-geteventkind-method.md)|Указывает тип события, который представляет этот объект `ICorDebugDebugEvent`.|  
+|[Метод GetThread](icordebugdebugevent-getthread-method.md)|Получает поток, в котором произошло событие.|  
   
 ## <a name="remarks"></a>Заметки  
  Следующие интерфейсы являются производными от интерфейса `ICorDebugDebugEvent`.  
   
-- [икордебужексцептиондебужевент](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
+- [икордебужексцептиондебужевент](icordebugexceptiondebugevent-interface.md)  
   
-- [икордебугмодуледебужевент](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
+- [икордебугмодуледебужевент](icordebugmoduledebugevent-interface.md)  
   
 > [!NOTE]
 > Этот интерфейс доступен только в машинном коде .NET. Попытка вызова метода `QueryInterface` для получения указателя интерфейса возвращает `E_NOINTERFACE` для сценариев ICorDebug вне .NET Native.  
@@ -38,7 +38,7 @@ ms.locfileid: "73137038"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

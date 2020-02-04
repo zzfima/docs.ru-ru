@@ -4,16 +4,16 @@ description: Сведения о типах C#, допускающих знач
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964316"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740944"
 ---
 # <a name="nullable-value-types-c-reference"></a>Справочник по C#. Типы значений, допускающие значение NULL
 
-Тип значений, допускающий значение NULL, `T?` может представлять все значения своего [базового типа](../keywords/value-types.md) `T`, а также дополнительное значение [NULL](../keywords/null.md). Например, можно присвоить переменной `bool?` любое из следующих трех значений: `true`, `false` или `null`. Базовый тип значения `T` не может соответствовать типу значения, допускающему значение NULL.
+Тип значений, допускающий значение NULL, `T?` может представлять все значения своего [базового типа](value-types.md) `T`, а также дополнительное значение [NULL](../keywords/null.md). Например, можно присвоить переменной `bool?` любое из следующих трех значений: `true`, `false` или `null`. Базовый тип значения `T` не может соответствовать типу значения, допускающему значение NULL.
 
 > [!NOTE]
 > В C# 8.0 появилась возможность использования ссылочных типов, допускающих значение NULL. Дополнительные сведения см. в статье [Ссылочные типы, допускающие значение NULL](../../nullable-references.md). Типы значений, допускающие значение NULL, доступны начиная с C# 2.

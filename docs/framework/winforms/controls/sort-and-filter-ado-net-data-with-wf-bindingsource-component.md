@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms
+title: Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: ae331ca9e3fd2aed654659e11434454874eff8fa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cf1da3bb94b26449eb72b0e4930b262236487acc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960434"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742973"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms
-Можно предоставить возможность <xref:System.Windows.Forms.BindingSource> сортировки и фильтрации элементов управления с <xref:System.Windows.Forms.BindingSource.Sort%2A> помощью свойств и <xref:System.Windows.Forms.BindingSource.Filter%2A> . Можно применить простую сортировку <xref:System.ComponentModel.IBindingList>, если базовый источник данных является, и можно применить фильтрацию и расширенную сортировку, если источником данных <xref:System.ComponentModel.IBindingListView>является. Для свойства требуется стандартный синтаксис ADO.NET: строка, представляющая имя столбца данных в источнике данных, `ASC` за которым следует или `DESC` , чтобы указать, должен ли список быть отсортирован в порядке возрастания или убывания. <xref:System.Windows.Forms.BindingSource.Sort%2A> Можно задать расширенную сортировку или сортировку по нескольким столбцам, разделив каждый столбец разделителями-запятыми. <xref:System.Windows.Forms.BindingSource.Filter%2A> Свойство принимает строковое выражение.  
+Можно предоставить возможность сортировки и фильтрации <xref:System.Windows.Forms.BindingSource> управления с помощью свойств <xref:System.Windows.Forms.BindingSource.Sort%2A> и <xref:System.Windows.Forms.BindingSource.Filter%2A>. Можно применить простую сортировку, если базовый источник данных является <xref:System.ComponentModel.IBindingList>ом, и можно применить фильтрацию и расширенную сортировку, если источником данных является <xref:System.ComponentModel.IBindingListView>. Для свойства <xref:System.Windows.Forms.BindingSource.Sort%2A> требуется стандартный синтаксис ADO.NET: строка, представляющая имя столбца данных в источнике данных, за которым следует `ASC` или `DESC`, чтобы указать, должен ли список быть отсортирован в порядке возрастания или убывания. Можно задать расширенную сортировку или сортировку по нескольким столбцам, разделив каждый столбец разделителями-запятыми. Свойство <xref:System.Windows.Forms.BindingSource.Filter%2A> принимает строковое выражение.  
   
 > [!NOTE]
 > Хранение конфиденциальных сведений (например, пароля) в строке подключения может повлиять на безопасность приложения. Использование проверки подлинности Windows (также называемой встроенными средствами безопасности) — более безопасный способ управления доступом к базе данных. Дополнительные сведения см. в разделе [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md).  
   
 ### <a name="to-filter-data-with-the-bindingsource"></a>Фильтрация данных с помощью BindingSource  
   
-- Задайте для <xref:System.Windows.Forms.BindingSource.Filter%2A> свойства нужное выражение.  
+- Задайте для свойства <xref:System.Windows.Forms.BindingSource.Filter%2A> нужное выражение.  
   
      В следующем примере кода выражение представляет собой имя столбца, за которым следует значение, которое требуется для столбца.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69960434"
   
 ### <a name="to-sort-data-with-the-bindingsource"></a>Сортировка данных с помощью BindingSource  
   
-1. Присвойте `ASC` `DESC` свойству имя нужного столбца, а затем укажите порядок сортировки по возрастанию или убыванию. <xref:System.Windows.Forms.BindingSource.Sort%2A>  
+1. Задайте для свойства <xref:System.Windows.Forms.BindingSource.Sort%2A> имя нужного столбца, а затем `ASC` или `DESC`, чтобы указать порядок по возрастанию или по убыванию.  
   
 2. Несколько столбцов разделяются запятыми.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "69960434"
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример кода загружает данные из таблицы Customers образца базы данных Northwind в <xref:System.Windows.Forms.DataGridView> элемент управления, а затем фильтрует и сортирует отображаемые данные.  
+ Следующий пример кода загружает данные из таблицы Customers образца базы данных Northwind в элемент управления <xref:System.Windows.Forms.DataGridView>, а также фильтрует и сортирует отображаемые данные.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы выполнить этот пример, вставьте код в форму, <xref:System.Windows.Forms.BindingSource> содержащую именованный `BindingSource1` и <xref:System.Windows.Forms.DataGridView> именованный `dataGridView1`. Обработайте `InitializeSortedFilteredBindingSource`событиедля формы и вызовите метод обработчика событий Load. <xref:System.Windows.Forms.Form.Load>  
+ Чтобы выполнить этот пример, вставьте код в форму, содержащую <xref:System.Windows.Forms.BindingSource> с именем `BindingSource1` и <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`. Обработайте событие <xref:System.Windows.Forms.Form.Load> для формы и вызовите `InitializeSortedFilteredBindingSource` в методе обработчика событий Load.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>

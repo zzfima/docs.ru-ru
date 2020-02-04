@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms
+title: Реагирование на щелчки в элементе управления DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914993"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735755"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms
 > [!NOTE]
 > Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- После подключения Windows Forms <xref:System.Windows.Forms.DataGrid> к базе данных можно отслеживать ячейку, которую щелкнул пользователь.  
+ После подключения <xref:System.Windows.Forms.DataGrid> Windows Forms к базе данных можно отслеживать ячейку, которую щелкнул пользователь.  
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Определение того, когда пользователь DataGrid выбирает другую ячейку  
   
-- В обработчике <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> событий напишите код, отвечающий соответствующим образом.  
+- В обработчике событий <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> напишите код, отвечающий соответствующим образом.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,9 +56,9 @@ ms.locfileid: "69914993"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Определение части элемента управления DataGrid, которую щелкнул пользователь  
   
-- Вызовите <xref:System.Windows.Forms.Control.MouseDown> <xref:System.Windows.Forms.Control.Click> метод в соответствующем обработчике событий, например, для события или. <xref:System.Windows.Forms.DataGrid.HitTest%2A>  
+- Вызовите метод <xref:System.Windows.Forms.DataGrid.HitTest%2A> в соответствующем обработчике событий, например для события <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.Click>.  
   
-     <xref:System.Windows.Forms.DataGrid.HitTest%2A> Метод<xref:System.Windows.Forms.DataGrid.HitTestInfo> возвращает объект, содержащий строку и столбец области с нажатием.  
+     Метод <xref:System.Windows.Forms.DataGrid.HitTest%2A> возвращает объект <xref:System.Windows.Forms.DataGrid.HitTestInfo>, содержащий строку и столбец области с нажатием.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -140,7 +140,7 @@ ms.locfileid: "69914993"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
-- [Практическое руководство. Изменение отображаемых данных во время выполнения в элементе управления Windows Forms DataGrid](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

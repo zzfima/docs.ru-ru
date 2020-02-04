@@ -1,5 +1,6 @@
 ---
-title: Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms
+title: Реагирование на изменения шрифтовой схемы в приложении Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,64 +8,64 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e3b96139a7cfd4b268d81b1da58229527e2beb87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425330"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739226"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms
-В операционных системах Windows пользователь может изменить параметры шрифта во всей системе, чтобы проверить шрифт по умолчанию отображаются, больше или меньше. Изменение этих параметров шрифта важно для пользователей с нарушениями зрения и требуют более длинный тип для чтения текста на экране компьютера. Вы можете настроить приложение Windows Forms реагировать на эти изменения путем увеличения или уменьшения размера формы и все содержащиеся в нем текст при каждом изменении шрифтовой схемы. Если требуется, чтобы формы в соответствии с изменениями в размерах шрифта динамически, можно добавить код в форму.  
+В операционных системах Windows пользователь может изменить параметры шрифта в масштабе всей системы, сделав шрифт по умолчанию больше или меньше. Изменение этих параметров шрифта является критически важным для пользователей, имеющих визуальное нарушение, и требует большего размера для чтения текста на своих экранах. Можно настроить приложение Windows Forms для реагирования на эти изменения, увеличивая или уменьшая размер формы и весь содержащийся в ней текст при изменении шрифтовой схемы. Если требуется, чтобы форма автоматически соответствовала изменениям размеров шрифтов, можно добавить код в форму.  
   
- Как правило, шрифт по умолчанию, используемые в Windows Forms используется шрифт, возвращенный <xref:Microsoft.Win32> вызов пространства имен `GetStockObject(DEFAULT_GUI_FONT)`. Шрифт, возвращаемый при вызове этого метода изменяется только при изменении разрешения экрана. Как показано в следующей процедуре, ваш код должен изменить шрифт по умолчанию для <xref:System.Drawing.SystemFonts.IconTitleFont%2A> реагировать на изменения размера шрифта.  
+ Как правило, шрифтом по умолчанию, используемым Windows Forms, является шрифт, возвращаемый вызовом пространства имен <xref:Microsoft.Win32> в `GetStockObject(DEFAULT_GUI_FONT)`. Шрифт, возвращаемый этим вызовом, изменяется только при изменении разрешения экрана. Как показано в следующей процедуре, код должен изменить шрифт по умолчанию на <xref:System.Drawing.SystemFonts.IconTitleFont%2A>, чтобы реагировать на изменения размера шрифта.  
   
-### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Чтобы использовать шрифт рабочего стола и реагировать на изменения схемы шрифтов  
+### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Использование шрифта рабочего стола и реагирование на изменения схемы шрифтов  
   
-1. Создайте форму и добавьте элементы управления к нему. Дополнительные сведения см. в разделе [Практическое руководство. Создание приложения Windows Forms из командной строки](how-to-create-a-windows-forms-application-from-the-command-line.md) и [элементы управления для использования в формах Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
+1. Создайте форму и добавьте в нее нужные элементы управления. Дополнительные сведения см. в разделе [инструкции. создание Windows Forms приложения из командной строки](how-to-create-a-windows-forms-application-from-the-command-line.md) и [элементов управления для использования в Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
   
-2. Добавьте ссылку на <xref:Microsoft.Win32> пространства имен в код.  
+2. Добавьте ссылку на пространство имен <xref:Microsoft.Win32> в код.  
   
      [!code-csharp[WinFormsAutoScaling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
      [!code-vb[WinFormsAutoScaling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
-3. Добавьте следующий код в конструктор формы для привязки обработчиков событий, а также изменять шрифт по умолчанию используется для формы.  
+3. Добавьте следующий код в конструктор формы, чтобы подключить необходимые обработчики событий и изменить используемый по умолчанию шрифт для формы.  
   
      [!code-csharp[WinFormsAutoScaling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
      [!code-vb[WinFormsAutoScaling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
-4. Реализовать обработчик для <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> событие, которое приводит к автоматическому масштабированию формы при <xref:Microsoft.Win32.UserPreferenceCategory.Window> категории изменения.  
+4. Реализуйте обработчик для события <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>, которое приводит к автоматическому масштабированию формы при изменении категории <xref:Microsoft.Win32.UserPreferenceCategory.Window>.  
   
      [!code-csharp[WinFormsAutoScaling#4](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
      [!code-vb[WinFormsAutoScaling#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
-5. Наконец, Реализуйте обработчик для <xref:System.Windows.Forms.Form.FormClosing> событие, которое отсоединяет <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> обработчик событий.  
+5. Наконец, реализуйте обработчик для события <xref:System.Windows.Forms.Form.FormClosing>, которое отсоединяет обработчик событий <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.  
   
      > [!IMPORTANT]
-     > Если не добавить этот код вызовет утечка памяти.  
+     > Сбой включения этого кода приведет к утечке памяти в приложении.  
   
      [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
      [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
 6. Скомпилируйте и запустите код.  
   
-### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Для ручного изменения схемы шрифтов в Windows XP  
+### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Изменение схемы шрифтов в Windows XP вручную  
   
-1. Пока выполняется приложение Windows Forms, щелкните правой кнопкой мыши рабочий стол Windows и выберите **свойства** в контекстном меню.  
+1. Пока приложение Windows Forms работает, щелкните правой кнопкой мыши рабочий стол Windows и выберите в контекстном меню пункт **Свойства** .  
   
-2. В **свойства отображения** диалоговом окне щелкните **внешний вид** вкладки.  
+2. В диалоговом окне **Свойства экрана** перейдите на вкладку **вид** .  
   
-3. Из **размер шрифта** раскрывающемся списке выберите новый размер шрифта.  
+3. В раскрывающемся списке **Размер шрифта** выберите новый размер шрифта.  
   
-     Вы заметите, что форма теперь реагирует на изменения схемы шрифтов рабочего стола во время выполнения. Когда пользователь изменяет между **обычный**, **крупного шрифта**, и **Огромный шрифт**, форма изменяет шрифт и корректно масштабируется.  
+     Обратите внимание, что форма теперь реагирует на изменения, внесенные во время выполнения в шрифтовую схему рабочего стола. При изменении пользователем между **обычными**, **крупными шрифтами**и **очень крупными шрифтами**форма изменяет шрифт и масштабируется правильно.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- Конструктор в этом примере кода содержит вызов `InitializeComponent`, который определяется при создании нового проекта Windows Forms в Visual Studio. Удалите эту строку кода, при создании приложения в командной строке.  
+ Конструктор в этом примере кода содержит вызов `InitializeComponent`, который определяется при создании нового проекта Windows Forms в Visual Studio. Удалите эту строку кода, если вы создаете приложение в командной строке.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Автоматическое масштабирование в Windows Forms](automatic-scaling-in-windows-forms.md)

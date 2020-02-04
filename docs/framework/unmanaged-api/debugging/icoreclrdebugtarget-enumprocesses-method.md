@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 4d1404e3f7565ee26edd94e059b7f01f8edd4dd6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11b1072b3467f7d0a3f223fbc2151ec9ccf461ad
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121845"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790805"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>Метод ICoreClrDebugTarget::EnumProcesses
 Перечисляет процессы, работающие на удаленном компьютере.  
@@ -41,7 +41,7 @@ HRESULT EnumProcesses (
  [out] Число процессов, возвращаемых в `ppProcs`. Это значение может быть 0 (ноль).  
   
  `ppProcs`  
- заполняет Массив структур [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) , представляющих процессы, выполняемые на удаленном компьютере.  
+ заполняет Массив структур [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) , представляющих процессы, выполняемые на удаленном компьютере.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -54,7 +54,7 @@ HRESULT EnumProcesses (
  Прочие сбои.  
   
 ## <a name="remarks"></a>Заметки  
- Чтобы освободить память, выделенную этим методом, вызовите метод [ICoreClrDebugTarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) .  
+ Чтобы освободить память, выделенную этим методом, вызовите метод [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -65,6 +65,6 @@ HRESULT EnumProcesses (
   
  **.NET Framework версии:** 3,5 SP1  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [Интерфейс ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)

@@ -241,5 +241,3 @@
           href: ui-automation-support-for-the-treeitem-control-type.md
         - name: Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Window
           href: ui-automation-support-for-the-window-control-type.md
-    - name: Спецификация модели автоматизации пользовательского интерфейса и обязательство сообщества
-      href: ui-automation-specification-and-community-promise.md

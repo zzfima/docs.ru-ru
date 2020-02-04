@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 610f2a1020cc15f855b3ddfc0917e14aae34fb82
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f58edf326ab9415d78d7065d74d8c1954fbbf37
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344941"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76315867"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Знакомство с LINQ в Visual Basic
 Языковой интегрированный запрос (LINQ) добавляет возможности запросов в Visual Basic и предоставляет простые и эффективные возможности при работе со всеми типами данных. Вместо отправки запроса в базу данных для обработки или работы с другим синтаксисом запросов для каждого типа искомых данных LINQ вводит запросы в составе языка Visual Basic. Синтаксис запросов не зависит от типа данных.  
@@ -76,13 +76,13 @@ ms.locfileid: "74344941"
 
 ### <a name="from-clause"></a>Предложение From
 
-Для начала запроса требуется либо [предложение`From`](../../../../visual-basic/language-reference/queries/from-clause.md) , либо предложение `Aggregate`. Предложение `From` определяет коллекцию источника и переменную итерации для запроса. Пример.
+Для начала запроса требуется либо [предложение`From`](../../../../visual-basic/language-reference/queries/from-clause.md) , либо предложение `Aggregate`. Предложение `From` определяет коллекцию источника и переменную итерации для запроса. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select - предложение
 
-Необязательный элемент. [Предложение`Select`](../../../../visual-basic/language-reference/queries/select-clause.md) объявляет набор переменных итерации для запроса. Пример.
+(Необязательный аргумент) [Предложение`Select`](../../../../visual-basic/language-reference/queries/select-clause.md) объявляет набор переменных итерации для запроса. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,31 +90,31 @@ ms.locfileid: "74344941"
 
 ### <a name="where-clause"></a>Предложение Where
 
-Необязательный элемент. [Предложение`Where`](../../../../visual-basic/language-reference/queries/where-clause.md) задает условие фильтрации для запроса. Пример.
+(Необязательный аргумент) [Предложение`Where`](../../../../visual-basic/language-reference/queries/where-clause.md) задает условие фильтрации для запроса. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>ORDER BY, предложение]
+### <a name="order-by-clause"></a>Order By - предложение
 
-| Используемых. [Предложение`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) задает порядок сортировки для столбцов в запросе. Пример.
+(Необязательный аргумент) [Предложение`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) задает порядок сортировки для столбцов в запросе. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join - предложение
 
-Необязательный элемент. [Предложение`Join`](../../../../visual-basic/language-reference/queries/join-clause.md) объединяет две коллекции в одну. Пример.
+(Необязательный аргумент) [Предложение`Join`](../../../../visual-basic/language-reference/queries/join-clause.md) объединяет две коллекции в одну. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By - предложение
 
-Необязательный элемент. [Предложение`Group By`](../../../../visual-basic/language-reference/queries/group-by-clause.md) группирует элементы результата запроса. Его можно использовать для применения агрегатных функций к каждой группе. Пример.
+(Необязательный аргумент) [Предложение`Group By`](../../../../visual-basic/language-reference/queries/group-by-clause.md) группирует элементы результата запроса. Его можно использовать для применения агрегатных функций к каждой группе. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join - предложение
 
-Необязательный элемент. [Предложение`Group Join`](../../../../visual-basic/language-reference/queries/group-join-clause.md) объединяет две коллекции в одну иерархическую коллекцию. Пример.
+(Необязательный аргумент) [Предложение`Group Join`](../../../../visual-basic/language-reference/queries/group-join-clause.md) объединяет две коллекции в одну иерархическую коллекцию. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
@@ -124,43 +124,43 @@ ms.locfileid: "74344941"
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
-Предложение `Aggregate` можно также использовать для изменения запроса. Например, с помощью предложения `Aggregate` можно произвести вычисление с соответствующей коллекцией запросов. Пример.
+Предложение `Aggregate` можно также использовать для изменения запроса. Например, с помощью предложения `Aggregate` можно произвести вычисление с соответствующей коллекцией запросов. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>Let - предложение
 
-Необязательный элемент. [Предложение`Let`](../../../../visual-basic/language-reference/queries/let-clause.md) выполняет вычисление значения и присваивает его новой переменной в запросе. Пример.
+(Необязательный аргумент) [Предложение`Let`](../../../../visual-basic/language-reference/queries/let-clause.md) выполняет вычисление значения и присваивает его новой переменной в запросе. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct - предложение
 
-Необязательный элемент. Предложение `Distinct` позволяет ограничивать значения текущей переменной итерации, чтобы исключить дублирующиеся значения в результатах запроса. Пример.
+(Необязательный аргумент) Предложение `Distinct` позволяет ограничивать значения текущей переменной итерации, чтобы исключить дублирующиеся значения в результатах запроса. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip - предложение
 
-Необязательный элемент. [Предложение`Skip`](../../../../visual-basic/language-reference/queries/skip-clause.md) обходит указанное число элементов в коллекции, а затем возвращает остальные элементы. Пример.
+(Необязательный аргумент) [Предложение`Skip`](../../../../visual-basic/language-reference/queries/skip-clause.md) обходит указанное число элементов в коллекции, а затем возвращает остальные элементы. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While - предложение
 
-Необязательный элемент. [Предложение`Skip While`](../../../../visual-basic/language-reference/queries/skip-while-clause.md) обходит элементы в коллекции, пока заданное условие `true`, а затем возвращает оставшиеся элементы. Пример.
+(Необязательный аргумент) [Предложение`Skip While`](../../../../visual-basic/language-reference/queries/skip-while-clause.md) обходит элементы в коллекции, пока заданное условие `true`, а затем возвращает оставшиеся элементы. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take - предложение
 
-Необязательный элемент. [Предложение`Take`](../../../../visual-basic/language-reference/queries/take-clause.md) возвращает указанное число смежных элементов от начала коллекции. Пример.
+(Необязательный аргумент) [Предложение`Take`](../../../../visual-basic/language-reference/queries/take-clause.md) возвращает указанное число смежных элементов от начала коллекции. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While - предложение
 
-Необязательный элемент. [`Take While` предложение](../../../../visual-basic/language-reference/queries/take-while-clause.md) включает элементы в коллекцию, пока заданное условие `true` и обходит оставшиеся элементы. Пример.
+(Необязательный аргумент) [`Take While` предложение](../../../../visual-basic/language-reference/queries/take-while-clause.md) включает элементы в коллекцию, пока заданное условие `true` и обходит оставшиеся элементы. Например:
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
@@ -245,7 +245,7 @@ ms.locfileid: "74344941"
 ## <a name="featured-book-chapters"></a>Рекомендуемые главы книги  
  [Глава 17. LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) в [программировании Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Встроенный язык запросов LINQ](../../concepts/linq/index.md)
 - [Общие сведения о LINQ to XML в Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)

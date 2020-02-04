@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-ms.openlocfilehash: d95662167dbc8fcda049fb6a7b3e6ff1dfb6e736
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4306c4ae44b0ae1ade2bf374981492fa1a4df76f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130708"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788369"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>Метод ICorDebugManagedCallback::LogMessage
 Уведомляет отладчик о том, что управляемый поток среды CLR вызвал метод в классе <xref:System.Diagnostics.EventLog> для записи события в журнал.  
@@ -45,7 +45,7 @@ HRESULT LogMessage (
  окне Указатель на объект ICorDebugThread, представляющий управляемый поток.  
   
  `lLevel`  
- окне Значение перечисления [логгинглевеленум](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) , указывающее степень серьезности описательного сообщения, записанного в журнал событий.  
+ окне Значение перечисления [логгинглевеленум](logginglevelenum-enumeration.md) , указывающее степень серьезности описательного сообщения, записанного в журнал событий.  
   
  `pLogSwitchName`  
  окне Указатель на имя переключателя трассировки.  
@@ -62,6 +62,6 @@ HRESULT LogMessage (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Интерфейс ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

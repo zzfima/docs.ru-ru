@@ -1,24 +1,24 @@
 ---
-title: Свойства элементов управления Windows Forms
+title: Свойства элементов управления
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], properties overview (using code)
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82bfab15cef4946661a37d2d88fbe1b797f3d816
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012513"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741178"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Свойства элементов управления Windows Forms
-Элемент управления Windows Forms наследует многие свойства базового класса <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. К ним относятся свойства, такие как <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>и многие другие. Дополнительные сведения о наследуемых свойствах см. в разделе <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+Windows Forms элемент управления наследует многие свойства, образуя базовый класс <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. К ним относятся такие свойства, как <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>и многие другие. Дополнительные сведения о наследованных свойствах см. в разделе <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
  Вы можете переопределять наследуемые свойства в элементе управления, а также задавать новые свойства.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Определение свойства](defining-a-property-in-windows-forms-controls.md)  
  Показывает, как реализовать свойство настраиваемого элемента управления или компонента и интегрировать свойство в среду разработки.  
   
@@ -34,17 +34,17 @@ ms.locfileid: "62012513"
  [Реализация методов в специализированных элементах управления](method-implementation-in-custom-controls.md)  
  Показывает, как реализовывать методы в настраиваемых элементах управления и компонентах.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.UserControl>  
  Описание базового класса для реализации составных элементов управления.  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- Описывает атрибут, задающий <xref:System.ComponentModel.TypeConverter> для типа настраиваемого свойства.  
+ Документирует атрибут, указывающий <xref:System.ComponentModel.TypeConverter>, используемый для пользовательского типа свойства.  
   
  <xref:System.ComponentModel.EditorAttribute>  
- Описывает атрибут, задающий <xref:System.Drawing.Design.UITypeEditor> для пользовательского свойства.  
+ Документирует атрибут, указывающий <xref:System.Drawing.Design.UITypeEditor>, используемый для пользовательского свойства.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Атрибуты в элементах управления Windows Forms](attributes-in-windows-forms-controls.md)  
  Описываются атрибуты, которые можно применять к свойствам или другим членам пользовательских элементов управления и компонентов.  
   

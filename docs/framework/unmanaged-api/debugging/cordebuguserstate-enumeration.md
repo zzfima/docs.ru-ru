@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120192"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789230"
 ---
 # <a name="cordebuguserstate-enumeration"></a>Перечисление CorDebugUserState
 Указывает состояние пользователя потока.  
@@ -40,9 +40,9 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|значения|Описание|  
+|{2&gt;Value&lt;2}|Описание|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|Запрошено завершение потока.|  
 |`USER_SUSPEND_REQUESTED`|Запрошена приостановка потока.|  
@@ -57,7 +57,7 @@ typedef enum CorDebugUserState {
 ## <a name="remarks"></a>Заметки  
  Пользовательское состояние потока — это состояние, которое поток имеет при его проверке отладчиком. Поток может иметь сочетание пользовательских состояний.  
   
- Чтобы получить состояние пользователя потока, используйте метод [ICorDebugThread:: жетусерстате](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) .  
+ Чтобы получить состояние пользователя потока, используйте метод [ICorDebugThread:: жетусерстате](icordebugthread-getuserstate-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -68,6 +68,6 @@ typedef enum CorDebugUserState {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Перечисления отладки](debugging-enumerations.md)

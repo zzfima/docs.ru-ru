@@ -1,5 +1,5 @@
 ---
-title: Элемент управления NumericUpDown (Windows Forms)
+title: Элемент управления NumericUpDown
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, NumericUpDown control
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - spin button control
 - NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
-ms.openlocfilehash: 47aff0ae4d75ef83fd72bc0dc381963a7b496ec6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69babfd5ea047570a39f78df235dc7193159f3f0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61806565"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728473"
 ---
 # <a name="numericupdown-control-windows-forms"></a>Элемент управления NumericUpDown (Windows Forms)
 Элемент управления Windows Forms `NumericUpDown` выглядит как сочетание текстового поля и пары кнопок со стрелками для корректировки значения пользователем. Он выводит и задает отдельное числовое значение из списка вариантов. Пользователь может увеличить и уменьшить число путем нажатия кнопок со стрелками, клавиш со стрелками ВВЕРХ и ВНИЗ или путем ввода числа. Нажатие клавиши со стрелкой ВВЕРХ увеличивает значение до максимума; нажатие клавиши со стрелкой ВНИЗ уменьшает значение до минимума. В качестве примера сферы применения этого элемента управления можно привести регулятор громкости музыкального проигрывателя. Числовые элементы управления "вверх/вниз" используются в некоторых приложениях панели управления Windows.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления NumericUpDown](numericupdown-control-overview-windows-forms.md)  
  Основные понятия элемента управления `NumericUpDown`, который позволяет пользователям просматривать список числовых значений и выбирать из него значения.  
   
- [Практическое руководство. Отображение и ввод числовых значений с помощью элемента управления NumericUpDown в Windows Forms](set-and-return-numeric-values-with-wf-numericupdown-control.md)  
+ [Практическое руководство. Ввод числовых значений с помощью элемента управления NumericUpDown в Windows Forms](set-and-return-numeric-values-with-wf-numericupdown-control.md)  
  Описание способов тестирования значения элемента управления.  
   
- [Практическое руководство. Задайте формат для элемента управления NumericUpDown в Windows Forms](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ [Практическое руководство. Определение формата элемента управления NumericUpDown в Windows Forms](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
  Описание способов настройки отображения значений в элементе управления.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.NumericUpDown>  
  Содержит справочные сведения о классе <xref:System.Windows.Forms.NumericUpDown> и его членах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
  [Элемент управления DomainUpDown](domainupdown-control-windows-forms.md)  
- Представляет элемент управления аналогично <xref:System.Windows.Forms.NumericUpDown>, за исключением того, что <xref:System.Windows.Forms.DomainUpDown> элемент управления отображает строки, а не числовые значения.
+ Вводит элемент управления, аналогичный <xref:System.Windows.Forms.NumericUpDown>, за исключением того, что элемент управления <xref:System.Windows.Forms.DomainUpDown> отображает строку вместо числовых значений.

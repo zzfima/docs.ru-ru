@@ -1,15 +1,15 @@
 ---
-title: 'Метод ICorDebugInstanceFieldSymbol:: Name'
+title: Метод ICorDebugInstanceFieldSymbol::GetName
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-ms.openlocfilehash: d88e18b8d6d497098e340b396972f9ead28dbaf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 05914863dfbc2aca608a5d74f298f81c64345fe8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139053"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782389"
 ---
-# <a name="icordebuginstancefieldsymbolgetname-method"></a>Метод ICorDebugInstanceFieldSymbol:: Name
+# <a name="icordebuginstancefieldsymbolgetname-method"></a>Метод ICorDebugInstanceFieldSymbol::GetName
 Получает имя поля экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -46,7 +46,7 @@ HRESULT GetName(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugInstanceFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugInstanceFieldSymbol](icordebuginstancefieldsymbol-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

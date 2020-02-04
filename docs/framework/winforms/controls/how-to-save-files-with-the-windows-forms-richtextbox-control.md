@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сохранение файлов с помощью элемента управления RichTextBox в Windows Forms
+title: Сохранение файлов с помощью элемента управления RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c5d88e4942d96ee12e8b9f40156090c874386668
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a87b93a53347aeba54f944b0f4c455aa272ea243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046263"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744819"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Сохранение файлов с помощью элемента управления RichTextBox в Windows Forms
 
-Элемент управления <xref:System.Windows.Forms.RichTextBox> Windows Forms может записывать отображаемые сведения в одном из следующих форматов:
+Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> может записывать отображаемые сведения в одном из следующих форматов:
 
-- Обычный текст
+- с обычным текстом;
 
 - Обычный текст в Юникоде
 
@@ -36,17 +36,17 @@ ms.locfileid: "70046263"
 
 - Обычный текст с текстовым представлением объектов OLE
 
-Чтобы сохранить файл, вызовите <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> метод. Можно также использовать метод **SaveFile** для сохранения данных в поток. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Чтобы сохранить файл, вызовите метод <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. Можно также использовать метод **SaveFile** для сохранения данных в поток. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Сохранение содержимого элемента управления в файле
 
 1. Определите путь к файлу, который необходимо сохранить.
 
-    Для этого в реальном приложении обычно используется <xref:System.Windows.Forms.SaveFileDialog> компонент. Общие сведения см. в разделе [Общие сведения о компоненте SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
+    Для этого в реальном приложении обычно используется компонент <xref:System.Windows.Forms.SaveFileDialog>. Общие сведения см. в разделе [Общие сведения о компоненте SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
 
-2. Вызовите <xref:System.Windows.Forms.RichTextBox> метод элемента управления, указав файл для сохранения и, при необходимости, тип файла. <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> При вызове метода с именем файла в качестве единственного аргумента файл будет сохранен как RTF. Чтобы указать другой тип файла, вызовите метод со значением перечисления <xref:System.Windows.Forms.RichTextBoxStreamType> в качестве второго аргумента.
+2. Вызовите метод <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> элемента управления <xref:System.Windows.Forms.RichTextBox>, указав файл для сохранения и, при необходимости, тип файла. При вызове метода с именем файла в качестве единственного аргумента файл будет сохранен как RTF. Чтобы указать другой тип файла, вызовите метод со значением перечисления <xref:System.Windows.Forms.RichTextBoxStreamType> в качестве второго аргумента.
 
-    В приведенном ниже примере путь, заданный для расположения RTF-файла, является папкой " **Мои документы** ". Это расположение используется, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут содержать эту папку. Выбор этого расположения также позволяет пользователям с минимальными уровнями доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, <xref:System.Windows.Forms.RichTextBox> что форма с уже добавленным элементом управления.
+    В приведенном ниже примере путь, заданный для расположения RTF-файла, является папкой " **Мои документы** ". Это расположение используется, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут содержать эту папку. Выбор этого расположения также позволяет пользователям с минимальными уровнями доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма с уже добавленным элементом управления <xref:System.Windows.Forms.RichTextBox>.
 
     ```vb
     Public Sub SaveFile()
@@ -88,7 +88,7 @@ ms.locfileid: "70046263"
     > [!IMPORTANT]
     > В этом примере создается файл (если файл отсутствует). Если приложению требуется создать файл, этому приложению требуется доступ для создания папки. Для задания разрешений используются списки управления доступом. Если файл уже существует, приложению требуется только доступ на запись, чем меньше привилегия. Там, где это возможно, более безопасно создавать файл во время развертывания и предоставлять доступ только для чтения к одному файлу, а не к папке. По тем же соображениям рекомендуется записывать данные в пользовательские папки, а не в коревую папку или папку Program Files.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>

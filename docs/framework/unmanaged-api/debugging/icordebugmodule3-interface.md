@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 07919398b658d735fe4c9818ab24d27d586b6629
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33acc4d9a0819c43d17c362fcbea2e7636521fd3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122562"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792936"
 ---
 # <a name="icordebugmodule3-interface"></a>Интерфейс ICorDebugModule3
 Создает средство чтения символов для динамического модуля.  
@@ -41,7 +41,7 @@ interface ICorDebugModule3 : IUnknown
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод ICorDebugModule3::CreateReaderForInMemorySymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Создает средство чтения символов (обычно [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) для динамического модуля.|  
+|[Метод ICorDebugModule3::CreateReaderForInMemorySymbols](icordebugmodule3-createreaderforinmemorysymbols-method.md)|Создает средство чтения символов (обычно [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) для динамического модуля.|  
   
 ## <a name="remarks"></a>Заметки  
  Этот интерфейс логически расширяет интерфейсы "ICorDebugModule" и "ICorDebugModule2".  
@@ -58,9 +58,9 @@ interface ICorDebugModule3 : IUnknown
   
  **.NET Framework версии:** 4,5, 4, 3,5 SP1
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Интерфейс ICorDebugRemoteTarget](icordebugremotetarget-interface.md)
+- [Интерфейс ICorDebug](icordebug-interface.md)
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

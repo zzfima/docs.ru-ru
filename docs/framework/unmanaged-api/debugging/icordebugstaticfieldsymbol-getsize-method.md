@@ -1,15 +1,15 @@
 ---
-title: 'Метод Икордебугстатикфиелдсимбол:: resize'
+title: Метод ICorDebugStaticFieldSymbol::GetSize
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-ms.openlocfilehash: 0fa9c519a40624dd8c5471231263d2430738af87
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: deeb887dad38417e3ebb980f5ef2f89392388d65
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131771"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791818"
 ---
-# <a name="icordebugstaticfieldsymbolgetsize-method"></a>Метод Икордебугстатикфиелдсимбол:: resize
+# <a name="icordebugstaticfieldsymbolgetsize-method"></a>Метод ICorDebugStaticFieldSymbol::GetSize
 Получает размер статического поля в байтах.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,7 +38,7 @@ HRESULT GetSize(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugStaticFieldSymbol](icordebugstaticfieldsymbol-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

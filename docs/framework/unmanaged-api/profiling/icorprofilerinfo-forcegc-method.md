@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0da1ef80-d242-4636-87d0-43e0470b342a
 topic_type:
 - apiref
-ms.openlocfilehash: 9f97da4e68d4b76178198e91c3fb8f08b56dda7b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e1fe38419cda328c919f0840d51cf6336919aa60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448184"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864223"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>Метод ICorProfilerInfo::ForceGC
 Принудительное выполнение сборки мусора в среде CLR.  
@@ -31,7 +31,7 @@ ms.locfileid: "74448184"
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Метод `ForceGC` должен вызываться только из потока, который никогда не выполнял управляемый код и не имеет обратных вызовов профилировщика в стеке. Наиболее удобной реализацией является создание отдельного потока в профилировщике, который вызывает `ForceGC` при получении сигнала.  
   
 ## <a name="requirements"></a>Требования  
@@ -45,4 +45,4 @@ HRESULT ForceGC();
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)

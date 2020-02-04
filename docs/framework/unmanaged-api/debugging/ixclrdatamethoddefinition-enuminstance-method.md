@@ -1,5 +1,5 @@
 ---
-title: Метод IXCLRDataMethodDefinition::EnumInstance
+title: 'Метод Иксклрдатамесоддефинитион:: Енуминстанце'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EnumInstance Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7ad1a9957e9bffd7b28aa241723dedba1d11f4cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775870"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790443"
 ---
-# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>Метод IXCLRDataMethodDefinition::EnumInstance
+# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>Метод Иксклрдатамесоддефинитион:: Енуминстанце
 
-Перечисление экземпляров класса определения метода.
+Перечисляет экземпляры этого определения метода.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,25 +40,25 @@ HRESULT EnumInstance(
 ## <a name="parameters"></a>Параметры
 
 `handle`\
-[in, out] Дескриптор для перечисления экземпляров.
+[вход, выход] Маркер для перечисления экземпляров.
 
 `instance`\
-[out] Экземпляр перечисления.
+заполняет Перечислимый экземпляр.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Указанный метод является частью `IXCLRDataMethodDefinition` интерфейса и соответствует четвертый слот в таблице виртуального метода.
+Предоставленный метод является частью `IXCLRDataMethodDefinition` интерфейса и соответствует четвертому слоту таблицы виртуального метода.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** None  
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Заголовок:** None  
 **Библиотека:** None  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Перечисление CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейс IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
-- [Интерфейс IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [Перечисление Клрдатасаурцетипе](clrdatasourcetype-enumeration.md)
+- [Отладка](index.md)
+- [Интерфейс Иксклрдатамесоддефинитион](ixclrdatamethoddefinition-interface.md)
+- [Интерфейс Иксклрдатамесодинстанце](ixclrdatamethodinstance-interface.md)

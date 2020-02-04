@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 5b58b7131d015353c2276b6f422e93e5d6a09109
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428153"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861142"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Метод ICorProfilerObjectEnum::Next
 Возвращает указанное количество смежных объектов из последовательной коллекции объектов, начиная с текущей позиции перечислителя в последовательности.  
@@ -57,4 +57,4 @@ HRESULT Next (
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [Интерфейс ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)

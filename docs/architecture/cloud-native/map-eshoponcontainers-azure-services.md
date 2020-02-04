@@ -2,12 +2,12 @@
 title: Сопоставление eShopOnContainers со службами Azure
 description: Сопоставление eShopOnContainers со службами Azure, такими как служба Kubernetes Azure, шлюз API и служебная шина Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "73841195"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781214"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Сопоставление eShopOnContainers со службами Azure
 
@@ -54,7 +54,7 @@ AKS предоставляет службы управления для отде
 
 Микрослужба Locations использует базу данных MongoDB NoSQL для сохраняемости. Во время разработки база данных может быть развернута в собственном контейнере, а в рабочей среде служба может использовать [API Azure Cosmos DB для MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction). Одним из преимуществ Azure Cosmos DB является возможность использовать несколько различных протоколов связи, включая API SQL и общие API NoSQL, включая MongoDB, Cassandra, Gremlin и хранилище таблиц Azure. Azure Cosmos DB предлагает полностью управляемую и глобально распределенную базу данных в качестве службы, которая может масштабироваться в соответствии с потребностями служб, использующих ее.
 
-Распределенные данные в облачных приложениях более подробно рассматриваются в [главе 5](distributed-data.md).
+Распределенные данные в облачных приложениях более подробно рассматриваются в [главе 5](database-per-microservice.md).
 
 ## <a name="event-bus"></a>Шина событий
 

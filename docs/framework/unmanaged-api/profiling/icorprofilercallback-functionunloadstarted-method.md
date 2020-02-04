@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: f57a3ed70267de65daed85305ad7d623b4ca0337
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2b228337a55d50b94da966b45877e2000b3c03e4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448015"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866330"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>Метод ICorProfilerCallback::FunctionUnloadStarted
 Уведомляет профилировщик о запуске среды выполнения для выгрузки функции.  
@@ -32,11 +32,13 @@ HRESULT FunctionUnloadStarted(
     [in] FunctionID functionId);   
 ```  
   
-## <a name="parameters"></a>Параметры  
- `functionId`  
- окне Идентификатор выгрузки функции.  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="parameters"></a>Параметры
+
+- `functionId`
+
+  \[в] идентификатор выгрузки функции.
+
+## <a name="remarks"></a>Заметки  
  Значение параметра `functionId` больше не является допустимым после возврата этим методом вызывающему объекту.  
   
 ## <a name="requirements"></a>Требования  
@@ -50,4 +52,4 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

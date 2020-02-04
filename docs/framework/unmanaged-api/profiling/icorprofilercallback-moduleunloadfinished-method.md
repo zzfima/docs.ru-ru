@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 185e3327-9f9c-44bc-8a5c-febea9a6bb5b
 topic_type:
 - apiref
-ms.openlocfilehash: 40cb666c47c690dc930ec2cb7f6c89662464780e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b13573d19ab4d8bb655c1e153530dc70173abe82
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445912"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866147"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>Метод ICorProfilerCallback::ModuleUnloadFinished
 Уведомляет профилировщик о завершении выгрузки модуля.  
@@ -40,8 +40,8 @@ HRESULT ModuleUnloadFinished(
  `hrStatus`  
  окне Значение HRESULT, указывающее, успешно ли выгружен модуль.  
   
-## <a name="remarks"></a>Примечания  
- Значение `moduleId` недопустимо для информационного запроса после возврата метода [ICorProfilerCallback:: ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) .  
+## <a name="remarks"></a>Заметки  
+ Значение `moduleId` недопустимо для информационного запроса после возврата метода [ICorProfilerCallback:: ModuleUnloadStarted](icorprofilercallback-moduleunloadstarted-method.md) .  
   
  Некоторые части выгрузки класса могут продолжаться после обратного вызова `ModuleUnloadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть выгрузки модуля успешно выполнена.  
   
@@ -56,4 +56,4 @@ HRESULT ModuleUnloadFinished(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

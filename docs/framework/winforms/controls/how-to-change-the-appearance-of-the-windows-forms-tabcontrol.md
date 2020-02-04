@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms
+title: Изменение внешнего вида элемента TabControl
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,43 +11,43 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: e8ab97c545577dd393fd7d9844b396973621e6a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 056070177e6bbaba0c93c7b94f5adfd7887be6a8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650860"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746608"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms
-Можно изменить внешний вид вкладок в формах Windows Forms с помощью свойств объекта <xref:System.Windows.Forms.TabControl> и <xref:System.Windows.Forms.TabPage> объекты, составляющие отдельные вкладки в элементе управления. Задавая эти свойства, можно отображать изображения на вкладках, отображение вкладок вертикально, отображения нескольких рядов и также включить или отключить вкладки программными средствами.  
+Внешний вид вкладок в Windows Forms можно изменить с помощью свойств <xref:System.Windows.Forms.TabControl> и объектов <xref:System.Windows.Forms.TabPage>, которые составляют отдельные вкладки в элементе управления. Устанавливая эти свойства, можно отображать изображения на вкладках, отображать вкладки вертикально, а не горизонтально, отображать несколько строк вкладок, а также включать и отключать вкладки программным способом.  
   
-### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a>Для отображения значка со стороны метка вкладки  
+### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a>Отображение значка в части метки вкладки  
   
-1. Добавление <xref:System.Windows.Forms.ImageList> на форму элемент управления.  
+1. Добавьте в форму элемент управления <xref:System.Windows.Forms.ImageList>.  
   
-2. Добавление изображений в списке изображений.  
+2. Добавление изображений в список изображений.  
   
-     Дополнительные сведения о списках изображений, см. в разделе [компонента ImageList](imagelist-component-windows-forms.md) и [как: Добавление и удаление изображений с помощью Windows Forms компонента ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+     Дополнительные сведения о списках изображений см. в разделе [ImageList Component](imagelist-component-windows-forms.md) и [инструкции по добавлению или удалению изображений с помощью компонента Windows Forms ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
-3. Задайте <xref:System.Windows.Forms.TabControl.ImageList%2A> свойство <xref:System.Windows.Forms.TabControl> для <xref:System.Windows.Forms.ImageList> элемента управления.  
+3. Задайте для свойства <xref:System.Windows.Forms.TabControl.ImageList%2A> <xref:System.Windows.Forms.TabControl> элемент управления <xref:System.Windows.Forms.ImageList>.  
   
-4. Задайте <xref:System.Windows.Forms.TabPage.ImageIndex%2A> свойство <xref:System.Windows.Forms.TabPage> к индексу соответствующего изображения в списке.  
+4. Задайте для свойства <xref:System.Windows.Forms.TabPage.ImageIndex%2A> <xref:System.Windows.Forms.TabPage> индекс соответствующего изображения в списке.  
   
-### <a name="to-create-multiple-rows-of-tabs"></a>Чтобы создать несколько строк вкладок  
+### <a name="to-create-multiple-rows-of-tabs"></a>Создание нескольких строк вкладок  
   
-1. Добавите число страниц вкладок, которые нужно.  
+1. Добавьте нужное число страниц вкладок.  
   
-2. Задайте <xref:System.Windows.Forms.TabControl.Multiline%2A> свойство <xref:System.Windows.Forms.TabControl> для `true`.  
+2. Задайте для свойства <xref:System.Windows.Forms.TabControl.Multiline%2A> <xref:System.Windows.Forms.TabControl> значение `true`.  
   
-3. Если вкладки не отображается в нескольких строках, задайте <xref:System.Windows.Forms.Control.Width%2A> свойство <xref:System.Windows.Forms.TabControl> быть уже, чем все знаки табуляции.  
+3. Если вкладки еще не отображаются в нескольких строках, установите свойство <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.TabControl>, чтобы оно было более узким, чем все вкладки.  
   
-### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Расположение вкладок вдоль края элемента управления  
+### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Размещение вкладок на стороне элемента управления  
   
-- Задайте <xref:System.Windows.Forms.TabControl.Alignment%2A> свойство <xref:System.Windows.Forms.TabControl> для <xref:System.Windows.Forms.TabAlignment.Left> или <xref:System.Windows.Forms.TabAlignment.Right>.  
+- Задайте для свойства <xref:System.Windows.Forms.TabControl.Alignment%2A> <xref:System.Windows.Forms.TabControl> значение <xref:System.Windows.Forms.TabAlignment.Left> или <xref:System.Windows.Forms.TabAlignment.Right>.  
   
-### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Чтобы включить или отключить все элементы управления на вкладке  
+### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Программное включение или отключение всех элементов управления на вкладке  
   
-1. Задайте <xref:System.Windows.Forms.TabPage.Enabled%2A> свойство <xref:System.Windows.Forms.TabPage> для `true` или `false`.  
+1. Задайте для свойства <xref:System.Windows.Forms.TabPage.Enabled%2A> <xref:System.Windows.Forms.TabPage> значение `true` или `false`.  
   
     ```vb  
     TabPage1.Enabled = False  
@@ -61,14 +61,14 @@ ms.locfileid: "64650860"
     tabPage1->Enabled = false;  
     ```  
   
-### <a name="to-display-tabs-as-buttons"></a>Отображение вкладок как кнопки  
+### <a name="to-display-tabs-as-buttons"></a>Отображение вкладок в виде кнопок  
   
-- Задайте <xref:System.Windows.Forms.TabControl.Appearance%2A> свойство <xref:System.Windows.Forms.TabControl> для <xref:System.Windows.Forms.TabAppearance.Buttons> или <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
+- Задайте для свойства <xref:System.Windows.Forms.TabControl.Appearance%2A> <xref:System.Windows.Forms.TabControl> значение <xref:System.Windows.Forms.TabAppearance.Buttons> или <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления TabControl](tabcontrol-control-windows-forms.md)
 - [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление элемента управления на вкладку](how-to-add-a-control-to-a-tab-page.md)
 - [Практическое руководство. Блокировка доступа ко вкладкам](how-to-disable-tab-pages.md)
-- [Практическое руководство. Добавление и удаление вкладок с помощью Windows Forms TabControl](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

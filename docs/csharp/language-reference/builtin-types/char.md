@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: ab49b8cbddac2569d6063a5f312105bef3033e84
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 3952e9e30706a8cd362ef248955918de5dacf4a3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552305"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787809"
 ---
 # <a name="char-c-reference"></a>char (Справочник по C#)
 
 Ключевое слово типа `char` — это псевдоним для типа структуры <xref:System.Char?displayProperty=nameWithType> .NET, представляющий символ UTF-16 в Юникоде.
 
-|Тип|Диапазон|Размер|Тип .NET|
+|Type|Диапазон|Размер|Тип .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|От U+0000 до U+FFFF|16 разрядов|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -58,3 +58,4 @@ ms.locfileid: "74552305"
 - [справочник по C#](../index.md)
 - [Таблица встроенных типов](../keywords/built-in-types-table.md)
 - [Строки](../../programming-guide/strings/index.md)
+- <xref:System.Text.Rune?displayProperty=nameWithType>

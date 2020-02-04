@@ -1,5 +1,5 @@
 ---
-title: Пространства имен XAML и сопоставление пространств имен для WPF XAML
+title: Пространства имен и сопоставление пространств имен XAML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976781"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741825"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Пространства имен XAML и сопоставление пространств имен для WPF XAML
 В этом разделе обосновывается наличие и рассматриваются цели сопоставления двух пространств имен XAML, обычно содержащихся в корневом теге файла WPF XAML. Также описываются способы создания аналогичных сопоставлений для использования элементов, заданных в коде и/или в отдельных сборках.  
@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Сопоставление пространств имен CLR с пространствами имен XML в сборке  
  WPF определяет атрибут CLR, который обрабатывается процессорами XAML для сопоставления нескольких пространств имен CLR с одним пространством имен XAML. Этот атрибут, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, помещается на уровне сборки в исходном коде, который создает сборку. Исходный код сборки WPF использует этот атрибут для соотнесения различных общих пространств имен, таких как <xref:System.Windows> и <xref:System.Windows.Controls>, к пространству имен `http://schemas.microsoft.com/winfx/2006/xaml/presentation`.  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> принимает два параметра: имя пространства имен XML/XAML и имя пространства имен CLR. Для соответствия нескольких пространств имен CLR одному и тому же пространству имен XML может существовать несколько <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. После сопоставления на члены этих пространств имен при желании можно ссылаться без указания полного имени, предоставляя соответствующий оператор `using` на странице с выделенным кодом разделяемого класса. Дополнительные сведения см. в разделе <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute> принимает два параметра: имя пространства имен XML/XAML и имя пространства имен CLR. Для соответствия нескольких пространств имен CLR одному и тому же пространству имен XML может существовать несколько <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. После сопоставления на члены этих пространств имен при желании можно ссылаться без указания полного имени, предоставляя соответствующий оператор `using` на странице с выделенным кодом разделяемого класса. Дополнительные сведения см. в статье <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Пространства имен конструктора и другие префиксы из шаблонов XAML  
  При работе в средах разработки или со средствами разработки для WPF XAML можно заметить, что в разметке XAML определены и другие пространства имен и префиксы XAML.  
@@ -135,7 +135,7 @@ End Namespace
   
  Скомпилированный BAML (сформированный с помощью PresentationBuildTask) использует все шаги, хотя BAML также не должен содержать неполные имена сборок.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Основные сведения о пространствах имен XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Общие сведения о языке XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Обзор XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

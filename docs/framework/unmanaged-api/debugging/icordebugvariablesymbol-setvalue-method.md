@@ -1,15 +1,15 @@
 ---
-title: 'Метод ICorDebugVariableSymbol:: SetValue'
+title: Метод ICorDebugVariableSymbol::SetValue
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: fbd3d617e3448730241ccfda7bd26b65d17b694d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe6b63e4c0706dd69478753b3512f606e73bee7c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121880"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790856"
 ---
-# <a name="icordebugvariablesymbolsetvalue-method"></a>Метод ICorDebugVariableSymbol:: SetValue
+# <a name="icordebugvariablesymbolsetvalue-method"></a>Метод ICorDebugVariableSymbol::SetValue
 Присваивает переменной значение массива байтов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -58,7 +58,7 @@ HRESULT SetValue(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вставка элемента MenuStrip в раскрывающемся меню интерфейса MDI (Windows Forms)
+title: Практическое руководство. Вставка элемента MenuStrip в раскрывающееся меню интерфейса MDI
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: febe5347ed305dc85e67d992fac8aefa18a02cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e189dd159c48b5779679d0563fab85e9b848992
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651647"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736404"
 ---
-# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Практическое руководство. Вставка элемента MenuStrip в раскрывающемся меню интерфейса MDI (Windows Forms)
+# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Практическое руководство. Вставка элемента MenuStrip в раскрывающееся меню интерфейса MDI (Windows Forms)
 В некоторых приложениях вид дочернего окна многодокументного интерфейса (MDI) может отличаться от родительского окна MDI. Например, родительским окном MDI может быть электронная таблица, а дочерним окном MDI — диаграмма. В этом случае может потребоваться дополнить содержимое меню родительского окна MDI содержимым меню дочерней MDI-формы, по мере того как активируются дочерние окна MDI различных типов.  
   
- В следующей процедуре используется <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойства, чтобы вставить группу пунктов меню из дочернего меню MDI в в раскрывающегося списка части родительского меню MDI. При закрытии дочернего окна MDI удаляются пункты меню, вставленные из родительского окна MDI.  
+ В следующей процедуре используются свойства <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> для вставки группы пунктов меню из дочернего меню MDI в раскрывающийся список родительского меню MDI. При закрытии дочернего окна MDI элементы вставленного меню удаляются из родительского интерфейса MDI.  
   
-### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>Чтобы Вставка элемента MenuStrip в раскрывающееся меню интерфейса MDI  
+### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>Вставка объекта MenuStrip в раскрывающееся меню MDI  
   
 1. Создайте форму и присвойте ее свойству <xref:System.Windows.Forms.Form.IsMdiContainer%2A> значение `true`.  
   
@@ -29,25 +29,25 @@ ms.locfileid: "64651647"
   
 3. Добавьте пункт меню верхнего уровня в `Form1`<xref:System.Windows.Forms.MenuStrip> и присвойте его свойству <xref:System.Windows.Forms.Control.Text%2A> значение `&File`.  
   
-4. Добавьте три элемента вложенного меню для `&File` пункта меню и задайте их <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойства `&Open`, `&Import from`, и `E&xit`.  
+4. Добавьте три пункта подменю в элемент меню `&File` и задайте для свойств <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&Open`, `&Import from`и `E&xit`.  
   
-5. Добавьте два подменю к `&Import from` подменю и задайте их <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойства `&Word` и `&Excel`.  
+5. Добавьте два пункта подменю в элемент вложенного меню `&Import from` и задайте для свойств <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&Word` и `&Excel`.  
   
 6. Добавьте в проект форму, добавьте <xref:System.Windows.Forms.MenuStrip> на форму и присвойте его свойству <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> элемента `Form2`<xref:System.Windows.Forms.MenuStrip> значение `true`.  
   
 7. Добавьте пункт меню верхнего уровня в `Form2`<xref:System.Windows.Forms.MenuStrip> и присвойте его свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&File`.  
   
-8. Добавить подменю `&File` меню `Form2` в следующем порядке: <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`и другой <xref:System.Windows.Forms.ToolStripSeparator>.  
+8. Добавьте элементы подменю в меню `&File` `Form2` в следующем порядке: <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`и другой <xref:System.Windows.Forms.ToolStripSeparator>.  
   
-9. Задайте <xref:System.Windows.Forms.MergeAction> и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойства `Form2` пункты меню, как показано в следующей таблице.  
+9. Задайте свойства <xref:System.Windows.Forms.MergeAction> и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> пунктов меню `Form2`, как показано в следующей таблице.  
   
-    |Пункт меню Form2|Значение MergeAction|Значение MergeIndex|  
+    |Пункт меню Form2|Значение Мержеактион|Значение Мержеиндекс|  
     |---------------------|-----------------------|----------------------|  
-    |Файл|MatchOnly|-1|  
-    |Separator|Insert|2|  
-    |Сохранение|Insert|3|  
-    |Сохранить и закрыть|Insert|4|  
-    |Separator|Insert|5|  
+    |Файл|матчонли|-1|  
+    |Разделитель|Вставить|2|  
+    |Сохранять|Вставить|3|  
+    |Сохранить и закрыть|Вставить|4|  
+    |Разделитель|Вставить|5|  
   
 10. Создайте обработчик событий для события <xref:System.Windows.Forms.Control.Click> элемента `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "64651647"
   
 - ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Создание родительских MDI-форм](../advanced/how-to-create-mdi-parent-forms.md)
 - [Практическое руководство. Создание дочерних MDI-форм](../advanced/how-to-create-mdi-child-forms.md)

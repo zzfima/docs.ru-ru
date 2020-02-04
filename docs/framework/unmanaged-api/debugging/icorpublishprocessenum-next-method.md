@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-ms.openlocfilehash: d79b642735543ff84f6211fe5ca2e5b424be1f2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 084af87acd73ef65739ba69ef2bd66d10d7c27c2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103447"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790515"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>Метод ICorPublishProcessEnum::Next
 Возвращает указанное количество процессов из коллекции, начиная с текущего положения курсора.  
@@ -41,7 +41,7 @@ HRESULT Next (
  окне Число процессов для извлечения.  
   
  `objects`  
- заполняет Указатель на массив полученных объектов [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) , каждый из которых представляет процесс.  
+ заполняет Указатель на массив полученных объектов [ICorPublishProcess](icorpublishprocess-interface.md) , каждый из которых представляет процесс.  
   
  `pceltFetched`  
  заполняет Указатель на число фактически возвращенных процессов. Это значение может быть равно null, если `celt` является одним.  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+- [Интерфейс ICorPublishProcessEnum](icorpublishprocessenum-interface.md)

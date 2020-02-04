@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458484"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870744"
 ---
 # <a name="weak-event-patterns"></a>Шаблоны слабых событий
 В приложениях возможно, что обработчики, присоединенные к источникам событий, не будут уничтожены в координации с объектом прослушивателя, который присоединил обработчик к источнику. Такая ситуация может привести к утечке памяти. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представляет шаблон проектирования, который можно использовать для решения этой проблемы, предоставляя выделенный класс диспетчера для конкретных событий и реализуя интерфейс в прослушивателях для этого события. Этот шаблон разработки известен как *шаблон слабых событий*.  
@@ -36,7 +36,7 @@ ms.locfileid: "73458484"
 |Использование существующего класса диспетчера слабых событий|Если событие, на которое вы хотите подписываться, имеет соответствующую <xref:System.Windows.WeakEventManager>, используйте существующий диспетчер слабых событий. Список слабых диспетчеров событий, входящих в состав WPF, см. в разделе Иерархия наследования в классе <xref:System.Windows.WeakEventManager>. Поскольку входящие диспетчеры событий ограничены, вам, вероятно, потребуется выбрать один из других подходов.|  
 |Использование универсального класса диспетчера слабых событий|Используйте универсальный <xref:System.Windows.WeakEventManager%602> если имеющийся <xref:System.Windows.WeakEventManager> недоступен, вы хотите легко реализовать и не беспокоиться об эффективности. Универсальный <xref:System.Windows.WeakEventManager%602> менее эффективен, чем существующий или пользовательский диспетчер слабых событий. Например, универсальный класс делает больше отражения для обнаружения события в заданном имени события. Кроме того, код для регистрации события с помощью универсального <xref:System.Windows.WeakEventManager%602> является более подробным, чем использование существующего или пользовательского <xref:System.Windows.WeakEventManager>.|  
 |Создание пользовательского класса диспетчера слабых событий|Создайте настраиваемый <xref:System.Windows.WeakEventManager>, если существующий <xref:System.Windows.WeakEventManager> недоступен и требуется лучшая эффективность. Использование настраиваемых <xref:System.Windows.WeakEventManager> для подписки на событие будет более эффективным, но в начале придется писать больше кода.|  
-|Использование стороннего диспетчера слабых событий|NuGet имеет [несколько диспетчеров слабых событий](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) , а многие платформы WPF также поддерживают шаблон (например, см. [документацию по Prism по слабо связанной подписке на события](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
+|Использование стороннего диспетчера слабых событий|NuGet имеет [несколько диспетчеров слабых событий](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) , а многие платформы WPF также поддерживают шаблон (например, см. [документацию по Prism по слабо связанной подписке на события](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)).|
 
  В следующих разделах описывается реализация шаблона слабых событий.  В рамках этого обсуждения событие, для которого подписывается, имеет следующие характеристики.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "73458484"
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>

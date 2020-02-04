@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 3a33d25ee13e12a2612d0132da1dc84c24f2f95b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6cc1ef5f778902efaa53156fbefe334046c82114
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090544"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794537"
 ---
 # <a name="icordebugframeenum-interface"></a>Интерфейс ICorDebugFrameEnum
 
@@ -29,7 +29,7 @@ ms.locfileid: "73090544"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|Возвращает указанное число экземпляров `ICorDebugFrame` из перечисления, начиная с текущей позиции.|  
+|[Метод Next](icordebugframeenum-next-method.md)|Возвращает указанное число экземпляров `ICorDebugFrame` из перечисления, начиная с текущей позиции.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -45,6 +45,6 @@ ms.locfileid: "73090544"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

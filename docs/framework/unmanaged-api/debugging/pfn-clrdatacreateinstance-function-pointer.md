@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-ms.openlocfilehash: 426a8acf2e9319725cf592db00dc97c8960bca4f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 433f34447d3bd1a57ca1e289cb0eab3facac2c69
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139168"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790360"
 ---
 # <a name="pfn_clrdatacreateinstance-function-pointer"></a>Указатель функции PFN_CLRDataCreateInstance
 Указывает на функцию, которая создает объект интерфейса для указанного целевого элемента.  
@@ -39,7 +39,7 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  окне Идентификатор интерфейса, для которого создается экземпляр.  
   
  `target`  
- окне Указатель на реализуемый пользователем объект [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.  
+ окне Указатель на реализуемый пользователем объект [ICLRDataTarget](iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.  
   
  `iface`  
  заполняет Указатель на адрес возвращенного объекта интерфейса.  
@@ -56,6 +56,6 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Глобальные статические функции отладки](debugging-global-static-functions.md)

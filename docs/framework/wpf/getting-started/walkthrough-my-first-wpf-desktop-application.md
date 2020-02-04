@@ -1,5 +1,6 @@
 ---
-title: Руководство. Создание первого приложения WPF в Visual Studio 2019 — .NET Framework
+title: Создание первого приложения WPF в Visual Studio 2019 — .NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,18 +13,18 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336811"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746973"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Руководство. Создание первого приложения WPF в Visual Studio 2019
 
 В этой статье показано, как разработать классическое приложение Windows Presentation Foundation (WPF), включающее элементы, которые являются общими для большинства приложений WPF: разметка XAML (XAML), код программной части, определения приложений, элементы управления, макет, привязка данных и стили. Для разработки приложения вы будете использовать Visual Studio. 
 
-В этом руководстве вы узнаете, как:
+В этом руководстве описано следующее.
 > [!div class="checklist"]
 >
 > - Создайте проект WPF.
@@ -41,7 +42,7 @@ ms.locfileid: "75336811"
 >
 > Язык кода образца кода можно переключать между C# и Visual Basic с помощью селектора языка в верхней части этой страницы.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) с установленной рабочей нагрузкой " **Разработка классических приложений .NET** ".
 
@@ -83,7 +84,7 @@ ms.locfileid: "75336811"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Откройте файл *MainWindow.xaml*.
+3. Откройте файл *MainWindow. XAML*.
 
     Этот XAML-файл является главным окном приложения и отображает содержимое, созданное на страницах. Класс <xref:System.Windows.Window> определяет свойства окна, такие как заголовок, размер или значок, а также обрабатывает события, такие как закрытие или скрытие.
 
@@ -151,7 +152,7 @@ ms.locfileid: "75336811"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Откройте файл *MainWindow.xaml*.
+1. Откройте файл *MainWindow. XAML*.
 
 1. Добавьте свойство <xref:System.Windows.Navigation.NavigationWindow.Source%2A> в элемент <xref:System.Windows.Navigation.NavigationWindow> и задайте для него значение "`ExpenseItHome.xaml`".
 
@@ -214,7 +215,7 @@ ms.locfileid: "75336811"
 
     2. В диалоговом окне **Добавление существующего элемента** задайте для фильтра файлов значение **все файлы** или **файлы изображений**, перейдите к файлу изображения, который необходимо использовать, а затем нажмите кнопку **Добавить**.
 
-## <a name="build-and-run-the-application"></a>Построение и запуск приложения
+## <a name="build-and-run-the-application"></a>Создание и запуск приложения
 
 1. Чтобы выполнить сборку и запуск приложения, нажмите клавишу **F5** или выберите **начать отладку** в меню **Отладка** .
 
@@ -263,7 +264,7 @@ ms.locfileid: "75336811"
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a>Добавление элементов управления
+## <a name="add-controls"></a>Добавить элементы управления
 
 В этом разделе вы обновите пользовательский интерфейс домашней страницы, чтобы отобразить список людей, в которых вы выбрали одного пользователя для отображения отчета о расходах. Элементы управления — это объекты пользовательского интерфейса, позволяющие пользователям взаимодействовать с приложением. Более подробную информацию см. в разделе [Элементы управления](../controls/index.md).
 
@@ -282,7 +283,7 @@ ms.locfileid: "75336811"
    > [!TIP]
    > Можно также создать элементы управления, перетащив их из окна **панель элементов** в окно конструктора, а затем задав их свойства в окне **свойства** .
 
-2. Выполните сборку и запуск приложения.
+2. Выполните сборку и запустите приложение.
 
     На следующем рисунке показаны созданные элементы управления.
 
@@ -316,7 +317,7 @@ ms.locfileid: "75336811"
 
     [!code-xaml[ExpenseIt#13](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#13)]
 
-7. Выполните сборку и запуск приложения.
+7. Выполните сборку и запустите приложение.
 
 На следующем рисунке показаны результаты только что добавленных элементов.
 
@@ -347,7 +348,7 @@ ms.locfileid: "75336811"
 
     Этот пользовательский интерфейс похож на *`ExpenseItHome.xaml`* , за исключением того, что данные отчета отображаются в <xref:System.Windows.Controls.DataGrid>.
 
-3. Выполните сборку и запуск приложения.
+3. Выполните сборку и запустите приложение.
 
 4. Нажмите кнопку **Просмотр** .
 
@@ -397,7 +398,7 @@ ms.locfileid: "75336811"
 
     Этот XAML добавляет стили к элементам <xref:System.Windows.Controls.Label> и <xref:System.Windows.Controls.Border>.
 
-6. Выполните сборку и запуск приложения. Внешний вид окна такой же, как и ранее.
+6. Выполните сборку и запустите приложение. Внешний вид окна такой же, как и ранее.
 
     ![Пример снимка экрана ExpenseIt с тем же видом, что и в последнем разделе.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
@@ -461,7 +462,7 @@ ms.locfileid: "75336811"
 
     [!code-xaml[ExpenseIt#32](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 
-5. Выполните сборку и запуск приложения.
+5. Выполните сборку и запустите приложение.
 
 6. Выберите пользователя и нажмите кнопку **Просмотр** .
 
@@ -473,11 +474,11 @@ ms.locfileid: "75336811"
 > В этом примере демонстрируется конкретная функция WPF, которая не соответствует всем рекомендациям, таким как безопасность, локализация и специальные возможности. Полный охват WPF и рекомендации по разработке приложений .NET см. в следующих разделах:
 >
 > - [Специальные возможности](../../ui-automation/accessibility-best-practices.md)
-> - [Security](../security-wpf.md)
+> - [Безопасность](../security-wpf.md)
 > - [Глобализация и локализация WPF](../advanced/wpf-globalization-and-localization-overview.md)
 > - [Производительность WPF](../advanced/optimizing-wpf-application-performance.md)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В этом пошаговом руководстве вы узнали о ряде методов создания пользовательского интерфейса с помощью Windows Presentation Foundation (WPF). Теперь у вас должно быть базовое представление о стандартных блоках приложений .NET с привязкой к данным. Более подробную информацию об архитектуре и моделях программирования WPF см. в следующих разделах:
 
@@ -494,7 +495,7 @@ ms.locfileid: "75336811"
 - [Графика и мультимедиа](../graphics-multimedia/index.md)
 - [Документы в WPF](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Обзор панелей](../controls/panels-overview.md)
 - [Общие сведения о шаблонах данных](../data/data-templating-overview.md)

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-ms.openlocfilehash: 732e07e15b3ddd535bf781e6c297383150e40e94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76aaeef93028b2ff9526601450d7e11f918e063d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123403"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792189"
 ---
 # <a name="icordebugprocess7-interface"></a>Интерфейс ICorDebugProcess7
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -26,7 +26,7 @@ ms.locfileid: "73123403"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)|Устанавливает значение, определяющее порядок, согласно которому отладчик обрабатывает обновления находящихся в памяти метаданных в целевом процессе.|  
+|[Метод SetWriteableMetadataUpdateMode](icordebugprocess7-setwriteablemetadataupdatemode-method.md)|Устанавливает значение, определяющее порядок, согласно которому отладчик обрабатывает обновления находящихся в памяти метаданных в целевом процессе.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73123403"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

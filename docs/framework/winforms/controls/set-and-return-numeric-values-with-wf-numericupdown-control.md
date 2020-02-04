@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Ввод числовых значений с помощью элемента управления NumericUpDown в Windows Forms
+title: Установка и возврат числовых значений с помощью элемента управления NumericUpDown
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 3da2c7b057732e9b2db5e048dec037e4e9910c0a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0b264fec9619b467c293bcb96278c4517775ac3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625736"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743024"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Практическое руководство. Ввод числовых значений с помощью элемента управления NumericUpDown в Windows Forms
-Числовое значение в Windows Forms <xref:System.Windows.Forms.NumericUpDown> управления определяется его <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойство. Можно написать проверок условий для значения элемента управления так же, как и в любое другое свойство. Один раз <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойству, ее можно изменить непосредственно путем написания кода для выполнения над ним операций или вы можете вызвать <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> и <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> методы.  
+Числовое значение элемента управления Windows Forms <xref:System.Windows.Forms.NumericUpDown> определяется его свойством <xref:System.Windows.Forms.NumericUpDown.Value%2A>. Можно писать условные тесты для значения элемента управления точно так же, как и любое другое свойство. После установки свойства <xref:System.Windows.Forms.NumericUpDown.Value%2A> его можно настроить непосредственно, написав код для выполнения операций с ним, или можно вызвать методы <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> и <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.  
   
-### <a name="to-set-the-numeric-value"></a>Чтобы задать числовое значение  
+### <a name="to-set-the-numeric-value"></a>Задание числового значения  
   
-1. Присвойте значение <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойства в коде или в окне «Свойства».  
+1. Присвойте значение свойству <xref:System.Windows.Forms.NumericUpDown.Value%2A> в коде или в окно свойств.  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -39,7 +39,7 @@ ms.locfileid: "64625736"
   
      -или-  
   
-2. Вызовите <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> или <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> метод, чтобы увеличить или уменьшить значение величину, указанную в <xref:System.Windows.Forms.NumericUpDown.Increment%2A> свойство.  
+2. Вызовите метод <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> или <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>, чтобы увеличить или уменьшить значение на величину, указанную в свойстве <xref:System.Windows.Forms.NumericUpDown.Increment%2A>.  
   
     ```vb  
     NumericUpDown1.UpButton()  
@@ -53,9 +53,9 @@ ms.locfileid: "64625736"
     numericUpDown1->UpButton();  
     ```  
   
-### <a name="to-return-the-numeric-value"></a>Чтобы вернуть числовое значение  
+### <a name="to-return-the-numeric-value"></a>Получение числового значения  
   
-- Доступ <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойства в коде.  
+- Доступ к свойству <xref:System.Windows.Forms.NumericUpDown.Value%2A> в коде.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  
@@ -89,7 +89,7 @@ ms.locfileid: "64625736"
     }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>

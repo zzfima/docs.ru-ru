@@ -1,21 +1,21 @@
 ---
-title: Разработка пользовательских элементов управления Windows Forms в .NET Framework
+title: Разработка пользовательских элементов управления
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 3d628d75b75c311c266648886b3b971c4833d172
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbc1c4530b3a0f4e579ca67c7ae88c1685222ea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972254"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745998"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Разработка пользовательских элементов управления Windows Forms в .NET Framework
 Элементы управления Windows Forms — это многократно используемые компоненты, которые инкапсулируют функциональность пользовательского интерфейса и используются в клиентских приложениях Windows. Windows Forms предоставляет не только множество готовых к использованию элементов управления, но и инфраструктуру для разработки собственных элементов управления. Вы можете объединять существующие элементы управления, расширять существующие или создавать пользовательские элементы управления. В этом разделе приводятся дополнительные сведения и образцы, которые помогут вам в разработке элементов управления Windows Forms.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об использовании элементов управления в формах Windows Forms](overview-of-using-controls-in-windows-forms.md)  
  Освещены главные особенности использования элементов управления в приложениях Windows Forms.  
   
@@ -43,21 +43,21 @@ ms.locfileid: "61972254"
  [Многопоточность в элементах управления Windows Forms](multithreading-in-windows-forms-controls.md)  
  Показано, как реализовать многопоточные элементы управления.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
  <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Атрибуты времени разработки для компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  Перечислены атрибуты метаданных, которые нужно применить к компонентам и элементам управления, чтобы они корректно отображались в режиме разработки в визуальных конструкторах.  
   
  [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
  Описывается, как реализовать такие классы, как редакторы и конструкторы, обеспечивающие поддержку во время разработки.  
   
- [Практическое руководство. Лицензии компонентов и элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))  
+ [Практическое руководство. Лицензирование компонентов и элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))  
  Описывается, как реализовать лицензирование в элементе управления или компоненте.  
   
  См. также [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md).

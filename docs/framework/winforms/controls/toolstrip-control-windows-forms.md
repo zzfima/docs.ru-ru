@@ -1,25 +1,25 @@
 ---
-title: Элемент управления ToolStrip (Windows Forms)
+title: Элемент управления ToolStrip
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-ms.openlocfilehash: c7c140eaec8e16826c7dd7c26094be7cec234991
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b468b81f0ac0d0a2bc59ea08e95ac5dd71b6412e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654789"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733870"
 ---
 # <a name="toolstrip-control-windows-forms"></a>Элемент управления ToolStrip (Windows Forms)
 Элементы управления <xref:System.Windows.Forms.ToolStrip> — это панели инструментов, на которых можно разместить меню, элементы управления и пользовательские элементы управления в приложениях Windows Forms.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Управление переполнения элемента управления ToolStrip](how-to-manage-toolstrip-overflow-in-windows-forms.md)  
+ [Практическое руководство. Определение действий, выполняемых в случае переполнения элемента управления ToolStrip](how-to-manage-toolstrip-overflow-in-windows-forms.md)  
  Описывается область  переполнения и управление ею.  
   
  [Практическое руководство. Разрешение переупорядочения элементов ToolStrip во время выполнения](how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md)  
@@ -28,13 +28,13 @@ ms.locfileid: "64654789"
  [Практическое руководство. Включение автозаполнения для элементов управления ToolStrip](how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md)  
  Показаны функциональные возможности автоматического заполнения в <xref:System.Windows.Forms.ToolStripComboBox>.  
   
- [Практическое руководство. Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms](how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md)  
+ [Практическое руководство. Изменение расстояния между элементами и способа их выравнивания для элемента управления ToolStrip в Windows Forms](how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md)  
  Описание различных способов упорядочивания <xref:System.Windows.Forms.ToolStripItem> на <xref:System.Windows.Forms.ToolStrip>.  
   
- [Практическое руководство. Изменение внешнего вида элемента управления ToolStrip текста и изображений в Windows Forms](how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md)  
+ [Практическое руководство. Изменение внешнего вида текста и изображений элемента управления ToolStrip в Windows Forms](how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md)  
  Описание способов определения и изменения расположения текста и изображений на элементах управления <xref:System.Windows.Forms.ToolStripItem>.  
   
- [Практическое руководство. Заключение элемента управления Windows Forms с помощью ToolStripControlHost](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)  
+ [Практическое руководство. Заключение элемента управления в оболочку ToolStripControlHost в Windows Forms](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)  
  Показано размещение элемента управления <xref:System.Windows.Forms.MonthCalendar> на <xref:System.Windows.Forms.ToolStripControlHost>.  
   
  [Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
@@ -52,36 +52,36 @@ ms.locfileid: "64654789"
  [Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
  Описание способа получения <xref:System.Windows.Forms.ToolStrip> без контейнера, но с формой.  
   
- [Практическое руководство. Размещение ToolStripItem на полосе ToolStrip](how-to-position-a-toolstripitem-on-a-toolstrip.md)  
+ [Практическое руководство. Размещение элемента ToolStripItem на полосе ToolStrip](how-to-position-a-toolstripitem-on-a-toolstrip.md)  
  Описывается, как разместить <xref:System.Windows.Forms.ToolStripButton> на крайнем левом или правом конце <xref:System.Windows.Forms.ToolStrip>.  
   
- [Практическое руководство. С помощью клавиши для перемещения выход из элемента управления ToolStrip](how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md)  
+ [Практическое руководство. Выход из элемента управления ToolStrip с помощью клавиши TAB](how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md)  
  Описание способа перехода в пределах <xref:System.Windows.Forms.ToolStrip> и перехода от него к следующему элементу управления в последовательности перехода.  
   
- [Практическое руководство. Обнаружить, когда указатель мыши находится над ToolStripItem](how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md)  
+ [Практическое руководство. Отслеживание наведения указателя мыши на элемент ToolStripItem](how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md)  
  Описывается, как настроить элементы <xref:System.Windows.Forms.ToolStrip> для обнаружения наведения указателя мыши на них без необходимости синхронизации различных событий мыши.  
   
  [Практическое руководство. Создание формы MDI с использованием элементов управления ToolStripPanel](how-to-create-an-mdi-form-with-toolstrippanel-controls.md)  
  Описывается, как создавать MDI-приложения с элементами управления <xref:System.Windows.Forms.ToolStripPanel>.  
   
- [Практическое руководство. Создание формы MDI с помощью слияния меню и элементов управления ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+ [Практическое руководство. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
  Описывается создание формы MDI, которая поддерживает элементы управления <xref:System.Windows.Forms.ToolStrip> и слияние меню.  
   
  [Практическое руководство. Создание профессионально оформленного элемента управления ToolStrip](how-to-create-a-professionally-styled-toolstrip-control.md)  
- Описывает использование <xref:System.Windows.Forms.ToolStripProfessionalRenderer> класса для создания составного элемента управления, напоминающего **редактируемую** в Microsoft® Outlook®.  
+ Описывает использование класса <xref:System.Windows.Forms.ToolStripProfessionalRenderer> для создания составного элемента управления, который имитирует **область навигации** , предоставляемую Microsoft® Outlook®.  
   
- [Практическое руководство. Практическое](how-to-implement-a-custom-toolstriprenderer.md)  
+ [Практическое руководство. Реализация пользовательского класса, производного от ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)  
  Описывается способ настройки внешнего вида элемента управления <xref:System.Windows.Forms.ToolStrip>, который  можно настроить путем реализации класса, производного от <xref:System.Windows.Forms.ToolStripRenderer>.  
   
-- [Практическое руководство. Создать базовый Windows Forms элемента управления ToolStrip со стандартными элементами с помощью конструктора](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [Инструкции. Создание базового Windows Forms ToolStrip со стандартными элементами с помощью конструктора](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
 - [Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
-- [Пошаговое руководство: Создание профессионально оформленного элемента управления ToolStrip](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [Пример. Создание профессионально оформленного элемента управления ToolStripl](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
-- [Пошаговое руководство: Создание формы MDI с помощью слияния меню и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [Пример. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.ToolStrip>  
  Описание класса и всех его членов.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "64654789"
  <xref:System.Windows.Forms.ToolStripItem>  
  Описывает класс <xref:System.Windows.Forms.ToolStripItem> и содержит ссылки на все его члены.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

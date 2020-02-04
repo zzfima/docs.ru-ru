@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 453486c9e3d98ffd6f0dcfa08e7a0a9a1c1d3342
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35767529d9433764b7eed0b3b4acdd806f399962
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123394"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792183"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>Метод ICorDebugProcess7::SetWriteableMetadataUpdateMode
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -34,7 +34,7 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="parameters"></a>Параметры  
  `flags`  
- Значение перечисления [вритеаблеметадатаупдатемоде](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md) , указывающее, являются ли обновления в памяти в целевом процессе видимыми (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) или невидимыми (`WriteableMetadataUpdateMode::LegacyCompatPolicy`) отладчиком.  
+ Значение перечисления [вритеаблеметадатаупдатемоде](writeablemetadataupdatemode-enumeration.md) , указывающее, являются ли обновления в памяти в целевом процессе видимыми (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) или невидимыми (`WriteableMetadataUpdateMode::LegacyCompatPolicy`) отладчиком.  
   
 ## <a name="remarks"></a>Заметки  
  Обновления для метаданных в целевом процессе могут поступать из режима "Изменить и продолжить", профилировщика или <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
@@ -48,7 +48,7 @@ HRESULT SetWriteableMetadataUpdateMode(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugProcess7](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugProcess7](icordebugprocess7-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

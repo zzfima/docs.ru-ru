@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Задание атрибутов шрифта для элемента управления RichTextBox в Windows Forms
+title: Установка атрибутов шрифта для элемента управления RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 4919e94c23b1a67680ea0f360304ee0f75c7f425
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f27256c155223df576ee3c42e6bf65270c870b0f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963227"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744862"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Практическое руководство. Задание атрибутов шрифта для элемента управления RichTextBox в Windows Forms
-Элемент управления <xref:System.Windows.Forms.RichTextBox> Windows Forms имеет множество параметров для форматирования отображаемого текста. Можно сделать выбранные символы полужирным, подчеркнутым или курсивом с помощью <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> свойства. Это свойство также может использоваться для изменения размера и начертания выбранных символов. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Свойство позволяет изменить цвет выбранных символов.  
+Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> имеет множество параметров для форматирования отображаемого текста. Можно сделать выбранные символы полужирным, подчеркнутым или курсивом с помощью свойства <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>. Это свойство также может использоваться для изменения размера и начертания выбранных символов. Свойство <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> позволяет изменить цвет выбранных символов.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Изменение внешнего вида символов  
   
-1. Задайте для <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> свойства соответствующий шрифт.  
+1. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> соответствующий шрифт.  
   
-     Чтобы разрешить пользователям задавать семейство шрифтов, размер и гарнитуру в приложении, обычно используется <xref:System.Windows.Forms.FontDialog> компонент. Его обзор приведен в разделе [Общие сведения о компоненте FontDialog](fontdialog-component-overview-windows-forms.md).  
+     Чтобы разрешить пользователям задавать семейство шрифтов, размер и гарнитуру в приложении, обычно используется компонент <xref:System.Windows.Forms.FontDialog>. Его обзор приведен в разделе [Общие сведения о компоненте FontDialog](fontdialog-component-overview-windows-forms.md).  
   
-2. Задайте для <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> свойства соответствующий цвет.  
+2. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> соответствующий цвет.  
   
-     Чтобы разрешить пользователям задавать цвет в приложении, обычно используется <xref:System.Windows.Forms.ColorDialog> компонент. Его обзор приведен в разделе [Общие сведения о компоненте ColorDialog](colordialog-component-overview-windows-forms.md).  
+     Чтобы разрешить пользователям задавать цвет в приложении, обычно используется компонент <xref:System.Windows.Forms.ColorDialog>. Его обзор приведен в разделе [Общие сведения о компоненте ColorDialog](colordialog-component-overview-windows-forms.md).  
   
     ```vb  
     RichTextBox1.SelectionFont = New Font("Tahoma", 12, FontStyle.Bold)  
@@ -51,9 +51,9 @@ ms.locfileid: "69963227"
     ```  
   
     > [!NOTE]
-    > Эти свойства влияют лишь на выделенный текст или, если никакой текст не выбран, текст, вводимый в текущей позиции курсора. Сведения о программном выборе текста см. <xref:System.Windows.Forms.TextBoxBase.Select%2A>в разделе.  
+    > Эти свойства влияют лишь на выделенный текст или, если никакой текст не выбран, текст, вводимый в текущей позиции курсора. Сведения о программном выборе текста см. в разделе <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)

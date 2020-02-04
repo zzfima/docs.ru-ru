@@ -1,5 +1,5 @@
 ---
-title: Создание элементов управления Windows Forms во время разработки
+title: Проектирование элементов управления во время разработки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls [Windows Forms]
@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460081"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745986"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Разработка элементов управления Windows Forms во время разработки
 
@@ -28,7 +28,7 @@ ms.locfileid: "73460081"
 
 Если вам необходимо создать пользовательский элемент управления для использования в веб-формах, см. раздел [Разработка пользовательских серверных элементов управления ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Пошаговое руководство. Создание составного элемента управления](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
 Демонстрируется создание простого составного элемента управления в C#.
@@ -81,18 +81,18 @@ ms.locfileid: "73460081"
 [Разрешение вопросов, связанных с созданием элементов управления и компонентов](troubleshooting-control-and-component-authoring.md)\
 Демонстрируются диагностика и исправление распространенных проблем, возникающих при разработке пользовательского компонента или элемента управления.
 
-## <a name="reference"></a>Справочники
+## <a name="reference"></a>Справочник
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 
 - <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)\
 Описывается создание пользовательских элементов управления с помощью .NET Framework.
 
-[Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
+[Независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md)\
 Основные сведения об общеязыковой среде выполнения (CLR), которая предназначена для упрощения создания и использования компонентов. Важным аспектом этого упрощения является расширение возможностей взаимодействия между компонентами, написанными на разных языках программирования. Спецификация CLS делает возможным создание инструментов и компонентов, которые работают с несколькими языками программирования.
 
 [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\

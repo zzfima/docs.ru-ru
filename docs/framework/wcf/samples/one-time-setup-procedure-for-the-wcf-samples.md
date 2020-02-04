@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 1d7b5f6cb5922bde4b002611209ea3464f8e457c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544662"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921171"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 
@@ -24,7 +24,7 @@ ms.locfileid: "75544662"
 
 2. Убедитесь, что установлен .NET Framework 4. Выполните поиск в следующем каталоге версии 4.0 (или более поздней): **\виндовс\микрософт.нет\фрамеворк**
 
-3. Если Visual Studio 2012 не установлена, а операционная система не является Windows Server 2008 с пакетом обновления 2 (SP2) или более поздней версии, установите [исправление 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
+3. Убедитесь, что установлен Visual Studio 2012 или более поздней версии, либо установлена операционная система Windows Server 2008 SP2 или более поздней версии.
 
 4. Выполните следующие команды. Дополнительные сведения о том, почему должны выполняться эти команды, см. в разделе [сбой размещенной службы IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
 
@@ -63,7 +63,7 @@ ms.locfileid: "75544662"
     > [!NOTE]
     > Если этот шаг не выполнен, построение всех образцов, размещенных в службах IIS, завершится с ошибкой. Убедитесь, что разрешения заданы правильно, или запустите и командную строку пакета SDK, и командную строку Visual Studio (2012) от имени администратора.
 
-11. Создайте на компьютере каталог C:\logs. Некоторые образцы могут ожидать его наличия. Убедитесь, что соответствующая учетная запись имеет разрешение на запись в этот каталог. Для Windows 7, Windows Vista и Windows Server 2008 R2 эта учетная запись является **сетевой службой**. Для Windows Server 2008 учетная запись — NT Authority\Network Service. Для [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и Windows Server 2003 учетная запись — ASPNET.
+11. Создайте на компьютере каталог C:\logs. Некоторые образцы могут ожидать его наличия. Убедитесь, что соответствующая учетная запись имеет разрешение на запись в этот каталог. Для Windows 7, Windows Vista и Windows Server 2008 R2 эта учетная запись является **сетевой службой**. Для Windows Server 2008 учетная запись — NT Authority\Network Service. Для Windows XP и Windows Server 2003 учетная запись — ASPNET.
 
 12. Запустите файл Setupcerttool.bat. Этот файл находится в папке \<InstallPath > \ WF_WCF_Samples \Вкф\сетуп\.  Этот скрипт выполнит следующие задачи.
 

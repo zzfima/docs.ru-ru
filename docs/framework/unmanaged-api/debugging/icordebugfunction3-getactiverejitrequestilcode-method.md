@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 88584574-ade5-45b2-9778-489ed5c4dd7f
 topic_type:
 - apiref
-ms.openlocfilehash: 53fedde028c7551e929cb583d38a4ec6937f2a8c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 70a55b833acb7fa946c694a63e1e8b51562938bc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938098"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777731"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>Метод ICorDebugFunction3::GetActiveReJitRequestILCode
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
   
- Возвращает указатель интерфейса на [икордебугилкоде](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) , содержащий Il из активного запроса ReJIT.  
+ Возвращает указатель интерфейса на [икордебугилкоде](icordebugilcode-interface.md) , содержащий Il из активного запроса ReJIT.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,6 +52,6 @@ HRESULT GetActiveReJitRequestILCode(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugFunction3](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugFunction3](icordebugfunction3-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
 - [ReJIT: руководство](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

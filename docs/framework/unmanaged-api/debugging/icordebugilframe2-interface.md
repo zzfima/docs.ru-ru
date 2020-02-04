@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: 08c2946a9bd6251f377ea594c0c3ca5d1bd98c67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5fa0a67309e23c02393b70d849af3884dfd0adf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095094"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788544"
 ---
 # <a name="icordebugilframe2-interface"></a>Интерфейс ICorDebugILFrame2
 
@@ -29,8 +29,8 @@ ms.locfileid: "73095094"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Возвращает объект ICorDebugTypeEnum, содержащий параметры <xref:System.Type> в этом кадре.|  
-|[Метод RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Повторно сопоставляет отредактированную функцию, указывая новое смещение MSIL.|  
+|[Метод EnumerateTypeParameters](icordebugilframe2-enumeratetypeparameters-method.md)|Возвращает объект ICorDebugTypeEnum, содержащий параметры <xref:System.Type> в этом кадре.|  
+|[Метод RemapFunction](icordebugilframe2-remapfunction-method.md)|Повторно сопоставляет отредактированную функцию, указывая новое смещение MSIL.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -46,6 +46,6 @@ ms.locfileid: "73095094"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715371"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741563"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Публикация приложения Hello World .NET Core в Visual Studio
 
@@ -68,7 +68,7 @@ ms.locfileid: "75715371"
 
       * *HelloWorld.runtimeconfig.json*
 
-         Это файл конфигурации среды выполнения приложения. Он определяет версию платформы .NET Core, для которой предназначено приложение. Дополнительные сведения см. в разделе [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md) (Файлы конфигурации среды выполнения).
+         Это файл конфигурации среды выполнения для приложения. Он определяет версию платформы .NET Core, для которой предназначено приложение. Кроме того, в него можно добавить параметры конфигурации. Дополнительные сведения см. в статье [Параметры конфигурации среды выполнения .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 

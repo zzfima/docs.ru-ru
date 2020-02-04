@@ -2,12 +2,12 @@
 title: Реализация устойчивых SQL-подключений Entity Framework Core
 description: Сведения о реализации устойчивых SQL-подключений Entity Framework Core Этот прием особенно важен при использовании базы данных SQL Azure в облаке.
 ms.date: 10/16/2018
-ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094050"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777064"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Реализация устойчивых SQL-подключений Entity Framework Core
 
@@ -88,9 +88,9 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-Первый <xref:Microsoft.EntityFrameworkCore.DbContext> — это `_catalogContext`, а второй `DbContext` находится в пределах объекта `_integrationEventLogService`. Действие фиксации выполняется во всех объектах `DbContext` с помощью стратегии выполнения EF.
+Первый <xref:Microsoft.EntityFrameworkCore.DbContext> — это `_catalogContext`, а второй `DbContext` находится в пределах объекта `_catalogIntegrationEventService`. Действие фиксации выполняется во всех объектах `DbContext` с помощью стратегии выполнения EF.
 
-Для достижения такой фиксации нескольких `DbContext` `SaveEventAndCatalogContextChangesAsync` использует класс `ResilientTransaction`, как показано в приведенном ниже примере кода.
+Для достижения такой фиксации нескольких `DbContext``SaveEventAndCatalogContextChangesAsync` использует класс `ResilientTransaction`, как показано в приведенном ниже примере кода.
 
 ```csharp
 public class CatalogIntegrationEventService : ICatalogIntegrationEventService

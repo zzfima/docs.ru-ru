@@ -3,12 +3,12 @@ title: Пакеты, метапакеты и платформы — .NET Core
 description: В этой статье объясняется терминология, связанная с пакетами, метапакетами и платформами.
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715509"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116064"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Пакеты, метапакеты и платформы
 
@@ -18,7 +18,7 @@ ms.locfileid: "75715509"
 
 ## <a name="packages"></a>Пакеты
 
-Платформа .NET Core разделяется на набор пакетов, которые предоставляют типы-примитивы, типы данных более высокого уровня, составные типы приложений и общие служебные программы. Каждый из этих пакетов представляет отдельную сборку с тем же именем. Например, [System.Runtime](https://www.nuget.org/packages/System.Runtime) содержит сборку System.Runtime.dll. 
+Платформа .NET Core разделяется на набор пакетов, которые предоставляют типы-примитивы, типы данных более высокого уровня, составные типы приложений и общие служебные программы. Каждый из этих пакетов представляет собой отдельную сборку с тем же именем. Например, [пакет System.Runtime](https://www.nuget.org/packages/System.Runtime) содержит сборку System.Runtime.dll. 
 
 Мелкомодульное определение пакетов имеет ряд преимуществ:
 
@@ -108,7 +108,7 @@ ms.locfileid: "75715509"
 
 ### <a name="net-standard"></a>.NET Standard
 
-Платформа .NET Standard ([моникер целевой платформы](../standard/frameworks.md): `netstandard`) представляет API, которые определяются и создаются на основе [.NET Standard](../standard/net-standard.md). Библиотеки, предназначенные для различных сред выполнения, должны быть нацелены на эту платформу. Они будут поддерживаться в любой среде выполнения, совместимой с .NET Standard, например .NET Core, .NET Framework и Mono или Xamarin. Каждая из этих сред выполнения поддерживает ряд версий .NET Standard в зависимости от реализуемых ими интерфейсов API.
+Платформа .NET Standard ([моникер целевой платформы](../standard/frameworks.md): `netstandard`) представляет API, которые определяются и создаются на основе [.NET Standard](../standard/net-standard.md). Библиотеки, предназначенные для различных сред выполнения, должны быть нацелены на эту платформу. Они будут поддерживаться в любой среде выполнения, совместимой с .NET Standard, например .NET Core, .NET Framework и Mono/Xamarin. Каждая из этих сред выполнения поддерживает ряд версий .NET Standard в зависимости от реализуемых ими интерфейсов API.
 
 Платформа `netstandard` неявно ссылается на метапакет [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library). Например, следующий файл проекта MSBuild указывает, что проект предназначен для библиотеки `netstandard1.6`, которая ссылается на метапакет [`NETStandard.Library` версии 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0).
 

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение текста всплывающих подсказок для отдельных ячеек элемента управления DataGridView в Windows Forms
+title: Добавление всплывающих подсказок в отдельные ячейки элемента управления DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: d0e9b3ad742633b135a2fe1c00af3fa72af7b44a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac86db5fa27a95adb20888cd59b5e236941d9177
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663460"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732177"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Практическое руководство. Определение текста всплывающих подсказок для отдельных ячеек элемента управления DataGridView в Windows Forms
-По умолчанию всплывающие подсказки используются для отображения значений <xref:System.Windows.Forms.DataGridView> ячеек, которые слишком малы, чтобы отображать их полное содержимое. Это поведение можно переопределить тем не менее, чтобы задать значения текст подсказки для отдельных ячеек. Это полезно для отображения дополнительных сведений пользователям о ячейке, или для предоставления пользователям альтернативное описание содержимого ячейки. Например если у вас есть строка, содержащая значки состояния, может потребоваться включение текстовых пояснений, с помощью всплывающих подсказок.  
+По умолчанию подсказки используются для отображения значений <xref:System.Windows.Forms.DataGridView>ных ячеек, которые слишком малы для отображения всего содержимого. Однако это поведение можно переопределить, чтобы задать текстовые значения ToolTip для отдельных ячеек. Это полезно для вывода дополнительных сведений о ячейке или для предоставления пользователям альтернативного описания содержимого ячейки. Например, если имеется строка, отображающая значки состояния, может потребоваться написать текстовые объяснения с помощью всплывающих подсказок.  
   
- Отображение всплывающих подсказок на уровне ячейки можно также отключить, задав <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> свойства `false`.  
+ Можно также отключить отображение подсказок на уровне ячейки, задав для свойства <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> значение `false`.  
   
-### <a name="to-add-a-tooltip-to-a-cell"></a>Чтобы добавить подсказку для ячейки  
+### <a name="to-add-a-tooltip-to-a-cell"></a>Добавление подсказки в ячейку  
   
 - Задайте свойство <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>.  
   
@@ -34,14 +34,14 @@ ms.locfileid: "64663460"
   
 - Для этого примера требуются:  
   
-- Объект <xref:System.Windows.Forms.DataGridView> управления с именем `dataGridView1` , содержащий столбец с именем `Rating` для отображения строковых значений от одного до четырех звездочки ("*») символов. <xref:System.Windows.Forms.DataGridView.CellFormatting> События элемента управления должен быть связан с показано в примере метода обработчика событий.  
+- Элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`, содержащий столбец с именем `Rating` для отображения строковых значений из одного до четырех символов звездочки ("*"). Событие <xref:System.Windows.Forms.DataGridView.CellFormatting> элемента управления должно быть связано с методом обработчика событий, показанным в примере.  
   
 - ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- При привязке <xref:System.Windows.Forms.DataGridView> управления к внешнему источнику данных или обеспечивается реализация виртуального режима для источника данных, могут возникнуть проблемы с производительностью. Чтобы избежать снижения производительности при работе с большими объемами данных, обрабатывать <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> событий, а не параметр <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> свойство несколько ячеек. Когда вы обрабатываете это событие, получение значения ячейки <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> свойство вызывает событие и возвращает значение <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> свойство как указанный в событии обработчик.  
+ При привязке элемента управления <xref:System.Windows.Forms.DataGridView> к внешнему источнику данных или предоставлении собственного источника данных путем реализации виртуального режима могут возникнуть проблемы с производительностью. Чтобы избежать снижения производительности при работе с большими объемами данных, обрабатывайте <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> событие, а не устанавливая <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> свойства нескольких ячеек. При обработке этого события получение значения ячейки <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> свойство вызывает событие и возвращает значение свойства <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>, как указано в обработчике событий.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>

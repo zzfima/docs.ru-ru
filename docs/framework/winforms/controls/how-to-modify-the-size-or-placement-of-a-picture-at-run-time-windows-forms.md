@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
+title: Практическое руководство. Изменение размера или размещения изображения во время выполнения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 695abf51870ef9164e4543a91b3183e801eee55f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bb094ce0b7945f23a2e9b8614e56c9492d5f832
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649253"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736034"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
-При использовании Windows Forms <xref:System.Windows.Forms.PictureBox> элемента управления в форме, можно задать <xref:System.Windows.Forms.PictureBox.SizeMode%2A> свойства:  
+Если в форме используется элемент управления <xref:System.Windows.Forms.PictureBox> Windows Forms, можно задать для него свойство <xref:System.Windows.Forms.PictureBox.SizeMode%2A>:  
   
-- Выравнивание верхнего левого угла рисунка с верхнего левого угла элемента управления  
+- Выровняйте верхний левый угол изображения по левому верхнему углу элемента управления  
   
-- Центрировать изображение в элементе управления  
+- Центрирование рисунка внутри элемента управления  
   
-- Размер элемента управления в соответствии с рисунка  
+- Настройка размера элемента управления в соответствии с отображаемым изображением  
   
-- Изменять размеры рисунка в соответствии с размерами элемента управления  
+- Растяжение всех рисунков, которые отображаются в соответствии с элементом управления  
   
- Растяжение рисунка (особенно в формат точечного рисунка) может привести к ухудшению качества изображения. Метафайлы, в которых перечислены инструкции для создания изображений во время выполнения, лучше подходят для растягивания чем растровые изображения.  
+ Растяжение изображения (особенно в формате точечного рисунка) может привести к ухудшению качества изображения. Метафайлы, представляющие собой списки графических инструкций для рисования изображений во время выполнения, лучше подходят для растяжения по сравнению с точечными рисунками.  
   
-### <a name="to-set-the-sizemode-property-at-run-time"></a>Чтобы задать свойство размеров во время выполнения  
+### <a name="to-set-the-sizemode-property-at-run-time"></a>Задание свойства Сиземоде во время выполнения  
   
-1. Задайте <xref:System.Windows.Forms.PictureBox.SizeMode%2A> для <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (по умолчанию), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, или <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> означает, что изображение размещается в левом верхнем углу элемента управления; Если изображение больше, чем элемент управления, его нижняя и правая границы обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> означает, что изображение по центру элемента управления; Если изображение больше, чем элемент управления, его внешние края обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> означает, что размер элемента управления имеет размер изображения. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> является обратным и означает, что размер изображения размер элемента управления.  
+1. Задайте для <xref:System.Windows.Forms.PictureBox.SizeMode%2A> значение <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (по умолчанию), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>или <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> означает, что изображение помещается в левый верхний угол элемента управления; Если изображение больше элемента управления, его нижний и правый края обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> означает, что изображение центрируется в элементе управления; Если изображение больше элемента управления, внешние края рисунка обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> означает, что размер элемента управления изменяется в соответствии с размером изображения. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> является обратным и означает, что размер изображения корректируется до размера элемента управления.  
   
-     В следующем примере в расположение образа выбрана папка «Мои документы». Это делается, поскольку предполагается, что большинство компьютеров под управлением операционной системы Windows, содержат эту папку. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма <xref:System.Windows.Forms.PictureBox> управления уже добавлен.  
+     В приведенном ниже примере путь, заданный для расположения изображения, является папкой "Мои документы". Это делается, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут включать этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма с уже добавленным элементом управления <xref:System.Windows.Forms.PictureBox>.  
   
     ```vb  
     Private Sub StretchPic()  
@@ -82,7 +82,7 @@ ms.locfileid: "64649253"
        }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Практическое руководство. Загрузка изображения с помощью конструктора](how-to-load-a-picture-using-the-designer-windows-forms.md)

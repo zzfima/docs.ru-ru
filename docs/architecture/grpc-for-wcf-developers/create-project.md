@@ -2,12 +2,12 @@
 title: Создание нового ASP.NET Core проекта gRPC — gRPC для разработчиков WCF
 description: Узнайте, как создать проект gRPC с помощью Visual Studio или командной строки.
 ms.date: 09/02/2019
-ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fbcc598cf503a5baeca941803ff8fa0d5fc99671
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711438"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919412"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Создание проекта ASP.NET Core gRPC
 
@@ -16,13 +16,13 @@ ms.locfileid: "74711438"
 ## <a name="create-the-project-by-using-visual-studio"></a>Создание проекта с помощью Visual Studio
 
 > [!IMPORTANT]
-> Для разработки любого приложения ASP.NET Core 3,0 требуется Visual Studio 2019 16,3 или более поздней версии с установленной рабочей нагрузкой **ASP.NET и Web Development** .
+> Для разработки любого приложения ASP.NET Core 3,0 требуется Visual Studio 2019 версии 16,3 или более поздней, с установленной рабочей нагрузкой **ASP.NET и Web Development** .
 
 Создайте пустое решение с именем **традерсис** из шаблона *пустого решения* . Добавьте папку решения с именем `src`. Затем щелкните правой кнопкой мыши папку и выберите **добавить** > **Новый проект**. Введите `grpc` в поле поиска шаблона, и вы увидите шаблон проекта с именем `gRPC Service`.
 
 ![Снимок экрана: диалоговое окно "Добавление нового проекта"](media/create-project/new-grpc-project.png)
 
-Нажмите кнопку **Далее** , чтобы перейти в диалоговое окно **Настройка нового проекта** . Присвойте проекту имя `TraderSys.Portfolios`и добавьте подкаталог `src` в **Расположение**.
+Нажмите кнопку **Далее** , чтобы перейти в диалоговое окно **Настройка нового проекта** . Присвойте проекту имя `TraderSys.Portfolios` и добавьте подкаталог `src` в **Расположение**.
 
 ![Снимок экрана: диалоговое окно "Настройка нового проекта"](media/create-project/configure-project.png)
 

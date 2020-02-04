@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964580"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919347"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Настройка поддержки WS-Atomic Transaction
 
@@ -25,7 +25,7 @@ ms.locfileid: "75964580"
 
 Дополнительные сведения о программе командной строки см. в разделе [служебная программа настройки WS-AtomicTransaction (WsatConfig. exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
 
-Если вы используете [!INCLUDE[wxp](../../../../includes/wxp-md.md)] или Windows Server 2003, доступ к оснастке MMC можно получить, перейдя к **панели управления/Администрирование/службы компонентов**, щелкнув правой кнопкой мыши **Мой компьютер**и выбрав пункт **Свойства**. Здесь же можно настроить координатор распределенных транзакций (Майкрософт). Параметры, доступные для конфигурации, группируются на вкладке **WS-AT** . Если вы используете Windows Vista или Windows Server 2008, оснастку MMC можно найти, нажав кнопку **Пуск** и введя `dcomcnfg.exe` в поле **поиска** . Когда откроется консоль MMC, перейдите к узлу **Мои Компутер\дистрибутед Transaction КУРДИНАТОР\ЛОКАЛ DTC** , щелкните правой кнопкой мыши и выберите пункт **свойства**. Параметры, доступные для конфигурации, группируются на вкладке **WS-AT** .
+Если вы используете Windows XP или Windows Server 2003, доступ к оснастке MMC можно получить, перейдя в раздел **Панель управления/Администрирование/службы компонентов**, щелкнув правой кнопкой мыши **Мой компьютер**и выбрав пункт **Свойства**. Здесь же можно настроить координатор распределенных транзакций (Майкрософт). Параметры, доступные для конфигурации, группируются на вкладке **WS-AT** . Если вы используете Windows Vista или Windows Server 2008, оснастку MMC можно найти, нажав кнопку **Пуск** и введя `dcomcnfg.exe` в поле **поиска** . Когда откроется консоль MMC, перейдите к узлу **Мои Компутер\дистрибутед Transaction КУРДИНАТОР\ЛОКАЛ DTC** , щелкните правой кнопкой мыши и выберите пункт **свойства**. Параметры, доступные для конфигурации, группируются на вкладке **WS-AT** .
 
 Дополнительные сведения об оснастке см. в разделе [оснастка MMC "Настройка WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)".
 

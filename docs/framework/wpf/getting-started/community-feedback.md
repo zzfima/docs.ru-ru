@@ -1,5 +1,5 @@
 ---
-title: Отзывы сообщества WPF
+title: Ресурсы сообщества
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196996"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733808"
 ---
 # <a name="wpf-community-feedback"></a>Отзывы сообщества WPF
 
@@ -118,6 +118,6 @@ ms.locfileid: "73196996"
 
 Ситуации сбоя и потери данных обычно имеют высокое влияние, и таким образом, для них проще всего назначить приоритет при решении проблемы. Некоторые ошибки отображаются только в нечасто используемых скриптах, которые, однако, в некоторых случаях могут оказаться основными. Предоставление контекста для сценария и влияния помогает группе разработчиков WPF принять правильное решение.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Как сообщить о проблеме с Visual Studio 2017](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

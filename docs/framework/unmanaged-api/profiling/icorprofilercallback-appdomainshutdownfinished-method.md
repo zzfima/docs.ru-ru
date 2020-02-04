@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: 8ff7d5a593388bd3a584e031aea411dfdb6c9845
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0851ac33a2bac4fcf727cf09e5225f6b83481b50
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445195"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866680"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>Метод ICorProfilerCallback::AppDomainShutdownFinished
 Уведомляет профилировщик о том, что домен приложения был выгружен из процесса.  
@@ -33,15 +33,18 @@ HRESULT AppDomainShutdownFinished(
     [in] HRESULT     hrStatus);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `appDomainId`  
- окне Определяет домен, в котором хранятся сборки приложения.  
-  
- `hrStatus`  
- окне Значение HRESULT, указывающее, успешно ли выгружен домен приложения.  
-  
+## <a name="parameters"></a>Параметры
+
+- `appDomainId`
+
+  \[в] определяет домен, в котором хранятся сборки приложения.
+
+- `hrStatus`
+
+  \[in] значение HRESULT, указывающее, успешно ли выгружен домен приложения.
+
 ## <a name="remarks"></a>Заметки  
- Значение `appDomainId` недопустимо для информационного запроса после возврата метода [ICorProfilerCallback:: AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) .  
+ Значение `appDomainId` недопустимо для информационного запроса после возврата метода [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) .  
   
  Некоторые части выгрузки домена приложения могут продолжаться после обратного вызова `AppDomainCreationFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает, что первая часть выгрузки домена приложения успешно выполнена.  
   
@@ -54,6 +57,6 @@ HRESULT AppDomainShutdownFinished(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

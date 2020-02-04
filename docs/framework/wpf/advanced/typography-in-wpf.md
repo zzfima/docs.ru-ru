@@ -1,15 +1,15 @@
 ---
-title: Оформление в WPF
+title: Типографская разметка
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3d94873931e3ee6df780df214f508258aa07a791
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740284"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735531"
 ---
 # <a name="typography-in-wpf"></a>Оформление в WPF
 В этом разделе содержатся вводные сведения об основных типографических возможностях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Эти функции включают повышение качества и производительности отрисовки текста, поддержку типографских шрифтов OpenType, расширенный международный текст, расширенную поддержку шрифта и новые интерфейсы программирования текстовых приложений (API).  
@@ -148,7 +148,7 @@ ms.locfileid: "75740284"
   
  Дополнительные сведения о создании пользовательского макета текста см. в разделе [Дополнительное форматирование текста](advanced-text-formatting.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
@@ -156,5 +156,5 @@ ms.locfileid: "75740284"
 - [Возможности шрифта OpenType](opentype-font-features.md)
 - [Рисование форматированного текста](drawing-formatted-text.md)
 - [Дополнительное форматирование текста](advanced-text-formatting.md)
-- [Text](optimizing-performance-text.md)
+- [Текст](optimizing-performance-text.md)
 - [Типография Майкрософт](https://docs.microsoft.com/typography/)

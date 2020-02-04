@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-ms.openlocfilehash: d13c5be314dc39f3e7b42a8d6b13f6a25751067d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 21a97f140a41f8f380c1334652bc2417e19659c6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130714"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777140"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>Метод ICorDebugManagedCallback::LoadModule
 Уведомляет отладчик о том, что модуль среды CLR успешно загружен.  
@@ -53,7 +53,7 @@ HRESULT LoadModule (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Метод UnloadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
-- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Метод UnloadModule](icordebugmanagedcallback-unloadmodule-method.md)
+- [Интерфейс ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

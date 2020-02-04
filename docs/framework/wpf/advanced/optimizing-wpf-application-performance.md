@@ -1,5 +1,5 @@
 ---
-title: Улучшение производительности приложений WPF
+title: Оптимизация производительности приложения
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 98c7022eab9153808d47d7da69c23349032165c3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cc6ea051401199a87965565c920068fd55cb05d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460846"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743943"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Улучшение производительности приложений WPF
 Этот раздел предназначен для разработчиков приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], которые ищут способы повышения производительности приложений. Если вы являетесь разработчиком, который не знаком с платформой Microsoft .NET и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], необходимо сначала ознакомиться с обеими платформами. В этом разделе предполагается работа с базами знаний и написана для программистов, которые уже знакомы, чтобы заставить их работать.  
@@ -20,7 +20,7 @@ ms.locfileid: "73460846"
 > [!NOTE]
 > Данные о производительности, приведенные в этом разделе, основаны на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложениях, работающих на ПК 2,8 ГГц с 512 ОЗУ и графической картой ATI Radeon 9700.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>в этом разделе  
  [Планирование производительности приложения](planning-for-application-performance.md)  
   
  [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "73460846"
   
  [Поведение объекта](optimizing-performance-object-behavior.md)  
   
- [Ресурсы приложений](optimizing-performance-application-resources.md)  
+ [Ресурсы приложения](optimizing-performance-application-resources.md)  
   
  [Текст](optimizing-performance-text.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73460846"
   
  [Время запуска приложения](application-startup-time.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5da1bf3d-dddf-4892-b266-578ee54d570b
 topic_type:
 - apiref
-ms.openlocfilehash: 8af2b6834ac8655c64a7738c65550b515a4b6675
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5fe472c4a0053ec9e37d7d61ffde5cf21d65dd2f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439050"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863521"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>Метод ICorProfilerInfo::GetILFunctionBodyAllocator
 Возвращает интерфейс, предоставляющий метод для выделения памяти, используемой для перекачки тела метода в коде на языке MSIL.  
@@ -38,9 +38,9 @@ HRESULT GetILFunctionBodyAllocator(
  окне Идентификатор модуля, в котором находится метод.  
   
  `ppMalloc`  
- заполняет Указатель на интерфейс [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) , предоставляющий метод для выделения памяти.  
+ заполняет Указатель на интерфейс [IMethodMalloc](imethodmalloc-interface.md) , предоставляющий метод для выделения памяти.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Тело метода в коде MSIL должен располагаться как относительный виртуальный адрес (RVA) относительно загруженного модуля. Это означает, что он следует за модулем в пределах 4 ГБ. Чтобы упростить средство для замены тела метода, метод `GetILFunctionBodyAllocator` гарантирует выделение памяти в пределах этого диапазона.  
   
 ## <a name="requirements"></a>Требования  
@@ -54,4 +54,4 @@ HRESULT GetILFunctionBodyAllocator(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)

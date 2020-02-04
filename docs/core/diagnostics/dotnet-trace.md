@@ -2,16 +2,16 @@
 title: Программа dotnet-trace — .NET Core
 description: Установка и использование программы командной строки dotnet-trace.
 ms.date: 11/21/2019
-ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714435"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737639"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Программа анализа производительности dotnet-trace
 
-**Эта статья относится к** ✓ SDK для .NET Core 3.0 и более поздних версий
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 3.0 и более поздних версий
 
 ## <a name="install-dotnet-trace"></a>Установка dotnet-trace
 
@@ -38,7 +38,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>Параметры
 
-- **`--version`**  
+- **`--version`**
 
   Отображение версии служебной программы dotnet-counters.
 

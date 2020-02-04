@@ -1,5 +1,6 @@
 ---
-title: Практическое руководство. Предварительный просмотр при печати в приложениях Windows Forms
+title: Отображать предварительный просмотр в Windows Forms приложениях
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +11,30 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 8252906de9a574f49617609a4cb08a1e8aa6a992
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac02339ad86e491cd047dcd4b0c8841374b3bb2e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929008"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745569"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Практическое руководство. Предварительный просмотр при печати в приложениях Windows Forms
-<xref:System.Windows.Forms.PrintPreviewDialog> Элемент управления можно использовать для предоставления пользователям возможности отображать документ, часто перед его печатью.  
+С помощью элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> можно разрешить пользователям отображать документ, часто перед его печатью.  
   
- Для этого необходимо указать экземпляр <xref:System.Drawing.Printing.PrintDocument> класса; это документ для печати. Дополнительные сведения об использовании предварительного просмотра с <xref:System.Drawing.Printing.PrintDocument> компонентом см. в разделе как [ Печать в Windows Forms с помощью предварительного](../advanced/how-to-print-in-windows-forms-using-print-preview.md)просмотра.  
+ Для этого необходимо указать экземпляр класса <xref:System.Drawing.Printing.PrintDocument>. Это документ для печати. Дополнительные сведения об использовании предварительного просмотра с компонентом <xref:System.Drawing.Printing.PrintDocument> см. [в разделе инструкции. Печать в Windows Forms с помощью предварительного просмотра](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
   
 > [!NOTE]
-> Чтобы использовать <xref:System.Windows.Forms.PrintPreviewDialog> элемент управления во время выполнения, на компьютере пользователя должен быть установлен принтер (локально или через сеть), поскольку он частично определяет, <xref:System.Windows.Forms.PrintPreviewDialog> как именно этот документ будет выглядеть при печати.  
+> Чтобы использовать элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> во время выполнения, на компьютере пользователя должен быть установлен принтер, как локально, так и через сеть, поскольку это частично, как компонент <xref:System.Windows.Forms.PrintPreviewDialog> определяет, как будет выглядеть документ при печати.  
   
- <xref:System.Windows.Forms.PrintPreviewDialog> Элемент управления<xref:System.Drawing.Printing.PrinterSettings> использует класс. Кроме того, <xref:System.Windows.Forms.PrintPreviewDialog> элемент управления <xref:System.Drawing.Printing.PageSettings> использует класс так же, как <xref:System.Windows.Forms.PrintPreviewDialog> и компонент. Документ <xref:System.Windows.Forms.PrintPreviewDialog> печати, указанный в <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> свойстве элемента управления, относится <xref:System.Drawing.Printing.PrinterSettings> к экземплярам классов и <xref:System.Drawing.Printing.PageSettings> и используется для отрисовки документа в окне предварительного просмотра.  
+ Элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> использует класс <xref:System.Drawing.Printing.PrinterSettings>. Кроме того, элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> использует класс <xref:System.Drawing.Printing.PageSettings>, точно так же, как и компонент <xref:System.Windows.Forms.PrintPreviewDialog>. Документ печати, указанный в свойстве <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления, относится к экземплярам классов <xref:System.Drawing.Printing.PrinterSettings> и <xref:System.Drawing.Printing.PageSettings>, и они используются для отрисовки документа в окне предварительного просмотра.  
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Просмотр страниц с помощью элемента управления PrintPreviewDialog  
   
 - Используйте метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> для отображения диалогового окна, указав используемый <xref:System.Drawing.Printing.PrintDocument> .  
   
-     В следующем примере <xref:System.Windows.Forms.Button> кода обработчик <xref:System.Windows.Forms.Control.Click> событий элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> открывает экземпляр элемента управления. Документ печати задается в <xref:System.Windows.Forms.PrintDialog.Document%2A> свойстве. В приведенном ниже примере не указан документ Print.  
+     В следующем примере кода обработчик событий <xref:System.Windows.Forms.Control.Click> элемента управления <xref:System.Windows.Forms.Button> открывает экземпляр элемента управления <xref:System.Windows.Forms.PrintPreviewDialog>. Документ печати задается в свойстве <xref:System.Windows.Forms.PrintDialog.Document%2A>. В приведенном ниже примере не указан документ Print.  
   
-     В примере требуется <xref:System.Windows.Forms.Button> , чтобы форма соработала элемент управления <xref:System.Drawing.Printing.PrintDocument> , <xref:System.Windows.Forms.PrintPreviewDialog> компонент `myDocument`с именем и элемент управления.  
+     В примере требуется, чтобы в форме был элемент управления <xref:System.Windows.Forms.Button>, <xref:System.Drawing.Printing.PrintDocument> компонент с именем `myDocument`и элемент управления <xref:System.Windows.Forms.PrintPreviewDialog>.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -81,7 +82,7 @@ ms.locfileid: "69929008"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Компонент PrintDocument](printdocument-component-windows-forms.md)
 - [Элемент управления PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)

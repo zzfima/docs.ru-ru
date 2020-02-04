@@ -1,5 +1,5 @@
 ---
-title: Оператор Dim
+title: Dim - оператор
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Dim
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: ac66ffdba622673ef42017d147c05b2a2733dede
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1b0c3089c366c417af926c8c0703cea021674432
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343770"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744722"
 ---
 # <a name="dim-statement-visual-basic"></a>Оператор Dim (Visual Basic)
 
@@ -47,53 +47,53 @@ ms.locfileid: "74343770"
 Dim [ WithEvents ] variablelist
 ```
 
-## <a name="parts"></a>Части
+## <a name="parts"></a>Компоненты
 
 - `attributelist`
 
-  Необязательно. См. [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).
+  Необязательный параметр. См. [список атрибутов](attribute-list.md).
 
 - `accessmodifier`
 
-  Необязательно. Ниже указаны доступные значения.
+  Необязательный параметр. Может применяться один из перечисленных ниже типов.
 
-  - [Public](../../../visual-basic/language-reference/modifiers/public.md)
+  - [Открытый](../modifiers/public.md)
 
-  - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+  - [Protected](../modifiers/protected.md)
 
-  - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+  - [Friend](../modifiers/friend.md)
 
-  - [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
+  - [Частное](../modifiers/private.md)
 
-  - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+  - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [Private Protected](../../language-reference/modifiers/private-protected.md)
+  - [Private Protected](../modifiers/private-protected.md)
 
-  См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+  См. раздел [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 - `Shared`
 
-  Необязательно. См. раздел [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
+  Необязательный параметр. См. раздел [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  Необязательно. См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  Необязательный параметр. См. раздел [Shadows](../modifiers/shadows.md).
 
 - `Static`
 
-  Необязательно. См. раздел [static](../../../visual-basic/language-reference/modifiers/static.md).
+  Необязательный параметр. См. раздел [static](../modifiers/static.md).
 
 - `ReadOnly`
 
-  Необязательно. См. раздел [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
+  Необязательный параметр. См. раздел [ReadOnly](../modifiers/readonly.md).
 
 - `WithEvents`
 
-Необязательно. Указывает, что это переменные объекта, которые ссылаются на экземпляры класса, которые могут создавать события. См. раздел [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
+  Необязательный параметр. Указывает, что это переменные объекта, которые ссылаются на экземпляры класса, которые могут создавать события. См. раздел [WithEvents](../modifiers/withevents.md).
 
 - `variablelist`
 
-  Обязательно. Список переменных, объявляемых в этой инструкции.
+  Обязательный элемент. Список переменных, объявляемых в этой инструкции.
 
   `variable [ , variable ... ]`
 
@@ -101,18 +101,18 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |Отделение|Описание|
+  |Часть|Description|
   |---|---|
-  |`variablename`|Обязательно. Имя переменной. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|Необязательно. Список границ каждого измерения переменной массива.|
-  |`New`|Необязательно. Создает новый экземпляр класса при выполнении инструкции `Dim`.|
-  |`datatype`|Необязательно. Тип данных переменной.|
-  |`With`|Необязательно. Представляет список инициализаторов объектов.|
-  |`propertyname`|Необязательно. Имя свойства в классе, экземпляр которого вы вносите.|
+  |`variablename`|Обязательный элемент. Имя переменной. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`boundslist`|Необязательный параметр. Список границ каждого измерения переменной массива.|
+  |`New`|Необязательный параметр. Создает новый экземпляр класса при выполнении инструкции `Dim`.|
+  |`datatype`|Необязательный параметр. Тип данных переменной.|
+  |`With`|Необязательный параметр. Представляет список инициализаторов объектов.|
+  |`propertyname`|Необязательный параметр. Имя свойства в классе, экземпляр которого вы вносите.|
   |`propinitializer`|Требуется после `propertyname` =. Выражение, которое вычисляется и присваивается имени свойства.|
   |`initializer`|Необязательный, если не указан `New`. Выражение, которое вычисляется и присваивается переменной при ее создании.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Компилятор Visual Basic использует инструкцию `Dim` для определения типа данных переменной и других сведений, например кода, который может получить доступ к переменной. В следующем примере объявляется переменная для хранения `Integer` значения.
 
@@ -133,11 +133,11 @@ Dim monitorBox As System.Windows.Forms.Form
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-Переменную можно объявить в процедуре, блоке, классе, структуре или модуле. Нельзя объявить переменную в исходном файле, пространстве имен или интерфейсе. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Переменную можно объявить в процедуре, блоке, классе, структуре или модуле. Нельзя объявить переменную в исходном файле, пространстве имен или интерфейсе. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](declaration-contexts-and-default-access-levels.md).
 
 Переменная, объявленная на уровне модуля вне любой процедуры, является переменной или *полем* *члена* . Переменные членов находятся в области действия класса, структуры или модуля. Переменная, объявленная на уровне процедуры, является *локальной переменной*. Локальные переменные находятся в области действия только в пределах их процедуры или блока.
 
-Следующие модификаторы доступа используются для объявления переменных вне процедуры: `Public`, `Protected`, `Friend`, `Protected Friend`и `Private`. Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Следующие модификаторы доступа используются для объявления переменных вне процедуры: `Public`, `Protected`, `Friend`, `Protected Friend`и `Private`. Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 Ключевое слово `Dim` является необязательным и обычно опускается при указании любого из следующих модификаторов: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`или `WithEvents`.
 
@@ -148,7 +148,7 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-Если `Option Explicit` имеет значение On (значение по умолчанию), компилятору требуется объявление для каждой используемой переменной. Дополнительные сведения см. в разделе [оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
+Если `Option Explicit` имеет значение On (значение по умолчанию), компилятору требуется объявление для каждой используемой переменной. Дополнительные сведения см. в разделе [оператор Option Explicit](option-explicit-statement.md).
 
 ## <a name="specifying-an-initial-value"></a>Указание начального значения
 
@@ -169,9 +169,9 @@ Dim num1 As Integer = 3
 Dim num2 = 3
 ```
 
-Определение типа применяется на уровне процедуры. Он не применяется за пределами процедуры в классе, структуре, модуле или интерфейсе. Дополнительные сведения о выводе типа см. в разделе [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) и [определение локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+Определение типа применяется на уровне процедуры. Он не применяется за пределами процедуры в классе, структуре, модуле или интерфейсе. Дополнительные сведения о выводе типа см. в разделе [Option Infer](option-infer-statement.md) и [определение локального типа](../../programming-guide/language-features/variables/local-type-inference.md).
 
-Сведения о том, что происходит, если не указан тип данных или инициализатор, см. в подразделе [типы данных и значения по умолчанию](../../../visual-basic/language-reference/statements/dim-statement.md#default) далее в этой статье.
+Сведения о том, что происходит, если не указан тип данных или инициализатор, см. в подразделе [типы данных и значения по умолчанию](dim-statement.md#default) далее в этой статье.
 
 *Инициализатор объекта* можно использовать для объявления экземпляров именованных и анонимных типов. Следующий код создает экземпляр класса `Student` и использует инициализатор объекта для инициализации свойств.
 
@@ -180,7 +180,7 @@ Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-Дополнительные сведения об инициализаторах объектов см. [в разделе как объявить объект с помощью инициализатора](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)объекта, [инициализаторов объектов: именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)и [анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Дополнительные сведения об инициализаторах объектов см. [в разделе как объявить объект с помощью инициализатора](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)объекта, [инициализаторов объектов: именованные и анонимные типы](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)и [анонимные типы](../../programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="declaring-multiple-variables"></a>Объявление нескольких переменных
 
@@ -201,7 +201,7 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 
 ## <a name="arrays"></a>Массивы
 
-Можно объявить переменную для хранения *массива*, который может содержать несколько значений. Чтобы указать, что переменная содержит массив, следует следовать его `variablename` сразу же с круглыми скобками. Дополнительные сведения см. в руководстве по работе с [массивами](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Можно объявить переменную для хранения *массива*, который может содержать несколько значений. Чтобы указать, что переменная содержит массив, следует следовать его `variablename` сразу же с круглыми скобками. Дополнительные сведения см. в руководстве по работе с [массивами](../../programming-guide/language-features/arrays/index.md).
 
 Можно указать нижнюю и верхнюю границы каждого измерения массива. Для этого включите `boundslist` в круглые скобки. Для каждого измерения `boundslist` указывает верхнюю границу и, при необходимости, нижнюю границу. Нижняя граница всегда равна нулю, независимо от того, указана она или нет. Каждый индекс может изменяться от нуля до значения его верхней границы.
 
@@ -235,7 +235,7 @@ ReDim messages(4)
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-Можно объявить *массив нулевой длины* , объявляя один из измерений массива равным-1. Переменная, содержащая массив нулевой длины, не имеет значения `Nothing`. Для некоторых функций среды CLR требуются массивы нулевой длины. При попытке доступа к такому массиву возникает исключение времени выполнения. Дополнительные сведения см. в статье [Arrays (C++/CLI and C++/CX)](../../../visual-basic/programming-guide/language-features/arrays/index.md) (Массивы (C++/CLI и C++/CX)).
+Можно объявить *массив нулевой длины* , объявляя один из измерений массива равным-1. Переменная, содержащая массив нулевой длины, не имеет значения `Nothing`. Для некоторых функций среды CLR требуются массивы нулевой длины. При попытке доступа к такому массиву возникает исключение времени выполнения. Дополнительные сведения см. в статье [Arrays (C++/CLI and C++/CX)](../../programming-guide/language-features/arrays/index.md) (Массивы (C++/CLI и C++/CX)).
 
 Значения массива можно инициализировать с помощью литерала массива. Для этого заключите значения инициализации в фигурные скобки (`{}`).
 
@@ -249,7 +249,7 @@ Dim longArray() As Long = {0, 1, 2, 3}
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ```
 
-Дополнительные сведения о литералах массивов см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Дополнительные сведения о литералах массивов см. в разделе [массивы](../../programming-guide/language-features/arrays/index.md).
 
 ## <a name="default"></a>Типы данных и значения по умолчанию
 
@@ -257,9 +257,9 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|
 |---|---|---|---|
-|Нет|Нет|`Dim qty`|Если [параметр optioned](../../../visual-basic/language-reference/statements/option-strict-statement.md) имеет значение OFF (значение по умолчанию), то переменной присваивается значение `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|
-|Нет|Да|`Dim qty = 5`|Если [параметр Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) имеет значение On (значение по умолчанию), переменная принимает тип данных инициализатора. См. раздел [определение локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|
-|Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. См. таблицу далее в этом разделе.|
+|нет|нет|`Dim qty`|Если [параметр optioned](option-strict-statement.md) имеет значение OFF (значение по умолчанию), то переменной присваивается значение `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|
+|нет|Да|`Dim qty = 5`|Если [параметр Infer](option-infer-statement.md) имеет значение On (значение по умолчанию), переменная принимает тип данных инициализатора. См. раздел [определение локального типа](../../programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|
+|Да|нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. См. таблицу далее в этом разделе.|
 |Да|Да|`Dim qty  As Integer = 5`|Если тип данных инициализатора нельзя преобразовать в указанный тип данных, возникает ошибка времени компиляции.|
 
 Если указать тип данных, но не указать инициализатор, Visual Basic инициализирует переменную как значение по умолчанию для ее типа данных. В следующей таблице приведены значения инициализации по умолчанию.
@@ -292,7 +292,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 Можно указать, какой код может получить доступ к переменной, указав `accessmodifier`. Переменные-члены класса и модуля (вне любой процедуры) по умолчанию имеют частный доступ, а переменные-члены структуры по умолчанию имеют общий доступ. Уровни доступа можно изменить с помощью модификаторов доступа. Нельзя использовать модификаторы доступа для локальных переменных (внутри процедуры).
 
-Можно указать `WithEvents` только для переменных-членов, но не для локальных переменных внутри процедуры. При указании `WithEvents`тип данных переменной должен быть конкретным типом класса, а не `Object`. Нельзя объявить массив с `WithEvents`. Дополнительные сведения о событиях см. в разделе [события](../../../visual-basic/programming-guide/language-features/events/index.md).
+Можно указать `WithEvents` только для переменных-членов, но не для локальных переменных внутри процедуры. При указании `WithEvents`тип данных переменной должен быть конкретным типом класса, а не `Object`. Нельзя объявить массив с `WithEvents`. Дополнительные сведения о событиях см. в разделе [события](../../programming-guide/language-features/events/index.md).
 
 > [!NOTE]
 > Код за пределами класса, структуры или модуля должен уточнять имя переменной-члена именем этого класса, структуры или модуля. Код за пределами процедуры или блока не может ссылаться на локальные переменные в этой процедуре или блоке.
@@ -303,7 +303,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 Если класс принадлежит особому ценному и ограниченному ресурсу (например, к подключению к базе данных или файлу), может возникнуть необходимость в ожидании следующей сборки мусора для очистки экземпляра класса, который больше не используется. Класс может реализовывать интерфейс <xref:System.IDisposable>, чтобы предоставить способ освобождения ресурсов перед сборкой мусора. Класс, реализующий этот интерфейс, предоставляет метод `Dispose`, который может быть вызван для немедленного освобождения ценных ресурсов.
 
-Инструкция `Using` автоматизирует процесс получения ресурса, выполнения набора инструкций и последующего удаления ресурса. Однако ресурс должен реализовывать интерфейс <xref:System.IDisposable>. Дополнительные сведения см. в разделе [Оператор using](../../../visual-basic/language-reference/statements/using-statement.md).
+Инструкция `Using` автоматизирует процесс получения ресурса, выполнения набора инструкций и последующего удаления ресурса. Однако ресурс должен реализовывать интерфейс <xref:System.IDisposable>. Дополнительные сведения см. в разделе [Оператор using](using-statement.md).
 
 ## <a name="example"></a>Пример
 
@@ -325,18 +325,18 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)
-- [Оператор reDim](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Оператор Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Оператор Const](const-statement.md)
+- [Оператор reDim](redim-statement.md)
+- [Оператор Option Explicit](option-explicit-statement.md)
+- [Оператор Option Infer](option-infer-statement.md)
+- [Оператор Option Strict](option-strict-statement.md)
 - [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [Объявление переменных](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Инициализаторы объектов. Именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Инициализаторы объектов. Именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Практическое руководство. Объявление объекта с помощью инициализатора объектов](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
-- [Вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Объявление переменных](../../programming-guide/language-features/variables/variable-declaration.md)
+- [Массивы](../../programming-guide/language-features/arrays/index.md)
+- [Инициализаторы объектов. Именованные и анонимные типы](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Анонимные типы](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Инициализаторы объектов. Именованные и анонимные типы](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Практическое руководство. Объявление объекта с помощью инициализатора объектов](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [Вывод локального типа](../../programming-guide/language-features/variables/local-type-inference.md)

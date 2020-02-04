@@ -1,15 +1,15 @@
 ---
-title: 'Метод Икордебужексцептиондебужевент::'
+title: Метод ICorDebugExceptionDebugEvent::GetFlags
 ms.date: 03/30/2017
 ms.assetid: 73225303-8852-487e-9a0e-9f0cb95e99d9
-ms.openlocfilehash: 6c330ce5b375daacdf257eda16fd5e34012f5d69
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aaf137b1d851d0de86bde697c9e3a512f34d2aa9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084757"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782916"
 ---
-# <a name="icordebugexceptiondebugeventgetflags-method"></a>Метод Икордебужексцептиондебужевент::
+# <a name="icordebugexceptiondebugeventgetflags-method"></a>Метод ICorDebugExceptionDebugEvent::GetFlags
 Возвращает флаг, указывающий, может ли исключение быть перехвачено.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -22,7 +22,7 @@ HRESULT GetFlags(
   
 ## <a name="parameters"></a>Параметры  
  `pdwFlags`  
- заполняет Указатель на значение [кордебужексцептионфлагс](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) , указывающее, может ли быть перехвачено исключение.  
+ заполняет Указатель на значение [кордебужексцептионфлагс](cordebugexceptionflags-enumeration.md) , указывающее, может ли быть перехвачено исключение.  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -38,7 +38,7 @@ HRESULT GetFlags(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugExceptionDebugEvent](icordebugexceptiondebugevent-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

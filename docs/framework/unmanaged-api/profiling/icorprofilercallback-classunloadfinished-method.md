@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: b78d604a28ffe01000a763f7e0dd3c1630e2c186
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d9474f78dd8b999a37f60e0698cfd04240b897a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435921"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866576"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>Метод ICorProfilerCallback::ClassUnloadFinished
 Уведомляет профилировщик о завершении выгрузки класса.  
@@ -33,14 +33,17 @@ HRESULT ClassUnloadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `classId`  
- окне Идентифицирует выгруженный класс.  
+## <a name="parameters"></a>Параметры
+
+- `classId`
+
+  \[в] определяет класс, который был выгружен.
+
+- `hrStatus`
+
+  \[in] значение HRESULT, указывающее, успешно ли выгружен класс.
   
- `hrStatus`  
- окне Значение HRESULT, указывающее, успешно ли выгружен класс.  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Некоторые части выгрузки класса могут продолжаться после обратного вызова `ClassUnloadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть выгрузки класса успешно выполнена.  
   
 ## <a name="requirements"></a>Требования  
@@ -52,7 +55,7 @@ HRESULT ClassUnloadFinished(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод ClassUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод ClassUnloadStarted](icorprofilercallback-classunloadstarted-method.md)

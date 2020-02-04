@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: 4f87065fc4a3d80a8363f3ae2fbb76c29f3d9b96
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa31b8a6cc96935319e9bef3e561790b65e33a87
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138418"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777590"
 ---
 # <a name="icordebugheapvalue-interface"></a>Интерфейс ICorDebugHeapValue
 
@@ -29,8 +29,8 @@ ms.locfileid: "73138418"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод CreateRelocBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Не реализовано.|  
-|[Метод IsValid](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Возвращает значение, указывающее, является ли допустимым объект, представленный данным `ICorDebugHeapValue`, или освобожден сборщиком мусора. Этот метод не рекомендуется к использованию в .NET Framework версии 2,0.|  
+|[Метод CreateRelocBreakpoint](icordebugheapvalue-createrelocbreakpoint-method.md)|Не реализовано.|  
+|[Метод IsValid](icordebugheapvalue-isvalid-method.md)|Возвращает значение, указывающее, является ли допустимым объект, представленный данным `ICorDebugHeapValue`, или освобожден сборщиком мусора. Этот метод не рекомендуется к использованию в .NET Framework версии 2,0.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -46,6 +46,6 @@ ms.locfileid: "73138418"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

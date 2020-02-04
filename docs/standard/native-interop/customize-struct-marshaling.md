@@ -5,14 +5,14 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706352"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741530"
 ---
-# <a name="customizing-structure-marshaling"></a>Настройка маршалинга структур
+# <a name="customizing-structure-marshaling"></a>Настройка маршалинга структуры
 
 Иногда стандартные правила маршалинга структур не совсем подходят. В средах выполнения .NET предусмотрены точки расширения, которые позволяют настроить макет структуры и способ маршалинга полей.
 
@@ -20,11 +20,11 @@ ms.locfileid: "75706352"
 
 На платформе .NET предусмотрен атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> и перечисление <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType>, которые позволяют настроить способ размещения полей в памяти. Следуйте указаниям ниже, чтобы избежать распространенных проблем.
 
-**✔️ ДОПУСТИМО** использовать `LayoutKind.Sequential` во всех возможных случаях.
+✔️ Рассмотрите возможность использования `LayoutKind.Sequential` везде, где это возможно.
 
-**✔️ РЕКОМЕНДУЕТСЯ** использовать `LayoutKind.Explicit` для маршалинга только в тех случаях, когда ваша собственная структура также имеет явный макет, например объединение.
+✔️ использовать только `LayoutKind.Explicit` во время маршалирования, если структура в машинном коде также имеет явный макет, например объединение.
 
-**❌ избегать** использования `LayoutKind.Explicit` при упаковке структур на платформах, отличных от Windows, если необходимо выполнять целевые среды выполнения до .net Core 3,0. Среда выполнения .NET Core до 3,0 не поддерживает передачу явных структур по значению в собственные функции в системах на основе Intel или AMD 64-разрядных систем, отличных от Windows. Но она поддерживает передачу явных структур по ссылке на всех платформах.
+❌ избегать использования `LayoutKind.Explicit` при упаковке структур на платформах, отличных от Windows, если необходимо выполнять целевые среды выполнения до .NET Core 3,0. Среда выполнения .NET Core до 3,0 не поддерживает передачу явных структур по значению в собственные функции в системах на основе Intel или AMD 64-разрядных систем, отличных от Windows. Но она поддерживает передачу явных структур по ссылке на всех платформах.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Настройка маршалинга логических полей
 
@@ -247,7 +247,7 @@ struct UTF8String
 > [!NOTE]
 > Значение <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> доступно только на платформе .NET Framework 4.7 (или более поздних версий) или .NET Core 1.1 (или более поздних версий). Оно недоступно на платформе .NET Standard 2.0.
 
-Если вы работаете с API COM, возможно, вам потребуется маршалировать строку как `BSTR`. Вы можете маршалировать строку как `BSTR`, используя значение <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType>.
+Если вы работаете с API COM, возможно, вам потребуется маршалировать строку как `BSTR`. Вы можете маршалировать строку как <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType>, используя значение `BSTR`.
 
 ```csharp
 public struct BString
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-Если используется API на базе WinRT, возможно, потребуется маршалировать строку как `HSTRING`.  Вы можете маршалировать строку как `HSTRING`, используя значение <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>.
+Если используется API на базе WinRT, возможно, потребуется маршалировать строку как `HSTRING`.  Вы можете маршалировать строку как <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, используя значение `HSTRING`.
 
 ```csharp
 public struct HString

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-ms.openlocfilehash: df4bfe69b22439073342693a03376a0b506f9c70
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb6d2e5fc21047fea0928137f983c553f9bb2bbd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428371"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867286"
 ---
 # <a name="cor_prf_ex_clause_info-structure"></a>Структура COR_PRF_EX_CLAUSE_INFO
 Хранит сведения об определенном экземпляре исключительного предложения и связанном с ним кадре.  
@@ -35,31 +35,31 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 } COR_PRF_EX_CLAUSE_INFO;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`clauseType`|Значение перечисления [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) , указывающее тип предложения исключения, введенного или левого кода.|  
+|`clauseType`|Значение перечисления [COR_PRF_CLAUSE_TYPE](cor-prf-clause-type-enumeration.md) , указывающее тип предложения исключения, введенного или левого кода.|  
 |`programCounter`|Собственная точка входа обработчика предложения, например, содержимое регистра x86 EIP.|  
 |`framePointer`|Указатель на логический кадр для обработчика предложения, например содержимое регистра x86 EBP.|  
 |`shadowStackPointer`|Указатель на теневой стек. Это значение является содержимым регистра BSP и применяется только к версии IA64.|  
   
-## <a name="remarks"></a>Примечания  
- При получении уведомления об исключении можно использовать [ICorProfilerInfo2:: GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) для получения сведений о собственном адресе и кадре для предложения исключения (`catch`/`finally`/Filter), которое будет выполняться или только что было запущено.  
+## <a name="remarks"></a>Заметки  
+ При получении уведомления об исключении можно использовать [ICorProfilerInfo2:: GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) для получения сведений о собственном адресе и кадре для предложения исключения (`catch`/`finally`/Filter), которое будет выполняться или только что было запущено.  
   
  Выполнение предложения исключения включает следующие обратные вызовы из среды CLR:  
   
-- [ICorProfilerCallback:: Ексцептионкатчерентер](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
+- [ICorProfilerCallback:: Ексцептионкатчерентер](icorprofilercallback-exceptioncatcherenter-method.md)  
   
-- [ICorProfilerCallback:: Ексцептионунвиндфиналлентер](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)  
+- [ICorProfilerCallback:: Ексцептионунвиндфиналлентер](icorprofilercallback-exceptionunwindfinallyenter-method.md)  
   
-- [ICorProfilerCallback:: Ексцептионсеарчфилтерентер](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)  
+- [ICorProfilerCallback:: Ексцептионсеарчфилтерентер](icorprofilercallback-exceptionsearchfilterenter-method.md)  
   
-- [ICorProfilerCallback:: Ексцептионкатчерлеаве](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)  
+- [ICorProfilerCallback:: Ексцептионкатчерлеаве](icorprofilercallback-exceptioncatcherleave-method.md)  
   
-- [ICorProfilerCallback:: Exceptionunwindfinallyleave-](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)  
+- [ICorProfilerCallback:: Exceptionunwindfinallyleave-](icorprofilercallback-exceptionunwindfinallyleave-method.md)  
   
-- [ICorProfilerCallback:: Ексцептионсеарчфилтерлеаве](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
+- [ICorProfilerCallback:: Ексцептионсеарчфилтерлеаве](icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,4 +72,4 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 ## <a name="see-also"></a>См. также:
 
-- [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [Структуры профилирования](profiling-structures.md)

@@ -2,12 +2,12 @@
 title: Интерфейс ICorDebugMemoryBuffer
 ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
-ms.openlocfilehash: 9e43f9a2297eb56755c7a6bba73e994441cbfeaa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa1bbca1e771cbc2b3475891862875b97b9e7f90
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127981"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793141"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>Интерфейс ICorDebugMemoryBuffer
 Представляет буфер в памяти.  
@@ -16,8 +16,8 @@ ms.locfileid: "73127981"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-getsize-method.md)|Возвращает размер буфера памяти в байтах.|  
-|[Метод GetStartAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-getstartaddress-method.md)|Возвращает начальный адрес буфера памяти.|  
+|[Метод GetSize](icordebugmemorybuffer-getsize-method.md)|Возвращает размер буфера памяти в байтах.|  
+|[Метод GetStartAddress](icordebugmemorybuffer-getstartaddress-method.md)|Возвращает начальный адрес буфера памяти.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73127981"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

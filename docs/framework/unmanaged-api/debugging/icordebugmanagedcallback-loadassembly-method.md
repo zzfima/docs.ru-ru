@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55cb673a-e240-43a6-a406-6912e7c0fe66
 topic_type:
 - apiref
-ms.openlocfilehash: c6d77ff1393bc0ba4884dfa34810fee5316e33ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80836cbbf82a97ccd6dc7251e5cbe934e0cbe66f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130750"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777275"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>Метод ICorDebugManagedCallback::LoadAssembly
 Уведомляет отладчик о том, что сборка среды CLR была успешно загружена.  
@@ -50,7 +50,7 @@ HRESULT LoadAssembly (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Метод UnloadAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)
-- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Метод UnloadAssembly](icordebugmanagedcallback-unloadassembly-method.md)
+- [Интерфейс ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

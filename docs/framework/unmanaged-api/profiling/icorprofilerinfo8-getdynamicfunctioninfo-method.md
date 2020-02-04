@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243987"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861688"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>Метод ICorProfilerInfo8:: Жетдинамикфунктионинфо
 
@@ -34,30 +34,37 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-`functionId` \
-окне Идентификатор функции, для которой требуется получить сведения.
+- `functionId`
 
-`moduleId` \
-окне Указатель на модуль, в котором определен родительский класс функции.
+  \[в] идентификатор функции, для которой требуется получить сведения.
 
-`ppvSig` \
-заполняет Указатель на сигнатуру для функции.
+- `moduleId`
 
-`pbSig` \
-заполняет Указатель на число байтов для сигнатуры функции.
+  \[в] указатель на модуль, в котором определен родительский класс функции.
 
-`cchName` \
-[in] Максимальный размер массива `wszName`.
+- `ppvSig`
 
-`pcchName` \
-заполняет Число символов в `wszName` массиве.
+  \[out] указатель на сигнатуру для функции.
 
-`wszName` \
-заполняет Массив `WCHAR` , содержащий имя функции, если таковое существует.
+- `pbSig`
 
-## <a name="remarks"></a>Примечания
+  \[out] указатель на число байтов для сигнатуры функции.
+
+- `cchName`
+
+  \[в] максимальный размер массива `wszName`.
+
+- `pcchName`
+
+  \[out] число символов в массиве `wszName`.
+
+- `wszName`
+
+  \[out] массив `WCHAR`, который является именем функции, если таковая существует.
+
+## <a name="remarks"></a>Заметки
 
 Некоторые методы, такие как заглушки IL или LCG, не имеют связанных метаданных, которые можно извлечь с помощью интерфейсов API [IMetaDataImport](../metadata/imetadataimport-interface.md) и [IMetaDataImport2](../metadata/imetadataimport2-interface.md) . Такие методы могут быть обнаружены профилировщиками с помощью указателей инструкций или путем прослушивания [ICorProfilerCallback8::D инамикмесоджиткомпилатионстартед](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).
 
@@ -65,14 +72,14 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** CorProf. idl, CorProf. h
+**Заголовок:** CorProf.idl, CorProf.h
 
-**Библиотечная** Коргуидс. lib
+**Библиотека:** CorGuids.lib
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo8](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [Интерфейс ICorProfilerInfo8](icorprofilerinfo8-interface.md)

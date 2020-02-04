@@ -1,5 +1,5 @@
 ---
-title: Элемент управления ListBox (Windows Forms)
+title: Элемент управления ListBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms]
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36ae8140a2d81aafe983b5f1f56e180a0f91e96c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012819"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745174"
 ---
 # <a name="listbox-control-windows-forms"></a>Элемент управления ListBox (Windows Forms)
-Windows Forms `ListBox` элемент управления отображает список элементов, из которых пользователь может выбрать один или несколько.  
+Элемент управления `ListBox` Windows Forms отображает список элементов, из которых пользователь может выбрать один или несколько.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об элементе управления ListBox](listbox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  Класс <xref:System.Windows.Forms.ListBox>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)  
- Предоставляет список вещей, которые можно сделать с помощью списков, поля со списком и списки.
+ Предоставляет список действий, которые можно выполнить с помощью списков, полей со списками и списков с установленными флажками.

@@ -1,36 +1,36 @@
 ---
-title: Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора
+title: Привязка элементов управления к компоненту BindingSource с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 180fafa9ace5927fd84ec5dc0a1b2a342f771efd
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 35b3fb7b9884f07dd6e2aef311a01d3090c44227
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040018"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744395"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора
 После добавления элементов управления в форму и определения пользовательского интерфейса для приложения можно привязать элементы управления к источнику данных, чтобы во время выполнения пользователи могли изменять и сохранять данные, связанные с приложением.
 
- Привязка элемента управления или ряда элементов управления в Windows Forms наиболее легко осуществляется с помощью <xref:System.Windows.Forms.BindingSource> элемента управления в качестве моста между элементами управления в форме и источником данных.
+ Привязка элемента управления или ряда элементов управления в Windows Forms наиболее легко осуществляется с помощью элемента управления <xref:System.Windows.Forms.BindingSource> в качестве моста между элементами управления в форме и источником данных.
 
- Один или несколько элементов управления формы могут быть привязаны к данным; в следующей процедуре <xref:System.Windows.Forms.TextBox> элемент управления привязан к источнику данных.
+ Один или несколько элементов управления формы могут быть привязаны к данным; в следующей процедуре элемент управления <xref:System.Windows.Forms.TextBox> привязан к источнику данных.
 
  Для выполнения этой процедуры предполагается, что будет выполнена привязка к источнику данных, производному от базы данных. Дополнительные сведения о создании источников данных из других хранилищ данных см. в разделе [Добавление новых источников данных](/visualstudio/data-tools/add-new-data-sources).
 
 ## <a name="to-bind-a-control-at-design-time"></a>Привязка элемента управления во время разработки
 
-1. <xref:System.Windows.Forms.TextBox> Перетащите элемент управления в форму.
+1. Перетащите элемент управления <xref:System.Windows.Forms.TextBox> в форму.
 
 2. В окне " **Свойства** ":
 
     1. Разверните узел **(DataBindings)** .
 
-    2. Щелкните стрелку рядом <xref:System.Windows.Forms.TextBox.Text%2A> со свойством.
+    2. Щелкните стрелку рядом со свойством <xref:System.Windows.Forms.TextBox.Text%2A>.
 
          Откроется редактор типов пользовательского интерфейса **DataSource** .
 
@@ -46,17 +46,17 @@ ms.locfileid: "69040018"
 
 7. Выберите **Да, сохранить подключение** , чтобы сохранить строку подключения в файле конфигурации приложения.
 
-8. Выберите объекты базы данных, чтобы перенести их в приложение. В этом случае выберите поле в таблице, которое <xref:System.Windows.Forms.TextBox> нужно отобразить.
+8. Выберите объекты базы данных, чтобы перенести их в приложение. В этом случае выберите поле в таблице, которое будет отображаться <xref:System.Windows.Forms.TextBox>.
 
 9. Если необходимо, замените имя набора данных по умолчанию.
 
 10. Нажмите кнопку **Готово**.
 
-11. В окне **Свойства** снова щелкните стрелку рядом <xref:System.Windows.Forms.TextBox.Text%2A> со свойством. В окне Редактор типов пользовательского интерфейса **DataSource** выберите имя поля для привязки <xref:System.Windows.Forms.TextBox> к.
+11. В окне **Свойства** щелкните стрелку рядом со свойством <xref:System.Windows.Forms.TextBox.Text%2A>. В окне Редактор типов пользовательского интерфейса **источника данных** выберите имя поля для привязки <xref:System.Windows.Forms.TextBox>.
 
-     Редактор типов пользовательского интерфейса **DataSource** закрывается, а набор <xref:System.Windows.Forms.BindingSource> данных и адаптер таблицы, относящиеся к этому соединению с данными, добавляются в форму.
+     Редактор типов пользовательского интерфейса **DataSource** закрывается, а набор данных, <xref:System.Windows.Forms.BindingSource> и адаптер таблицы, относящиеся к этому соединению с данными, добавляются в форму.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>

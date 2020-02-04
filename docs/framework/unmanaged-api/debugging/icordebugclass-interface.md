@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 5714597b5e5ca2936aad53217ae934684e75585c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ac588591222a1abbc7b99ec7e973284c055f95e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125746"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784167"
 ---
 # <a name="icordebugclass-interface"></a>Интерфейс ICorDebugClass
 
@@ -29,9 +29,9 @@ ms.locfileid: "73125746"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Возвращает модуль, который определяет этот класс.|  
-|[Метод GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|Возвращает значение указанного статического поля.|  
-|[Метод GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|Возвращает `TypeDef` маркера метаданных для этого класса.|  
+|[Метод GetModule](icordebugclass-getmodule-method.md)|Возвращает модуль, который определяет этот класс.|  
+|[Метод GetStaticFieldValue](icordebugclass-getstaticfieldvalue-method.md)|Возвращает значение указанного статического поля.|  
+|[Метод GetToken](icordebugclass-gettoken-method.md)|Возвращает `TypeDef` маркера метаданных для этого класса.|  
   
 ## <a name="remarks"></a>Заметки  
  Интерфейс `ICorDebugClass` представляет универсальный тип, экземпляр которого не был создан. Интерфейс ICorDebugType представляет экземпляр универсального типа. Например, `Hashtable<K, V>` будет представлено `ICorDebugClass`, а `Hashtable<Int32, String>` будет представлено `ICorDebugType`.  
@@ -50,6 +50,6 @@ ms.locfileid: "73125746"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

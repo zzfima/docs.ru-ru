@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об использовании элементов управления в формах Windows Forms
+title: Общие сведения об использовании элементов управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654587"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744347"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Общие сведения об использовании элементов управления в формах Windows Forms
-В этом разделе описываются основные элементы в приложении Windows Forms и предоставляет простой пример, в котором используются элементы управления и обрабатывает события в приложении Windows Forms.  
+В этом разделе описываются ключевые элементы приложения Windows Forms и приводится простой пример использования элементов управления и обработки событий в приложении Windows Forms.  
   
-## <a name="simple-windows-forms-applications"></a>Простой Windows Forms в приложения  
- Как минимум это приложение Windows Forms состоит из следующих элементов:  
+## <a name="simple-windows-forms-applications"></a>Простые Windows Forms приложения  
+ Как минимум, Windows Forms приложение состоит из следующих элементов:  
   
 - Один или несколько классов, производных от <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
-- Объект `Main` метода, который вызывает `static` (`shared` в Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> и передает <xref:System.Windows.Forms.Form> экземпляра к нему. <xref:System.Windows.Forms.Application.Run%2A> Метод обрабатывает сообщения из операционной системы для приложения.  
+- Метод `Main`, который вызывает метод `static` (`shared` в Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> и передает ему экземпляр <xref:System.Windows.Forms.Form>. Метод <xref:System.Windows.Forms.Application.Run%2A> обрабатывает сообщения из операционной системы в приложение.  
   
- В следующем примере кода показаны основные элементы в приложении Windows Forms.  
+ В следующем примере кода показаны ключевые элементы приложения Windows Forms.  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>С помощью элементов управления в приложении Windows Forms  
- В следующем примере кода показано простое приложение, которое показано, как приложения Windows Forms с помощью элементов управления и обработки событий. Пример состоит из трех кнопок в форме; каждой кнопки изменяет цвет фона при щелчке.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Использование элементов управления в приложении Windows Forms  
+ В следующем примере кода показано простое приложение, которое показывает, как Windows Forms приложения используют элементы управления и обрабатывайте события. Пример состоит из трех кнопок в форме. При нажатии каждая кнопка меняет цвет фона.  
   
 ```vb  
 Option Explicit  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
 - [Основы разработки элементов управления форм Windows Forms](windows-forms-control-development-basics.md)

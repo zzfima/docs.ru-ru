@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: 64df6a81eb23c20537238c702fd0c204d64d14bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4a003b30c495852a3a68d44d92bef35c3ed7812
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434553"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866303"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>Метод ICorProfilerCallback::Initialize
 Вызывается для инициализации профилировщика кода при запуске нового приложения среды CLR.  
@@ -32,12 +32,14 @@ HRESULT Initialize(
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `pICorProfilerInfoUnk`  
- [в](/cpp/atl/iunknown) интерфейсе, который профилировщик должен запрашивать для указателя интерфейса [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) .  
-  
-## <a name="remarks"></a>Примечания  
- Вызов `Initialize` является единственной возможностью включать (или отключать) обратные вызовы, которые являются неизменяемыми. После включения обратного вызова в `Initialize` вызове его нельзя отключить позже с помощью команды [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). Значение COR_PRF_MONITOR_IMMUTABLE перечисления [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) указывает, какие события являются неизменяемыми.  
+## <a name="parameters"></a>Параметры
+
+- `pICorProfilerInfoUnk`
+
+  \[в] указатель на интерфейс [IUnknown](/cpp/atl/iunknown) , который профилировщик должен запрашивать для указателя интерфейса [ICorProfilerInfo](icorprofilerinfo-interface.md) .  
+
+## <a name="remarks"></a>Заметки  
+ Вызов `Initialize` является единственной возможностью включать (или отключать) обратные вызовы, которые являются неизменяемыми. После включения обратного вызова в `Initialize` вызове его нельзя отключить позже с помощью команды [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Значение COR_PRF_MONITOR_IMMUTABLE перечисления [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) указывает, какие события являются неизменяемыми.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,7 +50,7 @@ HRESULT Initialize(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод Shutdown](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод Shutdown](icorprofilercallback-shutdown-method.md)

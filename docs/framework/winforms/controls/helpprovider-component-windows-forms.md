@@ -1,36 +1,36 @@
 ---
-title: Компонент HelpProvider (Windows Forms)
+title: Компонент HelpProvider
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], Help
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: b5da5895b39412052f83cb0a89c3852d28f264bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 058a90a6d868d051e36523ae93bb1f3f810fc3b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011311"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745600"
 ---
 # <a name="helpprovider-component-windows-forms"></a>Компонент HelpProvider (Windows Forms)
 Компонент `HelpProvider` Windows Forms позволяет связать HTML-файл справки версии 1.x (CHM-файл, созданный с помощью средства HTML Help Workshop, или HTM-файл) с приложением Windows.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте HelpProvider](helpprovider-component-overview-windows-forms.md)  
  Общие понятия, связанные с компонентом `HelpProvider`, который позволяет связать HTML-файл справки с приложением Windows.  
   
- См. в разделе [справочные системы в приложениях Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).  
+ См. раздел [Справочные системы в Windows Forms приложениях](../advanced/help-systems-in-windows-forms-applications.md).  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.HelpProvider>  
  Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.Help>  
  Описание класса и всех его членов.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- Также см. в разделе [справочные системы в приложениях Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).
+ См. также [Справочные системы в Windows Forms приложениях](../advanced/help-systems-in-windows-forms-applications.md).

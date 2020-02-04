@@ -1,5 +1,5 @@
 ---
-title: Метод ICorProfilerInfo3::GetModuleInfo2
+title: ICorProfilerInfo3::GetModuleInfo2 Method
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo3.GetModuleInfo2
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: e2a4df262e076c960640977bea0d22be19802140
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 96cde35c7151bb7ce58715f2826feaa59b30efab
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449666"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862312"
 ---
-# <a name="icorprofilerinfo3getmoduleinfo2-method"></a>Метод ICorProfilerInfo3::GetModuleInfo2
+# <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 Method
 Возвращает имя файла модуля, идентификатор родительской сборки модуля и битовую маску, описывающую свойства модуля, по идентификатору модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -59,12 +59,12 @@ HRESULT GetModuleInfo2(
  [out] Указатель на идентификатор родительской сборки модуля.  
   
  `pdwModuleFlags`  
- заполняет Битовая маска значений из перечисления [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) , определяющая свойства модуля.  
+ заполняет Битовая маска значений из перечисления [COR_PRF_MODULE_FLAGS](cor-prf-module-flags-enumeration.md) , определяющая свойства модуля.  
   
 ## <a name="remarks"></a>Заметки  
  Для динамических модулей параметр `szName` является именем метаданных модуля, а базовый адрес равен 0 (нулю). Имя метаданных — это значение в столбце Name таблицы Module в метаданных. Это также предоставляется в качестве свойства <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> для управляемого кода, а также в качестве параметра `szName` метода [IMetaDataImport:: жетскопепропс](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) в неуправляемый клиентский код метаданных.  
   
- Несмотря на то, что метод `GetModuleInfo2` может вызываться сразу после существования идентификатора модуля, идентификатор родительской сборки будет недоступен до тех пор, пока профилировщик не получит обратный вызов [ICorProfilerCallback:: модулеаттачедтоассембли](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) .  
+ Несмотря на то, что метод `GetModuleInfo2` может вызываться сразу после существования идентификатора модуля, идентификатор родительской сборки будет недоступен до тех пор, пока профилировщик не получит обратный вызов [ICorProfilerCallback:: модулеаттачедтоассембли](icorprofilercallback-moduleattachedtoassembly-method.md) .  
   
  После возврата метода `GetModuleInfo2` необходимо убедиться, что буфер `szName` был достаточно велик, чтобы вместить в себя полное имя файла модуля. Для этого сравните значение, на которое указывает параметр `pcchName`, со значением параметра `cchName`. Если параметр `pcchName` указывает на значение, превышающее значение `cchName`, выделите буфер `szName` большего размера, обновите параметр `cchName`, задав новый, больший размер, и вызовите метод `GetModuleInfo2` снова.  
   
@@ -79,8 +79,8 @@ HRESULT GetModuleInfo2(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Интерфейсы профилирования](profiling-interfaces.md)
+- [Профилирование](index.md)

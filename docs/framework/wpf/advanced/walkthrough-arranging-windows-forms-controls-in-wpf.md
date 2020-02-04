@@ -1,5 +1,6 @@
 ---
-title: Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
+title: Упорядочение элементов управления Windows Forms в WPF
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197838"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794245"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
 
-В этом пошаговом руководстве показано, как использовать функции макета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для упорядочения элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] в гибридном приложении.
+В этом пошаговом руководстве показано, как использовать функции макета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для упорядочения элементов управления Windows Forms в гибридном приложении.
 
 В данном пошаговом руководстве представлены следующие задачи.
 
@@ -38,9 +39,9 @@ ms.locfileid: "73197838"
 
 Полный листинг кода задач, показанных в этом пошаговом руководстве, см. в разделе [Размещение элементов управления Windows Forms в WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971).
 
-По завершении вы получите представление о [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ных функциях макета в приложениях на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+По завершении вы получите представление о Windows Formsных функциях макета в приложениях на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -58,7 +59,7 @@ ms.locfileid: "73197838"
 
 3. Дважды щелкните файл *MainWindow. XAML* , чтобы открыть его в представлении XAML.
 
-4. В элемент <xref:System.Windows.Window> добавьте следующее сопоставление пространства имен [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+4. В элемент <xref:System.Windows.Window> добавьте следующее сопоставление пространства имен Windows Forms.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -70,7 +71,7 @@ ms.locfileid: "73197838"
 
 ## <a name="using-default-layout-settings"></a>Использование параметров макета по умолчанию
 
-По умолчанию элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> обрабатывает макет для размещенного элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+По умолчанию элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> обрабатывает макет для размещенного элемента управления Windows Forms.
 
 Чтобы использовать параметры макета по умолчанию, выполните следующие действия.
 
@@ -78,7 +79,7 @@ ms.locfileid: "73197838"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. В <xref:System.Windows.Controls.Canvas>появится элемент управления <xref:System.Windows.Forms.Button?displayProperty=nameWithType> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Размер размещаемого элемента управления зависит от его содержимого, а размер элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> изменяется в соответствии с размещаемым элементом управления.
+2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. В <xref:System.Windows.Controls.Canvas>появится элемент управления <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Windows Forms. Размер размещаемого элемента управления зависит от его содержимого, а размер элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> изменяется в соответствии с размещаемым элементом управления.
 
 ## <a name="sizing-to-content"></a>Изменение размеров в зависимости от содержимого
 
@@ -114,7 +115,7 @@ ms.locfileid: "73197838"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Для элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> задается размер 50 пикселей в ширину на 70 пикселей выше, что меньше, чем параметры макета по умолчанию. Содержимое элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] упорядочивается соответствующим образом.
+2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Для элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> задается размер 50 пикселей в ширину на 70 пикселей выше, что меньше, чем параметры макета по умолчанию. Содержимое элемента управления Windows Forms упорядочивается соответствующим образом.
 
 ## <a name="setting-layout-properties"></a>Установка свойств макета
 
@@ -149,7 +150,7 @@ ms.locfileid: "73197838"
 
 2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> зарисовывается поверх элемента Label.
 
-## <a name="docking"></a>Закрепление
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент поддерживает закрепление [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Задайте присоединенное свойство <xref:System.Windows.Controls.DockPanel.Dock%2A>, чтобы закрепить размещаемый элемент управления в элементе <xref:System.Windows.Controls.DockPanel>.
 
@@ -163,7 +164,7 @@ ms.locfileid: "73197838"
 
 ## <a name="setting-visibility"></a>Задание видимости
 
-Можно сделать элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] невидимым или свернуть его, установив свойство <xref:System.Windows.UIElement.Visibility%2A> элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Если элемент управления невидим, он не отображается, но при этом занимает пространство разметки. Если элемент управления свернут, он не отображается и не занимает пространство разметки.
+Можно сделать элемент управления Windows Forms невидимым или свернуть его, установив свойство <xref:System.Windows.UIElement.Visibility%2A> элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Если элемент управления невидим, он не отображается, но при этом занимает пространство разметки. Если элемент управления свернут, он не отображается и не занимает пространство разметки.
 
 Чтобы задать видимость размещенного элемента управления, выполните следующие действия.
 
@@ -180,11 +181,11 @@ ms.locfileid: "73197838"
 
 4. Нажмите кнопку, **чтобы сделать невидимой** кнопку, чтобы сделать элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> невидимым.
 
-5. Нажмите кнопку " **щелкните, чтобы свернуть** ", чтобы полностью скрыть элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> из макета. Когда элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сворачивается, окружающие элементы переупорядочиваются, чтобы занять свое пространство.
+5. Нажмите кнопку " **щелкните, чтобы свернуть** ", чтобы полностью скрыть элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> из макета. Когда элемент управления Windows Forms сворачивается, окружающие элементы переупорядочиваются, чтобы занять свое пространство.
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>Размещение нерастягиваемых элементов управления
 
-Некоторые элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] имеют фиксированный размер и не растягиваются для заполнения доступного пространства в макете. Например, элемент управления <xref:System.Windows.Forms.MonthCalendar> отображает месяц в фиксированном пространстве.
+Некоторые элементы управления Windows Forms имеют фиксированный размер и не растягиваются для заполнения доступного пространства в макете. Например, элемент управления <xref:System.Windows.Forms.MonthCalendar> отображает месяц в фиксированном пространстве.
 
 Для размещения элемента управления, который не растягивается, выполните следующие действия.
 
@@ -222,7 +223,7 @@ ms.locfileid: "73197838"
 
 ## <a name="setting-padding-and-margins"></a>Задание отбивки и внутренних полей
 
-Заполнение и поля в макете [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] похожи на заполнение и поля в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Просто задайте свойства <xref:System.Windows.Controls.Control.Padding%2A> и <xref:System.Windows.FrameworkElement.Margin%2A> элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
+Заполнение и поля в макете [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] похожи на заполнение и поля в Windows Forms. Просто задайте свойства <xref:System.Windows.Controls.Control.Padding%2A> и <xref:System.Windows.FrameworkElement.Margin%2A> элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
 Чтобы задать заполнение и поля для размещенного элемента управления, выполните следующие действия.
 
@@ -231,11 +232,11 @@ ms.locfileid: "73197838"
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Параметры заполнения и поля применяются к размещенным элементам управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] так же, как они будут применяться в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Параметры заполнения и поля применяются к размещенным элементам управления Windows Forms так же, как они будут применяться в Windows Forms.
 
 ## <a name="using-dynamic-layout-containers"></a>Использование динамических контейнеров макета
 
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] предоставляет два динамических контейнера макета: <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>. Эти контейнеры также можно использовать в макетах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Windows Forms предоставляет два динамических контейнера макета: <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>. Эти контейнеры также можно использовать в макетах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 Чтобы использовать динамический контейнер макета, выполните следующие действия.
 
@@ -255,7 +256,7 @@ ms.locfileid: "73197838"
 
 4. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> заполняет <xref:System.Windows.Controls.DockPanel>и <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает свои дочерние элементы управления в <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>по умолчанию.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

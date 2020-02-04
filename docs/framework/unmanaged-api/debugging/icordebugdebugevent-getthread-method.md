@@ -1,15 +1,15 @@
 ---
-title: ICorDebugDebugEvent::Метод GetThread
+title: Метод ICorDebugDebugEvent::GetThread
 ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
-ms.openlocfilehash: 66b4abc4bebfbbde2e6a6b25d2bc0e88839a363f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0900ac2ae5bcf2141e720dad6efdf68d4fafaccc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136649"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793534"
 ---
-# <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::Метод GetThread
+# <a name="icordebugdebugeventgetthread-method"></a>Метод ICorDebugDebugEvent::GetThread
 Получает поток, в котором произошло событие.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -22,7 +22,7 @@ HRESULT GetThread(
   
 ## <a name="parameters"></a>Параметры  
  ppThread  
- заполняет Указатель на адрес объекта ICorDebugThread, представляющий поток, в котором произошло событие.  
+ [выходной] Указатель на адрес объекта ICorDebugThread, представляющего поток, в котором произошло событие.  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -38,7 +38,7 @@ HRESULT GetThread(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugDebugEvent](icordebugdebugevent-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

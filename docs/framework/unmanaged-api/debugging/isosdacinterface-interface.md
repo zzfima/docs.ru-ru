@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94349a3f7b18c8ce29bb3a71cb9d10ee4eac8036
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922152"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790479"
 ---
 # <a name="isosdacinterface-interface"></a>Интерфейс ISOSDacInterface
 
@@ -32,22 +32,22 @@ ms.locfileid: "61922152"
 
 | Метод                                                                                                               | Описание                                                                                                                   |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | Получает данные для заданный указатель MethodDesc. |
-| [GetMethodDescPtrFromIP](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescptrfromip-method.md) | Извлекает указатель MethodDesc, соответствующий метод, содержащий адрес заданной инструкции машинного кода. |
-| [GetModuleData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmoduledata-method.md)| Извлекает данные, соответствующие модуль загружен по указанному адресу. |
+| [жетмесоддескдата](isosdacinterface-getmethoddescdata-method.md) | Возвращает данные для заданного указателя MethodDesc. |
+| [жетмесоддескптрфромип](isosdacinterface-getmethoddescptrfromip-method.md) | Получает указатель MethodDesc, соответствующий методу, содержащему указанный адрес собственной инструкции. |
+| [жетмодуледата](isosdacinterface-getmoduledata-method.md)| Извлекает данные, соответствующие модулю, загруженному по указанному адресу. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Этот интерфейс находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек. Однако это COM-интерфейс, наследуемый от `IUnknown` с идентификатором GUID `436f00f2-b42a-4b9f-870c-e73db66ae930` , можно получить с помощью обычных механизмов COM.
+Этот интерфейс находится внутри среды выполнения и не предоставляется через все файлы заголовков или библиотек. Однако это COM-интерфейс, производный от `IUnknown` с GUID `436f00f2-b42a-4b9f-870c-e73db66ae930`, который можно получить с помощью обычных механизмов COM.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** Нет  
-**Библиотека:** Нет  
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Заголовок:** None  
+**Библиотека:** None  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

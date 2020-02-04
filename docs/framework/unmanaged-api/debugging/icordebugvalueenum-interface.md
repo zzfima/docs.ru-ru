@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: 4cc9849ee8cd160a33ae9c769f7b98a87eafb8dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba61df045caa117acae3756eb879cf67d0791222
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134600"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791066"
 ---
 # <a name="icordebugvalueenum-interface"></a>Интерфейс ICorDebugValueEnum
 Реализует методы "ICorDebugEnum" и перечисляет массивы "ICorDebugValue".  
@@ -28,7 +28,7 @@ ms.locfileid: "73134600"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Возвращает указанное число экземпляров `ICorDebugValue` из перечисления, начиная с текущей позиции.|  
+|[Метод Next](icordebugvalueenum-next-method.md)|Возвращает указанное число экземпляров `ICorDebugValue` из перечисления, начиная с текущей позиции.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -44,6 +44,6 @@ ms.locfileid: "73134600"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

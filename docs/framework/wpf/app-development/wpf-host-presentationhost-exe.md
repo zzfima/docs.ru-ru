@@ -1,16 +1,17 @@
 ---
 title: Ведущее приложение WPF (PresentationHost.exe)
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 64ba1261134184f22e9faf157ca70e3471e3b3cb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bda7efbb1b7a4760199215bdb58c12b3063e290c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636254"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743397"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Ведущее приложение WPF (PresentationHost.exe)
 Узел Windows Presentation Foundation (WPF) (PresentationHost. exe) — это приложение, которое позволяет размещать приложения WPF в совместимых браузерах (включая Microsoft Internet Explorer 6 и более поздние версии). По умолчанию узел Windows Presentation Foundation (WPF) регистрируется в качестве оболочки и обработчика MIME для содержимого WPF, размещенного в браузере, в том числе:  
@@ -29,14 +30,14 @@ ms.locfileid: "75636254"
   
  В этом разделе описываются параметры командной строки, которые можно использовать с PresentationHost.exe.  
   
-## <a name="usage"></a>Метрики  
+## <a name="usage"></a>Использование  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|имя_файла|Путь к файлу, который нужно активировать. Также может быть URI.|  
+|filename|Путь к файлу, который нужно активировать. Также может быть URI.|  
 |-debug|При активации приложения не фиксирует его в хранилище и не запускает из хранилища. Работает только при активации локального файла.|  
 |-debugSecurityZoneURL \<url>|Используется со значением URL-адреса, чтобы указать PresentationHost. exe, что приложение должно быть отлажено, как если бы оно было развернуто с указанного URL-адреса. Это определяет как зону развертывания, так и исходный узел.|  
 |-embedding|Требуется для OLE. Если указан параметр `-event` или `-debug`, то не обязательно указывать параметр `-embedding`, поскольку он устанавливается внутренне.|  
@@ -57,6 +58,6 @@ ms.locfileid: "75636254"
 ### <a name="visual-studio-debugging-in-zone"></a>Visual Studio, отладка в зоне  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Security](../security-wpf.md)
+- [Безопасность](../security-wpf.md)

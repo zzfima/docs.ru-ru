@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выделение строки элемента управления ListView в Windows Forms
+title: Выбор элемента в элементе управления ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: 41a30ba6c242d0587e98b458e41ca213e8885bca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57e985af9d0347510d7d7782f68d5b414d36e077
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638206"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743234"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Практическое руководство. Выделение строки элемента управления ListView в Windows Forms
-В этом примере показано, как программно выбрать элемент в формах Windows <xref:System.Windows.Forms.ListView> элемента управления. Выбор элемента программным образом не изменяется автоматически фокуса в <xref:System.Windows.Forms.ListView> элемента управления. По этой причине обычно необходимо также задать элемент как с фокусом ввода при выделении элемента.  
+В этом примере показано, как программным способом выбрать элемент в элементе управления Windows Forms <xref:System.Windows.Forms.ListView>. При выборе элемента программным способом не происходит автоматического переключения фокуса на элемент управления <xref:System.Windows.Forms.ListView>. По этой причине, как правило, требуется задать элемент в качестве элемента, который будет заменяться при выборе элемента.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
@@ -27,11 +27,11 @@ ms.locfileid: "64638206"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
-- Объект <xref:System.Windows.Forms.ListView> управления с именем `listView1` , содержащий хотя бы один элемент.  
+- Элемент управления <xref:System.Windows.Forms.ListView> с именем `listView1`, содержащий по крайней мере один элемент.  
   
 - Ссылки на пространства имен <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

@@ -1,5 +1,5 @@
 ---
-title: Установка профилирующей среды
+title: Настройка среды профилирования
 ms.date: 03/30/2017
 helpviewer_keywords:
 - environment variables, profiling API
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 86720cb1739e3f193cd1d5081577d69bca1cf0f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04b9abd8ffe04a24c08ad89ff48b037c9b003359
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427049"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860983"
 ---
-# <a name="setting-up-a-profiling-environment"></a>Установка профилирующей среды
+# <a name="setting-up-a-profiling-environment"></a>Настройка среды профилирования
 > [!NOTE]
 > В .NET Framework 4 были внесены существенные изменения в профилирование.  
   
@@ -55,23 +55,23 @@ ms.locfileid: "74427049"
   
 ## <a name="additional-considerations"></a>Дополнительные сведения  
   
-- Класс профилировщика реализует интерфейсы [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) . На платформе .NET Framework версии 2.0 профилировщик должен реализовывать интерфейс `ICorProfilerCallback2`. Если это не так, то `ICorProfilerCallback2` не будет загружен.  
+- Класс профилировщика реализует интерфейсы [ICorProfilerCallback](icorprofilercallback-interface.md) и [ICorProfilerCallback2](icorprofilercallback2-interface.md) . На платформе .NET Framework версии 2.0 профилировщик должен реализовывать интерфейс `ICorProfilerCallback2`. Если это не так, то `ICorProfilerCallback2` не будет загружен.  
   
 - Только один профилировщик может профилировать процесс в каждый момент времени в конкретной среде. Можно зарегистрировать два различных профилировщика в разных средах, но каждый из них должен профилировать разные процессы. Профилировщик должен быть реализован как внутрипроцессная DLL COM-сервера, назначенная в то же адресное пространство, что и профилируемый процесс. Это означает, что профилировщик функционирует внутрипроцессно. Платформа .NET Framework не поддерживает другие типы COM-сервера. Например, если профилировщику необходимо выполнить мониторинг приложений с удаленного компьютера, он должен реализовать агенты сборщика на каждом компьютере. Эти агенты будут выполнять пакетную обработку результатов и сообщать о них центральному компьютеру коллекции данных.  
   
 - Так как профилировщик является COM-объектом, создаваемым в процессе, каждое профилируемое приложение будет иметь собственную копию профилировщика. Таким образом, одиночный экземпляр профилировщика не должен обрабатывать данные из нескольких приложений. Тем не менее необходимо добавить логику в код ведения журнала профилировщика для предотвращения перезаписи файла журнала другими профилируемыми приложениями.  
   
 ## <a name="initializing-the-profiler"></a>Инициализация профилировщика  
- Когда обе переменные среды проходят проверку, среда CLR  создает экземпляр профилировщика аналогично функции COM `CoCreateInstance`. Профилировщик не загружается посредством прямого вызова `CoCreateInstance`. Таким образом, исключается вызов `CoInitialize`, требующий установки потоковой модели. Затем среда CLR вызывает метод [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) в профилировщике. Сигнатура этого метода выглядит следующим образом.  
+ Когда обе переменные среды проходят проверку, среда CLR  создает экземпляр профилировщика аналогично функции COM `CoCreateInstance`. Профилировщик не загружается посредством прямого вызова `CoCreateInstance`. Таким образом, исключается вызов `CoInitialize`, требующий установки потоковой модели. Затем среда CLR вызывает метод [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) в профилировщике. Сигнатура этого метода выглядит следующим образом.  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- Профилировщик должен запросить `pICorProfilerInfoUnk` для указателя интерфейса [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) или [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) и сохранить его, чтобы он мог запрашивать дополнительные сведения позже во время профилирования.  
+ Профилировщик должен запросить `pICorProfilerInfoUnk` для указателя интерфейса [ICorProfilerInfo](icorprofilerinfo-interface.md) или [ICorProfilerInfo2](icorprofilerinfo2-interface.md) и сохранить его, чтобы он мог запрашивать дополнительные сведения позже во время профилирования.  
   
 ## <a name="setting-event-notifications"></a>Настройка уведомлений о событиях  
- Затем профилировщик вызывает метод [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) , чтобы указать, в каких категориях уведомлений он заинтересован. Например, если профилировщик интересуют только уведомления вызова-возврата в функциях и уведомления о сборке мусора, то указывается следующее.  
+ Затем профилировщик вызывает метод [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) , чтобы указать, в каких категориях уведомлений он заинтересован. Например, если профилировщик интересуют только уведомления вызова-возврата в функциях и уведомления о сборке мусора, то указывается следующее.  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,8 +91,8 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  Обратите внимание, что эти изменения будут включать профилирование в рамках всей системы. Во избежание профилирования всех последовательно запускаемых управляемых приложений следует удалить переменные среды после перезагрузки целевого компьютера.  
   
- Этот метод также приводит к профилированию каждого процесса CLR. Профилировщик должен добавить логику в свой обратный вызов [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) , чтобы определить, является ли текущий процесс интересным. Если это не так, профилировщик может завершить обратный вызов с ошибкой без выполнения инициализации.  
+ Этот метод также приводит к профилированию каждого процесса CLR. Профилировщик должен добавить логику в свой обратный вызов [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) , чтобы определить, является ли текущий процесс интересным. Если это не так, профилировщик может завершить обратный вызов с ошибкой без выполнения инициализации.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Общие сведения о профилировании](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+- [Общие сведения о профилировании](profiling-overview.md)

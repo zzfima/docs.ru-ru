@@ -2,12 +2,12 @@
 title: Метод ICorDebugProcess6::GetExportStepInfo
 ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-ms.openlocfilehash: d92b05e3d84a230e87901378f34ed27ac38286b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 118f52db63464b4c9355ba9ee7f330b996c5bf71
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123462"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792249"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>Метод ICorDebugProcess6::GetExportStepInfo
 Предоставляет информацию о функциях, экспортируемых в ходе выполнения, для пошагового перемещения по управляемому коду.  
@@ -26,10 +26,10 @@ HRESULT GetExportStepInfo(
  [входной] Имя функции экспорта во время выполнения, записываемой в таблице экспорта PE.  
   
  invokeKind  
- заполняет Указатель на член перечисления [CorDebugCodeInvokeKind](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md) , описывающий, как экспортируемая функция будет вызывать управляемый код.  
+ заполняет Указатель на член перечисления [CorDebugCodeInvokeKind](cordebugcodeinvokekind-enumeration.md) , описывающий, как экспортируемая функция будет вызывать управляемый код.  
   
  invokePurpose  
- заполняет Указатель на член перечисления [кордебугкодеинвокепурпосе](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md) , описывающий, почему экспортируемая функция будет вызывать управляемый код.  
+ заполняет Указатель на член перечисления [кордебугкодеинвокепурпосе](cordebugcodeinvokepurpose-enumeration.md) , описывающий, почему экспортируемая функция будет вызывать управляемый код.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод может возвращать значения, перечисленные в следующей таблице.  
@@ -54,7 +54,7 @@ HRESULT GetExportStepInfo(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugProcess6](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugProcess6](icordebugprocess6-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

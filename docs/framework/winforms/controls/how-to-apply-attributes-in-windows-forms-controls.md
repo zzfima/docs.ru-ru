@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Применение атрибутов к элементам управления Windows Forms
+title: Применение атрибутов в элементах управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 273d32927582f4467a92cd3b8f87e699c1f167d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b8ecd516cf6bb189c6ad1b208dd8e3a5444f001c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922787"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741494"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Практическое руководство. Применение атрибутов к элементам управления Windows Forms
 Для разработки компонентов и элементов управления, которые правильно взаимодействуют со средой разработки и правильно выполняются во время выполнения, необходимо правильно применить атрибуты к классам и членам.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показано, как использовать несколько атрибутов для пользовательского элемента управления. Элемент управления демонстрирует простую возможность ведения журнала. Когда элемент управления привязан к источнику данных, он отображает значения, отправленные источником данных в <xref:System.Windows.Forms.DataGridView> элементе управления. Если значение превышает значение `Threshold` `ThresholdExceeded` , заданное свойством, возникает событие.  
+ В следующем примере кода показано, как использовать несколько атрибутов для пользовательского элемента управления. Элемент управления демонстрирует простую возможность ведения журнала. Когда элемент управления привязан к источнику данных, он отображает значения, отправленные источником данных в элементе управления <xref:System.Windows.Forms.DataGridView>. Если значение превышает значение, заданное свойством `Threshold`, возникает событие `ThresholdExceeded`.  
   
- Записывает значения в журнал `LogEntry` с помощью класса. `AttributesDemoControl` `LogEntry` Класс является классом шаблона, что означает, что он параметризован для типа, который он записывает в журнал. Например, если параметр `AttributesDemoControl` выполняет ведение журнала значений типа `float`, каждый `LogEntry` экземпляр объявляется и используется следующим образом.  
+ `AttributesDemoControl` регистрирует значения с помощью класса `LogEntry`. Класс `LogEntry` является классом-шаблоном, что означает, что он параметризован для типа, который он записывает в журнал. Например, если `AttributesDemoControl` ведет запись значений типа `float`, каждый экземпляр `LogEntry` объявляется и используется следующим образом.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#110)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#110)]  
   
 > [!NOTE]
-> Поскольку `LogEntry` параметр параметризован произвольным типом, он должен использовать отражение для работы с типом параметра. Чтобы функция порогового значения работала, тип `T` параметра должен <xref:System.IComparable> реализовывать интерфейс.  
+> Поскольку `LogEntry` параметризован произвольным типом, он должен использовать отражение для работы с типом параметра. Чтобы функция порогового значения работала, тип параметра `T` должен реализовывать интерфейс <xref:System.IComparable>.  
   
- Форма, в которой периодически `AttributesDemoControl` размещаются запросы счетчика производительности. Каждое значение упаковывается в `LogEntry` соответствующий тип и добавляется в <xref:System.Windows.Forms.BindingSource>форму. Объект `AttributesDemoControl` получает значение через привязку данных и отображает значение <xref:System.Windows.Forms.DataGridView> в элементе управления.  
+ Форма, в которой размещается `AttributesDemoControl` периодически опрашивает счетчик производительности. Каждое значение упаковывается в `LogEntry` соответствующего типа и добавляется в <xref:System.Windows.Forms.BindingSource>формы. `AttributesDemoControl` получает значение через привязку данных и отображает значение в элементе управления <xref:System.Windows.Forms.DataGridView>.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#1)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#1)]  
@@ -38,7 +38,7 @@ ms.locfileid: "69922787"
  [!code-csharp[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#100)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#100)]  
   
- Первый пример кода является `AttributesDemoControl` реализацией. Во втором примере кода демонстрируется форма, использующая `AttributesDemoControl`.  
+ Первый пример кода является реализацией `AttributesDemoControl`. Во втором примере кода демонстрируется форма, использующая `AttributesDemoControl`.  
   
 ## <a name="class-level-attributes"></a>Атрибуты уровня класса  
  Некоторые атрибуты применяются на уровне класса. В следующем примере кода показаны атрибуты, которые обычно применяются к элементу управления Windows Forms.  
@@ -47,7 +47,7 @@ ms.locfileid: "69922787"
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
 ### <a name="typeconverter-attribute"></a>Атрибут TypeConverter  
- <xref:System.ComponentModel.TypeConverterAttribute>— Это еще один часто используемый атрибут уровня класса. В следующем примере кода показано его использование для `LogEntry` класса. В этом примере также показана реализация <xref:System.ComponentModel.TypeConverter> `LogEntry` для типа с именем `LogEntryTypeConverter`.  
+ <xref:System.ComponentModel.TypeConverterAttribute> является другим часто используемым атрибутом уровня класса. В следующем примере кода показано использование класса `LogEntry`. В этом примере также показана реализация <xref:System.ComponentModel.TypeConverter> для типа `LogEntry`, который называется `LogEntryTypeConverter`.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  
@@ -65,7 +65,7 @@ ms.locfileid: "69922787"
  [!code-vb[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#23)]  
   
 ### <a name="databinding-attributes"></a>Атрибуты привязки данных  
- В следующих примерах демонстрируется реализация сложной привязки данных. На уровне <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>класса, показанном ранее, `DataSource` указываются свойства `DataMember` и, используемые для привязки данных. Указывает тип, к `DataSource` которому будет привязано свойство. <xref:System.ComponentModel.AttributeProviderAttribute>  
+ В следующих примерах демонстрируется реализация сложной привязки данных. <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>уровня класса, показанный ранее, указывает свойства `DataSource` и `DataMember`, используемые для привязки данных. <xref:System.ComponentModel.AttributeProviderAttribute> указывает тип, к которому будет привязано свойство `DataSource`.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
@@ -75,12 +75,12 @@ ms.locfileid: "69922787"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
-- Для создания формы, в `AttributesDemoControl` которой размещен объект, требуется `AttributesDemoControl` ссылка на сборку.  
+- Для сборки в форме, в которой размещен `AttributesDemoControl`, требуется ссылка на сборку `AttributesDemoControl`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
 - [Атрибуты в элементах управления Windows Forms](attributes-in-windows-forms-controls.md)
-- [Практическое руководство. Сериализация коллекций стандартных типов с помощью Десигнерсериализатионвисибилитяттрибуте](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
+- [Последовательное руководство. Сериализация коллекций стандартных типов с помощью Десигнерсериализатионвисибилитяттрибуте](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

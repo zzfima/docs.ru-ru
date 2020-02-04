@@ -1,5 +1,6 @@
 ---
-title: Как создать Windows Forms приложение из командной строки
+title: Создание Windows Forms приложения из командной строки
+titleSuffix: ''
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da6b9da53a36a44233dde4f0d1c4f147d913c7cf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127246"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739521"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Как создать Windows Forms приложение из командной строки
 
@@ -64,7 +65,7 @@ ms.locfileid: "73127246"
   
     - Если используется Visual Basic, введите: `vbc form1.vb`  
   
-3. В командной строке введите: `Form1.exe`  
+3. В командной строке введите следующий текст: `Form1.exe`.  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработка события
 
@@ -110,7 +111,7 @@ ms.locfileid: "73127246"
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>

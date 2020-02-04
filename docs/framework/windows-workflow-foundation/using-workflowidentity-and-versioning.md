@@ -2,18 +2,18 @@
 title: Использование WorkflowIdentity и управления версиями
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 97224caa24b38a00a1cbb4fa76781eea3a10faaf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142046"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787918"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Использование WorkflowIdentity и управления версиями
 
 <xref:System.Activities.WorkflowIdentity> предоставляет разработчикам приложений рабочих процессов способ связать имя и <xref:System.Version> с определением рабочего процесса, а также связать эти сведения с сохраненным экземпляром рабочего процесса. Эти идентификационные данные могут быть использованы разработчиками приложений рабочего процесса для поддержки таких сценариев, как параллельное выполнение нескольких версий определения рабочего процесса, и являются ключевым элементом для других функциональных возможностей, таких как динамическое обновление. В этом разделе представлены общие сведения об использовании <xref:System.Activities.WorkflowIdentity> с размещением <xref:System.Activities.WorkflowApplication>. Сведения о параллельном выполнении определений рабочих процессов в службе рабочего процесса см. [в разделе параллельное управление версиями в WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Дополнительные сведения о динамическом обновлении см. в разделе [динамическое обновление](dynamic-update.md).
 
-## <a name="in-this-topic"></a>Содержание раздела
+## <a name="in-this-topic"></a>Содержание
 
 - [Использование WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
 
@@ -78,7 +78,7 @@ wfApp.Load(instanceId);
 
 Если предыдущий код выполняется, выдается исключение <xref:System.Activities.VersionMismatchException>.
 
-```
+```output
 The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
 ```
 
@@ -150,7 +150,7 @@ wfApp.Load(instance);
 
 Если приложение рабочего процесса .NET Framework 4,5 пытается выполнить любые операции сохранения, использующие новые функции управления версиями в базе данных сохраняемости, которая не была обновлена с помощью предоставленного скрипта, создается <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> с сообщением, аналогичным приведенному ниже.
 
-```
+```output
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
 ```
 

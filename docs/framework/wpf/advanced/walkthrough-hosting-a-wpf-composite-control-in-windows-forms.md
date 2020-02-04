@@ -1,18 +1,19 @@
 ---
-title: Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
+title: Размещение составного элемента управления WPF в Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 05ba8120c90175801aa2cb61499c48133853e8f7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458933"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794170"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
-Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако при наличии значительных инвестиций в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код может оказаться более эффективным, чтобы расширить имеющееся приложение [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], а не переписывать его с нуля. Распространенный сценарий заключается в том, что необходимо внедрить один или несколько элементов управления, реализованных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении Windows Forms. Дополнительные сведения о настройке элементов управления WPF см. в разделе [Настройка элемента управления](../controls/control-customization.md).  
+Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако при наличии значительных инвестиций в Windows Forms код может оказаться более эффективным, чтобы расширить имеющееся приложение Windows Forms с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], а не переписывать его с нуля. Распространенный сценарий заключается в том, что необходимо внедрить один или несколько элементов управления, реализованных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении Windows Forms. Дополнительные сведения о настройке элементов управления WPF см. в разделе [Настройка элемента управления](../controls/control-customization.md).  
   
  В этом пошаговом руководстве рассматривается приложение, в котором размещается [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составной элемент управления для выполнения записи данных в Windows Forms приложении. Составной элемент управления упакован в библиотеку DLL. Эта общая процедура может быть расширена для более сложных приложений и элементов управления. Это пошаговое руководство призвано стать практически идентичным по внешнему виду и функциональности для [пошагового руководства: размещение Windows Forms составного элемента управления в WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Основным отличием является то, что сценарий размещения выполняется в обратном порядке.  
   
@@ -26,7 +27,7 @@ ms.locfileid: "73458933"
   
  Полный листинг кода задач, показанных в этом пошаговом руководстве, см. [в разделе размещение составного элемента управления WPF в Windows Forms примере](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl).  
   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Prerequisites  
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "73458933"
   
 - PresentationFramework  
   
-- Система  
+- System  
   
 - WindowsBase  
   
@@ -176,7 +177,7 @@ namespace MyControls
   
  [!code-csharp[WindowsFormsHostingWpfControl#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
   
- Постройте решение. В результате сборки будет создана библиотека DLL с именем MyControls.dll.  
+ Выполните сборку решения. Сборка создаст библиотеку DLL с именем MyControls.dll.  
   
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>Реализация ведущего приложения Windows Forms  
@@ -230,19 +231,19 @@ namespace MyControls
   
 4. Добавьте в форму следующие элементы управления <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>.  
   
-    |Название|Text|  
+    |Name|Текст|  
     |----------|----------|  
-    |groupBox1|Цвет фона|  
+    |groupBox1|Background Color|  
     |groupBox2|Цвет переднего плана|  
-    |groupBox3|Размер шрифта|  
+    |groupBox3|Font Size|  
     |groupBox4|Семейство шрифтов|  
-    |groupBox5|Стиль шрифта|  
+    |groupBox5|Font Style|  
     |groupBox6|Насыщенность шрифта|  
     |groupBox7|Данные из элемента управления|  
   
 5. Добавьте в элементы управления <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> следующие элементы управления <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>.  
   
-    |GroupBox|Название|Text|  
+    |GroupBox|Name|Текст|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|До преобразования|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -257,13 +258,13 @@ namespace MyControls
     |groupBox4|radioFamilyTimes|Times New Roman Cyr|  
     |groupBox4|radioFamilyWingDings|WingDings|  
     |groupBox5|radioStyleOriginal|Норм.|  
-    |groupBox5|radioStyleItalic|Italic|  
+    |groupBox5|radioStyleItalic|Курсив|  
     |groupBox6|radioWeightOriginal|До преобразования|  
-    |groupBox6|radioWeightBold|Полужирный|  
+    |groupBox6|radioWeightBold|Полужирный шрифт|  
   
 6. Добавьте в последнюю <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>следующие элементы управления <xref:System.Windows.Forms.Label?displayProperty=nameWithType>. Эти элементы управления отображают данные, возвращаемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составным элементом управления.  
   
-    |GroupBox|Название|Text|  
+    |GroupBox|Name|Текст|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Имя.|  
     |groupBox7|lblAddress|Почтовый адрес:|  
@@ -322,7 +323,7 @@ namespace MyControls
   
  Выполните сборку и запуск приложения. Щелкайте различные переключатели, чтобы увидеть соответствующий эффект в составном элементе управления WPF.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -1,15 +1,15 @@
 ---
-title: 'Метод ICorDebugSymbolProvider2:: Жетженерикдиктионаринфо'
+title: Метод ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133634"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791507"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Метод ICorDebugSymbolProvider2:: Жетженерикдиктионаринфо
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Метод ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 
 Получает универсальную карту словаря
 
@@ -24,7 +24,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Параметры
 
 `ppMemoryBuffer`\
-заполняет Указатель на адрес объекта [икордебугмеморибуффер](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) , содержащего универсальную карту словаря. Дополнительные сведения см. в разделе "Примечания".
+заполняет Указатель на адрес объекта [икордебугмеморибуффер](icordebugmemorybuffer-interface.md) , содержащего универсальную карту словаря. Дополнительные сведения см. в разделе «Примечания».
 
 ## <a name="remarks"></a>Заметки
 
@@ -85,7 +85,7 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugSymbolProvider2](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugSymbolProvider2](icordebugsymbolprovider2-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

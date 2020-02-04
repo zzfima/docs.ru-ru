@@ -2,16 +2,16 @@
 title: Неподдерживаемые сценарии
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901266"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921160"
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 
-По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые конкретные сценарии безопасности. Например, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition не реализует протоколы проверки подлинности SSPI или Kerberos, поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. Другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS, поддерживаются при запуске WCF в Windows XP Home Edition.
+По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые конкретные сценарии безопасности. Например, в Windows XP Home Edition не реализованы протоколы проверки подлинности SSPI или Kerberos, поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. Другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS, поддерживаются при запуске WCF в Windows XP Home Edition.
 
 ## <a name="impersonation-scenarios"></a>Сценарии олицетворения
 
@@ -22,7 +22,7 @@ ms.locfileid: "75901266"
 
 WCF не поддерживает олицетворение, и при выполнении следующих условий возникает <xref:System.InvalidOperationException>.
 
-- Операционной системой является [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+- Операционная система — Windows XP.
 
 - Режим проверки подлинности имеет результатом удостоверение Windows.
 
@@ -35,7 +35,7 @@ WCF не поддерживает олицетворение, и при выпо
  Кроме того, в конфигурации маркер включается путем создания <`customBinding`>, добавления <`security`> и присвоения атрибуту `authenticationMode` значения SecureConversation, а `requireSecurityContextCancellation` — `true`.
 
 > [!NOTE]
-> Эти требования зависят от конкретной ситуации. Например, метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> создает элемент привязки, который имеет результатом удостоверение Windows, однако не устанавливает маркер SCT. Поэтому его можно использовать с параметром `Required` в ОС [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Эти требования зависят от конкретной ситуации. Например, метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> создает элемент привязки, который имеет результатом удостоверение Windows, однако не устанавливает маркер SCT. Поэтому его можно использовать с параметром `Required` в Windows XP.
 
 ### <a name="possible-aspnet-conflict"></a>Возможный конфликт ASP.NET
 

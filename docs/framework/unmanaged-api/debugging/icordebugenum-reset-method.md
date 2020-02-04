@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab03dcb8-ceed-4f7a-abf8-9d31604bf90c
 topic_type:
 - apiref
-ms.openlocfilehash: fdf7ce97d45dc54d711389af822f2ca7d1ea67a5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f338a4e50d50e7dad67160ff66ea4be3d08b0dcd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090634"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788770"
 ---
 # <a name="icordebugenumreset-method"></a>Метод ICorDebugEnum::Reset
 Перемещает курсор в начало перечисления.  
@@ -40,6 +40,6 @@ HRESULT Reset ();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [Интерфейс ICorDebugEnum](icordebugenum-interface1.md)

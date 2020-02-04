@@ -1,5 +1,5 @@
 ---
-title: Проверка введенных пользователем данных в Windows Forms
+title: Проверка входных данных пользователя
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, validating user input
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 2b83e94f188f46d0cedc9fed9e9c5a946ada59c5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dc56c09677d1054e8f264169b78638fa83bd7d9e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960432"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734689"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Проверка введенных пользователем данных в Windows Forms
 Когда пользователи вводят данные в приложение, может потребоваться проверить, являются ли данные допустимыми, прежде чем использовать их в приложении. Может потребоваться, чтобы определенные текстовые поля не были нулевой длины, поле было отформатировано как номер телефона или другой тип данных правильного формата или что строка не содержит небезопасный символ, который можно использовать для нарушения безопасности базы данных. Windows Forms предоставляет несколько способов проверки входных данных в приложении.  
@@ -67,7 +67,7 @@ ms.locfileid: "74960432"
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Поведение неявной проверки по умолчанию для элементов управления Windows Forms  
  Различные элементы управления Windows Forms имеют разные значения по умолчанию для их свойства <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>. В следующей таблице показаны наиболее распространенные элементы управления и их значения по умолчанию.  
   
-|Элемент управления|Поведение проверки по умолчанию|  
+|Control|Поведение проверки по умолчанию|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
@@ -90,7 +90,7 @@ ms.locfileid: "74960432"
 > [!NOTE]
 > Если принудительно закрыть форму таким образом, все данные в элементах управления формы, которые еще не были сохранены, теряются. Кроме того, модальные формы не проверяют содержимое элементов управления при их закрытии. Вы по-прежнему можете использовать проверку элемента управления для блокировки фокуса на элемент управления, но не нужно беспокоиться о поведении, связанном с закрытием формы.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

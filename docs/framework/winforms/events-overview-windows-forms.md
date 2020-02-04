@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о событиях (Windows Forms)
+title: Общие сведения о событиях
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, event handling
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 59085597789d12ce80648efb77859228e4718a3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345006"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743481"
 ---
 # <a name="events-overview-windows-forms"></a>Общие сведения о событиях (Windows Forms)
 Событие — это действие, требующее реагирования или "обработки" в коде. События могут генерироваться действиями пользователя (например, нажатием кнопки мыши или клавиши на клавиатуре), программным кодом или системой.
@@ -43,7 +43,7 @@ ms.locfileid: "75345006"
 
  В делегатах используется динамический механизм связки: во время выполнения делегат может быть связан с любым методом, подпись которого совпадает с подписью обработчика событий. С помощью этой функции можно устанавливать или изменять метод связки в зависимости от условий и динамически привязывать обработчик событий к элементу управления.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Общие сведения об обработчиках событий](event-handlers-overview-windows-forms.md)

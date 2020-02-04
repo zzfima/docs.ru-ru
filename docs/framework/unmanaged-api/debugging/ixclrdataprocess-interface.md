@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ff74a7acb5cc84c177f083c19402cd78977aeab5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5d707d61513b030e5968af28db3c2a606e4419b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775249"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790376"
 ---
 # <a name="ixclrdataprocess-interface"></a>Интерфейс IXCLRDataProcess
 
-Предоставляет методы для запроса на получение сведений о процессе.
+Предоставляет методы для запроса сведений о процессе.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,26 +32,26 @@ ms.locfileid: "61775249"
 
 | Метод                                                                                                                                               | Описание                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [GetAppDomainByUniqueId](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Получает `AppDomain` в процессе по ее уникальному идентификатору.                                              |
-| [StartEnumModules](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-startenummodules-method.md)                                   | Предоставляет маркер, чтобы перечислить модули, процесса.                                        |
-| [EnumModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-enummodule-method.md)                                               | Перечисляет модули этого процесса.                                                         |
-| [EndEnumModules](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-endenummodules-method.md)                                       | Освобождает ресурсы, используемые внутренней итераторы, используемые при перечислении модуля.               |
-| [StartEnumMethodInstancesByAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Предоставляет дескриптор для перечисления экземпляров метод `AppDomain` начиная с данного адреса. |
-| [EnumMethodInstanceByAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Перечисление экземпляров метод класса этот процесс, начиная с смещение адреса.                  |
-| [EndEnumMethodInstancesByAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Освобождает ресурсы, используемые внутренней итераторы, используется в процессе экземпляра перечисления.             |
+| [жетаппдомаинбюникуеид](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Возвращает `AppDomain` в процессе по его уникальному идентификатору.                                              |
+| [стартенуммодулес](ixclrdataprocess-startenummodules-method.md)                                   | Предоставляет описатель для перечисления модулей процесса.                                        |
+| [енуммодуле](ixclrdataprocess-enummodule-method.md)                                               | Перечисляет модули этого процесса.                                                         |
+| [енденуммодулес](ixclrdataprocess-endenummodules-method.md)                                       | Освобождает ресурсы, используемые внутренними итераторами, используемыми при перечислении модулей.               |
+| [стартенуммесодинстанцесбяддресс](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Предоставляет описатель для перечисления экземпляров методов `AppDomain`, начиная с заданного адреса. |
+| [енуммесодинстанцебяддресс](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Перечисляет экземпляры методов этого процесса, начиная с смещения адреса.                  |
+| [енденуммесодинстанцесбяддресс](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Освобождает ресурсы, используемые внутренними итераторами, используемыми при перечислении экземпляров.             |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Этот интерфейс находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек. Однако это COM-интерфейс, наследуемый от `IUnknown` с идентификатором GUID `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` , можно получить с помощью обычных механизмов COM.
+Этот интерфейс находится внутри среды выполнения и не предоставляется через все файлы заголовков или библиотек. Однако это COM-интерфейс, производный от `IUnknown` с GUID `5c552ab6-fc09-4cb3-8e36-22fa03c798b7`, который можно получить с помощью обычных механизмов COM.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).   
-**Заголовок.** Нет  
-**Библиотека:** Нет  
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).   
+**Заголовок:** None  
+**Библиотека:** None  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

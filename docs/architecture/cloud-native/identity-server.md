@@ -2,12 +2,12 @@
 title: IdentityServer для облачных приложений в машинном код
 description: Создание архитектуры облачных приложений .NET для Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568466"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728578"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer для собственных приложений в облаке
 
@@ -96,13 +96,13 @@ IdentityServer также содержит общедоступный демон
 
 ## <a name="javascript-clients"></a>Клиенты JavaScript
 
-Многие облачные приложения используют API на стороне сервера и полнофункциональные клиентские приложения с одними страницами (одностраничные приложения) на внешнем интерфейсе. IdentityServer поставляется с [клиентом JavaScript](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html) (`oidc-client.js`) через NPM, который можно добавить в одностраничные приложения, чтобы разрешить им использовать IdentityServer для входа, выхода и проверки подлинности на основе маркеров для веб-API.
+Многие облачные приложения используют API на стороне сервера и полнофункциональные клиентские приложения с одними страницами (одностраничные приложения) на внешнем интерфейсе. IdentityServer поставляется с [клиентом JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) (`oidc-client.js`) через NPM, который можно добавить в одностраничные приложения, чтобы разрешить им использовать IdentityServer для входа, выхода и проверки подлинности на основе маркеров для веб-API.
 
 ## <a name="references"></a>Ссылки
 
 - [Документация по IdentityServer](http://docs.identityserver.io/en/latest/)
 - [Типы приложений](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [Клиент OIDC JavaScript](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
+- [Клиент OIDC JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[Назад](azure-active-directory.md)

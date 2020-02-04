@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3d9676d-0b87-4bc3-b679-7bbc7a186c88
 topic_type:
 - apiref
-ms.openlocfilehash: 1ea0274adc12f3a99df0422bfc0b5180f0ef5596
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f435db28d5c85d576f69e7612841fc46ae142332
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131375"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792072"
 ---
 # <a name="icordebugregisterset-interface"></a>Интерфейс ICorDebugRegisterSet
 Представляет набор регистров, доступных на компьютере, который выполняет код в данный момент.  
@@ -28,14 +28,14 @@ ms.locfileid: "73131375"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)|Возвращает значение каждого регистра (на компьютере, выполняющем в данный момент код), который задается битовой маской.|  
-|[Метод GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)|Возвращает битовую маску, указывающую, какие регистры в этом `ICorDebugRegisterSet` доступны в данный момент.|  
-|[Метод GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getthreadcontext-method.md)|Возвращает контекст текущего потока.|  
-|[Метод SetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setregisters-method.md)|Не реализовано для .NET Framework версии 2,0.|  
-|[Метод SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setthreadcontext-method.md)|Не реализовано для .NET Framework 2,0.|  
+|[Метод GetRegisters](icordebugregisterset-getregisters-method.md)|Возвращает значение каждого регистра (на компьютере, выполняющем в данный момент код), который задается битовой маской.|  
+|[Метод GetRegistersAvailable](icordebugregisterset-getregistersavailable-method.md)|Возвращает битовую маску, указывающую, какие регистры в этом `ICorDebugRegisterSet` доступны в данный момент.|  
+|[Метод GetThreadContext](icordebugregisterset-getthreadcontext-method.md)|Возвращает контекст текущего потока.|  
+|[Метод SetRegisters](icordebugregisterset-setregisters-method.md)|Не реализовано для .NET Framework версии 2,0.|  
+|[Метод SetThreadContext](icordebugregisterset-setthreadcontext-method.md)|Не реализовано для .NET Framework 2,0.|  
   
 ## <a name="remarks"></a>Заметки  
- Интерфейс `ICorDebugRegisterSet` поддерживает только 32-разрядные регистры. Используйте интерфейс [ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md) на платформах, таких как IA-64, требующих дополнительных регистров.  
+ Интерфейс `ICorDebugRegisterSet` поддерживает только 32-разрядные регистры. Используйте интерфейс [ICorDebugRegisterSet2](icordebugregisterset2-interface.md) на платформах, таких как IA-64, требующих дополнительных регистров.  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
@@ -49,7 +49,7 @@ ms.locfileid: "73131375"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Интерфейс ICorDebugRegisterSet2](icordebugregisterset2-interface.md)

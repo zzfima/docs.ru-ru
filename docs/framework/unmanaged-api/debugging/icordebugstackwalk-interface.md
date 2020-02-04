@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: 48f1b485b6dfa8fd898f6ea00eee2d7b397deba6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6283d699263dc9b79e457010f31923f77443129
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131861"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791879"
 ---
 # <a name="icordebugstackwalk-interface"></a>Интерфейс ICorDebugStackWalk
 Обеспечивает методы для получения управляемых методов или кадров в стеке потока.  
@@ -28,10 +28,10 @@ ms.locfileid: "73131861"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Возвращает контекст для текущего кадра в объекте `ICorDebugStackWalk`.|  
-|[Метод SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Задает в качестве текущего контекста объекта `ICorDebugStackWalk` допустимый контекст для потока.|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Перемещает объект `ICorDebugStackWalk` в следующий кадр.|  
-|[Метод GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Возвращает текущий кадр в объекте `ICorDebugStackWalk`.|  
+|[Метод GetContext](icordebugstackwalk-getcontext-method.md)|Возвращает контекст для текущего кадра в объекте `ICorDebugStackWalk`.|  
+|[Метод SetContext](icordebugstackwalk-setcontext-method.md)|Задает в качестве текущего контекста объекта `ICorDebugStackWalk` допустимый контекст для потока.|  
+|[Метод Next](icordebugstackwalk-next-method.md)|Перемещает объект `ICorDebugStackWalk` в следующий кадр.|  
+|[Метод GetFrame](icordebugstackwalk-getframe-method.md)|Возвращает текущий кадр в объекте `ICorDebugStackWalk`.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73131861"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

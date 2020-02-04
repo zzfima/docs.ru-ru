@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: a7eb2796de060b3a5dc8e8c08d07e6aeeb3daecb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0cc79c0a93fa4f05b8c793a8b7fb0b9b3f031b1a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131270"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791954"
 ---
 # <a name="icordebugremote-interface"></a>Интерфейс ICorDebugRemote
 Позволяет запускать или подключать управляемый отладчик к удаленному целевому процессу.  
@@ -60,8 +60,8 @@ interface ICorDebugRemote : IUnknown
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод ICorDebugRemote::CreateProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Создает процесс на удаленном компьютере для управляемой отладки.|  
-|[Метод ICorDebugRemote::DebugActiveProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Запускает процесс на удаленном компьютере в отладчике.|  
+|[Метод ICorDebugRemote::CreateProcessEx](icordebugremote-createprocessex-method.md)|Создает процесс на удаленном компьютере для управляемой отладки.|  
+|[Метод ICorDebugRemote::DebugActiveProcessEx](icordebugremote-debugactiveprocessex-method.md)|Запускает процесс на удаленном компьютере в отладчике.|  
   
 ## <a name="remarks"></a>Заметки  
  В настоящее время эта функция поддерживается только для отладки целевого объекта приложения на основе Silverlight, который выполняется на удаленном компьютере Macintosh.  
@@ -75,9 +75,9 @@ interface ICorDebugRemote : IUnknown
   
  **.NET Framework версии:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Интерфейс ICorDebugRemoteTarget](icordebugremotetarget-interface.md)
+- [Интерфейс ICorDebug](icordebug-interface.md)
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

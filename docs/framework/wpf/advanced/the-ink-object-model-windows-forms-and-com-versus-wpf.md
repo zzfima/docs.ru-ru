@@ -1,5 +1,6 @@
 ---
-title: 'Объектная модель рукописного ввода: Windows Forms и COM по сравнению с WPF'
+title: Цифровые рукописные данные — Windows Forms и COM или WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-ms.openlocfilehash: 2c0d155d320bab2f0114280e962c8f2f0b559681
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 4a183bba2c5cfb2d12a9cf435ae1f92b4cf63948
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636423"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737296"
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Объектная модель рукописного ввода: Windows Forms и COM по сравнению с WPF
 

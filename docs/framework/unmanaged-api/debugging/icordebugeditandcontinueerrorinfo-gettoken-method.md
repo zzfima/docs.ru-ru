@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 590647c5-499f-44c3-b56c-0e1945088d3a
 topic_type:
 - apiref
-ms.openlocfilehash: e30c3dada4466cabed40a63e1c98d1c27e33f011
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e9c6cba3f06ebaa061679dbf1f8b49534bda153c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120696"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783323"
 ---
 # <a name="icordebugeditandcontinueerrorinfogettoken-method"></a>Метод ICorDebugEditAndContinueErrorInfo::GetToken
 `GetToken` устарел. Не вызывайте этот метод.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

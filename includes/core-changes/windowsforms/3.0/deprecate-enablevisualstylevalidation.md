@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643901"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937017"
 ---
-### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>Параметр совместимости Switch.System.Windows.Forms.EnableVisualStyleValidation не поддерживается
+### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>Параметр совместимости EnableVisualStyleValidation не поддерживается
 
 Параметр совместимости `Switch.System.Windows.Forms.EnableVisualStyleValidation` не поддерживается в Windows Forms в .NET Core 3.0.
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643901"
 
 3.0, предварительная версия 9
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Удалите параметр. Он не поддерживается, и альтернативного варианта нет.
 
@@ -30,7 +30,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Затронутые API
 
-- Нет
+- Отсутствуют
 
 <!-- 
 

@@ -1,23 +1,23 @@
 ---
-title: Код программной части и XAML в WPF
+title: Код программной части и XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 00427004448997aa234b335b397390f9fabe1bd5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 212a37fb7fbcb7e66a669d96671333be793956df
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559915"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738101"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Код программной части и XAML в WPF
 <a name="introduction"></a>Код программной части — это термин, используемый для описания кода, который объединяется с объектами, определенными разметкой, при компиляции разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ной страницы. В этом разделе описываются требования к коду программной части, а также альтернативный механизм встроенного кода для кода в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- В этом разделе содержатся следующие подразделы.  
+ Этот раздел состоит из следующих подразделов.  
   
-- [Необходимые компоненты](#Prerequisites)  
+- [Предварительные требования](#Prerequisites)  
   
 - [Код программной части и язык XAML](#codebehind_and_the_xaml_language)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "75559915"
 - [Ограничения встроенного кода](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>предварительные требования  
  В этом разделе предполагается, что вы прочитали [Общие сведения о XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) и имеете некоторые базовые знания о среде CLR и объектно-ориентированном программировании.  
   
 <a name="codebehind_and_the_xaml_language"></a>   
@@ -58,9 +58,9 @@ ms.locfileid: "75559915"
 ## <a name="inline-code-limitations"></a>Ограничения встроенного кода  
  Рекомендуется избегать или ограничивать использование встроенного кода. С точки зрения архитектуры и философии программирования, обеспечение разделения между разметкой и кодом программной части обеспечивает гораздо более отличающиеся роли конструктора и разработчика. На более техническом уровне код, написанный для встроенного кода, может быть неудобным для записи, так как вы всегда пишете в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] созданном разделяемом классе и можете использовать только сопоставления пространства имен XML по умолчанию. Так как вы не можете добавлять `using` операторы, необходимо полностью определить множество вызовов API. Сопоставления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию включают большинство, но не все пространства имен CLR, которые имеются в сборках [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Вам придется полностью квалифицировать вызовы типов и членов, содержащихся в других пространствах имен CLR. Кроме того, нельзя определить что-либо за пределами разделяемого класса во встроенном коде, и все сущности кода пользователя, на которые вы ссылаетесь, должны существовать в виде члена или переменной в созданном разделяемом классе. Другие функции программирования, такие как макросы или `#ifdef` с глобальными переменными или переменные сборки, также недоступны. Дополнительные сведения см. в разделе Тип данных, [встроенный в x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о языке XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Обзор XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Встроенный тип XAML x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
 - [Построение приложения WPF](../app-development/building-a-wpf-application-wpf.md)
 - [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)

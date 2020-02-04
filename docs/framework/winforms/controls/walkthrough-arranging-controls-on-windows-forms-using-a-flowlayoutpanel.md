@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel
+title: Упорядочение элементов управления с помощью FlowLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6df0a910ee346f319fbee835e5e632808630a99e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771661"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745400"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel
 
 В некоторых приложениях требуется форма, макет которой изменяется надлежащим образом при изменении размера формы или содержимого. Если необходим динамический макет и вы не хотите обрабатывать события <xref:System.Windows.Forms.Control.Layout> явно в коде, рассмотрите возможность использования панели макета.
 
 Элементы управления <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel> предоставляют удобные способы упорядочения элементов управления в форме. Они обеспечивают автоматическую настраиваемую возможность управления относительным положением содержащихся в них дочерних элементов управления и предоставляют функции динамического макета во время выполнения и таким образом могут изменять размер и положение дочерних элементов управления по мере измерения размеров родительской формы. Панели макета могут быть вложенными в других панелях макета, что позволяет реализовывать сложные пользовательские интерфейсы.
 
-<xref:System.Windows.Forms.TableLayoutPanel> Упорядочивает свое содержимое в сетке, обеспечивая функциональные возможности, аналогичные HTML \<таблицы > элемента. Его ячейки организованы в строки и столбцы, и они могут быть разного размера. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+<xref:System.Windows.Forms.TableLayoutPanel> упорядочивает свое содержимое в сетке, предоставляя функциональные возможности, аналогичные элементу HTML \<TABLE >. Его ячейки организованы в строки и столбцы, и они могут быть разного размера. Для получения дополнительной информации см. [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает свое содержимое в определенном направлении, горизонтальном или вертикальном. Его содержимое может быть перенесено из одной строки в следующую или из одного столбца в следующий. Кроме того, вместо переноса содержимое может обрезаться. В данном пошаговом руководстве представлены следующие задачи.
 
@@ -42,11 +42,11 @@ ms.locfileid: "67771661"
 
 - Переназначение существующих элементов управления другим родительским элементам
 
-Когда вы закончите, вы получите представление о роли, которую играют эти важные функции макета.
+По завершении вы получите представление о роли, которую играют эти важные функции макета.
 
 ## <a name="create-the-project"></a>Создание проекта
 
-1. В Visual Studio создайте проект приложения на основе Windows с именем «FlowLayoutPanelExample» (**файл** > **New** > **проекта**  >  **Visual C#**  или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).
+1. В Visual Studio создайте проект приложения на основе Windows с именем "фловлайаутпанелексампле" (**файл** > **Новый** > **проект** > **Visual C#**  или **Visual Basic** > **классический рабочий стол** > **приложение**).
 
 2. Выберите форму в **конструкторе форм**.
 
@@ -119,7 +119,7 @@ ms.locfileid: "67771661"
 
 1. Измените значение свойства <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления <xref:System.Windows.Forms.Control.Dock%2A> на <xref:System.Windows.Forms.DockStyle.Fill>. Если ваша форма достаточно большая, элементы управления <xref:System.Windows.Forms.Button> будут перемещены в первый столбец элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> .
 
-2. Измените значение свойства <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> , развернув запись <xref:System.Windows.Forms.Control.Padding%2A> в окне **Свойства** и установив для свойства <xref:System.Windows.Forms.Padding.All%2A> значение **20**. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение Windows Forms элементы управления с помощью свойств Padding, Margins и свойство AutoSize](windows-forms-controls-padding-autosize.md). Обратите внимание, что дочерние элементы управления перемещаются к центру элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> . Увеличенное значение свойства <xref:System.Windows.Forms.Control.Padding%2A> отодвигает дочерние элементы управления от границ элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> .
+2. Измените значение свойства <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> , развернув запись <xref:System.Windows.Forms.Control.Padding%2A> в окне **Свойства** и установив для свойства <xref:System.Windows.Forms.Padding.All%2A> значение **20**. Дополнительные сведения см. в разделе [Пошаговое руководство. размещение элементов управления Windows Forms с заполнением, полями и свойством AutoSize](windows-forms-controls-padding-autosize.md). Обратите внимание, что дочерние элементы управления перемещаются к центру элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> . Увеличенное значение свойства <xref:System.Windows.Forms.Control.Padding%2A> отодвигает дочерние элементы управления от границ элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> .
 
 3. Выберите все элементы управления <xref:System.Windows.Forms.Button> в <xref:System.Windows.Forms.FlowLayoutPanel> и задайте в свойстве <xref:System.Windows.Forms.Control.Margin%2A> значение **20**. Обратите внимание, что расстояние между элементами управления <xref:System.Windows.Forms.Button> увеличивается, поэтому они раздвигаются. Может потребоваться изменить размер элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> , чтобы увидеть все дочерние элементы управления.
 
@@ -150,7 +150,7 @@ ms.locfileid: "67771661"
 
 ### <a name="to-insert-a-control-using-the-caret"></a>Вставка элемента управления с помощью курсора
 
-1. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> и укажите место между двумя элементами управления <xref:System.Windows.Forms.Button> . Обратите внимание, что выводится полоса вставки, показывающая, где <xref:System.Windows.Forms.Button> помещаются при его вставке в <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления. Прежде чем вставить новый элемент управления <xref:System.Windows.Forms.Button> в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> , перемещайте указатель мыши, чтобы понаблюдать за перемещением полосы вставки.
+1. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> и укажите место между двумя элементами управления <xref:System.Windows.Forms.Button> . Обратите внимание, что рисуется строка вставки, указывающая, куда будет помещен <xref:System.Windows.Forms.Button> при его перетаскивании в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel>. Прежде чем вставить новый элемент управления <xref:System.Windows.Forms.Button> в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> , перемещайте указатель мыши, чтобы понаблюдать за перемещением полосы вставки.
 
 2. Вставьте новый элемент управления <xref:System.Windows.Forms.Button> в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> . Обратите внимание, что новый элемент управления <xref:System.Windows.Forms.Button> не выравнивается с другими, так как его свойство <xref:System.Windows.Forms.Control.Margin%2A> имеет другое значение.
 
@@ -171,8 +171,8 @@ ms.locfileid: "67771661"
 
 6. Отпустите кнопку мыши. Теперь эти три элемента управления <xref:System.Windows.Forms.Button> вставлены в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> .
 
-## <a name="next-steps"></a>Следующие шаги
- Используя сочетание панелей макета и элементов управления, можно создавать сложные макеты. Рекомендуется также дополнительно исследовать следующие моменты.
+## <a name="next-steps"></a>Next Steps
+ Используя сочетание панелей макета и элементов управления, можно создавать сложные макеты. Для лучшего изучения можно предложить следующее:
 
 - Увеличьте размер элемента управления <xref:System.Windows.Forms.Button> и отметьте, как это отразится на макете.
 
@@ -182,14 +182,13 @@ ms.locfileid: "67771661"
 
 - Задайте для свойства <xref:System.Windows.Forms.Control.Visible%2A> одного из элементов управления значение `false` и обратите внимание, как в ответ перестраивается <xref:System.Windows.Forms.FlowLayoutPanel> .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Взаимодействие с пользователем в Microsoft Windows, официальные рекомендации для разработчиков и конструкторов пользовательских интерфейсов. Редмонд, штат Вашингтон: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Свойство AutoSize](autosize-property-overview.md)
 - [Практическое руководство. Закрепление элементов управления в формах Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Практическое руководство. Привязка элементов управления в формах Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Пошаговое руководство: Создание структуры Windows Forms элементов управления с помощью свойств Padding, Margins и свойство AutoSize](windows-forms-controls-padding-autosize.md)
+- [Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize](windows-forms-controls-padding-autosize.md)

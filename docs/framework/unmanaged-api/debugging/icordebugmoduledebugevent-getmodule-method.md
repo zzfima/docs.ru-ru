@@ -1,15 +1,15 @@
 ---
-title: 'Метод Икордебугмодуледебужевент:: module'
+title: Метод ICorDebugModuleDebugEvent::GetModule
 ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
-ms.openlocfilehash: 5dc26d0367d01bc8da957c3ce648c3e529dddb08
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d9eea8fb5c42002763a0ae52a186bf2c1e6d2ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096940"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792908"
 ---
-# <a name="icordebugmoduledebugeventgetmodule-method"></a>Метод Икордебугмодуледебужевент:: module
+# <a name="icordebugmoduledebugeventgetmodule-method"></a>Метод ICorDebugModuleDebugEvent::GetModule
 Возвращает объединенный модуль, который только что был загружен или выгружен.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -22,10 +22,10 @@ HRESULT GetModule(
   
 ## <a name="parameters"></a>Параметры  
  `ppModule`  
- заполняет Указатель на адрес объекта ICorDebugModule, который представляет объединенный модуль, который был только что загружен или выгружен.  
+ [out] Указатель на адрес объекта ICorDebugModule, представляющего объединенный модуль, который был только что загружен или выгружен.  
   
 ## <a name="remarks"></a>Заметки  
- Можно вызвать метод [GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) , чтобы определить, был ли модуль загружен или выгружен.  
+ Можно вызвать метод [GetEventKind](icordebugdebugevent-geteventkind-method.md) , чтобы определить, был ли модуль загружен или выгружен.  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
@@ -39,7 +39,7 @@ HRESULT GetModule(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugModuleDebugEvent](icordebugmoduledebugevent-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

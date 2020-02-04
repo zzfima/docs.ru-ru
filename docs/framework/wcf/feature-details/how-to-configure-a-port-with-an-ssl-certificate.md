@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 412aa2bb2a56fbe654b0d9ce5f4b9b5176fc5549
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963310"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921305"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
 При создании автономной службы Windows Communication Foundation (WCF) с классом <xref:System.ServiceModel.WSHttpBinding>, использующим безопасность транспорта, необходимо также настроить порт с помощью сертификата X. 509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Выбор средства для настройки порта зависит от операционной системы компьютера.  
   
- Если вы используете Windows Server 2003 или [!INCLUDE[wxp](../../../../includes/wxp-md.md)], используйте средство HttpCfg. exe. В Windows Server 2003 это средство установлено. С [!INCLUDE[wxp](../../../../includes/wxp-md.md)]можно загрузить средство в [средствах поддержки Windows XP с пакетом обновления 2](https://go.microsoft.com/fwlink/?LinkId=88606)(SP2). Дополнительные сведения см. в разделе [Общие сведения об HttpCfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). В [документации по средствам поддержки Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) описывается синтаксис средства Httpcfg. exe.  
+ Если вы используете Windows Server 2003 или Windows XP, используйте средство HttpCfg. exe. В Windows Server 2003 это средство установлено. В Windows XP это средство можно загрузить с помощью [средств поддержки Windows XP с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkId=88606). Дополнительные сведения см. в разделе [Общие сведения об HttpCfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). В [документации по средствам поддержки Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) описывается синтаксис средства Httpcfg. exe.  
   
  Если вы используете Windows Vista, используйте уже установленное средство Netsh. exe.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75963310"
   
 ### <a name="to-determine-how-ports-are-configured"></a>Определение конфигурации портов  
   
-1. В Windows Server 2003 или [!INCLUDE[wxp](../../../../includes/wxp-md.md)]используйте средство HttpCfg. exe для просмотра текущей конфигурации порта с помощью **запроса** и коммутаторов **SSL** , как показано в следующем примере.  
+1. В Windows Server 2003 или Windows XP используйте средство HttpCfg. exe для просмотра текущей конфигурации порта с помощью **запроса** и коммутаторов **SSL** , как показано в следующем примере.  
   
     ```console
     httpcfg query ssl  
@@ -57,7 +57,7 @@ ms.locfileid: "75963310"
   
 1. С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. (Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
   
-2. Получите доступ к отпечатку сертификата. Дополнительные сведения см. в статье [Практическое руководство. Извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Получите доступ к отпечатку сертификата. Дополнительные сведения см. в разделе [как получить отпечаток сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3. Скопируйте отпечаток сертификата в текстовый редактор, например "Блокнот".  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75963310"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Выполнение привязки SSL-сертификата к номеру порта  
   
-1. В Windows Server 2003 или [!INCLUDE[wxp](../../../../includes/wxp-md.md)]используйте средство HttpCfg. exe в режиме Set в хранилище SSL (SSL), чтобы привязать сертификат к номеру порта. Это средство использует отпечаток для идентификации сертификата, как показано в следующем примере.  
+1. В Windows Server 2003 или Windows XP используйте средство HttpCfg. exe в режиме Set в хранилище SSL (SSL), чтобы привязать сертификат к номеру порта. Это средство использует отпечаток для идентификации сертификата, как показано в следующем примере.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ ms.locfileid: "75963310"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Выполнение привязки SSL-сертификата к номеру порта и поддержка сертификатов клиента  
   
-1. В Windows Server 2003 или [!INCLUDE[wxp](../../../../includes/wxp-md.md)]для поддержки клиентов, которые проходят проверку подлинности с помощью сертификатов X. 509 на транспортном уровне, выполните предыдущую процедуру, но передайте дополнительный параметр командной строки в программу HttpCfg. exe, как показано в следующем примере.  
+1. В Windows Server 2003 или Windows XP для поддержки клиентов, которые проходят проверку подлинности с помощью сертификатов X. 509 на транспортном уровне, выполните предыдущую процедуру, но передайте дополнительный параметр командной строки в HttpCfg. exe, как показано в следующем примере.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ ms.locfileid: "75963310"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. В Windows Server 2003 или [!INCLUDE[wxp](../../../../includes/wxp-md.md)]используйте средство HttpCfg. exe с ключевыми словами **Delete** и **SSL** . Используйте параметр **-i** , чтобы указать `IP`:`port` Number, и параметр **-h** , чтобы указать отпечаток.  
+2. В Windows Server 2003 или Windows XP используйте средство HttpCfg. exe с ключевыми словами **Delete** и **SSL** . Используйте параметр **-i** , чтобы указать `IP`:`port` Number, и параметр **-h** , чтобы указать отпечаток.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

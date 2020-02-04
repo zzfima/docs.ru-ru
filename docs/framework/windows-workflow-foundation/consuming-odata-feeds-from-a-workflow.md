@@ -2,12 +2,12 @@
 title: Использование каналов OData из рабочего процесса — WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: c9780200d9b7c7bc89797b3c16b22bc38440fccc
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ceac2c2d07351fcb79e2345068f07fa22f356411
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802665"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743792"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Использование каналов OData из рабочего процесса
 
@@ -15,7 +15,7 @@ WCF Data Services является компонентом .NET Framework, кот
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Использование примера службы OData "Борей"
 
-В примерах этого раздела используется образец службы данных Northwind, расположенный по адресу <https://services.odata.org/Northwind/Northwind.svc/>. Эта служба поставляется в составе [пакета SDK OData](https://www.odata.org/wp-content/uploads/sites/21/odatasdkcodesamples.zip) и предоставляет доступ только для чтения к образцу базы данных "Борей". Если необходим доступ для чтения или локальная служба данных WCF, то можно выполнить действия, описанные в [кратком руководстве по службам данных WCF](../data/wcf/quickstart-wcf-data-services.md) , чтобы создать локальную службу OData, обеспечивающую доступ к базе данных "Борей". При выполнении инструкций, описанных в кратком руководстве, необходимо заменить локальный URI на тот, который указан в коде в этом разделе.
+В примерах этого раздела используется образец службы данных Northwind, расположенный по адресу <https://services.odata.org/Northwind/Northwind.svc/>. Эта служба поставляется в составе [пакета SDK OData](https://www.odata.org/ecosystem/#sdk) и предоставляет доступ только для чтения к образцу базы данных "Борей". Если необходим доступ для чтения или локальная служба данных WCF, то можно выполнить действия, описанные в [кратком руководстве по службам данных WCF](../data/wcf/quickstart-wcf-data-services.md) , чтобы создать локальную службу OData, обеспечивающую доступ к базе данных "Борей". При выполнении инструкций, описанных в кратком руководстве, необходимо заменить локальный URI на тот, который указан в коде в этом разделе.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Использование веб-канала OData с помощью клиентских библиотек
 
@@ -41,7 +41,7 @@ WCF Data Services включает клиентские библиотеки, к
 
 ### <a name="using-client-library-asynchronous-methods"></a>Использование асинхронных методов клиентской библиотеки
 
-Класс <xref:System.Data.Services.Client.DataServiceQuery%601> предусматривает методы <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> и <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> для асинхронных запросов службы OData. Эти методы могут быть вызваны из переопределений <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> класса, производного от <xref:System.Activities.AsyncCodeActivity> . Когда переопределение <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> возвращает управление, рабочий процесс может перейти в состояние простоя (при этом он не будет сохранен), а после завершения асинхронных операций <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> вызывается средой выполнения.
+Класс <xref:System.Data.Services.Client.DataServiceQuery%601> предусматривает методы <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> и <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> для асинхронных запросов службы OData. Эти методы могут быть вызваны из переопределений <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> класса, производного от <xref:System.Activities.AsyncCodeActivity> . Когда переопределение <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> возвращает, Рабочий процесс может переходить в режим простоя (но не сохраняться) и после завершения асинхронной работы <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> вызываться средой выполнения.
 
 В следующем примере действие `OrdersByCustomer` определено с двумя входными аргументами. Аргумент `CustomerId` представляет клиента, для которого необходимо вернуть заказы, а аргумент `ServiceUri` - URI службы OData, которой будет отправлен запрос. Поскольку действие является производным от `AsyncCodeActivity<IEnumerable<Order>>` , имеется также выходной аргумент <xref:System.Activities.Activity%601.Result%2A> , который служит для возврата результатов запроса. Переопределение <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> создает запрос LINQ, выбирающий все заказы указанного клиента. Запрос указывается как <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> переданного <xref:System.Activities.AsyncCodeActivityContext>, а затем вызывается метод запроса <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> . Обратите внимание, что обратный вызов и состояние, передаваемые в <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> запроса, представляют собой обратный вызов и состояние, переданные методу действия <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> . После завершения обработки запроса вызывается метод действия <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> . Запрос извлекается из <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, а затем вызывается метод запроса <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> . Метод возвращает <xref:System.Collections.Generic.IEnumerable%601> указанного типа сущности, в данном случае - `Order`. Поскольку `IEnumerable<Order>` является универсальным типом <xref:System.Activities.AsyncCodeActivity%601>, этот <xref:System.Collections.IEnumerable> задается как <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> действия.
 

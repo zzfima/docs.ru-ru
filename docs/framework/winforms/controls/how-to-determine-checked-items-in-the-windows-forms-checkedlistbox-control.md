@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms
+title: Определение отмеченных элементов в элементе управления CheckedListBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5854f7e6be759daeb604458ea8554d3c98ed39c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010921"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743250"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms
-При представлении данных в формах Windows <xref:System.Windows.Forms.CheckedListBox> элемента управления, вы можете либо прохода по коллекции хранятся в <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> свойство или Пройдите по списку с помощью <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> метод, чтобы определить, какие элементы установлены. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Метод принимает номер элемента в качестве аргумента и возвращает `true` или `false`. Вопреки ожиданиям <xref:System.Windows.Forms.ListBox.SelectedItems%2A> и <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> свойства не определяют элементы, которые проверяются; они определяют, какие элементы будут выделены.  
+При представлении данных в элементе управления Windows Forms <xref:System.Windows.Forms.CheckedListBox> можно выполнить итерацию по коллекции, хранящейся в свойстве <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>, или пошаговое выполнение списка с помощью метода <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>, чтобы определить, какие элементы отмечены флажками. Метод <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> принимает в качестве аргумента номер индекса элемента и возвращает `true` или `false`. В отличие от того, что вы можете ожидать, свойства <xref:System.Windows.Forms.ListBox.SelectedItems%2A> и <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> не определяют, какие элементы отмечены. они определяют, какие элементы выделены.  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Чтобы определить, какие элементы в элементе управления CheckedListBox  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Определение отмеченных элементов в элементе управления CheckedListBox  
   
-1. Итерации по <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> коллекции, начиная с 0, так как коллекции (с нуля). Обратите внимание на то, что этот метод выдаст номер элемента в список помеченных элементов, а не в полном списке. Если первый элемент в списке не проверяется, и второй элемент выделен, приведенный ниже код будет отображать текст, например «отмеченного элемента 1 = MyListItem2».  
+1. Пройдите по коллекции <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>, начиная с 0, так как коллекция отсчитывается от нуля. Обратите внимание, что этот метод предоставит номер элемента в списке отмеченных элементов, а не в общем списке. Таким образом, если первый элемент в списке не установлен и второй элемент установлен, в приведенном ниже коде отображается текст, например "Checked Item 1 = MyListItem2".  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -66,9 +66,9 @@ ms.locfileid: "62010921"
     }  
     ```  
   
-     - или  
+     - или -  
   
-2. Пошаговое выполнение <xref:System.Windows.Forms.CheckedListBox.Items%2A> коллекции, начиная с 0, поскольку коллекция является отсчитываемый от нуля и вызовите <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> для каждого элемента. Обратите внимание, что этот метод выдаст номер элемента в общий список, поэтому если первый элемент в списке не проверяется и второй элемент установлен, то он выдаст примерно «элемент 2 = MyListItem2».  
+2. Пройдите по коллекции <xref:System.Windows.Forms.CheckedListBox.Items%2A>, начиная с 0, так как коллекция отсчитывается от нуля, и вызовите метод <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> для каждого элемента. Обратите внимание, что этот метод предоставит номер элемента в общем списке, поэтому, если первый элемент в списке не установлен и второй элемент установлен, он будет отображать нечто вроде "Item 2 = MyListItem2".  
   
     ```vb  
     Dim i As Integer  
@@ -111,6 +111,6 @@ ms.locfileid: "62010921"
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)

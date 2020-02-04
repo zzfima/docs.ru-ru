@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-ms.openlocfilehash: 4201fe23bf54388510088e21471edce91809e94c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a147aee1ebba57b86dbbf8a7648456b8d7494936
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129798"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793196"
 ---
 # <a name="icordebugmda-interface"></a>Интерфейс ICorDebugMDA
 Представляет сообщение управляемого помощника по отладке (MDA).  
@@ -28,11 +28,11 @@ ms.locfileid: "73129798"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetDescription](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|Возвращает строку, содержащую описание этого MDA.|  
-|[Метод GetFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|Возвращает флаги, связанные с этим MDA.|  
-|[Метод GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|Возвращает строку, содержащую имя этого MDA.|  
-|[Метод GetOSThreadId](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Возвращает идентификатор потока операционной системы, в котором выполняется этот MDA.|  
-|[Метод GetXML](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|Возвращает полный XML-поток, связанный с этим MDA.|  
+|[Метод GetDescription](icordebugmda-getdescription-method.md)|Возвращает строку, содержащую описание этого MDA.|  
+|[Метод GetFlags](icordebugmda-getflags-method.md)|Возвращает флаги, связанные с этим MDA.|  
+|[Метод GetName](icordebugmda-getname-method.md)|Возвращает строку, содержащую имя этого MDA.|  
+|[Метод GetOSThreadId](icordebugmda-getosthreadid-method.md)|Возвращает идентификатор потока операционной системы, в котором выполняется этот MDA.|  
+|[Метод GetXML](icordebugmda-getxml-method.md)|Возвращает полный XML-поток, связанный с этим MDA.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73129798"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,5 +1,5 @@
 ---
-title: Метод IXCLRDataMethodDefinition::EndEnumInstances
+title: 'Метод Иксклрдатамесоддефинитион:: Енденуминстанцес'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EndEnumInstances Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3d9e3ca31eddff9d08607c4d6d37ca76139bf5d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 605a4244d20ef6c0b7af3c2b26b65ff2a63fa9dd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756307"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790450"
 ---
-# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>Метод IXCLRDataMethodDefinition::EndEnumInstances
+# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>Метод Иксклрдатамесоддефинитион:: Енденуминстанцес
 
-Освобождает ресурсы, используемые внутренней итераторы, используется в процессе экземпляра перечисления.
+Освобождает ресурсы, используемые внутренними итераторами, используемыми при перечислении экземпляров.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT EndEnumInstances(
 ## <a name="parameters"></a>Параметры
 
 `handle`\
-[out] Дескриптор для перечисления экземпляров.
+заполняет Маркер для перечисления экземпляров.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Указанный метод является частью `IXCLRDataMethodDefinition` интерфейса и соответствует пятый слот в таблице виртуального метода.
+Предоставленный метод является частью `IXCLRDataMethodDefinition` интерфейса и соответствует пятой области таблицы виртуального метода.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** None  
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Заголовок:** None  
 **Библиотека:** None  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейс IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
+- [Отладка](index.md)
+- [Интерфейс Иксклрдатамесоддефинитион](ixclrdatamethoddefinition-interface.md)

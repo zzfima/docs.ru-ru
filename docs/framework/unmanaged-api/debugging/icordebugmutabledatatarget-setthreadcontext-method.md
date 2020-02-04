@@ -1,15 +1,15 @@
 ---
-title: 'Метод Икордебугмутабледататаржет:: SetThreadContext'
+title: Метод ICorDebugMutableDataTarget::SetThreadContext
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-ms.openlocfilehash: 2c9e508c7a4059fee4e1cce6eb28e6de7b2fff6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063c7954543174caece6f3dcbe005a4b2d059c64
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132707"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792848"
 ---
-# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Метод Икордебугмутабледататаржет:: SetThreadContext
+# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Метод ICorDebugMutableDataTarget::SetThreadContext
 Задает контекст (значения регистра) для потока.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -31,7 +31,7 @@ HRESULT SetThreadContext(
  [in] Указатель на байты, которые требуется записать.  
   
 ## <a name="remarks"></a>Заметки  
- Метод `SetThreadContext` обновляет текущий контекст для потока, указанного аргументом `dwThreadID`, который задается операционной системой. Формат записи контекста определяется платформой, указанной в методе [ICorDebugDataTarget::-Platform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . В Windows это структура [контекста](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
+ Метод `SetThreadContext` обновляет текущий контекст для потока, указанного аргументом `dwThreadID`, который задается операционной системой. Формат записи контекста определяется платформой, указанной в методе [ICorDebugDataTarget::-Platform](icordebugdatatarget-getplatform-method.md) . В Windows это структура [контекста](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -42,7 +42,7 @@ HRESULT SetThreadContext(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugMutableDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugMutableDataTarget](icordebugmutabledatatarget-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

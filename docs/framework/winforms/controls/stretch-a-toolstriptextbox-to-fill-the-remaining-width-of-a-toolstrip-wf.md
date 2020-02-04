@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Растягивание ToolStripTextBox пространства для заполнения оставшегося элемента управления ToolStrip (Windows Forms)
+title: Практическое руководство. Растягивание ToolStripTextBox для заполнения оставшегося пространства элемента управления ToolStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 7a9fd703206caadf2d9c63d92567f8b1c3b51e61
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c60cc2a377f08a73159f25b2ab5f2812d41f0c10
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751415"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742837"
 ---
-# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Практическое руководство. Растягивание ToolStripTextBox пространства для заполнения оставшегося элемента управления ToolStrip (Windows Forms)
-При задании <xref:System.Windows.Forms.ToolStrip.Stretch%2A> свойство <xref:System.Windows.Forms.ToolStrip> управления `true`, элемент управления заполняет контейнер от начала до конца и изменяет размер при изменении размеров контейнера. В этой конфигурации могут оказаться полезными для растяжения элемента в элементе управления, такие как <xref:System.Windows.Forms.ToolStripTextBox>, чтобы заполнить доступное пространство, так и для изменения размера при изменении размера элемента управления. Таком растягивании полезно, например, если требуется обеспечить внешний вид и поведение, аналогичное в адресную строку обозревателя Microsoft® Internet Explorer.  
+# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Практическое руководство. Растягивание ToolStripTextBox для заполнения оставшегося пространства элемента управления ToolStrip (Windows Forms)
+Если для свойства <xref:System.Windows.Forms.ToolStrip.Stretch%2A> элемента управления <xref:System.Windows.Forms.ToolStrip> задано значение `true`, элемент управления заполняет его контейнер от сквозного к концу и изменяет размеры при изменении размера контейнера. В такой конфигурации может оказаться полезным растяжение элемента в элементе управления, например <xref:System.Windows.Forms.ToolStripTextBox>, для заполнения доступного пространства и изменения размера при изменении размера элемента управления. Такое растяжение полезно, например, если требуется обеспечить внешний вид и поведение, аналогичные адресной строке в Microsoft® Internet Explorer.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода предоставляет класс, производный от <xref:System.Windows.Forms.ToolStripTextBox> вызывается `ToolStripSpringTextBox`. Этот класс переопределяет <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> для расчета доступную ширину родительского <xref:System.Windows.Forms.ToolStrip> управления после вычитания объединенный ширину всех элементов. Этот пример кода также предоставляет <xref:System.Windows.Forms.Form> класса и `Program` для демонстрации нового поведения.  
+ В следующем примере кода представлен класс, производный от <xref:System.Windows.Forms.ToolStripTextBox> с именем `ToolStripSpringTextBox`. Этот класс переопределяет метод <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A>, чтобы вычислить доступную ширину родительского элемента управления <xref:System.Windows.Forms.ToolStrip> после вычитания общей ширины всех остальных элементов. Этот пример кода также предоставляет класс <xref:System.Windows.Forms.Form> и класс `Program` для демонстрации нового поведения.  
   
  [!code-csharp[ToolStripSpringTextBox#00](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
  [!code-vb[ToolStripSpringTextBox#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripSpringTextBox/vb/ToolStripSpringTextBox.vb#00)]  
@@ -29,7 +29,7 @@ ms.locfileid: "64751415"
   
 - ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>

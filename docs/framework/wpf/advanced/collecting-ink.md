@@ -1,5 +1,5 @@
 ---
-title: Получение рукописного ввода в приложениях WPF
+title: Получение цифрового рукописного ввода
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 8109e0d6a746d6ca23c25643c510014c1a1e656c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 813a5313a6fbf83c36cdbed1f64ce69a217ad788
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740871"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747024"
 ---
 # <a name="collect-ink"></a>Собирайте рукописные данные
 
 Платформа [Windows Presentation Foundation](../index.md) выполняет сбор цифровых рукописных фрагментов, что является одной из основных ее функций. В этом разделе обсуждаются методы сбора рукописного ввода в Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы использовать следующие примеры, необходимо сначала установить Visual Studio и Windows SDK. Следует также понимать, как писать приложения для WPF. Дополнительные сведения о начале работы с WPF см. в разделе [Пошаговое руководство. мое первое классическое приложение WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
@@ -52,7 +52,7 @@ ms.locfileid: "73740871"
 
 <xref:System.Windows.Controls.InkCanvas> обеспечивает поддержку многих операций редактирования рукописных данных. Например, <xref:System.Windows.Controls.InkCanvas> поддерживает стирание в обратном пера, а дополнительный код не требуется для добавления функциональности в элемент.
 
-#### <a name="selection"></a>Выбранное
+#### <a name="selection"></a>Выбор
 
 Настройка режима выделения так же проста, как установка свойства <xref:System.Windows.Controls.InkCanvasEditingMode> для **выбора**.
 
@@ -88,7 +88,7 @@ ms.locfileid: "73740871"
 
 Обратите внимание на то, как <xref:System.Windows.Controls.StackPanel> помещает кнопки поверх <xref:System.Windows.Controls.InkCanvas>. При попытке рукописного ввода в верхней части кнопок <xref:System.Windows.Controls.InkCanvas> собирает и отображает рукописные данные позади кнопок. Это связано с тем, что кнопки являются одноуровневыми элементами <xref:System.Windows.Controls.InkCanvas>, а не дочерними. Кроме того, кнопки находятся выше в z-порядке, поэтому рукописные фрагменты отображаются позади них.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

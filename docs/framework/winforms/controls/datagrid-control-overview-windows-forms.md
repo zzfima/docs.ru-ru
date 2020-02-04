@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об элементе управления DataGrid (Windows Forms)
+title: Общие сведения об элементе управления DataGrid
 ms.date: 03/30/2017
 f1_keywords:
 - DataGrid
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: ce149ed25d3326daa9096596fe8d542a13759a96
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: df559926dbc9141276f0a03deb99e340fd7212da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046213"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742565"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Общие сведения об элементе управления DataGrid (Windows Forms)
 
@@ -42,7 +42,7 @@ ms.locfileid: "70046213"
 
 Элемент управления <xref:System.Windows.Forms.DataGrid> может предоставлять пользовательский интерфейс для набора данных, навигацию между связанными таблицами и широкие возможности форматирования и редактирования.
 
-Отображение и обработка данных — это отдельные функции. Элемент управления обрабатывает пользовательский интерфейс, в то время как обновления данных обрабатываются Windows Forms архитектурой привязки данных и .NET Framework поставщиками данных. Таким образом обеспечивается синхронизация элементов управления, привязанных к одному источнику данных.
+Отображение и обработка данных — это отдельные функции: элемент управления обрабатывает пользовательский интерфейс, в то время как обновления данных обрабатываются Windows Forms архитектурой привязки данных и .NET Framework поставщиками данных. Таким образом обеспечивается синхронизация элементов управления, привязанных к одному источнику данных.
 
 > [!NOTE]
 > Если вы знакомы с элементом управления DataGrid в Visual Basic 6.0, вы можете обратить внимание на значительные отличия элемента управления <xref:System.Windows.Forms.DataGrid> в Windows Forms.
@@ -53,9 +53,9 @@ ms.locfileid: "70046213"
 
 Для работы элемента управления <xref:System.Windows.Forms.DataGrid> он должен быть привязан к источнику данных с помощью свойств <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> во время разработки или метода <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> во время выполнения. Эта привязка указывает <xref:System.Windows.Forms.DataGrid> на созданный экземпляр объекта источника данных, например <xref:System.Data.DataSet> или <xref:System.Data.DataTable>. Элемент управления <xref:System.Windows.Forms.DataGrid> отображает результаты действий, выполняемых с данными. Большинство операций с данными выполняются не через <xref:System.Windows.Forms.DataGrid>, а через источник данных.
 
-Если данные в привязанном наборе данных обновляются посредством какого-либо механизма, элемент управления <xref:System.Windows.Forms.DataGrid> отражает изменения. Если для `ReadOnly` `false`сетки данных и стилей таблиц и стилей столбцов задано свойство, данные в наборе данных <xref:System.Windows.Forms.DataGrid> можно обновить с помощью элемента управления.
+Если данные в привязанном наборе данных обновляются посредством какого-либо механизма, элемент управления <xref:System.Windows.Forms.DataGrid> отражает изменения. Если в сетке данных и ее стилях таблицы и стилей столбцов для свойства `ReadOnly` задано значение `false`, данные в наборе данных можно обновить с помощью элемента управления <xref:System.Windows.Forms.DataGrid>.
 
-В элементе управления <xref:System.Windows.Forms.DataGrid> на определенный момент времени может отображаться только одна таблица. Если между таблицами определено отношение "родительская-дочерняя", пользователь может перемещаться между связанными таблицами для выбора таблицы, которая будет отображаться в элементе управления <xref:System.Windows.Forms.DataGrid>. Сведения о привязке <xref:System.Windows.Forms.DataGrid> элемента управления к источнику данных ADO.NET во время разработки или во время выполнения см. [в разделе как Привязка Windows Forms элемента управления DataGrid к источнику](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)данных.
+В элементе управления <xref:System.Windows.Forms.DataGrid> на определенный момент времени может отображаться только одна таблица. Если между таблицами определено отношение "родительская-дочерняя", пользователь может перемещаться между связанными таблицами для выбора таблицы, которая будет отображаться в элементе управления <xref:System.Windows.Forms.DataGrid>. Сведения о привязке <xref:System.Windows.Forms.DataGrid> элемента управления к источнику данных ADO.NET во время разработки или во время выполнения см. в разделе [как привязать Windows Forms элемент управления DataGrid к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
 
 Источники данных, допустимые для <xref:System.Windows.Forms.DataGrid>, включают следующие:
 
@@ -100,19 +100,19 @@ ms.locfileid: "70046213"
 
 ## <a name="columns-and-rows"></a>Столбцы и строки
 
-<xref:System.Windows.Forms.DataGrid> состоит из коллекции объектов <xref:System.Windows.Forms.DataGridTableStyle>, содержащихся в свойстве <xref:System.Windows.Forms.DataGrid.TableStyles%2A> элемента управления <xref:System.Windows.Forms.DataGrid>. Стиль таблицы может содержать коллекцию объектов <xref:System.Windows.Forms.DataGridColumnStyle>, содержащихся в свойстве <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> класса <xref:System.Windows.Forms.DataGridTableStyle>. Изменить <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойства и <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> можно с помощью редакторов коллекций, доступных в окне " **Свойства** ".
+<xref:System.Windows.Forms.DataGrid> состоит из коллекции объектов <xref:System.Windows.Forms.DataGridTableStyle>, содержащихся в свойстве <xref:System.Windows.Forms.DataGrid> элемента управления <xref:System.Windows.Forms.DataGrid.TableStyles%2A>. Стиль таблицы может содержать коллекцию объектов <xref:System.Windows.Forms.DataGridColumnStyle>, содержащихся в свойстве <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> класса <xref:System.Windows.Forms.DataGridTableStyle>. Свойства <xref:System.Windows.Forms.DataGrid.TableStyles%2A> и <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> можно изменить с помощью редакторов коллекций, доступных в окне " **Свойства** ".
 
-К любому классу <xref:System.Windows.Forms.DataGridTableStyle>, связанному с элементом управления <xref:System.Windows.Forms.DataGrid>, можно получить доступ через коллекцию <xref:System.Windows.Forms.GridTableStylesCollection>. Коллекцию <xref:System.Windows.Forms.GridTableStylesCollection> можно изменить в конструкторе с помощью редактора коллекции <xref:System.Windows.Forms.DataGridTableStyle> или программным путем с помощью свойства <xref:System.Windows.Forms.DataGrid.TableStyles%2A> элемента управления <xref:System.Windows.Forms.DataGrid>.
+К любому классу <xref:System.Windows.Forms.DataGridTableStyle>, связанному с элементом управления <xref:System.Windows.Forms.DataGrid>, можно получить доступ через коллекцию <xref:System.Windows.Forms.GridTableStylesCollection>. Коллекцию <xref:System.Windows.Forms.GridTableStylesCollection> можно изменить в конструкторе с помощью редактора коллекции <xref:System.Windows.Forms.DataGridTableStyle> или программным путем с помощью свойства <xref:System.Windows.Forms.DataGrid> элемента управления <xref:System.Windows.Forms.DataGrid.TableStyles%2A>.
 
 На следующем рисунке показаны объекты, входящие в элемент управления DataGrid:
 
 ![Схема, показывающая объекты, содержащиеся в элементе управления DataGrid.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)
 
-Стили таблиц и столбцов синхронизируются с объектами <xref:System.Data.DataTable> и <xref:System.Data.DataColumn> путем задания для их свойства `MappingName` соответствующих свойств <xref:System.Data.DataTable.TableName%2A> и <xref:System.Data.DataColumn.ColumnName%2A>. Когда класс <xref:System.Windows.Forms.DataGridTableStyle>, не имеющий стилей столбцов, добавляется в элемент управления <xref:System.Windows.Forms.DataGrid>, привязанный к допустимому источнику данных, и для свойства <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> этого стиля таблицы задается допустимое свойство <xref:System.Data.DataTable.TableName%2A>, для этого стиля таблицы создается коллекция объектов <xref:System.Windows.Forms.DataGridColumnStyle>. Для каждого объекта <xref:System.Data.DataColumn> в коллекции <xref:System.Data.DataTable.Columns%2A> объекта <xref:System.Data.DataTable> в коллекцию <xref:System.Windows.Forms.GridColumnStylesCollection> добавляется соответствующий класс <xref:System.Windows.Forms.DataGridColumnStyle>. Доступ к коллекции <xref:System.Windows.Forms.GridColumnStylesCollection> осуществляется через свойство <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> класса <xref:System.Windows.Forms.DataGridTableStyle>. Столбцы можно добавлять или удалять из сетки, используя метод <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> или <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> для коллекции <xref:System.Windows.Forms.GridColumnStylesCollection>. Дополнительные сведения см. в разделе [Практическое руководство. Добавьте таблицы и столбцы в Windows Forms элемент управления](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) DataGrid и [как: Удаление или скрытие столбцов в элементе управления](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)Windows Forms DataGrid.
+Стили таблиц и столбцов синхронизируются с объектами <xref:System.Data.DataTable> и <xref:System.Data.DataColumn> путем задания для их свойства `MappingName` соответствующих свойств <xref:System.Data.DataTable.TableName%2A> и <xref:System.Data.DataColumn.ColumnName%2A>. Когда класс <xref:System.Windows.Forms.DataGridTableStyle>, не имеющий стилей столбцов, добавляется в элемент управления <xref:System.Windows.Forms.DataGrid>, привязанный к допустимому источнику данных, и для свойства <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> этого стиля таблицы задается допустимое свойство <xref:System.Data.DataTable.TableName%2A>, для этого стиля таблицы создается коллекция объектов <xref:System.Windows.Forms.DataGridColumnStyle>. Для каждого объекта <xref:System.Data.DataColumn> в коллекции <xref:System.Data.DataTable.Columns%2A> объекта <xref:System.Data.DataTable> в коллекцию <xref:System.Windows.Forms.DataGridColumnStyle> добавляется соответствующий класс <xref:System.Windows.Forms.GridColumnStylesCollection>. Доступ к коллекции <xref:System.Windows.Forms.GridColumnStylesCollection> осуществляется через свойство <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> класса <xref:System.Windows.Forms.DataGridTableStyle>. Столбцы можно добавлять или удалять из сетки, используя метод <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> или <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> для коллекции <xref:System.Windows.Forms.GridColumnStylesCollection>. Дополнительные сведения см. в разделе [Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) и [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).
 
 Коллекция типов столбцов расширяет класс <xref:System.Windows.Forms.DataGridColumnStyle>, добавляя целый ряд возможностей форматирования и редактирования. Все типы столбцов наследуют от базового класса <xref:System.Windows.Forms.DataGridColumnStyle>. Создаваемый класс зависит от свойства <xref:System.Data.DataColumn.DataType%2A> класса <xref:System.Data.DataColumn>, который является базовым для <xref:System.Web.UI.WebControls.DataGridColumn>. Например, объект <xref:System.Data.DataColumn>, для свойства <xref:System.Data.DataColumn.DataType%2A> которого задано значение <xref:System.Boolean>, будет связан с <xref:System.Windows.Forms.DataGridBoolColumn>. В следующей таблице описан каждый из этих типов столбцов.
 
-|Тип столбца|Описание|
+|Тип столбца|Description|
 |-----------------|-----------------|
 |<xref:System.Windows.Forms.DataGridTextBoxColumn>|Принимает и отображает данные в виде форматированных или неформатированных строк. Возможности редактирования аналогичны возможностям редактирования данных в простом элементе <xref:System.Windows.Forms.TextBox>. Наследует от <xref:System.Windows.Forms.DataGridColumnStyle>.|
 |<xref:System.Windows.Forms.DataGridBoolColumn>|Принимает и отображает значения `true`, `false` и NULL. Наследует от <xref:System.Windows.Forms.DataGridColumnStyle>.|
@@ -140,16 +140,16 @@ ms.locfileid: "70046213"
 
 ## <a name="formatting"></a>Форматирование
 
-Форматирование, которое может применяться к элементу управления <xref:System.Windows.Forms.DataGrid>, включает стили границ, стили линий сетки, шрифты, свойства подписи, выравнивание данных и чередующиеся фоновые цвета для строк. Дополнительные сведения см. в разделе [Практическое руководство. Форматирование элемента управления](how-to-format-the-windows-forms-datagrid-control.md)Windows Forms DataGrid.
+Форматирование, которое может применяться к элементу управления <xref:System.Windows.Forms.DataGrid>, включает стили границ, стили линий сетки, шрифты, свойства подписи, выравнивание данных и чередующиеся фоновые цвета для строк. Дополнительные сведения см. в разделе [Практическое руководство. Форматирование элемента управления DataGrid в Windows Forms](how-to-format-the-windows-forms-datagrid-control.md).
 
 ## <a name="events"></a>События
 
 Помимо общих событий управления, таких как <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter> и <xref:System.Windows.Forms.DataGrid.Scroll>, элемент управления <xref:System.Windows.Forms.DataGrid> поддерживает события, связанные с редактированием и навигацией в сетке. Свойство <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> определяет, какая ячейка выбрана. Событие <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> вызывается, когда пользователь переходит к новой ячейке. При переходе к новой таблице через отношение "родительская-дочерняя" вызывается событие <xref:System.Windows.Forms.DataGrid.Navigate>. Событие <xref:System.Windows.Forms.DataGrid.BackButtonClick> возникает, когда пользователь нажимает кнопку "Назад" при просмотре дочерней таблицы, а событие <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> возникает при нажатии значка "показать/скрыть" для родительских строк.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
-- [Практическое руководство. Привязка Windows Forms элемента управления DataGrid к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Практическое руководство. Добавление таблиц и столбцов в элемент управления Windows Forms DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Практическое руководство. Удаление или скрытие столбцов в элементе управления Windows Forms DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Практическое руководство. Форматирование элемента управления Windows Forms DataGrid](how-to-format-the-windows-forms-datagrid-control.md)
+- [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Практическое руководство. Форматирование элемента управления DataGrid в Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)

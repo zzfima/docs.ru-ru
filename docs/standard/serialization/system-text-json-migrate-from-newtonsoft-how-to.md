@@ -11,16 +11,16 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d84b6d16d529914c87d42bf12ce17dc7093fe9ee
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211971"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921275"
 ---
-# <a name="how-to-migrate-from-opno-locnewtonsoftjson-to-opno-locsystemtextjson"></a>Переход с Newtonsoft.Json на System.Text.Json
+# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Переход с Newtonsoft. JSON на System. Text. JSON
 
-В этой статье показано, как выполнить миграцию с [Newtonsoft.Json](https://www.newtonsoft.com/json) на <xref:System.Text.Json>.
+В этой статье показано, как выполнить миграцию из [Newtonsoft. JSON](https://www.newtonsoft.com/json) в <xref:System.Text.Json>.
 
 `System.Text.Json` фокусируется в первую очередь на производительность, безопасность и соответствие стандартам. Он имеет некоторые ключевые отличия в поведении по умолчанию и не имеет функции соответствия `Newtonsoft.Json`. В некоторых сценариях `System.Text.Json` не имеет встроенных функций, но рекомендуется использовать их. В других сценариях обходные пути нецелесообразны. Если приложение зависит от отсутствующей функции, попробуйте добавить [проблему](https://github.com/dotnet/runtime/issues/new) , чтобы узнать, можно ли добавлять поддержку для вашего сценария.
 
@@ -28,7 +28,7 @@ ms.locfileid: "76211971"
 
 Большая часть этой статьи посвящена использованию <xref:System.Text.Json.JsonSerializer> API, но также содержит рекомендации по использованию <xref:System.Text.Json.JsonDocument> (который представляет модель DOM или модель DOM), <xref:System.Text.Json.Utf8JsonReader>и типы <xref:System.Text.Json.Utf8JsonWriter>.
 
-## <a name="table-of-differences-between-opno-locnewtonsoftjson-and-opno-locsystemtextjson"></a>Таблица различий между Newtonsoft.Json и System.Text.Json
+## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Таблица различий между Newtonsoft. JSON и System. Text. JSON
 
 В следующей таблице перечислены `Newtonsoft.Json` функции и `System.Text.Json` эквиваленты. Эквиваленты делятся на следующие категории:
 
@@ -36,7 +36,7 @@ ms.locfileid: "76211971"
 * Не поддерживается, решение можно устранить. Обходные пути являются [пользовательскими преобразователями](system-text-json-converters-how-to.md), которые могут не обеспечивать полную четность с помощью функций `Newtonsoft.Json`. Некоторые из этих примеров кода приведены в качестве примеров. Если вы полагаетесь на эти `Newtonsoft.Json` функции, то миграция потребует внесения изменений в объектные модели .NET или другие изменения кода.
 * Не поддерживается, обходной путь не является практичным и невозможным. Если вы полагаетесь на эти `Newtonsoft.Json` функции, миграция будет невозможна без существенных изменений.
 
-| Функция в Newtonsoft.Json                               | эквивалент System.Text.Json |
+| Функция Newtonsoft. JSON                               | Эквивалент System. Text. JSON |
 |-------------------------------------------------------|-----------------------------|
 | Десериализация без учета регистра по умолчанию           | [глобальный параметр ✔️ пропертинамекасеинсенситиве](#case-insensitive-deserialization) |
 | Имена свойств в стиле Camel                             | [глобальный параметр ✔️ пропертинамингполици](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
@@ -75,9 +75,9 @@ ms.locfileid: "76211971"
 | Разрешить одиночные кавычки вокруг строковых значений              | ❌ [не поддерживается](#json-strings-property-names-and-string-values) |
 | Разрешить значения, отличные от строкового JSON, для строковых свойств    | ❌ [не поддерживается](#non-string-values-for-string-properties) |
 
-Это не исчерпывающий список функций `Newtonsoft.Json`. Список включает многие сценарии, которые были запрошены в [проблемах GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) или [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) . Если вы реализуете обходной путь для одного из сценариев, перечисленных здесь без примера кода, и если вы хотите поделиться своим решением, нажмите кнопку "**Эта страница**" в нижней части страницы. Это создает ошибку GitHub и добавляет ее к проблемам, перечисленным в нижней части страницы.
+Это не исчерпывающий список функций `Newtonsoft.Json`. Список включает многие сценарии, которые были запрошены в [проблемах GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) или [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) . Если вы реализуете обходной путь для одного из перечисленных здесь сценариев, в котором в настоящее время нет образца кода, и если вы хотите поделиться своим решением, выберите **эту страницу** в [разделе Обратная связь](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback) на этой странице. Это создает ошибку GitHub и перечисляет ее в нижней части этой страницы.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-opno-locnewtonsoftjson"></a>Различия в поведении JsonSerializer по умолчанию по сравнению с Newtonsoft.Json
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Различия в поведении JsonSerializer по умолчанию по сравнению с Newtonsoft. JSON
 
 <xref:System.Text.Json> по умолчанию является строгой и позволяет избежать подбора или интерпретации от имени вызывающего объекта, подчеркивая детерминированное поведение. Библиотека преднамеренно разработана таким образом для повышения производительности и безопасности. `Newtonsoft.Json` по умолчанию является гибкой. Это фундаментальное различие в проектировании – это за многие из следующих различий в поведении по умолчанию.
 
@@ -221,13 +221,20 @@ The JSON value could not be converted to System.String.
 
 ### <a name="deserialization-of-object-properties"></a>Десериализация свойств объекта
 
-При `Newtonsoft.Json` десериализации для `object` свойств в POCO или в словарях типа `Dictionary<string, object>`это:
+При десериализации `Newtonsoft.Json` в <xref:System.Object>:
 
 * Выводит типы примитивных значений в полезных данных JSON (кроме `null`) и возвращает хранимые `string`, `long`, `double`, `boolean`или `DateTime` в виде упакованного объекта. *Примитивные значения* — это одиночные значения JSON, такие как номер JSON, строка, `true`, `false`или `null`.
 * Возвращает `JObject` или `JArray` для сложных значений в полезных данных JSON. *Сложные значения* — это коллекции пар "ключ-значение" JSON в фигурных скобках (`{}`) или списках значений в квадратных скобках (`[]`). Свойства и значения в фигурных скобках или квадратных скобках могут иметь дополнительные свойства или значения.
 * Возвращает пустую ссылку, если полезная нагрузка содержит литерал `null` JSON.
 
-<xref:System.Text.Json> сохраняет упакованную `JsonElement` как для простых, так и для сложных значений в свойстве `System.Object` или словаре. Однако он обрабатывает `null` так же, как `Newtonsoft.Json`, и возвращает пустую ссылку, если полезная нагрузка содержит `null` литерал JSON.
+<xref:System.Text.Json> сохраняет Упакованные `JsonElement` как для простых, так и для сложных значений при десериализации в <xref:System.Object>, например:
+
+* Свойство `object`.
+* `object` значение словаря.
+* Значение массива `object`.
+* Корневой `object`.
+
+Однако `System.Text.Json` обрабатывает `null` так же, как `Newtonsoft.Json`, и возвращает пустую ссылку, когда в полезных данных есть литерал `null` JSON.
 
 Чтобы реализовать определение типа для `object` свойств, создайте преобразователь, как в примере, в котором [описывается написание пользовательских преобразователей](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties).
 
@@ -284,7 +291,7 @@ The JSON value could not be converted to System.String.
 
 Атрибут `Newtonsoft.Json` `[JsonConstructor]` позволяет указать, какой конструктор вызывать при десериализации POCO. <xref:System.Text.Json> поддерживает только конструкторы без параметров. В качестве обходного решения можно вызвать любой конструктор, необходимый в пользовательском преобразователе. См. пример для [десериализации неизменяемых классов и структур](#deserialize-to-immutable-classes-and-structs).
 
-### <a name="required-properties"></a>Требуемые свойства
+### <a name="required-properties"></a>Обязательные свойства
 
 В `Newtonsoft.Json`указать, что свойство требуется, задав `Required` атрибута `[JsonProperty]`. `Newtonsoft.Json` создает исключение, если в JSON не получено значение для свойства, помеченного как обязательное.
 
@@ -358,7 +365,7 @@ The JSON value could not be converted to System.String.
 * Параметр `DateTimeZoneHandling` можно использовать для сериализации всех значений `DateTime` как даты в формате UTC.
 * Для настройки формата строк даты можно использовать параметры `DateFormatString` и `DateTime` преобразователей.
 
-В <xref:System.Text.Json>единственным форматом, поддерживающим встроенную поддержку, является ISO 8601-1:2019, так как он широко используется, однозначно и делает круговые циклы. Чтобы использовать любой другой формат, создайте пользовательский преобразователь. Дополнительные сведения см. [в разделе Поддержка DateTime и DateTimeOffset в System.Text.Json](../datetime/system-text-json-support.md).
+В <xref:System.Text.Json>единственным форматом, поддерживающим встроенную поддержку, является ISO 8601-1:2019, так как он широко используется, однозначно и делает круговые циклы. Чтобы использовать любой другой формат, создайте пользовательский преобразователь. Дополнительные сведения см. [в разделе Поддержка DateTime и DateTimeOffset в System. Text. JSON](../datetime/system-text-json-support.md).
 
 ### <a name="callbacks"></a>Обратные вызовы
 

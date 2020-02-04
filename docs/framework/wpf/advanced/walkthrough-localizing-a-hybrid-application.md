@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b406d539f2446824027e9462c8ecbe20c18cfb27
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976501"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794128"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Пример локализации гибридного приложения
 
-В этом пошаговом руководстве показано, как локализовать элементы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в гибридном приложении на основе [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+В этом пошаговом руководстве показано, как локализовать элементы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в гибридном приложении на основе Windows Forms.
 
 В данном пошаговом руководстве представлены следующие задачи.
 
-- Создание проекта [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] узла.
+- Создание проекта Windows Forms узла.
 
 - Добавление локализуемого содержимого.
 
@@ -32,7 +32,7 @@ ms.locfileid: "73976501"
 
 Закончив, вы получите локализованное гибридное приложение.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
@@ -40,7 +40,7 @@ ms.locfileid: "73976501"
 
 ## <a name="creating-the-windows-forms-host-project"></a>Создание ведущего проекта Windows Forms
 
-Первым шагом является создание проекта приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и Добавление элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с содержимым, которое будет локализовано.
+Первым шагом является создание проекта приложения Windows Forms и Добавление элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с содержимым, которое будет локализовано.
 
 ### <a name="to-create-the-host-project"></a>Создание ведущего проекта
 
@@ -52,7 +52,7 @@ ms.locfileid: "73976501"
 
 ## <a name="adding-localizable-content"></a>Добавление локализуемого содержимого
 
-Далее предстоит добавить элемент управления Label [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и задать содержимое элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для локализуемой строки.
+Далее предстоит добавить элемент управления Label Windows Forms и задать содержимое элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для локализуемой строки.
 
 ### <a name="to-add-localizable-content"></a>Добавление локализуемого содержимого
 
@@ -172,7 +172,7 @@ ms.locfileid: "73976501"
 
      В приложении выводятся локализованные строки вместо английских строк.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

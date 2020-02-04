@@ -4,12 +4,12 @@ description: Эта статья описывает, как перенести �
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567279"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116023"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Процесс переноса классического приложения Windows Forms в .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "74567279"
 
 В этой статье применяются различные имена для обозначения типов файлов, используемых для переноса. При переносе вашего проекта файлы будут называться иначе, поэтому попытайтесь мысленно сопоставить их с именами из этой таблицы:
 
-| Файл | ОПИСАНИЕ |
+| Файл | Описание |
 | ---- | ----------- |
 | **MyApps.sln** | Имя файла решения. |
 | **MyForms.csproj** | Имя проекта Windows Forms в .NET Framework, который нужно перенести. |
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-С помощью Visual Studio или .NET Core CLI проект **MyFormsCore.csproj** необходимо добавить в файл **MyApps.sln** из каталога **SolutionFolder**.
+С помощью Visual Studio или .NET Core CLI добавьте проект **MyFormsCore.csproj** в файл **MyApps.sln** из каталога **SolutionFolder**.
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -188,7 +188,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
 
 Используя пример из предыдущего шага, расширим перечень проектов и файлов, с которыми мы работаем.
 
-| Файл | ОПИСАНИЕ |
+| Файл | Описание |
 | ---- | ----------- |
 | **MyApps.sln** | Имя файла решения. |
 | **MyControls.csproj** | Имя проекта библиотеки элементов управления Windows Forms, который нужно перенести. |
@@ -261,7 +261,7 @@ SolutionFolder
 
 Как можно видеть, узел `<OutputType>` был удален, поэтому компилятор создает библиотеку, а не исполняемый файл. Узлы `<AssemblyName>` и `<RootNamespace>` были изменены. В частности, узел `<RootNamespace>` должен совпадать с пространством имен переносимой библиотеки элементов управления Windows Forms. Наконец, узлы `<Compile>` и `<EmbeddedResource>` были откорректированы и теперь указывают на папку переносимой библиотеки элементов управления Windows Forms.
 
-Теперь в главном проекте .NET Core **MyFormsCore.csproj** нужно добавить ссылку на новую библиотеку элементов управления Windows Forms в .NET Core. Добавьте ссылку с помощью Visual Studio или .NET Core CLI из каталога **SolutionFolder**.
+Теперь в главном проекте .NET Core **MyFormsCore.csproj** добавьте ссылку на новую библиотеку элементов управления Windows Forms в .NET Core. Добавьте ссылку с помощью Visual Studio или .NET Core CLI из каталога **SolutionFolder**.
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
@@ -287,7 +287,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ## <a name="next-steps"></a>Следующие шаги
 
+- Ознакомьтесь со [списком критических изменений, касающихся перехода с .NET Framework на .NET Core](../compatibility/fx-core.md).
 - Дополнительные сведения о [пакете обеспечения совместимости Windows][compat-pack].
 - [Видео о переносе](https://www.youtube.com/watch?v=upVQEUc_KwU) проекта Windows Forms из .NET Framework в .NET Core.
 

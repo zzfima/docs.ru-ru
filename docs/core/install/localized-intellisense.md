@@ -1,15 +1,13 @@
 ---
 title: Установка локализованных файлов IntelliSense
 description: Узнайте, как настроить компьютер, на котором ведется разработка, для использования локализованных файлов IntelliSense в проектах .NET Core в Visual Studio.
-author: mairaw
-ms.author: mairaw
-ms.date: 12/18/2019
-ms.openlocfilehash: 98d75544ab853e75c175dd2919991b250cfaa3b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/23/2020
+ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75436676"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733650"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Установка локализованных файлов IntelliSense для .NET Core
 
@@ -34,9 +32,10 @@ ms.locfileid: "75436676"
 
 1. Извлеките содержимое ZIP-файла.
 
-1. Перейдите в папку установки .NET Core. Ее расположение по умолчанию: *%ProgramFiles%\dotnet\packs*.
+1. Перейдите в папку Intellisense для .NET Core.
 
-   - Выберите пакет SDK, для которого необходимо установить IntelliSense, и перейдите по соответствующему пути. Можно выбрать один из следующих параметров.
+   1. Перейдите в папку установки .NET Core. Ее расположение по умолчанию: *%ProgramFiles%\dotnet\packs*.
+   1. Выберите пакет SDK, для которого необходимо установить IntelliSense, и перейдите по соответствующему пути. Можно выбрать один из следующих параметров.
 
       | Тип пакета SDK        | Path                               |
       | --------------- | ---------------------------------- |
@@ -44,9 +43,9 @@ ms.locfileid: "75436676"
       | Windows Desktop | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
    
-   - Перейдите к версии, для которой необходимо установить локализованные файлы IntelliSense. Например, *3.1.0*.
-   - Откройте папку *ref*.
-   - Откройте папку моникера. Например, *netcoreapp3.1*.
+   1. Перейдите к версии, для которой необходимо установить локализованные файлы IntelliSense. Например, *3.1.0*.
+   1. Откройте папку *ref*.
+   1. Откройте папку моникера. Например, *netcoreapp3.1*.
 
    Таким образом, полный путь для перехода будет выглядеть примерно так: *C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1*.
 
@@ -76,7 +75,7 @@ ms.locfileid: "75436676"
 Если нужный языковой пакет не был установлен, обновите Visual Studio, как показано ниже.
 
 > [!IMPORTANT]
-> Чтобы установить, обновить или изменить среду Visual Studio, необходимо войти в учетную запись с правами администратора. Дополнительные сведения см. в статье [Разрешения пользователей и Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
+> Чтобы установить, обновить или изменить среду Visual Studio, необходимо войти в учетную запись с правами администратора. Дополнительные сведения см. в статье [Разрешения пользователей и Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
 
 1. Найдите установщик Visual Studio на своем компьютере.
 
@@ -103,7 +102,7 @@ ms.locfileid: "75436676"
 
    ![Вкладка "Языковые пакеты" в Visual Studio](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. Выберите **Изменить**. Начинается обновление.
+1. Выберите **Изменить**. Начнется обновление.
 
 ### <a name="modify-language-settings-in-visual-studio"></a>Изменение языковых параметров в Visual Studio
 
@@ -113,9 +112,9 @@ ms.locfileid: "75436676"
 
 1. В начальном окне выберите **Продолжить без кода**.
 
-1. В главном меню выберите **Сервис** > **Параметры**. Откроется диалоговое окно "Параметры ".
+1. В строке меню выберите **Сервис** > **Параметры**. Откроется диалоговое окно "Параметры ".
 
-1. В папке **Среда** выберите **Выбор языка**.
+1. В узле **Среда** выберите **Выбор языка**.
 
 1. В раскрывающемся списке **Язык** выберите язык. Нажмите кнопку **ОК**. 
 

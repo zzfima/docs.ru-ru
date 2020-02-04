@@ -6,20 +6,20 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342853"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742588"
 ---
 # <a name="whats-new-in-net-core-31"></a>Новые возможности .NET Core 3.1
 
 В этой статье описаны новые возможности в .NET Core 3.1. Этот выпуск содержит небольшие улучшения относительно .NET Core 3.0. Внимание уделялось нескольким небольшим, но важным исправлениям. Основная особенность .NET Core 3.1 заключается в том, что это выпуск [долгосрочной поддержки (LTS)](#long-term-support).
 
-Если вы используете Visual Studio 2019, для работы с проектами .NET Core 3.1 необходимо обновить Visual Studio 2019 до [версии 16.4](https://visualstudio.microsoft.com/downloads/). Дополнительные сведения о новых возможностях Visual Studio см. в [блоге о Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
+Если вы используете Visual Studio 2019, для работы с проектами .NET Core 3.1 необходимо обновить Visual Studio 2019 до [версии 16.4](https://visualstudio.microsoft.com/downloads/). Дополнительные сведения о новых возможностях Visual Studio см. на странице [Новые возможности Visual Studio 2019 версии 16.4](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164).
 
-Visual Studio для Mac также поддерживает и содержит .NET Core 3.1 в канале предварительной версии Visual Studio для Mac 8.4. Вам потребуется перейти на канал предварительной версии, чтобы использовать .NET Core 3.1.
+Visual Studio для Mac также поддерживает и содержит .NET Core 3.1 в версии Visual Studio для Mac 8.4.
 
 Дополнительные сведения см. в [объявлении о выпуске .NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
@@ -64,7 +64,7 @@ Visual Studio для Mac также поддерживает и содержит
 
 Добавлена поддержка создания проектов C++/CLI ("управляемый C++"). Двоичные файлы из этих проектов совместимы с .NET Core 3.0 и более поздних версий.
 
-Чтобы добавить поддержку C++/CLI в Visual Studio 2019 16.4, установите рабочую нагрузку [Разработка классических приложений на C++](https://docs.microsoft.com/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads). При использовании этой рабочей нагрузки в Visual Studio добавляется два шаблона:
+Чтобы добавить поддержку C++/CLI в Visual Studio 2019 версии 16.4, установите рабочую нагрузку [Разработка классических приложений на C++](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads). При использовании этой рабочей нагрузки в Visual Studio добавляется два шаблона:
 
 - библиотека классов CLR (.NET Core);
 - пустой проект CLR (.NET Framework).
@@ -72,4 +72,4 @@ Visual Studio для Mac также поддерживает и содержит
 ## <a name="next-steps"></a>Следующие шаги
 
 - [Изучите критические изменения при обновлении с .NET Core 3.0 и до NET Core 3.1.](../compatibility/3.0-3.1.md)
-- [Изучите критические отличия между версиями .NET Framework и .NET Core 3.0 для приложений Windows Forms.](../porting/winforms-breaking-changes.md)
+- [Изучите критические изменения в NET Core 3.1 для приложений Windows Forms.](../compatibility/winforms.md#net-core-31)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: dfc2e91599e7f05d90d56af07b71313e9eecaa51
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 542bfa05c55ef224d1b9111f9af6c069e9e23542
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121052"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790973"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Метод ICorDebugVariableHome:: GetSlotIndex
 Возвращает управляемый индекс в виде слота локальной переменной.  
@@ -40,10 +40,10 @@ HRESULT GetSlotIndex(
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения.  
   
-|значения|Описание|  
+|{2&gt;Value&lt;2}|Описание|  
 |-----------|-----------------|  
 |`S_OK`|Вызов метода вернул значение индекса слота в `pSlotIndex`.|  
-|`E_FAIL`|Текущий экземпляр [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) представляет аргумент функции.|  
+|`E_FAIL`|Текущий экземпляр [ICorDebugVariableHome](icordebugvariablehome-interface.md) представляет аргумент функции.|  
   
 ## <a name="remarks"></a>Заметки  
  Чтобы получить метаданные для этой локальной переменной, можно использовать индекс Slot.  
@@ -57,6 +57,6 @@ HRESULT GetSlotIndex(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [Интерфейс ICorDebugVariableHome](icordebugvariablehome-interface.md)

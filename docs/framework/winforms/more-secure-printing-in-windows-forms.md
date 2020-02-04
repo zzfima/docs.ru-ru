@@ -1,5 +1,5 @@
 ---
-title: Более безопасная печать в Windows Forms
+title: Более безопасная печать
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, printing
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-ms.openlocfilehash: b0387a82f142fb32912dad1370d6ac0c784e8894
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6285b76d01660bfa761ea606421f264bdc0c0af5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592643"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734891"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Более безопасная печать в Windows Forms
-Приложения Windows Forms часто предусмотрена возможность печати. Платформа .NET Framework использует <xref:System.Drawing.Printing.PrintingPermission> класс для управления доступом к возможностям печати и связанный <xref:System.Drawing.Printing.PrintingPermissionLevel> значение перечисления, указывающее уровень доступа. По умолчанию она разрешена по умолчанию в зонах локальной интрасети и Интернета; Тем не менее в обоих зон ограничено уровень доступа. Ли приложение может начать печать, требует взаимодействия с пользователем, или не зависит значение разрешения, предоставленные приложению. По умолчанию в зону локальной интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> доступа и в зону интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> доступа.  
+Windows Forms приложения часто включают возможности печати. .NET Framework использует класс <xref:System.Drawing.Printing.PrintingPermission> для управления доступом к возможностям печати и связанным значением перечисления <xref:System.Drawing.Printing.PrintingPermissionLevel>, чтобы указать уровень доступа. По умолчанию печать по умолчанию включена в зонах «Местная интрасеть» и «Интернет». Однако уровень доступа ограничен в обеих зонах. Может ли приложение печататься, требует взаимодействия с пользователем или не может печататься, зависит от значения разрешений, предоставленного приложению. По умолчанию зона локальной интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> доступ, а зона интрасети — <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> доступ.  
   
- В следующей таблице показаны функциональные возможности, доступные в каждой печати уровень разрешений.  
+ В следующей таблице показаны функциональные возможности, доступные для каждого уровня разрешений печати.  
   
-|PrintingPermissionLevel|Описание|  
+|PrintingPermissionLevel|Description|  
 |-----------------------------|-----------------|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Предоставляет полный доступ для всех установленных принтеров.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Обеспечивает программную печать на принтере по умолчанию и более безопасную печать через диалоговое окно печати. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Предоставляет возможность печати только из более ограниченного диалоговое окно. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Запрещает доступ к принтерам. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Предоставляет полный доступ ко всем установленным принтерам.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Разрешает программную печать на принтере по умолчанию и более безопасную печать через диалоговое окно с ограниченным режимом печати. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Предоставляет печать только из более ограниченного диалогового окна. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Предотвращает доступ к принтерам. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Более безопасный доступ к файлам и данным в Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Дополнительные вопросы безопасности в формах Windows Forms](additional-security-considerations-in-windows-forms.md)

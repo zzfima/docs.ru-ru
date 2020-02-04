@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 dev_langs:
 - cpp
 ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
-ms.openlocfilehash: b6bfd258f35f19719be5e5169a1edc22a358371c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c0da899b3f6f3c229c6f5e5b4cafe48fdc19742
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123375"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792171"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>Метод ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode
 [Поддерживается в .NET Framework 4,6 и более поздних версиях]  
   
- Включает или отключает определенные типы обратных вызовов исключений [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) .  
+ Включает или отключает определенные типы обратных вызовов исключений [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,9 +31,9 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 ## <a name="remarks"></a>Заметки  
  Если `enableExceptionsOutsideOfJMC` имеет значение `false`:  
   
-- Исключение DEBUG_EXCEPTION_FIRST_CHANCE не приведет к обратному вызову отладчика.  
+- Исключение DEBUG_EXCEPTION_FIRST_CHANCE не будет приводить к обратному вызову отладчика.  
   
-- Исключение DEBUG_EXCEPTION_CATCH_HANDLER_FOUND не приведет к обратному вызову отладчика, если исключение никогда не переключается в пользовательский код (то есть путь от источника исключения к обработчику исключений не имеет методов, помеченных как Жустмикоде или JMC).  
+- Исключение DEBUG_EXCEPTION_CATCH_HANDLER_FOUND не приводит к обратному вызову отладчика, если исключение никогда не попадает в пользовательский код (то есть путь от источника исключения в обработчик исключений не имеет методов, помеченных как JustMyCode или JMC).  
   
  Значением свойства `enableExceptionsOutsideOfJMC` по умолчанию является `true`.  
   
@@ -46,7 +46,7 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugProcess8](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugProcess8](icordebugprocess8-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

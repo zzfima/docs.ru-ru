@@ -1,15 +1,15 @@
 ---
-title: 'Метод ICorDebugVariableSymbol:: GetValue'
+title: Метод ICorDebugVariableSymbol::GetValue
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2dc074384d209d0740a1fb0a9a16d96ff355f02b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120967"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790884"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a>Метод ICorDebugVariableSymbol:: GetValue
+# <a name="icordebugvariablesymbolgetvalue-method"></a>Метод ICorDebugVariableSymbol::GetValue
 Возвращает значение переменной в виде массива байтов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -58,7 +58,7 @@ HRESULT GetValue(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

@@ -21,7 +21,7 @@
           href: wpf-windows-overview.md
         - name: Общие сведения о диалоговых окнах
           href: dialog-boxes-overview.md
-        - name: Практические руководства
+        - name: Инструкции
           href: window-management-how-to-topics.md
           items:
             - name: Автоматическое изменение размера окна в соответствии с размером содержимого
@@ -45,7 +45,7 @@
           href: structured-navigation-overview.md
         - name: Общие сведения о топологии переходов
           href: navigation-topologies-overview.md
-        - name: Практические руководства
+        - name: Инструкции
           href: navigation-how-to-topics.md
           items:
             - name: Вызов страничной функции
@@ -77,14 +77,14 @@
     - name: Общие сведения о надстройках WPF
       href: wpf-add-ins-overview.md
       items:
-        - name: Практические руководства
+        - name: Инструкции
           href: how-to-topics.md
           items:
             - name: 'Создание надстройки, возвращающей пользовательский интерфейс'
               href: how-to-create-an-add-in-that-returns-a-ui.md
             - name: 'Создание надстройки, являющейся пользовательским интерфейсом'
               href: how-to-create-an-add-in-that-is-a-ui.md
-    - name: Размещение
+    - name: Hosting
       href: hosting-wpf-applications.md
       items:
         - name: Общие сведения о приложениях браузера WPF XAML
@@ -123,15 +123,13 @@
           href: building-a-wpf-application-wpf.md
         - name: Развертывание приложения WPF
           href: deploying-a-wpf-application-wpf.md
-        - name: Практические руководства
+        - name: Инструкции
           href: build-and-deploy-how-to-topics.md
           items:
             - name: Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF
               href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
-            - name: Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы
+            - name: Настройка Visual Studio 2005 для отладки приложений браузера XAML для вызова веб-службы
               href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-            - name: Определение установленной версии WPF
-              href: how-to-determine-the-installed-version-of-wpf.md
             - name: Проверка наличия установленной платформы .NET Framework 3.0
               href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
             - name: Проверка наличия установленной платформы .NET Framework 3.5

@@ -1,86 +1,86 @@
 ---
-title: Типы столбцов элемента управления DataGridView в Windows Forms
+title: Типы столбцов в элементе управления DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e918394cca6350854074d4c1567890138b2a1462
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956251"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743857"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Типы столбцов элемента управления DataGridView в Windows Forms
-<xref:System.Windows.Forms.DataGridView> Элемент управления использует несколько типов столбцов для отображения данных и позволяют пользователям изменять или добавлять данные.  
+Элемент управления <xref:System.Windows.Forms.DataGridView> использует несколько типов столбцов для вывода сведений и позволяет пользователям изменять или добавлять данные.  
   
- При привязке <xref:System.Windows.Forms.DataGridView> и задание <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> свойства `true`, столбцы создаются автоматически с помощью типов столбцов по умолчанию для типов данных, содержащихся в привязанного источника данных.  
+ При привязке <xref:System.Windows.Forms.DataGridView> элемента управления и присвоении свойству <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> значения `true`столбцы автоматически создаются с использованием типов столбцов по умолчанию, соответствующих типам данных, содержащимся в связанном источнике данных.  
   
- Можно также создать экземпляры любых классов столбцов самостоятельно и добавить их в коллекцию, возвращаемую <xref:System.Windows.Forms.DataGridView.Columns%2A> свойство. Можно создать эти экземпляры для использования в качестве непривязанные столбцы, или вручную привязывать их. Вручную привязанные столбцы полезны, например, если вы хотите заменить автоматически созданного столбца одного типа со столбцом типа.  
+ Можно также создать экземпляры любого класса столбцов самостоятельно и добавить их в коллекцию, возвращенную свойством <xref:System.Windows.Forms.DataGridView.Columns%2A>. Эти экземпляры можно создать для использования в качестве несвязанных столбцов или можно вручную привязать их. Связанные вручную столбцы полезны, например, когда необходимо заменить автоматически созданный столбец одного типа столбцом другого типа.  
   
- В следующей таблице описаны различные классы столбцов, доступных для использования в <xref:System.Windows.Forms.DataGridView> элемента управления.  
+ В следующей таблице описаны различные классы столбцов, доступные для использования в элементе управления <xref:System.Windows.Forms.DataGridView>.  
   
-|Класс|Описание|  
+|Class|Description|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Используется с текстовыми значениями. Создается автоматически при привязке к чисел и строк.|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Используется с <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState> значения. Создается автоматически, при привязке к значениям из этих типов.|  
-|<xref:System.Windows.Forms.DataGridViewImageColumn>|Используется для отображения изображения. Создается автоматически при привязке в массив байтов, <xref:System.Drawing.Image> объектов, или <xref:System.Drawing.Icon> объектов.|  
-|<xref:System.Windows.Forms.DataGridViewButtonColumn>|Используется для отображения кнопок в ячейках. Создается автоматически при привязке. Обычно используется в качестве несвязанных столбцов.|  
-|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Используется для отображения раскрывающихся списков в ячейках. Создается автоматически при привязке. Обычно связан с данными вручную.|  
-|<xref:System.Windows.Forms.DataGridViewLinkColumn>|Используется для отображения ссылки в ячейках. Создается автоматически при привязке. Обычно связан с данными вручную.|  
-|Пользовательский тип столбцов|Можно создать свой собственный класс столбца путем наследования <xref:System.Windows.Forms.DataGridViewColumn> класса или любого из его производных классов, чтобы предоставить пользовательское оформление, поведение или размещенные элементы управления. Дополнительные сведения см. в разделе [Как Настройка ячеек и столбцов в элементе управления DataGridView Windows Forms, расширяя их поведение и внешний вид](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Используется со значениями, основанными на тексте. Создается автоматически при привязке к числам и строкам.|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Используется со значениями <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState>. Создается автоматически при привязке к значениям этих типов.|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn>|Используется для вывода изображений. Создается автоматически при привязке к массивам байтов, <xref:System.Drawing.Image> объектам или <xref:System.Drawing.Icon> объектам.|  
+|<xref:System.Windows.Forms.DataGridViewButtonColumn>|Используется для вывода кнопок в ячейках. Не создается автоматически при привязке. Обычно используется как непривязанные столбцы.|  
+|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Используется для вывода раскрывающихся списков в ячейках. Не создается автоматически при привязке. Обычно привязка данных осуществляется вручную.|  
+|<xref:System.Windows.Forms.DataGridViewLinkColumn>|Используется для вывода ссылок в ячейках. Не создается автоматически при привязке. Обычно привязка данных осуществляется вручную.|  
+|Тип настраиваемого столбца|Можно создать собственный класс столбца, наследуя класс <xref:System.Windows.Forms.DataGridViewColumn> или любой из его производных классов для предоставления пользовательского внешнего вида, поведения или размещенных элементов управления. Дополнительные сведения см. в разделе [как настроить ячейки и столбцы в элементе управления Windows Forms DataGridView путем расширения их поведения и внешнего вида.](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
- Типы столбцов описаны более подробно в следующих разделах.  
+ Эти типы столбцов более подробно описаны в следующих разделах.  
   
-## <a name="datagridviewtextboxcolumn"></a>DataGridViewTextBoxColumn  
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn> Является типом столбца общего назначения для использования с текстовыми значениями, например чисел и строк. В режиме редактирования <xref:System.Windows.Forms.TextBox> отображается элемент управления в ячейки, дающий пользователю возможность изменять значение ячейки.  
+## <a name="datagridviewtextboxcolumn"></a>датагридвиевтекстбоксколумн  
+ <xref:System.Windows.Forms.DataGridViewTextBoxColumn> является типом столбца общего назначения для использования с текстовыми значениями, такими как числа и строки. В режиме редактирования в активной ячейке отображается <xref:System.Windows.Forms.TextBox> элемент управления, позволяющий пользователям изменять значение ячейки.  
   
- Значения ячеек, автоматически преобразуются в строки для отображения. Для создания ячейки значение соответствующего типа данных автоматически синтаксический анализ значения вводятся или изменены пользователем. Эти преобразования можно настроить путем обработки <xref:System.Windows.Forms.DataGridView.CellFormatting> и <xref:System.Windows.Forms.DataGridView.CellParsing> события <xref:System.Windows.Forms.DataGridView> элемента управления.  
+ Значения ячеек автоматически преобразуются в строки для вывода. Значения, введенные или измененные пользователем, автоматически анализируются для создания значения ячейки соответствующего типа данных. Эти преобразования можно настроить, обрабатывая события <xref:System.Windows.Forms.DataGridView.CellFormatting> и <xref:System.Windows.Forms.DataGridView.CellParsing> элемента управления <xref:System.Windows.Forms.DataGridView>.  
   
- Тип данных значения ячейки столбца задается в <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> свойства столбца.  
+ Тип данных значения ячейки столбца указывается в свойстве <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> столбца.  
   
-## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> Используется с <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState> значения. <xref:System.Boolean> значения отображаются в виде двумя или тремя состояниями флажков, в зависимости от значения <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> свойство. Когда столбец связан с <xref:System.Windows.Forms.CheckState> значения, <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> свойство имеет значение `true` по умолчанию.  
+## <a name="datagridviewcheckboxcolumn"></a>датагридвиевчеккбоксколумн  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> используется со значениями <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState>. <xref:System.Boolean> значения отображаются как флажки с двумя состояниями или три состояния, в зависимости от значения свойства <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>. Если столбец привязан к <xref:System.Windows.Forms.CheckState> значениям, значение свойства <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> по умолчанию равно `true`.  
   
- Как правило значения ячеек "флажок" предназначены для хранения данных, как любые другие данные, либо для выполнения массовых операций. Если вы хотите немедленно при щелчке ячейки с флажком, можно обрабатывать реагировать на <xref:System.Windows.Forms.DataGridView.CellClick> событие, но это событие происходит до обновления значения ячейки. Если необходимо новое значение во время щелчка, один из вариантов — можно вычислить ожидаемое значение, на основе текущего значения. Другой подход заключается в том, чтобы немедленно зафиксируйте изменения и обработки информации о <xref:System.Windows.Forms.DataGridView.CellValueChanged> событий отвечать на него. Чтобы применить изменения при щелчке ячейки, должно обрабатывать <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> событий. В обработчике, если текущая ячейка является ячейкой флажок, вызовите <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> метод и передать <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> значение.  
+ Как правило, значения ячеек флажков предназначены для хранения, например для любых других данных, или для выполнения операций с массовыми операциями. Если вы хотите ответить немедленно, когда пользователь нащелкнул ячейку флажка, можно обработать событие <xref:System.Windows.Forms.DataGridView.CellClick>, но это событие происходит перед обновлением значения ячейки. Если требуется новое значение во время щелчка, можно вычислить ожидаемое значение на основе текущего значения. Другой подход заключается в фиксации изменения немедленно и обработке события <xref:System.Windows.Forms.DataGridView.CellValueChanged> для реагирования на него. Чтобы зафиксировать изменение при щелчке ячейки, необходимо выполнить обработку события <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged>. Если в обработчике текущая ячейка является ячейкой флажка, вызовите метод <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> и передайте значение <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit>.  
   
-## <a name="datagridviewimagecolumn"></a>DataGridViewImageColumn  
- <xref:System.Windows.Forms.DataGridViewImageColumn> Используется для отображения изображения. Столбцы изображений можно автоматически заполняется из источника данных, заполняется вручную для несвязанных столбцов или динамически заполнить в обработчике для <xref:System.Windows.Forms.DataGridView.CellFormatting> событий.  
+## <a name="datagridviewimagecolumn"></a>датагридвиевимажеколумн  
+ <xref:System.Windows.Forms.DataGridViewImageColumn> используется для вывода изображений. Столбцы изображений могут автоматически заполняться из источника данных, заполняться вручную для несвязанных столбцов или динамически заполняться в обработчике для события <xref:System.Windows.Forms.DataGridView.CellFormatting>.  
   
- Автоматическое заполнение столбцов изображений из источника данных работает с массивами байтов в различных форматов изображений, включая любые форматы, поддерживаемые <xref:System.Drawing.Image> класс и OLE графический формат, используемый в Microsoft® Access и образец базы данных "Борей".  
+ Автоматическое заполнение столбца Image из источника данных работает с массивами байтов в различных форматах изображений, включая все форматы, поддерживаемые классом <xref:System.Drawing.Image>, и формат OLE Picture, используемый в Microsoft® Access и образце базы данных Northwind.  
   
- Заполнение столбцов изображений вручную полезно, если вы хотите предоставить функциональность <xref:System.Windows.Forms.DataGridViewButtonColumn>, но с настроенными внешним видом. Можно обрабатывать <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> событий для реагирования на нажатия в пределах ячейки с изображением.  
+ Заполнение столбца Image вручную полезно, если требуется предоставить функциональные возможности <xref:System.Windows.Forms.DataGridViewButtonColumn>, но с пользовательским видом. Можно обработать событие <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>, чтобы реагировать на щелчки в ячейке изображения.  
   
- Заполнение ячеек столбца изображений с помощью обработчика <xref:System.Windows.Forms.DataGridView.CellFormatting> событие полезно, если вы хотите предоставлять образы для вычисляемых значений или значений в не являющихся изображениями. Например, имеется столбец «Риск» со строковыми значениями например `"high"`, `"middle"`, и `"low"` , будет отображаться в виде значков. Кроме того имеется столбец «Образ», содержащий расположения образов, которые должны загружаться вместо того чтобы двоичного содержимого изображений.  
+ Заполнение ячеек столбца Image в обработчике для события <xref:System.Windows.Forms.DataGridView.CellFormatting> полезно, если требуется предоставить изображения для вычисляемых значений или значений в форматах, отличных от изображений. Например, у вас может быть столбец "риск" со строковыми значениями, такими как `"high"`, `"middle"`и `"low"`, которые должны отображаться в виде значков. Кроме того, может существовать столбец "Image", содержащий расположения изображений, которые должны быть загружены, а не двоичное содержимое изображений.  
   
-## <a name="datagridviewbuttoncolumn"></a>DataGridViewButtonColumn  
- С помощью <xref:System.Windows.Forms.DataGridViewButtonColumn>, можно отобразить столбец ячеек, содержащих кнопки. Это полезно в том случае, если вы хотите предоставить простой способ для пользователей для выполнения действий над записями, таких как размещение заказа и отображение дочерних записей в отдельном окне.  
+## <a name="datagridviewbuttoncolumn"></a>датагридвиевбуттонколумн  
+ С помощью <xref:System.Windows.Forms.DataGridViewButtonColumn>можно отобразить столбец ячеек, содержащих кнопки. Это полезно, если необходимо предоставить пользователям простой способ выполнения действий с конкретными записями, например, размещение заказа или отображение дочерних записей в отдельном окне.  
   
- Кнопка столбцы не создаются автоматически при связывании <xref:System.Windows.Forms.DataGridView> элемента управления. Использование столбцов, необходимо создать их вручную и добавить их в коллекцию, возвращаемую <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> свойство.  
+ Столбцы кнопок не создаются автоматически при привязке данных к элементу управления <xref:System.Windows.Forms.DataGridView>. Чтобы использовать столбцы кнопки, необходимо создать их вручную и добавить их в коллекцию, возвращенную свойством <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>.  
   
- Может отвечать на щелчок пользователя в ячейках кнопки путем обработки <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> событий.  
+ Вы можете реагировать на нажатия пользователем в ячейках кнопки, обрабатывая событие <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>.  
   
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
- С помощью <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, можно отобразить столбец ячеек, содержащих поля с раскрывающимся списком. Это полезно для ввода данных в полях, которые может содержать только определенные значения, такие как столбец категории таблицы продуктов в базе данных Northwind.  
+ С помощью <xref:System.Windows.Forms.DataGridViewComboBoxColumn>можно отобразить столбец ячеек, содержащих раскрывающиеся списки. Это полезно для ввода данных в полях, которые могут содержать только определенные значения, например столбец Category таблицы Products в образце базы данных Northwind.  
   
- Можно заполнить стрелку раскрывающегося списка, используемого для всех ячеек так же, заполнению <xref:System.Windows.Forms.ComboBox> стрелку раскрывающегося списка, либо вручную с помощью коллекции, возвращаемой <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> свойство, или через привязку к источнику данных с помощью <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, и <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> свойства. Дополнительные сведения см. в разделе [элемент управления ComboBox](combobox-control-windows-forms.md).  
+ Раскрывающийся список, используемый для всех ячеек, можно заполнить тем же способом, что и <xref:System.Windows.Forms.ComboBox> раскрывающийся список, вручную через коллекцию, возвращенную свойством <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>, или путем привязки к источнику данных с помощью свойств <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>и <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>. Дополнительные сведения см. в разделе [элемент управления ComboBox](combobox-control-windows-forms.md).  
   
- Фактические значения ячеек можно привязать к источнику данных, который используется командой <xref:System.Windows.Forms.DataGridView> управления <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> свойство <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
+ Фактические значения ячеек можно привязать к источнику данных, используемому элементом управления <xref:System.Windows.Forms.DataGridView>, установив свойство <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
   
- Столбцы поле со списком не создаются автоматически при связывании <xref:System.Windows.Forms.DataGridView> элемента управления. Использование столбцов поле со списком, необходимо создать их вручную и добавить их в коллекцию, возвращаемую <xref:System.Windows.Forms.DataGridView.Columns%2A> свойство.  
+ Столбцы с полями со списками не создаются автоматически при привязке данных к элементу управления <xref:System.Windows.Forms.DataGridView>. Чтобы использовать столбцы поля со списком, необходимо создать их вручную и добавить их в коллекцию, возвращенную свойством <xref:System.Windows.Forms.DataGridView.Columns%2A>.  
   
-## <a name="datagridviewlinkcolumn"></a>DataGridViewLinkColumn  
- С помощью <xref:System.Windows.Forms.DataGridViewLinkColumn>, можно отобразить столбец ячеек, содержащих гиперссылки. Это полезно для значений URL-адрес в источнике данных или в качестве альтернативы, чтобы столбец кнопок для особого поведения, например открытия окна с дочерними записями.  
+## <a name="datagridviewlinkcolumn"></a>датагридвиевлинкколумн  
+ С помощью <xref:System.Windows.Forms.DataGridViewLinkColumn>можно отобразить столбец ячеек, содержащих гиперссылки. Это полезно для значений URL-адресов в источнике данных или в качестве альтернативы столбцу кнопки для специальных поведений, таких как открытие окна с дочерними записями.  
   
- Столбцы ссылок не создаются автоматически при связывании <xref:System.Windows.Forms.DataGridView> элемента управления. Использование столбцов ссылок, необходимо создать их вручную и добавить их в коллекцию, возвращаемую <xref:System.Windows.Forms.DataGridView.Columns%2A> свойство.  
+ Столбцы связей не создаются автоматически при привязке данных к элементу управления <xref:System.Windows.Forms.DataGridView>. Чтобы использовать ссылочные столбцы, необходимо создать их вручную и добавить их в коллекцию, возвращенную свойством <xref:System.Windows.Forms.DataGridView.Columns%2A>.  
   
- Может отвечать на щелчок мышью по ссылке путем обработки <xref:System.Windows.Forms.DataGridView.CellContentClick> событий. Это событие отличается от <xref:System.Windows.Forms.DataGridView.CellClick> и <xref:System.Windows.Forms.DataGridView.CellMouseClick> события, которые происходят, когда пользователь щелкает в любом месте ячейки.  
+ Вы можете ответить на щелчки по ссылкам, обрабатывая событие <xref:System.Windows.Forms.DataGridView.CellContentClick>. Это событие отличается от событий <xref:System.Windows.Forms.DataGridView.CellClick> и <xref:System.Windows.Forms.DataGridView.CellMouseClick>, происходящих, когда пользователь щелкает в любом месте ячейки.  
   
- <xref:System.Windows.Forms.DataGridViewLinkColumn> Класс предоставляет несколько свойств для изменения внешнего вида ссылок до, во время и после их щелкнули.  
+ Класс <xref:System.Windows.Forms.DataGridViewLinkColumn> предоставляет несколько свойств для изменения внешнего вида ссылок до, во время и после их нажатия.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
@@ -91,6 +91,6 @@ ms.locfileid: "61956251"
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
-- [Практическое руководство. Отображение изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView в Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [Настройка элементов управления DataGridView в Windows Forms](customizing-the-windows-forms-datagridview-control.md)

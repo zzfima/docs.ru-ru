@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-ms.openlocfilehash: a40e12655106cca01add065c2f95384b0eb1a286
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1ec54f4fe36aaf38d7c0ce0586733729bd2fddea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122811"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784468"
 ---
 # <a name="icordebugboxvalue-interface"></a>Интерфейс ICorDebugBoxValue
 
@@ -29,7 +29,7 @@ ms.locfileid: "73122811"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Возвращает указатель интерфейса на упакованный экземпляр "ICorDebugObjectValue".|  
+|[Метод GetObject](icordebugboxvalue-getobject-method.md)|Возвращает указатель интерфейса на упакованный экземпляр "ICorDebugObjectValue".|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -45,6 +45,6 @@ ms.locfileid: "73122811"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

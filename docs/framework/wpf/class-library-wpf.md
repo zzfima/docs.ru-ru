@@ -1,23 +1,23 @@
 ---
-title: Библиотека классов (WPF)
+title: Библиотека классов
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859712"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742291"
 ---
 # <a name="class-library-wpf"></a>Библиотека классов (WPF)
-Следующие ссылки указывают на пространства имен, содержащие [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API-интерфейсы.  
+Следующие ссылки относятся к пространствам имен, содержащим [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
@@ -123,8 +123,8 @@ ms.locfileid: "67859712"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a>Поддержка XAML в .NET Framework 4  
- Следующие пространства имен содержат типы из сборки System.Xaml. System.Xaml предоставляет поддержка common language XAML для платформ, например WPF, построенных на .NET Framework 4.  
+## <a name="xaml-support-in-net-4"></a>Поддержка XAML в .NET 4  
+ Следующие пространства имен содержат типы из сборки System. XAML. System. XAML предоставляет общую поддержку языка XAML для платформ, таких как WPF, построенных на .NET Framework 4.  
   
 - <xref:System.Windows.Markup> (общий)  
   

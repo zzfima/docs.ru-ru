@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-ms.openlocfilehash: aaa8eaa2c4eb927a817425611f71e51c9f3d37af
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b08a501f7d55fbb193afd8c297ca7725348dac76
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447577"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860934"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>Метод ICorProfilerThreadEnum::Skip
 Перемещает курсор перечислителя из текущей позиции, пропуская указанное число элементов.  
@@ -44,7 +44,7 @@ HRESULT Skip (    [in] ULONG celt
 |S_OK|элементы `celt` пропущены.|  
 |S_FALSE|Пропущено менее `celt` элементов, что означает, что больше нет элементов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Новая позиции курсора перечислителя — (Текущая позиции) + `celt`.  
   
 ## <a name="requirements"></a>Требования  
@@ -58,5 +58,5 @@ HRESULT Skip (    [in] ULONG celt
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Интерфейс ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md)
+- [Интерфейсы профилирования](profiling-interfaces.md)

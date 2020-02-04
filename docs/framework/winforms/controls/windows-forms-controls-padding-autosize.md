@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств "Padding", "Margins" и "AutoSize"
+title: Размещение элементов управления с заполнением, полями и свойством AutoSize
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -18,12 +18,12 @@ ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 76c880c208355b01d0fbaf46cf58091ad147846b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ca7942c04434592f2541252c47ac3dd17e03dbac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460608"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742374"
 ---
 # <a name="walkthrough-lay-out-controls-with-padding-margins-and-the-autosize-property"></a>Пошаговое руководство. размещение элементов управления с заполнением, полями и свойством AutoSize
 
@@ -39,7 +39,7 @@ ms.locfileid: "73460608"
 
 Свойство <xref:System.Windows.Forms.Control.AutoSize%2A> указывает элементу управления на автоматическое изменение размера в соответствии с его содержимым. Размер не будет меньше, чем значение исходного свойства <xref:System.Windows.Forms.Control.Size%2A>, и оно будет учитывать значение его свойства <xref:System.Windows.Forms.Control.Padding%2A>.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения этого пошагового руководства потребуется Visual Studio.
 
@@ -164,7 +164,7 @@ ms.locfileid: "73460608"
 
    <xref:System.Windows.Forms.Panel> элемент управления изменяется на новое расположение элемента управления <xref:System.Windows.Forms.Button>.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Существует множество других функций макета для упорядочения элементов управления в Windows Forms приложениях. Ниже приведены некоторые сочетания, которые можно использовать.
 
@@ -174,7 +174,7 @@ ms.locfileid: "73460608"
 
 - Поэкспериментируйте с закреплением дочерних элементов управления в элементе управления <xref:System.Windows.Forms.Panel>. Свойство <xref:System.Windows.Forms.Control.Padding%2A> является более общим реализацией свойства <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>, и вы можете удовлетворить, что это так, поместив дочерний элемент управления в элемент управления <xref:System.Windows.Forms.Panel> и установив для свойства <xref:System.Windows.Forms.Control.Dock%2A> дочернего элемента управления значение <xref:System.Windows.Forms.DockStyle.Fill>. Задайте для свойства <xref:System.Windows.Forms.Control.Padding%2A> элемента управления <xref:System.Windows.Forms.Panel> различные значения и обратите внимание на результат.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>

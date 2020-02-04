@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9594a7e-cb0c-4c48-accb-29f762aa0c21
 topic_type:
 - apiref
-ms.openlocfilehash: 52ad124638a1c1ec7d39fa41b9163f3ab50ffe70
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a430631948230d16e5d04c869625b4c670faaf02
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433067"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868646"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>Метод ICorProfilerInfo2::GetNotifiedExceptionClauseInfo
 Получает сведения о машинном адресе и кадре для предложения исключения (`catch`/`finally`/`filter`), которое будет выполняться или только что было запущено.  
@@ -34,10 +34,10 @@ HRESULT GetNotifiedExceptionClauseInfo(
   
 ## <a name="parameters"></a>Параметры  
  `pinfo`  
- заполняет Указатель на структуру [COR_PRF_EX_CLAUSE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md) , описывающую экземпляр предложения текущего исключения и связанный с ним кадр.  
+ заполняет Указатель на структуру [COR_PRF_EX_CLAUSE_INFO](cor-prf-ex-clause-info-structure.md) , описывающую экземпляр предложения текущего исключения и связанный с ним кадр.  
   
-## <a name="remarks"></a>Примечания  
- При получении уведомления об исключении `GetNotifiedExceptionClauseInfo` можно использовать для получения сведений о машинном адресе и кадре для предложения исключения (`catch`/`finally`/`filter`), которое должно быть выполнено (в профилировщике получен обратный вызов[ексцептионкатчерентер](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md) [или ICorProfilerCallback:](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md): [ексцептионсеарчфилтерентер](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md) ) или только что выполнялось ([ICorProfilerCallback:: ексцептионкатчерлеаве ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md), Файловый обратный вызов [ICorProfilerCallback:: Exceptionunwindfinallyleave-](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)или [ICorProfilerCallback:: ексцептионсеарчфилтерлеаве](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md) получен профилировщиком).  
+## <a name="remarks"></a>Заметки  
+ При получении уведомления об исключении `GetNotifiedExceptionClauseInfo` можно использовать для получения сведений о машинном адресе и кадре для предложения исключения (`catch`/`finally`/`filter`), которое должно быть выполнено (в профилировщике получен обратный вызов[ексцептионкатчерентер](icorprofilercallback-exceptioncatcherenter-method.md) [или ICorProfilerCallback:](icorprofilercallback-exceptionunwindfinallyenter-method.md): [ексцептионсеарчфилтерентер](icorprofilercallback-exceptionsearchfilterenter-method.md) ) или только что выполнялось ([ICorProfilerCallback:: ексцептионкатчерлеаве ](icorprofilercallback-exceptioncatcherleave-method.md), Файловый обратный вызов [ICorProfilerCallback:: Exceptionunwindfinallyleave-](icorprofilercallback-exceptionunwindfinallyleave-method.md)или [ICorProfilerCallback:: ексцептионсеарчфилтерлеаве](icorprofilercallback-exceptionsearchfilterleave-method.md) получен профилировщиком).  
   
  Этот вызов можно выполнить в любое время после одного из обратных вызовов при вводе выше, пока не будет получен соответствующий обратный вызов метода Leave или не будет создано вложенное исключение в текущем предложении, в этом случае для этого предложения нет уведомления о выходе. Обратите внимание, что выданное исключение не может покидать предложение `filter` Exception, поэтому в этом случае всегда отображается уведомление о выходе.  
   
@@ -50,7 +50,7 @@ HRESULT GetNotifiedExceptionClauseInfo(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Интерфейс ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](icorprofilerinfo2-interface.md)

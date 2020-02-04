@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 226f24ad8f1636101b283c3cb6662905cbf7eebe
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 8520f5fc0a6ff7e71f40cd7fbb1caf68aab63197
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938209"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868516"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Метод ICorProfilerInfo3::RequestProfilerDetach
 Дает среде выполнения команду на отключение профилировщика.  
@@ -42,11 +42,11 @@ HRESULT RequestProfilerDetach(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Запрос отсоединения является допустимым, и процедура отсоединения теперь продолжается в другом потоке. После полного выполнения отсоединения выдается событие `ProfilerDetachSucceeded`.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|Профилировщику не удалось выполнить попытку [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) для интерфейса [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) , который он должен реализовать для поддержки операции отсоединения. Попытка отсоединения не выполнялась.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|Профилировщику не удалось выполнить попытку [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) для интерфейса [ICorProfilerCallback3](icorprofilercallback3-interface.md) , который он должен реализовать для поддержки операции отсоединения. Попытка отсоединения не выполнялась.|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|Отсоединение невозможно, так как профилировщик установил неизменяемые флаги во время запуска. Попытка отсоединения не выполнялась; профилировщик по-прежнему полностью присоединен.|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Отсоединение невозможно, так как профилировщик использовал инструментированный код языка MSIL или вставил `enter`/`leave`ных обработчиков. Попытка отсоединения не выполнялась; профилировщик по-прежнему полностью присоединен.<br /><br /> **Примечание** . Инструментированный MSIL — это код, предоставляемый профилировщиком с помощью метода [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) .|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|Среда выполнения еще не была инициализирована в управляемом приложении. (То есть среда выполнения не была полностью загружена.) Этот код ошибки может быть возвращен, когда запрос отсоединения запрашивается в методе [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) обратного вызова профилировщика.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` был вызван в неподдерживаемое время. Это происходит, если метод вызывается в управляемом потоке, но не в методе [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) или в методе [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) , который не допускает сборки мусора. Дополнительные сведения см. в разделе [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Отсоединение невозможно, так как профилировщик использовал инструментированный код языка MSIL или вставил `enter`/`leave`ных обработчиков. Попытка отсоединения не выполнялась; профилировщик по-прежнему полностью присоединен.<br /><br /> **Примечание** . Инструментированный MSIL — это код, предоставляемый профилировщиком с помощью метода [SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) .|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|Среда выполнения еще не была инициализирована в управляемом приложении. (То есть среда выполнения не была полностью загружена.) Этот код ошибки может быть возвращен, когда запрос отсоединения запрашивается в методе [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) обратного вызова профилировщика.|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` был вызван в неподдерживаемое время. Это происходит, если метод вызывается в управляемом потоке, но не в методе [ICorProfilerCallback](icorprofilercallback-interface.md) или в методе [ICorProfilerCallback](icorprofilercallback-interface.md) , который не допускает сборки мусора. Дополнительные сведения см. в разделе [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Заметки  
  При выполнении процедуры отсоединения поток отсоединения (поток, созданный специально для отсоединения профилировщика) периодически проверяет, все ли потоки вышли из кода профилировщика. Профилировщик должен предоставить оценку, как долго это должно происходить, с помощью параметра `dwExpectedCompletionMilliseconds`. В качестве этого значения рекомендуется использовать обычное время, которое профилировщик проводит внутри любого конкретного метода `ICorProfilerCallback*`; это значение не должно быть меньше половины максимального времени, которое профилировщик предполагает потратить.  
@@ -66,6 +66,6 @@ HRESULT RequestProfilerDetach(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Интерфейс ICorProfilerInfo3](icorprofilerinfo3-interface.md)
+- [Интерфейсы профилирования](profiling-interfaces.md)
+- [Профилирование](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127493"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788624"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Метод ICorDebugHeapValue3::GetThreadOwningMonitorLock
 Возвращает управляемый поток, которому принадлежит блокировка монитора для этого объекта.  
@@ -54,11 +54,11 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>Заметки  
  Если управляемый поток владеет блокировкой монитора для этого объекта:  
   
-- Метод возвращает значение S_OK.  
+- Метод возвращает S_OK.  
   
 - Объект потока действителен до тех пор, пока поток не завершит работу.  
   
- Если ни один из управляемых потоков не владеет блокировкой монитора для этого объекта, `ppThread` и `pAcquisitionCount` не изменяются, а метод возвращает значение S_FALSE.  
+ Если ни один из управляемых потоков не владеет блокировкой монитора для этого объекта, `ppThread` и `pAcquisitionCount` не изменяются, а метод возвращает S_FALSE.  
   
  Если `ppThread` или `pAcquisitionCount` не является допустимым указателем, результат не определен.  
   
@@ -73,7 +73,7 @@ HRESULT GetThreadOwningMonitorLock (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Отладка](index.md)

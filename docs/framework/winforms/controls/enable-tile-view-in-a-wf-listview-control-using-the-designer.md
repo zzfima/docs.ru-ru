@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Включение вида мозаики в элементе управления ListView формы Windows Forms с помощью конструктора
+title: Включение мозаичного представления в элементе управления ListView с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 4f51d3a596bc3358942cdfd654b3e4515d96cd07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a0429efaab14995ab1e3f3b0dfd91db61de72fbf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960096"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745806"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Практическое руководство. Включение вида мозаики в элементе управления ListView формы Windows Forms с помощью конструктора
 Функция мозаичного представления элемента управления <xref:System.Windows.Forms.ListView> позволяет обеспечить визуальный баланс между графическими и текстовыми сведениями. Текстовые данные, отображаемые для мозаичного представления элемента совпадают с данными о столбцах, определенных для подробного представления. Мозаичное представление функции в сочетании с функциями группирования или вставки меток в элементе управления <xref:System.Windows.Forms.ListView>.
@@ -30,7 +30,7 @@ ms.locfileid: "74960096"
 
 2. В окне **Свойства** выберите свойство <xref:System.Windows.Forms.ListView.View%2A> и щелкните **плитка**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)

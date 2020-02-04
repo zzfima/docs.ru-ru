@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора
+title: Форматирование элемента управления DataGrid с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 548acac0fc7724490bfe89927ec0662b3488c230
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "69666161"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736793"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора
 
@@ -41,11 +41,11 @@ ms.locfileid: "69666161"
 
 2. В окне **Свойства** задайте следующие свойства, если это уместно.
 
-    |свойство;|Описание|
+    |Свойство|Description|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Свойство `BackColor` определяет цвет строк сетки с четными номерами. Если для свойства <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> задан другой цвет, для каждой другой строки задается этот новый цвет (строки 1, 3, 5 и т. д.).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Цвет фона строк сетки с четными номерами (строки 0, 2, 4, 6 и т. д.).|
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|В то время как свойства <xref:System.Windows.Forms.DataGrid.BackColor%2A> и <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> определяют цвет строк в сетке, свойство <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> определяет цвет области за пределами области строк, которая видна только при прокрутке сетки вниз, или если только несколько строк содержатся в сетки.|
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|В то время как свойства <xref:System.Windows.Forms.DataGrid.BackColor%2A> и <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> определяют цвет строк в сетке, свойство <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> определяет цвет области за пределами области строк, который отображается только при прокрутке сетки вниз, или если в сетке содержатся только несколько строк.|
     |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Стиль границы сетки, одно из значений перечисления <xref:System.Windows.Forms.BorderStyle>.|
     |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Цвет фона заголовка окна сетки, который появляется непосредственно над сеткой.|
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Шрифт заголовка в верхней части сетки.|
@@ -95,7 +95,7 @@ ms.locfileid: "69666161"
     > [!NOTE]
     > Дополнительные сведения о строках форматирования см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>

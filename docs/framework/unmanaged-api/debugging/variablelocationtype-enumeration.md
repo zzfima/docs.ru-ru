@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1aa59ee559abff8006f0ac63a812e4315aa48154
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139118"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790312"
 ---
 # <a name="variablelocationtype-enumeration"></a>Перечисление VariableLocationType
 Указывает тип собственного расположения переменной.  
@@ -35,7 +35,7 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -44,7 +44,7 @@ typedef enum VariableLocationType
 |`VLT_INVALID`|Переменная не хранится в регистре или расположении в памяти относительно регистра.|  
   
 ## <a name="remarks"></a>Заметки  
- Член перечисления `VariableLocationType` возвращается методом [ICorDebugVariableHome:: жетлокатионтипе](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) .  
+ Член перечисления `VariableLocationType` возвращается методом [ICorDebugVariableHome:: жетлокатионтипе](icordebugvariablehome-getlocationtype-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -55,6 +55,6 @@ typedef enum VariableLocationType
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Перечисления отладки](debugging-enumerations.md)

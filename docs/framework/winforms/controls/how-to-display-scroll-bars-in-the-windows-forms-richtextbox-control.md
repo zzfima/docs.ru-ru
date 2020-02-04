@@ -1,45 +1,45 @@
 ---
-title: Практическое руководство. Отображение полос прокрутки в элементе управления RichTextBox в Windows Forms
+title: Отображение полос прокрутки в элементе управления RichTextBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2185b572ef20765043d3df3dbfd8bf5b21cfac28
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650483"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745561"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение полос прокрутки в элементе управления RichTextBox в Windows Forms
-По умолчанию в Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления отображает горизонтальные и вертикальные полосы прокрутки при необходимости. Существует семь возможных значений для <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления, которые описаны в следующей таблице.  
+По умолчанию элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> отображает горизонтальные и вертикальные полосы прокрутки по мере необходимости. Существует семь возможных значений свойства <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> элемента управления <xref:System.Windows.Forms.RichTextBox>, которые описаны в таблице ниже.  
   
-### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Для отображения полос прокрутки в элементе управления RichTextBox  
+### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Отображение полос прокрутки в элементе управления RichTextBox  
   
-1. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.Multiline%2A> значение `true`. Тип не полосы прокрутки, включая горизонтальной, отобразится в том случае, если <xref:System.Windows.Forms.RichTextBox.Multiline%2A> свойству `false`.  
+1. Установите свойство <xref:System.Windows.Forms.RichTextBox.Multiline%2A> в значение `true`. Без типа полосы прокрутки, включая горизонтальное, будет отображаться, если свойство <xref:System.Windows.Forms.RichTextBox.Multiline%2A> имеет значение `false`.  
   
-2. Задайте <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> свойства соответствующее значение из <xref:System.Windows.Forms.RichTextBoxScrollBars> перечисления.  
+2. Задайте для свойства <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> соответствующее значение перечисления <xref:System.Windows.Forms.RichTextBoxScrollBars>.  
   
-    |Значение|Описание|  
+    |Значение|Description|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (по умолчанию)|Отображает полосы прокрутки по горизонтали или вертикали, так и в, только в том случае, если длина текста превышает ширину или длина элемента управления.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Не отображаются ни полосы прокрутки.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Отображает горизонтальную полосу прокрутки, только если длина текста превышает ширину элемента управления. (Это произошло, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> свойству должно быть присвоено `false`.)|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Отображает вертикальную полосу только в том случае, если текст выходит высоту элемента управления прокрутки.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|Отображение горизонтальной прокрутки полосы при <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> свойству `false`. Полоса прокрутки отображается серым цветом, если текст не превышает ширину элемента управления.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Вертикальная полоса прокрутки отображается всегда. Полоса прокрутки отображается серым цветом, если текст не превышает длину элемента управления.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Вертикальная полоса прокрутки отображается всегда. Отображение горизонтальной прокрутки полосы при <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> свойству `false`. Полосы прокрутки отображаются затененный, когда текст не превышает пределы элемента управления.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (по умолчанию)|Отображает горизонтальную или вертикальную полосу прокрутки или оба значения, только если текст превышает ширину или длину элемента управления.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Никогда не отображает ни одного типа полосы прокрутки.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Отображает горизонтальную полосу прокрутки только в том случае, если текст превышает ширину элемента управления. (Чтобы это произошло, свойству <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> должно быть присвоено значение `false`.)|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Отображает вертикальную полосу прокрутки, только если текст превышает высоту элемента управления.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|Отображает горизонтальную полосу прокрутки, если свойство <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> имеет значение `false`. Полоса прокрутки отображается серым цветом, если текст не превышает ширину элемента управления.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Всегда отображает вертикальную полосу прокрутки. Полоса прокрутки отображается серым цветом, если текст не превышает длину элемента управления.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Всегда отображает вертикальную полосу прокрутки. Отображает горизонтальную полосу прокрутки, если свойство <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> имеет значение `false`. Полосы прокрутки отображаются серым цветом, если текст не превышает ширину или длину элемента управления.|  
   
 3. Присвойте свойству <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> соответствующее значение.  
   
-    |Значение|Описание|  
+    |Значение|Description|  
     |-----------|-----------------|  
-    |`false`|Текст в элементе управления не изменяется автоматически в соответствии с шириной элемента управления, поэтому он будет прокручивать экран вправо до достижения конца строки. Это значение используется в том случае, если вы выбрали горизонтальных полос прокрутки или оба, выше.|  
-    |`true` (по умолчанию)|Текст в элементе управления автоматически изменяется в соответствии с шириной элемента управления. Горизонтальная полоса прокрутки не появится. Это значение используется в том случае, если вы выбрали вертикальных полос прокрутки или нет "," выше, для отображения один или несколько абзацев.|  
+    |`false`|Текст в элементе управления не корректируется автоматически в соответствии с шириной элемента управления, поэтому он прокручивается вправо, пока не будет достигнут разрыв строки. Используйте это значение, если выбраны горизонтальные полосы прокрутки или оба.|  
+    |`true` (по умолчанию)|Текст в элементе управления автоматически настраивается в соответствии с шириной элемента управления. Горизонтальная полоса прокрутки не будет отображаться. Используйте это значение, если для отображения одного или нескольких абзацев выбраны вертикальные полосы прокрутки или нет.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>

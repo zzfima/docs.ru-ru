@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7212d9f4-989b-44e3-b8d4-ffc35922f6a0
 topic_type:
 - apiref
-ms.openlocfilehash: 1216629fc7e1c3e720d5f296b9293b3c4b7f8721
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab6551ba70ed4cd154b166eeb92138b6550d2cb2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127896"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792968"
 ---
 # <a name="icordebugmodule2getjitcompilerflags-method"></a>Метод ICorDebugModule2::GetJITCompilerFlags
 Возвращает флаги, управляющие JIT-компиляцией этого ICorDebugModule2.  
@@ -35,7 +35,7 @@ HRESULT GetJITCompilerFlags (
   
 ## <a name="parameters"></a>Параметры  
  `pdwFlags`  
- заполняет Указатель на значение перечисления [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) , которое управляет JIT-компиляцией.  
+ заполняет Указатель на значение перечисления [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) , которое управляет JIT-компиляцией.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

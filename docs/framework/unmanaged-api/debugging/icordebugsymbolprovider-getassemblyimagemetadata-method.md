@@ -1,15 +1,15 @@
 ---
-title: 'Метод метод icordebugsymbolprovider:: GetAssemblyImageMetadata'
+title: Метод ICorDebugSymbolProvider::GetAssemblyImageMetadata
 ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
-ms.openlocfilehash: fb08df3b594e0c34dfe4ca791983b0c111239b23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3ee80c18d3091406bf0bbd5b22c5f6021888906d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138904"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791656"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>Метод метод icordebugsymbolprovider:: GetAssemblyImageMetadata
+# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>Метод ICorDebugSymbolProvider::GetAssemblyImageMetadata
 Возвращает метаданные из объединенной сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -22,7 +22,7 @@ HRESULT GetAssemblyImageMetadata(
   
 ## <a name="parameters"></a>Параметры  
  `ppMemoryBuffer`  
- заполняет Указатель на адрес объекта [икордебугмеморибуффер](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) , который содержит сведения о размере и адресе метаданных объединенной сборки.  
+ заполняет Указатель на адрес объекта [икордебугмеморибуффер](icordebugmemorybuffer-interface.md) , который содержит сведения о размере и адресе метаданных объединенной сборки.  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -38,7 +38,7 @@ HRESULT GetAssemblyImageMetadata(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

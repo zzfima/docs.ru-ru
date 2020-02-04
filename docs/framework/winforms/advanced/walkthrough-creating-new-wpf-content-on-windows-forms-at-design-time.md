@@ -1,5 +1,6 @@
 ---
-title: Пошаговое руководство. Создание нового содержимого WPF для формы Windows Forms во время разработки
+title: Создание нового содержимого WPF на Windows Forms
+titleSuffix: ''
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,18 +12,18 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 395543a3141af66038cabef9a3c9fed40a36b47e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 69a0598b05d1b2bff84b203317d6d5a166ce109d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460652"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746386"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Создание нового содержимого WPF на Windows Forms во время разработки
 
 В этой статье показано, как создать элемент управления Windows Presentation Foundation (WPF) для использования в приложениях на основе Windows Forms.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -65,7 +66,7 @@ ms.locfileid: "73460652"
    > [!NOTE]
    > Обычно размещается более сложное содержимое WPF. Элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> используется здесь в целях наглядности.
 
-6. Выполните построение проекта.
+6. Создайте проект.
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Добавление элемента управления WPF в форму Windows Forms
 
@@ -91,7 +92,7 @@ ms.locfileid: "73460652"
 
 5. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Windows Forms и WPF — это разные технологии, но они предназначены для тесного взаимодействия. Чтобы обеспечить расширенный внешний вид и поведение приложений, попробуйте выполнить следующие действия.
 
@@ -101,7 +102,7 @@ Windows Forms и WPF — это разные технологии, но они 
 
 - Изменение стиля оформления содержимого WPF. Дополнительные сведения см. в разделе [Пошаговое руководство. стилизация содержимого WPF](walkthrough-styling-wpf-content.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

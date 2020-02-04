@@ -2,12 +2,12 @@
 title: Учебник. Создание решения .NET Core в macOS с помощью Visual Studio Code
 description: В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core в Visual Studio Code.
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715304"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741541"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Учебник. Создание решения .NET Core в macOS с помощью Visual Studio Code
 
@@ -28,7 +28,7 @@ ms.locfileid: "75715304"
 
 В этом руководстве вы создадите три проекта: проект библиотеки, тесты для этого проекта библиотеки и консольное приложение, которое использует библиотеку. [Просмотреть и скачать исходный код](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) для этой статьи можно в репозитории dotnet/samples на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Запустите Visual Studio Code. Нажмите клавишу <kbd>CTRL</kbd>+<kbd>\`</kbd> (символ обратной кавычки или обратного апострофа) или выберите **Вид > Терминал**, чтобы открыть встроенный терминал в Visual Studio Code. Если вы предпочитаете работать не в среде Visual Studio Code, можете открыть внешнюю оболочку в Explorer, выбрав пункт меню проводника **Открыть в командной строке** (в Mac и Linux — **Открыть в терминале**).
+Запустите Visual Studio Code. Нажмите клавиши <kbd>CTRL</kbd><kbd>\`</kbd> (символ обратной кавычки или обратного апострофа) или выберите **Вид** > **Терминал**, чтобы открыть встроенный терминал в Visual Studio Code. Если вы предпочитаете работать не в среде Visual Studio Code, можете открыть внешнюю оболочку в Explorer, выбрав в проводнике команду **Открыть в командной строке** (в macOS и Linux — **Открыть в терминале**).
 
 Для начала нужно создать файл решения, который выступает в качестве контейнера для одного или нескольких проектов .NET Core. В окне терминала выполните команду [`dotnet new`](../tools/dotnet-new.md), чтобы создать новое решение *golden.sln* в новой папке с именем *golden*:
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 Установите точку останова в инструкции `WriteLine` метода `Main`. Для этого нажмите клавишу <kbd>Fn</kbd>+<kbd>F9</kbd>, установив курсор в строку `WriteLine`, или щелкнув в левом поле строки, в которой вы хотите установить точку останова. В поле рядом со строкой кода появится красный кружок. При достижении точки останова выполнение кода приостанавливается *перед* той строкой, в которой расположена точка останова.
 
-Откройте вкладку отладчика, щелкнув значок "Отладка" на панели инструментов Visual Studio Code и выбрав **Вид > Отладка** в меню или нажав клавиши <kbd>Command</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>:
+Откройте вкладку отладчика, щелкнув значок "Отладка" на панели инструментов Visual Studio Code и выбрав **Вид** > **Отладка** в меню или нажав клавиши <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd>.
 
 ![Отладчик Visual Studio Code](./media/using-on-macos/visual-studio-code-debugger.png)
 

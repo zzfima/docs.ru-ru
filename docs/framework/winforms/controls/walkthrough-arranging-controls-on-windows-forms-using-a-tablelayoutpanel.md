@@ -1,17 +1,17 @@
 ---
-title: Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel
+title: Упорядочение элементов управления с помощью TableLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7b7380690d8668f46b98272e1d42640f23679b19
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 803a56f6416cf3b718890e96cf9f36ae6c4ee471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799114"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740316"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel
 
@@ -99,11 +99,11 @@ ms.locfileid: "72799114"
 
 2. В окнах **свойств** откройте коллекцию <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>, нажав кнопку с многоточием (![кнопку с многоточием (...) в окно свойств кнопки Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с записью **Columns** .
 
-3. Выберите первый столбец и измените значение его свойства <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> на <xref:System.Windows.Forms.SizeType.AutoSize>. Нажмите кнопку **ОК** , чтобы принять изменения. Обратите внимание, что ширина первого столбца уменьшается в соответствии с элементом управления <xref:System.Windows.Forms.Button>. Также обратите внимание, что ширина столбца не может изменяться.
+3. Выберите первый столбец и измените значение его свойства <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> на <xref:System.Windows.Forms.SizeType.AutoSize>. Чтобы принять изменение, нажмите кнопку **ОК**. Обратите внимание, что ширина первого столбца уменьшается в соответствии с элементом управления <xref:System.Windows.Forms.Button>. Также обратите внимание, что ширина столбца не может изменяться.
 
-4. В окне **Свойства** откройте коллекцию <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> и выберите первый столбец. Измените значение его свойства <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> на <xref:System.Windows.Forms.SizeType.Percent>. Нажмите кнопку **ОК** , чтобы принять изменения. Измените ширину элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до большей ширины и обратите внимание, что ширина первого столбца расширяется. Измените ширину элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до меньшей ширины и обратите внимание, что кнопки в первом столбце имеют размер в соответствии с ячейкой. Также обратите внимание, что размер столбца можно изменять.
+4. В окне **Свойства** откройте коллекцию <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> и выберите первый столбец. Измените значение его свойства <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> на <xref:System.Windows.Forms.SizeType.Percent>. Чтобы принять изменение, нажмите кнопку **ОК**. Измените ширину элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до большей ширины и обратите внимание, что ширина первого столбца расширяется. Измените ширину элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до меньшей ширины и обратите внимание, что кнопки в первом столбце имеют размер в соответствии с ячейкой. Также обратите внимание, что размер столбца можно изменять.
 
-5. В окне **Свойства** откройте коллекцию <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> и выберите все перечисленные столбцы. Задайте для каждого свойства <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> значение <xref:System.Windows.Forms.SizeType.Percent>. Нажмите кнопку **ОК** , чтобы принять изменения. Повторите операцию с коллекцией <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>.
+5. В окне **Свойства** откройте коллекцию <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> и выберите все перечисленные столбцы. Задайте для каждого свойства <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> значение <xref:System.Windows.Forms.SizeType.Percent>. Чтобы принять изменение, нажмите кнопку **ОК**. Повторите операцию с коллекцией <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>.
 
 6. Извлеките один из угловых маркеров изменения размера и измените ширину и высоту элемента управления <xref:System.Windows.Forms.TableLayoutPanel>. Обратите внимание, что размер строк и столбцов изменяется по мере изменения размера элемента управления <xref:System.Windows.Forms.TableLayoutPanel>. Также обратите внимание, что размер строк и столбцов можно изменять с помощью маркеров горизонтального и вертикального размера.
 
@@ -175,9 +175,9 @@ ms.locfileid: "72799114"
 
 - Перетащите один из <xref:System.Windows.Forms.Button> элементов управления из занятой ячейки и поместите в другую занятую ячейку. Обратите внимание, что два элемента управления перемещаются из одной ячейки в другую.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Next Steps
 
-Используя сочетание панелей макета и элементов управления, можно создавать сложные макеты. Рекомендуется также дополнительно исследовать следующие моменты.
+Используя сочетание панелей макета и элементов управления, можно создавать сложные макеты. Для лучшего изучения можно предложить следующее:
 
 - Попробуйте изменить размер одного из элементов управления <xref:System.Windows.Forms.Button> до большего размера и обратите внимание на изменение макета.
 
@@ -187,7 +187,7 @@ ms.locfileid: "72799114"
 
 - Закрепите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> в родительской форме. Измените размер этой формы и обратите внимание, как это отражается на макете.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>

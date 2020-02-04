@@ -2,27 +2,27 @@
 title: Основные понятия безопасности
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: d23ef86c2ccf315300a9290c3055388469df2e0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8da822c6a4d55ee916bc1e0243bc8b2f9a5742fb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990903"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730832"
 ---
 # <a name="security-concepts"></a>Основные понятия безопасности
-В этом разделе содержится краткое описание понятий, связанных с безопасностью Windows Communication Foundation (WCF).  
+В этом разделе кратко описаны понятия, связанные с безопасностью Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Основные понятия безопасности, используемые в WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Высокоуровневый обзор принципов, используемых для реализации механизмов безопасности.  
   
  [Защита распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- Обзор как WCF обеспечивает безопасность в топографии распределенных приложений.  
+ Общие сведения о том, как WCF обеспечивает безопасность распределенных приложений топографии.  
   
  [Терминология в сфере безопасности](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- Глоссарий терминов, используемых при обсуждении вопросов безопасности WCF.  
+ Глоссарий терминов, используемых при обсуждении безопасности WCF.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -33,11 +33,11 @@ ms.locfileid: "61990903"
   
  <xref:System.Security>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

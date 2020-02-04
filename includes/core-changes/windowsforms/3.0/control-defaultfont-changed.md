@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: 843007ac6467584fbe6350b6ea19ef67609d73e2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643847"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936997"
 ---
-### <a name="controldefaultfont-changed-to-segoe-ui-9pt"></a>Замена `Control.DefaultFont` на `Segoe UI 9pt`
+### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Шрифт элемента управления по умолчанию изменен на Segoe UI 9 пт
 
 #### <a name="change-description"></a>Описание изменений
 
-В .NET Framework свойству <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> присвоено значение `Microsoft Sans Serif 8pt`. На следующем рисунке показано окно, в котором используется шрифт по умолчанию.
+В .NET Framework свойству <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> присвоено значение `Microsoft Sans Serif 8 pt`. На следующем рисунке показано окно, в котором используется шрифт по умолчанию.
 
 ![Шрифт по умолчанию для элемента управления в .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-В .NET Core начиная с .NET Core 3.0 для него задано значение `Segoe UI 9pt` (тот же шрифт, что и для <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). В результате этого изменения размер форм и элементов управления будет увеличен на 27 % с учетом увеличенного размера нового шрифта по умолчанию. Например:
+Начиная с .NET Core 3.0 шрифтом по умолчанию является `Segoe UI 9 pt` (тот же шрифт, что и <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). В результате этого изменения размер форм и элементов управления увеличен на 27 % с учетом увеличенного размера нового шрифта по умолчанию. Пример:
 
 ![Шрифт по умолчанию для элемента управления в .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
-Это изменение было внесено в соответствии с [рекомендациями по пользовательскому интерфейсу Windows](https://docs.microsoft.com/windows/win32/uxguide/vis-fonts#fonts-and-colors).
+Это изменение было внесено в соответствии с [рекомендациями по пользовательскому интерфейсу Windows](/windows/win32/uxguide/vis-fonts#fonts-and-colors).
 
 #### <a name="version-introduced"></a>Представленная версия
 
 3.0
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Так как размер форм и элементов управления изменился, убедитесь, что приложение отображается правильно.
 
-Чтобы оставить исходный шрифт, задайте для формы шрифт по умолчанию: `Microsoft Sans Serif 8pt`. Например:
+Чтобы оставить исходный шрифт, задайте для формы шрифт по умолчанию: `Microsoft Sans Serif 8 pt`. Пример:
 
 ```csharp
 public MyForm()

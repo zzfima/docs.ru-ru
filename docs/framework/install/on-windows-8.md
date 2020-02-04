@@ -3,12 +3,12 @@ title: Установка платформы .NET Framework в Windows 8
 ms.custom: updateeachrelease
 description: Сведения об установке платформы .NET Framework в Windows 8
 ms.date: 04/18/2019
-ms.openlocfilehash: 0d9afb30088256b6c5c1fd8c0b2c99e3a9760b89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716729"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966001"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Установка .NET Framework в Windows 8 и Windows Server 2012
 
@@ -29,7 +29,7 @@ ms.locfileid: "75716729"
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130) является последней поддерживаемой версией платформы .NET Framework в Windows 8.
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) является последней поддерживаемой версией платформы .NET Framework в Windows 8.
 
 Платформа .NET Framework 4.6 поддерживает приложения, созданные для платформы .NET Framework версий с 4.0 по 4.6.
 

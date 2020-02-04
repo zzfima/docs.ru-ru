@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: 3a7267548a957d403cfe02aa3d800a410c14b82a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 188ff8feabd704d828256a09aca20f9db2227f2c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103419"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790499"
 ---
 # <a name="icorpublishprocessenum-interface"></a>Интерфейс ICorPublishProcessEnum
-Подкласс интерфейса [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) , предоставляющий методы для прохода по коллекции объектов [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) .  
+Подкласс интерфейса [ICorPublishEnum](icorpublishenum-interface.md) , предоставляющий методы для прохода по коллекции объектов [ICorPublishProcess](icorpublishprocess-interface.md) .  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|Возвращает указанное число экземпляров `ICorPublishProcess` из коллекции, начиная с текущей позиции.|  
+|[Метод Next](icorpublishprocessenum-next-method.md)|Возвращает указанное число экземпляров `ICorPublishProcess` из коллекции, начиная с текущей позиции.|  
   
 ## <a name="remarks"></a>Заметки  
- Интерфейс `ICorPublishProcessEnum` реализует методы абстрактного интерфейса [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md).  
+ Интерфейс `ICorPublishProcessEnum` реализует методы абстрактного интерфейса [ICorPublishEnum](icorpublishenum-interface.md).  
   
- Экземпляр `ICorPublishProcessEnum` создается методом [ICorPublish:: EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md) . Обход коллекции объектов `ICorPublishProcess` основан на условиях фильтра, заданных во время создания `ICorPublishProcessEnum` экземпляра.  
+ Экземпляр `ICorPublishProcessEnum` создается методом [ICorPublish:: EnumProcesses](icorpublish-enumprocesses-method.md) . Обход коллекции объектов `ICorPublishProcess` основан на условиях фильтра, заданных во время создания `ICorPublishProcessEnum` экземпляра.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "73103419"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Кокласс CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Интерфейсы отладки](debugging-interfaces.md)
+- [Кокласс CorpubPublish](corpubpublish-coclass.md)

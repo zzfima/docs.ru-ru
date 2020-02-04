@@ -12,12 +12,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac9a4e4b54b302afeae4ede1dd574c15ded3ff12
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131097"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788603"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>Метод ICorDebugILCode::GetEHClauses
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -35,13 +35,13 @@ HRESULT GetEHClauses(
   
 ## <a name="parameters"></a>Параметры  
  `cClauses`  
- [в] Емкость хранилища массива `clauses`. Дополнительные сведения см. в разделе "Примечания".  
+ [в] Емкость хранилища массива `clauses`. Дополнительные сведения см. в разделе «Примечания».  
   
  `pcClauses`  
  [из] Количество предложений, информация о которых записывается в массив `clauses`.  
   
  предложения  
- заполняет Массив объектов [кордебужехклаусе](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) , содержащих сведения о предложениях обработки исключений, определенных для этого IL.  
+ заполняет Массив объектов [кордебужехклаусе](cordebugehclause-structure.md) , содержащих сведения о предложениях обработки исключений, определенных для этого IL.  
   
 ## <a name="remarks"></a>Заметки  
  Если `cClauses` имеет значение 0, а `pcClauses` не равно**null**, `pcClauses` задается число доступных предложений обработки исключений. Если значение `cClauses` не равно 0, оно обозначает емкость хранилища массива `clauses`. Когда метод возвращает не пустое значение, `clauses` содержит максимум элементов `cClauses`, а значению `pcClauses` присваивается количество предложений, записанных в массив `clauses` на данный момент.  
@@ -55,8 +55,8 @@ HRESULT GetEHClauses(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [Структура CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugILCode](icordebugilcode-interface.md)
+- [Структура CorDebugEHClause](cordebugehclause-structure.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

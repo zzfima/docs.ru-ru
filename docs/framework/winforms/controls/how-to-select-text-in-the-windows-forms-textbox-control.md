@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms
+title: Выбор текста в элементе управления TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a32e40f14ddae6f8ddcaa6d62337329df6fde26
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013300"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745318"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms
-Выделите текст программными средствами в Windows Forms <xref:System.Windows.Forms.TextBox> элемента управления. Например создав функцию, которая ищет текст для определенной строки, можно выбрать текст, который визуально уведомления позицию найденной строки.  
+Текст можно выбрать программным способом в элементе управления Windows Forms <xref:System.Windows.Forms.TextBox>. Например, при создании функции, выполняющей поиск определенной строки в тексте, можно выбрать текст, чтобы визуально предупредить читателя о положении найденной строки.  
   
-### <a name="to-select-text-programmatically"></a>Выделение текста программными средствами  
+### <a name="to-select-text-programmatically"></a>Выбор текста программным способом  
   
-1. Задайте <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> свойство в начале текста, который вы хотите выбрать.  
+1. Задайте в качестве значения свойства <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> начало текста, который необходимо выбрать.  
   
-     <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Свойство является число, указывающее точку вставки в текстовой строке, причем 0 крайней левой позиции. Если <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> свойству присвоено значение меньше, чем количество символов в текстовом поле, курсор помещается после последнего символа.  
+     Свойство <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> — это число, указывающее точку вставки в текстовой строке, а 0 — самое левое положение. Если для свойства <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> задано значение, которое больше числа символов в текстовом поле или превышает его, точка вставки помещается после последнего символа.  
   
-2. Задать <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> свойства длину текста, который вы хотите выбрать.  
+2. Задайте для свойства <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> длину текста, который необходимо выбрать.  
   
-     <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Свойство — это числовое значение, которое задает ширину курсора. Параметр <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> больше нуля, это число выделяемых знаков, начиная с текущей позиции курсора.  
+     Свойство <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> — это числовое значение, которое задает ширину точки вставки. Установка для <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> числа больше 0 приводит к тому, что число символов будет выбрано, начиная с текущей точки вставки.  
   
-3. (Необязательно) Доступ к выделенный текст через <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> свойство.  
+3. Используемых Доступ к выбранному тексту осуществляется с помощью свойства <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>.  
   
-     В следующем примере выделяется содержимое текстового поля при элемента управления <xref:System.Windows.Forms.Control.Enter> событием. В этом примере проверяется, если текстовое поле имеет значение <xref:System.Windows.Forms.TextBox.Text%2A> свойство, которое не является `null` или является пустой строкой. Когда текстовое поле получает фокус, выбран текущий текст в текстовом поле. `TextBox1_Enter` Обработчик событий должен быть привязан к элементу управления; Дополнительные сведения, см. в разделе [как: Создание обработчиков событий во время выполнения для форм Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     Приведенный ниже код выбирает содержимое текстового поля при возникновении события <xref:System.Windows.Forms.Control.Enter> элемента управления. В этом примере проверяется, имеет ли текстовое поле значение для свойства <xref:System.Windows.Forms.TextBox.Text%2A>, которое не `null` или является пустой строкой. Когда текстовое поле получает фокус, выделяется текущий текст в текстовом поле. Обработчик событий `TextBox1_Enter` должен быть привязан к элементу управления; Дополнительные сведения см. [в разделе инструкции. Создание обработчиков событий во время выполнения для Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     Чтобы протестировать этот пример, нажмите клавишу Tab, пока в текстовом поле имеет фокус. Если щелкнуть в текстовом поле, текст не выбран.  
+     Чтобы протестировать этот пример, нажимайте клавишу TAB, пока текстовое поле не найдет фокус. Если щелкнуть в текстовом поле, то текст не будет выбран.  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -67,13 +67,13 @@ ms.locfileid: "62013300"
     }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.TextBox>
 - [Общие сведения об элементе управления TextBox](textbox-control-overview-windows-forms.md)
-- [Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Практическое руководство. Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Создать только для чтения текстовое поле](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля только для чтения](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Практическое руководство. Добавление кавычек в строку](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Практическое руководство. Просмотр нескольких строк в элементе управления Windows Forms TextBox](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Элемент управления TextBox](textbox-control-windows-forms.md)

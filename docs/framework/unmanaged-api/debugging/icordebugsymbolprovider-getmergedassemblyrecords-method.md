@@ -1,15 +1,15 @@
 ---
-title: 'Метод метод icordebugsymbolprovider:: Жетмержедассемблирекордс'
+title: Метод ICorDebugSymbolProvider::GetMergedAssemblyRecords
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 6faf8960c06488c8fff5a076aae375529e1d0260
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6a537a88bd4ab666eff8b5dda994da96bfcc5e52
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138885"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791625"
 ---
-# <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>Метод метод icordebugsymbolprovider:: Жетмержедассемблирекордс
+# <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>Метод ICorDebugSymbolProvider::GetMergedAssemblyRecords
 Возвращает символьные записи для всех объединенных сборок.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -30,7 +30,7 @@ HRESULT GetMergedAssemblyRecords(
  [out] Указатель на число  символьных записей, полученных при помощи метода.  
   
  `pRecords`  
- Указатель на массив объектов [икордебугмержедассемблирекорд](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md) .  
+ Указатель на массив объектов [икордебугмержедассемблирекорд](icordebugmergedassemblyrecord-interface.md) .  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -46,7 +46,7 @@ HRESULT GetMergedAssemblyRecords(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейс ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

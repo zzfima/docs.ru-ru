@@ -3,12 +3,12 @@ title: Параметры конфигурации глобализации
 description: Вы можете узнать о параметрах времени выполнения, настраивающих аспекты глобализации для приложения .NET Core, например способа анализа дат на японском языке.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740540"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733451"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Параметры конфигурации времени выполнения для глобализации
 
@@ -21,7 +21,34 @@ ms.locfileid: "75740540"
 | | Имя параметра | Значения |
 | - | - | - |
 | **runtimeconfig.json** | `System.Globalization.Invariant` | `false` — доступ к данным языка и региональных параметров<br/>`true` — выполнение в инвариантном режиме |
+| **Свойство MSBuild** | `InvariantGlobalization` | `false` — доступ к данным языка и региональных параметров<br/>`true` — выполнение в инвариантном режиме |
 | **Переменная среды** | `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` | `0` — доступ к данным языка и региональных параметров<br/>`1` — выполнение в инвариантном режиме |
+
+### <a name="examples"></a>Примеры
+
+Файл *runtimeconfig.json*
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Globalization.Invariant": true
+      }
+   }
+}
+```
+
+Файл проекта:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="era-year-ranges"></a>Era year ranges (Диапазоны лет эры)
 

@@ -3,12 +3,12 @@ title: Типы и переменные в C#. Краткий обзор язы�
 description: Сведения о типах и об объявлении переменных в C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 02840169730e53875baccfa012ae9653e32a35c9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 28ba01f7d3f9c71e99945a5d5e813d95389b3b79
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346850"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737634"
 ---
 # <a name="types-and-variables"></a>Типы и переменные
 
@@ -44,8 +44,8 @@ ms.locfileid: "75346850"
   - [Типы делегатов][DelegateTypes]
     - Пользовательские типы в формате `delegate int D(...)`
 
-[ValueTypes]: ../language-reference/keywords/value-types-table.md
-[SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
+[ValueTypes]: ../language-reference/builtin-types/value-types.md
+[SimpleTypes]: ../language-reference/builtin-types/value-types.md#built-in-value-types
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/keywords/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md

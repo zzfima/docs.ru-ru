@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об элементе управления TextBox (Windows Forms)
+title: Общие сведения об элементе управления TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], about TextBox controls
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
-ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06ab460d720d17331881b5ba653263160eaf3cb3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932552"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742803"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>Общие сведения об элементе управления TextBox (Windows Forms)
-Текстовые поля форм Windows Forms используются для получения входных данных от пользователя или для отображения текста. <xref:System.Windows.Forms.TextBox> Управления обычно используется для ввода и редактирования текста, несмотря на то, что его можно также сделать доступным только для чтения. Текстовые поля можно отобразить несколько строк, переноса текста по размеру элемента управления и добавлять основные элементы форматирования. <xref:System.Windows.Forms.TextBox> Элемент управления предоставляет в одном формате, введенные в элементе управления или отображать текст. Чтобы отобразить несколько типов форматированного текста, используйте <xref:System.Windows.Forms.RichTextBox> элемента управления. Дополнительные сведения см. в разделе [Обзор элемента управления RichTextBox](richtextbox-control-overview-windows-forms.md).  
+Windows Forms текстовые поля используются для получения входных данных от пользователя или для вывода текста. Элемент управления <xref:System.Windows.Forms.TextBox> обычно используется для редактируемого текста, хотя его также можно сделать доступным только для чтения. Текстовые поля могут отображать несколько строк, переносить текст в размер элемента управления и добавлять базовое форматирование. Элемент управления <xref:System.Windows.Forms.TextBox> предоставляет один стиль формата для текста, отображаемого или вводимых в элемент управления. Чтобы отобразить несколько типов форматированного текста, используйте элемент управления <xref:System.Windows.Forms.RichTextBox>. Дополнительные сведения см. в разделе [Общие сведения об элементе управления RichTextBox](richtextbox-control-overview-windows-forms.md).  
   
 ## <a name="working-with-the-textbox-control"></a>Работа с элементом управления TextBox  
- Текст, отображаемый элементом управления, содержащийся в <xref:System.Windows.Forms.TextBox.Text%2A> свойство. По умолчанию можно ввести не более 2048 символов в текстовом поле. Если задать <xref:System.Windows.Forms.TextBox.Multiline%2A> свойства `true`, можно ввести текст до 32 КБ. <xref:System.Windows.Forms.TextBox.Text%2A> Свойство можно задать во время разработки в окне свойств во время выполнения в коде, или вводимыми пользователем во время выполнения. Текущее содержимое текстового поля могут быть получены во время выполнения путем чтения <xref:System.Windows.Forms.TextBox.Text%2A> свойство.  
+ Текст, отображаемый элементом управления, содержится в свойстве <xref:System.Windows.Forms.TextBox.Text%2A>. По умолчанию в текстовом поле можно ввести до 2048 символов. Если для свойства <xref:System.Windows.Forms.TextBox.Multiline%2A> задано значение `true`, можно ввести до 32 КБ текста. Свойство <xref:System.Windows.Forms.TextBox.Text%2A> может быть задано во время разработки с помощью окна Свойства, во время выполнения в коде или ввода пользователем во время выполнения. Текущее содержимое текстового поля можно получить во время выполнения, читая свойство <xref:System.Windows.Forms.TextBox.Text%2A>.  
   
- В следующем примере кода задает текст в элементе управления во время выполнения. `InitializeMyControl` Процедуры не выполняется автоматически; его необходимо вызывать.  
+ В следующем примере кода во время выполнения задается текст в элементе управления. Процедура `InitializeMyControl` не будет выполняться автоматически; Он должен быть вызван.  
   
 ```vb  
 Private Sub InitializeMyControl()  
@@ -49,13 +49,13 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.TextBox>
-- [Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Практическое руководство. Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Создать только для чтения текстовое поле](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля только для чтения](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Практическое руководство. Добавление кавычек в строку](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Практическое руководство. Выделите текст в элементе управления Windows Forms TextBox](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Просмотр нескольких строк в элементе управления Windows Forms TextBox](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Элемент управления TextBox](textbox-control-windows-forms.md)

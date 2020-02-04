@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53fca564-84b1-44d4-9e21-17a492d2aae7
 topic_type:
 - apiref
-ms.openlocfilehash: 01404d23707be90b6b15cf741632400d49f164de
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 734ae1d14d02d47c7d3126f1b4cf55dcb4ad151b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445148"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866628"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>Метод ICorProfilerCallback::AssemblyUnloadFinished
 Уведомляет профилировщик о том, что сборка была выгружена.  
@@ -33,15 +33,18 @@ HRESULT AssemblyUnloadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `assemblyId`  
- окне Определяет выгрузку сборки.  
-  
- `hrStatus`  
- окне Значение HRESULT, указывающее, успешно ли выгружена сборка.  
-  
-## <a name="remarks"></a>Примечания  
- Значение `assemblyId` недопустимо для информационного запроса после возврата метода [ICorProfilerCallback:: ассемблюнлоадстартед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) .  
+## <a name="parameters"></a>Параметры
+
+- `assemblyId`
+
+  \[в] определяет сборку, которая выгружается.
+
+- `hrStatus`
+
+  \[in] значение HRESULT, указывающее, успешно ли выгружена сборка.
+
+## <a name="remarks"></a>Заметки  
+ Значение `assemblyId` недопустимо для информационного запроса после возврата метода [ICorProfilerCallback:: ассемблюнлоадстартед](icorprofilercallback-assemblyunloadstarted-method.md) .  
   
  Некоторые части выгрузки сборки могут продолжаться после обратного вызова `AssemblyUnloadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть выгрузки сборки завершилась успешно.  
   
@@ -56,4 +59,4 @@ HRESULT AssemblyUnloadFinished(
   
 ## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

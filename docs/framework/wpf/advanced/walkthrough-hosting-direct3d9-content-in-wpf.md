@@ -1,22 +1,23 @@
 ---
-title: Пошаговое руководство. Размещение содержимого Direct3D9 в WPF
+title: Размещение содержимого Direct3D9 в WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 03c93ea3813d3572abd7ca60519478c9bf54cf7d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e65b0c59268b44abed289e54181bf0bda9355664
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976510"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742605"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Пошаговое руководство. Размещение содержимого Direct3D9 в WPF
 
 В этом пошаговом руководстве показано, как разместить содержимое Direct3D9 в приложении Windows Presentation Foundation (WPF).
 
-В руководстве выполняются следующие задачи:
+В этом пошаговом руководстве будут выполнены следующие задачи:
 
 - Создайте проект WPF для размещения содержимого Direct3D9.
 
@@ -26,11 +27,11 @@ ms.locfileid: "73976510"
 
  По завершении вы узнаете, как разместить содержимое Direct3D9 в приложении WPF.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>предварительные требования
 
-Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
+Для выполнения этого пошагового руководства требуются следующие компоненты:
 
-- Visual Studio.
+- приведенному.
 
 - Пакет SDK для DirectX 9 или более поздней версии.
 
@@ -68,7 +69,7 @@ ms.locfileid: "73976510"
 
     [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]
 
-2. Выполните построение проекта.
+2. Создайте проект.
 
 3. Скопируйте библиотеку DLL, содержащую содержимое Direct3D9, в папку bin/Debug.
 
@@ -76,7 +77,7 @@ ms.locfileid: "73976510"
 
     Содержимое Direct3D9 отображается в приложении WPF.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

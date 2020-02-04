@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 5c1dc42a451d2c6a82e2c2429115db023c610334
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5aca2b8b3ca6572194692888eae3c5614245b481
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643907"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937061"
 ---
-### <a name="switchsystemwindowsformsuselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported"></a>Параметр совместимости Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue не поддерживается
+### <a name="uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported"></a>Параметр совместимости UseLegacyContextMenuStripSourceControlValue не поддерживается
 
 Параметр совместимости `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue`, появившийся в .NET Framework 4.7.2, не поддерживается в Windows Forms в .NET Core 3.0.
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643907"
 
 3.0, предварительная версия 9
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Удалите параметр. Он не поддерживается, и альтернативного варианта нет.
 

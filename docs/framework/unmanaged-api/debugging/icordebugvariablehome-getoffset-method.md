@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6f93ec3c7ffe415c41dcf094dbde2f0a08969f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125095"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791001"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>Метод ICorDebugVariableHome:: методом offset
 Возвращает смещение от базового регистра для переменной.  
@@ -40,7 +40,7 @@ HRESULT GetOffset(
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения:  
   
-|значения|Описание|  
+|{2&gt;Value&lt;2}|Описание|  
 |-----------|-----------------|  
 |`S_OK`|Переменная находится в расположении в памяти относительно регистра.|  
 |`E_FAIL`|Переменная не находится в расположении в памяти относительно регистра.|  
@@ -54,6 +54,6 @@ HRESULT GetOffset(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [Интерфейс ICorDebugVariableHome](icordebugvariablehome-interface.md)

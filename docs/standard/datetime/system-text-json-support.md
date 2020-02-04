@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344652"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867351"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Поддержка DateTime и DateTimeOffset в System.Text.Json
 
@@ -68,7 +68,7 @@ ms.locfileid: "75344652"
 ### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>При использовании <xref:System.Text.Json.JsonSerializer>
 
 Если вы хотите, чтобы сериализатор выполнял пользовательское синтаксический анализ или форматирование, можно реализовать [пользовательские преобразователи](xref:System.Text.Json.Serialization.JsonConverter%601).
-Ниже приведено несколько примеров:
+Вот несколько примеров:
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>Использование `DateTime(Offset).Parse` и `DateTime(Offset).ToString`
 
@@ -130,7 +130,7 @@ ms.locfileid: "75344652"
 | Day             | "dd"                        | 01-28, 01-29, 01-30, 01-31 в зависимости от месяца/года                                  |
 | Hour            | "HH"                        | 00-23                                                                           |
 | Minute          | "mm"                        | 00-59                                                                           |
-| Second          | "ss"                        | 00-59                                                                           |
+| Second          | "сс"                        | 00-59                                                                           |
 | Вторая дробь | "FFFFFFF"                   | Минимум одна цифра, максимум 16 цифр                                      |
 | Смещение времени     | "K"                         | "Z" или "(' + '/'-') HH ': ' mm '                                                |
 | Частичное время    | "HH": "mm": "SS [FFFFFFF]"     | Время без сведений о смещении UTC                                             |
@@ -199,4 +199,12 @@ ms.locfileid: "75344652"
 
         Используется для форматирования <xref:System.DateTime> или <xref:System.DateTimeOffset> с долей секунд и с локальным смещением.
 
-Если оно имеется, записывается не более 7 цифр дробной части. Это соответствует реализации <xref:System.DateTime>, которая ограничена этим разрешением.
+Если представление [формата приема-](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) передачи <xref:System.DateTime> или <xref:System.DateTimeOffset> экземпляра содержит конечные нули в долях секунды, то <xref:System.Text.Json.JsonSerializer> и <xref:System.Text.Json.Utf8JsonWriter> будут форматировать представление экземпляра без конечных нулей.
+Например, экземпляр <xref:System.DateTime>, представление [формата обратной](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) передачи которого `2019-04-24T14:50:17.1010000Z`, будет отформатировано как `2019-04-24T14:50:17.101Z` с <xref:System.Text.Json.JsonSerializer> и <xref:System.Text.Json.Utf8JsonWriter>.
+
+Если представление [формата приема-](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) передачи <xref:System.DateTime> или <xref:System.DateTimeOffset> экземпляра содержит все нули в долях секунды, то <xref:System.Text.Json.JsonSerializer> и <xref:System.Text.Json.Utf8JsonWriter> будут форматировать представление экземпляра без доли секунды.
+Например, экземпляр <xref:System.DateTime>, представление [формата обратной](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) передачи которого `2019-04-24T14:50:17.0000000+02:00`, будет отформатировано как `2019-04-24T14:50:17+02:00` с <xref:System.Text.Json.JsonSerializer> и <xref:System.Text.Json.Utf8JsonWriter>.
+
+Усечение нулей в долях секунды позволяет получить наименьший объем выходных данных, необходимых для сохранения информации во время цикла обработки.
+
+Записываются не более 7 цифр в долях секунды. Это соответствует реализации <xref:System.DateTime>, которая ограничена этим разрешением.

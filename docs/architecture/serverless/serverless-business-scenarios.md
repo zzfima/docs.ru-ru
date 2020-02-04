@@ -4,12 +4,12 @@ description: Ознакомьтесь с бессерверными прилож
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522386"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787896"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Бессерверные сценарии и варианты использования для бизнеса
 
@@ -33,7 +33,7 @@ ms.locfileid: "72522386"
 
 Узнайте, как реализовать простую бессерверную функцию Azure на веб-портале Azure или в Visual Studio. Выполните сборку клиента с помощью клиента Xamarin.Forms, работающего в Android, iOS и Windows. После этого приложение будет оптимизировано для использования JSON в качестве формата для передачи данных между сервером и мобильными клиентами с бессерверной частью.
 
-Дополнительные сведения см. в статье [Implementing a simple Azure Function with a Xamarin.Forms client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/) (Реализация простой функции Azure с помощью клиента Xamarin.Forms).
+Дополнительные сведения см. в статье [Implementing a simple Azure Function with a Xamarin.Forms client](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/) (Реализация простой функции Azure с помощью клиента Xamarin.Forms).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Создание фотомозаики с помощью бессерверного распознавания изображений
 
@@ -43,7 +43,7 @@ ms.locfileid: "72522386"
 
 Например, вы можете обучить модель на базе достопримечательностей в Орландо, например, колеса обозрения Orlando Eye. Пользовательское визуальное распознавание распознает изображение колеса обозрения Orlando Eye, и функция создаст фотомозаику на основе результатов поиска изображений в Bing для Orlando Eye.
 
-Дополнительные сведения см. в статье о [генераторе фотомозаики с использованием Функций Azure](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
+Дополнительные сведения см. в статье о [генераторе фотомозаики с использованием Функций Azure](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic).
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>Перенос существующего приложения в облако
 
@@ -83,17 +83,17 @@ ms.locfileid: "72522386"
 
 Пример состоит из Центра Интернета вещей Azure и функции Azure. Новое сообщение в Центре Интернета вещей активирует функцию Azure. Бессерверный код отправляет то же содержимое сообщения обратно на устройство, которое его отправило. Проект содержит весь код и конфигурацию развертывания, необходимые для решения.
 
-Дополнительные сведения о проверке связи с помощью Центра Интернета вещей Azure см. в [этой статье](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
+Дополнительные сведения о проверке связи с помощью Центра Интернета вещей Azure см. в [этой статье](https://github.com/Azure-Samples/iot-hub-node-ping).
 
 ## <a name="recommended-resources"></a>Рекомендуемые ресурсы
 
-- [Статья о генераторе фотомозаики с использованием Функций Azure](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Проверка связи с Центром Интернета вещей Azure](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Статья о генераторе фотомозаики с использованием Функций Azure](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
+- [Проверка связи с Центром Интернета вещей Azure](https://github.com/Azure-Samples/iot-hub-node-ping)
 - [Краткое руководство по службе хранилища Azure для бессерверных приложений .NET](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 - [Статья о переносе собственного приложения в Azure](https://github.com/JeremyLikness/bring-own-app-connect-17)
 - [Статья об использовании Функций Azure для обработки CSV-файла и импорта данных в SQL Azure](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 - [Пример приложения Event-Grid-Glue](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Implementing a simple Azure Function with a Xamarin.Forms client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/) (Реализация простой функции Azure с помощью клиента Xamarin.Forms)
+- [Implementing a simple Azure Function with a Xamarin.Forms client](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/) (Реализация простой функции Azure с помощью клиента Xamarin.Forms)
 - [Azure: Bring your app to the cloud with serverless Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102) (Перенос приложения в облако с помощью бессерверных Функций Azure)
 - [Azure Functions App for URL Shortening](https://github.com/jeremylikness/serverless-url-shortener) (Приложение Функций Azure для сокращения URL-адресов)
 

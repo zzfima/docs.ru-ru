@@ -1,31 +1,31 @@
 ---
-title: Многопоточность в элементах управления Windows Forms
+title: Многопоточность в элементах управления
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BackgroundWorker component
 - threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
-ms.openlocfilehash: cf6790172b7445ad154eead5d17f8efddd78ffee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 79832e12a10f02c909d2a28270594bcb4ea68656
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952682"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742139"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Многопоточность в элементах управления Windows Forms
-Во многих приложениях можно сделать пользовательский интерфейс более быстрым, выполняя длительные операции в другом потоке. Существует ряд средств для многопоточности элементов управления Windows Forms, включая <xref:System.Threading> пространство имен <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> , метод и `BackgroundWorker` компонент.  
+Во многих приложениях можно сделать пользовательский интерфейс более быстрым, выполняя длительные операции в другом потоке. Для многопоточности можно использовать ряд средств для управления Windows Forms, включая пространство имен <xref:System.Threading>, метод <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> и компонент `BackgroundWorker`.  
   
 > [!NOTE]
-> Компонент заменяет и добавляет функции <xref:System.Threading> к пространству имен и <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> методу. Однако они сохраняются для обратной совместимости и использования в будущем, если вы решили. `BackgroundWorker` Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md).  
+> Компонент `BackgroundWorker` заменяет и добавляет функции в пространство имен <xref:System.Threading> и метод <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>. Однако они сохраняются для обратной совместимости и использования в будущем, если вы решили. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
+## <a name="in-this-section"></a>в этом разделе  
+ [Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms.](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
  Показывает, как выполнять потокобезопасные вызовы элементов управления Windows Forms.  
   
- [Практическое руководство. Использовать фоновый поток для поиска файлов](how-to-use-a-background-thread-to-search-for-files.md)  
- Показывает, как использовать <xref:System.Threading> пространство имен <xref:System.Windows.Forms.Control.BeginInvoke%2A> и метод для асинхронного поиска файлов.  
+ [Практическое руководство. Применение фонового потока для поиска файлов](how-to-use-a-background-thread-to-search-for-files.md)  
+ Показывает, как использовать пространство имен <xref:System.Threading> и метод <xref:System.Windows.Forms.Control.BeginInvoke%2A> для асинхронного поиска файлов.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.ComponentModel.BackgroundWorker>  
  Документирует компонент, инкапсулирующий рабочий поток для асинхронных операций.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "69952682"
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
  Документация по асинхронной загрузке изображения.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Практическое руководство. Фоновое выполнение операции](how-to-run-an-operation-in-the-background.md)  
- Показывает, как выполнить трудоемкую операцию с <xref:System.ComponentModel.BackgroundWorker> компонентом.  
+ Показывает, как выполнить трудоемкую операцию с компонентом <xref:System.ComponentModel.BackgroundWorker>.  
   
  [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md)  
- Содержит разделы, в которых описывается использование <xref:System.ComponentModel.BackgroundWorker> компонента для асинхронных операций.
+ Содержит разделы, в которых описывается использование компонента <xref:System.ComponentModel.BackgroundWorker> для асинхронных операций.

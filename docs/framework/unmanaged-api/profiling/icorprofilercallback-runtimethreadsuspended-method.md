@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: de830a8b-6ee1-4900-ace3-4237108f6b12
 topic_type:
 - apiref
-ms.openlocfilehash: 509d6cd2e65c2eb8c92f6d79deae9e01e75298f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c8645bf828d0ad99bd25c1909cbee3314a11abf9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433444"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865874"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>Метод ICorProfilerCallback::RuntimeThreadSuspended
 Уведомляет профилировщик о том, что указанный поток был приостановлен или готов к приостановке.  
@@ -37,7 +37,7 @@ HRESULT RuntimeThreadSuspended(
  окне Идентификатор приостановленного потока.  
   
 ## <a name="remarks"></a>Заметки  
- `RuntimeThreadSuspended`ное уведомление может возникнуть в любое время между методами [ICorProfilerCallback:: рунтимесуспендстартед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) и связанными обратными вызовами [ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) . Уведомления, происходящие между параметрами [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) и `RuntimeResumeStarted`, относятся к потокам, которые были запущены в неуправляемом коде и были приостановлены при входе в среду выполнения.  
+ `RuntimeThreadSuspended`ное уведомление может возникнуть в любое время между методами [ICorProfilerCallback:: рунтимесуспендстартед](icorprofilercallback-runtimesuspendstarted-method.md) и связанными обратными вызовами [ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) . Уведомления, происходящие между параметрами [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) и `RuntimeResumeStarted`, относятся к потокам, которые были запущены в неуправляемом коде и были приостановлены при входе в среду выполнения.  
   
  Как правило, этот обратный вызов происходит сразу после приостановки потока. Однако если текущий выполняющийся поток (поток, вызвавший этот обратный вызов) является приостановленным, этот обратный вызов произойдет непосредственно перед приостановкой потока.  
   
@@ -50,7 +50,7 @@ HRESULT RuntimeThreadSuspended(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод RuntimeThreadResumed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод RuntimeThreadResumed](icorprofilercallback-runtimethreadresumed-method.md)

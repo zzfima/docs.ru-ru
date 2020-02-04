@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: 5fb4a8a508cde4455bbee8c08432d3549e3fac43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22ae1d24040a8ee5000e0ff2fbeb2b45e08050df
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122758"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784343"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>Интерфейс ICorDebugBreakpointEnum
 
@@ -29,7 +29,7 @@ ms.locfileid: "73122758"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Возвращает указанное число экземпляров `ICorDebugBreakpoint` из перечисления, начиная с текущей позиции.|  
+|[Метод Next](icordebugbreakpointenum-next-method.md)|Возвращает указанное число экземпляров `ICorDebugBreakpoint` из перечисления, начиная с текущей позиции.|  
   
 ## <a name="remarks"></a>Заметки  
   
@@ -45,6 +45,6 @@ ms.locfileid: "73122758"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Интерфейсы отладки](debugging-interfaces.md)

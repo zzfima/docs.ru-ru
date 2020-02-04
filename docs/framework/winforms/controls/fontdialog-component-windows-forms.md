@@ -1,35 +1,35 @@
 ---
-title: Компонент FontDialog (Windows Forms)
+title: Компонент FontDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], dialog box
 - FontDialog component [Windows Forms]
 - Font dialog box [Windows Forms], Windows Forms
 ms.assetid: 54015df3-aab2-4338-84e5-ba78cedbfdfc
-ms.openlocfilehash: de3a6b8f59d5ae83d55ea408f70d54d37761f693
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c150db1d6833babd3dd53923fb11a2ab98a4b5c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971357"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745686"
 ---
 # <a name="fontdialog-component-windows-forms"></a>Компонент FontDialog (Windows Forms)
-Компонент Windows Forms <xref:System.Windows.Forms.FontDialog> является стандартным диалоговым окном. Он аналогичен **шрифта** диалоговое окно, предоставляемые операционной системой Windows. Компонент наследуется от <xref:System.Windows.Forms.CommonDialog> класса.  
+Компонент Windows Forms <xref:System.Windows.Forms.FontDialog> является стандартным диалоговым окном. Это одно и то же диалоговое окно **шрифта** , предоставляемое операционной системой Windows. Компонент наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о компоненте FontDialog](fontdialog-component-overview-windows-forms.md)  
- Основные понятия <xref:System.Windows.Forms.FontDialog> компонент, который используется для отображения стандартным диалоговым окном. Пользователи могут использовать диалоговое окно для управления шрифтами и их параметров.  
+ Основные понятия компонента <xref:System.Windows.Forms.FontDialog>, который используется для вывода предварительно настроенного диалогового окна. Пользователи могут использовать диалоговое окно для управления шрифтами и их параметрами.  
   
  [Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog](how-to-show-a-font-list-with-the-fontdialog-component.md)  
- Описание выбора шрифта во время выполнения посредством экземпляра <xref:System.Windows.Forms.FontDialog> компонента.  
+ Объясняет, как выбрать шрифт во время выполнения с помощью экземпляра компонента <xref:System.Windows.Forms.FontDialog>.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Forms.FontDialog>  
  Справочная информация о классе <xref:System.Windows.Forms.FontDialog> и его членах.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Элементы управления и компоненты диалоговых окон](dialog-box-controls-and-components-windows-forms.md)  
- Описание набора элементов управления и компонентов, которые позволяют пользователям для выполнения стандартных действий в приложении или системе.  
+ Описывает набор элементов управления и компонентов, которые позволяют пользователям выполнять стандартные взаимодействия с приложением или системой.  
   
  [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
- Предоставляет полный список элементов управления Windows Forms со ссылками на сведения об их использовании.
+ Содержит полный список элементов управления Windows Forms со ссылками на сведения об их использовании.

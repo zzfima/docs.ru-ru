@@ -2,12 +2,12 @@
 title: Совместимость с ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 0938075464a0f2739bdb2a9d8ed1f16f61edff2b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1f1690cdd1a880c852abc04ea8e4958bae2c5432
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716162"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728017"
 ---
 # <a name="aspnet-compatibility"></a>Совместимость с ASP.NET
 
@@ -20,7 +20,7 @@ ms.locfileid: "74716162"
 
 Для запуска этого примера требуется пул приложений .NET Framework 4. Чтобы создать новый пул приложений или изменить пул приложений по умолчанию, выполните следующие шаги.
 
-1. Откройте **панель управления**.  Откройте приложение **Администрирование** под заголовком **система и безопасность** . Откройте приложение **диспетчера службы IIS (IIS)** .
+1. Откройте **Панель управления**.  Откройте приложение **Администрирование** под заголовком **система и безопасность** . Откройте приложение **диспетчера службы IIS (IIS)** .
 
 2. Разверните элемент TreeView в области **подключения** . Выберите узел **Пулы приложений** .
 
@@ -128,6 +128,6 @@ Press <ENTER> to terminate client.
 
 4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Примеры размещения и сохраняемости AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Примеры размещения и сохраняемости AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

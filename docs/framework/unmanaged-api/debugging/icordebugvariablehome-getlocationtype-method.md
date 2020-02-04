@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-ms.openlocfilehash: 1dd4e9510831b4c878e9c1246dabe4add919130c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5d33c917ab814083ec2f3a3f3de6bdc264d90b77
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125114"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791008"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>Метод ICorDebugVariableHome:: Жетлокатионтипе
 Возвращает тип собственного расположения переменной.  
@@ -35,7 +35,7 @@ HRESULT GetLocationType(
   
 ## <a name="parameters"></a>Параметры  
  `pLocationType`  
- заполняет Указатель на тип собственного расположения переменной.  Дополнительные сведения см. в описании перечисления [вариаблелокатионтипе](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) .  
+ заполняет Указатель на тип собственного расположения переменной.  Дополнительные сведения см. в описании перечисления [вариаблелокатионтипе](variablelocationtype-enumeration.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,7 +46,7 @@ HRESULT GetLocationType(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
-- [Перечисление VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
+- [Интерфейс ICorDebugVariableHome](icordebugvariablehome-interface.md)
+- [Перечисление VariableLocationType](variablelocationtype-enumeration.md)

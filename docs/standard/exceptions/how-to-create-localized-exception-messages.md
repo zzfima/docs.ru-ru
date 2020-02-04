@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 9360fccf27a0900d8380461e03baa5806ce1e0da
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 48e429a6379b0a13cb81f8db6fae27aa31409840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708922"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794612"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Создание пользовательских исключений с локализованными сообщениями об исключениях
 
@@ -157,12 +157,17 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
     ```
 
+    ```vb
+    Dim resourceManager As New ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly())
+    Throw New StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John")
+    ```
+
     > [!NOTE]
     > Если имя проекта — `TestProject`, а файл ресурсов *ExceptionMessages.resx* находится в папке *Ресурсы* проекта, полное имя файла ресурсов — `TestProject.Resources.ExceptionMessages`.
 
 ## <a name="see-also"></a>См. также
 
 - [Как создать пользовательские исключения](how-to-create-user-defined-exceptions.md)
-- [Creating Satellite Assemblies for Desktop Apps](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) (Создание вспомогательных сборок для классических приложений)
+- [Создание вспомогательных сборок для приложений для настольных систем](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [base (справочник по C#)](../../csharp/language-reference/keywords/base.md)
 - [this (справочник по C#)](../../csharp/language-reference/keywords/this.md)

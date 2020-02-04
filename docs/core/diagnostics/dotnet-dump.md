@@ -2,16 +2,16 @@
 title: dotnet-dump (.NET Core)
 description: Установка и использование программы командной строки dotnet-dump.
 ms.date: 10/14/2019
-ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740772"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737669"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Программа для сбора и анализа дампов (`dotnet-dump`)
 
-**Эта статья относится к ✓** SDK для .NET Core 3.0 и более поздних версий
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 3.0 и более поздних версий
 
 > [!NOTE]
 > `dotnet-dump` не поддерживается для macOS.

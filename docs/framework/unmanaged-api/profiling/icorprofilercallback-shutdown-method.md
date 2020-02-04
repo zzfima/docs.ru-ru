@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 490f9dd5446a51bd07881cdb9825d737e380a63e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446941"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865861"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>Метод ICorProfilerCallback::Shutdown
 Уведомляет профилировщик о том, что приложение завершает работу.  
@@ -31,8 +31,8 @@ ms.locfileid: "74446941"
 HRESULT Shutdown();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Код профилировщика не может безопасно вызывать методы интерфейса [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) после вызова метода `Shutdown`. Любые вызовы `ICorProfilerInfo` методов приводят к неопределенному поведению после возврата метода `Shutdown`. Некоторые неизменяемые события по-прежнему могут возникать после завершения работы. Профилировщик должен немедленно возвращаться к моменту, когда это происходит.  
+## <a name="remarks"></a>Заметки  
+ Код профилировщика не может безопасно вызывать методы интерфейса [ICorProfilerInfo](icorprofilerinfo-interface.md) после вызова метода `Shutdown`. Любые вызовы `ICorProfilerInfo` методов приводят к неопределенному поведению после возврата метода `Shutdown`. Некоторые неизменяемые события по-прежнему могут возникать после завершения работы. Профилировщик должен немедленно возвращаться к моменту, когда это происходит.  
   
  Метод `Shutdown` будет вызываться только в том случае, если управляемое приложение, профилирование которого запускается в качестве управляемого кода (то есть исходный кадр в стеке процессов является управляемым). Если приложение запущено как неуправляемый код, но позднее перейдем к управляемому коду, то, таким образом, создает экземпляр среды CLR, то `Shutdown` не будет вызываться. В таких случаях профилировщик должен включать в свою библиотеку `DllMain` подпрограммы, которая использует значение DLL_PROCESS_DETACH для высвобождения любых ресурсов и выполнения очистки данных, таких как сброс трассировок на диск и т. д.  
   
@@ -47,7 +47,7 @@ HRESULT Shutdown();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Метод Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+- [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Метод Initialize](icorprofilercallback-initialize-method.md)

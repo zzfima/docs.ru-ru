@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Thumb control type
 - Thumb control type
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
-ms.openlocfilehash: b795a216d0f32b3bd4014c884a061c0c2d4558a8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7b7e2a8f65d76548a93b47688f2dbe2661cd6693
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741461"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793978"
 ---
 # <a name="ui-automation-support-for-the-thumb-control-type"></a>Поддержка автоматизации пользовательского интерфейса для элемента управления типа Thumb
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741461"
   
  Элементы управления "Бегунок" предоставляют функциональность, позволяющую перемещать (или перетаскивать) элемент управления, например кнопка полосы прокрутки, или изменять его размер, например мини-приложение для изменения размера окна. Элемент управления "Бегунок" может также быть реализован в виде перемещаемых границ панелей. Обратите внимание, что он не предоставляет функциональность перетаскивания и вставки. Бегунок может получать фокус мыши, но обычно не может получать фокус клавиатуры. Разработчик элемента управления должен реализовать его так, чтобы он действовал соответствующим образом (поддерживал перетаскивание или изменение размера).  
   
- В следующих разделах описывается необходимая древовидная структура [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , свойства, шаблоны элементов управления и события для типа элемента управления Thumb. Требования к [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] применяются ко всем элементам управления "бегунок", будь то [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 или [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ В следующих разделах описывается необходимая древовидная структура [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , свойства, шаблоны элементов управления и события для типа элемента управления Thumb. Требования к [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] применяются ко всем элементам управления "бегунок", будь то [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 или Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Требуемая древовидная структура модели автоматизации пользовательского интерфейса  
