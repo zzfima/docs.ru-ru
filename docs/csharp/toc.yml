@@ -16,7 +16,7 @@
       items:
         - name: Выберите первый урок
           href: tutorials/intro-to-csharp/index.md
-        - name: Hello World
+        - name: 'Здравствуй, мир'
           href: tutorials/intro-to-csharp/hello-world.yml
         - name: 'Числа в C#'
           href: tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -70,7 +70,7 @@
       href: tutorials/attributes.md
 - name: 'Обзор языка C#'
   items:
-    - name: Введение
+    - name: Вступление
       href: tour-of-csharp/index.md
     - name: Структура программы
       href: tour-of-csharp/program-structure.md
@@ -78,7 +78,7 @@
       href: tour-of-csharp/types-and-variables.md
     - name: Выражения
       href: tour-of-csharp/expressions.md
-    - name: Инструкции
+    - name: Операторы
       href: tour-of-csharp/statements.md
     - name: Классы и объекты
       href: tour-of-csharp/classes-and-objects.md
@@ -314,7 +314,7 @@
           href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
         - name: 'Значения, возвращаемые методом Main()'
           href: programming-guide/main-and-command-args/main-return-values.md
-    - name: Основные понятия о программировании
+    - name: Основные понятия программирования
       items:
         - name: Обзор
           displayName: programming concepts
@@ -472,7 +472,7 @@
                   href: programming-guide/concepts/linq/linq-to-objects.md
                 - name: LINQ и строки
                   href: programming-guide/concepts/linq/linq-and-strings.md
-                - name: Руководства
+                - name: Статьи с пошаговыми инструкциями
                   items:
                     - name: Практическое руководство. Подсчет вхождений слова в строке (LINQ)
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
@@ -738,7 +738,7 @@
                               href: programming-guide/concepts/linq/applicability-of-functional-transformation.md
                             - name: Функциональное преобразование XML
                               href: programming-guide/concepts/linq/functional-transformation-of-xml.md
-                            - name: Руководство. Объединение запросов в цепочки
+                            - name: Учебник. Объединение запросов в цепочки
                               items:
                                 - name: Отложенное выполнение и отложенное вычисление в LINQ to XML
                                   href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
@@ -750,7 +750,7 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: Связывание стандартных операторов запросов
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: Руководство. Объединение запросов в цепочки
+                            - name: Учебник. Объединение запросов в цепочки
                               items:
                                 - name: Отложенное выполнение и отложенное вычисление в LINQ to XML
                                   href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
@@ -762,7 +762,7 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: Связывание стандартных операторов запросов
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: Руководство. Обработка содержимого документа WordprocessingML
+                            - name: Учебник. Обработка содержимого документа WordprocessingML
                               items:
                                 - name: Форма документов WordprocessingML
                                   href: programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md
@@ -898,7 +898,7 @@
         - name: Обзор
           displayName: 'statements, expressions, operators'
           href: programming-guide/statements-expressions-operators/index.md
-        - name: Инструкции
+        - name: Операторы
           href: programming-guide/statements-expressions-operators/statements.md
         - name: Выражения
           href: programming-guide/statements-expressions-operators/expressions.md
@@ -967,7 +967,7 @@
               href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
             - name: Переопределение метода ToString
               href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
-        - name: Члены
+        - name: Участники
           items:
             - name: Обзор участников
               href: programming-guide/classes-and-structs/members.md
@@ -1106,7 +1106,7 @@
           href: programming-guide/arrays/passing-arrays-as-arguments.md
         - name: Неявно типизированные массивы
           href: programming-guide/arrays/implicitly-typed-arrays.md
-    - name: строк
+    - name: Строки
       items:
         - name: Программирование со строками
           href: programming-guide/strings/index.md
@@ -1250,7 +1250,7 @@
           href: programming-guide/exceptions/index.md
         - name: Использование исключений
           href: programming-guide/exceptions/using-exceptions.md
-        - name: Обработка исключений.
+        - name: Обработка исключений
           href: programming-guide/exceptions/exception-handling.md
         - name: Создание и порождение исключений
           href: programming-guide/exceptions/creating-and-throwing-exceptions.md
@@ -1285,7 +1285,7 @@
           href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
         - name: Практическое руководство. Создание раздела в реестре
           href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
-    - name: Совместимость
+    - name: Взаимодействие
       items:
         - name: Взаимодействие с платформой .NET
           href: programming-guide/interop/index.md
@@ -1351,7 +1351,7 @@
                   href: language-reference/builtin-types/reference-types.md
                 - name: class
                   href: language-reference/keywords/class.md
-                - name: интерфейс
+                - name: interface
                   href: language-reference/keywords/interface.md
             - name: void
               href: language-reference/keywords/void.md
@@ -1365,8 +1365,6 @@
               items:
                 - name: Таблица встроенных типов
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Таблица форматирования числовых результатов
-                  href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Модификаторы
           items:
             - name: Модификаторы доступа
@@ -1379,13 +1377,13 @@
                   href: language-reference/keywords/accessibility-domain.md
                 - name: Ограничения на использование уровней доступности
                   href: language-reference/keywords/restrictions-on-using-accessibility-levels.md
-                - name: Внутренние
+                - name: internal
                   href: language-reference/keywords/internal.md
-                - name: Частный пиринг
+                - name: private
                   href: language-reference/keywords/private.md
                 - name: protected
                   href: language-reference/keywords/protected.md
-                - name: таверна
+                - name: public
                   href: language-reference/keywords/public.md
                 - name: protected internal
                   href: language-reference/keywords/protected-internal.md
@@ -1546,7 +1544,7 @@
               href: language-reference/keywords/set.md
             - name: when (условие фильтра)
               href: language-reference/keywords/when.md
-            - name: value
+            - name: значение
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1577,7 +1575,7 @@
               href: language-reference/keywords/descending.md
             - name: 'on'
               href: language-reference/keywords/on.md
-            - name: equals (равно)
+            - name: equals
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
@@ -1689,7 +1687,7 @@
           href: language-reference/preprocessor-directives/preprocessor-undef.md
         - name: '#warning'
           href: language-reference/preprocessor-directives/preprocessor-warning.md
-        - name: '#ошибка'
+        - name: '#error'
           href: language-reference/preprocessor-directives/preprocessor-error.md
         - name: '#line'
           href: language-reference/preprocessor-directives/preprocessor-line.md
