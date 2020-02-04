@@ -1,16 +1,16 @@
 ---
-title: Изменение данных больших объемов (max) в ADO.NET
+title: Изменение данных с большими значениями (max)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: cb37fdb85d323d4f0816a3667a4624da8ec75e65
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894441"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979850"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Изменение данных больших объемов (max) в ADO.NET
 Типы данных LOB - это типы данных, размер которых превышает максимальный размер строки в 8 килобайт (КБ). В SQL Server для типов данных `max`, `varchar` и `nvarchar` имеется описатель `varbinary`, позволяющий хранить значения размером до 2^32 байт. Столбцы таблицы и переменные языка Transact-SQL могут задавать типы данных `varchar(max)`, `nvarchar(max)` или `varbinary(max)`. В ADO.NET типы данных `max` можно выбрать с помощью объекта `DataReader`, а также их можно задавать в качестве значений входных и выходных параметров без какой-либо специальной обработки. Данные больших типов данных `varchar` можно получать и обновлять добавочно.  
@@ -37,9 +37,9 @@ ms.locfileid: "70894441"
   
  В функции `OPENROWSET` включен поставщик набора строк `BULK`, позволяющий считывать данные непосредственно из файла без загрузки данных в целевую таблицу. Это позволяет использовать `OPENROWSET` в простой инструкции INSERT SELECT.  
   
- Аргументы `OPENROWSET BULK` Option обеспечивают значительный контроль над тем, где следует начинать и заканчивать чтение данных, как обрабатывать ошибки и как интерпретировать данные. Например, можно указать, что файл с данными будет считан как однострочный или как набор строк типа `varbinary`, `varchar` или `nvarchar` в один столбец. Полный синтаксис и параметры см. в электронной документации по SQL Server.  
+ Аргументы параметра `OPENROWSET BULK` обеспечивают значительный контроль над тем, где следует начинать и заканчивать чтение данных, как обрабатывать ошибки и как интерпретировать данные. Например, можно указать, что файл с данными будет считан как однострочный или как набор строк типа `varbinary`, `varchar` или `nvarchar` в один столбец. Полный синтаксис и параметры см. в электронной документации по SQL Server.  
   
- В следующем примере в таблицу ProductPhoto образца базы данных AdventureWorks вставляется фотография. При использовании `BULK OPENROWSET` поставщика необходимо указать именованный список столбцов, даже если значения не вставляются в каждый столбец. В этом случае первичный ключ определяется в качестве столбца идентификаторов и может быть исключен из списка столбцов. Обратите внимание, что в конце инструкции `OPENROWSET` необходимо также указать корреляционное имя, которым в данном случае является ThumbnailPhoto. Оно коррелировано со столбцом в таблице `ProductPhoto`, в которую загружается файл.  
+ В следующем примере в таблицу ProductPhoto образца базы данных AdventureWorks вставляется фотография. При использовании поставщика `BULK OPENROWSET` необходимо указать именованный список столбцов, даже если значения не вставляются в каждый столбец. В этом случае первичный ключ определяется в качестве столбца идентификаторов и может быть исключен из списка столбцов. Обратите внимание, что в конце инструкции `OPENROWSET` необходимо также указать корреляционное имя, которым в данном случае является ThumbnailPhoto. Оно коррелировано со столбцом в таблице `ProductPhoto`, в которую загружается файл.  
   
 ```sql  
 INSERT Production.ProductPhoto (  
@@ -57,20 +57,20 @@ FROM OPENROWSET
   
  UPDATE  
   
- *{\<Object >* }  
+ { *\<объект >* }  
   
  SET  
   
- { *column_name* = {. WRITE ( *выражение* , @Offset , @Length )}  
+ { *column_name* = {. WRITE ( *выражение* , @Offset, @Length)}  
   
- Метод WRITE указывает, что будет изменен раздел значения аргумента *column_name* . Выражение представляет собой значение, которое будет скопировано в *column_name*, `@Offset` является начальной точкой, в которую будет `@Length` записано выражение, а аргумент — длиной раздела в столбце.  
+ Метод WRITE указывает, что раздел значения *column_name* будет изменен. Выражение — это значение, которое будет скопировано в *column_name*, `@Offset` является начальной точкой, в которую будет записано выражение, а аргументом `@Length` — длиной раздела в столбце.  
   
-|If|Следующее действие|  
+|Если командлет|Затем|  
 |--------|----------|  
-|Выражение устанавливается в значение NULL.|`@Length`параметр не учитывается, и значение в столбце *column_name* усекается по `@Offset`указанному значению.|  
-|`@Offset`имеет значение NULL|Операция обновления добавляет выражение в конец существующего значения *column_name* и `@Length` игнорируется.|  
+|Выражение устанавливается в значение NULL.|`@Length` игнорируется, и значение в *column_name* усекается по указанному `@Offset`.|  
+|`@Offset` равно NULL|Операция обновления добавляет выражение в конец существующего *column_name* значения, и `@Length` игнорируется.|  
 |Аргумент `@Offset` больше, чем длина поля column_name.|SQL Server возвращает ошибку.|  
-|`@Length`имеет значение NULL|Операция обновления удаляет все данные, со значения `@Offset` до конца значения `column_name`.|  
+|`@Length` равно NULL|Операция обновления удаляет все данные, со значения `@Offset` до конца значения `column_name`.|  
   
 > [!NOTE]
 > Ни `@Offset`, ни `@Length` не могут быть отрицательными числами.  
@@ -104,7 +104,7 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>Работа с типами данных большого размера в ADO.NET  
- Вы можете работать с типами больших значений в ADO.NET, указав типы больших значений в <xref:System.Data.SqlClient.SqlParameter> качестве объектов <xref:System.Data.SqlClient.SqlDataReader> в, чтобы получить результирующий набор <xref:System.Data.SqlClient.SqlDataAdapter> , или `DataSet` / `DataTable`используя для заполнения. Не существует разницы в способах работы с типами больших значений и связанных с ними более мелкими типами данных.  
+ Вы можете работать с типами больших значений в ADO.NET, указав типы больших значений в качестве <xref:System.Data.SqlClient.SqlParameter> объектов в <xref:System.Data.SqlClient.SqlDataReader> для возвращения результирующего набора или используя <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения `DataSet`/`DataTable`. Не существует разницы в способах работы с типами больших значений и связанных с ними более мелкими типами данных.  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>Использование метода GetSqlBytes для получения данных  
  Метод `GetSqlBytes` объекта <xref:System.Data.SqlClient.SqlDataReader> можно использовать для получения содержимого столбца `varbinary(max)`. Следующий фрагмент кода предполагает, что объект <xref:System.Data.SqlClient.SqlCommand> с именем `cmd` выбирает данные столбца `varbinary(max)` из таблицы, а объект <xref:System.Data.SqlClient.SqlDataReader> с именем `reader` получает данные в виде <xref:System.Data.SqlTypes.SqlBytes>.  
@@ -222,13 +222,13 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>Пример  
- Следующий код получает из таблицы `LargePhoto` в базе данных `ProductPhoto` имя и объект `AdventureWorks` и сохраняет их в файл. При компиляции сборки необходимо добавить ссылку на пространство имен <xref:System.Drawing>.  Метод <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> объекта <xref:System.Data.SqlClient.SqlDataReader> возвращает объект <xref:System.Data.SqlTypes.SqlBytes>, представляющий свойство `Stream`. Этот код использует для создания нового `Bitmap` объекта, а затем сохраняет его в GIF. `ImageFormat`  
+ Следующий код получает из таблицы `LargePhoto` в базе данных `ProductPhoto` имя и объект `AdventureWorks` и сохраняет их в файл. При компиляции сборки необходимо добавить ссылку на пространство имен <xref:System.Drawing>.  Метод <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> объекта <xref:System.Data.SqlClient.SqlDataReader> возвращает объект <xref:System.Data.SqlTypes.SqlBytes>, представляющий свойство `Stream`. Этот код использует для создания нового объекта `Bitmap`, а затем сохраняет его в `ImageFormat`GIF.  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
 ## <a name="using-large-value-type-parameters"></a>Использование параметров типа больших значений  
- Типы больших значений могут использоваться в объектах <xref:System.Data.SqlClient.SqlParameter> способом, аналогичным способу, используемому для типов меньших значений в объектах <xref:System.Data.SqlClient.SqlParameter>. Типы больших значений можно получить в виде <xref:System.Data.SqlClient.SqlParameter> значений, как показано в следующем примере. Код предполагает, что следующая хранимая процедура GetDocumentSummary существует в образце базы данных AdventureWorks. Хранимая процедура принимает входной параметр с именем @DocumentID и возвращает содержимое столбца DocumentSummary @DocumentSummary в выходном параметре.  
+ Типы больших значений могут использоваться в объектах <xref:System.Data.SqlClient.SqlParameter> способом, аналогичным способу, используемому для типов меньших значений в объектах <xref:System.Data.SqlClient.SqlParameter>. Типы больших значений можно получить в виде значений <xref:System.Data.SqlClient.SqlParameter>, как показано в следующем примере. Код предполагает, что следующая хранимая процедура GetDocumentSummary существует в образце базы данных AdventureWorks. Хранимая процедура принимает входной параметр с именем @DocumentID и возвращает содержимое столбца DocumentSummary в выходном параметре @DocumentSummary.  
   
 ```sql
 CREATE PROCEDURE GetDocumentSummary   
@@ -244,12 +244,12 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>Пример  
- Для выполнения хранимой процедуры GetDocumentSummary код ADO.NET создает объекты <xref:System.Data.SqlClient.SqlConnection> и <xref:System.Data.SqlClient.SqlCommand> и получает сводку документа, которая хранится в виде типа больших значений. Код передает значение @DocumentID входного параметра и отображает результаты, переданные обратно @DocumentSummary в выходной параметр в окне консоли.  
+ Для выполнения хранимой процедуры GetDocumentSummary код ADO.NET создает объекты <xref:System.Data.SqlClient.SqlConnection> и <xref:System.Data.SqlClient.SqlCommand> и получает сводку документа, которая хранится в виде типа больших значений. Код передает значение входного параметра @DocumentID и отображает результаты, переданные в выходном параметре @DocumentSummary в окне консоли.  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Двоичные данные и данные большого объема SQL Server](sql-server-binary-and-large-value-data.md)
 - [Сопоставления типов данных SQL Server](../sql-server-data-type-mappings.md)

@@ -1,13 +1,14 @@
 ---
 title: Типы данных SQL Server и ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 642fe0d541aca01d6ffb2d9279c4d0fa91eadb63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9baffc7a439c851ead7ec0e12899adf418174e22
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780851"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979863"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Типы данных SQL Server и ADO.NET
 В SQL Server и .NET Framework используются различные системы типов, что может привести к потенциальной потере данных. Чтобы сохранить целостность данных, поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) предоставляет типизированные методы доступа для работы с данными SQL Server. Для указания типов данных <xref:System.Data.SqlDbType> можно использовать перечисления классов <xref:System.Data.SqlClient.SqlParameter>.  
@@ -41,7 +42,7 @@ ms.locfileid: "70780851"
  [Данные XML в SQL Server](xml-data-in-sql-server.md)  
  Описание работы с данными XML, извлеченными из SQL Server.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Data.DataSet>  
  Описывает класс `DataSet` и все его члены.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "70780851"
  <xref:System.Data.DbType>  
  Описывает перечисление `DbType` и все его члены.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Сопоставления типов данных SQL Server](../sql-server-data-type-mappings.md)
 - [Настройка параметров и типы данных параметров](../configuring-parameters-and-parameter-data-types.md)

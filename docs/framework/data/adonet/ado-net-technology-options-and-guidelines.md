@@ -1,13 +1,13 @@
 ---
-title: Возможности технологии и рекомендации по ADO.NET
+title: Технологические параметры и рекомендации
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 6c7ff59be7c163117ba990331e7cae75d10e8f59
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9be44a5b9c06a310581aee57cdb6a304127f8a12
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569432"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980279"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Возможности технологии и рекомендации по ADO.NET
 Платформа данных ADO.NET представляет собой стратегию многократного выпуска, целью которой является снижение объемов кодирования и обслуживания. Эта платформа позволяет разработчикам программировать на основе концептуальных моделей EDM (entity data model). Данная платформа включает платформу ADO.NET Entity Framework и связанные с нею технологии.  

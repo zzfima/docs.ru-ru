@@ -2,18 +2,18 @@
 title: Новые возможности в F# 4,6- F# Guide
 description: Ознакомьтесь с обзором новых функций, доступных в F# 4,6.
 ms.date: 11/27/2019
-ms.openlocfilehash: 81d3e988d044cb16f8ec079118fd0ede2dabc587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 620c1edd8ea212fee306a02d5844b6b322808251
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644136"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980396"
 ---
 # <a name="whats-new-in-f-46"></a>Новые возможности в F# 4,6
 
 F#4,6 добавляет несколько улучшений в F# язык.
 
-## <a name="get-started"></a>Начало работы
+## <a name="get-started"></a>Приступая к работе
 
 F#4,6 доступна во всех дистрибутивах .NET Core и средствах Visual Studio. Дополнительные сведения см. в статье Приступая к [работе с F# ](../get-started/index.md) .
 
@@ -71,14 +71,14 @@ let strOpt = ValueSome "Mirror image"
 let reverse (str: string) =
     match str with
     | null
-    | "" -> None
+    | "" -> ValueNone
     | s ->
         str.ToCharArray()
         |> Array.rev
         |> string
-        |> Some
+        |> ValueSome
 
-let reversedString = strOpt |> Option.bind reverse
+let reversedString = strOpt |> ValueOption.bind reverse
 ```
 
 Это позволяет использовать Валуеоптион так же, как вариант в сценариях, где тип значения повышает производительность.
