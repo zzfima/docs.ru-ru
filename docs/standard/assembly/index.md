@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900597"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921373"
 ---
 # <a name="assemblies-in-net"></a>Сборки в .NET
 
@@ -63,7 +63,7 @@ ms.locfileid: "75900597"
 
 Существует несколько способов создания сборок. Можно использовать средства разработки, такие как Visual Studio, позволяющие создавать файлы *DLL* или *EXE*. Чтобы создать сборки с использованием модулей из других средств разработки, можно воспользоваться средствами из Windows SDK. Для создания динамических сборок также можно использовать интерфейсы CLR такие, как <xref:System.Reflection.Emit?displayProperty=nameWithType>.
 
-Скомпилируйте сборки, выполнив сборку в Visual Studio, с помощью средств интерфейса командной строки .NET Core или создав сборки .NET Framework с помощью компилятора командной строки. Дополнительные сведения о компиляции сборок с помощью средств интерфейса командной строки .NET см. в разделе [Средства интерфейса командной строки .NET Core](../../core/tools/index.md). Дополнительные сведения о компиляции сборок с помощью компиляторов командной строки см. в статье [Сборка из командной строки с помощью csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) для C# или [Построение из командной строки](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) для Visual Basic.
+Скомпилируйте сборки, выполнив сборку в Visual Studio, с помощью средств интерфейса командной строки .NET Core или создав сборки .NET Framework с помощью компилятора командной строки. Дополнительные сведения о компиляции сборок с помощью .NET Core CLI см. в [этой статье](../../core/tools/index.md). Дополнительные сведения о компиляции сборок с помощью компиляторов командной строки см. в статье [Сборка из командной строки с помощью csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) для C# или [Построение из командной строки](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) для Visual Basic.
 
 > [!NOTE]
 > Чтобы создать сборку в Visual Studio, выберите пункт **Сборка** в меню **Сборка**.

@@ -4,12 +4,12 @@ description: Руководства по .NET Core научат вас созд
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714045"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920429"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>См. дополнительные сведения о средствах пакета SDK для .NET Core и .NET Core
 
@@ -35,10 +35,10 @@ ms.locfileid: "75714045"
 - [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](using-on-mac-vs.md)
 - [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a>Создание приложений с помощью инструментов командной строки .NET Core
+## <a name="build-applications-with-the-net-core-cli"></a>Создание приложений с помощью .NET Core CLI
 
-- [Начало работы с .NET Core в Windows, Linux и macOS с помощью средств интерфейса командной строки .NET Core](cli-create-console-app.md)
-- [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
+- [Начало работы с .NET Core в Windows, Linux и macOS с помощью .NET Core CLI](cli-create-console-app.md)
+- [Организация и тестирование проектов с помощью .NET Core CLI](testing-with-cli.md)
 - [Начало работы с F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Другой

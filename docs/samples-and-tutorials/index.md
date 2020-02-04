@@ -4,12 +4,12 @@ description: Сведения о примерах и руководствах д
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9a161d5325125fba8d4f4e53a0a306c989ed6bc5
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901038"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921393"
 ---
 # <a name="net-samples-and-tutorials"></a>Примеры и руководства .NET
 
@@ -25,13 +25,13 @@ ms.locfileid: "75901038"
 
 ### <a name="tutorials"></a>Учебники
 
-**[Написание консольных приложений .NET Core с помощью средств командной строки: пошаговое руководство](../core/tutorials/cli-create-console-app.md)**
+**[Написание консольных приложений .NET Core с помощью .NET Core CLI: пошаговое руководство](../core/tutorials/cli-create-console-app.md)**
 
 В этом руководстве показано, как с помощью средств интерфейса командной строки в .NET Core создавать кроссплатформенные консольные приложения. Мы начнем с самого простого консольного приложения, а затем охватим несколько проектов, включая тестирование. Пошаговое добавление функций позволит наращивать знания в ходе работы. [Готовый пример](https://github.com/dotnet/samples/tree/master/core/console-apps) доступен в репозитории dotnet/samples на сайте GitHub.
 
 **[Написание библиотек с помощью кроссплатформенных средств](../core/tutorials/libraries.md)**
 
-В этом примере рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки. Они предоставляют эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. [Готовый пример](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) доступен в репозитории dotnet/samples на сайте GitHub.
+В этом примере рассматривается создание библиотек для .NET с помощью .NET Core CLI. Они предоставляют эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. [Готовый пример](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) доступен в репозитории dotnet/samples на сайте GitHub.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -111,7 +111,7 @@ ms.locfileid: "75901038"
    * Клонируйте репозиторий локально. Если вы клонируете репозиторий docs непосредственно на свой компьютер, вы не сможете сохранять изменения напрямую в официальном репозитории и, соответственно, не сможете участвовать в работе над документацией в дальнейшем. Чтобы сохранить возможность последующего участия в работе над документацией, используйте описанную выше процедуру ответвления и клонирования.
 1. Откройте в репозитории папку с примером. Относительный путь к папке с примером отображается в адресной строке браузера при переходе по ссылке на пример.
 1. Запустить пример можно несколькими способами:
-   * Используйте [средства интерфейса командной строки dotnet](../core/tools/index.md): в окне консоли перейдите в папку с примером и используйте команды интерфейса командной строки dotnet.
-   * Воспользуйтесь программой [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) или [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): откройте пример, последовательно щелкнув **"Файл" > "Открыть" > "Проект/решение"** , перейдите в папку проекта, содержащую пример, и выберите файл проекта ( *.csproj* или *.fsproj*).
+   * С использованием [.NET Core CLI](../core/tools/index.md): в окне консоли перейдите в папку с примером и используйте команды интерфейса командной строки dotnet.
+   * Воспользуйтесь программой [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) или [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): откройте пример, последовательно щелкнув **"Файл" > "Открыть" > "Проект/решение"**, перейдите в папку проекта, содержащую пример, и выберите файл проекта (*.csproj* или *.fsproj*).
    * Воспользуйтесь программой [Visual Studio Code](https://code.visualstudio.com/): откройте пример, последовательно щелкнув **"Файл" > "Открыть папку"** и выбрав папку проекта, содержащую пример.
    * Воспользуйтесь другой средой IDE, которая поддерживает проекты .NET Core.

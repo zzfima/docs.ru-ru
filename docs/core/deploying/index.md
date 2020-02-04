@@ -2,12 +2,12 @@
 title: Разработка приложений .NET Core
 description: См. дополнительные сведения о развертывании приложения .NET Core.
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740818"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920879"
 ---
 # <a name="net-core-application-deployment"></a>Развертывание приложений .NET Core
 
@@ -91,11 +91,11 @@ ms.locfileid: "75740818"
 
 ## <a name="step-by-step-examples"></a>Примеры с пошаговыми инструкциями
 
-Пошаговые примеры развертывания приложений .NET Core с помощью средств командной строки см. в [этой статье](deploy-with-cli.md). Пошаговые примеры развертывания приложений .NET Core с помощью Visual Studio см. в [этой статье](deploy-with-vs.md). 
+Пошаговые примеры развертывания приложений .NET Core с помощью .NET Core CLI см. в статье [Публикации приложений .NET Core с помощью интерфейса командной строки](deploy-with-cli.md). Пошаговые примеры развертывания приложений .NET Core с помощью Visual Studio см. в [этой статье](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>См. также
 
-- [Развертывание приложений .NET Core с помощью средств командной строки (CLI)](deploy-with-cli.md)
+- [Публикация приложений .NET Core с помощью .NET Core CLI](deploy-with-cli.md)
 - [Развертывание приложений .NET Core с помощью Visual Studio](deploy-with-vs.md)
 - [Пакеты, метапакеты и платформы](../packages.md)
 - [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)
