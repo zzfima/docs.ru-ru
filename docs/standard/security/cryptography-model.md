@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706231"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965962"
 ---
 # <a name="net-framework-cryptography-model"></a>Модель криптографии .NET Framework
 
@@ -33,15 +33,11 @@ ms.locfileid: "75706231"
 
 В качестве примера различных реализаций, доступных для алгоритма, рассмотрим симметричные алгоритмы. Основой для всех симметричных алгоритмов является <xref:System.Security.Cryptography.SymmetricAlgorithm>, который наследуется следующими алгоритмами:
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes> наследуется двумя классами: <xref:System.Security.Cryptography.AesCryptoServiceProvider> и <xref:System.Security.Cryptography.AesManaged>. Класс <xref:System.Security.Cryptography.AesCryptoServiceProvider> является оболочкой реализации CAPI (Windows Cryptography API) для AES, тогда как класс <xref:System.Security.Cryptography.AesManaged> написан полностью в управляемом коде. Имеется также и третий тип реализации — CNG (Cryptography Next Generation), который дополняет реализацию в управляемом коде и реализацию CAPI. Примером алгоритма CNG является <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Алгоритмы CNG доступны в Windows Vista и более поздних версий.
 
@@ -62,35 +58,22 @@ ms.locfileid: "75706231"
 Ниже приведен список рекомендуемых алгоритмов в зависимости от приложения.
 
 - Конфиденциальность данных:
-
   - <xref:System.Security.Cryptography.Aes>
-
 - Целостность данных:
-
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
 - Цифровая подпись.
-
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - Обмен ключами:
-
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - Генерация случайных чисел:
-
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
 - Формирование ключа из пароля:
-
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>См. также:
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Примененные протоколы шифрования, алгоритмы и исходный код в C, Брюс Шнайера](https://www.schneier.com/books/applied_cryptography/)
