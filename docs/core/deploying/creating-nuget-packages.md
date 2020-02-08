@@ -4,14 +4,14 @@ description: Узнайте, как создать пакет NuGet с помо�
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740860"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920922"
 ---
-# <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Как создать пакет NuGet с помощью средств интерфейса командной строки (CLI) .NET Core
+# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>Создание пакета NuGet с помощью .NET Core CLI
 
 > [!NOTE]
 > Ниже приведены примеры команд командной строки для Unix. Показанная здесь команда `dotnet pack` точно так же работает в Windows.

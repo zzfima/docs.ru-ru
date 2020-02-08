@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348152"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920103"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Учебник. Автоматизированная визуальная проверка с использованием передачи обучения и API классификации изображений ML.NET
 
@@ -28,7 +28,7 @@ ms.locfileid: "75348152"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
+- [Visual Studio 2017 версии 15.6 или более поздней](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>Обзор примера с передачей обучения для классификации изображений
 
@@ -140,10 +140,10 @@ SDNET2018 — это набор данных изображений, котор�
 
         `ModelInput` содержит следующие свойства:
 
-        - `ImagePath` — полный путь, по которому хранится изображение.
-        - `Label` — категория, к которой принадлежит это изображение. Это прогнозируемое значение.
         - `Image` является представлением изображения `byte[]`. Модель ожидает, что для обучения используются данные изображений этого типа.
         - `LabelAsKey` является численным представлением `Label`.
+        - `ImagePath` — полный путь, по которому хранится изображение.
+        - `Label` — категория, к которой принадлежит это изображение. Это прогнозируемое значение.
 
         Только `Image` и `LabelAsKey` используются для обучения модели и составления прогнозов. Свойства `ImagePath` и `Label` хранятся на случай обращения к имени и категории исходного файла изображения.
 
@@ -171,7 +171,7 @@ SDNET2018 — это набор данных изображений, котор�
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. Затем инициализируйте переменную `mlContext` с помощью нового экземпляра [MLContext](xref:Microsoft.ML.MLContext).
+1. Инициализируйте переменную `mlContext` с помощью нового экземпляра [MLContext](xref:Microsoft.ML.MLContext).
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 
@@ -253,7 +253,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 Обучение модели состоит из нескольких шагов. Сначала для обучения модели используется API классификации изображений. Затем закодированные метки в столбце `PredictedLabel` преобразуются обратно в исходное значение категории с помощью преобразования `MapKeyToValue`.
 
-1. Создайте новую переменную для хранения набора обязательных и необязательных параметров для `ImageClassificationTrainer`. 
+1. Создайте новую переменную для хранения набора обязательных и необязательных параметров для `ImageClassificationTrainer`.
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 

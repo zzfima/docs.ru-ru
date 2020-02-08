@@ -1,5 +1,5 @@
 ---
-title: <code> - C# Programming Guide
+title: <code> - C# programming guide
 ms.date: 07/20/2015
 f1_keywords:
 - code
@@ -8,32 +8,37 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: eddf00c5fd51308d6d0f618282931190b43e92b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711809"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789837"
 ---
-# <a name="code-c-programming-guide"></a>\<code> (руководство по программированию на C#)
-## <a name="syntax"></a>Синтаксис  
-  
-```xml  
-<code>content</code>  
-```  
-  
-## <a name="parameters"></a>Параметры  
- `content`  
- Текст, который необходимо пометить как код.  
-  
-## <a name="remarks"></a>Примечания  
- С помощью тега \<code> можно определить несколько строк как код. С помощью тега [\<c>](./code-inline.md) можно указать, что текст в описании необходимо пометить как код.  
-  
- Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../language-reference/compiler-options/doc-compiler-option.md).  
-  
-## <a name="example"></a>Пример  
- В разделе [\<example>](./example.md) можно найти пример использования тега \<code>.  
-  
+# <a name="code-c-programming-guide"></a>Руководство по программированию на C#. \<code>
+
+## <a name="syntax"></a>Синтаксис
+
+```xml
+<code>content</code>
+```
+
+## <a name="parameters"></a>Параметры
+
+- `content`
+
+  Текст, который необходимо пометить как код.
+
+## <a name="remarks"></a>Примечания
+
+С помощью тега \<code> можно определить несколько строк как код. С помощью тега [\<c>](./code-inline.md) можно указать, что текст в описании необходимо пометить как код.
+
+Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../language-reference/compiler-options/doc-compiler-option.md).
+
+## <a name="example"></a>Пример
+
+В разделе [\<example>](./example.md) можно найти пример использования тега \<code>.
+
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../index.md)

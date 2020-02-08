@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 47e8e15a64236d8ade2febb1add81fa4e5c030d9
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: ef3e4f9f8145677732b9d2e66d416be277697f55
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116146"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920636"
 ---
 
 Пакеты, добавляемые в веб-каналы диспетчера пакетов, именуются в формате, который можно взломать: `{product}-{type}-{version}`.
@@ -34,6 +34,6 @@ ms.locfileid: "76116146"
 - Установка среды выполнения ASP.NET Core 3.1: `aspnetcore-runtime-3.1`
 - Установка среды выполнения .NET Core 2.1: `dotnet-runtime-2.1`
 
-### <a name="troubleshoot"></a>Устранение неполадок
+### <a name="package-missing"></a>Пакет отсутствует
 
-Если сочетание пакетов не работает, оно недоступно. Например, пакет SDK для ASP.NET Core отсутствует, компоненты этого пакета SDK входят в состав пакета SDK для .NET Core. Значение `aspnetcore-sdk-2.2` неправильное и должно быть равно `dotnet-sdk-2.2`
+Если сочетание пакета и версии больше не поддерживается, оно недоступно. Например, пакет SDK для ASP.NET Core отсутствует, компоненты этого пакета SDK входят в состав пакета SDK для .NET Core. Значение `aspnetcore-sdk-2.2` неправильное и должно быть равно `dotnet-sdk-2.2`

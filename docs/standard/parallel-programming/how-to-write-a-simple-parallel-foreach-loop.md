@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134180"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921219"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Практическое руководство. написание простого цикла Parallel.ForEach
 
@@ -47,7 +47,7 @@ ms.locfileid: "73134180"
 
 В Visual Studio существуют шаблоны консольных приложений Visual Basic и C# для Windows Desktop и .NET Core.
 
-В командной строке можно использовать .NET Core и его средства CLI (например, `dotnet new console` или `dotnet new console -lang vb`) либо вы можете создать файл и использовать компилятор командной строки для приложения .NET Framework.
+В командной строке можно использовать команды .NET Core CLI (например, `dotnet new console` или `dotnet new console -lang vb`). Также вы можете создать файл и использовать компилятор командной строки для приложения .NET Framework.
 
 Для проекта .NET Core необходимо сослаться на пакет NuGet **System.Drawing.Common**. В Visual Studio используйте диспетчер пакетов NuGet для установки пакета. Кроме того, вы можете добавить ссылку на пакет в файл \*.csproj или \*.vbproj:
  

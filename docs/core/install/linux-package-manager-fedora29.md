@@ -4,12 +4,12 @@ description: Используйте диспетчер пакетов для у�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 750952229297ae069c0e8465bf83333d86b38dbd
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d917c867e0d8cdb066b7dee64a9dbd767b56072d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740684"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920806"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Диспетчер пакетов Fedora 29 — установка .NET Core
 
@@ -61,3 +61,11 @@ sudo dnf install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Установка других версий
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Устранение неполадок диспетчера пакетов
+
+В этом разделе описаны распространенные ошибки, которые могут возникнуть при использовании диспетчера пакетов для установки .NET Core.
+
+### <a name="failed-to-fetch"></a>Ошибка получения
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

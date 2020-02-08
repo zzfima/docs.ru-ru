@@ -1,16 +1,16 @@
 ---
-title: Организация и тестирование проектов с использованием командной строки .NET Core
+title: Организация и тестирование проектов с помощью .NET Core CLI
 description: В этом учебнике объясняется, как упорядочить и протестировать проекты .NET Core из командной строки.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715342"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920422"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Организация и тестирование проектов с использованием командной строки .NET Core
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Организация и тестирование проектов с помощью .NET Core CLI
 
 В этом руководстве мы продолжаем разрабатывать приложение, описанное в статье [Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки](cli-create-console-app.md), и переходим от простых консольных приложений к более сложным и структурированным приложениям. В этом руководстве будет описано, как упорядочить код с помощью папок и расширить консольное приложение с помощью платформы тестирования [xUnit](https://xunit.github.io/).
 

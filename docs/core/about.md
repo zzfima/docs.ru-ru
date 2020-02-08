@@ -2,12 +2,12 @@
 title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900620"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920961"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -58,14 +58,14 @@ ms.locfileid: "75900620"
 
 - [Среда выполнения .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr) предоставляет систему типов, функции загрузки сборок, сборщик мусора, собственные функции взаимодействия и другие базовые службы. [Библиотеки платформы .NET Core](https://github.com/dotnet/runtime/tree/master/src/libraries) предоставляют примитивные типы данных, типы компоновки приложений и базовые служебные программы.
 - [Среда выполнения ASP.NET Core](https://github.com/dotnet/aspnetcore) — это платформа для создания современных облачных приложений, подключенных к Интернету: веб-приложений, приложений Интернета вещей, серверной части мобильных решений и многого другого.
-- [Средства .NET Core CLI](https://github.com/dotnet/sdk) и компиляторы языков ([Roslyn](https://github.com/dotnet/roslyn) и [F#](https://github.com/microsoft/visualfsharp)) реализуют возможности разработки .NET Core.
-- [Средство dotnet](https://github.com/dotnet/core-setup) используется для запуска приложений .NET Core и инструментов командной строки. Оно выбирает среду выполнения, размещает ее, предоставляет политику загрузки сборок и запускает приложения и инструменты.
+- [.NET Core CLI](https://github.com/dotnet/sdk) и компиляторы языков ([Roslyn](https://github.com/dotnet/roslyn) и [F#](https://github.com/microsoft/visualfsharp)) реализуют возможности разработки .NET Core.
+- [Команда dotnet](./tools/dotnet.md) используется для запуска приложений .NET Core и CLI. Оно выбирает среду выполнения, размещает ее, предоставляет политику загрузки сборок и запускает приложения и инструменты.
 
 Эти компоненты распределены следующим образом:
 
 - [Среда выполнения .NET Core](https://dotnet.microsoft.com/download) — включает среду выполнения .NET Core и библиотеки платформы.
 - [Среда выполнения ASP.NET Core](https://dotnet.microsoft.com/download) — включает среды выполнения ASP.NET Core и .NET Core, а также библиотеки платформы.
-- [Пакет SDK для .NET Core](https://dotnet.microsoft.com/download) — включает средства CLI .NET, среду выполнения ASP.NET Core, а также платформу и среду выполнения .NET Core.
+- [Пакет SDK для .NET Core](https://dotnet.microsoft.com/download) — включает CLI .NET, среду выполнения ASP.NET Core, а также платформу и среду выполнения .NET Core.
 
 ### <a name="open-source"></a>Открытый код
 

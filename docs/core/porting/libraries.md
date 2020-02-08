@@ -3,12 +3,12 @@ title: Перенос библиотек в .NET Core
 description: Узнайте, как перенести проекты библиотеки из .NET Framework в .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 6ff38647f77bbe1d25dd1d0065c4b32c60f87fcd
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777350"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920613"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Перенос библиотек .NET Framework в .NET Core
 
@@ -31,7 +31,7 @@ ms.locfileid: "75777350"
 Из этой статьи вы узнаете, как .NET Core определяет и использует пакеты и как пакеты поддерживают выполнение кода во множестве реализаций .NET.
 
 [Разработка библиотек с помощью кроссплатформенных средств](../tutorials/libraries.md)\
-В этой статье объясняется создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки.
+В этой статье показано, как создавать библиотеки с помощью .NET Core CLI.
 
 [Дополнения к формату *CSPROJ* для .NET Core](../tools/csproj.md)\
 В этой статье перечислены изменения, внесенные в файлы проекта при перемещении в *CSPROJ* и MSBuild.

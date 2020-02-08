@@ -4,12 +4,12 @@ description: Используйте диспетчер пакетов для у�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 7a9d4524661e1230af7d1d50a4d8a60ad7774a68
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 32b152ff9be5135cf0ca7f8914bc9ee4f78000be
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740706"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920850"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Диспетчер пакетов Debian 9 — установка .NET Core
 
@@ -74,3 +74,11 @@ sudo apt-get install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Установка других версий
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Устранение неполадок диспетчера пакетов
+
+В этом разделе описаны распространенные ошибки, которые могут возникнуть при использовании диспетчера пакетов для установки .NET Core.
+
+### <a name="failed-to-fetch"></a>Ошибка получения
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

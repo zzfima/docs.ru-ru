@@ -1,23 +1,23 @@
 ---
-title: Начало работы с .NET Core с использованием CLI — .NET Core CLI
-description: Пошаговое руководство, описывающее начало работы с .NET Core в Windows, Linux или macOS с помощью интерфейса командной строки (CLI) .NET Core.
+title: Начало работы с .NET Core с помощью средств интерфейса командной строки
+description: Пошаговое руководство по использованию .NET Core в Windows, Linux или macOS с помощью .NET Core CLI.
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739126"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920468"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>Начало работы с .NET Core с помощью .NET Core CLI
 
-В этой статье показано, как приступить к разработке кроссплатформенных приложений с помощью средств .NET Core CLI.
+В этой статье показано, как приступить к разработке приложений .NET Core для Windows, Linux и macOS с помощью .NET Core CLI.
 
-Если вы не знакомы с набором средств CLI .NET Core, прочитайте [обзор пакета SDK для .NET Core](../tools/index.md).
+Если вы не знакомы с .NET Core CLI, см. сведения о [пакете SDK для .NET Core](../tools/index.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -194,6 +194,6 @@ Hello World!
 
 ## <a name="see-also"></a>См. также
 
-- [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
-- [Публикация приложений .NET Core с помощью интерфейса командной строки](../deploying/deploy-with-cli.md)
-- [Подробнее о развертывании приложений](../deploying/index.md)
+- [Организация и тестирование проектов с помощью .NET Core CLI](testing-with-cli.md)
+- [Публикация приложений .NET Core с помощью .NET Core CLI](../deploying/deploy-with-cli.md)
+- [Развертывание приложений .NET Core](../deploying/index.md)

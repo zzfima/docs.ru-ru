@@ -1,16 +1,16 @@
 ---
-title: Использование XML-документации (руководство по программированию на C#)
+title: Руководство по программированию на C#. Использование XML-документации
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696718"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789776"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Практическое руководство. Использование XML-документации
 
@@ -20,7 +20,7 @@ ms.locfileid: "75696718"
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-В примере создается XML-файл со следующим содержимым:
+В примере создается файл *.xml* со следующим содержимым:
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ ms.locfileid: "75696718"
 
 - Документация должна представлять собой XML с правильным форматом. Если формат XML неверен, то выдается предупреждение и файл документации содержит комментарий о том, что произошла ошибка.
 
-- Разработчики могут создавать собственные наборы тегов. Существует рекомендуемый набор тегов (см. статью о [рекомендуемых тегах для комментариев документации](recommended-tags-for-documentation-comments.md)). Некоторые рекомендуемые теги имеют особые значения.
+- Разработчики могут создавать собственные наборы тегов. При этом существует [рекомендуемый набор тегов](recommended-tags-for-documentation-comments.md). Некоторые рекомендуемые теги имеют особые значения.
 
   - Тег \<param> используется для описания параметров. При использовании этого тега компилятор проверяет, что параметр существует и все параметры описаны в документации. При сбое проверки компилятор выдает предупреждение.
 

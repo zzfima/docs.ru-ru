@@ -1,19 +1,19 @@
 ---
 title: Отладка приложения .NET для Apache Spark в Windows
 description: Узнайте, как отлаживать приложения .NET для Apache Spark в Windows.
-ms.date: 08/15/2019
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 098c7519fe99ef04773c5e4b81685ca0f06f1272
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281532"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919928"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Отладка приложения .NET для Apache Spark
 
-В этом практическом руководстве приведены команды, которые необходимы для отладки приложения .NET для Apache Spark и кода Scala в Windows.
+Это практическое руководство содержит сведения о том, как отлаживать приложения .NET для Apache Spark в Windows.
 
 ## <a name="debug-your-application"></a>Отладка приложения
 
@@ -35,13 +35,40 @@ spark-submit \
 ***********************************************************************
 ```
 
-В этом режиме отладки `DotnetRunner` не запускает приложение .NET, но ожидает его подключения. Не закрывайте окно командной строки.
+В режиме отладки DotnetRunner не запускает приложение .NET, а ожидает, пока вы запустите это приложение вручную. Оставьте окно командной строки открытым и запустите приложение .NET через отладчик C#, чтобы выполнить отладку приложения. Запустите приложение .NET через отладчик C# ([отладчик Visual Studio для Windows/macOS](https://visualstudio.microsoft.com/vs/) или [расширения отладчика C# для Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)), чтобы выполнить отладку приложения.
 
-Теперь можно запустить приложение .NET с любым отладчиком.
+## <a name="debug-a-user-defined-function-udf"></a>Отладка определяемой пользователем функции (UDF)
+
+> [!NOTE]
+> Определяемые пользователем функции поддерживаются только в Windows с отладчиком Visual Studio.
+
+Перед запуском `spark-submit` установите следующее значение переменной среды:
+
+```bat
+set DOTNET_WORKER_DEBUG=1
+```
+
+При запуске приложения Spark появится окно `Choose Just-In-Time Debugger`. Выберите здесь отладчик Visual Studio.
+
+Отладчик остановит выполнение программы в следующей строке файла [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52):
+
+```csharp
+if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
+{
+    Debugger.Launch(); // <-- The debugger will break here.
+}
+```
+
+Перейдите к файлу *.cs*, который содержит определяемую пользователем функцию, которую вам нужно отладить, и [установите точку останова](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019). От точки останова поступит сообщение `The breakpoint will not currently be hit`, так как рабочая роль еще не загрузила сборку с нужной функцией UDF.
+
+Нажмите `F5`, чтобы продолжить работу приложения до момента, когда будет достигнута эта точка останова.
+
+> [!NOTE] 
+> Для каждой задачи откроется окно выбора JIT-отладчика. Чтобы всплывающих окон не было слишком много, настройте небольшое число исполнителей. Например, параметр **--master local [1]** для команды spark-submit позволяет задать для числа задач значение 1. Это означает, что запускается только один экземпляр отладчика.
 
 ## <a name="debug-scala-code"></a>Отладка кода Scala
 
-Если необходимо выполнить отладку кода на стороне Scala, например `DotnetRunner` или `DotnetBackendHandler`, выполните следующую команду:
+Если вам нужно выполнить отладку кода на стороне Scala (`DotnetRunner`, `DotnetBackendHandler` и т. д.), можно использовать следующую команду и подключить отладчик к выполняющемуся процессу с помощью [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):
 
 ```shell
 spark-submit \

@@ -4,12 +4,12 @@ description: Используйте диспетчер пакетов для у�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 18a0068e5494d6a25e9cd278ce88f5915e2000b8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f48c131b4250bd04fffc0d815a3500732caacb7c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740642"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921034"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>Диспетчер пакетов SLES 15 — установка .NET Core
 
@@ -60,3 +60,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Установка других версий
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Устранение неполадок диспетчера пакетов
+
+В этом разделе описаны распространенные ошибки, которые могут возникнуть при использовании диспетчера пакетов для установки .NET Core.
+
+### <a name="failed-to-fetch"></a>Ошибка получения
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-rpm.md)]

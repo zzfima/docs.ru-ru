@@ -2,12 +2,12 @@
 title: Рабочий процесс разработки для приложений Docker
 description: Сведения о рабочем процессе для разработки приложений Docker. Начнем по шагам, рассмотрим подробности оптимизации файлов Dockerfile и закончим на упрощенном рабочем процессе, доступном при использовании Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740358"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965793"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Рабочий процесс разработки для приложений Docker
 
@@ -409,7 +409,7 @@ services:
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Работа с файлом docker-compose.yml в Visual Studio 2017
 
-Помимо добавления в проект файла Dockerfile, как уже отмечалось, Visual Studio 2017 (с версии 15.8) позволяет добавить поддержку оркестратора для Docker Compose в решение.
+Наряду с возможностью добавления Dockerfile в проект, как уже отмечалось, Visual Studio 2017 версии 15.8 и выше позволяет включить в решении поддержку оркестратора для Docker Compose.
 
 При добавлении поддержки оркестратора контейнеров, как показано на рисунке 5-7, в первый раз Visual Studio создает файл Dockerfile для проекта и создает новый проект (раздел службы) в решении с несколькими глобальными файлами `docker-compose*.yml`, а затем добавляет проект для таких файлов. Затем можно открыть файлы docker-compose.yml и добавить в них дополнительные возможности.
 
@@ -442,10 +442,10 @@ services:
 Контейнер Docker можно запустить с помощью команды `docker run`, как показано на рисунке 5-9.
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-Приведенная выше команда создает новый экземпляр контейнера из указанного образа при каждом запуске. Можно использовать параметр `--name` для указания имени контейнера, а затем использовать `docker start {name}` (или идентификатор контейнера либо автоматическое имя) для запуска существующего экземпляра контейнера.
+Приведенная выше команда создает новый экземпляр контейнера из указанного образа при каждом запуске. Можно использовать параметр `--name` для указания имени контейнера, а затем использовать `docker start {name}` (также поддерживаются идентификатор контейнера и автоматически присваиваемое имя) для запуска существующего экземпляра контейнера.
 
 ![Снимок экрана: запуск контейнера Docker с помощью команды docker run.](./media/docker-app-development-workflow/use-docker-run-command.png)
 
@@ -453,7 +453,7 @@ services:
 
 В этом случае команда привязывает внутренний порт 5000 контейнера к порту 80 хост-компьютера. Это означает, что узел выполняет прослушивание порта 80 и переадресацию в порт 5000 в контейнере.
 
-Показанный хэш — это идентификатор контейнера; ему также присваивается случайное имя для чтения, если параметр `--name` не используется.
+Показанный хэш — это идентификатор контейнера; ему также присваивается случайное доступное для чтения имя, если параметр `--name` не используется.
 
 #### <a name="using-visual-studio"></a>Использование Visual Studio
 
@@ -500,7 +500,7 @@ services:
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Примечание о тестировании и развертывании с использованием оркестраторов
 
-Команды docker-compose up и docker run (или запуск и отладка контейнеров в Visual Studio) подходят для тестирования контейнеров в вашей среде разработки. Но этот подход не следует использовать для развертывания в рабочей среде, где следует выбирать оркестраторы, например [Kubernetes](https://kubernetes.io/) или [Service Fabric](https://azure.microsoft.com/services/service-fabric/). При использовании Kubernetes необходимо использовать [модули](https://kubernetes.io/docs/concepts/workloads/pods/pod/) для организации контейнеров и [службы](https://kubernetes.io/docs/concepts/services-networking/service/) для их объединения в сеть. Можно также использовать [развертывания](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) для упорядочения создания и изменения модулей.
+Команды docker-compose up и docker run (или запуск и отладка контейнеров в Visual Studio) подходят для тестирования контейнеров в вашей среде разработки. Но этот подход не следует использовать для развертывания в рабочей среде, где следует выбирать оркестраторы, например [Kubernetes](https://kubernetes.io/) или [Service Fabric](https://azure.microsoft.com/services/service-fabric/). При работе с Kubernetes необходимо использовать [модули](https://kubernetes.io/docs/concepts/workloads/pods/pod/) для организации контейнеров и [службы](https://kubernetes.io/docs/concepts/services-networking/service/) для их объединения в сеть. Можно также использовать [развертывания](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) для упорядочения создания и изменения модулей.
 
 ![Изображение для шага 6.](./media/docker-app-development-workflow/step-6-test-app-microservices.png)
 

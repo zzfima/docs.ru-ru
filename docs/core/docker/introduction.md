@@ -3,12 +3,12 @@ title: Введение в Docker
 description: Эта статья содержит общие сведения об использовании Docker в контексте приложения .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715552"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920822"
 ---
 # <a name="introduction-to-net-and-docker"></a>Введение в .NET и Docker
 
@@ -18,7 +18,7 @@ ms.locfileid: "75715552"
 
 ## <a name="docker-basics"></a>Основные сведения о Docker
 
-Существует несколько понятий, с которыми вам следует ознакомиться. Клиент Docker содержит программу с интерфейсом командной строки, используемую для управления образами и контейнерами. Как озвучивалось ранее, вам следует выделить время на ознакомление с [Обзорной документацией по Docker](https://docs.docker.com/engine/docker-overview/). 
+Существует несколько понятий, с которыми вам следует ознакомиться. Клиент Docker содержит CLI для управления образами и контейнерами. Как озвучивалось ранее, вам следует выделить время на ознакомление с [Обзорной документацией по Docker](https://docs.docker.com/engine/docker-overview/). 
 
 ### <a name="images"></a>Образы
 

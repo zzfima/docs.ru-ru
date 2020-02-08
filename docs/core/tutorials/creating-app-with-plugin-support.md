@@ -4,12 +4,12 @@ description: Узнайте, как создать приложение .NET Cor
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739703"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787853"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Создание приложения .NET Core с подключаемыми модулями
 
@@ -250,15 +250,18 @@ static Assembly LoadPlugin(string relativePath)
 
 ```xml
 <ItemGroup>
-<ProjectReference Include="..\PluginBase\PluginBase.csproj">
-    <Private>false</Private>
-</ProjectReference>
+    <ProjectReference Include="..\PluginBase\PluginBase.csproj">
+        <Private>false</Private>
+        <ExcludeAssets>runtime</ExcludeAssets>
+    </ProjectReference>
 </ItemGroup>
 ```
 
 Элемент `<Private>false</Private>` очень важен. Он сообщает MSBuild, что не нужно копировать *PluginBase.dll* в выходной каталог для HelloPlugin. Если сборка *PluginBase.dll* присутствует в выходном каталоге, `PluginLoadContext` найдет там сборку и загрузит ее при загрузке сборки *HelloPlugin.dll*. На этом этапе тип `HelloPlugin.HelloCommand` реализует интерфейс `ICommand` из файла *PluginBase.dll* в выходном каталоге проекта `HelloPlugin`, а не интерфейс `ICommand`, загруженный в контекст загрузки по умолчанию. Так как среда выполнения считает эти два типа разными типами из разных сборок, метод `AppWithPlugin.Program.CreateCommands` не найдет команды. Поэтому для ссылки на сборку, содержащую интерфейсы подключаемого модуля, требуются метаданные `<Private>false</Private>`.
 
-Теперь, когда проект `HelloPlugin` завершен, мы должны обновить проект `AppWithPlugin`, чтобы знать, где находится подключаемый модуль `HelloPlugin`. После комментария `// Paths to plugins to load` добавьте `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` как элемент массива `pluginPaths`.
+Аналогично, элемент `<ExcludeAssets>runtime</ExcludeAssets>` также важен, если `PluginBase` ссылается на другие пакеты. Этот параметр действует так же, как `<Private>false</Private>`, но используется в ссылках на пакеты, которые могут содержать проект `PluginBase` или одну из его зависимостей.
+
+Теперь, когда проект `HelloPlugin` завершен, нужно обновить проект `AppWithPlugin`, чтобы знать, где находится подключаемый модуль `HelloPlugin`. После комментария `// Paths to plugins to load` добавьте `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` как элемент массива `pluginPaths`.
 
 ## <a name="plugin-with-library-dependencies"></a>Подключаемый модуль с зависимостями библиотек
 
@@ -268,7 +271,7 @@ static Assembly LoadPlugin(string relativePath)
 
 Полный исходный код для этого руководства можно найти в [репозитории dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Полный пример включает несколько других примеров поведения `AssemblyDependencyResolver`. Например, объект `AssemblyDependencyResolver` может разрешить собственные библиотеки, а также локализованные вспомогательные сборки, включенные в пакеты NuGet. `UVPlugin` и `FrenchPlugin` в репозитории примеров демонстрируют такие сценарии.
 
-## <a name="reference-a-plugin-from-a-nuget-package"></a>Активация подключаемого модуля из пакета NuGet
+## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>Активация интерфейса подключаемого модуля из пакета NuGet
 
 Предположим, у вас есть приложение A, и интерфейс его подключаемого модуля определен в пакете NuGet `A.PluginBase`. Как правильно сослаться на пакет в проекте подключаемого модуля? Для ссылок проекта использование метаданных `<Private>false</Private>` в элементе `ProjectReference` в файле проекта не позволило скопировать DLL-файл в выходные данные.
 

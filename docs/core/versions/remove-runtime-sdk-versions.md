@@ -5,12 +5,12 @@ ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 82fbccdec0323b54d313960279fcbfeeb6033319
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713989"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920403"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Как удалить среду выполнения .NET Core и пакет SDK
 
@@ -136,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ---
 
-## <a name="uninstalling-net-core"></a>Удаление .NET Core
+## <a name="uninstall-net-core"></a>Удаление .NET Core
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -220,7 +220,7 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 | Visual Studio 2017 версии 15.9 | Пакет SDK для .NET Core 2.2.1xx, 2.1.5xx |
 | Visual Studio 2017 версии 15.8 | Пакет SDK для .NET Core 2.1.4xx |
 
-Начиная с Visual Studio 2019 версии 16.3, Visual Studio управляет собственной копией пакета SDK для .NET Core. По этой причине вы больше не встретите эти версии пакета SDK в диалоговом окне **Установка и удаление программ**.
+Visual Studio 2019 версии 16.3 и выше управляет собственной копией пакета SDK для .NET Core. По этой причине вы больше не встретите эти версии пакета SDK в диалоговом окне **Установка и удаление программ**.
 
 ## <a name="remove-the-nuget-fallback-folder"></a>Удаление резервной папки NuGet
 

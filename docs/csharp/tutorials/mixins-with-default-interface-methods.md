@@ -3,12 +3,12 @@ title: Создание типов смешения с помощью метод
 description: Используя элементы интерфейса по умолчанию, можно расширить интерфейсы дополнительными реализациями по умолчанию для средств реализации.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140843"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921448"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Учебник. Функциональные возможности смешения при создании классов с помощью методов интерфейса по умолчанию
 
@@ -24,7 +24,7 @@ ms.locfileid: "74140843"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Вам нужно настроить свой компьютер для выполнения .NET Core, включая компилятор C# 8.0. Компилятор C# 8.0 доступен, начиная с [Visual Studio 2019, 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), или [в пакете SDK для .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) или более поздней версии.
+Вам нужно настроить свой компьютер для выполнения .NET Core, включая компилятор C# 8.0. Компилятор C# 8.0 доступен в [Visual Studio 2019 версии 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) и выше или [пакете SDK .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) и выше.
 
 ## <a name="limitations-of-extension-methods"></a>Ограничения методов расширения
 
@@ -45,7 +45,7 @@ ms.locfileid: "74140843"
 
 Некоторые из этих расширенных возможностей можно эмулировать на устройствах, поддерживающих минимальный набор. Это соответствует реализации по умолчанию. Для устройств со встроенными дополнительными возможностями программное обеспечение устройства будет использовать собственные возможности. Для других источников освещения они могут реализовать интерфейс и использовать реализацию по умолчанию.
 
-Элементы интерфейса по умолчанию являются лучшим решением для этого сценария, чем методы расширения. Авторы классов могут управлять выбором интерфейсов для реализации. Выбранные ими интерфейсы доступны как методы. Кроме того, так как методы стандартного интерфейса являются виртуальными по умолчанию, диспетчеризация методов всегда выбирает реализацию в классе. 
+Элементы интерфейса по умолчанию являются лучшим решением для этого сценария, чем методы расширения. Авторы классов могут управлять выбором интерфейсов для реализации. Выбранные ими интерфейсы доступны как методы. Кроме того, так как методы стандартного интерфейса являются виртуальными по умолчанию, диспетчеризация методов всегда выбирает реализацию в классе.
 
 Давайте создадим код для демонстрации этих различий.
 
@@ -79,7 +79,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-В отличие от переопределения виртуальных методов классов, объявление `TurnOnFor` в классе `HalogenLight` не использует ключевое слово `override`. 
+В отличие от переопределения виртуальных методов классов, объявление `TurnOnFor` в классе `HalogenLight` не использует ключевое слово `override`.
 
 ## <a name="mix-and-match-capabilities"></a>Смешение и сопоставление возможностей
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345024"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794626"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Учебник. Обнаружение объектов с помощью ONNX в ML.NET
 
@@ -213,7 +213,7 @@ Open Neural Network Exchange (ONNX) — это формат с открытым 
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` имеет следующие поля `float`:
+    `DimensionsBase` имеет следующие свойства `float`:
 
     - `X` содержит расположение объекта вдоль оси X.
     - `Y` содержит расположение объекта вдоль оси Y.
@@ -237,7 +237,7 @@ Open Neural Network Exchange (ONNX) — это формат с открытым 
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` имеет следующие поля:
+    `YoloBoundingBox` имеет следующие свойства:
 
     - `Dimensions` содержит размеры ограничивающего прямоугольника.
     - `Label` содержит класс объекта, обнаруженного в ограничивающем прямоугольнике.
@@ -260,7 +260,7 @@ Open Neural Network Exchange (ONNX) — это формат с открытым 
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L10)]
 
-1. Добавьте в определение класса `YoloOutputParser` следующую константу и поля.
+1. Добавьте в определение класса `YoloOutputParser` следующие константы и поля.
 
     [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 

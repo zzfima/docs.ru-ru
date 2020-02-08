@@ -3,12 +3,12 @@ title: Глобальные средства .NET Core
 description: Обзор глобальных средств .NET Core и доступных для них команд .NET Core CLI.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899862"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920494"
 ---
 # <a name="net-core-global-tools-overview"></a>Обзор глобальных средств .NET Core
 
@@ -30,7 +30,7 @@ ms.locfileid: "75899862"
 
 ## <a name="find-a-net-core-global-tool"></a>Как найти глобальное средство .NET Core
 
-В интерфейсе командной строки (CLI) .NET Core пока нет функции поиска глобальных средств. Ниже приведены некоторые рекомендации по поиску средств.
+В .NET Core CLI пока нет функции поиска глобальных средств. Ниже приведены некоторые рекомендации по поиску средств.
 
 * Глобальные средства .NET Core можно найти в [NuGet](https://www.nuget.org). При этом NuGet пока не позволяет выполнять поиск конкретных глобальных средств .NET Core.
 * Вы можете найти рекомендации средств в записях блога или в репозитории GitHub [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).

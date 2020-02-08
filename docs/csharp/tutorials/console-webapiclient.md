@@ -3,20 +3,18 @@ title: Создание клиента REST с использованием .NET
 description: Это руководство раскроет для вас некоторые возможности .NET Core и языка C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737574"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921091"
 ---
 # <a name="rest-client"></a>Клиент REST
 
-## <a name="introduction"></a>Вступление
-
 Это руководство раскроет для вас некоторые возможности .NET Core и языка C#. Вы узнаете:
 
-* работа с интерфейсом командной строки (CLI) в .NET Core;
+* Общие сведения о .NET Core CLI.
 * обзор возможностей языка C#;
 * управление зависимостями с помощью NuGet;
 * взаимодействие по протоколу HTTP;
@@ -154,7 +152,7 @@ namespace WebAPIClient
 {
     public class Repository
     {
-        public string name { get; set; };
+        public string name { get; set; }
     }
 }
 ```
@@ -170,7 +168,6 @@ namespace WebAPIClient
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
-return repositories;
 ```
 
 Вы используете новое пространство имён, поэтому его нужно добавить в верхней части файла:
@@ -231,7 +228,8 @@ private static async Task<List<Repository>> ProcessRepositories()
 Теперь мы можем просто возвращать репозитории после обработки ответа JSON:
 
 ```csharp
-var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
+var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
+var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 return repositories;
 ```
 
@@ -255,16 +253,16 @@ public static async Task Main(string[] args)
 Сначала добавьте еще несколько простых типов в определение класса `Repository`. Добавьте в этот класс следующие свойства:
 
 ```csharp
-[JsonPropertyName(Name="description")]
+[JsonPropertyName("description")]
 public string Description { get; set; }
 
-[JsonPropertyName(Name="html_url")]
+[JsonPropertyName("html_url")]
 public Uri GitHubHomeUrl { get; set; }
 
-[JsonPropertyName(Name="homepage")]
+[JsonPropertyName("homepage")]
 public Uri Homepage { get; set; }
 
-[JsonPropertyName(Name="watchers")]
+[JsonPropertyName("watchers")]
 public int Watchers { get; set; }
 ```
 
@@ -293,7 +291,7 @@ foreach (var repo in repositories)
 Он не соответствует ни одному из стандартных форматов .NET для типа <xref:System.DateTime>. Поэтому нам нужен специализированный метод для преобразования. Кроме того, нежелательно предоставлять пользователям класса `Repository` доступ к необработанным строковым данным. И здесь нам снова помогут атрибуты. Сначала определите свойство `public`, которое будет содержать строковое представление даты и времени в вашем классе `Repository`, а также свойство `LastPush` `readonly`, которое возвращает отформатированную строку, которая представляет возвращенную дату:
 
 ```csharp
-[JsonPropertyName(Name="pushed_at")]
+[JsonPropertyName("pushed_at")]
 public string JsonDate { get; set; }
 
 public DateTime LastPush =>

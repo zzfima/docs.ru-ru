@@ -1,20 +1,20 @@
 ---
-title: Публикации приложений .NET Core с помощью интерфейса командной строки
-description: Научитесь публиковать приложения .NET Core с помощью средств командной строки (CLI) в составе .NET Core SDK.
+title: Публикация приложений с помощью .NET Core CLI
+description: Узнайте, как публиковать приложения .NET Core с помощью команд .NET Core CLI.
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740858"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920900"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>Публикации приложений .NET Core с помощью интерфейса командной строки
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>Публикация приложений .NET Core с помощью .NET Core CLI
 
 В этой статье рассказывается, как опубликовать приложение .NET Core из командной строки. Платформа .NET Core предоставляет три способа публикации приложений. Зависящее от платформы развертывание создает кроссплатформенный DLL-файл, который использует локально установленную среду выполнения .NET Core. Зависящий от платформы исполняемый файл использует локально установленную среду выполнения .NET Core. Автономный исполняемый файл создает зависящий от платформы исполняемый файл и включает локальную копию среды выполнения .NET Core.
 
