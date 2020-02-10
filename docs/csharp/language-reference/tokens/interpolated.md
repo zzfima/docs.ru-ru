@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715082"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980123"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочные материалы по C#)
 
@@ -101,6 +101,6 @@ ms.locfileid: "75715082"
 - [справочник по C#](../index.md)
 - [Специальные символы C#](index.md)
 - [Строки](../../programming-guide/strings/index.md)
-- [Таблица форматирования числовых результатов](../keywords/formatting-numeric-results-table.md)
+- [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Составное форматирование](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

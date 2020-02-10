@@ -2,12 +2,12 @@
 title: Использование счетчиков производительности
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 3e0a0199e93abe1218f7d9c052807cb94e911140
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6c125ecd0f6cef10b62e7e451eb37bba1ce89b65
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716703"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094843"
 ---
 # <a name="using-performance-counters"></a>Использование счетчиков производительности
 В этом образце показано, как получить доступ к счетчикам производительности Windows Communication Foundation (WCF) и как создавать определяемые пользователем счетчики производительности. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -76,6 +76,6 @@ ms.locfileid: "74716703"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Примеры мониторинга AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Примеры мониторинга AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

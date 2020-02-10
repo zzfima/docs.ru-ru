@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965962"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095272"
 ---
 # <a name="net-framework-cryptography-model"></a>Модель криптографии .NET Framework
 
@@ -41,7 +41,7 @@ ms.locfileid: "76965962"
 
 <xref:System.Security.Cryptography.Aes> наследуется двумя классами: <xref:System.Security.Cryptography.AesCryptoServiceProvider> и <xref:System.Security.Cryptography.AesManaged>. Класс <xref:System.Security.Cryptography.AesCryptoServiceProvider> является оболочкой реализации CAPI (Windows Cryptography API) для AES, тогда как класс <xref:System.Security.Cryptography.AesManaged> написан полностью в управляемом коде. Имеется также и третий тип реализации — CNG (Cryptography Next Generation), который дополняет реализацию в управляемом коде и реализацию CAPI. Примером алгоритма CNG является <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Алгоритмы CNG доступны в Windows Vista и более поздних версий.
 
-Можно выбрать ту реализацию, которая подходит вам лучше всего.  Реализации в управляемом коде доступны на всех платформах, поддерживающих .NET Framework.  Реализации CAPI доступны в старых операционных системах и больше не разрабатываются. CNG — это самая последняя реализация, при помощи которой будет вестись разработка новых приложений. Однако реализации в управляемом коде не сертифицированы по федеральным стандартам на обработку информации (FIPS) и могут работать медленнее, чем классы-оболочки.
+Можно выбрать ту реализацию, которая подходит вам лучше всего. Управляемые реализации доступны на всех платформах, поддерживающих .NET Framework. Реализации CAPI доступны в более старых операционных системах и больше не разрабатываются. CNG — это последняя реализация, в которой будет создаваться новая разработка. Однако реализации в управляемом коде не сертифицированы по федеральным стандартам на обработку информации (FIPS) и могут работать медленнее, чем классы-оболочки.
 
 ## <a name="stream-design"></a>Поточно-ориентированный подход
 
@@ -62,7 +62,7 @@ ms.locfileid: "76965962"
 - Целостность данных:
   - <xref:System.Security.Cryptography.HMACSHA256>
   - <xref:System.Security.Cryptography.HMACSHA512>
-- Цифровая подпись.
+- Цифровая подпись:
   - <xref:System.Security.Cryptography.ECDsa>
   - <xref:System.Security.Cryptography.RSA>
 - Обмен ключами:
@@ -73,7 +73,7 @@ ms.locfileid: "76965962"
 - Формирование ключа из пароля:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Службы криптографии](../../../docs/standard/security/cryptographic-services.md)
 - [Примененные протоколы шифрования, алгоритмы и исходный код в C, Брюс Шнайера](https://www.schneier.com/books/applied_cryptography/)

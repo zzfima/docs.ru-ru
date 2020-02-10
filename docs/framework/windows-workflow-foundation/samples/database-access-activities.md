@@ -2,16 +2,16 @@
 title: Действия доступа к базе данных
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710862"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094648"
 ---
 # <a name="database-access-activities"></a>Действия доступа к базе данных
 
-Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса. Эти действия позволяют обращаться к базам данных для получения или изменения информации и использовать [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) для доступа к базе данных.
+Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса. Эти действия позволяют обращаться к базам данных для получения или изменения информации и использовать [ADO.NET](../../data/adonet/index.md) для доступа к базе данных.
 
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).
@@ -72,13 +72,13 @@ Public class DbUpdate: AsyncCodeActivity
 }
 ```
 
-|Аргумент|Описание|
+|Аргумент|Description|
 |-|-|
 |ProviderName|Неизменяемое имя поставщика ADO.NET. Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|
 |ConnectionString|Строка соединения для подключения к базе данных. Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|
 |ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении. Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|
-|Тип команды|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
-|Sql|Выполняемая команда SQL.|
+|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
+|SQL|Команда SQL для выполнения.|
 |Параметры|Коллекция параметров SQL-запроса.|
 |AffectedRecords|Количество записей, на которые повлияла последняя операция.|
 
@@ -126,13 +126,13 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }
 ```
 
-|Аргумент|Описание|
+|Аргумент|Description|
 |-|-|
 |ProviderName|Неизменяемое имя поставщика ADO.NET. Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|
 |ConnectionString|Строка соединения для подключения к базе данных. Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|
 |ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении. Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|
-|Тип команды|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
-|Sql|Выполняемая команда SQL.|
+|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
+|SQL|Команда SQL для выполнения.|
 |Параметры|Коллекция параметров SQL-запроса.|
 |Результат|Скаляр, полученный после выполнения запроса. Этот аргумент имеет тип `TResult`.|
 
@@ -186,13 +186,13 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }
 ```
 
-|Аргумент|Описание|
+|Аргумент|Description|
 |-|-|
 |ProviderName|Неизменяемое имя поставщика ADO.NET. Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|
 |ConnectionString|Строка соединения для подключения к базе данных. Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|
 |ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении. Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|
-|Тип команды|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
-|Sql|Выполняемая команда SQL.|
+|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
+|SQL|Команда SQL для выполнения.|
 |Параметры|Коллекция параметров SQL-запроса.|
 |Сопоставитель|Функция сопоставления (<xref:System.Func%601><`DbDataReader`, `TResult`>), которая принимает запись в `DataReader`, полученную в результате выполнения запроса, и возвращает экземпляр объекта типа `TResult`, добавляемого в коллекцию `Result`.<br /><br /> В этом случае сопоставление совершается на одном шаге выполнения, но декларативное авторство с использованием конструктора невозможно.|
 |MapperFunc|Функция сопоставления (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>), которая принимает запись в `DataReader`, полученную в результате выполнения запроса, и возвращает экземпляр объекта типа `TResult`, добавляемого в коллекцию `Result`.<br /><br /> В этом случае сопоставление совершается в несколько шагов выполнения. Для этой функции возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).|
@@ -240,13 +240,13 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }
 ```
 
-|Аргумент|Описание|
+|Аргумент|Description|
 |-|-|
 |ProviderName|Неизменяемое имя поставщика ADO.NET. Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|
 |ConnectionString|Строка соединения для подключения к базе данных. Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|
 |ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении. Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|
-|Тип команды|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
-|Sql|Выполняемая команда SQL.|
+|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
+|SQL|Команда SQL для выполнения.|
 |Параметры|Коллекция параметров SQL-запроса.|
 |Результат|<xref:System.Data.DataSet>, полученный после выполнения запроса.|
 
@@ -307,7 +307,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Запуск команды Setup.cmd
 
-1. Откройте окно командной строки.
+1. Откройте командную строку.
 
 2. Перейдите в папку образца DbActivities.
 
@@ -320,7 +320,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 1. Выполните в командной строке файл Cleanup.cmd из папки образца.
 
-##### <a name="to-run-the-sample"></a>Выполнение образца
+##### <a name="to-run-the-sample"></a>Запуск образца
 
 1. Открытие решения в Visual Studio 2010
 

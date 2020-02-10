@@ -2,20 +2,20 @@
 title: Реализованное действие политики в .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710929"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094635"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Реализованное действие политики в .NET Framework 4.5
 
-В этом примере показано, как действие ExternalizedPolicy4 разрешает выполнение существующих .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> объектов [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) непосредственно с помощью обработчика правил, который поставляется в WF 3,5. Используя это действие, можно создавать и выполнять любой существующий набор правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. Дополнительные сведения о обработчике правил WF 3,5, включенном в состав Windows Workflow Foundation, см. в статье [Введение в обработчик правил Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Дополнительные сведения о переносе правил в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]см. в [руководстве по миграции](../migration-guidance.md).
+В этом примере показано, как действие ExternalizedPolicy4 разрешает выполнение существующих .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> объектов [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) непосредственно с помощью обработчика правил, который поставляется в WF 3,5. Используя это действие, можно создавать и выполнять любой существующий набор правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. Дополнительные сведения о обработчике правил WF 3,5, включенном в состав Windows Workflow Foundation, см. в статье [Введение в обработчик правил Windows Workflow Foundation](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10)). Дополнительные сведения о переносе правил в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]см. в [руководстве по миграции](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Проекты в этом образце
 
-|Имя проекта|Описание|Основные файлы|
+|Имя проекта|Description|Основные файлы|
 |-|-|-|
 |ExternalizedPolicy4|Содержит действие PolicyExternalizedPolicy4 и его конструктор WF 4.5.|**ExternalizedPolicy4.CS**: определение действия.<br /><br /> **ExternalizedPolicy4Designer. XAML**: Пользовательский конструктор для действия ExternalizedPolicy4. Он использует редактор правил (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>), определенный в конструкторе правил WF 3.5.|
 |ImperativeCodeClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения PolicyExternalizedPolicy4, использующего императивный код C# (конструктор не используется).|**ApplyDiscount. rules**: файл с определениями правил [!INCLUDE[wf1](../../../../includes/wf1-md.md)].<br /><br /> **Order.CS**: тип, представляющий заказ клиента. Правила применяются к объектам этого типа.<br /><br /> **Program.CS**: настраивает и запускает рабочий процесс с действием Policy4 для применения правил, определенных в ApplyDiscount. rules к экземплярам объектов Order.<br /><br /> App.config: файл конфигурации, содержащий путь к файлу правил.|
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|свойство;|Описание|
+|Свойство|Description|
 |-|-|
 |RuleSetFilePath|Путь к файлу <xref:System.Workflow.Activities.Rules.RuleSet> в .NET Framework 3.5, который определяется при выполнении действия.|
 |RuleSetName|Имя <xref:System.Workflow.Activities.Rules.RuleSet>, которое будет использоваться в файлах правил с расширением RULES.|

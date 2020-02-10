@@ -1,13 +1,13 @@
 ---
-title: Критические изменения сети — .NET Core
+title: Критические изменения сети
 description: Список критических изменений сети в .NET Core.
 ms.date: 10/03/2019
-ms.openlocfilehash: fb53dfc230623d7fda515341209a1853d4319468
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: d5d445827554d2c898e07dac53d8a571ebdf9359
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116429"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092997"
 ---
 # <a name="networking-breaking-changes"></a>Критические изменения сети
 

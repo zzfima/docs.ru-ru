@@ -2,12 +2,12 @@
 title: Набор средств внешнего набора правил
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: b07d2b63d9f3d98b8f08eb697a8d688d8fac1962
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710900"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094674"
 ---
 # <a name="external-ruleset-toolkit"></a>Набор средств внешнего набора правил
 
@@ -16,7 +16,7 @@ ms.locfileid: "74710900"
 В примере набора средств "External RuleSet Toolkit" содержится средство на основе Windows Forms, которое можно использовать для управления и изменения версий набора правил в базе данных. Также включены действие и служба размещения для выполнения этих правил.
 
 > [!NOTE]
-> Для этого примера требуется [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).
+> Для этого примера требуется [Microsoft SQL Server](/sql).
 
 Visual Studio предоставляет редактор набора правил в составе Windows Workflow Foundation (WF). Редактор запускается двойным щелчком действия `Policy` в рабочем процессе; редактор выполняет сериализацию объекта набора правил в файл с расширением RULES, связанный с рабочим процессом (действие `Policy` запускает экземпляр набора правил из рабочего процесса). При построении проекта рабочего процесса выполняет компиляция в сборку файла с расширением RULES как ресурса.
 

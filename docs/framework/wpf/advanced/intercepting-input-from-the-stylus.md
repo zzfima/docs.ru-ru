@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 2547c0aa2f3a14080868c2760fa8999eb99d3d16
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7629843730a82584e94448ceac1ea574906876c9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046332"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095142"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Перехват ввода, осуществляемого пером
-Архитектура предоставляет механизм для реализации низкоуровневого <xref:System.Windows.Input.Stylus> управления входными данными и создания объектов цифровых рукописных данных <xref:System.Windows.Ink.Stroke>. <xref:System.Windows.Input.StylusPlugIns> <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Класс предоставляет механизм для реализации пользовательского поведения и применения его к потоку данных, поступающих от устройства пера, для достижения оптимальной производительности.  
+Архитектура <xref:System.Windows.Input.StylusPlugIns> предоставляет механизм для реализации низкоуровневого контроля над входом <xref:System.Windows.Input.Stylus> и создания цифровых рукописных <xref:System.Windows.Ink.Stroke> объектов. Класс <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> предоставляет механизм для реализации пользовательского поведения и применения его к потоку данных, поступающих от устройства пера, для достижения оптимальной производительности.  
   
  В этом разделе содержатся следующие подразделы:  
   
@@ -31,21 +31,21 @@ ms.locfileid: "70046332"
 - [Заключение](#Conclusion)  
   
 <a name="Architecture"></a>   
-## <a name="architecture"></a>Архитектура  
- — Это эволюция интерфейсов API [стилусинпут](https://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) , описанных в статье [доступ к вводу с помощью пера и управление ими](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)в [пакете Microsoft Windows XP Tablet PC Edition Software Development Kit 1,7.](https://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409) <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>  
+## <a name="architecture"></a>Architecture  
+ <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> является развитием API-интерфейсов [стилусинпут](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms574861(v=vs.90)) , описанных в статье [доступ к вводу с помощью пера и управление](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10))им.  
   
- Каждый <xref:System.Windows.UIElement> <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>имеет свойство,равное.<xref:System.Windows.UIElement.StylusPlugIns%2A> Можно добавить <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> к <xref:System.Windows.UIElement.StylusPlugIns%2A> свойству элемента, чтобы управлять <xref:System.Windows.Input.StylusPoint> данными по мере их создания. <xref:System.Windows.Input.StylusPoint>данные состоят из всех свойств, поддерживаемых системным дигитайзером, включая <xref:System.Windows.Input.StylusPoint.X%2A> <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> данные точек и <xref:System.Windows.Input.StylusPoint.Y%2A> , а также данные.  
+ Каждый <xref:System.Windows.UIElement> имеет свойство <xref:System.Windows.UIElement.StylusPlugIns%2A>, которое является <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Можно добавить <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> в свойство <xref:System.Windows.UIElement.StylusPlugIns%2A> элемента, чтобы управлять данными <xref:System.Windows.Input.StylusPoint> при их создании. <xref:System.Windows.Input.StylusPoint> данные состоят из всех свойств, поддерживаемых системным дигитайзером, включая <xref:System.Windows.Input.StylusPoint.X%2A> и данные точки <xref:System.Windows.Input.StylusPoint.Y%2A>, а также данные <xref:System.Windows.Input.StylusPoint.PressureFactor%2A>.  
   
- Объекты вставляются непосредственно в поток данных, поступающих <xref:System.Windows.Input.Stylus> от устройства, при добавлении в <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> <xref:System.Windows.UIElement.StylusPlugIns%2A> свойство. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Порядок, в котором подключаемые модули добавляются в <xref:System.Windows.UIElement.StylusPlugIns%2A> коллекцию, определяет порядок, в котором они будут принимать <xref:System.Windows.Input.StylusPoint> данные. Например, если добавить подключаемый модуль фильтра, который будет ограничивать входные данные в определенный регион, а затем добавить подключаемый модуль, который распознает жесты по мере их написания, подключаемый модуль, который распознает жесты, получит <xref:System.Windows.Input.StylusPoint> отфильтрованные данные.  
+ <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> объекты вставляются непосредственно в поток данных, поступающих от устройства <xref:System.Windows.Input.Stylus>, при добавлении <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> в свойство <xref:System.Windows.UIElement.StylusPlugIns%2A>. Порядок, в котором подключаемые модули добавляются в коллекцию <xref:System.Windows.UIElement.StylusPlugIns%2A>, определяет порядок, в котором они будут принимать <xref:System.Windows.Input.StylusPoint> данные. Например, если добавить подключаемый модуль фильтра, который будет ограничивать входные данные в определенный регион, а затем добавить подключаемый модуль, распознающий жесты по мере их написания, подключаемый модуль, распознающий жесты, получит отфильтрованные <xref:System.Windows.Input.StylusPoint> данные.  
   
 <a name="ImplementingStylusPlugins"></a>   
 ## <a name="implementing-stylus-plug-ins"></a>Реализация подключаемых модулей пера  
- Чтобы реализовать подключаемый модуль, создайте класс, производный от <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>. Этот класс применяется к потоку данных в том виде, в котором <xref:System.Windows.Input.Stylus>они поступают из. В этом классе можно изменить значения <xref:System.Windows.Input.StylusPoint> данных.  
+ Чтобы реализовать подключаемый модуль, создайте класс, производный от <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>. Этот класс применяется к потоку данных в том виде, в каком он поступает из <xref:System.Windows.Input.Stylus>. В этом классе можно изменить значения <xref:System.Windows.Input.StylusPoint> данных.  
   
 > [!CAUTION]
-> <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Если вызывается или вызывается исключение, приложение будет закрыто. Следует тщательно протестировать элементы управления, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> использующие, и использовать элемент управления только в том случае <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , если вы уверены, что не создаст исключение.  
+> Если <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> создает или вызывает исключение, приложение будет закрыто. Следует тщательно протестировать элементы управления, использующие <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> и использовать элемент управления, только если вы уверены, что <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> не создаст исключение.  
   
- В следующем примере показан подключаемый модуль, который ограничивают ввод с помощью <xref:System.Windows.Input.StylusPoint.X%2A> пера, изменяя <xref:System.Windows.Input.StylusPoint.Y%2A> значения и в <xref:System.Windows.Input.StylusPoint> данных, поступающих от <xref:System.Windows.Input.Stylus> устройства.  
+ В следующем примере демонстрируется подключаемый модуль, который ограничивают ввод с помощью пера, изменяя <xref:System.Windows.Input.StylusPoint.X%2A> и <xref:System.Windows.Input.StylusPoint.Y%2A> значения в <xref:System.Windows.Input.StylusPoint> данных по мере их поступающих с устройства <xref:System.Windows.Input.Stylus>.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -54,23 +54,23 @@ ms.locfileid: "70046332"
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
 ## <a name="adding-your-plug-in-to-an-inkcanvas"></a>Добавление подключаемого модуля в InkCanvas  
- Самый простой способ использовать пользовательский подключаемый модуль — реализовать класс, производный от InkCanvas, и добавить его в <xref:System.Windows.UIElement.StylusPlugIns%2A> свойство.  
+ Самый простой способ использовать пользовательский подключаемый модуль — реализовать класс, производный от InkCanvas, и добавить его в свойство <xref:System.Windows.UIElement.StylusPlugIns%2A>.  
   
- В следующем примере демонстрируется пользовательская <xref:System.Windows.Controls.InkCanvas> , которая фильтрует рукописные данные.  
+ В следующем примере демонстрируется пользовательский <xref:System.Windows.Controls.InkCanvas>, фильтрующий рукописный ввод.  
   
  [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
- Если добавить `FilterInkCanvas` в приложение и запустить его, вы заметите, что рукописный ввод не ограничен регионом, пока пользователь не завершит штрих. Это обусловлено <xref:System.Windows.Controls.InkCanvas> тем, что <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> имеет <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> свойство, которое является и уже является членом <xref:System.Windows.UIElement.StylusPlugIns%2A> коллекции. Пользователь <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , добавленный <xref:System.Windows.UIElement.StylusPlugIns%2A> в коллекцию, получает <xref:System.Windows.Input.StylusPoint> данные после <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> получения данных. В результате <xref:System.Windows.Input.StylusPoint> данные не будут фильтроваться до тех пор, пока пользователь не отрывает перо для завершения штриха. Чтобы отфильтровать рукописные данные по мере их рисования, необходимо вставить `FilterPlugin` <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>перед.  
+ Если добавить `FilterInkCanvas` в приложение и запустить его, вы заметите, что рукописный ввод не ограничен регионом, пока пользователь не завершит штрих. Это связано с тем, что <xref:System.Windows.Controls.InkCanvas> имеет свойство <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>, которое является <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> и уже является членом коллекции <xref:System.Windows.UIElement.StylusPlugIns%2A>. Пользовательские <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, добавленные в коллекцию <xref:System.Windows.UIElement.StylusPlugIns%2A>, получают <xref:System.Windows.Input.StylusPoint> данные после <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> получения данных. В результате данные <xref:System.Windows.Input.StylusPoint> не будут фильтроваться до тех пор, пока пользователь не отрывает перо для завершения штриха. Чтобы отфильтровать рукописные данные по мере их рисования, необходимо вставить `FilterPlugin` перед <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  
   
- В следующем C# коде показан пользовательский <xref:System.Windows.Controls.InkCanvas> объект, который фильтрует рукописные данные по мере их прорисовки.  
+ В следующем C# коде демонстрируется пользовательский <xref:System.Windows.Controls.InkCanvas>, который фильтрует рукописные данные по мере их прорисовки.  
   
  [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
 ## <a name="conclusion"></a>Заключение  
- Создав собственные <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> классы и вставляя их в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> коллекции, можно значительно улучшить поведение рукописного ввода. У вас есть доступ к <xref:System.Windows.Input.StylusPoint> данным по мере их создания, что дает возможность <xref:System.Windows.Input.Stylus> настраивать входные данные. Так как у вас есть такой низкоуровневый доступ <xref:System.Windows.Input.StylusPoint> к данным, вы можете реализовать сбор и отрисовку рукописного ввода с оптимальной производительностью приложения.  
+ Создав собственные классы <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> и вставляя их в коллекции <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, можно значительно улучшить поведение рукописного ввода. У вас есть доступ к <xref:System.Windows.Input.StylusPoint>ным данным при их создании, что дает возможность настроить <xref:System.Windows.Input.Stylus> входные данные. Так как у вас есть такой низкоуровневый доступ к данным <xref:System.Windows.Input.StylusPoint>, можно реализовать сбор и отрисовку рукописного ввода с оптимальной производительностью для приложения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Дополнительная обработка рукописных фрагментов](advanced-ink-handling.md)
-- [Доступ к вводу с помощью пера и управление им](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+- [Доступ к вводу с помощью пера и управление им](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10))

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: c786137a471e0199a8ac60f8d82b4ce440e33b7e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f23f54283849ddaa827a98f0f28a39a72305dc1d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740395"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095233"
 ---
 # <a name="drawing-formatted-text"></a>Рисование форматированного текста
 В этом разделе содержатся общие сведения о функциях объекта <xref:System.Windows.Media.FormattedText>. Этот объект предоставляет низкоуровневый элемент управления для рисования текста в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -29,11 +29,11 @@ ms.locfileid: "75740395"
 > Для разработчиков, выполняющих миграцию из API Win32, в таблице в разделе [миграции Win32](#win32_migration) перечислены флаги Win32 DrawText и приблизительный эквивалент в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Причины использования форматированного текста  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество элементов управления для отображения текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений. Как правило, элемент <xref:System.Windows.Controls.TextBlock> следует использовать, если требуется ограниченная поддержка текста, например краткое предложение в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> можно использовать, если требуется минимальная поддержка текста. Дополнительные сведения см. в разделе [Документы в WPF](documents-in-wpf.md).  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется множество элементов управления для рисования текста на экране. Каждый элемент управления предназначен для различных сценариев и имеет свой собственный список функций и ограничений. Как правило, элемент <xref:System.Windows.Controls.TextBlock> следует использовать, если требуется ограниченная поддержка текста, например краткое предложение в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> можно использовать, если требуется минимальная поддержка текста. Дополнительные сведения см. в разделе [Документы в WPF](documents-in-wpf.md).  
   
  Объект <xref:System.Windows.Media.FormattedText> предоставляет больше возможностей форматирования текста, чем [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] текстовых элементов, и может быть полезен в случаях, когда требуется использовать текст в качестве декоративного элемента. Дополнительные сведения см. в следующем разделе: [Преобразование форматированного текста в геометрический объект](#converting_formatted_text).  
   
- Кроме того, объект <xref:System.Windows.Media.FormattedText> полезен для создания объектов, ориентированных на текст <xref:System.Windows.Media.DrawingVisual>. <xref:System.Windows.Media.DrawingVisual> — это упрощенный класс рисования, используемый для отрисовки фигур, изображений или текста. Дополнительные сведения см. в разделе [Пример проверки нажатия с использованием DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994).  
+ Кроме того, объект <xref:System.Windows.Media.FormattedText> полезен для создания объектов, ориентированных на текст <xref:System.Windows.Media.DrawingVisual>. <xref:System.Windows.Media.DrawingVisual> — это упрощенный класс рисования, используемый для отрисовки фигур, изображений или текста. Дополнительные сведения см. в разделе [Пример проверки нажатия с использованием DrawingVisuals](https://github.com/Microsoft/WPF-Samples/tree/master/Visual%20Layer/DrawingVisual).  
   
 ## <a name="using-the-formattedtext-object"></a>Использование объекта FormattedText  
  Чтобы создать форматированный текст, вызовите конструктор <xref:System.Windows.Media.FormattedText.%23ctor%2A>, чтобы создать <xref:System.Windows.Media.FormattedText> объект. После создания исходной строки форматированного текста можно применить ряд стилей форматирования.  
@@ -93,29 +93,29 @@ ms.locfileid: "75740395"
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|Используйте свойство <xref:System.Windows.Media.FormattedText.Height%2A>, чтобы вычислить соответствующую координату "y" для Win32 DrawText.|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Для вычисления прямоугольника вывода используйте свойства <xref:System.Windows.Media.FormattedText.Height%2A> и <xref:System.Windows.Media.FormattedText.Width%2A>.|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Используйте свойство <xref:System.Windows.Media.FormattedText.TextAlignment%2A> со значением <xref:System.Windows.TextAlignment.Center>.|  
-|DT_EDITCONTROL|Нет|Не требуется. Ширина пробелов и отрисовка последней строки соответствуют этим параметрам в элементе управления редактированием среды.|  
+|DT_EDITCONTROL|None|Необязательно. Ширина пробелов и отрисовка последней строки соответствуют этим параметрам в элементе управления редактированием среды.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Используйте свойство <xref:System.Windows.Media.FormattedText.Trimming%2A> со значением <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Используйте <xref:System.Windows.TextTrimming.WordEllipsis> для получения DT_END_ELLIPSIS Win32 с DT_WORD_ELIPSIS завершающим многоточием — в данном случае символ многоточие выполняется только для слов, которые не умещаются в одной строке.|  
-|DT_EXPAND_TABS|Нет|Не требуется. Символы табуляции автоматически расширяются до точек каждые 4 размера максимального пробела (это примерно соответствует ширине 8 независимых от языка символов).|  
-|DT_EXTERNALLEADING|Нет|Не требуется. Внешнее ведение всегда включается в междустрочный интервал. Используйте свойство <xref:System.Windows.Media.FormattedText.LineHeight%2A> для создания определяемого пользователем межстрочного междустрочного промежутка.|  
-|DT_HIDEPREFIX|Нет|Не поддерживается. Удалите "&" из строки перед созданием объекта <xref:System.Windows.Media.FormattedText>.|  
+|DT_EXPAND_TABS|None|Необязательно. Символы табуляции автоматически расширяются до точек каждые 4 размера максимального пробела (это примерно соответствует ширине 8 независимых от языка символов).|  
+|DT_EXTERNALLEADING|None|Необязательно. Внешнее ведение всегда включается в междустрочный интервал. Используйте свойство <xref:System.Windows.Media.FormattedText.LineHeight%2A> для создания определяемого пользователем межстрочного междустрочного промежутка.|  
+|DT_HIDEPREFIX|None|Не поддерживается. Удалите "&" из строки перед созданием объекта <xref:System.Windows.Media.FormattedText>.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Это выравнивание текста по умолчанию. Используйте свойство <xref:System.Windows.Media.FormattedText.TextAlignment%2A> со значением <xref:System.Windows.TextAlignment.Left>. (только WPF)|  
-|DT_MODIFYSTRING|Нет|Не поддерживается.|  
+|DT_MODIFYSTRING|None|Не поддерживается.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Отсечение не происходит автоматически. Если нужно обрезать текст, используйте свойство <xref:System.Windows.Media.Visual.VisualClip%2A>.|  
-|DT_NOFULLWIDTHCHARBREAK|Нет|Не поддерживается.|  
-|DT_NOPREFIX|Нет|Не требуется. Символ & в строке всегда рассматривается как обычный символ.|  
-|DT_PATHELLIPSIS|Нет|Используйте свойство <xref:System.Windows.Media.FormattedText.Trimming%2A> со значением <xref:System.Windows.TextTrimming.WordEllipsis>.|  
-|DT_PREFIX|Нет|Не поддерживается. Если вы хотите использовать подчеркивания для текста, например сочетания клавиш или ссылку, используйте метод <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>.|  
-|DT_PREFIXONLY|Нет|Не поддерживается.|  
+|DT_NOFULLWIDTHCHARBREAK|None|Не поддерживается.|  
+|DT_NOPREFIX|None|Необязательно. Символ & в строке всегда рассматривается как обычный символ.|  
+|DT_PATHELLIPSIS|None|Используйте свойство <xref:System.Windows.Media.FormattedText.Trimming%2A> со значением <xref:System.Windows.TextTrimming.WordEllipsis>.|  
+|DT_PREFIX|None|Не поддерживается. Если вы хотите использовать подчеркивания для текста, например сочетания клавиш или ссылку, используйте метод <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>.|  
+|DT_PREFIXONLY|None|Не поддерживается.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Используйте свойство <xref:System.Windows.Media.FormattedText.TextAlignment%2A> со значением <xref:System.Windows.TextAlignment.Right>. (только WPF)|  
-|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Задайте для свойства <xref:System.Windows.Media.FormattedText.FlowDirection%2A> значение <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|Нет|Не требуется. <xref:System.Windows.Media.FormattedText> объекты ведут себя как один элемент управления Line, если только свойство <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> не задано или текст содержит символ возврата каретки или перевода строки (CR/LF).|  
-|DT_TABSTOP|Нет|Отсутствует поддержка пользовательских позиций табуляции.|  
-|DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Не требуется. По умолчанию используется выравнивание по верхнему краю. Другие значения вертикального позиционирования можно определить с помощью свойства <xref:System.Windows.Media.FormattedText.Height%2A>, чтобы вычислить соответствующую позицию Win32 DrawText "y".|  
+|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Установите свойство <xref:System.Windows.Media.FormattedText.FlowDirection%2A> в значение <xref:System.Windows.FlowDirection.RightToLeft>.|  
+|DT_SINGLELINE|None|Необязательно. <xref:System.Windows.Media.FormattedText> объекты ведут себя как один элемент управления Line, если только свойство <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> не задано или текст содержит символ возврата каретки или перевода строки (CR/LF).|  
+|DT_TABSTOP|None|Отсутствует поддержка пользовательских позиций табуляции.|  
+|DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Необязательно. По умолчанию используется выравнивание по верхнему краю. Другие значения вертикального позиционирования можно определить с помощью свойства <xref:System.Windows.Media.FormattedText.Height%2A>, чтобы вычислить соответствующую позицию Win32 DrawText "y".|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Используйте свойство <xref:System.Windows.Media.FormattedText.Height%2A>, чтобы вычислить соответствующую координату "y" для Win32 DrawText.|  
-|DT_WORDBREAK|Нет|Не требуется. Разбиение по словам происходит автоматически с <xref:System.Windows.Media.FormattedText> объектами. Его нельзя отключить.|  
+|DT_WORDBREAK|None|Необязательно. Разбиение по словам происходит автоматически с <xref:System.Windows.Media.FormattedText> объектами. Его нельзя отключить.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Используйте свойство <xref:System.Windows.Media.FormattedText.Trimming%2A> со значением <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.FormattedText>
 - [Документы в WPF](documents-in-wpf.md)

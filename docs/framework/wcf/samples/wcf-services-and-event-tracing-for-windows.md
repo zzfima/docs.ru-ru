@@ -2,12 +2,12 @@
 title: Службы WCF и средство отслеживания событий для Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 93663cbc33b6fab9b34bb02187e5b04192f5c13d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 5bf965ad6a9997ec0603325f246679cf42662a52
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715264"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094817"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Службы WCF и средство отслеживания событий для Windows
 В этом примере показано, как использовать аналитическую трассировку в Windows Communication Foundation (WCF) для создания событий в трассировке событий Windows (ETW). Аналитические трассировки — это события, генерируемые в ключевых точках стека WCF, которые позволяют устранять неполадки служб WCF в рабочей среде.
@@ -34,7 +34,7 @@ ms.locfileid: "74715264"
 
 5. В тестовом клиенте WCF добавьте службу, выбрав **файл**, а затем **Добавить службу**.
 
-     Добавьте адрес конечной точки в поле ввода. Значение по умолчанию: `http://localhost:1378/Calculator.svc`.
+     Добавьте адрес конечной точки в поле ввода. Значение по умолчанию — `http://localhost:1378/Calculator.svc`.
 
 6. Откройте приложение просмотра событий.
 
@@ -70,7 +70,7 @@ ms.locfileid: "74715264"
 
 #### <a name="to-cleanup-optional"></a>Очистка (необязательно)
 
-1. Откройте окно Просмотр событий.
+1. Откройте средство просмотра событий.
 
 2. Перейдите к **Просмотр событий**, **журналам приложений и служб**, **Microsoft**, **Windows**, а затем **Application-Servers-Applications**. Щелкните правой кнопкой мыши **аналитика** и выберите **Отключить журнал**.
 
@@ -87,6 +87,6 @@ ms.locfileid: "74715264"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Примеры мониторинга AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Примеры мониторинга AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

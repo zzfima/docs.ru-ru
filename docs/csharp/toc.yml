@@ -1313,7 +1313,7 @@
         - name: Обзор
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: Встроенные типы
+        - name: Типы
           items:
             - name: Типы значений
               items:
@@ -1357,14 +1357,12 @@
               href: language-reference/keywords/void.md
             - name: var
               href: language-reference/keywords/var.md
+            - name: Встроенные типы
+              href: language-reference/builtin-types/built-in-types.md
             - name: Неуправляемые типы
               href: language-reference/builtin-types/unmanaged-types.md
             - name: Значения по умолчанию
               href: language-reference/builtin-types/default-values.md
-            - name: Справочные таблицы по типам
-              items:
-                - name: Таблица встроенных типов
-                  href: language-reference/keywords/built-in-types-table.md
         - name: Модификаторы
           items:
             - name: Модификаторы доступа

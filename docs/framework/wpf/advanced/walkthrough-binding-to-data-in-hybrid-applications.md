@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0d1e66a1277e6a04d2f49ac91691160f70fb56e4
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794225"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095077"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Пошаговое руководство. Привязка к данным в гибридных приложениях
 
@@ -35,15 +35,15 @@ ms.locfileid: "76794225"
 
 - Подключение к источнику данных.
 
-Полный листинг кода задач, показанных в этом пошаговом руководстве, см. в разделе [Пример привязки данных в гибридных приложениях](https://go.microsoft.com/fwlink/?LinkID=159983).
+Полный листинг кода задач, показанных в этом пошаговом руководстве, см. в разделе [Пример привязки данных в гибридных приложениях](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding).
 
 Изучив этот раздел, вы будете иметь представление о функциях привязки данных в гибридных приложениях.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
-Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
+Для выполнения этого пошагового руководства требуются следующие компоненты:
 
-- Visual Studio.
+- приведенному.
 
 - Доступ к учебной базе данных Northwind, выполняемой на Microsoft SQL Server.
 
@@ -57,7 +57,7 @@ ms.locfileid: "76794225"
 
     - WindowsFormsIntegration
 
-    - System.Windows.Forms.
+    - System.Windows.Forms
 
 3. Откройте файл MainWindow. XAML в конструкторе WPF.
 
@@ -179,13 +179,13 @@ ms.locfileid: "76794225"
      [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]
 
-10. Нажмите клавишу F5 для построения и запуска приложения.
+10. Нажмите клавишу F5, чтобы создать и запустить приложение.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Проектирование XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [Пример привязки данных в гибридных приложениях](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Пример привязки данных в гибридных приложениях](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)
 - [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

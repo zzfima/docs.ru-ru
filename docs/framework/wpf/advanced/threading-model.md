@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794274"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094505"
 ---
 # <a name="threading-model"></a>Модель потоков
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] призвана помочь разработчикам избежать трудностей при разработке потоков. В результате большинству [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработчикам не придется писать интерфейс, использующий более одного потока. Поскольку многопотоковые программы являются сложными и трудно отлаживаемыми, их следует избегать, если существуют однопоточные решения.
@@ -58,7 +58,7 @@ ms.locfileid: "76794274"
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Пример однопоточного приложения с длительным выполнением вычислений
  Большинство графических интерфейсов пользователя (GUI) тратят большую часть времени простоя, когда ожидают события, создаваемые в ответ на взаимодействие с пользователем. При тщательном программировании это время простоя можно использовать в конструкторе, не влияя на скорость реагирования [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Потоковая модель [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не позволяет входным данным прерывать операции, происходящие в потоке [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Это означает, что необходимо периодически возвращаться к <xref:System.Windows.Threading.Dispatcher> для обработки ожидающих входных событий, прежде чем они станут устаревшими.
 
- Рассмотрим следующий пример.
+ Рассмотрим следующий пример:
 
  ![Снимок экрана, показывающий поток простых чисел.](./media/threading-model/threading-prime-numbers.png)
 
@@ -99,7 +99,7 @@ ms.locfileid: "76794274"
 
  Этот метод проверяет, является ли следующее нечетное число простым. Если это просто, метод непосредственно обновляет `bigPrime`<xref:System.Windows.Controls.TextBlock>, чтобы отразить его обнаружение. Мы можем сделать так потому, что вычисление происходит в том же потоке, который был использован для создания компонента. Если бы мы решили использовать отдельный поток для вычисления, нам пришлось бы использовать более сложный механизм синхронизации и выполнять обновление в потоке [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Эта ситуация будет продемонстрирована далее.
 
- Полный исходный код для этого примера см. в разделе [Пример однопотокового приложения с длительным выполнением вычислений](https://go.microsoft.com/fwlink/?LinkID=160038) .
+ Полный исходный код для этого примера см. в разделе [Пример однопотокового приложения с длительным выполнением вычислений](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication) .
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Обработка блокирующей операции с фоновым потоком
@@ -215,6 +215,6 @@ ms.locfileid: "76794274"
 
  Задача для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] заключается в предотвращении непредвиденного повторного входа без повторного введения утечек памяти, поэтому мы не блокируем повторного входа везде.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Пример однопоточного приложения с длительным выполнением вычислений](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [Пример однопоточного приложения с длительным выполнением вычислений](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)

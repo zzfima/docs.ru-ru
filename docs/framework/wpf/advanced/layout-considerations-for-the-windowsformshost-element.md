@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787908"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095155"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Вопросы, связанные с макетом элемента WindowsFormsHost
 В этом разделе описано, как элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> взаимодействует с системой разметки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -28,11 +28,11 @@ ms.locfileid: "76787908"
   
  Макет в Windows Forms зависит от устройства и, скорее всего, является статическим. Как правило, Windows Forms элементы управления располагаются абсолютно на форме с использованием измерений, заданных в аппаратных пикселях. Однако Windows Forms поддерживает некоторые функции динамического макета, как показано в следующей таблице.  
   
-|Функция макета|Описание|  
+|Функция макета|Description|  
 |--------------------|-----------------|  
 |Автоматическое изменение размера|Некоторые Windows Forms элементы управления изменяют размер, чтобы правильно отображать их содержимое. Дополнительные сведения см. в разделе [Общие сведения о свойстве AutoSize](../../winforms/controls/autosize-property-overview.md).|  
-|Привязка и закрепление|Элементы управления Windows Forms поддерживают размещение и изменение размера на основе родительского контейнера. Дополнительные сведения см. в разделах <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
-|Автомасштабирования|Размеры элементов управления контейнера и их дочерние элементы изменяются в зависимости от разрешения выходного устройства или размера (в пикселях) шрифта контейнера по умолчанию. Дополнительные сведения см. [в разделе Автоматическое масштабирование в Windows Forms](../../winforms/automatic-scaling-in-windows-forms.md).|  
+|Привязка и закрепление|Элементы управления Windows Forms поддерживают размещение и изменение размера на основе родительского контейнера. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
+|Автомасштабирование|Размеры элементов управления контейнера и их дочерние элементы изменяются в зависимости от разрешения выходного устройства или размера (в пикселях) шрифта контейнера по умолчанию. Дополнительные сведения см. [в разделе Автоматическое масштабирование в Windows Forms](../../winforms/automatic-scaling-in-windows-forms.md).|  
 |Контейнеры макета|Элементы управления <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel> упорядочивают свои дочерние элементы управления и сами имеют свой размер в соответствии с их содержимым.|  
   
 ## <a name="layout-limitations"></a>Ограничения макета  
@@ -67,9 +67,9 @@ ms.locfileid: "76787908"
   
  Помимо масштабирования, элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> обрабатывает варианты округления и переполнения, как описано в следующей таблице.  
   
-|Проблемы с преобразованием|Описание|  
+|Проблемы с преобразованием|Description|  
 |----------------------|-----------------|  
-|округление;|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] измерения, независимые от устройства, задаются как `double`, а Windows Forms измерения пикселей оборудования задаются как `int`. В случаях, когда измерения на основе `double`преобразуются в измерения на основе `int`, элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> использует стандартное округление, чтобы дробные значения меньше 0,5 округлялись вниз до 0.|  
+|Округление|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] измерения, независимые от устройства, задаются как `double`, а Windows Forms измерения пикселей оборудования задаются как `int`. В случаях, когда измерения на основе `double`преобразуются в измерения на основе `int`, элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> использует стандартное округление, чтобы дробные значения меньше 0,5 округлялись вниз до 0.|  
 |Переполнение|Когда элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> преобразует из `double` значений в значения `int`, возможно переполнение. Значения, превышающие <xref:System.Int32.MaxValue>, задаются равными <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Свойства, связанные с макетом  
@@ -98,11 +98,11 @@ ms.locfileid: "76787908"
   
 - Если свойство <xref:System.Windows.Forms.Control.Size%2A> возвращает меньший размер, чем указанное ограничение, <xref:System.Windows.Forms.Integration.WindowsFormsHost> принимает это значение размера и возвращает значение в систему макета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [Пример упорядочивания элементов управления Windows Forms в WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Пример упорядочивания элементов управления Windows Forms в WPF](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md)
 - [Миграция и взаимодействие систем](migration-and-interoperability.md)

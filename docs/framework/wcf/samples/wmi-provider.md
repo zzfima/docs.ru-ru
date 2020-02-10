@@ -2,12 +2,12 @@
 title: Поставщик WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 4db8873397b0136de88d00ebe62c429aee260911
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a170a20212791d789af589c1ff99dcd1abad1c9e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715009"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094778"
 ---
 # <a name="wmi-provider"></a>Поставщик WMI
 В этом примере показано, как собирать данные из служб Windows Communication Foundation (WCF) во время выполнения с помощью поставщика инструментарий управления Windows (WMI) (WMI), встроенного в WCF. Кроме того, в образце показано, как добавлять в службу пользовательский объект инструментария WMI. В примере активируется поставщик WMI для [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) и демонстрируется сбор данных из `ICalculator` службы во время выполнения.  
@@ -16,7 +16,7 @@ ms.locfileid: "74715009"
   
  WCF реализует поставщик WMI, компонент, который предоставляет инструментирование во время выполнения через интерфейс, совместимый с WBEM. Средства управления могут подключаться к службам через интерфейс во время выполнения. WCF предоставляет атрибуты служб, такие как адреса, привязки, поведения и прослушиватели.  
   
- Встроенный поставщик инструментария WMI активируется в файле конфигурации приложения. Это выполняется с помощью атрибута `wmiProviderEnabled` [диагностики\<](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) в разделе [\<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , как показано в следующем образце конфигурации:  
+ Встроенный поставщик инструментария WMI активируется в файле конфигурации приложения. Это выполняется с помощью атрибута `wmiProviderEnabled` [диагностики\<>](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) в разделе [\<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , как показано в следующем образце конфигурации:  
   
 ```xml  
 <system.serviceModel>  
@@ -32,7 +32,8 @@ ms.locfileid: "74715009"
  Добавление в службу объектов WMI позволяет предоставлять доступ к пользовательским сведениям, а также к сведениям встроенного поставщика WMI. Для этого необходимо опубликовать схему службы в инструментарии WMI с помощью приложения Installutil.exe. Соответствующие инструкции, а также более подробные сведения, см в инструкция по установке в конце этого раздела.  
   
 ## <a name="accessing-wmi-information"></a>Доступ к сведениям WMI  
- Доступ к данным инструментария WMI может осуществляться несколькими различными способами. Корпорация Майкрософт предоставляет API-интерфейсы WMI для сценариев, C++ Visual Basic приложений, приложений и .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
+
+Доступ к данным инструментария WMI может осуществляться несколькими различными способами. Корпорация Майкрософт предоставляет API-интерфейсы WMI для сценариев, C++ Visual Basic приложений, приложений и .NET Framework. Дополнительные сведения см. [в разделе Использование WMI](/windows/desktop/wmisdk/using-wmi).
   
  В этом образце используется два скрипта Java: один - для перечисления выполняющихся на компьютере служб и некоторых их свойств, а второй - для просмотра пользовательских данных инструментария WMI. Скрипт открывает подключение к поставщику инструментария WMI, анализирует данные и отображает собранные данные.  
   
@@ -143,6 +144,6 @@ cscript EnumerateCustomObjects.js
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Примеры мониторинга AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Примеры мониторинга AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

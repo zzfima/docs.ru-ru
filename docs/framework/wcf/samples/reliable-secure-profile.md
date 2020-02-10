@@ -2,15 +2,16 @@
 title: Надежный защищенный профиль
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716506"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094947"
 ---
 # <a name="reliable-secure-profile"></a>Надежный защищенный профиль
-В этом примере показано, как создать WCF и [надежный защищенный профиль](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). В этом примере демонстрируется реализация канала [подключения](https://go.microsoft.com/fwlink/?LinkId=178141) , который может состоять вместе с надежным обменом сообщениями и, при необходимости, защищенным каналом для создания надежной безопасной привязки на основе спецификации RSP.  
+
+В этом примере показано, как создать WCF и [надежный защищенный профиль (RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html). В этом примере демонстрируется реализация канала [подключения](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) , который может состоять вместе с надежным обменом сообщениями и, при необходимости, защищенным каналом для создания надежной безопасной привязки на основе спецификации RSP.  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

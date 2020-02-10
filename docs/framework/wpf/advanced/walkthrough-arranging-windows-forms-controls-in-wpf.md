@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5cf48b347be2d0ca6a9b55f3e19affb8b471aa2b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794245"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095103"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
 
@@ -37,11 +37,11 @@ ms.locfileid: "76794245"
 - Задание полей и внутренних полей.
 - Использование динамических контейнеров макета.
 
-Полный листинг кода задач, показанных в этом пошаговом руководстве, см. в разделе [Размещение элементов управления Windows Forms в WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971).
+Полный листинг кода задач, показанных в этом пошаговом руководстве, см. в разделе [Размещение элементов управления Windows Forms в WPF Sample](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml).
 
 По завершении вы получите представление о Windows Formsных функциях макета в приложениях на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -54,7 +54,7 @@ ms.locfileid: "76794245"
 2. В обозреватель решений добавьте ссылки на следующие сборки:
 
     - WindowsFormsIntegration
-    - System.Windows.Forms.
+    - System.Windows.Forms
     - System.Drawing;
 
 3. Дважды щелкните файл *MainWindow. XAML* , чтобы открыть его в представлении XAML.
@@ -81,7 +81,7 @@ ms.locfileid: "76794245"
 
 2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. В <xref:System.Windows.Controls.Canvas>появится элемент управления <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Windows Forms. Размер размещаемого элемента управления зависит от его содержимого, а размер элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> изменяется в соответствии с размещаемым элементом управления.
 
-## <a name="sizing-to-content"></a>Изменение размеров в зависимости от содержимого
+## <a name="sizing-to-content"></a>Изменение размеров в соответствии с содержимым
 
 Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> гарантирует, что размещаемый элемент управления будет иметь размер для правильного вывода его содержимого.
 
@@ -150,7 +150,7 @@ ms.locfileid: "76794245"
 
 2. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> зарисовывается поверх элемента Label.
 
-## <a name="docking"></a>Docking
+## <a name="docking"></a>Закрепление
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент поддерживает закрепление [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Задайте присоединенное свойство <xref:System.Windows.Controls.DockPanel.Dock%2A>, чтобы закрепить размещаемый элемент управления в элементе <xref:System.Windows.Controls.DockPanel>.
 
@@ -256,12 +256,12 @@ Windows Forms предоставляет два динамических кон�
 
 4. Нажмите клавишу <kbd>F5</kbd>, чтобы выполнить сборку приложения и запустить его. Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> заполняет <xref:System.Windows.Controls.DockPanel>и <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает свои дочерние элементы управления в <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>по умолчанию.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Проектирование XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Вопросы, связанные с макетом элемента WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
-- [Пример упорядочивания элементов управления Windows Forms в WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Пример упорядочивания элементов управления Windows Forms в WPF](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

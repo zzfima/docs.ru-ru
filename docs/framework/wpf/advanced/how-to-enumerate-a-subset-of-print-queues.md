@@ -9,22 +9,22 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae41931f012f6d34fc057fdd6ee9fc9baab6e7b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776068"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094544"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Практическое руководство. Перечисление подмножества очередей печати
-Это распространенная ситуация, которыми специалистов по информационным технологиям (ИТ), управляющая набором принтеры всей компании сталкиваются состоит в создании списка принтеров, имеющих определенные характеристики. Эта функциональность обеспечивается <xref:System.Printing.PrintServer.GetPrintQueues%2A> метод <xref:System.Printing.PrintServer> объекта и <xref:System.Printing.EnumeratedPrintQueueTypes> перечисления.  
+Распространенной ситуацией, с которой сталкиваются специалисты по информационным технологиям, управляющие корпоративным набором принтеров, является создание списка принтеров с определенными характеристиками. Эта функциональность обеспечивается методом <xref:System.Printing.PrintServer.GetPrintQueues%2A> объекта <xref:System.Printing.PrintServer> и перечислением <xref:System.Printing.EnumeratedPrintQueueTypes>.  
   
 ## <a name="example"></a>Пример  
- В следующем примере код начинается с создания массив флагов, определяющих характеристики очередей печати, которые требуется внести в список. В этом примере мы ищем очередей печати, которые устанавливаются локально на сервере печати и являются общими. <xref:System.Printing.EnumeratedPrintQueueTypes> Перечисление предоставляет множество других возможностей.  
+ В приведенном ниже примере код начинается с создания массива флагов, указывающих характеристики очередей печати, которые нужно вывести в список. В этом примере мы ищем очереди печати, которые установлены локально на сервере печати и являются общими. Перечисление <xref:System.Printing.EnumeratedPrintQueueTypes> предоставляет множество других возможностей.  
   
- Затем он создает <xref:System.Printing.LocalPrintServer> объект, производный от класса <xref:System.Printing.PrintServer>. Локальный сервер печати — это компьютер, на котором выполняется приложение.  
+ Затем код создает объект <xref:System.Printing.LocalPrintServer> — класс, производный от <xref:System.Printing.PrintServer>. Локальный сервер печати — это компьютер, на котором работает приложение.  
   
- Последним значительным шагом является передача массив, в который <xref:System.Printing.PrintServer.GetPrintQueues%2A> метод.  
+ Последний важный шаг — передать массив методу <xref:System.Printing.PrintServer.GetPrintQueues%2A>.  
   
  В конечном итоге результаты предоставляются пользователю.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "61776068"
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- Вы можете расширить этот пример за счет `foreach` цикл, который проходит по каждой очереди печати для дальнейшей блокировки. Например, можно блокировать принтеры, которые не поддерживают двухсторонней печати, вызвав в цикле каждой очереди печати <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> метод и проверяйте возвращаемое значение наличие блока двусторонней печати.  
+ Этот пример можно расширить, получив цикл `foreach`, который проходит по каждой очереди печати и выполняет дальнейший отбор. Например, можно вывести на экран принтеры, не поддерживающие двустороннюю печать, вызвав каждый метод <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> очереди печати и протестировать возвращаемое значение для обеспечения двусторонней печати.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
@@ -44,4 +44,4 @@ ms.locfileid: "61776068"
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Документы в WPF](documents-in-wpf.md)
 - [Общие сведения о печати](printing-overview.md)
-- [Средство записи документов Microsoft XPS](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Средство записи документов XPS (Майкрософт)](/windows/win32/printdocs/microsoft-xps-document-writer)

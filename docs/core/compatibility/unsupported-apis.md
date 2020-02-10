@@ -1,13 +1,14 @@
 ---
 title: Неподдерживаемые API в .NET Core
+titleSuffix: ''
 description: Узнайте, какие API-интерфейсы из .NET Framework всегда вызывают исключение в .NET Core.
 ms.date: 12/23/2019
-ms.openlocfilehash: f27aeca31226a95dacf100813762eedb56876fbd
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: c4b94321d30cacd90d5c2ee23c258681683a6faa
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936970"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092971"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>API, которые всегда создают исключения в .NET Core
 
@@ -154,6 +155,7 @@ ms.locfileid: "75936970"
 
 | Член | Платформы, которые вызывают исключение |
 | - | - |
+| <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)?displayProperty=nameWithType> | Все |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | Все |
 
 ## <a name="systemnetwebsockets"></a>System.Net.WebSockets
@@ -246,7 +248,6 @@ ms.locfileid: "75936970"
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.Removable?displayProperty=nameWithType> | Linux и macOS |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.UniqueKeyContainerName?displayProperty=nameWithType> | Linux и macOS |
 | <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> | Все |
-| <xref:System.Security.Cryptography.HashAlgorithm.Create(System.String)?displayProperty=nameWithType> | Все |
 | <xref:System.Security.Cryptography.HMAC.Create?displayProperty=nameWithType> | Все |
 | <xref:System.Security.Cryptography.HMAC.Create(System.String)?displayProperty=nameWithType> | Все |
 | <xref:System.Security.Cryptography.HMAC.HashCore%2A?displayProperty=nameWithType> | Все |

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460835"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095172"
 ---
 # <a name="how-to-localize-an-application"></a>Практическое руководство. Локализация приложения
 В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.  
@@ -64,7 +64,7 @@ ms.locfileid: "73460835"
   
 <a name="create_dll"></a>   
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Создание вспомогательной сборки ресурсов нейтрального языка  
- После настройки приложения для создания вспомогательной сборки для ресурсов нейтрального языка можно построить приложение. При этом будет создана основная сборка приложения, а также вспомогательная сборка ресурсов нейтрального языка, которая требуется LocBaml для локализации. Построение приложения  
+ После настройки приложения для создания вспомогательной сборки для ресурсов нейтрального языка можно построить приложение. При этом будет создана основная сборка приложения, а также вспомогательная сборка ресурсов нейтрального языка, которая требуется LocBaml для локализации. Чтобы создать приложение:  
   
 1. Скомпилируйте HelloApp, чтобы создать библиотеку динамической компоновки (DLL):  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73460835"
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Построение средства LocBaml  
   
-1. Все файлы, необходимые для построения LocBaml, находятся в примерах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Скачайте C# файлы из [примера средства LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+1. Все файлы, необходимые для построения LocBaml, находятся в примерах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Скачайте C# файлы из [примера средства LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 2. Из командной строки запустите файл проекта (locbaml.csproj), чтобы построить это средство:  
   
@@ -149,11 +149,11 @@ ms.locfileid: "73460835"
   
    В следующей таблице показывается, как эти поля соответствуют разделенным значениям CSV-файла.  
   
-   |Имя BAML|Ключ ресурса|Категория|Удобочитаемость|Изменяемость|Комментарии|значения|  
+   |Имя BAML|Ключ ресурса|Категория|Удобочитаемость|Изменяемость|Комментарии|Значение|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Пропустить|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Отсутствуют|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Отсутствуют|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Игнорировать|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Goodbye World|
   
    Обратите внимание, что все значения поля **Comments** не содержат значений. Если поле не имеет значения, оно пустое. Также обратите внимание, что элемент в первой строке не является ни читаемым, ни изменяемым, а параметр **Category** имеет значение "ignore", а все это означает, что значение не локализуется.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "73460835"
 ## <a name="whats-next"></a>Что дальше?  
  Теперь у вас есть базовое представление о том, как использовать средство LocBaml.  Вы можете создать файл, содержащий ИД пользователей. С помощью средства LocBaml вы можете анализировать файл для извлечения локализуемого содержимого и после перевода этого содержимого можете создать файл .resources.dll, объединяющий переведенное содержимое. В этом разделе не рассматриваются все возможные детали, но теперь у вас есть знания, необходимые для использования LocBaml для локализации приложений.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Глобализация для WPF](globalization-for-wpf.md)
 - [Обзор использования автоматической разметки](use-automatic-layout-overview.md)

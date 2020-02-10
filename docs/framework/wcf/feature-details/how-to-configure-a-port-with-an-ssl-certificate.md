@@ -9,37 +9,27 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 412aa2bb2a56fbe654b0d9ce5f4b9b5176fc5549
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 99a08c9714e8f8cef0c1c96ac7f890d163324b44
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921305"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095025"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
+
 При создании автономной службы Windows Communication Foundation (WCF) с классом <xref:System.ServiceModel.WSHttpBinding>, использующим безопасность транспорта, необходимо также настроить порт с помощью сертификата X. 509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Выбор средства для настройки порта зависит от операционной системы компьютера.  
   
- Если вы используете Windows Server 2003 или Windows XP, используйте средство HttpCfg. exe. В Windows Server 2003 это средство установлено. В Windows XP это средство можно загрузить с помощью [средств поддержки Windows XP с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkId=88606). Дополнительные сведения см. в разделе [Общие сведения об HttpCfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). В [документации по средствам поддержки Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) описывается синтаксис средства Httpcfg. exe.  
+ Если вы используете Windows Server 2003, используйте средство HttpCfg. exe. В Windows Server 2003 это средство установлено. Дополнительные сведения см. в разделе [Общие сведения об HttpCfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). В [документации по средствам поддержки Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) описывается синтаксис средства Httpcfg. exe.  
   
- Если вы используете Windows Vista, используйте уже установленное средство Netsh. exe.  
+ Если вы используете Windows Vista, используйте уже установленное средство Netsh. exe. 
   
- В этом разделе описывается выполнение нескольких процедур.  
+> [!NOTE]
+> Для изменения сертификатов, хранящихся на компьютере, требуются права администратора.  
   
-- Определение текущей конфигурации портов компьютера.  
-  
-- Возвращение отпечатка сертификата (необходимо для выполнения следующих двух процедур).  
-  
-- Выполнение привязки SSL-сертификата к конфигурации порта.  
-  
-- Выполнение привязки SSL-сертификата к конфигурации порта и поддержка сертификатов клиента.  
-  
-- Удаление SSL-сертификата из номера порта.  
-  
- Обратите внимание, что для изменения сертификатов, хранящихся на компьютере, требуются привилегии администратора.  
-  
-### <a name="to-determine-how-ports-are-configured"></a>Определение конфигурации портов  
+## <a name="determine-how-ports-are-configured"></a>Определение настроек портов  
   
 1. В Windows Server 2003 или Windows XP используйте средство HttpCfg. exe для просмотра текущей конфигурации порта с помощью **запроса** и коммутаторов **SSL** , как показано в следующем примере.  
   
@@ -53,17 +43,17 @@ ms.locfileid: "76921305"
     netsh http show sslcert  
     ```  
   
-### <a name="to-get-a-certificates-thumbprint"></a>Возвращение отпечатка сертификата  
+## <a name="get-a-certificates-thumbprint"></a>Получение отпечатка сертификата  
   
-1. С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. (Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
+1. С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2. Получите доступ к отпечатку сертификата. Дополнительные сведения см. в разделе [как получить отпечаток сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Получите доступ к отпечатку сертификата. Дополнительные сведения см. в статье [Практическое руководство. Извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3. Скопируйте отпечаток сертификата в текстовый редактор, например "Блокнот".  
   
 4. Удалите все пробелы между шестнадцатеричными символами. Эту задачу можно выполнить, в том числе, с помощью функции поиска и замены текстового редактора, заменив каждый пробел символом null.  
   
-### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Выполнение привязки SSL-сертификата к номеру порта  
+## <a name="bind-an-ssl-certificate-to-a-port-number"></a>Привязка SSL-сертификата к номеру порта  
   
 1. В Windows Server 2003 или Windows XP используйте средство HttpCfg. exe в режиме Set в хранилище SSL (SSL), чтобы привязать сертификат к номеру порта. Это средство использует отпечаток для идентификации сертификата, как показано в следующем примере.  
   
@@ -87,7 +77,7 @@ ms.locfileid: "76921305"
   
     - Параметр **AppID** — это идентификатор GUID, который можно использовать для поиска приложения-владельца.  
   
-### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Выполнение привязки SSL-сертификата к номеру порта и поддержка сертификатов клиента  
+## <a name="bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Привязка SSL-сертификата к номеру порта и поддержка клиентских сертификатов  
   
 1. В Windows Server 2003 или Windows XP для поддержки клиентов, которые проходят проверку подлинности с помощью сертификатов X. 509 на транспортном уровне, выполните предыдущую процедуру, но передайте дополнительный параметр командной строки в HttpCfg. exe, как показано в следующем примере.  
   
@@ -103,7 +93,7 @@ ms.locfileid: "76921305"
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
     ```  
   
-### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Удаление SSL-сертификата из номера порта  
+## <a name="delete-an-ssl-certificate-from-a-port-number"></a>Удаление SSL-сертификата из номера порта  
   
 1. Для просмотра портов и отпечатков всех привязок на компьютере следует использовать средство HttpCfg.exe или Netsh.exe. Чтобы напечатать данные на диск, используйте символ перенаправления ">", как показано в следующем примере.  
   
@@ -124,11 +114,12 @@ ms.locfileid: "76921305"
     ```  
   
 ## <a name="example"></a>Пример  
+
  В следующем примере кода показано, как создавать резидентную службу с использованием класса <xref:System.ServiceModel.WSHttpBinding>, установленного на безопасность транспорта. При создании приложения необходимо задать номер порта в адресе.  
   
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
