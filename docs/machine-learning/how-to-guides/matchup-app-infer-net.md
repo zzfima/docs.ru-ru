@@ -1,14 +1,14 @@
 ---
-title: Создание приложения со списком матчей с помощью Infer.NET и вероятностного программирования
+title: Приложение со списком матчей Infer.NET — вероятностное программирование
 description: Узнайте, как использовать вероятностное программирование и Infer.NET для создания приложения со списком матчей на основе упрощенной версии TrueSkill.
-ms.date: 05/06/2019
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774546"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092607"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Создание приложения со списком матчей с помощью Infer.NET и вероятностного программирования
 

@@ -1,17 +1,17 @@
 ---
 title: Учебник. Классификация заявок на поддержку — мультиклассовая классификация
 description: Узнайте, как использовать ML.NET для сценариев многоклассовой классификации, чтобы назначать задачи GitHub определенным областям.
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 44e6234a56ae1890a7f485ffaca827945c1a33ff
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d5d397cfa6475574b6d6cc6d8cbb48b51c2d0af1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739642"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092529"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Учебник. Классификация заявок на поддержку с использованием мультиклассовой классификации с помощью ML .NET
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Учебник. Классификация заявок на поддержку с использованием мультиклассовой классификации с помощью ML.NET
 
 В этом практическом руководстве демонстрируется создание классификатора задач GitHub для обучения модели, классифицирующей и прогнозирующей метки области для задач на GitHub, с помощью ML.NET в консольном приложении .NET Core на языке C# в Visual Studio.
 

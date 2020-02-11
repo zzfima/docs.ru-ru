@@ -7,16 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 6b3e8068be2f5ed82c483b760fe100ea0a751588
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457857"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094479"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Устранение рисков. Поддержка сенсорного управления и пера на основе указателя
 
-В приложениях WPF, предназначенных 4.7 .NET Framework и выполняемых в системах Windows, начиная с версии Windows 10 Creators Update, можно включить дополнительный стек сенсорного управления и пера WPF на основе `WM_POINTER`.
+В приложениях WPF, предназначенных для .NET Framework 4.7 и выполняемых в Windows, начиная с версии Windows 10 Creators Update, можно включить дополнительный стек сенсорного управления и пера WPF на основе `WM_POINTER`.
 
 ## <a name="impact"></a>Последствия
 
@@ -40,7 +40,7 @@ ms.locfileid: "73457857"
 
 ## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Выбор поддержки сенсорного управления и пера на основе WM_POINTER
 
-Разработчики, желающие включить этот стек, могут добавить следующую информацию в файл app.config своего приложения:
+Разработчики, желающие включить этот стек, могут добавить следующую информацию в файл *app.config* своего приложения.
 
 ```xml
 <configuration>
