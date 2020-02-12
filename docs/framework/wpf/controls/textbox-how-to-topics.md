@@ -7,32 +7,32 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790888"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124238"
 ---
-# <a name="textbox-how-to-topics"></a><span data-ttu-id="252ef-102">Разделы руководства, посвященные TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-102">TextBox How-to Topics</span></span>
-<span data-ttu-id="252ef-103">В этом разделе содержатся примеры, демонстрирующие способы выполнения типичных задач с помощью <xref:System.Windows.Controls.TextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="252ef-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  
+# <a name="textbox-how-to-topics"></a><span data-ttu-id="17219-102">Разделы руководства, посвященные TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-102">TextBox How-to Topics</span></span>
+<span data-ttu-id="17219-103">В этом разделе приводятся примеры, демонстрирующие выполнение общих задач с помощью элемента управления <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="17219-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="252ef-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="252ef-104">In This Section</span></span>  
- [<span data-ttu-id="252ef-105">Создание элемента управления для многострочных элементов TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-105">Create a Multiline TextBox Control</span></span>](how-to-create-a-multiline-textbox-control.md)  
- [<span data-ttu-id="252ef-106">Определение изменения текста в TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-106">Detect When Text in a TextBox Has Changed</span></span>](how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [<span data-ttu-id="252ef-107">Включение знаков табуляции в элементе управления TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-107">Enable Tab Characters in a TextBox Control</span></span>](how-to-enable-tab-characters-in-a-textbox-control.md)  
- [<span data-ttu-id="252ef-108">Получение коллекции строк из элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-108">Get a Collection of Lines from a TextBox</span></span>](how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [<span data-ttu-id="252ef-109">Перевод элемента управления TextBox в режим только для чтения</span><span class="sxs-lookup"><span data-stu-id="252ef-109">Make a TextBox Control Read-Only</span></span>](how-to-make-a-textbox-control-read-only.md)  
- [<span data-ttu-id="252ef-110">Позиционирование курсора в начале или конце текста в элементе управления TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-110">Position the Cursor at the Beginning or End of Text in a TextBox Control</span></span>](position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [<span data-ttu-id="252ef-111">Извлечение выделенного текста</span><span class="sxs-lookup"><span data-stu-id="252ef-111">Retrieve a Text Selection</span></span>](how-to-retrieve-a-text-selection.md)  
- [<span data-ttu-id="252ef-112">Установка фокуса в элементе управления TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-112">Set Focus in a TextBox Control</span></span>](how-to-set-focus-in-a-textbox-control.md)  
- [<span data-ttu-id="252ef-113">Установка текстового содержимого для элемента управления TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-113">Set the Text Content of a TextBox Control</span></span>](how-to-set-the-text-content-of-a-textbox-control.md)  
- [<span data-ttu-id="252ef-114">Включение проверки орфографии в элементе управления редактирования текста</span><span class="sxs-lookup"><span data-stu-id="252ef-114">Enable Spell Checking in a Text Editing Control</span></span>](how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [<span data-ttu-id="252ef-115">Использование пользовательского контекстного меню с элементом TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-115">Use a Custom Context Menu with a TextBox</span></span>](how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [<span data-ttu-id="252ef-116">Использование проверки орфографии с помощью контекстного меню</span><span class="sxs-lookup"><span data-stu-id="252ef-116">Use Spell Checking with a Context Menu</span></span>](how-to-use-spell-checking-with-a-context-menu.md)  
- [<span data-ttu-id="252ef-117">Добавление водяного знака в элемент TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-117">Add a Watermark to a TextBox</span></span>](how-to-add-a-watermark-to-a-textbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="17219-104">в этом разделе</span><span class="sxs-lookup"><span data-stu-id="17219-104">In This Section</span></span>  
+ [<span data-ttu-id="17219-105">Создание элемента управления для многострочных элементов TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-105">Create a Multiline TextBox Control</span></span>](how-to-create-a-multiline-textbox-control.md)  
+ [<span data-ttu-id="17219-106">Определение изменения текста в TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-106">Detect When Text in a TextBox Has Changed</span></span>](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [<span data-ttu-id="17219-107">Включение знаков табуляции в элементе управления TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-107">Enable Tab Characters in a TextBox Control</span></span>](how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [<span data-ttu-id="17219-108">Получение коллекции строк из элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-108">Get a Collection of Lines from a TextBox</span></span>](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [<span data-ttu-id="17219-109">Перевод элемента управления TextBox в режим только для чтения</span><span class="sxs-lookup"><span data-stu-id="17219-109">Make a TextBox Control Read-Only</span></span>](how-to-make-a-textbox-control-read-only.md)  
+ [<span data-ttu-id="17219-110">Позиционирование курсора в начале или конце текста в элементе управления TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-110">Position the Cursor at the Beginning or End of Text in a TextBox Control</span></span>](position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [<span data-ttu-id="17219-111">Извлечение выделенного текста</span><span class="sxs-lookup"><span data-stu-id="17219-111">Retrieve a Text Selection</span></span>](how-to-retrieve-a-text-selection.md)  
+ [<span data-ttu-id="17219-112">Установка фокуса в элементе управления TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-112">Set Focus in a TextBox Control</span></span>](how-to-set-focus-in-a-textbox-control.md)  
+ [<span data-ttu-id="17219-113">Установка текстового содержимого для элемента управления TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-113">Set the Text Content of a TextBox Control</span></span>](how-to-set-the-text-content-of-a-textbox-control.md)  
+ [<span data-ttu-id="17219-114">Включение проверки орфографии в элементе управления редактирования текста</span><span class="sxs-lookup"><span data-stu-id="17219-114">Enable Spell Checking in a Text Editing Control</span></span>](how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [<span data-ttu-id="17219-115">Использование пользовательского контекстного меню с элементом TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-115">Use a Custom Context Menu with a TextBox</span></span>](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [<span data-ttu-id="17219-116">Использование проверки орфографии с помощью контекстного меню</span><span class="sxs-lookup"><span data-stu-id="17219-116">Use Spell Checking with a Context Menu</span></span>](how-to-use-spell-checking-with-a-context-menu.md)  
+ [<span data-ttu-id="17219-117">Добавление водяного знака в элемент TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-117">Add a Watermark to a TextBox</span></span>](how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="252ef-118">Ссылка</span><span class="sxs-lookup"><span data-stu-id="252ef-118">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="17219-118">Справочник</span><span class="sxs-lookup"><span data-stu-id="17219-118">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -41,7 +41,7 @@ ms.locfileid: "61790888"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="252ef-119">См. также</span><span class="sxs-lookup"><span data-stu-id="252ef-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17219-119">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="17219-119">See also</span></span>
 
-- [<span data-ttu-id="252ef-120">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="252ef-120">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [<span data-ttu-id="252ef-121">Стили и шаблоны элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="252ef-121">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
+- [<span data-ttu-id="17219-120">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="17219-120">WPF Controls Gallery Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
+- [<span data-ttu-id="17219-121">Стили и шаблоны элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="17219-121">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053437"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124459"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="4a98a-102">Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="4a98a-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="4a98a-103">Прежде чем администраторы смогут развертывать приложения Microsoft .NET Framework в системе, они должны сначала убедиться в наличии среды выполнения .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4a98a-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="4a98a-104">В этом разделе содержится сценарий, написанный на языке HTML/JavaScript, который администраторы могут использовать для определения наличия .NET Framework в системе.</span><span class="sxs-lookup"><span data-stu-id="4a98a-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="f8f81-102">Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="f8f81-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="f8f81-103">Прежде чем администраторы смогут развертывать приложения Microsoft .NET Framework в системе, они должны сначала убедиться в наличии среды выполнения .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f8f81-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="f8f81-104">В этом разделе содержится сценарий, написанный на языке HTML/JavaScript, который администраторы могут использовать для определения наличия .NET Framework в системе.</span><span class="sxs-lookup"><span data-stu-id="f8f81-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="4a98a-105">Более подробные сведения об установке, развертывании и обнаружении Microsoft .NET Framework см. в статье [Развертывание платформы Microsoft .NET Framework версии 3,0](https://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="4a98a-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+> <span data-ttu-id="f8f81-105">Более подробные сведения об установке, развертывании и обнаружении Microsoft .NET Framework см. в статье [Развертывание платформы Microsoft .NET Framework версии 3,0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).</span><span class="sxs-lookup"><span data-stu-id="f8f81-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="4a98a-106">Определение строки агента пользователя ".NET CLR"</span><span class="sxs-lookup"><span data-stu-id="4a98a-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="4a98a-107">При установке .NET Framework MSI добавляет ".NET CLR" и номер версии в строку UserAgent.</span><span class="sxs-lookup"><span data-stu-id="4a98a-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="4a98a-108">В следующем примере показан сценарий, внедренный в простую HTML-страницу.</span><span class="sxs-lookup"><span data-stu-id="4a98a-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="4a98a-109">Сценарий выполняет поиск строки UserAgent, чтобы определить, установлена ли .NET Framework, и отображает сообщение о состоянии для результатов поиска.</span><span class="sxs-lookup"><span data-stu-id="4a98a-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="f8f81-106">Определение строки агента пользователя ".NET CLR"</span><span class="sxs-lookup"><span data-stu-id="f8f81-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="f8f81-107">При установке .NET Framework MSI добавляет ".NET CLR" и номер версии в строку UserAgent.</span><span class="sxs-lookup"><span data-stu-id="f8f81-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="f8f81-108">В следующем примере показан сценарий, внедренный в простую HTML-страницу.</span><span class="sxs-lookup"><span data-stu-id="f8f81-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="f8f81-109">Сценарий выполняет поиск строки UserAgent, чтобы определить, установлена ли .NET Framework, и отображает сообщение о состоянии для результатов поиска.</span><span class="sxs-lookup"><span data-stu-id="f8f81-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
   
 ```html  
 <HTML>  
@@ -113,13 +113,13 @@ ms.locfileid: "71053437"
 </HTML>  
 ```  
   
- <span data-ttu-id="4a98a-110">Если поиск версии ".NET CLR" завершился успешно, отображается сообщение о состоянии следующего типа:</span><span class="sxs-lookup"><span data-stu-id="4a98a-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="f8f81-110">Если поиск версии ".NET CLR" завершился успешно, отображается сообщение о состоянии следующего типа:</span><span class="sxs-lookup"><span data-stu-id="f8f81-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="4a98a-111">В противном случае отображается сообщение о состоянии следующего типа:</span><span class="sxs-lookup"><span data-stu-id="4a98a-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="f8f81-111">В противном случае отображается сообщение о состоянии следующего типа:</span><span class="sxs-lookup"><span data-stu-id="f8f81-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

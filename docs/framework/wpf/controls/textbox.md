@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b1b15739b1ba1787ba160a9a4d829d83fb10db1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790836"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123641"
 ---
-# <a name="textbox"></a><span data-ttu-id="7728a-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="7728a-102">TextBox</span></span>
-<span data-ttu-id="7728a-103"><xref:System.Windows.Controls.TextBox> Элемент управления поддерживает базовые текстовые входные данные в приложениях WPF.</span><span class="sxs-lookup"><span data-stu-id="7728a-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="af148-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="af148-102">TextBox</span></span>
+<span data-ttu-id="af148-103">Элемент управления <xref:System.Windows.Controls.TextBox> обеспечивает поддержку базовых текстовых вводов в приложениях WPF.</span><span class="sxs-lookup"><span data-stu-id="af148-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7728a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="7728a-104">In This Section</span></span>  
- [<span data-ttu-id="7728a-105">Общие сведения о TextBox</span><span class="sxs-lookup"><span data-stu-id="7728a-105">TextBox Overview</span></span>](textbox-overview.md)  
- [<span data-ttu-id="7728a-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="7728a-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="af148-104">в этом разделе</span><span class="sxs-lookup"><span data-stu-id="af148-104">In This Section</span></span>  
+ [<span data-ttu-id="af148-105">Общие сведения о TextBox</span><span class="sxs-lookup"><span data-stu-id="af148-105">TextBox Overview</span></span>](textbox-overview.md)  
+ [<span data-ttu-id="af148-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="af148-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="7728a-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="7728a-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="af148-107">Справочник</span><span class="sxs-lookup"><span data-stu-id="af148-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,7 +30,7 @@ ms.locfileid: "61790836"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="7728a-108">См. также</span><span class="sxs-lookup"><span data-stu-id="7728a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af148-108">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="af148-108">See also</span></span>
 
-- [<span data-ttu-id="7728a-109">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="7728a-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [<span data-ttu-id="7728a-110">Стили и шаблоны элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="7728a-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
+- [<span data-ttu-id="af148-109">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="af148-109">WPF Controls Gallery Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
+- [<span data-ttu-id="af148-110">Стили и шаблоны элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="af148-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
