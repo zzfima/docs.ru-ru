@@ -1,25 +1,25 @@
 ---
 title: Начало работы с .NET для Apache Spark
-description: Узнайте, как запустить приложение .NET для Apache Spark с помощью .NET Core в Windows.
-ms.date: 11/04/2019
+description: Узнайте, как запустить приложение .NET для Apache Spark, используя .NET Core на Windows, macOS и Ubuntu.
+ms.date: 01/31/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 679ee7660e96504768a781e1e384acab80362736
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 018c21804bf942233e07039281d7ec22a6bef763
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743204"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092321"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Учебник. Начало работы с .NET для Apache Spark
 
-В этом руководстве описывается, как запустить приложение .NET для Apache Spark с помощью .NET Core в Windows.
+В этом руководстве описывается, как запустить приложение .NET для Apache Spark, используя .NET Core на Windows, macOS и Ubuntu.
 
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
 >
-> * Подготовка среды Windows для .NET для Apache Spark
+> * подготовить среду под .NET для Apache Spark;
 > * написать свое первое приложение .NET для Apache Spark;
 > * скомпилировать и запустить простое приложение .NET для Apache Spark.
 
@@ -31,29 +31,23 @@ ms.locfileid: "76743204"
 
 Чтобы приступить к созданию приложений .NET, необходимо загрузить и установить пакет средств разработки программного обеспечения (SDK) для .NET.
 
-Скачайте и установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download/dotnet-core/3.0). При установке пакета SDK в переменную PATH добавляется цепочка инструментов `dotnet`.
+Скачайте и установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download/dotnet-core/3.1). При установке пакета SDK в переменную PATH добавляется цепочка инструментов `dotnet`.
 
-После установки пакета SDK для .NET Core, откройте новую командную строку и выполните команду `dotnet`.
+Установив пакет SDK для .NET Core, откройте новое окно командной строки или терминала и выполните команду `dotnet`.
 
-Если команда выполняется и выводит сведения об использовании dotnet, можно перейти к следующему шагу. При возникновении ошибки `'dotnet' is not recognized as an internal or external command` убедитесь, что вы открыли **новую** командную строку перед выполнением команды.
+Если команда выполняется и выводит сведения об использовании dotnet, можно перейти к следующему шагу. Если возникает ошибка `'dotnet' is not recognized as an internal or external command`, убедитесь, что команда выполняется в **новом** окне терминала или командной строки.
 
 ### <a name="2-install-java"></a>2. Установка Java
 
-Установите [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Установите [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) для Windows и macOS или [OpenJDK 8](https://openjdk.java.net/install/) для Ubuntu.
 
-Выберите соответствующую версию для вашей операционной системы. Например, для компьютера с 64-разрядной версией Windows выберите **jdk-8u201-windows-x64.exe**. Затем используйте команду `java`, чтобы проверить установку.
+Выберите соответствующую версию для вашей операционной системы. Например, выберите **jdk-8u201-windows-x64.exe** для компьютера с 64-разрядной версией Windows (как показано ниже) или **jdk-8u231-macosx-x64.dmg** для macOS. Затем используйте команду `java`, чтобы проверить установку.
 
 ![Скачать Java](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
-### <a name="3-install-7-zip"></a>3. Установка 7-Zip
+### <a name="3-install-compression-software"></a>3. Установка ПО для сжатия
 
-Apache Spark загружается как сжатый файл TGZ. Чтобы извлечь файл, используйте программу-архиватор, например 7-Zip.
-
-* Посетите [страницу загрузок 7-Zip](https://www.7-zip.org/).
-* В первой таблице на странице выберите загрузку 32-разрядной (x86) или 64-разрядной версии (x64) в зависимости от вашей операционной системы.
-* После завершения загрузки запустите установщик.
-
-![Скачать 7-Zip](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
+Apache Spark загружается как сжатый файл TGZ. Чтобы извлечь файл, используйте программу-архиватор, например [7-Zip](https://www.7-zip.org/) или [WinZip](https://www.winzip.com/).
 
 ### <a name="4-install-apache-spark"></a>4. Установка Apache Spark
 
@@ -77,14 +71,22 @@ Apache Spark загружается как сжатый файл TGZ. Чтобы
 
 ![Установка Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
 
-Выполните следующие команды, чтобы задать переменные среды, используемые для размещения Apache Spark:
+Выполните следующие команды, чтобы задать переменные сред, используемые для обнаружения Apache Spark на **Windows**:
 
 ```console
 setx HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 ```
 
-После установки всего необходимого и настройки переменных среды, откройте **новую** командную строку и выполните следующую команду:
+Выполните следующие команды, чтобы задать переменные сред, используемые для обнаружения Apache Spark на **macOS** и **Ubuntu**:
+
+```bash
+export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
+export PATH="$SPARK_HOME/bin:$PATH"
+source ~/.bashrc
+```
+
+Установив все необходимое и задав переменные сред, откройте **новое** окно командной строки или терминала и выполните следующую команду:
 
 `%SPARK_HOME%\bin\spark-submit --version`
 
@@ -94,11 +96,11 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ### <a name="5-install-net-for-apache-spark"></a>5. Установка .NET для Apache Spark
 
-Загрузите выпуск [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) со страницы выпусков .NET для Apache Spark в GitHub. Например, если у вас компьютер Windows и вы планируете использовать .NET Core, [загрузите выпуск netcoreapp 2.1 для Windows x64 ](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).
+Загрузите выпуск [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) со страницы выпусков .NET для Apache Spark в GitHub. Например, если вы планируете использовать .NET Core на компьютере под управлением Windows, [скачайте выпуск netcoreapp3.1 для Windows x64](https://github.com/dotnet/spark/releases/download/v0.8.0/Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip).
 
 Для извлечения Microsoft.Spark.Worker:
 
-* Найдите скачанный файл **Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip**.
+* Найдите скачанный файл **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip**.
 * Щелкните правой кнопкой мыши и выберите **7-Zip -> Извлечь файлы…** .
 * Введите **C:\bin** в поле **Извлечь в**.
 * Снимите флажок под полем **Извлечь в**.
@@ -106,7 +108,7 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ![Установка .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
-### <a name="6-install-winutils"></a>6.  Установка WinUtils
+### <a name="6-install-winutils-windows-only"></a>6.  Установка WinUtils (только для Windows)
 
 .NET для Apache Spark требует установки WinUtils вместе с Apache Spark. [Скачайте winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Затем скопируйте WinUtils в папку **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.
 
@@ -115,9 +117,13 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. Установка DOTNET_WORKER_DIR и проверка зависимостей
 
-Выполните следующую команду, чтобы задать переменную среды `DOTNET_WORKER_DIR`, которая используется приложениями .NET для обнаружения .NET для Apache Spark:
+Выполните одну из следующих команд, чтобы задать переменную среды `DOTNET_WORKER_DIR`, которая используется приложениями .NET для обнаружения .NET для Apache Spark.
 
-`setx DOTNET_WORKER_DIR "C:\bin\Microsoft.Spark.Worker-0.6.0"`
+В **Windows** создайте [переменную среды](https://www.java.com/en/download/help/path.xml) с именем `DOTNET_WORKER_DIR` и присвойте ей путь к каталогу, в который вы скачали и извлекли Microsoft.Spark.Worker (например, `C:\bin\Microsoft.Spark.Worker\`).
+
+В **macOS** создайте переменную среды с помощью `export DOTNET_WORKER_DIR <your_path>` и присвойте ей путь к каталогу, в который вы скачали и извлекли Microsoft.Spark.Worker (например, *~/bin/Microsoft.Spark.Worker/* ). 
+
+В **Ubuntu** создайте [переменную среды](https://help.ubuntu.com/community/EnvironmentVariables) с именем `DOTNET_WORKER_DIR` и присвойте ей путь к каталогу, в который вы скачали и извлекли Microsoft.Spark.Worker (например, *~/bin/Microsoft.Spark.Worker*).
 
 Наконец, перед переходом к следующему разделу еще раз проверьте, можно ли выполнять команды `dotnet`, `java`, `mvn` и `spark-shell` из командной строки.
 
@@ -125,9 +131,9 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ### <a name="1-create-a-console-app"></a>1. Создание консольного приложения
 
-В командной строке выполните следующие команды, чтобы создать новое консольное приложение:
+В командной строке или терминале выполните следующие команды, чтобы создать новое консольное приложение:
 
-```console
+```dotnetcli
 dotnet new console -o mySparkApp
 cd mySparkApp
 ```
@@ -136,9 +142,9 @@ cd mySparkApp
 
 ### <a name="2-install-nuget-package"></a>2. Установка пакета NuGet
 
-Чтобы использовать .NET для Apache Spark в приложении, установите пакет Microsoft.Spark. В командной строке выполните следующую команду:
+Чтобы использовать .NET для Apache Spark в приложении, установите пакет Microsoft.Spark. В командной строке или терминале выполните следующую команду:
 
-`dotnet add package Microsoft.Spark --version 0.6.0`
+`dotnet add package Microsoft.Spark --version 0.8.0`
 
 ### <a name="3-code-your-app"></a>3. Написание кода приложения
 
@@ -154,7 +160,7 @@ namespace MySparkApp
         static void Main(string[] args)
         {
             // Create a Spark session.
-            var spark = SparkSession
+            SparkSession spark = SparkSession
                 .Builder()
                 .AppName("word_count_sample")
                 .GetOrCreate();
@@ -163,7 +169,7 @@ namespace MySparkApp
             DataFrame dataFrame = spark.Read().Text("input.txt");
 
             // Count words.
-            var words = dataFrame
+            DataFrame words = dataFrame
                 .Select(Functions.Split(Functions.Col("value"), " ").Alias("words"))
                 .Select(Functions.Explode(Functions.Col("words"))
                 .Alias("word"))
@@ -181,7 +187,13 @@ namespace MySparkApp
 }
 ```
 
-### <a name="4-add-data-file"></a>4. Добавление файла данных
+### <a name="4-create-and-add-a-data-file"></a>4. Создание и добавление файла данных
+
+Откройте командную строку или терминал и перейдите в папку своего приложения.
+
+```bash
+cd <your-app-output-directory>
+```
 
 Ваше приложение обрабатывает файл, содержащий строки текста. Создайте файл *input.txt* в каталоге *mySparkApp*, содержащий следующий текст:
 
@@ -201,9 +213,16 @@ This .NET app counts words with Apache Spark
 
 2. Отправьте приложение для запуска на Apache Spark с помощью следующей команды:
 
-   ```powershell
-   %SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local bin\Debug\netcoreapp3.0\microsoft-spark-2.4.x-0.6.0.jar dotnet bin\Debug\netcoreapp3.0\mySparkApp.dll
+   ```console
+   spark-submit \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
+   --master local \
+   microsoft-spark-2.4.x-<version>.jar \
+   dotnet HelloSpark.dll
    ```
+
+   > [!NOTE]
+   > При выполнении этой команды предполагается, что вы скачали Apache Spark и добавили это решение в переменную среды PATH, чтобы использовать `spark-submit`. В противном случае потребуется использовать полный путь (например, *C:\bin\apache-spark\bin\spark-submit* или *~/spark/bin/spark-submit*).
 
 3. При запуске приложения данные подсчета слов из файла *input.txt* записываются в консоль.
 

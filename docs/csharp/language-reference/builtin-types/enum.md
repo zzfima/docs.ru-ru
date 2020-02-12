@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72bc867bf0a789279da9a01f97c85d96b78684ed
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75437957"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093231"
 ---
 # <a name="enumeration-types-c-reference"></a>Типы перечислений (справочник по C#)
 
-Тип перечисления — это тип значения, определенный набором именованных констант базового [целочисленного](integral-numeric-types.md) типа. Чтобы определить тип перечисления, используйте ключевое слово `enum` и укажите имена *элементов перечисления*:
+*Тип перечисления* (или *тип enum*) — это [тип значения](value-types.md), определенный набором именованных констант применяемого [целочисленного типа](integral-numeric-types.md). Чтобы определить тип перечисления, используйте ключевое слово `enum` и укажите имена *элементов перечисления*:
 
 ```csharp
 enum Season

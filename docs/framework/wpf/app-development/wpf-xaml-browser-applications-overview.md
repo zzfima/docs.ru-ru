@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742277"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124212"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>Приложения браузера XAML (XBAP) объединяют функции веб-приложений и многофункциональных клиентских приложений. Как веб-приложения, XBAP можно развертывать на веб-сервере и запускать из Internet Explorer или Firefox. Как и многофункциональные клиентские приложения, XBAP могут использовать возможности WPF. Кроме того, XBAP разрабатываются аналогично многофункциональным клиентским приложениям. Этот раздел содержит простое, общее введение в разработку XBAP и показывает, чем она отличается от разработки стандартных многофункциональных клиентов.
@@ -91,7 +91,7 @@ ms.locfileid: "76742277"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>Связь с веб-страницей размещения
- Если приложение находится во фрейме HTML, вы можете взаимодействовать с веб-страницей, которая содержит XBAP. Это можно сделать, извлекая свойство <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> <xref:System.Windows.Interop.BrowserInteropHelper>. Оно возвращает объект скрипта, представляющий окно HTML. Доступ к свойствам, методам и событиям можно получить в [объекте окна](https://go.microsoft.com/fwlink/?LinkId=160274), используя обычный синтаксис с точками. Также можно получить доступ к методам скрипта и глобальным переменным. В следующем примере показано, как извлечь объект скрипта и закрыть браузер.
+ Если приложение находится во фрейме HTML, вы можете взаимодействовать с веб-страницей, которая содержит XBAP. Это можно сделать, извлекая свойство <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> <xref:System.Windows.Interop.BrowserInteropHelper>. Оно возвращает объект скрипта, представляющий окно HTML. Доступ к свойствам, методам и событиям можно получить в [объекте окна](https://developer.mozilla.org/en-US/docs/Web/API/Window), используя обычный синтаксис с точками. Также можно получить доступ к методам скрипта и глобальным переменным. В следующем примере показано, как извлечь объект скрипта и закрыть браузер.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
@@ -175,7 +175,7 @@ ms.locfileid: "76742277"
 > [!NOTE]
 > Поведение, описанное в предыдущей таблице, относится к приложениям XBAP с полным доверием, не следующим модели доверенного развертывания ClickOnce.
 
- Для развертывания XBAP с полным доверием рекомендуется использовать модель доверенного развертывания ClickOnce. Она позволяет XBAP получать полное доверие автоматически, независимо от зоны безопасности и не запрашивая подтверждение пользователя. При использовании этой модели приложение должно быть подписано сертификатом надежного издателя. Дополнительные сведения см. в разделах [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview) и [Знакомство с подписыванием кода](https://go.microsoft.com/fwlink/?LinkId=166327).
+ Для развертывания XBAP с полным доверием рекомендуется использовать модель доверенного развертывания ClickOnce. Она позволяет XBAP получать полное доверие автоматически, независимо от зоны безопасности и не запрашивая подтверждение пользователя. При использовании этой модели приложение должно быть подписано сертификатом надежного издателя. Дополнительные сведения см. в разделах [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview) и [Знакомство с подписыванием кода](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)).
 
 <a name="xbap_start_time_performance_considerations"></a>
 ## <a name="xbap-start-time-performance-considerations"></a>Влияние времени запуска XBAP на производительность

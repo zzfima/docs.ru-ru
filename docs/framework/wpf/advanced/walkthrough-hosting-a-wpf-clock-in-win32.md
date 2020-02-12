@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0aecde96d182e12ab72b1a6cba129ab1d8a28391
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794161"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123783"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>Пошаговое руководство. размещение часов WPF в Win32
 
 Чтобы разместить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] внутри приложений Win32, используйте <xref:System.Windows.Interop.HwndSource>, который предоставляет HWND, содержащий содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Сначала создайте <xref:System.Windows.Interop.HwndSource>, предоставив ему параметры, аналогичные CreateWindow. Затем вы указываете <xref:System.Windows.Interop.HwndSource> о требуемом содержимом [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Наконец, вы получаете HWND из <xref:System.Windows.Interop.HwndSource>. В этом пошаговом руководстве показано, как создать смешанный [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении Win32, которое повторно реализует диалоговое окно **свойств даты и времени** операционной системы.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>предварительные требования
 
 См. раздел [взаимодействие WPF и Win32](wpf-and-win32-interoperation.md).
 
-## <a name="how-to-use-this-tutorial"></a>Применение данного учебника
+## <a name="how-to-use-this-tutorial"></a>Как использовать этот учебник
 
-Основное внимание в этом учебнике уделяется важным шагам в процессе создания приложения взаимодействия. Руководство основано на примере, [Пример взаимодействия с часами Win32](https://go.microsoft.com/fwlink/?LinkID=160051), но этот пример является отражением конечного продукта. В этом учебнике описываются действия, которые необходимо выполнить, как если бы вы начали работу с существующим проектом Win32, возможно, с уже существующим проектом, и вы добавили размещенную [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложение. Вы можете сравнить конечный продукт с [примером взаимодействия с часами Win32](https://go.microsoft.com/fwlink/?LinkID=160051).
+Основное внимание в этом учебнике уделяется важным шагам в процессе создания приложения взаимодействия. Руководство основано на примере, [Пример взаимодействия с часами Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock), но этот пример является отражением конечного продукта. В этом учебнике описываются действия, которые необходимо выполнить, как если бы вы начали работу с существующим проектом Win32, возможно, с уже существующим проектом, и вы добавили размещенную [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложение. Вы можете сравнить конечный продукт с [примером взаимодействия с часами Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock).
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Пошаговое руководство по WPF внутри Win32 (HwndSource)
 
@@ -232,10 +232,10 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 ![Диалоговое окно «Свойства даты и времени последнего результата»](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
-Чтобы сравнить конечный результат с кодом, созданным на этом снимке экрана, см. [Пример взаимодействия с часами Win32](https://go.microsoft.com/fwlink/?LinkID=160051).
+Чтобы сравнить конечный результат с кодом, созданным на этом снимке экрана, см. [Пример взаимодействия с часами Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Interop.HwndSource>
 - [Взаимодействие WPF и Win32](wpf-and-win32-interoperation.md)
-- [Пример взаимодействия с часами Win32](https://go.microsoft.com/fwlink/?LinkID=160051)
+- [Пример взаимодействия с часами Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)

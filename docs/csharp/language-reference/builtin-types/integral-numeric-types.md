@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036363"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093205"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Целочисленные типы (справочник по C#)
 
-**Целочисленные типы** — это подмножество **простых типов**. Они могут инициализироваться [*литералами*](#integer-literals). Кроме того, все целочисленные типы являются типами значений. Все целочисленные типы поддерживают [арифметические](../operators/arithmetic-operators.md) операторы, [побитовые логические](../operators/bitwise-and-shift-operators.md) операторы, операторы [сравнения](../operators/comparison-operators.md) и [равенства](../operators/equality-operators.md).
+*Целочисленные типы* представляют целые числа. Все целочисленные типы являются [типами значений](value-types.md). Они также представляют собой [простые типы](value-types.md#built-in-value-types) и могут быть инициализированы [литералами](#integer-literals). Все целочисленные типы поддерживают [арифметические](../operators/arithmetic-operators.md) операторы, [побитовые логические](../operators/bitwise-and-shift-operators.md) операторы, операторы [сравнения](../operators/comparison-operators.md) и [равенства](../operators/equality-operators.md).
 
 ## <a name="characteristics-of-the-integral-types"></a>Характеристики целочисленных типов
 
@@ -130,7 +130,7 @@ var longVariable = (long)42;
 ## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
-- [Таблица встроенных типов](../keywords/built-in-types-table.md)
+- [Типы значений](value-types.md)
 - [Типы с плавающей запятой](floating-point-numeric-types.md)
-- [Таблица форматирования числовых результатов](../keywords/formatting-numeric-results-table.md)
+- [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Числовые значения в .NET](../../../standard/numerics.md)

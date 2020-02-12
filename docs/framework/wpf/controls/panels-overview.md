@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: d77ce78fe914bf300c5b33019d7cf67aa4ad74c3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d0962793854a6066112eb987fbdb3f703617787f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291445"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124433"
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
 <xref:System.Windows.Controls.Panel> элементы — это компоненты, управляющие отрисовкой элементов (их размер и размеры, их расположение и расположение их дочернего содержимого). [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет ряд предопределенных элементов <xref:System.Windows.Controls.Panel>, а также возможность создания пользовательских элементов <xref:System.Windows.Controls.Panel>.  
   
- В этом разделе содержатся следующие подразделы:  
+ Эта тема описана в следующих разделах.  
   
 - [Класс Panel](#Panels_view_from_10000_feet)  
   
@@ -62,16 +62,16 @@ ms.locfileid: "72291445"
   
  Каждый элемент панели имеет собственные специальные возможности, представленные в следующей таблице.  
   
-|Имя элемента|Панель пользовательского интерфейса?|Описание|  
+|Имя элемента|Панель пользовательского интерфейса?|Description|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Да|Определяет область, в которой можно явно располагать дочерние элементы по координатам относительно области <xref:System.Windows.Controls.Canvas>.|  
 |<xref:System.Windows.Controls.DockPanel>|Да|Определяет область, в которой можно горизонтально либо вертикально упорядочивать дочерние элементы относительно друг друга.|  
 |<xref:System.Windows.Controls.Grid>|Да|Определяет область с таблицей переменного размера, состоящей из столбцов и строк. Дочерние элементы <xref:System.Windows.Controls.Grid> можно точно располагать с помощью свойства <xref:System.Windows.FrameworkElement.Margin%2A>.|  
 |<xref:System.Windows.Controls.StackPanel>|Да|Выравнивает дочерние элементы в одну линию, ориентированную горизонтально или вертикально.|  
-|<xref:System.Windows.Controls.Primitives.TabPanel>|Нет|Обрабатывает макет кнопок вкладки в <xref:System.Windows.Controls.TabControl>.|  
-|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Нет|Упорядочивает содержимое в элементе управления <xref:System.Windows.Controls.ToolBar>.|  
-|<xref:System.Windows.Controls.Primitives.UniformGrid>|Нет|<xref:System.Windows.Controls.Primitives.UniformGrid> используется для упорядочения дочерних элементов в сетке со всеми равными размерами ячеек.|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|Нет|Предоставляет базовый класс для панелей, которые могут "виртуализировать" дочерние коллекции.|  
+|<xref:System.Windows.Controls.Primitives.TabPanel>|нет|Обрабатывает макет кнопок вкладки в <xref:System.Windows.Controls.TabControl>.|  
+|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|нет|Упорядочивает содержимое в элементе управления <xref:System.Windows.Controls.ToolBar>.|  
+|<xref:System.Windows.Controls.Primitives.UniformGrid>|нет|<xref:System.Windows.Controls.Primitives.UniformGrid> используется для упорядочения дочерних элементов в сетке со всеми равными размерами ячеек.|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|нет|Предоставляет базовый класс для панелей, которые могут "виртуализировать" дочерние коллекции.|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|Да|Упорядочивает и виртуализирует одну строку содержимого, ориентированную горизонтально или вертикально.|  
 |<xref:System.Windows.Controls.WrapPanel>|Да|<xref:System.Windows.Controls.WrapPanel> размещает дочерние элементы в последовательном положении слева направо, разбивая содержимое на следующую строку на границе содержащего поля. Последующее упорядочение происходит последовательно сверху вниз или справа налево в зависимости от значения свойства <xref:System.Windows.Controls.WrapPanel.Orientation%2A>.|  
   
@@ -93,15 +93,15 @@ ms.locfileid: "72291445"
  С более подробными описаниями и примерами использования каждого из этих элементов можно ознакомиться ниже.  
   
 <a name="Panels_overview_Canvas_subsection"></a>   
-### <a name="canvas"></a>Canvas  
- Элемент <xref:System.Windows.Controls.Canvas> обеспечивает размещение содержимого в соответствии с абсолютными координатами *x* и *y*. Элементы могут быть нарисованы в уникальном месте или, если элементы занимают одни координаты, порядок, в котором они отображаются в разметке, определяется порядком, в котором нарисованы эти элементы.  
+### <a name="canvas"></a>Холст  
+ Элемент <xref:System.Windows.Controls.Canvas> обеспечивает размещение содержимого в соответствии с абсолютными координатами *x* и *y* . Элементы могут быть нарисованы в уникальном месте или, если элементы занимают одни координаты, порядок, в котором они отображаются в разметке, определяется порядком, в котором нарисованы эти элементы.  
   
  <xref:System.Windows.Controls.Canvas> предоставляет наиболее гибкую поддержку макета любых <xref:System.Windows.Controls.Panel>. Свойства Height и Width используются для определения области холста, а элементам внутри назначаются абсолютные координаты относительно области родительского <xref:System.Windows.Controls.Canvas>. Четыре вложенных свойства, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> и <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, позволяют точно контролировать размещение объектов в <xref:System.Windows.Controls.Canvas>, позволяя разработчику точно располагать и упорядочивать элементы на экране.  
   
 #### <a name="cliptobounds-within-a-canvas"></a>Свойство ClipToBounds в элементе Canvas  
  <xref:System.Windows.Controls.Canvas> может размещать дочерние элементы в любой позиции на экране даже в координатах, находящихся за пределами определенного <xref:System.Windows.FrameworkElement.Height%2A> и <xref:System.Windows.FrameworkElement.Width%2A>. Кроме того, на <xref:System.Windows.Controls.Canvas> не влияет размер дочерних элементов. В результате дочерний элемент может перерисовывать другие элементы за пределами ограничивающего прямоугольника родительского <xref:System.Windows.Controls.Canvas>. Поведение <xref:System.Windows.Controls.Canvas> по умолчанию состоит в том, чтобы разрешить прорисовку дочерних элементов вне границ родительского <xref:System.Windows.Controls.Canvas>. Если такое поведение нежелательно, свойству <xref:System.Windows.UIElement.ClipToBounds%2A> может быть присвоено значение `true`. Это приводит к тому, что <xref:System.Windows.Controls.Canvas> обрезается по собственному размеру. <xref:System.Windows.Controls.Canvas> является единственным элементом макета, который позволяет рисовать дочерние элементы за пределами границ.  
   
- Такое поведение графически показано в [примере сравнения свойств ширины](https://go.microsoft.com/fwlink/?LinkID=160050).  
+ Такое поведение графически показано в [примере сравнения свойств ширины](https://github.com/Microsoft/WPF-Samples/tree/master/Elements/WidthProperties).  
   
 #### <a name="defining-and-using-a-canvas"></a>Определение и использование Canvas  
  Экземпляр <xref:System.Windows.Controls.Canvas> можно создать просто с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] или кода. В следующем примере показано, как использовать <xref:System.Windows.Controls.Canvas> для абсолютного позиционирования содержимого. Этот код рисует три квадрата со стороной в 100 пикселей. Первый квадрат — красный и координаты (*x, y*) его левого верхнего угла имеют значение (0, 0). Второй квадрат — зеленый, и его левый верхний угол имеет координаты (100, 100). Он находится ниже и правее первого квадрата. Третий квадрат — синий, его левый верхний угол имеет координаты (50, 50); таким образом, он пересекается с правым нижним углом первого квадрата и левым верхним углом второго. Так как третий квадрат накладывается последним, он будет отображаться поверх первых двух квадратов — то есть пересекающиеся участки принимают цвет третьей фигуры.  
@@ -112,7 +112,7 @@ ms.locfileid: "72291445"
   
  Скомпилированное приложение возвращает новый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который выглядит следующим образом.  
   
- ![Обычный элемент Canvas.](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
+ ![Типичный элемент Canvas.](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
   
 <a name="Panels_overview_DockPanel_subsection"></a>   
 ### <a name="dockpanel"></a>DockPanel  
@@ -136,10 +136,10 @@ ms.locfileid: "72291445"
   
  Скомпилированное приложение возвращает новый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который выглядит следующим образом.  
   
- ![Обычный сценарий DockPanel.](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
+ ![Типичный сценарий DockPanel.](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 <a name="Panels_overview_Grid_subsection"></a>   
-### <a name="grid"></a>Grid  
+### <a name="grid"></a>Сетка  
  Элемент <xref:System.Windows.Controls.Grid> объединяет функциональные возможности абсолютного позиционирования и табличного элемента управления данными. <xref:System.Windows.Controls.Grid> позволяет легко позиционировать элементы и изменять их стиль. <xref:System.Windows.Controls.Grid> позволяет определять гибкие группирования строк и столбцов, а также предоставляет механизм для совместного использования сведений о размере между несколькими элементами <xref:System.Windows.Controls.Grid>.  
   
 #### <a name="how-is-grid-different-from-table"></a>Чем Grid отличается от Table?  
@@ -156,7 +156,7 @@ ms.locfileid: "72291445"
   
  Скомпилированное приложение возвращает новый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который выглядит следующим образом.  
   
- ![Обычный элемент сетки.](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
+ ![Типичный элемент Grid.](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
   
 <a name="Panels_overview_StackPanel_subsection"></a>   
 ### <a name="stackpanel"></a>StackPanel  
@@ -184,7 +184,7 @@ ms.locfileid: "72291445"
   
  Скомпилированное приложение возвращает новый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который выглядит следующим образом.  
   
- ![Обычный элемент StackPanel.](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
+ ![Типичный элемент StackPanel.](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
@@ -209,7 +209,7 @@ ms.locfileid: "72291445"
   
  Скомпилированное приложение возвращает новый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который выглядит следующим образом.  
   
- ![Обычный элемент WrapPanel.](./media/wrappanel-element.PNG "WrapPanel_Element")  
+ ![Типичный элемент WrapPanel.](./media/wrappanel-element.PNG "WrapPanel_Element")  
   
 <a name="Panels_nested_panel_elements"></a>   
 ## <a name="nested-panel-elements"></a>Вложенные элементы Panel  
@@ -232,7 +232,7 @@ ms.locfileid: "72291445"
   
  Аналогичным образом пользовательские поведения макета, основанные на производных классах (например <xref:System.Windows.Controls.Canvas> или <xref:System.Windows.Controls.Grid>), можно определить путем переопределения методов <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> и <xref:System.Windows.FrameworkElement.MeasureOverride%2A>.  
   
- В следующей разметке показано, как создать пользовательский элемент <xref:System.Windows.Controls.Panel>. Эта новая <xref:System.Windows.Controls.Panel>, определенная как `PlotPanel`, поддерживает размещение дочерних элементов с помощью жестко заданных координат *x* и *y*. В этом примере элемент <xref:System.Windows.Shapes.Rectangle> (не показан) располагается в точке построения 50 (*x*) и 50 (*y*).  
+ В следующей разметке показано, как создать пользовательский элемент <xref:System.Windows.Controls.Panel>. Эта новая <xref:System.Windows.Controls.Panel>, определенная как `PlotPanel`, поддерживает размещение дочерних элементов с помощью жестко заданных координат *x* и *y* . В этом примере элемент <xref:System.Windows.Shapes.Rectangle> (не показан) располагается в точке построения 50 (*x*) и 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
@@ -252,12 +252,12 @@ ms.locfileid: "72291445"
   
  Дополнительные сведения о создании [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений с помощью локализуемых пользовательских интерфейсов см. в разделе [Обзор использования автоматической разметки](../advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Пошаговое руководство. Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Пример коллекции макетов WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Макет](../advanced/layout.md)
-- [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Пример коллекции элементов управления WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [Общие сведения о свойствах Alignment, Margin, Padding](../advanced/alignment-margins-and-padding-overview.md)
 - [Пример создания пользовательской панели с переносом содержимого](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Общие сведения о присоединенных свойствах](../advanced/attached-properties-overview.md)

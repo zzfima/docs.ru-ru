@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204741"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123666"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ресурсы приложений для библиотек, предназначенных для нескольких платформ
 Можно использовать тип проекта [Переносимая библиотека классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) .NET Framework, чтобы обеспечить доступ к ресурсам в библиотеках классов из нескольких платформ. Этот тип проекта доступен в Visual Studio 2012 и предназначен для переносимого подмножества библиотеки классов .NET Framework. Использование переносимой библиотеки классов гарантирует, что доступ к библиотеке можно получить из классических приложений, приложений Silverlight, Windows Phone приложений и приложений Магазина Windows 8. x.
@@ -35,7 +33,7 @@ ms.locfileid: "74204741"
 
  Проект переносимой библиотеки классов включает четыре <xref:System.Resources.ResourceManager> членов, перечисленных в следующей таблице. Эти конструкторы и методы позволяют создать экземпляр объекта <xref:System.Resources.ResourceManager> и извлечь строковые ресурсы.
 
-|Член`ResourceManager`|Описание|
+|Член`ResourceManager`|Description|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Создает экземпляр <xref:System.Resources.ResourceManager> для доступа к именованному файлу ресурсов, найденному в заданной сборке.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Создает экземпляр <xref:System.Resources.ResourceManager>, соответствующий указанному типу.|
@@ -61,11 +59,11 @@ ms.locfileid: "74204741"
 |BornLength|12|
 |Hired|Дата приема на работу|
 |HiredLength|12|
-|ИДЕНТИФИКАТОР|ИДЕНТИФИКАТОР|
+|ID|ID|
 |ID.Length|12|
 |Имя|Имя|
 |NameLength|25|
-|Заголовок|Employee Database|
+|Title|Employee Database|
 
  В следующем коде определяется класс `UILibrary`, использующий оболочку диспетчер ресурсов с именем `resources`, созданную Visual Studio, когда **Модификатор доступа** для файла изменяется на **Public**. Класс UILibrary анализирует строковые данные по мере необходимости. . Обратите внимание, что класс находится в пространстве имен `MyCompany.Employees`.
 
@@ -90,9 +88,9 @@ ms.locfileid: "74204741"
 |BornLength|20|
 |Hired|Дата ембаучé|
 |HiredLength|16|
-|ИДЕНТИФИКАТОР|ИДЕНТИФИКАТОР|
+|ID|ID|
 |Имя|Nom|
-|Заголовок|Base de доннéес des емплойéс|
+|Title|Base de доннéес des емплойéс|
 
  В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из консольного приложения. Для этого требуется ссылка на UILibrary. dll для добавления в проект консольного приложения.
 
@@ -104,7 +102,7 @@ ms.locfileid: "74204741"
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Resources.ResourceManager>
 - [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)

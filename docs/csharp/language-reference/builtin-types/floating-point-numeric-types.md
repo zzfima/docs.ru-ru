@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552282"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093218"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Числовые типы с плавающей запятой (справочник по C#)
 
-**Типы с плавающей запятой** — это подмножество **простых типов**. Они могут инициализироваться [*литералами*](#real-literals). Все типы с плавающей запятой также являются типами значений. Все числовые типы с плавающей запятой поддерживают [арифметические](../operators/arithmetic-operators.md) операторы, а также операторы [сравнения](../operators/comparison-operators.md) и [равенства](../operators/equality-operators.md).
+*Числовые типы с плавающей запятой* представляют действительные числа. Все числовые типы с плавающей запятой являются [типами значений](value-types.md). Они также представляют собой [простые типы](value-types.md#built-in-value-types) и могут быть инициализированы [литералами](#real-literals). Все числовые типы с плавающей запятой поддерживают [арифметические](../operators/arithmetic-operators.md) операторы, а также операторы [сравнения](../operators/comparison-operators.md) и [равенства](../operators/equality-operators.md).
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Характеристики типов с плавающей запятой
 
@@ -118,9 +118,8 @@ Console.WriteLine(m);  // output: 1500000
 ## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
-- [Таблица встроенных типов](../keywords/built-in-types-table.md)
+- [Типы значений](value-types.md)
 - [Целочисленные типы](integral-numeric-types.md)
-- [Таблица форматирования числовых результатов](../keywords/formatting-numeric-results-table.md)
 - [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Числовые значения в .NET](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

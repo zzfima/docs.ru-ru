@@ -8,23 +8,23 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b973d47711632f4c0fe56f042545598272c79d2d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053266"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124368"
 ---
 # <a name="contextmenu-overview"></a>Общие сведения о ContextMenu
-<xref:System.Windows.Controls.ContextMenu> Класс представляет элемент, который предоставляет функциональные возможности с помощью контекстно зависимое <xref:System.Windows.Controls.Menu>. Как правило, предоставляется пользователю <xref:System.Windows.Controls.ContextMenu> в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] щелкнув правой кнопкой мыши. В данном разделе представлены <xref:System.Windows.Controls.ContextMenu> элемент и приводятся примеры того, как использовать его в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и кода.  
+Класс <xref:System.Windows.Controls.ContextMenu> представляет элемент, предоставляющий функциональные возможности с помощью <xref:System.Windows.Controls.Menu>, зависящего от контекста. Как правило, пользователь предоставляет <xref:System.Windows.Controls.ContextMenu> в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], щелкая правой кнопкой мыши. В этом разделе описывается элемент <xref:System.Windows.Controls.ContextMenu> и приводятся примеры его использования в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и коде.  
 
 <a name="contextmenu_control"></a>   
 ## <a name="contextmenu-control"></a>Элемент управления ContextMenu  
- Объект <xref:System.Windows.Controls.ContextMenu> подключен с конкретным элементом управления. <xref:System.Windows.Controls.ContextMenu> Элемент позволяет представлять пользователям список элементов, определяющих команды или параметры, связанные с определенным элементом управления, например, <xref:System.Windows.Controls.Button>. Пользователи нажимают правой кнопкой мыши элемент управления, чтобы появилось меню. Как правило, щелкнув <xref:System.Windows.Controls.MenuItem> открывается подменю или вызывает приложение для выполнения команды.  
+ <xref:System.Windows.Controls.ContextMenu> присоединяется к конкретному элементу управления. Элемент <xref:System.Windows.Controls.ContextMenu> позволяет представлять пользователям список элементов, которые указывают команды или параметры, связанные с определенным элементом управления, например <xref:System.Windows.Controls.Button>. Пользователи нажимают правой кнопкой мыши элемент управления, чтобы появилось меню. Как правило, щелчок <xref:System.Windows.Controls.MenuItem> открывает подменю или заставляет приложение выполнить команду.  
   
 <a name="creating_contextmenus"></a>   
 ## <a name="creating-contextmenus"></a>Создание элементов ContextMenu  
- Следующие примеры демонстрируют создание <xref:System.Windows.Controls.ContextMenu> с вложенными меню. <xref:System.Windows.Controls.ContextMenu> Вложенные элементы управления для элемента управления button.  
+ В следующих примерах показано, как создать <xref:System.Windows.Controls.ContextMenu> с подменю. Элементы управления <xref:System.Windows.Controls.ContextMenu> присоединяются к элементам управления "Кнопка".  
   
  [!code-xaml[ContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
   
@@ -33,9 +33,9 @@ ms.locfileid: "62053266"
   
 <a name="applying_styles_to_contextmenu"></a>   
 ## <a name="applying-styles-to-a-contextmenu"></a>Применение стилей к ContextMenu  
- С помощью элемента управления <xref:System.Windows.Style>, можно значительно изменить внешний вид и поведение <xref:System.Windows.Controls.ContextMenu> без написания пользовательского элемента управления. В дополнение к установке визуальных свойств также можно применить стили к частям элемента управления. Например, можно изменить поведение частей элемента управления с помощью свойств, или можно добавлять части или изменить макет, <xref:System.Windows.Controls.ContextMenu>. В следующих примерах показано несколько способов добавления стилей к <xref:System.Windows.Controls.ContextMenu> элементов управления.  
+ С помощью <xref:System.Windows.Style>элементов управления можно значительно изменить внешний вид и поведение <xref:System.Windows.Controls.ContextMenu> без написания пользовательского элемента управления. В дополнение к установке визуальных свойств также можно применить стили к частям элемента управления. Например, можно изменить поведение частей элемента управления с помощью свойств, а также добавить или изменить макет, <xref:System.Windows.Controls.ContextMenu>. В следующих примерах показано несколько способов добавления стилей к элементам управления <xref:System.Windows.Controls.ContextMenu>.  
   
- В первом примере определяется стиль с именем `SimpleSysResources`, который показывает, как использовать текущие параметры системы в стиле. Этот пример назначает <xref:System.Windows.SystemColors.MenuHighlightBrushKey%2A> как <xref:System.Windows.Controls.Control.Background%2A> цвет и <xref:System.Windows.SystemColors.MenuTextBrushKey%2A> как <xref:System.Windows.Controls.Control.Foreground%2A> цвет <xref:System.Windows.Controls.ContextMenu>.  
+ В первом примере определяется стиль с именем `SimpleSysResources`, который показывает, как использовать текущие параметры системы в стиле. Этот пример назначает <xref:System.Windows.SystemColors.MenuHighlightBrushKey%2A> в качестве цвета <xref:System.Windows.Controls.Control.Background%2A> и <xref:System.Windows.SystemColors.MenuTextBrushKey%2A> в качестве <xref:System.Windows.Controls.Control.Foreground%2A>ого цвета <xref:System.Windows.Controls.ContextMenu>.  
   
 ```xaml  
 <Style x:Key="SimpleSysResources" TargetType="{x:Type MenuItem}">  
@@ -46,7 +46,7 @@ ms.locfileid: "62053266"
 </Style>  
 ```  
   
- В следующем примере используется <xref:System.Windows.Trigger> элемент для изменения внешнего вида <xref:System.Windows.Controls.Menu> в ответ на события, возникающие на <xref:System.Windows.Controls.ContextMenu>. Когда пользователь перемещает мышь поверх меню, внешний вид <xref:System.Windows.Controls.ContextMenu> элементы изменения.  
+ В следующем примере элемент <xref:System.Windows.Trigger> используется для изменения внешнего вида <xref:System.Windows.Controls.Menu> в ответ на события, возникающие в <xref:System.Windows.Controls.ContextMenu>. Когда пользователь наводит указатель мыши на меню, изменяется внешний вид <xref:System.Windows.Controls.ContextMenu> элементов.  
   
 ```xaml  
 <Style x:Key="Triggers" TargetType="{x:Type MenuItem}">  
@@ -60,7 +60,7 @@ ms.locfileid: "62053266"
 </Style>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.Style>
@@ -68,4 +68,4 @@ ms.locfileid: "62053266"
 - <xref:System.Windows.Controls.MenuItem>
 - [ContextMenu](contextmenu.md)
 - [Стили и шаблоны элемента ContextMenu](contextmenu-styles-and-templates.md)
-- [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Пример коллекции элементов управления WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)

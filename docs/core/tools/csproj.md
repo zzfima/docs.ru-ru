@@ -2,12 +2,12 @@
 title: Дополнения к формату CSPROJ для .NET Core
 description: Различия между существующими файлами и файлами CSPROJ .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787881"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965611"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Дополнения к формату CSPROJ для .NET Core
 
@@ -145,7 +145,7 @@ ms.locfileid: "76787881"
 
 #### <a name="version"></a>Version
 
-Обязательный атрибут `Version` указывает версию пакета для восстановления. Этот атрибут подчиняется правилам схемы [управления версиями NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). По умолчанию выбирается точное соответствие версии. Например, если указать `Version="1.2.3"`, это будет эквивалентно нотации NuGet `[1.2.3]` для точного указания версии 1.2.3 пакета.
+Обязательный атрибут `Version` указывает версию пакета для восстановления. Этот атрибут подчиняется правилам схемы [управления версиями NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). По умолчанию выбирается минимальная из заданных версий (включительно). Например, если указать `Version="1.2.3"`, это будет эквивалентно нотации NuGet `[1.2.3, )` и означает, что при разрешении пакет будет иметь версию 1.2.3, если она доступна, или более высокую, если нет.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets и PrivateAssets
 
@@ -184,7 +184,7 @@ ms.locfileid: "76787881"
 
 #### <a name="version"></a>Version
 
-`Version` указывает версию пакета для восстановления. Этот атрибут подчиняется правилам схемы [управления версиями NuGet](/nuget/create-packages/dependency-versions#version-ranges). По умолчанию выбирается точное соответствие версии. Например, если указать `Version="1.2.3"`, это будет эквивалентно нотации NuGet `[1.2.3]` для точного указания версии 1.2.3 пакета.
+`Version` указывает версию пакета для восстановления. Этот атрибут подчиняется правилам схемы [управления версиями NuGet](/nuget/create-packages/dependency-versions#version-ranges). По умолчанию выбирается минимальная из заданных версий (включительно). Например, если указать `Version="1.2.3"`, это будет эквивалентно нотации NuGet `[1.2.3, )` и означает, что при разрешении пакет будет иметь версию 1.2.3, если она доступна, или более высокую, если нет.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 

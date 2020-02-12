@@ -6,18 +6,18 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053437"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124459"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0
 Прежде чем администраторы смогут развертывать приложения Microsoft .NET Framework в системе, они должны сначала убедиться в наличии среды выполнения .NET Framework. В этом разделе содержится сценарий, написанный на языке HTML/JavaScript, который администраторы могут использовать для определения наличия .NET Framework в системе.  
   
 > [!NOTE]
-> Более подробные сведения об установке, развертывании и обнаружении Microsoft .NET Framework см. в статье [Развертывание платформы Microsoft .NET Framework версии 3,0](https://go.microsoft.com/fwlink/?LinkId=96739).  
+> Более подробные сведения об установке, развертывании и обнаружении Microsoft .NET Framework см. в статье [Развертывание платформы Microsoft .NET Framework версии 3,0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>Определение строки агента пользователя ".NET CLR"  

@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 418c5a4708a7842e5e441235738b73a009c9c956
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735319"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124551"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Пошаговое руководство. Размещение содержимого WPF в Win32
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако при наличии значительных инвестиций в код Win32 может оказаться более эффективным Добавление [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] функций в приложение, а не переписывание исходного кода. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет простой механизм размещения содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в окне Win32.  
   
- В этом учебнике описывается, как написать пример приложения, [в котором размещается содержимое WPF, в примере окна Win32](https://go.microsoft.com/fwlink/?LinkID=160004), который размещает [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое в окне Win32. Этот пример можно расширить для размещения любого окна Win32. Поскольку он включает в себя смешение управляемого и неуправляемого кода, приложение пишется в C++/CLI.  
+ В этом учебнике описывается, как написать пример приложения, [в котором размещается содержимое WPF, в примере окна Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage), который размещает [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое в окне Win32. Этот пример можно расширить для размещения любого окна Win32. Поскольку он включает в себя смешение управляемого и неуправляемого кода, приложение пишется в C++/CLI.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Требования  
@@ -26,7 +26,7 @@ ms.locfileid: "76735319"
  Поскольку пример, прилагаемый к этому учебнику, C++реализован в/CLI, в этом учебнике предполагается знание C++ использования для программирования Windows API, а также понимание управляемого кода. Знакомство с C++/CLI является полезным, но не необходимым.  
   
 > [!NOTE]
-> Этот учебник включает ряд примеров кода из связанного образца приложения. Однако для удобства чтения он не содержит полный пример кода. Полный пример кода см. в разделе [Размещение содержимого WPF в примере окна Win32](https://go.microsoft.com/fwlink/?LinkID=160004).  
+> Этот учебник включает ряд примеров кода из связанного образца приложения. Однако для удобства чтения он не содержит полный пример кода. Полный пример кода см. в разделе [Размещение содержимого WPF в примере окна Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage).  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>Основная процедура  

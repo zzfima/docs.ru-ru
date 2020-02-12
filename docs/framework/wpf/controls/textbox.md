@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b1b15739b1ba1787ba160a9a4d829d83fb10db1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790836"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123641"
 ---
 # <a name="textbox"></a>TextBox
-<xref:System.Windows.Controls.TextBox> Элемент управления поддерживает базовые текстовые входные данные в приложениях WPF.  
+Элемент управления <xref:System.Windows.Controls.TextBox> обеспечивает поддержку базовых текстовых вводов в приложениях WPF.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о TextBox](textbox-overview.md)  
  [Разделы практического руководства](textbox-how-to-topics.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,7 +30,7 @@ ms.locfileid: "61790836"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Пример коллекции элементов управления WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [Стили и шаблоны элемента TextBox](textbox-styles-and-templates.md)

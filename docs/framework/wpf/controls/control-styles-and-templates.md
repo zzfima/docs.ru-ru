@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460411"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124407"
 ---
 # <a name="control-styles-and-templates"></a>Стили и шаблоны элемента Control
 Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate>, который содержит визуальное дерево этого элемента управления. Структуру и внешний вид элемента управления можно изменить, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; чтобы изменить визуальное дерево элемента управления, необходимо задать для свойства <xref:System.Windows.Controls.Control.Template%2A> элемента управления его новое и полное <xref:System.Windows.Controls.ControlTemplate>.  
   
- Темы рабочего стола определяют, какой словарь ресурсов используется. Сведения о получении словарей ресурсов тем рабочего стола см. в разделе [Темы WPF по умолчанию](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Темы рабочего стола определяют, какой словарь ресурсов используется. Сведения о получении словарей ресурсов тем рабочего стола см. в разделе [Темы WPF по умолчанию](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
  Ниже перечислены имена файлов словарей ресурсов и их соответствующие темы рабочего стола.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73460411"
 |Royale.NormalColor.xaml|Тема по умолчанию в ОС Windows XP Media Center Edition.|  
 |Aero.NormalColor.xaml|Тема по умолчанию в ОС Windows Vista.|  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>в этом разделе  
  [Стили и шаблоны элемента Button](button-styles-and-templates.md)  
  [Стили и шаблоны элемента Calendar](calendar-styles-and-templates.md)  
  [Стили и шаблоны элемента CheckBox](checkbox-styles-and-templates.md)  
@@ -67,12 +67,12 @@ ms.locfileid: "73460411"
  [Стили и шаблоны элемента TreeView](treeview-styles-and-templates.md)  
  [Стили и шаблоны элемента Window](window-styles-and-templates.md)  
   
-## <a name="reference"></a>Справочники  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Общие сведения о разработке элементов управления](control-authoring-overview.md)  
   
- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+ [Использование стилей и шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

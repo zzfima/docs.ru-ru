@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802756"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123705"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
 
@@ -92,15 +90,15 @@ ms.locfileid: "74802756"
 
 Дополнительные сведения об использовании .NET Framework для создания среда выполнения Windows компонента и пошаговое руководство, в котором показано, как использовать такой компонент с JavaScript, см. [в разделе Создание компонентов C# среда выполнения Windows в и Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
-### <a name="primitive-types"></a>Типы-примитивы
+### <a name="primitive-types"></a>Примитивные типы
 
 Чтобы обеспечить естественное использование среда выполнения Windows в управляемом коде, .NET Framework примитивные типы отображаются вместо среда выполнения Windows типов-примитивов в коде. В .NET Framework у простых типов, таких как структура `Int32`, имеется множество полезных свойств и методов, например метод `Int32.TryParse`. Напротив, типы-примитивы и структуры в среда выполнения Windows имеют только поля. При использовании простых типов в управляемом коде они представляются как типы платформы .NET Framework, и можно как обычно использовать свойства и методы типов платформы .NET Framework. В следующем списке приводятся сводные данные.
 
 - Для примитивов среда выполнения Windows `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (неизменяемая коллекция символов Юникода), `Enum`, `UInt32`, `UInt64`и `Guid`, используйте тип с тем же именем в пространстве имен `System`.
 
-- вместо `UInt8` используется тип `System.Byte`;
+- Для `UInt8` используйте `System.Byte`.
 
-- вместо `Char16` используется тип `System.Char`;
+- Для `Char16` используйте `System.Char`.
 
 - вместо интерфейса `IInspectable` используется тип `System.Object`.
 
@@ -112,7 +110,7 @@ ms.locfileid: "74802756"
 
 ### <a name="other-differences"></a>Другие различия
 
-В некоторых случаях .NET Framework типы отображаются в коде, а не среда выполнения Windows типы требуют действия в вашей части. Например, класс <xref:Windows.Foundation.Uri?displayProperty=nameWithType> отображается как <xref:System.Uri?displayProperty=nameWithType> в .NET Frameworkном коде. <xref:System.Uri?displayProperty=nameWithType> допускает относительный URI, но для <xref:Windows.Foundation.Uri?displayProperty=nameWithType> требуется абсолютный URI. Поэтому при передаче URI в метод среда выполнения Windows необходимо убедиться, что он является абсолютным. См. раздел [Передача URI в среду выполнения Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+В некоторых случаях .NET Framework типы отображаются в коде, а не среда выполнения Windows типы требуют действия в вашей части. Например, класс <xref:Windows.Foundation.Uri?displayProperty=nameWithType> отображается как <xref:System.Uri?displayProperty=nameWithType> в .NET Frameworkном коде. <xref:System.Uri?displayProperty=nameWithType> допускает относительный URI, но для <xref:Windows.Foundation.Uri?displayProperty=nameWithType> требуется абсолютный URI. Поэтому при передаче URI в метод среда выполнения Windows необходимо убедиться, что он является абсолютным. См. раздел [Передача URI в среда выполнения Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -157,7 +155,7 @@ ms.locfileid: "74802756"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание|
+|Title|Description|
 |-----------|-----------------|
 |[Общие сведения о платформе .NET для приложений Магазина Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Описание типов .NET Framework и членов, которые можно использовать для создания приложений Магазина Windows 8. x и Windows Рунтимекомпонентс. (В Центре разработки для Windows.)|
 |[Путеводитель по приложениям Магазина Windows с C# помощью или Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Содержит основные ресурсы, которые помогут приступить к разработке приложений для Магазина Windows 8. x C# с помощью или Visual Basic, включая множество разделов, руководств и рекомендаций по быстрому запуску. (В Центре разработки для Windows.)|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 687f61bd3ec7d10c6aa66c20cd5eb58fcc56f18a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 56f5f633092d8aa0bfabdb0570ec26f14221838d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636371"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124615"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Надстройки Firefox для поддержки развертывания приложений .NET
 Подключаемый модуль Windows Presentation Foundation (WPF) для Firefox и помощник по .NET Framework для Firefox позволяют приложениям браузера XAML (XBAP), свободным [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]и приложениям ClickOnce работать с браузером Mozilla Firefox.  
@@ -31,9 +31,9 @@ ms.locfileid: "75636371"
   
 - Сообщать обо всех установленных версиях .NET Framework или только о последней версии.  
   
- Помощник .NET Framework для Firefox входит в состав .NET Framework 3,5 с пакетом обновления 1 (SP1). Сведения об удалении помощника .NET Framework для Firefox см. [в статье Удаление помощника по .NET Framework для Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
+ Помощник .NET Framework для Firefox входит в состав .NET Framework 3,5 с пакетом обновления 1 (SP1). Сведения об удалении помощника .NET Framework для Firefox см. [в статье Удаление помощника по .NET Framework для Firefox](https://support.microsoft.com/help/963707/how-to-remove-the-net-framework-assistant-for-firefox).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)
 - [Общие сведения о приложениях браузера WPF XAML](wpf-xaml-browser-applications-overview.md)
