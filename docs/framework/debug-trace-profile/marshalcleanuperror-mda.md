@@ -10,14 +10,12 @@ helpviewer_keywords:
 - MarshalCleanupError MDA
 - memory, cleanup errors
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ab3690cac28ef572b19cadb632662590d1ea04c7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a14c548ce960d53f47934595171189db28edfbb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052483"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216159"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
 Помощник отладки управляемого кода (MDA) `marshalCleanupError` активируется, когда при попытке очистить временные структуры и память, используемые для маршалинга типов данных между границами машинного и управляемого кода, в среде CLR возникает ошибка.  
@@ -47,7 +45,7 @@ ms.locfileid: "71052483"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

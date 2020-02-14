@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088747"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214812"
 ---
 # <a name="add-element-for-appsettings"></a>\<добавить элемент > для \<appSettings >
 
@@ -47,7 +45,7 @@ ms.locfileid: "74088747"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Отсутствуют
+Нет
 
 ## <a name="example"></a>Пример
 
@@ -68,6 +66,6 @@ ms.locfileid: "74088747"
 </appSettings>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема файла конфигурации для .NET Framework](../index.md)

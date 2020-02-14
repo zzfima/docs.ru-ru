@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088766"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215440"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<добавить элемент > для NameValueSectionHandler и DictionarySectionHandler
 
@@ -45,7 +43,7 @@ ms.locfileid: "74088766"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Отсутствуют
+Нет
 
 ## <a name="example"></a>Пример
 
@@ -62,10 +60,10 @@ ms.locfileid: "74088766"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>файл конфигурации
+## <a name="configuration-file"></a>Файл конфигурации
 
 Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема файла конфигурации для .NET Framework](index.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052548"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217355"
 ---
 # <a name="loaderlock-mda"></a>Помощник по отладке управляемого кода loaderLock
 Помощник по отладке управляемого кода `loaderLock` (MDA) определяет попытки выполнения управляемого кода в потоке, который удерживает блокировку загрузчика операционной системы Microsoft Windows.  Любое подобное выполнение кода недопустимо, поскольку оно может привести к взаимоблокировке и использованию библиотек DLL до того, как они будут инициализированы загрузчиком операционной системы.  
@@ -55,6 +53,6 @@ ms.locfileid: "71052548"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

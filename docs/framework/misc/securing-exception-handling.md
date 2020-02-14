@@ -9,14 +9,12 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894541"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215790"
 ---
 # <a name="securing-exception-handling"></a>Безопасность обработки исключений
 В Visual C++ и Visual Basic выражение фильтра, расположенное дальше вверх по стеку, выполняется перед любым оператором **finally** . Блок **catch** , связанный с этим фильтром, выполняется после оператора **finally** . Дополнительные сведения см. [в разделе Использование исключений с пользовательской фильтрацией](../../standard/exceptions/using-user-filtered-exception-handlers.md). В этом разделе рассматриваются аспекты безопасности в этом порядке. Рассмотрим следующий пример псевдокода, демонстрирующий порядок выполнения операторов Filter и операторов **finally** .  
@@ -116,7 +114,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Правильным исправлением в этом случае является заключение существующего блока **try**/**finally** в блок **try**/**catch** . Простое внедрение предложения **catch-throw** в существующий блок **try**/**finally** не устраняет проблему, как показано в следующем примере.  
+ Правильным исправлением в этом случае является заключение существующего блока **try**/**finally** в блок **try**/**catch** . Простое введение предложения **catch-throw** в существующий блок **try**/**finally** не устраняет проблему, как показано в следующем примере.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,7 +134,7 @@ YourObject.YourMethod()
 }  
 ```  
   
- Это не устраняет проблему, так как оператор **finally** не выполнялся перед `FilterFunc` элементом управления.  
+ Это не устраняет проблему, так как оператор **finally** не выполнялся до того, как `FilterFunc` получает управление.  
   
  Следующий пример устраняет проблему, гарантируя, что предложение **finally** выполнялось до того, как будет предложено исключение в блоках фильтра исключений вызывающих объектов.  
   
@@ -160,6 +158,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Правила написания безопасного кода](../../standard/security/secure-coding-guidelines.md)

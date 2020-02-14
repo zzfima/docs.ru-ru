@@ -7,14 +7,12 @@ helpviewer_keywords:
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b64bd1e112932f394bb473a21642d37e28e39d3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 44d512a8ebec0e21e33f51c07428331e5e22b7bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052505"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217338"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Упрощение отладки образа в .NET
 
@@ -42,7 +40,7 @@ AllowOptimize=0
 
 Значением каждого параметра может быть 0 или 1; отсутствующие параметры получают значение 0. Для упрощения отладки значение `GenerateTrackingInfo` должно быть равным 1, а значение `AllowOptimize` — 0.
 
-Начиная с версии .NET Framework 2,0, JIT-компилятор всегда создает данные отслеживания независимо от значения `GenerateTrackingInfo` `AllowOptimize` , однако значение все равно действует. При использовании [Ngen.exe (средства для создания образов в машинном коде)](../tools/ngen-exe-native-image-generator.md) для предварительной компиляции образа в машинном коде без оптимизации INI-файл, содержащий параметр `AllowOptimize=0`, должен находиться в целевой папке во время выполнения Ngen.exe. Если сборка предварительно скомпилирована без оптимизации, необходимо удалить предварительно скомпилированный код с помощью команды NGen. exe **/uninstall** перед повторным выполнением программы Ngen. exe, чтобы выполнить предварительную компиляцию кода как оптимизированного. Если ini-файл отсутствует в папке, по умолчанию Ngen. exe выполняет предварительную компиляцию кода как оптимизированного.
+Начиная с версии .NET Framework 2,0 JIT-компилятор всегда создает данные отслеживания независимо от значения для `GenerateTrackingInfo`. Однако значение `AllowOptimize` по-прежнему действует. При использовании [Ngen.exe (средства для создания образов в машинном коде)](../tools/ngen-exe-native-image-generator.md) для предварительной компиляции образа в машинном коде без оптимизации INI-файл, содержащий параметр `AllowOptimize=0`, должен находиться в целевой папке во время выполнения Ngen.exe. Если сборка предварительно скомпилирована без оптимизации, необходимо удалить предварительно скомпилированный код с помощью команды NGen. exe **/uninstall** перед повторным выполнением программы Ngen. exe, чтобы выполнить предварительную компиляцию кода как оптимизированного. Если ini-файл отсутствует в папке, по умолчанию Ngen. exe выполняет предварительную компиляцию кода как оптимизированного.
 
 <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> управляет параметрами для сборки. **DebuggableAttribute** содержит два поля, которые определяют, должен ли JIT-компилятор оптимизировать и (или) создавать данные отслеживания. Начиная с версии .NET Framework 2,0 JIT-компилятор всегда создает данные отслеживания.
 
@@ -53,7 +51,7 @@ AllowOptimize=0
 > [!NOTE]
 > В .NET Framework версии 1.0 **DebuggableAttribute** добавляется компилятором Microsoft Visual C++, если указаны параметры компилятора **/clr** и **/Zi**. В версии 1,1 .NET Framework необходимо вручную добавить **DebuggableAttribute** в код или использовать параметр компоновщика **/ASSEMBLYDEBUG** .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Отладка, трассировка и профилирование](index.md)
 - [Включение отладки с JIT-присоединением](enabling-jit-attach-debugging.md)

@@ -7,15 +7,13 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-author: mairaw
-ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: e1e2af584c73b1c0b2548cdd3fcbd8517dfa330d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3a5134aa4407598e223fd2c938bfaac02cf9178c
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429340"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215528"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Дополнительные библиотеки классов и интерфейсы API
 
@@ -23,7 +21,7 @@ ms.locfileid: "74429340"
   
 Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например, класс <xref:System.Text.CodePagesEncodingProvider> делает кодировки кодовых страниц доступными для приложений UWP, разработанных с помощью .NET Framework. В этой статье эти библиотеки перечислены тоже.  
   
-## <a name="oob-projects"></a>Внештатные проекты
+## <a name="oob-projects"></a>Встроенные проекты
   
 | Проект | Описание |  
 | ------- | ----------- |  

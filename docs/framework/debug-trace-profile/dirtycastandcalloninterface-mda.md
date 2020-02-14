@@ -10,14 +10,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6ac43f6b92198fec03e722b6cf5e12b86df6f4b8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6e4f0074958e8a6a8ca322968e9c29e89481c0c8
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052867"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216519"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>Помощник по отладке управляемого кода dirtyCastAndCallOnInterface
 Помощник по отладке управляемого кода (MDA) `dirtyCastAndCallOnInterface` активируется при попытке выполнения вызова с ранним связыванием посредством виртуальной таблицы в интерфейсе класса, который был отмечен как интерфейс только позднего связывания.  
@@ -49,7 +47,7 @@ ms.locfileid: "71052867"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

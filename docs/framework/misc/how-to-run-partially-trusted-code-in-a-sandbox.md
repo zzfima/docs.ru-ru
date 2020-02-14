@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде
+title: Практическое руководство. Выполнение кода с неполным доверием в изолированной среде
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8b1db291fbaf19ae9086fe1e2b76a475d198e19
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894558"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215860"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Практическое руководство. Выполнение кода с неполным доверием в изолированной среде
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Изолирование в песочнице — это способ запуска кода в ограниченной среде безопасности, ограничивающей разрешения доступа, предоставленные коду. Например, если имеется управляемая библиотека, полученная из источника с неполным доверием, не следует запускать ее как полностью доверенную. Вместо этого следует поместить код в "песочницу", которая ограничивает разрешения кода, которые необходимы ему по вашему мнению (например, <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -106,7 +104,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5. Загрузите код в созданный ранее изолирующий домен <xref:System.AppDomain>. Это можно сделать двумя способами.  
+5. Загрузите код в созданный ранее изолирующий домен <xref:System.AppDomain>. Это можно сделать двумя способами:  
   
     - Вызовите для сборки метод <xref:System.AppDomain.ExecuteAssembly%2A>.  
   
@@ -116,7 +114,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - Во-первых, можно использовать базу кода, указывающую на расположение, которое не содержит вашу сборку.  
   
-    - Во-вторых, при работе в режиме полного доверия (<xref:System.Security.CodeAccessPermission.Assert%2A>) можно использовать для создания экземпляра критически важного класса метод <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>. (Это происходит при условии, что сборка не имеет маркеров прозрачности и загружается как полностью доверенная.) Поэтому нужно следить за тем, чтобы при использовании этой функции создавался только доверенный код. Кроме того, мы рекомендуем создавать в новом домене приложения только экземпляры полностью доверенных классов.  
+    - Во-вторых, при работе в режиме полного доверия (<xref:System.Security.CodeAccessPermission.Assert%2A>) можно использовать для создания экземпляра критически важного класса метод <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>. (Это происходит каждый раз, когда сборка не содержит метки прозрачности и загружается как полностью доверенная.) Поэтому необходимо быть осторожным при создании только кода, которому вы доверяете этой функции, и мы рекомендуем создавать только экземпляры полностью доверенных классов в новом домене приложения.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -273,6 +271,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Правила написания безопасного кода](../../standard/security/secure-coding-guidelines.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 752a6a5f9608aa260f192ee3e9e0709b7a10e27e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052289"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216141"
 ---
 # <a name="trace-listeners"></a>Прослушиватели трассировки
-При использовании классов **Trace**, **Debug** и <xref:System.Diagnostics.TraceSource> необходимо обеспечить механизм сбора и записи отправляемых сообщений. Сообщения трассировки получаются *прослушивателями*. В задачу прослушивателя входит сбор, хранение и маршрутизация сообщений трассировки. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту, например, в журнал событий, окно или текстовый файл.  
+При использовании классов **Trace**, **Debug** и <xref:System.Diagnostics.TraceSource> необходимо обеспечить механизм сбора и записи отправляемых сообщений. Сообщения трассировки получаются *прослушивателями*. Цель прослушивателя — сбор, хранение и маршрутизация сообщений трассировки. Прослушиватели направляют вывод трассировки в соответствующий целевой объект, например журнал, окно или текстовый файл.  
   
  Прослушиватели доступны для классов **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, каждый из которых может отправлять свои выходные данные разным объектам прослушивателей. Ниже перечислены часто используемые предварительно определенные прослушиватели.  
   
@@ -36,11 +34,11 @@ ms.locfileid: "71052289"
   
 - Объект <xref:System.Diagnostics.ConsoleTraceListener> направляет выходные данные трассировки или отладки в стандартный вывод или стандартный поток ошибок.  
   
-- Прослушиватель <xref:System.Diagnostics.DelimitedListTraceListener> направляет выходные данные трассировки или отладки в модуль записи текста, например модуль записи в поток, или в поток, например файловый поток. Вывод трассировки находится в текстовом формате с разделителями и использует разделитель, заданный свойством <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>.  
+- Прослушиватель <xref:System.Diagnostics.DelimitedListTraceListener> направляет выходные данные трассировки или отладки в модуль записи текста, например модуль записи в поток, или в поток, например файловый поток. Выходные данные трассировки имеют текстовый формат с разделителями, в котором используется разделитель, заданный свойством <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>.  
   
 - Прослушиватель <xref:System.Diagnostics.XmlWriterTraceListener> направляет вывод отладки или трассировки в качестве кодированных в XML данных в метод <xref:System.IO.TextWriter> или поток <xref:System.IO.Stream>, например <xref:System.IO.FileStream>.  
   
- Если нужно, чтобы какой-либо еще прослушиватель, помимо <xref:System.Diagnostics.DefaultTraceListener>, получал выходные данные **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, необходимо добавить его в коллекцию `Listeners`. Дополнительные сведения см. в разделе [Практическое руководство. Создание и инициализация](how-to-create-and-initialize-trace-listeners.md) прослушивателей [трассировки, а так: Используйте TraceSource и фильтры с прослушивателями](how-to-use-tracesource-and-filters-with-trace-listeners.md)трассировки. Любой прослушиватель из коллекции **Listeners** получает те же сообщения от методов вывода трассировки. Предположим, например, что настроены два прослушивателя: **TextWriterTraceListener** и **EventLogTraceListener**. Каждый прослушиватель получает одно и то же сообщение. Прослушиватель **TextWriterTraceListener** направляет выходные данные в поток, а **EventLogTraceListener** направляет выходные данные в журнал событий.  
+ Если нужно, чтобы какой-либо еще прослушиватель, помимо <xref:System.Diagnostics.DefaultTraceListener>, получал выходные данные **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, необходимо добавить его в коллекцию `Listeners`. Дополнительные сведения см. в разделе [Практическое руководство. Создание и инициализация прослушивателей трассировки](how-to-create-and-initialize-trace-listeners.md) и [Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки](how-to-use-tracesource-and-filters-with-trace-listeners.md). Любой прослушиватель из коллекции **Listeners** получает те же сообщения от методов вывода трассировки. Предположим, например, что настроены два прослушивателя: **TextWriterTraceListener** и **EventLogTraceListener**. Каждый прослушиватель получает одно и то же сообщение. Прослушиватель **TextWriterTraceListener** направляет выходные данные в поток, а **EventLogTraceListener** направляет выходные данные в журнал событий.  
   
  В приведенном ниже примере показана отправка выходных данных в коллекцию **прослушивателей**.  
   
@@ -76,7 +74,7 @@ System.Diagnostics.Trace.Listeners.Add(
 ## <a name="developer-defined-listeners"></a>Прослушиватели, определяемые разработчиками  
  Можно определить собственные прослушиватели путем наследования от базового класса **TraceListener** и переопределения его методов своими пользовательскими методами. Дополнительные сведения о создании прослушивателей, определяемых разработчиками, см. в описании <xref:System.Diagnostics.TraceListener> в справочнике по .NET Framework.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>

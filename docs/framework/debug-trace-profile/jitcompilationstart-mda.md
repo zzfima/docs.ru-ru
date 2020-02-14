@@ -7,14 +7,12 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6d3832dcd842631d290e046b5e32908ce4bb7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052527"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216260"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 Помощник по отладке управляемого кода (MDA) `jitCompilationStart` активируется, чтобы сообщить о том, что JIT-компилятор начал компиляцию функции.  
@@ -39,7 +37,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Конфигурация  
- Приведенный ниже файл конфигурации содержит различные фильтры, которые можно применять, чтобы отфильтровать методы, о которых будет сообщено при их первой JIT-компиляции. Можно указать, чтобы все методы были переданы, задав для \*атрибута Name значение.  
+ Приведенный ниже файл конфигурации содержит различные фильтры, которые можно применять, чтобы отфильтровать методы, о которых будет сообщено при их первой JIT-компиляции. Можно указать, чтобы все методы были переданы, задав значение атрибута Name равным \*.  
   
 ```xml  
 <mdaConfig>  
@@ -157,7 +155,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

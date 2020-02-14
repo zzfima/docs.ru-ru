@@ -13,17 +13,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 21df0e8129505e50e6b7f29c4f4f5aea94f380e3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052743"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217470"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Практическое руководство. Добавление операторов трассировки в код приложения
-Чаще всего для трассировки используются методы для записи выходных данных в прослушиватели: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**и **Failed**. Эти методы можно разделить на две категории: Выдавать, **WriteLine**и **завершать** все выходные данные неусловным **, тогда**как **WriteIf**, **WriteLineIf**и **Assert** проверяют логическое условие, а также запись или не запись на основе значения условия. **WriteIf** и **WriteLineIf** выдают выходные данные, если условие равно `true`, а **Assert** выдает выходные данные, если условие равно `false`.  
+Методы, наиболее часто используемые для отслеживания, — это методы для записи выходных данных в прослушиватели: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** и **Fail**. Эти методы можно разделить на две категории: **Write**, **WriteLine** и **Fail** выдают выходные данные безусловно, в то время как методы **WriteIf**, **WriteLineIf** и **Assert** тестируют условие Boolean и выполняют или не выполняют запись в зависимости от значения условия. **WriteIf** и **WriteLineIf** выдают выходные данные, если условие равно `true`, а **Assert** выдает выходные данные, если условие равно `false`.  
   
  При разработке своей стратегии трассировки и отладки следует подумать о способе представления вывода. При наличии нескольких операторов **Write**, заполненных несвязанными данными, получается сложный для чтения журнал. С другой стороны, при использовании метода **WriteLine** для размещения связанных операторов на разных строках может быть сложно понять, какие сведения связаны друг с другом. Как правило, при использовании нескольких операторов **Write** имеет смысл объединить информацию из разных источников для создания единого информационного сообщения и использовать оператор **WriteLine** для создания единого полного сообщения.  
   
@@ -69,7 +67,7 @@ ms.locfileid: "71052743"
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Проверка наличия определенного условия до или после выполнения метода  
   
-1. Вызовите метод <xref:System.Diagnostics.Trace.Assert%2A>.  
+1. Вызовите метод <xref:System.Diagnostics.Trace.Assert%2A> .  
   
     ```vb  
     Dim i As Integer = 4  
@@ -84,7 +82,7 @@ ms.locfileid: "71052743"
     > [!NOTE]
     > Оператор **Assert** можно использовать и для отладки, и для трассировки. В этом примере стек вызовов выводится в любой прослушиватель в коллекции **Listeners**. Дополнительные сведения см. в разделах [Утверждения в управляемом коде](/visualstudio/debugger/assertions-in-managed-code) и <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>

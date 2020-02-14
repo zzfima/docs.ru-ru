@@ -9,14 +9,12 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d508beb697e07f7d3b960b6627b9a07ffe25adf4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052638"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217384"
 ---
 # <a name="invalidcercall-mda"></a>Помощник по отладке управляемого кода invalidCERCall
 Помощник по отладке управляемого кода (MDA) `invalidCERCall` активируется при осуществляемом в графе области ограниченного исполнения (CER) вызове метода, не имеющего контракта надежности или имеющего чрезвычайно слабый контракт. Слабый контракт представляет собой контракт, который объявляет, что максимальное повреждение состояния имеет большую область, чем экземпляр, переданный в вызов, то есть <xref:System.AppDomain> или состояние процесса может быть повреждено или его результат не всегда является детерминированно вычисляемым при вызове в рамках CER.  
@@ -54,7 +52,7 @@ ms.locfileid: "71052638"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>

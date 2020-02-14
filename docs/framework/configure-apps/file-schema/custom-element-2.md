@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118534"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215478"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Настраиваемый элемент для NameValueSectionHandler и DictionarySectionHandler
 
@@ -24,7 +22,7 @@ ms.locfileid: "73118534"
 
 ## <a name="attributes"></a>Атрибуты
 
-Отсутствуют
+Нет
 
 ## <a name="parent-element"></a>Родительский элемент
 
@@ -40,7 +38,7 @@ ms.locfileid: "73118534"
 | [ **\<удалить >** ](remove-element-for-custom-2.md) для <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> | Удаляет ранее определенный параметр. |
 | [ **\<очистить >** ](clear-element-for-custom-2.md) для <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> | Удаляет все ранее определенные параметры в разделе. |
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Элемент **\<sectionName >** — это пользовательский элемент, определяемый тегом **\<раздела >** в элементе **\<configSections >** .
 
@@ -76,10 +74,10 @@ ms.locfileid: "73118534"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>файл конфигурации
+## <a name="configuration-file"></a>Файл конфигурации
 
 Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема файла конфигурации для .NET Framework](index.md)

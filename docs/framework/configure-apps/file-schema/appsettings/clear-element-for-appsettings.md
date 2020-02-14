@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d321f3169344e9aa40d65b1722a533549de5315a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088739"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214800"
 ---
 # <a name="clear-element-for-appsettings"></a>\<очистить элемент > для \<appSettings >
 
@@ -34,7 +32,7 @@ ms.locfileid: "74088739"
 
 ## <a name="attributes"></a>Атрибуты
 
-Отсутствуют
+Нет
 
 ## <a name="parent-element"></a>Родительский элемент
 
@@ -44,7 +42,7 @@ ms.locfileid: "74088739"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Отсутствуют
+Нет
 
 ## <a name="example"></a>Пример
 
@@ -56,6 +54,6 @@ ms.locfileid: "74088739"
 </appSettings>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема файла конфигурации для .NET Framework](../index.md)

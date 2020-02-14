@@ -5,14 +5,12 @@ helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975530"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215833"
 ---
 # <a name="security-transparent-code"></a>Прозрачный для системы безопасности код
 
@@ -96,7 +94,7 @@ ms.locfileid: "73975530"
 
 Правила прозрачности не применяются до вычисления прозрачности. При нарушении правила прозрачности возникает исключение <xref:System.InvalidOperationException>. Время расчета прозрачности зависит от различных факторов и не может быть предсказано заранее. Расчет происходит в последний возможный момент. В .NET Framework 4 Вычисление прозрачности на уровне сборки выполняется раньше, чем в .NET Framework 2,0. Гарантируется только то, что расчет прозрачности будет выполнен к тому моменту, когда он понадобится. Этот похоже на то, как JIT-компилятор изменяет момент компиляции метода и обнаружения всех ошибок в нем. Расчет прозрачности выполняется без внешних проявлений, если в коде нет ошибок прозрачности.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Прозрачный для системы безопасности код, уровень 1](security-transparent-code-level-1.md)
 - [Прозрачный для системы безопасности код, уровень 2](security-transparent-code-level-2.md)

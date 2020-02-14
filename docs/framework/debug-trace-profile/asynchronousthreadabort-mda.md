@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052964"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217578"
 ---
 # <a name="asynchronousthreadabort-mda"></a>Помощник по отладке управляемого кода asynchronousThreadAbort
 Помощник по отладке управляемого кода (MDA) `asynchronousThreadAbort` активируется в том случае, если поток пытается выполнить асинхронное прерывание в другом потоке. При вызове синхронных прерываний потока помощник `asynchronousThreadAbort` не активируется.
@@ -70,7 +68,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Threading.Thread>
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

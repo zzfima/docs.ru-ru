@@ -7,14 +7,12 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052520"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216162"
 ---
 # <a name="loadfromcontext-mda"></a>Помощник по отладке управляемого кода loadFromContext
 Помощник по отладке управляемого кода (MDA) `loadFromContext` активируется при загрузке сборки в контекст `LoadFrom`. Эта ситуация может возникнуть в результате вызова метода <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> или других аналогичных методов.  
@@ -23,7 +21,7 @@ ms.locfileid: "71052520"
  Использование некоторых методов загрузчика может привести к загрузке сборок в контекст `LoadFrom`. Использование этого контекста может привести к неожиданному поведению при сериализации, приведении типов и разрешении зависимостей. Чтобы избежать этих проблем, рекомендуется загружать сборки в контекст `Load`. Без этого помощника по отладке управляемого кода определить, в какой контекст загружена сборка, трудно.  
   
 ## <a name="cause"></a>Причина  
- Как правило, при использовании пути за пределами контекста `Load`, например глобального кэша сборок или свойства <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType>, сборка загружается в контекст `LoadFrom`.  
+ Как правило, при использовании пути за пределами контекста `LoadFrom`, например глобального кэша сборок или свойства `Load`, сборка загружается в контекст <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType>.  
   
 ## <a name="resolution"></a>Решение  
  Настройте приложения таким образом, чтобы вызовы <xref:System.Reflection.Assembly.LoadFrom%2A> больше не требовались. Это можно сделать следующими способами:  
@@ -72,6 +70,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

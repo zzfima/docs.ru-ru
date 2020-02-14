@@ -1,17 +1,15 @@
 ---
-title: Практическое руководство. Миграция DCOM с управляемым кодов в WCF
+title: Практическое руководство. Миграция DCOM с управляемым кодом в WCF
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6fdd5c9b285bdc948af876c72e85590500dd41c8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 4d814d9c2e62af9aa5cc2a8d1f84738b69e36ad1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039598"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217180"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Практическое руководство. Миграция DCOM с управляемым кодов в WCF
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Практическое руководство. Миграция DCOM с управляемым кодом в WCF
 Для вызовов управляемого кода между серверами и клиентами в распределенной среде рекомендуется использовать технологию Windows Communication Foundation (WCF), а не модель DCOM, из соображений безопасности. В этом разделе описывается, как перенести код из DCOM в WCF в перечисленных ниже ситуациях.  
   
 - Удаленная служба возвращает клиенту объект по значению.  
@@ -422,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Базовое программирование для WCF](../wcf/basic-wcf-programming.md)
 - [Проектирование и реализация служб](../wcf/designing-and-implementing-services.md)

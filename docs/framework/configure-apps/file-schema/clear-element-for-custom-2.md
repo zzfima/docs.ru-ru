@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fff5a5c2a523480f2eaebb127ec98ff6e9908acf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088716"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214743"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Clear > элемента для NameValueSectionHandler и DictionarySectionHandler
 
@@ -32,7 +30,7 @@ ms.locfileid: "74088716"
 
 ## <a name="attributes"></a>Атрибуты
 
-Отсутствуют
+Нет
 
 ## <a name="parent-element"></a>Родительский элемент
 
@@ -42,9 +40,9 @@ ms.locfileid: "74088716"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Отсутствуют
+Нет
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Можно использовать элемент **\<clear >** , чтобы удалить из приложения все параметры, которые были определены на более высоком уровне в иерархии файлов конфигурации.
 
@@ -78,10 +76,10 @@ ms.locfileid: "74088716"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>файл конфигурации
+## <a name="configuration-file"></a>Файл конфигурации
 
 Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема файла конфигурации для .NET Framework](index.md)

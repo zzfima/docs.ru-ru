@@ -10,14 +10,12 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1679e283a801044ad5a0baed89f17e6acc74259c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 65bbdfec2d7050d1b474a8186a9ea6e9bb93bd9e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052458"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216180"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 Помощник по отладке управляемого кода (MDA) `moduloObjectHashcode` изменяет поведение класса <xref:System.Object> для выполнения операции деления по модулю с хэш-кодом, возвращаемым методом <xref:System.Object.GetHashCode%2A>. Модуль по умолчанию для этого помощника по отладке управляемого кода равен 1, поэтому <xref:System.Object.GetHashCode%2A> возвращает 0 для всех объектов.  
@@ -50,7 +48,7 @@ ms.locfileid: "71052458"
  Этот помощник по отладке управляемого кода не выводит никаких данных.  
   
 ## <a name="configuration"></a>Конфигурация  
- Атрибут `modulus` задает модуль, используемый в хэш-коде. Значение по умолчанию — 1.  
+ Атрибут `modulus` задает модуль, используемый в хэш-коде. Значение по умолчанию ― 1.  
   
 ```xml  
 <mdaConfig>  
@@ -60,7 +58,7 @@ ms.locfileid: "71052458"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>

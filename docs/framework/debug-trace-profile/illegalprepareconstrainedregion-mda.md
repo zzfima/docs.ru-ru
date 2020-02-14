@@ -8,14 +8,12 @@ helpviewer_keywords:
 - IllegalPrepareConstrainedRegions MDA
 - MDAs (managed debugging assistants), illegal PrepareConstrainedRegions
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 623aff91eb801b4b32fc180bd97ed3822ad7f163
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b80d6160876834b22e8d9d1eb7112b8b67c15fcc
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052675"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216465"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
 Помощник по отладке управляемого кода (MDA) `illegalPrepareConstrainedRegion` запускается, если сразу же после вызова метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> не следует инструкция `try` обработчика исключений. Это ограничение используется на уровне MSIL, поэтому между вызовом и `try` можно размещать текст, не приводящий к созданию кода, например комментарии.  
@@ -24,7 +22,7 @@ ms.locfileid: "71052675"
  Область ограниченного выполнения, которая никогда не рассматривается в виде такой области, но представляет собой простой блок обработки исключений (`finally` или `catch`). Поэтому эта область не запускается в случае нехватки памяти или прерывания потока.  
   
 ## <a name="cause"></a>Причина  
- Вы не следуете шаблону подготовки для области ограниченного выполнения.  Это ошибка. / / `fault` / `catch` `finally` Вызов метода, используемый для пометки обработчиков исключений как знакомого CER`filter` в блоках, должен использоваться непосредственно перед <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> `try` оператор.  
+ Вы не следуете шаблону подготовки для области ограниченного выполнения.  Это ошибка. Вызов метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>, используемый для пометки обработчиков исключений как представление CER в их `catch`/`finally`/`fault`/блоки должны использоваться непосредственно перед инструкцией `filter`.`try`  
   
 ## <a name="resolution"></a>Решение  
  Убедитесь, что вызов метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> выполняется непосредственно перед инструкцией `try`.  
@@ -64,7 +62,7 @@ void MethodWithInvalidPCR()
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>

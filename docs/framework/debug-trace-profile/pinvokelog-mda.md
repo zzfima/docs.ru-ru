@@ -9,14 +9,12 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0883849eee12922601e50c2337bb0048d77cab68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 12d7f60bcaedc5a97a7718610f40188547f87050
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052381"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216135"
 ---
 # <a name="pinvokelog-mda"></a>Помощник по отладке управляемого кода pInvokeLog
 Помощник по отладке управляемого кода `pInvokeLog` активируется для каждой уникальной сигнатуры вызова неуправляемого кода во время выполнения.  
@@ -43,7 +41,7 @@ ms.locfileid: "71052381"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Использование неуправляемых функций DLL](../interop/consuming-unmanaged-dll-functions.md)

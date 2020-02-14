@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975583"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217457"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
 При отладке приложения во время разработки выходные данные трассировки и отладки отображаются в окне «Вывод» Visual Studio. Однако чтобы включить возможности трассировки в развернутом приложении, необходимо скомпилировать инструментированные приложения с включенной директивой компилятора **TRACE**. Это позволяет компилировать код трассировки в выпускаемой версии приложения. Если не включить директиву **TRACE**, весь код трассировки игнорируется во время компиляции и не включается в исполняемый код, который будет развернут.  
@@ -59,7 +57,7 @@ ms.locfileid: "73975583"
   
      Директивы условной компиляции, используемые в приведенных выше примерах, имеют следующие значения.  
   
-    |Директива|Смысл|  
+    |Directive|Значение|  
     |---------------|-------------|  
     |`vbc`|компилятор Visual Basic|  
     |`csc`|Компилятор C#|  
@@ -73,7 +71,7 @@ ms.locfileid: "73975583"
   
 1. Введите соответствующую инструкцию для используемого языка программирования в верхней части файла исходного кода.  
   
-    |Язык|Оператор|Результат|  
+    |Язык|Выписка|Результат|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Включает трассировку|  
     ||**#CONST TRACE = false**|Отключает трассировку|  
@@ -95,12 +93,12 @@ ms.locfileid: "73975583"
 > [!NOTE]
 > Когда все готово для компиляции, можно выбрать команду **Построить** из меню **Сборка** или использовать метод командной строки (но без ввода **d:** ), чтобы определить символы условной компиляции.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Трассировка и инструментирование приложений](tracing-and-instrumenting-applications.md)
 - [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](how-to-create-initialize-and-configure-trace-switches.md)
 - [Переключатели трассировки](trace-switches.md)
 - [Прослушиватели трассировки](trace-listeners.md)
 - [Практическое руководство. Добавление операторов трассировки в код приложения](how-to-add-trace-statements-to-application-code.md)
-- [Как задать переменные среды для командной строки Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Практическое руководство. Вызов компилятора командной строки](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

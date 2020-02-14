@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc7208aa51cbf6abdb2fe151d48071c0aa95b5c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089051"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215393"
 ---
 # <a name="remove-element-for-configsections"></a>\<удалить элемент > для \<configSections >
 
@@ -44,9 +42,9 @@ ms.locfileid: "74089051"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Отсутствуют
+Нет
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Элемент **\<удалить >** можно использовать для удаления разделов и групп разделов из приложения, которые были определены на более высоком уровне в иерархии файлов конфигурации.
 
@@ -80,10 +78,10 @@ ms.locfileid: "74089051"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>файл конфигурации
+## <a name="configuration-file"></a>Файл конфигурации
 
 Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема файла конфигурации для .NET Framework](index.md)

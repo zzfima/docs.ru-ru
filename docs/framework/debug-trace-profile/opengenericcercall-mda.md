@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b6ee3e4f74a523c1e902a4eb48a64b11eb3937
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960900"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217268"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
@@ -37,7 +35,7 @@ ms.locfileid: "72960900"
 
 Как правило, активация этого помощника по отладке управляемого кода вызвана сбоем области ограниченного выполнения для поврежденных экземпляров. Фактически среда выполнения не пытается реализовать область ограниченного выполнения в ситуации, в которой активируется этот помощник по отладке управляемого кода. Если разработчик использует общий экземпляр среды ограниченного выполнения, ошибки JIT-компиляции, ошибки загрузки универсальных типов или прерывания потоков в предполагаемой области ограниченного выполнения не перехватываются.
 
-## <a name="resolution"></a>Разрешение
+## <a name="resolution"></a>Решение
 
 Не используйте переменные универсального типа, которые имеют тип ссылки на объект, в методах, которые могут содержать область ограниченного выполнения.
 
@@ -56,7 +54,7 @@ ms.locfileid: "72960900"
  declaringType name="OpenGenericCERCall"
  ```
 
-## <a name="configuration"></a>Параметр Configuration
+## <a name="configuration"></a>Конфигурация
 
 ```xml
 <mdaConfig>
@@ -112,7 +110,7 @@ class MyClass
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>

@@ -1,7 +1,5 @@
 ---
 title: Метод Exception. Препфорремотинг (система)
-author: mairaw
-ms.author: mairaw
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 057390d64f70d3cb8eba7d4b29b94570fdca77e3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72405900"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214889"
 ---
-# <a name="exceptionprepforremoting-method"></a>Метод Exception. Препфорремотинг
+# <a name="exceptionprepforremoting-method"></a>Метод Exception.PrepForRemoting
 
 Сохраняет трассировку стека на стороне сервера, добавляя ее к сообщению, прежде чем исключение будет повторно создано на сайте вызова клиента.
 
@@ -26,12 +24,12 @@ ms.locfileid: "72405900"
 internal Exception PrepForRemoting();
 ```
 
-## <a name="returns"></a>Returns
+## <a name="returns"></a>Результаты
 
 <xref:System.Exception>  
 Данный экземпляр <xref:System.Exception>.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 > [!WARNING]
 > Метод `Exception.PrepForRemoting` является внутренним и не предназначен для непосредственного использования в коде.

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - invalid VARIANT types
 - managed debugging assistants (MDAs), invalid variant
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c34f160b643a0431168097d3832357b4ac6e4557
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8d686621ae4aa087e1b4f4bea9df7fc3de758d40
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052573"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216274"
 ---
 # <a name="invalidvariant-mda"></a>Помощник по отладке управляемого кода invalidVariant
 Помощник по отладке управляемого кода (MDA) `invalidVariant` активируется, когда во время вызова из машинного или неуправляемого кода обнаруживается недопустимая структура `VARIANT`.  
@@ -45,7 +43,7 @@ ms.locfileid: "71052573"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)
