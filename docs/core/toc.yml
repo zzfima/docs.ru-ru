@@ -49,8 +49,9 @@
     - name: Установка локализованной версии IntelliSense
       href: install/localized-intellisense.md
 - name: Начало работы
-  href: get-started.md
   items:
+    - name: Начало работы
+      href: get-started.md
     - name: 'Начало работы с C# и Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
     - name: Начало работы с .NET Core в macOS с помощью Visual Studio Code
@@ -83,16 +84,9 @@
   displayName: app compatibility
   href: compatibility/
 - name: Учебники
-  href: tutorials/index.md
   items:
-    - name: Шаблоны для интерфейса командной строки
-      items:
-        - name: 1. Создание шаблона элемента
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2. Создание шаблона проекта
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3. Создание пакета шаблонов
-          href: tutorials/cli-templates-create-template-pack.md
+    - name: Обзор
+      href: tutorials/index.md
     - name: Начало работы с .NET Core с помощью Visual Studio для Mac
       href: tutorials/using-on-mac-vs.md
     - name: Создание полноценного решения .NET Core в macOS
@@ -109,6 +103,14 @@
       href: tutorials/aspnet-core.md
     - name: Размещение .NET Core из машинного кода
       href: tutorials/netcore-hosting.md
+    - name: Создание шаблонов для интерфейса командной строки
+      items:
+        - name: 1. Создание шаблона элемента
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2. Создание шаблона проекта
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3. Создание пакета шаблонов
+          href: tutorials/cli-templates-create-template-pack.md
 - name: Конфигурация среды выполнения
   items:
     - name: Параметры
@@ -131,13 +133,6 @@
       href: native-interop/expose-components-to-com.md
 - name: 'Пакеты, метапакеты и платформы'
   href: packages.md
-- name: Общие сведения об изменениях интерфейса командной строки
-  href: tools/cli-msbuild-architecture.md
-  items:
-    - name: Управление зависимостями
-      href: tools/dependencies.md
-    - name: Дополнения к формату CSPROJ
-      href: tools/csproj.md
 - name: Миграция
   items:
     - name: "Переход с ASP.NET Core\_2.0 на\_2.1"
@@ -146,11 +141,16 @@
       href: migration/index.md
     - name: Сопоставление между project.json и CSPROJ
       href: tools/project-json-to-csproj.md
+    - name: Общие сведения об изменениях интерфейса командной строки
+      href: tools/cli-msbuild-architecture.md
+    - name: Дополнения к формату CSPROJ
+      href: tools/csproj.md
     - name: Миграция из DNX
       href: migration/from-dnx.md
 - name: Развертывание приложений
-  href: deploying/index.md
   items:
+    - name: Обзор
+      href: deploying/index.md
     - name: Публикация приложений с помощью CLI
       href: deploying/deploy-with-cli.md
     - name: Развертывание приложений с помощью Visual Studio
@@ -192,6 +192,8 @@
 - name: Модульное тестирование
   href: testing/index.md
   items:
+    - name: Обзор
+      href: testing/index.md
     - name: Рекомендации по модульному тестированию
       href: testing/unit-testing-best-practices.md
     - name: 'Модульное тестирование в C# с использованием xUnit'
@@ -221,8 +223,9 @@
 - name: Непрерывная интеграция
   href: tools/using-ci-with-cli.md
 - name: Управление версиями
-  href: versions/index.md
   items:
+    - name: Обзор
+      href: versions/index.md
     - name: Выбор версии .NET Core
       href: versions/selection.md
     - name: "Удаление устаревших сред выполнения и\_пакетов SDK"
@@ -330,8 +333,9 @@
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
 - name: Дополнительные инструменты .NET Core
-  href: additional-tools/index.md
   items:
+    - name: Обзор
+      href: additional-tools/index.md
     - name: Средство удаления .NET Core
       href: additional-tools/uninstall-tool.md
     - name: Поставщик WCF Web Service Reference
@@ -364,13 +368,15 @@
       href: porting/wpf.md
     - name: Перенос проектов C++/CLI
       href: porting/cpp-cli.md
-- name: Загрузка зависимостей
+- name: Управление зависимостями и их загрузка
   items:
-    - name: Обзор
+    - name: Управление зависимостями
+      href: tools/dependencies.md
+    - name: Загрузка зависимостей
       href: dependency-loading/overview.md
     - name: Основные сведения об AssemblyLoadContext
       href: dependency-loading/understanding-assemblyloadcontext.md
-    - name: Загрузка сведений
+    - name: Сведения о загрузке зависимостей
       items:
         - name: Проверка зависимостей по умолчанию
           href: dependency-loading/default-probing.md
@@ -387,6 +393,4 @@
         - name: Использование и отладка сборок с возможностью выгрузки в .NET Core
           href: ../standard/assembly/unloadability-howto.md
 - name: Упаковка дистрибутивов .NET Core
-  items:
-    - name: Обзор
-      href: distribution-packaging.md
+  href: distribution-packaging.md
