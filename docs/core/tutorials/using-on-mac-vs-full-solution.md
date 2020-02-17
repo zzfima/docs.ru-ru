@@ -1,14 +1,13 @@
 ---
 title: Создание полноценного решения .NET Core с помощью Visual Studio для Mac
 description: В этой статье описывается сборка решения .NET Core, включающего многократно используемую библиотеку и модульное тестирование.
-author: mairaw
 ms.date: 12/19/2019
-ms.openlocfilehash: f4284cd4c3c8b358b87c31c0fd5c067b1e7fb8a2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715349"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215208"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
 
