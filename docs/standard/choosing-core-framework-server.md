@@ -2,14 +2,13 @@
 title: Выбор между .NET Core и .NET Framework для серверных приложений
 description: Рекомендации по использованию реализации .NET для создания серверных приложений на платформе .NET.
 author: cartermp
-ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921421"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124628"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
