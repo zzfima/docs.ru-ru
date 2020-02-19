@@ -9,19 +9,19 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-ms.openlocfilehash: ae5e98a1ebf3753b24127f96ed563eba27eea2fb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: cc2987499aa094960c08d220940fe1aed5440b2d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217425"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449963"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Практическое руководство. Создание и инициализация источников трассировки
 Класс <xref:System.Diagnostics.TraceSource> используется приложениями для создания трассировок, которые могут быть связаны с приложением. <xref:System.Diagnostics.TraceSource> предоставляет методы трассировки, позволяющие легко трассировать события, трассировать данные и выпускать информационные трассировки. Выходные данные трассировки из объектов <xref:System.Diagnostics.TraceSource> можно создавать и инициализировать с использованием или без использования файлов конфигурации. В этом разделе содержатся инструкции для обоих вариантов. Однако рекомендуется использовать файлы конфигурации для упрощения повторной настройки трассировки, создаваемой источниками трассировки во время выполнения.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Создание и инициализация источника трассировки с помощью файла конфигурации  
   
-1. Создайте проект консольного приложения Visual Studio и замените предоставленный код следующим кодом. Этот код регистрирует ошибки и предупреждения, выводит некоторые из них на консоль, а некоторые в файл myListener, созданный записями в файле конфигурации.  
+1. Создайте проект консольного приложения Visual Studio (.NET Framework) и замените указанный код следующим кодом. Этот код регистрирует ошибки и предупреждения, выводит некоторые из них на консоль, а некоторые в файл myListener, созданный записями в файле конфигурации.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
@@ -76,7 +76,7 @@ ms.locfileid: "77217425"
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

@@ -2,15 +2,16 @@
 title: Добавление ссылки на службу в проект переносного вложенного набора
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320848"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449482"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Добавление ссылки на службу в проект переносного вложенного набора
-Переносимые проекты подмножества позволяют программистам сборок .NET поддерживать единое дерево исходного кода и систему сборки, одновременно обеспечивая поддержку нескольких реализаций .NET (Desktop, Silverlight, Windows Phone и XBOX). Переносимые проекты подмножества ссылаются только на переносимые библиотеки .NET, которые являются сборкой .NET Framework, которую можно использовать в любой реализации .NET.  
+
+Переносимые проекты подмножества позволяют программистам сборок .NET поддерживать единое дерево исходного кода и систему сборки, одновременно обеспечивая поддержку нескольких реализаций .NET (Desktop, Silverlight, Windows Phone и Xbox). Переносимые проекты подмножества ссылаются только на переносимые библиотеки, которые являются сборками .NET, которые могут использоваться в любой реализации .NET.
   
 ## <a name="add-service-reference-details"></a>Диалоговое окно «Добавление ссылки на службу»  
  При добавлении ссылки на службу в проект переносного подмножества применяются следующие ограничения.  
@@ -43,7 +44,7 @@ ms.locfileid: "72320848"
   
 14. Свойство <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> не поддерживается в проектах переносимого подмножества.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Обращение к службам с помощью клиента WCF](accessing-services-using-a-wcf-client.md)
 - [Переносимая библиотека классов](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

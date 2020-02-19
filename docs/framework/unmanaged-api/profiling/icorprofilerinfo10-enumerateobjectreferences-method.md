@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9aadf9701444d215291b6fc19cc8cd61ca832837
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863313"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452244"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>Метод ICorProfilerInfo10:: Енумератеобжектреференцес
 
@@ -44,13 +44,13 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
   \[in] данные, предоставленные профилировщиком, передаются в функцию `callback`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Метод `EnumerateObjectReferences` аналогичен [ObjectReferences](icorprofilercallback-objectreferences-method.md), за исключением того, что он просматривает ссылки по запросу для профилировщика вместо предварительного выделения массива для хранения ссылок.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Платформы:** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Заголовок:** CorProf.idl, CorProf.h
 
@@ -58,6 +58,6 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 **Версии .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorProfilerInfo10](icorprofilerinfo10-interface.md)

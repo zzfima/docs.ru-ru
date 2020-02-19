@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559720"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453121"
 ---
 # <a name="animation-overview"></a>Общие сведения об эффектах анимации
 
@@ -184,7 +184,7 @@ ms.locfileid: "75559720"
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]
 
-### <a name="complete-example"></a>Полный пример
+### <a name="complete-example"></a>Пример целиком
 
 Ниже показано, как создать прямоугольник, который исчезает и выходит из представления в XAML.
 
@@ -231,10 +231,10 @@ ms.locfileid: "75559720"
 
 |Тип свойства|Соответствующая базовая (From/To/By) анимация|Соответствующая анимация с ключевыми кадрами|Соответствующая анимация с использованием пути|Пример использования|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Нет|Анимация <xref:System.Windows.Media.SolidColorBrush.Color%2A> <xref:System.Windows.Media.SolidColorBrush> или <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Анимация <xref:System.Windows.Media.SolidColorBrush.Color%2A> <xref:System.Windows.Media.SolidColorBrush> или <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Анимация <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.Controls.DockPanel> или <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Анимация <xref:System.Windows.Media.EllipseGeometry.Center%2A> расположения <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|Нет|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Нет|Анимация <xref:System.Windows.Controls.TextBlock.Text%2A> <xref:System.Windows.Controls.TextBlock> или <xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Анимация <xref:System.Windows.Controls.TextBlock.Text%2A> <xref:System.Windows.Controls.TextBlock> или <xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -339,9 +339,9 @@ ms.locfileid: "75559720"
 
 Хотя для <xref:System.Windows.Media.Animation.Storyboard>также создаются часы, часы не применяются к свойствам. Он предназначен для управления дочерними часами, часов, созданных для <xref:System.Windows.Media.Animation.DoubleAnimation>.
 
-Для отражения анимацией привязки данных или изменений анимации следует обновить ее часы. Автоматическое обновление часов не поддерживается. Чтобы анимация отражала изменения, повторно примените ее раскадровку с помощью <xref:System.Windows.Media.Animation.BeginStoryboard> или метода <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>. При использовании любого из этих методов анимация запускается повторно. В коде можно использовать метод <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>, чтобы переместить раскадровку обратно в предыдущую точку.
+Для отражения анимацией привязки данных или изменений анимации следует обновить ее часы. Автоматическое повторное создание часов не выполняется. Чтобы анимация отражала изменения, повторно примените ее раскадровку с помощью <xref:System.Windows.Media.Animation.BeginStoryboard> или метода <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>. При использовании любого из этих методов анимация запускается повторно. В коде можно использовать метод <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>, чтобы переместить раскадровку обратно в предыдущую точку.
 
-Пример анимации с привязкой к данным см. в разделе [Пример анимации по ключевым сплайнам](https://go.microsoft.com/fwlink/?LinkID=160011). Дополнительные сведения о работе анимации и системы управления временем см. в разделе [Общие сведения об анимации и системе](animation-and-timing-system-overview.md)управления временем.
+Пример анимации с привязкой к данным см. в разделе [Пример анимации по ключевым сплайнам](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations). Дополнительные сведения о работе анимации и системы управления временем см. в разделе [Общие сведения об анимации и системе](animation-and-timing-system-overview.md)управления временем.
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,19 +355,19 @@ ms.locfileid: "75559720"
 
 В следующих примерах описывается порядок добавления анимации в приложения.
 
-- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Пример целевых значений анимации From, To, By](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   Описание различных параметров анимации From/To/By.
 
-- [Пример поведения анимации с учетом времени](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Пример поведения анимации с учетом времени](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   Описание способов управления поведением анимации во времени. В этом примере также описывается порядок привязки данных для конечного значения анимации.
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>Связанные разделы
+## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание|
+|Title|Description|
 |-----------|-----------------|
 |[Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)|Описывает, как система управления временем использует классы <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock>, которые позволяют создавать анимации.|
 |[Советы и рекомендации по анимации](animation-tips-and-tricks.md)|Список полезных советов по устранению проблем с анимацией, например проблем производительности.|
@@ -380,14 +380,14 @@ ms.locfileid: "75559720"
 |[Общие сведения о раскадровке](storyboards-overview.md)|Описание способов использования раскадровок с несколькими временными шкалами для создания сложных анимаций.|
 |[Общие сведения о характере поведения во времени](timing-behaviors-overview.md)|Описывает типы <xref:System.Windows.Media.Animation.Timeline> и свойства, используемые в анимации.|
 |[Общие сведения о временных событиях](timing-events-overview.md)|Описание событий, доступных в <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов для выполнения кода в точках временной шкалы, таких как begin, пауза, возобновление, пропуск или остановка.|
-|[Практические руководства](animation-and-timing-how-to-topics.md)|Примеры кода для использования анимаций и временных шкал в приложении.|
+|[Разделы практического руководства](animation-and-timing-how-to-topics.md)|Примеры кода для использования анимаций и временных шкал в приложении.|
 |[Разделы руководства, посвященные часам](clocks-how-to-topics.md)|Содержит примеры кода для использования объекта <xref:System.Windows.Media.Animation.Clock> в приложении.|
 |[Практические руководства, посвященные анимации по ключевым кадрам](key-frame-animation-how-to-topics.md)|Примеры кода для использования покадровой анимации в приложении.|
-|[Практические руководства, посвященные анимации по контуру](path-animation-how-to-topics.md)|Примеры кода для применения анимации с использованием пути в приложении.|
+|[Практические руководства, посвященные анимации вдоль пути](path-animation-how-to-topics.md)|Примеры кода для применения анимации с использованием пути в приложении.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Справочные сведения
+## <a name="reference"></a>Справочник
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

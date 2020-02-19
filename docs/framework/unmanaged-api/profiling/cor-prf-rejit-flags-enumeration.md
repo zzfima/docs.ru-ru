@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: fabbcd497dc2f321da90188cebbac6ed4e147492
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3b4f85072b9dcf87d696b979fa6cbf4e59393f82
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867091"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453043"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>Перечисление COR_PRF_REJIT_FLAGS
 Содержит значения, указывающие поведение API [ICorProfilerInfo10:: рекуестрежитвисинлинерс](icorprofilerinfo10-requestrejitwithinliners-method.md) .  
@@ -35,22 +35,22 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Участник|Description|  
 |------------|-----------------|  
 |`COR_PRF_REJIT_BLOCK_INLINING`| Методы Режиттед будут заблокированы из встроенных в другие методы. |  
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| Получение обратных вызовов `GetFunctionParameters` для любых методов, которые подставляемые методы Режиттед. |  
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).  
+ **Платформы:** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/install/dependencies.md?pivots=os-windows).  
   
  **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET Framework:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
+ **.NET Framework версии:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Перечисления профилирования](profiling-enumerations.md)

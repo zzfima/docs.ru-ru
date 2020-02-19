@@ -2,12 +2,12 @@
 title: Обработка повторного входа в асинхронных приложениях
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354270"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452582"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Обработка повторного входа в асинхронных приложениях (Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "74354270"
 > Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.
 
 > [!NOTE]
-> Версия протокола TLS 1.2 теперь является минимальной версией для использования в разработке приложений. Если приложение предназначено для более ранней версии .NET Framework, чем 4.7, обратитесь к следующей статье, чтобы ознакомиться с [рекомендациями по протоколу TLS в .NET Framework](../../../../framework/network-programming/tls.md) 
+> Версия протокола TLS 1.2 теперь является минимальной версией для использования в разработке приложений. Если приложение предназначено для .NET Framework более ранней версии, чем 4,7, обратитесь к следующей статье, в которой приведены рекомендации по [обеспечению безопасности транспортного уровня (TLS) с .NET Framework](../../../../framework/network-programming/tls.md).
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Распознавание поддержки повторного входа
 
@@ -474,7 +474,7 @@ End Function
 
 Этот пример можно выполнить, вставив изменения в код в разделе [Сборка приложения](#BKMK_BuildingTheApp) или выполнив инструкции, приведенные в разделе [Загрузка приложения](#BKMK_DownloadingTheApp), чтобы скачать пример, а затем выполнить проект QueueResults.
 
-#### <a name="points-of-interest"></a>Интересующие точки
+#### <a name="points-of-interest"></a>Достопримечательности
 
 Информационные строки, начинающиеся с символа # в выходных данных, поясняют, как работает этот пример.
 
@@ -554,11 +554,11 @@ End Function
 
 ##### <a name="to-build-a-wpf-app"></a>Построение приложения WPF
 
-1. Запустите Visual Studio.
+1. Запустите среду Visual Studio.
 
-2. В строке меню выберите **Файл**, **Создать**, **Проект**.
+2. В главном меню выберите **Файл**, **Создать**, **Проект**.
 
-     Откроется диалоговое окно **Новый проект** .
+     Откроется диалоговое окно **Создание проекта** .
 
 3. В области **Установленные шаблоны** разверните узел **Visual Basic**, а затем узел **Windows**.
 
@@ -682,7 +682,7 @@ End Function
 
 12. Внесите изменения, описанные в разделах [Отключение кнопки запуска](#BKMK_DisableTheStartButton), [Отмена и перезапуск операции](#BKMK_CancelAndRestart) или [Запуск нескольких операций и постановка выходных данных в очередь](#BKMK_RunMultipleOperations) для обработки повторного входа.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Доступ к веб-сайтам с помощью модификатора Async и оператора Await (Visual Basic))
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

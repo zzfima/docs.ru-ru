@@ -9,15 +9,15 @@ helpviewer_keywords:
 - composite shapes [WPF]
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
-ms.openlocfilehash: de9f7972c7a51ea623c3630fe62bb48f6109317e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c56053f2b07d6055deac5097a68fd7b80ad704ba
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052902"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452101"
 ---
 # <a name="how-to-create-a-composite-shape"></a>Практическое руководство. Создание составной фигуры
-В этом примере демонстрируется создание составной фигуры, применив <xref:System.Windows.Media.Geometry> объектов и отобразить их с помощью <xref:System.Windows.Shapes.Path> элемент. В следующем примере <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>и <xref:System.Windows.Media.RectangleGeometry> используются с <xref:System.Windows.Media.GeometryGroup> Создание составной фигуры. Затем рисуются фигуры с помощью <xref:System.Windows.Shapes.Path> элемент.  
+В этом примере показано, как создавать составные фигуры с помощью <xref:System.Windows.Media.Geometry>ных объектов и отображать их с помощью элемента <xref:System.Windows.Shapes.Path>. В следующем примере <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>и <xref:System.Windows.Media.RectangleGeometry> используются с <xref:System.Windows.Media.GeometryGroup> для создания составной фигуры. Затем геометрические объекты рисуются с помощью элемента <xref:System.Windows.Shapes.Path>.  
   
 ## <a name="example"></a>Пример  
  [!code-xaml[GeometrySample#19](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#19)]  
@@ -27,9 +27,9 @@ ms.locfileid: "62052902"
   
  На следующем рисунке показана фигура, созданная в предыдущем примере.  
   
- ![Составной геометрический объект, созданная с использованием GeometryGroup](./media/wcpsdk-graphicsmm-compositegeometryexample1.jpg "wcpsdk_graphicsmm_compositegeometryexample1")  
-Составные геометрические объекты  
+ ![Составная геометрия, созданная с помощью GeometryGroup](./media/wcpsdk-graphicsmm-compositegeometryexample1.jpg "wcpsdk_graphicsmm_compositegeometryexample1")  
+Составной геометрический объект  
   
- Более сложные фигуры, например, многоугольники и фигур с помощью сегментов кривых могут быть созданы с помощью <xref:System.Windows.Media.PathGeometry>. Пример, демонстрирующий создание фигуры с помощью <xref:System.Windows.Media.PathGeometry>, см. в разделе [Создание фигуры с помощью PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md).  Несмотря на то, что в этом примере отображает фигуру на экране при помощи <xref:System.Windows.Shapes.Path> элемент, <xref:System.Windows.Media.Geometry> объектов может также использоваться для описания содержимого <xref:System.Windows.Media.GeometryDrawing> или <xref:System.Windows.Media.DrawingContext>. Они также могут использоваться для обрезки и проверки нажатия.  
+ Более сложные фигуры, такие как многоугольники и фигуры с изогнутыми сегментами, могут быть созданы с помощью <xref:System.Windows.Media.PathGeometry>. Пример создания фигуры с помощью <xref:System.Windows.Media.PathGeometry>см. [в разделе Создание фигуры с помощью PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md).  Хотя в этом примере фигура подготавливается к экрану с помощью элемента <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Media.Geometry> объекты также могут использоваться для описания содержимого <xref:System.Windows.Media.GeometryDrawing> или <xref:System.Windows.Media.DrawingContext>. Они также могут использоваться для обрезки и проверки попадания.  
   
- Этот пример является частью большего примера; полный пример см. в разделе [Пример геометрических объектов](https://go.microsoft.com/fwlink/?LinkID=159989).
+ Этот пример является частью большего примера; полный пример см. в разделе [Пример геометрических объектов](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).

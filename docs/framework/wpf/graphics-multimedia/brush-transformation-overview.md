@@ -9,100 +9,100 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d3a56014e0975f3616b7f90021b4290ced5daab
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020676"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453134"
 ---
 # <a name="brush-transformation-overview"></a>Общие сведения о преобразованиях объекта Brush
-Класс Brush предоставляет два свойства для преобразований: <xref:System.Windows.Media.Brush.Transform%2A> и <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Эти свойства позволяют выполнять поворот, масштабирование, наклон и преобразовывать содержимое кисти. В этом разделе описываются различия между этими двумя свойствами и приводятся примеры их использования.  
+Класс Brush предоставляет два свойства преобразования: <xref:System.Windows.Media.Brush.Transform%2A> и <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Эти свойства позволяют выполнять поворот, масштабирование, наклон и преобразовывать содержимое кисти. В этом разделе описываются различия между этими двумя свойствами и приводятся примеры их использования.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы разобраться в этом разделе, пользователь должен понимать возможности преобразуемой кисти. Для <xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush>, см. в разделе [закраске сплошным цветом и градиентом Обзор](painting-with-solid-colors-and-gradients-overview.md). Для <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush>, см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md). Также необходимо иметь представление о двумерных преобразованиях, описанных в разделе [Общие сведения о преобразованиях](transforms-overview.md).  
+## <a name="prerequisites"></a>предварительные требования  
+ Чтобы разобраться в этом разделе, пользователь должен понимать возможности преобразуемой кисти. Для <xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush>см. [Общие сведения о заполнении сплошными цветами и градиентами](painting-with-solid-colors-and-gradients-overview.md). Сведения о <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>или <xref:System.Windows.Media.VisualBrush>см. [в разделе Рисование с помощью изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md). Также необходимо иметь представление о двумерных преобразованиях, описанных в разделе [Общие сведения о преобразованиях](transforms-overview.md).  
   
 <a name="transformversusrelativetransform"></a>   
 ## <a name="differences-between-the-transform-and-relativetransform-properties"></a>Различия между свойствами Transform и RelativeTransform  
- При применении преобразования к кисти <xref:System.Windows.Media.Brush.Transform%2A> свойство, необходимо знать размер закрашиваемой области, если вы хотите преобразовать содержимое кисти относительно ее центра. Предположим, что область рисования имеет ширину 200 аппаратно-независимых пикселей и высоту 150 пикселей.  Если вы использовали <xref:System.Windows.Media.RotateTransform> Чтобы повернуть кисть выходных данных на 45 градусов относительно ее центра, то <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 100 и <xref:System.Windows.Media.RotateTransform.CenterY%2A> числа 75.  
+ При применении преобразования к свойству <xref:System.Windows.Media.Brush.Transform%2A> кисти необходимо знать размер закрашиваемой области, если необходимо преобразовать содержимое кисти относительно ее центра. Предположим, что область рисования имеет ширину 200 аппаратно-независимых пикселей и высоту 150 пикселей.  Если вы использовали <xref:System.Windows.Media.RotateTransform> для поворота выходных данных кисти на 45 градусов относительно его центра, вы придаете <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 100 и <xref:System.Windows.Media.RotateTransform.CenterY%2A> 75.  
   
- При применении преобразования к кисти <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство, это преобразование применяется к кисти перед сопоставлением ее выходного значения закрашиваемой области. Следующий список описывает порядок обработки и преобразования содержимого кисти.  
+ При применении преобразования к свойству <xref:System.Windows.Media.Brush.RelativeTransform%2A> кисти это преобразование применяется к кисти до того, как ее выходные данные сопоставлены с закрашиваемой областью. Следующий список описывает порядок обработки и преобразования содержимого кисти.  
   
-1. Обработка содержимого кисти. Для <xref:System.Windows.Media.GradientBrush>, это означает определение области градиента. Для <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> сопоставляется <xref:System.Windows.Media.TileBrush.Viewport%2A>. Это становится результатом работы кисти.  
+1. Обработка содержимого кисти. Для <xref:System.Windows.Media.GradientBrush>это означает определение области градиента. Для <xref:System.Windows.Media.TileBrush><xref:System.Windows.Media.TileBrush.Viewbox%2A> сопоставляется с <xref:System.Windows.Media.TileBrush.Viewport%2A>. Это становится результатом работы кисти.  
   
 2. Проекция результата работы кисти на прямоугольник преобразования 1 x 1.  
   
-3. Применение кисти <xref:System.Windows.Media.Brush.RelativeTransform%2A>, если он имеется.  
+3. Примените <xref:System.Windows.Media.Brush.RelativeTransform%2A>кисти, если таковая имеется.  
   
 4. Проекция преобразованного результата работы на закрашиваемую область.  
   
-5. Применение кисти <xref:System.Windows.Media.Transform>, если он имеется.  
+5. Примените <xref:System.Windows.Media.Transform>кисти, если таковая имеется.  
   
- Так как <xref:System.Windows.Media.Brush.RelativeTransform%2A> применяется при сопоставлении кисти результата прямоугольнику 1 x 1, центра преобразования и значения смещения считаются относительными. Например, если вы использовали <xref:System.Windows.Media.RotateTransform> Чтобы повернуть кисть выходных данных на 45 градусов относительно ее центра, то <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0,5 и <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0,5.  
+ Поскольку <xref:System.Windows.Media.Brush.RelativeTransform%2A> применяется, когда выходные данные кисти сопоставлены с прямоугольником 1 x 1, центр преобразования и значения смещения выглядят как относительные. Например, если вы использовали <xref:System.Windows.Media.RotateTransform> для поворота выходных данных кисти на 45 градусов относительно его центра, вы придаете <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0,5 и <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0,5.  
   
- На следующем рисунке показан результат выполнения нескольких кистей, повернутых на 45 градусов с помощью <xref:System.Windows.Media.Brush.RelativeTransform%2A> и <xref:System.Windows.Media.Brush.Transform%2A> свойства.  
+ На следующем рисунке показаны выходные данные нескольких кистей, повернутых на 45 градусов с помощью свойств <xref:System.Windows.Media.Brush.RelativeTransform%2A> и <xref:System.Windows.Media.Brush.Transform%2A>.  
   
  ![Свойства RelativeTransform и Transform](./media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")  
   
 <a name="relativetransformandtilebrush"></a>   
 ## <a name="using-relativetransform-with-a-tilebrush"></a>Использование RelativeTransform с TileBrush  
- Так как мозаичные кисти являются более сложные, чем другие, применение <xref:System.Windows.Media.Brush.RelativeTransform%2A> одно может привести к непредвиденным результатам. Например, рассмотрим следующий рисунок.  
+ Поскольку мозаичные кисти сложнее, чем другие кисти, применение <xref:System.Windows.Media.Brush.RelativeTransform%2A> к одной может привести к непредвиденным результатам. Например, рассмотрим следующий рисунок.  
   
  ![Исходное изображение](./media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")  
   
- В следующем примере используется <xref:System.Windows.Media.ImageBrush> для закраски прямоугольной области приведенным выше изображением. Он применяется <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.Media.ImageBrush> объекта <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство, которое задает его <xref:System.Windows.Media.TileBrush.Stretch%2A> свойства <xref:System.Windows.Media.Stretch.UniformToFill>, которого необходимо сохранять пропорции изображения при его растяжении для полного заполнения прямоугольника.  
+ В следующем примере используется <xref:System.Windows.Media.ImageBrush> для рисования прямоугольной области с предыдущим изображением. Он применяет <xref:System.Windows.Media.RotateTransform> к свойству <xref:System.Windows.Media.Brush.RelativeTransform%2A> объекта <xref:System.Windows.Media.ImageBrush> и задает для его свойства <xref:System.Windows.Media.TileBrush.Stretch%2A> значение <xref:System.Windows.Media.Stretch.UniformToFill>, которое должно сохранять пропорции изображения при его растяжении для полной заливки прямоугольника.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeTransformExample2Inline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/RelativeTransformIllustration.xaml#graphicsmmrelativetransformexample2inline)]  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
- ![Преобразованный результат работы](./media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")  
+ ![Преобразованные выходные данные](./media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")  
   
- Обратите внимание на то, что изображение искажено, даже если кисти <xref:System.Windows.Media.TileBrush.Stretch%2A> было присвоено <xref:System.Windows.Media.Stretch.UniformToFill>. Это потому, что относительное преобразование применяется после кисти <xref:System.Windows.Media.TileBrush.Viewbox%2A> сопоставляется с его <xref:System.Windows.Media.TileBrush.Viewport%2A>. В следующем списке описан каждый шаг процесса:  
+ Обратите внимание, что изображение искажается, несмотря на то, что для <xref:System.Windows.Media.TileBrush.Stretch%2A> кисти задано значение <xref:System.Windows.Media.Stretch.UniformToFill>. Это связано с тем, что относительное преобразование применяется после сопоставления <xref:System.Windows.Media.TileBrush.Viewbox%2A> кисти с <xref:System.Windows.Media.TileBrush.Viewport%2A>. В следующем списке описан каждый шаг процесса:  
   
-1. Проект содержимого кисти (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) на базовую плитку (<xref:System.Windows.Media.TileBrush.Viewport%2A>) с помощью кисти <xref:System.Windows.Media.TileBrush.Stretch%2A> параметр.  
+1. Проецировать содержимое кисти (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) на ее базовый элемент (<xref:System.Windows.Media.TileBrush.Viewport%2A>), используя параметр <xref:System.Windows.Media.TileBrush.Stretch%2A> кисти.  
   
-     ![Растягивание Viewbox для заполнения Viewport](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
+     ![Растяжение Viewbox в соответствии с окном просмотра](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
 2. Проекция базового мозаичного элемента на прямоугольник преобразования 1 x 1.  
   
-     ![Сопоставление Viewport и прямоугольника преобразования](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
+     ![Сопоставьте окно просмотра с прямоугольником преобразования](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3. Применить <xref:System.Windows.Media.RotateTransform>.  
+3. Примените <xref:System.Windows.Media.RotateTransform>.  
   
      ![Применение относительного преобразования](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
 4. Проекция преобразованного базового мозаичного элемента на закрашиваемую область.  
   
-     ![Проекция преобразованной кисти на закрашиваемую область](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
+     ![Проецирование преобразованной кисти на выходную область](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
 <a name="rotateexample"></a>   
-## <a name="example-rotate-an-imagebrush-45-degrees"></a>Пример Поворот ImageBrush на 45 градусов  
- В следующем примере применяется <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство <xref:System.Windows.Media.ImageBrush>. <xref:System.Windows.Media.RotateTransform> Объекта <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> заданы оба свойства 0,5, относительные координаты центра содержимого точка. В результате содержимое кисти поворачивается относительно ее центра.  
+## <a name="example-rotate-an-imagebrush-45-degrees"></a>Пример. Поворот ImageBrush на 45 градусов  
+ Следующий пример применяет <xref:System.Windows.Media.RotateTransform> к свойству <xref:System.Windows.Media.Brush.RelativeTransform%2A> <xref:System.Windows.Media.ImageBrush>. Свойства <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> объекта <xref:System.Windows.Media.RotateTransform> установлены в значение 0,5, относительные координаты центральной точки содержимого. В результате содержимое кисти поворачивается относительно ее центра.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- В следующем примере также применяется <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.Media.ImageBrush>, но использует <xref:System.Windows.Media.Brush.Transform%2A> вместо свойства <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство. Чтобы повернуть кисть относительно ее центра, <xref:System.Windows.Media.RotateTransform> объекта <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> должны быть указаны в абсолютных координатах. Так как прямоугольник, закрашиваемый с помощью кисти, имеет размеры 175 на 90 пикселей, его центральная точка будет иметь координаты (87,5, 45).  
+ В следующем примере также применяется <xref:System.Windows.Media.RotateTransform> к <xref:System.Windows.Media.ImageBrush>, но вместо свойства <xref:System.Windows.Media.Brush.RelativeTransform%2A> используется свойство <xref:System.Windows.Media.Brush.Transform%2A>. Чтобы повернуть кисть по центру, <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> объекта <xref:System.Windows.Media.RotateTransform> должны быть установлены в абсолютные координаты. Так как прямоугольник, закрашиваемый с помощью кисти, имеет размеры 175 на 90 пикселей, его центральная точка будет иметь координаты (87,5, 45).  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- На следующем рисунке показана кисть без преобразования, с преобразованием, примененным к <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство и с преобразованием, примененным к <xref:System.Windows.Media.Brush.Transform%2A> свойство.  
+ На следующем рисунке показана кисть без преобразования, преобразование применяется к свойству <xref:System.Windows.Media.Brush.RelativeTransform%2A> и преобразование, применяемое к свойству <xref:System.Windows.Media.Brush.Transform%2A>.  
   
- ![Параметры RelativeTransform и Transform для кисти](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
+ ![Параметры RelativeTransform и преобразования кисти](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
   
- Данный пример является частью большого примера. Полный пример см. в разделе [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973). Более подробные сведения о кистях см. в разделе [Общие сведения о кистях WPF](wpf-brushes-overview.md).  
+ Данный пример является частью большого примера. Полный пример см. в разделе [Пример использования кистей](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes). Более подробные сведения о кистях см. в разделе [Общие сведения о кистях WPF](wpf-brushes-overview.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Brush>
-- [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
+- [Общие сведения о закрашивании сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
+- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
 - [Общие сведения о классах Transform](transforms-overview.md)

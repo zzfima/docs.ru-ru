@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454461"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449976"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Практическое руководство. Привязка к веб-службе
 В этом примере показано, как выполнить привязку к объектам, возвращаемым вызовами метода веб-службы.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется [Служба содержимого MSDN/TechNet Publishing System (MTPS)](https://go.microsoft.com/fwlink/?LinkId=95677) для получения списка языков, поддерживаемых указанным документом.  
+ В этом примере используется служба содержимого MSDN/TechNet Publishing System (MTPS) для получения списка языков, поддерживаемых указанным документом.  
   
  Перед вызовом веб-службы необходимо создать ссылку на нее. Чтобы создать веб-ссылку на службу MTPS с помощью Visual Studio, выполните следующие действия.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73454461"
   
  Сведения о структуре `getContentResponse`см. в [документации по службе содержимого](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
 - [Общие сведения об источниках привязки](binding-sources-overview.md)

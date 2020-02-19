@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124563"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452673"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Общие сведения о глобализации и локализации WPF
 
@@ -215,11 +215,11 @@ ms.locfileid: "77124563"
 |Код|Исходный английский BAML|Локализованный BAML|
 |Ресурсы, не зависящие от языка и региональных параметров|Другие ресурсы на английском языке|Другие ресурсы, локализованные для немецкого языка|
 
-Платформа .NET Framework автоматически выбирает вспомогательную сборку ресурсов для загрузки на основе `Thread.CurrentThread.CurrentUICulture`приложения. По умолчанию используется язык и региональные параметры операционной системы Windows. Поэтому, если вы используете Windows на немецком языке, de-DE\MyDialog.resources.dll загружается, если вы используете англоязычные окна, EN-us\mydialog.Resources.dll. загружает. Вы можете задать для приложения конечный резервный ресурс, указав NeutralResourcesLanguage в файле AssemblyInfo проекта.\*. Например, если будет указано:
+.NET автоматически выбирает сборку вспомогательных ресурсов для загрузки на основе <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>приложения. По умолчанию используется язык и региональные параметры операционной системы Windows. Если вы используете Windows на немецком языке, файл *de-DE\MyDialog.Resources.dll* загружается. Если вы используете Windows на английском языке, файл *EN-us\mydialog.Resources.dll.* загружается. Можно задать конечный ресурс для приложения, указав атрибут `NeutralResourcesLanguage` в файле *AssemblyInfo* проекта. Например, если указать:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-то в случае недоступности de-DE\MyDialog.resources.dll и de\MyDialog.resources.dll немецкой версией Windows будет использоваться en-US\MyDialog.resources.dll.
+Затем файл *EN-us\mydialog.Resources.dll.* используется с немецкими окнами, если ни один из следующих файлов не доступен: *de-DE\MyDialog.Resources.dll* или *де\мидиалог.ресаурцес.длл*.
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Домашняя страница сайта Майкрософт для Саудовской Аравии
 
@@ -267,7 +267,7 @@ ms.locfileid: "77124563"
 
 Этот комментарий связан с содержимым TextBlock_1 и в случае средства LocBaml (см. раздел [Локализация приложения](how-to-localize-an-application.md)) оно может отображаться в шестом столбце строки TextBlock_1 в файле Output. csv.
 
-|Ключ ресурса|Категория|Доступен для чтения|Изменяемый|Комментарий|Значение|
+|Ключ ресурса|Категория|Доступен для чтения|Возможность изменения|Комментарий|Значение|
 |-|-|-|-|-|-|
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|текст|TRUE|TRUE|Этот символ используется в качестве декоративного правила.|&#124;|
 

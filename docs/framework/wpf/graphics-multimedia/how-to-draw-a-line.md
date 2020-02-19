@@ -1,33 +1,33 @@
 ---
-title: Практическое руководство. Рисование линии
+title: Как начертить линию
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], lines
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: c11dfb9523834ec2e622cb2e62bd6982a1a78fd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a803c1be01086ca8911ef4cc33bd67697239e2c0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947658"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452952"
 ---
-# <a name="how-to-draw-a-line"></a>Практическое руководство. Рисование линии
-В этом примере показано, как рисование линий с помощью <xref:System.Windows.Shapes.Line> элемент.  
+# <a name="how-to-draw-a-line"></a>Как начертить линию
+В этом примере показано, как нарисовать линии с помощью элемента <xref:System.Windows.Shapes.Line>.  
   
- Чтобы нарисовать линию, создайте <xref:System.Windows.Shapes.Line> элемент. Используйте его <xref:System.Windows.Shapes.Line.X1%2A> и <xref:System.Windows.Shapes.Line.Y1%2A> свойства для задания начальной точки; и используйте его <xref:System.Windows.Shapes.Line.X2%2A> и <xref:System.Windows.Shapes.Line.Y2%2A> свойства для задания конечной точки. Наконец, установите его <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> так, как в строку без штриха остается невидимым.  
+ Чтобы нарисовать линию, создайте элемент <xref:System.Windows.Shapes.Line>. Чтобы задать начальную точку, используйте его свойства <xref:System.Windows.Shapes.Line.X1%2A> и <xref:System.Windows.Shapes.Line.Y1%2A>. чтобы задать конечную точку, используйте его свойства <xref:System.Windows.Shapes.Line.X2%2A> и <xref:System.Windows.Shapes.Line.Y2%2A>. Наконец, задайте его <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>, так как линия без штриха невидима.  
   
- Параметр <xref:System.Windows.Shapes.Shape.Fill%2A> элемент строку, не оказывает влияния, так как строки не имеет внутренней части.  
+ Установка элемента <xref:System.Windows.Shapes.Shape.Fill%2A> для линии не оказывает никакого воздействия, так как линия не имеет внутренней части.  
   
- В следующем примере рисуется три строки внутри <xref:System.Windows.Controls.Canvas> элемент.  
+ В следующем примере в элемент <xref:System.Windows.Controls.Canvas> выводится три строки.  
   
 ## <a name="example"></a>Пример  
  [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037).  
+ Этот пример является частью более крупного примера; Полный пример см. в разделе [Пример элементов Shape](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Shapes.Line>
-- [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [Пример элементов Shape](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)
