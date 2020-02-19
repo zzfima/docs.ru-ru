@@ -2,15 +2,14 @@
 title: Анализатор .NET API
 description: Узнайте, как анализатор .NET API помогает выявлять устаревшие интерфейсы API и проблемы с совместимостью платформ.
 author: oliag
-ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929353"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124251"
 ---
 # <a name="net-api-analyzer"></a>Анализатор .NET API
 
@@ -60,7 +59,7 @@ ms.locfileid: "70929353"
 
 ### <a name="suppressing-warnings-globally"></a>Глобальное скрытие предупреждений
 
-Чтобы скрыть предупреждения глобально, щелкните нужный элемент правой кнопкой мыши и выберите **Быстрые действия и рефакторинг** > **Скрыть *идентификатор диагностики* \<идентификатор диагностики >**  > **в файле с предупреждениями**.
+Чтобы скрыть предупреждения глобально, щелкните нужный элемент правой кнопкой мыши и выберите **Быстрые действия и рефакторинг** > **Скрыть *идентификатор диагностики*\<идентификатор диагностики >**  > **в файле с предупреждениями**.
 
 ![Снимок экрана API-интерфейса WebClient с зеленой волнистой линией и лампочкой слева](media/api-analyzer/suppress-in-sup-file.jpg)
 

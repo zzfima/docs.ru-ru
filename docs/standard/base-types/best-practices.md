@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938003"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124426"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Рекомендации по использованию регулярных выражений в .NET
 
@@ -176,7 +176,7 @@ ms.locfileid: "75938003"
 
 Поскольку граница слова не является символом слова (или подмножеством символов слова), нет шанса, что регулярное выражение перейдет границу слова, сопоставляя символы слова. Это значит, что для этого регулярного выражения поиск с возвратом не принесет никакой пользы, а только снизит производительность, поскольку обработчик регулярных выражений вынужден сохранять свое состояние для каждого возможного совпадения.
 
-Если вы понимаете, что нет необходимости использовать поиск с возвратом, его можно отключить с помощью языкового элемента `(?>subexpression)`. В следующем примере производится анализ входной строки с использованием двух регулярных выражений. Функционирование первого регулярного выражения, `\b\p{Lu}\w*\b`, основано на поиске с возвратом. Второе регулярное выражение, `\b\p{Lu}(?>\w*)\b`, отключает поиск с возвратом. Как видно по выводу, выражения дают одинаковый результат.
+Если вы понимаете, что нет необходимости использовать обратное отслеживание, его можно отключить с помощью языкового элемента `(?>subexpression)`, называемого атомарной группой. В следующем примере производится анализ входной строки с использованием двух регулярных выражений. Функционирование первого регулярного выражения, `\b\p{Lu}\w*\b`, основано на поиске с возвратом. Второе регулярное выражение, `\b\p{Lu}(?>\w*)\b`, отключает поиск с возвратом. Как видно по выводу, выражения дают одинаковый результат.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
