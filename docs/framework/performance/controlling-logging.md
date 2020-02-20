@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716109"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504102"
 ---
 # <a name="controlling-net-framework-logging"></a>Контроль ведения журнала .NET Framework
 
@@ -17,7 +17,7 @@ ms.locfileid: "75716109"
 
 - Программы командной строки [Logman](/windows-server/administration/windows-commands/logman) и [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), входящие в состав операционной системы Windows.
 
-- Программы [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) в составе [набора средств для оценки производительности Windows](/windows-hardware/test/wpt/). Дополнительные сведения о программе Xperf см. в [блоге, посвященном производительности Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/).
+- Программы [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) в составе [набора средств для оценки производительности Windows](/windows-hardware/test/wpt/). Дополнительные сведения о программе Xperf см. в [блоге, посвященном производительности Windows](https://docs.microsoft.com/archive/blogs/pigscanfly/).
 
 Для регистрации событий среды CLR на компьютере должен быть установлен поставщик среды CLR. Чтобы проверить, установлен ли этот поставщик, введите в командной строке `logman query providers`. Откроется список поставщиков. В этом списке должна находиться следующая запись для поставщика среды CLR.
 
@@ -27,7 +27,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Если поставщик среды CLR не указан, его можно установить в Windows Vista и операционных системах более поздних версий с помощью программы командной строки Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil). Откройте окно командной строки от имени учетной записи администратора. Измените каталог подсказки на папку .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET version > \). Эта папка содержит файл CLR-ETW.man. Чтобы установить поставщик среды CLR, в командной строке введите следующую команду:
+Если поставщик среды CLR не указан, его можно установить в Windows Vista и операционных системах более поздних версий с помощью программы командной строки Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil). Откройте окно командной строки с правами администратора. Измените каталог подсказки на папку .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET version > \). Эта папка содержит файл CLR-ETW.man. Чтобы установить поставщик среды CLR, в командной строке введите следующую команду:
 
 `wevtutil im CLR-ETW.man`
 
@@ -45,11 +45,11 @@ Provider                                 GUID
 
 ### <a name="to-capture-clr-etw-events-using-logman"></a>Регистрация событий ETW среды CLR с помощью программы Logman
 
-1. В командной строке введите следующее:
+1. В командной строке введите:
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     Здесь:
+     где:
 
     - Параметр `-p` задает GUID поставщика.
 
@@ -69,7 +69,7 @@ Provider                                 GUID
 
 ### <a name="to-capture-clr-etw-events-using-xperf"></a>Регистрация событий ETW среды CLR с помощью программы Xperf
 
-1. В командной строке введите следующее:
+1. В командной строке введите:
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
@@ -87,7 +87,7 @@ Provider                                 GUID
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Просмотр событий ETW среды CLR с помощью программы Tracerpt
 
-- В командной строке введите следующее:
+- В командной строке введите:
 
      `tracerpt clrevents.etl`
 
@@ -95,7 +95,7 @@ Provider                                 GUID
 
 ### <a name="to-view-clr-etw-events-using-xperf"></a>Просмотр событий ETW среды CLR с помощью программы Xperf
 
-- В командной строке введите следующее:
+- В командной строке введите:
 
      `xperf clrevents.etl`
 
@@ -103,7 +103,7 @@ Provider                                 GUID
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Преобразование ETL-файла в файл данных с разделителями-запятыми
 
-- В командной строке введите следующее:
+- В командной строке введите:
 
      `xperf -i clrevents.etl -f clrevents.csv`
 
@@ -111,5 +111,5 @@ Provider                                 GUID
 
 ## <a name="see-also"></a>См. также:
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Набор средств производительности Windows](/windows-hardware/test/wpt/)
 - [События в среде CLR (трассировка событий Windows)](etw-events-in-the-common-language-runtime.md)

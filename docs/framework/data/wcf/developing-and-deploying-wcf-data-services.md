@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937462"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504021"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Разработка и развертывание WCF Data Services
 
@@ -80,7 +80,7 @@ ms.locfileid: "75937462"
 
 - Программа проверки HTTP может быть очень полезной при развертывании службы данных, позволяя проверять содержимое сообщений запросов и ответов. Любой планировщик сетевых пакетов, способный отображать необработанные пакеты, можно использовать для проверки HTTP-запросов к службе данных и ответов от нее.
 
-- При отладке службы данных может потребоваться получить дополнительные сведения об ошибке из службы данных, чем во время обычной работы. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. Дополнительные сведения см. в разделе Post [Debugging WCF Data Services](https://blogs.msdn.microsoft.com/phaniraj/?m=20086). Можно также включить трассировку в WCF для просмотра исключений, возникающих на уровне HTTP-сообщений. Для получения дополнительной информации см. [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- При отладке службы данных может потребоваться получить дополнительные сведения об ошибке из службы данных, чем во время обычной работы. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. Дополнительные сведения см. в разделе Post [Debugging WCF Data Services](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Можно также включить трассировку в WCF для просмотра исключений, возникающих на уровне HTTP-сообщений. Для получения дополнительной информации см. [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Служба данных обычно разрабатывается как проект приложения ASP.NET, но вы также можете создать службу данных в качестве проекта веб-сайта ASP.NET в Visual Studio. Сведения о различиях между двумя типами проектов см. [в разделе проекты веб-приложений и проекты веб-сайтов в Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -117,7 +117,7 @@ ms.locfileid: "75937462"
 
      Вы можете развернуть службу данных в Windows Azure с помощью инструментов Windows Azure для Visual Studio. Вы можете скачать инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=201848). Дополнительные сведения о развертывании службы данных в Windows Azure см. в разделе Публикация [службы OData в Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
-### <a name="deployment-considerations"></a>Требования к развертыванию
+### <a name="deployment-considerations"></a>Вопросы развертывания
 
 При разработке службы данных необходимо учитывать следующее:
 
@@ -129,4 +129,4 @@ ms.locfileid: "75937462"
 
 - [Размещение служб данных](hosting-the-data-service-wcf-data-services.md)
 - [Защита служб WCF Data Services](securing-wcf-data-services.md)
-- [Определение служб данных WCF](defining-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)

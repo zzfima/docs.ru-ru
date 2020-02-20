@@ -2,18 +2,18 @@
 title: Приступая к F# работе со средствами командной строки
 description: Узнайте, как создать простое многопроектное решение на F# основе .NET Core CLI в любой операционной системе (Windows, MacOS или Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 6f67314f49150e20b18734f21f24daa3ce856922
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559491"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504143"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Начало работы F# с .NET Core CLI
 
 В этой статье описывается, как можно приступить F# к работе в любой операционной системе (Windows, MacOS или Linux) с .NET Core CLI. Он проходит через создание многопроектного решения с библиотекой классов, которая вызывается консольным приложением.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Предварительные требования
 
 Для начала необходимо установить последнюю [пакет SDK для .NET Core](https://dotnet.microsoft.com/download).
 
@@ -135,7 +135,7 @@ dotnet sln add src/App/App.fsproj
 
 Перейдите в каталог `src/App` проект консоли и запустите проект, передав `Hello World` в качестве аргументов:
 
-```console
+```dotnetcli
 cd src/App
 dotnet run Hello World
 ```
