@@ -120,13 +120,13 @@ ms.locfileid: "74552481"
 |x|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|true|Ложь|false|true|  
+|true|false|false|true|  
 |true|null|null|true|  
-|Ложь|true|Ложь|true|  
-|Ложь|Ложь|Ложь|Ложь|  
-|Ложь|null|Ложь|null|  
+|false|true|false|true|  
+|false|false|false|false|  
+|false|null|false|null|  
 |null|true|null|true|  
-|null|Ложь|Ложь|null|  
+|null|false|false|null|  
 |null|null|null|null|  
 
 Поведение этих операторов отличается от типичного поведения операторов, допускающих значение NULL. Как правило, оператор, который определяется для операндов типа значения, можно также использовать с соответствующими операндами типа, допускающего значение NULL. Такой оператор возвращает `null`, если какой-либо из операндов имеет значение `null`. При этом операторы `&` и `|` могут возвращать отличное от NULL значение, даже если один из операндов имеет значение `null`. См. подробнее о поведении операторов, допускающих значение NULL, в разделе [Операторы с нулификацией](../builtin-types/nullable-value-types.md#lifted-operators) в статье [Типы, допускающие значение NULL](../builtin-types/nullable-value-types.md).
