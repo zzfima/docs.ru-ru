@@ -154,6 +154,9 @@
             - name: Управление версиями
               tocHref: /dotnet/core/versions/
               topicHref: /dotnet/core/versions/index
+            - name: Проекты SDK
+              tocHref: /dotnet/core/project-sdk/
+              topicHref: /dotnet/core/project-sdk/overview
             - name: Инструменты
               tocHref: /dotnet/core/tools/
               topicHref: /dotnet/core/tools/index
@@ -404,7 +407,7 @@
                 - name: Элементы управления
                   tocHref: /dotnet/framework/wpf/controls/
                   topicHref: /dotnet/framework/wpf/controls/index
-                - name: Data
+                - name: Данные
                   tocHref: /dotnet/framework/wpf/data/
                   topicHref: /dotnet/framework/wpf/data/index
                 - name: Начало работы (WPF)
