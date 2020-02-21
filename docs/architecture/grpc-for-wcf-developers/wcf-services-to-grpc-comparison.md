@@ -2,16 +2,16 @@
 title: Сравнение WCF с gRPC-gRPC для разработчиков WCF
 description: Сравнение платформ WCF и gRPC для создания распределенных приложений.
 ms.date: 09/02/2019
-ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966950"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503334"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Сравнение WCF и gRPC
 
-В предыдущем разделе вы должны были получить хорошее представление о protobuf и о том, как gRPC обрабатывает сообщения. Прежде чем выполнять подробное преобразование из WCF в gRPC, важно обратить внимание на то, как диапазон функций, доступных в WCF в настоящее время, будет обрабатываться в gRPC и какие обходные пути можно использовать, если они не являются gRPC эквивалентами. В частности, в этой главе рассматриваются следующие темы:
+В предыдущей главе вы узнаете о protobuf и том, как gRPC обрабатывает сообщения. Прежде чем выполнять подробное преобразование из Windows Communication Foundation (WCF) в gRPC, важно понять, как функции, доступные в WCF, обрабатываются в gRPC и какие обходные пути можно использовать при отсутствии эквивалента gRPC. В частности, в этой главе рассматриваются следующие темы:
 
 - Операции и методы
 - Привязки и транспорты
@@ -37,12 +37,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message that contains the user's name.
 message HelloRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
+// The response message that contains the greetings.
 message HelloReply {
   string message = 1;
 }
