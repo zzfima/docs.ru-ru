@@ -3,12 +3,12 @@ title: Повышенные права доступа для команд dotnet
 description: Рекомендации по использованию команд dotnet, которым требуются повышенные права доступа.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216304"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543434"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Повышенные права доступа для команд dotnet
 
@@ -29,9 +29,9 @@ ms.locfileid: "71216304"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-global-tool"></a>Установка глобального средства
+### <a name="install-the-tool"></a>Установка средства
 
 Если папка `%ProgramFiles%\dotnet-tools` уже существует, выполните указанные ниже действия, чтобы проверить, имеет ли группа "Пользователи" разрешение на запись в нее или ее изменение.
 
@@ -73,11 +73,11 @@ TOOLCOMMAND
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
@@ -93,14 +93,14 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 - Использование созданного исполняемого файла (обеспечивает максимальную производительность при запуске):
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
     
 - Использование команды [dotnet run](dotnet-run.md) с флагом `—no-build` во избежание создания новых двоичных файлов:
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo dotnet run --no-build
    ```

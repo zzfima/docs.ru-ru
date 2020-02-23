@@ -3,12 +3,12 @@ title: Разработка библиотек с помощью .NET Core CLI
 description: Узнайте, как создавать библиотеки для .NET Core с помощью .NET Core CLI. Вы создадите библиотеку, которая поддерживает несколько платформ.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920447"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503506"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Разработка библиотек с помощью .NET Core CLI
 
@@ -220,7 +220,7 @@ netstandard1.4/
 
 1. Настройте решение. Это можно сделать с помощью следующих команд:
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ netstandard1.4/
 
 1. Перейдите в каталог тестового проекта и добавьте ссылку на `MyProject.Test` из `MyProject`.
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -300,7 +300,7 @@ let doWork data = async {
 
 Чтобы получить ту же структуру каталогов, что и в этом руководстве, выполните следующие команды в окне терминала:
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

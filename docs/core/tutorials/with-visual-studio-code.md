@@ -3,12 +3,12 @@ title: Начало работы с C# и Visual Studio Code
 description: Узнайте, как создать и отладить в Visual Studio Code свое первое приложение .NET Core на языке C#.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715310"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503518"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
 
@@ -129,8 +129,13 @@ ms.locfileid: "75715310"
 
 5. Сохраните изменения и снова запустите программу. Должно отобразиться новое сообщение с добавленной строкой.
 
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Вы получите следующие выходные данные:
+
     ```console
-    > dotnet run
     Hello World! Happy coding!
     ```
 

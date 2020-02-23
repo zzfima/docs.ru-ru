@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100695"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451984"
 ---
 # <a name="whats-new-in-net-core-22"></a>Новые возможности .NET Core 2.2
 
@@ -18,7 +18,7 @@ ms.locfileid: "73100695"
 
 ## <a name="new-deployment-mode"></a>Новый режим развертывания
 
-Начиная с .NET Core 2.2, вы можете развертывать [зависящие от платформы исполняемые файлы](../deploying/index.md#framework-dependent-executables-fde) **.exe** вместо файлов **.dll**. Функционально похожие на зависящие от платформы развертывания, зависящие от платформы исполняемые файлы (FDE) для запуска по-прежнему требуют наличия общедоступной на уровне системы версии .NET Core. Ваше приложение содержит только ваш код и зависимости сторонних разработчиков. В отличие от развертываний, зависящих от платформ, FDE зависят от конкретной платформы.
+Начиная с .NET Core 2.2, вы можете развертывать [зависящие от платформы исполняемые файлы](../deploying/index.md#publish-runtime-dependent) **.exe** вместо файлов **.dll**. Функционально похожие на зависящие от платформы развертывания, зависящие от платформы исполняемые файлы (FDE) для запуска по-прежнему требуют наличия общедоступной на уровне системы версии .NET Core. Ваше приложение содержит только ваш код и зависимости сторонних разработчиков. В отличие от развертываний, зависящих от платформ, FDE зависят от конкретной платформы.
 
 Этот новый режим развертывания обладает явным преимуществом создания исполняемого файла вместо библиотеки, что позволяет вам запускать приложение напрямую без вызова `dotnet`.
 
@@ -64,7 +64,7 @@ internal sealed class SimpleEventListener : EventListener
 
 - <xref:System.Diagnostics.Tracing.EventWrittenEventArgs.TimeStamp?displayProperty=nameWithType>
 
-## <a name="data"></a>Data
+## <a name="data"></a>Данные
 
 **Проверка подлинности Azure Active Directory в базах данных SQL Azure с помощью свойства SqlConnection.AccessToken**
 

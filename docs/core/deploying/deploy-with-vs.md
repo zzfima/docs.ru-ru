@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920896"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449027"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Развертывание приложений .NET Core с помощью Visual Studio
 
@@ -24,7 +24,7 @@ ms.locfileid: "76920896"
 - автономное развертывание;
 - Автономное развертывание с зависимостями сторонних разработчиков
 
-Сведения об использовании Visual Studio для разработки приложений .NET Core см. в статье [Зависимости и требования для .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Сведения об использовании Visual Studio для разработки приложений .NET Core см. в статье [Зависимости и требования для .NET Core](../install/dependencies.md?pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>развертывание, зависящее от платформы;
 
@@ -110,7 +110,7 @@ ms.locfileid: "76920896"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 и более ранние версии](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 и более ранние версии](#tab/vs156)
 
 Создание после отладки и тестирования программы файлов, которые будут развертываться с приложением, для каждой целевой платформы.
 
@@ -176,7 +176,7 @@ ms.locfileid: "76920896"
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 и более поздние версии](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 и более поздние версии](#tab/vs157)
 
 Создание после отладки и тестирования программы файлов, которые будут развертываться с приложением, для каждой целевой платформы. Это предполагает создание отдельного профиля для каждой целевой платформы.
 
@@ -274,7 +274,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 Ниже приведено полное содержимое файла *csproj* для этого проекта:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 и более ранние версии](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 и более ранние версии](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 и более поздние версии](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 и более поздние версии](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

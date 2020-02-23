@@ -2,12 +2,12 @@
 title: Непрерывная интеграция (CI) с использованием пакета SDK для .NET Core и его средств
 description: Узнайте, как использовать пакет SDK для .NET Core и его средства на сервере сборки с непрерывной интеграцией.
 ms.date: 05/18/2017
-ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215234"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451042"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)
 
@@ -32,7 +32,7 @@ ms.locfileid: "77215234"
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> При использовании скрипта установки собственные зависимости не устанавливаются автоматически. Их необходимо установить вручную, если их нет в операционной системе. Дополнительные сведения см. в статье [Зависимости и требования для .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
+> При использовании скрипта установки собственные зависимости не устанавливаются автоматически. Их необходимо установить вручную, если их нет в операционной системе. Дополнительные сведения см. в статье [Зависимости и требования для .NET Core](../install/dependencies.md).
 
 ## <a name="ci-setup-examples"></a>Примеры установки решений CI
 

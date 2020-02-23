@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787838"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503488"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Учебник. Создание пакета шаблонов
 
@@ -51,8 +51,11 @@ dotnet new console -n templatepack -o .
 
 Параметр `-n` присваивает файлы _.csproj_ имя _templatepack.csproj_. Параметр `-o` создает файлы в текущем каталоге. Отобразится результат примерно такого содержания:
 
+```dotnetcli
+dotnet new console -n templatepack -o .
+```
+
 ```console
-C:\working> dotnet new console -n templatepack -o .
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -109,8 +112,11 @@ dotnet pack
 
 Эта команда выполнит сборку проекта и создаст пакет NuGet в папке _working\bin\Debug_.
 
+```dotnetcli
+dotnet pack
+```
+
 ```console
-C:\working> dotnet pack
 Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -146,8 +152,11 @@ Class library                                     classlib              [C#], F#
 
 Независимо от того, как был установлен пакет шаблонов (непосредственно из файла _NUPKG_ или из веб-канала NuGet), процедура удаления пакета шаблонов будет одинаковой. Определите `<PackageId>` шаблона, который требуется удалить. Вы можете отобразить список всех установленных шаблонов, выполнив команду `dotnet new -u`.
 
+```dotnetcli
+dotnet new -u
+```
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:

@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a535048fc8756b55068098ad61fdc37fc8c1f04e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74999011"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448897"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Зависимости и требования для .NET Core
 
@@ -23,7 +23,7 @@ ms.locfileid: "74999011"
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1 поддерживает следующие версии Windows:
 
@@ -39,7 +39,7 @@ ms.locfileid: "74999011"
 
 Дополнительные сведения об операционных системах, дистрибутивах и политике жизненного цикла, поддерживаемых .NET Core 3.1, см. в статье [Поддерживаемые .NET Core 3.1 версии ОС](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0 поддерживает следующие версии Windows:
 
@@ -55,7 +55,7 @@ ms.locfileid: "74999011"
 
 Дополнительные сведения об операционных системах, дистрибутивах и политике жизненного цикла, поддерживаемых .NET Core 3.0, см. в статье [Поддерживаемые .NET Core 3.0 версии ОС](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 .NET Core 2.2 поддерживает следующие версии Windows:
 
@@ -71,7 +71,7 @@ ms.locfileid: "74999011"
 
 Дополнительные сведения об операционных системах, дистрибутивах и политике жизненного цикла, поддерживаемых .NET Core 2.2, см. в статье [Поддерживаемые .NET Core 2.2 версии ОС](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 .NET Core 2.1 поддерживает следующие версии Windows:
 
@@ -118,7 +118,7 @@ ms.locfileid: "74999011"
 
 ::: zone pivot="os-linux"
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
 
@@ -147,7 +147,7 @@ ms.locfileid: "74999011"
 > [!IMPORTANT]
 > Для поддержки ARM64 требуется ядро Linux 4.14 или более высокой версии. Некоторые дистрибутивы Linux отвечают этому требованию, а другие — нет. Например, Ubuntu 18.04 поддерживается, а Ubuntu 16.04 — нет.
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
 
@@ -173,7 +173,7 @@ ms.locfileid: "74999011"
 
 Дополнительные сведения об установке .NET Core 3.0 в ARM64 см. в [этой статье](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 .NET Core 2.2 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
 
@@ -189,7 +189,7 @@ ms.locfileid: "74999011"
 | Oracle Linux                   |  7                      | X64 |
 | Fedora                         |  29, 30                 | X64 |
 | Debian                         |  9                      | x64, ARM32 |
-| Ubuntu                         |  16.04, 18.04, 18.10, 19.04    | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 18.10    | x64, ARM32 |
 | Linux Mint                     |  17, 18                 | X64 |
 | openSUSE                       |  15+                    | X64 |
 | SUSE Enterprise Linux (SLES)   |  12 с пакетом обновления 2+                | X64 |
@@ -197,7 +197,7 @@ ms.locfileid: "74999011"
 
 Дополнительные сведения об операционных системах, дистрибутивах и политике жизненного цикла, поддерживаемых .NET Core 2.2, см. в статье [Поддерживаемые .NET Core 2.2 версии ОС](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 .NET Core 2.1 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
 
@@ -250,7 +250,7 @@ ms.locfileid: "74999011"
 - libgdiplus (версия 6.0.1 или выше)
 
 > [!WARNING]
-> В большинство версий Ubuntu входит более ранняя версия libgdiplus. Вы можете установить последнюю версию libgdiplus, добавив в систему репозиторий Mono. Дополнительные сведения можно найти по адресу: <https://www.mono-project.com/download/stable/>.
+> В большинство версий Ubuntu входит более ранняя версия libgdiplus. Вы можете установить последнюю версию libgdiplus, добавив в систему репозиторий Mono. Для получения дополнительной информации см. <https://www.mono-project.com/download/stable/>.
 
 ### <a name="centos-and-fedora"></a>CentOS и Fedora
 
@@ -277,7 +277,7 @@ ms.locfileid: "74999011"
 - libgdiplus (версия 6.0.1 или выше)
 
 > [!WARNING]
-> В большинство версий CentOS и Fedora входит более ранняя версия libgdiplus. Вы можете установить последнюю версию libgdiplus, добавив в систему репозиторий Mono. Дополнительные сведения можно найти по адресу: <https://www.mono-project.com/download/stable/>.
+> В большинство версий CentOS и Fedora входит более ранняя версия libgdiplus. Вы можете установить последнюю версию libgdiplus, добавив в систему репозиторий Mono. Для получения дополнительной информации см. <https://www.mono-project.com/download/stable/>.
 
 ::: zone-end
 
