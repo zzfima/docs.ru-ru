@@ -12,7 +12,7 @@
           href: interface-definition-language.md
         - name: Сетевые протоколы
           href: network-protocols.md
-        - name: Почему gRPC рекомендуется для разработчиков WCF
+        - name: 'Причины, по которым мы рекомендуем gRPC разработчикам WCF'
           href: Why-grpc.md
     - name: Protocol Buffers
       href: protocol-buffers.md
@@ -79,9 +79,9 @@
           href: docker.md
         - name: Kubernetes
           href: kubernetes.md
-        - name: gRPC и слой взаимодействия между службами
+        - name: Слои взаимодействия служб
           href: service-mesh.md
-        - name: Балансировка нагрузки
+        - name: балансировка нагрузки;
           href: load-balancing.md
         - name: Управление производительностью приложений
           href: application-performance-management.md

@@ -2,14 +2,13 @@
 title: Обеспечение безопасности веб-приложений и микрослужб .NET
 description: Безопасность микрослужб и веб-приложений .NET — узнайте о способах проверки подлинности в веб-приложениях ASP.NET Core.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777215"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501654"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Обеспечение безопасности микрослужб и веб-приложений .NET
 
@@ -19,13 +18,13 @@ ms.locfileid: "76777215"
 
 Доступ к ресурсам и API-интерфейсам, публикуемым службой, часто требуется ограничить определенным кругом надежных пользователей или клиентов. Первый этап принятия подобных решений о доверии на уровне API — проверка подлинности. Проверка подлинности — это процесс достоверного установления личности пользователя.
 
-В сценариях с микрослужбами управление аутентификацией обычно осуществляется централизованно. Если имеется шлюз API, проверку подлинности целесообразно проводить в нем, как показано на рис. 9-1. При таком подходе отдельные микрослужбы не должны быть доступны напрямую (в обход шлюза API), если только не реализованы дополнительные средства безопасности для проверки того, поступают ли сообщения из шлюза или нет.
+При использовании микрослужб управление проверкой подлинности обычно осуществляется централизованно. Если имеется шлюз API, проверку подлинности целесообразно проводить в нем, как показано на рис. 9-1. При таком подходе отдельные микрослужбы не должны быть доступны напрямую (в обход шлюза API), если только не реализованы дополнительные средства безопасности для проверки того, поступают ли сообщения из шлюза или нет.
 
 ![Схема взаимодействия клиентского мобильного приложения с серверной частью.](./media/index/api-gateway-centralized-authentication.png)
 
 **Рис. 9-1**. Централизованная проверка подлинности с помощью шлюза API
 
-Когда шлюз API централизует проверку подлинности, он добавляет сведения о пользователе при переадресации запросов в микрослужбы. Если доступ к службам можно получить напрямую, то для аутентификации пользователей можно использовать такую службу аутентификации, как Azure Active Directory или выделенная микрослужба аутентификации, которая выступает в роли службы токенов безопасности (STS). Решения о доверии передаются между службами с помощью маркеров безопасности или файлов cookie. (При необходимости эти токены могут передаваться между приложениями ASP.NET Core путем реализации [совместного использования файлов cookie](/aspnet/core/security/cookie-sharing).) Такая схема проиллюстрирована на рис. 9-2.
+Когда шлюз API централизует проверку подлинности, он добавляет сведения о пользователе при переадресации запросов в микрослужбы. Если службы доступны напрямую, для проверки подлинности пользователей можно применять службу проверки подлинности, например Azure Active Directory или выделенную микрослужбу проверки подлинности, выступающую в роли службы токенов безопасности (STS). Сведения о доверии передаются между службами с помощью токенов безопасности или файлов cookie. (При необходимости эти токены могут передаваться между приложениями ASP.NET Core путем реализации [совместного использования файлов cookie](/aspnet/core/security/cookie-sharing).) Такая схема проиллюстрирована на рис. 9-2.
 
 ![Схема, показывающая проверку подлинности с помощью серверных микрослужб.](./media/index/identity-microservice-authentication.png)
 
@@ -35,19 +34,50 @@ ms.locfileid: "76777215"
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>Проверка подлинности с помощью ASP.NET Core Identity
 
-Основным механизмом для идентификации пользователей приложения в ASP.NET Core является система членства на основе [удостоверений ASP.NET Core](/aspnet/core/security/authentication/identity). В ASP.NET Core Identity в хранилище данных, настроенном разработчиком, хранятся сведения о пользователях (включая данные для входа, роли и утверждений). Как правило, хранилище данных ASP.NET Core Identity представляет собой хранилище Entity Framework, входящее в пакет `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. Однако вы также можете использовать настраиваемые хранилища или пакеты сторонних поставщиков для хранения сведений удостоверений в Хранилище таблиц Azure, CosmosDB или других местах.
+Основным механизмом для идентификации пользователей приложения в ASP.NET Core является система членства на основе [удостоверений ASP.NET Core](/aspnet/core/security/authentication/identity). В удостоверении ASP.NET Core хранятся сведения о пользователе (в том числе данные для входа, роли и утверждения). Само удостоверение находится в хранилище данных, которое настраивает разработчик. Как правило, хранилище данных ASP.NET Core Identity представляет собой хранилище Entity Framework, входящее в пакет `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. Однако вы также можете использовать настраиваемые хранилища или пакеты сторонних поставщиков для хранения сведений удостоверений в Хранилище таблиц Azure, CosmosDB или других местах.
 
-Приведенный ниже код взят из шаблона проекта веб-приложения ASP.NET Core с выбранной проверкой подлинности отдельной учетной записи пользователя. В нем показано, как настроить удостоверение ASP.NET Core с помощью EntityFramework.Core в методе Startup.ConfigureServices.
+> [!TIP]
+> В ASP.NET Core 2.1 и более поздних версиях предоставляется [ASP.NET Core Identity](/aspnet/core/security/authentication/identity) в виде [библиотеки классов Razor](/aspnet/core/razor-pages/ui-class), поэтому в проекте не будет отображаться большая часть необходимого кода, как в предыдущих версиях. Дополнительные сведения о том, как настроить код Identity в соответствии со своими требованиями, см. в статье [Scaffold Identity in ASP.NET Core projects](/aspnet/core/security/authentication/scaffold-identity) (Шаблоны для использования Identity в проектах ASP.NET Core).
+
+Приведенный ниже код взят из шаблона проекта веб-приложения ASP.NET Core MVC 3.1 с выбранной проверкой подлинности отдельной учетной записи пользователя. В нем показано, как настроить ASP.NET Core Identity с помощью Entity Framework Core в методе `Startup.ConfigureServices`.
 
 ```csharp
-services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-    services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(
+            Configuration.GetConnectionString("DefaultConnection")));
+
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddRazorPages();
+    //...
+}
 ```
 
-После настройки службы ASP.NET Core Indentity ее необходимо включить, вызвав app.UseIdentity в методе службы `Startup.Configure`.
+После настройки системы ASP.NET Core Identity ее необходимо включить, добавив `app.UseAuthentication()` и `endpoints.MapRazorPages()` как показано в следующем коде в методе `Startup.Configure` службы.
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    //...
+    app.UseRouting();
+
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapRazorPages();
+    });
+    //...
+}
+```
+
+> [!IMPORTANT]
+> Для правильной работы Identity строки в приведенном выше коде **ДОЛЖНЫ ИСПОЛЬЗОВАТЬСЯ В ТАКОМ ЖЕ ПОРЯДКЕ**.
 
 Использование удостоверения ASP.NET Core обеспечивает несколько сценариев.
 
@@ -65,7 +95,27 @@ services.AddDbContext<ApplicationDbContext>(options =>
 
 ASP.NET Core также поддерживает использование [внешних поставщиков проверки подлинности](/aspnet/core/security/authentication/social/) для обеспечения входа пользователей посредством рабочих процессов [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2). Это означает, что пользователи могут выполнять вход с помощью существующих процедур проверки подлинности, предоставляемых такими поставщиками, как Майкрософт, Google, Facebook или Twitter, и связывать свои удостоверения с удостоверением ASP.NET Core в вашем приложении.
 
-Для применения внешней проверки подлинности необходимо включить соответствующее ПО промежуточного слоя в конвейер обработки HTTP-запросов приложения. Это ПО промежуточного слоя отвечает за обработку запросов с целью получения маршрутов URI от поставщика проверки подлинности, регистрацию сведений об удостоверениях и предоставление доступа к ним посредством метода SignInManager.GetExternalLoginInfo.
+Чтобы использовать внешнюю проверку подлинности (помимо промежуточного ПО для проверки подлинности), упомянутую ранее, с помощью метода `app.UseAuthentication()`, потребуется также зарегистрировать внешний поставщик в `Startup`, как показано в следующем примере:
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddAuthentication()
+        .AddMicrosoftAccount(microsoftOptions =>
+        {
+            microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+            microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+        })
+        .AddGoogle(googleOptions => { ... })
+        .AddTwitter(twitterOptions => { ... })
+        .AddFacebook(facebookOptions => { ... });
+    //...
+}
+```
 
 В следующей таблице показаны популярные внешние поставщики проверки подлинности и связанные с ними пакеты NuGet:
 
@@ -76,58 +126,23 @@ ASP.NET Core также поддерживает использование [в
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-Во всех случаях ПО промежуточного слоя регистрируется через вызов метода регистрации, аналогично `app.Use{ExternalProvider}Authentication` в `Startup.Configure`. Методы регистрации принимают объект параметров, который содержит идентификатор приложения и секретные данные (например пароль), необходимые поставщику. Чтобы внешние поставщики проверки подлинности могли сообщать пользователю, какое приложение запрашивает доступ к его удостоверению, приложение должно быть зарегистрировано (как описано в [документации по ASP.NET Core](/aspnet/core/security/authentication/social/)).
+Во всех случаях необходимо выполнить процедуру регистрации приложения, которая зависит от поставщика и обычно включает в себя такие задачи:
 
-После регистрации ПО промежуточного слоя в `Startup.Configure` вы можете запрашивать у пользователей вход в любом действии контроллера. Для этого нужно создать объект `AuthenticationProperties`, который содержит имя и URL-адрес перенаправления поставщика проверки подлинности. Затем нужно вернуть ответ на запрос и передать в нем объект `AuthenticationProperties`. В приведенном ниже коде показан пример.
+1. Получение идентификатора клиентского приложения.
+2. Получение секрета клиентского приложения.
+3. Настройка URL-адреса перенаправления, который обрабатывается ПО промежуточного слоя авторизации и зарегистрированным поставщиком.
+4. (Необязательно) Настройка URL-адреса выхода для правильной обработки выхода в сценарии с использованием единого входа.
 
-```csharp
-var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
-    redirectUrl);
-return Challenge(properties, provider);
-```
+Дополнительные сведения о настройке приложения для внешнего поставщика см. в документации ASP.NET Core по [внешнему поставщику проверки подлинности](/aspnet/core/security/authentication/social/).
 
-Параметр redirectUrl содержит URL-адрес, на который внешний поставщик должен выполнить перенаправление после прохождения пользователем проверки подлинности. URL-адрес должен представлять действие, посредством которого будет выполнен вход пользователя на основании данных внешнего удостоверения, как показано в следующем упрощенном примере.
+> [!TIP]
+Все данные обрабатываются с помощью ПО промежуточного слоя авторизации и ранее упомянутых служб. Поэтому при создании проекта веб-приложения ASP.NET Code в Visual Studio нужно лишь выбрать вариант проверки подлинности **Отдельная учетная запись пользователя** (помимо регистрации поставщиков проверки подлинности, упомянутых ранее), как показано на рис. 9-3.
 
-```csharp
-// Sign in the user with this external login provider if the user
-// already has a login.
-var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
+![Снимок экрана: диалоговое окно "Создать веб-приложение ASP.NET Core".](./media/index/select-individual-user-account-authentication-option.png)
 
-if (result.Succeeded)
-{
-    return RedirectToLocal(returnUrl);
-}
-else
-{
-    ApplicationUser newUser = new ApplicationUser
-    {
-        // The user object can be constructed with claims from the
-        // external authentication provider, combined with information
-        // supplied by the user after they have authenticated with
-        // the external provider.
-        UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
-        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
-    };
-    var identityResult = await _userManager.CreateAsync(newUser);
-    if (identityResult.Succeeded)
-    {
-        identityResult = await _userManager.AddLoginAsync(newUser, info);
-        if (identityResult.Succeeded)
-        {
-            await _signInManager.SignInAsync(newUser, isPersistent: false);
-        }
-        return RedirectToLocal(returnUrl);
-    }
-}
-```
+**Рис. 9-3**. Выбор варианта "Отдельная учетная запись пользователя" для использования внешней проверки подлинности при создании проекта веб-приложения в Visual Studio 2019.
 
-Если при создании проекта веб-приложения ASP.NET Core в Visual Studio выбрать вариант проверки подлинности **Отдельная учетная запись пользователя**, то весь код, необходимый для входа через внешнего поставщика, уже будет доступен в проекте, как показано на рис. 9-3.
-
-![Снимок экрана: диалоговое окно "Создать веб-приложение ASP.NET Core".](./media/index/select-external-authentication-option.png)
-
-**Рис. 9-3**. Выбор способа внешней проверки подлинности при создании проекта веб-приложения
-
-Помимо перечисленных выше внешних поставщиков проверки подлинности, доступны пакеты сторонних производителей, предоставляющие ПО промежуточного слоя для использования множества других внешних поставщиков проверки подлинности. Список см. в репозитории [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) в GitHub.
+Помимо перечисленных выше внешних поставщиков проверки подлинности, доступны пакеты сторонних производителей, предоставляющие ПО промежуточного слоя для использования множества других внешних поставщиков проверки подлинности. Список см. в репозитории [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) на сайте GitHub.
 
 Вы также можете создать собственное ПО промежуточного слоя для внешней проверки подлинности, позволяющее решать какие-то особые задачи.
 
@@ -147,31 +162,36 @@ else
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
+    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 
     services.AddAuthentication(options =>
     {
         options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
-    .AddCookie()
+    .AddCookie(setup => setup.ExpireTimeSpan = TimeSpan.FromMinutes(sessionCookieLifetime))
     .AddOpenIdConnect(options =>
     {
         options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.Authority = identityUrl;
-        options.SignedOutRedirectUri = callBackUrl;
+        options.Authority = identityUrl.ToString();
+        options.SignedOutRedirectUri = callBackUrl.ToString();
+        options.ClientId = useLoadTest ? "mvctest" : "mvc";
         options.ClientSecret = "secret";
+        options.ResponseType = useLoadTest ? "code id_token token" : "code id_token";
         options.SaveTokens = true;
         options.GetClaimsFromUserInfoEndpoint = true;
         options.RequireHttpsMetadata = false;
@@ -218,12 +238,16 @@ public void ConfigureServices(IServiceCollection services)
 Ниже приведен пример конфигурации для IdentityServer4, которая предполагает использование клиентов и ресурсов в памяти, предоставляемых пользовательским типом IClientStore.
 
 ```csharp
-// Add IdentityServer services
-services.AddSingleton<IClientStore, CustomClientStore>();
-services.AddIdentityServer()
-    .AddSigningCredential("CN=sts")
-    .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
-    .AddAspNetIdentity<ApplicationUser>();
+public IServiceProvider ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddSingleton<IClientStore, CustomClientStore>();
+    services.AddIdentityServer()
+        .AddSigningCredential("CN=sts")
+        .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
+        .AddAspNetIdentity<ApplicationUser>();
+    //...
+}
 ```
 
 ### <a name="consume-security-tokens"></a>Использование токенов безопасности
@@ -241,7 +265,10 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
@@ -252,8 +279,8 @@ public void ConfigureServices(IServiceCollection services)
 
     services.AddAuthentication(options =>
     {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultAuthenticateScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
 
     }).AddJwtBearer(options =>
     {

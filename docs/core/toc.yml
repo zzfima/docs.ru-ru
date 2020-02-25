@@ -250,17 +250,23 @@
   items:
     - name: Обзор
       href: tools/index.md
-    - name: Инструменты
+    - name: Глобальные и локальные средства
       expanded: true
       items:
-        - name: Глобальные средства
-          expanded: true
+        - name: Как управлять средствами
+          href: tools/global-tools.md
+        - name: Учебники
           items:
-            - name: Обзор
-              href: tools/global-tools.md
-            - name: Создание глобального инструмента
+            - name: Создание средства
+              displayName: tools
               href: tools/global-tools-how-to-create.md
-        - name: Устранение неполадок инструмента
+            - name: Установка и использование глобального средства
+              displayName: tools
+              href: tools/global-tools-how-to-use.md
+            - name: Установка и использование локального средства
+              displayName: tools
+              href: tools/local-tools-how-to-use.md
+        - name: Устранение неполадок в средствах
           href: tools/troubleshoot-usage-issues.md
     - name: Повышенные права доступа
       href: tools/elevated-access.md
@@ -320,6 +326,10 @@
               href: tools/dotnet-tool-install.md
             - name: dotnet tool list
               href: tools/dotnet-tool-list.md
+            - name: dotnet tool restore
+              href: tools/dotnet-tool-restore.md
+            - name: dotnet tool run
+              href: tools/dotnet-tool-run.md
             - name: dotnet tool uninstall
               href: tools/dotnet-tool-uninstall.md
             - name: dotnet tool update
