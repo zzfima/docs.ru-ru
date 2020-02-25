@@ -1,17 +1,17 @@
 ---
 title: Карты protobuf для словарей — gRPC для разработчиков WCF
-description: Узнайте, как использовать protobuf Maps для представления. Типы словарей NET.
+description: Узнайте, как использовать карты protobuf для представления типов словарей в .NET.
 ms.date: 09/09/2019
-ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967414"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543135"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Карты Protobuf для словарей
 
-Важно иметь возможность представлять произвольные коллекции именованных значений в сообщениях. В .NET это обычно осуществляется с помощью типов словаря. Эквивалентом типа <xref:System.Collections.Generic.IDictionary%602> .NET для protobuf является тип `map<key_type, value_type>`. В этом разделе показано, как объявить `map` в protobuf и как использовать созданный код.
+Важно иметь возможность представлять произвольные коллекции именованных значений в сообщениях. В .NET это обычно осуществляется с помощью типов словаря. Эквивалентом типа <xref:System.Collections.Generic.IDictionary%602> .NET в буфере протокола (protobuf) является тип `map<key_type, value_type>`. В этом разделе показано, как объявить тип `map` в protobuf и как использовать созданный код.
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-В созданном коде `map` поля используют класс `Google.Protobuf.Collections.MapField<TKey, TValue>`, который реализует стандартные интерфейсы коллекции .NET, в том числе <xref:System.Collections.Generic.IDictionary%602>.
+В созданном коде `map` поля используют класс `Google.Protobuf.Collections.MapField<TKey, TValue>`. Этот класс реализует стандартные интерфейсы коллекции .NET, в том числе <xref:System.Collections.Generic.IDictionary%602>.
 
-Поля карт не могут повторяться непосредственно в определении сообщения, но можно создать вложенное сообщение, содержащее карту и использовать `repeated` для типа сообщений, как показано в следующем примере:
+Поля карт не могут повторяться непосредственно в определении сообщения. Однако можно создать вложенное сообщение, содержащее карту и использовать `repeated` для типа сообщений, как показано в следующем примере:
 
 ```protobuf
 message Order {
@@ -45,7 +45,7 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 }
 ```
 
-## <a name="further-reading"></a>Дополнительные сведения
+## <a name="further-reading"></a>Дополнительные материалы
 
 Дополнительные сведения о protobuf см. в официальной [документации protobuf](https://developers.google.com/protocol-buffers/docs/overview).
 

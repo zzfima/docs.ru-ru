@@ -2,12 +2,12 @@
 title: Самостоятельные приложения gRPC — gRPC для разработчиков WCF
 description: Развертывание ASP.NET Core gRPC приложений как самостоятельных служб.
 ms.date: 09/02/2019
-ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee370ba1893b060505b38ddf84235bd84433ad32
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503398"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542993"
 ---
 # <a name="self-hosted-grpc-applications"></a>Приложения gRPC с самостоятельным размещением
 
@@ -90,6 +90,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
+  
 Скопируйте полное содержимое каталога `publish` в папку установки на узле Linux. Для регистрации службы требуется специальный файл, называемый *файлом единицы*, который будет добавлен в каталог `/etc/systemd/system`. Для создания файла в этой папке необходимо разрешение root. Присвойте файлу имя, которое будет использоваться `systemd` и расширением `.service`. Например, воспользуйтесь `/etc/systemd/system/myapp.service`.
 
 Файл службы использует формат INI, как показано в следующем примере:
