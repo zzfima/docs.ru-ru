@@ -2,12 +2,12 @@
 title: Итераторы
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353739"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628739"
 ---
 # <a name="iterators-visual-basic"></a>Итераторы (Visual Basic)
 
@@ -43,7 +43,7 @@ Visual Basic функция итератора или `get` объявление
 
 Итераторы появились в Visual Basic в Visual Studio 2012.
 
-**Содержание раздела**
+**В этом разделе**
 
 - [Простой итератор](#BKMK_SimpleIterator)
 
@@ -435,7 +435,7 @@ End Class
 
 Чтобы просмотреть операции компилятора, воспользуйтесь средством Ildasm.exe для отображения кода промежуточного языка Майкрософт, создаваемого для метода итератора.
 
-При создании итератора для [класса](../../../csharp/language-reference/keywords/class.md) или [структуры](../../../csharp/language-reference/keywords/struct.md)не нужно реализовывать весь интерфейс <xref:System.Collections.IEnumerator>. Когда компилятор обнаруживает итератор, он автоматически создает методы `Current`, `MoveNext` и `Dispose` интерфейса <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.
+При создании итератора для [класса](../../language-reference/statements/class-statement.md) или [структуры](../../language-reference/statements/structure-statement.md)не нужно реализовывать весь интерфейс <xref:System.Collections.IEnumerator>. Когда компилятор обнаруживает итератор, он автоматически создает методы `Current`, `MoveNext` и `Dispose` интерфейса <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.
 
 В каждой последовательной итерации цикла `For Each…Next` (или непосредственном вызове метода `IEnumerator.MoveNext`) код тела следующего итератора возобновляет выполнение после предыдущего оператора `Yield`. Затем он переходит к следующему `Yield` оператору до достижения конца тела итератора или до тех пор, пока не будет обнаружена инструкция `Exit Function` или `Return`.
 
@@ -453,10 +453,10 @@ End Class
 
 - Инкапсулирование построения списка в итераторе. В методе итератора можно построить список, а затем выдавать каждый результат в цикле.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [Оператор Yield](../../../visual-basic/language-reference/statements/yield-statement.md)
-- [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)
+- [Итератор](../../../visual-basic/language-reference/modifiers/iterator.md)

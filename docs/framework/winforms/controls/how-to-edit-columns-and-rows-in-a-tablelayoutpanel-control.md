@@ -8,27 +8,27 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 99ff3286592da0a097835b8f35d687475ca54fb0
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4473b20eea57088104a51eb1b6c080219223d214
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040292"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628648"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Практическое руководство. Изменение столбцов и строк в элементе управления TableLayoutPanel
 
-Для изменения строк и столбцов элементов управления можно <xref:System.Windows.Forms.TableLayoutPanel> использовать редактор коллекций элемента управления, называемый диалоговым окном **стили столбцов и строк** .
+Для изменения строк и столбцов элементов управления можно использовать редактор коллекций элемента управления <xref:System.Windows.Forms.TableLayoutPanel>, называемый диалоговым окном **стили столбцов и строк** .
 
 > [!NOTE]
-> Если требуется, чтобы элемент управления занимал несколько строк или столбцов, установите `RowSpan` свойства и `ColumnSpan` в элементе управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочивание элементов управления в Windows Forms с помощью](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)TableLayoutPanel.
+> Если требуется, чтобы элемент управления занимал несколько строк или столбцов, задайте свойства `RowSpan` и `ColumnSpan` элемента управления. Для получения дополнительной информации см. [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 >
-> Если необходимо выстроить элемент управления в пределах ячейки или нужно растянуть элемент управления внутри ячейки, используйте <xref:System.Windows.Forms.Control.Anchor%2A> свойство элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочивание элементов управления в Windows Forms с помощью](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)TableLayoutPanel.
+> Если необходимо выстроить элемент управления в пределах ячейки или нужно растянуть элемент управления внутри ячейки, используйте свойство <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления. Для получения дополнительной информации см. [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 ## <a name="to-edit-rows-and-columns"></a>Изменение строк и столбцов
 
 1. Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму.
 
-2. ![](./media/vs-winformsmttagglyph.gif "") <xref:System.Windows.Forms.TableLayoutPanel> Щелкните глиф смарт-тега элемента управления (глиф смарт-тега VS_WinFormSmtTagGlyph) и выберите изменить строки и столбцы, чтобы открыть диалоговое окно **стили столбцов и строк** . Можно также щелкнуть правой кнопкой мыши <xref:System.Windows.Forms.TableLayoutPanel> элемент управления и выбрать пункт **изменить строки и столбцы** из контекстного меню.
+2. Щелкните глиф действий конструктора <xref:System.Windows.Forms.TableLayoutPanel> элемента управления (![маленькая черная стрелка](./media/designer-actions-glyph.gif)) и выберите **изменить строки и столбцы** , чтобы открыть диалоговое окно **стили столбцов и строк** . Можно также щелкнуть правой кнопкой мыши элемент управления <xref:System.Windows.Forms.TableLayoutPanel> и выбрать пункт **изменить строки и столбцы** из контекстного меню.
 
 3. Чтобы добавить или удалить столбцы, выберите **столбцы** из раскрывающегося списка **тип элемента** .
 
@@ -42,7 +42,7 @@ ms.locfileid: "69040292"
 
 8. Чтобы удалить строку или столбец, нажмите кнопку **Удалить** , чтобы удалить текущий выбранный элемент в списке **элементов** .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.SizeType>
 - [Элемент управления TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

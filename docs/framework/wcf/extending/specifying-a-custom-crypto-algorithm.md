@@ -2,12 +2,12 @@
 title: Задание пользовательского алгоритма шифрования
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849115"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628687"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Задание пользовательского алгоритма шифрования
 WCF позволяет указывать пользовательский алгоритм шифрования для использования при шифровании данных или вычислении цифровых подписей. Для этого выполните следующие действия.  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- В разделе элемента > <`cryptoClasses`создается сопоставление между SHA256CryptoServiceProvider и псевдонимом «SHA256CSP». Элемент >`nameEntry`< создает сопоставление между псевдонимом "SHA256CSP" и указанным URL-адресом (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ Раздел под элементом <`cryptoClasses`> создает сопоставление между SHA256CryptoServiceProvider и псевдонимом "SHA256CSP". Элемент >`nameEntry`< создает сопоставление между псевдонимом "SHA256CSP" и указанным `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`URL.  
   
  Для регистрации пользовательского алгоритма в коде используйте метод <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>. Этот метод создает и оба сопоставления. В следующем примере показано, как вызвать этот метод.  
   
@@ -125,9 +125,9 @@ WSHttpBinding binding = new WSHttpBinding();
   
  Полный пример кода см. в разделе [гибкость криптографии в WCF Security](../samples/cryptographic-agility-in-wcf-security.md) .  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Защита служб и клиентов](../feature-details/securing-services-and-clients.md)
 - [Защита служб](../securing-services.md)
-- [Общие сведения о безопасности](../feature-details/security-overview.md)
+- [Общие сведения о безопасности для служб R SQL Server](../feature-details/security-overview.md)
 - [Основные понятия безопасности](../feature-details/security-concepts.md)

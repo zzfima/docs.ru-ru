@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745986"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628713"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Разработка элементов управления Windows Forms во время разработки
 
@@ -36,7 +36,7 @@ ms.locfileid: "76745986"
 [Пошаговое руководство. наследование от Windows Formsного элемента управления](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 Демонстрируется создание простого элемента управления Windows Forms с помощью наследования в C#.
 
-[Пошаговое руководство. выполнение стандартных задач с использованием смарт-тегов для элементов управления Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[Пошаговое руководство. выполнение стандартных задач с помощью действий конструктора](perform-common-tasks-design-actions.md)\
 Демонстрируется использование функции смарт-тегов в элементах управления Windows Forms.
 
 [Пошаговое руководство. Сериализация коллекций стандартных типов с помощью десигнерсериализатионвисибилитяттрибуте](serializing-collections-designerserializationvisibilityattribute.md)\

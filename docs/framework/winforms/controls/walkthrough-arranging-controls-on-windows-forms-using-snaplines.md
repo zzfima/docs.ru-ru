@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740218"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628804"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Пошаговое руководство. упорядочение элементов управления по Windows Forms с помощью линий привязки
 
@@ -124,7 +124,7 @@ ms.locfileid: "76740218"
 
 ## <a name="align-a-label-to-a-controls-text"></a>Выровняйте метку по тексту элемента управления
 
-1. Перетащите элемент управления <xref:System.Windows.Forms.TextBox> из **панели элементов** в свою форму. При перетаскивании элемента управления <xref:System.Windows.Forms.TextBox> на форму щелкните глиф смарт-тега и выберите параметр **задать текст для textBox1** . Дополнительные сведения см. [в разделе Пошаговое руководство. выполнение стандартных задач с использованием смарт-тегов в элементах управления Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md).
+1. Перетащите элемент управления <xref:System.Windows.Forms.TextBox> из **панели элементов** в свою форму. При перетаскивании элемента управления <xref:System.Windows.Forms.TextBox> на форму щелкните глиф смарт-тега и выберите параметр **задать текст для textBox1** . Дополнительные сведения см. в разделе [Пошаговое руководство. выполнение стандартных задач с помощью действий конструктора](perform-common-tasks-design-actions.md).
 
 2. Перетащите элемент управления <xref:System.Windows.Forms.Label> из **панели элементов** в свою форму.
 

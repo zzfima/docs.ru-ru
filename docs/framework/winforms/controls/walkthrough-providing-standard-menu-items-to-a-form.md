@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Связывание стандартных элементов меню с формой
+title: Пошаговое руководство. Создание стандартных пунктов меню для формы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,106 +10,106 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: ebfacadfee3ea069359a72ea0402751e9e6280d7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: ee80aad445c00bb4b98b49c80495fa512150bcef
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211495"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628778"
 ---
-# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Пошаговое руководство. Связывание стандартных элементов меню с формой
+# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Пошаговое руководство. Создание стандартных пунктов меню для формы
 
 С помощью элемента управления <xref:System.Windows.Forms.MenuStrip> можно создавать стандартные меню для форм.
 
-В этом пошаговом руководстве демонстрируется использование <xref:System.Windows.Forms.MenuStrip> элементу управления создавать стандартные меню. Также форма изменяется при выборе пользователем пункта меню. В этом пошаговом руководстве показаны следующие задачи:
+В этом пошаговом руководстве показано, как использовать элемент управления <xref:System.Windows.Forms.MenuStrip> для создания стандартного меню. Форма также реагирует, когда пользователь выбирает пункт меню. В этом пошаговом руководстве показаны следующие задачи:
 
 - Создание проекта Windows Forms.
 
 - Создание стандартного меню.
 
-- Создание <xref:System.Windows.Forms.StatusStrip> элемента управления.
+- Создание элемента управления <xref:System.Windows.Forms.StatusStrip>.
 
-- Управление выбором элементов меню.
+- Обработка выбора пунктов меню.
 
-Когда вы закончите, вы получите формы, содержащей стандартное меню, в котором отображаются выбранные элементы меню в <xref:System.Windows.Forms.StatusStrip> элемента управления.
+По завершении у вас будет форма со стандартным меню, которое отображает элементы меню, выделенные в элементе управления <xref:System.Windows.Forms.StatusStrip>.
 
-Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Обеспечивают стандартные пункты меню к форме](how-to-provide-standard-menu-items-to-a-form.md).
+Чтобы скопировать код из этого раздела в виде одного списка, см. раздел [как предоставить стандартные пункты меню в форме](how-to-provide-standard-menu-items-to-a-form.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-Вам потребуется Visual Studio для выполнения этого пошагового руководства.
+Для выполнения этого пошагового руководства потребуется Visual Studio.
 
 ## <a name="create-the-project"></a>Создание проекта
 
-1. В Visual Studio создайте проект приложения Windows с именем **StandardMenuForm** (**файл** > **New** > **проекта**   >  **Visual C#**  или **Visual Basic** > **классический рабочий стол**  >  **Windows Forms Application**).
+1. В Visual Studio создайте проект приложения Windows с именем **стандардменуформ** (**File** > **New** > **Project** > **Visual C#**  или **Visual Basic** > **классический Настольный компьютер** > **приложение**).
 
-2. В конструкторе Windows Forms выберите форму.
+2. В конструктор Windows Forms выберите форму.
 
 ## <a name="create-a-standard-menu"></a>Создание стандартного меню
 
-В конструкторе Windows Forms позволяет автоматически заполнять <xref:System.Windows.Forms.MenuStrip> элемента управления с помощью стандартных элементов меню.
+Конструктор Windows Forms может автоматически заполнять элемент управления <xref:System.Windows.Forms.MenuStrip> с помощью стандартных пунктов меню.
 
-1. Из **элементов**, перетащите <xref:System.Windows.Forms.MenuStrip> управления на форму.
+1. Из **панели элементов**перетащите элемент управления <xref:System.Windows.Forms.MenuStrip> на форму.
 
-2. Нажмите кнопку <xref:System.Windows.Forms.MenuStrip> глиф смарт-тега элемента управления (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) и выберите **вставить стандартные элементы**.
+2. Щелкните глиф действий конструктора <xref:System.Windows.Forms.MenuStrip> элемента управления (![маленькая черная стрелка](./media/designer-actions-glyph.gif)) и выберите **Вставить стандартные элементы**.
 
-     <xref:System.Windows.Forms.MenuStrip> Заполнением стандартные пункты меню элемента управления.
+     Элемент управления <xref:System.Windows.Forms.MenuStrip> заполняется стандартными элементами меню.
 
-3. Нажмите кнопку **файл** элемент меню, чтобы увидеть его элементы меню по умолчанию и соответствующие значки.
+3. Щелкните пункт меню **файл** , чтобы просмотреть элементы меню по умолчанию и соответствующие значки.
 
 ## <a name="create-a-statusstrip-control"></a>Создание элемента управления StatusStrip
 
-Используйте <xref:System.Windows.Forms.StatusStrip> управления для отображения состояния для приложений Windows Forms. В этом примере элементы меню, выбранный пользователем отображаются в <xref:System.Windows.Forms.StatusStrip> элемента управления.
+Используйте элемент управления <xref:System.Windows.Forms.StatusStrip> для просмотра состояния приложений Windows Forms. В текущем примере пункты меню, выбранные пользователем, отображаются в элементе управления <xref:System.Windows.Forms.StatusStrip>.
 
-1. Из **элементов**, перетащите <xref:System.Windows.Forms.StatusStrip> управления на форму.
+1. Из **панели элементов**перетащите элемент управления <xref:System.Windows.Forms.StatusStrip> на форму.
 
-     <xref:System.Windows.Forms.StatusStrip> Автоматически прикреплен к нижней части формы.
+     Элемент управления <xref:System.Windows.Forms.StatusStrip> автоматически закрепляется в нижней части формы.
 
-2. Нажмите кнопку <xref:System.Windows.Forms.StatusStrip> кнопку раскрывающегося списка элемента управления и выберите **StatusLabel** добавление <xref:System.Windows.Forms.ToolStripStatusLabel> управления <xref:System.Windows.Forms.StatusStrip> элемента управления.
+2. Нажмите кнопку раскрывающегося списка <xref:System.Windows.Forms.StatusStrip> элемента управления и выберите **значение statuslabel как** , чтобы добавить элемент управления <xref:System.Windows.Forms.ToolStripStatusLabel> в элемент управления <xref:System.Windows.Forms.StatusStrip>.
 
-## <a name="handle-item-selection"></a>Управлять выбором элементов
+## <a name="handle-item-selection"></a>Выбор элементов в обработке
 
-Обрабатывать <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> событий, чтобы ответить, когда пользователь выбирает пункт меню.
+Обработка события <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> для реагирования, когда пользователь выбирает пункт меню.
 
-1. Нажмите кнопку **файл** пункт меню, который вы создали при создании стандартного раздела меню.
+1. Щелкните элемент меню **файл** , созданный в разделе Создание стандартного меню.
 
 2. В окне **Свойства** выберите **События**.
 
-3. Дважды щелкните <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> событий.
+3. Дважды щелкните событие <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>.
 
-     В конструкторе Windows Forms создает обработчик событий для <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> событий.
+     Конструктор Windows Forms создает обработчик событий для события <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>.
 
 4. Вставьте следующий код в обработчик событий.
 
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]
 
-5. Вставить `UpdateStatus` определение служебного метода в форму.
+5. Вставьте в форму определение метода служебной программы `UpdateStatus`.
 
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]
 
-## <a name="checkpoint--test-your-form"></a>CHECKPOINT-тестирования в форму
+## <a name="checkpoint--test-your-form"></a>Контрольная точка — тестирование формы
 
-1. Нажмите клавишу **F5** для компиляции и запуска в форму.
+1. Нажмите клавишу **F5** , чтобы скомпилировать и запустить форму.
 
-2. Нажмите кнопку **файл** пункт меню, чтобы открыть меню.
+2. Щелкните пункт меню **файл** , чтобы открыть меню.
 
-3. На **файл** меню, выберите один из элементов, чтобы выбрать его.
+3. В меню **файл** выберите один из элементов, чтобы выбрать его.
 
-     <xref:System.Windows.Forms.StatusStrip> Элемент управления отображает выбранный элемент.
+     Элемент управления <xref:System.Windows.Forms.StatusStrip> отображает выбранный элемент.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-В этом пошаговом руководстве вы создали формы, содержащей стандартное меню. Можно использовать <xref:System.Windows.Forms.ToolStrip> семейства элементов управления, для многих других целей:
+В этом пошаговом руководстве вы создали форму со стандартным меню. Семейство элементов управления <xref:System.Windows.Forms.ToolStrip> можно использовать для многих других целей:
 
-- Создать контекстное меню для элементов управления с <xref:System.Windows.Forms.ContextMenuStrip>. Дополнительные сведения см. в разделе [Общие сведения о компоненте ContextMenu](contextmenu-component-overview-windows-forms.md).
+- Создайте контекстные меню для элементов управления с помощью <xref:System.Windows.Forms.ContextMenuStrip>. Дополнительные сведения см. в разделе [Общие сведения о компоненте ContextMenu](contextmenu-component-overview-windows-forms.md).
 
-- Создайте форму многодокументного интерфейса (MDI) закрепленный <xref:System.Windows.Forms.ToolStrip> элементов управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание формы MDI путем слияния меню и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).
+- Создание формы многодокументного интерфейса (MDI) с закреплением <xref:System.Windows.Forms.ToolStrip> элементов управления. Дополнительные сведения см. в разделе [Пошаговое руководство. Создание формы MDI с помощью слияния меню и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).
 
-- Предоставить вашей <xref:System.Windows.Forms.ToolStrip> управляет профессиональный вид. Дополнительные сведения см. в разделе [Как Назначение средства визуализации компоненту ToolStrip для приложения](how-to-set-the-toolstrip-renderer-for-an-application.md).
+- Придайте <xref:System.Windows.Forms.ToolStrip> элементам управления профессиональный внешний вид. Дополнительные сведения см. [в разделе как задать модуль подготовки отчетов ToolStrip для приложения](how-to-set-the-toolstrip-renderer-for-an-application.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>

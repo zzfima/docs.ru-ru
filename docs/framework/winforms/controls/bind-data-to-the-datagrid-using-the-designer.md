@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: d5fab6acc53e5b8be247e958bdba78f0d3647fdc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d49a718e42a989c731cdf748fb63a6305ee096bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744113"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626335"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Привязка данных к элементу управления DataGridView в форме Windows Forms с помощью конструктора
 Конструктор можно использовать для подключения элемента управления <xref:System.Windows.Forms.DataGridView> к источникам данных нескольких различных видов, включая базы данных, бизнес-объекты или веб-службы. При привязке элемента управления к источнику данных с помощью конструктора элемент управления автоматически привязывается к <xref:System.Windows.Forms.BindingSource> компоненту, представляющему источник данных. Кроме того, в элементе управления автоматически создаются столбцы для сопоставления данных о схеме, предоставляемых источником данных.
@@ -24,7 +24,7 @@ ms.locfileid: "76744113"
 
 ## <a name="to-bind-the-control-to-a-data-source"></a>Привязка элемента управления к источнику данных
 
-1. Щелкните глиф смарт-тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) в правом верхнем углу элемента управления <xref:System.Windows.Forms.DataGridView>.
+1. Щелкните глиф действия конструктора (![маленькая черная стрелка](./media/designer-actions-glyph.gif)) в правом верхнем углу элемента управления <xref:System.Windows.Forms.DataGridView>.
 
 2. Щелкните стрелку раскрывающегося списка рядом с параметром **Выбор источника данных**.
 
