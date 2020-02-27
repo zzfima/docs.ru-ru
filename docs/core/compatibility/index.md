@@ -2,12 +2,12 @@
 title: Типы критических изменений
 description: Узнайте, как .NET Core пытается обеспечить совместимость для разработчиков в разных версиях .NET и какого рода изменения рассматриваются как критические.
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092984"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628596"
 ---
 # <a name="changes-that-affect-compatibility"></a>Изменения, влияющие на совместимость
 
@@ -49,7 +49,7 @@ ms.locfileid: "77092984"
 
   *Старой* сборке следует присвоить метку <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>, указывающую на новую сборку.
 
-- ✔️ **РАЗРЕШЕНО. Изменение типа [struct](../../csharp/language-reference/keywords/struct.md) на тип `readonly struct`**
+- ✔️ **РАЗРЕШЕНО. Изменение типа [struct](../../csharp/language-reference/builtin-types/struct.md) на тип `readonly struct`**
 
   Изменение типа `readonly struct` на тип `struct` запрещено.
 
@@ -77,11 +77,11 @@ ms.locfileid: "77092984"
 
   Есть одно исключение из правила удаления интерфейса: вы можете добавить реализацию интерфейса, наследуемую от удаленного интерфейса. Например, можно удалить <xref:System.IDisposable>, если тип или интерфейс теперь реализуют <xref:System.ComponentModel.IComponent> с реализацией <xref:System.IDisposable>.
 
-- ❌ **ЗАПРЕЩЕНО. Изменение типа `readonly struct` на тип [struct](../../csharp/language-reference/keywords/struct.md)**
+- ❌ **ЗАПРЕЩЕНО. Изменение типа `readonly struct` на тип [struct](../../csharp/language-reference/builtin-types/struct.md)**
 
   Обратите внимание, что изменение типа `struct` на тип `readonly struct` разрешено.
 
-- ❌ **ЗАПРЕЩЕНО. Изменение типа [struct](../../csharp/language-reference/keywords/struct.md) на тип `ref struct` и наоборот**
+- ❌ **ЗАПРЕЩЕНО. Изменение типа [struct](../../csharp/language-reference/builtin-types/struct.md) на тип `ref struct` и наоборот**
 
 - ❌ **ЗАПРЕЩЕНО. Снижение видимости типа**
 
@@ -300,7 +300,7 @@ ms.locfileid: "77092984"
 
 - ✔️ **РАЗРЕШЕНО. Добавление [params](../../csharp/language-reference/keywords/params.md) в параметр**
 
-- ❌ **ЗАПРЕЩЕНО. Замена [структуры](../../csharp/language-reference/keywords/struct.md) на [класс](../../csharp/language-reference/keywords/class.md) и наоборот**
+- ❌ **ЗАПРЕЩЕНО. Замена [структуры](../../csharp/language-reference/builtin-types/struct.md) на [класс](../../csharp/language-reference/keywords/class.md) и наоборот**
 
 - ❌ **ЗАПРЕЩЕНО. Добавление ключевого слова [checked](../../csharp/language-reference/keywords/virtual.md) в блок кода**
 

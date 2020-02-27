@@ -2,12 +2,12 @@
 title: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows (2-е издание)
 description: В этой электронной книге вы узнаете, как переместить и модернизировать существующие приложения в облако Azure и контейнеры.
 ms.date: 04/28/2018
-ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714571"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628452"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows (2-е издание)
 
@@ -19,7 +19,7 @@ Microsoft Press и Microsoft DevDiv
 One Microsoft Way  
 Redmond, Washington 98052-6399  
 
-© Корпорация Майкрософт (Microsoft Corporation), 2018.  
+© Корпорация Майкрософт (Microsoft Corporation), 2020 г.  
 
 Все права защищены. Запрещается полное или частичное воспроизведение настоящей книги в любом виде или любыми средствами без письменного разрешения издателя.
 
