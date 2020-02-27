@@ -2,12 +2,12 @@
 title: Микрослужбы .NET. Архитектура контейнерных приложений .NET
 description: 'Микрослужбы .NET: архитектура контейнерных приложений .NET | Микрослужбы — это модульные службы, развертываемые независимо друг от друга. Контейнеры Docker (для Linux и Windows) упрощают развертывание и тестирование путем объединения службы и ее зависимостей в единый модуль, запускаемый в изолированной среде.'
 ms.date: 01/30/2020
-ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502632"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543538"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET: Архитектура контейнерных приложений .NET
 
@@ -21,7 +21,7 @@ ms.locfileid: "77502632"
 
 ## <a name="action-links"></a>Ссылки действий
 
-- Скачайте эту электронную книгу в выбранном формате (только на английском языке): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- Эта электронная книга также доступна в формате PDF (только на английском языке) [Скачать](https://aka.ms/microservicesebook)
 
 - Клонировать эталонное приложение [eShopOnContainers на GitHub](https://github.com/dotnet-architecture/eShopOnContainers) или создать для него вилку
 
@@ -78,9 +78,7 @@ Docker становится стандартом де-факто в област
 
 ## <a name="send-us-your-feedback"></a>Отправьте нам свой отзыв.
 
-Мы создали это руководство, чтобы помочь вам разобраться в архитектуре контейнерных приложений и микрослужб в .NET. Руководство и связанный с ним пример приложения будут развиваться, поэтому мы будем рады вашим отзывам! Если у вас есть замечания касательно того, как можно улучшить этот документ, направляйте их по следующему адресу
-
-[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
+Мы создали это руководство, чтобы помочь вам разобраться в архитектуре контейнерных приложений и микрослужб в .NET. Руководство и связанный с ним пример приложения будут развиваться, поэтому мы будем рады вашим отзывам! Если у вас есть замечания касательно того, как можно улучшить это руководство, направляйте ваши отзывы по адресу <https://aka.ms/ebookfeedback>.
 
 ## <a name="credits"></a>Благодарности
 
@@ -149,8 +147,6 @@ Docker становится стандартом де-факто в област
 > **Мигель Велосо** (Miguel Veloso), инженер по разработке программного обеспечения в Plain Concepts
 
 ## <a name="copyright"></a>Copyright
-
-Можно загрузить по ссылке: <https://aka.ms/microservicesebook>
 
 ИЗДАТЕЛЬ
 
