@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: Использование Azure Monitor, чтобы получить представление о работающей системе.
 ms.date: 02/05/2020
-ms.openlocfilehash: 961331011db4e59583438a2dbdf366bbe0e34261
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87ffca186346c3356c0277809d1d67145d1dd17b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448933"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628037"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -59,7 +59,7 @@ StormEvents
 ![пример панели мониторинга Power BI](./media/azure-monitor.png)
 **рис. 7-15**. Пример Power BI панели мониторинга.
 
-## <a name="alerts"></a>видны узлы
+## <a name="alerts"></a>Предупреждения
 
 Иногда нет достаточных панелей мониторинга данных. Если никто не находится в спящем режиме для просмотра панелей мониторинга, это может быть несколько часов, прежде чем проблема будет устранена или даже обнаружена. В конце концов, Azure Monitor также предоставляет решение для [оповещений](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)с высшим делением. Оповещения могут инициироваться с помощью широкого диапазона условий, в том числе:
 
@@ -78,7 +78,7 @@ Azure Monitor автоматически использует машинное �
 ## <a name="references"></a>Ссылки
 
 - [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
-- [Smart Управление оповещениями — MS Ignite-Video](https://oxfordcomputergroup.com/resourceso365-security-native-cloud-authentication/)
+- [Smart Управление оповещениями — MS Ignite-Video](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
 >[Назад](monitoring-azure-kubernetes.md)
