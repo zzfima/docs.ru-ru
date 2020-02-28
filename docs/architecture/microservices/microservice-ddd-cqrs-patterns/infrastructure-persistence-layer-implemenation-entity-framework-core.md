@@ -1,13 +1,13 @@
 ---
 title: Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Сведения о реализации уровня сохраняемости инфраструктуры с помощью Entity Framework Core.
-ms.date: 10/08/2018
-ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737910"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502495"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
 
@@ -273,49 +273,73 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     {
-            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-            orderConfiguration.HasKey(o => o.Id);
+        orderConfiguration.HasKey(o => o.Id);
 
-            orderConfiguration.Ignore(b => b.DomainEvents);
+        orderConfiguration.Ignore(b => b.DomainEvents);
 
-            orderConfiguration.Property(o => o.Id)
-                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.Property(o => o.Id)
+            .UseHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
 
-            //Address Value Object persisted as owned entity type supported since EF Core 2.0
-            orderConfiguration.OwnsOne(o => o.Address);
+        //Address value object persisted as owned entity type supported since EF Core 2.0
+        orderConfiguration
+            .OwnsOne(o => o.Address, a =>
+            {
+                a.WithOwner();
+            });
 
-            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
-            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
-            orderConfiguration.Property<string>("Description").IsRequired(false);
+        orderConfiguration
+            .Property<int?>("_buyerId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("BuyerId")
+            .IsRequired(false);
 
-            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+        orderConfiguration
+            .Property<DateTime>("_orderDate")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderDate")
+            .IsRequired();
 
-            // DDD Patterns comment:
-            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
-            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+        orderConfiguration
+            .Property<int>("_orderStatusId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderStatusId")
+            .IsRequired();
 
-            orderConfiguration.HasOne<PaymentMethod>()
-                .WithMany()
-                .HasForeignKey("PaymentMethodId")
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.Restrict);
+        orderConfiguration
+            .Property<int?>("_paymentMethodId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("PaymentMethodId")
+            .IsRequired(false);
 
-            orderConfiguration.HasOne<Buyer>()
-                .WithMany()
-                .IsRequired(false)
-                .HasForeignKey("BuyerId");
+        orderConfiguration.Property<string>("Description").IsRequired(false);
 
-            orderConfiguration.HasOne(o => o.OrderStatus)
-                .WithMany()
-                .HasForeignKey("OrderStatusId");
+        var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        // DDD Patterns comment:
+        //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        orderConfiguration.HasOne<PaymentMethod>()
+            .WithMany()
+            .HasForeignKey("_paymentMethodId")
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        orderConfiguration.HasOne<Buyer>()
+            .WithMany()
+            .IsRequired(false)
+            .HasForeignKey("_buyerId");
+
+        orderConfiguration.HasOne(o => o.OrderStatus)
+            .WithMany()
+            .HasForeignKey("_orderStatusId");
     }
 }
 ```
 
-Можно задать все сопоставления текучего API в одном и том же методе OnModelCreating, но рекомендуется разбить этот код на несколько классов конфигурации, по одному на сущность, как показано в примере. В первую очередь отдельные классы конфигурации для настройки разных типов сущностей рекомендуется использовать для особо больших моделей.
+Можно задать все сопоставления текучего API в одном и том же методе `OnModelCreating`, но рекомендуется разбить этот код на несколько классов конфигурации, по одному на сущность, как показано в примере. В первую очередь отдельные классы конфигурации для настройки разных типов сущностей рекомендуется использовать для больших моделей.
 
 В примере кода показано несколько явных объявлений и сопоставлений. Однако соглашения EF Core выполняют многие из этих сопоставлений автоматически, так что фактический код, который понадобится в вашем случае, может иметь меньший размер.
 
@@ -333,7 +357,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 
 - Он создает удобный для восприятия идентификатор, в отличие от методов, в которых используются идентификаторы GUID.
 
-EF Core поддерживает алгоритм [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) с помощью метода ForSqlServerUseSequenceHiLo, как показано в предыдущем примере.
+EF Core поддерживает алгоритм [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) с помощью метода `UseHiLo`, как показано в предыдущем примере.
 
 ### <a name="map-fields-instead-of-properties"></a>Сопоставление полей вместо свойств
 
@@ -410,6 +434,7 @@ public class BasketWithItemsSpecification : BaseSpecification<Basket>
     {
         AddInclude(b => b.Items);
     }
+
     public BasketWithItemsSpecification(string buyerId)
         : base(b => b.BuyerId == buyerId)
     {
@@ -445,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Помимо инкапсуляции логики фильтрации, эта спецификация может указывать форму возвращаемых данных, включая свойства, которые следует заполнить.
 
-Хотя не рекомендуется возвращать IQueryable из репозитория, совершенно нормально использовать их в репозитории для создания набора результатов. Вы видели применение этого подхода в методе List выше, где промежуточные выражения IQueryable использовались для построения списка Includes запроса перед выполнением запроса с условиями спецификации в последней строке.
+Хотя не рекомендуется возвращать `IQueryable` из репозитория, совершенно нормально использовать их в репозитории для создания набора результатов. Вы видели применение этого подхода в методе List выше, где промежуточные выражения `IQueryable` использовались для построения списка Includes запроса перед выполнением запроса с условиями спецификации в последней строке.
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 

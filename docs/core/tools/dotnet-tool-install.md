@@ -1,99 +1,118 @@
 ---
 title: Команда dotnet tool install
-description: Команда dotnet tool install устанавливает указанное глобальное средство .NET Core на компьютер.
-ms.date: 05/29/2018
-ms.openlocfilehash: d6f691117e93a39c9837b282dca19e452515c80a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: Команда dotnet tool install устанавливает указанное средство .NET Core на компьютер.
+ms.date: 02/14/2020
+ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117464"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543473"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 2.1 и более поздних версий
 
 ## <a name="name"></a>name
 
-`dotnet tool install` устанавливает указанное [глобальное средство .NET Core](global-tools.md) на компьютер.
+`dotnet tool install` устанавливает указанное [средство .NET Core](global-tools.md) на компьютер.
 
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
 ```
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
-Команда `dotnet tool install` предоставляет способ установки глобальных средств .NET Core на компьютере. Чтобы использовать эту команду, укажите установку уровня пользователя с помощью параметра `--global` или укажите путь к месту установки с помощью параметра `--tool-path`.
+Команда `dotnet tool install` предоставляет способ установки средств .NET Core на компьютере. Чтобы использовать команду, укажите один из следующих параметров установки:
 
-Глобальные средства устанавливаются в следующие каталоги по умолчанию при выборе параметра `-g` (или `--global`):
+* Чтобы установить глобальный инструмент в расположение по умолчанию, используйте параметр `--tool-path`.
+* Чтобы установить глобальный инструмент в расположение, указанное пользователем, используйте параметр `--tool-path`.
+* Чтобы установить локальный инструмент, пропустите параметры `--global` и `--tool-path`.
+
+**Локальные средства доступны в пакете SDK для .NET Core, начиная с версии 3.0.**
+
+Глобальные средства устанавливаются в следующие каталоги по умолчанию при выборе параметра `-g` или `--global`:
 
 | Операционная система          | Path                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
+Локальные средства добавляются в файл *tool-manifest.json* в каталоге *. config* в текущем каталоге. Если файл манифеста еще не существует, создайте его, выполнив следующую команду:
+
+```dotnetcli
+dotnet new tool-manifest
+```
+
+Дополнительные сведения см. в разделе [Установка глобального средства](global-tools.md#install-a-local-tool).
+
 ## <a name="arguments"></a>Аргументы
 
-`PACKAGE_NAME`
+- **`PACKAGE_NAME`**
 
-Имя или идентификатор пакета NuGet, который содержит устанавливаемое глобальное средство .NET Core.
+  Имя или идентификатор пакета NuGet, который содержит устанавливаемое средство .NET Core.
 
 ## <a name="options"></a>Параметры
 
-`--add-source <SOURCE>`
+- **`add-source <SOURCE>`**
 
-Добавляет дополнительный источник пакета NuGet для использования во время установки.
+  Добавляет дополнительный источник пакета NuGet для использования во время установки.
 
-`--configfile <FILE>`
+- **`configfile <FILE>`**
 
-Файл конфигурации NuGet (*nuget.config*), который будет использоваться.
+  Файл конфигурации NuGet (*nuget.config*), который будет использоваться.
 
-`--framework <FRAMEWORK>`
+- **`framework <FRAMEWORK>`**
 
-Указывает [требуемую версию .NET Framework](../../standard/frameworks.md) для установки средства. По умолчанию пакет SDK для .NET Core пытается выбрать наиболее подходящую версию .NET Framework.
+  Указывает [требуемую версию .NET Framework](../../standard/frameworks.md) для установки средства. По умолчанию пакет SDK для .NET Core пытается выбрать наиболее подходящую версию .NET Framework.
 
-`-g|--global`
+- **`-g|--global`**
 
-Указывает, что установка происходит на уровне пользователя. Не может использоваться вместе с параметром `--tool-path`. Если вы не укажете этот параметр, укажите параметр `--tool-path`.
+  Указывает, что установка происходит на уровне пользователя. Не может использоваться вместе с параметром `--tool-path`. Пропуск параметров `--global` и `--tool-path` задает установку локального средства. 
 
-`-h|--help`
+- **`-h|--help`**
 
-Выводит краткую справку по команде.
+  Выводит краткую справку по команде.
 
-`--tool-path <PATH>`
+- **`tool-path <PATH>`**
 
-Указывает место установки глобального средства. Путь может быть абсолютным или относительным. Если путь не существует, команда пытается создать его. Не может использоваться вместе с параметром `--global`. Если вы не укажете этот параметр, укажите параметр `--global`.
+  Указывает место установки глобального средства. Путь может быть абсолютным или относительным. Если путь не существует, команда пытается создать его. Пропуск параметров `--global` и `--tool-path` задает установку локального средства. 
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
-`--version <VERSION_NUMBER>`
+- **`--version <VERSION_NUMBER>`**
 
-Версия средства для установки. По умолчанию устанавливается последняя стабильная версия пакета. Используйте этот параметр для установки предварительной версии или предыдущей версии средства.
+  Версия средства для установки. По умолчанию устанавливается последняя стабильная версия пакета. Используйте этот параметр для установки предварительной версии или предыдущей версии средства.
 
 ## <a name="examples"></a>Примеры
 
-Устанавливает глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/) в расположении по умолчанию:
+- **`dotnet tool install -g dotnetsay`**
 
-`dotnet tool install -g dotnetsay`
+  Устанавливает глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/) в расположении по умолчанию.
 
-Устанавливает глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/) в определенную папку Windows:
+- **`dotnet tool install dotnetsay --tool-path c:\global-tools`**
 
-`dotnet tool install dotnetsay --tool-path c:\global-tools`
+  Устанавливает [dotnetsay](https://www.nuget.org/packages/dotnetsay/) в качестве глобального инструмента в определенном каталоге Windows.
 
-Устанавливает глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/) в определенную папку Linux/macOS:
+- **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-`dotnet tool install dotnetsay --tool-path ~/bin`
+  Устанавливает [dotnetsay](https://www.nuget.org/packages/dotnetsay/) в качестве глобального инструмента в определенном каталоге Linux/macOS.
 
-Устанавливает версию 2.0.0 глобального средства [dotnetsay](https://www.nuget.org/packages/dotnetsay/):
+- **`dotnet tool install -g dotnetsay --version 2.0.0`**
 
-`dotnet tool install -g dotnetsay --version 2.0.0`
+  Устанавливает версию 2.0.0 в качестве глобального средства [dotnetsay](https://www.nuget.org/packages/dotnetsay/):
+
+- **`dotnet tool install dotnetsay`**
+
+  Устанавливает [dotnetsay](https://www.nuget.org/packages/dotnetsay/) в качестве локального средства для текущего каталога.
 
 ## <a name="see-also"></a>См. также
 
-- [Глобальные средства .NET Core](global-tools.md)
+- [Средства .NET Core](global-tools.md)

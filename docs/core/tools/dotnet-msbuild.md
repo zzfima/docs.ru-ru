@@ -1,17 +1,17 @@
 ---
 title: Команда dotnet msbuild
 description: Команда dotnet msbuild обеспечивает доступ к командной строке MSBuild.
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733194"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503677"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
 ## <a name="name"></a>name
 
@@ -31,25 +31,25 @@ ms.locfileid: "76733194"
 
 ## <a name="examples"></a>Примеры
 
-* Сборка проекта и его зависимостей:
+- Сборка проекта и его зависимостей:
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* Сборка проекта и его зависимостей с помощью конфигурации Release:
+- Сборка проекта и его зависимостей с помощью конфигурации Release:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* Запустите цель публикации и публикацию для RID `osx.10.11-x64`:
+- Запустите цель публикации и публикацию для RID `osx.10.11-x64`:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* Весь проект со всеми целевыми объектами, включенными в пакет SDK:
+- Весь проект со всеми целевыми объектами, включенными в пакет SDK:
 
   ```dotnetcli
   dotnet msbuild -preprocess

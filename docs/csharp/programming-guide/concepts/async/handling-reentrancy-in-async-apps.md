@@ -2,12 +2,12 @@
 title: Обработка повторного входа в асинхронных приложениях (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772026"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451867"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Обработка повторного входа в асинхронных приложениях (C#)
 
@@ -28,10 +28,10 @@ ms.locfileid: "72772026"
 - [Проверка и выполнение примера приложения](#BKMD_SettingUpTheExample)
 
 > [!NOTE]
-> Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.
+> Для выполнения этого примера нужно, чтобы на компьютере были установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.
 
 > [!NOTE]
-> Версия протокола TLS 1.2 теперь является минимальной версией для использования в разработке приложений. Если приложение предназначено для более ранней версии .NET Framework, чем 4.7, обратитесь к следующей статье, чтобы ознакомиться с [рекомендациями по протоколу TLS в .NET Framework](../../../../framework/network-programming/tls.md) 
+> Версия протокола TLS 1.2 теперь является минимальной версией для использования в разработке приложений. Если приложение предназначено для более ранней версии .NET Framework, чем 4.7, обратитесь к следующей статье, чтобы ознакомиться с [рекомендациями по протоколу TLS в .NET Framework](../../../../framework/network-programming/tls.md).
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Распознавание поддержки повторного входа
 

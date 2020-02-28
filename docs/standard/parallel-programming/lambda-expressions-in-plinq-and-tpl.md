@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129032"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453004"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Лямбда-выражения в PLINQ и библиотеке параллельных задач
 
@@ -26,11 +26,11 @@ ms.locfileid: "73129032"
 
 ## <a name="func-delegate"></a>Делегат Func
 
-Делегат `Func` инкапсулирует метод, который возвращает значение. В сигнатуре Func последний или крайний правый тип параметра всегда указывает возвращаемый тип. Распространенной причиной ошибок компилятора является попытка передать в <xref:System.Func%602?displayProperty=nameWithType> два входных параметра. На самом деле этот тип принимает только один входной параметр. Библиотека классов Framework определяет 17 версий для `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> и так далее вплоть до <xref:System.Func%6017?displayProperty=nameWithType>.
+Делегат `Func` инкапсулирует метод, который возвращает значение. В сигнатуре `Func` последний или крайний справа тип параметра всегда указывает возвращаемый тип. Распространенной причиной ошибок компилятора является попытка передать в <xref:System.Func%602?displayProperty=nameWithType> два входных параметра. На самом деле этот тип принимает только один входной параметр. .NET определяет 17 версий `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> и т. д. до <xref:System.Func%6017?displayProperty=nameWithType>.
 
 ## <a name="action-delegate"></a>Делегат Action
 
-Делегат <xref:System.Action?displayProperty=nameWithType> инкапсулирует метод (Sub в Visual Basic), который не возвращает значение или возвращает [void](../../csharp/language-reference/keywords/void.md). В сигнатуре типа Action параметры типа представляют только входные параметры. Как и в случае с делегатом Func, библиотека классов Framework определяет 17 версий делегата Action, начиная с версии без параметров типа и заканчивая версией с 16 параметрами типа.
+Делегат <xref:System.Action?displayProperty=nameWithType> инкапсулирует метод (Sub в Visual Basic), который не возвращает значение. В сигнатуре типа `Action` параметры типа представляют только входные параметры. Как и `Func`, .NET определяет 17 версий делегата `Action`, начиная с версии без параметров типа и заканчивая версией с 16 параметрами типа.
 
 ## <a name="example"></a>Пример
 

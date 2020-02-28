@@ -4,12 +4,12 @@ description: Сведения об индексаторах в C# и о том, 
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039121"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450886"
 ---
 # <a name="indexers"></a>Индексаторы
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 создают *псевдоним* сконструированного универсального типа. Эти операторы позволяют коду позднее использовать более описательные имена `DateMeasurements` и `CityDateMeasurements` вместо универсальной конструкции `Dictionary<DateTime, Measurements>` и `Dictionary<string, Dictionary<DateTime, Measurements> >`. Эта конструкция требует использования полных имен типов в правой части равенства `=`.
 
-Второй прием — отбросить части времени любого объекта `DateTime`, используемого для индексации в коллекции. Платформа .NET Framework не включает тип "только дата".
+Второй прием — отбросить части времени любого объекта `DateTime`, используемого для индексации в коллекции. .NET не включает тип "только дата".
 Разработчики используют тип `DateTime`, однако использование свойства `Date` для проверки того, что любой объект `DateTime` принадлежит к заданной дате, равноценно.
 
 ## <a name="summing-up"></a>Заключение

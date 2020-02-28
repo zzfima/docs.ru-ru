@@ -2,18 +2,18 @@
 title: Команда dotnet test
 description: Команда dotnet test служит для выполнения модульных тестов в проекте.
 ms.date: 05/29/2018
-ms.openlocfilehash: c3115d546efb1f076ae9f9731f83a12183aa4154
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182517"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451198"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>ИМЯ
+## <a name="name"></a>name
 
 `dotnet test` — драйвер тестов .NET, используемый для проведения модульных тестов.
 
@@ -21,7 +21,7 @@ ms.locfileid: "71182517"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -31,7 +31,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] 
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -40,7 +40,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
@@ -50,7 +50,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 Команда `dotnet test` служит для выполнения модульных тестов в проекте. Команда `dotnet test` запускает консольное приложение средства выполнения тестов, указанное для проекта. Средство выполнения тестов запускает тесты, определенные для платформы модульного тестирования (например, MSTest, NUnit или xUnit) и сообщает об успешном или неудачном выполнении каждого из них. Если все тесты выполнены успешно, средство выполнения тестов возвращает код 0. Если же любой тест завершается с ошибкой, средство выполнения возвращает 1. Средство выполнения тестов и библиотека модульных тестов упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.
 
@@ -66,7 +66,7 @@ dotnet test [-h|--help]
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -140,7 +140,7 @@ dotnet test [-h|--help]
 
 Дополнительные сведения о RunSettings см. в статье о [передаче аргументов RunSettings в командной строке](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -202,7 +202,7 @@ dotnet test [-h|--help]
 
 Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -278,7 +278,7 @@ dotnet test [-h|--help]
 
 | Тестовая платформа | Поддерживаемые свойства                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>ИМЯ</li><li>ClassName</li><li>Приоритет</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>Priority</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Признаки</li></ul>                                   |
 
 `<operator>` описывает связь между свойством и значением:
@@ -288,6 +288,7 @@ dotnet test [-h|--help]
 | `=`      | Точное соответствие     |
 | `!=`     | Неточное соответствие |
 | `~`      | Содержит        |
+| `!~`     | Не содержит    |
 
 `<value>` — это строка. Поиск выполняется без учета регистра.
 
@@ -298,7 +299,7 @@ dotnet test [-h|--help]
 | Оператор            | Функция |
 | ------------------- | -------- |
 | <code>&#124;</code> | OR       |
-| `&`                 | И      |
+| `&`                 | AND      |
 
 При использовании условных операторов выражения можно заключать в скобки (например, `(Name~TestMethod1) | (Name~TestMethod2)`).
 

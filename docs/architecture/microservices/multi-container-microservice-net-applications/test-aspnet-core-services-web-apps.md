@@ -1,13 +1,13 @@
 ---
 title: Тестирование служб и веб-приложений ASP.NET Core
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Архитектура тестирования служб и веб-приложений ASP.NET Core в контейнерах.
-ms.date: 10/02/2018
-ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739474"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501987"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Тестирование служб и веб-приложений ASP.NET Core
 
@@ -140,8 +140,6 @@ public class PrimeWebDefaultRequestShould
 
 3. **функциональные и интеграционные тесты приложений**, ориентированные на интеграцию микрослужб, с тестовыми случаями, которые воздействуют на несколько микрослужб (содержатся в проекте **Application.FunctionalTests**);
 
-4. **нагрузочные тесты**, ориентированные на время отклика для каждой микрослужбы. Эти тесты содержатся в проекте **LoadTest**, и для их выполнения требуется Visual Studio 2017 Enterprise Edition.
-
 Модульные и интеграционные тесты микрослужб содержатся в папке tests, а тесты приложений и нагрузочные тесты содержатся в папке test в папке решения, как показано на рис. 6-25.
 
 ![Снимок экрана VS, на котором стрелками показаны некоторые тестовые проекты в решении.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
@@ -160,9 +158,9 @@ services:
     image: redis:alpine
   rabbitmq:
     image: rabbitmq:3-management-alpine
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
-  nosql.data:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  nosqldata:
     image: mongo
 ```
 
@@ -179,13 +177,13 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
 ```

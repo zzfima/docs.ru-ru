@@ -2,21 +2,17 @@
 title: Команда dotnet nuget push
 description: Команда dotnet nuget push отправляет пакет на сервер и публикует его.
 author: karann-msft
-ms.date: 12/04/2019
-ms.openlocfilehash: a352120efa199b871e67eb8ba2442bd69a9fc4ed
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 02/14/2020
+ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789884"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503656"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Эта статья относится к следующему.** ✔️ SDK для .NET Core 1.x и более поздних версий
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
 ## <a name="name"></a>name
 
@@ -36,69 +32,69 @@ dotnet nuget push [-h|--help]
 
 ## <a name="arguments"></a>Аргументы
 
-* **`ROOT`**
+- **`ROOT`**
 
   Указывает путь к файлу пакета для отправки.
 
 ## <a name="options"></a>Параметры
 
-* **`-d|--disable-buffering`**
+- **`-d|--disable-buffering`**
 
   Отключает буферизацию при передаче данных на сервер HTTP(S), чтобы снизить использование памяти.
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   Принудительно запускает приложение с использованием инвариантного английского языка и региональных параметров.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Выводит краткую справку по команде.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Позволяет блокировать команду до выполнения действия пользователем, например аутентификации. Параметр доступен, начиная с пакета SDK для .NET Core 2.2.
 
-* **`-k|--api-key <API_KEY>`**
+- **`-k|--api-key <API_KEY>`**
 
   Ключ API для сервера.
 
-* **`-n|--no-symbols`**
+- **`-n|--no-symbols`**
 
   Не передает символы (даже если они присутствуют).
 
-* **`--no-service-endpoint`**
+- **`--no-service-endpoint`**
 
   Не добавляет "api/v2/package" в исходный URL-адрес. Параметр доступен, начиная с пакета SDK для .NET Core 2.1.
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   Определяет URL-адрес сервера. Этот параметр является обязательным, если значение параметра конфигурации `DefaultPushSource` задано в файле конфигурации NuGet.
 
-* **`--skip-duplicate`**
+- **`--skip-duplicate`**
 
   При принудительной отправке нескольких пакетов на сервер HTTP(S) обрабатывает любой ответ с кодом состояния 409 Conflict (конфликт) в виде предупреждения, чтобы можно было продолжить принудительную отправку. Доступно, начиная с пакета SDK для .NET Core 3.1.
 
-* **`-sk|--symbol-api-key <API_KEY>`**
+- **`-sk|--symbol-api-key <API_KEY>`**
 
   Ключ API для сервера символов.
 
-* **`-ss|--symbol-source <SOURCE>`**
+- **`-ss|--symbol-source <SOURCE>`**
 
   Указывает URL-адрес сервера символов.
 
-* **`-t|--timeout <TIMEOUT>`**
+- **`-t|--timeout <TIMEOUT>`**
 
   Указывает время ожидания для передачи на сервер в секундах. Значение по умолчанию — 300 секунд (5 минут). При указании 0 (ноль секунд) применяется значение по умолчанию.
 
 ## <a name="examples"></a>Примеры
 
-* Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию, предоставляя ключ API:
+- Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию, предоставляя ключ API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* Отправляет *foo.nupkg* на официальный сервер NuGet, предоставляя ключ API:
+- Отправляет *foo.nupkg* на официальный сервер NuGet, предоставляя ключ API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -110,25 +106,25 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-* Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию.
+- Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-* Отправляет *foo.symbols.nupkg* в источник символов по умолчанию.
+- Отправляет *foo.symbols.nupkg* в источник символов по умолчанию.
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-* Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию, указав время ожидания 360 секунд:
+- Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию, указав время ожидания 360 секунд:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-* Отправляет все файлы *NUPKG* из текущего каталога в источник push-уведомлений по умолчанию.
+- Отправляет все файлы *NUPKG* из текущего каталога в источник push-уведомлений по умолчанию.
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,7 +134,7 @@ dotnet nuget push [-h|--help]
   > Если эта команда не работает, возможно, это связано с ошибкой, которая существовала в более старых версиях пакета SDK (пакет SDK для .NET Core 2.1 и более ранних версий).
   > Чтобы устранить эту проблему, обновите версию пакета SDK или выполните следующую команду: `dotnet nuget push **/*.nupkg`
 
-* Принудительно отправляет все файлы *.nupkg*, даже если сервер HTTP(S) возвращает код состояния 409 Conflict (конфликт):
+- Принудительно отправляет все файлы *.nupkg*, даже если сервер HTTP(S) возвращает код состояния 409 Conflict (конфликт):
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340371"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503555"
 ---
 # <a name="tutorial-create-an-item-template"></a>Учебник. Создание шаблона элемента
 
@@ -41,7 +41,7 @@ ms.locfileid: "75340371"
 
 Сначала создайте родительскую папку (имя не имеет значения). Затем создайте вложенную папку с именем _working_. В папке _working_ создайте вложенную папку с именем _templates_.
 
-Затем в родительской папке создайте папку с именем _test_. Структура папок должна выглядеть так:
+Затем в родительской папке создайте папку с именем _test_. Структура папок должна выглядеть так, как показано ниже.
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Откройте файл _template.json_ в текстовом редакторе, вставьте приведенный ниже код JSON и сохраните его:
+Откройте файл _template.json_ в любом текстовом редакторе, вставьте приведенный ниже код JSON и сохраните его.
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 Теперь, когда вы установили шаблон элемента, протестируйте его. Перейдите к папке _test/_ и создайте консольное приложение с помощью команды `dotnet new console`. При этом будет создан рабочий проект, который вы можете с легкостью протестировать, выполнив команду `dotnet run`.
 
+```dotnetcli
+dotnet new console
+```
+
+Вы получите результат, аналогичный приведенному ниже.
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+Запустите проект с помощью следующей команды:
+
+```dotnetcli
+dotnet run
+```
+
+Вы получите приведенные ниже выходные данные.
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 Затем выполните команду `dotnet new stringext`, чтобы создать файл _CommonExtensions.cs_ из шаблона.
 
+```dotnetcli
+dotnet new stringext
+```
+
+Вы получите приведенные ниже выходные данные.
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 Запустите программу еще раз, и вы увидите, что порядок символов изменен на обратный.
 
+```dotnetcli
+dotnet run
+```
+
+Вы получите приведенные ниже выходные данные.
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ C:\test> dotnet run
 
 Так как вы установили шаблон с указанием пути к файлу, вам нужно удалить его, указав **абсолютный** путь к файлу. Вы можете просмотреть список всех установленных шаблонов, выполнив команду `dotnet new -u`. Ваш шаблон должен быть последним в списке. Удалите шаблон с помощью команды `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`, указав путь к нему.
 
+```dotnetcli
+dotnet new -u
+```
+
+Вы получите результат, аналогичный приведенному ниже.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+Чтобы удалить шаблон, выполните указанную ниже команду.
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

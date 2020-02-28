@@ -2,13 +2,13 @@
 title: Устранение неполадок при использовании средства .NET Core
 description: Ознакомьтесь с распространенными проблемами, возникающими при использовании средств .NET Core, и возможными решениями.
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282504"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543278"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Устранение неполадок при использовании средства .NET Core
 
@@ -59,7 +59,7 @@ Possible reasons for this include:
   * установлен пакет SDK для .NET Core 3.0, и переменной среды `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` присвоено значение `false`;
   * установлен пакет SDK для пакет SDK.NET Core 2.2 или более ранней версии, и переменной среды `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` присвоено значение `true`.
 
-  См. дополнительные сведения о [глобальных средствах .NET Core](global-tools.md).
+  Дополнительные сведения см. в статье [Обзор глобальных средств .NET Core](global-tools.md).
 
 * Локальные средства
 
@@ -73,7 +73,7 @@ Possible reasons for this include:
 
 ### <a name="runtime-not-found"></a>Среда выполнения не найдена
 
-Средства .NET Core — это [приложения, зависящие от платформы](../deploying/index.md#framework-dependent-deployments-fdd), то есть от среды выполнения .NET Core, установленной на компьютере. Если ожидаемая среда выполнения не найдена, они следуют обычным правилам наката среды выполнения .NET Core.
+Средства .NET Core — это [приложения, зависящие от платформы](../deploying/index.md#publish-runtime-dependent), то есть от среды выполнения .NET Core, установленной на компьютере. Если ожидаемая среда выполнения не найдена, они следуют обычным правилам наката среды выполнения .NET Core.
 
 * Накат выполняется к последнему номеру выпуска исправления указанной основной и дополнительной версии.
 * Если соответствующая среда выполнения с соответствующими номерами основной и дополнительной версий отсутствует, используется следующий последний дополнительный номер версии.
@@ -99,7 +99,7 @@ dotnet --info
 
 ## <a name="net-core-tool-installation-fails"></a>Не удается установить средство .NET Core
 
-Установка глобального или локального средства .NET Core может завершиться сбоем по ряду причин. Если при установке средства происходит сбой, появляется примерно следующее сообщение.
+Установка глобального или локального средства .NET Core может завершиться сбоем по ряду причин. Если при установке средства происходит сбой, появляется примерно следующее сообщение:
 
 ```console
 Tool '{0}' failed to install. This failure may have been caused by:
@@ -137,9 +137,6 @@ dotnet tool install -g <toolName>
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> Команда разработчиков .NET Core CLI планирует добавить параметр `--preview` в будущем выпуске, чтобы упростить эту задачу.
-
 ### <a name="package-isnt-a-net-core-tool"></a>Пакет не является средством .NET Core
 
 * Пакет NuGet с таким именем найден, но не является средством .NET Core.
@@ -162,4 +159,4 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор глобальных средств .NET Core](global-tools.md)
+* [Средства .NET Core](global-tools.md)

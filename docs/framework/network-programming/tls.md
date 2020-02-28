@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937696"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452686"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
@@ -140,7 +140,7 @@ WCF использует тот же сетевой стек, что вся пл
 
 ## <a name="if-your-app-targets-net-framework-35"></a>Приложение предназначено для .NET Framework 3.5
 
-Если нужно явно указать протокол безопасности вместо того, чтобы разрешить платформе .NET Framework или операционной системе выбирать его, добавьте перечисления `SecurityProtocolTypeExtensions` и `SslProtocolsExtension` в код. Перечисления `SecurityProtocolTypeExtensions` и `SslProtocolsExtension` включают значения для `Tls12`, `Tls11` и значение `SystemDefault`. Сведения см. на странице [Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) (Добавлена поддержка версий TLS по умолчанию для .NET Framework 3.5 в системе Windows 8.1 и Windows Server 2012 R2)
+Если нужно явно указать протокол безопасности вместо того, чтобы разрешить .NET или операционной системе выбирать его, добавьте перечисления `SecurityProtocolTypeExtensions` и `SslProtocolsExtension` в код. Перечисления `SecurityProtocolTypeExtensions` и `SslProtocolsExtension` включают значения для `Tls12`, `Tls11` и значение `SystemDefault`. Дополнительные сведения см. в статье [Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) (Добавлена поддержка версий TLS по умолчанию для .NET Framework 3.5 в системе Windows 8.1 и Windows Server 2012 R2)
 
 <a name="configuring-security-via-appcontext-switches"></a>
 
@@ -209,7 +209,7 @@ WCF использует тот же сетевой стек, что вся пл
 
 См. дополнительные сведения о [накопительном пакете обновления для Windows 10 версии 1511 и Windows Server 2016 Technical Preview 4 за 10 мая 2016 г.](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)
 
-Дополнительные сведения о .NET Framework 3.5.1. см. в статье [Support for TLS System Default Versions included in .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) (Добавлена поддержка версий TLS по умолчанию для .NET Framework 3.5.1 в системе Windows 7 с пакетом обновления 1 (SP1) и Server 2008 R2 с пакетом обновления 1 (SP1).)
+Дополнительные сведения о .NET Framework 3.5.1 см. в статье [Support for TLS System Default Versions included in .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) (Добавлена поддержка версий TLS по умолчанию для .NET Framework 3.5.1 в системе Windows 7 с пакетом обновления 1 (SP1) и Server 2008 R2 с пакетом обновления 1 (SP1).)
 
 В следующем файле _.REG_ для разделов реестра и их вариантов задаются наиболее безопасные значения:
 
@@ -241,7 +241,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>Флаг SCH_USE_STRONG_CRYPTO
 
-Если флаг `SCH_USE_STRONG_CRYPTO` включен (по умолчанию с помощью параметра `AppContext` или в реестре Windows), .NET Framework использует его, когда приложение запрашивает протокол безопасности TLS. Флаг `SCH_USE_STRONG_CRYPTO` может быть включен по умолчанию с помощью параметра `AppContext` или реестра. Операционная система передает флаг `Schannel`, чтобы отключать известные ненадежные алгоритмы шифрования, наборы шифров, версии протоколов TLS и SSL, которые могут быть включены для улучшения взаимодействия. Дополнительные сведения можно найти в разделе 
+Если флаг `SCH_USE_STRONG_CRYPTO` включен (по умолчанию с помощью параметра `AppContext` или в реестре Windows), .NET Framework использует его, когда приложение запрашивает протокол безопасности TLS. Флаг `SCH_USE_STRONG_CRYPTO` может быть включен по умолчанию с помощью параметра `AppContext` или реестра. Операционная система передает флаг `Schannel`, чтобы отключать известные ненадежные алгоритмы шифрования, наборы шифров, версии протоколов TLS и SSL, которые могут быть включены для улучшения взаимодействия. Дополнительные сведения можно найти в разделе
 
 - [Secure Channel](/windows/desktop/SecAuthN/secure-channel)
 - [SCHANNEL_CRED structure](/windows/win32/api/schannel/ns-schannel-schannel_cred) (Структура SCHANNEL_CRED)

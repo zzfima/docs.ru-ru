@@ -1,13 +1,13 @@
 ---
 title: Команда dotnet
 description: Узнайте о команде dotnet (универсальном драйвере для CLI .NET Core) и о том, как ее использовать.
-ms.date: 06/04/2018
-ms.openlocfilehash: 7674529980623caa2291987bdeba52f50ce2fc2c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/13/2020
+ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920551"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451172"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -21,14 +21,14 @@ ms.locfileid: "76920551"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
@@ -36,7 +36,7 @@ dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--de
     [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
@@ -53,7 +53,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
@@ -117,7 +117,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 Выводит версию используемого пакета SDK для .NET Core.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
@@ -167,7 +167,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 Выводит версию используемого пакета SDK для .NET Core.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
@@ -215,7 +215,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="general"></a>Общее
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 | Команда                                       | Функция                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -234,7 +234,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 | [dotnet store](dotnet-store.md)               | Сохраняет сборки в хранилище пакетов среды выполнения.                     |
 | [dotnet test](dotnet-test.md)                 | Выполняет тесты с помощью средства запуска тестов.                                     |
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 | Команда                             | Функция                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -252,7 +252,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 | [dotnet store](dotnet-store.md)     | Сохраняет сборки в хранилище пакетов среды выполнения.                     |
 | [dotnet test](dotnet-test.md)       | Выполняет тесты с помощью средства запуска тестов.                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 | Команда                             | Функция                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -293,16 +293,16 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 [dotnet nuget locals](dotnet-nuget-locals.md) | Очищает или перечисляет локальные ресурсы NuGet в кэше HTTP-запросов, временном кэше или папке пакетов, используемой на уровне компьютера.
 [dotnet nuget push](dotnet-nuget-push.md) | Отправляет пакет на сервер и публикует его.
 
-### <a name="global-tools-commands"></a>Команды глобальных средств
+### <a name="global-tool-path-and-local-tools-commands"></a>Команды глобального, установочного и локального средства
 
-[Глобальные средства .NET Core](global-tools.md) появились в пакете SDK для .NET Core, начиная с версии 2.1.300:
+Средства — это консольные приложения, которые устанавливаются из пакетов NuGet и вызываются из командной строки. Вы можете писать средства самостоятельно или устанавливать средства, написанные другими. Средства также называются глобальными средствами, средствами пути к средству и локальными средствами. Дополнительные сведения см. в [обзоре средств .NET Core](global-tools.md). Глобальные и установочные средства доступны, начиная с версии пакета SDK .NET Core 2.1. Локальные средства доступны в пакете SDK для .NET Core, начиная с версии 3.0.
 
 Команда | Функция
 --- | ---
-[dotnet tool install](dotnet-tool-install.md) | Устанавливает глобальное средство на локальном компьютере.
-[dotnet tool list](dotnet-tool-list.md) | Перечисляет выводит все глобальные средства, установленные на компьютере в каталоге по умолчанию или по указанному пути.
-[dotnet tool uninstall](dotnet-tool-uninstall.md) | Удаляет глобальное средство с компьютера.
-[dotnet tool update](dotnet-tool-update.md) | Обновляет глобальное средство на локальном компьютере.
+[dotnet tool install](dotnet-tool-install.md) | Устанавливает средство на компьютере.
+[dotnet tool list](dotnet-tool-list.md) | Выводит все глобальные, установочные и локальные средства, установленные на компьютере.
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | Удаляет средство с компьютера.
+[dotnet tool update](dotnet-tool-update.md) | Обновляет средство, установленное на компьютере.
 
 ### <a name="additional-tools"></a>Дополнительные средства
 
@@ -340,7 +340,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="environment-variables"></a>Переменные среды
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
@@ -362,7 +362,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 Отключает накат дополнительных версий, если установлено `0`. Дополнительные сведения о накате можно найти в [этой статье](../whats-new/dotnet-core-2-1.md#roll-forward).
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
@@ -380,7 +380,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 Указывает, разрешается ли из глобального расположения среда выполнения .NET Core, общая платформа или пакет SDK. Если не задано, используется значение по умолчанию `true`. Задайте значение `false`, чтобы не разрешать эти сущности из глобального расположения и использовать изолированные установки .NET Core (принимаются значения `0` или `false`). Дополнительные сведения о многоуровневом поиске см. в разделе [Многоуровневый поиск SharedFX](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 

@@ -2,12 +2,12 @@
 title: Справочник по командам интерфейса командной строки (CLI) ML.NET
 description: Обзор, примеры и справочник по командам auto-train в программе командной строки ML.NET.
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636124"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449703"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Справочник по командам интерфейса командной строки ML.NET
 

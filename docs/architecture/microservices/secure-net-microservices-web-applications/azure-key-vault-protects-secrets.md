@@ -2,14 +2,13 @@
 title: Использование Azure Key Vault для защиты секретов в рабочей среде
 description: Безопасность в микрослужбах и веб-приложениях .NET. Azure Key Vault предоставляет отличный способ работы с секретами приложений, которыми полностью управляют администраторы. Администраторы даже могут назначать и отзывать значения разработки без необходимости привлекать к этому разработчиков.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 4d121f584188c5d5fa9ddf0d91bea5e107eff0cb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899656"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501752"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Защиты секретов в рабочей среде с помощью Azure Key Vault
 
@@ -33,7 +32,7 @@ ms.locfileid: "75899656"
    Также можно использовать перегрузку метода `AddAzureKeyVault`, который принимает сертификат вместо секрета клиента. Для этого достаточно добавить ссылку на пакет [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory).
 
 > [!IMPORTANT]
-> Рекомендуем зарегистрировать Azure Key Vault в качестве последнего поставщика конфигурации, чтобы можно было переопределить значения параметров конфигурации от предыдущих поставщиков.
+> Рекомендуем зарегистрировать Azure Key Vault в качестве последнего поставщика конфигурации, чтобы можно было переопределять значения параметров конфигурации от предыдущих поставщиков.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 

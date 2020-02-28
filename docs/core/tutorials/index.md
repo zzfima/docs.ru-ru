@@ -4,12 +4,12 @@ description: Руководства по .NET Core научат вас созд
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215183"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625938"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>См. дополнительные сведения о средствах пакета SDK для .NET Core и .NET Core
 
@@ -48,5 +48,6 @@ ms.locfileid: "77215183"
 - [Разработка библиотек с помощью кроссплатформенных средств](libraries.md)
 - [Размещение .NET Core из машинного кода](netcore-hosting.md)
 - [Создание шаблонов для интерфейса командной строки](cli-templates-create-item-template.md)
+- [Создание и использование средств для интерфейса командной строки](../tools/global-tools-how-to-create.md)
 
 Руководства по разработке веб-приложений на ASP.NET Core см. в [документации по ASP.NET Core](/aspnet/core/).

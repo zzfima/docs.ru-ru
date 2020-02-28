@@ -1,13 +1,13 @@
 ---
 title: Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
-description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование баз данных NoSql в целом и в Azure Cosmos DB в частности для реализации сохраняемости.
-ms.date: 10/08/2018
-ms.openlocfilehash: 44fc2fa01e2d19efed7314f421a682c0a635a9f6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+description: Использование баз данных NoSql в целом и в Azure Cosmos DB в частности для реализации сохраняемости.
+ms.date: 01/30/2020
+ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737449"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502377"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 
@@ -122,7 +122,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 Базы данных Azure Cosmos DB доступны из любого кода .NET, запущенного в контейнерах, точно так же, как из любых других приложений .NET. Например, микрослужбы Locations.API и Marketing.API в eShopOnContainers реализованы таким образом, что они могут использовать базы данных Azure Cosmos DB.
 
-Однако с точки зрения разработки для Docker, в Azure Cosmos DB есть ограничение. Даже при наличии локального [эмулятора Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/local-emulator), который можно запустить на локальном компьютере разработчика (например на ПК), на конец 2017 г. этот эмулятор поддерживает только Windows, но не Linux.
+Однако с точки зрения разработки для Docker, в Azure Cosmos DB есть ограничение. Несмотря на наличие локального эмулятора [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/local-emulator), который может выполняться на локальном компьютере разработки, он поддерживает только Windows. Linux и macOS не поддерживаются.
 
 Этот эмулятор также можно запустить в Docker, но только в контейнерах Windows, а не в контейнерах Linux. Это начальное ограничение среды разработки в том случае, если ваше приложение развертывается в виде контейнеров Linux, так как сейчас вы не можете одновременно развернуть контейнеры Linux и Windows в Docker для Windows. Все контейнеры должны быть развернуты либо в Linux, либо в Windows.
 
@@ -273,14 +273,14 @@ public async Task<Locations> GetAsync(int locationId)
 version: '3.4'
 services:
   # Other services
-  locations.api:
+  locations-api:
     environment:
       # Other settings
-      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
 
 ```
 
-Переменная среды `ConnectionString` разрешается следующим образом: если в файле `.env` определена глобальная переменная `ESHOP_AZURE_COSMOSDB` со строкой подключения Azure Cosmos DB, эта строка подключения будет использована для обращения к базе данных Azure Cosmos DB в облаке. Если она не определена, будет использоваться значение `mongodb://nosql.data` и контейнер разработки mongodb.
+Переменная среды `ConnectionString` разрешается следующим образом: если в файле `.env` определена глобальная переменная `ESHOP_AZURE_COSMOSDB` со строкой подключения Azure Cosmos DB, эта строка подключения будет использована для обращения к базе данных Azure Cosmos DB в облаке. Если она не определена, будет использоваться значение `mongodb://nosqldata` и контейнер разработки MongoDB.
 
 В следующем коде показан файл `.env` с глобальной переменной среды для строки подключения Azure Cosmos DB, так, как это было реализовано в решении eShopOnContainers:
 
@@ -299,16 +299,16 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-Раскомментируйте строку ESHOP_AZURE_COSMOSDB и замените ее на строку подключения к Azure Cosmos DB, полученную на портале Azure в соответствии с инструкциями в разделе [Подключение приложения MongoDB к Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
+Раскомментируйте строку ESHOP_AZURE_COSMOSDB и замените ее на строку подключения к Azure Cosmos DB, полученную на портале Azure в соответствии с инструкциями в статье [Connect a MongoDB application to Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account) (Подключение приложения MongoDB к Azure Cosmos DB).
 
-Если глобальная переменная `ESHOP_AZURE_COSMOSDB` пуста, т. е. закомментирована в файле `.env`, то контейнер использует строку подключения MongoDB по умолчанию, указывающую на локальный контейнер MongoDB, развернутый в eShopOnContainers, который имеет имя `nosql.data` и определен в файле docker-compose, как показано в следующем коде YML.
+Если глобальная переменная `ESHOP_AZURE_COSMOSDB` пуста, то есть она записывается в файл `.env`, контейнер использует строку подключения MongoDB по умолчанию. Эта строка подключения указывает на локальный контейнер MongoDB, развернутый в eShopOnContainers с именем `nosqldata`, определенный в файле docker-compose, как показано в следующем коде .yml:
 
 ``` yml
 # docker-compose.yml
 version: '3.4'
 services:
   # ...Other services...
-  nosql.data:
+  nosqldata:
     image: mongo
 ```
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713122"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451945"
 ---
 # <a name="readonly-c-reference"></a>readonly (Справочник по C#)
 
@@ -54,7 +54,7 @@ ms.locfileid: "75713122"
 Эти контексты конструктора являются единственными, в которых можно передавать поле `readonly` в качестве параметра [out](out-parameter-modifier.md) или [ref](ref.md).
 
 > [!NOTE]
-> Ключевое слово `readonly` отличается от ключевого слова [const](const.md). Поле `const` может быть инициализировано только при объявлении поля. Поле `readonly` может быть назначено несколько раз в объявлении поля и в любом конструкторе. Таким образом, поля `readonly` могут иметь разные значения в зависимости от использованного конструктора. К тому же, в то время как поле `const` является константой во время компиляции, поле `readonly` можно использовать для констант во время выполнения, как в следующем примере:
+> Ключевое слово `readonly` отличается от ключевого слова [const](const.md). Поле `const` может быть инициализировано только при объявлении поля. Поле `readonly` может быть назначено несколько раз в объявлении поля и в любом конструкторе. Таким образом, поля `readonly` могут иметь разные значения в зависимости от использованного конструктора. К тому же, поскольку поле `const` является константой времени компиляции, поле `readonly` можно использовать для констант времени выполнения, как в следующем примере:
 >
 > ```csharp
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -70,7 +70,7 @@ p2.y = 66;        // Error
 
 будет отображено сообщение об ошибке компилятора:
 
-`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
+**Присваивание значений доступному только для чтения полю допускается только в конструкторе и в инициализаторе переменных.**
 
 ## <a name="readonly-struct-example"></a>Пример структуры только для чтения
 

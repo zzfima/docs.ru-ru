@@ -3,12 +3,12 @@ title: Интерфейс командной строки .NET Core
 titleSuffix: ''
 description: Общие сведения о .NET Core CLI и его функциях.
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543318"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625986"
 ---
 # <a name="net-core-cli-overview"></a>Обзор .NET Core CLI
 
@@ -87,7 +87,7 @@ dotnet /build_output/my_app.dll
 dotnet build
 ```
 
-Сначала драйвер определяет нужную версию пакета SDK. Если файл ["global.json"](global-json.md) отсутствует, используется последняя доступная версия пакета SDK. Это может быть предварительная или стабильная версия, в зависимости от того, какая версия является последней на компьютере.  После определения версии пакета SDK он выполняет команду.
+Сначала драйвер определяет нужную версию пакета SDK. Если файл [global.json](global-json.md) отсутствует, используется последняя доступная версия пакета SDK. Это может быть предварительная или стабильная версия, в зависимости от того, какая версия является последней на компьютере.  После определения версии пакета SDK он выполняет команду.
 
 ### <a name="command"></a>Команда
 

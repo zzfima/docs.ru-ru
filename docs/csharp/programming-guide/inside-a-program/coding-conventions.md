@@ -6,15 +6,16 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c56d673de958f49a9ace60350442e89039e1d69f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712108"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452010"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Соглашения о написании кода на C# (Руководство по программированию на C#)
- Соглашения о написании кода предназначены для реализации следующих целей.  
+
+Соглашения о написании кода предназначены для реализации следующих целей.  
   
 - Создание согласованного вида кода, позволяющего читателям сосредоточиться на содержимом, а не на структуре.  
   
@@ -24,7 +25,7 @@ ms.locfileid: "75712108"
   
 - Предоставление лучших методик C#.  
 
- Майкрософт использует приведенные в этом разделе рекомендации для разработки примеров и документации.  
+Майкрософт использует приведенные в этой статье рекомендации для разработки примеров и документации.  
   
 ## <a name="naming-conventions"></a>Соглашения об именах  
   
@@ -35,7 +36,8 @@ ms.locfileid: "75712108"
 - Нет необходимости изменять имена объектов, созданных с помощью инструментов разработки Visual Studio, чтобы привести их в соответствие с другими соглашениями.  
   
 ## <a name="layout-conventions"></a>Соглашения о расположении  
- Чтобы выделить структуру кода и облегчить чтение кода, в хорошем макете используется форматирование. Примеры и образцы корпорации Майкрософт соответствуют следующим соглашениям.  
+
+Чтобы выделить структуру кода и облегчить чтение кода, в хорошем макете используется форматирование. Примеры и образцы корпорации Майкрософт соответствуют следующим соглашениям.  
   
 - Использование параметров редактора кода по умолчанию (логичные отступы, отступы по четыре символа, использование пробелов для табуляции). Дополнительные сведения см. в разделе ["Параметры", "Текстовый редактор", C#, "Форматирование"](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
@@ -66,7 +68,8 @@ ms.locfileid: "75712108"
 - Вокруг комментариев не должно быть звездочек.  
   
 ## <a name="language-guidelines"></a>Рекомендации по работе с языком  
- В следующих подразделах описаны методики, которыми руководствуется команда C# для подготовки примеров и образцов кода.  
+
+В следующих подразделах описаны методики, которыми руководствуется команда C# для подготовки примеров и образцов кода.  
   
 ### <a name="string-data-type"></a>Тип данных String  
   
@@ -94,33 +97,38 @@ ms.locfileid: "75712108"
   
 - Рекомендуется избегать использования `var` вместо [dynamic](../../language-reference/builtin-types/reference-types.md).  
   
-- Рекомендуется использовать неявное типизирование для определения типа переменной цикла в циклах [for](../../language-reference/keywords/for.md) и [foreach](../../language-reference/keywords/foreach-in.md).  
+- Рекомендуется использовать неявное типизирование для определения типа переменной цикла в циклах [for](../../language-reference/keywords/for.md).  
   
      В следующем примере неявное типизирование используется в операторе `for`.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
-  
-     В следующем примере неявное типизирование используется в операторе `foreach`.  
-  
-     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
-  
+
+- Не используйте неявное типизирование для определения типа переменной цикла в циклах [foreach](../../language-reference/keywords/foreach-in.md).
+
+     В следующем примере явное типизирование используется в операторе `foreach`.
+
+     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
+
+     > [!NOTE]
+     > Следите за тем, чтобы случайно не изменить тип элемента итерируемой коллекции. Например, можно легко переключиться с <xref:System.Linq.IQueryable?displayProperty=nameWithType> на <xref:System.Collections.IEnumerable?displayProperty=nameWithType> в инструкции `foreach`, изменяющей выполнение запроса.
+
 ### <a name="unsigned-data-type"></a>Беззнаковый тип данных  
   
-- Как правило, рекомендуется использовать `int` вместо беззнаковых типов. В C# обычно используется `int`. Использование `int` упрощает взаимодействие с другими библиотеками.  
+Как правило, рекомендуется использовать `int` вместо беззнаковых типов. В C# обычно используется `int`. Использование `int` упрощает взаимодействие с другими библиотеками.  
   
 ### <a name="arrays"></a>Массивы  
   
-- При инициализации массивов в строке объявления рекомендуется использовать сокращенный синтаксис.  
+При инициализации массивов в строке объявления рекомендуется использовать сокращенный синтаксис.  
   
-     [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
+[!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>Делегаты  
   
-- Для создания экземпляров типа делегата рекомендуется использовать сокращенный синтаксис.  
+Для создания экземпляров типа делегата рекомендуется использовать сокращенный синтаксис.  
   
-     [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
+[!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
-     [!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
+[!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>Операторы try-catch и using в процессе обработки исключений  
   
@@ -134,9 +142,9 @@ ms.locfileid: "75712108"
   
 ### <a name="-and-124124-operators"></a>Операторы && и ||  
   
-- Чтобы избежать возникновения исключений и увеличить производительность за счет пропуска необязательных сравнений, рекомендуется использовать [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) вместо [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) и [||](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) вместо [|](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) при выполнении сравнений, как показано в следующем примере.  
+Чтобы избежать возникновения исключений и увеличить производительность за счет пропуска необязательных сравнений, рекомендуется использовать [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) вместо [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) и [||](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) вместо [|](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) при выполнении сравнений, как показано в следующем примере.  
   
-     [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
+[!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>Оператор New  
   
@@ -154,15 +162,15 @@ ms.locfileid: "75712108"
   
 ### <a name="event-handling"></a>Обработка событий  
   
-- При определении обработчика событий, которого не требуется удалять позднее, рекомендуется использовать лямбда-выражение.  
+При определении обработчика событий, которого не требуется удалять позднее, рекомендуется использовать лямбда-выражение.  
   
-     [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
+[!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
-     [!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
+[!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
   
 ### <a name="static-members"></a>Статический члены  
   
-- Для вызова [статических](../../language-reference/keywords/static.md) членов следует использовать имя класса: *ClassName.StaticMember*. В этом случае код становится более удобочитаемым за счет четкого доступа.  Не присваивайте статическому члену, определенному в базовом классе, имя производного класса.  Во время компиляции кода его читаемость нарушается, и если добавить статический член с тем же именем в производный классе, код может быть поврежден.  
+Для вызова [статических](../../language-reference/keywords/static.md) членов следует использовать имя класса: *ClassName.StaticMember*. В этом случае код становится более удобочитаемым за счет четкого доступа.  Не присваивайте статическому члену, определенному в базовом классе, имя производного класса.  Во время компиляции кода его читаемость нарушается, и если добавить статический член с тем же именем в производный классе, код может быть поврежден.  
   
 ### <a name="linq-queries"></a>Запросы LINQ  
   
@@ -193,7 +201,8 @@ ms.locfileid: "75712108"
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
 ## <a name="security"></a>Безопасность  
- Следуйте указаниям, изложенным в [правилах написания безопасного кода](../../../standard/security/secure-coding-guidelines.md).  
+
+Следуйте указаниям, изложенным в [правилах написания безопасного кода](../../../standard/security/secure-coding-guidelines.md).  
   
 ## <a name="see-also"></a>См. также
 

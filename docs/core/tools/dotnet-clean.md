@@ -1,21 +1,17 @@
 ---
 title: Команда dotnet clean
 description: Команда dotnet clean очищает текущий каталог.
-ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734249"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503757"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Эта статья относится к следующему.** ✔️ SDK для .NET Core 1.x и более поздних версий
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
 ## <a name="name"></a>name
 
@@ -41,9 +37,9 @@ dotnet clean [-h|--help]
 
 ## <a name="options"></a>Параметры
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  Определяет конфигурацию сборки. Значение по умолчанию — `Debug`. Этот параметр требуется при очистке только в том случае, если вы указали его во время сборки.
+  Определяет конфигурацию сборки. По умолчанию для большинства проектов используется `Debug`, но можно переопределить параметры конфигурации сборки в проекте. Этот параметр требуется при очистке только в том случае, если вы указали его во время сборки.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ dotnet clean [-h|--help]
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Очищает выходную папку указанной среды выполнения. Используется, если было создано [автономное развертывание](../deploying/index.md#self-contained-deployments-scd). Параметр доступен, начиная с пакета SDK для .NET Core 2.0.
+  Очищает выходную папку указанной среды выполнения. Используется, если было создано [автономное развертывание](../deploying/index.md#publish-self-contained).
 
 * **`-v|--verbosity <LEVEL>`**
 

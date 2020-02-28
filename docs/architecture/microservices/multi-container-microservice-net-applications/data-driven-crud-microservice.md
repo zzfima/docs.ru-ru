@@ -1,13 +1,13 @@
 ---
 title: Создание простой микрослужбы CRUD на основе данных
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие сведения о создании простой микрослужбы CRUD (управляемой данными) в контексте приложения для микрослужб.
-ms.date: 01/07/2019
-ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737340"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502363"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбы CRUD на основе данных
 
@@ -39,7 +39,7 @@ ms.locfileid: "73737340"
 
 ![Снимок экрана Visual Studio, на котором показана настройка проекта.](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
-**Рис. 6-6**. Создание проекта веб-API ASP.NET Core в Visual Studio
+**Рис. 6-6**. Создание проекта веб-API ASP.NET Core в Visual Studio 2019
 
 Для создания проекта веб-API ASP.NET Core сначала выберите веб-приложение ASP.NET Core и затем тип API. После создания проекта вы можете реализовать свои контроллеры MVC, как это делается в любом другом проекте веб-API, с помощью API Entity Framework или другого API. В новом проекте веб-API видно, что единственная имеющаяся в микрослужбе зависимость — в самом ASP.NET Core. Внутренним образом зависимость *Microsoft.AspNetCore.All* ссылается на Entity Framework и многие другие пакеты NuGet .NET Core, как показано на рисунке 6-7.
 
@@ -129,12 +129,27 @@ public class CatalogController : ControllerBase
 
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
-    [Route("[action]")]
+    [Route("items")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-                                           [FromQuery]int pageIndex = 0)
-
+    [ProducesResponseType(typeof(IEnumerable<CatalogItem>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    public async Task<IActionResult> ItemsAsync(
+        [FromQuery]int pageSize = 10,
+        [FromQuery]int pageIndex = 0,
+        string ids = null)
     {
+        if (!string.IsNullOrEmpty(ids))
+        {
+            var items = await GetItemsByIdsAsync(ids);
+
+            if (!items.Any())
+            {
+                return BadRequest("ids value invalid. Must be comma-separated list of numbers");
+            }
+
+            return Ok(items);
+        }
+
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
 
@@ -172,7 +187,7 @@ _context.SaveChanges();
 
 В приведенном выше примере класса `CatalogController` мы внедряли объект типа `CatalogContext` и другие объекты с помощью конструктора `CatalogController()`.
 
-Важной конфигурацией для настройки в проекте веб-API является регистрация класса DbContext в контейнере IoC службы. Обычно это делается в классе `Startup` путем вызова метода `services.AddDbContext<DbContext>()` в методе `ConfigureServices()`, как показано в следующем примере.
+Важной конфигурацией для настройки в проекте веб-API является регистрация класса DbContext в контейнере IoC службы. Обычно это делается в классе `Startup` путем вызова метода `services.AddDbContext<DbContext>()` в методе `ConfigureServices()`, как показано в следующем **упрощенном** примере:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -240,9 +255,9 @@ public void ConfigureServices(IServiceCollection services)
 # docker-compose.override.yml
 
 #
-catalog.api:
+catalog-api:
   environment:
-    - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -350,7 +365,7 @@ Swashbuckle объединяет обозреватель API и Swagger или 
 
 Сейчас Swashbuckle состоит из пяти независимых внутренних пакетов NuGet в высокоуровневом метапакете [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) для приложений ASP.NET Core.
 
-После установки этих пакетов NuGet в проекте веб-API нужно настроить Swagger в классе Startup, как показано в следующем коде (в упрощенном виде):
+После установки этих пакетов NuGet в проекте веб-API нужно настроить Swagger в классе Startup, как показано в следующем **упрощенном** коде:
 
 ```csharp
 public class Startup
@@ -366,12 +381,11 @@ public class Startup
         services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+            options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
-                TermsOfService = "Terms Of Service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample"
             });
         });
 
@@ -395,7 +409,7 @@ public class Startup
 
 После этого можно запустить приложение и перейти к следующим конечным точкам пользовательского интерфейса и JSON Swagger, используя URL-адреса, подобные приведенным ниже.
 
-```url
+```console
   http://<your-root-url>/swagger/v1/swagger.json
 
   http://<your-root-url>/swagger/

@@ -1,19 +1,19 @@
 ---
 title: Подписка на события
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие сведения о публикации событий интеграции и подписке на них.
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937148"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501811"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
 Первый шаг при использовании шины событий — подписать микрослужбы на события, которые они должны получать. Это нужно сделать для микрослужб-получателей.
 
-В следующем простом коде видно, что должна реализовать каждая микрослужба-получатель при запуске службы (то есть в классе `Startup`), чтобы подписаться на нужные события. В этом случае микрослужба `basket.api` должна подписаться на сообщения `ProductPriceChangedIntegrationEvent` и `OrderStartedIntegrationEvent`.
+В следующем простом коде видно, что должна реализовать каждая микрослужба-получатель при запуске службы (то есть в классе `Startup`), чтобы подписаться на нужные события. В этом случае микрослужба `basket-api` должна подписаться на сообщения `ProductPriceChangedIntegrationEvent` и `OrderStartedIntegrationEvent`.
 
 Например, при подписке на событие `ProductPriceChangedIntegrationEvent` микрослужба корзины узнает об изменении цены товара и уведомляет пользователя об этом изменении, если товар находится в корзине пользователя.
 
@@ -301,7 +301,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Соблюдение идемпотентности сообщений**  
+- **Соблюдение идемпотентности сообщений** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Дедупликация сообщений о событиях интеграции
@@ -338,7 +338,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Итоговая согласованность** \
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Филип Браун (Philip Brown). Стратегии интеграции ограниченных контекстов** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,7 +359,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **Теорема CAP** \
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **Что такое теорема CAP?** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
@@ -377,7 +377,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Руководство по обеспечению надежности** (документация RabbitMQ) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
 > [Назад](rabbitmq-event-bus-development-test-environment.md)

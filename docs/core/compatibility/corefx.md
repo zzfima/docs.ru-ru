@@ -2,12 +2,12 @@
 title: Критические изменения в библиотеке базовых классов
 description: Список критических изменений в библиотеке базовых классов .NET CoreFx.
 ms.date: 09/20/2019
-ms.openlocfilehash: 9e8a00abfae8bf8f5301a4879cb5274492a2b6fd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7c59f2a96545e74e4099b6078ff52009740699c6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093088"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449567"
 ---
 # <a name="corefx-breaking-changes"></a>Критические изменения CoreFx
 
@@ -15,21 +15,25 @@ CoreFx предоставляет примитивы и другие общие 
 
 На этой странице описаны следующие критические изменения:
 
-- [Интерфейсы API, сообщающие версию, теперь сообщают версию продукта, а не файла](#apis-that-report-version-now-report-product-and-not-file-version)
-- [Пользовательские экземпляры EncoderFallbackBuffer не поддерживают рекурсивный откат](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively)
-- [Изменено поведение форматирования и анализа при наличии плавающей запятой](#floating-point-formatting-and-parsing-behavior-changed)
-- [Операции синтаксического анализа с плавающей запятой больше не завершаются ошибкой и не вызывают исключение OverflowException](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception)
-- [Исключение InvalidAsynchronousStateException перенесено в другую сборку](#invalidasynchronousstateexception-moved-to-another-assembly)
-- [В .NET Core 3.0 применяются рекомендации по Юникоду при замене некорректных последовательностей байтов UTF-8](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences)
-- [Класс TypeDescriptionProviderAttribute перенесен в другую сборку](#typedescriptionproviderattribute-moved-to-another-assembly)
-- [ZipArchiveEntry больше не обрабатывает архивы с несогласованными размерами записей](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes)
-- [Тип исключения сериализатора JSON изменен с JsonException на NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception)
-- [Внесены изменения в семантику (string)null в Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter)
-- [Методы JsonEncodedText.Encode содержат дополнительный аргумент JavaScriptEncoder](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument)
-- [Изменена подпись JsonFactoryConverter.CreateConverter](#jsonfactoryconvertercreateconverter-signature-changed)
-- [Внесены изменения в API JsonElement](#jsonelement-api-changes)
-- [Во встроенные типы структур добавлены частные поля](#private-fields-added-to-built-in-struct-types)
-- [Изменено значение по умолчанию для UseShellExecute](#change-in-default-value-of-useshellexecute)
+| Критическое изменение | Представленная версия |
+| - | :-: |
+| [Интерфейсы API, сообщающие версию, теперь сообщают версию продукта, а не файла](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
+| [Пользовательские экземпляры EncoderFallbackBuffer не поддерживают рекурсивный откат](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
+| [Изменено поведение форматирования и анализа при наличии плавающей запятой](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
+| [Операции синтаксического анализа с плавающей запятой больше не завершаются ошибкой и не вызывают исключение OverflowException](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
+| [Исключение InvalidAsynchronousStateException перенесено в другую сборку](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
+| [В .NET Core 3.0 применяются рекомендации по Юникоду при замене некорректных последовательностей байтов UTF-8](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
+| [Класс TypeDescriptionProviderAttribute перенесен в другую сборку](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
+| [ZipArchiveEntry больше не обрабатывает архивы с несогласованными размерами записей](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
+| [Тип исключения сериализатора JSON изменен с JsonException на NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
+| [Внесены изменения в семантику (string)null в Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
+| [Методы JsonEncodedText.Encode содержат дополнительный аргумент JavaScriptEncoder](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
+| [Изменена подпись JsonFactoryConverter.CreateConverter](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
+| [Внесены изменения в API JsonElement](#jsonelement-api-changes) | 3.0 |
+| [FieldInfo.SetValue вызывает исключение для статических полей и полей только для инициализации](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
+| [Во встроенные типы структур добавлены частные поля](#private-fields-added-to-built-in-struct-types) | 2.1 |
+| [Изменено значение по умолчанию для UseShellExecute](#change-in-default-value-of-useshellexecute) | 2.1 |
+| [Исключение UnauthorizedAccessException, вызванное FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -65,13 +69,9 @@ CoreFx предоставляет примитивы и другие общие 
 
 ***
 
-## <a name="net-core-30-preview-9"></a>.NET Core 3.0 (предварительная версия 9)
-
 [!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
 
 ***
-
-## <a name="net-core-30-preview-8"></a>.NET Core 3.0 (предварительная версия 8)
 
 [!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/3.0/change-in-null-in-utf8jsonwriter.md)]
 
@@ -85,9 +85,11 @@ CoreFx предоставляет примитивы и другие общие 
 
 ***
 
-## <a name="net-core-30-preview-7"></a>.NET Core 3.0 (предварительная версия 7)
-
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
+
+***
+
+[!INCLUDE [FieldInfo.SetValue throws exception for static, init-only fields](~/includes/core-changes/corefx/3.0/fieldinfo-setvalue-exception.md)]
 
 ***
 
@@ -98,5 +100,11 @@ CoreFx предоставляет примитивы и другие общие 
 ***
 
 [!INCLUDE[Change in default value of UseShellExecute](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+## <a name="net-core-10"></a>.NET Core 1.0
+
+[!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
 
 ***

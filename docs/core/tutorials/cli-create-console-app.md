@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920468"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503540"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Начало работы с .NET Core с помощью .NET Core CLI
 
@@ -28,7 +28,7 @@ ms.locfileid: "76920468"
 
 [Просмотреть или скачать пример кода](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) можно в репозитории dotnet/samples на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Откройте командную строку и создайте папку с именем *Hello*. Перейдите в созданную папку и введите следующую команду:
+Откройте командную строку и создайте папку с именем *Hello*. Перейдите в созданную папку и введите приведенную ниже команду.
 
 ```dotnetcli
 dotnet new console
@@ -64,17 +64,25 @@ dotnet run
 
     [dotnet run](../tools/dotnet-run.md) вызывает [dotnet build](../tools/dotnet-build.md), чтобы проверить, выполнена ли сборка целевых объектов. Затем вызывается `dotnet <assembly.dll>` для запуска целевого приложения.
     
-    ```console
+    ```dotnetcli
     dotnet run
+    ```
 
+    Вы получите приведенные ниже выходные данные.
+
+    ```console
     Hello World!
     ```
     
     Вместо этого вы можете выполнить `dotnet build`, чтобы скомпилировать код, не запуская консольные приложения сборки. В таком случае создается DLL-файл с готовым приложением. Файлу присваивается имя проекта. В нашем примере создается файл с именем *Hello.dll*. Это приложение можно выполнить с помощью `dotnet bin\Debug\netcoreapp3.1\Hello.dll` в ОС Windows (или `/` в системах, отличных от Windows).
     
-    ```console
+    ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
+    ```
 
+    Вы получите приведенные ниже выходные данные.
+
+    ```console
     Hello World!
     ```
     
@@ -98,8 +106,13 @@ dotnet run
 
 03. Запустите программу, передав параметр в приложение. Когда вы запускаете приложение с помощью команды `dotnet`, добавьте в конце `--`. Все, что находится справа от `--`, будет передано в приложение в виде параметра. В приведенном ниже примере в приложение передается значение `John`.
 
+    ```dotnetcli
+    dotnet run -- John
+    ```
+
+    Вы получите приведенные ниже выходные данные.
+
     ```console
-    $ dotnet run -- John
     Hello John!
     Fibonacci Numbers 1-15:
     1: 0
@@ -135,10 +148,15 @@ dotnet run
 
 03. Выполните [dotnet build](../tools/dotnet-build.md) для компиляции изменений.
 
-04. Запустите приложение, выполнив [dotnet run](../tools/dotnet-run.md). Ниже приведены выходные данные программы:
+04. Запустите приложение, выполнив [dotnet run](../tools/dotnet-run.md).
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Вы получите приведенные ниже выходные данные.
 
     ```console
-    $ dotnet run
     0
     1
     1
@@ -160,8 +178,13 @@ dotnet run
 
 Когда все будет готово к распределению приложения, используйте команду [dotnet publish](../tools/dotnet-publish.md) для создания папки _publish_ по адресу _bin\\debug\\netcoreapp3.1\\publish\\_ (используйте `/` для систем, отличных от Windows). Содержимое папки _publish_ можно распространить на другие платформы, если на них установлена среда выполнения .NET.
 
-```console
+```dotnetcli
 dotnet publish
+```
+
+Вы получите результат, аналогичный приведенному ниже.
+
+```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -174,9 +197,13 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 Запустить опубликованное приложение можно с помощью команды [dotnet](../tools/dotnet.md):
 
-```console
+```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
+```
 
+Вы получите приведенные ниже выходные данные.
+
+```console
 Hello World!
 ```
 

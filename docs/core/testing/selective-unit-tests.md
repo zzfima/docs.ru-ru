@@ -3,16 +3,20 @@ title: Выполнение выборочных модульных тестов
 description: Как использовать выражения фильтра для выполнения выборочных модульных тестов с помощью команды dotnet test в .NET Core.
 author: smadala
 ms.date: 03/22/2017
-ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715463"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543512"
 ---
 # <a name="running-selective-unit-tests"></a>Выполнение выборочных модульных тестов
 
 Использовать выражения фильтра для выполнения выборочных модульных тестов можно с помощью команды `dotnet test` в .NET Core. В этой статье показано, как отфильтровывать модульные тесты для выполнения. В следующих примерах используется `dotnet test`. Если вы используете `vstest.console.exe`, замените `--filter` на `--testcasefilter:`.
+
+> [!NOTE]
+> Чтобы в `*nix` использовать фильтры, содержащие восклицательный знак (!), требуется выполнять экранирование, так как символ `!` зарезервирован. Например, этот фильтр пропускает все тесты, если пространство имен содержит IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
+> Обратите внимание на обратную косую черту перед восклицательным знаком.
 
 ## <a name="mstest"></a>MSTest
 

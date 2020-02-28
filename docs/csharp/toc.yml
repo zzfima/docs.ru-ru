@@ -82,8 +82,6 @@
       href: tour-of-csharp/statements.md
     - name: Классы и объекты
       href: tour-of-csharp/classes-and-objects.md
-    - name: Структуры
-      href: tour-of-csharp/structs.md
     - name: Массивы
       href: tour-of-csharp/arrays.md
     - name: Интерфейсы
@@ -129,8 +127,6 @@
       href: basic-types.md
     - name: Классы
       href: programming-guide/classes-and-structs/classes.md
-    - name: Структуры
-      href: structs.md
     - name: Кортежи
       href: tuples.md
     - name: Деконструкция кортежей и других типов
@@ -941,19 +937,12 @@
     - name: Классы и структуры
       items:
         - name: Обзор
-          displayName: classes structs
+          displayName: classes
           href: programming-guide/classes-and-structs/index.md
         - name: Классы
           href: programming-guide/classes-and-structs/classes.md
         - name: Объекты
           href: programming-guide/classes-and-structs/objects.md
-        - name: Структуры
-          items:
-            - name: Обзор
-              displayName: structs
-              href: programming-guide/classes-and-structs/structs.md
-            - name: Использование структур
-              href: programming-guide/classes-and-structs/using-structs.md
         - name: Наследование
           href: programming-guide/classes-and-structs/inheritance.md
         - name: Полиморфизм
@@ -967,9 +956,9 @@
               href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
             - name: Переопределение метода ToString
               href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
-        - name: Члены
+        - name: Участники
           items:
-            - name: Обзор членов
+            - name: Обзор участников
               href: programming-guide/classes-and-structs/members.md
             - name: Абстрактные и запечатанные классы и члены классов
               href: programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md
@@ -1061,7 +1050,7 @@
           href: programming-guide/classes-and-structs/partial-classes-and-methods.md
         - name: Анонимные типы
           href: programming-guide/classes-and-structs/anonymous-types.md
-        - name: Возврат подмножеств свойств элементов в запросе
+        - name: Возвращение подмножеств свойств элементов в запросе
           href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
     - name: Интерфейсы
       items:
@@ -1337,8 +1326,9 @@
                 - name: Типы перечисления.
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: struct
-                  href: language-reference/keywords/struct.md
+                - name: Типы структур
+                  href: language-reference/builtin-types/struct.md
+                  displayName: struct type
                 - name: 'Типы значений, допускающие значение NULL'
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'

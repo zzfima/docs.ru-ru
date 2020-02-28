@@ -1,20 +1,20 @@
 ---
 title: .NET Standard
 description: Сведения о .NET Standard, ее версиях и реализациях .NET, которые ее поддерживают.
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124641"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452595"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) — это официальная спецификация API .NET, которые должны быть доступны во всех реализациях .NET. .NET Standard используется для обеспечения согласованности экосистемы .NET. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) продолжает обеспечивать единообразие для реализации .NET, но аналогичные спецификации для библиотек базовых классов (BCL) .NET для реализаций библиотек .NET отсутствуют.
+[.NET Standard](https://github.com/dotnet/standard) — это официальная спецификация API .NET, которые должны быть доступны во всех реализациях .NET. .NET Standard создана для того, чтобы повысить согласованность в экосистеме .NET. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) продолжает обеспечивать единообразие для реализации .NET. Но так как в ECMA 335 определен лишь небольшой набор стандартных библиотек, спецификация .NET Standard охватывает более широкий спектр API-интерфейсов .NET.
 
 .NET Standard предоставляет следующие важные возможности:
 

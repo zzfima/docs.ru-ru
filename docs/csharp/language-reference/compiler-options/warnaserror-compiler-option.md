@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606248"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503475"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (параметры компилятора C#)
 Параметр **-warnaserror+** предписывает обрабатывать все предупреждения как ошибки  
@@ -29,7 +29,7 @@ ms.locfileid: "69606248"
   
  По умолчанию действует параметр **-warnaserror-** , при котором наличие предупреждений не препятствует созданию выходного файла. Если задан параметр **-warnaserror** или эквивалентный ему **-warnaserror+** , все предупреждения обрабатываются как ошибки.  
   
- Если требуется обрабатывать как ошибки только конкретные предупреждения, укажите их номера через запятую.  
+ Если требуется обрабатывать как ошибки только конкретные предупреждения, укажите их номера через запятую. Набор всех предупреждений о допустимости значений NULL можно указать с помощью сокращения **nullable**.
   
  Параметр [-warn](./warn-compiler-option.md) позволяет указать уровень предупреждений, которые будет отображать компилятор. Параметр [-nowarn](./nowarn-compiler-option.md) позволяет отключать определенные предупреждения.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69606248"
   
 ```console  
 csc -warnaserror in.cs  
-csc -warnaserror:642,649,652 in.cs  
+csc -warnaserror:642,649,652,nullable in.cs  
 ```  
   
 ## <a name="see-also"></a>См. также

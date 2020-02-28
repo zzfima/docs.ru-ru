@@ -3,13 +3,13 @@ title: Работа с данными в приложениях ASP.NET Core
 description: Разработка современных веб-приложений с помощью ASP.NET Core и Azure | Работа с данными в приложениях ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777121"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449352"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Работа с данными в приложениях ASP.NET Core
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-В этом примере свойство `ShipToAddress` принадлежит типу `Address`. `Address` является объектом значения с несколькими свойствами, такими как `Street` и `City`. EF Core сопоставляет объект `Order` со своей таблицей, по одному столбцу на свойство `Address`, вставляя перед именем каждого столбца имя свойства. В этом примере таблица `Order` должна включать такие столбцы, как `ShipToAddress_Street` и `ShipToAddress_City`.
+В этом примере свойство `ShipToAddress` принадлежит типу `Address`. `Address` является объектом значения с несколькими свойствами, такими как `Street` и `City`. EF Core сопоставляет объект `Order` со своей таблицей, по одному столбцу на свойство `Address`, вставляя перед именем каждого столбца имя свойства. В этом примере таблица `Order` должна включать такие столбцы, как `ShipToAddress_Street` и `ShipToAddress_City`. При необходимости собственные типы можно также хранить в отдельных таблицах.
 
-[В EF Core 2.2 добавлена поддержка коллекций принадлежащих сущностей](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+Узнайте больше о [поддержке сущностей в EF Core](/ef/core/modeling/owned-entities).
 
 ### <a name="resilient-connections"></a>Устойчивые подключения
 

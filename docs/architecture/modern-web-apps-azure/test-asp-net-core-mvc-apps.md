@@ -3,13 +3,13 @@ title: Тестирование приложений MVC ASP.NET Core
 description: Разработка современных веб-приложений с помощью ASP.NET Core и Azure | Тестирование приложений MVC ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.date: 12/04/2019
+ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965780"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503932"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Тестирование приложений MVC ASP.NET Core
 
@@ -70,7 +70,7 @@ ms.locfileid: "76965780"
 
 **Рис. 9-2**. Организация теста в решении
 
-Вы можете использовать любую предпочитаемую платформу тестирования. Эффективным решением является платформа xUnit, на которой пишутся все тесты для ASP.NET Core и EF Core. Вы можете добавить тестовый проект xUnit в Visual Studio, используя показанный на рис. 9-3 шаблон или через интерфейс командной строки с помощью команды dotnet new xunit.
+Вы можете использовать любую предпочитаемую платформу тестирования. Эффективным решением является платформа xUnit, на которой пишутся все тесты для ASP.NET Core и EF Core. Вы можете добавить тестовый проект xUnit в Visual Studio, используя показанный на рис. 9-3 шаблон или через интерфейс командной строки с помощью `dotnet new xunit`.
 
 ![Добавление тестового проекта xUnit в Visual Studio](./media/image9-3.png)
 
@@ -106,7 +106,7 @@ ms.locfileid: "76965780"
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Модульное тестирование приложений ASP.NET Core
 
-В грамотно спроектированном приложении ASP.NET Core большая часть сложных функций и бизнес-логики инкапсулируется в бизнес-сущностях и различных службах. Таким образом, само приложение MVC ASP.NET Core со всеми его контроллерами, фильтрами, моделями представлений и представлениями должно требовать минимального количества модульных тестов. Большая часть функционала конкретного действия выполняется за пределами самого метода действия. Модульные тесты не позволяют эффективно проверить корректность маршрутизации или глобальной обработки ошибок. Кроме того, модульное тестирование не позволяет проверить какие-либо фильтры, в том числе применяемые для подтверждения, проверки подлинности и авторизации. Без этих источников реакции на события большинство методов действия будут иметь небольшой размер, поскольку они делегируют основную часть выполняемых задач службам, которые могут быть протестированы независимо от использующего их контроллера.
+В грамотно спроектированном приложении ASP.NET Core большая часть сложных функций и бизнес-логики инкапсулируется в бизнес-сущностях и различных службах. Таким образом, само приложение MVC ASP.NET Core со всеми его контроллерами, фильтрами, моделями представлений и представлениями должно требовать минимального количества модульных тестов. Большая часть функционала конкретного действия выполняется за пределами самого метода действия. Модульные тесты не позволяют эффективно проверить корректность маршрутизации или глобальной обработки ошибок. Кроме того, модульное тестирование не позволяет проверить какие-либо фильтры, в том числе применяемые для подтверждения, проверки подлинности и авторизации, в ходе теста, предназначенного для метода действия контроллера. Без этих источников реакции на события большинство методов действия будут иметь небольшой размер, поскольку они делегируют основную часть выполняемых задач службам, которые могут быть протестированы независимо от использующего их контроллера.
 
 В некоторых случаях, чтобы провести модульное тестирование кода, требуется выполнить его рефакторинг. Зачастую для этого требуется определить абстракции и использовать внедрение зависимостей для доступа к абстракции в коде, который требуется протестировать, вместо того, чтобы писать код непосредственно для работы с инфраструктурой. Например, рассмотрим простой метод действия для показа изображений:
 
@@ -153,7 +153,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Функциональное тестирование приложений ASP.NET Core
 
-Для удобства функционального тестирования приложений ASP.NET Core используется класс `TestServer`. Для настройки `TestServer` напрямую используется `WebHostBuilder` (как обычно для приложения) или тип `WebApplicationFactory` (доступно начиная с версии 2.1). Постарайтесь, чтобы тестовый узел максимально соответствовал рабочему узлу. Тогда при тестировании приложение будет вести себя так же, как в рабочей среде. Класс `WebApplicationFactory` помогает настраивать каталог ContentRoot на сервере TestServer, который используется платформой ASP.NET Core для поиска статических ресурсов, таких как представления.
+Для удобства функционального тестирования приложений ASP.NET Core используется класс `TestServer`. Для настройки `TestServer` напрямую используется `WebHostBuilder` или `HostBuilder` (как обычно для приложения) или тип `WebApplicationFactory` (начиная с версии 2.1). Тестовый узел должен максимально соответствовать рабочему узлу, чтобы при тестировании приложение вело себя так же, как в рабочей среде. Класс `WebApplicationFactory` помогает настраивать каталог ContentRoot на сервере TestServer, который используется платформой ASP.NET Core для поиска статических ресурсов, таких как представления.
 
 Можно создать простые функциональные тесты, создав тестовый класс, который реализует IClassFixture\<WebApplicationFactory\<TEntry>>, где TEntry — это класс запуска веб-приложения. После этого ваше средство тестирования может создать клиента с помощью метода фабрики CreateClient:
 
@@ -175,6 +175,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 
 ```cs
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.eShopWeb.Infrastructure.Data;
@@ -184,32 +185,35 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
+namespace Microsoft.eShopWeb.FunctionalTests.Web
 {
-    public class CustomWebApplicationFactory<TStartup>
-    : WebApplicationFactory<Startup>
+    public class WebTestFixture : WebApplicationFactory<Startup>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
+            builder.UseEnvironment("Testing");
+
             builder.ConfigureServices(services =>
             {
+                 services.AddEntityFrameworkInMemoryDatabase();
+
                 // Create a new service provider.
-                var serviceProvider = new ServiceCollection()
+                var provider = services
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory
+                // Add a database context (ApplicationDbContext) using an in-memory 
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
                     options.UseInMemoryDatabase("InMemoryDbForTesting");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 services.AddDbContext<AppIdentityDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("Identity");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 // Build the service provider.
@@ -224,7 +228,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
 
                     var logger = scopedServices
-                        .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
+                        .GetRequiredService<ILogger<WebTestFixture>>();
 
                     // Ensure the database is created.
                     db.Database.EnsureCreated();
@@ -233,6 +237,11 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     {
                         // Seed the database with test data.
                         CatalogContextSeed.SeedAsync(db, loggerFactory).Wait();
+
+                        // seed sample user data
+                        var userManager = scopedServices.GetRequiredService<UserManager<ApplicationUser>>();
+                        var roleManager = scopedServices.GetRequiredService<RoleManager<IdentityRole>>();
+                        AppIdentityDbContextSeed.SeedAsync(userManager, roleManager).Wait();
                     }
                     catch (Exception ex)
                     {
@@ -249,17 +258,17 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
 Тесты могут использовать эту пользовательскую фабрику WebApplicationFactory, чтобы с ее помощью создать клиент, а затем делать запросы к приложению, используя этот экземпляр клиента. Приложение заполнится данными, которые можно использовать в утверждениях теста. Следующий тест проверяет, что домашняя страница приложения eShopOnWeb правильно загружается и содержит список продуктов, который был добавлен в приложение при заполнении данными.
 
 ```cs
-using Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
-using Microsoft.eShopWeb.Web;
+using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 {
-    public class HomePageOnGet : IClassFixture<CustomWebApplicationFactory<Startup>>
+    [Collection("Sequential")]
+    public class HomePageOnGet : IClassFixture<WebTestFixture>
     {
-        public HomePageOnGet(CustomWebApplicationFactory<Startup> factory)
+        public HomePageOnGet(WebTestFixture factory)
         {
             Client = factory.CreateClient();
         }
@@ -293,8 +302,6 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 > - **Интеграционные тесты на платформе ASP.NET Core** \
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
-> - **Ежедневное собрание сообщества ASP.NET 15 мая 2018 г. Тестирование приложений MVC с Хавьером Нелсоном (Javier C. Nelson)** . Видео на YouTube \
->   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[Назад](work-with-data-in-asp-net-core-apps.md)

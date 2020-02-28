@@ -1,21 +1,17 @@
 ---
 title: Команда dotnet build
 description: Команда dotnet build выполняет сборку проекта и всех его зависимостей.
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734314"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503761"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Эта статья относится к следующему.** ✔️ SDK для .NET Core 1.x и более поздних версий
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
 ## <a name="name"></a>name
 
@@ -75,7 +71,7 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>Параметры
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Определяет конфигурацию сборки. По умолчанию для большинства проектов используется `Debug`, но можно переопределить параметры конфигурации сборки в проекте.
 
@@ -85,7 +81,7 @@ dotnet build [-h|--help]
 
 - **`--force`**
 
-  Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*. Доступно, начиная с пакета SDK для .NET Core 2.0.
+  Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ dotnet build [-h|--help]
 
 - **`--no-restore`**
 
-  Во время сборки не выполняется неявное восстановление. Доступно, начиная с пакета SDK для .NET Core 2.0.
+  Во время сборки не выполняется неявное восстановление.
 
 - **`--nologo`**
 

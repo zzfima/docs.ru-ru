@@ -1,13 +1,13 @@
 ---
 title: Для какой ОС использовать контейнеры .NET
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Для какой ОС использовать контейнеры .NET
-ms.date: 01/07/2019
-ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736928"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501865"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Для какой ОС использовать контейнеры .NET
 
@@ -34,10 +34,10 @@ ms.locfileid: "73736928"
 
 | Изображение | Комментарии |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2.2 (мультиархитектурный): поддерживает Linux и Windows Nano Server в зависимости от узла Docker. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2.2 (мультиархитектурный): поддерживает Linux и Windows Nano Server в зависимости от узла Docker. <br/> Образ aspnetcore имеет несколько оптимизаций для ASP.NET Core. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | .NET Core 2.2 (только для среды выполнения), основанный на дистрибутиве Alpine Linux |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | .NET Core 2.2 (только для среды выполнения), основанный на Windows Nano Server (Windows Server версии 1803) |
+| mcr.microsoft.com/dotnet/core/runtime:3.1 | .NET Core 3.1 (несколько архитектур): поддерживает Linux и Windows Nano Server в зависимости от узла Docker. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1 | ASP.NET Core 3.1 (несколько архитектур): поддерживает Linux и Windows Nano Server в зависимости от узла Docker. <br/> Образ aspnetcore имеет несколько оптимизаций для ASP.NET Core. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | .NET Core 3.1 (только для среды выполнения) на основе дистрибутива Linux Debian |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | .NET Core 3.1 (только для среды выполнения) на основе Windows Nano Server (Windows Server версии 1809) |
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 

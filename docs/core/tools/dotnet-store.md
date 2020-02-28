@@ -1,17 +1,17 @@
 ---
 title: Команда dotnet store
 description: Команда dotnet store сохраняет указанные сборки в хранилище пакетов среды выполнения.
-ms.date: 05/29/2018
-ms.openlocfilehash: cc5b4b6160ba296e1529f006c15e238746d9e08a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733051"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503581"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+**Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
 ## <a name="name"></a>name
 
@@ -19,7 +19,9 @@ ms.locfileid: "76733051"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-`dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
+```dotnetcli
+dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
+```
 
 ## <a name="description"></a>Описание
 
@@ -27,57 +29,61 @@ ms.locfileid: "76733051"
 
 ## <a name="required-options"></a>Обязательные параметры
 
-`-f|--framework <FRAMEWORK>`
+- **`-f|--framework <FRAMEWORK>`**
 
-Задает [целевую платформу](../../standard/frameworks.md).
+  Задает [целевую платформу](../../standard/frameworks.md). Целевая платформа должна быть указана в файле проекта.
 
-`-m|--manifest <PATH_TO_MANIFEST_FILE>`
+- **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-*Файл манифеста хранилища пакетов* — это XML-файл, содержащий список сохраняемых пакетов. Формат файла манифеста совместим с форматом проекта в стиле SDK. Поэтому файл проекта, ссылающийся на требуемые пакеты, можно использовать с параметром `-m|--manifest` для сохранения сборок в хранилище пакетов среды выполнения. Чтобы указать несколько файлов манифеста, добавьте параметр и путь для каждого из них. Например, `--manifest packages1.csproj --manifest packages2.csproj`.
+  *Файл манифеста хранилища пакетов* — это XML-файл, содержащий список сохраняемых пакетов. Формат файла манифеста совместим с форматом проекта в стиле SDK. Поэтому файл проекта, ссылающийся на требуемые пакеты, можно использовать с параметром `-m|--manifest` для сохранения сборок в хранилище пакетов среды выполнения. Чтобы указать несколько файлов манифеста, добавьте параметр и путь для каждого из них. Например, `--manifest packages1.csproj --manifest packages2.csproj`.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-[Идентификатор целевой среды выполнения](../rid-catalog.md).
+  [Идентификатор целевой среды выполнения](../rid-catalog.md).
 
 ## <a name="optional-options"></a>Необязательные параметры
 
-`--framework-version <FRAMEWORK_VERSION>`
+- **`--framework-version <FRAMEWORK_VERSION>`**
 
-Указывает версию пакета SDK для .NET Core. Этот параметр позволяет выбрать определенную версию платформы, отличную от версии, заданной с помощью параметра `-f|--framework`.
+  Указывает версию пакета SDK для .NET Core. Этот параметр позволяет выбрать определенную версию платформы, отличную от версии, заданной с помощью параметра `-f|--framework`.
 
-`-h|--help`
+- **`-h|--help`**
 
-Выводит справочные сведения.
+  Выводит справочные сведения.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Определяет путь к хранилищу пакетов среды выполнения. Если значение не указано, по умолчанию используется подкаталог *store* каталога установки .NET Core в профиле пользователя.
+  Определяет путь к хранилищу пакетов среды выполнения. Если значение не указано, по умолчанию используется подкаталог *store* каталога установки .NET Core в профиле пользователя.
 
-`--skip-optimization`
+- **`--skip-optimization`**
 
-Пропуск этапа оптимизации.
+  Пропуск этапа оптимизации.
 
-`--skip-symbols`
+- **`--skip-symbols`**
 
-Пропуск создания символов. В настоящее время символы можно создавать только в Windows и Linux.
+  Пропуск создания символов. В настоящее время символы можно создавать только в Windows и Linux.
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
-`-w|--working-dir <INTERMEDIATE_WORKING_DIRECTORY>`
+- **`-w|--working-dir <WORKING_DIRECTORY>`**
 
-Рабочий каталог, используемый командой. Если значение не указано, используется подкаталог *obj* в текущем каталоге.
+  Рабочий каталог, используемый командой. Если значение не указано, используется подкаталог *obj* в текущем каталоге.
 
 ## <a name="examples"></a>Примеры
 
-Сохранение пакетов, указанных в файле проекта *packages.csproj* для .NET Core 2.0.0:
+- Сохранение пакетов, указанных в файле проекта *packages.csproj* для .NET Core 2.0.0:
 
-`dotnet store --manifest packages.csproj --framework-version 2.0.0`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --framework-version 2.0.0
+  ```
 
-Сохранение пакетов, указанных в файле *packages.csproj*, без оптимизации:
+- Сохранение пакетов, указанных в файле *packages.csproj*, без оптимизации:
 
-`dotnet store --manifest packages.csproj --skip-optimization`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --skip-optimization
+  ```
 
 ## <a name="see-also"></a>См. также
 

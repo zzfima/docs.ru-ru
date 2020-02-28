@@ -49,25 +49,7 @@
     - name: Установка локализованной версии IntelliSense
       href: install/localized-intellisense.md
 - name: Начало работы
-  items:
-    - name: Начало работы
-      href: get-started.md
-    - name: 'Начало работы с C# и Visual Studio Code'
-      href: tutorials/with-visual-studio-code.md
-    - name: Начало работы с .NET Core в macOS с помощью Visual Studio Code
-      href: tutorials/using-on-macos.md
-    - name: Создание первого консольного приложения в Visual Studio
-      href: tutorials/with-visual-studio.md
-    - name: Отладка приложения с помощью Visual Studio
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Публикация приложения с помощью Visual Studio
-      href: tutorials/publishing-with-visual-studio.md
-    - name: "Создание библиотеки .NET\_Standard в Visual Studio"
-      href: tutorials/library-with-visual-studio.md
-    - name: "Тестирование библиотеки .NET\_Standard в Visual Studio"
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: "Использование библиотеки .NET\_Standard в Visual Studio"
-      href: tutorials/consuming-library-with-visual-studio.md
+  href: get-started.md
 - name: Новые возможности .NET Core
   items:
     - name: "Новые возможности .NET Core\_3.1"
@@ -87,12 +69,28 @@
   items:
     - name: Обзор
       href: tutorials/index.md
-    - name: Начало работы с .NET Core с помощью Visual Studio для Mac
-      href: tutorials/using-on-mac-vs.md
-    - name: Создание полноценного решения .NET Core в macOS
-      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Начало работы с .NET Core с помощью Visual Studio
+      href: tutorials/with-visual-studio.md
+    - name: Начало работы с .NET Core с помощью Visual Studio Code
+      href: tutorials/with-visual-studio-code.md
     - name: Начало работы с .NET Core с помощью средств интерфейса командной строки
       href: tutorials/cli-create-console-app.md
+    - name: Начало работы с .NET Core с помощью Visual Studio Code в macOS
+      href: tutorials/using-on-macos.md
+    - name: Начало работы с .NET Core с помощью Visual Studio для Mac
+      href: tutorials/using-on-mac-vs.md
+    - name: Отладка приложения с помощью Visual Studio
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Публикация приложения с помощью Visual Studio
+      href: tutorials/publishing-with-visual-studio.md
+    - name: "Создание библиотеки .NET\_Standard в Visual Studio"
+      href: tutorials/library-with-visual-studio.md
+    - name: "Тестирование библиотеки .NET\_Standard в Visual Studio"
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: "Использование библиотеки .NET\_Standard в Visual Studio"
+      href: tutorials/consuming-library-with-visual-studio.md
+    - name: Создание полноценного решения .NET Core в macOS
+      href: tutorials/using-on-mac-vs-full-solution.md
     - name: Организация и тестирование проектов с помощью инструментов командной строки .NET Core
       href: tutorials/testing-with-cli.md
     - name: Разработка библиотек с помощью кроссплатформенных средств

@@ -1,13 +1,13 @@
 ---
 title: Выбор вычислительных платформ Azure для контейнерных приложений
 description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows | Выбор вычислительных платформ Azure для контейнерных приложений
-ms.date: 05/04/2018
-ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 02/18/2020
+ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73736997"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503883"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Выбор вычислительных платформ Azure для контейнерных приложений
 
@@ -25,9 +25,19 @@ ms.locfileid: "73736997"
 
 После углубленного анализа потребностей приложения изначальный и конечный выбранные продукты могут отличаться. Но в качестве отправной точки полезно иметь начальные рекомендации относительно того, где можно начать оценку и тестирование в зависимости от определенного приоритета.
 
-На рис. 1 различные виды приложений сопоставлены с их идеальными сценариями размещения в Azure.
+В приведенной ниже таблице различные виды приложений сопоставлены с их возможными и рекомендуемыми сценариями размещения в Azure.
 
-![Таблица, в которой показаны сценарии размещения Azure, подходящие для различных приложений.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
+| Архитектура приложения | Виртуальные машины Azure | ACI — Экземпляры контейнеров Azure | Служба приложений Azure (с контейнерами и без них) | AKS — Служба Azure Kubernetes | Проверка | Пакетная служба Azure |
+|:------------------------:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Веб-приложения (монолитные)**         | ![Возможный сценарий с использованием виртуальных машин](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Возможный сценарий с использованием ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Рекомендуемый сценарий с использованием Службы приложений](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![Возможный сценарий с использованием AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
+| **N-уровневые приложения (службы)**        | ![Возможный сценарий с использованием виртуальных машин](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Возможный сценарий с использованием ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Рекомендуемый сценарий с использованием Службы приложений](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![Возможный сценарий с использованием AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Возможный сценарий с использованием Функций Azure](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
+| **Ориентированные на облако приложения (микрослужбы)**  | | ![Возможный сценарий с использованием ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![Рекомендуемый сценарий с использованием AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Контейнеры&nbsp;Linux)| ![Рекомендуемый сценарий с использованием Функций Azure](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (На основе событий) | |
+| **Пакетная обработки и задания (фоновые задачи)** | ![Возможный сценарий с использованием виртуальных машин](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Возможный сценарий с использованием ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Возможный сценарий с использованием Службы приложений](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Возможный сценарий с использованием AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Рекомендуемый сценарий с использованием Функций Azure](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Фоновые&nbsp;задачи) | ![Возможный сценарий с использованием пакетной службы Azure](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Большой масштаб) |
+
+**Условные обозначения**
+
+![Значок рекомендуемого сценария](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) Рекомендуемый сценарий \
+![Значок возможного сценария](media/choosing-azure-compute-options-for-container-based-applications/possible.png) Возможна
 
 > [!div class="step-by-step"]
 > [Назад](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

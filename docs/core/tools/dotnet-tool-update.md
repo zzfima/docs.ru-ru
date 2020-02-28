@@ -1,84 +1,95 @@
 ---
 title: Команда dotnet tool update
-description: Команда dotnet tool update обновляет указанное глобальное средство .NET Core на вашем компьютере.
-ms.date: 05/29/2018
-ms.openlocfilehash: b10ce39c8b9d4df23243bcf672454a455e34eec1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: Команда dotnet tool update обновляет указанное средство .NET Core на вашем компьютере.
+ms.date: 02/14/2020
+ms.openlocfilehash: 50bb366fedfb0ea69b8b6007ff89e366b4f689de
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117530"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543421"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 2.1 и более поздних версий
 
 ## <a name="name"></a>name
 
-`dotnet tool update` обновляет указанное [глобальное средство .NET Core](global-tools.md) на компьютере.
+`dotnet tool update` обновляет указанное [средство .NET Core](global-tools.md) на компьютер.
 
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
-dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity]
-dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity]
+dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity] [--add-source]
+dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity] [--add-source]
+dotnet tool update <PACKAGE_NAME> [--configfile] [--framework] [-v|--verbosity] [--add-source]
 dotnet tool update <-h|--help>
 ```
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
-Команда `dotnet tool update` предоставляет способ обновления глобального средства .NET Core на компьютере до последней стабильной версии пакета. Команда удаляет и повторно устанавливает средство, эффективно обновляя его. Чтобы использовать эту команду, укажите, что хотите обновить средство из установки уровня пользователя с помощью параметра `--global`, или укажите путь к месту установки средства с помощью параметра `--tool-path`.
+Команда `dotnet tool update` предоставляет способ обновления средства .NET Core на компьютере до последней стабильной версии пакета. Команда удаляет и повторно устанавливает средство, эффективно обновляя его. Чтобы использовать команду, необходимо указать один из следующих параметров:
+
+* Чтобы обновить глобальное средство, установленное в расположении по умолчанию, используйте параметр `--global`
+* Чтобы обновить глобальное средство, установленное в пользовательском расположении, используйте параметр `--tool-path`.
+* Чтобы обновить локальный инструмент, пропустите параметры `--global` и `--tool-path`.
+
+**Локальные средства доступны в пакете SDK для .NET Core, начиная с версии 3.0.**
 
 ## <a name="arguments"></a>Аргументы
 
-`PACKAGE_NAME`
+- **`PACKAGE_NAME`**
 
-Имя или идентификатор пакета NuGet, который содержит глобальное средство .NET Core, которое вы хотите обновить. Найти имя пакета можно с помощью команды [dotnet tool list](dotnet-tool-list.md).
+  Имя или идентификатор пакета NuGet, который содержит глобальное средство .NET Core, которое вы хотите обновить. Найти имя пакета можно с помощью команды [dotnet tool list](dotnet-tool-list.md).
 
 ## <a name="options"></a>Параметры
 
-`--add-source <SOURCE>`
+- **`--add-source <SOURCE>`**
 
-Добавляет дополнительный источник пакета NuGet для использования во время установки.
+  Добавляет дополнительный источник пакета NuGet для использования во время установки.
 
-`--configfile <FILE>`
+- **`--configfile <FILE>`**
 
-Файл конфигурации NuGet (*nuget.config*), который будет использоваться.
+  Файл конфигурации NuGet (*nuget.config*), который будет использоваться.
 
-`--framework <FRAMEWORK>`
+- **`--framework <FRAMEWORK>`**
 
-Указывает [требуемую версию .NET Framework](../../standard/frameworks.md) для обновления средства.
+  Указывает [требуемую версию .NET Framework](../../standard/frameworks.md) для обновления средства.
 
-`-g|--global`
+- **`-g|--global`**
 
-Указывает, что обновление предназначено для средства уровня пользователя. Не может использоваться вместе с параметром `--tool-path`. Если вы не укажете этот параметр, укажите параметр `--tool-path`.
+  Указывает, что обновление предназначено для средства уровня пользователя. Не может использоваться вместе с параметром `--tool-path`. Пропуск `--global` и `--tool-path` означает, что обновляемое средство является локальным. 
 
-`-h|--help`
+- **`-h|--help`**
 
-Выводит краткую справку по команде.
+  Выводит краткую справку по команде.
 
-`--tool-path <PATH>`
+- **`--tool-path <PATH>`**
 
-Указывает место установки глобального средства. Путь может быть абсолютным или относительным. Не может использоваться вместе с параметром `--global`. Если вы не укажете этот параметр, укажите параметр `--global`.
+  Указывает место установки глобального средства. Путь может быть абсолютным или относительным. Не может использоваться вместе с параметром `--global`. Пропуск `--global` и `--tool-path` означает, что обновляемое средство является локальным. 
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
 ## <a name="examples"></a>Примеры
 
-Обновляет глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/):
+- **`dotnet tool update -g dotnetsay`**
 
-`dotnet tool update -g dotnetsay`
+  Обновляет глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/).
 
-Обновляет глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/), расположенное в определенной папке Windows:
+- **`dotnet tool update dotnetsay --tool-path c:\global-tools`**
 
-`dotnet tool update dotnetsay --tool-path c:\global-tools`
+  Обновляет глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/), расположенное в определенном каталоге Windows.
 
-Обновляет глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/), расположенное в определенной папке Linux/macOS:
+- **`dotnet tool update dotnetsay --tool-path ~/bin`**
 
-`dotnet tool update dotnetsay --tool-path ~/bin`
+  Обновляет глобальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/), расположенное в определенном каталоге Linux/macOS.
+
+- **`dotnet tool update dotnetsay`**
+
+  Обновляет локальное средство [dotnetsay](https://www.nuget.org/packages/dotnetsay/), установленное для текущего каталога.
 
 ## <a name="see-also"></a>См. также
 
-- [Глобальные средства .NET Core](global-tools.md)
+- [Средства .NET Core](global-tools.md)
