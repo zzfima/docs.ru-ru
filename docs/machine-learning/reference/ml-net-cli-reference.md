@@ -2,61 +2,61 @@
 title: Справочник по командам интерфейса командной строки (CLI) ML.NET
 description: Обзор, примеры и справочник по командам auto-train в программе командной строки ML.NET.
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636124"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449703"
 ---
-# <a name="the-mlnet-cli-command-reference"></a><span data-ttu-id="66d25-103">Справочник по командам интерфейса командной строки ML.NET</span><span class="sxs-lookup"><span data-stu-id="66d25-103">The ML.NET CLI command reference</span></span>
+# <a name="the-mlnet-cli-command-reference"></a><span data-ttu-id="ce5cd-103">Справочник по командам интерфейса командной строки ML.NET</span><span class="sxs-lookup"><span data-stu-id="ce5cd-103">The ML.NET CLI command reference</span></span>
 
-<span data-ttu-id="66d25-104">Команда `auto-train` — это основная команда, предоставляемая программой командной строки ML.NET.</span><span class="sxs-lookup"><span data-stu-id="66d25-104">The `auto-train` command is the main command provided by the ML.NET CLI tool.</span></span> <span data-ttu-id="66d25-105">Она позволяет создать модель ML.NET хорошего качества, используя автоматизированное машинное обучение (AutoML), а также пример кода на C# для выполнения и оценки модели.</span><span class="sxs-lookup"><span data-stu-id="66d25-105">The command allows you to generate a good quality ML.NET model using automated machine learning (AutoML) as well as the the example C# code to run/score that model.</span></span> <span data-ttu-id="66d25-106">Кроме того, код C# для обучения модели создается для изучения алгоритма и параметров модели.</span><span class="sxs-lookup"><span data-stu-id="66d25-106">In addition, the C# code to train the model is generated for you to research the algorithm and settings of the model.</span></span>
+<span data-ttu-id="ce5cd-104">Команда `auto-train` — это основная команда, предоставляемая программой командной строки ML.NET.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-104">The `auto-train` command is the main command provided by the ML.NET CLI tool.</span></span> <span data-ttu-id="ce5cd-105">Она позволяет создать модель ML.NET хорошего качества, используя автоматизированное машинное обучение (AutoML), а также пример кода на C# для выполнения и оценки модели.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-105">The command allows you to generate a good quality ML.NET model using automated machine learning (AutoML) as well as the example C# code to run/score that model.</span></span> <span data-ttu-id="ce5cd-106">Кроме того, код C# для обучения модели создается для изучения алгоритма и параметров модели.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-106">In addition, the C# code to train the model is generated for you to research the algorithm and settings of the model.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="66d25-107">Этот раздел относится к ML.NET CLI и ML.NET AutoML, находящимся в данный момент в предварительной версии; материалы могут быть изменены.</span><span class="sxs-lookup"><span data-stu-id="66d25-107">This topic refers to ML.NET CLI and ML.NET AutoML, which are currently in Preview, and material may be subject to change.</span></span>
+> <span data-ttu-id="ce5cd-107">Этот раздел относится к ML.NET CLI и ML.NET AutoML, находящимся в данный момент в предварительной версии; материалы могут быть изменены.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-107">This topic refers to ML.NET CLI and ML.NET AutoML, which are currently in Preview, and material may be subject to change.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="66d25-108">Обзор</span><span class="sxs-lookup"><span data-stu-id="66d25-108">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="ce5cd-108">Обзор</span><span class="sxs-lookup"><span data-stu-id="ce5cd-108">Overview</span></span>
 
-<span data-ttu-id="66d25-109">Пример использования:</span><span class="sxs-lookup"><span data-stu-id="66d25-109">Example usage:</span></span>
+<span data-ttu-id="ce5cd-109">Пример использования:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-109">Example usage:</span></span>
 
 ```console
 mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
 ```
 
-<span data-ttu-id="66d25-110">Команда `mlnet auto-train` создает следующие ресурсы:</span><span class="sxs-lookup"><span data-stu-id="66d25-110">The `mlnet auto-train` command generates the following assets:</span></span>
+<span data-ttu-id="ce5cd-110">Команда `mlnet auto-train` создает следующие ресурсы:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-110">The `mlnet auto-train` command generates the following assets:</span></span>
 
-- <span data-ttu-id="66d25-111">готовый к использованию ZIP-файл сериализованной модели ("модели высшего качества");</span><span class="sxs-lookup"><span data-stu-id="66d25-111">A serialized model .zip ("best model") ready to use.</span></span>
-- <span data-ttu-id="66d25-112">код C# для выполнения или оценки созданной модели.</span><span class="sxs-lookup"><span data-stu-id="66d25-112">C# code to run/score that generated model.</span></span>
-- <span data-ttu-id="66d25-113">код на C# с кодом обучения, используемый для создания этой модели.</span><span class="sxs-lookup"><span data-stu-id="66d25-113">C# code with the training code used to generate that model.</span></span>
+- <span data-ttu-id="ce5cd-111">готовый к использованию ZIP-файл сериализованной модели ("модели высшего качества");</span><span class="sxs-lookup"><span data-stu-id="ce5cd-111">A serialized model .zip ("best model") ready to use.</span></span>
+- <span data-ttu-id="ce5cd-112">код C# для выполнения или оценки созданной модели.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-112">C# code to run/score that generated model.</span></span>
+- <span data-ttu-id="ce5cd-113">код на C# с кодом обучения, используемый для создания этой модели.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-113">C# code with the training code used to generate that model.</span></span>
 
-<span data-ttu-id="66d25-114">Первые два ресурса можно использовать непосредственно в приложениях конечных пользователей (веб-приложениях и службах ASP.NET Core, классических приложениях и т. д.) для прогнозирования с помощью созданной модели.</span><span class="sxs-lookup"><span data-stu-id="66d25-114">The first two assets can directly be used in your end-user apps (ASP.NET Core web app, services, desktop app and more) to make predictions with the model.</span></span>
+<span data-ttu-id="ce5cd-114">Первые два ресурса можно использовать непосредственно в приложениях конечных пользователей (веб-приложениях и службах ASP.NET Core, классических приложениях и т. д.) для прогнозирования с помощью созданной модели.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-114">The first two assets can directly be used in your end-user apps (ASP.NET Core web app, services, desktop app and more) to make predictions with the model.</span></span>
 
-<span data-ttu-id="66d25-115">Третий актив, код обучения, показывает, какой код API ML.NET использовало средство CLI для обучения созданной модели, поэтому можно определить конкретный алгоритм обучения и параметры модели.</span><span class="sxs-lookup"><span data-stu-id="66d25-115">The third asset, the training code, shows you what ML.NET API code was used by the CLI to train the generated model, so you can investigate the specific algorithm and settings of the model.</span></span>
+<span data-ttu-id="ce5cd-115">Третий актив, код обучения, показывает, какой код API ML.NET использовало средство CLI для обучения созданной модели, поэтому можно определить конкретный алгоритм обучения и параметры модели.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-115">The third asset, the training code, shows you what ML.NET API code was used by the CLI to train the generated model, so you can investigate the specific algorithm and settings of the model.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="66d25-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="66d25-116">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="ce5cd-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="ce5cd-116">Examples</span></span>
 
-<span data-ttu-id="66d25-117">Самый простой пример команды CLI для задачи бинарной классификации (ядро AutoML выведет большую часть параметров из предоставленных данных):</span><span class="sxs-lookup"><span data-stu-id="66d25-117">The simplest CLI command for a binary classification problem (AutoML infers most of the configuration from the provided data):</span></span>
+<span data-ttu-id="ce5cd-117">Самый простой пример команды CLI для задачи бинарной классификации (ядро AutoML выведет большую часть параметров из предоставленных данных):</span><span class="sxs-lookup"><span data-stu-id="ce5cd-117">The simplest CLI command for a binary classification problem (AutoML infers most of the configuration from the provided data):</span></span>
 
 ```console
 mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-<span data-ttu-id="66d25-118">Другой простой пример команды интерфейса командной строки для решения задачи регрессии:</span><span class="sxs-lookup"><span data-stu-id="66d25-118">Another simple CLI command for a regression problem:</span></span>
+<span data-ttu-id="ce5cd-118">Другой простой пример команды интерфейса командной строки для решения задачи регрессии:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-118">Another simple CLI command for a regression problem:</span></span>
 
 ``` console
 mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
 ```
 
-<span data-ttu-id="66d25-119">Создание и обучение модели бинарной классификации с набором данных для обучения, проверочным набором данных и дальнейшей настройкой явных аргументов:</span><span class="sxs-lookup"><span data-stu-id="66d25-119">Create and train a binary-classification model with a train dataset, a test dataset, and further customization explicit arguments:</span></span>
+<span data-ttu-id="ce5cd-119">Создание и обучение модели бинарной классификации с набором данных для обучения, проверочным набором данных и дальнейшей настройкой явных аргументов:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-119">Create and train a binary-classification model with a train dataset, a test dataset, and further customization explicit arguments:</span></span>
 
 ```console
 mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
 ```
 
-## <a name="command-options"></a><span data-ttu-id="66d25-120">Параметры команды</span><span class="sxs-lookup"><span data-stu-id="66d25-120">Command options</span></span>
+## <a name="command-options"></a><span data-ttu-id="ce5cd-120">Параметры команды</span><span class="sxs-lookup"><span data-stu-id="ce5cd-120">Command options</span></span>
 
-<span data-ttu-id="66d25-121">`mlnet auto-train` обучает несколько моделей на основе предоставленного набора данных и наконец выбирает лучшую модель, сохраняет ее как сериализуемый ZIP-файл, а также создает связанный код на C# для оценки и обучения.</span><span class="sxs-lookup"><span data-stu-id="66d25-121">`mlnet auto-train` trains multiple models based on the provided dataset and finally selects the best model, saves it as a serialized .zip file plus generates related C# code for scoring and training.</span></span>
+<span data-ttu-id="ce5cd-121">`mlnet auto-train` обучает несколько моделей на основе предоставленного набора данных и наконец выбирает лучшую модель, сохраняет ее как сериализуемый ZIP-файл, а также создает связанный код на C# для оценки и обучения.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-121">`mlnet auto-train` trains multiple models based on the provided dataset and finally selects the best model, saves it as a serialized .zip file plus generates related C# code for scoring and training.</span></span>
 
 ```console
 mlnet auto-train
@@ -92,176 +92,176 @@ mlnet auto-train
 
 ```
 
-<span data-ttu-id="66d25-122">Недопустимые входные параметры приводят к тому, что средство CLI выдает список допустимых входных данных и сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="66d25-122">Invalid input options cause the CLI tool to emit a list of valid inputs and an error message.</span></span>
+<span data-ttu-id="ce5cd-122">Недопустимые входные параметры приводят к тому, что средство CLI выдает список допустимых входных данных и сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-122">Invalid input options cause the CLI tool to emit a list of valid inputs and an error message.</span></span>
 
-## <a name="task"></a><span data-ttu-id="66d25-123">Задача</span><span class="sxs-lookup"><span data-stu-id="66d25-123">Task</span></span>
+## <a name="task"></a><span data-ttu-id="ce5cd-123">Задача</span><span class="sxs-lookup"><span data-stu-id="ce5cd-123">Task</span></span>
 
-<span data-ttu-id="66d25-124">`--task | --mltask | -T` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-124">`--task | --mltask | -T` (string)</span></span>
+<span data-ttu-id="ce5cd-124">`--task | --mltask | -T` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-124">`--task | --mltask | -T` (string)</span></span>
 
-<span data-ttu-id="66d25-125">Одна строка, описывающая задачу машинного обучения для решения.</span><span class="sxs-lookup"><span data-stu-id="66d25-125">A single string providing the ML problem to solve.</span></span> <span data-ttu-id="66d25-126">Например, это может быть любая из следующих задач (программа командной строки со временем будет поддерживать все задачи, поддерживаемые в AutoML):</span><span class="sxs-lookup"><span data-stu-id="66d25-126">For instance, any of the following tasks (The CLI will eventually support all tasks supported in AutoML):</span></span>
+<span data-ttu-id="ce5cd-125">Одна строка, описывающая задачу машинного обучения для решения.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-125">A single string providing the ML problem to solve.</span></span> <span data-ttu-id="ce5cd-126">Например, это может быть любая из следующих задач (программа командной строки со временем будет поддерживать все задачи, поддерживаемые в AutoML):</span><span class="sxs-lookup"><span data-stu-id="ce5cd-126">For instance, any of the following tasks (The CLI will eventually support all tasks supported in AutoML):</span></span>
 
-- <span data-ttu-id="66d25-127">`regression` — выберите, если модель машинного обучения будет использоваться для прогнозирования числовых значений.</span><span class="sxs-lookup"><span data-stu-id="66d25-127">`regression` - Choose if the ML Model will be used to predict a numeric value</span></span>
-- <span data-ttu-id="66d25-128">`binary-classification` — выберите, если результат модели машинного обучения имеет два возможных категориальных логических значения (0 или 1).</span><span class="sxs-lookup"><span data-stu-id="66d25-128">`binary-classification` - Choose if the ML Model result has two possible categorical boolean values (0 or 1).</span></span>
-- <span data-ttu-id="66d25-129">`multiclass-classification` — выберите, если результат модели машинного обучения имеет несколько возможных категориальных значений.</span><span class="sxs-lookup"><span data-stu-id="66d25-129">`multiclass-classification` - Choose if the ML Model result has multiple categorical possible values.</span></span>
+- <span data-ttu-id="ce5cd-127">`regression` — выберите, если модель машинного обучения будет использоваться для прогнозирования числовых значений.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-127">`regression` - Choose if the ML Model will be used to predict a numeric value</span></span>
+- <span data-ttu-id="ce5cd-128">`binary-classification` — выберите, если результат модели машинного обучения имеет два возможных категориальных логических значения (0 или 1).</span><span class="sxs-lookup"><span data-stu-id="ce5cd-128">`binary-classification` - Choose if the ML Model result has two possible categorical boolean values (0 or 1).</span></span>
+- <span data-ttu-id="ce5cd-129">`multiclass-classification` — выберите, если результат модели машинного обучения имеет несколько возможных категориальных значений.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-129">`multiclass-classification` - Choose if the ML Model result has multiple categorical possible values.</span></span>
 
-<span data-ttu-id="66d25-130">В этом аргументе должна указываться только одна задача машинного обучения.</span><span class="sxs-lookup"><span data-stu-id="66d25-130">Only one ML task should be provided in this argument.</span></span>
+<span data-ttu-id="ce5cd-130">В этом аргументе должна указываться только одна задача машинного обучения.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-130">Only one ML task should be provided in this argument.</span></span>
 
-## <a name="dataset"></a><span data-ttu-id="66d25-131">Набор данных</span><span class="sxs-lookup"><span data-stu-id="66d25-131">Dataset</span></span>
+## <a name="dataset"></a><span data-ttu-id="ce5cd-131">Набор данных</span><span class="sxs-lookup"><span data-stu-id="ce5cd-131">Dataset</span></span>
 
-<span data-ttu-id="66d25-132">`--dataset | -d` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-132">`--dataset | -d` (string)</span></span>
+<span data-ttu-id="ce5cd-132">`--dataset | -d` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-132">`--dataset | -d` (string)</span></span>
 
-<span data-ttu-id="66d25-133">Этот аргумент содержит путь к файлу в одном из следующих форматов:</span><span class="sxs-lookup"><span data-stu-id="66d25-133">This argument provides the filepath to either one of the following options:</span></span>
+<span data-ttu-id="ce5cd-133">Этот аргумент содержит путь к файлу в одном из следующих форматов:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-133">This argument provides the filepath to either one of the following options:</span></span>
 
-- <span data-ttu-id="66d25-134">*А. Файл полного набора данных:* Если используется этот параметр и пользователь не задает `--test-dataset` и `--validation-dataset`, внутри для проверки модели используется кросс-валидация с K-сверткой или автоматизированное разделение данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-134">*A: The whole dataset file:* If using this option and the user is not providing `--test-dataset` and `--validation-dataset`, then cross-validation (k-fold, etc.) or automated data split approaches will be used internally for validating the model.</span></span> <span data-ttu-id="66d25-135">В этом случае пользователю будет достаточно указать путь к файлу набора данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-135">In that case, the user will just need to provide the dataset filepath.</span></span>
+- <span data-ttu-id="ce5cd-134">*А. Файл полного набора данных:* Если используется этот параметр и пользователь не задает `--test-dataset` и `--validation-dataset`, внутри для проверки модели используется кросс-валидация с K-сверткой или автоматизированное разделение данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-134">*A: The whole dataset file:* If using this option and the user is not providing `--test-dataset` and `--validation-dataset`, then cross-validation (k-fold, etc.) or automated data split approaches will be used internally for validating the model.</span></span> <span data-ttu-id="ce5cd-135">В этом случае пользователю будет достаточно указать путь к файлу набора данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-135">In that case, the user will just need to provide the dataset filepath.</span></span>
 
-- <span data-ttu-id="66d25-136">*Б. Файл набора данных для обучения:* Если пользователь также предоставляет наборы данных для валидации модели (с помощью `--test-dataset` и при необходимости `--validation-dataset`), то аргумент `--dataset` указывает лишь "набор данных для обучения".</span><span class="sxs-lookup"><span data-stu-id="66d25-136">*B: The training dataset file:* If the user is also providing datasets for model validation (using `--test-dataset` and optionally `--validation-dataset`), then the `--dataset` argument means to only have the "training dataset".</span></span> <span data-ttu-id="66d25-137">Например при использовании подхода 80–20 % для валидации качества модели и получения показателей точности "набор данных для обучения" будет содержать 80 % данных, а на "проверочный набор данных" придется 20 % данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-137">For example, when using an 80% - 20% approach to validate the quality of the model and to obtain accuracy metrics, the "training dataset" will have 80% of the data and the "test dataset" would have 20% of the data.</span></span>
+- <span data-ttu-id="ce5cd-136">*Б. Файл набора данных для обучения:* Если пользователь также предоставляет наборы данных для валидации модели (с помощью `--test-dataset` и при необходимости `--validation-dataset`), то аргумент `--dataset` указывает лишь "набор данных для обучения".</span><span class="sxs-lookup"><span data-stu-id="ce5cd-136">*B: The training dataset file:* If the user is also providing datasets for model validation (using `--test-dataset` and optionally `--validation-dataset`), then the `--dataset` argument means to only have the "training dataset".</span></span> <span data-ttu-id="ce5cd-137">Например при использовании подхода 80–20 % для валидации качества модели и получения показателей точности "набор данных для обучения" будет содержать 80 % данных, а на "проверочный набор данных" придется 20 % данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-137">For example, when using an 80% - 20% approach to validate the quality of the model and to obtain accuracy metrics, the "training dataset" will have 80% of the data and the "test dataset" would have 20% of the data.</span></span>
 
-## <a name="test-dataset"></a><span data-ttu-id="66d25-138">Проверочный набор данных</span><span class="sxs-lookup"><span data-stu-id="66d25-138">Test dataset</span></span>
+## <a name="test-dataset"></a><span data-ttu-id="ce5cd-138">Проверочный набор данных</span><span class="sxs-lookup"><span data-stu-id="ce5cd-138">Test dataset</span></span>
 
-<span data-ttu-id="66d25-139">`--test-dataset | -t` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-139">`--test-dataset | -t` (string)</span></span>
+<span data-ttu-id="ce5cd-139">`--test-dataset | -t` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-139">`--test-dataset | -t` (string)</span></span>
 
-<span data-ttu-id="66d25-140">Путь к файлу набора данных теста, например при использовании подхода 80–20 % при выполнении регулярных валидаций для получения показателей точности.</span><span class="sxs-lookup"><span data-stu-id="66d25-140">File path pointing to the test dataset file, for example when using an 80% - 20% approach when making regular validations to obtain accuracy metrics.</span></span>
+<span data-ttu-id="ce5cd-140">Путь к файлу набора данных теста, например при использовании подхода 80–20 % при выполнении регулярных валидаций для получения показателей точности.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-140">File path pointing to the test dataset file, for example when using an 80% - 20% approach when making regular validations to obtain accuracy metrics.</span></span>
 
-<span data-ttu-id="66d25-141">При использовании `--test-dataset` параметр `--dataset` также является обязательным.</span><span class="sxs-lookup"><span data-stu-id="66d25-141">If using `--test-dataset`, then `--dataset` is also required.</span></span>
+<span data-ttu-id="ce5cd-141">При использовании `--test-dataset` параметр `--dataset` также является обязательным.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-141">If using `--test-dataset`, then `--dataset` is also required.</span></span>
 
-<span data-ttu-id="66d25-142">Аргумент `--test-dataset` является необязательным, если только не используется --validation-dataset.</span><span class="sxs-lookup"><span data-stu-id="66d25-142">The `--test-dataset` argument is optional unless the --validation-dataset is used.</span></span> <span data-ttu-id="66d25-143">В этом случае пользователь должен использовать три аргумента.</span><span class="sxs-lookup"><span data-stu-id="66d25-143">In that case, the user must use the three arguments.</span></span>
+<span data-ttu-id="ce5cd-142">Аргумент `--test-dataset` является необязательным, если только не используется --validation-dataset.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-142">The `--test-dataset` argument is optional unless the --validation-dataset is used.</span></span> <span data-ttu-id="ce5cd-143">В этом случае пользователь должен использовать три аргумента.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-143">In that case, the user must use the three arguments.</span></span>
 
-## <a name="validation-dataset"></a><span data-ttu-id="66d25-144">Набор данных для проверки</span><span class="sxs-lookup"><span data-stu-id="66d25-144">Validation dataset</span></span>
+## <a name="validation-dataset"></a><span data-ttu-id="ce5cd-144">Набор данных для проверки</span><span class="sxs-lookup"><span data-stu-id="ce5cd-144">Validation dataset</span></span>
 
-<span data-ttu-id="66d25-145">`--validation-dataset | -v` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-145">`--validation-dataset | -v` (string)</span></span>
+<span data-ttu-id="ce5cd-145">`--validation-dataset | -v` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-145">`--validation-dataset | -v` (string)</span></span>
 
-<span data-ttu-id="66d25-146">Путь к файлу валидационного набора данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-146">File path pointing to the validation dataset file.</span></span> <span data-ttu-id="66d25-147">В любом случае валидационный набор данных является необязательным.</span><span class="sxs-lookup"><span data-stu-id="66d25-147">The validation dataset is optional, in any case.</span></span>
+<span data-ttu-id="ce5cd-146">Путь к файлу валидационного набора данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-146">File path pointing to the validation dataset file.</span></span> <span data-ttu-id="ce5cd-147">В любом случае валидационный набор данных является необязательным.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-147">The validation dataset is optional, in any case.</span></span>
 
-<span data-ttu-id="66d25-148">При использовании `validation dataset` должно быть следующее поведение:</span><span class="sxs-lookup"><span data-stu-id="66d25-148">If using a `validation dataset`, the behavior should be:</span></span>
+<span data-ttu-id="ce5cd-148">При использовании `validation dataset` должно быть следующее поведение:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-148">If using a `validation dataset`, the behavior should be:</span></span>
 
-- <span data-ttu-id="66d25-149">Аргументы `test-dataset` и `--dataset` также являются обязательными.</span><span class="sxs-lookup"><span data-stu-id="66d25-149">The `test-dataset` and `--dataset` arguments are also required.</span></span>
+- <span data-ttu-id="ce5cd-149">Аргументы `test-dataset` и `--dataset` также являются обязательными.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-149">The `test-dataset` and `--dataset` arguments are also required.</span></span>
 
-- <span data-ttu-id="66d25-150">Набор данных `validation-dataset` используется для оценки ошибки прогноза для выбора модели.</span><span class="sxs-lookup"><span data-stu-id="66d25-150">The `validation-dataset` dataset is used to estimate prediction error for model selection.</span></span>
+- <span data-ttu-id="ce5cd-150">Набор данных `validation-dataset` используется для оценки ошибки прогноза для выбора модели.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-150">The `validation-dataset` dataset is used to estimate prediction error for model selection.</span></span>
 
-- <span data-ttu-id="66d25-151">`test-dataset` используется для оценки ошибки обобщения конечной выбранной модели.</span><span class="sxs-lookup"><span data-stu-id="66d25-151">The `test-dataset` is used for assessment of the generalization error of the final chosen model.</span></span> <span data-ttu-id="66d25-152">В идеале проверочный набор должен храниться в "хранилище" и добавляться только в конце анализа данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-152">Ideally, the test set should be kept in a “vault,” and be brought out only at the end of the data analysis.</span></span>
+- <span data-ttu-id="ce5cd-151">`test-dataset` используется для оценки ошибки обобщения конечной выбранной модели.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-151">The `test-dataset` is used for assessment of the generalization error of the final chosen model.</span></span> <span data-ttu-id="ce5cd-152">В идеале проверочный набор должен храниться в "хранилище" и добавляться только в конце анализа данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-152">Ideally, the test set should be kept in a “vault,” and be brought out only at the end of the data analysis.</span></span>
 
-<span data-ttu-id="66d25-153">Обычно при использовании `validation dataset` с `test dataset` этап валидации состоит из двух частей.</span><span class="sxs-lookup"><span data-stu-id="66d25-153">Basically, when using a `validation dataset` plus the `test dataset`, the validation phase is split into two parts:</span></span>
+<span data-ttu-id="ce5cd-153">Обычно при использовании `validation dataset` с `test dataset` этап валидации состоит из двух частей.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-153">Basically, when using a `validation dataset` plus the `test dataset`, the validation phase is split into two parts:</span></span>
 
-1. <span data-ttu-id="66d25-154">В первой части вы просто смотрите на модели и выбираете наиболее эффективный подход с использованием проверочных данных (=валидация).</span><span class="sxs-lookup"><span data-stu-id="66d25-154">In the first part, you just look at your models and select the best performing approach using the validation data (=validation)</span></span>
-2. <span data-ttu-id="66d25-155">Затем можно оценить точность выбранного подхода (= проверка).</span><span class="sxs-lookup"><span data-stu-id="66d25-155">Then you estimate the accuracy of the selected approach (=test).</span></span>
+1. <span data-ttu-id="ce5cd-154">В первой части вы просто смотрите на модели и выбираете наиболее эффективный подход с использованием проверочных данных (=валидация).</span><span class="sxs-lookup"><span data-stu-id="ce5cd-154">In the first part, you just look at your models and select the best performing approach using the validation data (=validation)</span></span>
+2. <span data-ttu-id="ce5cd-155">Затем можно оценить точность выбранного подхода (= проверка).</span><span class="sxs-lookup"><span data-stu-id="ce5cd-155">Then you estimate the accuracy of the selected approach (=test).</span></span>
 
-<span data-ttu-id="66d25-156">Таким образом, разделение данных может быть задано как 80-10-10 или 75-15-10.</span><span class="sxs-lookup"><span data-stu-id="66d25-156">Hence, the separation of data could be 80/10/10 or 75/15/10.</span></span> <span data-ttu-id="66d25-157">Пример:</span><span class="sxs-lookup"><span data-stu-id="66d25-157">For example:</span></span>
+<span data-ttu-id="ce5cd-156">Таким образом, разделение данных может быть задано как 80-10-10 или 75-15-10.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-156">Hence, the separation of data could be 80/10/10 or 75/15/10.</span></span> <span data-ttu-id="ce5cd-157">Пример:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-157">For example:</span></span>
 
-- <span data-ttu-id="66d25-158">Файл `training-dataset` должен содержать 75 % данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-158">`training-dataset` file should have 75% of the data.</span></span>
-- <span data-ttu-id="66d25-159">Файл `validation-dataset` должен содержать 15 % данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-159">`validation-dataset` file should have 15% of the data.</span></span>
-- <span data-ttu-id="66d25-160">Файл `test-dataset` должен содержать 10 % данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-160">`test-dataset` file should have 10% of the data.</span></span>
+- <span data-ttu-id="ce5cd-158">Файл `training-dataset` должен содержать 75 % данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-158">`training-dataset` file should have 75% of the data.</span></span>
+- <span data-ttu-id="ce5cd-159">Файл `validation-dataset` должен содержать 15 % данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-159">`validation-dataset` file should have 15% of the data.</span></span>
+- <span data-ttu-id="ce5cd-160">Файл `test-dataset` должен содержать 10 % данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-160">`test-dataset` file should have 10% of the data.</span></span>
 
-<span data-ttu-id="66d25-161">В любом случае эти проценты выбираются с помощью интерфейса командной строки, который будет предоставлять уже разделенные файлы.</span><span class="sxs-lookup"><span data-stu-id="66d25-161">In any case, those percentages will be decided by the user using the CLI who will provide the files already split.</span></span>
+<span data-ttu-id="ce5cd-161">В любом случае эти проценты выбираются с помощью интерфейса командной строки, который будет предоставлять уже разделенные файлы.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-161">In any case, those percentages will be decided by the user using the CLI who will provide the files already split.</span></span>
 
-## <a name="label-column-name"></a><span data-ttu-id="66d25-162">Надпись "имя столбца"</span><span class="sxs-lookup"><span data-stu-id="66d25-162">Label column name</span></span>
+## <a name="label-column-name"></a><span data-ttu-id="ce5cd-162">Надпись "имя столбца"</span><span class="sxs-lookup"><span data-stu-id="ce5cd-162">Label column name</span></span>
 
-<span data-ttu-id="66d25-163">`--label-column-name | -n` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-163">`--label-column-name | -n` (string)</span></span>
+<span data-ttu-id="ce5cd-163">`--label-column-name | -n` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-163">`--label-column-name | -n` (string)</span></span>
 
-<span data-ttu-id="66d25-164">С помощью этого аргумента можно указать определенную цель и целевой столбец (переменную, которую необходимо прогнозировать), используя имя столбца в заголовке набора данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-164">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's name set in the dataset's header.</span></span>
+<span data-ttu-id="ce5cd-164">С помощью этого аргумента можно указать определенную цель и целевой столбец (переменную, которую необходимо прогнозировать), используя имя столбца в заголовке набора данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-164">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's name set in the dataset's header.</span></span>
 
-<span data-ttu-id="66d25-165">Этот аргумент используется только для контролируемых задач машинного обучения, таких как *задачи классификации*.</span><span class="sxs-lookup"><span data-stu-id="66d25-165">This argument is used only for supervised ML tasks such as a *classification problem*.</span></span> <span data-ttu-id="66d25-166">Он не может использоваться для задач машинного обучения без учителя, например *кластеризации*.</span><span class="sxs-lookup"><span data-stu-id="66d25-166">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
+<span data-ttu-id="ce5cd-165">Этот аргумент используется только для контролируемых задач машинного обучения, таких как *задачи классификации*.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-165">This argument is used only for supervised ML tasks such as a *classification problem*.</span></span> <span data-ttu-id="ce5cd-166">Он не может использоваться для задач машинного обучения без учителя, например *кластеризации*.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-166">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
 
-## <a name="label-column-index"></a><span data-ttu-id="66d25-167">Надпись "индекс столбца"</span><span class="sxs-lookup"><span data-stu-id="66d25-167">Label column index</span></span>
+## <a name="label-column-index"></a><span data-ttu-id="ce5cd-167">Надпись "индекс столбца"</span><span class="sxs-lookup"><span data-stu-id="ce5cd-167">Label column index</span></span>
 
-<span data-ttu-id="66d25-168">`--label-column-index | -i` (int)</span><span class="sxs-lookup"><span data-stu-id="66d25-168">`--label-column-index | -i` (int)</span></span>
+<span data-ttu-id="ce5cd-168">`--label-column-index | -i` (int)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-168">`--label-column-index | -i` (int)</span></span>
 
-<span data-ttu-id="66d25-169">С помощью этого аргумента можно задать определенную цель и целевой столбца (переменную, которую требуется спрогнозировать) с помощью числового индекса столбца в файле набора данных (значения индексов столбцов начинаются с 1).</span><span class="sxs-lookup"><span data-stu-id="66d25-169">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's numeric index in the dataset's file (The column index values start at 1).</span></span>
+<span data-ttu-id="ce5cd-169">С помощью этого аргумента можно задать определенную цель и целевой столбца (переменную, которую требуется спрогнозировать) с помощью числового индекса столбца в файле набора данных (значения индексов столбцов начинаются с 1).</span><span class="sxs-lookup"><span data-stu-id="ce5cd-169">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's numeric index in the dataset's file (The column index values start at 1).</span></span>
 
-<span data-ttu-id="66d25-170">*Примечание.* Если пользователь также задал `--label-column-name`, используется `--label-column-name`.</span><span class="sxs-lookup"><span data-stu-id="66d25-170">*Note:* If the user is also using the `--label-column-name`, the `--label-column-name` is the one being used.</span></span>
+<span data-ttu-id="ce5cd-170">*Примечание.* Если пользователь также задал `--label-column-name`, используется `--label-column-name`.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-170">*Note:* If the user is also using the `--label-column-name`, the `--label-column-name` is the one being used.</span></span>
 
-<span data-ttu-id="66d25-171">Этот аргумент используется только для контролируемых задач машинного обучения, таких как *задачи классификации*.</span><span class="sxs-lookup"><span data-stu-id="66d25-171">This argument is used only for supervised ML task such as a *classification problem*.</span></span> <span data-ttu-id="66d25-172">Он не может использоваться для задач машинного обучения без учителя, например *кластеризации*.</span><span class="sxs-lookup"><span data-stu-id="66d25-172">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
+<span data-ttu-id="ce5cd-171">Этот аргумент используется только для контролируемых задач машинного обучения, таких как *задачи классификации*.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-171">This argument is used only for supervised ML task such as a *classification problem*.</span></span> <span data-ttu-id="ce5cd-172">Он не может использоваться для задач машинного обучения без учителя, например *кластеризации*.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-172">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
 
-## <a name="ignore-columns"></a><span data-ttu-id="66d25-173">Игнорировать столбцы</span><span class="sxs-lookup"><span data-stu-id="66d25-173">Ignore columns</span></span>
+## <a name="ignore-columns"></a><span data-ttu-id="ce5cd-173">Игнорировать столбцы</span><span class="sxs-lookup"><span data-stu-id="ce5cd-173">Ignore columns</span></span>
 
-<span data-ttu-id="66d25-174">`--ignore-columns | -I` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-174">`--ignore-columns | -I` (string)</span></span>
+<span data-ttu-id="ce5cd-174">`--ignore-columns | -I` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-174">`--ignore-columns | -I` (string)</span></span>
 
-<span data-ttu-id="66d25-175">С помощью этого аргумента можно игнорировать существующие столбцы в файле набора данных; они не загружаются и не используются процессами обучения.</span><span class="sxs-lookup"><span data-stu-id="66d25-175">With this argument, you can ignore existing columns in the dataset file so they are not loaded and used by the training processes.</span></span>
+<span data-ttu-id="ce5cd-175">С помощью этого аргумента можно игнорировать существующие столбцы в файле набора данных; они не загружаются и не используются процессами обучения.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-175">With this argument, you can ignore existing columns in the dataset file so they are not loaded and used by the training processes.</span></span>
 
-<span data-ttu-id="66d25-176">Укажите имена столбцов, которые требуется игнорировать.</span><span class="sxs-lookup"><span data-stu-id="66d25-176">Specify the columns names that you want to ignore.</span></span> <span data-ttu-id="66d25-177">Используйте ", " (запятая с пробелом) или " " (пробел) для разделения нескольких имен столбцов.</span><span class="sxs-lookup"><span data-stu-id="66d25-177">Use ', ' (comma with space) or ' ' (space) to separate multiple column names.</span></span> <span data-ttu-id="66d25-178">Можно использовать кавычки для имен столбцов, содержащих пробелы (например, "Вход в систему").</span><span class="sxs-lookup"><span data-stu-id="66d25-178">You can use quotes for column names containing whitespace (e.g. "logged in").</span></span>
+<span data-ttu-id="ce5cd-176">Укажите имена столбцов, которые требуется игнорировать.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-176">Specify the columns names that you want to ignore.</span></span> <span data-ttu-id="ce5cd-177">Используйте ", " (запятая с пробелом) или " " (пробел) для разделения нескольких имен столбцов.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-177">Use ', ' (comma with space) or ' ' (space) to separate multiple column names.</span></span> <span data-ttu-id="ce5cd-178">Можно использовать кавычки для имен столбцов, содержащих пробелы (например, "Вход в систему").</span><span class="sxs-lookup"><span data-stu-id="ce5cd-178">You can use quotes for column names containing whitespace (e.g. "logged in").</span></span>
 
-<span data-ttu-id="66d25-179">Пример.</span><span class="sxs-lookup"><span data-stu-id="66d25-179">Example:</span></span>
+<span data-ttu-id="ce5cd-179">Пример.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-179">Example:</span></span>
 
 `--ignore-columns email, address, id, logged_in`
 
-## <a name="has-header"></a><span data-ttu-id="66d25-180">Имеет заголовок</span><span class="sxs-lookup"><span data-stu-id="66d25-180">Has header</span></span>
+## <a name="has-header"></a><span data-ttu-id="ce5cd-180">Имеет заголовок</span><span class="sxs-lookup"><span data-stu-id="ce5cd-180">Has header</span></span>
 
-<span data-ttu-id="66d25-181">`--has-header | -h` (логическое значение)</span><span class="sxs-lookup"><span data-stu-id="66d25-181">`--has-header | -h` (bool)</span></span>
+<span data-ttu-id="ce5cd-181">`--has-header | -h` (логическое значение)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-181">`--has-header | -h` (bool)</span></span>
 
-<span data-ttu-id="66d25-182">Укажите, содержат ли файлы набора данных строку заголовка.</span><span class="sxs-lookup"><span data-stu-id="66d25-182">Specify if the dataset file(s) have a header row.</span></span>
-<span data-ttu-id="66d25-183">Доступны следующие значения:</span><span class="sxs-lookup"><span data-stu-id="66d25-183">Possible values are:</span></span>
+<span data-ttu-id="ce5cd-182">Укажите, содержат ли файлы набора данных строку заголовка.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-182">Specify if the dataset file(s) have a header row.</span></span>
+<span data-ttu-id="ce5cd-183">Доступны следующие значения:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-183">Possible values are:</span></span>
 
 - `true`
 - `false`
 
-<span data-ttu-id="66d25-184">По умолчанию значение равно `true`, если этот аргумент не задан пользователем.</span><span class="sxs-lookup"><span data-stu-id="66d25-184">The by default value is `true` if this argument is not specified by the user.</span></span>
+<span data-ttu-id="ce5cd-184">По умолчанию значение равно `true`, если этот аргумент не задан пользователем.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-184">The by default value is `true` if this argument is not specified by the user.</span></span>
 
-<span data-ttu-id="66d25-185">Чтобы использовать аргумент `--label-column-name`, необходимо указать заголовок в файле набора данных и задать `--has-header` как `true` (используется по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="66d25-185">In order to use the `--label-column-name` argument, you need to have a header in the dataset file and `--has-header` set to `true` (which is by default).</span></span>
+<span data-ttu-id="ce5cd-185">Чтобы использовать аргумент `--label-column-name`, необходимо указать заголовок в файле набора данных и задать `--has-header` как `true` (используется по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="ce5cd-185">In order to use the `--label-column-name` argument, you need to have a header in the dataset file and `--has-header` set to `true` (which is by default).</span></span>
 
-## <a name="max-exploration-time"></a><span data-ttu-id="66d25-186">Максимальное время исследования</span><span class="sxs-lookup"><span data-stu-id="66d25-186">Max exploration time</span></span>
+## <a name="max-exploration-time"></a><span data-ttu-id="ce5cd-186">Максимальное время исследования</span><span class="sxs-lookup"><span data-stu-id="ce5cd-186">Max exploration time</span></span>
 
-<span data-ttu-id="66d25-187">`--max-exploration-time | -x` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-187">`--max-exploration-time | -x` (string)</span></span>
+<span data-ttu-id="ce5cd-187">`--max-exploration-time | -x` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-187">`--max-exploration-time | -x` (string)</span></span>
 
-<span data-ttu-id="66d25-188">По умолчанию максимальное время исследования составляет 30 минут.</span><span class="sxs-lookup"><span data-stu-id="66d25-188">By default, the maximum exploration time is 30 minutes.</span></span>
+<span data-ttu-id="ce5cd-188">По умолчанию максимальное время исследования составляет 30 минут.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-188">By default, the maximum exploration time is 30 minutes.</span></span>
 
-<span data-ttu-id="66d25-189">Этот аргумент задает максимальное время (в секундах) для процесса изучения различных учителей и конфигураций.</span><span class="sxs-lookup"><span data-stu-id="66d25-189">This argument sets the maximum time (in seconds) for the process to explore multiple trainers and configurations.</span></span> <span data-ttu-id="66d25-190">Заданное время может быть превышено, если указанное время слишком мало (скажем, 2 секунды) для одной итерации.</span><span class="sxs-lookup"><span data-stu-id="66d25-190">The configured time may be exceeded if the provided time is too short (say 2 seconds) for a single iteration.</span></span> <span data-ttu-id="66d25-191">В этом случае фактическое время — это время, необходимое для создания одной модели конфигурации в одной итерации.</span><span class="sxs-lookup"><span data-stu-id="66d25-191">In this case, the actual time is the required time to produce one model configuration in a single iteration.</span></span>
+<span data-ttu-id="ce5cd-189">Этот аргумент задает максимальное время (в секундах) для процесса изучения различных учителей и конфигураций.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-189">This argument sets the maximum time (in seconds) for the process to explore multiple trainers and configurations.</span></span> <span data-ttu-id="ce5cd-190">Заданное время может быть превышено, если указанное время слишком мало (скажем, 2 секунды) для одной итерации.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-190">The configured time may be exceeded if the provided time is too short (say 2 seconds) for a single iteration.</span></span> <span data-ttu-id="ce5cd-191">В этом случае фактическое время — это время, необходимое для создания одной модели конфигурации в одной итерации.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-191">In this case, the actual time is the required time to produce one model configuration in a single iteration.</span></span>
 
-<span data-ttu-id="66d25-192">Требуемое время для итераций зависит от размера набора данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-192">The needed time for iterations can vary depending on the size of the dataset.</span></span>
+<span data-ttu-id="ce5cd-192">Требуемое время для итераций зависит от размера набора данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-192">The needed time for iterations can vary depending on the size of the dataset.</span></span>
 
-## <a name="cache"></a><span data-ttu-id="66d25-193">Кэш</span><span class="sxs-lookup"><span data-stu-id="66d25-193">Cache</span></span>
+## <a name="cache"></a><span data-ttu-id="ce5cd-193">Кэш</span><span class="sxs-lookup"><span data-stu-id="ce5cd-193">Cache</span></span>
 
-<span data-ttu-id="66d25-194">`--cache | -c` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-194">`--cache | -c` (string)</span></span>
+<span data-ttu-id="ce5cd-194">`--cache | -c` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-194">`--cache | -c` (string)</span></span>
 
-<span data-ttu-id="66d25-195">При использовании кэширования весь обучающий набор данных будет загружен в память.</span><span class="sxs-lookup"><span data-stu-id="66d25-195">If you use caching, the whole training dataset will be loaded in-memory.</span></span>
+<span data-ttu-id="ce5cd-195">При использовании кэширования весь обучающий набор данных будет загружен в память.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-195">If you use caching, the whole training dataset will be loaded in-memory.</span></span>
 
-<span data-ttu-id="66d25-196">Для малых и средних наборов данных с помощью кэша можно существенно улучшить производительность обучения; это означает, что время обучения может быть короче, чем в ситуации, если кэш не используется.</span><span class="sxs-lookup"><span data-stu-id="66d25-196">For small and medium datasets, using cache can drastically improve the training performance, meaning the training time can be shorter than when you don't use cache.</span></span>
+<span data-ttu-id="ce5cd-196">Для малых и средних наборов данных с помощью кэша можно существенно улучшить производительность обучения; это означает, что время обучения может быть короче, чем в ситуации, если кэш не используется.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-196">For small and medium datasets, using cache can drastically improve the training performance, meaning the training time can be shorter than when you don't use cache.</span></span>
 
-<span data-ttu-id="66d25-197">Тем не менее на большие наборы данных загрузка всех данных в память может повлиять отрицательно, так как может возникнуть нехватка памяти.</span><span class="sxs-lookup"><span data-stu-id="66d25-197">However, for large datasets, loading all the data in memory can impact negatively since you might get out of memory.</span></span> <span data-ttu-id="66d25-198">В случае обучения с большими файлами набора данных без использования кэша ML.NET будет потоком передавать блоки данных с диска при необходимости загрузить дополнительные данные во время обучения.</span><span class="sxs-lookup"><span data-stu-id="66d25-198">When training with large dataset files and not using cache, ML.NET will be streaming chunks of data from the drive when it needs to load more data while training.</span></span>
+<span data-ttu-id="ce5cd-197">Тем не менее на большие наборы данных загрузка всех данных в память может повлиять отрицательно, так как может возникнуть нехватка памяти.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-197">However, for large datasets, loading all the data in memory can impact negatively since you might get out of memory.</span></span> <span data-ttu-id="ce5cd-198">В случае обучения с большими файлами набора данных без использования кэша ML.NET будет потоком передавать блоки данных с диска при необходимости загрузить дополнительные данные во время обучения.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-198">When training with large dataset files and not using cache, ML.NET will be streaming chunks of data from the drive when it needs to load more data while training.</span></span>
 
-<span data-ttu-id="66d25-199">Можно указать следующие значения:</span><span class="sxs-lookup"><span data-stu-id="66d25-199">You can specify the following values:</span></span>
+<span data-ttu-id="ce5cd-199">Можно указать следующие значения:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-199">You can specify the following values:</span></span>
 
-<span data-ttu-id="66d25-200">`on`. принудительно включает кэш при обучении;</span><span class="sxs-lookup"><span data-stu-id="66d25-200">`on`: Forces cache to be used when training.</span></span>
-<span data-ttu-id="66d25-201">`off`. принудительно отключает кэш при обучении;</span><span class="sxs-lookup"><span data-stu-id="66d25-201">`off`: Forces cache not to be used when training.</span></span>
-<span data-ttu-id="66d25-202">`auto`. кэш будет использоваться в зависимости от эвристики AutoML.</span><span class="sxs-lookup"><span data-stu-id="66d25-202">`auto`: Depending on AutoML heuristics, the cache will be used or not.</span></span> <span data-ttu-id="66d25-203">Как правило, для небольших и средних наборов данных будет использоваться кэш; большие наборы данных не будут использовать кэш, если вы укажете `auto`.</span><span class="sxs-lookup"><span data-stu-id="66d25-203">Usually, small/medium datasets will use cache and large datasets won't use cache if you use the `auto` choice.</span></span>
+<span data-ttu-id="ce5cd-200">`on`. принудительно включает кэш при обучении;</span><span class="sxs-lookup"><span data-stu-id="ce5cd-200">`on`: Forces cache to be used when training.</span></span>
+<span data-ttu-id="ce5cd-201">`off`. принудительно отключает кэш при обучении;</span><span class="sxs-lookup"><span data-stu-id="ce5cd-201">`off`: Forces cache not to be used when training.</span></span>
+<span data-ttu-id="ce5cd-202">`auto`. кэш будет использоваться в зависимости от эвристики AutoML.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-202">`auto`: Depending on AutoML heuristics, the cache will be used or not.</span></span> <span data-ttu-id="ce5cd-203">Как правило, для небольших и средних наборов данных будет использоваться кэш; большие наборы данных не будут использовать кэш, если вы укажете `auto`.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-203">Usually, small/medium datasets will use cache and large datasets won't use cache if you use the `auto` choice.</span></span>
 
-<span data-ttu-id="66d25-204">Если вы не укажете параметр `--cache`, то для кэша `auto` будет использована конфигурация по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="66d25-204">If you don't specify the `--cache` parameter, then the cache `auto` configuration will be used by default.</span></span>
+<span data-ttu-id="ce5cd-204">Если вы не укажете параметр `--cache`, то для кэша `auto` будет использована конфигурация по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-204">If you don't specify the `--cache` parameter, then the cache `auto` configuration will be used by default.</span></span>
 
-## <a name="name"></a><span data-ttu-id="66d25-205">name</span><span class="sxs-lookup"><span data-stu-id="66d25-205">Name</span></span>
+## <a name="name"></a><span data-ttu-id="ce5cd-205">name</span><span class="sxs-lookup"><span data-stu-id="ce5cd-205">Name</span></span>
 
-<span data-ttu-id="66d25-206">`--name | -N` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-206">`--name | -N` (string)</span></span>
+<span data-ttu-id="ce5cd-206">`--name | -N` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-206">`--name | -N` (string)</span></span>
 
-<span data-ttu-id="66d25-207">Имя для создаваемых выходных проекта или решения.</span><span class="sxs-lookup"><span data-stu-id="66d25-207">The name for the created output project or solution.</span></span> <span data-ttu-id="66d25-208">Если имя не задано, используется имя `sample-{mltask}`.</span><span class="sxs-lookup"><span data-stu-id="66d25-208">If no name is specified, the name `sample-{mltask}` is used.</span></span>
+<span data-ttu-id="ce5cd-207">Имя для создаваемых выходных проекта или решения.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-207">The name for the created output project or solution.</span></span> <span data-ttu-id="ce5cd-208">Если имя не задано, используется имя `sample-{mltask}`.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-208">If no name is specified, the name `sample-{mltask}` is used.</span></span>
 
-<span data-ttu-id="66d25-209">Файл модели ML.NET (ZIP-файл) получит то же имя.</span><span class="sxs-lookup"><span data-stu-id="66d25-209">The ML.NET model file (.ZIP file) will get the same name, as well.</span></span>
+<span data-ttu-id="ce5cd-209">Файл модели ML.NET (ZIP-файл) получит то же имя.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-209">The ML.NET model file (.ZIP file) will get the same name, as well.</span></span>
 
-## <a name="output-path"></a><span data-ttu-id="66d25-210">Путь для создаваемых файлов</span><span class="sxs-lookup"><span data-stu-id="66d25-210">Output path</span></span>
+## <a name="output-path"></a><span data-ttu-id="ce5cd-210">Путь для создаваемых файлов</span><span class="sxs-lookup"><span data-stu-id="ce5cd-210">Output path</span></span>
 
-<span data-ttu-id="66d25-211">`--output-path | -o` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-211">`--output-path | -o` (string)</span></span>
+<span data-ttu-id="ce5cd-211">`--output-path | -o` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-211">`--output-path | -o` (string)</span></span>
 
-<span data-ttu-id="66d25-212">Корневое расположение или папка для размещения созданных выходных данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-212">Root location/folder to place the generated output.</span></span> <span data-ttu-id="66d25-213">Значением по умолчанию является текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="66d25-213">The default is the current directory.</span></span>
+<span data-ttu-id="ce5cd-212">Корневое расположение или папка для размещения созданных выходных данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-212">Root location/folder to place the generated output.</span></span> <span data-ttu-id="ce5cd-213">Значением по умолчанию является текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-213">The default is the current directory.</span></span>
 
-## <a name="verbosity"></a><span data-ttu-id="66d25-214">Уровень детализации</span><span class="sxs-lookup"><span data-stu-id="66d25-214">Verbosity</span></span>
+## <a name="verbosity"></a><span data-ttu-id="ce5cd-214">Уровень детализации</span><span class="sxs-lookup"><span data-stu-id="ce5cd-214">Verbosity</span></span>
 
-<span data-ttu-id="66d25-215">`--verbosity | -V` (строка)</span><span class="sxs-lookup"><span data-stu-id="66d25-215">`--verbosity | -V` (string)</span></span>
+<span data-ttu-id="ce5cd-215">`--verbosity | -V` (строка)</span><span class="sxs-lookup"><span data-stu-id="ce5cd-215">`--verbosity | -V` (string)</span></span>
 
-<span data-ttu-id="66d25-216">Задает уровень детализации стандартных выходных данных.</span><span class="sxs-lookup"><span data-stu-id="66d25-216">Sets the verbosity level of the standard output.</span></span>
+<span data-ttu-id="ce5cd-216">Задает уровень детализации стандартных выходных данных.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-216">Sets the verbosity level of the standard output.</span></span>
 
-<span data-ttu-id="66d25-217">Допустимыми значениями являются:</span><span class="sxs-lookup"><span data-stu-id="66d25-217">Allowed values are:</span></span>
+<span data-ttu-id="ce5cd-217">Допустимыми значениями являются:</span><span class="sxs-lookup"><span data-stu-id="ce5cd-217">Allowed values are:</span></span>
 
 - `q[uiet]`
-- <span data-ttu-id="66d25-218">`m[inimal]` (по умолчанию);</span><span class="sxs-lookup"><span data-stu-id="66d25-218">`m[inimal]`  (by default)</span></span>
-- <span data-ttu-id="66d25-219">`diag[nostic]` (уровень ведения журнала).</span><span class="sxs-lookup"><span data-stu-id="66d25-219">`diag[nostic]` (logging information level)</span></span>
+- <span data-ttu-id="ce5cd-218">`m[inimal]` (по умолчанию);</span><span class="sxs-lookup"><span data-stu-id="ce5cd-218">`m[inimal]`  (by default)</span></span>
+- <span data-ttu-id="ce5cd-219">`diag[nostic]` (уровень ведения журнала).</span><span class="sxs-lookup"><span data-stu-id="ce5cd-219">`diag[nostic]` (logging information level)</span></span>
 
-<span data-ttu-id="66d25-220">По умолчанию программа командной строки должна отображать минимальные выходные данные во время работы, например отметить, что она работает и (по возможности) сколько времени уйдет на завершение работы.</span><span class="sxs-lookup"><span data-stu-id="66d25-220">By default, the CLI tool should show some minimum feedback (minimal) when working, such as mentioning that it is working and if possible how much time is left or what % of the time is completed.</span></span>
+<span data-ttu-id="ce5cd-220">По умолчанию программа командной строки должна отображать минимальные выходные данные во время работы, например отметить, что она работает и (по возможности) сколько времени уйдет на завершение работы.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-220">By default, the CLI tool should show some minimum feedback (minimal) when working, such as mentioning that it is working and if possible how much time is left or what % of the time is completed.</span></span>
 
-## <a name="help"></a><span data-ttu-id="66d25-221">Справка</span><span class="sxs-lookup"><span data-stu-id="66d25-221">Help</span></span>
+## <a name="help"></a><span data-ttu-id="ce5cd-221">Справка</span><span class="sxs-lookup"><span data-stu-id="ce5cd-221">Help</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="66d25-222">Выводит справку для команды с описанием каждого аргумента.</span><span class="sxs-lookup"><span data-stu-id="66d25-222">Prints out help for the command with a description for each command's parameter.</span></span>
+<span data-ttu-id="ce5cd-222">Выводит справку для команды с описанием каждого аргумента.</span><span class="sxs-lookup"><span data-stu-id="ce5cd-222">Prints out help for the command with a description for each command's parameter.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="66d25-223">См. также</span><span class="sxs-lookup"><span data-stu-id="66d25-223">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce5cd-223">См. также</span><span class="sxs-lookup"><span data-stu-id="ce5cd-223">See also</span></span>
 
-- [<span data-ttu-id="66d25-224">Установка интерфейса командной строки ML.NET</span><span class="sxs-lookup"><span data-stu-id="66d25-224">How to install the ML.NET CLI tool</span></span>](../how-to-guides/install-ml-net-cli.md)
-- [<span data-ttu-id="66d25-225">Общие сведения о ML.NET CLI</span><span class="sxs-lookup"><span data-stu-id="66d25-225">Overview of the ML.NET CLI</span></span>](../automate-training-with-cli.md)
-- [<span data-ttu-id="66d25-226">Учебник. Анализ тональности с помощью интерфейса командной строки (CLI) ML.NET</span><span class="sxs-lookup"><span data-stu-id="66d25-226">Tutorial: Analyze sentiment using the ML.NET CLI</span></span>](../tutorials/sentiment-analysis-cli.md)
-- [<span data-ttu-id="66d25-227">Данные телеметрии в интерфейсе командной строки ML.NET</span><span class="sxs-lookup"><span data-stu-id="66d25-227">Telemetry in ML.NET CLI</span></span>](../resources/ml-net-cli-telemetry.md)
+- [<span data-ttu-id="ce5cd-224">Установка интерфейса командной строки ML.NET</span><span class="sxs-lookup"><span data-stu-id="ce5cd-224">How to install the ML.NET CLI tool</span></span>](../how-to-guides/install-ml-net-cli.md)
+- [<span data-ttu-id="ce5cd-225">Общие сведения о ML.NET CLI</span><span class="sxs-lookup"><span data-stu-id="ce5cd-225">Overview of the ML.NET CLI</span></span>](../automate-training-with-cli.md)
+- [<span data-ttu-id="ce5cd-226">Учебник. Анализ тональности с помощью интерфейса командной строки (CLI) ML.NET</span><span class="sxs-lookup"><span data-stu-id="ce5cd-226">Tutorial: Analyze sentiment using the ML.NET CLI</span></span>](../tutorials/sentiment-analysis-cli.md)
+- [<span data-ttu-id="ce5cd-227">Данные телеметрии в интерфейсе командной строки ML.NET</span><span class="sxs-lookup"><span data-stu-id="ce5cd-227">Telemetry in ML.NET CLI</span></span>](../resources/ml-net-cli-telemetry.md)

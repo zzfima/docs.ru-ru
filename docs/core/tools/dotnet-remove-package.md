@@ -1,48 +1,52 @@
 ---
 title: Команда dotnet remove package
 description: Команду dotnet remove package удобно использовать для удаления ссылки на пакет NuGet в проекте.
-ms.date: 05/29/2018
-ms.openlocfilehash: cbdeacff78ef20c9a73010e10a771a724b23792e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 02/14/2020
+ms.openlocfilehash: 8eaa311748c5627351ef149012dc4dddd2ab2793
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632436"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503633"
 ---
-# <a name="dotnet-remove-package"></a><span data-ttu-id="06d1f-103">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="06d1f-103">dotnet remove package</span></span>
+# <a name="dotnet-remove-package"></a><span data-ttu-id="fcf4e-103">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="fcf4e-103">dotnet remove package</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+<span data-ttu-id="fcf4e-104">**Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий</span><span class="sxs-lookup"><span data-stu-id="fcf4e-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="06d1f-104">name</span><span class="sxs-lookup"><span data-stu-id="06d1f-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="fcf4e-105">name</span><span class="sxs-lookup"><span data-stu-id="fcf4e-105">Name</span></span>
 
-<span data-ttu-id="06d1f-105">`dotnet remove package` — удаляет ссылку на пакет из файла проекта.</span><span class="sxs-lookup"><span data-stu-id="06d1f-105">`dotnet remove package` - Removes package reference from a project file.</span></span>
+<span data-ttu-id="fcf4e-106">`dotnet remove package` — удаляет ссылку на пакет из файла проекта.</span><span class="sxs-lookup"><span data-stu-id="fcf4e-106">`dotnet remove package` - Removes package reference from a project file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="06d1f-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="06d1f-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="fcf4e-107">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="fcf4e-107">Synopsis</span></span>
 
-`dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]`
+```dotnetcli
+dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
+```
 
-## <a name="description"></a><span data-ttu-id="06d1f-107">Описание</span><span class="sxs-lookup"><span data-stu-id="06d1f-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="fcf4e-108">Описание</span><span class="sxs-lookup"><span data-stu-id="fcf4e-108">Description</span></span>
 
-<span data-ttu-id="06d1f-108">Команду `dotnet remove package` удобно использовать для удаления ссылки на пакет NuGet из проекта.</span><span class="sxs-lookup"><span data-stu-id="06d1f-108">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
+<span data-ttu-id="fcf4e-109">Команду `dotnet remove package` удобно использовать для удаления ссылки на пакет NuGet из проекта.</span><span class="sxs-lookup"><span data-stu-id="fcf4e-109">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="06d1f-109">Аргументы</span><span class="sxs-lookup"><span data-stu-id="06d1f-109">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="fcf4e-110">Аргументы</span><span class="sxs-lookup"><span data-stu-id="fcf4e-110">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="06d1f-110">Указывает файл проекта.</span><span class="sxs-lookup"><span data-stu-id="06d1f-110">Specifies the project file.</span></span> <span data-ttu-id="06d1f-111">Если он не указан, команда ищет текущий каталог для него.</span><span class="sxs-lookup"><span data-stu-id="06d1f-111">If not specified, the command searches the current directory for one.</span></span>
+<span data-ttu-id="fcf4e-111">Указывает файл проекта.</span><span class="sxs-lookup"><span data-stu-id="fcf4e-111">Specifies the project file.</span></span> <span data-ttu-id="fcf4e-112">Если он не указан, команда ищет текущий каталог для него.</span><span class="sxs-lookup"><span data-stu-id="fcf4e-112">If not specified, the command searches the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-<span data-ttu-id="06d1f-112">Удаляемая ссылка на пакет.</span><span class="sxs-lookup"><span data-stu-id="06d1f-112">The package reference to remove.</span></span>
+<span data-ttu-id="fcf4e-113">Удаляемая ссылка на пакет.</span><span class="sxs-lookup"><span data-stu-id="fcf4e-113">The package reference to remove.</span></span>
 
-## <a name="options"></a><span data-ttu-id="06d1f-113">Параметры</span><span class="sxs-lookup"><span data-stu-id="06d1f-113">Options</span></span>
+## <a name="options"></a><span data-ttu-id="fcf4e-114">Параметры</span><span class="sxs-lookup"><span data-stu-id="fcf4e-114">Options</span></span>
 
-`-h|--help`
+- **`-h|--help`**
 
-<span data-ttu-id="06d1f-114">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="06d1f-114">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="fcf4e-115">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="fcf4e-115">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="06d1f-115">Примеры</span><span class="sxs-lookup"><span data-stu-id="06d1f-115">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="fcf4e-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="fcf4e-116">Examples</span></span>
 
-<span data-ttu-id="06d1f-116">Удаляет пакет NuGet `Newtonsoft.Json` из проекта в текущем каталоге:</span><span class="sxs-lookup"><span data-stu-id="06d1f-116">Removes `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
+- <span data-ttu-id="fcf4e-117">Удалите пакет NuGet `Newtonsoft.Json` из проекта в текущем каталоге:</span><span class="sxs-lookup"><span data-stu-id="fcf4e-117">Remove `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
 
-`dotnet remove package Newtonsoft.Json`
+  ```dotnetcli
+  dotnet remove package Newtonsoft.Json
+  ```
