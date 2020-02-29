@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423527"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159628"
 ---
 # <a name="handling-and-raising-events"></a>Обработка и создание событий
 
@@ -78,7 +78,7 @@ ms.locfileid: "73423527"
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Обработчики статических и динамических событий  
- 
+
 .NET позволяет подписчикам регистрироваться для получения уведомлений о событиях как статически, так и динамически. Обработчики статических событий действуют в течение всего жизненного цикла класса, события которого они обрабатывают. Обработчики динамических событий активируются и деактивируются во время выполнения программы, обычно в ответ на определенную условную логику программы. Например, они могут использоваться, если уведомления о событиях требуются только в определенных условиях, либо приложение предоставляет несколько обработчиков событий и выбор конкретного обработчика зависит от условий среды выполнения. В примере в предыдущем разделе показано, как динамически добавлять обработчик события. Дополнительные сведения см. в разделах [события](../../visual-basic/programming-guide/language-features/events/index.md) (в Visual Basic) и [события](../../csharp/programming-guide/events/index.md) (в C#).  
   
 ## <a name="raising-multiple-events"></a>Создание нескольких событий  

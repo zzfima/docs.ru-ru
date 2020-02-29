@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708375"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156313"
 ---
 # <a name="generics-in-net"></a>Универсальные шаблоны в .NET
 
@@ -124,7 +124,7 @@ ms.locfileid: "75708375"
   
  Среда CLR предоставляет новые коды операций и префиксы для поддержки универсальных типов в языке MSIL, включая <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>и <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- В языках Visual C++, C# и Visual Basic обеспечивается полноценная поддержка определения и использования универсальных шаблонов. Дополнительные сведения о поддержке языков см. в статьях [Универсальные типы в Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Введение в универсальные шаблоны](../../csharp/programming-guide/generics/index.md) и [Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp). 
+ В языках Visual C++, C# и Visual Basic обеспечивается полноценная поддержка определения и использования универсальных шаблонов. Дополнительные сведения о поддержке языков см. в статьях [Универсальные типы в Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Введение в универсальные шаблоны](../../csharp/programming-guide/generics/index.md) и [Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).
 
 ## <a name="nested-types-and-generics"></a>Вложенные типы и универсальные шаблоны  
  Тип, вложенный в универсальный тип, может зависеть от параметров типа этого универсального типа. Среда CLR рассматривает вложенные типы как универсальные, даже если они не имеют своих собственных параметров универсального типа. При создании экземпляра вложенного типа необходимо задать аргументы типа для всех включающих его универсальных типов.  

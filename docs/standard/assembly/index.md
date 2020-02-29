@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921373"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156509"
 ---
 # <a name="assemblies-in-net"></a>Сборки в .NET
 
@@ -85,7 +85,7 @@ ms.locfileid: "76921373"
 Чтобы использовать сборку в приложении, нужно добавить ссылку на нее. Когда вы добавите ссылку на сборку, в вашем приложении станут доступны все предоставленные в сборке типы, свойства, методы и другие члены пространств имен, как если бы их код являлся частью файла с исходным кодом вашего приложения.
 
 > [!NOTE]
-> Ссылки на большинство сборок из библиотеки классов .NET создаются автоматически. Если системная сборка не упоминается в ссылке автоматически, для .NET Core можно добавить ссылку на пакет NuGet, содержащий эту сборку. Используйте диспетчер пакетов NuGet в Visual Studio или добавьте элемент [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) для сборки в файл проекта с расширением *.csproj* или *.vbproj*. В .NET Framework можно добавить ссылку на сборку с помощью диалогового окна **Добавить ссылку** в Visual Studio или параметра командной строки `-reference` для компиляторов [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) или [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md).
+> Ссылки на большинство сборок из библиотеки классов .NET создаются автоматически. Если системная сборка не упоминается в ссылке автоматически, для .NET Core можно добавить ссылку на пакет NuGet, содержащий эту сборку. Используйте диспетчер пакетов NuGet в Visual Studio или добавьте элемент [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) для сборки в файл проекта с расширением *.csproj* или *.vbproj*. В .NET Framework можно добавить ссылку на сборку с помощью диалогового окна **Добавить ссылку** в Visual Studio или параметра командной строки `-reference` для компиляторов [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) или [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md).
 
 На C# вы можете использовать две версии одной и той же сборки в одном приложении. Дополнительные сведения см. в разделе [Псевдоним extern](../../csharp/language-reference/keywords/extern-alias.md).
 
