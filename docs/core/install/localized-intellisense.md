@@ -2,12 +2,12 @@
 title: Установка локализованных файлов IntelliSense
 description: Узнайте, как настроить компьютер, на котором ведется разработка, для использования локализованных файлов IntelliSense в проектах .NET Core в Visual Studio.
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733650"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157717"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Установка локализованных файлов IntelliSense для .NET Core
 
@@ -42,7 +42,7 @@ ms.locfileid: "76733650"
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Windows Desktop | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
-   
+
    1. Перейдите к версии, для которой необходимо установить локализованные файлы IntelliSense. Например, *3.1.0*.
    1. Откройте папку *ref*.
    1. Откройте папку моникера. Например, *netcoreapp3.1*.
@@ -116,7 +116,7 @@ ms.locfileid: "76733650"
 
 1. В узле **Среда** выберите **Выбор языка**.
 
-1. В раскрывающемся списке **Язык** выберите язык. Нажмите кнопку **ОК**. 
+1. В раскрывающемся списке **Язык** выберите язык. Нажмите кнопку **ОК**.
 
 1. Появится диалоговое окно, информирующее о необходимости перезапуска Visual Studio для применения изменений. Нажмите кнопку **ОК**.
 

@@ -4,12 +4,12 @@ description: Сведения о концепциях модульного те�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1b21e961ffceb3fce2697ad3254e79ed258aaa1a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715388"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157341"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Модульное тестирование кода C# с использованием MSTest и .NET Core
 
@@ -36,15 +36,15 @@ namespace Prime.Services
 {
     public class PrimeService
     {
-        public bool IsPrime(int candidate) 
+        public bool IsPrime(int candidate)
         {
             throw new NotImplementedException("Please create a test first.");
-        } 
+        }
     }
 }
 ```
 
-Вернитесь в каталог *unit-testing-using-mstest*. Чтобы добавить проект библиотеки классов в решение, выполните команду [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md). 
+Вернитесь в каталог *unit-testing-using-mstest*. Чтобы добавить проект библиотеки классов в решение, выполните команду [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md).
 
 ## <a name="create-the-test-project"></a>Создание тестового проекта
 
@@ -90,7 +90,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-Выполните команду [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) в каталоге *unit-testing-using-mstest*. 
+Выполните команду [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) в каталоге *unit-testing-using-mstest*.
 
 ## <a name="create-the-first-test"></a>Создание первого теста
 
@@ -123,7 +123,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-[Атрибут TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) обозначает класс, содержащий модульные тесты. [Атрибут TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) указывает, что метод — это метода теста. 
+[Атрибут TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) обозначает класс, содержащий модульные тесты. [Атрибут TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) указывает, что метод — это метода теста.
 
 Сохраните этот файл и выполните [`dotnet test`](../tools/dotnet-test.md), чтобы создать тесты и библиотеку классов, а затем запустите тесты. Средство запуска тестов MSTest содержит точку входа в программу для выполнения тестов. `dotnet test` запускает средство выполнения тестов с помощью проекта модульного теста, который вы создали.
 

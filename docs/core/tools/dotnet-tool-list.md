@@ -2,12 +2,12 @@
 title: Команда dotnet tool list
 description: Команда dotnet tool list выводит список средств .NET Core, установленных на компьютере.
 ms.date: 02/14/2020
-ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543460"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156989"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -40,7 +40,7 @@ dotnet tool list <-h|--help>
 
 - **`-g|--global`**
 
-  Выводит глобальные средства на уровне пользователя. Не может использоваться вместе с параметром `--tool-path`. Пропуск `--global` и `--tool-path` выводит локальные инструменты. 
+  Выводит глобальные средства на уровне пользователя. Не может использоваться вместе с параметром `--tool-path`. Пропуск `--global` и `--tool-path` выводит локальные инструменты.
 
 - **`-h|--help`**
 
@@ -48,7 +48,7 @@ dotnet tool list <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Задает пользовательское расположение для глобальных средств. Путь может быть абсолютным или относительным. Не может использоваться вместе с параметром `--global`. Пропуск `--global` и `--tool-path` выводит локальные инструменты. 
+  Задает пользовательское расположение для глобальных средств. Путь может быть абсолютным или относительным. Не может использоваться вместе с параметром `--global`. Пропуск `--global` и `--tool-path` выводит локальные инструменты.
 
 ## <a name="examples"></a>Примеры
 

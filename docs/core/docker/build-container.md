@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900112"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157834"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Учебник. Контейнеризация приложения .NET Core
 
@@ -141,7 +141,7 @@ dotnet publish -c Release
 
 Эта команда компилирует приложение и помещает результат в папку *publish*. Путь к папке *publish* из рабочей папки должен быть таким: `.\app\bin\Release\netcoreapp3.1\publish\`
 
-Получите список файлов для папки publish из папки *приложения*, чтобы убедится, что файл *myapp.dll* создан. 
+Получите список файлов для папки publish из папки *приложения*, чтобы убедится, что файл *myapp.dll* создан.
 
 ```console
 > dir bin\Release\netcoreapp3.1\publish

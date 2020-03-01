@@ -2,12 +2,12 @@
 title: Команда dotnet new
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451334"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157223"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +20,7 @@ ms.locfileid: "77451334"
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -174,7 +174,7 @@ dotnet new [-h|--help]
 
   Список версий C# по умолчанию см. в разделе [Значения по умолчанию](../../csharp/language-reference/configure-language-version.md#defaults).
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   Если указано — во время создания проекта не выполняется неявное восстановление. Доступно начиная с пакета SDK для .NET Core 2.2.
 
@@ -202,7 +202,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp3.1`. Доступно, начиная с пакета SDK для .NET Core 3.1. 
+  Указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp3.1`. Доступно, начиная с пакета SDK для .NET Core 3.1.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp3.1`. Доступно, начиная с пакета SDK для .NET Core 3.1. 
+  Указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp3.1`. Доступно, начиная с пакета SDK для .NET Core 3.1.
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Тип проверки подлинности. Доступно, начиная с пакета SDK для .NET Core 3.0. 
+  Тип проверки подлинности. Доступно, начиная с пакета SDK для .NET Core 3.0.
   
   Допустимые значения:
 
@@ -512,7 +512,7 @@ dotnet new [-h|--help]
 
 - **`--exclude-launch-settings`**
 
-  Исключает файл *launchSettings.json* из создаваемого шаблона. 
+  Исключает файл *launchSettings.json* из создаваемого шаблона.
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ dotnet new [-h|--help]
 
 - **`--exclude-launch-settings`**
 
-  Исключает файл *launchSettings.json* из создаваемого шаблона. 
+  Исключает файл *launchSettings.json* из создаваемого шаблона.
 
 - **`-f|--framework <FRAMEWORK>`**
 

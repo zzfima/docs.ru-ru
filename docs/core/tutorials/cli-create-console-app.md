@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503540"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156664"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Начало работы с .NET Core с помощью .NET Core CLI
 
@@ -40,30 +40,30 @@ dotnet run
 01. `dotnet new console`
 
     [dotnet new](../tools/dotnet-new.md) создает актуальный файл проекта *Hello.csproj* с зависимостями, необходимыми для создания консольного приложения. Эта команда также позволяет создать *Program.cs* — простой файл, содержащий точку входа для приложения.
-    
+
     *Hello.csproj*:
-    
+
     [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
-    
+
     В файле проекта указываются все данные, необходимые для восстановления зависимостей и создания программы.
-    
+
     - Элемент `<OutputType>` указывает, что мы создаем исполняемый файл, то есть консольное приложение.
     - Элемент `<TargetFramework>` указывает, какая реализация.NET является целевой. В расширенном сценарии обработки можно указать несколько целевых платформ и выполнить сборку во всех средах за одну операцию. В этом руководстве рассматривается сборка только для платформы .NET Core 3.1.
-    
+
     *Program.cs*:
-    
+
     [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
-    
+
     Программа начинается с команды `using System`, что означает "добавить все данные пространства имен `System` в область видимости для этого файла". Пространство имен `System` включает класс `Console`.
-    
+
     Затем мы определяем пространство имен с именем `Hello`. Вы можете сменить это имя на любое другое. В этом пространстве имен определяется класс с именем `Program` и методом `Main`, который принимает массив строк с именем `args`. Этот массив содержит список аргументов, передаваемых при вызове программы. В нашем примере массив не используется и программа просто выводит строку "Hello World!" в консоль. Позднее мы внесем в код изменения, использующие этот аргумент.
-    
+
     `dotnet new` неявно вызывает [dotnet restore](../tools/dotnet-restore.md). `dotnet restore` вызывает [NuGet](https://www.nuget.org/) (диспетчер пакетов .NET) для восстановления дерева зависимостей. NuGet анализирует файл *Hello.csproj*, скачивает указанные в нем зависимости (или извлекает их из кэша на вашем компьютере) и записывает файл *obj/project.assets.json*, который требуется для компиляции и запуска примера.
 
 02. `dotnet run`
 
     [dotnet run](../tools/dotnet-run.md) вызывает [dotnet build](../tools/dotnet-build.md), чтобы проверить, выполнена ли сборка целевых объектов. Затем вызывается `dotnet <assembly.dll>` для запуска целевого приложения.
-    
+
     ```dotnetcli
     dotnet run
     ```
@@ -73,9 +73,9 @@ dotnet run
     ```console
     Hello World!
     ```
-    
+
     Вместо этого вы можете выполнить `dotnet build`, чтобы скомпилировать код, не запуская консольные приложения сборки. В таком случае создается DLL-файл с готовым приложением. Файлу присваивается имя проекта. В нашем примере создается файл с именем *Hello.dll*. Это приложение можно выполнить с помощью `dotnet bin\Debug\netcoreapp3.1\Hello.dll` в ОС Windows (или `/` в системах, отличных от Windows).
-    
+
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
     ```
@@ -85,7 +85,7 @@ dotnet run
     ```console
     Hello World!
     ```
-    
+
     При компиляции этого приложения создается исполняемый файл, формат которого зависит от операционной системы, а также `Hello.dll`. В Windows это будет `Hello.exe`, а в Linux или macOS — `hello`. Для приведенного выше примера файлу будет присвоено имя `Hello.exe` или `Hello`. Этот исполняемый файл можно запускать напрямую.
 
     ```console

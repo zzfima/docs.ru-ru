@@ -3,12 +3,12 @@ title: Инструменты для переноса в .NET Core
 description: Дополнительные сведения о некоторых инструментах, которые можно использовать для переноса в .NET Core
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 3b71c31b4f26b278b2bd1088adc8e9f64d28ab7b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 98b3a29f2287414b2cd323f1cbf2225905592b26
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215200"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157522"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>Инструменты для переноса в .NET Core
 
@@ -21,5 +21,5 @@ ms.locfileid: "77215200"
 
 Кроме того, можно попытаться перенести более мелкие решения или отдельные проекты в формат файла проекта .NET Core с помощью средства [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017).
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 — это стороннее средство. Нет никакой гарантии, что оно будет поддерживать все проекты. Кроме того, оно может вызвать незначительные изменения в ожидаемом поведении. CsprojToVs2017 следует использовать в качестве _начальной точки_, которая автоматизирует соответствующие основные процессы. Это решение не может гарантировать перенос форматов файлов проекта.

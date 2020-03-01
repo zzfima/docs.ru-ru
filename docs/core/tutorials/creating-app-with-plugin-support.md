@@ -4,12 +4,12 @@ description: Узнайте, как создать приложение .NET Cor
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4c03c70edcdba52c4e6029402b92d5478a0d312c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787853"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156651"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Создание приложения .NET Core с подключаемыми модулями
 
@@ -218,7 +218,7 @@ static Assembly LoadPlugin(string relativePath)
 В корневой папке сделайте следующее:
 
 1. Выполните следующую команду, чтобы создать проект библиотеки классов с именем `HelloPlugin`.
-    
+
     ```dotnetcli
     dotnet new classlib -o HelloPlugin
     ```

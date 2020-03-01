@@ -2,12 +2,12 @@
 title: Команда dotnet tool uninstall
 description: Команда dotnet tool uninstall удаляет указанное средство .NET Core с компьютера.
 ms.date: 02/14/2020
-ms.openlocfilehash: 82dad0206d9c3e2ef0f41c353f4a608f10e4f127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543447"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157049"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -46,7 +46,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`-g|--global`**
 
-  Указывает, что средство будет удалено из установки на уровне пользователя. Не может использоваться вместе с параметром `--tool-path`. Пропуск `--global` и `--tool-path` означает, что удаляемое средство является локальным. 
+  Указывает, что средство будет удалено из установки на уровне пользователя. Не может использоваться вместе с параметром `--tool-path`. Пропуск `--global` и `--tool-path` означает, что удаляемое средство является локальным.
 
 - **`-h|--help`**
 
@@ -54,7 +54,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Указывает место, откуда будет удалено средство. Путь может быть абсолютным или относительным. Не может использоваться вместе с параметром `--global`. Пропуск `--global` и `--tool-path` означает, что удаляемое средство является локальным. 
+  Указывает место, откуда будет удалено средство. Путь может быть абсолютным или относительным. Не может использоваться вместе с параметром `--global`. Пропуск `--global` и `--tool-path` означает, что удаляемое средство является локальным.
 
 ## <a name="examples"></a>Примеры
 

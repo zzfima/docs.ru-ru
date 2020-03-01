@@ -3,12 +3,12 @@ title: Обзор пакета SDK для .NET Core
 description: Сведения о пакете SDK для .NET Core, который является набором библиотек и средств, используемых для создания проектов .NET Core.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 09b32b0065326af54da935a810764f93248618af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920601"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157470"
 ---
 # <a name="net-core-sdk-overview"></a>Обзор пакета SDK для .NET Core
 

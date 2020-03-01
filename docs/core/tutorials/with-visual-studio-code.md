@@ -3,12 +3,12 @@ title: Начало работы с C# и Visual Studio Code
 description: Узнайте, как создать и отладить в Visual Studio Code свое первое приложение .NET Core на языке C#.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ef7134e26c1ded3926faa51748c1b6d4a461008f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503518"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156612"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
 
@@ -113,7 +113,7 @@ ms.locfileid: "77503518"
 
     ```csharp
     using System;
-    
+
     namespace HelloWorld
     {
         class Program

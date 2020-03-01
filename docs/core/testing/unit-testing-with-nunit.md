@@ -3,12 +3,12 @@ title: Модульное тестирование кода C# с использ
 description: Сведения о концепциях модульного тестирования в C# и .NET Core в рамках пошаговой процедуры по созданию примера решения с помощью команды dotnet test и NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c099695b48e96ac47e41794082cd8dccaa0457a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714218"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157275"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Модульное тестирование кода C# с использованием NUnit и .NET Core
 
@@ -28,7 +28,7 @@ ms.locfileid: "75714218"
 ```dotnetcli
 dotnet new sln
 ```
- 
+
 Затем создайте каталог *PrimeService*. Ниже приведена актуальная структура каталогов и файлов:
 
 ```console
@@ -137,11 +137,11 @@ namespace Prime.UnitTests.Services
 
             Assert.IsFalse(result, "1 should not be prime");
         }
-        
+
         /*
         More tests
         */
-        
+
         private PrimeService CreatePrimeService()
         {
              return new PrimeService();

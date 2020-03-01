@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973314"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157548"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Предоставление доступа к компонентам .NET Core для COM
 
@@ -32,14 +32,14 @@ ms.locfileid: "73973314"
 Сначала нужно создать библиотеку.
 
 1. Создайте новую папку и в этой папке выполните следующую команду.
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
 
 2. Откройте `Class1.cs`.
 3. Добавьте `using System.Runtime.InteropServices;` в начало файла.
-4. Создайте интерфейс с именем `IServer`. Например:
+4. Создайте интерфейс с именем `IServer`. Пример:
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 

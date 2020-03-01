@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741563"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156638"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Публикация приложения Hello World .NET Core в Visual Studio
 
@@ -25,15 +25,15 @@ ms.locfileid: "76741563"
 1. Щелкните проект **HelloWorld** (не решение HelloWorld) правой кнопкой мыши и выберите **Опубликовать**. (Также можно выбрать **Публикация HelloWorld** из раздела **Сборка** в главном меню.)
 
    ![Контекстное меню "Опубликовать" в Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. На странице **Выберите целевой объект публикации** выберите **Папка**, а затем — **Создать профиль**.
 
    ![Выбор целевого объекта публикации в Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. На странице **Публикация** выберите **Опубликовать**.
 
    ![Окно публикации в Visual Studio](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>Проверка файлов
 
 В ходе публикации создается платформенно-зависимое развертывание. При таком развертывании опубликованное приложение выполнится на любой платформе, поддерживаемой .NET Core, при условии, что платформа .NET Core установлена в системе. Пользователи могут запустить опубликованное приложение, дважды щелкнув исполняемый файл или выполнив команду `dotnet HelloWorld.dll` из командной строки.
@@ -59,7 +59,7 @@ ms.locfileid: "76741563"
          Это версия [зависимого от платформы развертывания](../deploying/deploy-with-cli.md#framework-dependent-deployment) приложения. Чтобы выполнить эту библиотеку динамической компоновки, введите `dotnet HelloWorld.dll` в командной строке.
 
       * *HelloWorld.exe*
-      
+
          Это версия [исполняемого, зависящего от платформы файла](../deploying/deploy-with-cli.md#framework-dependent-executable) приложения. Чтобы запустить его, введите `HelloWorld.exe` в командной строке.
 
       * *HelloWorld.pdb* (необязателен для развертывания)
