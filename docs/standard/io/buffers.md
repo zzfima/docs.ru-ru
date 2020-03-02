@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960477"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160122"
 ---
 # <a name="work-with-buffers-in-net"></a>Работа с буферами в .NET
 
@@ -51,8 +51,8 @@ ms.locfileid: "74960477"
 
 <xref:System.Buffers.ReadOnlySequence%601> — это структура, которая может представлять смежную или несмежную последовательность `T`. Она может состоять из следующих компонентов:
 
-1. `T[]`
-1. `ReadOnlyMemory<T>`
+1. `T[]`;
+1. `ReadOnlyMemory<T>`;
 1. Пара узла связанного списка <xref:System.Buffers.ReadOnlySequenceSegment%601> и индекса, представляющая начальную и конечную позицию последовательности.
 
 Третье представление является наиболее интересным, так как оно влияет на производительность различных операций с `ReadOnlySequence<T>`.
@@ -115,9 +115,11 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ##### <a name="process-text-data"></a>Обработка текстовых данных
 
-В следующем примере происходит следующее:
+Следующий пример:
 
 - Выполняется поиск первого символа новой строки (`\r\n`) в `ReadOnlySequence<byte>`, которое возвращается через выходной параметр line.
 - Затем эта строка обрезается, исключая `\r\n` из входного буфера.
@@ -142,11 +144,11 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 - `SequencePosition` — это метка позиции определенного объекта `ReadOnlySequence<T>`, а не абсолютная позиция. Так как эта метка связана с определенным типом `ReadOnlySequence<T>`, нет смысла ее использовать за пределами `ReadOnlySequence<T>`, где она была создана.
 - Арифметические операции с `SequencePosition` нельзя выполнять без `ReadOnlySequence<T>`. Это означает, что при выполнении простых операций, например `position++`, записывается `ReadOnlySequence<T>.GetPosition(position, 1)`.
-- `GetPosition(long)` **не** поддерживает отрицательные индексы. Таким образом, чтобы получить предпоследний символ, необходимо пройти все сегменты.
+- `GetPosition(long)`**не** поддерживает отрицательные индексы. Таким образом, чтобы получить предпоследний символ, необходимо пройти все сегменты.
 - Нельзя сравнить два объекта `SequencePosition`, что затрудняет выполнение следующих задач:
   - Определение того, является ли значение позиции больше или меньше по отношению к другой позиции.
   - Написание некоторых алгоритмов анализа.
-- Размер последовательности `ReadOnlySequence<T>` больше чем у ссылки на объект, поэтому по возможности последовательность следует передавать с помощью [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) или [ref](../../csharp/language-reference/keywords/ref.md). Передача `ReadOnlySequence<T>` посредством `in` или `ref` позволяет сократить количество копирований [структуры](../../csharp/language-reference/keywords/struct.md).
+- Размер последовательности `ReadOnlySequence<T>` больше чем у ссылки на объект, поэтому по возможности последовательность следует передавать с помощью [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) или [ref](../../csharp/language-reference/keywords/ref.md). Передача `ReadOnlySequence<T>` посредством `in` или `ref` позволяет сократить количество копирований [структуры](../../csharp/language-reference/builtin-types/struct.md).
 - Пустые сегменты:
   - Допускаются в `ReadOnlySequence<T>`.
   - Могут появиться при итерации с помощью метода `ReadOnlySequence<T>.TryGet`.
@@ -154,7 +156,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 ## <a name="sequencereadert"></a>SequenceReader\<T\>
 
-<xref:System.Buffers.SequenceReader%601>.
+<xref:System.Buffers.SequenceReader%601>:
 
 - Новый тип, который появился в .NET Core 3.0. Он позволяет упростить обработку `ReadOnlySequence<T>`.
 - Обобщает различия между `ReadOnlySequence<T>` с одним сегментом и `ReadOnlySequence<T>` с несколькими сегментами.

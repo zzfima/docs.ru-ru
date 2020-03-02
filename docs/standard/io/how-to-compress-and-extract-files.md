@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сжатие и извлечение файлов
+title: Руководство. Сжатие и извлечение файлов
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708106"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159381"
 ---
-# <a name="how-to-compress-and-extract-files"></a>Практическое руководство. Сжатие и извлечение файлов
+# <a name="how-to-compress-and-extract-files"></a>Руководство. Сжатие и извлечение файлов
 
 Пространство имен <xref:System.IO.Compression> предоставляет следующие типы для сжатия и распаковки файлов и потоков. Вы также можете использовать эти типы для чтения и изменения содержимого сжатого файла.
 
@@ -29,26 +29,26 @@ ms.locfileid: "75708106"
 
 В примерах ниже показано несколько операций для работы со сжатыми файлами.
 
-## <a name="example-1-create-and-extract-a-zip-file"></a>Пример 1: Создание и извлечение ZIP-файла
+## <a name="example-1-create-and-extract-a-zip-file"></a>Пример 1: Создание и извлечение ZIP-файла
 
-В следующем примере показано, как создавать и извлекать сжатый файл *.zip* с помощью класса <xref:System.IO.Compression.ZipFile>. Он сжимает содержимое папки в новый *ZIP*-файл и затем извлекает его в новую папку. 
+В следующем примере показано, как создавать и извлекать сжатый файл *.zip* с помощью класса <xref:System.IO.Compression.ZipFile>. Он сжимает содержимое папки в новый *ZIP*-файл и затем извлекает его в новую папку.
 
-Чтобы запустить пример, создайте папку *start* в папке программы и заполните ее файлами для сжатия. 
+Чтобы запустить пример, создайте папку *start* в папке программы и заполните ее файлами для сжатия.
 
 Если возникнет ошибка сборки "Имя ZipFile не существует в текущем контексте", добавьте в проект ссылку на сборку `System.IO.Compression.FileSystem`.
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
 
-## <a name="example-2-extract-specific-file-extensions"></a>Пример 2: Извлечение файлов с определенными расширениями
+## <a name="example-2-extract-specific-file-extensions"></a>Пример 2. Извлечение файлов с определенными расширениями
 
-В этом примере выполняется итерация по содержимому существующего *ZIP*-файла и извлекаются файлы с расширением *.txt*. Здесь используется класс <xref:System.IO.Compression.ZipArchive> для доступа к ZIP-файлу и класс <xref:System.IO.Compression.ZipArchiveEntry> для проверки отдельных элементов. Метод расширения <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> для объекта <xref:System.IO.Compression.ZipArchiveEntry> доступен в классе <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>. 
+В этом примере выполняется итерация по содержимому существующего *ZIP*-файла и извлекаются файлы с расширением *.txt*. Здесь используется класс <xref:System.IO.Compression.ZipArchive> для доступа к ZIP-файлу и класс <xref:System.IO.Compression.ZipArchiveEntry> для проверки отдельных элементов. Метод расширения <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> для объекта <xref:System.IO.Compression.ZipArchiveEntry> доступен в классе <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
-Чтобы запустить пример, поместите *ZIP*-файл с именем *result.zip* в папку программы. По запросу укажите имя папки для извлечения. 
+Чтобы запустить пример, поместите *ZIP*-файл с именем *result.zip* в папку программы. По запросу укажите имя папки для извлечения.
 
 Если возникнет ошибка сборки "Имя ZipFile не существует в текущем контексте", добавьте в проект ссылку на сборку `System.IO.Compression.FileSystem`.
 
-Если возникает ошибка "Тип ZipArchive определен в сборке, на которую нет ссылки", добавьте ссылку на сборку `System.IO.Compression` в проект. 
+Если возникает ошибка "Тип ZipArchive определен в сборке, на которую нет ссылки", добавьте ссылку на сборку `System.IO.Compression` в проект.
 
 > [!IMPORTANT]
 > При распаковке файлов важно убедиться в отсутствии вредоносных путей, которые могут вести за пределы каталога, в который вы извлекаете файлы. Такая атака известна как обход путей. В следующем примере показано, как правильно проверить наличие вредоносных путей и безопасно извлечь файлы.
@@ -70,7 +70,7 @@ ms.locfileid: "75708106"
 [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
 [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO.Compression.ZipArchive>  
 - <xref:System.IO.Compression.ZipFile>  

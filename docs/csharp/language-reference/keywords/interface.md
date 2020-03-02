@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744691"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625856"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (справочник по C#)
 
-Интерфейс определяет контракт. Любой [`class`](class.md) или [`struct`](struct.md), реализующий этот контракт, должен предоставлять реализацию для членов, определенных в интерфейсе. Начиная с C# 8.0, интерфейс может определять реализацию по умолчанию для членов. Он также может определять члены [`static`](static.md), чтобы обеспечить единую реализацию для общих функциональных возможностей.
+Интерфейс определяет контракт. Любой [`class`](class.md) или [`struct`](../builtin-types/struct.md), реализующий этот контракт, должен предоставлять реализацию для членов, определенных в интерфейсе. Начиная с C# 8.0, интерфейс может определять реализацию по умолчанию для членов. Он также может определять члены [`static`](static.md), чтобы обеспечить единую реализацию для общих функциональных возможностей.
 
 В следующем примере класс `ImplementationClass` должен реализовать метод с именем `SampleMethod`, не имеющий параметров и возвращающий значение `void`.
 
@@ -78,6 +78,4 @@ public interface INamed
 - [Интерфейсы](../../programming-guide/interfaces/index.md)
 - [Использование свойств](../../programming-guide/classes-and-structs/using-properties.md)
 - [Использование индексаторов](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [Интерфейсы](../../programming-guide/interfaces/index.md)

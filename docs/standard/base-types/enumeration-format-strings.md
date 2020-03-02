@@ -10,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: c32fd9d59f61b6befe94ff9eb85b0c39ce926adb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: da7634758f5c4319fa18612d216682dc141318fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348270"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155962"
 ---
 # <a name="enumeration-format-strings"></a>Строки форматов перечисления
 
@@ -48,7 +48,7 @@ ms.locfileid: "75348270"
 
 Отображает элемент перечисления в виде шестнадцатеричного значения. Значение представлено с обязательным начальным нулем, чтобы обеспечить в строке результата наличие двух символов для каждого байта в [базовом числовом типе](xref:System.Enum.GetUnderlyingType%2A), который принадлежит к типу перечисления. В следующем примере показан описатель формата X. В примере <xref:System.ConsoleColor> и <xref:System.IO.FileAttributes> имеют базовый тип <xref:System.Int32> (32-разрядное (4-байтовое) целое число), который выводит 8-символьную строку результата.
 
-[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
+[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
 ## <a name="example"></a>Пример
@@ -68,6 +68,6 @@ ms.locfileid: "75348270"
 [!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
 [!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Типы форматирования](formatting-types.md)

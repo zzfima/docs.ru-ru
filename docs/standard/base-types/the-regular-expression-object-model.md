@@ -35,15 +35,15 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124814"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160005"
 ---
 # <a name="the-regular-expression-object-model"></a>Объектная модель регулярных выражений
-<a name="introduction"></a> В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями в .NET. Он содержит следующие подразделы:  
+<a name="introduction"></a> В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями в .NET. Он содержит следующие разделы:  
   
 - [Механизм регулярных выражений](#Engine)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73124814"
   
 - [Отдельный захват](#the_individual_capture)  
   
-<a name="Engine"></a>   
+<a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>Механизм регулярных выражений  
  Механизм регулярных выражений в .NET представлен классом <xref:System.Text.RegularExpressions.Regex>. Механизм отвечает за синтаксический анализ и компиляцию регулярного выражение, а также выполнение операций, которые сопоставляют шаблон регулярного выражения с входной строкой. Этот механизм представляет центральный компонент объектной модели регулярных выражений .NET.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73124814"
   
  Возможные интерпретации шаблона регулярного выражения `^\d{3}-\d{2}-\d{4}$` показаны в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`^`|Выделение начала входной строки.|  
 |`\d{3}`|Совпадение с тремя десятичными цифрами.|  
@@ -107,7 +107,7 @@ ms.locfileid: "73124814"
   
  Возможные интерпретации шаблона регулярного выражения `\b(\w+)\W+(\1)\b` показаны в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\b`|Сопоставление начинается на границе слова.|  
 |`(\w+)`|Совпадение с одним или несколькими символами слова. Это первая группа записи.|  
@@ -129,7 +129,7 @@ ms.locfileid: "73124814"
   
  Возможные интерпретации шаблона регулярного выражения `\b\d+\.\d{2}\b` показаны в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
@@ -139,7 +139,7 @@ ms.locfileid: "73124814"
   
  Шаблон замены `$$$&` интерпретируется, как показано в следующей таблице.  
   
-|Шаблон|Строка замены|  
+|Модель|Строка замены|  
 |-------------|------------------------|  
 |`$$`|Символ доллара ($).|  
 |`$&`|Вся сопоставленная подстрока.|  
@@ -152,18 +152,18 @@ ms.locfileid: "73124814"
   
  Возможные интерпретации шаблона регулярного выражения `\b\d{1,2}\.\s` показаны в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`\d{1,2}`|Совпадение с одной или двумя десятичными цифрами.|  
 |`\.`|Сопоставляется точка.|  
 |`\s`|Соответствует пробелу.|  
   
-<a name="Match_and_MCollection"></a>   
+<a name="Match_and_MCollection"></a>
 ## <a name="the-matchcollection-and-match-objects"></a>Объекты MatchCollection и Match  
  Методы Regex возвращают два объекта, входящие в объектную модель регулярного выражения: <xref:System.Text.RegularExpressions.MatchCollection> и <xref:System.Text.RegularExpressions.Match>.  
   
-<a name="the_match_collection"></a>   
+<a name="the_match_collection"></a>
 ### <a name="the-match-collection"></a>Коллекция Match  
  Метод <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> возвращает объект <xref:System.Text.RegularExpressions.MatchCollection>, содержащий объекты <xref:System.Text.RegularExpressions.Match>, которые представляют все сопоставления, найденных механизмом регулярных выражений, в том порядке, в котором они присутствуют во входной строке. Если соответствий нет, метод возвращает объект <xref:System.Text.RegularExpressions.MatchCollection> без членов. Свойство <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> позволяет получить доступ к отдельным членам коллекции по индексу (от нуля до значения свойства <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> минус 1). <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> — это индексатор коллекции (для C#) и свойство по умолчанию (для Visual Basic).  
   
@@ -174,7 +174,7 @@ ms.locfileid: "73124814"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matchcollection1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
-<a name="the_match"></a>   
+<a name="the_match"></a>
 ### <a name="the-match"></a>Класс Match  
  Класс <xref:System.Text.RegularExpressions.Match> представляет результат одного сопоставления регулярного выражения. Доступ к объектам <xref:System.Text.RegularExpressions.Match> можно получить двумя способами:  
   
@@ -215,7 +215,7 @@ ms.locfileid: "73124814"
   
  Шаблон регулярного выражения `\b\d+(,\d{3})*\.\d{2}\b` определяется, как показано в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
@@ -226,9 +226,9 @@ ms.locfileid: "73124814"
   
  Шаблон замены `$$ $&` указывает, что сопоставленную подстроку следует заменить на символ доллара ($) (шаблон `$$`), пробел и значение соответствия (шаблон `$&`).  
   
- [К началу](#introduction)  
+ [Вверх](#introduction)  
   
-<a name="GroupCollection"></a>   
+<a name="GroupCollection"></a>
 ## <a name="the-group-collection"></a>Коллекция Group  
  Свойство <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> возвращает объект <xref:System.Text.RegularExpressions.GroupCollection>, содержащий объекты <xref:System.Text.RegularExpressions.Group>, которые представляют захватываемые группы в одном соответствии. Первый объект <xref:System.Text.RegularExpressions.Group> в коллекции (объект с нулевым индексом) представляет все сопоставление. Каждый последующий объект представляет результаты одной захватываемой группы.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "73124814"
   
  Шаблон регулярного выражения `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` определяется, как показано в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`(\w+)`|Совпадение с одним или несколькими символами слова. Это первая группа записи.|  
@@ -257,9 +257,9 @@ ms.locfileid: "73124814"
 |`(\d{4})`|Выделяются 4 десятичные цифры. Это третья группа записи.|  
 |`\b`|Сопоставление заканчивается на границе слова.|  
   
- [К началу](#introduction)  
+ [Вверх](#introduction)  
   
-<a name="the_captured_group"></a>   
+<a name="the_captured_group"></a>
 ## <a name="the-captured-group"></a>Захватываемая группа  
  Класс <xref:System.Text.RegularExpressions.Group> представляет результат одной захватываемой группы. Объекты Group, представляющие захватываемые группы, заданные в регулярном выражении, возвращаются свойством <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> объекта <xref:System.Text.RegularExpressions.GroupCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Свойство <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> — это индексатор (для C#) и свойство по умолчанию (для Visual Basic) класса <xref:System.Text.RegularExpressions.Group>. Вы также можете извлечь отдельные члены, циклически перебирая коллекцию с помощью конструкции `foreach` или `For Each`. Пример см. в предыдущем разделе.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "73124814"
   
  Шаблон регулярного выражения `^(?<name>\w+):(?<value>\w+)` определяется, как показано в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`^`|Начало совпадения в начале входной строки.|  
 |`(?<name>\w+)`|Совпадение с одним или несколькими символами слова. Имя захватываемой группы — `name`.|  
@@ -294,7 +294,7 @@ ms.locfileid: "73124814"
     |`Value`|<xref:System.String.Empty?displayProperty=nameWithType>|  
     |`Length`|0|  
   
-     Ниже приведен пример. В шаблоне регулярного выражения `aaa(bbb)*ccc` первая захватываемая группа (подстрока "bbb") может быть сопоставлена ноль или больше раз. Так как входная строка "aaaccc" соответствует шаблону, захватываемая группа не имеет соответствия.  
+     Это показывается в следующем примере. В шаблоне регулярного выражения `aaa(bbb)*ccc` первая захватываемая группа (подстрока "bbb") может быть сопоставлена ноль или больше раз. Так как входная строка "aaaccc" соответствует шаблону, захватываемая группа не имеет соответствия.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
@@ -304,9 +304,9 @@ ms.locfileid: "73124814"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
   
- [К началу](#introduction)  
+ [Вверх](#introduction)  
   
-<a name="CaptureCollection"></a>   
+<a name="CaptureCollection"></a>
 ## <a name="the-capture-collection"></a>Коллекция Capture  
  Объект <xref:System.Text.RegularExpressions.Group> содержит сведения только о последнем выделении. Однако весь набор выделений, созданный захватываемой группой, по-прежнему доступен из объекта <xref:System.Text.RegularExpressions.CaptureCollection>, возвращаемого свойством <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Каждый член коллекции — это объект <xref:System.Text.RegularExpressions.Capture>, представляющий выделение этой захватываемой группы в порядке захвата (и, следовательно, в порядке сопоставления выделенных строк слева направо во входной строке). Вы можете извлечь отдельные объекты <xref:System.Text.RegularExpressions.Capture> из коллекции одним из двух способов:  
   
@@ -326,9 +326,9 @@ ms.locfileid: "73124814"
  [!code-csharp[RegularExpressions.Classes#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#5)]
  [!code-vb[RegularExpressions.Classes#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#5)]  
   
- [К началу](#introduction)  
+ [Вверх](#introduction)  
   
-<a name="the_individual_capture"></a>   
+<a name="the_individual_capture"></a>
 ## <a name="the-individual-capture"></a>Отдельное выделение  
  Класс <xref:System.Text.RegularExpressions.Capture> содержит результаты одного выделения части выражения. Свойство <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> содержит сопоставленный текст, а свойство <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> указывает начальную позицию сопоставленной подстроки во входной строке с основанием ноль.  
   
@@ -339,7 +339,7 @@ ms.locfileid: "73124814"
   
  Определение регулярного выражения показано в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\w+`|Совпадение с одним или несколькими символами слова.|  
 |`(\s\w+)*`|Сопоставляется ноль или несколько экземпляров пробела, за которыми следует один или несколько словообразующих символов. Этот шаблон выделяет названия городов из нескольких слов. Это третья группа записи.|  
@@ -349,7 +349,7 @@ ms.locfileid: "73124814"
 |`;`|Сопоставление точки с запятой.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Шаблона из слова, за которым следуют другие слова, запятая, одна или несколько цифр и точка запятая сопоставляется один или более раз. Это первая группа записи.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Text.RegularExpressions>
 - [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)

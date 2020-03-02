@@ -15,12 +15,12 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: b5289074724e3afd7356599738eeba648f25ca06
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7b2dee03619e24c5a2845699a06e88abab0c594b
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120850"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160135"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Выполнение смены регистра независимо от языка и региональных параметров
 Методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> и <xref:System.Char.ToLower%2A?displayProperty=nameWithType> предоставляют перегрузки, которые не принимают параметры. По умолчанию эти перегрузки без параметров выполняют изменения регистра на основе значения <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Результат преобразования чувствителен к регистру и может быть разным для языков и региональных параметров. Чтобы четко указать, нужно ли учитывать язык и региональные параметры при изменении регистра, используйте перегрузки этих методов, принимающие параметр `culture` явным образом. Чтобы изменить регистр с учетом языка и региональных параметров, укажите значение `CultureInfo.CurrentCulture` для параметра `culture`. Чтобы изменить регистр без учета языка и региональных параметров, укажите значение `CultureInfo.InvariantCulture` для параметра `culture`.  
@@ -41,7 +41,7 @@ End Function
 ```  
   
 ```csharp  
-static object LookupKey(string key)   
+static object LookupKey(string key)
 {  
     return internalHashtable[key.ToLower()];  
 }  
@@ -56,7 +56,7 @@ End Function
 ```  
   
 ```csharp  
-static object LookupKey(string key)   
+static object LookupKey(string key)
 {  
     return internalHashtable[key.ToLower(CultureInfo.InvariantCulture)];  
 }  
@@ -65,7 +65,7 @@ static object LookupKey(string key)
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Использование методов Char.ToUpper и Char.ToLower  
  Методы `Char.ToUpper` и `Char.ToLower` действуют точно так же, как и методы `String.ToUpper` и `String.ToLower`, за исключением турецкого (Турция) и азербайджанского (латиница, Азербайджан) языков. Только для этих значений языка и региональных параметров изменяется применение регистра для одиночных символов. Дополнительные сведения об этом уникальном сопоставлении регистра см. в разделе "Регистр" описания класса <xref:System.String>. Чтобы повысить читаемость кода и стабильность результатов, мы рекомендуем всегда использовать перегрузки этих методов, позволяющие явным образом указать параметр `culture`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.String.ToUpper%2A?displayProperty=nameWithType>
 - <xref:System.String.ToLower%2A?displayProperty=nameWithType>

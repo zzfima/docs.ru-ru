@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2447db25e837cdcd6d67847b8677d7d44da551a9
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964875"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625869"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Значения по умолчанию типов C# (справка по C#)
 
@@ -24,7 +24,7 @@ ms.locfileid: "75964875"
 |[bool](bool.md)|`false`|
 |[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Значение, создаваемое выражением `(E)0`, где `E` — это идентификатор перечисления.|
-|[struct](../keywords/struct.md)|Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.|
+|[struct](struct.md)|Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.|
 |Любой [тип значения, допускающий значение NULL](nullable-value-types.md)|Экземпляр, свойство `false` которого имеет значение <xref:System.Nullable%601.HasValue%2A>, а свойство <xref:System.Nullable%601.Value%2A> не определено. Это значение по умолчанию также называется значением *NULL* типа значения, допускающего значение NULL.|
 
 Используйте [оператор по умолчанию](../operators/default.md), чтобы получить значение типа по умолчанию, как показано в следующем примере:

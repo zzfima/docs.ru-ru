@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712810"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626715"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ограничение универсального типа) (справочник по C#)
 
@@ -32,7 +32,7 @@ ms.locfileid: "75712810"
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-Предложение `where` может включать ограничение `notnull`. Ограничение `notnull` ограничивает параметр типа типами, допускающими значение NULL. Этот тип может быть [типом значения](struct.md) или ссылочным типом, не допускающим значение NULL. Ограничение `notnull` доступно начиная с C# 8.0 для кода, скомпилированного в [`nullable enable` контексте](../../nullable-references.md#nullable-contexts). В отличие от других ограничений, если аргумент типа нарушает ограничение `notnull`, компилятор генерирует предупреждение вместо ошибки. Предупреждения генерируются только в контексте `nullable enable`. 
+Предложение `where` может включать ограничение `notnull`. Ограничение `notnull` ограничивает параметр типа типами, допускающими значение NULL. Этот тип может быть [типом значения](../builtin-types/value-types.md) или ссылочным типом, не допускающим значение NULL. Ограничение `notnull` доступно начиная с C# 8.0 для кода, скомпилированного в [`nullable enable` контексте](../../nullable-references.md#nullable-contexts). В отличие от других ограничений, если аргумент типа нарушает ограничение `notnull`, компилятор генерирует предупреждение вместо ошибки. Предупреждения генерируются только в контексте `nullable enable`.
 
 > [!IMPORTANT]
 > Универсальные объявления, включающие ограничение `notnull`, можно использовать в обнуляемом контексте, допускающем значение NULL, но компилятор не применяет ограничение.

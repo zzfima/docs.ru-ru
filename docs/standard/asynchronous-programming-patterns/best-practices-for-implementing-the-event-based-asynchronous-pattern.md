@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 561d0759af4f7557bae39540cbb00f8038726ddc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 439b862612d7997c9277ffb2cf4f15b14bd0b106
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950806"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156053"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Рекомендации по реализации асинхронной модели, основанной на событиях
 Асинхронная модель на основе событий является эффективным средством для обеспечения асинхронной работы в классах на базе привычной семантики делегатов и событий. Чтобы внедрить асинхронную модель на основе событий, необходимо выполнить определенные требования относительно поведения. В следующих разделах описываются требования и рекомендации, которые следует учитывать при реализации класса, поддерживающего асинхронную модель на основе событий.  
@@ -27,7 +27,7 @@ ms.locfileid: "69950806"
 ## <a name="required-behavioral-guarantees"></a>Обеспечение требуемого поведения  
  Если вы внедряете асинхронную модель на основе событий, необходимо выполнить несколько условий, чтобы класс работал правильно, а клиенты вашего класса могли положиться на его работу.  
   
-### <a name="completion"></a>Завершение  
+### <a name="completion"></a>Completion  
  После успешного завершения, отмены или в случае ошибки всегда вызывайте обработчик событий <em>имя_метода</em>**Completed**. Приложения никогда не должны попадать в ситуацию, в которой они остаются неактивными, а завершение не выполняется. Единственным исключением из этого правила является такая асинхронная операция, которая намеренно разработана таким образом, чтобы никогда не завершаться.  
   
 ### <a name="completed-event-and-eventargs"></a>Событие Completed и EventArgs  
@@ -43,14 +43,14 @@ ms.locfileid: "69950806"
   
 ```csharp  
 // Good design  
-private void Form1_MethodNameCompleted(object sender, xxxCompletedEventArgs e)   
-{   
+private void Form1_MethodNameCompleted(object sender, xxxCompletedEventArgs e)
+{
     DemoType result = e.Result;  
 }  
   
 // Bad design  
-private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventArgs e)   
-{   
+private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventArgs e)
+{
     DemoType result = (DemoType)(e.Result);  
 }  
 ```  
@@ -85,7 +85,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Убедитесь, что любая попытка доступа к результату вызывает исключение <xref:System.InvalidOperationException>, указывающее на отмену операции. Для выполнения этой проверки используйте метод <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A?displayProperty=nameWithType>.  
   
-### <a name="progress-reporting"></a>Отчет о ходе выполнения  
+### <a name="progress-reporting"></a>Отчет о состоянии  
   
 - По возможности реализуйте поддержку отчетов о ходе выполнения. Это позволяет разработчикам улучшить взаимодействие приложения с пользователем при использовании вашего класса.  
   
@@ -143,7 +143,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - При использовании любого вида многопоточности вы создаете условия для возникновения очень серьезных и сложных ошибок. Перед реализацией любого решения, в котором используется многопоточность, ознакомьтесь с разделом [Рекомендации по работе с потоками](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ComponentModel.AsyncOperation>
 - <xref:System.ComponentModel.AsyncOperationManager>
@@ -154,5 +154,5 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [Определение, когда следует реализовать асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [Рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Практическое руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)

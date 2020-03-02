@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142051"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156339"
 ---
 # <a name="implementing-a-dispose-method"></a>Реализация метода Dispose
 
@@ -125,7 +125,7 @@ ms.locfileid: "74142051"
 > [!NOTE]
 > В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> выполняется путем определения [деструктора](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>Использование безопасных дескрипторов
 
 Написание кода для метода завершения объекта является сложной задачей, которая может вызвать проблемы при неправильном выполнении. Поэтому вместо реализации метода завершения рекомендуется создавать объекты <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>.  
@@ -142,7 +142,7 @@ ms.locfileid: "74142051"
   
 - Класс <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> — для дескрипторов ожидания.  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Использование безопасного дескриптора для реализации шаблона удаления для базового класса
 
 В следующем примере показан шаблон удаления для базового класса `DisposableStreamResource`, который использует безопасный дескриптор для инкапсуляции неуправляемых ресурсов. Он определяет класс `DisposableResource`, который использует <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для создания экземпляра объекта <xref:System.IO.Stream>, который представляет открытый файл. Метод `DisposableResource` также включает свойство `Size`, которое возвращает общее количество байтов в файловом потоке.  
@@ -150,7 +150,7 @@ ms.locfileid: "74142051"
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Использование безопасного дескриптора для реализации шаблона удаления для производного класса
 
 В следующем примере показан шаблон удаления для производного класса `DisposableStreamResource2`, унаследованного от класса `DisposableStreamResource`, представленного в предыдущем примере. Класс добавляет дополнительный метод `WriteFileInfo` и использует объект <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для создания экземпляра дескриптора записываемого файла.  
@@ -158,7 +158,7 @@ ms.locfileid: "74142051"
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>
@@ -166,5 +166,5 @@ ms.locfileid: "74142051"
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [Практическое руководство. Определение и использование классов и структур (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
+- [Руководство. Определение и использование классов и структур (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
 - [Шаблон ликвидации](implementing-dispose.md)

@@ -2,12 +2,12 @@
 title: Использование сервера баз данных, работающего в качестве контейнера
 description: Изучите важность использования сервера базы данных, работающего в качестве контейнера, только для разработки. Не для рабочей среды.
 ms.date: 01/30/2020
-ms.openlocfilehash: 816ac196636f78a368a9f20e8eedcc6a22567fa7
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502288"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628531"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Использование сервера баз данных, работающего в качестве контейнера
 
@@ -48,10 +48,10 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d mcr.mic
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Запуск образа SQL Server Docker в Linux, Mac или Windows** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
 - **Подключения и запросы к SQL Server на Linux с помощью sqlcmd** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>Заполнение тестовыми данными при запуске веб-приложения
 

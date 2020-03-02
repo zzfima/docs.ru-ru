@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: aa8a62ee0c653a1905283696b97f55a3e6ffff85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706547"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159433"
 ---
 # <a name="types-of-isolation"></a>Типы изоляции
 Доступ к изолированному хранилищу всегда предоставляется только пользователю, который его создал. Чтобы поддерживать изоляцию такого типа, общеязыковая среда выполнения использует тот же подход к идентификации пользователя, что и операционная система, применяя идентификатор, связанный с процессом, в котором выполнялся код при открытии хранилища. Этот идентификатор обозначает аутентифицированного пользователя, но использование функции олицетворения может привести к тому, что идентификатор текущего пользователя изменится в ходе выполнения приложения.  
@@ -53,7 +53,7 @@ ms.locfileid: "75706547"
 > [!IMPORTANT]
 > Изолированное хранилище недоступно для приложений Магазина Windows 8.x. Вместо этого используйте классы данных приложений в пространствах имен `Windows.Storage`, включенных в API среды выполнения Windows для хранения локальных данных и файлов. Дополнительные сведения см. в статье [Доступ к данным приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) в Центре разработки для Windows.  
   
-<a name="UserAssembly"></a>   
+<a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Изоляция по пользователям и сборкам  
  Изоляция по пользователям и сборкам подходит в тех случаях, когда использующая это хранилище сборка должна быть доступна из любого домена приложения. Обычно таким образом изолированное хранилище используется для хранения данных, применяющихся в несколькими приложениях и не привязанных к любому из них, например имен пользователей и (или) сведений о лицензиях. Для доступа к хранилищу, изолированному по пользователю и сборке, код должен иметь доверие на передачу данных между приложениями. Как правило, изоляция по пользователям и сборкам допускается только в интрасетях, но не в Интернете. Чтобы получить хранилище с этим типом изоляции, вызовите статический метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> и передайте в него <xref:System.IO.IsolatedStorage.IsolatedStorageScope> с указанием пользователя и сборки.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75706547"
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
-<a name="UserDomainAssembly"></a>   
+<a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>Изоляция по пользователям, доменам и сборкам  
  Если приложение использует сборку стороннего поставщика, для которой нужно закрытое хранилище данных, вы можете применить изолированное хранилище. Изоляция по пользователям, доменам и сборкам гарантирует, что доступ к данным получит только код из определенной сборки и только в том случае, если эту сборку использует приложение, запущенное в момент создания хранилища. Это приложение должно работать от имени пользователя, для которого было создано хранилище. Изоляция по пользователям, доменам и сборкам не позволяет сторонним сборкам влиять на данные других приложений. По умолчанию следует использовать именно этот тип изоляции, если вы намерены использовать изолированное хранилище, но не уверены в выборе его типа. Чтобы получить хранилище с этим типом изоляции, вызовите статический метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> из <xref:System.IO.IsolatedStorage.IsolatedStorageFile> и передайте в него <xref:System.IO.IsolatedStorage.IsolatedStorageScope> с указанием пользователя, домена и сборки.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75706547"
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
-<a name="Roaming"></a>   
+<a name="Roaming"></a>
 ## <a name="isolated-storage-and-roaming"></a>Изолированное хранилище и роуминг  
  Перемещаемые профили пользователя — это функция Windows, которая позволяет пользователю настроить и использовать сетевой идентификатор, чтобы при входе на любой сетевой компьютер применялись одинаковые персональные настройки. Сборка, которая использует изолированное хранилище, может потребовать переноса изолированного хранилища вместе с перемещаемым профилем пользователя. Роуминг можно использовать в сочетании с изоляцией по пользователям и сборкам или с изоляцией по пользователям, доменам и сборкам. Если функция перемещения не используется, хранилище будет сохраняться только локально даже для пользователей с перемещаемым профилем.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "75706547"
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)

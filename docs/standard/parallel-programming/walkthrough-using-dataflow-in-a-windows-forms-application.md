@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: b6f4b933f76834f48d522d9c97fb0c9b5c24e13d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139917"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159771"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Пошаговое руководство. Использование потока данных в приложении Windows Forms
 В этом документе демонстрируется способ создания сети блоков потока данных, которые выполняют обработку изображений в приложении Windows Forms.  
@@ -35,7 +35,7 @@ ms.locfileid: "73139917"
   
 - [Полный пример](#complete)  
   
-<a name="winforms"></a>   
+<a name="winforms"></a>
 ## <a name="creating-the-windows-forms-application"></a>Создание приложения Windows Forms  
  В этом разделе описывается, как создать простое приложение Windows Forms и добавить элементы управления в главную форму.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "73139917"
   
 4. Добавьте второй элемент управления <xref:System.Windows.Forms.ToolStripButton> к элементу управления <xref:System.Windows.Forms.ToolStrip>. Задайте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение **Отмена**, а свойству <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> — значение `False`.  
   
-5. Добавьте объект <xref:System.Windows.Forms.PictureBox> на главную форму. Задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Добавьте объект <xref:System.Windows.Forms.PictureBox> на главную форму. Установите свойство <xref:System.Windows.Forms.Control.Dock%2A> в значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-<a name="network"></a>   
+<a name="network"></a>
 ## <a name="creating-the-dataflow-network"></a>Создание сети потока данных  
  В этом разделе описывается способ создания сети потока данных, которая выполняет обработку изображений.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73139917"
   
  Следующая таблица описывает члены сети.  
   
-|Член|Тип|ОПИСАНИЕ|  
+|Участник|Тип|Описание|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Принимает путь папки на входе и создает коллекцию объектов <xref:System.Drawing.Bitmap> на выходе.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Принимает коллекцию объектов <xref:System.Drawing.Bitmap> на входе и подает составной точечный рисунок на выход.|  
@@ -101,7 +101,7 @@ ms.locfileid: "73139917"
   
  В этом примере используется общий токен отмены, а не устанавливается свойство <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, поскольку свойство <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> окончательно отменяет выполнение блока потока данных. Токен отмены в этом примере позволяет повторно использовать те же сети потоков данных несколько раз, даже если пользователь отменил одну или несколько операций. Пример, использующий <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, чтобы окончательно отменить выполнение блока потока данных, см. в разделе [Практическое руководство. Отмена блока потока данных](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
-<a name="ui"></a>   
+<a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Подключение сети потока данных к пользовательскому интерфейсу  
  В этом разделе описывается, как подключить сеть потока данных к интерфейсу пользователя. Создание составного изображения и отмена операции инициализируются кнопками **Выбрать папку** и **Отмена**. Когда пользователь выбирает какую-либо из этих кнопок, соответствующее действие выполняется асинхронно.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "73139917"
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
-<a name="complete"></a>   
+<a name="complete"></a>
 ## <a name="the-complete-example"></a>Полный пример  
  В следующем примере приведен полный код для этого руководства.  
   
@@ -129,6 +129,6 @@ ms.locfileid: "73139917"
   
  ![Приложение Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

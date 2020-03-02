@@ -3,12 +3,12 @@ title: Справочник по C#. Неуправляемые типы
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342581"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626949"
 ---
 # <a name="unmanaged-types-c-reference"></a>Справочник по C#. Неуправляемые типы
 
@@ -17,7 +17,7 @@ ms.locfileid: "75342581"
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` или `bool`;
 - любой тип [перечисления](enum.md);
 - любой тип [указателя](../../programming-guide/unsafe-code-pointers/pointer-types.md).
-- Любой определенный пользователем тип [структуры](../keywords/struct.md), который содержит поля только неуправляемых типов в C# 7.3 и более ранних версиях, не является сконструированным типом (тип, который включает по крайней мере один аргумент типа)
+- Любой определенный пользователем тип [структуры](struct.md), который содержит поля только неуправляемых типов в C# 7.3 и более ранних версиях, не является сконструированным типом (тип, который включает по крайней мере один аргумент типа)
 
 Начиная с C# 7.3 можно использовать [ограничение `unmanaged`](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint), чтобы указать, что параметр типа является отличным от указателя неуправляемым типом, не допускающим значения NULL.
 

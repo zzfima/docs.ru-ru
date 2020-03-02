@@ -16,12 +16,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: 319aa76754adc852528f35448d9906d4e903693b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c4853a6854f5da1a3217c976a03ddbde3b528560
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711549"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159667"
 ---
 # <a name="anchors-in-regular-expressions"></a>Привязки в регулярных выражениях
 Привязки (или атомарные утверждения нулевой ширины) указывают положение в строке, где должно быть найдено соответствие. При использовании привязки в выражении поиска обработчик регулярных выражений не проходит по строке и не потребляет символы; он ищет соответствия только в заданном местоположении. Например, `^` указывает, что соответствие должно начаться в начале строки. Таким образом, регулярное выражение `^http:` находит соответствие для http, только если этот элемент находится в начале строки. В таблице ниже перечислены привязки, поддерживаемые регулярными выражениями в .NET.  
@@ -51,7 +51,7 @@ ms.locfileid: "75711549"
   
  Шаблон регулярного выражения `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`^`|Соответствие должно начинаться в начале входной строки (или в начале строки, если метод вызывается с параметром <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ).|  
 |`((\w+(\s?)){2,}`|Сопоставление одного или нескольких символов слов, за которыми следует ноль или один пробел, хотя бы два раза. Это первая группа записи. Это выражение также определяет вторую и третью группу записи: вторая состоит из записанного слова, а третья — из записанных пробелов.|  
@@ -61,7 +61,7 @@ ms.locfileid: "75711549"
 |`\s\d{4}`|Сопоставление пробела, за которым следуют четыре десятичные цифры.|  
 |<code>(-(\d{4}&#124;present))?</code>|Сопоставление нулевого или единичного вхождения дефиса, за которым следуют четыре десятичные цифры или строка present. Это шестая группа записи. Она также включает седьмую группу записи.|  
 |`,?`|Сопоставление нулевого или единичного вхождения запятой.|  
-|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Сопоставление одного или нескольких вхождений следующих символов: пробела, четырех десятичных цифр, нулевого или единичного вхождения дефиса, за которым следуют четыре десятичные цифры или строка present, нуля или одной запятой. Это пятая группа записи.| 
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Сопоставление одного или нескольких вхождений следующих символов: пробела, четырех десятичных цифр, нулевого или единичного вхождения дефиса, за которым следуют четыре десятичные цифры или строка present, нуля или одной запятой. Это пятая группа записи.|
 
 ## <a name="end-of-string-or-line-"></a>Конец строки: $  
  Привязка `$` указывает, что предыдущий шаблон должен находиться в конце входной строки или перед символом `\n` в конце входной строки.  
@@ -71,7 +71,7 @@ ms.locfileid: "75711549"
  В следующем примере добавляется привязка `$` к шаблону регулярного выражения, используемого в примере из раздела [Начало строки](#start-of-string-or-line-) . При использовании с исходной входной строкой, которая включает пять строк текста, методу <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> не удается найти соответствие, потому что конец первой строки не соответствует шаблону `$` . Если исходная входная строка разбивается на массив строк, методу <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> удается найти соответствие для каждой из пяти строк. Если метод <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> вызывается с параметром `options` , для которого задано значение <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, соответствия не найдены, потому что шаблон регулярного выражения не учитывает элемент возврата каретки (\u+000D). Однако изменение шаблона регулярного выражения (замена `$` последовательностью `\r?$`) приведет к тому, что вызов метода <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> с параметром `options` , равным <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> , позволит снова найти пять соответствий.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]     
+ [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]
 
 ## <a name="start-of-string-only-a"></a>Только начало строки: \A  
  Привязка `\A` указывает, что соответствие должно находиться в начале входной строки. Она идентична привязке `^` с той разницей, что `\A` игнорирует параметр <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Следовательно, можно найти соответствие только для начала первой строки в многострочной входной строке.  
@@ -79,7 +79,7 @@ ms.locfileid: "75711549"
  Следующий пример похож на примеры для привязок `^` и `$` . В нем привязка `\A` используется в регулярном выражении, которое извлекает сведения о годах, в течение которых существовали некоторые профессиональные бейсбольные команды. Входная строка включает пять строк. При вызове метода <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> удается найти только первую подстроку во входной строке, которая соответствует шаблону регулярного выражения. Как показано в примере, параметр <xref:System.Text.RegularExpressions.RegexOptions.Multiline> не оказывает никакого влияния.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring2.cs#3)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]     
+ [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]
 
 ## <a name="end-of-string-or-before-ending-newline-z"></a>Конец строки или до конца символа новой строки: \Z  
  Привязка `\Z` указывает, что соответствие должно находиться в конце входной строки или перед символом `\n` в конце входной строки. Она идентична привязке `$` с той разницей, что `\Z` игнорирует параметр <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Таким образом, в многострочной строке она может соответствовать только концу последней строки или последней строке до символа `\n`.  
@@ -89,7 +89,7 @@ ms.locfileid: "75711549"
  В следующем примере используется привязка `\Z` в регулярном выражении, которая похожа на использованную в примере из раздела [Начало строки](#start-of-string-or-line-) и которая извлекает информацию о годах, в течение которых существовали некоторые профессиональные бейсбольные команды. Часть выражения `\r?\Z` в регулярном выражении `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` соответствует концу строки, а также соответствует строке, которая заканчивается на `\n` или `\r\n`. В результате каждый элемент в массиве соответствует шаблону регулярного выражения.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring2.cs#4)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]     
+ [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]
 
 ## <a name="end-of-string-only-z"></a>Только начало строки: \z  
  Привязка `\z` указывает, что соответствие должно находиться в конце входной строки. Как и языковой элемент `$` , `\z` игнорирует параметр <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . В отличие от языкового элемента `\Z``\z` не сопоставляет символ `\n` в конце строки. Таким образом, соответствие может находиться только в последней строке входной строки.  
@@ -97,7 +97,7 @@ ms.locfileid: "75711549"
  В следующем примере используется привязка `\z` в регулярном выражении, которая похожа на использованную в примере из предыдущего раздела с той разницей, что она извлекает информацию о годах, в течение которых существовали некоторые профессиональные бейсбольные команды. В примере предпринимается попытка сопоставить каждый из пяти элементов в массиве строк шаблону регулярного выражения `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`. Две строки оканчиваются символом возврата каретки и перевода строки, одна заканчивается символом перевода строки, и еще две — ни символом возврата каретки, ни символом перевода строки. Как показывают выходные данные, шаблону соответствуют только строки без символа возврата каретки и перевода строки.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring3.cs#5)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]    
+ [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]
 
 ## <a name="contiguous-matches-g"></a>Непрерывные совпадения: \G  
  Привязка `\G` указывает, что соответствие должно находиться в точке окончания предыдущего соответствия. При использовании этой привязки с методом <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> гарантируется непрерывность всех совпадений.  
@@ -109,14 +109,14 @@ ms.locfileid: "75711549"
   
  Возможные интерпретации регулярного выражения `\G(\w+\s?\w*),?` показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\G`|Начать сопоставление там, где закончилось последнее соответствие.|  
 |`\w+`|Совпадение с одним или несколькими символами слова.|  
 |`\s?`|Совпадение с нулем или одним пробелом.|  
 |`\w*`|Совпадение с нулем или большим числом буквенных символов.|  
 |`(\w+\s?\w*)`|Сопоставление одного или более символов слов, за которыми ноль или один пробел, а затем ноль или более символов слов. Это первая группа записи.|  
-|`,?`|Сопоставление нулевому или единичному вхождению литерального символа запятой.|     
+|`,?`|Сопоставление нулевому или единичному вхождению литерального символа запятой.|
 
 ## <a name="word-boundary-b"></a>Граница слова: \b  
  Привязка `\b` указывает, что соответствие должно находиться на границе между символом слова (языковым элементом `\w` ) и несловесным символом (языковым элементом `\W` ). Символы слов — это буквенно-цифровые символы и подчеркивания; несловесные символы — это все остальные символы. (См. дополнительные сведения см. о [классах символов](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Соответствие может также находиться на границе слова в начале или конце строки.  
@@ -128,7 +128,7 @@ ms.locfileid: "75711549"
   
  Возможные интерпретации шаблона регулярного выражения показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`are`|Совпадение с подстрокой are.|  
@@ -145,13 +145,13 @@ ms.locfileid: "75711549"
   
  Возможные интерпретации шаблона регулярного выражения показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Модель|Описание|  
 |-------------|-----------------|  
 |`\B`|Совпадение не должно начинаться на границе слова.|  
 |`qu`|Совпадение с подстрокой qu.|  
 |`\w+`|Совпадение с одним или несколькими символами слова.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md)

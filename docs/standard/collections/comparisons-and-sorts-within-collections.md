@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: fc6972061994e17c2176d3ab278b8d2b37c725ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711393"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159264"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Сравнение и сортировка в коллекциях
 Классы <xref:System.Collections> выполняют сравнения почти во всех процессах управления коллекциями — будь то поиск элемента для удаления или возвращение значения пары "ключ-значение".  
   
  В коллекциях обычно используется компаратор проверки на равенство и (или) компаратор упорядочения. Для сравнения используются две конструкции.  
   
-<a name="BKMK_Checkingforequality"></a>   
+<a name="BKMK_Checkingforequality"></a>
 ## <a name="checking-for-equality"></a>Проверка на равенство  
  Такие методы, как `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>и `Remove` , используют компаратор проверки на равенство для элементов коллекции. Если коллекция является универсальной, то элементы проверяются на равенство согласно следующим правилам.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75711393"
   
  Кроме того, некоторые перегрузки конструктора для коллекций словаря принимают реализацию <xref:System.Collections.Generic.IEqualityComparer%601>, которая используется для сравнения ключей на равенство. Пример см. в конструкторе <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> .  
   
-<a name="BKMK_Determiningsortorder"></a>   
+<a name="BKMK_Determiningsortorder"></a>
 ## <a name="determining-sort-order"></a>Определение порядка сортировки  
  Такие методы, как `BinarySearch` и `Sort` , используют компаратор упорядочения для элементов коллекции. Сравнение может проводиться между элементами коллекции или между элементом и заданным значением. В процессе сравнения объектов существует понятие `default comparer` и `explicit comparer`.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "75711393"
   
  Текущее значение языка и региональных параметров системы может влиять на сравнения и сортировки в рамках коллекции. По умолчанию сравнения и сортировки в классах **Collections** зависят от языка и региональных параметров. Чтобы игнорировать параметр языка и региональные параметры и получить согласованные результаты сравнения и сортировки, используйте <xref:System.Globalization.CultureInfo.InvariantCulture%2A> с перегрузками элементов, принимающими <xref:System.Globalization.CultureInfo>. Дополнительные сведения см. в разделах [Выполнение в коллекциях строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) и [Выполнение в массивах строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).  
   
-<a name="BKMK_Equalityandsortexample"></a>   
+<a name="BKMK_Equalityandsortexample"></a>
 ## <a name="equality-and-sort-example"></a>Пример сортировки и проверки на равенство  
  В следующем примере демонстрируется реализация <xref:System.IEquatable%601> и <xref:System.IComparable%601> в простом бизнес-объекте. Кроме того, когда объект сохраняется в списке и сортируется, вы увидите, что вызов метода <xref:System.Collections.Generic.List%601.Sort> приведет к использованию компаратора по умолчанию для типа `Part` , а метод <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> будет реализован с помощью анонимного метода.  
   
  [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.IComparer>
 - <xref:System.IEquatable%601>

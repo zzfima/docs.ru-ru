@@ -3,12 +3,12 @@ title: Выбор между .NET Core и .NET Framework для серверны
 description: Рекомендации по использованию реализации .NET для создания серверных приложений на платформе .NET.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124628"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159979"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -75,7 +75,7 @@ ms.locfileid: "77124628"
 
 Библиотеки быстро распространяются в .NET Standard. .NET Standard позволяет совместно использовать код во всех реализациях .NET, включая .NET Core. С .NET Standard 2.0 это стало еще проще.
 
-- Значительно расширен API-интерфейс. 
+- Значительно расширен API-интерфейс.
 - Появился режим совместимости .NET Framework. Этот режим совместимости позволяет проектам .NET Standard и .NET Core ссылаться на библиотеки .NET Framework. Дополнительные сведения о режиме совместимости см. в статье [Объявление о выпуске .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/).
 
 Таким образом, платформу .NET Framework следует применять только в случаях, где библиотеки или пакеты NuGet используют технологии, которые недоступны в .NET Standard и .NET Core.
@@ -86,7 +86,7 @@ ms.locfileid: "77124628"
 
 - Приложения веб-форм ASP.NET. Веб-формы ASP.NET доступны только в среде .NET Framework. ASP.NET Core не может использоваться для веб-форм ASP.NET. Добавление веб-форм ASP.NET в среду .NET Core не планируется.
 
-- Приложения веб-страниц ASP.NET. Веб-страницы ASP.NET не добавлены в среду ASP.NET Core. 
+- Приложения веб-страниц ASP.NET. Веб-страницы ASP.NET не добавлены в среду ASP.NET Core.
 
 - Реализация служб WCF. Хотя в среду .NET Core и добавлена [библиотека клиента WCF](https://github.com/dotnet/wcf), позволяющая использовать службы WCF, сервер WCF можно реализовать только в среде .NET Framework. Этот сценарий не входит в текущий план для .NET Core, но он будет рассмотрен в будущем.
 
@@ -100,7 +100,7 @@ ms.locfileid: "77124628"
 
 Некоторые платформы Майкрософт и платформы сторонних поставщиков не поддерживают среду .NET Core. Некоторые службы Azure предоставляют пакеты SDK, недоступные в среде .NET Core. Это временные обстоятельства, так как все службы Azure используют среду .NET Core. В то же время в качестве альтернативы клиентскому пакету SDK всегда можно использовать REST API.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework)
 - [ASP.NET Core с целевой платформой .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)

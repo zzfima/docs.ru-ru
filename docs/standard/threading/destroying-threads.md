@@ -9,16 +9,16 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: efd4c596f67d5eabace8ecafb48f2d350df6a18e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 842ca4ff17f9cbab3a1518d2dea37436c9b23f9d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938037"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155936"
 ---
 # <a name="destroying-threads"></a>Удаление потоков
 
-[Модель совместной отмены](cancellation-in-managed-threads.md) используется для остановки потока. Иногда выполнить совместную отмену потока невозможно, так как он выполняет код сторонних производителей, не поддерживающий такую отмену. Метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> в .NET Framework можно использовать для принудительного завершения управляемого потока. При вызове <xref:System.Threading.Thread.Abort%2A> общеязыковая среда выполнения создает в целевом потоке исключение <xref:System.Threading.ThreadAbortException>, которое целевой поток может перехватить. Для получения дополнительной информации см. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> не поддерживается в .NET Core. Если необходимо принудительно завершить выполнение кода сторонних производителей в .NET Core, запустите его в отдельном процессе и воспользуйтесь <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
+[Модель совместной отмены](cancellation-in-managed-threads.md) используется для остановки потока. Иногда выполнить совместную отмену потока невозможно, так как он выполняет код сторонних производителей, не поддерживающий такую отмену. Метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> в .NET Framework можно использовать для принудительного завершения управляемого потока. При вызове <xref:System.Threading.Thread.Abort%2A> общеязыковая среда выполнения создает в целевом потоке исключение <xref:System.Threading.ThreadAbortException>, которое целевой поток может перехватить. Дополнительные сведения см. в разделе <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> не поддерживается в .NET Core. Если необходимо принудительно завершить выполнение кода сторонних производителей в .NET Core, запустите его в отдельном процессе и воспользуйтесь <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
 > Если в потоке выполняется неуправляемый код при вызове его метода <xref:System.Threading.Thread.Abort%2A>, в среде выполнения он отмечается как <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. В этом случае исключение вызывается после возврата потока в управляемый код.  
@@ -38,26 +38,26 @@ Try
 Catch ex As ThreadAbortException  
     ' Clean-up code can go here.  
     ' If there is no Finally clause, ThreadAbortException is  
-    ' re-thrown by the system at the end of the Catch clause.   
+    ' re-thrown by the system at the end of the Catch clause.
 Finally  
     ' Clean-up code can go here.  
 End Try  
-' Do not put clean-up code here, because the exception   
+' Do not put clean-up code here, because the exception
 ' is rethrown at the end of the Finally clause.  
 ```  
   
 ```csharp  
-try   
+try
 {  
     // Code that is executing when the thread is aborted.  
-}   
-catch (ThreadAbortException ex)   
+}
+catch (ThreadAbortException ex)
 {  
     // Clean-up code can go here.  
     // If there is no Finally clause, ThreadAbortException is  
-    // re-thrown by the system at the end of the Catch clause.   
+    // re-thrown by the system at the end of the Catch clause.
 }  
-// Do not put clean-up code here, because the exception   
+// Do not put clean-up code here, because the exception
 // is rethrown at the end of the Finally clause.  
 ```  
   
@@ -65,7 +65,7 @@ catch (ThreadAbortException ex)
   
  Чтобы предотвратить повторное создание исключения, вы можете вызвать метод <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType>. Но этот вариант следует использовать только в том случае, если <xref:System.Threading.ThreadAbortException> вызывается в пользовательском коде.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.ThreadAbortException>
 - <xref:System.Threading.Thread>

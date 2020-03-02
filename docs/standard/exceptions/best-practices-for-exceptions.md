@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696766"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160174"
 ---
 # <a name="best-practices-for-exceptions"></a>Лучшие методики обработки исключений
 
@@ -56,7 +56,7 @@ ms.locfileid: "71696766"
 
 Другой способ устранения исключений заключается в том, что для наиболее общих и часто встречающихся ошибок следует возвращать значение NULL (или значение по умолчанию). Такие ошибки могут относиться к обычному потоку управления. Возвращая значение NULL (или значение по умолчанию) в таких случаях, можно уменьшить влияние на производительность приложения.
 
-При выборе типа значения `Nullable<T>` или значения по умолчанию в качестве индикатора ошибки учитывайте особенности приложения. При использовании `Nullable<Guid>` `default` принимает значение `null`, а не `Guid.Empty`. В некоторых случаях добавление `Nullable<T>` помогает более точно определить, присутствует или отсутствует значение. Но в определенных ситуациях добавление `Nullable<T>` может привести к созданию лишних необязательных случаев для проверки, что повышает вероятность ошибки. 
+При выборе типа значения `Nullable<T>` или значения по умолчанию в качестве индикатора ошибки учитывайте особенности приложения. При использовании `Nullable<Guid>``default` принимает значение `null`, а не `Guid.Empty`. В некоторых случаях добавление `Nullable<T>` помогает более точно определить, присутствует или отсутствует значение. Но в определенных ситуациях добавление `Nullable<T>` может привести к созданию лишних необязательных случаев для проверки, что повышает вероятность ошибки.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Выдача исключений вместо возврата кода ошибки
 
@@ -64,7 +64,7 @@ ms.locfileid: "71696766"
 
 ## <a name="use-the-predefined-net-exception-types"></a>Использование предопределенных типов исключений .NET
 
-Создавайте новый класс исключений, только если предопределенное исключение не подходит. Например:
+Создавайте новый класс исключений, только если предопределенное исключение не подходит. Пример:
 
 - Вызывайте исключение <xref:System.InvalidOperationException>, если значение свойства или вызов метода не соответствуют текущему состоянию объекта.
 
@@ -72,7 +72,7 @@ ms.locfileid: "71696766"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>Завершайте имена классов исключений словом `Exception`
 
-Если требуется пользовательское исключение, присвойте ему соответствующее имя и сделайте его производным от класса <xref:System.Exception>. Например:
+Если требуется пользовательское исключение, присвойте ему соответствующее имя и сделайте его производным от класса <xref:System.Exception>. Пример:
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -108,12 +108,12 @@ ms.locfileid: "71696766"
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>Включение локализованной строки сообщения в каждое исключение
 
-Сообщение об ошибке, показываемое пользователю, извлекается из свойства <xref:System.Exception.Message?displayProperty=nameWithType> созданного исключения, а не из имени класса исключения. Как правило, вы присваиваете значение свойству <xref:System.Exception.Message?displayProperty=nameWithType>, передав строку сообщения аргументу `message` [конструктора исключений](xref:System.Exception.%23ctor%2A).
+Сообщение об ошибке, показываемое пользователю, извлекается из свойства <xref:System.Exception.Message?displayProperty=nameWithType> созданного исключения, а не из имени класса исключения. Как правило, вы присваиваете значение свойству <xref:System.Exception.Message?displayProperty=nameWithType>, передав строку сообщения аргументу `message`[конструктора исключений](xref:System.Exception.%23ctor%2A).
 
 Для локализованных приложений необходимо предоставить строку локализованного сообщения для всех исключений, которые может создавать приложение. Используйте файлы ресурсов для предоставления локализованных сообщений об ошибках. Сведения о локализации приложений и извлечении локализованных строк см. в следующих статьях:
 
 - [Пошаговое руководство. Создание пользовательских исключений с локализованными сообщениями об исключениях](how-to-create-localized-exception-messages.md)
-- [Ресурсы в приложениях для настольных систем](../../framework/resources/index.md) 
+- [Ресурсы в приложениях для настольных систем](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Предоставление дополнительных свойств в пользовательских исключениях по мере необходимости
@@ -126,7 +126,7 @@ ms.locfileid: "71696766"
 
 ## <a name="use-exception-builder-methods"></a>Использование методов построителя исключений
 
-Обычно класс генерирует одно и то же исключение из различных мест своей реализации. Чтобы избежать повторения кода, используйте вспомогательные методы, создающие исключение и затем возвращающие его. Например:
+Обычно класс генерирует одно и то же исключение из различных мест своей реализации. Чтобы избежать повторения кода, используйте вспомогательные методы, создающие исключение и затем возвращающие его. Пример:
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -214,6 +214,6 @@ Catch ex As Exception
 End Try
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Исключения](index.md)

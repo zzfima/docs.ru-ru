@@ -9,14 +9,14 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921219"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160304"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Практическое руководство. написание простого цикла Parallel.ForEach
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Руководство. написание простого цикла Parallel.ForEach
 
 В этом примере показано, как использовать цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> для включения параллелизма данных в любом источнике данных <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 
@@ -50,7 +50,7 @@ ms.locfileid: "76921219"
 В командной строке можно использовать команды .NET Core CLI (например, `dotnet new console` или `dotnet new console -lang vb`). Также вы можете создать файл и использовать компилятор командной строки для приложения .NET Framework.
 
 Для проекта .NET Core необходимо сослаться на пакет NuGet **System.Drawing.Common**. В Visual Studio используйте диспетчер пакетов NuGet для установки пакета. Кроме того, вы можете добавить ссылку на пакет в файл \*.csproj или \*.vbproj:
- 
+
 ```xml
 <ItemGroup>
      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
@@ -61,7 +61,7 @@ ms.locfileid: "76921219"
 
 Чтобы запустить консольное приложение из Visual Studio, нажмите клавишу **F5**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)

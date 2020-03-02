@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: c2d4fbd2f9e8a343a81d88bacc54a53335e170ec
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: e9b2ab32fb79b80649305843abdd935b8c582bc0
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867390"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628219"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Практическое руководство. Реализация облегченного класса с автоматически реализуемыми свойствами (руководство по программированию на C#)
 
@@ -148,5 +148,5 @@ public class Program
 ## <a name="see-also"></a>См. также
 
 - [Свойства](./properties.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [struct](../../language-reference/builtin-types/struct.md)
 - [Инициализаторы объектов и коллекций](./object-and-collection-initializers.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Подписывание сборки строгим именем
+title: Руководство. Подписывание сборки строгим именем
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
@@ -11,14 +11,14 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738777"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160317"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Практическое руководство. Подписывание сборки строгим именем
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Руководство. Подписывание сборки строгим именем
 
 > [!NOTE]
 > Хотя .NET Core поддерживает сборки со строгими именами и все сборки в библиотеке .NET Core подписаны, большинству сборок сторонних разработчиков строгие имена не требуются. Дополнительные сведения см. в разделе [Подпись строгим именем](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) в GitHub.
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Подпись сборки строгим именем с помощью атрибутов  
   
 1. Добавьте <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> или <xref:System.Reflection.AssemblyKeyNameAttribute> в файл исходного кода и укажите имя файла или контейнера, содержащего пару ключей, которая используется при подписи сборки строгим именем.  
-   
+
 2. Компилируйте файл исходного кода в обычном режиме.  
-   
+
    > [!NOTE]
    > Компиляторы C# и Visual Basic выдают предупреждения (CS1699 и BC41008, соответственно), если в исходном коде встречается <xref:System.Reflection.AssemblyKeyFileAttribute> или <xref:System.Reflection.AssemblyKeyNameAttribute> . Эти предупреждения можно игнорировать.  
 
@@ -107,10 +107,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
 ```  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Создание и использование сборок со строгими именами](create-use-strong-named.md)
-- [Практическое руководство. Создание пары открытого и закрытого ключей](create-public-private-key-pair.md)
+- [Руководство. Создание пары открытого и закрытого ключей](create-public-private-key-pair.md)
 - [Al.exe (компоновщик сборок)](../../framework/tools/al-exe-assembly-linker.md)
 - [Отложенная подпись сборки](delay-sign.md)
 - [Управление подписыванием сборок и манифестов](/visualstudio/ide/managing-assembly-and-manifest-signing)

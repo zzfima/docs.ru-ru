@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711848"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627803"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Буферы фиксированного размера (Руководство по программированию на C#)
 
@@ -22,7 +22,7 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Примечания
 
-В безопасном коде структура C#, содержащая массив, не содержит элементы массива. Вместо этого в ней присутствуют ссылки на элементы. Вы можете внедрить массив фиксированного размера в [структуру](../../language-reference/keywords/struct.md), если он используется в блоке [небезопасного](../../language-reference/keywords/unsafe.md) кода.
+В безопасном коде структура C#, содержащая массив, не содержит элементы массива. Вместо этого в ней присутствуют ссылки на элементы. Вы можете внедрить массив фиксированного размера в [структуру](../../language-reference/builtin-types/struct.md), если он используется в блоке [небезопасного](../../language-reference/keywords/unsafe.md) кода.
 
 Размер следующего типа `struct` составляет 8 байт. Массив `pathName` является ссылкой:
 

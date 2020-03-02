@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: edd398cd3e42e23301dcc992093d14d087754e76
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d6314fae266505fbb4410aaaa351973070ab3811
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347245"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156443"
 ---
 # <a name="resolve-assembly-loads"></a>Разрешение загрузки сборок
 В .NET имеется событие <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> для приложений, требующих дополнительного управления загрузкой сборок. Обрабатывая это событие, приложение может загружать сборку в контекст загрузки не из каталогов, где обычно осуществляется поиск, выбирать, какую из версий сборки загрузить, создавать динамическую сборку и возвращать ее и многое другое. В этом разделе описывается использование события <xref:System.AppDomain.AssemblyResolve>.  
@@ -81,7 +81,7 @@ using namespace System::Reflection;
 ref class Example
 {
 internal:
-    static Assembly^ MyHandler(Object^ source, ResolveEventArgs^ e) 
+    static Assembly^ MyHandler(Object^ source, ResolveEventArgs^ e)
     {
         Console::WriteLine("Resolving {0}", e->Name);
         return Assembly::Load(e->Name);
@@ -98,7 +98,7 @@ void main()
         Object^ obj = ad->CreateInstanceAndUnwrap(
             "MyAssembly, version=1.2.3.4, culture=neutral, publicKeyToken=null",
             "MyType");
-    } 
+    }
     catch (Exception^ ex)
     {
         Console::WriteLine(ex->Message);
@@ -133,19 +133,19 @@ class BadExample
             object obj = ad.CreateInstanceAndUnwrap(
                 "MyAssembly, version=1.2.3.4, culture=neutral, publicKeyToken=null",
                 "MyType");
-        } 
+        }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
     }
 
-    static Assembly MyHandler(object source, ResolveEventArgs e) 
+    static Assembly MyHandler(object source, ResolveEventArgs e)
     {
         Console.WriteLine("Resolving {0}", e.Name);
         return Assembly.Load(e.Name);
     }
-} 
+}
 
 /* This example produces output similar to the following:
 
@@ -165,7 +165,7 @@ Imports System.Reflection
 Class BadExample
 
     Shared Sub Main()
-    
+
         Dim ad As AppDomain = AppDomain.CreateDomain("Test")
         AddHandler ad.AssemblyResolve, AddressOf MyHandler
 
@@ -196,7 +196,7 @@ End Class
 'Process is terminated due to StackOverflowException.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Рекомендации для загрузки сборок](../../framework/deployment/best-practices-for-assembly-loading.md)
 - [Использование доменов приложений](../../framework/app-domains/use.md)

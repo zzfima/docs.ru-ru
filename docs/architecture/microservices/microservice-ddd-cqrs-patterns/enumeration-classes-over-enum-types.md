@@ -2,12 +2,12 @@
 title: Использование классов перечисления вместо типов перечисления
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Сведения о том, как можно использовать классы перечисления вместо перечислений для преодоления некоторых ограничений последних.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 82bd80d19b3b73eb2f45ede8cc7ad4593c688277
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337679"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628466"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Использование классов перечисления вместо типов перечисления
 
@@ -81,12 +81,6 @@ public class CardType : Enumeration
 ```
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
-
-- **Перечисления нам не друзья (обновление)**  \
-  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
-
-- **Дэниэл Хардман (Daniel Hardman). Какие болезни переносят перечисления и как их вылечить** \
-  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Джимми Богард (Jimmy Bogard). Классы перечислений** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>

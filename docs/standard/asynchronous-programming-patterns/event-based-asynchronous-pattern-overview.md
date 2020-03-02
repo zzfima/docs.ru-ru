@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 05b5ab19c5206395ab138465eccf2035b5cebe3e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046489"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160072"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Обзор асинхронной модели, основанной на событиях
 Приложениям, выполняющим множество задач одновременно и при этом активно реагирующим на действия пользователя, часто требуется структура, использующая несколько потоков. Пространство имен <xref:System.Threading> предоставляет все необходимые средства для создания высокопроизводительных многопоточных приложений, однако для эффективного использования этих средств требуется значительный опыт в области многопоточной программной инженерии. Для относительно простых многопоточных приложений компонент <xref:System.ComponentModel.BackgroundWorker> предоставляет прямолинейное решение. Для более сложных асинхронных приложений рекомендуется реализовать класс, который соответствует асинхронной модели на основе событий.  
@@ -60,19 +60,19 @@ ms.locfileid: "70046489"
 ```vb  
 Public Class AsyncExample  
     ' Synchronous methods.  
-    Public Function Method1(ByVal param As String) As Integer   
-    Public Sub Method2(ByVal param As Double)   
+    Public Function Method1(ByVal param As String) As Integer
+    Public Sub Method2(ByVal param As Double)
   
     ' Asynchronous methods.  
-    Overloads Public Sub Method1Async(ByVal param As String)   
-    Overloads Public Sub Method1Async(ByVal param As String, ByVal userState As Object)   
+    Overloads Public Sub Method1Async(ByVal param As String)
+    Overloads Public Sub Method1Async(ByVal param As String, ByVal userState As Object)
     Public Event Method1Completed As Method1CompletedEventHandler  
   
-    Overloads Public Sub Method2Async(ByVal param As Double)   
-    Overloads Public Sub Method2Async(ByVal param As Double, ByVal userState As Object)   
+    Overloads Public Sub Method2Async(ByVal param As Double)
+    Overloads Public Sub Method2Async(ByVal param As Double, ByVal userState As Object)
     Public Event Method2Completed As Method2CompletedEventHandler  
   
-    Public Sub CancelAsync(ByVal userState As Object)   
+    Public Sub CancelAsync(ByVal userState As Object)
   
     Public ReadOnly Property IsBusy () As Boolean  
   
@@ -131,14 +131,14 @@ public class AsyncExample
   
  Некоторые классы могут предоставлять добавочные результаты по мере выполнения асинхронных операций. Эти результаты будут сохранены в классе, который является производным от <xref:System.ComponentModel.ProgressChangedEventArgs>, и будут иметь вид свойств в производном классе. Вы можете получить доступ к этим результатам в обработчике событий для события `ProgressChanged` точно так же, как стали бы получать доступ к свойству <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>. Если имеется несколько ожидающих асинхронных операций, вы можете использовать свойство <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A>, чтобы определить, какая операция выдает добавочные результаты.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Практическое руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Практическое руководство. Фоновое выполнение операции](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Руководство. Фоновое выполнение операции](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Руководство. Реализация формы, в которой выполняется фоновая операция](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [Рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Определение, когда следует реализовать асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

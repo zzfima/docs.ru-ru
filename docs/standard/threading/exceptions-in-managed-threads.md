@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138067"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159654"
 ---
 # <a name="exceptions-in-managed-threads"></a>Исключения в управляемых потоках
 Начиная с .NET Framework версии 2.0, среда CLR позволяет большинству необработанных исключений выполняться в потоках. Как правило, это означает, что необработанное исключение будет вызывать завершение работы приложения.  
@@ -41,7 +41,7 @@ ms.locfileid: "73138067"
   
  Предоставление возможности необработанным исключениям продолжать выполняться в потоках, пока операционная система не завершит программу, создает проблемы во время разработки и тестирования. Отчеты об ошибках при завершении программы поддерживают процесс отладки.  
   
-<a name="ChangeFromPreviousVersions"></a>   
+<a name="ChangeFromPreviousVersions"></a>
 ## <a name="change-from-previous-versions"></a>Отличия от предыдущих версий  
  Наиболее существенное изменение связано с управляемыми потоками. В .NET Framework версий 1.0 и 1.1 среда CLR обеспечивает поддержку для необработанных исключений в следующих ситуациях.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "73138067"
 ## <a name="host-override"></a>Переопределение узла  
  В платформе .NET Framework версии 2.0 неуправляемый узел может использовать интерфейс [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) в API размещения для переопределения политики необработанных исключений по умолчанию среды CLR. Чтобы задать политику для необработанных исключений, используется функция [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Основы управляемых потоков](../../../docs/standard/threading/managed-threading-basics.md)

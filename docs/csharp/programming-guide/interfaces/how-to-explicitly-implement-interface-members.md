@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: d006db2a7501a3273f5cd11e82bc589b21e1ce9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff094aca237ed6146bd9b52813c40549bc99b9b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712095"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627789"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Руководство по программированию на C#. Явная реализация элементов интерфейса
-В этом примере объявляются [интерфейс](../../language-reference/keywords/interface.md)`IDimensions` и класс `Box`, который явно реализует члены интерфейса `getLength` и `getWidth`. Доступ к членам осуществляется посредством экземпляра интерфейса `dimensions`.  
+В этом примере объявляются [интерфейс](../../language-reference/keywords/interface.md)`IDimensions` и класс `Box`, который явно реализует члены интерфейса `GetLength` и `GetWidth`. Доступ к членам осуществляется посредством экземпляра интерфейса `dimensions`.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  
