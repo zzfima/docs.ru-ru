@@ -2,12 +2,12 @@
 title: Таблица принятия решений. Использование платформ .NET для Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Таблица принятия решений. Использование платформ .NET для Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 0087d80c2d949daf14e1edd773dd310f47c508a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8ffe2b7bc0bee976d3a63b274994dbcc8aef0c61
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039678"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628323"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Таблица для принятия решений. Использование платформ .NET для Docker
 
@@ -27,7 +27,7 @@ ms.locfileid: "71039678"
 | ASP.NET 4 (MVC 5, веб-API 2 и веб-формы) | -- | .NET Framework |
 | Службы SignalR | .NET Core 2.1 или более поздней версии | .NET Framework <br/> .NET Core 2.1 или более поздней версии |
 | WCF, WF и другие устаревшие платформы | WCF в .NET Core (только клиентская библиотека) | .NET Framework <br/> WCF в .NET Core (только клиентская библиотека) |
-| Использование служб Azure | .NET Core <br/> (В конечном итоге все службы Azure будут предоставлять клиентские пакеты SDK для .NET Core) | .NET Framework <br/> .NET Core <br/> (В конечном итоге все службы Azure будут предоставлять клиентские пакеты SDK для .NET Core) |
+| Использование служб Azure | .NET Core <br/> (в конечном итоге большинство служб Azure будет предоставлять клиентские пакеты SDK для .NET Core) | .NET Framework <br/> .NET Core <br/> (в конечном итоге большинство служб Azure будет предоставлять клиентские пакеты SDK для .NET Core) |
 
 >[!div class="step-by-step"]
 >[Назад](net-framework-container-scenarios.md)
