@@ -240,10 +240,10 @@ WebHost.CreateDefaultBuilder(args)
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Building a scheduled task in ASP.NET Core/Standard 2.0** \ (Создание запланированной задачи в ASP.NET Core или Standard 2.0)
+- **Building a scheduled task in ASP.NET Core/Standard 2.0** (Создание запланированной задачи в ASP.NET Core или Standard 2.0) \
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementing IHostedService in ASP.NET Core 2.0** \ (Реализация интерфейса IHostedService в ASP.NET Core 2.0)
+- **Implementing IHostedService in ASP.NET Core 2.0** (Реализация интерфейса IHostedService в ASP.NET Core 2.0) \
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
 - **Пример GenericHost с ASP.NET Core 2.1** \
