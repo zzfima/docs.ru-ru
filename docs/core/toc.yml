@@ -12,6 +12,8 @@
       href: install/runtime.md
     - name: Поддерживаемые ОС и зависимости
       href: install/dependencies.md
+    - name: Проблемы с подтверждением подлинности в macOS
+      href: install/macos-notarization-issues.md
     - name: Проверка версий .NET Core
       href: install/how-to-detect-installed-versions.md
     - name: Диспетчеры пакетов Linux
@@ -109,6 +111,17 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3. Создание пакета шаблонов
           href: tutorials/cli-templates-create-template-pack.md
+    - name: Создание средств для интерфейса командной строки
+      items:
+        - name: 1. Создание средства
+          displayName: 'tools, tutorials'
+          href: tools/global-tools-how-to-create.md
+        - name: 2. Использование глобального средства
+          displayName: 'tools, tutorials'
+          href: tools/global-tools-how-to-use.md
+        - name: 3. Использование локального средства
+          href: tools/local-tools-how-to-use.md
+          displayName: 'tools, tutorials'
 - name: Пакеты SDK для проектов
   items:
     - name: Обзор
@@ -121,163 +134,12 @@
           href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
         - name: Microsoft.NET.Sdk.Razor
           href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
-- name: Конфигурация среды выполнения
-  items:
-    - name: Параметры
-      href: run-time-config/index.md
-    - name: Параметры компиляции
-      href: run-time-config/compilation.md
-    - name: Параметры отладки и профилирования
-      href: run-time-config/debugging-profiling.md
-    - name: Параметры сборщика мусора
-      href: run-time-config/garbage-collector.md
-    - name: Параметры глобализации
-      href: run-time-config/globalization.md
-    - name: Параметры сети
-      href: run-time-config/networking.md
-    - name: Параметры потоков
-      href: run-time-config/threading.md
-- name: Взаимодействие на уровне машинного кода
-  items:
-    - name: Предоставление доступа к компонентам .NET Core для COM
-      href: native-interop/expose-components-to-com.md
-- name: 'Пакеты, метапакеты и платформы'
-  href: packages.md
-- name: Миграция
-  items:
-    - name: "Переход с ASP.NET Core\_2.0 на\_2.1"
-      href: migration/20-21.md
-    - name: Миграция из project.json
-      href: migration/index.md
-    - name: Сопоставление между project.json и CSPROJ
-      href: tools/project-json-to-csproj.md
-    - name: Общие сведения об изменениях интерфейса командной строки
-      href: tools/cli-msbuild-architecture.md
-    - name: Дополнения к формату CSPROJ
-      href: tools/csproj.md
-    - name: Миграция из DNX
-      href: migration/from-dnx.md
-- name: Развертывание приложений
-  items:
-    - name: Обзор
-      href: deploying/index.md
-    - name: Публикация приложений с помощью CLI
-      href: deploying/deploy-with-cli.md
-    - name: Развертывание приложений с помощью Visual Studio
-      href: deploying/deploy-with-vs.md
-    - name: Создание пакета NuGet с помощью CLI
-      href: deploying/creating-nuget-packages.md
-    - name: Обновление версии среды выполнения автономного развертывания
-      href: deploying/runtime-patch-selection.md
-    - name: Хранилище пакетов среды выполнения
-      href: deploying/runtime-store.md
-- name: Docker
-  items:
-    - name: Введение в .NET и Docker
-      href: docker/introduction.md
-    - name: Контейнеризация приложения .NET Core
-      href: docker/build-container.md
-    - name: "Средства Visual\_Studio для контейнеров"
-      href: /visualstudio/containers/overview
-- name: Диагностические средства
-  items:
-    - name: Обзор
-      href: diagnostics/index.md
-    - name: Управляемые отладчики
-      href: diagnostics/managed-debuggers.md
-    - name: Ведение журнала и трассировка
-      href: diagnostics/logging-tracing.md
-    - name: Глобальные средства .NET Core CLI
-      items:
-        - name: dotnet-counters
-          href: diagnostics/dotnet-counters.md
-        - name: dotnet-dump
-          href: diagnostics/dotnet-dump.md
-        - name: dotnet-trace
-          href: diagnostics/dotnet-trace.md
-    - name: Учебники по диагностике .NET Core
-      items:
-        - name: Отладка утечек памяти
-          href: diagnostics/debug-memory-leak.md
-- name: Модульное тестирование
-  href: testing/index.md
-  items:
-    - name: Обзор
-      href: testing/index.md
-    - name: Рекомендации по модульному тестированию
-      href: testing/unit-testing-best-practices.md
-    - name: 'Модульное тестирование в C# с использованием xUnit'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: 'Модульное тестирование в C# с использованием NUnit'
-      href: testing/unit-testing-with-nunit.md
-    - name: 'Модульное тестирование в C# с использованием MSTest'
-      href: testing/unit-testing-with-mstest.md
-    - name: 'Модульное тестирование в F# с использованием xUnit'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: 'Модульное тестирование в F# с использованием NUnit'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: 'Модульное тестирование в F# с использованием MSTest'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: Модульное тестирование в Visual Basic с использованием xUnit
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: Модульное тестирование в Visual Basic с использованием NUnit
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: Модульное тестирование в Visual Basic с использованием MSTest
-      href: testing/unit-testing-visual-basic-with-mstest.md
-    - name: Выполнение выборочных модульных тестов
-      href: testing/selective-unit-tests.md
-    - name: Модульное тестирование публикуемых выходных данных
-      href: testing/unit-testing-published-output.md
-    - name: Live Unit Testing в проектах .NET Core с использованием Visual Studio
-      href: /visualstudio/test/live-unit-testing-start
-- name: Непрерывная интеграция
-  href: tools/using-ci-with-cli.md
-- name: Управление версиями
-  items:
-    - name: Обзор
-      href: versions/index.md
-    - name: Выбор версии .NET Core
-      href: versions/selection.md
-    - name: "Удаление устаревших сред выполнения и\_пакетов SDK"
-      href: versions/remove-runtime-sdk-versions.md
-- name: Каталог идентификаторов сред выполнения (RID)
-  href: rid-catalog.md
 - name: Обзор пакета SDK для .NET Core
   href: sdk.md
 - name: Интерфейс командной строки .NET Core
   items:
     - name: Обзор
       href: tools/index.md
-    - name: Глобальные и локальные средства
-      expanded: true
-      items:
-        - name: Как управлять средствами
-          href: tools/global-tools.md
-        - name: Учебники
-          items:
-            - name: Создание средства
-              displayName: tools
-              href: tools/global-tools-how-to-create.md
-            - name: Установка и использование глобального средства
-              displayName: tools
-              href: tools/global-tools-how-to-use.md
-            - name: Установка и использование локального средства
-              displayName: tools
-              href: tools/local-tools-how-to-use.md
-        - name: Устранение неполадок в средствах
-          href: tools/troubleshoot-usage-issues.md
-    - name: Повышенные права доступа
-      href: tools/elevated-access.md
-    - name: Модель расширяемости
-      href: tools/extensibility.md
-    - name: Пользовательские шаблоны
-      href: tools/custom-templates.md
-    - name: Включение автодополнения клавишей TAB
-      href: tools/enable-tab-autocomplete.md
-    - name: Телеметрия
-      href: tools/telemetry.md
-    - name: Обзор global.json
-      href: tools/global-json.md
     - name: Справочник
       items:
         - name: dotnet
@@ -352,6 +214,44 @@
               href: tools/dotnet-list-package.md
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
+    - name: Глобальные и локальные средства
+      items:
+        - name: Управление средствами
+          href: tools/global-tools.md
+        - name: Устранение неполадок в средствах
+          href: tools/troubleshoot-usage-issues.md
+    - name: Обзор global.json
+      href: tools/global-json.md
+    - name: Пользовательские шаблоны
+      href: tools/custom-templates.md
+    - name: Телеметрия
+      href: tools/telemetry.md
+    - name: Повышенные права доступа
+      href: tools/elevated-access.md
+    - name: Включение автодополнения клавишей TAB
+      href: tools/enable-tab-autocomplete.md
+    - name: Модель расширяемости
+      href: tools/extensibility.md
+- name: Диагностические средства
+  items:
+    - name: Обзор
+      href: diagnostics/index.md
+    - name: Управляемые отладчики
+      href: diagnostics/managed-debuggers.md
+    - name: Ведение журнала и трассировка
+      href: diagnostics/logging-tracing.md
+    - name: Глобальные средства .NET Core CLI
+      items:
+        - name: dotnet-counters
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-dump
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-trace
+          href: diagnostics/dotnet-trace.md
+    - name: Учебники по диагностике .NET Core
+      items:
+        - name: Отладка утечек памяти
+          href: diagnostics/debug-memory-leak.md
 - name: Дополнительные инструменты .NET Core
   items:
     - name: Обзор
@@ -366,6 +266,58 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: Генератор сериализации XML
       href: additional-tools/xml-serializer-generator.md
+- name: Развертывание приложений
+  items:
+    - name: Обзор
+      href: deploying/index.md
+    - name: Публикация приложений с помощью CLI
+      href: deploying/deploy-with-cli.md
+    - name: Развертывание приложений с помощью Visual Studio
+      href: deploying/deploy-with-vs.md
+    - name: Создание пакета NuGet с помощью CLI
+      href: deploying/creating-nuget-packages.md
+    - name: Обновление версии среды выполнения автономного развертывания
+      href: deploying/runtime-patch-selection.md
+    - name: Хранилище пакетов среды выполнения
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: Введение в .NET и Docker
+      href: docker/introduction.md
+    - name: Контейнеризация приложения .NET Core
+      href: docker/build-container.md
+    - name: "Средства Visual\_Studio для контейнеров"
+      href: /visualstudio/containers/overview
+- name: Конфигурация среды выполнения
+  items:
+    - name: Параметры
+      href: run-time-config/index.md
+    - name: Параметры компиляции
+      href: run-time-config/compilation.md
+    - name: Параметры отладки и профилирования
+      href: run-time-config/debugging-profiling.md
+    - name: Параметры сборщика мусора
+      href: run-time-config/garbage-collector.md
+    - name: Параметры глобализации
+      href: run-time-config/globalization.md
+    - name: Параметры сети
+      href: run-time-config/networking.md
+    - name: Параметры потоков
+      href: run-time-config/threading.md
+- name: Миграция
+  items:
+    - name: "Переход с ASP.NET Core\_2.0 на\_2.1"
+      href: migration/20-21.md
+    - name: Миграция из project.json
+      href: migration/index.md
+    - name: Сопоставление между project.json и CSPROJ
+      href: tools/project-json-to-csproj.md
+    - name: Общие сведения об изменениях интерфейса командной строки
+      href: tools/cli-msbuild-architecture.md
+    - name: Дополнения к формату CSPROJ
+      href: tools/csproj.md
+    - name: Миграция из DNX
+      href: migration/from-dnx.md
 - name: Перенос из .NET Framework
   items:
     - name: Обзор
@@ -388,6 +340,47 @@
       href: porting/wpf.md
     - name: Перенос проектов C++/CLI
       href: porting/cpp-cli.md
+- name: Модульное тестирование
+  href: testing/index.md
+  items:
+    - name: Обзор
+      href: testing/index.md
+    - name: Рекомендации по модульному тестированию
+      href: testing/unit-testing-best-practices.md
+    - name: 'Модульное тестирование в C# с использованием xUnit'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: 'Модульное тестирование в C# с использованием NUnit'
+      href: testing/unit-testing-with-nunit.md
+    - name: 'Модульное тестирование в C# с использованием MSTest'
+      href: testing/unit-testing-with-mstest.md
+    - name: 'Модульное тестирование в F# с использованием xUnit'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: 'Модульное тестирование в F# с использованием NUnit'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: 'Модульное тестирование в F# с использованием MSTest'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: Модульное тестирование в Visual Basic с использованием xUnit
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: Модульное тестирование в Visual Basic с использованием NUnit
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: Модульное тестирование в Visual Basic с использованием MSTest
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: Выполнение выборочных модульных тестов
+      href: testing/selective-unit-tests.md
+    - name: Модульное тестирование публикуемых выходных данных
+      href: testing/unit-testing-published-output.md
+    - name: Live Unit Testing в проектах .NET Core с использованием Visual Studio
+      href: /visualstudio/test/live-unit-testing-start
+- name: Управление версиями
+  items:
+    - name: Обзор
+      href: versions/index.md
+    - name: Выбор версии .NET Core
+      href: versions/selection.md
+    - name: "Удаление устаревших сред выполнения и\_пакетов SDK"
+      href: versions/remove-runtime-sdk-versions.md
+- name: Каталог идентификаторов сред выполнения (RID)
+  href: rid-catalog.md
 - name: Управление зависимостями и их загрузка
   items:
     - name: Управление зависимостями
@@ -414,3 +407,9 @@
           href: ../standard/assembly/unloadability-howto.md
 - name: Упаковка дистрибутивов .NET Core
   href: distribution-packaging.md
+- name: Предоставление доступа к компонентам .NET Core для COM
+  href: native-interop/expose-components-to-com.md
+- name: 'Пакеты, метапакеты и платформы'
+  href: packages.md
+- name: Непрерывная интеграция
+  href: tools/using-ci-with-cli.md
