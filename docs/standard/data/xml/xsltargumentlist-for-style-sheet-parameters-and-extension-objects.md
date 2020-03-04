@@ -6,56 +6,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709625"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160200"
 ---
-# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="6315c-102">XsltArgumentList для параметров таблицы стилей и объектов расширения</span><span class="sxs-lookup"><span data-stu-id="6315c-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
-<span data-ttu-id="6315c-103">Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT.</span><span class="sxs-lookup"><span data-stu-id="6315c-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="6315c-104">При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.</span><span class="sxs-lookup"><span data-stu-id="6315c-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="a33f7-102">XsltArgumentList для параметров таблицы стилей и объектов расширения</span><span class="sxs-lookup"><span data-stu-id="a33f7-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
+<span data-ttu-id="a33f7-103">Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT.</span><span class="sxs-lookup"><span data-stu-id="a33f7-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="a33f7-104">При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.</span><span class="sxs-lookup"><span data-stu-id="a33f7-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="6315c-105">Классы <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XsltArgumentList> являются устаревшими в версии платформы NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="6315c-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="6315c-106">Преобразования XSLT можно выполнять с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="6315c-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="6315c-107">См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="6315c-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="a33f7-105">Классы <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XsltArgumentList> являются устаревшими в версии платформы NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="a33f7-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="a33f7-106">Преобразования XSLT можно выполнять с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="a33f7-107">См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="a33f7-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="6315c-108">Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры XSLT и объекты расширения XSLT.</span><span class="sxs-lookup"><span data-stu-id="6315c-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="6315c-109">При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.</span><span class="sxs-lookup"><span data-stu-id="6315c-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+ <span data-ttu-id="a33f7-108">Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры XSLT и объекты расширения XSLT.</span><span class="sxs-lookup"><span data-stu-id="a33f7-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="a33f7-109">При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.</span><span class="sxs-lookup"><span data-stu-id="a33f7-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
- <span data-ttu-id="6315c-110">Далее перечислены преимущества передачи объектов по сравнению с использованием внедренного скрипта.</span><span class="sxs-lookup"><span data-stu-id="6315c-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
+ <span data-ttu-id="a33f7-110">Далее перечислены преимущества передачи объектов по сравнению с использованием внедренного скрипта.</span><span class="sxs-lookup"><span data-stu-id="a33f7-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
   
-- <span data-ttu-id="6315c-111">Обеспечивает улучшенную инкапсуляцию и повторное использование классов.</span><span class="sxs-lookup"><span data-stu-id="6315c-111">Provides better encapsulation and reuse of classes.</span></span>  
+- <span data-ttu-id="a33f7-111">Обеспечивает улучшенную инкапсуляцию и повторное использование классов.</span><span class="sxs-lookup"><span data-stu-id="a33f7-111">Provides better encapsulation and reuse of classes.</span></span>  
   
-- <span data-ttu-id="6315c-112">Уменьшает размер и улучшает обслуживание таблиц стилей.</span><span class="sxs-lookup"><span data-stu-id="6315c-112">Allows style sheets to be smaller and more maintainable.</span></span>  
+- <span data-ttu-id="a33f7-112">Уменьшает размер и улучшает обслуживание таблиц стилей.</span><span class="sxs-lookup"><span data-stu-id="a33f7-112">Allows style sheets to be smaller and more maintainable.</span></span>  
   
-- <span data-ttu-id="6315c-113">Поддерживает вызов методов из классов, принадлежащих пространствам имен, не определенным в наборе поддерживаемых пространств имен <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="6315c-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
+- <span data-ttu-id="a33f7-113">Поддерживает вызов методов из классов, принадлежащих пространствам имен, не определенным в наборе поддерживаемых пространств имен <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
   
-- <span data-ttu-id="6315c-114">Поддерживает передачу фрагментов результирующего дерева в таблицу стилей с помощью <xref:System.Xml.XPath.XPathNodeIterator>.</span><span class="sxs-lookup"><span data-stu-id="6315c-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
+- <span data-ttu-id="a33f7-114">Поддерживает передачу фрагментов результирующего дерева в таблицу стилей с помощью <xref:System.Xml.XPath.XPathNodeIterator>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
   
-## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="6315c-115">Параметры таблицы стилей XSLT</span><span class="sxs-lookup"><span data-stu-id="6315c-115">XSLT Style Sheet Parameters</span></span>  
- <span data-ttu-id="6315c-116">Параметры XSLT добавляются в <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span><span class="sxs-lookup"><span data-stu-id="6315c-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="6315c-117">В это время с объектом параметра связываются полное имя и URI-код пространства имен.</span><span class="sxs-lookup"><span data-stu-id="6315c-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
+## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="a33f7-115">Параметры таблицы стилей XSLT</span><span class="sxs-lookup"><span data-stu-id="a33f7-115">XSLT Style Sheet Parameters</span></span>  
+ <span data-ttu-id="a33f7-116">Параметры XSLT добавляются в <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="a33f7-117">В это время с объектом параметра связываются полное имя и URI-код пространства имен.</span><span class="sxs-lookup"><span data-stu-id="a33f7-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
   
- <span data-ttu-id="6315c-118">Объект параметра должен соответствовать типу W3C.</span><span class="sxs-lookup"><span data-stu-id="6315c-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="6315c-119">В следующей таблице показано соответствие типов W3C и классов (типов) .NET Framework. Также показано, является ли тип W3C типом XPath или типом XSLT.</span><span class="sxs-lookup"><span data-stu-id="6315c-119">The following table shows the corresponding W3C types, the equivalent .NET Framework classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
+ <span data-ttu-id="a33f7-118">Объект параметра должен соответствовать типу W3C.</span><span class="sxs-lookup"><span data-stu-id="a33f7-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="a33f7-119">В следующей таблице показано соответствие типов W3C и классов (типов) .NET Framework. Также показано, является ли тип W3C типом XPath или типом XSLT.</span><span class="sxs-lookup"><span data-stu-id="a33f7-119">The following table shows the corresponding W3C types, the equivalent .NET Framework classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
   
-|<span data-ttu-id="6315c-120">Тип W3C</span><span class="sxs-lookup"><span data-stu-id="6315c-120">W3C Type</span></span>|<span data-ttu-id="6315c-121">Эквивалентный класс (тип) .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6315c-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="6315c-122">Тип XPath или тип XSLT</span><span class="sxs-lookup"><span data-stu-id="6315c-122">XPath type or XSLT type</span></span>|  
+|<span data-ttu-id="a33f7-120">Тип W3C</span><span class="sxs-lookup"><span data-stu-id="a33f7-120">W3C Type</span></span>|<span data-ttu-id="a33f7-121">Эквивалентный класс (тип) .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a33f7-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="a33f7-122">Тип XPath или тип XSLT</span><span class="sxs-lookup"><span data-stu-id="a33f7-122">XPath type or XSLT type</span></span>|  
 |--------------|----------------------------------------------|-----------------------------|  
-|<span data-ttu-id="6315c-123">Строка</span><span class="sxs-lookup"><span data-stu-id="6315c-123">String</span></span>|<span data-ttu-id="6315c-124">System.String</span><span class="sxs-lookup"><span data-stu-id="6315c-124">System.String</span></span>|<span data-ttu-id="6315c-125">XPath</span><span class="sxs-lookup"><span data-stu-id="6315c-125">XPath</span></span>|  
-|<span data-ttu-id="6315c-126">Логическое значение .</span><span class="sxs-lookup"><span data-stu-id="6315c-126">Boolean</span></span>|<span data-ttu-id="6315c-127">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="6315c-127">System.Boolean</span></span>|<span data-ttu-id="6315c-128">XPath</span><span class="sxs-lookup"><span data-stu-id="6315c-128">XPath</span></span>|  
-|<span data-ttu-id="6315c-129">Числовой</span><span class="sxs-lookup"><span data-stu-id="6315c-129">Number</span></span>|<span data-ttu-id="6315c-130">System.Double</span><span class="sxs-lookup"><span data-stu-id="6315c-130">System.Double</span></span>|<span data-ttu-id="6315c-131">XPath</span><span class="sxs-lookup"><span data-stu-id="6315c-131">XPath</span></span>|  
-|<span data-ttu-id="6315c-132">Фрагмент дерева результатов</span><span class="sxs-lookup"><span data-stu-id="6315c-132">Result Tree Fragment</span></span>|<span data-ttu-id="6315c-133">System.Xml.XPath.XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="6315c-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="6315c-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="6315c-134">XSLT</span></span>|  
-|<span data-ttu-id="6315c-135">Набор узлов</span><span class="sxs-lookup"><span data-stu-id="6315c-135">Node Set</span></span>|<span data-ttu-id="6315c-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="6315c-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="6315c-137">XPath</span><span class="sxs-lookup"><span data-stu-id="6315c-137">XPath</span></span>|  
+|<span data-ttu-id="a33f7-123">String</span><span class="sxs-lookup"><span data-stu-id="a33f7-123">String</span></span>|<span data-ttu-id="a33f7-124">System.String</span><span class="sxs-lookup"><span data-stu-id="a33f7-124">System.String</span></span>|<span data-ttu-id="a33f7-125">XPath</span><span class="sxs-lookup"><span data-stu-id="a33f7-125">XPath</span></span>|  
+|<span data-ttu-id="a33f7-126">Логическое</span><span class="sxs-lookup"><span data-stu-id="a33f7-126">Boolean</span></span>|<span data-ttu-id="a33f7-127">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="a33f7-127">System.Boolean</span></span>|<span data-ttu-id="a33f7-128">XPath</span><span class="sxs-lookup"><span data-stu-id="a33f7-128">XPath</span></span>|  
+|<span data-ttu-id="a33f7-129">Number</span><span class="sxs-lookup"><span data-stu-id="a33f7-129">Number</span></span>|<span data-ttu-id="a33f7-130">System.Double</span><span class="sxs-lookup"><span data-stu-id="a33f7-130">System.Double</span></span>|<span data-ttu-id="a33f7-131">XPath</span><span class="sxs-lookup"><span data-stu-id="a33f7-131">XPath</span></span>|  
+|<span data-ttu-id="a33f7-132">Фрагмент дерева результатов</span><span class="sxs-lookup"><span data-stu-id="a33f7-132">Result Tree Fragment</span></span>|<span data-ttu-id="a33f7-133">System.Xml.XPath.XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="a33f7-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="a33f7-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="a33f7-134">XSLT</span></span>|  
+|<span data-ttu-id="a33f7-135">Набор узлов</span><span class="sxs-lookup"><span data-stu-id="a33f7-135">Node Set</span></span>|<span data-ttu-id="a33f7-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="a33f7-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="a33f7-137">XPath</span><span class="sxs-lookup"><span data-stu-id="a33f7-137">XPath</span></span>|  
   
- <span data-ttu-id="6315c-138">Если объект параметра не принадлежит ни к одному из классов выше, он принудительно преобразуется в тип Double или String.</span><span class="sxs-lookup"><span data-stu-id="6315c-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="6315c-139">Типы Int16, UInt16, Int32, UInt32, Int64, UInt64, Single и Decimal преобразуются в Double.</span><span class="sxs-lookup"><span data-stu-id="6315c-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="6315c-140">Все остальные типы преобразуются в тип String с помощью метода `ToString`.</span><span class="sxs-lookup"><span data-stu-id="6315c-140">All other types are forced to a String using the `ToString` method.</span></span>  
+ <span data-ttu-id="a33f7-138">Если объект параметра не принадлежит ни к одному из классов выше, он принудительно преобразуется в тип Double или String.</span><span class="sxs-lookup"><span data-stu-id="a33f7-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="a33f7-139">Типы Int16, UInt16, Int32, UInt32, Int64, UInt64, Single и Decimal преобразуются в Double.</span><span class="sxs-lookup"><span data-stu-id="a33f7-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="a33f7-140">Все остальные типы преобразуются в тип String с помощью метода `ToString`.</span><span class="sxs-lookup"><span data-stu-id="a33f7-140">All other types are forced to a String using the `ToString` method.</span></span>  
   
-#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="6315c-141">Чтобы использовать параметр XSLT, пользователь должен выполнить следующие действия.</span><span class="sxs-lookup"><span data-stu-id="6315c-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="a33f7-141">Чтобы использовать параметр XSLT, пользователь должен выполнить следующие действия.</span><span class="sxs-lookup"><span data-stu-id="a33f7-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
   
-1. <span data-ttu-id="6315c-142">Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объекты с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span><span class="sxs-lookup"><span data-stu-id="6315c-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
+1. <span data-ttu-id="a33f7-142">Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объекты с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
   
-2. <span data-ttu-id="6315c-143">Вызвать параметры из таблицы стилей.</span><span class="sxs-lookup"><span data-stu-id="6315c-143">Call the parameters from the style sheet.</span></span>  
+2. <span data-ttu-id="a33f7-143">Вызвать параметры из таблицы стилей.</span><span class="sxs-lookup"><span data-stu-id="a33f7-143">Call the parameters from the style sheet.</span></span>  
   
-3. <span data-ttu-id="6315c-144">Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="6315c-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="a33f7-144">Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="6315c-145">Пример</span><span class="sxs-lookup"><span data-stu-id="6315c-145">Example</span></span>  
- <span data-ttu-id="6315c-146">В следующем примере используется метод <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> для создания параметра, хранящего вычисленную дату скидки.</span><span class="sxs-lookup"><span data-stu-id="6315c-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="6315c-147">Дата скидки вычисляется как 20 дней после даты заказа.</span><span class="sxs-lookup"><span data-stu-id="6315c-147">The discount date is calculated to be 20 days from the order date.</span></span>  
+### <a name="example"></a><span data-ttu-id="a33f7-145">Пример</span><span class="sxs-lookup"><span data-stu-id="a33f7-145">Example</span></span>  
+ <span data-ttu-id="a33f7-146">В следующем примере используется метод <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> для создания параметра, хранящего вычисленную дату скидки.</span><span class="sxs-lookup"><span data-stu-id="a33f7-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="a33f7-147">Дата скидки вычисляется как 20 дней после даты заказа.</span><span class="sxs-lookup"><span data-stu-id="a33f7-147">The discount date is calculated to be 20 days from the order date.</span></span>  
   
 ```vb  
 Imports System  
@@ -137,8 +137,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="6315c-148">Input</span><span class="sxs-lookup"><span data-stu-id="6315c-148">Input</span></span>  
- <span data-ttu-id="6315c-149">order.xml</span><span class="sxs-lookup"><span data-stu-id="6315c-149">order.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="a33f7-148">Входные данные</span><span class="sxs-lookup"><span data-stu-id="a33f7-148">Input</span></span>  
+ <span data-ttu-id="a33f7-149">order.xml</span><span class="sxs-lookup"><span data-stu-id="a33f7-149">order.xml</span></span>  
   
 ```xml  
 <!--Represents a customer order-->  
@@ -154,7 +154,7 @@ public class Sample
 </order>  
 ```  
   
- <span data-ttu-id="6315c-150">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="6315c-150">discount.xsl</span></span>  
+ <span data-ttu-id="a33f7-150">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="a33f7-150">discount.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
@@ -169,34 +169,34 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="6315c-151">Вывод</span><span class="sxs-lookup"><span data-stu-id="6315c-151">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="a33f7-151">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="a33f7-151">Output</span></span>  
   
 ```xml  
 <order>  
-   <total>36.9</total>   
-   15% discount if paid by: 5/6/2001 5:01:15 PM   
+   <total>36.9</total>
+   15% discount if paid by: 5/6/2001 5:01:15 PM
 </order>  
 ```  
   
-## <a name="xslt-extension-objects"></a><span data-ttu-id="6315c-152">Объекты расширения XSLT</span><span class="sxs-lookup"><span data-stu-id="6315c-152">XSLT Extension Objects</span></span>  
- <span data-ttu-id="6315c-153">Объекты расширения XSLT добавляются в объект <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="6315c-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="6315c-154">В это время с объектом расширения связываются полное имя и URI-код пространства имен.</span><span class="sxs-lookup"><span data-stu-id="6315c-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
+## <a name="xslt-extension-objects"></a><span data-ttu-id="a33f7-152">Объекты расширения XSLT</span><span class="sxs-lookup"><span data-stu-id="a33f7-152">XSLT Extension Objects</span></span>  
+ <span data-ttu-id="a33f7-153">Объекты расширения XSLT добавляются в объект <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="a33f7-154">В это время с объектом расширения связываются полное имя и URI-код пространства имен.</span><span class="sxs-lookup"><span data-stu-id="a33f7-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
   
- <span data-ttu-id="6315c-155">Во время добавления объекта вызывающий объект метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> должен иметь полное доверие в политике безопасности.</span><span class="sxs-lookup"><span data-stu-id="6315c-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="6315c-156">Если вызывающий объект обладает только частичным доверием, добавление объекта завершится ошибкой.</span><span class="sxs-lookup"><span data-stu-id="6315c-156">If the caller is semi-trusted, the addition will fail.</span></span>  
+ <span data-ttu-id="a33f7-155">Во время добавления объекта вызывающий объект метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> должен иметь полное доверие в политике безопасности.</span><span class="sxs-lookup"><span data-stu-id="a33f7-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="a33f7-156">Если вызывающий объект обладает только частичным доверием, добавление объекта завершится ошибкой.</span><span class="sxs-lookup"><span data-stu-id="a33f7-156">If the caller is semi-trusted, the addition will fail.</span></span>  
   
- <span data-ttu-id="6315c-157">Объект добавляется успешно, однако не гарантируется успешность его выполнения.</span><span class="sxs-lookup"><span data-stu-id="6315c-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="6315c-158">Во время вызова метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> вычисляются разрешения по свидетельству, указанному во время вызова метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, и этот набор разрешений назначается для всего процесса преобразования.</span><span class="sxs-lookup"><span data-stu-id="6315c-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="6315c-159">Если объект расширения запускает действие, для которого необходимы разрешения, отсутствующие в наборе, вызывается исключение.</span><span class="sxs-lookup"><span data-stu-id="6315c-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
+ <span data-ttu-id="a33f7-157">Объект добавляется успешно, однако не гарантируется успешность его выполнения.</span><span class="sxs-lookup"><span data-stu-id="a33f7-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="a33f7-158">Во время вызова метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> вычисляются разрешения по свидетельству, указанному во время вызова метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, и этот набор разрешений назначается для всего процесса преобразования.</span><span class="sxs-lookup"><span data-stu-id="a33f7-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="a33f7-159">Если объект расширения запускает действие, для которого необходимы разрешения, отсутствующие в наборе, вызывается исключение.</span><span class="sxs-lookup"><span data-stu-id="a33f7-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
   
- <span data-ttu-id="6315c-160">Объекты расширения возвращают один из четырех базовых типов данных XPath: number, string, Boolean и node set.</span><span class="sxs-lookup"><span data-stu-id="6315c-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
+ <span data-ttu-id="a33f7-160">Объекты расширения возвращают один из четырех базовых типов данных XPath: number, string, Boolean и node set.</span><span class="sxs-lookup"><span data-stu-id="a33f7-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
   
-#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="6315c-161">Чтобы использовать объект расширения XSLT, пользователь должен выполнить следующие действия</span><span class="sxs-lookup"><span data-stu-id="6315c-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="a33f7-161">Чтобы использовать объект расширения XSLT, пользователь должен выполнить следующие действия</span><span class="sxs-lookup"><span data-stu-id="a33f7-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
   
-1. <span data-ttu-id="6315c-162">Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объект расширения с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="6315c-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
+1. <span data-ttu-id="a33f7-162">Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объект расширения с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
   
-2. <span data-ttu-id="6315c-163">Вызвать объект расширения из таблицы стилей.</span><span class="sxs-lookup"><span data-stu-id="6315c-163">Invoke the extension object from the style sheet.</span></span>  
+2. <span data-ttu-id="a33f7-163">Вызвать объект расширения из таблицы стилей.</span><span class="sxs-lookup"><span data-stu-id="a33f7-163">Invoke the extension object from the style sheet.</span></span>  
   
-3. <span data-ttu-id="6315c-164">Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="6315c-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="a33f7-164">Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="a33f7-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="6315c-165">Пример</span><span class="sxs-lookup"><span data-stu-id="6315c-165">Example</span></span>  
- <span data-ttu-id="6315c-166">В следующем примере вычисляется длина окружности по заданному радиусу.</span><span class="sxs-lookup"><span data-stu-id="6315c-166">The following example calculates the circumference of a circle given its radius.</span></span>  
+### <a name="example"></a><span data-ttu-id="a33f7-165">Пример</span><span class="sxs-lookup"><span data-stu-id="a33f7-165">Example</span></span>  
+ <span data-ttu-id="a33f7-166">В следующем примере вычисляется длина окружности по заданному радиусу.</span><span class="sxs-lookup"><span data-stu-id="a33f7-166">The following example calculates the circumference of a circle given its radius.</span></span>  
   
 ```vb  
 Imports System  
@@ -305,8 +305,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="6315c-167">Input</span><span class="sxs-lookup"><span data-stu-id="6315c-167">Input</span></span>  
- <span data-ttu-id="6315c-168">number.xml</span><span class="sxs-lookup"><span data-stu-id="6315c-168">number.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="a33f7-167">Входные данные</span><span class="sxs-lookup"><span data-stu-id="a33f7-167">Input</span></span>  
+ <span data-ttu-id="a33f7-168">number.xml</span><span class="sxs-lookup"><span data-stu-id="a33f7-168">number.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -317,10 +317,10 @@ public class Sample
   <circle>  
     <radius>37.5</radius>  
   </circle>  
-</data>    
+</data>
 ```  
   
- <span data-ttu-id="6315c-169">circle.xsl</span><span class="sxs-lookup"><span data-stu-id="6315c-169">circle.xsl</span></span>  
+ <span data-ttu-id="a33f7-169">circle.xsl</span><span class="sxs-lookup"><span data-stu-id="a33f7-169">circle.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -332,7 +332,7 @@ public class Sample
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="myObj:Circumference(radius)"/>          
+          <xsl:value-of select="myObj:Circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -341,7 +341,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="6315c-170">Вывод</span><span class="sxs-lookup"><span data-stu-id="6315c-170">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="a33f7-170">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="a33f7-170">Output</span></span>  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a><span data-ttu-id="6315c-171">См. также:</span><span class="sxs-lookup"><span data-stu-id="6315c-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a33f7-171">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="a33f7-171">See also</span></span>
 
-- [<span data-ttu-id="6315c-172">Реализация классом XslTransform XSLT-процессора</span><span class="sxs-lookup"><span data-stu-id="6315c-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="a33f7-172">Реализация классом XslTransform XSLT-процессора</span><span class="sxs-lookup"><span data-stu-id="a33f7-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
