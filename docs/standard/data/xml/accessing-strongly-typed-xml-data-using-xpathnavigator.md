@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: ec08b668bf54c5460e078bbb27bfbc370aff4e4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711185"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158055"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Доступ к XML-данным со строгой типизацией с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> как экземпляр модели данных XPath 2.0, может содержать данные со строгой типизацией, которые сопоставляются с типами CLR. Согласно модели данных XPath 2.0, только элементы и атрибуты могут содержать данные со строгой типизацией. Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет механизмы для доступа к данным со строгой типизацией в объектах <xref:System.Xml.XPath.XPathDocument> и <xref:System.Xml.XmlDocument>, а также механизмы для преобразования данных из одного типа в другой.  
@@ -32,7 +32,7 @@ ms.locfileid: "75711185"
 ## <a name="xpathnavigator-typed-accessors"></a>Типизированные методы доступа XPathNavigator  
  В следующей таблице показаны свойства и методы класса <xref:System.Xml.XPath.XPathNavigator>, которые используются для доступа к данным о типе узла.  
   
-|Идентификаторы|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|Содержит информацию о типе схемы XML для узла, если он допустим.|  
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|Содержит информационный набор после проверки по схеме узла, который добавляется после проверки. Он включает сведения о типе схемы XML, а также сведения о достоверности.|  
@@ -111,9 +111,9 @@ Console.WriteLine(navigator.SchemaInfo.SchemaElement.MinOccurs);
  В примере в качестве входных данных также используется схема `books.xsd`.  
   
 ```xml  
-<xs:schema xmlns="http://www.contoso.com/books"   
-attributeFormDefault="unqualified" elementFormDefault="qualified"   
-targetNamespace="http://www.contoso.com/books"   
+<xs:schema xmlns="http://www.contoso.com/books"
+attributeFormDefault="unqualified" elementFormDefault="qualified"
+targetNamespace="http://www.contoso.com/books"
 xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="publishedType">  
         <xs:restriction base="xs:date">  
@@ -183,7 +183,7 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
  Дополнительные сведения о сопоставлении встроенных типов схемы с типами CLR см. в руководстве по [поддержке типов в классах System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e0a6912c10baa0be4a8ef9f6536948ae27f235c7
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921275"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159563"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Переход с Newtonsoft. JSON на System. Text. JSON
 
@@ -64,7 +64,7 @@ ms.locfileid: "76921275"
 | Обратные вызовы                                             | ⚠️ [не поддерживается, обходной путь, пример](#callbacks) |
 | Поддержка открытых и не открытых полей              | ⚠️ [не поддерживается, обходной путь](#public-and-non-public-fields) |
 | Поддержка методов и методов доступа для внутренних и закрытых свойств | ⚠️ [не поддерживается, обходной путь](#internal-and-private-property-setters-and-getters) |
-| Метод`JsonConvert.PopulateObject`                   | ⚠️ [не поддерживается, обходной путь](#populate-existing-objects) |
+| Метод `JsonConvert.PopulateObject`                   | ⚠️ [не поддерживается, обходной путь](#populate-existing-objects) |
 | Глобальный параметр `ObjectCreationHandling`               | ⚠️ [не поддерживается, обходной путь](#reuse-rather-than-replace-properties) |
 | Добавить в коллекции без методов задания                    | ⚠️ [не поддерживается, обходной путь](#add-to-collections-without-setters) |
 | Глобальный параметр `PreserveReferencesHandling`           | ❌ [не поддерживается](#preserve-object-references-and-handle-loops) |
@@ -81,7 +81,7 @@ ms.locfileid: "76921275"
 
 <xref:System.Text.Json> по умолчанию является строгой и позволяет избежать подбора или интерпретации от имени вызывающего объекта, подчеркивая детерминированное поведение. Библиотека преднамеренно разработана таким образом для повышения производительности и безопасности. `Newtonsoft.Json` по умолчанию является гибкой. Это фундаментальное различие в проектировании – это за многие из следующих различий в поведении по умолчанию.
 
-### <a name="case-insensitive-deserialization"></a>Десериализация без учета регистра 
+### <a name="case-insensitive-deserialization"></a>Десериализация без учета регистра
 
 Во время десериализации `Newtonsoft.Json` имя свойства, по умолчанию совпадающее с учетом регистра. <xref:System.Text.Json> умолчанию учитывается регистр, что обеспечивает лучшую производительность, поскольку выполняет точное соответствие. Сведения о том, как выполнять сопоставление без учета регистра, см. в разделе [сопоставление свойств без учета регистра](system-text-json-how-to.md#case-insensitive-property-matching).
 
@@ -91,7 +91,7 @@ ms.locfileid: "76921275"
 
 Во время сериализации `Newtonsoft.Json` имеет относительно недостаточное разрешение на использование символов без экранирования их. То есть он не заменяет их `\uxxxx`, где `xxxx` является кодовой точкой символа. Там они помещаются в escape-последовательность, выпуская `\` перед символом (например, `"` преобразуется в `\"`). по умолчанию <xref:System.Text.Json> содержит больше символов, чтобы обеспечить защиту от несанкционированного использования межсайтовых сценариев (XSS) или атак с раскрытием информации и делает это с помощью последовательности из шести символов. `System.Text.Json` отменяет все символы, отличные от ASCII, по умолчанию, поэтому вам не нужно ничего делать, если вы используете `StringEscapeHandling.EscapeNonAscii` в `Newtonsoft.Json`. `System.Text.Json` также по умолчанию обходит символы, зависящие от HTML. Сведения о том, как переопределить поведение `System.Text.Json` по умолчанию, см. в разделе [Настройка кодировки символов](system-text-json-how-to.md#customize-character-encoding).
 
-### <a name="comments"></a>Comments
+### <a name="comments"></a>Комментарии
 
 Во время десериализации `Newtonsoft.Json` по умолчанию игнорирует комментарии в JSON. <xref:System.Text.Json> по умолчанию — создавать исключения для комментариев, так как спецификация [RFC 8259](https://tools.ietf.org/html/rfc8259) не включает их. Сведения о том, как разрешить комментарии, см. в разделе [allow Comments and замыкающие запятые](system-text-json-how-to.md#allow-comments-and-trailing-commas).
 
@@ -194,7 +194,7 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json` может сериализовать или десериализовать числа, представленные строками JSON (заключенные в кавычки). Например, он может принимать: `{"DegreesCelsius":"23"}` вместо `{"DegreesCelsius":23}`. Чтобы включить это поведение в <xref:System.Text.Json>, реализуйте пользовательский преобразователь, как показано в следующем примере. Преобразователь обрабатывает свойства, определенные как `long`:
 
-* Он сериализует их как строки JSON. 
+* Он сериализует их как строки JSON.
 * Он принимает числа и числа JSON в кавычках при десериализации.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
@@ -238,7 +238,7 @@ The JSON value could not be converted to System.String.
 
 Чтобы реализовать определение типа для `object` свойств, создайте преобразователь, как в примере, в котором [описывается написание пользовательских преобразователей](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties).
 
-### <a name="deserialize-null-to-non-nullable-type"></a>Десериализация значения NULL в тип, не допускающий значения NULL 
+### <a name="deserialize-null-to-non-nullable-type"></a>Десериализация значения NULL в тип, не допускающий значения NULL
 
 `Newtonsoft.Json` не создает исключение в следующем сценарии:
 
@@ -326,7 +326,7 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json` имеет несколько способов условно игнорировать свойство при сериализации или десериализации:
 
-* `DefaultContractResolver` позволяет выбрать свойства для включения или исключения на основе произвольных критериев. 
+* `DefaultContractResolver` позволяет выбрать свойства для включения или исключения на основе произвольных критериев.
 * Параметры `NullValueHandling` и `DefaultValueHandling` на `JsonSerializerSettings` позволяют указать, что все свойства со значением NULL или значениями по умолчанию должны игнорироваться.
 * Параметры `NullValueHandling` и `DefaultValueHandling` атрибута `[JsonProperty]` позволяют указать отдельные свойства, которые должны игнорироваться при установке значения NULL или по умолчанию.
 
@@ -341,7 +341,7 @@ The JSON value could not be converted to System.String.
 * Игнорировать все свойства, имеющие значение по умолчанию для типа.
 * Игнорировать выбранные свойства, которые имеют значение по умолчанию для типа.
 * Игнорировать выбранные свойства, если их значение равно null.
-* Игнорировать выбранные свойства на основе произвольных критериев, вычисляемых во время выполнения. 
+* Игнорировать выбранные свойства на основе произвольных критериев, вычисляемых во время выполнения.
 
 Для этой функции можно написать пользовательский преобразователь. Ниже приведен пример POCO и пользовательский конвертер, демонстрирующий этот подход:
 
@@ -349,7 +349,7 @@ The JSON value could not be converted to System.String.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
 
-Преобразователь вызывает пропуск свойства `Summary` из сериализации, если его значение равно null, пустая строка или "н/д". 
+Преобразователь вызывает пропуск свойства `Summary` из сериализации, если его значение равно null, пустая строка или "н/д".
 
 Зарегистрируйте этот пользовательский преобразователь с [помощью атрибута в классе](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) или путем [добавления преобразователя](system-text-json-converters-how-to.md#registration-sample---converters-collection) в коллекцию <xref:System.Text.Json.JsonSerializerOptions.Converters>.
 
@@ -446,7 +446,7 @@ The JSON value could not be converted to System.String.
 
 ### <a name="jsondocument-is-idisposable"></a>Жсондокумент является IDisposable
 
-`JsonDocument` создает в памяти представление данных в буфере в пуле. Таким образом, в отличие от `JObject` или `JArray` от `Newtonsoft.Json`тип `JsonDocument` реализует `IDisposable` и должен использоваться внутри блока using. 
+`JsonDocument` создает в памяти представление данных в буфере в пуле. Таким образом, в отличие от `JObject` или `JArray` от `Newtonsoft.Json`тип `JsonDocument` реализует `IDisposable` и должен использоваться внутри блока using.
 
 Возвращать `JsonDocument` из API, если вы хотите передать владение временем существования и освободить ответственность вызывающему. В большинстве случаев это необязательно. Если вызывающему объекту необходимо работать с документом JSON целиком, возвращайте <xref:System.Text.Json.JsonElement.Clone%2A> <xref:System.Text.Json.JsonDocument.RootElement%2A>, то есть <xref:System.Text.Json.JsonElement>. Если вызывающему объекту необходимо работать с определенным элементом в документе JSON, возвращайте <xref:System.Text.Json.JsonElement.Clone%2A> этого <xref:System.Text.Json.JsonElement>. Если вы возвращаете `RootElement` или вложенный элемент напрямую, не выполняя `Clone`, вызывающий объект не сможет получить доступ к возвращаемому `JsonElement` после того, как `JsonDocument`, которому он принадлежит, будет удален.
 
@@ -456,7 +456,7 @@ The JSON value could not be converted to System.String.
 public JsonElement LookAndLoad(JsonElement source)
 {
     string json = File.ReadAllText(source.GetProperty("fileName").GetString());
-   
+
     using (JsonDocument doc = JsonDocument.Parse(json))
     {
         return doc.RootElement.Clone();
@@ -464,9 +464,9 @@ public JsonElement LookAndLoad(JsonElement source)
 }
 ```
 
-Приведенный выше код ждет `JsonElement`, содержащий свойство `fileName`. Он открывает JSON-файл и создает `JsonDocument`. Метод предполагает, что вызывающий объект хочет работать со всем документом, поэтому он возвращает `Clone` `RootElement`. 
+Приведенный выше код ждет `JsonElement`, содержащий свойство `fileName`. Он открывает JSON-файл и создает `JsonDocument`. Метод предполагает, что вызывающий объект хочет работать со всем документом, поэтому он возвращает `Clone` `RootElement`.
 
-Если вы получаете `JsonElement` и возвращаете вложенный элемент, нет необходимости возвращать `Clone` вложенного элемента. Вызывающий объект отвечает за поддержание активности `JsonDocument`, к которой принадлежит переданный `JsonElement`. Например:
+Если вы получаете `JsonElement` и возвращаете вложенный элемент, нет необходимости возвращать `Clone` вложенного элемента. Вызывающий объект отвечает за поддержание активности `JsonDocument`, к которой принадлежит переданный `JsonElement`. Пример:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -514,7 +514,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 `Utf8JsonReader` поддерживает чтение из кодировки UTF-8 [реадонлиспан\<byte >](xref:System.ReadOnlySpan%601) или [реадонлисекуенце\<Byte >](xref:System.Buffers.ReadOnlySequence%601) (что является результатом чтения из <xref:System.IO.Pipelines.PipeReader>).
 
-Для синхронного чтения можно считать полезные данные JSON до конца потока в массив байтов и передать его в модуль чтения. Для чтения из строки (которая кодируется в кодировке UTF-16) вызовите <xref:System.Text.Encoding.UTF8>.<xref:System.Text.Encoding.GetBytes%2A> Сначала перекодирует строку в массив байтов в кодировке UTF-8. Затем передайте его в `Utf8JsonReader`. 
+Для синхронного чтения можно считать полезные данные JSON до конца потока в массив байтов и передать его в модуль чтения. Для чтения из строки (которая кодируется в кодировке UTF-16) вызовите <xref:System.Text.Encoding.UTF8>.<xref:System.Text.Encoding.GetBytes%2A> Сначала перекодирует строку в массив байтов в кодировке UTF-8. Затем передайте его в `Utf8JsonReader`.
 
 Поскольку `Utf8JsonReader` считает входные данные текстом JSON, отметка порядка байтов UTF-8 (BOM) считается недопустимым JSON. Вызывающий объект должен отфильтровать это, прежде чем передавать данные в модуль чтения.
 
@@ -522,7 +522,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="read-with-multi-segment-readonlysequence"></a>Чтение с помощью Реадонлисекуенце нескольких сегментов
 
-Если входные данные JSON являются [реадонлиспан\<](xref:System.ReadOnlySpan%601), к каждому элементу JSON можно получить доступ из свойства `ValueSpan` в модуле чтения по мере прохождения цикла чтения. Однако если входные данные являются [реадонлисекуенце\<](xref:System.Buffers.ReadOnlySequence%601) (что является результатом чтения из <xref:System.IO.Pipelines.PipeReader>), некоторые элементы JSON могут повлечь за собой несколько сегментов объекта `ReadOnlySequence<byte>`. Эти элементы не будут доступны из <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A> в непрерывном блоке памяти. Вместо этого каждый раз, когда у вас есть несколько сегментов `ReadOnlySequence<byte>` в качестве входных данных, следует опросить свойство <xref:System.Text.Json.Utf8JsonReader.HasValueSequence%2A> в модуле чтения, чтобы выяснить, как получить доступ к текущему элементу JSON. Вот рекомендуемый шаблон:
+Если входные данные JSON являются [реадонлиспан\<>](xref:System.ReadOnlySpan%601), к каждому элементу JSON можно получить доступ из свойства `ValueSpan` в модуле чтения по мере прохождения цикла чтения. Однако если входные данные являются [реадонлисекуенце\<>](xref:System.Buffers.ReadOnlySequence%601) (что является результатом чтения из <xref:System.IO.Pipelines.PipeReader>), некоторые элементы JSON могут повлечь за собой несколько сегментов объекта `ReadOnlySequence<byte>`. Эти элементы не будут доступны из <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A> в непрерывном блоке памяти. Вместо этого каждый раз, когда у вас есть несколько сегментов `ReadOnlySequence<byte>` в качестве входных данных, следует опросить свойство <xref:System.Text.Json.Utf8JsonReader.HasValueSequence%2A> в модуле чтения, чтобы выяснить, как получить доступ к текущему элементу JSON. Вот рекомендуемый шаблон:
 
 ```csharp
 while (reader.Read())

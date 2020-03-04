@@ -3,12 +3,12 @@ title: Результаты вывода XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 93cbf7807630a605e17e7f513055c052aad0d08e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710496"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159641"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Результаты вывода XslTransform
 Поскольку таблицы стилей могут определять формат вывода с помощью инструкции `<xsl:output>` с атрибутом `method`, в следующей таблице описан формат вывода при использовании для записи вывода метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> и объявлении этого формата как <xref:System.IO.Stream> или <xref:System.IO.TextWriter>.  
@@ -22,7 +22,7 @@ ms.locfileid: "75710496"
 |-----------------------------------------|-------------------|  
 |method="xml"|XML|  
 |method="html"|HTML|  
-|method="text"|Текст|  
+|method="text"|текст|  
   
 > [!NOTE]
 > Примечание. Инструкция `<xsl:output>` не выполняется, если метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> возвращает <xref:System.Xml.XmlReader> или <xref:System.Xml.XmlWriter>.  
@@ -33,7 +33,7 @@ ms.locfileid: "75710496"
   
 - omit-xml-declaration  
   
-- standalone  
+- Автономный  
   
 - doctype-public  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75710496"
 - indent  
   
     > [!NOTE]
-    > \*Атрибут encoding пропускается, если метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> отправляет выходные данные в объект <xref:System.IO.TextWriter>. Вместо него в объекте <xref:System.IO.TextWriter> используется свойство encoding. 
+    > \*Атрибут encoding пропускается, если метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> отправляет выходные данные в объект <xref:System.IO.TextWriter>. Вместо него в объекте <xref:System.IO.TextWriter> используется свойство encoding.
   
  Следующий атрибут пропускается, если выходом метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> является <xref:System.IO.Stream>.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "75710496"
 ## <a name="escaping-special-characters"></a>Экранирование специальных символов  
  Тег `<xsl:text disable-output-escaping>` используется для указания, следует ли экранировать специальные символы в XML-формате (например, использовать `<&lt>` вместо `"<"`) или оставлять их в текущем состоянии. Атрибут `disable-output-escaping` не учитывать при преобразовании в объект <xref:System.Xml.XmlReader> или <xref:System.Xml.XmlWriter> и не влияет на специальные символы.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709625"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160200"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList для параметров таблицы стилей и объектов расширения
 Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
   
 > [!NOTE]
-> Классы <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XsltArgumentList> являются устаревшими в версии платформы NET Framework 2.0. Преобразования XSLT можно выполнять с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+> Классы <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XsltArgumentList> являются устаревшими в версии платформы NET Framework 2.0. Преобразования XSLT можно выполнять с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "75709625"
   
 |Тип W3C|Эквивалентный класс (тип) .NET Framework|Тип XPath или тип XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|Строка|System.String|XPath|  
-|Логическое значение .|System.Boolean|XPath|  
-|Числовой|System.Double|XPath|  
+|String|System.String|XPath|  
+|Логическое|System.Boolean|XPath|  
+|Number|System.Double|XPath|  
 |Фрагмент дерева результатов|System.Xml.XPath.XPathNavigator|XSLT|  
 |Набор узлов|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -137,7 +137,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Input  
+### <a name="input"></a>Входные данные  
  order.xml  
   
 ```xml  
@@ -169,12 +169,12 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Вывод  
+### <a name="output"></a>Выходные данные  
   
 ```xml  
 <order>  
-   <total>36.9</total>   
-   15% discount if paid by: 5/6/2001 5:01:15 PM   
+   <total>36.9</total>
+   15% discount if paid by: 5/6/2001 5:01:15 PM
 </order>  
 ```  
   
@@ -305,7 +305,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Input  
+### <a name="input"></a>Входные данные  
  number.xml  
   
 ```xml  
@@ -317,7 +317,7 @@ public class Sample
   <circle>  
     <radius>37.5</radius>  
   </circle>  
-</data>    
+</data>
 ```  
   
  circle.xsl  
@@ -332,7 +332,7 @@ public class Sample
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="myObj:Circumference(radius)"/>          
+          <xsl:value-of select="myObj:Circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -341,7 +341,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Вывод  
+### <a name="output"></a>Выходные данные  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

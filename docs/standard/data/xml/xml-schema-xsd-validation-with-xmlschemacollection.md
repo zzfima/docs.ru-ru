@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 1ab6dec2b99b01db04333c5d47176e40ed033fa7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 994153ba93848ebb120f23bdf6a979462a65142d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709898"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159485"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection
 Объект <xref:System.Xml.Schema.XmlSchemaCollection> можно использовать для проверки XML-документа по схемам на языке XSD. Объект <xref:System.Xml.Schema.XmlSchemaCollection> повышает производительность за счет сохранения схем в коллекции, чтобы они не загружались в память при каждой проверке. Если схема существует в коллекции схем, для ее поиска в коллекции используется атрибут `schemaLocation`.  
@@ -35,7 +35,7 @@ ms.locfileid: "75709898"
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
 ' XML Schema.  
-xsc.Add("urn:bookstore-schema", schema)   
+xsc.Add("urn:bookstore-schema", schema)
 reader = New XmlTextReader(filename)  
 vreader = New XmlValidatingReader(reader)  
 vreader.Schemas.Add(xsc)  
@@ -184,9 +184,9 @@ while(vr.Read()) {
  Далее приведено содержимое файла схемы XML sample4.xsd, по которому будет выполнена проверка.  
   
 ```xml  
-<xs:schema   
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
-    xmlns:tns="datatypesTest"   
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="datatypesTest"
     targetNamespace="datatypesTest"  
     elementFormDefault="qualified">  
   
@@ -206,7 +206,7 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Xml.XmlParserContext>
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>

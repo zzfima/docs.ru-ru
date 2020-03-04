@@ -12,12 +12,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018016"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159862"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Практическое руководство. Указание имени альтернативного элемента для потока XML
   
@@ -73,7 +73,7 @@ public class SerializeOverride()
     myAttributes.XmlElements.Add(myElementAttribute);  
     XmlAttributeOverrides myOverrides = new XmlAttributeOverrides();  
     myOverrides.Add(typeof(Book), "ISBN", myAttributes);  
-    XmlSerializer mySerializer =   
+    XmlSerializer mySerializer =
     new XmlSerializer(typeof(Book), myOverrides)  
     Book b = new Book();  
     b.ISBN = "123456789"  
@@ -91,7 +91,7 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: 9a7cdd0b9e5bd12d5730d92f39c2432bdc84a18e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2dde9f795dfe31ff6ef821272a0d5e8d20e8b2f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795035"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159953"
 ---
 # <a name="basic-serialization"></a>Базовая сериализация
 
@@ -65,7 +65,7 @@ Console.WriteLine("str: {0}", obj.str);
 ```xml  
 <SOAP-ENV:Envelope  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  
   xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"  
   SOAP-ENV:encodingStyle=  
@@ -86,7 +86,7 @@ Console.WriteLine("str: {0}", obj.str);
 Важно отметить, что атрибут [Serializable](xref:System.SerializableAttribute) не может быть унаследован. Если новый класс наследуется от `MyObject`, новый класс также должен быть отмечен атрибутом, иначе его сериализация невозможна. Например, при попытке сериализовать экземпляр класса (см. ниже) будет выдано исключение <xref:System.Runtime.Serialization.SerializationException>, информирующее о том, что тип `MyStuff` не отмечен как сериализуемый.  
   
 ```csharp  
-public class MyStuff : MyObject   
+public class MyStuff : MyObject
 {  
   public int n3;  
 }  
@@ -94,7 +94,7 @@ public class MyStuff : MyObject
   
  Использование атрибута [Serializable](xref:System.SerializableAttribute) удобно, но у него есть свои ограничения, как это показано выше. См. раздел [Правила сериализации](serialization-guidelines.md), чтобы получить сведения о том, в каких случаях класс следует отмечать для сериализации. Сериализацию невозможно добавить в класс после его компиляции.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Двоичная сериализация](binary-serialization.md)
 - [Сериализация XML и SOAP](xml-and-soap-serialization.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-ms.openlocfilehash: 5f670fa5e83d1802496c0cc6972a7e3af7cae374
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e03eb08c71ff2d031ac61a702683e3950d94f2be
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709651"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160239"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XSLT-преобразования с помощью класса XslTransform
 
@@ -22,18 +22,18 @@ ms.locfileid: "75709651"
 
 ## <a name="overview"></a>Обзор
 
-![Схема, показывающая архитектуру преобразования XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
+![Схема, показывающая архитектуру преобразования XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif)
 
 В рекомендациях XSLT используется язык XPath для выбора частей XML-документа, XPath - язык запросов, используемый для навигации по узлам дерева документов. Как показано на схеме, реализация языка XPath платформы .NET Framework используется для выбора частей XML-документа, сохраненных в нескольких классах, таких как <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XPath.XPathDocument>. <xref:System.Xml.XPath.XPathDocument> - оптимизированное хранилище данных XSLT, которое при использовании с классом <xref:System.Xml.Xsl.XslTransform> обеспечивает хорошую производительность преобразований XSLT.
 
 В следующей таблице перечислены классы, широко используемые при работе с классом <xref:System.Xml.Xsl.XslTransform> и XPath, и их функции.
 
-|Класс или интерфейс|Функция|
+|Класс или интерфейс|Компонент|
 |------------------------|--------------|
 |<xref:System.Xml.XPath.XPathNavigator>|API-интерфейс, который предоставляет модель стиля курсора для навигации по хранилищу, наряду с поддержкой запросов XPath. Не позволяет вносить изменения в базовое хранилище. Для изменения используйте класс <xref:System.Xml.XmlDocument>.|
 |<xref:System.Xml.XPath.IXPathNavigable>|Интерфейс, который предоставляет метод `CreateNavigator` классу <xref:System.Xml.XPath.XPathNavigator> для хранилища.|
 |<xref:System.Xml.XmlDocument>|Позволяет изменять документ. Реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable>, обеспечивая сценарии изменения документов, в которых требуются преобразования XSLT. См. дополнительные сведения по [использованию XmlDocument в качестве входа для XslTransform](xmldocument-input-to-xsltransform.md).|
-|<xref:System.Xml.XmlDataDocument>|Производный от <xref:System.Xml.XmlDocument>. Соединяет реляционные и XML-данные с помощью объекта <xref:System.Data.DataSet> для оптимизации хранения структурированных данных в XML-документе в соответствии с сопоставлениями, указанными для объекта <xref:System.Data.DataSet>. Реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable>, обеспечивая сценарии, в которых преобразования XSLT могут быть выполнены над реляционными данными, полученными из базы данных. См. дополнительные сведения по [интеграции XML с реляционными данными и ADO.NET](xml-integration-with-relational-data-and-adonet.md).|
+|<xref:System.Xml.XmlDataDocument>|Производный от <xref:System.Xml.XmlDocument>. Соединяет реляционные и XML-данные с помощью объекта <xref:System.Data.DataSet> для оптимизации хранения структурированных данных в XML-документе в соответствии с сопоставлениями, указанными для объекта <xref:System.Data.DataSet>. Реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable>, обеспечивая сценарии, в которых преобразования XSLT могут быть выполнены над реляционными данными, полученными из базы данных. См. дополнительные сведения об [интеграции XML с реляционными данными и ADO.NET](xml-integration-with-relational-data-and-adonet.md).|
 |<xref:System.Xml.XPath.XPathDocument>|Этот класс оптимизирован для обработки преобразований <xref:System.Xml.Xsl.XslTransform> и запросов XPath, и предоставляет высокопроизводительный кэш только для чтения. Реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable> и является предпочтительным хранилищем для преобразований XSLT.|
 |<xref:System.Xml.XPath.XPathNodeIterator>|Обеспечивает навигацию в наборах узлов XPath. Все методы выбора XPath класса <xref:System.Xml.XPath.XPathNavigator> возвращают объект <xref:System.Xml.XPath.XPathNodeIterator>. Несколько объектов <xref:System.Xml.XPath.XPathNodeIterator> могут быть созданы для одного хранилища, и каждый может представлять выбранный набор узлов.|
 
@@ -74,7 +74,7 @@ using System.Xml;
 using System.Xml.XPath;
 using System.Xml.Xsl;
 
-public class Sample 
+public class Sample
 {
     private const String filename = "mydata.xml";
     private const String stylesheet = "myStyleSheet.xsl";
@@ -92,7 +92,7 @@ public class Sample
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [Реализация классом XslTransform XSLT-процессора](xsltransform-class-implements-the-xslt-processor.md)

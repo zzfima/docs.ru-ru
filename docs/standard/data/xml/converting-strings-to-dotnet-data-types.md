@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711055"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160356"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Преобразование строк в типы данных .NET Framework
 Если нужно преобразовать строку в тип данных .NET Framework, используйте метод **XmlConvert**, соответствующий требованиям приложения. Список всех методов преобразования, доступных в классе **XmlConvert**, можно найти в <xref:System.Xml.XmlConvert>.  
@@ -20,20 +20,20 @@ ms.locfileid: "75711055"
   
  В следующей таблице перечислены типы данных .NET Framework и строковые типы, возвращаемые с помощью сопоставления типа данных XSD. **System.Convert** не поддерживает обработку этих типов .NET Framework.  
   
-|Тип платформы .NET Framework|Возвращаемая строка|  
+|Тип .NET Framework|Возвращаемая строка|  
 |-------------------------|---------------------|  
-|Логическое значение .|"true", "false"|  
+|Логическое|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
 |Double.NegativeInfinity|"-INF"|  
-|DateTime|Используется формат «гггг-ММ-ддТЧЧ:мм:ссzzzzzz» и его сокращенные версии.|  
-|TimeSpan|Используется формат PnYnMnTnHnMnS, то есть значение `P2Y10M15DT10H30M20S` соответствует длительности в 2 года, 10 месяцев, 15 дней, 10 часов, 30 минут и 20 секунд.|  
+|Дата и время|Используется формат «гггг-ММ-ддТЧЧ:мм:ссzzzzzz» и его сокращенные версии.|  
+|Timespan|Используется формат PnYnMnTnHnMnS, то есть значение `P2Y10M15DT10H30M20S` соответствует длительности в 2 года, 10 месяцев, 15 дней, 10 часов, 30 минут и 20 секунд.|  
   
 > [!NOTE]
 > Если любой из типов .NET Framework, представленных в таблице, преобразуется в строку с использованием метода **ToString**, возвращаемая строка имеет не базовый тип, а тип строки XSD.  
   
- Типы значений **DateTime** и **Timespan** отличаются тем, что **DateTime** представляет момент времени, а **TimeSpan** — интервал времени. Форматы **DateTime** и **Timespan** приведены в спецификации типов данных схемы XML (XSD). Например:  
+ Типы значений **DateTime** и **Timespan** отличаются тем, что **DateTime** представляет момент времени, а **TimeSpan** — интервал времени. Форматы **DateTime** и **Timespan** приведены в спецификации типов данных схемы XML (XSD). Пример:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -47,7 +47,7 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- **Вывод**  
+ **Выходные данные**  
   
  `<Date>2001-08-04T00:00:00</Date>`.  
   
@@ -65,7 +65,7 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- **Вывод**  
+ **Выходные данные**  
   
  `<Number>200</Number>`  
   
@@ -76,10 +76,10 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 |Допустимый строковый входной параметр|Выходной тип .NET Framework|  
 |----------------------------------|--------------------------------|  
-|"true"|Boolean.True|  
-|"1"|Boolean.True|  
+|True|Boolean.True|  
+|1|Boolean.True|  
 |"false"|Boolean.False|  
-|"0"|Boolean.False|  
+|0|Boolean.False|  
   
  Например, пусть задан следующий XML-код.  
   
@@ -87,7 +87,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 ```xml  
 <Boolean>true</Boolean>  
-<Boolean>1</Boolean>   
+<Boolean>1</Boolean>
 ```  
   
  Обе записи обрабатываются следующим кодом, где **bvalue** имеет значение **System.Boolean.True**.  
@@ -131,7 +131,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Преобразование типов XML-данных](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [Преобразование типов .NET Framework в строки](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

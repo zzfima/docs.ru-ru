@@ -2,12 +2,12 @@
 title: Настройка маршалинга параметров — .NET
 description: Из этой статьи вы узнаете, как настроить способ, с помощью которого .NET маршалирует ваши параметры в собственное представление.
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706365"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159615"
 ---
 # <a name="customizing-parameter-marshaling"></a>Настройка маршалинга параметров
 
@@ -21,10 +21,10 @@ ms.locfileid: "75706365"
 
 Каждый из этих форматов передает строку, которая оканчивается значением NULL, в машинный код. Они различаются кодировкой собственной строки.
 
-| Значение`System.Runtime.InteropServices.UnmanagedType` | Encoding |
+| Значение `System.Runtime.InteropServices.UnmanagedType` | Кодирование |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWSTR | UTF-16 |
 | LPTStr | UTF-16 |
 
@@ -40,7 +40,7 @@ ms.locfileid: "75706365"
 
 В среде выполнения .NET можно маршалировать параметры массива несколькими способами. При вызове API, который принимает массив в стиле C, используйте неуправляемый тип <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType>. Если для значений в массиве необходимо настроить маршалинг, используйте для этого поле <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> в атрибуте `[MarshalAs]`.
 
-Если вы используете API COM, вам, скорее всего, придется маршалировать свои параметры массивов как `SAFEARRAY*`. Для этого можно использовать неуправляемый тип <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>. Тип по умолчанию для элементов `SAFEARRAY` можно посмотреть в таблице с информацией по [настройке полей `object`](./customize-struct-marshaling.md#marshaling-systemobjects). Чтобы настроить точный тип элемента для `SAFEARRAY`, используйте поля <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> и <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType>.
+Если вы используете API COM, вам, скорее всего, придется маршалировать свои параметры массивов как `SAFEARRAY*`. Для этого можно использовать неуправляемый тип <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>. Тип по умолчанию для элементов `SAFEARRAY` можно посмотреть в таблице с информацией по [настройке полей `object`](./customize-struct-marshaling.md#marshaling-systemobjects). Чтобы настроить точный тип элемента для <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType>, используйте поля <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> и `SAFEARRAY`.
 
 ## <a name="customizing-boolean-or-decimal-parameters"></a>Настройка параметров логических значений или десятичных чисел
 
@@ -62,7 +62,7 @@ ms.locfileid: "75706365"
 
 ### <a name="marshaling-to-a-variant"></a>Маршалинг в `VARIANT`
 
-Если ваш собственный API принимает `VARIANT` Win32, можно использовать формат <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> с параметром `object` для маршалинга объектов в виде `VARIANT`. Дополнительные сведения о сопоставлении типов NET и `VARIANT` см. в документации по [настройке полей `object`](customize-struct-marshaling.md#marshaling-systemobjects).
+Если ваш собственный API принимает `VARIANT` Win32, можно использовать формат <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> с параметром `object` для маршалинга объектов в виде `VARIANT`. Дополнительные сведения о сопоставлении типов NET и [ см. в документации по `object`настройке полей ](customize-struct-marshaling.md#marshaling-systemobjects)`VARIANT`.
 
 ### <a name="custom-marshalers"></a>Пользовательские маршалеры
 

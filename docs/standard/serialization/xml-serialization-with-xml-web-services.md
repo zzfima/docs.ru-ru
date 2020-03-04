@@ -17,12 +17,12 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: c8e4e848cb37ac1b2d147b570d98777a7beaf1bb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2301f30a55e136b9a75a414d9325e4cf71c161da
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460256"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159537"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Сериализация XML с использованием XML-веб-служб
 Сериализация XML является базовым механизмом передачи, применяемом в архитектуре XML-веб-служб, и выполняется с использованием класса <xref:System.Xml.Serialization.XmlSerializer>. Для управления кодом XML, созданным XML-веб-службой, для классов, возвращаемых значений, параметров и полей файла, используемых для создания XML-веб-службы (файл ASMX), можно применять атрибуты, указанные в разделах [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) и [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md). Дополнительные сведения о создании веб-службы XML см. в разделе [XML Web Services Using ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
@@ -51,12 +51,12 @@ End Class
   
 Public Class MyService  
     <WebMethod, SoapDocumentMethod> _  
-    public Function MyLiteralMethod() As Order   
+    public Function MyLiteralMethod() As Order
         Dim myOrder As Order = New Order()  
         return myOrder  
     End Function  
     <WebMethod, SoapRpcMethod> _  
-    public Function MyEncodedMethod() As Order   
+    public Function MyEncodedMethod() As Order
         Dim myOrder As Order = New Order()  
         return myOrder  
     End Function  
@@ -129,7 +129,7 @@ public class MyService {
 public Function MyLiteralMethod() As _  
 <XmlElement(Namespace:="http://www.cohowinery.com", _  
 ElementName:= "BookOrder")> _  
-Order   
+Order
     Dim myOrder As Order = New Order()  
     return myOrder  
 End Function  
@@ -169,7 +169,7 @@ public Function MyLiteralMethod(<XmlElement _
 ("MyOrderID", Namespace:="http://www.microsoft.com")>ID As String) As _  
 <XmlElement(Namespace:="http://www.cohowinery.com", _  
 ElementName:= "BookOrder")> _  
-Order   
+Order
     Dim myOrder As Order = New Order()  
     myOrder.OrderID = ID  
     return myOrder  
@@ -180,12 +180,12 @@ End Function
 [return: XmlElement(Namespace = "http://www.cohowinery.com",  
 ElementName = "BookOrder")]  
 [WebMethod][SoapDocumentMethod]  
-public Order MyLiteralMethod([XmlElement("MyOrderID",   
+public Order MyLiteralMethod([XmlElement("MyOrderID",
 Namespace="http://www.microsoft.com")] string ID){  
     Order myOrder = new Order();  
     myOrder.OrderID = ID;  
     return myOrder;  
-}   
+}
 ```  
   
  Запрос SOAP должен может иметь следующий вид.  
@@ -258,7 +258,7 @@ public class Order {
 </BookOrderForm>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Сериализация XML и SOAP](xml-and-soap-serialization.md)
 - [Атрибуты управления сериализацией с кодировкой SOAP](attributes-that-control-encoded-soap-serialization.md)

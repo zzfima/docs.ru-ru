@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 383dc7687e67e183b86598857067801c950b0312
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545091"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159875"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Как квалифицировать XML-элемент и имена атрибутов XML
 
@@ -111,7 +111,7 @@ public class Program
     {
         SerializeObject("XmlNamespaces.xml");
     }
-    
+
     public static void SerializeObject(string filename)
     {
         var mySerializer = new XmlSerializer(typeof(Books));
@@ -162,7 +162,7 @@ public class Price
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Инструмент определения схемы XML и сериализация XML](the-xml-schema-definition-tool-and-xml-serialization.md)

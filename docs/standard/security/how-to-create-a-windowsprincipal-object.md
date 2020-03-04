@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d409c0e9a2a6564e5fb16e4e2c72ab661ae2d5ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30af18b7d7b86621586c7da66eda1b37356d5565
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706166"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159784"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Практическое руководство. Создание объекта WindowsPrincipal
 Существует два способа создания объекта <xref:System.Security.Principal.WindowsPrincipal> в зависимости от того, должен ли код выполнять проверку на основании ролей многократно или всего один раз.  
@@ -25,7 +25,7 @@ ms.locfileid: "75706166"
   
 ### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>Создание объекта WindowsPrincipal для повторяющейся проверки  
   
-1. Вызовите метод <xref:System.AppDomain.SetPrincipalPolicy%2A> для объекта <xref:System.AppDomain>, возвращенного статическим свойством <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType>, передав в метод <xref:System.Security.Principal.PrincipalPolicy> значение перечисления, которое указывает, какой должна быть новая политика. Допустимые значения: <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> и <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. Вызов этого метода демонстрируется в следующем коде.  
+1. Вызовите метод <xref:System.AppDomain.SetPrincipalPolicy%2A> для объекта <xref:System.AppDomain>, возвращенного статическим свойством <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType>, передав в метод <xref:System.Security.Principal.PrincipalPolicy> значение перечисления, которое указывает, какой должна быть новая политика. Поддерживаются значения <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> и <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. Вызов этого метода демонстрируется в следующем коде.  
   
     ```csharp  
     AppDomain.CurrentDomain.SetPrincipalPolicy(  
@@ -40,13 +40,13 @@ ms.locfileid: "75706166"
 2. После задания политики используйте статическое свойство <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> для извлечения субъекта, инкапсулирующего текущего пользователя Windows. Поскольку возвращаемое свойство имеет тип <xref:System.Security.Principal.IPrincipal>, результат необходимо привести к типу <xref:System.Security.Principal.WindowsPrincipal>. Следующий код инициализирует новый объект <xref:System.Security.Principal.WindowsPrincipal> значением субъекта, связанного с текущим потоком.  
   
     ```csharp  
-    WindowsPrincipal myPrincipal =   
+    WindowsPrincipal myPrincipal =
         (WindowsPrincipal) Thread.CurrentPrincipal;  
     ```  
   
     ```vb  
     Dim myPrincipal As WindowsPrincipal = _  
-        CType(Thread.CurrentPrincipal, WindowsPrincipal)   
+        CType(Thread.CurrentPrincipal, WindowsPrincipal)
     ```  
   
 3. После создания объекта субъекта можно использовать один из нескольких методов для его проверки.  
@@ -75,6 +75,6 @@ ms.locfileid: "75706166"
   
 3. После создания объекта субъекта можно использовать один из нескольких методов для его проверки.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Объекты Principal и Identity](../../../docs/standard/security/principal-and-identity-objects.md)

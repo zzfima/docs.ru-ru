@@ -1,5 +1,5 @@
 ---
-title: How to write custom converters for JSON serialization - .NET
+title: Написание пользовательских преобразователей для сериализации JSON — .NET
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 310967f39c3aa7a46d79087bcbf0cb016f7d7284
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164064"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159576"
 ---
-# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>How to write custom converters for JSON serialization (marshalling) in .NET
+# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Написание пользовательских преобразователей для сериализации JSON (маршалирование) в .NET
 
-This article shows how to create custom converters for the JSON serialization classes that are provided in the <xref:System.Text.Json> namespace. For an introduction to `System.Text.Json`, see [How to serialize and deserialize JSON in .NET](system-text-json-how-to.md).
+В этой статье показано, как создать пользовательские преобразователи для классов сериализации JSON, предоставляемых в пространстве имен <xref:[!OP.NO-LOC(System.Text.Json)]>. Общие сведения о `[!OP.NO-LOC(System.Text.Json)]`см. [в статье сериализация и десериализация JSON в .NET](system-text-json-how-to.md).
 
-A *converter* is a class that converts an object or a value to and from JSON. The `System.Text.Json` namespace has built-in converters for most primitive types that map to JavaScript primitives. You can write custom converters:
+*Преобразователь* — это класс, который преобразует объект или значение в JSON и обратно. Пространство имен `[!OP.NO-LOC(System.Text.Json)]` содержит встроенные преобразователи для большинства типов-примитивов, которые сопоставляются с примитивами JavaScript. Вы можете создавать пользовательские преобразователи:
 
-* To override the default behavior of a built-in converter. For example, you might want `DateTime` values to be represented by mm/dd/yyyy format instead of the default  ISO 8601-1:2019 format.
-* To support a custom value type. For example, a `PhoneNumber` struct.
+* Переопределение поведения по умолчанию встроенного преобразователя. Например, может потребоваться, чтобы `DateTime` значения были представлены в формате мм/дд/гггг вместо формата ISO 8601-1:2019 по умолчанию.
+* Для поддержки пользовательского типа значения. Например, структура `PhoneNumber`.
 
-You can also write custom converters to customize or extend `System.Text.Json` with functionality not included in the current release. The following scenarios are covered later in this article:
+Можно также написать пользовательские преобразователи для настройки или расширения `[!OP.NO-LOC(System.Text.Json)]` с функциональностью, не входящей в текущий выпуск. Далее в этой статье рассматриваются следующие сценарии.
 
-* [Deserialize inferred types to object properties](#deserialize-inferred-types-to-object-properties).
-* [Support Dictionary with non-string key](#support-dictionary-with-non-string-key).
-* [Support polymorphic deserialization](#support-polymorphic-deserialization).
+* [Десериализация выводимых типов в свойства объекта](#deserialize-inferred-types-to-object-properties).
+* [Словарь поддержки с ключом, не являющимся строкой](#support-dictionary-with-non-string-key).
+* [Поддержка полиморфизма](#support-polymorphic-deserialization).
 
-## <a name="custom-converter-patterns"></a>Custom converter patterns
+## <a name="custom-converter-patterns"></a>Пользовательские шаблоны преобразователя
 
-There are two patterns for creating a custom converter: the basic pattern and the factory pattern. The factory pattern is for converters that handle type `Enum` or open generics. The basic pattern is for non-generic and closed generic types.  For example, converters for the following types require the factory pattern:
+Существует два шаблона создания пользовательского преобразователя: базовый шаблон и шаблон фабрики. Шаблон фабрики предназначен для преобразователей, обрабатывающих `Enum` типов или открытых универсальных шаблонов. Базовый шаблон предназначен для неуниверсальных и закрытых универсальных типов.  Например, для преобразователей следующих типов требуется шаблон фабрики:
 
 * `Dictionary<TKey, TValue>`
 * `Enum`
 * `List<T>`
 
-Some examples of types that can be handled by the basic pattern include:
+Ниже приведены некоторые примеры типов, которые могут быть обработаны базовым шаблоном.
 
 * `Dictionary<int, string>`
 * `WeekdaysEnum`
@@ -48,17 +48,17 @@ Some examples of types that can be handled by the basic pattern include:
 * `DateTime`
 * `Int32`
 
-The basic pattern creates a class that can handle one type. The factory pattern creates a class that determines at runtime which specific type is required and dynamically creates the appropriate converter.
+Базовый шаблон создает класс, который может работать с одним типом. Шаблон фабрики создает класс, который определяет в среде выполнения, какой необходим конкретный тип, и динамически создает соответствующий преобразователь.
 
-## <a name="sample-basic-converter"></a>Sample basic converter
+## <a name="sample-basic-converter"></a>Образец базового преобразователя
 
-The following sample is a converter that overrides default serialization for an existing data type. The converter uses mm/dd/yyyy format for `DateTimeOffset` properties.
+Следующий пример представляет собой преобразователь, который переопределяет сериализацию по умолчанию для существующего типа данных. Для `DateTimeOffset` свойств преобразователь использует формат мм/дд/гггг.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetConverter.cs)]
 
-## <a name="sample-factory-pattern-converter"></a>Sample factory pattern converter
+## <a name="sample-factory-pattern-converter"></a>Образец преобразователя шаблона фабрики
 
-The following code shows a custom converter that works with `Dictionary<Enum,TValue>`. The code follows the factory pattern because the first generic type parameter is `Enum` and the second is open. The `CanConvert` method returns `true` only for a `Dictionary` with two generic parameters, the first of which is an `Enum` type. Внутренний преобразователь получает существующий преобразователь для работы с любым типом, предоставленным во время выполнения для `TValue`. 
+В следующем коде показан пользовательский преобразователь, работающий с `Dictionary<Enum,TValue>`. Код соответствует шаблону фабрики, так как первый параметр универсального типа является `Enum`, а второй — открытым. Метод `CanConvert` возвращает `true` только для `Dictionary` с двумя универсальными параметрами, первый из которых является типом `Enum`. Внутренний преобразователь получает существующий преобразователь для работы с любым типом, предоставленным во время выполнения для `TValue`.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
@@ -68,47 +68,47 @@ The following code shows a custom converter that works with `Dictionary<Enum,TVa
 
 Ниже описано, как создать преобразователь, следуя базовому шаблону.
 
-* Создайте класс, производный от <xref:System.Text.Json.Serialization.JsonConverter%601>, где `T` — это тип для сериализации и десериализации.
-* Переопределите метод `Read`, чтобы десериализовать входящий JSON и преобразовать его в тип `T`. Используйте <xref:System.Text.Json.Utf8JsonReader>, передаваемый в метод для чтения JSON.
-* Переопределите метод `Write`, чтобы сериализовать входящий объект типа `T`. Используйте <xref:System.Text.Json.Utf8JsonWriter>, передаваемый в метод для записи JSON.
+* Создайте класс, производный от <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverter%601>, где `T` — это тип для сериализации и десериализации.
+* Переопределите метод `Read`, чтобы десериализовать входящий JSON и преобразовать его в тип `T`. Используйте <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader>, передаваемый в метод для чтения JSON.
+* Переопределите метод `Write`, чтобы сериализовать входящий объект типа `T`. Используйте <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter>, передаваемый в метод для записи JSON.
 * Переопределяйте метод `CanConvert` только при необходимости. Реализация по умолчанию возвращает `true`, если тип для преобразования имеет тип `T`. Поэтому для преобразователей, поддерживающих только тип `T` не требуется переопределять этот метод. Пример преобразователя, в котором требуется переопределить этот метод, см. в подразделе « [полиморфизм десериализации](#support-polymorphic-deserialization) » далее в этой статье.
 
-В качестве эталонных реализаций для написания пользовательских преобразователей можно обратиться к [исходному коду встроенных преобразователей](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/) .
+В качестве эталонных реализаций для написания пользовательских преобразователей можно обратиться к [исходному коду встроенных преобразователей](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/) .
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>Действия по шаблону фабрики
 
 Ниже описано, как создать преобразователь, следуя шаблону фабрики.
 
-* Создайте класс, производный от <xref:System.Text.Json.Serialization.JsonConverterFactory>.
-* Переопределите метод `CanConvert`, чтобы он возвращал значение true, если преобразуемый тип является одним, который может быть преобразован преобразователем. Например, если преобразователь предназначен для `List<T>` он может работать только с `List<int>`, `List<string>`и `List<DateTime>`. 
+* Создайте класс, наследующий от класса <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterFactory>.
+* Переопределите метод `CanConvert`, чтобы он возвращал значение true, если преобразуемый тип является одним, который может быть преобразован преобразователем. Например, если преобразователь предназначен для `List<T>` он может работать только с `List<int>`, `List<string>`и `List<DateTime>`.
 * Переопределите метод `CreateConverter`, чтобы он возвращал экземпляр класса преобразователя, обрабатывающего тип для преобразования, который будет предоставлен во время выполнения.
-* Создайте класс преобразователя, который создает экземпляр метода `CreateConverter`. 
+* Создайте класс преобразователя, который создает экземпляр метода `CreateConverter`.
 
 Шаблон фабрики необходим для открытых универсальных шаблонов, поскольку код для преобразования объекта в строку и из строки не совпадает для всех типов. Преобразователь для открытого универсального типа (например,`List<T>`) должен создать преобразователь для закрытого универсального типа (например,`List<DateTime>`) в фоновом режиме. Необходимо написать код для работы с каждым закрытым универсальным типом, который может обрабатываться преобразователем.
 
-Тип `Enum` похож на открытый универсальный тип: преобразователь для `Enum` должен создать преобразователь для определенного `Enum` (например,`WeekdaysEnum`) в фоновом режиме. 
+Тип `Enum` похож на открытый универсальный тип: преобразователь для `Enum` должен создать преобразователь для определенного `Enum` (например,`WeekdaysEnum`) в фоновом режиме.
 
 ## <a name="error-handling"></a>Обработка ошибок
 
-Если необходимо создать исключение в коде обработки ошибок, рассмотрите возможность создания <xref:System.Text.Json.JsonException> без сообщения. Этот тип исключения автоматически создает сообщение, содержащее путь к части JSON, вызвавшей ошибку. Например, инструкция `throw new JsonException();` выдает сообщение об ошибке, как в следующем примере:
+Если необходимо создать исключение в коде обработки ошибок, рассмотрите возможность создания <xref:[!OP.NO-LOC(System.Text.Json)].JsonException> без сообщения. Этот тип исключения автоматически создает сообщение, содержащее путь к части JSON, вызвавшей ошибку. Например, инструкция `throw new JsonException();` выдает сообщение об ошибке, как в следующем примере:
 
 ```
-Unhandled exception. System.Text.Json.JsonException: 
-The JSON value could not be converted to System.Object. 
+Unhandled exception. [!OP.NO-LOC(System.Text.Json)].JsonException:
+The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-Если вы выдаете сообщение (например, `throw new JsonException("Error occurred")`, исключение по-прежнему предоставляет путь в свойстве <xref:System.Text.Json.JsonException.Path>.
+Если вы выдаете сообщение (например, `throw new JsonException("Error occurred")`, исключение по-прежнему предоставляет путь в свойстве <xref:[!OP.NO-LOC(System.Text.Json)].JsonException.Path>.
 
 ## <a name="register-a-custom-converter"></a>Регистрация пользовательского преобразователя
 
 *Зарегистрируйте* пользовательский преобразователь, чтобы методы `Serialize` и `Deserialize` использовали его. Выберите один из следующих подходов:
 
-* Добавьте экземпляр класса преобразователя в коллекцию <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType>.
-* Примените атрибут [[жсонконвертер]](xref:System.Text.Json.Serialization.JsonConverterAttribute) к свойствам, для которых требуется пользовательский преобразователь.
-* Примените атрибут [[жсонконвертер]](xref:System.Text.Json.Serialization.JsonConverterAttribute) к классу или структуре, представляющей пользовательский тип значения.
+* Добавьте экземпляр класса преобразователя в коллекцию <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters?displayProperty=nameWithType>.
+* Примените атрибут [[жсонконвертер]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) к свойствам, для которых требуется пользовательский преобразователь.
+* Примените атрибут [[жсонконвертер]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) к классу или структуре, представляющей пользовательский тип значения.
 
-## <a name="registration-sample---converters-collection"></a>Пример регистрации — Коллекция преобразователей 
+## <a name="registration-sample---converters-collection"></a>Пример регистрации — Коллекция преобразователей
 
 Ниже приведен пример, который делает <xref:System.ComponentModel.DateTimeOffsetConverter> по умолчанию для свойств типа <xref:System.DateTimeOffset>.
 
@@ -296,7 +296,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 * [Преобразователь Int32, который допускает как строковые, так и числовые значения при десериализации](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [Преобразователь перечислений](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
 * [Перечисление\<преобразования >, принимающего внешние данные](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
-* [Преобразователь long [], который работает с разделенным запятыми списком чисел](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+* [Преобразователь long [], который работает с разделенным запятыми списком чисел](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 Если необходимо сделать преобразователь, изменяющий поведение существующего встроенного преобразователя, можно получить [Исходный код существующего преобразователя](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) , который будет служить отправной точкой для настройки.
 

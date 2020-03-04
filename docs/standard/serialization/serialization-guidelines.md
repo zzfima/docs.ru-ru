@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 603306ad4a739f168716fd7f6169a79923585b82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645053"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159797"
 ---
 # <a name="serialization-guidelines"></a>Правила сериализации
 В настоящем документе перечислены рекомендации, которые следует учитывать при разработке сериализуемого API.  
@@ -25,7 +25,7 @@ ms.locfileid: "64645053"
 |Технология|Соответствующие классы|Примечания|  
 |----------------|----------------------|-----------|  
 |Сериализация контрактов данных|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|Общее сохранение<br /><br /> Веб-службы<br /><br /> JSON|  
-|XML-сериализация|<xref:System.Xml.Serialization.XmlSerializer>|Формат XML <br />с полным доступом|  
+|Сериализация XML|<xref:System.Xml.Serialization.XmlSerializer>|Формат XML <br />с полным доступом|  
 |Сериализация времени выполнения (двоичная и SOAP-сериализация)|<xref:System.SerializableAttribute><br /><br /> <xref:System.Runtime.Serialization.ISerializable><br /><br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter><br /><br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Удаленное взаимодействие .NET|  
   
  При разработке новых типов необходимо выбрать технологии, которые должны поддерживать эти типы (если применимо). Ниже приведены рекомендации, которые помогут сделать этот выбор и описано, как реализовать такую поддержку. Эти рекомендации не следует воспринимать как указание для выбора технологии сериализации для использования в реализации приложения или библиотеки. Они не связаны напрямую с разработкой API, поэтому их полное описание не может быть приведено в рамках данного раздела.  
@@ -69,8 +69,7 @@ ms.locfileid: "64645053"
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     Атрибут <xref:System.Runtime.Serialization.OnDeserializedAttribute> является наиболее часто используемым атрибутом обратного вызова. Кроме того, в семейство входят атрибуты <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute>, и <xref:System.Runtime.Serialization.OnSerializedAttribute>. Их можно использовать для пометки обратных вызовов, которые выполняются перед десериализацией, перед сериализацией и после сериализации соответственно.  
+     Атрибут <xref:System.Runtime.Serialization.OnDeserializedAttribute> является наиболее часто используемым атрибутом обратного вызова. Другими атрибутами в семействе являются <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>и <xref:System.Runtime.Serialization.OnSerializedAttribute>. Их можно использовать для пометки обратных вызовов, которые выполняются перед десериализацией, перед сериализацией и после сериализации соответственно.  
   
 4. РЕКОМЕНДУЕТСЯ использовать <xref:System.Runtime.Serialization.KnownTypeAttribute> для указания конкретных типов, которые должны использоваться при десериализации более сложного графа объекта.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "64645053"
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. РЕКОМЕНДУЕТСЯ использовать реализацию интерфейса <xref:System.Xml.Serialization.IXmlSerializable>, если необходим более высокий уровень контроля над формой сериализуемого XML-кода, чем тот, который обеспечивается при применении атрибутов XML-сериализации. Два метода интерфейса, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> и <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, позволяют полностью управлять сериализованного потока XML. При этом обеспечивается возможность контроля над схемой XML, которая создается для типа путем применения атрибута <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
+2. РЕКОМЕНДУЕТСЯ использовать реализацию интерфейса <xref:System.Xml.Serialization.IXmlSerializable>, если необходим более высокий уровень контроля над формой сериализуемого XML-кода, чем тот, который обеспечивается при применении атрибутов XML-сериализации. Два метода интерфейса, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> и <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, позволяют полностью управлять сериализованным XML-потоком. При этом обеспечивается возможность контроля над схемой XML, которая создается для типа путем применения атрибута <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
   
 #### <a name="supporting-runtime-serialization"></a>Поддержка сериализации во время выполнения  
  *Сериализация во время выполнения* представляет собой технологию, используемую при удаленном взаимодействии .NET. Если планируется передача типов с использованием удаленного взаимодействия .NET, то необходимо убедиться, что они поддерживают сериализацию во время выполнения.  
@@ -138,7 +137,7 @@ ms.locfileid: "64645053"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Сериализатор контракта данных](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
