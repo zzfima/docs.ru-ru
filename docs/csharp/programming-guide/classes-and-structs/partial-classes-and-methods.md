@@ -6,16 +6,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451919"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673359"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Разделяемые классы и методы (Руководство по программированию в C#)
 
-Можно разделить определение [класса](../../language-reference/keywords/class.md), [структуры](../../language-reference/keywords/struct.md), [интерфейса](../../language-reference/keywords/interface.md) или метода между двумя или более исходными файлами. Каждый исходный файл содержит часть определения класса или метода, а во время компиляции приложения все части объединяются.
+Можно разделить определение [класса](../../language-reference/keywords/class.md), [структуры](../../language-reference/builtin-types/struct.md), [интерфейса](../../language-reference/keywords/interface.md) или метода между двумя или более исходными файлами. Каждый исходный файл содержит часть определения класса или метода, а во время компиляции приложения все части объединяются.
 
 ## <a name="partial-classes"></a>Разделяемые классы
 
@@ -173,6 +173,6 @@ partial void onNameChanged()
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы](./classes.md)
-- [Структуры](./structs.md)
+- [Типы структур](../../language-reference/builtin-types/struct.md)
 - [Интерфейсы](../interfaces/index.md)
 - [partial (тип)](../../language-reference/keywords/partial-type.md)

@@ -1,24 +1,24 @@
 ---
 title: Руководство по программированию на C#. Свойства интерфейса
-ms.date: 07/20/2015
+ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: ff892a35f4be6600c00bc0c72c2f789ef6eb4408
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705539"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626624"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Свойства интерфейса (Руководство по программированию на C#)
 
-Свойства можно объявлять для [интерфейса](../../language-reference/keywords/interface.md). Ниже показан пример метода доступа к свойству интерфейса:
+Свойства можно объявлять для [интерфейса](../../language-reference/keywords/interface.md). Следующий пример объявляет метод доступа к свойству интерфейса:
 
-[!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]
+[!code-csharp[DeclareProperties](~/samples/snippets/csharp/interfaces/properties.cs#DeclareInterfaceProperties)]
 
-Метод доступа свойства интерфейса не имеет тела. Таким образом, методы доступа нужны, чтобы указать, доступно ли свойство для чтения и записи, только для чтения или только для записи.
+Свойства интерфейса обычно не имеют тела. Методы доступа указывают, доступно ли свойство для чтения и записи, только для чтения или только для записи. В отличие от классов и структур, объявление методов доступа без тела не приводит к объявлению [автоматически реализуемого свойства](auto-implemented-properties.md). Начиная с C# 8.0 интерфейс может определять реализацию по умолчанию для членов, включая свойства. Определение реализации по умолчанию для свойства в интерфейсе используется редко, так как интерфейсы могут не определять поля данных экземпляра.
 
 ## <a name="example"></a>Пример
 
@@ -26,19 +26,20 @@ ms.locfileid: "75705539"
 
 Вы можете использовать полное имя свойства, которое ссылается на интерфейс, где был объявлен член. Пример:
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-Это называется [явной реализацией интерфейса](../interfaces/explicit-interface-implementation.md). Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых содержат свойство `Name`, потребуется явная реализация члена интерфейса. Это значит, что потребуется следующее объявление свойства:
+В предыдущем примере показана [явная реализация интерфейса](../interfaces/explicit-interface-implementation.md). Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых содержат свойство `Name`, потребуется явная реализация члена интерфейса. Это значит, что потребуется следующее объявление свойства:
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
 реализует свойство `Name` в интерфейсе `IEmployee`, тогда как следующее объявление:
 
-[!code-csharp[csProgGuideProperties#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#17)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#CitizenImplementation)]
 
 реализует свойство `Name` в интерфейсе `ICitizen`.
 
-[!code-csharp[csProgGuideProperties#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#15)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#PropertyExample)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#UseProperty)]
 
 **`210 Hazem Abolrous`**
 

@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739103"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673281"
 ---
 # <a name="the-history-of-c"></a>История языка C\#
 
@@ -37,7 +37,7 @@ ms.locfileid: "73739103"
 Основные возможности C# 1.0 включали следующие компоненты:
 
 - [Классы](../programming-guide/classes-and-structs/classes.md)
-- [Структуры](../programming-guide/classes-and-structs/structs.md)
+- [Структуры](../language-reference/builtin-types/struct.md)
 - [Интерфейсы](../programming-guide/interfaces/index.md)
 - [События](../events-overview.md)
 - [Свойства](../properties.md)

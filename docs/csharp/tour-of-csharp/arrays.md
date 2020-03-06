@@ -1,14 +1,14 @@
 ---
 title: Массивы в C#. Краткий обзор языка C#
 description: Массивы — это самый простой тип коллекций в языке C#
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634603"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159199"
 ---
 # <a name="arrays"></a>Массивы
 
@@ -25,7 +25,7 @@ ms.locfileid: "65634603"
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
 Массив `a1` содержит 10 элементов, массив `a2` — 50 элементов (10 × 5), и наконец `a3` содержит 100 элементов (10 × 5 × 2).
-Элементы массива могут иметь любой тип, в том числе тип массива. Массив с элементами типа массива иногда называют ***ступенчатым массивом***, поскольку элементы такого массива не обязаны иметь одинаковую длину. Следующий пример создает массив массивов `int`.
+Элементы массива могут иметь любой тип, в том числе тип массива. Массив с элементами типа массива иногда называют ***массивом массивов***, так как элементы такого массива не обязаны иметь одинаковую длину. Следующий пример создает массив массивов `int`.
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
@@ -35,14 +35,14 @@ ms.locfileid: "65634603"
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-Обратите внимание, что длина массива определяется по числу выражений между скобками { и }. Локальные объявления переменных и полей можно сократить, поскольку тип массива не обязательно объявлять повторно.
+Длина массива определяется по числу выражений между скобками { и }. Локальные объявления переменных и полей можно сократить, поскольку тип массива не обязательно объявлять повторно.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-Оба указанных выше примера дают результат, эквивалентный такому объявлению.
+Оба приведенных выше примера дают результат, эквивалентный следующему коду:
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Назад](structs.md)
+>[Назад](classes-and-objects.md)
 >[Вперед](interfaces.md)

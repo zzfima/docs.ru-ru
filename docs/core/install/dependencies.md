@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448897"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157818"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Зависимости и требования для .NET Core
 
@@ -294,6 +294,14 @@ ms.locfileid: "77448897"
 | 3.0               | High Sierra (10.13+)  | X64 | [Дополнительные сведения](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | Sierra (10.12+)       | X64 | [Дополнительные сведения](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12+)       | X64 | [Дополнительные сведения](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+
+Начиная с macOS Catalina (версия 10.15) все программное обеспечение, созданное после 1 июня 2019 года и распространяемое с идентификатором разработчика, должно быть заверено. Это требование относится к среде выполнения .NET Core, пакету SDK для .NET Core и программному обеспечению, созданному с помощью .NET Core.
+
+Установщики для .NET Core (среда выполнения и пакет SDK) версии 3.1, 3.0 и 2.1 были заверены с 18 февраля 2020 г. Более ранние версии не заверены. При запуске незаверенного приложения появится ошибка, аналогичная следующей:
+
+![Оповещение о заверении macOS Catalina](media/dependencies/macos-notarized-pkg-warning.png)
+
+Дополнительные сведения о том, как принудительное заверение влияет на .NET Core (и ваши приложения .NET Core), см. в разделе [Работа с заверением macOS Catalina](macos-notarization-issues.md).
 
 ## <a name="libgdiplus"></a>libgdiplus
 

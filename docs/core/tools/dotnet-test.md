@@ -1,17 +1,17 @@
 ---
 title: Команда dotnet test
 description: Команда dotnet test служит для выполнения модульных тестов в проекте.
-ms.date: 05/29/2018
-ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/27/2020
+ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451198"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157015"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Эта статья относится к следующему.** ✔️ SDK для .NET Core 2.1 и более поздних версий
 
 ## <a name="name"></a>name
 
@@ -19,36 +19,15 @@ ms.locfileid: "77451198"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
-
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
-    [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
+    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
+    [--filter] [-l|--logger] [--no-build] [--no-restore]
+    [-o|--output] [-r|--results-directory] [-s|--settings]
+    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Описание
 
@@ -60,213 +39,103 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>Аргументы
 
-`PROJECT`
+- **`PROJECT`**
 
-Путь к тестовому проекту. Если значение не задано, по умолчанию используется текущий каталог.
+  Путь к тестовому проекту. Если значение не задано, по умолчанию используется текущий каталог.
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+  Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.
 
-Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.
+- **`-blame`**
 
-`--blame`
+  Выполнение тестов в режиме обвинения. Этот параметр полезен при изоляции проблемных тестов, которые приводят к аварийному завершению хоста для тестов. Он создает в текущем каталоге выходной файл *Sequence.xml*, который записывает порядок выполнения тестов перед сбоем.
 
-Выполнение тестов в режиме обвинения. Этот параметр полезен при изоляции проблемных тестов, которые приводят к аварийному завершению хоста для тестов. Он создает в текущем каталоге выходной файл *Sequence.xml*, который записывает порядок выполнения тестов перед сбоем.
+- **`c|--configuration {Debug|Release}`**
 
-`-c|--configuration {Debug|Release}`
+  Определяет конфигурацию сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
+- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+  Включает сборщик данных для тестового запуска. Дополнительные сведения см. в разделе [Мониторинг и анализ тестового запуска](https://aka.ms/vstest-collect).
 
-Включает сборщик данных для тестового запуска. Дополнительные сведения см. в разделе [Мониторинг и анализ тестового запуска](https://aka.ms/vstest-collect).
+- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+  Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.
 
-Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.
+- **`f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).
 
-Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).
+- **`--filter <EXPRESSION>`**
 
-`--filter <EXPRESSION>`
+  Фильтрует тесты в текущем проекте с помощью заданного выражения. Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details). Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).
 
-Фильтрует тесты в текущем проекте с помощью заданного выражения. Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details). Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).
+- **`h|--help`**
 
-`-h|--help`
+  Выводит краткую справку по команде.
 
-Выводит краткую справку по команде.
+- **`l|--logger <LoggerUri/FriendlyName>`**
 
-`-l|--logger <LoggerUri/FriendlyName>`
+  Указывает средство ведения журнала для результатов тестирования.
 
-Указывает средство ведения журнала для результатов тестирования.
+- **`--no-build`**
 
-`--no-build`
+  Не выполняет сборку тестового проекта перед запуском. Он также неявно задает флаг `--no-restore`.
 
-Не выполняет сборку тестового проекта перед запуском. Он также неявно задает флаг `--no-restore`.
+- **`--no-restore`**
 
-`--no-restore`
+  Не выполняет неявное восстановление при выполнении команды.
 
-Не выполняет неявное восстановление при выполнении команды.
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  Каталог, в котором выполняется поиск двоичных файлов для выполнения.
 
-Каталог, в котором выполняется поиск двоичных файлов для выполнения.
+- **`-r|--results-directory <PATH>`**
 
-`-r|--results-directory <PATH>`
+  Каталог для сохранения результатов тестов. Если указанный каталог не существует, он создается.
 
-Каталог для сохранения результатов тестов. Если указанный каталог не существует, он создается.
+- **`-s|--settings <SETTINGS_FILE>`**
 
-`-s|--settings <SETTINGS_FILE>`
+  Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
-Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+- **`-t|--list-tests`**
 
-`-t|--list-tests`
+  Отображение списка всех обнаруженных тестов в текущем проекте.
 
-Отображение списка всех обнаруженных тестов в текущем проекте.
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
+  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+- Аргументы `RunSettings`
 
-`RunSettings arguments`
+  Аргументы передаются в качестве конфигураций `RunSettings` для теста. Аргументы задаются в виде пар `[name]=[value]` после "-- " (обратите внимание на пробел после --). Несколько пар `[name]=[value]` разделяются пробелами.
 
-Аргументы, передаваемые в качестве конфигураций RunSettings для теста. Аргументы задаются в виде пар `[name]=[value]` после "-- " (обратите внимание на пробел после --). Несколько пар `[name]=[value]` разделяются пробелами.
+  Пример: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-Пример: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
-
-Дополнительные сведения о RunSettings см. в статье о [передаче аргументов RunSettings в командной строке](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.
-
-`-c|--configuration {Debug|Release}`
-
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
-
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
-
-Включает сборщик данных для тестового запуска. Дополнительные сведения см. в разделе [Мониторинг и анализ тестового запуска](https://aka.ms/vstest-collect).
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.
-
-`-f|--framework <FRAMEWORK>`
-
-Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).
-
-`--filter <EXPRESSION>`
-
-Фильтрует тесты в текущем проекте с помощью заданного выражения. Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details). Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).
-
-`-h|--help`
-
-Выводит краткую справку по команде.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-Указывает средство ведения журнала для результатов тестирования.
-
-`--no-build`
-
-Не выполняет сборку тестового проекта перед запуском. Он также неявно задает флаг `--no-restore`.
-
-`--no-restore`
-
-Не выполняет неявное восстановление при выполнении команды.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Каталог, в котором выполняется поиск двоичных файлов для выполнения.
-
-`-r|--results-directory <PATH>`
-
-Каталог для сохранения результатов тестов. Если указанный каталог не существует, он создается.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-Отображение списка всех обнаруженных тестов в текущем проекте.
-
-`-v|--verbosity <LEVEL>`
-
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.
-
-`-c|--configuration {Debug|Release}`
-
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.
-
-`-f|--framework <FRAMEWORK>`
-
-Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).
-
-`--filter <EXPRESSION>`
-
-Фильтрует тесты в текущем проекте с помощью заданного выражения. Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details). Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).
-
-`-h|--help`
-
-Выводит краткую справку по команде.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-Указывает средство ведения журнала для результатов тестирования.
-
-`--no-build`
-
-Не выполняет сборку тестового проекта перед запуском.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Каталог, в котором выполняется поиск двоичных файлов для выполнения.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-Отображение списка всех обнаруженных тестов в текущем проекте.
-
-`-v|--verbosity <LEVEL>`
-
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
-
----
+  Дополнительные сведения см. в разделе [vstest.console.exe: аргументов RunSettings в командной строке](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Примеры
 
-Выполнение тестов в проекте в текущем каталоге:
+- Выполнение тестов в проекте в текущем каталоге:
 
-`dotnet test`
+  ```dotnetcli
+  dotnet test
+  ```
 
-Выполнение тестов в проекте `test1`:
+- Выполнение тестов в проекте `test1`:
 
-`dotnet test ~/projects/test1/test1.csproj`
+  ```dotnetcli
+  dotnet test ~/projects/test1/test1.csproj
+  ```
 
-Выполнение тестов в проекте в текущем каталоге и создание файл результатов теста в формате trx:
+- Выполнение тестов в проекте в текущем каталоге и создание файл результатов теста в формате trx:
 
-`dotnet test --logger trx`
+  ```dotnetcli
+  dotnet test --logger trx
+  ```
 
 ## <a name="filter-option-details"></a>Сведения о параметре "Фильтр"
 

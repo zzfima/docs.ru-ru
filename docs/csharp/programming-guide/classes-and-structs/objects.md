@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 95735d5032a8896570918b991f12b853af88fb68
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705487"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673385"
 ---
 # <a name="objects-c-programming-guide"></a>Объекты (Руководство по программированию на C#)
 Определение класса или структуры подобно чертежу, на котором указаны действия, выполняемые типом. В сущности, объект является блоком памяти, выделенной и настроенной в соответствии с чертежом. Программа может создать множество объектов одного класса. Объекты также называют экземплярами. Они могут храниться либо в именованной переменной, либо в массиве или коллекции. Клиентский код — это код, использующий эти переменные для вызова методов и доступа к открытым свойствам объекта. В объектно-ориентированном языке, таком как C#, стандартная программа состоит из нескольких динамически взаимодействующих объектов.  
@@ -52,8 +52,6 @@ ms.locfileid: "75705487"
   
 - [Классы](./classes.md)  
   
-- [Структуры](./structs.md)  
-  
 - [Конструкторы](./constructors.md)  
   
 - [Методы завершения](./destructors.md)  
@@ -66,6 +64,6 @@ ms.locfileid: "75705487"
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Наследование](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [Типы структур](../../language-reference/builtin-types/struct.md)
 - [Оператор new](../../language-reference/operators/new-operator.md)
 - [Система общих типов CTS](../../../standard/base-types/common-type-system.md)

@@ -1,13 +1,13 @@
 ---
 title: dotnet-counters (.NET Core)
 description: Сведения о том, как установить и использовать программу командной строки dotnet-counter.
-ms.date: 10/14/2019
-ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/26/2020
+ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737707"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157886"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -45,8 +45,53 @@ dotnet-counters [-h|--help] [--version] <command>
 
 | Команда                                             |
 | --------------------------------------------------- |
+| [dotnet-counters collect](#dotnet-counters-collect) |
 | [dotnet-counters list](#dotnet-counters-list)       |
 | [dotnet-counters monitor](#dotnet-counters-monitor) |
+| [dotnet-counters ps](#dotnet-counters-ps) |
+
+## <a name="dotnet-counters-collect"></a>dotnet-counters collect
+
+Периодический сбор выбранных значений счетчиков и их экспорт в указанном формате файла для последующей обработки.
+
+### <a name="synopsis"></a>Краткий обзор
+
+```console
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+```
+
+### <a name="options"></a>Параметры
+
+- **`-p|--process-id <PID>`**
+
+  Идентификатор отслеживаемого процесса.
+
+- **`--refresh-interval <SECONDS>`**
+
+  Время (в секундах) между обновлением значений отображаемых счетчиков
+
+- **`counter_list <COUNTERS>`**
+
+  Список счетчиков, разделенный пробелами. Вы можете объявить счетчики как `provider_name[:counter_name]`. Если используется `provider_name` без указания `counter_name`, отображаются все счетчики. Для обнаружения имен поставщиков и счетчиков используйте команду [dotnet-counters list](#dotnet-counters-list).
+
+- **`--format <csv|json>`**
+
+  Экспортируемый формат. В настоящее время доступно: csv, json.
+
+- **`-o|--output <output>`**
+
+  Имя выходного файла.
+
+### <a name="examples"></a>Примеры
+
+- Сбор всех счетчиков с интервалом обновления в 3 секунды и создание CSV-файла в качестве выходных данных:
+
+  ```console
+  > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
+
+  counter_list is unspecified. Monitoring all counters by default.
+  Starting a counter session. Press Q to quit.
+  ```
 
 ## <a name="dotnet-counters-list"></a>dotnet-counters list
 
@@ -135,3 +180,22 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+  
+## <a name="dotnet-counters-ps"></a>dotnet-counters ps 
+
+Отображение списка процессов dotnet, которые можно отслеживать.
+
+### <a name="synopsis"></a>Краткий обзор
+
+```console
+dotnet-counters ps [-h|--help]
+```
+
+### <a name="example"></a>Пример
+
+```console
+> dotnet-counters ps
+  
+  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  16324 dotnet     /usr/local/share/dotnet/dotnet
+```

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713694"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673099"
 ---
 # <a name="class-c-reference"></a>класс (Справочник по C#)
 
@@ -33,9 +33,9 @@ class TestClass
 |Наследование|Пример|
 |-----------------|-------------|
 |Отсутствуют|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|Отсутствует, реализует два интерфейса|`class ImplClass: IFace1, IFace2 { }`|
-|Одиночное, реализует один интерфейс|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|Отсутствует, реализует два интерфейса|`class ImplClass : IFace1, IFace2 { }`|
+|Одиночное, реализует один интерфейс|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 Классы, объявленные непосредственно в пространстве имен и не вложенные в другие классы, могут быть [открытыми](./public.md) или [внутренними](./internal.md). По умолчанию классы являются `internal`.
 
@@ -71,9 +71,9 @@ class TestClass
 
 - [Интерфейсы](../../programming-guide/interfaces/index.md)
 
-- [Структуры](../../programming-guide/classes-and-structs/structs.md)
+- [Типы структур](../builtin-types/struct.md)
 
-- [Перечисления](../builtin-types/enum.md)
+- [Типы перечислений](../builtin-types/enum.md)
 
 ## <a name="example"></a>Пример
 

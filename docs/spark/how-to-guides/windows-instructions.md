@@ -3,13 +3,13 @@ title: Сборка приложения .NET для Apache Spark в Windows
 description: Сведения о том, как скомпилировать приложение .NET для Apache Spark в Windows.
 ms.date: 01/29/2020
 ms.topic: conceptual
-ms.custom: mvc,how-to
-ms.openlocfilehash: e6dec09f7d3e8d478cdcccf9df1c3e72d5f884eb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.custom: how-to
+ms.openlocfilehash: 640459c8c80b6d798718b89d4965802cdacd6c63
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928064"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628661"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Сведения о том, как скомпилировать приложение .NET для Apache Spark в Windows
 
@@ -27,22 +27,22 @@ ms.locfileid: "76928064"
      * Кроссплатформенная разработка .NET Core
        * Все необходимые компоненты.
   3. Установите **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** . 
-     - Выберите соответствующую версию для своей операционной системы, например jdk-8u201-windows-x64.exe для компьютера под управлением Win x64.
-     - Запустите установщик и убедитесь в том, что можно выполнить команду `java` в командной строке.
+     - Выберите соответствующую версию для вашей операционной системы. Например, *jdk-8u201-windows-x64.exe* для компьютера с 64-разрядной версией Windows.
+     - Запустите установщик и убедитесь, что можете выполнить команду `java` в командной строке.
   4. Установите **[Apache Maven 3.6.0 или более поздней версии](https://maven.apache.org/download.cgi)** .
-     - Скачайте [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip).
-     - Извлеките содержимое в локальный каталог, например `C:\bin\apache-maven-3.6.0\`.
-     - Добавьте Apache Maven в [переменную среды PATH](https://www.java.com/en/download/help/path.xml), например так: `C:\bin\apache-maven-3.6.0\bin`.
+     - Скачайте [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip).
+     - Извлеките содержимое в локальный каталог. Например, *C:\bin\apache-maven-3.6.0\*.
+     - Добавьте Apache Maven в [переменную среды PATH](https://www.java.com/en/download/help/path.xml). Например, *C:\bin\apache-maven-3.6.0\bin*.
      - Убедитесь в том, что можно выполнить команду `mvn` в командной строке.
   5. Установите **[Apache Spark 2.3 или более поздней версии](https://spark.apache.org/downloads.html)** .
-     - Скачайте [Apache Spark 2.3 или более поздней версии](https://spark.apache.org/downloads.html) и извлеките содержимое в локальную папку (например, `C:\bin\spark-2.3.2-bin-hadoop2.7\`) с помощью средства [7-zip](https://www.7-zip.org/) (поддерживаются версии Spark 2.3.*, 2.4.0, 2.4.1, 2.4.3 и 2.4.4).
-     - Добавьте [новую переменную среды](https://www.java.com/en/download/help/path.xml) с именем `SPARK_HOME`, например так: `C:\bin\spark-2.3.2-bin-hadoop2.7\`.
+     - Скачайте [Apache Spark 2.3 или более поздней версии](https://spark.apache.org/downloads.html) и извлеките содержимое в локальную папку (например, *C:\bin\spark-2.3.2-bin-hadoop2.7\*) с помощью средства [7-zip](https://www.7-zip.org/). (Поддерживаются версии Spark 2.3.* , 2.4.0, 2.4.1, 2.4.3 и 2.4.4.)
+     - Добавьте [новую переменную среды](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`. Например, *C:\bin\spark-2.3.2-bin-hadoop2.7\*.
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\       
        ```
 
-     - Добавьте Apache Spark в [переменную среды PATH](https://www.java.com/en/download/help/path.xml), например так: `C:\bin\spark-2.3.2-bin-hadoop2.7\bin`.
+     - Добавьте Apache Spark в [переменную среды PATH](https://www.java.com/en/download/help/path.xml). Например, *C:\bin\spark-2.3.2-bin-hadoop2.7\bin*.
 
        ```powershell       
        set PATH=%SPARK_HOME%\bin;%PATH%
@@ -70,28 +70,28 @@ ms.locfileid: "76928064"
         </details>
 
   6. Установите **[WinUtils](https://github.com/steveloughran/winutils)** .
-     - Скачайте двоичный файл `winutils.exe` из [репозитория WinUtils](https://github.com/steveloughran/winutils). Выберите версию Hadoop, с которой был скомпилирован дистрибутив Spark, например hadoop-2.7.1 для Spark 2.3.2.
-     - Сохраните двоичный файл `winutils.exe` в любом каталоге по своему выбору, например `C:\hadoop\bin`.
+     - Скачайте двоичный файл `winutils.exe` из [репозитория WinUtils](https://github.com/steveloughran/winutils). Выберите версию Hadoop, с использованием которой был скомпилирован дистрибутив Spark. Например, для Spark 2.3.2 используйте hadoop-2.7.1.
+     - Сохраните двоичный файл `winutils.exe` в любом каталоге по своему выбору. Например, *C:\hadoop\bin*.
      - Включите в переменную среды `HADOOP_HOME` путь к каталогу с файлом winutils.exe (без строки bin). Например, выполните такую команду в командной строке:
 
        ```powershell
        set HADOOP_HOME=C:\hadoop
        ```
 
-     - Включите в переменную среды PATH значение `%HADOOP_HOME%\bin`. Например, выполните такую команду в командной строке:
+     - Включите в переменную среды PATH значение `%HADOOP_HOME%\bin`. Например, выполните следующую команду в командной строке:
 
        ```powershell
        set PATH=%HADOOP_HOME%\bin;%PATH%
        ```
 
-Перед переходом к следующему разделу еще раз убедитесь, что можно выполнять команды `dotnet`, `java`, `mvn` и `spark-shell` из командной строки. Считаете, что есть более эффективный способ? [Сообщите о проблеме](https://github.com/dotnet/spark/issues) и поделитесь своим мнением.
+Перед переходом к следующему разделу еще раз убедитесь, что можете выполнять команды `dotnet`, `java`, `mvn` и `spark-shell` из командной строки. Считаете, что есть более эффективный способ? [Сообщите о проблеме](https://github.com/dotnet/spark/issues) и поделитесь своим мнением.
 
 > [!NOTE]
 > После обновления переменных среды, возможно, потребуется открыть новый экземпляр командной строки.
 
-## <a name="build"></a>Построить
+## <a name="build"></a>Построение
 
-Для выполнения задач оставшейся части этого руководства потребуется копия репозитория .NET для Apache Spark, клонированная на локальный компьютер. Можно выбрать для копии репозитория любое расположение, например `C:\github\dotnet-spark\`.
+Для выполнения задач оставшейся части этого руководства потребуется копия репозитория .NET для Apache Spark, клонированная на локальный компьютер. Для клонированного репозитория можно выбрать любое расположение. Например, *C:\github\dotnet-spark\*.
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
@@ -99,7 +99,7 @@ git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 
 ### <a name="build-net-for-apache-spark-scala-extensions-layer"></a>Сборка уровня расширений Scala в .NET для Apache Spark
 
-Когда вы отправляете приложение .NET, .NET для Apache Spark применяет соответствующую логику на языке Scala, которая информирует Apache Spark о методах обработки запросов (таких как запрос на создание нового сеанса Spark, запрос на передачу данных от .NET на виртуальную машину Java и т. п.). Эту логику можно найти в [исходном коде Scala в .NET для Spark](https://github.com/dotnet/spark/tree/master/src/scala).
+Когда вы отправляете приложение .NET, .NET для Apache Spark применяет соответствующую логику на языке Scala, которая информирует Apache Spark о методах обработки запросов (таких как запрос на создание нового сеанса Spark, запрос на передачу данных из .NET на виртуальную машину Java и т. п.). Эту логику можно найти в [исходном коде Scala в .NET для Spark](https://github.com/dotnet/spark/tree/master/src/scala).
 
 Независимо от того, какую технологию вы используете (.NET Framework или .NET Core), вам нужно создать уровень расширения Scala в .NET для Apache Spark:
 
@@ -212,13 +212,13 @@ mvn clean package
 
 После сборки примеров их можно запустить через `spark-submit`, независимо от целевой платформы (.NET Framework или .NET Core). Убедитесь, что выполнены все [предварительные требования](#prerequisites) и установка Apache Spark.
 
-  1. Включите в переменную среды `DOTNET_WORKER_DIR` или `PATH` путь, по которому был создан двоичный файл `Microsoft.Spark.Worker` (например, `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461` для .NET Framework или `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish` для .NET Core):
+  1. Задайте переменную среды `DOTNET_WORKER_DIR` или `PATH`, чтобы включить путь, по которому был создан двоичный файл `Microsoft.Spark.Worker` (например, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* для .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish* для .NET Core):
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
       ```
   
-  2. Откройте Powershell и перейдите к каталогу, где был создан двоичный файл приложения (например, `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461` для .NET Framework или `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish` для .NET Core):
+  2. Откройте PowerShell и перейдите в каталог, где создан двоичный файл приложения (например, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* для .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* для .NET Core):
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish

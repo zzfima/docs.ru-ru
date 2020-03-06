@@ -1,32 +1,34 @@
 ---
-title: Управление зависимостями в средствах .NET Core
-description: Сведения об управлении зависимостями с помощью средств .NET Core.
-ms.date: 03/06/2017
-ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+title: Управление зависимостями в .NET Core
+description: Сведения об управлении зависимостями проекта для приложения .NET Core.
+no-loc:
+- dotnet add package
+- dotnet remove package
+- dotnet list package
+ms.date: 02/25/2020
+ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965624"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157249"
 ---
-# <a name="manage-dependencies-with-net-core-sdk-10"></a>Управление зависимостями с помощью пакета SDK для .NET Core 1.0
+# <a name="manage-dependencies-in-net-core-applications"></a>Управление зависимостями в приложениях .NET Core
 
-Помимо переноса проектов .NET Core из файла project.json в CSPROJ-файл и на платформу MSBuild произошло еще одно значительное изменение, которое привело к унификации файла проекта и ресурсов, обеспечивающих отслеживание зависимостей. Для проектов .NET Core это аналогично функции, которую раньше выполнял файл project.json. Не существует отдельного файла JSON или XML для отслеживания зависимостей NuGet. Вместе с этим изменением в синтаксис csproj также добавлен другой тип *ссылки* — `<PackageReference>`.
+Эта статья описывает, как добавлять и удалять зависимости путем изменения файла проекта или с помощью интерфейса командной строки.
 
-В этом документе описывается новый тип ссылки. Кроме того, в нем показано, как добавлять в проекты зависимость пакетов, используя этот новый тип ссылки.
+## <a name="the-packagereference-element"></a>Элемент \<PackageReference>
 
-## <a name="the-new-packagereference-element"></a>Новый элемент \<PackageReference>
-
-Элемент `<PackageReference>` имеет следующую базовую структуру:
+Элемент файла проекта `<PackageReference>` имеет следующую структуру:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-Если вы знакомы с платформой MSBuild, она покажется вам похожей на другие, уже существующие ссылочные типы. Ключевым является инструкция `Include`, указывающая идентификатор пакета, который нужно добавить в проект. Дочерний элемент `<Version>` указывает версию, которую необходимо получить. Версии указываются в соответствии с [правилами версий NuGet](/nuget/create-packages/dependency-versions#version-ranges).
+Атрибут `Include` указывает идентификатор пакета, добавляемого в проект. Атрибут `Version` указывает версию, которую необходимо получить. Версии указываются в соответствии с [правилами версий NuGet](/nuget/create-packages/dependency-versions#version-ranges).
 
 > [!NOTE]
-> Если вы не знакомы с синтаксисом проектов и файлов, см. дополнительные сведения в [справочной документации по проектам MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+> Если вы не знакомы с синтаксисом файла проекта, см. дополнительные сведения в [справочной документации по проектам MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 Зависимость, доступная только в конкретном целевом объекте, добавляется с использованием условий, как показано в следующем примере:
 
@@ -34,39 +36,47 @@ ms.locfileid: "76965624"
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-Зависимость будет допустимой только при сборке для указанного целевого объекта. Элемент `$(TargetFramework)` в этом условии представляет собой задаваемое в проекте свойство MSBuild. Для наиболее распространенных приложений .NET Core это не требуется.
+Зависимость в предыдущем примере будет допустимой только при сборке для указанного целевого объекта. Элемент `$(TargetFramework)` в этом условии представляет собой задаваемое в проекте свойство MSBuild. Для наиболее распространенных приложений .NET Core это не требуется.
 
-## <a name="add-a-dependency-to-the-project"></a>Добавление зависимости в проект
+## <a name="add-a-dependency-by-editing-the-project-file"></a>Добавление зависимости путем изменения файла проекта
 
-Добавить зависимость в проект очень просто. Ниже показано, как добавить в проект Json.NET версии `9.0.1`. Это применимо и к любой другой зависимости NuGet.
-
-Файл проекта содержит как минимум два узла `<ItemGroup>`. В одном из узлов уже есть элементы `<PackageReference>`. Вы можете добавить зависимость в этот узел или создать новый — результат от этого не изменится.
-
-В приведенном ниже примере используется шаблон по умолчанию, который удаляется командой `dotnet new console`. Это простое консольное приложение. При открытии проекта вы увидите узел `<ItemGroup>`, в котором уже есть элемент `<PackageReference>`. Добавьте к нему следующее:
+Чтобы добавить зависимость, добавьте элемент `<PackageReference>` внутрь элемента `<ItemGroup>`. Можно добавить существующий элемент `<ItemGroup>` или создать новый. В следующем примере используется проект консольного приложения по умолчанию, созданный с помощью `dotnet new console`:
 
 ```xml
-<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-```
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-После этого сохраните проект и выполните команду `dotnet restore` для установки зависимости.
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-Весь проект выглядит следующим образом:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
   </ItemGroup>
+
 </Project>
 ```
 
-## <a name="remove-a-dependency-from-the-project"></a>Удаление зависимости из проекта
+## <a name="add-a-dependency-by-using-the-cli"></a>Добавление зависимости с помощью интерфейса командной строки
 
-Чтобы удалить зависимость из файла проекта, достаточно просто удалить `<PackageReference>` из файла проекта.
+Чтобы добавить зависимость, выполните команду [dotnet add package](dotnet-add-package.md), как показано в следующем примере:
+
+```dotnetcli
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
+## <a name="remove-a-dependency-by-editing-the-project-file"></a>Удаление зависимости путем изменения файла проекта
+
+Чтобы удалить зависимость, удалите ее элемент `<PackageReference>` из файла проекта.
+
+## <a name="remove-a-dependency-by-using-the-cli"></a>Удаление зависимости с помощью интерфейса командной строки
+
+Чтобы удалить зависимость, выполните команду [dotnet remove package](dotnet-remove-package.md), как показано в следующем примере:
+
+```dotnetcli
+dotnet remove package Microsoft.EntityFrameworkCore
+```
+
+## <a name="see-also"></a>См. также
+
+* [Пакеты NuGet в файлах проекта](../project-sdk/msbuild-props.md#nuget-packages)
+* [Команда dotnet list package](dotnet-remove-package.md)

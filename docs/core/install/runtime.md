@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543525"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157640"
 ---
 # <a name="install-the-net-core-runtime"></a>Установка среды выполнения .NET Core
 
@@ -35,6 +35,19 @@ ms.locfileid: "77543525"
 В macOS есть автономные установщики, которые можно использовать для установки среды выполнения .NET Core 3.1:
 
 - [Процессоры x64 (64-разрядные)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Скачивание и установка вручную
+
+В качестве альтернативы установщикам macOS для .NET Core можно скачать и вручную установить среду выполнения.
+
+Чтобы установить среду выполнения и сделать команды .NET Core CLI доступными в терминале, сначала [скачайте](#all-net-core-downloads) двоичный выпуск .NET Core. Затем откройте терминал и выполните приведенные ниже команды. Предполагается, что среда выполнения скачивается в файл `~/Downloads/dotnet-runtime.pkg`.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-runtime.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -64,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 > - **Оболочка Bash**: *~/.bash_profile*, *~/.bashrc*
 > - **Оболочка Korn**: *~/.kshrc* или *.profile*
 > - **Оболочка Z**: *~/.zshrc* или *.zprofile*
-> 
+>
 > Измените соответствующий исходный файл оболочки и добавьте `:$HOME/dotnet` в конец существующего оператора `PATH`. Если оператор `PATH` не указан, добавьте новую строку с `export PATH=$PATH:$HOME/dotnet`.
 >
 > Кроме того, добавьте `export DOTNET_ROOT=$HOME/dotnet` в конец файла.

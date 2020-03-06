@@ -2,12 +2,12 @@
 title: Учебник. Установка и использование локальных средств .NET Core
 description: Узнайте, как устанавливать и использовать средство .NET в качестве локального.
 ms.date: 02/12/2020
-ms.openlocfilehash: 6de620772cec1e9d1b1f57380b72c0163d68337c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543818"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156703"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Учебник. Установка и использование локального средства .NET Core с помощью интерфейса командной строки .NET Core
 
@@ -24,9 +24,9 @@ ms.locfileid: "77543818"
 
 ## <a name="create-a-manifest-file"></a>Создание файла манифеста
 
-Чтобы установить средство только для локального доступа (для текущего каталога и подкаталогов), его необходимо добавить в файл манифеста. 
+Чтобы установить средство только для локального доступа (для текущего каталога и подкаталогов), его необходимо добавить в файл манифеста.
 
-Из папки *botsay-\<name>* перейдите на один уровень вверх к папке *репозиторий*:
+Из папки *microsoft.botsay* перейдите на один уровень вверх к папке *repository*:
 
 ```console
 cd ..
@@ -63,7 +63,7 @@ The template "Dotnet local tool manifest file" was created successfully.
 Установите средство из пакета, который вы создали в первом учебнике:
 
 ```dotnetcli
-dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
+dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
 Эта команда добавляет средство в файл манифеста, созданный на предыдущем шаге. Вывод команды показывает, в каком файле манифеста находится только что установленное средство:
@@ -71,7 +71,7 @@ dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
  ```console
  You can invoke the tool from this directory using the following command:
  'dotnet tool run botsay' or 'dotnet botsay'
- Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+ Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
@@ -82,7 +82,7 @@ dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
   "version": 1,
   "isRoot": true,
   "tools": {
-    "botsay-<name>": {
+    "microsoft.botsay": {
       "version": "1.0.0",
       "commands": [
         "botsay"
@@ -111,7 +111,7 @@ dotnet tool run botsay hello from the bot
      "version": 1,
      "isRoot": true,
      "tools": {
-       "botsay-<name>": {
+       "microsoft.botsay": {
          "version": "1.0.0",
          "commands": [
            "botsay"
@@ -131,7 +131,7 @@ dotnet tool run botsay hello from the bot
 
 1. Сохраните изменения.
 
-   Внесение этого изменения аналогично получению последней версии из репозитория после установления пакета `dotnetsay` для каталога проекта другим пользователем. 
+   Внесение этого изменения аналогично получению последней версии из репозитория после установления пакета `dotnetsay` для каталога проекта другим пользователем.
 
 1. Выполните команду `dotnet tool restore`.
 
@@ -142,7 +142,7 @@ dotnet tool run botsay hello from the bot
    После выполнения команды должен появиться результат, подобный приведенному ниже.
 
    ```console
-   Tool 'botsay-<name>' (version '1.0.0') was restored. Available commands: botsay
+   Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
    Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
    Restore was successful.
    ```
@@ -157,9 +157,9 @@ dotnet tool run botsay hello from the bot
 
    ```console
    Package Id      Version      Commands       Manifest
-   -------------------------------------------------------------------------------------------
-   botsay-<name>   1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
-   dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+   --------------------------------------------------------------------------------------------
+   microsoft.botsay 1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+   dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
 1. Протестируйте средства:
@@ -191,7 +191,7 @@ Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4
 Удалите установленные средства, выполнив команду [dotnet tool uninstall](dotnet-tool-uninstall.md):
 
 ```dotnetcli
-dotnet tool uninstall botsay-<name>
+dotnet tool uninstall microsoft.botsay
 ```
 
 ```dotnetcli

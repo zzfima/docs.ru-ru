@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450984"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156573"
 ---
 # <a name="whats-new-in-net-core-30"></a>Новые возможности .NET Core 3.0
 
@@ -54,12 +54,40 @@ ms.locfileid: "77450984"
 
 ### <a name="default-executables"></a>Исполняемые файлы по умолчанию
 
-.NET Core теперь по умолчанию собирает [исполняемые файлы, зависимые от платформы](../deploying/index.md#publish-runtime-dependent). Такое поведение ново для приложений, которые используют глобально установленную версию .NET Core. Раньше исполняемые файлы создавались только в [автономных развертываниях](../deploying/index.md#publish-self-contained).
+.NET Core теперь по умолчанию собирает [исполняемые файлы, зависимые от среды выполнения](../deploying/index.md#publish-runtime-dependent). Такое поведение ново для приложений, которые используют глобально установленную версию .NET Core. Раньше исполняемые файлы создавались только в [автономных развертываниях](../deploying/index.md#publish-self-contained).
 
-Во время выполнения команды `dotnet build` или `dotnet publish` создается исполняемый файл, который соответствует среде и платформе используемого пакета SDK. Предполагается, что с этими исполняемыми файлами можно выполнять те же действия, что и с другими исполняемыми файлами в машинном коде, например:
+Во время выполнения команды `dotnet build` или `dotnet publish` создается исполняемый файл (называемый **appHost**), который соответствует среде и платформе используемого пакета SDK. Предполагается, что с этими исполняемыми файлами можно выполнять те же действия, что и с другими исполняемыми файлами в машинном коде, например:
 
 - исполняемый файл можно дважды щелкнуть;
 - приложение можно запустить из командной строки напрямую, например `myapp.exe` в Windows и `./myapp` в Linux и macOS.
+
+### <a name="macos-apphost-and-notarization"></a>Файл appHost в macOS и заверение
+
+*Только macOS*
+
+Начиная с заверенного пакета SDK для .NET Core 3.0 для macOS параметр, отвечающий за создание исполняемого файла по умолчанию (называемого appHost), отключен по умолчанию. Дополнительные сведения см. в статье [Заверение macOS Catalina и влияние на скачиваемые файлы и проекты .NET Core](../install/macos-notarization-issues.md).
+
+Если параметр appHost включен, .NET Core создает собственный исполняемый файл Mach-O, когда вы выполняете сборку или публикацию. Приложение выполняется в контексте appHost при запуске из исходного кода с помощью команды `dotnet run` или путем непосредственного запуска исполняемого файла Mach-O.
+
+Без appHost пользователь может запустить приложение, [зависящее от среды выполнения](../deploying/index.md#publish-runtime-dependent), только одним способом — с помощью команды `dotnet <filename.dll>`. AppHost всегда создается при публикации приложения в [автономном виде](../deploying/index.md#publish-self-contained).
+
+Можно либо настроить appHost на уровне проекта, либо переключить использование appHost для определенной команды `dotnet` с помощью параметра `-p:UseAppHost`:
+
+- Файл проекта
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Параметр командной строки
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+Дополнительные сведения о параметре `UseAppHost` см. в разделе [Свойства MSBuild для Microsoft.NET.Sdk](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="single-file-executables"></a>Однофайловые исполняемые файлы
 

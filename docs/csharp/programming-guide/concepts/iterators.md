@@ -2,12 +2,12 @@
 title: Итерации по коллекциям в C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594962"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626274"
 ---
 # <a name="iterators-c"></a>Итераторы (C#)
 
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 Итератор может являться методом или методом доступа `get`. Итератор не может использоваться в событии, конструкторе экземпляра, статическом конструкторе или статическом методе завершения.
 
-Должно существовать неявное преобразование выражения типа в операторе `yield return` в аргумент типа для IEnumerable\<T>, возвращаемого итератором.
+Должно существовать неявное преобразование типа выражения в операторе `yield return` в аргумент типа для `IEnumerable<T>`, возвращаемого итератором.
 
 В C# метод итератора не может иметь параметры `in`, `ref` или `out`.
 
-В C# yield не является зарезервированным словом и имеет специальное значение, только если используется перед ключевым словом `return` или `break`.
+В C# `yield` не является зарезервированным словом и имеет специальное значение, только если используется перед ключевым словом `return` или `break`.
 
 ## <a name="technical-implementation"></a>Техническая реализация
 
@@ -336,7 +336,7 @@ public class Stack<T> : IEnumerable<T>
 
 Чтобы просмотреть операции компилятора, воспользуйтесь средством Ildasm.exe, чтобы просмотреть код промежуточного языка Майкрософт, создаваемый для метода итератора.
 
-При создании итератора для [класса](../../language-reference/keywords/class.md) или [структуры](../../language-reference/keywords/struct.md) реализация всего интерфейса <xref:System.Collections.IEnumerator> не требуется. Когда компилятор обнаруживает итератор, он автоматически создает методы `Current`, `MoveNext` и `Dispose` интерфейса <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.
+При создании итератора для [класса](../../language-reference/keywords/class.md) или [структуры](../../language-reference/builtin-types/struct.md) реализация всего интерфейса <xref:System.Collections.IEnumerator> не требуется. Когда компилятор обнаруживает итератор, он автоматически создает методы `Current`, `MoveNext` и `Dispose` интерфейса <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.
 
 В каждой последовательной итерации цикла `foreach` (или непосредственном вызове метода `IEnumerator.MoveNext`) код тела следующего итератора возобновляет выполнение после предыдущего оператора `yield return`. Затем он выполняется до следующего оператора `yield return` до тех пор, пока не будет достигнут конец тела итератора или пока не будет обнаружен оператор `yield break`.
 

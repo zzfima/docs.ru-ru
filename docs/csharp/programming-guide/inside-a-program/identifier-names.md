@@ -2,12 +2,12 @@
 title: Имена идентификаторов
 description: Дополнительные сведения о правилах для допустимых имен идентификаторов в языке C#.
 ms.date: 08/21/2018
-ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589352"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673372"
 ---
 # <a name="identifier-names"></a>Имена идентификаторов
 
@@ -38,7 +38,7 @@ ms.locfileid: "69589352"
 - [Структура программы C#](./index.md)
 - [Справочник по C#](../../language-reference/index.md)
 - [Классы](../classes-and-structs/classes.md)
-- [Структуры](../classes-and-structs/structs.md)
+- [Типы структур](../../language-reference/builtin-types/struct.md)
 - [Пространства имен](../namespaces/index.md)
 - [Интерфейсы](../interfaces/index.md)
 - [Делегаты](../delegates/index.md)

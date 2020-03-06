@@ -2,12 +2,12 @@
 title: Учебник. Установка и использование глобального средства .NET Core
 description: Узнайте, как устанавливать и использовать средство .NET в качестве глобального.
 ms.date: 02/12/2020
-ms.openlocfilehash: 65047af9d8a7f2fd4c1a07f65af3a6ddbf870c5d
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543824"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156742"
 ---
 # <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Учебник. Установка и использование глобального средства .NET Core с помощью интерфейса командной строки .NET Core
 
@@ -21,21 +21,21 @@ ms.locfileid: "77543824"
 
 ## <a name="use-the-tool-as-a-global-tool"></a>Использование средства в качестве глобального
 
-1. Установите средство из пакета, выполнив команду [dotnet tool install](dotnet-tool-install.md) в папке проекта *botsay-\<name>* :
+1. Установите средство из пакета, выполнив команду [dotnet tool install](dotnet-tool-install.md) в папке проекта *microsoft.botsay*:
 
    ```dotnetcli
-   dotnet tool install --global --add-source ./nupkg botsay-<name>
+   dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
    Параметр `--global` настраивает в .NET Core CLI установку двоичных файлов средства в расположении по умолчанию, которое автоматически добавляется в переменную среды PATH.
 
-   Параметр `--add-source` настраивает временное использование каталога *./nupkg* в качестве дополнительного источника пакетов NuGet. Вы присвоили пакету уникальное имя, которое будет найдено только в каталоге *./nupkg*, а не на сайте Nuget.org. 
+   Параметр `--add-source` настраивает временное использование каталога *./nupkg* в качестве дополнительного источника пакетов NuGet. Вы присвоили пакету уникальное имя, которое будет найдено только в каталоге *./nupkg*, а не на сайте Nuget.org.
 
    В выходных данных отображается команда, используемая для вызова средства и установленной версии:
 
    ```console
    You can invoke the tool using the following command: botsay
-   Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+   Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
    ```
 
 1. Вызовите средство:
@@ -50,7 +50,7 @@ ms.locfileid: "77543824"
 1. Удалите средство, выполнив команду [dotnet tool uninstall](dotnet-tool-uninstall.md):
 
    ```dotnetcli
-   dotnet tool uninstall -g botsay-<name>
+   dotnet tool uninstall -g microsoft.botsay
    ```
 
 ## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Использование средства в качестве глобального средства, установленного в настраиваемом расположении
@@ -60,13 +60,13 @@ ms.locfileid: "77543824"
    Windows:
 
    ```dotnetcli
-   dotnet tool install --tool-path c:\dotnet-tools --add-source ./nupkg botsay-<name>
+   dotnet tool install --tool-path c:\dotnet-tools --add-source ./nupkg microsoft.botsay
    ```
 
    В Linux или macOS.
 
    ```dotnetcli
-   dotnet tool install --tool-path ~/bin --add-source ./nupkg botsay-<name>
+   dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
    Параметр `--tool-path` настраивает в .NET Core CLI установку двоичных файлов средства в указанном расположении. Создать каталог, если он не существует. Этот каталог не добавляется автоматически в переменную среды PATH.
@@ -75,7 +75,7 @@ ms.locfileid: "77543824"
 
    ```console
    You can invoke the tool using the following command: botsay
-   Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+   Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
    ```
 
 1. Вызовите средство:
@@ -97,13 +97,13 @@ ms.locfileid: "77543824"
    Windows:
 
    ```dotnetcli
-   dotnet tool uninstall --tool-path c:\dotnet-tools botsay --add-source ./nupkg botsay-<name>
+   dotnet tool uninstall --tool-path c:\dotnet-tools microsoft.botsay
    ```
 
    В Linux или macOS.
 
    ```dotnetcli
-   dotnet tool uninstall --tool-path ~/bin botsay-<name>
+   dotnet tool uninstall --tool-path ~/bin microsoft.botsay
    ```
 
 ## <a name="troubleshoot"></a>Устранение неполадок

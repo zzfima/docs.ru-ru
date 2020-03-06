@@ -6,15 +6,15 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 2f0e7a187dfd9ed4622155317cd39b352ecf6e45
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a280a6df873d7c03c204bc5c86468e7e7298d723
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743727"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673437"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод (руководство по программированию на C#)
-В следующем примере демонстрируется, чем передача [структуры](../../language-reference/keywords/struct.md) в метод отличается от передачи экземпляра [класса](../../language-reference/keywords/class.md) в метод. В этом примере оба аргумента (структура и экземпляр класса) передаются по значению, и оба метода изменяют значение одного поля аргумента. Тем не менее результаты этих двух методов будут отличаться, поскольку в случае со структурой передаваемое содержимое отличается от передачи экземпляра класса.  
+В следующем примере демонстрируется, чем передача [структуры](../../language-reference/builtin-types/struct.md) в метод отличается от передачи экземпляра [класса](../../language-reference/keywords/class.md) в метод. В этом примере оба аргумента (структура и экземпляр класса) передаются по значению, и оба метода изменяют значение одного поля аргумента. Тем не менее результаты этих двух методов будут отличаться, поскольку в случае со структурой передаваемое содержимое отличается от передачи экземпляра класса.  
   
  Поскольку структура является [типом значения](../../language-reference/builtin-types/value-types.md), при [передаче структуры по значению](./passing-value-type-parameters.md) в метод этот метод получает и обрабатывает копию аргумента структуры. При этом метод не имеет доступа к исходной структуре в вызывающем методе и, соответственно, никак не может изменить ее. В этом случае метод может изменять только копию.  
   
@@ -29,5 +29,5 @@ ms.locfileid: "76743727"
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы](./classes.md)
-- [Структуры](./structs.md)
+- [Типы структур](../../language-reference/builtin-types/struct.md)
 - [Передача параметров](./passing-parameters.md)

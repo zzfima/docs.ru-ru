@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740562"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157575"
 ---
 # <a name="install-the-net-core-sdk"></a>Установка пакета SDK для .NET Core
 
@@ -35,6 +35,19 @@ ms.locfileid: "75740562"
 В macOS есть автономные установщики, которые можно использовать для установки пакета SDK для .NET Core 3.1:
 
 - [Процессоры x64 (64-разрядные)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Скачивание и установка вручную
+
+В качестве альтернативы установщикам macOS для .NET Core можно скачать и вручную установить пакет SDK.
+
+Чтобы извлечь пакет SDK и сделать команды .NET Core CLI доступными в терминале, сначала [скачайте](#all-net-core-downloads) двоичный выпуск .NET Core. Затем откройте терминал и выполните приведенные ниже команды. Предполагается, что среда выполнения скачивается в файл `~/Downloads/dotnet-sdk.pkg`.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -104,6 +117,25 @@ Visual Studio может установить последнюю пакета SD
 - рабочая нагрузка **Разработка классических приложений .NET** в разделе **Классические и мобильные**.
 
 [![Windows Visual Studio 2019 с рабочей нагрузкой .NET Core](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>Скачивание и установка вручную
+
+Чтобы извлечь среду выполнения и сделать команды .NET Core CLI доступными в терминале, сначала [скачайте](#all-net-core-downloads) двоичный выпуск .NET Core. Затем создайте каталог в котором будете выполнять установку, например `%USERPROFILE%\dotnet`. Наконец, извлеките скачанный ZIP-файл в этот каталог.
+
+По умолчанию команды и приложения .NET Core CLI не будут использовать .NET Core, установленный таким образом. Необходимо явно выбрать его использование. Для этого измените переменные среды, с которыми запускается приложение:
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+Такой подход позволяет установить несколько версий в отдельные расположения, а затем явно выбрать расположение установки, которое должно использовать приложение, запустив приложение с переменными среды, указывающими на это расположение.
+
+Даже если эти переменные среды заданы, .NET Core по-прежнему учитывает глобальное расположение установки по умолчанию при выборе лучшей платформы для запуска приложения. По умолчанию обычно это расположение `C:\Program Files\dotnet`, которое используют установщики. Вы можете указать среде выполнения использовать только пользовательское расположение установки, задав эту переменную среды.
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -186,6 +218,7 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone pivot="os-macos"
 
+- [Работа с заверением macOS Catalina](macos-notarization-issues.md).
 - [Учебник. Начало работы с macOS](../tutorials/using-on-mac-vs.md).
 - [Учебник. Создание приложения с помощью Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Учебник. Контейнеризация приложения .NET Core](../docker/build-container.md).

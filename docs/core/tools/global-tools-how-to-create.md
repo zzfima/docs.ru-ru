@@ -2,12 +2,12 @@
 title: Учебник. Создание средства .NET Core
 description: Сведения о создании средства .NET Core. Средство — это консольное приложение, которое устанавливается с помощью интерфейса командной строки .NET Core.
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543408"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156729"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Учебник. Создание средства .NET Core с помощью интерфейса командной строки .NET Core
 
@@ -31,24 +31,18 @@ ms.locfileid: "77543408"
 
 1. Откройте командную строку и создайте папку с именем *репозиторий*.
 
-1. Перейдите в папку *репозиторий* и введите следующую команду, заменив `<name>` уникальным значением, чтобы сделать имя проекта уникальным. 
+1. Перейдите в папку *repository* и введите следующую команду:
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   Например, можно выполнить следующую команду.
+   Команда создает папку с именем *microsoft.botsay* в папке *repository*.
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   Команда создает новую папку с именем *botsay-\<name>* в папке *репозиторий*.
-
-1. Перейдите в папку *botsay-\<name>* .
+1. Перейдите в папку *microsoft.botsay*.
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>Добавление кода
@@ -151,9 +145,9 @@ dotnet run -- Hello from the bot
 
 ## <a name="package-the-tool"></a>Упаковка средства
 
-Прежде чем упаковать и распространять приложение в качестве средства, измените файл проекта. 
+Прежде чем упаковать и распространять приложение в качестве средства, измените файл проекта.
 
-1. Откройте файл *botsay-\<name>.csproj* и добавьте три новых узла XML в конец узла `<PropertyGroup>`:
+1. Откройте файл *microsoft.botsay.csproj* и добавьте три новых узла XML в конец узла `<PropertyGroup>`:
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ dotnet run -- Hello from the bot
    dotnet pack
    ```
 
-   Файл *botsay-\<name>.1.0.0.nupkg* создается в папке, которую указывает значение `<PackageOutputPath>` из файла *botsay-\<name>.csproj*. В нашем примере это папка *./nupkg*.
+   Файл *microsoft.botsay.1.0.0.nupkg* создается в папке, которую указывает значение `<PackageOutputPath>` из файла *microsoft.botsay.csproj*. В нашем примере это папка *./nupkg*.
   
    Если вы решите сделать это средство общедоступным, его можно отправить в `https://www.nuget.org`. Когда это средство станет доступно в NuGet, разработчикам можно будет выполнить его установку, используя команду [dotnet tool install](dotnet-tool-install.md). В этом учебнике пакет устанавливается непосредственно из локальной папки *nupkg*, поэтому его не нужно передавать в NuGet.
 
