@@ -5,11 +5,11 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841909"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675006"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Структура проекта для приложений Блазор
 
@@ -137,7 +137,7 @@ public class Program
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>Pages
+## <a name="pages"></a>Страницы
 
 Где находятся страницы в приложениях Блазор? Блазор не определяет отдельное расширение файла для адресных страниц, таких как *ASPX* -файлы в приложениях ASP.NET Web Forms. Вместо этого страницы определяются путем назначения маршрутов компонентам. Маршрут обычно назначается с помощью директивы `@page` Razor. Например, компонент `Counter`, созданный в файле *pages/Counter. Razor* , определяет следующий маршрут:
 
@@ -234,7 +234,7 @@ public class Startup
 }
 ```
 
-## <a name="build-output"></a>Выходные данные сборки
+## <a name="build-output"></a>Выходные данные при создании
 
 При сборке проекта Блазор все файлы компонента и кода Razor компилируются в одну сборку. В отличие от проектов веб-форм ASP.NET, Блазор не поддерживает компиляцию логики пользовательского интерфейса во время выполнения.
 
