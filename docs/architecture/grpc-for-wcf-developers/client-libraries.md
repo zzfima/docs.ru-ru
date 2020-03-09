@@ -3,11 +3,11 @@ title: Создание клиентских библиотек gRPC — gRPC д
 description: Обсуждение общих клиентских библиотек или пакетов для служб gRPC Services.
 ms.date: 09/02/2019
 ms.openlocfilehash: bb58cb3cda4b0cbb3a5d34129961349bcb0093e9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711461"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675174"
 ---
 # <a name="create-grpc-client-libraries"></a>Создание клиентских библиотек gRPC
 

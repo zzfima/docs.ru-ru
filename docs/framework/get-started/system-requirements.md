@@ -29,7 +29,7 @@ ms.locfileid: "75545015"
 Сведения о более ранних версиях .NET Framework, чем 4.5, см. в статье [Версии и зависимости платформы .NET Framework](../migration-guide/versions-and-dependencies.md).
 
 Для сред разработки, позволяющих разрабатывать приложения для платформы .NET Framework, существует отдельный набор требований.
-  
+
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 Сведения о скачивании и ссылки для скачивания см. в разделе [Установка .NET Framework для разработчиков](../install/guide-for-developers.md).
