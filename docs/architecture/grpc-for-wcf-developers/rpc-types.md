@@ -3,11 +3,11 @@ title: Типы RPC-gRPC для разработчиков WCF
 description: Проверка типов удаленного вызова процедур, поддерживаемого WCF, и их эквивалентов в gRPC
 ms.date: 09/02/2019
 ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503440"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675159"
 ---
 # <a name="types-of-rpc"></a>Типы RPC
 
