@@ -3,17 +3,17 @@ title: Команда dotnet msbuild
 description: Команда dotnet msbuild обеспечивает доступ к командной строке MSBuild.
 ms.date: 02/14/2020
 ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503677"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 **Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
-## <a name="name"></a>name
+## <a name="name"></a>Имя
 
 `dotnet msbuild` — собирает проект и все его зависимости.
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503677"
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Команда `dotnet msbuild` предоставляет доступ к полнофункциональной системе MSBuild.
 

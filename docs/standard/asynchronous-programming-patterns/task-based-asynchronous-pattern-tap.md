@@ -13,10 +13,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158172"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Асинхронный шаблон, основанный на задачах (TAP)
@@ -189,9 +189,9 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>Связанные разделы  
   
-|Title|Описание|  
+|Название|Описание:|  
 |-----------|-----------------|  
 |[Модели асинхронного программирования](../../../docs/standard/asynchronous-programming-patterns/index.md)|Представляет три шаблона для выполнения асинхронных операций: асинхронную модель на основе задач (TAP), асинхронную модель программирования (APM) и асинхронную модель на основе событий (EAP).|  
 |[Реализация асинхронной модели на основе задач](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Описывает три способа реализации асинхронной модели на основе задач (TAP): с помощью компиляторов C# и Visual Basic в Visual Studio, вручную или путем сочетания этих методов.|  
-|[Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Описывает, как можно использовать задачи и обратные вызовы для реализации неблокирующего ожидания.|  
+|[Использование асинхронной модели на основе задач](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Описывает, как можно использовать задачи и обратные вызовы для реализации неблокирующего ожидания.|  
 |[Взаимодействие с другими асинхронными шаблонами и типами](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|Описывает, как использовать асинхронную модель на основе задач (TAP) для реализации асинхронной модели программирования (APM) и асинхронной модели на основе событий (EAP).|

@@ -6,13 +6,13 @@ helpviewer_keywords:
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
 ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76794553"
 ---
-# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Практическое руководство. Асинхронный вызов веб-службы (Visual Basic)
+# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Практическое руководство. Асинхронный вызов веб-службы (Visual Basic)
 
 В этом примере обработчик присоединяется к асинхронному обработчику событий веб-службы таким образом, чтобы получать результаты вызова асинхронного метода. В этом примере используется веб-служба DemoTemperatureService, которая находится на веб-сайте `http://www.xmethods.net`.
 
@@ -66,7 +66,7 @@ ms.locfileid: "76794553"
 
     Чтобы асинхронно вызвать веб-метод `getTemp`, вызовите метод `CallGetTempAsync`. После своего завершения веб-метод вернет значение, переданное обработчику событий `getTempCompletedHandler`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Доступ к веб-службам приложения](accessing-application-web-services.md)
 - [Объект My.WebServices](../../language-reference/objects/my-webservices-object.md)

@@ -19,10 +19,10 @@ helpviewer_keywords:
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706586"
 ---
 # <a name="isolated-storage"></a>Изолированное хранилище
@@ -47,9 +47,9 @@ ms.locfileid: "75706586"
 
 - [Сценарии изолированного хранилища](#scenarios_for_isolated_storage)
 
-- [Связанные разделы](#related_topics)
+- [См. также](#related_topics)
 
-- [Ссылки](#reference)
+- [Ссылка](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -132,7 +132,7 @@ ms.locfileid: "75706586"
 
 Классы, предназначенные для работы с изолированными хранилищами, позволяют создавать, перечислять и удалять изолированные хранилища. Доступ к методам, используемым для выполнения этих действий, осуществляется с помощью объекта <xref:System.IO.IsolatedStorage.IsolatedStorageFile> . Для выполнения некоторых операций необходимо разрешение <xref:System.Security.Permissions.IsolatedStorageFilePermission> , обеспечивающее право администрирования изолированного хранилища. Для доступа к некоторым файлам и каталогам также могут потребоваться права операционной системы.
 
-Несколько примеров, демонстрирующих часто встречающиеся задачи изолированного хранения см. в практических руководствах, перечисленных в разделе [Связанные разделы](#related_topics).
+Несколько примеров распространенных задач, связанных с изолированным хранилищем, см. в практических руководствах, перечисленных в разделе [Связанные разделы](#related_topics).
 
 <a name="scenarios_for_isolated_storage"></a>
 
@@ -162,7 +162,7 @@ ms.locfileid: "75706586"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание|
+|Название|Описание:|
 |-----------|-----------------|
 |[Типы изоляции](../../../docs/standard/io/types-of-isolation.md)|Описание различных типов изоляции.|
 |[Практическое руководство. Получение хранилищ для изолированного хранения](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Пример использования класса <xref:System.IO.IsolatedStorage.IsolatedStorageFile> для получения хранилища, изолированного по пользователю и сборке.|
@@ -177,7 +177,7 @@ ms.locfileid: "75706586"
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Ссылки
+## <a name="reference"></a>Справочник
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

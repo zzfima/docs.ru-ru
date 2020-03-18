@@ -5,10 +5,10 @@ helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348930"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
@@ -21,7 +21,7 @@ ms.locfileid: "74348930"
 
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.  
   
-|Класс|ОПИСАНИЕ|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Предоставляет статические методы для создания, перемещения и перечисления в каталогах и подкаталогах.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Предоставляет методы экземпляра для создания, перемещения и перечисления в каталогах и подкаталогах.|  
@@ -39,7 +39,7 @@ ms.locfileid: "74348930"
 
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для создания потоков.  
   
-|Класс|ОПИСАНИЕ|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Добавляет уровень буферизации в операциях чтения и записи в другие потоки.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Поддерживает произвольный доступ к файлам с помощью метода <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> по умолчанию открывает файлы синхронно, но поддерживает и асинхронные операции.|  
@@ -60,7 +60,7 @@ ms.locfileid: "74348930"
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Считывает символы из `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Записывает символы в `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Составление потоков](../../../../standard/io/composing-streams.md)
 - [Файловый и потоковый ввод-вывод](../../../../standard/io/index.md)

@@ -3,10 +3,10 @@ title: Реализация прикладного уровня микрослу
 description: Изучите внедрение зависимостей и шаблоны медиатора, а также сведения об их реализации на слое приложений веб-API.
 ms.date: 01/30/2020
 ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502451"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Реализация прикладного уровня для микрослужб с помощью веб-API

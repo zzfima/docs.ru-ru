@@ -8,10 +8,10 @@ helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
 ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712797"
 ---
 # <a name="while-c-reference"></a>while (Справочник по C#)
@@ -34,7 +34,7 @@ ms.locfileid: "75712797"
 
 Дополнительные сведения см. в разделе [Оператор while](~/_csharplang/spec/statements.md#the-while-statement) в документации [Предварительная спецификация C# 6.0](/dotnet/csharp/language-reference/language-specification/introduction).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

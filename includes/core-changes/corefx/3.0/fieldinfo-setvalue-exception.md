@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: dc733ee32184db5af59bb06e294cd73765977581
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449569"
 ---
 ### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue вызывает исключение для статических полей и полей только для инициализации
@@ -21,7 +21,7 @@ ms.locfileid: "77449569"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Рекомендованное действие
 

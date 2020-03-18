@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048386"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180823"
 ---
 # <a name="how-to-create-a-socket"></a>Практическое руководство. Создание сокета
 Перед использованием сокета для связи с удаленными устройствами необходимо инициализировать сокет, указав протокол и сведения о сетевом адресе. Конструктор класса <xref:System.Net.Sockets.Socket> имеет параметры, которые определяют семейство адресов, тип сокета и тип протокола, которые сокет использует для подключения.  
@@ -31,7 +31,7 @@ ms.locfileid: "71048386"
  В следующем примере создается объект Socket, который может использоваться для обмена данными в сетях на основе TCP/IP (например, в Интернете).  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Stream, ProtocolType.Tcp);  
 ```  
   
@@ -43,7 +43,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  Чтобы использовать UDP вместо TCP, измените тип протокола, как показано в следующем примере:  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Dgram, ProtocolType.Udp);  
 ```  
   
@@ -60,7 +60,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
  После создания объекта **Socket** он может создать подключение к удаленной конечной точке или принимать подключения от удаленных устройств.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Использование сокетов клиента](using-client-sockets.md)
 - [Прослушивание с помощью сокетов](listening-with-sockets.md)

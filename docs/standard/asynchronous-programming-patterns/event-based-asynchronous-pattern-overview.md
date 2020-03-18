@@ -17,10 +17,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
 ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160072"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Обзор асинхронной модели, основанной на событиях
@@ -136,9 +136,9 @@ public class AsyncExample
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Руководство. Фоновое выполнение операции](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Руководство. Реализация формы, в которой выполняется фоновая операция](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Практическое руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Практическое руководство. Фоновое выполнение операции](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [Рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Определение, когда следует реализовать асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 ms.openlocfilehash: dd4ddb3b324bd6d235efb541c90875dbe9ed4c2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789823"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Руководство по программированию на C#. Разделители для тегов в документации
@@ -82,7 +82,7 @@ ms.locfileid: "76789823"
     ```
     <!-- markdownlint-enable MD010 -->
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Комментарии XML-документации](./index.md)

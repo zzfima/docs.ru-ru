@@ -3,12 +3,12 @@ title: Интерфейс командной строки .NET Core
 titleSuffix: ''
 description: Общие сведения о .NET Core CLI и его функциях.
 ms.date: 02/13/2020
-ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156716"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397602"
 ---
 # <a name="net-core-cli-overview"></a>Обзор .NET Core CLI
 
@@ -24,44 +24,44 @@ ms.locfileid: "78156716"
 
 ### <a name="basic-commands"></a>Основные команды
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-- [help](dotnet-help.md)
-- [store](dotnet-store.md)
+- [`new`](dotnet-new.md)
+- [`restore`](dotnet-restore.md)
+- [`build`](dotnet-build.md)
+- [`publish`](dotnet-publish.md)
+- [`run`](dotnet-run.md)
+- [`test`](dotnet-test.md)
+- [`vstest`](dotnet-vstest.md)
+- [`pack`](dotnet-pack.md)
+- [`migrate`](dotnet-migrate.md)
+- [`clean`](dotnet-clean.md)
+- [`sln`](dotnet-sln.md)
+- [`help`](dotnet-help.md)
+- [`store`](dotnet-store.md)
 
 ### <a name="project-modification-commands"></a>Команды для изменения проекта
 
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
+- [`add package`](dotnet-add-package.md)
+- [`add reference`](dotnet-add-reference.md)
+- [`remove package`](dotnet-remove-package.md)
+- [`remove reference`](dotnet-remove-reference.md)
+- [`list reference`](dotnet-list-reference.md)
 
 ### <a name="advanced-commands"></a>Расширенные команды
 
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
+- [`nuget delete`](dotnet-nuget-delete.md)
+- [`nuget locals`](dotnet-nuget-locals.md)
+- [`nuget push`](dotnet-nuget-push.md)
+- [`msbuild`](dotnet-msbuild.md)
+- [`dotnet install script`](dotnet-install-script.md)
 
 ### <a name="tool-management-commands"></a>Команды управления средством
 
-- [tool install](dotnet-tool-install.md)
-- [tool list](dotnet-tool-list.md)
-- [tool update](dotnet-tool-update.md)
-- [tool restore](global-tools.md#install-a-local-tool) **Доступно начиная с пакета SDK для .NET Core 3.0**
-- [tool run](global-tools.md#invoke-a-local-tool) **Доступно начиная с пакета SDK для .NET Core 3.0**
-- [tool uninstall](dotnet-tool-uninstall.md)
+- [`tool install`](dotnet-tool-install.md)
+- [`tool list`](dotnet-tool-list.md)
+- [`tool update`](dotnet-tool-update.md)
+- [`tool restore`](global-tools.md#install-a-local-tool) (доступна, начиная с пакета SDK для .NET Core 3.0)
+- [`tool run`](global-tools.md#invoke-a-local-tool) (доступна, начиная с пакета SDK для .NET Core 3.0)
+- [`tool uninstall`](dotnet-tool-uninstall.md)
 
 Средства — это консольные приложения, которые устанавливаются из пакетов NuGet и вызываются из командной строки. Вы можете писать средства самостоятельно или устанавливать средства, написанные другими. Средства также называются глобальными средствами, средствами пути к средству и локальными средствами. Дополнительные сведения см. в [обзоре средств .NET Core](global-tools.md).
 

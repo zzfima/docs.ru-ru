@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5612ebce67946e22aaeeba861115ce4f8967e1f5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344461"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>Интерфейсы API, сообщающие версию, теперь сообщают версию продукта, а не файла
@@ -20,11 +20,11 @@ ms.locfileid: "75344461"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Рекомендованное действие
 
-Отсутствует. Это изменение должно сделать определение версии интуитивно понятным.
+Нет. Это изменение должно сделать определение версии интуитивно понятным.
 
 #### <a name="category"></a>Категория
 

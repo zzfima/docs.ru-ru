@@ -9,10 +9,10 @@ helpviewer_keywords:
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
 ms.openlocfilehash: 1ae3c17bef69a52b4d5852e09284929dc328bf8a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789675"
 ---
 # <a name="summary-c-programming-guide"></a>Руководство по программированию на C#. \<summary>
@@ -29,9 +29,9 @@ ms.locfileid: "76789675"
 
   Сводка объекта.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Тег \<summary> следует использовать для описания типа или члена типа. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](./remarks.md). Чтобы включить средства документации, такие как [DocFX](https://dotnet.github.io/docfx/) и [Sandcastle](https://github.com/EWSoftware/SHFB), для создания внутренних гиперссылок на страницы документации для элементов кода, используйте атрибут [cref](./cref-attribute.md).
+Тег \<summary> следует использовать для описания типа или члена типа. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](./remarks.md). Чтобы включить средства документации, такие как [DocFX](./cref-attribute.md) и [Sandcastle](https://dotnet.github.io/docfx/), для создания внутренних гиперссылок на страницы документации для элементов кода, используйте атрибут [cref](https://github.com/EWSoftware/SHFB).
 
 Текст в теге \<summary> является единственным источником сведений о типе для технологии IntelliSense и также отображается в окне обозревателя объектов.
 
@@ -98,7 +98,7 @@ ms.locfileid: "76789675"
 </doc>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

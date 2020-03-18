@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711224"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Преимущества использования потокобезопасных коллекций
@@ -38,14 +38,14 @@ ms.locfileid: "75711224"
   
  В смешанных сценариях "производитель-получатель", когда время обработки очень мало, класс <xref:System.Collections.Generic.Queue%601>, который имеет внешнюю блокировку, масштабируется лучше, чем класс<xref:System.Collections.Concurrent.ConcurrentQueue%601>. Однако, если время обработки имеет значение приблизительно равное 500 FLOPS и выше, то класс <xref:System.Collections.Concurrent.ConcurrentQueue%601> масштабируется лучше.  
   
-## <a name="concurrentstack-vs-stack"></a>ConcurrentStack и Стек  
+## <a name="concurrentstack-vs-stack"></a>ConcurrentStack и Stack  
  В чистых сценариях "производитель-получатель", когда время обработки каждого элемента очень мало, класс <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> и класс <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>, который использует внешнюю блокировку, обычно выполняются с одинаковой скоростью при одном выделенном потоке на добавление и одном выделенном потоке на извлечение. Однако по мере увеличения числа потоков производительность снижается у обоих типов, так как увеличивается число конфликтных ситуаций, и класс <xref:System.Collections.Generic.Stack%601> может выполняться лучше, чем класс <xref:System.Collections.Concurrent.ConcurrentStack%601>. Если время обработки имеет значение приблизительно равное 500 FLOPS и выше, то оба типа масштабируются примерно одинаково.  
   
  В смешанных сценариях "производитель-получатель" класс <xref:System.Collections.Concurrent.ConcurrentStack%601> имеет большее ускорение для небольших и больших рабочих нагрузок.  
   
  Использование методов <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> и <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> может значительно снизить время доступа.  
   
-## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary и Словарь  
+## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary и Dictionary  
  Как правило, лучше использовать класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> в любой ситуации, когда вы одновременно добавляете и обновляете ключи или значения из множества потоков. В сценариях, которые включают частные операции обновления и относительно редкие операции чтения, класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, в общем случае, обеспечивает немного лучшую производительность. В сценариях, которые включают частные операции чтения и относительно редкие операции обновления, класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, в общем случае, имеет значительно большее ускорение на компьютерах с многоядерными процессорами.  
   
  В сценариях, которые включают частые обновления, можно увеличить степень параллелизма в классе <xref:System.Collections.Concurrent.ConcurrentDictionary%602> и затем провести оценку, чтобы увидеть, увеличилась ли производительность на компьютерах с многоядерными процессорами. При изменении уровня параллелизма исключите, насколько это возможно, глобальные операции.  
@@ -60,7 +60,7 @@ ms.locfileid: "75711224"
 ## <a name="blockingcollection"></a>BlockingCollection  
  Если вы хотите использовать семантику границ и блокировок, класс <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> может работать быстрее, чем любые пользовательские реализации. Он также поддерживает гибкую обработку исключений и операций отмены, перечисления.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)

@@ -2,21 +2,21 @@
 title: Асинхронные типы возвращаемых значений (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 2c0dae6b4357ce89325ecb9b7d70ffd79f4e9417
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9926fea5308f9088ad924bcc98d8deed319c6300
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168396"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170043"
 ---
 # <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
 Асинхронные методы могут иметь следующие типы возвращаемых значений:
 
-- <xref:System.Threading.Tasks.Task%601> для асинхронного метода, возвращающего значение. 
- 
+- <xref:System.Threading.Tasks.Task%601> для асинхронного метода, возвращающего значение.
+
 - <xref:System.Threading.Tasks.Task> для асинхронного метода, который выполняет операцию, но не возвращает значение.
 
-- `void` для обработчика событий. 
+- `void` для обработчика событий.
 
 - Начиная с версии 7.0 в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`. Объект, возвращаемый методом `GetAwaiter`, должен реализовывать интерфейс <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
@@ -52,9 +52,9 @@ ms.locfileid: "70168396"
 Как и в предыдущем примере <xref:System.Threading.Tasks.Task%601>, вы можете отделить вызов `WaitAndApologize` от применения инструкции await, как показывает следующий код. Однако следует помнить, что `Task` не содержит свойство `Result`, и при применении оператора await к `Task` никакое значение не создается.  
   
 В следующем коде вызов метода `WaitAndApologize` отделяется от ожидания задачи, которую возвращает этот метод.  
- 
+
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
- 
+
 ## <a name="BKMK_VoidReturnType"></a> Тип возвращаемого значения Void
 
 Тип возвращаемого значения `void` используется в асинхронных обработчиках событий, для которых требуется тип возвращаемого значения `void`. Поскольку методы, не являющиеся обработчиками событий, не возвращают значения, вместо этого необходимо вернуть <xref:System.Threading.Tasks.Task>. Это вызвано тем, что для асинхронных методов, возвращающих значение `void`, ожидание невозможно. Любой вызывающий объект такого метода должен иметь возможность завершить свою работу, не дожидаясь завершения вызванного асинхронного метода, и он не должен зависеть ни от каких значений и исключений, создаваемых асинхронным методом.  
@@ -64,23 +64,23 @@ ms.locfileid: "70168396"
 Дополнительные сведения о перехвате исключений в асинхронных методах см. в разделе [Исключения в асинхронных методах](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) в статье о [try-catch](../../../language-reference/keywords/try-catch.md).  
   
 В следующем примере показано поведение асинхронного обработчика событий. Обратите внимание, что в примере кода асинхронный обработчик событий должен сообщить основному потоку о завершении своей работы. Основной поток может ожидать завершения работы асинхронного обработчика событий перед выходом из программы.
- 
+
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
- 
+
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>Обобщенные асинхронные типы возвращаемых значений и ValueTask\<TResult\>
 
 Начиная с C# 7.0 асинхронные методы могут возвращать любой тип, имеющий доступный метод `GetAwaiter`.
- 
-Поскольку <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> являются ссылочными типами, выделение памяти во влияющих на производительность сегментах (особенно при выделении памяти в ограниченных циклах) может серьезно снизить производительность. Поддержка обобщенных типов возвращаемых значений позволяет возвращать небольшой тип значения вместо ссылочного типа, благодаря чему удается предотвратить избыточное выделение памяти. 
 
-На платформе .NET представлена структура <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, которая является упрощенной реализацией обобщенного значения, возвращающего задачу. Чтобы использовать тип <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, необходимо добавить в проект пакет NuGet `System.Threading.Tasks.Extensions`. В следующем примере структура <xref:System.Threading.Tasks.ValueTask%601> используется для извлечения значений двух игральных костей. 
+Поскольку <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> являются ссылочными типами, выделение памяти во влияющих на производительность сегментах (особенно при выделении памяти в ограниченных циклах) может серьезно снизить производительность. Поддержка обобщенных типов возвращаемых значений позволяет возвращать небольшой тип значения вместо ссылочного типа, благодаря чему удается предотвратить избыточное выделение памяти.
+
+На платформе .NET представлена структура <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, которая является упрощенной реализацией обобщенного значения, возвращающего задачу. Чтобы использовать тип <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, необходимо добавить в проект пакет NuGet `System.Threading.Tasks.Extensions`. В следующем примере структура <xref:System.Threading.Tasks.ValueTask%601> используется для извлечения значений двух игральных костей.
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и оператора Await в C#](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Поток управления в асинхронных программах C#)
+- [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Обращение к веб-сайтам с помощью async и await в C#)
+- [Поток управления в асинхронных программах (C#)](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)

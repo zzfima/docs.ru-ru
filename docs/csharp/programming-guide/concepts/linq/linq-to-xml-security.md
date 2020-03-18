@@ -3,10 +3,10 @@ title: Безопасность LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
 ms.openlocfilehash: 5b7eb815b058cba008f1db2cf683c8934c19b743
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73423376"
 ---
 # <a name="linq-to-xml-security-c"></a>Безопасность LINQ to XML (C#)
@@ -21,7 +21,7 @@ ms.locfileid: "73423376"
   
  XML по своей природе уязвим для атак типа «отказ в обслуживании» из-за того, что XML-документы не ограничены по размеру, глубине, длине имен элементов и так далее. Независимо от компонента, с помощью которого обрабатывается XML, следует всегда быть готовым к очистке домена приложения, если он потребляет излишне много ресурсов.  
   
-## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>Предотвращение атак XML, XSD, XPath и XSLT  
+## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>Устранение рисков атак XML, XSD, XPath и XSLT  
  Технология LINQ to XML построена на основе объектов <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>. LINQ to XML поддерживает XSD и XPath через методы расширения в пространствах имен <xref:System.Xml.Schema?displayProperty=nameWithType> и <xref:System.Xml.XPath?displayProperty=nameWithType>. Используя классы <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> и <xref:System.Xml.XmlWriter> совместно с LINQ to XML, можно вызывать XSLT для преобразования XML-деревьев.  
   
  При работе в менее защищенной среде возникает несколько проблем безопасности, связанных с XML и использованием классов в <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType> и <xref:System.Xml.Xsl?displayProperty=nameWithType>. Эти проблемы включают следующие, но не ограничиваются ими.  
@@ -99,6 +99,6 @@ ms.locfileid: "73423376"
   
  Определенный уровень безопасности предоставляется средой CLR. Например, компонент, не содержащий закрытый класс, не может получить доступ к заметкам, которые обозначены ключами с помощью этого класса. Однако заметки могут быть удалены компонентами, не имеющими возможность их читать. Это может использоваться в качестве атаки для злонамеренного изменения данных.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию (LINQ to XML) (C#)](linq-to-xml-overview.md)

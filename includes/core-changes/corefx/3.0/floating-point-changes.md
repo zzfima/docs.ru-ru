@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ce4f09908b1025e8e5a0380c9bf035c6b0db479a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568210"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>Изменено поведение форматирования и анализа при наличии плавающей запятой
@@ -18,9 +18,9 @@ ms.locfileid: "74568210"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 В разделе "Потенциальное влияние на существующий код" записи блога [Улучшения в синтаксическом анализе и форматировании плавающей запятой в .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) предлагаются изменения, которые можно внести в код, если по сравнению с .NET Core 2.2 поведение приложения изменилось. Как правило, предполагается использование другой стандартной или пользовательской строки формата для обеспечения требуемого поведения. Для некоторых результатов обходное решение может отсутствовать, если ранее они были неверны.
 

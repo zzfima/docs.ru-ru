@@ -8,10 +8,10 @@ helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
 ms.openlocfilehash: acad3aa3b196c184132ad1acdf52b18a799b0896
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713252"
 ---
 # <a name="override-c-reference"></a>override (Справочник по C#)
@@ -46,7 +46,7 @@ ms.locfileid: "75713252"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Программирование для Office (C# и Visual Basic)
+title: Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635357"
 ---
-# <a name="walkthrough-office-programming-c-and-visual-basic"></a>Пошаговое руководство. Программирование для Office (C# и Visual Basic)
+# <a name="walkthrough-office-programming-c-and-visual-basic"></a>Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)
 
 Visual Studio предлагает новые функции C# и Visual Basic, позволяющие улучшить программирование для Microsoft Office. В число полезных функций C# входят именованные и необязательные аргументы и возвращаемые значения типа `dynamic`. В программировании COM можно опустить ключевое слово `ref` и получить доступ к индексированным свойствам. Список функций Visual Basic включает автоматически реализуемые свойства, инструкции в лямбда-выражениях и инициализаторы коллекций.
 
-Оба языка поддерживают внедрение сведений о типах, что позволяет развертывать сборки, взаимодействующие с компонентами COM, без предварительного развертывания на компьютере основных сборок взаимодействия (PIA). Дополнительные сведения см. в разделе [Пошаговое руководство: внедрению типов из управляемых сборок](../../../standard/assembly/embed-types-visual-studio.md).
+Оба языка поддерживают внедрение сведений о типах, что позволяет развертывать сборки, взаимодействующие с компонентами COM, без предварительного развертывания на компьютере основных сборок взаимодействия (PIA). Дополнительные сведения см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../standard/assembly/embed-types-visual-studio.md).
 
 В данном пошаговом руководстве эти возможности показаны в контексте программирования для Microsoft Office, но многие из них могут оказаться полезными и в других ситуациях. В этом пошаговом руководстве вы создадите книгу Excel с помощью надстройки Excel, а затем документ Word со ссылкой на эту книгу. Наконец, вы узнаете, как включать и отключать зависимость PIA.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 Для выполнения данного пошагового руководства на компьютере должны быть установлены Microsoft Office Excel и Microsoft Office Word.
 
@@ -32,7 +32,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 
 ### <a name="to-set-up-an-excel-add-in-application"></a>Настройка надстройки Excel
 
-1. Запустите Visual Studio.
+1. Запустите среду Visual Studio.
 
 2. В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.
 
@@ -52,7 +52,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 
 1. В **обозревателе решений** щелкните имя проекта правой кнопкой мыши и выберите пункт **Добавить ссылку**. Откроется диалоговое окно **Добавление ссылки**.
 
-2. На вкладке **Сборки** в списке **Имя компонента** выберите **Microsoft.Office.Interop.Excel**, версия `<version>.0.0.0` (расшифровку номеров версий продуктов Office см. в разделе [Версии Майкрософт](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), а затем, удерживая нажатой клавишу CTRL, выберите **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Если сборки отсутствуют, убедитесь, что они установлены и отображаются (см. практическое руководство по [ установке основных сборок взаимодействия Microsoft Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
+2. На вкладке **Сборки** в списке **Имя компонента** выберите `<version>.0.0.0`Microsoft.Office.Interop.Excel[, версия ](https://en.wikipedia.org/wiki/Microsoft_Office#Versions) (расшифровку номеров версий продуктов Office см. в разделе **Версии Майкрософт**), а затем, удерживая нажатой клавишу CTRL, выберите **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Если сборки отсутствуют, может потребоваться проверить, что они установлены и отображаются (см. раздел [Практическое руководство. Установка основных сборок взаимодействия Microsoft Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
 
 3. Нажмите кнопку **ОК**.
 
@@ -124,7 +124,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 
 ### <a name="to-invoke-displayinexcel"></a>Вызов метода DisplayInExcel
 
-1. Добавьте следующий код в конец метода `ThisAddIn_StartUp`. Вызов метода `DisplayInExcel` содержит два аргумента. Первый аргумент представляет собой имя списка счетов, которые требуется обработать. Второй аргумент — это состоящее из нескольких строк лямбда-выражение, которое определяет, каким образом следует обрабатывать данные. Значения `ID` и `balance` для каждого из счетов отображаются в соседних ячейках, а если баланс имеет отрицательное значение, строка отображается красным. Дополнительные сведения см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. Добавьте следующий код в конец метода `ThisAddIn_StartUp` . Вызов метода `DisplayInExcel` содержит два аргумента. Первый аргумент представляет собой имя списка счетов, которые требуется обработать. Второй аргумент — это состоящее из нескольких строк лямбда-выражение, которое определяет, каким образом следует обрабатывать данные. Значения `ID` и `balance` для каждого из счетов отображаются в соседних ячейках, а если баланс имеет отрицательное значение, строка отображается красным. Дополнительные сведения см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -160,7 +160,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 
 4. В меню **Файл** в окне IL DASM выберите пункт **Файл** > **Открыть**. Дважды щелкните **Visual Studio \<версия>** , а затем дважды щелкните **Проекты**. Откройте папку проекта и найдите в папке bin/Debug файл *имя_проекта*.dll. Дважды щелкните файл *имя_проекта*.dll. В новом окне будут показаны атрибуты проекта, а также ссылки на другие модули и сборки. Обратите внимание, что в сборку включены пространства имен `Microsoft.Office.Interop.Excel` и `Microsoft.Office.Interop.Word`. По умолчанию в Visual Studio компилятор импортирует в сборку необходимые типы из сборки PIA, на которую указывает ссылка.
 
-     Дополнительные сведения см. в разделе [Практическое руководство. просмотреть одержимое сборки](../../../standard/assembly/view-contents.md).
+     Дополнительные сведения см. в разделе [Практическое руководство. Просмотр содержимого сборок](../../../standard/assembly/view-contents.md).
 
 5. Дважды щелкните значок **МАНИФЕСТ**. Откроется окно со списком сборок, содержащих элементы, на которые имеются ссылки в проекте. Сборки `Microsoft.Office.Interop.Excel`и `Microsoft.Office.Interop.Word` не будут указаны в этом списке. Поскольку необходимые для проекта типы были импортированы в сборку проекта, ссылки на сборки PIA не требуется. Это упрощает развертывание. Сборки PIA не обязательно должны присутствовать на компьютере пользователя, а поскольку приложение не требует развертывания конкретной версии сборки PIA, можно разрабатывать приложения, которые работают с различными версиями Office, если в этих версиях имеются все необходимые интерфейсы API.
 
@@ -189,7 +189,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 
 8. В Visual Studio в меню **Построение** выберите пункт **Очистить решение**, чтобы очистить завершенный проект.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Автоматически реализуемые свойства (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Автоматически реализуемые свойства (C#)](../classes-and-structs/auto-implemented-properties.md)
@@ -204,8 +204,8 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 - [Лямбда-выражения (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Лямбда-выражения (C#)](../statements-expressions-operators/lambda-expressions.md)
 - [Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [Пошаговое руководство: Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Пошаговое руководство: внедрение типов из управляемых сборок](../../../standard/assembly/embed-types-visual-studio.md)
-- [Пошаговое руководство: создание первой надстройки VSTO для Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
+- [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../standard/assembly/embed-types-visual-studio.md)
+- [Пошаговое руководство. Создание первой надстройки VSTO для Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Взаимодействие](./index.md)
+- [Совместимость](./index.md)

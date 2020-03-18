@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568139"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Пользовательские экземпляры EncoderFallbackBuffer не поддерживают рекурсивный откат
@@ -28,9 +28,9 @@ ms.locfileid: "74568139"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 В большинстве случаев от разработчиков не требуется никаких действий.
 

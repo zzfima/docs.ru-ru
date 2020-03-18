@@ -5,10 +5,10 @@ description: Узнайте о технологиях .NET Framework, недос
 author: cartermp
 ms.date: 04/30/2019
 ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092945"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Технологии .NET Framework, недоступные в .NET Core
@@ -29,9 +29,9 @@ ms.locfileid: "77092945"
 
 Для взаимодействия между процессами вместо удаленного взаимодействия можно применять механизмы межпроцессного взаимодействия (IPC), например класс <xref:System.IO.Pipes> или <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
 
-Для взаимодействия между компьютерами в качестве альтернативы можно использовать сетевое решение, желательно протокол на основе обычного текста с низкими издержками, например HTTP. Еще один вариант — [веб-сервер Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), используемый платформой ASP.NET Core. Кроме того, для сценариев взаимодействия между компьютерами по сети можно использовать пространство имен <xref:System.Net.Sockets>. Другие варианты см. в разделе об обмене сообщениями статьи [.NET Open Source Developer Projects ](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Проекты разработки с открытым кодом в .NET).
+Для взаимодействия между компьютерами в качестве альтернативы можно использовать сетевое решение, желательно протокол на основе обычного текста с низкими издержками, например HTTP. Еще один вариант — [веб-сервер Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), используемый платформой ASP.NET Core. Кроме того, для сценариев взаимодействия между компьютерами по сети можно использовать пространство имен <xref:System.Net.Sockets>. Другие варианты см. в разделе об обмене сообщениями статьи [.NET Open Source Developer Projects](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Проекты разработки с открытым кодом в .NET).
 
-## <a name="code-access-security-cas"></a>CAS (Code Access Security — безопасность доступа кода)
+## <a name="code-access-security-cas"></a>Управление доступом для кода (CAS)
 
 Песочница ограничивает ресурсы, используемые или выполняемые в управляемых приложениях или библиотеках, на основе среды выполнения или платформы. Она [не поддерживается в .NET Framework](../../framework/misc/code-access-security.md) и, следовательно, в .NET Core. Часто в .NET Framework и среде выполнения пользователи повышают привилегии, чтобы и дальше использовать CAS в качестве ограничения безопасности. Кроме того, механизм CAS усложняет реализацию и понижает производительность приложений, которые не планируется использовать.
 
@@ -47,6 +47,6 @@ ms.locfileid: "77092945"
 
 Платформа .NET Core не поддерживает System.EnterpriseServices (COM+).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения о переносе кода в .NET Core из .NET Framework](../porting/index.md)

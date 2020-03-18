@@ -7,10 +7,10 @@ helpviewer_keywords:
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
 ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712004"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Руководство по программированию на C#. Анонимные функции
@@ -31,9 +31,9 @@ ms.locfileid: "75712004"
 
 Дополнительные сведения см. в разделе [Выражения анонимных функций](~/_csharplang/spec/expressions.md#anonymous-function-expressions) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Инструкции, выражения и операторы](./index.md)
 - [Лямбда-выражения](./lambda-expressions.md)
 - [Делегаты](../delegates/index.md)
-- [Expression Trees (C#)](../concepts/expression-trees/index.md) (Деревья выражений (C#))
+- [Деревья выражений (C#)](../concepts/expression-trees/index.md)

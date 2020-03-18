@@ -10,10 +10,10 @@ helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160174"
 ---
 # <a name="best-practices-for-exceptions"></a>Лучшие методики обработки исключений
@@ -88,7 +88,7 @@ ms.locfileid: "78160174"
 
 - <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, принимающий строковое сообщение и внутреннее исключение.
 
-Пример см. в статье [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md).
+Пример см. в разделе [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Обеспечение доступности данных об исключении при удаленном выполнении кода
 

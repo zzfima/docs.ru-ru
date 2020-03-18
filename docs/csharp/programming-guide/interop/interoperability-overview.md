@@ -9,10 +9,10 @@ helpviewer_keywords:
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700735"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Общие сведения о взаимодействии. (Руководство по программированию в C#)
@@ -57,7 +57,7 @@ ms.locfileid: "75700735"
   
  Дополнительные сведения см. в разделе [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../../framework/interop/exposing-dotnet-components-to-com.md) и [Пример COM-класса](./example-com-class.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Улучшение производительности взаимодействия](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [Общие сведения о взаимодействии между COM и .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)

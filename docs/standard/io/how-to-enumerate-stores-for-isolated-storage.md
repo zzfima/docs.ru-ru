@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Перечисление хранилищ для изолированного хранения
+title: Практическое руководство. Перечисление хранилищ для изолированного хранилища
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,10 +14,10 @@ helpviewer_keywords:
 - data stores, enumerating
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
 ms.openlocfilehash: 3ba38093e9e978c89cdb2bb7a584ed9e04c1096d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707532"
 ---
 # <a name="how-to-enumerate-stores-for-isolated-storage"></a>Практическое руководство. Перечисление хранилищ для изолированного хранилища
@@ -29,7 +29,7 @@ ms.locfileid: "75707532"
  [!code-csharp[Conceptual.IsolatedStorage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source2.cs#2)]
  [!code-vb[Conceptual.IsolatedStorage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)

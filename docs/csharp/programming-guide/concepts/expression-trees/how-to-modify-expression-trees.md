@@ -3,10 +3,10 @@ title: Практическое руководство. Изменение де�
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
 ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73969904"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Практическое руководство. Изменение деревьев выражений (C#)
@@ -70,7 +70,7 @@ ms.locfileid: "73969904"
   
 6. Скомпилируйте и запустите приложение.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Выполнение деревьев выражений (C#)](./how-to-execute-expression-trees.md)
-- [Expression Trees (C#)](./index.md) (Деревья выражений (C#))
+- [Деревья выражений (C#)](./index.md)

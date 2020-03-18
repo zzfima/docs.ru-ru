@@ -11,11 +11,11 @@ helpviewer_keywords:
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
 ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673424"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397662"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Классы и структуры (Руководство по программированию в C#)
 Классы и структуры являются двумя основными конструкциями системы общих типов CTS, используемой в платформе .NET Framework. Оба они являются структурами данных, которые инкапсулируют набор данных и поведений в одной логической сущности. Данные и поведение являются *членами* класса или структуры. К ним относятся методы, свойства, события и другие элементы, которые описаны далее в этой статье.  

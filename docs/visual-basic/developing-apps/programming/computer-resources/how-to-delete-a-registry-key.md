@@ -12,10 +12,10 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
 ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345651"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Практическое руководство. Удаление раздела реестра в Visual Basic
@@ -36,19 +36,19 @@ ms.locfileid: "74345651"
   
  При следующих условиях возможно возникновение исключения:  
   
-- Имя раздела — `Nothing` (<xref:System.ArgumentNullException>).  
+- Имя ключа имеет значение `Nothing` (<xref:System.ArgumentNullException>).  
   
 - У пользователя нет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).  
   
-- Имя раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
+- Имя ключа превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
   
 - Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+## <a name="net-framework-security"></a>Безопасность .NET Framework  
 
  Обращение к реестру невозможно, если не предоставлены достаточные разрешения времени выполнения (<xref:System.Security.Permissions.RegistryPermission>) или у пользователя нет надлежащих прав доступа (определенных списками управления доступом) для создания или записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>

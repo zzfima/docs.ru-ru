@@ -5,10 +5,10 @@ author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
 ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156138"
 ---
 # <a name="net-api-analyzer"></a>Анализатор .NET API
@@ -20,7 +20,7 @@ ms.locfileid: "78156138"
 > [!NOTE]
 > Анализатор .NET API пока доступен в режиме предварительной версии.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2017 и более поздние версии или Visual Studio для Mac (любые версии).
 
@@ -69,7 +69,7 @@ ms.locfileid: "78156138"
 
 ### <a name="suppress-warnings-locally"></a>Локальное скрытие предупреждений
 
-Чтобы скрыть предупреждения локально, щелкните нужный элемент правой кнопкой мыши и выберите **Быстрые действия и рефакторинг** > **Скрыть *идентификатор диагностики*\<идентификатор диагностики>**  > **в исходном коде**. Это действие добавляет в ваш исходный код директиву препроцессора [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) для определенной области: ![снимок экрана с фрагментом кода, для которого #pragma отключает предупреждение](media/api-analyzer/suppress-in-source.jpg)
+Чтобы скрыть предупреждения локально, щелкните нужный элемент правой кнопкой мыши и выберите **Быстрые действия и рефакторинг** > **Скрыть *идентификатор диагностики*\<идентификатор диагностики>**  > **в исходном коде**. Это действие добавляет в ваш исходный код директиву препроцессора [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) для определенной области. ![Снимок экрана с фрагментом кода, для которого #pragma отключает предупреждение](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>Глобальное скрытие предупреждений
 

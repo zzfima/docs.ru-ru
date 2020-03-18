@@ -4,10 +4,10 @@ titleSuffix: ''
 description: Узнайте, какие API-интерфейсы из .NET Framework всегда вызывают исключение в .NET Core.
 ms.date: 12/23/2019
 ms.openlocfilehash: c4b94321d30cacd90d5c2ee23c258681683a6faa
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092971"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>API, которые всегда создают исключения в .NET Core
@@ -23,7 +23,7 @@ ms.locfileid: "77092971"
 
 ## <a name="system"></a>Система
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> | Все |
 | <xref:System.AppDomain.ExecuteAssembly(System.String,System.String[],System.Byte[],System.Configuration.Assemblies.AssemblyHashAlgorithm)?displayProperty=nameWithType> | Все |
@@ -38,7 +38,7 @@ ms.locfileid: "77092971"
 
 ## <a name="systemcodedomcompiler"></a>System.CodeDom.Compiler
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A?displayProperty=nameWithType> | Все |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A?displayProperty=nameWithType> | Все |
@@ -46,7 +46,7 @@ ms.locfileid: "77092971"
 
 ## <a name="systemcollectionsspecialized"></a>System.Collections.Specialized
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
@@ -54,13 +54,13 @@ ms.locfileid: "77092971"
 
 ## <a name="systemconfiguration"></a>System.Configuration
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType> (все члены) | Все |
 
 ## <a name="systemconsole"></a>System.Console
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Console.Beep?displayProperty=nameWithType> | Linux и macOS |
 | <xref:System.Console.BufferHeight?displayProperty=nameWithType> (только установка) | Linux и macOS |
@@ -78,13 +78,13 @@ ms.locfileid: "77092971"
 
 ## <a name="systemdatacommon"></a>System.Data.Common
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType> (вызывает <xref:System.NotSupportedException>) | Все |
 
 ## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType> (только установка) | Linux |
 | <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType> (только установка) | Linux |
@@ -101,14 +101,14 @@ ms.locfileid: "77092971"
 
 ## <a name="systemio"></a>System.IO
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 | <xref:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 
 ## <a name="systemiopipes"></a>System.IO.Pipes
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.IO.Pipes.NamedPipeClientStream.NumberOfServerInstances?displayProperty=nameWithType> | Linux и macOS |
 | <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName?displayProperty=nameWithType> | Linux и macOS |
@@ -119,13 +119,13 @@ ms.locfileid: "77092971"
 
 ## <a name="systemmedia"></a>System.Media
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 
 ## <a name="systemnet"></a>System.Net
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Все |
 | <xref:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Все |
@@ -147,26 +147,26 @@ ms.locfileid: "77092971"
 
 ## <a name="systemnetnetworkinformation"></a>System.Net.NetworkInformation
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | Windows (UWP) |
 
 ## <a name="systemnetsockets"></a>System.Net.Sockets
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)?displayProperty=nameWithType> | Все |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | Все |
 
 ## <a name="systemnetwebsockets"></a>System.Net.WebSockets
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Net.WebSockets.WebSocket.RegisterPrefixes?displayProperty=nameWithType> | Все |
 
 ## <a name="systemreflection"></a>System.Reflection
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> | Все |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom(System.String)?displayProperty=nameWithType> | Все |
@@ -178,13 +178,13 @@ ms.locfileid: "77092971"
 
 ## <a name="systemruntimecompilerservices"></a>System.Runtime.CompilerServices
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator?displayProperty=nameWithType> | Все |
 
 ## <a name="systemruntimeinteropservices"></a>System.Runtime.InteropServices
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Runtime.InteropServices.Marshal.GetIDispatchForObject(System.Object)?displayProperty=nameWithType> | Все |
 | <xref:System.Runtime.InteropServices.RuntimeEnvironment.SystemConfigurationFile?displayProperty=nameWithType> | Все |
@@ -196,13 +196,13 @@ ms.locfileid: "77092971"
 
 ## <a name="systemruntimeserialization"></a>System.Runtime.Serialization
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas?displayProperty=nameWithType> | Все |
 
 ## <a name="systemsecurity"></a>System.Security
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Security.CodeAccessPermission.Deny?displayProperty=nameWithType> | Все |
 | <xref:System.Security.CodeAccessPermission.PermitOnly?displayProperty=nameWithType> | Все |
@@ -221,7 +221,7 @@ ms.locfileid: "77092971"
 
 ## <a name="systemsecurityclaims"></a>System.Security.Claims
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Security.Claims.ClaimsPrincipal.%23ctor?displayProperty=nameWithType> | Все |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
@@ -231,7 +231,7 @@ ms.locfileid: "77092971"
 
 ## <a name="systemsecuritycryptography"></a>System.Security.Cryptography
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | Все |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A?displayProperty=nameWithType> | Linux и macOS |
@@ -264,7 +264,7 @@ ms.locfileid: "77092971"
 
 ## <a name="systemsecuritycryptographypkcs"></a>System.Security.Cryptography.Pkcs
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)?displayProperty=nameWithType> | Все |
 | <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | Все |
@@ -272,7 +272,7 @@ ms.locfileid: "77092971"
 
 ## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Certificates
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | Все |
@@ -281,31 +281,31 @@ ms.locfileid: "77092971"
 
 ## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 
 ## <a name="systemsecuritypolicy"></a>System.Security.Policy
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Security.Policy.Hash.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 
 ## <a name="systemserviceprocessservicecontroller"></a>System.ServiceProcess.ServiceController
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 
 ## <a name="systemtextregularexpressions"></a>System.Text.RegularExpressions
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> | Все |
 
 ## <a name="systemthreading"></a>System.Threading
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
 | <xref:System.Threading.ExecutionContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Все |
@@ -316,13 +316,13 @@ ms.locfileid: "77092971"
 
 ## <a name="systemxml"></a>System.Xml
 
-| Член | Платформы, которые вызывают исключение |
+| Участник | Платформы, которые вызывают исключение |
 | - | - |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Все |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Все |
 | <xref:System.Xml.XmlDictionaryWriter.CreateMtomWriter(System.IO.Stream,System.Text.Encoding,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType> | Все |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Критические изменения для миграции с .NET Framework на .NET Core](../compatibility/fx-core.md)
 - [Двоичная сериализация в .NET Core](../../standard/serialization/binary-serialization.md#net-core)

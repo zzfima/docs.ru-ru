@@ -3,10 +3,10 @@ title: Группирование данных (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
 ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635747"
 ---
 # <a name="grouping-data-c"></a>Группирование данных (C#)
@@ -20,7 +20,7 @@ ms.locfileid: "75635747"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя метода|Описание:|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |GroupBy|Группирует элементы с общим атрибутом. Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> -или-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.|Не применяется|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -59,7 +59,7 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)

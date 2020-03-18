@@ -7,13 +7,13 @@ helpviewer_keywords:
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
 ms.openlocfilehash: febec0a8579d34f8ff59066da5b5aa59c1cce6b2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345642"
 ---
-# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера, в Visual Basic
+# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера, в Visual Basic
 
 В этом разделе описывается использование `My.Computer.Ports` для дозвона с помощью модема в Visual Basic.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "74345642"
   
 1. Определите, к какому последовательному порту подключен модем. В этом примере предполагается, что модем подключен к порту COM1.  
   
-2. Воспользуйтесь методом `My.Computer.Ports.OpenSerialPort`, чтобы получить ссылку на порт. Дополнительные сведения можно найти по адресу: <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+2. Воспользуйтесь методом `My.Computer.Ports.OpenSerialPort`, чтобы получить ссылку на порт. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
      Блок `Using` позволяет приложению закрыть последовательный порт даже в том случае, если он создает исключение. В блоке `Try...Catch...Finally` должен отображаться весь код, управляющий последовательным портом.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74345642"
   
  В этом примере приложение отключает последовательный порт после вызова модема. В действительности вам потребуется передать данные на модем и получить их от него. Дополнительные сведения см. в разделе [Практическое руководство. Получение строк из последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>

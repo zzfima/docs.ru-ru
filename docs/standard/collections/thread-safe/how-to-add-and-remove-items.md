@@ -9,10 +9,10 @@ helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 ms.openlocfilehash: dc4d13e09a91633fac1fcf5bd8ab5b043473bd7d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711315"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
@@ -46,7 +46,7 @@ ms.locfileid: "75711315"
   
  Поэтому нет гарантии, что данные, возвращаемые методом <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, будут данными, созданными делегатом valueFactory потока. Аналогичная последовательность событий может иметь место при вызове метода <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)

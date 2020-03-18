@@ -9,10 +9,10 @@ helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
 ms.openlocfilehash: 2a2c487ad93e6fc75ecf95c541e859b8b60bb5b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715106"
 ---
 # <a name="this-c-reference"></a>this (Справочник по C#)
@@ -38,7 +38,7 @@ ms.locfileid: "75715106"
 
   [!code-csharp[csrefKeywordsAccess#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#5)]
 
-У статических функций-членов нет указателя `this`, так как они существуют только на уровне класса и не являются частями объектов. Использование ссылки на `this` в статическом методе является недопустимым.
+У статических функций-членов нет указателя `this`, так как они существуют только на уровне класса и не являются частями объектов. Использование `this` в статическом методе приводит к ошибке.
 
 ## <a name="example"></a>Пример
 
@@ -50,7 +50,7 @@ ms.locfileid: "75715106"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

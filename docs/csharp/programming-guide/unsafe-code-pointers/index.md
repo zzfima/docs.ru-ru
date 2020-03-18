@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711835"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Руководство по программированию на C#. Небезопасный код и указатели
@@ -50,7 +50,7 @@ ms.locfileid: "75711835"
 
 Дополнительные сведения см. в разделе [Небезопасный код](~/_csharplang/spec/unsafe-code.md) в [Спецификации языка C#](~/_csharplang/spec/introduction.md).
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

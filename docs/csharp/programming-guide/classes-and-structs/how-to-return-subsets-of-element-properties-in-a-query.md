@@ -5,10 +5,10 @@ helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
 ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714855"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Практическое руководство. Возвращение поднаборов свойств элементов в запросе (руководство по программированию на C#)
@@ -45,7 +45,7 @@ Console.WriteLine(student.First + " " + student.Last);
   
 Чтобы выполнить этот код, скопируйте и вставьте класс в консольное приложение C# с директивой `using` для пространства имен System.Linq.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Анонимные типы](./anonymous-types.md)

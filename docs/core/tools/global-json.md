@@ -4,10 +4,10 @@ description: Узнайте, как использовать файл global.jso
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
 ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625999"
 ---
 # <a name="globaljson-overview"></a>Обзор global.json

@@ -2,12 +2,12 @@
 title: Нахождение разности множеств между двумя списками (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 227405428a1b418cbe6ceb3d0e3274595307e5ef
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345939"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169185"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Нахождение разности множеств между двумя списками (LINQ) (C#)
 В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в файле names2.txt.  
@@ -20,7 +20,7 @@ ms.locfileid: "75345939"
   
 ```csharp  
 class CompareLists  
-{          
+{
     static void Main()  
     {  
         // Create the IEnumerable data sources.  
@@ -57,6 +57,6 @@ class CompareLists
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Создайте проект консольного приложения C# с директивами `using` для пространств имен System.Linq и System.IO.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ и строки (C#)](./linq-and-strings.md)

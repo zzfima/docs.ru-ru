@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e6e10b2ec451c07bf397cbdcac51ef57c29dab47
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568239"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Тип исключения сериализатора JSON изменен с `JsonException` на `NotSupportedException`
@@ -27,7 +27,7 @@ ms.locfileid: "74568239"
 
 3.0, предварительная версия 9
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Если при десериализации вы выполняете перехват исключений <xref:System.Text.Json.JsonException>, рекомендуем также настроить перехват исключений <xref:System.NotSupportedException>.
 

@@ -3,10 +3,10 @@ title: Практическое руководство. Изменение пр�
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 ms.openlocfilehash: 6462cbb5001682b6a464c1446f8ae6de3c5669d1
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141505"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Практическое руководство. Изменение пространства имен для всего дерева XML (C#)

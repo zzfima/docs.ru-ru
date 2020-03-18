@@ -3,10 +3,10 @@ title: Процесс разработки для приложений на ос
 description: Общий обзор возможностей для разработки приложений на основе Docker. Использование Visual Studio для Windows, Visual Studio для Mac и Visual Studio Code для поддержки нескольких платформ (Windows, macOS и Linux).
 ms.date: 01/30/2020
 ms.openlocfilehash: 799aa6fc742a8fb763ec5a7ae3cf3f70f89bed6d
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77502718"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Процесс разработки для приложений на основе Docker
@@ -15,7 +15,7 @@ ms.locfileid: "77502718"
 
 ## <a name="development-environment-for-docker-apps"></a>Среда разработки приложений Docker
 
-### <a name="development-tool-choices-ide-or-editor"></a>Выбор средства разработки: интегрированная среда разработки или редактор
+### <a name="development-tool-choices-ide-or-editor"></a>Выбор средства разработки: IDE или редактор
 
 Предпочитаете ли вы использовать полнофункциональную среду IDE или упрощенный редактор, корпорация Майкрософт предлагает средства, с помощью которых можно разрабатывать приложения Docker.
 

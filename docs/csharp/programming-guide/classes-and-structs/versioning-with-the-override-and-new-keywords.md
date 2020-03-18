@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705396"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Практическое руководство. Управление версиями с помощью ключевых слов "Override" и "New" (Руководство по программированию в C#)
@@ -61,7 +61,7 @@ ms.locfileid: "75705396"
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- Ключевое слово `new` сообщает компилятору о том, что ваше определение скрывает определение, которое содержится в базовом классе. Это поведение установлено по умолчанию.  
+ Ключевое слово `new` сообщает компилятору о том, что ваше определение скрывает определение, которое содержится в базовом классе. Это поведение по умолчанию.  
   
 ## <a name="override-and-method-selection"></a>Переопределение и выбор метода  
  Если метод в классе именован, с вызовом совместимы сразу несколько методов (например, если существуют два метода с одинаковыми именами), а параметры совместимы с переданным параметром, компилятор C# выбирает метод, наиболее подходящий для вызова. Пример совместимых методов:  
@@ -78,7 +78,7 @@ ms.locfileid: "75705396"
   
  Дополнительные примеры `new` и `override` см. в разделе [Использование ключевых слов Override и New](./knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы и структуры](./index.md)

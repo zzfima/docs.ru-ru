@@ -3,10 +3,10 @@ title: Операции, использующие квантификаторы (
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
 ms.openlocfilehash: 5c931e0971a2ae7970415905be8772a64a82ee39
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635487"
 ---
 # <a name="quantifier-operations-c"></a>Операции, использующие квантификаторы (C#)
@@ -14,13 +14,13 @@ ms.locfileid: "75635487"
   
  На приведенном ниже рисунке показаны два различных квантификатора, примененные к двум разным исходным последовательностям. Первая операция проверяет, является ли один или несколько элементов буквой "А"; результатом является `true`. Вторая операция проверяет, являются ли все элементы буквой "А"; результатом является `true`.  
   
- ![Операции, использующие квантификаторы LINQ](./media/quantifier-operations/linq-quantifier-operations.png)  
+ ![Операции, использующие кванторы LINQ](./media/quantifier-operations/linq-quantifier-operations.png)  
   
  В следующем разделе перечислены методы стандартных операторов запросов, которые выполняют операции с использованием квантификаторов.  
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя метода|Описание:|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Все|Определяет, все ли элементы последовательности удовлетворяют условию.|Не применяется|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
 |Любой|Определяет, удовлетворяют ли условию какие-либо элементы последовательности.|Не применяется|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
@@ -43,7 +43,7 @@ ms.locfileid: "75635487"
   
 [!code-csharp[Contains](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Contains)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)

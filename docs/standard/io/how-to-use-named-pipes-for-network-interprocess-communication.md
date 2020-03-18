@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование именованных каналов для сетевого взаимодействия между процессами
+title: Практическое руководство. Использование именованных каналов для взаимодействия между процессами по сети
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 ms.openlocfilehash: 71f3a8d38b46993762b2673ea5fe735d8d54d351
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706638"
 ---
-# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Практическое руководство. Использование именованных каналов для сетевого взаимодействия между процессами
+# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Практическое руководство. Использование именованных каналов для взаимодействия между процессами по сети
 Именованные каналы обеспечивают межпроцессное взаимодействие между сервером канала и одним или несколькими клиентами канала. Они предоставляют больше функциональных возможностей, чем анонимные каналы, которые обеспечивают межпроцессное взаимодействие на локальном компьютере. Именованные каналы поддерживают полную дуплексную связь по сети и несколько экземпляров сервера, связь на основе сообщений и олицетворение клиента, позволяющее подключающимся процессам использовать собственные наборы разрешений на удаленных серверах.  
   
  Для реализации именованных каналов используются классы <xref:System.IO.Pipes.NamedPipeServerStream> и <xref:System.IO.Pipes.NamedPipeClientStream>.  
@@ -43,7 +43,7 @@ ms.locfileid: "75706638"
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Клиентский и серверный процессы в этом примере предназначены для выполнения на одном компьютере, поэтому объекту <xref:System.IO.Pipes.NamedPipeClientStream> передается имя сервера `"."`. Если клиентский и серверный процессы выполняются на разных компьютерах, вместо `"."` должно быть указано сетевое имя компьютера, на котором осуществляется серверный процесс.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>

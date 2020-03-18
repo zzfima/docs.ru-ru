@@ -6,10 +6,10 @@ helpviewer_keywords:
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
 ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75701242"
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Руководство по программированию на C#. Явная реализация элементов двух интерфейсов
@@ -27,7 +27,7 @@ ms.locfileid: "75701242"
   
  [!code-csharp[csProgGuideInheritance#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#11)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы и структуры](../classes-and-structs/index.md)

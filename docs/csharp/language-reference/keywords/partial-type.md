@@ -8,10 +8,10 @@ helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
 ms.openlocfilehash: 551145b9cdf5fa24f3ae365665e8ff06cf5e9307
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715207"
 ---
 # <a name="partial-type-c-reference"></a>разделяемый тип (справочник по C#)
@@ -26,15 +26,15 @@ ms.locfileid: "75715207"
 
 [!code-csharp[csrefKeywordsContextual#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#4)]  
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Разделение типа класса, структуры или интерфейса на несколько файлов может пригодиться при работе с крупными проектами или с автоматически созданным кодом, например предоставляемым [конструктором Windows Forms](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Разделяемый тип может содержать [разделяемый метод](partial-method.md). Дополнительные сведения см. в разделе [Разделяемые классы и методы](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
+Разделение типа класса, структуры или интерфейса на несколько файлов может пригодиться при работе с крупными проектами или с автоматически созданным кодом, например предоставляемым [конструктором Windows Forms](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Разделяемый тип может содержать [разделяемый метод](partial-method.md). Дополнительные сведения см. в статье [Разделяемые классы и методы](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

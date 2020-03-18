@@ -13,10 +13,10 @@ helpviewer_keywords:
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
 ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789750"
 ---
 # <a name="list-c-programming-guide"></a>Руководство по программированию на C#. \<list>
@@ -46,7 +46,7 @@ ms.locfileid: "76789750"
 
   Либо элемент маркированного или нумерованного списка, либо определение `term`.
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Блок \<listheader> используется для определения строки заголовка в таблице или списке определений. При определении таблицы необходимо ввести данные для термина в заголовке.
 
@@ -60,7 +60,7 @@ ms.locfileid: "76789750"
 
 [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)
