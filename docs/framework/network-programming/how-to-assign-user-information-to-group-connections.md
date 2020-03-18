@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01b686702250c68131e8a46b410ce05e67e7c950
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048428"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180846"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a><span data-ttu-id="0435c-102">Практическое руководство. Присвоение данных пользователя групповым подключениям</span><span class="sxs-lookup"><span data-stu-id="0435c-102">How to: Assign User Information to Group Connections</span></span>
+# <a name="how-to-assign-user-information-to-group-connections"></a><span data-ttu-id="8209f-102">Практическое руководство. Присвоение данных пользователя групповым подключениям</span><span class="sxs-lookup"><span data-stu-id="8209f-102">How to: Assign User Information to Group Connections</span></span>
 
- <span data-ttu-id="0435c-103">В следующем примере демонстрируется, как присвоить данные пользователя групповым подключениям. В этом разделе предполагается, что приложение присвоило значения переменным *UserName*, *SecurelyStoredPassword* и *Domain* до вызова этого раздела кода, а переменная *UserName* является уникальной.</span><span class="sxs-lookup"><span data-stu-id="0435c-103">The following example demonstrates how to assign user information to group connections, assuming that the application sets the variables *UserName*, *SecurelyStoredPassword*, and *Domain* before this section of code is called and that *UserName* is unique.</span></span>  
+ <span data-ttu-id="8209f-103">В следующем примере демонстрируется, как присвоить данные пользователя групповым подключениям. В этом разделе предполагается, что приложение присвоило значения переменным *UserName*, *SecurelyStoredPassword* и *Domain* до вызова этого раздела кода, а переменная *UserName* является уникальной.</span><span class="sxs-lookup"><span data-stu-id="8209f-103">The following example demonstrates how to assign user information to group connections, assuming that the application sets the variables *UserName*, *SecurelyStoredPassword*, and *Domain* before this section of code is called and that *UserName* is unique.</span></span>  
   
-### <a name="to-assign-user-information-to-a-group-connection"></a><span data-ttu-id="0435c-104">Присвоение данных пользователя групповому подключению</span><span class="sxs-lookup"><span data-stu-id="0435c-104">To assign user information to a group connection</span></span>  
+### <a name="to-assign-user-information-to-a-group-connection"></a><span data-ttu-id="8209f-104">Присвоение данных пользователя групповому подключению</span><span class="sxs-lookup"><span data-stu-id="8209f-104">To assign user information to a group connection</span></span>  
   
-1. <span data-ttu-id="0435c-105">Создайте имя группы подключений.</span><span class="sxs-lookup"><span data-stu-id="0435c-105">Create a connection group name.</span></span>  
+1. <span data-ttu-id="8209f-105">Создайте имя группы подключений.</span><span class="sxs-lookup"><span data-stu-id="8209f-105">Create a connection group name.</span></span>  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -32,7 +32,7 @@ ms.locfileid: "71048428"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2. <span data-ttu-id="0435c-106">Создайте запрос к конкретному URL-адресу.</span><span class="sxs-lookup"><span data-stu-id="0435c-106">Create a request for a specific URL.</span></span> <span data-ttu-id="0435c-107">Например, следующий код создает запрос к URL-адресу `http://www.contoso.com.`</span><span class="sxs-lookup"><span data-stu-id="0435c-107">For example, the following code creates a request for the URL `http://www.contoso.com.`</span></span>  
+2. <span data-ttu-id="8209f-106">Создайте запрос к конкретному URL-адресу.</span><span class="sxs-lookup"><span data-stu-id="8209f-106">Create a request for a specific URL.</span></span> <span data-ttu-id="8209f-107">Например, следующий код создает запрос к URL-адресу `http://www.contoso.com.`</span><span class="sxs-lookup"><span data-stu-id="8209f-107">For example, the following code creates a request for the URL `http://www.contoso.com.`</span></span>  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -42,10 +42,10 @@ ms.locfileid: "71048428"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3. <span data-ttu-id="0435c-108">Задайте учетные данные и имя группы подключений для веб-запроса и вызовите метод **GetResponse**, чтобы получить объект **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="0435c-108">Set the credentials and Connection GroupName for the Web request, and call **GetResponse** to retrieve a **WebResponse** object.</span></span>  
+3. <span data-ttu-id="8209f-108">Задайте учетные данные и имя группы подключений для веб-запроса и вызовите метод **GetResponse**, чтобы получить объект **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="8209f-108">Set the credentials and Connection GroupName for the Web request, and call **GetResponse** to retrieve a **WebResponse** object.</span></span>  
   
     ```csharp  
-    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
     myWebRequest.ConnectionGroupName = secureGroupName;  
   
     WebResponse myWebResponse=myWebRequest.GetResponse();  
@@ -58,7 +58,7 @@ ms.locfileid: "71048428"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4. <span data-ttu-id="0435c-109">После использования объекта WebRespose закройте поток ответа.</span><span class="sxs-lookup"><span data-stu-id="0435c-109">Close the response stream after using the WebRespose object.</span></span>  
+4. <span data-ttu-id="8209f-109">После использования объекта WebRespose закройте поток ответа.</span><span class="sxs-lookup"><span data-stu-id="8209f-109">Close the response stream after using the WebRespose object.</span></span>  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -68,7 +68,7 @@ ms.locfileid: "71048428"
     MyWebResponse.Close()  
     ```  
   
- <span data-ttu-id="0435c-110">Пример</span><span class="sxs-lookup"><span data-stu-id="0435c-110">Example</span></span>  
+ <span data-ttu-id="8209f-110">Пример</span><span class="sxs-lookup"><span data-stu-id="8209f-110">Example</span></span>  
   
 ```csharp  
 // Create a connection group name.  
@@ -79,7 +79,7 @@ String secureGroupName = Encoding.Default.GetString(updHash);
 // Create a request for a specific URL.  
 WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
   
-myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
 myWebRequest.ConnectionGroupName = secureGroupName;  
   
 WebResponse myWebResponse=myWebRequest.GetResponse();  
@@ -107,7 +107,7 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0435c-111">См. также</span><span class="sxs-lookup"><span data-stu-id="0435c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8209f-111">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="8209f-111">See also</span></span>
 
-- [<span data-ttu-id="0435c-112">Управление подключениями</span><span class="sxs-lookup"><span data-stu-id="0435c-112">Managing Connections</span></span>](managing-connections.md)
-- [<span data-ttu-id="0435c-113">Группирование подключений</span><span class="sxs-lookup"><span data-stu-id="0435c-113">Connection Grouping</span></span>](connection-grouping.md)
+- [<span data-ttu-id="8209f-112">Управление подключениями</span><span class="sxs-lookup"><span data-stu-id="8209f-112">Managing Connections</span></span>](managing-connections.md)
+- [<span data-ttu-id="8209f-113">Группирование подключений</span><span class="sxs-lookup"><span data-stu-id="8209f-113">Connection Grouping</span></span>](connection-grouping.md)
