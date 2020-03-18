@@ -3,12 +3,12 @@ title: Создание типов смешения с помощью метод
 description: Используя элементы интерфейса по умолчанию, можно расширить интерфейсы дополнительными реализациями по умолчанию для средств реализации.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921448"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240110"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Учебник. Функциональные возможности смешения при создании классов с помощью методов интерфейса по умолчанию
 
@@ -53,21 +53,21 @@ ms.locfileid: "76921448"
 
 Сначала можно создать интерфейс, который определяет поведение для всех источников освещения.
 
-[!code-csharp[Declare base interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
+[!code-csharp[Declare base interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
 
 Основное средство тестирования верхнего освещения может реализовать этот интерфейс, как показано в следующем коде.
 
-[!code-csharp[First overhead light](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
+[!code-csharp[First overhead light](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
 
 В этом учебнике код не поддерживает устройства Интернета вещей, но эмулирует такие действия, записывая сообщения в консоль. Вы можете исследовать код без автоматизации дома.
 
 Теперь определим интерфейс, автоматически отключающий освещение по истечении времени ожидания.
 
-[!code-csharp[pure Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
+[!code-csharp[pure Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
 Можно добавить базовую реализацию к верхнему освещению, но лучшим решением является изменение этого определения интерфейса для предоставления реализации по умолчанию типа `virtual`.
 
-[!code-csharp[Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
+[!code-csharp[Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
 После добавления этого изменения класс `OverheadLight` может реализовать функцию таймера, объявляя поддержку интерфейса.
 
@@ -77,7 +77,7 @@ public class OverheadLight : ITimerLight { }
 
 Другой тип освещения может поддерживать более сложный протокол. Он может предоставить собственную реализацию для `TurnOnFor`, как показано в следующем коде.
 
-[!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
+[!code-csharp[Override the timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
 В отличие от переопределения виртуальных методов классов, объявление `TurnOnFor` в классе `HalogenLight` не использует ключевое слово `override`.
 
@@ -85,19 +85,19 @@ public class OverheadLight : ITimerLight { }
 
 Преимущества методов интерфейса по умолчанию становятся понятнее, когда вы добавляете расширенные возможности. Использование интерфейса позволяет смешивать и сопоставлять возможности. Это также позволяет каждому автору класса выбирать между реализацией по умолчанию и пользовательской реализацией. Давайте добавим интерфейс с реализацией по умолчанию для мигающего освещения.
 
-[!code-csharp[Define the blinking light interface](~/samples/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
+[!code-csharp[Define the blinking light interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
 
 Реализация по умолчанию позволяет освещению мигать. С помощью реализации по умолчанию к верхнему освещению можно добавить возможности таймера и мигания.
 
-[!code-csharp[Use the default blink function](~/samples/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
+[!code-csharp[Use the default blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
 
 Новый тип освещения `LEDLight` поддерживает функцию таймера и функцию мигания напрямую. Такой стиль освещения реализует интерфейсы `ITimerLight` и `IBlinkingLight`, а также переопределяет метод `Blink`.
 
-[!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
+[!code-csharp[Override the blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
 `ExtraFancyLight` может напрямую поддерживать функции мигания и таймера.
 
-[!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
+[!code-csharp[Override the blink and timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
 Ранее созданный класс `HalogenLight` не поддерживает мигание. Поэтому не добавляйте `IBlinkingLight` в список его поддерживаемых интерфейсов.
 
@@ -105,21 +105,21 @@ public class OverheadLight : ITimerLight { }
 
 Теперь давайте напишем тестовый код. С помощью функции [сопоставления шаблонов](../pattern-matching.md) в C# можно определить возможности освещения путем проверки поддерживаемых им интерфейсов.  Следующий метод выполняет поддерживаемые возможности для каждого источника освещения.
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
 Следующий код в методе `Main` последовательно создает каждый тип освещения и тестирует его.
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 
 ## <a name="how-the-compiler-determines-best-implementation"></a>Как компилятор определяет наилучшую реализацию
 
 В этом сценарии показан базовый интерфейс без каких-либо реализаций. Добавление метода в интерфейс `ILight` вводит новые сложности. Языковые правила, управляющие методами интерфейса по умолчанию, снижают влияние на конкретные классы, которые реализуют несколько производных интерфейсов. Попробуем улучшить исходный интерфейс с помощью нового метода, чтобы продемонстрировать, как это изменит использование интерфейса. Каждый световой индикатор может сообщать о своем состоянии питания в виде перечисленного значения.
 
-[!code-csharp[Enumeration for power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
+[!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
 Реализация по умолчанию предполагает питание от сети.
 
-[!code-csharp[Report a default power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
+[!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 
 Эти изменения компилируются правильно, несмотря на то что `ExtraFancyLight` объявляет поддержку интерфейса `ILight` и производных интерфейсов `ITimerLight` и `IBlinkingLight`. В интерфейсе `ILight` объявлена только одна "ближайшая" реализация. Любой класс, который объявляет переопределение, стает "ближайшей" реализацией. Вы видели примеры с предыдущими классами, которые переопределили элементы других производных интерфейсов.
 

@@ -3,10 +3,10 @@ title: Установка локализованных файлов IntelliSense
 description: Узнайте, как настроить компьютер, на котором ведется разработка, для использования локализованных файлов IntelliSense в проектах .NET Core в Visual Studio.
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157717"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Установка локализованных файлов IntelliSense для .NET Core
@@ -16,7 +16,7 @@ ms.locfileid: "78157717"
 - Установка локализованной версии файлов.
 - Изменение установки Visual Studio для использования другого языка.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - [Пакет SDK для .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) или более поздней версии.
 - [Visual Studio 2019 версии 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) или более поздней версии.
@@ -37,10 +37,10 @@ ms.locfileid: "78157717"
    1. Перейдите в папку установки .NET Core. Ее расположение по умолчанию: *%ProgramFiles%\dotnet\packs*.
    1. Выберите пакет SDK, для которого необходимо установить IntelliSense, и перейдите по соответствующему пути. Можно выбрать один из следующих параметров.
 
-      | Тип пакета SDK        | Path                               |
+      | Тип пакета SDK        | путь                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
-      | Windows Desktop | *Microsoft.WindowsDesktop.App.Ref* |
+      | Классические приложения | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
 
    1. Перейдите к версии, для которой необходимо установить локализованные файлы IntelliSense. Например, *3.1.0*.
@@ -124,6 +124,6 @@ ms.locfileid: "78157717"
 
 Теперь при открытии проекта .NET Core, предназначенного для версии только что установленных файлов IntelliSense, средство IntelliSense должно работать соответствующим образом.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [IntelliSense в Visual Studio](/visualstudio/ide/using-intellisense)

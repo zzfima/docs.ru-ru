@@ -14,17 +14,17 @@ helpviewer_keywords:
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
 ms.openlocfilehash: 2cf114296005456f354d286aa2804fa8a95160dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127627"
 ---
 # <a name="padding-strings-in-net"></a>Заполнение строк в .NET
 
 Перечисленные ниже методы класса <xref:System.String> позволяют создать новую строку, состоящей из исходной строки, и дополнить ее указанными символами с начала или с конца до указанной общей длины. Символом заполнения может быть пробел или указанный знак. Итоговая строка выравнивается по правому или левому краю. Если длина исходной строки уже больше или равна требуемой общей длины, методы заполнения возвращают исходную строку без изменений. Дополнительные сведения см. в разделах **Возвращаемые значения** описания двух перегрузок методов <xref:System.String.PadLeft%2A?displayProperty=nameWithType> и <xref:System.String.PadRight%2A?displayProperty=nameWithType>.
   
-|Имя метода|Использовать|  
+|Имя метода|Использование|  
 |-----------------|---------|  
 |<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|Дополняет строку до указанной общей длины знаками с начала.|  
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Дополняет строку до указанной общей длины знаками с конца.|  
@@ -47,6 +47,6 @@ ms.locfileid: "73127627"
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]
  [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)

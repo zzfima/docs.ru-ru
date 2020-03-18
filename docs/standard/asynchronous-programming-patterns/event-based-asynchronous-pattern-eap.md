@@ -8,10 +8,10 @@ helpviewer_keywords:
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130943"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Асинхронная модель на основе событий (EAP)
@@ -21,7 +21,7 @@ ms.locfileid: "73130943"
 > [!NOTE]
 > Начиная с версии .NET Framework 4 библиотека параллельных задач предоставляет новую модель для асинхронного и параллельного программирования. Дополнительные сведения см. в разделах [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md) и [Асинхронная модель на основе задач (TAP)](task-based-asynchronous-pattern-tap.md).
   
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание
 
  [Обзор асинхронной модели, основанной на событиях](event-based-asynchronous-pattern-overview.md)  
  Описывает, как асинхронная модель на основе событий позволяет использовать преимущества многопоточных приложений и устраняет многие сложности, присущие многопоточности.  
@@ -44,7 +44,7 @@ ms.locfileid: "73130943"
  [Практическое руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Описывает использование компонента, поддерживающего асинхронную модель на основе событий.  
   
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочник
 
  <xref:System.ComponentModel.AsyncOperation>  
  Описывает класс <xref:System.ComponentModel.AsyncOperation> и содержит ссылки на все его члены.  
@@ -63,7 +63,7 @@ ms.locfileid: "73130943"
  [Работа с потоками](../../../docs/standard/threading/index.md)  
  Описывает многопоточные функциональные возможности в .NET.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Рекомендации по работе с потоками](../threading/managed-threading-best-practices.md)
 - [События](../events/index.md)

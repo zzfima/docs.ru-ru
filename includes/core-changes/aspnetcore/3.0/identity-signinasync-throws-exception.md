@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6679e38aefa7d61ce430dc5375ff3b35c641ea27
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394354"
 ---
 ### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Удостоверение. Создание исключения SignInAsync для удостоверения, не прошедшего проверку подлинности
@@ -26,7 +26,7 @@ ms.locfileid: "72394354"
 
 Старое поведение было проблематичным, так как по умолчанию эти участники отклонялись `[Authorize]` / `RequireAuthenticatedUser()`.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 В ASP.NET Core 3.0 (предварительная версия 6) есть флаг `RequireAuthenticatedSignIn` в `AuthenticationOptions`, который является `true` по умолчанию. Установите для этого флага значение `false`, чтобы восстановить старое поведение.
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Нет
+Отсутствуют
 
 <!-- 
 

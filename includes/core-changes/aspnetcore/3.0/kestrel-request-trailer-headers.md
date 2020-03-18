@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b0e1d6d720a1c9b827fb4585606e64b545d395d7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393926"
 ---
 ### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel: Трейлеры запроса перемещены из заголовков в новую коллекцию
@@ -39,7 +39,7 @@ ms.locfileid: "72393926"
 
 Трейлеры являются ключевой функциях в некоторых сценариях, например gRPC. Объединение трейлеров с заголовками вызывало путаницу у пользователей.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Для доступа к трейлерам используйте специальные методы расширения в `HttpRequest`.
 

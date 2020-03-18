@@ -21,10 +21,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121706"
 ---
 # <a name="net-regular-expressions"></a>Регулярные выражения в .NET
@@ -109,14 +109,14 @@ ms.locfileid: "73121706"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|ОПИСАНИЕ|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Элементы языка регулярных выражений — краткий справочник](regular-expression-language-quick-reference.md)|Сведения о наборе символов, операторов и конструкций, которые можно использовать для определения регулярных выражений.|  
 |[Объектная модель регулярных выражений](the-regular-expression-object-model.md)|Сведения об использовании классов регулярных выражений и примеры кода.|  
 |[Подробные сведения о поведении регулярных выражений](details-of-regular-expression-behavior.md)|Сведения о возможностях и поведении регулярных выражений платформы .NET.|  
 |[Примеры регулярных выражений](regular-expression-examples.md)|Примеры кода, демонстрирующие типичное применение регулярных выражений.|  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
  [Краткий справочник по регулярным выражениям (скачать в формате Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  

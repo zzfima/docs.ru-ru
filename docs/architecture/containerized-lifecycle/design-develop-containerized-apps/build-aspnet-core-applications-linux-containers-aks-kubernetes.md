@@ -3,10 +3,10 @@ title: Сборка приложений ASP.NET Core 2.2, развернуты�
 description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
 ms.date: 02/25/2019
 ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70848755"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Сборка приложений ASP.NET Core 2.2, развернутых как контейнеры Linux в оркестраторе AKS/Kubernetes

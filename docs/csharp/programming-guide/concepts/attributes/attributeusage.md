@@ -2,11 +2,11 @@
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
 ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589321"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61668722"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -17,9 +17,9 @@ ms.locfileid: "54589321"
   - module
   - поле
   - событие
-  - метод
+  - method
   - param
-  - свойство;
+  - Свойство
   - return
   - type
 - Можно ли применить атрибут к одному элементу программы несколько раз.
@@ -49,13 +49,13 @@ ms.locfileid: "54589321"
 
 В этом случае `MultiUseAttribute` можно применять несколько раз, так как `AllowMultiple` имеет значение `true`. Для применения нескольких атрибутов допускаются оба показанных формата.
 
-Если <xref:System.AttributeUsageAttribute.Inherited> — `false`, атрибут не наследуется классами, производными от класса атрибутов. Например:
+Если <xref:System.AttributeUsageAttribute.Inherited> — `false`, атрибут не наследуется классами, производными от класса атрибутов. Пример:
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 
 В этом случае `NonInheritedAttribute` не применяется к `DClass` путем наследования.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут `AttributeUsage` можно использовать только один раз — его нельзя повторно применять к одному и тому же классу. `AttributeUsage` является псевдонимом для <xref:System.AttributeUsageAttribute>.
 
@@ -67,7 +67,7 @@ ms.locfileid: "54589321"
 
 [!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
 
-## <a name="sample-output"></a>Пример результатов выполнения
+## <a name="sample-output"></a>Пример выходных данных
 
 ```text
 Attributes on Base Class:
@@ -79,13 +79,13 @@ ThirdAttribute
 SecondAttribute
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
 - [Руководство по программированию на C#](../..//index.md)
 - [Атрибуты](../../../..//standard/attributes/index.md)
-- [Reflection (C#)](../reflection.md) (Отражение (C#))
+- [Отражение (C#)](../reflection.md)
 - [Атрибуты](index.md)
 - [Создание настраиваемых атрибутов (C#)](creating-custom-attributes.md)
 - [Обращение к атрибутам с помощью отражения (C#)](accessing-attributes-by-using-reflection.md)

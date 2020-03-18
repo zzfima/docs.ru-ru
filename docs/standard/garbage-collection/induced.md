@@ -6,10 +6,10 @@ helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120917"
 ---
 # <a name="induced-collections"></a>Индуцированные коллекции
@@ -20,7 +20,7 @@ ms.locfileid: "73120917"
 ## <a name="gc-collection-mode"></a>Режим сборки мусора  
  Можно использовать одну из перегрузок метода <xref:System.GC.Collect%2A?displayProperty=nameWithType>, которая включает значение <xref:System.GCCollectionMode>, чтобы определить поведение принудительной сборки, как описано ниже.  
   
-|Значение`GCCollectionMode`|ОПИСАНИЕ|  
+|Значение `GCCollectionMode`|Описание:|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|Использует настройку сборки мусора по умолчанию для текущей версии .NET.|  
 |<xref:System.GCCollectionMode.Forced>|Вызывает немедленное выполнение принудительной сборки мусора. Это эквивалентно вызову перегрузки метода <xref:System.GC.Collect?displayProperty=nameWithType>. В результате образуется коллекция полной блокировки всех поколений.<br /><br /> Можно также сжать кучу больших объектов, установив для свойства <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> значение <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> перед запуском немедленной сборки мусора с полной блокировкой.|  
@@ -34,7 +34,7 @@ ms.locfileid: "73120917"
 |<xref:System.GCCollectionMode.Forced> или <xref:System.GCCollectionMode.Default>|Блокирующий сбор выполнится, как только это станет возможным. Если в это время выполняется фоновая сборка и параметр поколения имеет значение 0 или 1, метод <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> немедленно запускает блокирующую сборку и возвращает управление по ее завершении. Если выполняется фоновая сборка и параметр `generation` имеет значение 2, метод дожидается завершения фоновой сборки, активирует блокирующую сборку поколения 2 и возвращает управление.|Сборка выполнится, как только это станет возможным. Метод <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> запрашивает фоновую сборку, но не гарантирует этот режим. В зависимости от обстоятельств может выполняться блокирующая сборка. Если фоновая сборка уже выполняется, метод возвращает управление немедленно.|  
 |<xref:System.GCCollectionMode.Optimized>|В зависимости от текущего состояния сборщика мусора и значения параметра `generation` может выполняться блокирующая сборка. Сборщик мусора пытается обеспечить оптимальную производительность.|Сборка может быть выполнена в зависимости от состояния сборщика мусора. Метод <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> запрашивает фоновую сборку, но не гарантирует этот режим. В зависимости от обстоятельств может выполняться блокирующая сборка. Сборщик мусора пытается обеспечить оптимальную производительность. Если фоновая сборка уже выполняется, метод возвращает управление немедленно.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Режимы задержки](../../../docs/standard/garbage-collection/latency.md)
 - [Сборка мусора](../../../docs/standard/garbage-collection/index.md)

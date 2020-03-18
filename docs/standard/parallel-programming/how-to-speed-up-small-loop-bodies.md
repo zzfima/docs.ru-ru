@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallel loops, how to speed up
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
 ms.openlocfilehash: 29d7fa8200ddd972c1a5c98ea6f30a7c8ff732e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139751"
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>Практическое руководство. Повышение скорости выполнения небольших тел циклов
@@ -24,10 +24,10 @@ ms.locfileid: "73139751"
   
  Подход, продемонстрированный в данном примере, полезно использовать в тех случаях, когда цикл выполняет минимальный объем работ. Когда работа начнет потреблять больше вычислительных ресурсов, возможно, вы получите такую же или более высокую производительность с помощью цикла <xref:System.Threading.Tasks.Parallel.For%2A> или <xref:System.Threading.Tasks.Parallel.ForEach%2A> с разделителем по умолчанию.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
 - [Итераторы (C#)](../../csharp/programming-guide/concepts/iterators.md)
-- [Итераторы (Visual Basic)](../../visual-basic/programming-guide/concepts/iterators.md)
+- [Iterators (Visual Basic)](../../visual-basic/programming-guide/concepts/iterators.md) (Итераторы (Visual Basic))
 - [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

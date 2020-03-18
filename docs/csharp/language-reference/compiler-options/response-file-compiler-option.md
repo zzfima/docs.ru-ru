@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70202911"
 ---
 # <a name="-c-compiler-options"></a>@ (параметры компилятора C#)
@@ -27,10 +27,10 @@ ms.locfileid: "70202911"
  `response_file`  
  Файл, содержащий параметры компилятора и файлы исходного кода, которые требуется компилировать.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Параметры компилятора и файлы исходного кода будут обрабатываться компилятором таким образом, как если бы они были указаны в командной строке.  
   
- Чтобы задать несколько файлов ответов для компиляции, используйте соответствующее число параметров файла ответов. Например:  
+ Чтобы задать несколько файлов ответов для компиляции, используйте соответствующее число параметров файла ответов. Пример:  
   
 ```console  
 @file1.rsp @file2.rsp  
@@ -54,6 +54,6 @@ ms.locfileid: "70202911"
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 ms.openlocfilehash: 89851c42570f301bee8a3eca744eb5d069347d4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120873"
 ---
 # <a name="localization"></a>Локализация
@@ -31,7 +31,7 @@ ms.locfileid: "73120873"
 
 В пакете средств разработки (SDK) Windows предоставляется редактор ресурсов Windows Forms (Winres.exe), позволяющий быстро локализовать ресурсы Windows Forms для целевых языков и региональных параметров. Сведения об использовании этого инструмента см. в статье [Winres.exe (редактор ресурсов Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)
 - [Анализ локализуемости](../../../docs/standard/globalization-localization/localizability-review.md)

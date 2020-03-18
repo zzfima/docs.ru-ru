@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139905"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Общее представление об ускорении выполнения в PLINQ
@@ -68,7 +68,7 @@ ms.locfileid: "73139905"
 ## <a name="when-plinq-chooses-sequential-mode"></a>В каких случаях PLINQ выбирает последовательный режим  
  PLINQ всегда старается выполнять запрос по меньшей мере так же быстро, как если бы он выполнялся последовательно. PLINQ не оценивает, сколько вычислительных ресурсов потребуется для пользовательских делегатов, и не учитывает размер источника входных данных, но проверяет некоторые характерные формы запросов. В частности, определяется наличие в запросе некоторых операторов или их сочетаний, которые часто приводят к медленному выполнению в параллельном режиме. Обнаружив некоторые из таких форм, PLINQ по умолчанию переходит в последовательный режим.  
   
- Но иногда, оценив производительность конкретного запроса, вы заметите, что он все таки выполняется быстрее в параллельном режиме. В таких случаях можно использовать флаг <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> в методе <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>, чтобы принудительно указать для PLINQ параллельный режим выполнения запроса. Дополнительные сведения см. в разделе [Практическое руководство. Задание режима выполнения в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ Но иногда, оценив производительность конкретного запроса, вы заметите, что он все таки выполняется быстрее в параллельном режиме. В таких случаях можно использовать флаг <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> в методе <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>, чтобы принудительно указать для PLINQ параллельный режим выполнения запроса. Дополнительные сведения см. в разделе [Практическое руководство. Указание режима выполнения в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
   
  В следующем списке описываются формы запросов, которые PLINQ по умолчанию будет выполнять в последовательном режиме.  
   
@@ -82,6 +82,6 @@ ms.locfileid: "73139905"
   
 - Запросы, содержащие оператор Reverse, если он не применяется к индексируемым источникам данных.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047032"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Использование синхронного сокета сервера
@@ -75,7 +75,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Использование асинхронных сокетов сервера](using-an-asynchronous-server-socket.md)
 - [Пример синхронного сокета сервера](synchronous-server-socket-example.md)

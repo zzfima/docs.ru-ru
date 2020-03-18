@@ -9,10 +9,10 @@ helpviewer_keywords:
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141301"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Рекомендации по разработке международных приложений
@@ -99,7 +99,7 @@ ms.locfileid: "73141301"
 
 5. Обратите внимание, что в качестве значения uiCulture может быть задан язык, установленный в браузере.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)
 - [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)

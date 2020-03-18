@@ -3,11 +3,11 @@ title: Обход NAT с помощью IPv6 и Teredo
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768180"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642182"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>Обход NAT с помощью IPv6 и Teredo
 Были внесены улучшения, которые предоставляют поддержку обхода преобразования сетевых адресов (NAT). Эти изменения предназначены для использования с IPv6 и Teredo, но также могут применяться к другим технологиям туннелирования IP-адресов. Эти улучшения влияют на классы в <xref:System.Net> и соответствующие пространства имен.  
@@ -34,17 +34,17 @@ ms.locfileid: "59768180"
   
  В класс <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType> добавлены несколько методов для получения списка IP-адресов одноадресной рассылки на узле. Метод <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> отправляет асинхронный запрос для получения таблицы стабильных IP-адресов одноадресной рассылки на локальном компьютере. Метод <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> завершает ожидающий асинхронный запрос для получения таблицы стабильных IP-адресов одноадресной рассылки на локальном компьютере. Метод <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> отправляет синхронный запрос на получение таблицы стабильных IP-адресов одноадресной рассылки на локальном компьютере, при необходимости ожидая, пока таблица стабилизируется.  
   
- Чтобы определить, является ли <xref:System.Net.IPAddress> IP-адресом IPv6 Teredo, можно использовать свойство <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>.  
+ Чтобы определить, является ли <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType> IP-адресом IPv6 Teredo, можно использовать свойство <xref:System.Net.IPAddress>.  
   
  Используя эти новые методы класса <xref:System.Net.NetworkInformation.IPGlobalProperties> в сочетании со свойством <xref:System.Net.IPAddress.IsIPv6Teredo%2A>, приложение может легко определить адрес Teredo. Для связи с удаленными приложениями приложению обычно необходим только локальный адрес Teredo. Например, одноранговое приложение может отправлять все IP-адреса IPv6 координирующему серверу, который затем может перенаправлять их другим одноранговым узлам для прямого взаимодействия.  
   
  В службе прослушивания приложения необходимо настроить прослушивание <xref:System.Net.IPAddress.IPv6Any?displayProperty=nameWithType>, а не локального адреса Teredo. Это позволит удаленному клиенту или одноранговому узлу, у которого есть прямой маршрут IPv6 для службы прослушивания, подключиться напрямую с помощью протокола IPv6 и не использовать Teredo для туннелирования пакетов.  
   
- Для включения обхода NAT в приложениях TCP используется метод <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> класса <xref:System.Net.Sockets.TcpListener?displayProperty=nameWithType>. Для включения обхода NAT в приложениях UDP используется метод <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> класса <xref:System.Net.Sockets.UdpClient?displayProperty=nameWithType>.  
+ Для включения обхода NAT в приложениях TCP используется метод <xref:System.Net.Sockets.TcpListener?displayProperty=nameWithType> класса <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A>. Для включения обхода NAT в приложениях UDP используется метод <xref:System.Net.Sockets.UdpClient?displayProperty=nameWithType> класса <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A>.  
   
  Для отправки запросов для обхода NAT, а также для включения или отключения обхода NAT в приложениях, в которых используется класс <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> и связанные классы, можно использовать методы <xref:System.Net.Sockets.Socket.GetSocketOption%2A> и <xref:System.Net.Sockets.Socket.SetSocketOption%2A> с параметром сокета <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
 ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713474"
 ---
 # <a name="group-clause-c-reference"></a>Предложение group (Справочник по C#)
@@ -31,7 +31,7 @@ ms.locfileid: "75713474"
 
 ## <a name="enumerating-the-results-of-a-group-query"></a>Перечисление результатов запроса group
 
-Так как возвращаемые запросом `group` объекты <xref:System.Linq.IGrouping%602> представляют собой список списков, для доступа к каждому из элементов этих групп необходимо использовать вложенный цикл [foreach](foreach-in.md). Во внешнем цикле итерация будет выполняться по ключам групп, а во внутреннем цикле — по элементам самих групп. У группы может быть ключ, но не быть элементов. Ниже приведен пример цикла `foreach`, который выполняет запрос, показанный в предыдущих примерах кода:
+Так как возвращаемые запросом <xref:System.Linq.IGrouping%602> объекты `group` представляют собой список списков, для доступа к каждому из элементов этих групп необходимо использовать вложенный цикл [foreach](foreach-in.md). Во внешнем цикле итерация будет выполняться по ключам групп, а во внутреннем цикле — по элементам самих групп. У группы может быть ключ, но не быть элементов. Ниже приведен пример цикла `foreach`, который выполняет запрос, показанный в предыдущих примерах кода:
 
 [!code-csharp[cscsrefQueryKeywords#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#12)]
 
@@ -81,11 +81,11 @@ group person by new {name = person.surname, city = person.city};
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Во время компиляции предложения `group` преобразуются в вызовы метода <xref:System.Linq.Enumerable.GroupBy%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq.IGrouping%602>
 - <xref:System.Linq.Enumerable.GroupBy%2A>

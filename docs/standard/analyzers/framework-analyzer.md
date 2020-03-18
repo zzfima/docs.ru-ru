@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: dd69671e709549fe0ad0f582e4d09b43f7321df2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156001"
 ---
 # <a name="the-net-framework-analyzer"></a>Анализатор .NET Framework
@@ -25,8 +25,8 @@ ms.locfileid: "78156001"
 Анализатор .NET Framework входит в пакет NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Этот пакет содержит только анализаторы, соответствующие .NET Framework, в число которых входят анализаторы безопасности. В большинстве случаев требуется пакет NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers).
 Пакет FxCopAnalyzers содержит все анализаторы платформы, включенные в пакет Framework.Analyzers, а также следующие анализаторы:
 
-- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): предоставляет общие рекомендации и инструкции по стандартным API .NET Standard.
-- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): предоставляет анализаторы, соответствующие API .NET Core.
+- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): предоставляет общие рекомендации и инструкции по стандартным API-интерфейсам .NET Standard;
+- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): предоставляет анализаторы, соответствующие API-интерфейсам .NET Core;
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): предоставляет рекомендации по тексту, включаемому в виде кода, а также комментарии.
 
 Чтобы установить его, щелкните правой кнопкой мыши проект и выберите пункт "Управление зависимостями".
@@ -45,27 +45,27 @@ ms.locfileid: "78156001"
 
 Анализатор изучает код в решении и отображает список предупреждений по каждой найденной проблеме.
 
-### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058. Типы не должны расширять определенные базовые типы
+### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: типы не должны расширять определенные базовые типы
 
 В .NET Framework существует незначительное количество типов, от которых не следует выполнять прямое наследование.
 
-**Категория.** Разработка
+**Категория:** разработка
 
-**Серьезность**. Предупреждение
+**Серьезность** : предупреждение.
 
-Дополнительные сведения: [CA:1058. Типы не должны расширять определенные базовые типы](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
+Дополнительные сведения: [CA1058: типы не должны расширять определенные базовые типы](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
 
-### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153. Не перехватывайте исключения поврежденного состояния
+### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: не перехватывайте исключения поврежденного состояния
 
 Перехват исключений поврежденного состояния может маскировать ошибки (например, нарушение прав доступа), что приведет к несогласованному состоянию выполнения или упростит возможность нарушения безопасности системы злоумышленниками. Вместо этого следует перехватывать и обрабатывать более конкретный набор типов исключений или заново создать исключение.
 
-**Категория.** Безопасность
+**Категория:** безопасность
 
-**Уровень серьезности:** Предупреждение
+**Серьезность** : предупреждение.
 
-Дополнительные сведения: [## CA2153. Не перехватывайте исключения поврежденного состояния](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
+Дополнительные сведения: [## CA2153: не перехватывайте исключения поврежденного состояния](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
-### <a name="ca2229-implement-serialization-constructors"></a>CA2229. Реализуйте конструкторы сериализации
+### <a name="ca2229-implement-serialization-constructors"></a>CA2229: применяйте конструкторы сериализации
 
 Анализатор генерирует это предупреждение, когда вы создаете тип, реализующий интерфейс <xref:System.Runtime.Serialization.ISerializable>, но не определяющий необходимый конструктор сериализации. Чтобы устранить нарушение этого правила, реализуйте конструктор сериализации. Для запечатанного класса конструктор должен быть закрытым, а в иных случаях — защищенным. Конструктор сериализации имеет следующую сигнатуру:
 
@@ -80,58 +80,58 @@ public class MyItemType
 }
 ```
 
-**Категория.** Использование
+**Категория:** использование
 
-**Уровень серьезности:** Предупреждение
+**Серьезность** : предупреждение.
 
-Дополнительные сведения: [CA2229: реализуйте конструкторы сериализации](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
+Дополнительные сведения: [CA2229: применяйте конструкторы сериализации](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
 
-### <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235. Пометьте все несериализуемые поля
+### <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: помечайте все несериализуемые поля
 
 Экземпляр поля несериализуемого типа объявлен в сериализуемом типе. Необходимо явно пометить это поле с <xref:System.NonSerializedAttribute>, чтобы устранить это предупреждение.
 
-**Категория.** Использование
+**Категория:** использование
 
-**Уровень серьезности:** Предупреждение
+**Серьезность** : предупреждение.
 
-Дополнительные сведения: [CA2235. Пометьте все несериализуемые поля](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
+Дополнительные сведения: [CA2235: помечайте все несериализуемые поля](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
 
-### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237. Пометьте типы ISerializable атрибутом serializable
+### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: пометьте типы ISerializable атрибутом serializable
 
 Чтобы среда CLR распознавала тип как сериализуемый, он должен быть помечен атрибутом <xref:System.SerializableAttribute>, даже если тип использует пользовательскую процедуру сериализации посредством реализации интерфейса <xref:System.Runtime.Serialization.ISerializable>.
 
-**Категория.** Использование
+**Категория:** использование
 
-**Уровень серьезности:** Предупреждение
+**Серьезность** : предупреждение.
 
-Дополнительные сведения: [CA2237. Пометьте типы ISerializable атрибутом serializable](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+Дополнительные сведения: [CA2237: пометьте типы ISerializable атрибутом serializable](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075. Небезопасная обработка DTD в формате XML
+### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075: обработка небезопасных DTD в XML
 
 Если вы используете небезопасные экземпляры <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> или ссылаетесь на источники внешних сущностей, средство синтаксического анализа может принять недоверенные входные данные и раскрыть конфиденциальную информацию злоумышленникам.  
 
-**Категория.** Безопасность
+**Категория:** безопасность
 
-**Уровень серьезности:** Предупреждение
+**Серьезность** : предупреждение.
 
-Дополнительные сведения: [A3075. Небезопасная обработка DTD в формате XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+Дополнительные сведения: [A3075: обработка небезопасных DTD в XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350. Не используйте ненадежные алгоритмы шифрования
+### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: не используйте ненадежные алгоритмы шифрования
 
 С течением времени надежность алгоритмов шифрования снижается, так как атаки становятся более сложными. В зависимости от типа и применения этого алгоритма шифрования дальнейшее снижение его криптографической стойкости может привести к тому, что злоумышленники смогут читать зашифрованные сообщения, искажать зашифрованные сообщения, подделывать цифровые подписи, незаконно использовать хэшированное содержимое или иным образом нарушать безопасность криптосистемы, основанной на данном алгоритме. В целях шифрования используйте алгоритм AES (AES-256, AES 192 и AES-128) с длиной ключа не меньше 128 бит. В целях хэширования используйте функцию хэширования семейства SHA-2, например SHA-2 512, SHA-2 384 или SHA-2 256.
 
-**Категория**. Безопасность
+**Категория:** безопасность
 
-**Уровень серьезности:** Предупреждение
+**Серьезность** : предупреждение.
 
-Дополнительные сведения: [CA5350. Не используйте ненадежные алгоритмы шифрования](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
+Дополнительные сведения: [CA5350: не используйте ненадежные алгоритмы шифрования](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
 
-### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351. Не используйте взломанные алгоритмы шифрования
+### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: не используйте ослабленные алгоритмы шифрования
 
 Существует атака, допускающая нарушение этого алгоритма вычислительно выполнимым способом. С ее помощью злоумышленники могут разрушить возможности шифрования этого алгоритма. В этом случае в зависимости от типа и применения этого алгоритма шифрования злоумышленники смогут читать зашифрованные сообщения, искажать зашифрованные сообщения, подделывать цифровые подписи, незаконно использовать хэшированное содержимое или иным образом нарушать безопасность криптосистемы, основанной на данном алгоритме. В целях шифрования используйте алгоритм AES (AES-256, AES 192 и AES-128) с длиной ключа не меньше 128 бит. В целях хэширования используйте функцию хэширования семейства SHA-2, например SHA512, SHA384 или SHA256. Для цифровых подписей используйте RSA с длиной ключа не меньше 2048 бит или ECDSA с длиной ключа не меньше 256 бит.
 
-**Категория.** Безопасность
+**Категория:** безопасность
 
-**Уровень серьезности:** Предупреждение
+**Серьезность** : предупреждение.
 
-Дополнительные сведения: [CA5351. Не используйте взломанные алгоритмы шифрования](/visualstudio/code-quality/ca5351)
+Дополнительные сведения: [CA5351: не используйте ослабленные алгоритмы шифрования](/visualstudio/code-quality/ca5351)

@@ -12,25 +12,25 @@ helpviewer_keywords:
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091588"
 ---
 # <a name="numerics-in-net"></a>Числовые значения в .NET
 
-Платформа .NET предоставляет в пространстве имен <xref:System.Numerics> разные примитивы для целых чисел и чисел с плавающей запятой, а также <xref:System.Numerics.BigInteger?displayProperty=nameWithType> (целочисленный тип, не имеющий теоретической верхней и нижней границы), <xref:System.Numerics.Complex?displayProperty=nameWithType> (тип для представления комплексных чисел) и набор типов с поддержкой SIMD.
+Платформа .NET предоставляет в пространстве имен <xref:System.Numerics.BigInteger?displayProperty=nameWithType> разные примитивы для целых чисел и чисел с плавающей запятой, а также <xref:System.Numerics.Complex?displayProperty=nameWithType> (целочисленный тип, не имеющий теоретической верхней и нижней границы), <xref:System.Numerics> (тип для представления комплексных чисел) и набор типов с поддержкой SIMD.
   
 ## <a name="integer-types"></a>Целочисленные типы
 
 Платформа .NET поддерживает целочисленные типы со знаком и без знака с разрядностью 8, 16, 32 и 64 бита. Полный список приводится в следующей таблице.
   
-|Тип|Со знаком или без|Размер (в байтах)|Минимальное значение|Максимальное значение|  
+|Type|Со знаком или без|Размер (в байтах)|Минимальное значение|Максимальное значение|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Без знака|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|Со знаком|2|–32 768|32 767|  
-|<xref:System.Int32?displayProperty=nameWithType>|Со знаком|4|–2 147 483 648|2 147 483 647|  
+|<xref:System.Int32?displayProperty=nameWithType>|Со знаком|4|–2 147 483 648|2,147,483,647|  
 |<xref:System.Int64?displayProperty=nameWithType>|Со знаком|8|–9 223 372 036 854 775 808|9 223 372 036 854 775 807|  
 |<xref:System.SByte?displayProperty=nameWithType>|Со знаком|1|–128|127|  
 |<xref:System.UInt16?displayProperty=nameWithType>|Без знака|2|0|65 535|  
@@ -42,7 +42,7 @@ ms.locfileid: "73091588"
 Вы также можете работать с отдельными битами целочисленного значения с помощью класса <xref:System.BitConverter?displayProperty=nameWithType>.  
 
 > [!NOTE]  
-> Целочисленные типы без знака не совместимы с CLS. Для получения дополнительной информации см. [ статью Независимость от языка и независимые от языка компоненты](language-independence-and-language-independent-components.md).
+> Целочисленные типы без знака не совместимы с CLS. Дополнительные сведения см. в разделе [Независимость от языка и независимые от языка компоненты](language-independence-and-language-independent-components.md).
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -52,7 +52,7 @@ ms.locfileid: "73091588"
 
 Платформа .NET поддерживает три примитива с плавающей запятой, которые перечислены в таблице ниже.
   
-|Тип|Размер (в байтах)|Приблизительный диапазон значений|Точность|  
+|Type|Размер (в байтах)|Приблизительный диапазон значений|Точность|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|От ±1,5 x 10<sup>−45</sup> до ±3,4 x 10<sup>38</sup>|6–9 цифр|  
 |<xref:System.Double?displayProperty=nameWithType>|8|от ±5,0 × 10<sup>−324</sup> до ±1,7 × 10<sup>308</sup>|15–17 цифр|  
@@ -93,7 +93,7 @@ ms.locfileid: "73091588"
   
 Типы с поддержкой SIMD реализованы так, что их можно использовать на оборудовании и (или) с JIT-компиляторами, которые не поддерживают SIMD. Чтобы получить преимущество от использования инструкций SIMD, необходимо запустить 64-разрядное приложение в среде выполнения с компилятором RyuJIT. Он входит в состав .NET Core и .NET Framework 4.6 и более поздних версий. Он добавляет поддержку SIMD при нацеливании на 64-разрядные процессоры.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Основные сведения о приложениях .NET Framework](application-essentials.md)
 - [Строки стандартных числовых форматов](base-types/standard-numeric-format-strings.md)

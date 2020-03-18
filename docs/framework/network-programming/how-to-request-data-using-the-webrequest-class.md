@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048165"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Практическое руководство. Запрос данных с помощью класса WebRequest
@@ -24,7 +24,7 @@ ms.locfileid: "71048165"
 
 ## <a name="to-request-data-from-a-host-server"></a>Запрос данных с сервера узла
 
-1. Создайте экземпляр <xref:System.Net.WebRequest> путем вызова <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> с URI ресурса. Например:
+1. Создайте экземпляр <xref:System.Net.WebRequest> путем вызова <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> с URI ресурса. Пример:
 
     ```csharp
     WebRequest request = WebRequest.Create("https://docs.microsoft.com");
@@ -49,7 +49,7 @@ ms.locfileid: "71048165"
     request.Credentials = CredentialCache.DefaultCredentials
     ```
 
-3. Отправьте запрос на сервер, вызвав метод <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Этот метод возвращает объект, содержащий ответ сервера. Тип возвращенного объекта <xref:System.Net.WebResponse> определяется с помощью схемы URI запроса. Например:
+3. Отправьте запрос на сервер, вызвав метод <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Этот метод возвращает объект, содержащий ответ сервера. Тип возвращенного объекта <xref:System.Net.WebResponse> определяется с помощью схемы URI запроса. Пример:
 
     ```csharp
     WebResponse response = request.GetResponse();
@@ -71,7 +71,7 @@ ms.locfileid: "71048165"
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)
     ```
 
-5. Чтобы получить поток, содержащий данные ответа, отправленные сервером, вызовите метод <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>. Например:
+5. Чтобы получить поток, содержащий данные ответа, отправленные сервером, вызовите метод <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>. Пример:
 
     ```csharp
     Stream dataStream = response.GetResponseStream();
@@ -81,7 +81,7 @@ ms.locfileid: "71048165"
     Dim dataStream As Stream = response.GetResponseStream()
     ```
 
-6. После считывания данных из объекта ответа закройте его с помощью метода <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> или закройте поток ответа с помощью метода <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Если не закрыть объект ответа или поток, у приложения могут закончиться подключения к серверу и оно может оказаться неспособным обрабатывать новые запросы. Так как при закрытии ответа метод `WebResponse.Close` вызывает `Stream.Close`, вызывать `Close` для объектов как потока, так и ответа не требуется (при этом выполнение такой операции не приведет к негативным последствиям). Например:
+6. После считывания данных из объекта ответа закройте его с помощью метода <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> или закройте поток ответа с помощью метода <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Если не закрыть объект ответа или поток, у приложения могут закончиться подключения к серверу и оно может оказаться неспособным обрабатывать новые запросы. Так как при закрытии ответа метод `WebResponse.Close` вызывает `Stream.Close`, вызывать `Close` для объектов как потока, так и ответа не требуется (при этом выполнение такой операции не приведет к негативным последствиям). Пример:
 
     ```csharp
     response.Close();

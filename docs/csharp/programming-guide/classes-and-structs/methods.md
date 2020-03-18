@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
 ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626533"
 ---
 # <a name="methods-c-programming-guide"></a>Методы (Руководство по программированию на C#)
@@ -119,7 +119,7 @@ public static void FillMatrix(int[,] matrix)
 
 С помощью функции async можно вызывать асинхронные методы, не прибегая к использованию явных обратных вызовов или ручному разделению кода между несколькими методами или лямбда-выражениями.
 
-Если пометить метод с помощью модификатора [async](../../language-reference/keywords/async.md) , можно использовать в этом методе инструкцию [await](../../language-reference/operators/await.md) . Когда управление достигает выражения await в асинхронном методе, управление возвращается вызывающему объекту и выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи можно возобновить выполнение в методе.
+Если пометить метод с помощью модификатора [async](../../language-reference/keywords/async.md), можно использовать в этом методе инструкцию [await](../../language-reference/operators/await.md). Когда управление достигает выражения await в асинхронном методе, управление возвращается вызывающему объекту и выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи можно возобновить выполнение в методе.
 
 > [!NOTE]
 > Асинхронный метод возвращается в вызывающий объект, когда он встречает первый ожидаемый объект, выполнение которого еще не завершено, или когда выполнение асинхронного метода доходит до конца — в зависимости от того, что происходит раньше.
@@ -132,7 +132,7 @@ public static void FillMatrix(int[,] matrix)
 
 [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
 
-Асинхронный метод не может объявить все параметры [ref](../../language-reference/keywords/ref.md) или [out](../../language-reference/keywords/out-parameter-modifier.md) , но может вызывать методы, которые имеют такие параметры.
+Асинхронный метод не может объявить все параметры [ref](../../language-reference/keywords/ref.md) или [out](../../language-reference/keywords/out-parameter-modifier.md), но может вызвать методы, которые имеют такие параметры.
 
 Дополнительные сведения об асинхронных методах см. в разделах [Асинхронное программирование с использованием ключевых слов async и await](../concepts/async/index.md), [Поток управления в асинхронных программах](../concepts/async/control-flow-in-async-programs.md) и [Асинхронные типы возврата](../concepts/async/async-return-types.md).
 
@@ -151,7 +151,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 Если метод возвращает `void` или является асинхронным методом, то текст метода должен быть выражением инструкции (так же, как при использовании лямбда-выражений). Свойства и индексаторы должны быть только для чтения, и вы не должны использовать ключевое слово `get` метода доступа.
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>Итераторы
 
 Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует инструкцию [yield return](../../language-reference/keywords/yield.md) для возврата всех элементов по одному. Когда достигается инструкция [yield return](../../language-reference/keywords/yield.md) , текущее расположение в коде запоминается. При следующем вызове итератора выполнение возобновляется с этого места.
 
@@ -165,7 +165,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы и структуры](index.md)

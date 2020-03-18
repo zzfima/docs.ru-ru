@@ -3,15 +3,15 @@ title: Среда разработки приложений Docker
 description: Ознакомьтесь с наиболее важными средствами разработки, поддерживающими жизненный цикл разработки Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71214303"
 ---
 # <a name="development-environment-for-docker-apps"></a>Среда разработки приложений Docker
 
-## <a name="development-tools-choices-ide-or-editor"></a>Выбор средств разработки: интегрированная среда разработки или редактор
+## <a name="development-tools-choices-ide-or-editor"></a>Выбор средства разработки: IDE или редактор
 
 Предпочитаете ли вы использовать полнофункциональную среду IDE или упрощенный редактор, корпорация Майкрософт предлагает вам удобное решение для разработки приложений Docker.
 

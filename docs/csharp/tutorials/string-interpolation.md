@@ -5,10 +5,10 @@ author: pkulikov
 ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
 ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73039211"
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк на C\#
@@ -17,7 +17,7 @@ ms.locfileid: "73039211"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-## <a name="introduction"></a>Вступление
+## <a name="introduction"></a>Введение
 
 Функция [интерполяции строк](../language-reference/tokens/interpolated.md) создана на основе функции [составного форматирования](../../standard/base-types/composite-formatting.md) и имеет более удобный синтаксис для включения форматированных результатов выражения в строку результатов.
 
@@ -107,7 +107,7 @@ ms.locfileid: "73039211"
 
 В этом руководстве описаны распространенные сценарии использования интерполяции строк. Дополнительные сведения об интерполяции строк см. в разделе [Интерполяция строк](../language-reference/tokens/interpolated.md). Дополнительные сведения о форматировании типов в .NET см. в разделах [Типы форматирования в .NET](../../standard/base-types/formatting-types.md) и [Составное форматирование](../../standard/base-types/composite-formatting.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - <xref:System.FormattableString?displayProperty=nameWithType>

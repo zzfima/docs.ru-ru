@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 ms.openlocfilehash: 628d6a96606117d447c61d01595d13dd4a957ce4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138115"
 ---
 # <a name="countdownevent"></a>CountdownEvent
@@ -38,13 +38,13 @@ ms.locfileid: "73138115"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>CountdownEvent с возможностью отмены  
- В примере ниже показано, как отменить операцию ожидания для <xref:System.Threading.CountdownEvent> с помощью маркера отмены. Базовый шаблон соответствует универсальной модели отмены, которая применяется на платформе .NET Framework 4. См. дополнительные сведения об [отмене в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
+ В примере ниже показано, как отменить операцию ожидания для <xref:System.Threading.CountdownEvent> с помощью маркера отмены. Базовый шаблон соответствует универсальной модели отмены, которая применяется на платформе .NET Framework 4. Дополнительные сведения см. в статье [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  
   
  Обратите внимание, что операция ожидания не отменяет потоки, отправляющие сигналы. Как правило, отмена применяется к логической операции, которая включает ожидание событий и все рабочие элементы, которые она синхронизирует. В этом примере каждому рабочему элементу передается копия маркера отмены, чтобы элемент выполнил необходимые действия для завершения работы.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Semaphore?displayProperty=nameWithType>

@@ -4,10 +4,10 @@ description: Дополнительные сведения о машинном �
 ms.topic: reference
 ms.date: 02/25/2020
 ms.openlocfilehash: 2ec58352a310130d6611ed351ea563aeca558f01
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628700"
 ---
 # <a name="mlnet-resources"></a>Ресурсы по ML.NET
@@ -18,6 +18,6 @@ ms.locfileid: "77628700"
 - [Обучающие ресурсы Azure по построителям моделей](azure-training-concepts-model-builder.md)
 - [Телеметрия ML.NET](ml-net-cli-telemetry.md)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Next Steps
 
 Примените полученные знания, выполнив один из [учебников по ML.NET](../tutorials/index.md).

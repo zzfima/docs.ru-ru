@@ -3,10 +3,10 @@ title: Основные сведения о проблемах и исключе
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
 ms.openlocfilehash: 172ad7508bdcac94cc278faab65a2e265b3c6a65
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76743899"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Основные сведения о проблемах и исключениях WebRequest
@@ -28,7 +28,7 @@ ms.locfileid: "76743899"
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|Службе доменных имен не удалось разрешить имя узла прокси-сервера.|Правильно настройте прокси-сервер. См. раздел <https://support.microsoft.com/?id=318140>.<br /><br /> Запретите <xref:System.Net.HttpWebRequest> использовать прокси-сервер, присвоив свойству <xref:System.Net.HttpWebRequest.Proxy%2A> значение `null`.|  
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Ответ от сервера не является допустимым ответом HTTP. Эта проблема возникает, если платформа .NET Framework определяет, что ответ от сервера не соответствует требованиям документа RFC HTTP 1.1. Причиной может быть то, что ответ содержит неправильные заголовки или разделители заголовков. В документе RFC 2616 определяется протокол HTTP 1.1 и допустимый формат ответа от сервера. Дополнительные сведения см. в документе [RFC 2616 — Hypertext Transfer Protocol — HTTP/1.1](https://tools.ietf.org/html/rfc2616) (RFC 2616 — протокол передачи гипертекста — HTTP/1.1) на веб-сайте [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Получите сетевую трассировку транзакции и изучите заголовки в ответе.<br /><br /> Если приложению требуется ответ от сервера без синтаксического разбора (это может создать угрозу безопасности), присвойте `useUnsafeHeaderParsing` значение `true` в файле конфигурации. См. раздел [Элемент \<httpWebRequest> (сетевые параметры)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>

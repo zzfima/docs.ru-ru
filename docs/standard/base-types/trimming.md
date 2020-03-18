@@ -16,10 +16,10 @@ helpviewer_keywords:
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159992"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Сокращение и удаление символов из строк в .NET
@@ -77,7 +77,7 @@ ms.locfileid: "78159992"
   
  Этот код выводит на консоль значение `World!`.  
   
-## <a name="remove"></a>Удалить
+## <a name="remove"></a>Remove
 
  Метод <xref:System.String.Remove%2A?displayProperty=nameWithType> удаляет указанное количество знаков, начиная с указанного места в существующей строке. Этот метод подразумевает, что отсчет индекса начинается с нуля.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "78159992"
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
-## <a name="replace"></a>Replace
+## <a name="replace"></a>Заменить
 
  Чтобы удалить из строки указанный символ или подстроку, можно вызвать метод <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> и указать пустую строку (<xref:System.String.Empty?displayProperty=nameWithType>) в качестве замены. В следующем примере удаляются все запятые из строки.  
   

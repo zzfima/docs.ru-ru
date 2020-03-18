@@ -7,10 +7,10 @@ helpviewer_keywords:
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141542"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Рекомендации по шаблону разработки Observer
@@ -51,8 +51,8 @@ ms.locfileid: "73141542"
   
  Несмотря на наличие возможности прикрепить наблюдателя к нескольким поставщикам, рекомендуется присоединить экземпляр <xref:System.IObserver%601> только к одному экземпляру <xref:System.IObservable%601>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)
-- [Практическое руководство. Реализация наблюдателя](../../../docs/standard/events/how-to-implement-an-observer.md)
+- [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Практическое руководство. Реализация поставщика](../../../docs/standard/events/how-to-implement-a-provider.md)

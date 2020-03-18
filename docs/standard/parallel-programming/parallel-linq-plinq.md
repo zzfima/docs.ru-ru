@@ -6,10 +6,10 @@ helpviewer_keywords:
 - PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 ms.openlocfilehash: 1ea880c6403a5fc8b26ba67fe21dfce79c4683db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140036"
 ---
 # <a name="parallel-linq-plinq"></a>Parallel LINQ (PLINQ)
@@ -17,7 +17,7 @@ Parallel LINQ (PLINQ) является параллельной реализац
   
  Во многих сценариях PLINQ может значительно увеличить скорость запросов LINQ to Objects, более эффективно используя все доступные ядра на главном компьютере. Повышенная производительность увеличивает мощность высокопроизводительных вычислений на настольных компьютерах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Введение в PLINQ](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
   
  [Общее представление об ускорении выполнения в PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)  
@@ -48,7 +48,7 @@ Parallel LINQ (PLINQ) является параллельной реализац
   
  [Пример данных PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq.ParallelEnumerable>
 - [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)

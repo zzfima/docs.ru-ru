@@ -6,10 +6,10 @@ helpviewer_keywords:
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121587"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Рекомендации по созданию компонентов для параллельного выполнения
@@ -60,7 +60,7 @@ ms.locfileid: "73121587"
   
  [Средство глобального кэша сборок (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) позволяет заменить сборку, если более новым является только номер версии файла. Установщик обычно переустанавливает сборку только в том случае, если номер версии сборки больше.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параллельное выполнение](side-by-side-execution.md)
 - [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

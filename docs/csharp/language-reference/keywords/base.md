@@ -10,10 +10,10 @@ helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
 ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713772"
 ---
 # <a name="base-c-reference"></a>base (Справочник по C#)
@@ -32,7 +32,7 @@ ms.locfileid: "75713772"
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере метод `Getinfo` присутствует как в базовом классе `Person`, так и в производном классе `Employee`. С помощью ключевого слова `base` можно вызвать метод `Getinfo` базового класса из производного класса.
+В приведенном ниже примере метод `Person` присутствует как в базовом классе `Employee`, так и в производном классе `Getinfo`. С помощью ключевого слова `base` можно вызвать метод `Getinfo` базового класса из производного класса.
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
@@ -48,7 +48,7 @@ ms.locfileid: "75713772"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

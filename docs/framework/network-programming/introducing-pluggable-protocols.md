@@ -23,10 +23,10 @@ helpviewer_keywords:
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047865"
 ---
 # <a name="introducing-pluggable-protocols"></a>Введение в подключаемые протоколы
@@ -66,7 +66,7 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
   
  Разработчикам, знакомым с интерфейсом сокетов Windows, или пользователям, которым требуется управление, предоставляемое программированием на уровне сокетов, окажутся полезны классы **System.Net.Sockets**. Классы **System.Net.Sockets** являются точкой перехода из управляемого кода в машинный код в раках классов **System.Net**. В большинстве случаев классы **System.Net.Sockets** выполняют маршалинг данных в свои 32-разрядные аналоги Windows, а также обрабатывают все необходимые проверки безопасности.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Программирование подключаемых протоколов](programming-pluggable-protocols.md)
 - [Сетевое программирование в .NET Framework](index.md)

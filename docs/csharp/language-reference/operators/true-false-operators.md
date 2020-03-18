@@ -5,12 +5,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 498f8698401e91845b14ee1dbcda84ba7166bd14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5ccd08a348478902bbbac36e99acf7ffc1fc814b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712602"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846224"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Операторы true и false (справочник по C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "75712602"
 > [!TIP]
 > Используйте тип `bool?`, если вам нужно использовать трехзначную логику (например, при работе с базами данных, которые поддерживают трехзначный логический тип). В C# предоставляются операторы `&` и `|`, которые поддерживают троичную логику с операндами `bool?`. См. подробнее о [логических операторах, поддерживающих значение NULL](boolean-logical-operators.md#nullable-boolean-logical-operators) в описании [логических операторов](boolean-logical-operators.md).
 
-## <a name="boolean-expressions"></a>логические выражения
+## <a name="boolean-expressions"></a>Логические выражения
 
 Тип с определенным оператором `true` может быть типом результата управляющего условного выражения в операторах [if](../keywords/if-else.md), [do](../keywords/do.md), [while](../keywords/while.md) и [for](../keywords/for.md) и [условном операторе`?:`](conditional-operator.md). Дополнительные сведения см. в описании [логических выражений](~/_csharplang/spec/expressions.md#boolean-expressions) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
@@ -31,7 +31,7 @@ ms.locfileid: "75712602"
 
 В следующем примере представлен тип, который определяет операторы `true` и `false`. Этот тип также перегружает логический оператор И `&` таким образом, что оператор `&&` может быть вычислен для операндов этого типа.
 
-[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
+[!code-csharp[true and false operators example](snippets/TrueFalseOperators.cs)]
 
 Обратите внимание на поведение сокращенного вычисления оператора `&&`. Когда метод `GetFuelLaunchStatus` возвращает `LaunchStatus.Red`, правый операнд оператора `&&` не вычисляется. Это обусловлено тем, что `LaunchStatus.Red` имеет значение false. Результат логического оператора И не зависит от значения правого операнда. Выходные данные примера могут быть следующими:
 
@@ -40,7 +40,7 @@ Getting fuel launch status...
 Wait!
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)

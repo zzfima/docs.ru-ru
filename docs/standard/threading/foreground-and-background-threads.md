@@ -9,10 +9,10 @@ helpviewer_keywords:
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138055"
 ---
 # <a name="foreground-and-background-threads"></a>Основные и фоновые потоки
@@ -30,7 +30,7 @@ ms.locfileid: "73138055"
   
  Если у вас есть поток, который отслеживает некоторое действие, например подключение через сокет, установите для его свойства <xref:System.Threading.Thread.IsBackground%2A> значение `true`, чтобы этот поток не мешал завершить процесс.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
 - <xref:System.Threading.Thread>

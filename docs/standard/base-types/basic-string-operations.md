@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
 ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132914"
 ---
 # <a name="basic-string-operations-in-net"></a>Базовые операции со строками в .NET
 Многие приложения взаимодействуют с пользователями, формируя сообщения, основанные на данных, введенных пользователями. Например, веб-узлы зачастую приветствуют вошедших пользователей персональным приветствием, содержащим его имя. Ряд методов в классах <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType> позволяют динамически создавать настраиваемые строки для отображения в пользовательском интерфейсе. С помощью этих методов также можно выполнять базовые операции со строками — например, создание новых строк из байтовых массивов, сравнение значений строк и изменение существующих строк.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Создание строк](../../../docs/standard/base-types/creating-new.md)  
  Описывает основные способы комбинирования строк и преобразования объектов в строки.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73132914"
  [Смена регистра](../../../docs/standard/base-types/changing-case.md)  
  Описывает изменение регистра для символов в строке.  
   
- [Использование класса StringBuilder в .NET](../../../docs/standard/base-types/stringbuilder.md)  
+ [Using the StringBuilder class](../../../docs/standard/base-types/stringbuilder.md) (Использование класса StringBuilder)  
  Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.  
   
  [Практическое руководство. Выполнение базовых операций со строками](../../../docs/standard/base-types/basic-manipulations.md)  

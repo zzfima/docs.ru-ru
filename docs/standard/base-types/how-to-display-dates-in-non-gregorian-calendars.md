@@ -12,10 +12,10 @@ helpviewer_keywords:
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138754"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Практическое руководство. Отображение дат в календарях, отличных от григорианского
@@ -83,6 +83,6 @@ ms.locfileid: "73138754"
   
  Независимо от календаря, используемого в этом примере для создания значения <xref:System.DateTime> или <xref:System.DateTimeOffset>, это значение обычно выражается в виде григорианской даты. Это происходит потому, что в типах <xref:System.DateTime> и <xref:System.DateTimeOffset> не сохраняются никакие данные календаря. Внутренне они представлены как число тактов, прошедших с момента полуночи 1 января 0001 г. Интерпретация этого числа зависит от календаря. Для большинства языков и региональных параметров по умолчанию используется григорианский календарь.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 ms.openlocfilehash: 24677b145974af03e6ddcac1b9bab5907ab70c7b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69924673"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (параметры компилятора C#)
@@ -28,7 +28,7 @@ ms.locfileid: "69924673"
  `filename`  
  Имя и расположение пользовательского файла манифеста.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  По умолчанию компилятор Visual C# внедряет манифест приложения, определяющий запрошенный уровень выполнения "asInvoker". Он создает манифест в той же папке, в которой создан исполняемый файл, обычно в папке bin\Debug или bin\Release при использовании Visual Studio. Если необходимо предоставить пользовательский манифест, например, чтобы задать уровень выполнения highestAvailable or requireAdministrator, используйте этот параметр, чтобы указать имя файла.  
   
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "69924673"
 </assembly>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [-nowin32manifest (параметры компилятора C#)](./nowin32manifest-compiler-option.md)

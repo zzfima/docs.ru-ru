@@ -13,10 +13,10 @@ helpviewer_keywords:
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 ms.openlocfilehash: b3a106eb58de4865e260a43c8466019e738510f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130902"
 ---
 # <a name="extending-metadata-using-attributes"></a>Расширение метаданных с помощью атрибутов
@@ -26,7 +26,7 @@ ms.locfileid: "73130902"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|ОПИСАНИЕ|  
+|Название|Описание:|  
 |-----------|-----------------|  
 |[Применение атрибутов](../../../docs/standard/attributes/applying-attributes.md)|Описание порядка применения атрибута к элементу кода.|  
 |[Написание настраиваемых атрибутов](../../../docs/standard/attributes/writing-custom-attributes.md)|Описание разработки пользовательских классов атрибутов.|  
@@ -34,5 +34,5 @@ ms.locfileid: "73130902"
 |[Метаданные и компоненты с самоописанием](../../../docs/standard/metadata-and-self-describing-components.md)|Общие сведения о метаданных и описание их реализации в переносимом исполняемом файле (PE) платформы .NET Framework.|  
 |[Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Описание способов получения сведений настраиваемых атрибутов в контексте, предназначенном только для отражения.|  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Attribute?displayProperty=nameWithType>

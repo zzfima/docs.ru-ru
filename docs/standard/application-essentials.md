@@ -6,16 +6,16 @@ helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 ms.openlocfilehash: 494f3305f225e0130df30433f3fa0d06ca218068
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122553"
 ---
 # <a name="net-framework-application-essentials"></a>Основные сведения о приложениях .NET Framework
 В этом разделе документации по платформе .NET Framework представлены сведения о базовых задачах разработки приложений с использованием .NET Framework.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Базовые типы](../../docs/standard/base-types/index.md)  
  Описание форматирования и синтаксического анализа базовых типов данных, а также использования регулярных выражений для обработки текста.  
   
@@ -64,5 +64,5 @@ ms.locfileid: "73122553"
  [Руководство по разработке](../../docs/framework/development-guide.md)  
  Здесь содержится руководство по всем ключевым технологическим областям и задачам для разработки приложений, включая создание, настройку, отладку, безопасность и развертывание приложений, а также сведения о динамическом программировании, взаимодействии, расширении среды, управлении памятью и работе с потоками.  
   
- [Безопасность](../../docs/standard/security/index.md)  
+ [Security](../../docs/standard/security/index.md)  
  Здесь сведения о классах и службах среды CLR и .NET Framework, предназначенных для упрощения разработки безопасных приложений.

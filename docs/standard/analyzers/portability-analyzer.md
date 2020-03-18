@@ -5,10 +5,10 @@ ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.openlocfilehash: e0a5c791926b36fe5a35c5446471c3dcdb75cd7b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72774380"
 ---
 # <a name="the-net-portability-analyzer"></a>Анализатор переносимости .NET
@@ -57,7 +57,7 @@ ms.locfileid: "72774380"
 
 В разделе со сводкой по переносимости в этом отчете показан процент переносимости для каждой сборки, включенной в анализ. В предыдущем примере 71,24 % API-интерфейсов .NET Framework, используемых в приложении `svcutil`, доступны в .NET Core и расширениях платформы. Если запустить анализатор переносимости .NET для нескольких сборок, каждая сборка должна иметь строку в сводном отчете о переносимости.
 
-#### <a name="details"></a>Подробные сведения
+#### <a name="details"></a>Подробнее
 
 ![Снимок экрана: сведения о переносимости](./media/portability-analyzer/api-catalog-portablility-details.png)
 

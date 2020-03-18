@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198547"
 ---
 ### <a name="http-response-body-infrastructure-changes"></a>HTTP. Изменения инфраструктуры текста ответа
@@ -30,7 +30,7 @@ ms.locfileid: "73198547"
 
 Объединение API текста ответа в единый новый интерфейс функций.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Используйте `IHttpResponseBodyFeature` том, где ранее использовали `IHttpResponseFeature.Body`, `IHttpSendFileFeature` или `IHttpBufferingFeature`.
 

@@ -3,10 +3,10 @@ title: Управление микрослужбами и многоконтей
 description: Сведения о развертывании приложения с помощью службы Azure Kubernetes.
 ms.date: 02/15/2019
 ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71182372"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Развертывание в службе Azure Kubernetes (AKS)

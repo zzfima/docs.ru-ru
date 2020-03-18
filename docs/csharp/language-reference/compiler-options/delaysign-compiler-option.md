@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
 ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970445"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (параметры компилятора C#)
@@ -31,7 +31,7 @@ ms.locfileid: "70970445"
 
 Если требуется полностью подписанная сборка, используйте параметр **-delaysign-** . Если нужно лишь поместить в сборку открытый ключ, используйте параметр **-delaysign+** . Значение по умолчанию — **-delaysign-** .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Параметр **-delaysign** никак не действует, если не использовать его с [-keyfile](./keyfile-compiler-option.md) или [-keycontainer](./keycontainer-compiler-option.md).
 
@@ -50,7 +50,7 @@ ms.locfileid: "70970445"
 
 Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметр -publicsign в C#](publicsign-compiler-option.md)
 - [Параметры компилятора C# ](index.md)

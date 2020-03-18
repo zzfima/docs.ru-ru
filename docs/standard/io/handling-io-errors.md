@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120746"
 ---
 # <a name="handling-io-errors-in-net"></a>Обработка ошибок ввода-вывода в .NET
@@ -55,12 +55,12 @@ ms.locfileid: "73120746"
 | <xref:System.OperationCanceledException> | Да | Да |
 | <xref:System.UnauthorizedAccessException> | Да | Да |
 | <xref:System.ArgumentException> | .NET Core 2.0 или более ранняя версия| Да |
-| <xref:System.NotSupportedException> | Нет | Да |
-| <xref:System.Security.SecurityException> | Нет | Только для ограниченного доверия |
+| <xref:System.NotSupportedException> | нет | Да |
+| <xref:System.Security.SecurityException> | нет | Только для ограниченного доверия |
 
 ## <a name="handling-ioexception"></a>Обработка IOException
 
-<xref:System.IO.IOException> является базовым классом для исключений в пространстве имен <xref:System.IO> и создается для любого кода ошибки, который не имеет сопоставления с определенным типом исключения. Это означает, что оно может появиться в любой операции ввода-вывода.
+<xref:System.IO> является базовым классом для исключений в пространстве имен <xref:System.IO.IOException> и создается для любого кода ошибки, который не имеет сопоставления с определенным типом исключения. Это означает, что оно может появиться в любой операции ввода-вывода.
 
 > [!IMPORTANT]
 > Так как <xref:System.IO.IOException> является базовым классом для других типов исключений в пространстве имен <xref:System.IO>, его нужно обрабатывать в блоке `catch` после обработки других исключений, связанных с вводом-выводом.
@@ -71,7 +71,7 @@ ms.locfileid: "73120746"
 
 В случае с <xref:System.IO.IOException> дополнительные сведения об ошибке можно получить из свойства [IOException.HResult](xref:System.Exception.HResult). Чтобы преобразовать значение HResult в код ошибки Win32, отбросьте верхние 16 бит из 32-разрядного значения. В приведенной ниже таблице перечислены коды ошибок, которые могут быть заключены в <xref:System.IO.IOException>.
 
-| HResult | Константа | Описание |
+| HResult | Константа | Описание: |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Отсутствует имя файла, или файл или каталог уже используется. |
 | ERROR_FILE_EXISTS | 80 | Файл уже существует. |
@@ -83,7 +83,7 @@ ms.locfileid: "73120746"
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Обработка и создание исключений в .NET](../exceptions/index.md)
 - [Обработка исключений (библиотека параллельных задач)](../parallel-programming/exception-handling-task-parallel-library.md)

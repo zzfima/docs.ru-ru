@@ -8,10 +8,10 @@ helpviewer_keywords:
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
 ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793368"
 ---
 # <a name="typeparam-c-programming-guide"></a>Руководство по программированию на C#. \<typeparam>
@@ -32,7 +32,7 @@ ms.locfileid: "76793368"
 
   Описание параметра типа.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Тег `<typeparam>` следует использовать в комментариях к объявлению универсального типа или метода для описания параметра типа. Добавьте такой тег для каждого параметра типа универсального типа или метода.
 
@@ -46,7 +46,7 @@ ms.locfileid: "76793368"
 
 [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../../language-reference/index.md)
 - [Руководство по программированию на C#](../index.md)

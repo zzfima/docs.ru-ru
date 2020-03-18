@@ -3,10 +3,10 @@ title: Улучшения производительности сокетов в
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047242"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Улучшения производительности сокетов в версии 3.5
@@ -33,7 +33,7 @@ ms.locfileid: "71047242"
   
  Время существования нового объекта контекста для асинхронной операции на сокете определяется ссылками в коде приложения и ссылками асинхронного ввода-вывода. Приложению не требуется сохранять ссылку на объект контекста асинхронной операции на сокете после ее передачи в качестве параметра в один из методов асинхронной операции на сокете. Ссылка сохраняется до тех пор, пока не будет возвращен обратный вызов завершения. Однако ссылку на объект контекста полезно сохранять, чтобы приложение могло использовать этот объект повторно для последующей асинхронной операции на сокете.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>

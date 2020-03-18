@@ -3,10 +3,10 @@ title: Создание составного пользовательского 
 description: Архитектура микрослужб подходит не только для серверной части. Здесь вы можете кратко ознакомиться с ее применением во внешней интерфейсной части.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72275742"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Создание составного пользовательского интерфейса на основе микрослужб

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121960"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Рекомендации по использованию структур Memory\<T> и Span\<T>
 
-В .NET Core есть несколько типов, представляющих произвольную непрерывную область памяти. В .NET Core 2.0 появились типы <xref:System.Span%601> и <xref:System.ReadOnlySpan%601>, которые являются упрощенными буферами памяти, поддерживаемыми управляемой или неуправляемой памятью. Так как эти типы могут храниться только в стеке, они непригодны для ряда сценариев, включая вызовы асинхронных методов. В .NET Core 2.1 был добавлен ряд дополнительных типов, включая <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> и <xref:System.Buffers.MemoryPool%601>. Как и <xref:System.Span%601>, <xref:System.Memory%601> и связанные с ним типы могут поддерживаться управляемой и неуправляемой памятью. В отличие от <xref:System.Span%601> <xref:System.Memory%601> может храниться в управляемой куче.
+В .NET Core есть несколько типов, представляющих произвольную непрерывную область памяти. В .NET Core 2.0 появились типы <xref:System.Span%601> и <xref:System.ReadOnlySpan%601>, которые являются упрощенными буферами памяти, поддерживаемыми управляемой или неуправляемой памятью. Так как эти типы могут храниться только в стеке, они непригодны для ряда сценариев, включая вызовы асинхронных методов. В .NET Core 2.1 был добавлен ряд дополнительных типов, включая <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> и <xref:System.Buffers.MemoryPool%601>. Как и <xref:System.Span%601>, <xref:System.Memory%601> и связанные с ним типы могут поддерживаться управляемой и неуправляемой памятью. В отличие от <xref:System.Span%601><xref:System.Memory%601> может храниться в управляемой куче.
 
 <xref:System.Span%601> и <xref:System.Memory%601> являются буферами структурированных данных, которые можно использовать в конвейерах. То есть они разработаны так, чтобы некоторые или все данные могли быть эффективно переданы компонентам в конвейере, который способен их обрабатывать и при необходимости изменять буфер. Так как <xref:System.Memory%601> и связанные с ним типы могут быть доступными нескольким компонентам или нескольким потокам, важно, чтобы разработчик следовал некоторым общим рекомендациям для создания надежного кода.
 

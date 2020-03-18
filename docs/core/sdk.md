@@ -4,10 +4,10 @@ description: Сведения о пакете SDK для .NET Core, которы
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
 ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157470"
 ---
 # <a name="net-core-sdk-overview"></a>Обзор пакета SDK для .NET Core

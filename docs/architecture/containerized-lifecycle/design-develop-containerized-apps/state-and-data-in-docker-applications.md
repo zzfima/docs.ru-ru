@@ -3,10 +3,10 @@ title: Состояние и данные в приложениях Docker
 description: Сведения о доступной возможности для сохранения состояния в контейнерных приложениях.
 ms.date: 02/15/2019
 ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394643"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Состояние и данные в приложениях Docker

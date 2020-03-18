@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922502"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (параметры компилятора C#)
@@ -32,13 +32,13 @@ ms.locfileid: "69922502"
  `full` &#124; `pdbonly`  
  Определяет тип отладочной информации, создаваемой компилятором. Аргумент full, действующий при отсутствии параметра **-debug:pdbonly**, позволяет присоединить отладчик к выполняющейся программе. Задание параметра pdbonly позволяет выполнять отладку исходного кода при запуске программы в отладчике, но при этом ассемблер отображается только при подключении выполняющейся программы к отладчику.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Используйте этот параметр для создания отладочных сборок. Если не задать параметр **-debug**, **-debug+** или **-debug:full**, то отладка выходного файла программы будет невозможна.  
   
  При использовании параметра **-debug:full** нужно учитывать некоторое влияние на скорость и размер оптимизированного кода JIT и незначительное влияние на качество кода с **-debug:full**. Для создания кода выпуска рекомендуется использовать параметр **-debug:pdbonly** либо не использовать PDB.  
   
 > [!NOTE]
-> Отличие **-debug:pdbonly** от **-debug:full** заключается в том, что компилятор с параметром **-debug:full** создает <xref:System.Diagnostics.DebuggableAttribute>, сообщающий JIT-компилятору о доступности отладочных сведений. Поэтому если при использовании параметра **-debug:full** код содержит <xref:System.Diagnostics.DebuggableAttribute> со значением false, выводится сообщение об ошибке.  
+> Отличие **-debug:pdbonly** от **-debug:full** заключается в том, что компилятор с параметром **-debug:full** создает <xref:System.Diagnostics.DebuggableAttribute>, сообщающий JIT-компилятору о доступности отладочных сведений. Поэтому если при использовании параметра <xref:System.Diagnostics.DebuggableAttribute>-debug:full**код содержит** со значением false, выводится сообщение об ошибке.  
   
  Дополнительные сведения о настройке производительности отладки для приложения см. в разделе [Упрощение отладки образов](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "69922502"
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

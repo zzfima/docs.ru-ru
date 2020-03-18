@@ -15,10 +15,10 @@ helpviewer_keywords:
 - DateTime object
 - time strings
 ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156547"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Синтаксический анализ строк даты и времени в .NET
@@ -48,7 +48,7 @@ ms.locfileid: "78156547"
   
 Поставщик формата также используется для интерпретации неоднозначных числовых дат. Например, в строке "02/03/04" неясно, какие компоненты соответствуют месяцу, дню и году. Такие компоненты интерпретируются согласно их порядку расположения в схожих форматах даты в поставщике формата.
 
-## <a name="parse"></a>Синтаксический анализ
+## <a name="parse"></a>Анализ
 
 Ниже приведен пример использования метода <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> для преобразования `string` в <xref:System.DateTime>. В этом примере используются язык и региональные параметры, связанные с текущим потоком. Если класс <xref:System.Globalization.CultureInfo>, связанный с текущим значением языка и региональных параметров, не может выполнить синтаксический анализ исходной строки, создается исключение <xref:System.FormatException>.
 
@@ -61,7 +61,7 @@ ms.locfileid: "78156547"
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
 
-Кроме того, вы можете явно определить язык и региональные параметры, соглашения о форматировании для которых используются при анализе строки. Укажите один из стандартных объектов <xref:System.Globalization.DateTimeFormatInfo>, возвращенных свойством <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>. В приведенном ниже примере поставщик формата используется для анализа строки на немецком языке в <xref:System.DateTime>. Для представления языка и региональных параметров `de-DE` создается <xref:System.Globalization.CultureInfo>. Этот объект `CultureInfo` обеспечивает успешный анализ определенной строки. Это устраняет необходимость задания каких-либо параметров в <xref:System.Threading.Thread.CurrentCulture> потока <xref:System.Threading.Thread.CurrentThread>.  
+Кроме того, вы можете явно определить язык и региональные параметры, соглашения о форматировании для которых используются при анализе строки. Укажите один из стандартных объектов <xref:System.Globalization.DateTimeFormatInfo>, возвращенных свойством <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>. В приведенном ниже примере поставщик формата используется для анализа строки на немецком языке в <xref:System.DateTime>. Для представления языка и региональных параметров <xref:System.Globalization.CultureInfo> создается `de-DE`. Этот объект `CultureInfo` обеспечивает успешный анализ определенной строки. Это устраняет необходимость задания каких-либо параметров в <xref:System.Threading.Thread.CurrentCulture> потока <xref:System.Threading.Thread.CurrentThread>.  
   
 [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
@@ -86,7 +86,7 @@ ms.locfileid: "78156547"
 
 ## <a name="see-also"></a>См. также раздел
 
-- [Анализ строк в .NET](parsing-strings.md)
+- [Анализ строк в .NET Framework](parsing-strings.md)
 - [Типы форматирования](formatting-types.md)
 - [Преобразование типов в .NET](type-conversion.md)
 - [Стандартные форматы даты и времени](standard-date-and-time-format-strings.md)

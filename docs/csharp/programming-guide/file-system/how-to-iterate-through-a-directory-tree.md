@@ -6,10 +6,10 @@ helpviewer_keywords:
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
 ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712264"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Руководство по программированию на C#. Выполнение итерации по дереву папок
@@ -43,7 +43,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере показан обход файлов и папок в дереве папок без использования рекурсии. Этот метод использует универсальный тип коллекции <xref:System.Collections.Generic.Stack%601>, который представляет стек типа "последним пришел — первым вышел" (LIFO).  
+ В приведенном ниже примере показана итерация файлов и папок в дереве каталога без использования рекурсии. Этот метод использует универсальный тип коллекции <xref:System.Collections.Generic.Stack%601>, который представляет стек типа "последним пришел — первым вышел" (LIFO).  
   
  Обрабатываемые исключения и действия, выполняемые с каждым файлом или папкой, предоставляются только в качестве примеров. Этот код следует изменить в соответствии с конкретными требованиями. Дополнительные сведения см. в комментариях в коде.  
   
@@ -56,7 +56,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Надежный код обхода файлов должен учитывать сложности файловой системы. Дополнительные сведения о файловой системе Windows см. в статье [Обзор NTFS](/windows-server/storage/file-server/ntfs-overview).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO>
 - [LINQ и каталоги файлов](../concepts/linq/linq-and-file-directories.md)

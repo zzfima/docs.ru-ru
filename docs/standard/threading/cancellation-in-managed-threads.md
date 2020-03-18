@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138139"
 ---
 # <a name="cancellation-in-managed-threads"></a>Отмена в управляемых потоках
@@ -52,7 +52,7 @@ ms.locfileid: "73138139"
 ## <a name="cancellation-types"></a>Типы отмены  
  Инфраструктура отмены реализована в виде набора связанных типов, приведенных в таблице ниже.  
   
-|Имя типа|ОПИСАНИЕ|  
+|Имя типа|Описание|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|Объект, который создает токен отмены и запрос на отмену для всех копий этого токена.|  
 |<xref:System.Threading.CancellationToken>|Простой тип значения, передаваемый одному или нескольким прослушивателям, обычно в виде параметра метода. Прослушиватели отслеживают значение свойства `IsCancellationRequested` токена посредством опроса, обратного вызова или дескриптора ожидания.|  

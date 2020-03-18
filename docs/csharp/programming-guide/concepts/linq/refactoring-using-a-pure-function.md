@@ -3,10 +3,10 @@ title: Рефакторинг с использованием чистых фу�
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253081"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Рефакторинг с использованием чистых функций (C#)
@@ -174,13 +174,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a>Следующие шаги  
+### <a name="next-steps"></a>Next Steps  
  В следующем примере показано, как выполнить проекцию XML в другую форму:  
   
 - [Проецирование XML в другую форму (C#)](./projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Учебник. Обработка содержимого документа WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Учебник. Управление содержимым в документе WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
 - [Рефакторинг с использованием метода расширения (C#)](./refactoring-using-an-extension-method.md)
 - [Рефакторинг в чистые функции (C#)](./refactoring-into-pure-functions.md)

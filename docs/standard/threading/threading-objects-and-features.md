@@ -7,17 +7,17 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128960"
 ---
 # <a name="threading-objects-and-features"></a>Объекты и функциональные возможности работы с потоками
 
 Вместе с классом <xref:System.Threading.Thread?displayProperty=nameWithType> .NET предоставляет ряд классов для разработки многопоточных приложений. В следующих статьях приведены общие сведения об этих классах:
 
-|Заголовок|Описание|  
+|Название|Описание:|  
 |-----------|-----------------|  
 |[Пул управляемых потоков](the-managed-thread-pool.md)|Описание класса <xref:System.Threading.ThreadPool?displayProperty=nameWithType>, который предоставляет пул рабочих потоков, управляемых .NET.|  
 |[Таймеры](timers.md)|Описывает таймеры .NET, которые можно использовать в многопоточной среде.|
@@ -30,7 +30,7 @@ ms.locfileid: "73128960"
 |[SpinLock](spinlock.md)|Описывает структуру <xref:System.Threading.SpinLock?displayProperty=nameWithType>, упрощенную альтернативу классу <xref:System.Threading.Monitor?displayProperty=nameWithType> для определенных низкоуровневых сценариев блокировки.|
 |[SpinWait](spinwait.md)|Описывает структуру <xref:System.Threading.SpinWait?displayProperty=nameWithType>, которая обеспечивает поддержку ожидания на основе холостых циклов.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.WaitHandle?displayProperty=nameWithType>

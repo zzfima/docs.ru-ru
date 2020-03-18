@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 ms.openlocfilehash: ffc275c588775fb79da276be904ada90a5a31bad
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937929"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (средство создания заметок безопасности .NET)
@@ -17,7 +17,7 @@ ms.locfileid: "75937929"
   
  Расширение Visual Studio [Security Annotator](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator) обеспечивает графический пользовательский интерфейс для программы SecAnnotate.exe и позволяет запускать эту программу из Visual Studio.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
+ Это средство автоматически устанавливается с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующий текст, где *параметры* описаны в следующем разделе, а *сборки* состоят из одного имени сборок или нескольких, разделенных пробелами.  
   
@@ -29,7 +29,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |`/a`<br /><br /> or<br /><br /> `/showstatistics`|Показывает статистику использования прозрачности в анализируемых сборках.|  
 |`/d:` *каталог*<br /><br /> or<br /><br /> `/referencedir:` *каталог*|Указывает каталог для поиска зависимых сборок во время создания заметок.|  
@@ -47,7 +47,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/x`<br /><br /> or<br /><br /> `/verbose`|Задает подробный вывод при создании заметок.|  
 |`/y:` *каталог*<br /><br /> or<br /><br /> `/symbolpath:` *каталог*|Включает указанный каталог при поиске файлов символов во время аннотирования.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Параметры и сборки также могут предоставляться в файле ответов, указанном в командной строке с префиксом в виде знака \@ . Каждая строка в файле ответов должна содержать один параметр или имя сборки.  
   
  Дополнительные сведения о .NET Security Annotator см. в записи [Использование SecAnnotate для анализа сборок на наличие нарушений прозрачности](https://docs.microsoft.com/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example) в блоге .NET Security.  

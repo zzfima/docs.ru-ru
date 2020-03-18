@@ -3,10 +3,10 @@ title: Обработка асинхронных задач по мере зав
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
 ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71736730"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)
@@ -20,7 +20,7 @@ ms.locfileid: "71736730"
 
 ## <a name="download-an-example-solution"></a>Скачивание примера решения
 
-Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.
+Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.
 
 > [!TIP]
 > Если вы не хотите скачивать проект, просто изучите файл *MainWindow.xaml.cs* в конце этого раздела.
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 Приведенный ниже код — это полный текст файла *MainWindow.xaml.cs* для примера. Звездочками помечаются элементы, добавленные для этого примера. Также обратите внимание, что необходимо добавить ссылку для <xref:System.Net.Http>.
 
-Вы можете скачать проект из статьи [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Можно загрузить проект со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -225,9 +225,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Fine-Tuning Your Async Application (C#)](fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)
-- [Асинхронное программирование с использованием ключевых слов async и await (C#)](index.md)
-- [Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](index.md)
+- [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

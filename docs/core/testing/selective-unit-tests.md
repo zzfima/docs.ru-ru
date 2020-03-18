@@ -4,10 +4,10 @@ description: Как использовать выражения фильтра �
 author: smadala
 ms.date: 03/22/2017
 ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543512"
 ---
 # <a name="running-selective-unit-tests"></a>Выполнение выборочных модульных тестов
@@ -59,7 +59,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Выполняет тесты с `UnitTest1` в `FullyQualifiedName` **или** `TestCategory` является `CategoryA`. |
 | `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Выполняет тесты с `UnitTest1` в `FullyQualifiedName` **и** `TestCategory` является `CategoryA`. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Выполняет тесты с `UnitTest1` в `FullyQualifiedName` **и** `TestCategory` является `CategoryA` **или** `Priority` равно 1. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Выполняет тесты с `FullyQualifiedName` в `UnitTest1` **и** `TestCategory` является `CategoryA` **или** `Priority` равно 1. |
 
 ## <a name="xunit"></a>xUnit
 
@@ -105,7 +105,7 @@ namespace XUnitNamespace
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | Выполняет тесты с `TestClass1` в `FullyQualifiedName` **или** `Category` является `CategoryA`. |
 | `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | Выполняет тесты с `TestClass1` в `FullyQualifiedName` **или** `Category` является `CategoryA`. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | Выполняет тесты с `TestClass1` в `FullyQualifiedName` **и** `Category` является `CategoryA` **или** `Priority` равно 1. |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | Выполняет тесты с `FullyQualifiedName` в `TestClass1` **и** `Category` является `CategoryA` **или** `Priority` равно 1. |
 
 ## <a name="nunit"></a>NUnit
 
@@ -147,4 +147,4 @@ namespace NUnitNamespace
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Выполняет тесты с `UnitTest1` в `FullyQualifiedName` **или** `TestCategory` является `CategoryA`. |
 | `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Выполняет тесты с `UnitTest1` в `FullyQualifiedName` **и** `TestCategory` является `CategoryA`. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Выполняет тесты с `UnitTest1` в `FullyQualifiedName` **и** `TestCategory` является `CategoryA` **или** `Priority` равно 1. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Выполняет тесты с `FullyQualifiedName` в `UnitTest1` **и** `TestCategory` является `CategoryA` **или** `Priority` равно 1. |

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141328"
 ---
 # <a name="weak-references"></a>Слабые ссылки
@@ -50,6 +50,6 @@ ms.locfileid: "73141328"
   
  Избегайте использования слабых ссылок в качестве автоматического решения проблем, связанных с управлением памятью. Вместо этого разработайте эффективную политику кэширования для обработки объектов приложения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Сборка мусора](../../../docs/standard/garbage-collection/index.md)

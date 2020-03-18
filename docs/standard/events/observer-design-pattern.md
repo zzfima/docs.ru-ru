@@ -13,10 +13,10 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131576"
 ---
 # <a name="observer-design-pattern"></a>Шаблон разработки Observer
@@ -91,8 +91,8 @@ ms.locfileid: "73131576"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|ОПИСАНИЕ|
+|Название|Описание:|
 |-----------|-----------------|
 |[Рекомендации по шаблону разработки Observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Рекомендации по разработке приложений, реализующих шаблон разработки наблюдателя.|
 |[Практическое руководство. Реализация поставщика](../../../docs/standard/events/how-to-implement-a-provider.md)|Пошаговая реализация поставщика для приложения контроля температуры.|
-|[Практическое руководство. Реализация наблюдателя](../../../docs/standard/events/how-to-implement-an-observer.md)|Пошаговая реализация наблюдателя для приложения контроля температуры.|
+|[Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md)|Пошаговая реализация наблюдателя для приложения контроля температуры.|

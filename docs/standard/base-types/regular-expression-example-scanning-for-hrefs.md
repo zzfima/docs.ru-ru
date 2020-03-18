@@ -14,13 +14,13 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084214"
 ---
-# <a name="regular-expression-example-scanning-for-hrefs"></a>Пример регулярных выражений: поиск ссылок HREF
+# <a name="regular-expression-example-scanning-for-hrefs"></a>Пример регулярных выражений: Поиск ссылок HREF
 В следующем примере показаны поиск и вывод всех значений href="...", а также их позиций в строке.  
   
 ## <a name="the-regex-object"></a>Объект Regex  
@@ -36,7 +36,7 @@ ms.locfileid: "73084214"
   
  Возможные интерпретации шаблона регулярного выражения `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` показаны в следующей таблице.  
   
-|Шаблон|ОПИСАНИЕ|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`href`|Совпадение с литеральной строкой "href". Сопоставление не учитывает регистр.|  
 |`\s*`|Соответствует нулю или нескольким символам пробела.|  

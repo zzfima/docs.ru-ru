@@ -3,10 +3,10 @@ title: Типы критических изменений
 description: Узнайте, как .NET Core пытается обеспечить совместимость для разработчиков в разных версиях .NET и какого рода изменения рассматриваются как критические.
 ms.date: 06/10/2019
 ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628596"
 ---
 # <a name="changes-that-affect-compatibility"></a>Изменения, влияющие на совместимость

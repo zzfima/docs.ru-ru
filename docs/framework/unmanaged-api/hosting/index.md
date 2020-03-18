@@ -7,16 +7,16 @@ helpviewer_keywords:
 - hosting [.NET Framework], using the unmanaged API
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 ms.openlocfilehash: 3fe07ba06d5e50c178c84dcb05351923e0548849
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73102680"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Размещение (справочник по неуправляемым интерфейсам API)
 API размещения позволяет неуправляемым узлам интегрировать среду CLR в свои приложения.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Размещение коклассов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
  Описываются неуправляемые коклассы, которые использует API размещения.  
   

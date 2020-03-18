@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713818"
 ---
 # <a name="accessibility-levels-c-reference"></a>Уровни доступности (Справочник по C#)
@@ -37,9 +37,9 @@ ms.locfileid: "75713818"
   
 |Члены типа|Уровень доступности членов по умолчанию|Допустимые объявленные уровни доступности члена|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|Отсутствуют|  
+|`enum`|`public`|None|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Отсутствуют|  
+|`interface`|`public`|None|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  Доступность вложенного типа зависит от [домена доступности](./accessibility-domain.md), который определяется объявленным уровнем доступности члена и доменом доступности непосредственно вмещающего его типа. Однако домен доступности вложенного типа не может выходить за границы домена доступности содержащего его типа.  
@@ -47,7 +47,7 @@ ms.locfileid: "75713818"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

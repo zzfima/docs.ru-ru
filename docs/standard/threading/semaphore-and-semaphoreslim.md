@@ -11,10 +11,10 @@ helpviewer_keywords:
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127590"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Классы Semaphore и SemaphoreSlim
@@ -44,7 +44,7 @@ ms.locfileid: "73127590"
   
  Используйте безопасность управления доступом для защиты объекта <xref:System.Threading.Semaphore>, представляющего именованный семафор, предпочтительнее с помощью конструктора, который определяет объект <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. Также можно применить безопасность управления доступом с помощью метода <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>, однако это оставит брешь в защите между временем создания семафора и временем, когда он будет защищен. Защита семафоров с помощью безопасности управления доступом способствует предотвращению атак злоумышленников, но не решает проблемы непреднамеренного конфликта имен.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>

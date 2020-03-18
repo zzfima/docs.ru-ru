@@ -3,10 +3,10 @@ title: Перенос .NET Core из project.json
 description: Сведения о переносе старого проекта .NET Core с использованием project.json
 ms.date: 07/19/2017
 ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77450691"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Перенос проектов .NET Core из project.json
@@ -51,7 +51,7 @@ Visual Studio автоматически переносит выбранные �
 > Если вы используете Visual Studio Code, команда `dotnet migrate` не изменяет файлы, относящиеся к Visual Studio Code, такие как *tasks.json*. Эти файлы нужно будет изменить вручную.
 > Это также справедливо, если используются редактор или интегрированная среда разработки (IDE), отличные от Visual Studio.
 
-Сравнение форматов *project.json* и *CSPROJ* см. в разделе [Сопоставление свойств project.json и CSPROJ](../tools/project-json-to-csproj.md).
+Сравнение форматов [project.json](../tools/project-json-to-csproj.md) и *CSPROJ* см. в разделе *Сопоставление свойств project.json и CSPROJ*.
 
 Если вы получили сообщение об ошибке следующего содержания:
 
@@ -86,6 +86,6 @@ Visual Studio автоматически переносит выбранные �
 
 Примеры проектов до и после перехода от старого формата csproj к новому см. в статье [Обновление версии-кандидата Visual Studio 2017 — улучшение инструментов .NET Core](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) в блоге .NET.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Перенос кода, миграция и обновление проектов Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

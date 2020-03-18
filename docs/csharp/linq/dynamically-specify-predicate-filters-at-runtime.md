@@ -4,11 +4,11 @@ description: Узнайте, как выполнять динамическое 
 ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857740"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659947"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Динамическое определение фильтров предикатов во время выполнения
 
@@ -42,7 +42,7 @@ ms.locfileid: "54857740"
 
      Омельченко: 111
 
-8. Следующим шагом станет повторный запуск проекта, на этот раз с данными, введенными в среде выполнения, а не с массивом `ids`. В методе `Main` измените `QueryByID(ids)` на `QueryByID(args)`.
+8. Следующим шагом станет повторный запуск проекта, на этот раз с данными, введенными в среде выполнения, а не с массивом `ids`. В методе `QueryByID(ids)` измените `QueryByID(args)` на `Main`.
 
 9. Запустите проект с аргументами командной строки `122 117 120 115`. Когда проект будет запущен, эти значения станут элементами `args` — параметра метода `Main`.
 
@@ -68,7 +68,7 @@ ms.locfileid: "54857740"
 
 4. Запустите проект с помощью аргумента командной строки, выраженного целочисленным значением от 1 до 4.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ](index.md)
 - [предложение where](../language-reference/keywords/where-clause.md)

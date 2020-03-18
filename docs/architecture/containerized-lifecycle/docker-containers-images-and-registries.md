@@ -3,10 +3,10 @@ title: Контейнеры, образы и реестры Docker
 description: Сведения о ключевой роли реестров при развертывании приложений в Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72770919"
 ---
 # <a name="docker-containers-images-and-registries"></a>Контейнеры, образы и реестры Docker

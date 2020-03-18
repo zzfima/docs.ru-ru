@@ -4,11 +4,11 @@ description: Узнайте, как создать вложенную групп
 ms.date: 12/01/2016
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
 ms.openlocfilehash: 7d056c9e215ccc7ca24d621b64e2328bed79f22e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857675"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688622"
 ---
 # <a name="create-a-nested-group"></a>Создание вложенной группы
 
@@ -23,6 +23,6 @@ ms.locfileid: "54857675"
 
 Обратите внимание, что для выполнения итерации по внутренним элементам вложенной группы необходимо три вложенных цикла `foreach`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ](index.md)

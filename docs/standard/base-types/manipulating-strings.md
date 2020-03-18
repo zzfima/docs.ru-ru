@@ -7,16 +7,16 @@ helpviewer_keywords:
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
 ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73135233"
 ---
 # <a name="manipulating-strings-in-net"></a>Операции со строками в .NET
 .NET предоставляет широкий набор подпрограмм, которые позволяют эффективно создавать, сравнивать и изменять строки, а также быстро анализировать большие объемы текста и данных для поиска, удаления и замены текстовых шаблонов.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Рекомендации по использованию строк](../../../docs/standard/base-types/best-practices-strings.md)  
  Анализ методов сортировки строк, сравнения и работы с регистрами в .NET, а также рекомендации по выбору метода обработки строк.  
   
@@ -33,5 +33,5 @@ ms.locfileid: "73135233"
  [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
  Информация об использования библиотеки базовых классов для реализации форматирования, о правилах форматирования числовых типов и строковых типов, а также о форматировании для определенных языка и региональных параметров.  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [Анализ строк в .NET Framework](../../../docs/standard/base-types/parsing-strings.md)  
  Описание способов инициализации объектов со значениями, описанными строковыми представлениями этих объектов. Разбор является операцией, обратной форматированию.

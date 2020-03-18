@@ -18,10 +18,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 ms.openlocfilehash: 0edde8e716d5ce3b1444e994234def5835341475
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047128"
 ---
 # <a name="time-based-cache-policies"></a>политики кэша на основе времени
@@ -61,10 +61,10 @@ ms.locfileid: "71047128"
   
 - [Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Управление кэшем для сетевых приложений](cache-management-for-network-applications.md)
 - [Политика кэша](cache-policy.md)
 - [Политики кэша на основе расположения](location-based-cache-policies.md)
 - [Настройка кэширования в сетевых приложениях](configuring-caching-in-network-applications.md)
-- [Элемент \<requestCaching> (сетевые параметры)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Элемент \<requestCaching> (параметры сети)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
 ms.openlocfilehash: cbb77907c018b9b8f56895adf21f1f353ab71f88
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047294"
 ---
 # <a name="socket-code-examples"></a>Примеры кода сокетов
 В следующем примере кода демонстрируется использование класса <xref:System.Net.Sockets.Socket> в качестве клиента для подключения к удаленным сетевым службам и в качестве сервера для прослушивания подключений удаленных клиентов.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Пример синхронного сокета клиента](synchronous-client-socket-example.md)  
  Показывает, как реализовать синхронный клиент <xref:System.Net.Sockets.Socket>, который подключается к серверу и отображает возвращаемые сервером данные.  
   

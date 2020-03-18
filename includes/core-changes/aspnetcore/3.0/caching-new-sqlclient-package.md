@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 771238c53dc97f4cf4068968f3c68500ba9f87da
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198551"
 ---
 ### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Кэширование. Microsoft.Extensions.Caching.SqlServer использует новый пакет SqlClient
@@ -26,7 +26,7 @@ ms.locfileid: "73198551"
 
 `Microsoft.Data.SqlClient` — это новый пакет, созданный на основе `System.Data.SqlClient`. С этого момента в нем будут поддерживаться все новые функции.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Клиентам не нужно беспокоиться об этом критическом изменении, если только они не использовали типы, возвращаемые пакетом `Microsoft.Extensions.Caching.SqlServer` и приводимые к типам `System.Data.SqlClient`. Например, при приведении `DbConnection` к [старому типу SqlConnection](xref:System.Data.SqlClient.SqlConnection), нужно будет изменить приведение на новый тип `Microsoft.Data.SqlClient.SqlConnection`.
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Нет
+Отсутствуют
 
 <!-- 
 

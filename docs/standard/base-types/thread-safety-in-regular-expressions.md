@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 ms.openlocfilehash: db25028e10872cfca08d28518c795414d06c5d49
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124798"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Потокобезопасность в регулярных выражениях
@@ -25,6 +25,6 @@ ms.locfileid: "73124798"
   
  Перечислители являются единственным исключением. Вызовы, обращенные к перечислителям коллекций, в приложениях должны быть сериализованы. Правило заключается в том, что если существует возможность одновременной работы перечислителей из нескольких потоков с одной коллекцией, то их методы необходимо синхронизировать в корневом объекте коллекции, по которой проходит перечислитель.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)

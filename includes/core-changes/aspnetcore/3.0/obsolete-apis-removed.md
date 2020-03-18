@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b4a20599ce6b7d8fd642e4f0e5b5f7d3fbcdac92
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394288"
 ---
 ### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>Удалены устаревшие API в областях борьбы с фальсификацией, CORS, диагностики, MVC и маршрутизации
@@ -12,13 +12,13 @@ ms.locfileid: "72394288"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
 #### <a name="reason-for-change"></a>Причина изменения
 
 Улучшение контактной зоны API с течением времени.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 При работе с .NET Core 2.2 следуйте рекомендациям в сообщениях по устаревшей сборке для внедрения новых API.
 

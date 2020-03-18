@@ -4,11 +4,11 @@ description: Узнайте, как выполнять пользователь�
 ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
 ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857870"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659856"
 ---
 # <a name="perform-custom-join-operations"></a>Выполнение пользовательских операций соединения
 
@@ -41,7 +41,7 @@ ms.locfileid: "54857870"
 
 [!code-csharp[csProgGuideLINQ#13](~/samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ](index.md)
 - [предложение join](../language-reference/keywords/join-clause.md)

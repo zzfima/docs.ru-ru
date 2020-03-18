@@ -6,10 +6,10 @@ helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091368"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Практическое руководство. Перебор каталогов с файлами с помощью PLINQ
@@ -18,7 +18,7 @@ ms.locfileid: "73091368"
  Второй запрос использует статические методы <xref:System.IO.Directory.EnumerateDirectories%2A> и <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, которые сразу начинают возвращать результаты. Этот подход может оказаться быстрее, если вы просматриваете большие деревья каталогов, но разница с первым примером по времени обработки может зависеть от многих факторов.  
   
 > [!WARNING]
-> Этот пример предназначен только для демонстрации использования, и может выполняться не быстрее аналогичного последовательного запроса LINQ to Objects. См. дополнительные сведения об [ускорении выполнения в PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> Этот пример предназначен только для демонстрации использования, и может выполняться не быстрее аналогичного последовательного запроса LINQ to Objects. Дополнительные сведения см. в статье [Общее представление об ускорении выполнения в PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показан итеративный обход каталогов с файлами для простых сценариев, когда в дереве есть доступ ко всем каталогам, нет больших файлов и существенных задержек при доступе к ним. При таком подходе предполагается задержка в начале, пока код заполняет массив имен файлов.  
@@ -34,6 +34,6 @@ ms.locfileid: "73091368"
   
  Если есть риск задержки при операциях ввода-вывода (например, при обращении к файлу по сети), попробуйте один из асинхронных подходов, которые описаны в статье [Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) и [в этой записи блога](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

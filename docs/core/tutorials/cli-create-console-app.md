@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156664"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240861"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Начало работы с .NET Core с помощью .NET Core CLI
 
@@ -19,7 +19,7 @@ ms.locfileid: "78156664"
 
 Если вы не знакомы с .NET Core CLI, см. сведения о [пакете SDK для .NET Core](../tools/index.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - [Пакет SDK для .NET Core 3.1](https://dotnet.microsoft.com/download) или более поздней версии.
 - Текстовый редактор или редактор кода по вашему выбору.
@@ -43,7 +43,7 @@ dotnet run
 
     *Hello.csproj*:
 
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
     В файле проекта указываются все данные, необходимые для восстановления зависимостей и создания программы.
 
@@ -52,11 +52,11 @@ dotnet run
 
     *Program.cs*:
 
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
     Программа начинается с команды `using System`, что означает "добавить все данные пространства имен `System` в область видимости для этого файла". Пространство имен `System` включает класс `Console`.
 
-    Затем мы определяем пространство имен с именем `Hello`. Вы можете сменить это имя на любое другое. В этом пространстве имен определяется класс с именем `Program` и методом `Main`, который принимает массив строк с именем `args`. Этот массив содержит список аргументов, передаваемых при вызове программы. В нашем примере массив не используется и программа просто выводит строку "Hello World!" в консоль. Позднее мы внесем в код изменения, использующие этот аргумент.
+    Затем мы определяем пространство имен с именем `Hello`. Вы можете сменить это имя на любое другое. В этом пространстве имен определяется класс с именем `Program` и методом `Main`, который принимает массив строк с именем `args`. Этот массив содержит список аргументов, передаваемых при вызове программы. В нашем примере массив не используется и программа просто выводит строку "Hello World!" "Hello World!". Позднее мы внесем в код изменения, использующие этот аргумент.
 
     `dotnet new` неявно вызывает [dotnet restore](../tools/dotnet-restore.md). `dotnet restore` вызывает [NuGet](https://www.nuget.org/) (диспетчер пакетов .NET) для восстановления дерева зависимостей. NuGet анализирует файл *Hello.csproj*, скачивает указанные в нем зависимости (или извлекает их из кэша на вашем компьютере) и записывает файл *obj/project.assets.json*, который требуется для компиляции и запуска примера.
 
@@ -100,7 +100,7 @@ dotnet run
 
 01. Замените содержимое файла *Program.cs* следующим кодом:
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. Выполните [dotnet build](../tools/dotnet-build.md) для компиляции изменений.
 
@@ -140,11 +140,11 @@ dotnet run
 
 01. Добавьте в каталог *Hello* новый файл *FibonacciGenerator.cs* со следующим кодом:
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
 02. Измените метод `Main` в своем файле *Program.cs*, чтобы создать экземпляр класса new и вызвать его метод, как показано в следующем примере:
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. Выполните [dotnet build](../tools/dotnet-build.md) для компиляции изменений.
 
@@ -219,7 +219,7 @@ Hello World!
 
 Вот и все! Теперь вы можете воспользоваться изученными здесь основными концепциями, чтобы создавать собственные программы.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Организация и тестирование проектов с помощью .NET Core CLI](testing-with-cli.md)
 - [Публикация приложений .NET Core с помощью .NET Core CLI](../deploying/deploy-with-cli.md)

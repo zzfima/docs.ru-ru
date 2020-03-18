@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103821"
 ---
 # <a name="creating-new-strings-in-net"></a>Создание новых строк в .NET
@@ -32,7 +32,7 @@ ms.locfileid: "73103821"
 ## <a name="methods-that-return-strings"></a>Методы, возвращающие строки  
  В следующей таблице перечислено несколько полезных методов, которые возвращают строковые объекты.  
   
-|Имя метода|Использовать|  
+|Имя метода|Использование|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Создание форматированной строки из набора объектов ввода.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|Создание строк из двух или более строк.|  
@@ -64,7 +64,7 @@ ms.locfileid: "73103821"
  [!code-csharp[Strings.Creating#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#3)]
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>Вставить  
  Метод **String.Insert** создает новую строку, вставляя предоставленную строку в указанную позицию в другой строке. Этот метод использует отсчитываемый от нуля индекс. В следующем примере строка вставляется в пятую позицию индекса `MyString`, и создается новая строка с этим значением.  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
@@ -78,7 +78,7 @@ ms.locfileid: "73103821"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)
 - [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md)

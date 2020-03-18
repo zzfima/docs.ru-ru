@@ -3,10 +3,10 @@ title: Основные принципы и терминология (функц
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 ms.openlocfilehash: 3e2ecc4c2f70700ae92ee36b6f122059b922332e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70040633"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Основные принципы и терминология (функциональное преобразование) (C#)
@@ -67,7 +67,7 @@ ms.locfileid: "70040633"
 определение типов (скрытое типизирование) \
 Возможность компилятора определить тип переменной при отсутствии явной декларации типа.
 
-Дополнительные сведения см. в статье [Implicitly Typed Local Variables](../../classes-and-structs/implicitly-typed-local-variables.md) (Неявно типизированные локальные переменные).
+Дополнительные сведения см. в статье [Неявно типизированные локальные переменные (руководство по программированию на C#)](../../classes-and-structs/implicitly-typed-local-variables.md).
 
 отложенное исполнение и отложенные вычисления \
 Задержка вычисления выражения до тех пор, пока его результат не станет нужен. В коллекциях поддерживается отложенное исполнение.
