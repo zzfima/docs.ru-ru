@@ -5,10 +5,10 @@ helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711991"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Члены, воплощающие выражения (руководство по программированию на C#)
@@ -23,7 +23,7 @@ member => expression;
 
 В C# 6 была представлена поддержка для определений тела выражений для методов и свойств только для чтения. В C# 7.0 эта поддержка была расширена. Определения тела выражений можно использовать с членами типа, указанными в следующей таблице.
 
-|Член  |Поддерживается как... |
+|Участник  |Поддерживается как... |
 |---------|---------|
 |[Метод](#methods)  |C# 6 |
 |[Свойство только для чтения](#read-only-properties)   |C# 6  |

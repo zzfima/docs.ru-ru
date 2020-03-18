@@ -11,10 +11,10 @@ helpviewer_keywords:
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 ms.openlocfilehash: baf8497289ee71c2dbdc544607212de90928289c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708388"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Универсальные делегаты для управления массивами и списками
@@ -39,7 +39,7 @@ ms.locfileid: "75708388"
 ### <a name="chaining-delegates"></a>Связывание делегатов  
  Многие методы, использующие эти делегаты, возвращают массив или список, который можно передать другому методу. Например, если вы хотите выбрать определенные элементы массива, преобразовать их в новый тип и сохранить в новый массив, вы можете передать массив, возвращенный универсальным методом <xref:System.Array.FindAll%2A>, в универсальный метод <xref:System.Array.ConvertAll%2A>. Если у нового типа элементов нет естественного порядка сортировки, вы можете передать массив, возвращенный универсальным методом <xref:System.Array.ConvertAll%2A>, в универсальный метод <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

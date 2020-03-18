@@ -2,12 +2,12 @@
 title: Устранение рисков. Нормализация путей
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 61c8eec2043aa2fb9309ee6052e27fc2c91c6c6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457883"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181233"
 ---
 # <a name="mitigation-path-normalization"></a>Устранение рисков. Нормализация путей
 Начиная с приложений, ориентированных на .NET Framework 4.6.2, нормализация путей в .NET Framework изменилась.  
@@ -42,12 +42,12 @@ ms.locfileid: "73457883"
   
 Это изменение не влияет на приложения, предназначенные для .NET Framework 4.6.1 и более ранних версий, но работающие на платформе .NET Framework 4.6.2 или более новой версии.  
   
-## <a name="mitigation"></a>Устранение рисков  
+## <a name="mitigation"></a>Меры по снижению риска  
  В приложениях, предназначенных для .NET Framework 4.6.2 или более поздней версии, данное изменение можно отключить и использовать устаревшую нормализацию, добавив следующее в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения:  
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
 </runtime>  
 ```  
   
@@ -55,10 +55,10 @@ ms.locfileid: "73457883"
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />
 </runtime>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Совместимость приложений](application-compatibility.md)

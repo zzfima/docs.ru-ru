@@ -4,12 +4,12 @@ description: Сведения о шаблонах событий .NET, а так
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: dec516767e43a6bf4edfa555e34f3adcc21a46e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037173"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146145"
 ---
 # <a name="standard-net-event-patterns"></a>Стандартные шаблоны событий .NET
 
@@ -38,9 +38,9 @@ void OnEventRaised(object sender, EventArgs args);
 
 Использование модели событий обеспечивает некоторые преимущества разработки. Можно создать несколько прослушивателей событий, которые выполняют разные действия при нахождении искомого файла. Сочетание разных прослушивателей позволяет создавать более надежные алгоритмы.
 
-Ниже показано объявление аргумента исходного события для поиска искомого файла: 
+Ниже показано объявление аргумента исходного события для поиска искомого файла:
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 Несмотря на то, что этот тип выглядит как небольшой тип, содержащий только данные, вы должны выполнить соглашение и назначить его ссылочным типом (`class`). Это означает, что объект аргумента будет передаваться по ссылке, а любые обновления данных будут доступны всем подписчикам. Первая версия является неизменяемым объектом. Рекомендуется сделать свойства в типе аргумента события неизменяемыми. Таким образом, один подписчик не сможет изменить значения до того, как их увидит другой подписчик. (Существуют исключения, как можно будет увидеть ниже.)  
 
@@ -48,21 +48,21 @@ void OnEventRaised(object sender, EventArgs args);
 
 Заполним класс FileSearcher для поиска файлов, соответствующих шаблону, и вызова правильного события при обнаружении совпадения.
 
-[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/snippets/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>Определение и вызов событий, подобных полям
 
 Самый простой способ добавить событие в класс — объявить это событие как открытое поле, как показано в предыдущем примере.
 
-[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
+[!code-csharp[DeclareEvent](../../samples/snippets/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
 В таком коде объявляется открытое поле, что не рекомендуется в объектно-ориентированном программировании, поскольку необходимо обеспечить защиту доступа к данным с помощью свойств и методов. Хотя это выглядит нарушением рекомендаций, код, созданный компилятором, создает программы-оболочки, чтобы доступ к объектам событий мог осуществляться только безопасным образом. Единственные операции, доступные для событий, подобных полям, — обработчик add:
 
-[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
+[!code-csharp[DeclareEventHandler](../../samples/snippets/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 и обработчик remove:
 
-[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
+[!code-csharp[RemoveEventHandler](../../samples/snippets/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 Обратите внимание, что для обработчика используется локальная переменная. Если вы используете тело лямбда-выражения, удаление не будет работать корректно. Будет существовать другой экземпляр делегата, не выполняющий никаких действий.
 
@@ -76,7 +76,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 Обработчики событий не возвращают значение, поэтому вам нужно выполнить это другим способом. Стандартный шаблон события использует объект EventArgs для включения полей, которые подписчики на события могут использовать для передачи сообщения об отмене.
 
-Для этого случая предусмотрено два разных шаблона, которые можно использовать в зависимости от семантики контракта "Отмена". В обоих случаях в EventArguments добавляется логическое поле для события найденного файла. 
+Для этого случая предусмотрено два разных шаблона, которые можно использовать в зависимости от семантики контракта "Отмена". В обоих случаях в EventArguments добавляется логическое поле для события найденного файла.
 
 Один шаблон позволяет любому одному подписчику отменить операцию.
 Для этого шаблона новое поле инициализируется значением `false`. Любой подписчик можно изменить его на `true`. После того как все подписчики увидят событие, компонент FileSearcher проверяет логическое значение и выполняет действие.
@@ -86,7 +86,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 Реализуем первую версию для этого примера. Добавьте логическое поле с именем `CancelRequested` в тип `FileFoundArgs`:
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
 Это новое поле автоматически инициализируется значением `false`, которое используется по умолчанию для логических полей, чтобы не происходило случайной отмены. Единственным другим изменением в компоненте является установка флага после вызова события для просмотра, если любой из подписчиков запросил отмену:
 
@@ -122,27 +122,27 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 Эта операция может выполняться длительное время в каталоге с большим числом вложенных каталогов. Добавим событие, которое вызывается в начале каждого нового поиска в каталоге. Это позволяет подписчикам отслеживать ход выполнения и сообщать о нем пользователю. Все примеры, которые мы создали до сих пор, являются открытыми. Сделаем это событие внутренним. Это означает, что типы, используемые для аргументов, также можно сделать внутренними.
 
-Вы начнете с создания нового производного класса EventArgs для передачи сведений о новом каталоге и ходе выполнения. 
+Вы начнете с создания нового производного класса EventArgs для передачи сведений о новом каталоге и ходе выполнения.
 
-[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
+[!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 Опять же, вы можете следовать рекомендациям по созданию неизменяемого ссылочного типа для аргументов событий.
 
 Теперь определим событие. На этот раз будет использоваться другой синтаксис. Помимо синтаксиса полей можно явно создать свойство c помощью обработчиков add и remove. В этом примере вы не будете добавлять код в эти обработчики, здесь просто демонстрируется их создание.
 
-[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
+[!code-csharp[Declare event with add and remove handlers](../../samples/snippets/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
 Созданный здесь код очень похож на тот код, который компилятор создает для определения полей событий, как было показано ранее. Для создания события используется синтаксис, очень похожий на используемый для [свойств](properties.md). Обратите внимание, что обработчики имеют разные имена: `add` и `remove`. Они вызываются для подписки на событие или отмены подписки на событие. Учтите, что вы также должны объявить закрытое резервное поле для хранения переменной событий. Оно инициализируется значением NULL.
 
 Теперь добавим перегрузку метода `Search`, который обходит подкаталоги и вызывает оба события. Для этого проще всего использовать аргумент по умолчанию для задания поиска по всем каталогам:
 
-[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
+[!code-csharp[SearchImplementation](../../samples/snippets/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 На этом этапе можно запустить приложение, вызывающее перегруженный метод для поиска всех вложенных каталогов. Для нового события `ChangeDirectory` нет подписчиков, однако благодаря использованию идиомы `?.Invoke()` мы можем гарантировать правильную работу метода.
 
- Добавим обработчик для написания строки, показывающей ход выполнения в окне консоли. 
+ Добавим обработчик для написания строки, показывающей ход выполнения в окне консоли.
 
-[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
+[!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 
 Мы познакомились с шаблонами, которые используются во всей экосистеме .NET.
 Научившись использовать эти шаблоны и соглашения, вы сможете быстро создавать код C# и .NET на основе идиом.
