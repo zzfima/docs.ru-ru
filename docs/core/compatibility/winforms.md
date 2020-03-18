@@ -3,35 +3,35 @@ title: Критические изменения в Windows Forms
 description: Список критических изменений в Windows Forms для .NET Core.
 ms.date: 01/08/2020
 ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093023"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398013"
 ---
-# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="a491f-103">Критические изменения в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a491f-103">Breaking changes in Windows Forms</span></span>
+# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="162cf-103">Критические изменения в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="162cf-103">Breaking changes in Windows Forms</span></span>
 
-<span data-ttu-id="a491f-104">Поддержка Windows Forms была добавлена в .NET Core в версии 3.0.</span><span class="sxs-lookup"><span data-stu-id="a491f-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="a491f-105">В этой статье перечислены критические изменения для Windows Forms, сгруппированные по версии .NET Core, в которой они появились.</span><span class="sxs-lookup"><span data-stu-id="a491f-105">This article lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="a491f-106">Если вы обновляете приложение Windows Forms с .NET Framework или с предыдущей версии .NET Core (3.0 или более поздней), эта статья для вас актуальна.</span><span class="sxs-lookup"><span data-stu-id="a491f-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
+<span data-ttu-id="162cf-104">Поддержка Windows Forms была добавлена в .NET Core в версии 3.0.</span><span class="sxs-lookup"><span data-stu-id="162cf-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="162cf-105">В этой статье перечислены критические изменения для Windows Forms, сгруппированные по версии .NET Core, в которой они появились.</span><span class="sxs-lookup"><span data-stu-id="162cf-105">This article lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="162cf-106">Если вы обновляете приложение Windows Forms с .NET Framework или с предыдущей версии .NET Core (3.0 или более поздней), эта статья для вас актуальна.</span><span class="sxs-lookup"><span data-stu-id="162cf-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
 
-<span data-ttu-id="a491f-107">На этой странице описаны следующие критические изменения:</span><span class="sxs-lookup"><span data-stu-id="a491f-107">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="162cf-107">На этой странице описаны следующие критические изменения:</span><span class="sxs-lookup"><span data-stu-id="162cf-107">The following breaking changes are documented on this page:</span></span>
 
-- [<span data-ttu-id="a491f-108">Удаленные элементы управления</span><span class="sxs-lookup"><span data-stu-id="a491f-108">Removed controls</span></span>](#removed-controls)
-- [<span data-ttu-id="a491f-109">При отображении подсказки не возникает событие CellFormatting</span><span class="sxs-lookup"><span data-stu-id="a491f-109">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [<span data-ttu-id="a491f-110">Шрифт Control.DefaultFont изменен на Segoe UI 9 пт</span><span class="sxs-lookup"><span data-stu-id="a491f-110">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt)
-- [<span data-ttu-id="a491f-111">Модернизация FolderBrowserDialog</span><span class="sxs-lookup"><span data-stu-id="a491f-111">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog)
-- [<span data-ttu-id="a491f-112">Из некоторых типов Windows Forms удален атрибут SerializableAttribute</span><span class="sxs-lookup"><span data-stu-id="a491f-112">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types)
-- [<span data-ttu-id="a491f-113">Параметр совместимости AllowUpdateChildControlIndexForTabControls не поддерживается</span><span class="sxs-lookup"><span data-stu-id="a491f-113">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [<span data-ttu-id="a491f-114">Параметр совместимости DomainUpDown.UseLegacyScrolling не поддерживается</span><span class="sxs-lookup"><span data-stu-id="a491f-114">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
-- [<span data-ttu-id="a491f-115">Параметр совместимости DoNotLoadLatestRichEditControl не поддерживается</span><span class="sxs-lookup"><span data-stu-id="a491f-115">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [<span data-ttu-id="a491f-116">Параметр совместимости DoNotSupportSelectAllShortcutInMultilineTextBox не поддерживается</span><span class="sxs-lookup"><span data-stu-id="a491f-116">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
-- [<span data-ttu-id="a491f-117">Параметр совместимости DontSupportReentrantFilterMessage не поддерживается</span><span class="sxs-lookup"><span data-stu-id="a491f-117">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [<span data-ttu-id="a491f-118">Параметр совместимости EnableVisualStyleValidation не поддерживается</span><span class="sxs-lookup"><span data-stu-id="a491f-118">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [<span data-ttu-id="a491f-119">Параметр совместимости UseLegacyContextMenuStripSourceControlValue не поддерживается</span><span class="sxs-lookup"><span data-stu-id="a491f-119">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
-- [<span data-ttu-id="a491f-120">Параметр совместимости UseLegacyImages не поддерживается</span><span class="sxs-lookup"><span data-stu-id="a491f-120">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported)
-- [<span data-ttu-id="a491f-121">Изменение доступа для AccessibleObject.RuntimeIDFirstItem</span><span class="sxs-lookup"><span data-stu-id="a491f-121">Change of access for AccessibleObject.RuntimeIDFirstItem</span></span>](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [<span data-ttu-id="a491f-122">Из Windows Forms удалены дублирующиеся API</span><span class="sxs-lookup"><span data-stu-id="a491f-122">Duplicated APIs removed from Windows Forms</span></span>](#duplicated-apis-removed-from-windows-forms)
+- [<span data-ttu-id="162cf-108">Удаленные элементы управления</span><span class="sxs-lookup"><span data-stu-id="162cf-108">Removed controls</span></span>](#removed-controls)
+- [<span data-ttu-id="162cf-109">При отображении подсказки не возникает событие CellFormatting</span><span class="sxs-lookup"><span data-stu-id="162cf-109">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [<span data-ttu-id="162cf-110">Шрифт Control.DefaultFont изменен на Segoe UI 9 пт</span><span class="sxs-lookup"><span data-stu-id="162cf-110">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt)
+- [<span data-ttu-id="162cf-111">Модернизация FolderBrowserDialog</span><span class="sxs-lookup"><span data-stu-id="162cf-111">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog)
+- [<span data-ttu-id="162cf-112">Из некоторых типов Windows Forms удален атрибут SerializableAttribute</span><span class="sxs-lookup"><span data-stu-id="162cf-112">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types)
+- [<span data-ttu-id="162cf-113">Параметр совместимости AllowUpdateChildControlIndexForTabControls не поддерживается</span><span class="sxs-lookup"><span data-stu-id="162cf-113">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [<span data-ttu-id="162cf-114">Параметр совместимости DomainUpDown.UseLegacyScrolling не поддерживается</span><span class="sxs-lookup"><span data-stu-id="162cf-114">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [<span data-ttu-id="162cf-115">Параметр совместимости DoNotLoadLatestRichEditControl не поддерживается</span><span class="sxs-lookup"><span data-stu-id="162cf-115">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [<span data-ttu-id="162cf-116">Параметр совместимости DoNotSupportSelectAllShortcutInMultilineTextBox не поддерживается</span><span class="sxs-lookup"><span data-stu-id="162cf-116">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [<span data-ttu-id="162cf-117">Параметр совместимости DontSupportReentrantFilterMessage не поддерживается</span><span class="sxs-lookup"><span data-stu-id="162cf-117">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [<span data-ttu-id="162cf-118">Параметр совместимости EnableVisualStyleValidation не поддерживается</span><span class="sxs-lookup"><span data-stu-id="162cf-118">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [<span data-ttu-id="162cf-119">Параметр совместимости UseLegacyContextMenuStripSourceControlValue не поддерживается</span><span class="sxs-lookup"><span data-stu-id="162cf-119">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [<span data-ttu-id="162cf-120">Параметр совместимости UseLegacyImages не поддерживается</span><span class="sxs-lookup"><span data-stu-id="162cf-120">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported)
+- [<span data-ttu-id="162cf-121">Изменение доступа для AccessibleObject.RuntimeIDFirstItem</span><span class="sxs-lookup"><span data-stu-id="162cf-121">Change of access for AccessibleObject.RuntimeIDFirstItem</span></span>](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [<span data-ttu-id="162cf-122">Из Windows Forms удалены дублирующиеся API</span><span class="sxs-lookup"><span data-stu-id="162cf-122">Duplicated APIs removed from Windows Forms</span></span>](#duplicated-apis-removed-from-windows-forms)
 
-## <a name="net-core-31"></a><span data-ttu-id="a491f-123">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="a491f-123">.NET Core 3.1</span></span>
+## <a name="net-core-31"></a><span data-ttu-id="162cf-123">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="162cf-123">.NET Core 3.1</span></span>
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "77093023"
 
 ***
 
-## <a name="net-core-30"></a><span data-ttu-id="a491f-124">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="a491f-124">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="162cf-124">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="162cf-124">.NET Core 3.0</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
 
@@ -95,6 +95,6 @@ ms.locfileid: "77093023"
 
 ***
 
-## <a name="see-also"></a><span data-ttu-id="a491f-125">См. также</span><span class="sxs-lookup"><span data-stu-id="a491f-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="162cf-125">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="162cf-125">See also</span></span>
 
-- [<span data-ttu-id="a491f-126">Перенос приложения Windows Forms в .NET Core</span><span class="sxs-lookup"><span data-stu-id="a491f-126">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)
+- [<span data-ttu-id="162cf-126">Перенос приложения Windows Forms в .NET Core</span><span class="sxs-lookup"><span data-stu-id="162cf-126">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)
