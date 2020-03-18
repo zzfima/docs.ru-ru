@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 ms.openlocfilehash: 80e3a6bd199691df9391e88d5a64fab5df2a08a1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048618"
 ---
 # <a name="creating-internet-requests"></a>Создание интернет-запросов
@@ -27,7 +27,7 @@ ms.locfileid: "71048618"
   
  Для обработки запросов, использующих другие протоколы уровня приложений, необходимо реализовать классы для определенного протокола, производные от **WebRequest** и **WebResponse**. Дополнительные сведения см. в разделе [Программирование подключаемых протоколов](programming-pluggable-protocols.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Запрос данных с помощью класса WebRequest](how-to-request-data-using-the-webrequest-class.md)
 - [Запрос данных](requesting-data.md)

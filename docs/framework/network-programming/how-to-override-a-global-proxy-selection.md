@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
 ms.openlocfilehash: 44845fb67aac4ff9ab9dda8cf4934153c8c4f23c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048262"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Практическое руководство. Переопределение глобальных прокси-серверов
@@ -30,9 +30,9 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
-- Директива [`using` ](../../csharp/language-reference/keywords/using-directive.md) для пространства имен **System.Net**.  
+- Директива [`using`](../../csharp/language-reference/keywords/using-directive.md) для пространства имен **System.Net**.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Использование протоколов приложений](using-application-protocols.md)
 - [Доступ к Интернету через прокси-сервер](accessing-the-internet-through-a-proxy.md)

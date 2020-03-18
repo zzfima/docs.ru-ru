@@ -5,10 +5,10 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522633"
 ---
 # <a name="orchestration-patterns"></a>Шаблоны оркестрации
@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-Метод `CreateTimer` `DurableOrchestrationContext` настраивает расписание следующего вызова цикла для проверки изменений цен на акции. `DurableOrchestrationContext` также имеет свойство `CurrentUtcDateTime`, позволяющее получить текущее значение даты и времени в формате UTC. Лучше использовать это свойство вместо `DateTime.UtcNow`, так как оно легко имитируется для тестирования.
+Метод `DurableOrchestrationContext``CreateTimer` настраивает расписание следующего вызова цикла для проверки изменений цен на акции. `DurableOrchestrationContext` также имеет свойство `CurrentUtcDateTime`, позволяющее получить текущее значение даты и времени в формате UTC. Лучше использовать это свойство вместо `DateTime.UtcNow`, так как оно легко имитируется для тестирования.
 
 ## <a name="recommended-resources"></a>Рекомендуемые ресурсы
 

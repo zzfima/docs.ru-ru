@@ -5,11 +5,11 @@ author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
 ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465429"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61923855"
 ---
 # <a name="generic-types-overview"></a>Обзор универсальных типов
 
@@ -66,6 +66,6 @@ Non-Generic Sort: System.Collections.ArrayList
 
 Еще одно преимущество понимания типа универсального шаблона заключается в упрощении отладки. При отладке универсального шаблона в C# вы заранее знаете тип каждого элемента в структуре данных. Без универсальных шаблонов вы бы не имели об этом никакого понятия.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C# — универсальные шаблоны](../../docs/csharp/programming-guide/generics/index.md)

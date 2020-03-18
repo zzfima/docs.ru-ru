@@ -14,10 +14,10 @@ helpviewer_keywords:
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 ms.openlocfilehash: 85ba91b63ab0edbccc768e2d1ad4aaef31fd2f21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120833"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Сравнение строк без учета языка и региональных параметров
@@ -39,7 +39,7 @@ ms.locfileid: "73120833"
 
 Можно скачать [таблицы коэффициентов сортировки](https://www.microsoft.com/download/details.aspx?id=10921) — набор текстовых файлов, которые содержат сведения о весовых коэффициентах символов, используемых в операциях сортировки и сравнения для операционных систем Windows, а также [таблицу параметров сортировки по умолчанию для элементов Юникод](https://www.unicode.org/Public/UCA/latest/allkeys.txt) — таблицу весовых коэффициентов сортировки для Linux и macOS.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.String.Compare%2A?displayProperty=nameWithType>
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>

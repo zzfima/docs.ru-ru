@@ -3,10 +3,10 @@ title: Проектирование и разработка приложений
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Сведения об использовании внешней архитектуры для проектирования и разработки приложений .NET на основе множества контейнеров и микрослужб
 ms.date: 10/02/2018
 ms.openlocfilehash: 8c2f828e9913a0efcdf580371124b0f624daeffe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295231"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Проектирование и разработка приложений .NET на основе множества контейнеров и микрослужб

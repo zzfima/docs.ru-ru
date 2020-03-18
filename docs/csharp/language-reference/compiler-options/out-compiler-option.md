@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970382"
 ---
 # <a name="-out-c-compiler-options"></a>-out (параметры компилятора C#)
@@ -28,7 +28,7 @@ ms.locfileid: "70970382"
  `filename`  
  Имя выходного файла, создаваемого компилятором.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  В командной строке можно указать несколько выходных файлов для компиляции. После параметра компилятора **-out** нужно указать один или несколько файлов исходного кода. Все указанные файлы исходного кода будут скомпилированы в выходной файл, заданный параметром **-out**.  
   
  Укажите полное имя и расширение файла, который требуется создать.  
@@ -64,7 +64,7 @@ ms.locfileid: "70970382"
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Дружественные сборки](../../../standard/assembly/friend.md)
