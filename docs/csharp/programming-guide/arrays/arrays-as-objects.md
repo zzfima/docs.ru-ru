@@ -5,30 +5,30 @@ helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
 ms.openlocfilehash: d8b929eccf9be259874d03dd93f49a49798bb349
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715090"
 ---
-# <a name="arrays-as-objects-c-programming-guide"></a><span data-ttu-id="4227e-102">Массивы как объекты (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="4227e-102">Arrays as Objects (C# Programming Guide)</span></span>
+# <a name="arrays-as-objects-c-programming-guide"></a><span data-ttu-id="02d91-102">Массивы как объекты (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="02d91-102">Arrays as Objects (C# Programming Guide)</span></span>
 
-<span data-ttu-id="4227e-103">В C# массивы представляют собой реальные объекты, а не просто адресуемые области непрерывной памяти, как в C и C++.</span><span class="sxs-lookup"><span data-stu-id="4227e-103">In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++.</span></span> <span data-ttu-id="4227e-104"><xref:System.Array> — это абстрактный базовый тип для всех типов массивов.</span><span class="sxs-lookup"><span data-stu-id="4227e-104"><xref:System.Array> is the abstract base type of all array types.</span></span> <span data-ttu-id="4227e-105">Вы можете использовать свойства и другие члены класса, входящие в <xref:System.Array>.</span><span class="sxs-lookup"><span data-stu-id="4227e-105">You can use the properties and other class members that <xref:System.Array> has.</span></span> <span data-ttu-id="4227e-106">Например, с помощью свойства <xref:System.Array.Length%2A> можно получить длину массива.</span><span class="sxs-lookup"><span data-stu-id="4227e-106">An example of this is using the <xref:System.Array.Length%2A> property to get the length of an array.</span></span> <span data-ttu-id="4227e-107">В следующем коде значение длины массива `numbers` (`5`) присваивается переменной с именем `lengthOfNumbers`:</span><span class="sxs-lookup"><span data-stu-id="4227e-107">The following code assigns the length of the `numbers` array, which is `5`, to a variable called `lengthOfNumbers`:</span></span>
+<span data-ttu-id="02d91-103">В C# массивы представляют собой реальные объекты, а не просто адресуемые области непрерывной памяти, как в C и C++.</span><span class="sxs-lookup"><span data-stu-id="02d91-103">In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++.</span></span> <span data-ttu-id="02d91-104"><xref:System.Array> — это абстрактный базовый тип для всех типов массивов.</span><span class="sxs-lookup"><span data-stu-id="02d91-104"><xref:System.Array> is the abstract base type of all array types.</span></span> <span data-ttu-id="02d91-105">Вы можете использовать свойства и другие члены класса, входящие в <xref:System.Array>.</span><span class="sxs-lookup"><span data-stu-id="02d91-105">You can use the properties and other class members that <xref:System.Array> has.</span></span> <span data-ttu-id="02d91-106">Например, с помощью свойства <xref:System.Array.Length%2A> можно получить длину массива.</span><span class="sxs-lookup"><span data-stu-id="02d91-106">An example of this is using the <xref:System.Array.Length%2A> property to get the length of an array.</span></span> <span data-ttu-id="02d91-107">В следующем коде значение длины массива `numbers` (`5`) присваивается переменной с именем `lengthOfNumbers`:</span><span class="sxs-lookup"><span data-stu-id="02d91-107">The following code assigns the length of the `numbers` array, which is `5`, to a variable called `lengthOfNumbers`:</span></span>
 
 [!code-csharp[csProgGuideArrays#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#3)]
 
-<span data-ttu-id="4227e-108">В классе <xref:System.Array> представлено множество других полезных методов и свойств для сортировки, поиска и копирования массивов.</span><span class="sxs-lookup"><span data-stu-id="4227e-108">The <xref:System.Array> class provides many other useful methods and properties for sorting, searching, and copying arrays.</span></span>
+<span data-ttu-id="02d91-108">В классе <xref:System.Array> представлено множество других полезных методов и свойств для сортировки, поиска и копирования массивов.</span><span class="sxs-lookup"><span data-stu-id="02d91-108">The <xref:System.Array> class provides many other useful methods and properties for sorting, searching, and copying arrays.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4227e-109">Пример</span><span class="sxs-lookup"><span data-stu-id="4227e-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="02d91-109">Пример</span><span class="sxs-lookup"><span data-stu-id="02d91-109">Example</span></span>
 
-<span data-ttu-id="4227e-110">В этом примере используется свойство <xref:System.Array.Rank%2A>, позволяющее отобразить число измерений массива.</span><span class="sxs-lookup"><span data-stu-id="4227e-110">This example uses the <xref:System.Array.Rank%2A> property to display the number of dimensions of an array.</span></span>
+<span data-ttu-id="02d91-110">В этом примере используется свойство <xref:System.Array.Rank%2A>, позволяющее отобразить число измерений массива.</span><span class="sxs-lookup"><span data-stu-id="02d91-110">This example uses the <xref:System.Array.Rank%2A> property to display the number of dimensions of an array.</span></span>
 
 [!code-csharp[csProgGuideArrays#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#2)]
 
-## <a name="see-also"></a><span data-ttu-id="4227e-111">См. также</span><span class="sxs-lookup"><span data-stu-id="4227e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02d91-111">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="02d91-111">See also</span></span>
 
-- [<span data-ttu-id="4227e-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="4227e-112">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="4227e-113">Массивы</span><span class="sxs-lookup"><span data-stu-id="4227e-113">Arrays</span></span>](./index.md)
-- [<span data-ttu-id="4227e-114">Одномерные массивы</span><span class="sxs-lookup"><span data-stu-id="4227e-114">Single-Dimensional Arrays</span></span>](./single-dimensional-arrays.md)
-- [<span data-ttu-id="4227e-115">Многомерные массивы</span><span class="sxs-lookup"><span data-stu-id="4227e-115">Multidimensional Arrays</span></span>](./multidimensional-arrays.md)
-- [<span data-ttu-id="4227e-116">Массивы массивов</span><span class="sxs-lookup"><span data-stu-id="4227e-116">Jagged Arrays</span></span>](./jagged-arrays.md)
+- [<span data-ttu-id="02d91-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="02d91-112">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="02d91-113">Массивы</span><span class="sxs-lookup"><span data-stu-id="02d91-113">Arrays</span></span>](./index.md)
+- [<span data-ttu-id="02d91-114">Одномерные массивы</span><span class="sxs-lookup"><span data-stu-id="02d91-114">Single-Dimensional Arrays</span></span>](./single-dimensional-arrays.md)
+- [<span data-ttu-id="02d91-115">Многомерные массивы</span><span class="sxs-lookup"><span data-stu-id="02d91-115">Multidimensional Arrays</span></span>](./multidimensional-arrays.md)
+- [<span data-ttu-id="02d91-116">Массивы массивов</span><span class="sxs-lookup"><span data-stu-id="02d91-116">Jagged Arrays</span></span>](./jagged-arrays.md)

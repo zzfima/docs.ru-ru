@@ -3,17 +3,17 @@ title: Сериализация с использованием XmlSerializer (C
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347398"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="b266f-102">Сериализация с использованием XmlSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="b266f-102">How to serialize using XmlSerializer (C#)</span></span>
-<span data-ttu-id="b266f-103">Этот раздел показывает пример сериализации и десериализации с помощью <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="b266f-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="4cf2a-102">Сериализация с использованием XmlSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="4cf2a-102">How to serialize using XmlSerializer (C#)</span></span>
+<span data-ttu-id="4cf2a-103">Этот раздел показывает пример сериализации и десериализации с помощью <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="4cf2a-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b266f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="b266f-104">Example</span></span>  
- <span data-ttu-id="b266f-105">В следующем примере создается некоторое количество объектов, содержащих объекты <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="b266f-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="b266f-106">Затем объекты сериализуются в поток памяти и далее десериализуются из потока памяти.</span><span class="sxs-lookup"><span data-stu-id="b266f-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="4cf2a-104">Пример</span><span class="sxs-lookup"><span data-stu-id="4cf2a-104">Example</span></span>  
+ <span data-ttu-id="4cf2a-105">В следующем примере создается некоторое количество объектов, содержащих объекты <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="4cf2a-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="4cf2a-106">Затем объекты сериализуются в поток памяти и далее десериализуются из потока памяти.</span><span class="sxs-lookup"><span data-stu-id="4cf2a-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```csharp  
 using System;  
@@ -78,7 +78,7 @@ class XLinqTest
 }  
 ```  
   
- <span data-ttu-id="b266f-107">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="b266f-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="4cf2a-107">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="4cf2a-107">This example produces the following output:</span></span>  
   
 ```output  
 Testing for type: XElementNullContainer  
