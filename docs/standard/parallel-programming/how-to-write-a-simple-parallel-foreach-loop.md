@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160304"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Руководство. написание простого цикла Parallel.ForEach
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Практическое руководство. написание простого цикла Parallel.ForEach
 
 В этом примере показано, как использовать цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> для включения параллелизма данных в любом источнике данных <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 
@@ -61,7 +61,7 @@ ms.locfileid: "78160304"
 
 Чтобы запустить консольное приложение из Visual Studio, нажмите клавишу **F5**.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)

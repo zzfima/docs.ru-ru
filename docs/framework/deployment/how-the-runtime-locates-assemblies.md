@@ -9,12 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 13e2661b67ba3b717b8917e80118175acb09e756
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741337"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181677"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Обнаружение сборок в среде выполнения
 
@@ -141,7 +141,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="machine-configuration-file"></a>Файл конфигурации компьютера
 Файл конфигурации компьютера среда выполнения проверяет последним. Этот файл с именем Machine.config находится на локальном компьютере в подкаталоге Config корневого каталога, где установлена среда выполнения. С помощью этого файла администраторы могут настраивать ограничения привязки сборок, действующие только на этом компьютере. Параметры в файле конфигурации компьютера имеют приоритет над всеми остальными параметрами. Однако это не означает, что все параметры конфигурации должны быть помещены в этот файл. Версия, определяемая файлом политики администратора, является окончательной и не может быть переопределена. Переопределения, заданные в файле Machine.config, влияют на все приложения. Дополнительные сведения о файлах конфигурации см. в разделе [Настройка приложений с использованием файлов конфигурации](../configure-apps/index.md).
 
-<a name="step2"></a> 
+<a name="step2"></a>
 
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Шаг 2. Проверка наличия предыдущих ссылок на сборки
 

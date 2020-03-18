@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: b90971e072c0d075479523dc70187894cd0c8565
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0052475697dae2c3ad891db18d300b5ec08a7e62
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715739"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180346"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (управляемое средство профильной оптимизации)
 
@@ -104,7 +104,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 - По умолчанию Mpgo.exe не находится на пути сборки Visual Studio. Необходимо либо добавить путь в Visual Studio, либо указать полный путь в командной строке средства. В Visual Studio в событиях после сборки можно использовать как параметр `–Scenario`, так и параметр `–Import`. Однако, как правило, один раз в командной строке разработчика для Visual Studio используется параметр `–Scenario`, а затем для обновления оптимизированных сборок после каждой сборки используется параметр `–Import`. Пример: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
-<a name="samples"></a>   
+<a name="samples"></a>
 ## <a name="examples"></a>Примеры  
  Следующая команда Mpgo.exe в командной строке разработчика для Visual Studio оптимизирует приложение для подсчета налогов:  
   

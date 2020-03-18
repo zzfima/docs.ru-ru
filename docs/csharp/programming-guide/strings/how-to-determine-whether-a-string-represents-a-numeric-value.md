@@ -6,18 +6,18 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: bd89024a0a9bd62927d2d5e0eda248b57bb7d21d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 15a21a6298f8f0a57e0189554246202b220dd259
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711926"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157069"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Руководство по программированию в C#. Определение представления числового значения в строке
 Чтобы определить, является ли строка допустимым представлением указанного числового типа, воспользуйтесь статическим методом `TryParse`, реализуемым всеми простыми числовыми типами, например <xref:System.DateTime> и <xref:System.Net.IPAddress>. В следующем примере показано, как определить, является ли число 108 допустимым типом [int](../../language-reference/builtin-types/integral-numeric-types.md).  
   
 ```csharp  
-int i = 0;   
+int i = 0;
 string s = "108";  
 bool result = int.TryParse(s, out i); //i now = 108  
 ```  
@@ -35,10 +35,10 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Простые числовые типы также реализуют статический метод `Parse`, который вызывает исключение, если строка не является допустимым числом. В целом оператор `TryParse` более эффективен, поскольку если число не является допустимым, он просто возвращает значение "false".  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+## <a name="net-framework-security"></a>Безопасность .NET Framework  
  Для проверки данных, введенных пользователем в такие элементы управления, как текстовые поля и поля со списком, всегда следует использовать метод `TryParse` или `Parse`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Преобразование массива байтов в значение типа int](../types/how-to-convert-a-byte-array-to-an-int.md)
 - [Практическое руководство. Преобразование строки в число](../types/how-to-convert-a-string-to-a-number.md)

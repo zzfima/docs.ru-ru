@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127537"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398559"
 ---
 # <a name="the-managed-thread-pool"></a>Пул управляемых потоков
 
@@ -30,13 +30,13 @@ ms.locfileid: "73127537"
   
 ### <a name="exceptions-in-thread-pool-threads"></a>Исключения в потоках из пула потоков
 
-Необработанные исключения в потоках из пула приводят к завершению процесса. Существует три исключения из этого правила.  
+Необработанные исключения в потоках из пула приводят к завершению процесса. Есть три исключения из этого правила:  
   
 - Исключение <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType> возникает в потоке пула вследствие вызова <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
 - Исключение <xref:System.AppDomainUnloadedException?displayProperty=nameWithType> возникает в потоке пула вследствие выгрузки домена приложения.  
 - Среда CLR или процесс ведущего приложения прерывает выполнение потока.  
   
-Дополнительные сведения см. в статье [Исключения в управляемых потоках](exceptions-in-managed-threads.md).  
+См. дополнительные сведения об [исключениях в управляемых потоках](exceptions-in-managed-threads.md).  
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>Максимальное число потоков в пуле потоков
 
@@ -83,7 +83,7 @@ ms.locfileid: "73127537"
 - Необходимо поместить потоки в однопотоковое подразделение. Все потоки <xref:System.Threading.ThreadPool> находятся в многопотоковом подразделении.  
 - Необходимо иметь постоянное удостоверение, сопоставленное с потоком, или назначить поток задаче.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
@@ -92,5 +92,5 @@ ms.locfileid: "73127537"
 - [Практическое руководство. Возвращение значения из задачи](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)
 - [Потоки и работа с потоками](threads-and-threading.md)
-- [Асинхронный файловый ввод-вывод](../io/asynchronous-file-i-o.md)
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
 - [Таймеры](timers.md)

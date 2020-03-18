@@ -4,12 +4,12 @@ description: Сведения о выражениях сопоставления
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501630"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170388"
 ---
 # <a name="pattern-matching"></a>Сопоставление шаблонов
 
@@ -27,7 +27,7 @@ ms.locfileid: "77501630"
 
 Вместо того, чтобы начать с абстрактного определения фигуры и добавления различных конкретных классов фигур, составим для каждой геометрической фигуры определения, содержащие только простые данные:
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
+[!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 Опираясь на эти структуры, напишем метод, вычисляющий площадь определенной фигуры.
 
@@ -35,13 +35,13 @@ ms.locfileid: "77501630"
 
 До выхода C# 7.0 каждый тип необходимо было тестировать в ряде операторов `if` и `is`:
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
+[!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 Приведенный выше код представляет собой классическое выражение *шаблона типа*: он тестирует переменную, чтобы определить ее тип, и выполняет различные действия с учетом этого типа.
 
 Код упрощается за счет расширений, которые добавляются в выражение `is` для назначения переменной в случае успешного завершения теста:
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
+[!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 В этой обновленной версии выражение `is` и проверяет переменную, и присваивает ее новой переменной соответствующего типа. Обратите внимание также на то, что эта версия включает тип `Rectangle`, который представляет собой `struct`. Новое выражение `is` работает и с типами значений, и со ссылочными типами.
 
@@ -59,17 +59,17 @@ ms.locfileid: "77501630"
 
 ## <a name="using-pattern-matching-switch-statements"></a>Использование операторов сопоставления шаблонов `switch`
 
-Со временем вам может потребоваться поддержка других типов фигур. Чем больше условий нужно проверять, тем более громоздкими становятся выражения сопоставления шаблонов `is`. Кроме того, что для каждого проверяемого типа требуются операторы `if`, выражения `is` позволяют осуществлять тестирование, только если входные данные соответствуют одному типу. В этом случае лучше отдать предпочтение выражениям сопоставления шаблонов `switch`. 
+Со временем вам может потребоваться поддержка других типов фигур. Чем больше условий нужно проверять, тем более громоздкими становятся выражения сопоставления шаблонов `is`. Кроме того, что для каждого проверяемого типа требуются операторы `if`, выражения `is` позволяют осуществлять тестирование, только если входные данные соответствуют одному типу. В этом случае лучше отдать предпочтение выражениям сопоставления шаблонов `switch`.
 
 Традиционный оператор `switch` был выражением шаблона: он поддерживал шаблон константы.
 Переменную можно сравнивать с любой константой в операторе `case`:
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
+[!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 Единственным шаблоном, который поддерживался оператором `switch`, был шаблон константы. Кроме того, он ограничивался числовыми типами и типом `string`.
 Эти ограничения были устранены, и теперь оператор `switch` можно записывать, используя шаблон типа:
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
+[!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 В операторе сопоставления шаблона `switch` используется синтаксис, знакомый тем разработчикам, которые имели дело с традиционным для C оператором `switch`. Вычисляется каждый оператор `case`, и выполняется код, лежащий в основе условия, которое соответствует входной переменной. Выполнение кода не может передаваться из одного выражения в следующее. Синтаксис оператора `case` требует, чтобы каждый оператор `case` всегда оканчивался на `break`, `return` или `goto`.
 
@@ -87,7 +87,7 @@ ms.locfileid: "77501630"
 
 Для фигур с нулевой площадью можно создать специальные варианты, вставив предложение `when` в метку `case`. Квадрат с длиной стороны 0 или круг с радиусом 0 имеют нулевую площадь. Это условие задается с помощью предложения `when` в метке `case`:  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 Это изменение демонстрирует несколько важных моментов, связанных с новым синтаксисом. Во-первых, к одному разделу `switch` можно применить сразу несколько меток `case`. Этот блок оператора выполняется, если одна из этих меток — `true`. В данном случае если выражение `switch` представляет круг или квадрат с нулевой площадью, метод возвращает константу 0.
 
@@ -98,13 +98,13 @@ ms.locfileid: "77501630"
 
 Теперь, когда мы добавили формы с нулевой площадью, добавим еще пару типов фигур — прямоугольник и треугольник:
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
- Этот набор изменений добавляет метки `case` для вырожденного варианта, а также метки и блоки для каждой из новых фигур. 
+ Этот набор изменений добавляет метки `case` для вырожденного варианта, а также метки и блоки для каждой из новых фигур.
 
 Наконец, можно добавить вариант `null`, чтобы в качестве аргумента не использовался `null`:
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
+[!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 Особый случай с шаблоном `null` интересен тем, что константа `null` в этом шаблоне не имеет типа. Она может быть преобразована в любой ссылочный тип или тип, допускающий значение NULL. Вместо того, чтобы преобразовывать значение `null` в любой тип, в языке определяется, что значение `null` не будет соответствовать какому-либо шаблону типа, независимо от типа переменной во время компиляции. Такой подход позволяет обеспечить согласованность нового шаблона типа на основе `switch` с оператором `is`: операторы `is` всегда возвращают значение `false`, если проверяемое значение равно `null`. Более того, это проще, так как после проверки типа не требуется дополнительно выполнять проверку на значения NULL. Это видно из того факта, что в приведенном выше примере ни в одном блоке case не выполняется проверка на значения NULL. Это излишне, так как сопоставление с шаблоном типа уже гарантирует отсутствие значения NULL.
 
@@ -124,7 +124,7 @@ ms.locfileid: "77501630"
 
 Третье правило относится к случаям, когда может быть полезен вариант `var`. Предположим, производится сопоставление шаблона, причем входные данные представляют собой строку и нужно найти известные значения команд. Код может выглядеть так:
 
-[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+[!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
 Вариант `var` соответствует `null`, пустой строке или любой строке, которая содержит только пробелы. Обратите внимание на то, что в приведенном выше коде используется оператор `?.`, чтобы случайно не произошло исключение <xref:System.NullReferenceException>. Вариант `default` обрабатывает все остальные строковые значения, которые не распознает этот анализатор команд.
 

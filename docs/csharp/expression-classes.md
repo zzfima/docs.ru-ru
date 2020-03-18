@@ -4,12 +4,12 @@ description: Сведения о типах платформ, поддержив
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037623"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146090"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Типы платформ, поддерживающие деревья выражений
 
@@ -65,5 +65,5 @@ var addition = Expression.Add(one, two);
 3. Обратите внимание на класс `ExpressionVisitor`, который служит для создания измененного дерева выражения.
 
 В каждой из этих трех областей доступны и другие возможности. Вы обязательно найдете то, что вам нужно, если начнете с этих трех основных шагов.
- 
+
  [Следующий раздел: "Выполнение деревьев выражений"](expression-trees-execution.md)

@@ -4,12 +4,12 @@ description: Узнайте, как отлаживать приложения .N
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919928"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185811"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Отладка приложения .NET для Apache Spark
 
@@ -63,7 +63,7 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 
 Нажмите `F5`, чтобы продолжить работу приложения до момента, когда будет достигнута эта точка останова.
 
-> [!NOTE] 
+> [!NOTE]
 > Для каждой задачи откроется окно выбора JIT-отладчика. Чтобы всплывающих окон не было слишком много, настройте небольшое число исполнителей. Например, параметр **--master local [1]** для команды spark-submit позволяет задать для числа задач значение 1. Это означает, что запускается только один экземпляр отладчика.
 
 ## <a name="debug-scala-code"></a>Отладка кода Scala
@@ -81,7 +81,7 @@ spark-submit \
 
 После выполнения команды подключите отладчик к выполняющемуся процессу с помощью [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 * [Начало работы с .NET для Apache Spark](../tutorials/get-started.md)
 * [Развертывание приложения .NET для Apache Spark в Azure HDInsight](../tutorials/hdinsight-deployment.md)

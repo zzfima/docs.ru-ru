@@ -3,11 +3,11 @@ title: Сравнение шаблона шлюза API с прямым взаи
 description: Общие сведения о различиях использования шаблона шлюза API и прямого взаимодействия клиента и микрослужбы.
 ms.date: 01/07/2019
 ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090136"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401559"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Сравнение шаблона шлюза API с прямым взаимодействием клиента и микрослужбы
 

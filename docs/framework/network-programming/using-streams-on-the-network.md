@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046878"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180623"
 ---
 # <a name="using-streams-on-the-network"></a>Использование потоков в сети
 Сетевые ресурсы представлены в .NET Framework как потоки. Если рассматривать потоки в целом, платформа .NET Framework предоставляет указанные ниже возможности.  
@@ -38,7 +38,7 @@ ms.locfileid: "71046878"
  Для отправки данных в сеть с помощью полученного потока вызовите метод <xref:System.Net.WebRequest.GetRequestStream%2A> класса <xref:System.Net.WebRequest>. **WebRequest** отправит заголовки запроса на сервер, после чего можно отправлять данные в сетевой ресурс, вызывая метод <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> или <xref:System.IO.Stream.Write%2A> возвращенного потока. Некоторые протоколы, такие как HTTP, могут требовать задания определенных свойств протокола перед отправкой данных. В приведенном ниже примере кода показано, как задать свойства протокола HTTP для отправки данных. Предполагается, что переменная `sendData` содержит отправляемые данные, а в переменной `sendLength` указывается число передаваемых байтов.  
   
 ```csharp  
-HttpWebRequest request =   
+HttpWebRequest request =
    (HttpWebRequest) WebRequest.Create("http://www.contoso.com/");  
 request.Method = "POST";  
 request.ContentLength = sendLength;  
@@ -86,7 +86,7 @@ End Try
 // Create a response object.  
 WebResponse response = request.GetResponse();  
 // Get a readable stream from the server.  
-StreamReader sr =   
+StreamReader sr =
    new StreamReader(response.GetResponseStream(), Encoding.ASCII);  
 // Use the stream. Remember when you are through with the stream to close it.  
 sr.Close();  
@@ -96,13 +96,13 @@ sr.Close();
 ' Create a response object.  
 Dim response As WebResponse = request.GetResponse()  
 ' Get a readable stream from the server.  
-Dim sr As _   
+Dim sr As _
    New StreamReader(response.GetResponseStream(), Encoding.ASCII)  
 ' Use the stream. Remember when you are through with the stream to close it.  
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Запрос данных с помощью класса WebRequest](how-to-request-data-using-the-webrequest-class.md)
 - [Запрос данных](requesting-data.md)

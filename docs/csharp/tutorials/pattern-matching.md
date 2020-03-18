@@ -4,12 +4,12 @@ description: Этом руководстве показано, как испол
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039196"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156536"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Учебник. Использование функций сопоставления шаблонов для расширения типов данных
 
@@ -41,7 +41,7 @@ ms.locfileid: "73039196"
 
 Из этого краткого описания вы можете быстро составить иерархию объектов для моделирования этой системы. Но ваши данные поступают из разных источников, включая другие системы управления регистрацией транспортных средств. Эти системы предоставляют разные классы для моделирования таких данных, и у вас нет единой объектной модели, которую можно использовать. При работе с этим руководством для моделирования данных автомобиля вы будете использовать упрощенные классы из этих внешних систем, как показано в следующем примере кода:
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 Скачать начальный код можно из репозитория GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start). Вы можете видеть, что классы транспортных средств принадлежат разным системам и находятся в разных пространствах имен. Вы не можете использовать другие базовые классы, кроме `System.Object`.
 
@@ -241,7 +241,7 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 Этот метод работает, но фрагменты кода повторяются. Вы можете упростить его, как показано в следующем примере:
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 Затем добавьте такую же функцию, чтобы создать временные интервалы:
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 В предыдущем методе сопоставление шаблонов не применяется. В этом случае проще использовать каскад операторов `if`. Чтобы преобразовать каждый диапазон времени в дискретную величину, добавьте закрытое перечисление `enum`.
 
 Создав эти методы, можно использовать другое выражение `switch` с **шаблоном кортежа** для вычисления премиум-цены. Вы можете записать выражение `switch` сразу со всеми 16 вариантами:
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 Код выше работает, но его можно упростить. Плата для всех восьми сочетаний в выходные дни одинаковая. Вы можете заменить все восемь вариантов одной строкой:
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 Наконец, вы можете удалить два часа пик, за которые взимается обычная плата. Удалив эти ветви, можно заменить `false` пустой переменной (`_`) в последней ветви switch. У вас получится следующий законченный метод:
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 В этом примере продемонстрировано одно из преимуществ сопоставления шаблонов: ветви шаблона вычисляются по порядку. Если поменять их местами так, чтобы начальная ветвь обрабатывала один из последних случаев, компилятор выдаст предупреждение о недостижимом коде. Эти правила языка облегчают реализацию упрощений, выполненных выше, и гарантируют, что код не изменится.
 

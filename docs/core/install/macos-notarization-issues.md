@@ -4,12 +4,12 @@ description: Способы решения проблем с заверение�
 author: thraka
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: b16ef4074f829246df0aedebf7ffe4df75faed51
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78165353"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146753"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>Заверение macOS Catalina и влияние на скачиваемые файлы и проекты .NET Core
 
@@ -78,7 +78,7 @@ AppHost всегда создается при публикации прилож
 ## <a name="default-entitlements"></a>Права по умолчанию
 
 Узел по умолчанию .NET Core (команда `dotnet`) имеет набор прав по умолчанию. Эти права необходимы для правильной работы .NET Core. Приложению могут понадобиться дополнительные права. В этом случае потребуется создать и использовать [appHost](#apphost-is-disabled-by-default), а затем добавить необходимые права локально.
- 
+
 Набор прав по умолчанию для .NET Core:
 
 - `com.apple.security.cs.allow-jit`

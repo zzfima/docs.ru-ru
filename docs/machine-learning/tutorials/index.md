@@ -3,10 +3,10 @@ title: Руководства по ML.NET
 description: Наши руководства по ML.NET помогут вам научиться создавать специализированные решения на базе искусственного интеллекта и интегрировать их в свои .NET-приложения.
 ms.date: 07/08/2019
 ms.openlocfilehash: 771ecd83d3f901af84da1f55d7b48152e8145205
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716621"
 ---
 # <a name="mlnet-tutorials"></a>Руководства по ML.NET
@@ -23,6 +23,6 @@ ms.locfileid: "75716621"
 - [Обнаружение объектов на изображениях.](object-detection-onnx.md) Здесь описан способ обнаружения объектов на изображениях с помощью предварительно обученной модели ONNX.
 - [Классификация тональностей обзоров фильмов](text-classification-tf.md): узнайте, как загрузить предварительно обученную модель TensorFlow, чтобы классифицировать тональности обзоров фильмов.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Next Steps
 
 Другие примеры использования ML.NET см. в репозитории GitHub [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples).

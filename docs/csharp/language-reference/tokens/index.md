@@ -10,22 +10,22 @@ helpviewer_keywords:
 - '@ character (C#)'
 - $ character (C#)
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
-ms.openlocfilehash: 3deb4fd1de5b81e95d1caaf2a04e2daca7f285f5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 241f973baac1671a30da391fb8c3f055fb3ad754
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712433"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79173384"
 ---
 # <a name="c-special-characters"></a>Специальные символы в C#
 
-Специальные символы — это стандартные контекстно-зависимые символы, которые изменяют элемент программы (строковый литерал, идентификатор или имя атрибута), к которому они добавляются. C# поддерживает следующие специальные символы: 
+Специальные символы — это стандартные контекстно-зависимые символы, которые изменяют элемент программы (строковый литерал, идентификатор или имя атрибута), к которому они добавляются. C# поддерживает следующие специальные символы:
 
-- [@](./verbatim.md), символ буквального идентификатора. 
+- [@](./verbatim.md), символ буквального идентификатора.
 
 - [$](./interpolated.md), символ интерполируемой строки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

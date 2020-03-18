@@ -4,12 +4,12 @@ description: Сведения о том, как документировать �
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 1ed39c4733c36b3932fcb85bf50d4f4c0e53aa6f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965936"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146321"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Документирование кода с помощью XML-комментариев
 
@@ -26,9 +26,9 @@ ms.locfileid: "76965936"
    ```xml
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
    ```
-   
+
    Оно эквивалентно следующему выражению:
-   
+
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```

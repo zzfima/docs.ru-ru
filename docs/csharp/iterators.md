@@ -1,17 +1,17 @@
 ---
-title: Iterators
+title: Итераторы
 description: Сведения о том, как использовать встроенные итераторы C# и создавать собственные настраиваемые методы итераторов.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
 ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036420"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398727"
 ---
-# <a name="iterators"></a>Iterators
+# <a name="iterators"></a>Итераторы
 
 Почти каждой написанной вами программе придется выполнять итерацию определенной коллекции. Для этого вы напишете код, проверяющий каждый элемент в коллекции.
 
@@ -28,7 +28,7 @@ ms.locfileid: "73036420"
 
 ## <a name="iterating-with-foreach"></a>Итерация для каждого
 
-Вы полнить перечисление коллекции несложно. Ключевое слово `foreach` перечисляет коллекцию, выполняя внедренный оператор по одному разу для каждого элемента в коллекции:
+Перечислить коллекцию просто: ключевое слово `foreach` перечисляет коллекцию, выполняя внедренный оператор по одному разу для каждого элемента в коллекции:
 
 ```csharp
 foreach (var item in collection)

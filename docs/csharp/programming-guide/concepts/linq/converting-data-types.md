@@ -3,10 +3,10 @@ title: Преобразование типов данных (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 328c790a1a360907c91f69b3b6330b0b25eb414b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347200"
 ---
 # <a name="converting-data-types-c"></a>Преобразование типов данных (C#)
@@ -25,7 +25,7 @@ ms.locfileid: "75347200"
 
  Методы преобразования в этой таблице, имена которых начинаются с "As", изменяют статический тип исходной коллекции, но не выполняют перечисление. Методы, имена которых начинаются с "To", перечисляют исходную коллекцию и помещают элементы в соответствующий тип коллекции.
 
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|
+|Имя метода|Описание:|Синтаксис выражения запроса C#|Дополнительные сведения|
 |-----------------|-----------------|---------------------------------|----------------------|
 |AsEnumerable|Возвращает входное значение, типизированное как <xref:System.Collections.Generic.IEnumerable%601>.|Не применяется|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|Преобразует <xref:System.Collections.IEnumerable> (универсальный шаблон) в <xref:System.Linq.IQueryable> (универсальный шаблон).|Не применяется|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -75,7 +75,7 @@ static void Cast()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)

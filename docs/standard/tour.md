@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160343"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78241147"
 ---
 # <a name="tour-of-net"></a>Обзор .NET
 
@@ -41,7 +41,7 @@ ms.locfileid: "78160343"
 
 Обе приведенные ниже строки выделяют память:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 Аналогичных ключевых слов для отмены выделения памяти не существует, так как отмена осуществляется автоматически, когда сборщик мусора освобождает память в рамках запланированного выполнения.
 
@@ -49,7 +49,7 @@ ms.locfileid: "78160343"
 
 В следующем примере среда выполнения порождает исключение <xref:System.IndexOutOfRangeException> для обеспечения безопасности памяти.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>Работа с неуправляемыми ресурсами
 
@@ -57,7 +57,7 @@ ms.locfileid: "78160343"
 
 В среде .NET объекты, которые ссылаются на неуправляемые ресурсы, реализуют интерфейс <xref:System.IDisposable>. После окончания работы с объектом вызовите метод <xref:System.IDisposable.Dispose> объекта, который отвечает за освобождение неуправляемых ресурсов. В языках .NET для таких объектов есть удобная [инструкция `using`](../csharp/language-reference/keywords/using.md), как показано в следующем примере:
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 После окончания блока `using` среда выполнения .NET автоматически вызывает метод <xref:System.IDisposable.Dispose> объекта `stream`, который освобождает дескриптор файла. Среда выполнения также делает это, если управление переходит за пределы блока из-за исключения.
 
@@ -73,15 +73,15 @@ ms.locfileid: "78160343"
 
 Языки .NET являются объектно-ориентированными и имеют иерархии базовых и производных классов. Среда выполнения .NET допускает только те приведения и вызовы объектов, которые соответствуют иерархии объектов. Помните, что любой тип, определенный в любом языке .NET, является производным от базового типа <xref:System.Object>.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 Безопасность типа также используется для принудительной инкапсуляции, обеспечивая точность ключевых слов метода доступа. Ключевые слова метода доступа являются артефактами, которые управляют доступом к членам определенного типа из другого кода. Обычно они используются для различных видов данных внутри типа, которые позволяют управлять его поведением.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 Языки C#, Visual Basic и F# поддерживают *вывод локального типа*. Определение типа означает, что компилятор выводит тип выражения в левой части из выражения в правой части. Это не значит, что безопасность типа нарушается или исключается. Результирующий тип имеет строгий тип со всем, что подразумевается. В предыдущем примере `dog` перезаписывается для представления вывода типа, а оставшаяся часть примера остается без изменений:
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 В языке F# имеется даже больше возможностей вывода для типов, чем локальных выводов для типов методов в языках C# и Visual Basic. Для получения дополнительных сведений ознакомьтесь с разделом о [выводе типа](../fsharp/language-reference/type-inference.md).
 
@@ -101,7 +101,7 @@ ms.locfileid: "78160343"
 
 В следующем примере показано выполнение простой программы с использованием экземпляра типов <xref:System.Collections.Generic.List%601>.
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 Дополнительные сведения см. в разделе [Обзор универсальных типов (универсальных шаблонов)](generics.md).
 
@@ -133,9 +133,9 @@ LINQ — это эффективный набор функций для C# и V
 
 В следующем примере показана измененная версия метода `ToString()` из класса `StringBuilder`. Этот пример иллюстрирует, как с помощью кода `unsafe` можно эффективно реализовать алгоритм, перемещая блоки памяти напрямую:
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Если вас интересуют возможности языка C#, ознакомьтесь с [соответствующим обзором](../csharp/tour-of-csharp/index.md).
 

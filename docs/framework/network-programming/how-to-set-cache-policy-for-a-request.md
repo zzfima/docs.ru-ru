@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048117"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180770"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Практическое руководство. Задание политики кэширования для запроса
 В следующем примере показана установка политики кэширования для запроса. В качестве входных данных для этого примера используется URI, например `http://www.contoso.com/`.  
@@ -29,12 +29,12 @@ using System.IO;
 namespace Examples.System.Net.Cache  
 {  
     public class CacheExample  
-    {     
+    {
         public static void UseCacheForOneDay(Uri resource)  
         {  
             // Create a policy that allows items in the cache  
             // to be used if they have been cached one day or less.  
-            HttpRequestCachePolicy requestPolicy =   
+            HttpRequestCachePolicy requestPolicy =
                 new HttpRequestCachePolicy (HttpCacheAgeControl.MaxAge,  
                 TimeSpan.FromDays(1));  
   
@@ -105,10 +105,10 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Управление кэшем для сетевых приложений](cache-management-for-network-applications.md)
 - [Политика кэша](cache-policy.md)
 - [Политики кэша на основе расположения](location-based-cache-policies.md)
 - [Политики кэша на основе времени](time-based-cache-policies.md)
-- [Элемент \<requestCaching> (сетевые параметры)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Элемент \<requestCaching> (параметры сети)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

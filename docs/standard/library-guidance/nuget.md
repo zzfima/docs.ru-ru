@@ -3,11 +3,11 @@ title: NuGet и библиотеки .NET
 description: Практические рекомендации по упаковке библиотек .NET с помощью NuGet.
 ms.date: 01/15/2019
 ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731372"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398535"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -36,7 +36,7 @@ NuGet — это диспетчер пакетов для экосистемы .
 
 ✔ РЕКОМЕНДУЕТСЯ использовать файл проекта в стиле SDK для создания пакета NuGet.
 
-## <a name="package-dependencies"></a>Зависимости пакета
+## <a name="package-dependencies"></a>Зависимости пакетов
 
 См. сведения о [зависимостях пакета NuGet](./dependencies.md).
 
@@ -44,7 +44,7 @@ NuGet — это диспетчер пакетов для экосистемы .
 
 Пакет NuGet поддерживает многие [свойства метаданных](/nuget/reference/nuspec). В следующей таблице собраны основные метаданные, которые должен предоставлять каждый пакет на NuGet.org.
 
-| Имя свойства MSBuild              | Имя Nuspec              | Описание  |
+| Имя свойства MSBuild              | Имя Nuspec              | Описание:  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Идентификатор пакета. Можно зарезервировать префикс из идентификатора, если он удовлетворяет [критериям](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Версия пакета NuGet. См. сведения о [версии пакета NuGet](./versioning.md#nuget-package-version).             |

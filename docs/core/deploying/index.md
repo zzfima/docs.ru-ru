@@ -3,11 +3,11 @@ title: Публикация приложений
 description: Дополнительные сведения о публикации приложения .NET Core. .NET Core может публиковать приложения для конкретной платформы или кроссплатформенные приложения. Приложение можно опубликовать как автономное или как зависимое от среды выполнения. Каждый режим влияет на то, как пользователь запускает приложение.
 ms.date: 01/31/2020
 ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157939"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397590"
 ---
 # <a name="net-core-application-publishing-overview"></a>Общие сведения о публикации приложений .NET Core
 
@@ -23,7 +23,7 @@ ms.locfileid: "78157939"
 
 В следующей таблице приведены команды, используемые для публикации автономных и зависящих от среды приложений для каждой версии пакета SDK:
 
-| Type                                                                                 | SDK 2.1 | SDK 3.x | Команда |
+| Type                                                                                 | SDK 2.1 | SDK 3.x | Get-Help |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
 | [зависящий от среды выполнения исполняемый файл](#publish-runtime-dependent) для текущей платформы. |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | [зависящий от среды выполнения исполняемый файл](#publish-runtime-dependent) для определенной платформы.  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
@@ -38,7 +38,7 @@ ms.locfileid: "78157939"
 
 Следующие команды создают исполняемый файл:
 
-| Type                                                                                 | SDK 2.1 | SDK 3.x | Команда |
+| Type                                                                                 | SDK 2.1 | SDK 3.x | Get-Help |
 | ------------------------------------------------------------------------------------ | ------- | ------- | ------- |
 | [зависящий от среды выполнения исполняемый файл](#publish-runtime-dependent) для текущей платформы. |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | [зависящий от среды выполнения исполняемый файл](#publish-runtime-dependent) для определенной платформы.  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
@@ -52,7 +52,7 @@ ms.locfileid: "78157939"
 
 Следующая команда создает кроссплатформенный двоичный файл:
 
-| Type                                                                                 | SDK 2.1 | SDK 3.x | Команда |
+| Type                                                                                 | SDK 2.1 | SDK 3.x | Get-Help |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
 | [зависящий от среды выполнения кроссплатформенный двоичный файл](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
@@ -148,7 +148,7 @@ dotnet publish -r osx-x64
 dotnet publish -r win-x64
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Развертывание приложений .NET Core с помощью .NET Core CLI.](deploy-with-cli.md)
 - [Развертывание приложений .NET Core с помощью Visual Studio.](deploy-with-vs.md)

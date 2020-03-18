@@ -2,12 +2,12 @@
 title: Выполнение потокового преобразования крупных XML-документов (C#)
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 86b74534635dcca7e8c7f94873abcb50ea7c4d2b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9eb2e832f798e550ef3b534b0c9a0e3416378b43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345815"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169108"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Выполнение потокового преобразования крупных XML-документов (C#)
 Иногда необходимо преобразовывать большие XML-файлы, при этом приложение должно быть написано так, чтобы используемый им объем памяти был прогнозируемым. Если вставить в XML-дерево очень большой XML-файл, то объем используемой памяти будет пропорциональным размеру файла (то есть чрезмерным). Поэтому следует вместо этого использовать потоки.  
@@ -28,7 +28,7 @@ ms.locfileid: "75345815"
  Далее показан исходный документ, Source.xml:  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8" ?>   
+<?xml version="1.0" encoding="utf-8" ?>
 <Root>  
   <Customer>  
     <Name>A. Datum Corporation</Name>  

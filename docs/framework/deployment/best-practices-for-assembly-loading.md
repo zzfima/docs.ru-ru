@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716578"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181700"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Рекомендации для загрузки сборок
 В этой статье рассматриваются способы избежания проблем с идентификацией типов, способных привести к исключениям <xref:System.InvalidCastException>, <xref:System.MissingMethodException> и другим ошибкам. В статье рассматриваются следующие рекомендации:  
@@ -34,7 +34,7 @@ ms.locfileid: "75716578"
   
  Первая рекомендация, касающаяся [преимуществ и недостатков контекстов загрузки](#load_contexts), предоставляет базовые сведения для всех прочих рекомендаций, так как все они полагаются на понимание сути контекстов загрузки.  
   
-<a name="load_contexts"></a>   
+<a name="load_contexts"></a>
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>Понимание преимуществ и недостатков контекстов загрузки  
  В рамках домена приложения сборки могут загружаться в одном из трех контекстов либо могут быть загружены без контекста:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75716578"
   
 - На платформе .NET Framework версий 1.0 и 1.1 политика не применяется.  
   
-<a name="avoid_partial_names"></a>   
+<a name="avoid_partial_names"></a>
 ## <a name="avoid-binding-on-partial-assembly-names"></a>Избежание привязки к частичным именам сборок  
  Частичная привязка имен происходит при указании лишь одной из частей отображаемого имени сборки (<xref:System.Reflection.Assembly.FullName%2A>) при ее загрузке. Например, метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> можно вызвать с простым именем сборки, не указывая ее версию, язык и региональные параметры, а также маркер открытого ключа. Также можно вызвать метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>, который сначала вызывает метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, а затем, если ему не удалось найти сборку, проводит поиск по глобальному кэшу сборок и загружает последнюю версию сборки из доступных.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "75716578"
   
  Если вы хотите использовать метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A>, потому что он упрощает загрузку сборок, учтите, что сбой приложения с сообщением, содержащим полный идентификатор необходимой сборки, — это лучше для пользователя, чем автоматическое использование неизвестной версии сборки, способной вызвать непредвиденное поведение и бреши в системе безопасности.  
   
-<a name="avoid_loading_into_multiple_contexts"></a>   
+<a name="avoid_loading_into_multiple_contexts"></a>
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>Избежание загрузки сборок в нескольких контекстах  
  Загрузка сборок в нескольких контекстах может вызывать проблемы с идентификацией типов. Загрузка одного и того же типа из одной и той же сборки в двух разных контекстах аналогична загрузке двух разных типов с одним и тем же именем. При попытке приведения из одного такого типа в другой возникнет исключение <xref:System.InvalidCastException>, а в сообщении об ошибке при этом будет несколько туманно сказано, что тип `MyType` нельзя привести к типу `MyType`.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75716578"
   
  В разделе [Рассмотрение возможности перехода к использованию контекста загрузки по умолчанию](#switch_to_default) описаны альтернативы использованию загрузки по файловому пути, например <xref:System.Reflection.Assembly.LoadFile%2A> и <xref:System.Reflection.Assembly.LoadFrom%2A>.  
   
-<a name="avoid_loading_multiple_versions"></a>   
+<a name="avoid_loading_multiple_versions"></a>
 ## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>Избежание загрузки нескольких версий сборки в том же контексте  
  Загрузка нескольких версий сборки в одном контексте загрузки может вызвать проблемы с идентификацией типов. Загрузка одного и того же типа из двух версий одной и той же сборки аналогична загрузке двух разных типов с одним и тем же именем. При попытке приведения из одного такого типа в другой возникнет исключение <xref:System.InvalidCastException>, а в сообщении об ошибке при этом будет несколько туманно сказано, что тип `MyType` нельзя привести к типу `MyType`.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "75716578"
   
  Тщательно проанализируйте свой код и убедитесь, что загружается только одна версия сборки. В любой момент времени можно использовать метод <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> для определения фактически загруженных сборок.  
   
-<a name="switch_to_default"></a>   
+<a name="switch_to_default"></a>
 ## <a name="consider-switching-to-the-default-load-context"></a>Возможность перехода к использованию контекста загрузки по умолчанию  
  Рассмотрите способы загрузки и развертывания сборок в вашем приложении. Можно ли устранить сборки, загружаемые из байтовых массивов? Можно ли перенести сборки в путь поиска сборок? Если сборки загружаются из глобального кэша сборок или пути поиска сборок домена приложения (то есть <xref:System.AppDomainSetup.ApplicationBase%2A> и <xref:System.AppDomainSetup.PrivateBinPath%2A>), то сборку можно загрузить по идентификатору.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "75716578"
   
  Обратите внимание, что для загрузки таких сборок можно использовать метод <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. Так как они теперь расположены в пути поиска, они будут загружены в контексте загрузки по умолчанию, а не в контексте, из которого ведется загрузка. Тем не менее рекомендуется перейти к использованию метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> и полных отображаемых имен сборок, чтобы гарантировать, что всегда используются только правильные их версии.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

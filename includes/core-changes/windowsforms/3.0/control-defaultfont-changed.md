@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75936997"
 ---
 ### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Шрифт элемента управления по умолчанию изменен на Segoe UI 9 пт
@@ -22,7 +22,7 @@ ms.locfileid: "75936997"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Рекомендованное действие
 
@@ -44,7 +44,7 @@ public MyForm()
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Отсутствует.
+Нет.
 
 <!--
 

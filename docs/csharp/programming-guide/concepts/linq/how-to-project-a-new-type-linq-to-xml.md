@@ -2,12 +2,12 @@
 title: Как проецировать новый тип (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 3a54677fa0fa2845dd635f89ddb7ed1c5c279e03
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5205a0c56651271dea0181ed96518c0e9d7f95f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345720"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168997"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Как проецировать новый тип (LINQ to XML) (C#)
 
@@ -17,22 +17,22 @@ ms.locfileid: "75345720"
 
 В данном примере показано, как создавать экземпляры объектов в предложении `select`. Сначала в коде определяется новый класс с помощью конструктора, а затем модифицируется инструкция `select`, чтобы это выражение представляло новый экземпляр нового класса.
 
-В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
+В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
 
 ```csharp
-class NameQty 
+class NameQty
 {
     public string name;
     public int qty;
     public NameQty(string n, int q)
     {
         name = n;
-        qty = q; 
+        qty = q;
     }
 };
 
 class Program {
-    public static void Main() 
+    public static void Main()
     {
         XElement po = XElement.Load("PurchaseOrder.xml");
   

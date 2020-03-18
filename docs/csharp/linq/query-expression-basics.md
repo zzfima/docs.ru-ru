@@ -3,12 +3,12 @@ title: Основы выражения запроса (LINQ в C#)
 description: Общие сведения о понятиях, относящихся к выражениям запроса
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 83beaa82d4b4b42ff9da5230edddd391b33a0717
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635864"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173358"
 ---
 # <a name="query-expression-basics"></a>Основы выражения запроса
 
@@ -156,7 +156,7 @@ ms.locfileid: "75635864"
 
 Также можно выполнить групповое соединение путем сохранения результатов операции `join` во временную переменную, используя ключевое слово [into](../language-reference/keywords/into.md). Дополнительные сведения см. в разделе [Предложение join](../language-reference/keywords/join-clause.md).
 
-#### <a name="let-clause"></a>Предложение let 
+#### <a name="let-clause"></a>Предложение let
 
 Используйте предложение `let` для сохранения результата выражения, например вызов метода, в новую переменную диапазона. В следующем примере в переменную диапазона `firstName` сохраняется первый элемент массива строк, возвращенного с помощью `Split`.
 

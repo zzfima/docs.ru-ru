@@ -4,16 +4,16 @@ description: Узнайте, как отправить задание .NET дл�
 ms.date: 12/05/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9cd3d40871d4600660957ec268f192ef3e045845
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 65976f9095ecef66e0538c398492033c612c1430
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838365"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187611"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Отправка задания .NET для Apache Spark в Databricks
 
-Есть два способа развертывания задания .NET для Apache Spark в Databricks: с помощью команды `spark-submit` и действия "Указание файла JAR". 
+Есть два способа развертывания задания .NET для Apache Spark в Databricks: с помощью команды `spark-submit` и действия "Указание файла JAR".
 
 ## <a name="deploy-using-spark-submit"></a>Развертывание с помощью spark-submit
 
@@ -80,7 +80,7 @@ ms.locfileid: "74838365"
 
 4. Чтобы запустить задание, последовательно выберите **Кластер Databricks > Задания > [имя_задания] > Запустить сейчас**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 * [Начало работы с .NET для Apache Spark](../tutorials/get-started.md)
 * [Развертывание приложения .NET для Apache Spark в Databricks](../tutorials/databricks-deployment.md)

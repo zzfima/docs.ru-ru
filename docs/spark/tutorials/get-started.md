@@ -4,12 +4,12 @@ description: Узнайте, как запустить приложение .NET
 ms.date: 01/31/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 018c21804bf942233e07039281d7ec22a6bef763
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7375c385245a05d7dc29d5df89d875bf6cb4141a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092321"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187544"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Учебник. Начало работы с .NET для Apache Spark
 
@@ -121,7 +121,7 @@ source ~/.bashrc
 
 В **Windows** создайте [переменную среды](https://www.java.com/en/download/help/path.xml) с именем `DOTNET_WORKER_DIR` и присвойте ей путь к каталогу, в который вы скачали и извлекли Microsoft.Spark.Worker (например, `C:\bin\Microsoft.Spark.Worker\`).
 
-В **macOS** создайте переменную среды с помощью `export DOTNET_WORKER_DIR <your_path>` и присвойте ей путь к каталогу, в который вы скачали и извлекли Microsoft.Spark.Worker (например, *~/bin/Microsoft.Spark.Worker/* ). 
+В **macOS** создайте переменную среды с помощью `export DOTNET_WORKER_DIR <your_path>` и присвойте ей путь к каталогу, в который вы скачали и извлекли Microsoft.Spark.Worker (например, *~/bin/Microsoft.Spark.Worker/* ).
 
 В **Ubuntu** создайте [переменную среды](https://help.ubuntu.com/community/EnvironmentVariables) с именем `DOTNET_WORKER_DIR` и присвойте ей путь к каталогу, в который вы скачали и извлекли Microsoft.Spark.Worker (например, *~/bin/Microsoft.Spark.Worker*).
 

@@ -2,12 +2,12 @@
 title: Извлечение одного атрибута (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 31b34bddc9e748b473641235402847991d444c39
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 830a7be24702b6037ac62471060fbe49d8ded598
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347496"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168717"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Извлечение одного атрибута (LINQ to XML) (C#)
 В этом разделе приведены объяснения способа получения одного атрибута элемента при условии, что название атрибута известно. Это полезно для составления выражений запросов, при которых требуется найти элемент с определенным атрибутом.  
@@ -54,7 +54,7 @@ XElement cust = new XElement("PhoneNumbers",
         new XAttribute("type", "work"),  
         "555-555-6666")  
 );  
-IEnumerable<XElement> elList =   
+IEnumerable<XElement> elList =
     from el in cust.Descendants("Phone")  
     select el;  
 foreach (XElement el in elList)  
@@ -97,6 +97,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Оси LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

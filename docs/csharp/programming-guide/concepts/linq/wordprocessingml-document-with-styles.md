@@ -2,12 +2,12 @@
 title: Документ WordprocessingML со стилями3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 8f335303f2e288103520d0bedf81e295ab56efef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 10697744680276a40fb7a175e4c04920c9e3c243
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590870"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167872"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Документ WordprocessingML со стилями
 Более сложные документы WordprocessingML обладают абзацами, которые форматированы по стилям.  
@@ -17,7 +17,7 @@ ms.locfileid: "69590870"
  При доступе к пакетам очень важно использовать для этого связи между частями, а не произвольный путь. Этот вопрос не рассматривается в учебнике "Обработка содержимого документа WordprocessingML", однако примеры программ, включенные в этот учебник, демонстрируют правильный подход.  
   
 ## <a name="a-document-that-uses-styles"></a>Документ, в котором используются стили  
- Пример WordML, приводимый в разделе [Форма документов WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md), очень простой. Следующий документ более сложный. Он содержит абзацы, форматированные по стилям. Самый простой способ увидеть XML, который составляет XML-документ Office Open, состоит в том, чтобы запустить [Пример, выводящий части документа в формате Office Open XML (C#)](./example-that-outputs-office-open-xml-document-parts.md).  
+ Пример WordML, приводимый в разделе [Форма документов WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md), очень простой. Следующий документ более сложный: он содержит абзацы, отформатированные с использованием стилей. Самый простой способ увидеть XML, который составляет XML-документ Office Open, состоит в том, чтобы запустить [Пример, выводящий части документа в формате Office Open XML (C#)](./example-that-outputs-office-open-xml-document-parts.md).  
   
  В следующем документе первый абзац имеет стиль `Heading1`. Имеется несколько абзацев со стилем по умолчанию. Также имеется несколько абзацев со стилем `Code`. Благодаря этой относительной сложности синтаксический анализ этого документа при помощи LINQ to XML более интересен.  
   
@@ -136,4 +136,3 @@ ms.locfileid: "69590870"
   </w:body>  
 </w:document>  
 ```  
- 

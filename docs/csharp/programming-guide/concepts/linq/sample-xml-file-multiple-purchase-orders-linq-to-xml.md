@@ -1,15 +1,15 @@
 ---
-title: 'Пример XML-файла: несколько заказов на покупку (LINQ to XML)'
+title: Пример XML-файла. Несколько заказов на покупку (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: 1a2bfd64470fb52588d02fcfda5f89301e8d400a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d73887308c07b161887716ccf2194eeb3918ff51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483690"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168145"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Пример XML-файла: несколько заказов на покупку (LINQ to XML)
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Пример XML-файла. Несколько заказов на покупку (LINQ to XML)
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит несколько заказов на покупку.  
   
 ## <a name="purchaseordersxml"></a>PurchaseOrders.xml  
@@ -108,4 +108,3 @@ ms.locfileid: "66483690"
   </PurchaseOrder>  
 </PurchaseOrders>  
 ```  
- 

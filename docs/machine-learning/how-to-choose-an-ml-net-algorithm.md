@@ -4,10 +4,10 @@ description: Сведения о выборе алгоритма ML.NET для �
 ms.topic: overview
 ms.date: 06/05/2019
 ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75739997"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Выбор алгоритма ML.NET
@@ -95,7 +95,7 @@ ms.locfileid: "75739997"
 |----------|--------|
 |Используется для обнаружения отклонений.|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
-## <a name="naive-bayes"></a>Упрощенный алгоритм Байеса
+## <a name="naive-bayes"></a>упрощенный алгоритм Байеса
 
 |Свойства|Обучающие алгоритмы|
 |----------|--------|

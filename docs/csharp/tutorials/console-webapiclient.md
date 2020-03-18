@@ -3,12 +3,12 @@ title: Создание клиента REST с использованием .NET
 description: Это руководство раскроет для вас некоторые возможности .NET Core и языка C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503971"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156861"
 ---
 # <a name="rest-client"></a>Клиент REST
 
@@ -161,7 +161,7 @@ namespace WebAPIClient
 Сериализатор JSON просто игнорирует информацию, которая не входит в используемый тип класса.
 Такое поведение позволяет легко создавать типы, работающие с любым подмножеством полей из пакета JSON.
 
-Теперь давайте выполним десериализацию созданного типа. 
+Теперь давайте выполним десериализацию созданного типа.
 
 Теперь вызовите сериализатор для преобразования пакета JSON в объекты C#. В методе `ProcessRepositories` замените вызов <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> следующими тремя строками:
 

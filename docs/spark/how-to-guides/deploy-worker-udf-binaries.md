@@ -4,12 +4,12 @@ description: Узнайте, как развернуть рабочую роль
 ms.date: 01/21/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: f9197ca3cf8066f0849ebbe70d7757c9035d02f6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f373ccee398149adcadeac91f02d9896214706b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748545"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187594"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Развертывание рабочей роли и двоичных файлов пользовательских функций .NET для Apache Spark
 
@@ -19,19 +19,19 @@ ms.locfileid: "76748545"
 В конфигурациях приводятся общие переменные среды и параметры для развертывания рабочей роли и двоичных файлов пользовательских функций .NET для Apache Spark.
 
 ### <a name="environment-variables"></a>Переменные среды
-При развертывании рабочих ролей и создании пользовательских функций может потребоваться задать ряд стандартных переменных среды. 
+При развертывании рабочих ролей и создании пользовательских функций может потребоваться задать ряд стандартных переменных среды.
 
 | Переменная среды         | Описание
-| :--------------------------- | :---------- 
+| :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | Путь к месту создания двоичного файла <code>Microsoft.Spark.Worker</code>.</br>Он используется драйвером Spark и будет передан в исполнители Spark. Если эта переменная не задана, исполнители Spark будут выполнять поиск по пути, указанному в переменной среды <code>PATH</code>.</br>_Пример: "C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | Разделенные запятыми пути, по которому <code>Microsoft.Spark.Worker</code> будет загружать сборки.</br>Обратите внимание, что, если путь начинается с символа ".", в начало будет добавлен рабочий каталог. В **режиме YARN** символ "." представляет рабочий каталог контейнера.</br>_Пример: "C:\Users\\&lt;имя пользователя&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;версия dotnet&gt;"_
 | DOTNET_WORKER_DEBUG          | Если нужно <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">выполнить отладку пользовательской функции</a>, присвойте этой переменной среды значение <code>1</code> перед выполнением <code>spark-submit</code>.
 
 ### <a name="parameter-options"></a>Параметры
-После [упаковки](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies) приложения Spark его можно запустить с помощью `spark-submit`. В таблице ниже представлены некоторые часто используемые параметры. 
+После [упаковки](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies) приложения Spark его можно запустить с помощью `spark-submit`. В таблице ниже представлены некоторые часто используемые параметры.
 
 | имени параметра        | Описание
-| :---------------------| :---------- 
+| :---------------------| :----------
 | --class               | Точка входа для приложения.</br>_Пример: org.apache.spark.deploy.dotnet.DotnetRunner_
 | --master              | <a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">Главный URL-адрес</a> кластера.</br>_Пример: yarn_
 | --deploy-mode         | Указывает, следует ли развернуть драйвер в рабочих узлах (<code>cluster</code>) или локально в качестве внешнего клиента (<code>client</code>).</br>По умолчанию: <code>client</code>

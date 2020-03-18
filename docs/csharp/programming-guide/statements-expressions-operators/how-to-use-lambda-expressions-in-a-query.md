@@ -5,10 +5,10 @@ helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
 ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711965"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Руководство по программированию на C#. Использование лямбда-выражений в запросах
@@ -29,7 +29,7 @@ ms.locfileid: "75711965"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Чтобы выполнить этот код, скопируйте и вставьте метод в `StudentClass`, описанный в руководстве по [созданию запросов к коллекции объектов](../../linq/query-a-collection-of-objects.md), а затем вызовите его из метода `Main`.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Лямбда-выражения](./lambda-expressions.md)
-- [Expression Trees (C#)](../concepts/expression-trees/index.md) (Деревья выражений (C#))
+- [Деревья выражений (C#)](../concepts/expression-trees/index.md)

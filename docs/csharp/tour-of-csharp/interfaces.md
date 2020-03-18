@@ -4,10 +4,10 @@ description: Интерфейсы определяют контракты, ко�
 ms.date: 02/27/2020
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
 ms.openlocfilehash: 62d94462fa481379cf70d63a598deb7f36be204f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159134"
 ---
 # <a name="interfaces"></a>Интерфейсы

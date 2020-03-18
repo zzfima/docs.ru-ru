@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: d8db8cc6157ef0b03c90d00804696c7e660f08a3
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: cf8316ede6888b99a8b0c87cfa3426b33be18b7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736778"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180743"
 ---
 # <a name="listening-with-sockets"></a>прослушивание с помощью сокетов
 Сокеты прослушивателя и сервера открывают порт в сети и ожидают, когда клиент подключится к этому порту. В этом примере показано, как создать удаленную службу для сети TCP/IP (хотя существуют и другие семейства сетевых адресов и протоколов).  
@@ -45,7 +45,7 @@ IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
   
 ```vb  
 Dim listener As New Socket(ipAddress.AddressFamily, _  
-    SocketType.Stream, ProtocolType.Tcp) 
+    SocketType.Stream, ProtocolType.Tcp)
 listener.Bind(localEndPoint)  
 listener.Listen(100)  
 ```  
@@ -59,7 +59,7 @@ listener.Listen(100);
   
  Метод **Listen** принимает один параметр, который определяет максимальное количество ожидающих подключений для сокета **Socket**. При превышении этого количества клиенту возвращается ошибка "Сервер занят". В данном случае в очередь на подключение размещается до 100 клиентов. 101 клиенту возвращается ответ "Сервер занят".  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Использование синхронного сокета сервера](using-a-synchronous-server-socket.md)
 - [Использование асинхронных сокетов сервера](using-an-asynchronous-server-socket.md)

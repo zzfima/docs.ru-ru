@@ -3,12 +3,12 @@ title: Вложенный запрос в операции группирова�
 description: Как выполнять вложенный запрос в операции группирования с помощью LINQ в C#.
 ms.date: 12/01/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: a3757a7d358a310dd1404f85e34178f6e561bcb9
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: fd26f87ad7d5b4892f086bf8c7a34cf19a7f9e02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857441"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173371"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Вложенный запрос в операции группирования
 
@@ -23,12 +23,12 @@ ms.locfileid: "54857441"
 > [!NOTE]
 > Этот пример содержит ссылки на объекты, определенные в примере кода в разделе [Запрос коллекции объектов](query-a-collection-of-objects.md).
 
-[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)] 
+[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]
 
 Запрос, который приведен в фрагменте кода выше, можно записать, используя синтаксис метода. В следующем фрагменте кода приведен семантически эквивалентный запрос, написанный с использованием синтаксиса метода.
 
 [!code-csharp[csProgGuideLINQ#86](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_2.cs)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ](index.md)

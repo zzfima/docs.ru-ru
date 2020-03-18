@@ -6,12 +6,12 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: dd8c2c6b3cfa919970f68f2faae2044568f6c9ac
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 883aaf032bde632b08f965d3450cfbea4feb8e65
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457910"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181259"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Устранение рисков. Новый 64-разрядный JIT-компилятор
 Начиная с .NET Framework 4.6 среда выполнения включает в себя новый 64-разрядный JIT-компилятор. Это изменение не влияет на компиляцию с помощью 32-разрядного JIT-компилятора.  
@@ -36,7 +36,7 @@ ms.locfileid: "73457910"
   
 - При определенных условиях, если инструкция `if` используется для проверки условия перед входом в блок `try` и на выходе из блока `try`, и такое же условие вычисляется в блоке `catch` или `finally`, новый 64-разрядный JIT-компилятор удаляет условие `if` из блока `catch` или `finally` при оптимизации кода. В результате код внутри инструкции `if` в блоке `catch` или `finally` выполняется безусловно.  
   
-<a name="General"></a>   
+<a name="General"></a>
 ## <a name="mitigation-of-known-issues"></a>Устранение известных проблем  
  При возникновении перечисленных выше проблем их можно решить, выполнив одно из следующих действий.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73457910"
   
 - Компиляция с помощью старого 64-разрядного JIT-компилятора. Дополнительные сведения о том, как это сделать, см. в разделе [Устранение других проблем](#Other).  
   
-<a name="Other"></a>   
+<a name="Other"></a>
 ## <a name="mitigation-of-other-issues"></a>Устранение других проблем  
  При возникновении любых других различий в поведении между кодом, скомпилированным с помощью старого и нового 64-разрядных JIT-компиляторов, или между отладочной и окончательной версиями приложения, которые обе скомпилированы новым 64-разрядным JIT-компилятором, можно выполнить следующие действия для компиляции приложения с помощью старого 64-разрядного JIT-компилятора.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73457910"
   
  Можно также сообщить нам об обнаруженной проблеме, обратившись в службу [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Совместимость приложений](application-compatibility.md)
 - [Элемент \<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

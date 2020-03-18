@@ -2,12 +2,12 @@
 title: Команда dotnet publish
 description: Команда dotnet publish публикует решение или проект .NET Core в каталоге.
 ms.date: 02/24/2020
-ms.openlocfilehash: cf41ee09244faad03feb8ccda19135b8c7780106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157003"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146559"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,7 +20,7 @@ ms.locfileid: "78157003"
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration] 
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [--self-contained]
@@ -48,7 +48,7 @@ dotnet publish [-h|--help]
   
   * `PROJECT` — это путь или имя файла проекта [C#](csproj.md), F# или Visual Basic либо путь к папке, которая содержит файл проекта C#, F# или Visual Basic. Если каталог не указан, по умолчанию используется текущий каталог.
 
-  * `SOLUTION` — это путь и имя для файла решения (расширение *SLN*) или путь к каталогу, содержащему файл решения. Если каталог не указан, по умолчанию используется текущий каталог. **Доступно начиная с пакета SDK для .NET Core 3.0.** 
+  * `SOLUTION` — это путь и имя для файла решения (расширение *SLN*) или путь к каталогу, содержащему файл решения. Если каталог не указан, по умолчанию используется текущий каталог. Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 ## <a name="options"></a>Параметры
 
@@ -68,9 +68,9 @@ dotnet publish [-h|--help]
 
   Выводит краткую справку по команде.
 
-- **`--interactive`** **Доступно начиная с пакета SDK для .NET Core 3.0.**
+- **`--interactive`**
 
-  Позволяет команде остановиться и дождаться, пока пользователь выполнит действие или введет данные. Например, чтобы завершить проверку подлинности. 
+  Позволяет команде остановиться и дождаться, пока пользователь выполнит действие или введет данные. Например, чтобы завершить проверку подлинности. Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 - **`--manifest <PATH_TO_MANIFEST_FILE>`**
 
@@ -84,9 +84,9 @@ dotnet publish [-h|--help]
 
   Межпроектные ссылки игнорируются, и восстанавливается только корневой проект.
 
-- **`--nologo`** **Доступно начиная с пакета SDK для .NET Core 3.0.**
+- **`--nologo`**
 
-  Скрывает загрузочный баннер или сообщение об авторских правах. 
+  Скрывает загрузочный баннер или сообщение об авторских правах. Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 - **`--no-restore`**
 
@@ -102,9 +102,9 @@ dotnet publish [-h|--help]
 
   Публикует среду выполнения .NET Core вместе с приложением, что позволяет не устанавливать ее на конечном компьютере. Если указан идентификатор среды выполнения, значение по умолчанию равно `true`. Дополнительные сведения см. в разделах [Публикация приложения .NET Core](../deploying/index.md) и [Публикация приложений .NET Core с помощью .NET Core CLI](../deploying/deploy-with-cli.md).
 
-- **`--no-self-contained`**  **Доступно начиная с пакета SDK для .NET Core 3.0.**
+- **`--no-self-contained`**
 
-  Эквивалент `--self-contained false`.
+  Эквивалент `--self-contained false`. Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -112,7 +112,7 @@ dotnet publish [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `minimal`.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

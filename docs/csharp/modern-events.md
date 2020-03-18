@@ -4,12 +4,12 @@ description: Сведения о том, за счет чего шаблон с�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: a916a09b622f8df9bf99fafe52f35c706220f484
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c8858158ede761db8a3002beb26e521880f77feb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039790"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170440"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Обновленный шаблон событий .NET Core
 
@@ -59,7 +59,7 @@ internal struct SearchDirectoryArgs
 ```csharp
 worker.StartWorking += async (sender, eventArgs) =>
 {
-    try 
+    try
     {
         await DoWorkAsync();
     }

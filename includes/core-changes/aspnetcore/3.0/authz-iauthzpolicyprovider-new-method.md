@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 58dbb73902c0226fa81acf1a70de2160f406f6c6
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901907"
 ---
 ### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Авторизация. Требование нового метода для реализаций IAuthorizationPolicyProvider

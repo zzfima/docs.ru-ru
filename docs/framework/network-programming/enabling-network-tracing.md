@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 62a24e45339b93af2c62db440f0611f16705116d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 61ffd422463ca70cc34c39dd216ce8e660809dcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048522"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180882"
 ---
 # <a name="enabling-network-tracing"></a>Включение сетевой трассировки
 Трассировка сети предоставляет доступ к сведениям о вызовах методов и о сетевом трафике, созданном управляемым приложением. Чтобы включить трассировку сети в приложении, выполните следующие действия:  
   
-- Скомпилируйте код с включенной трассировкой. См. практическое руководство по [ Условная компиляция с использованием атрибутов Trace и Debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
+- Скомпилируйте код с включенной трассировкой. Дополнительные сведения о параметрах компилятора, которые требуются для включения трассировки, см. в разделе [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
 - Укажите назначение для выходных данных трассировки.  
   
-- Настройте поведение трассировки сети. См. практическое руководство по [ Настройка трассировки сети](how-to-configure-network-tracing.md).  
+- Настройте поведение трассировки сети. Дополнительные сведения см. в разделе [Практическое руководство. Настройка трассировки сети](how-to-configure-network-tracing.md).  
   
  Чаще всего в качестве назначений для трассировки сети (прослушивателей трассировки) выступают прослушиватели по умолчанию и файлы журнала.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "71048522"
   <trace autoflush="true" indentsize="4">  
     <listeners>  
       <add name="file" type="System.Diagnostics.TextWriterTraceListener" initializeData="trace.log"/>  
-    </listeners>   
+    </listeners>
   </trace>  
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерпретация трассировки сети](interpreting-network-tracing.md)
 - [Трассировка сети в .NET Framework](network-tracing.md)

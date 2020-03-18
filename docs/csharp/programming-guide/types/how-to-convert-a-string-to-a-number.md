@@ -7,12 +7,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711874"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157043"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Руководство по программированию на C#. Преобразование строки в число
 
@@ -24,13 +24,13 @@ ms.locfileid: "75711874"
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Вызов методов Parse и TryParse
 
-Методы `Parse` и `TryParse` игнорируют пробелы в начале и в конце строки, но все остальные символы должны быть символами, которые образуют соответствующий числовой тип (`int`, `long`, `ulong`, `float`, `decimal` и т. д.).  Любые пробелы в строке, образующие число, приводят к ошибке.  Например, можно использовать `decimal.TryParse` для анализа "10", "10.3" или "  10  ", но этот метод нельзя использовать для анализа 10 из "10X", "1 0" (обратите внимание на внедренный пробел), "10 .3" (обратите внимание на внедренный пробел), "10e1" (здесь работает `float.TryParse`) и т. д. Кроме того, строку со значением `null` или <xref:System.String.Empty?displayProperty=nameWithType> невозможно успешно проанализировать. Вы можете проверить наличие NULL или пустой строки, прежде чем пытаться ее проанализировать, вызвав метод <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType>. 
+Методы `Parse` и `TryParse` игнорируют пробелы в начале и в конце строки, но все остальные символы должны быть символами, которые образуют соответствующий числовой тип (`int`, `long`, `ulong`, `float`, `decimal` и т. д.).  Любые пробелы в строке, образующие число, приводят к ошибке.  Например, можно использовать `decimal.TryParse` для анализа "10", "10.3" или "  10  ", но этот метод нельзя использовать для анализа 10 из "10X", "1 0" (обратите внимание на внедренный пробел), "10 .3" (обратите внимание на внедренный пробел), "10e1" (здесь работает `float.TryParse`) и т. д. Кроме того, строку со значением `null` или <xref:System.String.Empty?displayProperty=nameWithType> невозможно успешно проанализировать. Вы можете проверить наличие NULL или пустой строки, прежде чем пытаться ее проанализировать, вызвав метод <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType>.
 
 В указанном ниже примере демонстрируются успешные и неуспешные вызовы методов `Parse` и `TryParse`.  
   
 [!code-csharp[Parse and TryParse](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse/program.cs)]  
 
-В следующем примере показан один из подходов к анализу строки, которая, как ожидается, будет включать начальные числовые символы (включая шестнадцатеричные символы) и конечные нечисловые символы. Он назначает допустимые символы в начале новой строки перед вызовом метода <xref:System.Int32.TryParse%2A>. Поскольку анализируемые строки содержат небольшое количество символов, в примере вызывается метод <xref:System.String.Concat%2A?displayProperty=nameWithType> для назначения допустимых символов новой строке. Для большей строки можете использовать класс <xref:System.Text.StringBuilder>. 
+В следующем примере показан один из подходов к анализу строки, которая, как ожидается, будет включать начальные числовые символы (включая шестнадцатеричные символы) и конечные нечисловые символы. Он назначает допустимые символы в начале новой строки перед вызовом метода <xref:System.Int32.TryParse%2A>. Поскольку анализируемые строки содержат небольшое количество символов, в примере вызывается метод <xref:System.String.Concat%2A?displayProperty=nameWithType> для назначения допустимых символов новой строке. Для большей строки можете использовать класс <xref:System.Text.StringBuilder>.
   
 [!code-csharp[Removing invalid characters](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse2/program.cs)]  
 

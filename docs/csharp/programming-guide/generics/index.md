@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 330aa74538ab15d1de19d80b0f57b3d0921c5c55
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c7252180c9c98a8ca99c8cc6b3faaf8b1b8f0749
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712160"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167496"
 ---
 # <a name="generics-c-programming-guide"></a>Универсальные шаблоны (Руководство по программированию на C#)
 
@@ -28,7 +28,7 @@ ms.locfileid: "75712160"
 
  Обратите внимание, что `T` доступен для вложенного класса `Node`. Когда экземпляр `GenericList<T>` создается с конкретным типом, например `GenericList<int>`, каждое вхождение `T` будет заменено `int`.
 
-[!code-csharp[csProgGuideGenerics#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#2)] 
+[!code-csharp[csProgGuideGenerics#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#2)]
 
 В следующем примере кода показано, как клиентский код использует универсальный класс `GenericList<T>` для создания списка целых чисел. Просто изменяя тип аргумента, следующий код можно легко изменить для создания списков строк или любого другого пользовательского типа:
 

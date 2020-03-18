@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: cdb35b212d5bfc4cc685fbfd6c294066983709df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451932"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847304"
 ---
 # <a name="operator-overloading-c-reference"></a>Перегрузка операторов (справочник по C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "77451932"
 
 В следующем примере определяется упрощенная структура, представляющая рациональное число. Структура перегружает некоторые [арифметические операторы](arithmetic-operators.md):
 
-[!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
+[!code-csharp[fraction example](snippets/OperatorOverloading.cs)]
 
 Вы можете расширить предыдущий пример, [определив неявное преобразование](user-defined-conversion-operators.md) из `int` в `Fraction`. Затем перегруженные операторы будут поддерживать аргументы этих двух типов. То есть можно будет добавить целое число к дроби и получить дробь.
 
@@ -57,9 +57,9 @@ ms.locfileid: "77451932"
 Дополнительные сведения см. в следующих разделах статьи [Спецификация языка C#](~/_csharplang/spec/introduction.md):
 
 - [Перегрузка операторов](~/_csharplang/spec/expressions.md#operator-overloading)
-- [Инструкции](~/_csharplang/spec/classes.md#operators)
+- [Операторы](~/_csharplang/spec/classes.md#operators)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)

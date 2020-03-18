@@ -3,12 +3,12 @@ title: Работа с коллекциями. Вводное руководст
 description: Это руководство по C# предоставляет для изучения примере коллекции списков.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834151"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156693"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Научитесь управлять коллекциями данных с использованием универсального типа списка
 
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-Замените `<name>` собственным именем. Сохраните *Program.cs*. Введите в окне консоли команду `dotnet run` для тестирования.
+Замените `<name>` собственным именем. Сохраните файл *Program.cs*. Введите в окне консоли команду `dotnet run` для тестирования.
 
 Вы создали список строк, добавили в него три имени и вывели имена с преобразованием всех букв в прописные. Для циклического прохода по списку вы примените концепции, которые изучили в предыдущих руководствах.
 
@@ -54,7 +54,7 @@ namespace list_tutorial
 
 В созданной коллекции используется тип <xref:System.Collections.Generic.List%601>. При применении такого типа сохраняются последовательности элементов. Тип элементов указывается в угловых скобках.
 
-Важный аспект типа <xref:System.Collections.Generic.List%601> — возможность увеличения или уменьшения, что позволяет добавлять или удалять элементы. Добавьте следующий код в метод `Main` перед закрывающей фигурной скобкой `}`:
+Важный аспект типа <xref:System.Collections.Generic.List%601> — возможность увеличения или уменьшения, что позволяет добавлять или удалять элементы. Добавьте следующий код в метод `}` перед закрывающей фигурной скобкой `Main`:
 
 ```csharp
 Console.WriteLine();
@@ -138,7 +138,7 @@ namespace list_tutorial
             WorkingWithStrings();
         }
 
-        public static void WorkingWithStrings()
+        static void WorkingWithStrings()
         {
             var names = new List<string> { "<name>", "Ana", "Felipe" };
             foreach (var name in names)
@@ -161,10 +161,25 @@ namespace list_tutorial
             Console.WriteLine($"The list has {names.Count} people in it");
 
             var index = names.IndexOf("Felipe");
-            Console.WriteLine($"The name {names[index]} is at index {index}");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+            }
 
-            var notFound = names.IndexOf("Not Found");
-            Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+            index = names.IndexOf("Not Found");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+
+            }
 
             names.Sort();
             foreach (var name in names)
@@ -215,4 +230,4 @@ foreach (var item in fibonacciNumbers)
 
 Поздравляем! Вы выполнили задачи в руководстве по спискам. Теперь вы можете выполнить задачи [вводного руководства по классам](introduction-to-classes.md) в своей среде разработки.
 
-Дополнительные сведения о работе с типом `List` см. в разделе о [коллекциях](../../../standard/collections/index.md) [руководства по .NET](../../../standard/index.md). Также в нем описаны многие другие типы коллекций.
+Дополнительные сведения о работе с типом `List` см. в разделе о [коллекциях](../../../standard/index.md)[руководства по .NET](../../../standard/collections/index.md). Также в нем описаны многие другие типы коллекций.

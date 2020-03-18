@@ -5,11 +5,11 @@ ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
 ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124602"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398799"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Целевые платформы в проектах в стиле SDK
 
@@ -29,7 +29,7 @@ ms.locfileid: "77124602"
 
 | Требуемая версия .NET Framework      | Последняя версия <br/> Стабильная версия | Моникер целевой платформы (TFM) | Реализовано <br/> Версия .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | netstandard2.1                 | Н/Д                                     |
+| .NET Standard         | 2.1                         | netstandard2.1                 | Недоступно                                     |
 | .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
@@ -127,7 +127,7 @@ public class MyClass
 | win10                                                                                      | uap10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Пакеты, метапакеты и платформы](../core/packages.md)
 - [Разработка библиотек с помощью кроссплатформенных средств](../core/tutorials/libraries.md)

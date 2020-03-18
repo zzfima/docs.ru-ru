@@ -5,10 +5,10 @@ helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
 ms.openlocfilehash: 5f066ca39c97b70554886e423c37c4ee47d49158
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712199"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Универсальные методы (Руководство по программированию на C#)
@@ -45,7 +45,7 @@ ms.locfileid: "75712199"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  Дополнительные сведения см. в [спецификации языка C#](~/_csharplang/spec/classes.md#methods).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Generic>
 - [Руководство по программированию на C#](../index.md)

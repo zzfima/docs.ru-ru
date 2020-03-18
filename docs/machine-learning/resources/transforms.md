@@ -3,11 +3,11 @@ title: Преобразования данных
 description: Изучите компоненты проектирования признаков, поддерживаемые в ML.NET.
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739587"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397755"
 ---
 # <a name="data-transformations"></a>Преобразования данных
 
@@ -25,7 +25,7 @@ ms.locfileid: "75739587"
 
 ## <a name="column-mapping-and-grouping"></a>Сопоставление и группирование столбцов
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A> | Объединение одного или нескольких входных столбцов в новый выходной столбец |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.CopyColumns%2A> | Копирование и переименование одного или нескольких входных столбцов |
@@ -34,7 +34,7 @@ ms.locfileid: "75739587"
 
 ## <a name="normalization-and-scaling"></a>Нормализация и масштабирование
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> | Вычитание среднего значения (данные для обучения) и деление на значение дисперсии (данные для обучения) |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeLogMeanVariance%2A> | Нормализация на основе логарифма данных для обучения |
@@ -46,7 +46,7 @@ ms.locfileid: "75739587"
 
 ## <a name="conversions-between-data-types"></a>Преобразования между типами данных
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | Преобразование типа входного столбца в новый тип |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue%2A> | Сопоставление значений с ключами (категориями) на основе предоставленного словаря сопоставлений |
@@ -58,7 +58,7 @@ ms.locfileid: "75739587"
 
 ## <a name="text-transformations"></a>Преобразования текста
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.TextCatalog.FeaturizeText%2A> | Преобразование текстового столбца в массив float счетчиков нормализованных n-грамм и символьных n-грамм |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A> | Разбиение одного или нескольких текстовых столбцов на отдельные слова |
@@ -75,7 +75,7 @@ ms.locfileid: "75739587"
 
 ## <a name="image-transformations"></a>Преобразование изображений
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> | Преобразование изображения в оттенки серого |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage%2A> | Преобразование вектора пикселей в <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
@@ -86,14 +86,14 @@ ms.locfileid: "75739587"
 
 ## <a name="categorical-data-transformations"></a>Преобразование категориальных данных
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding%2A> | Преобразование одного или нескольких текстовых столбцов в векторы с использованием [прямой](https://en.wikipedia.org/wiki/One-hot) кодировки |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding%2A> | Преобразование одного или нескольких текстовых столбцов в векторы с использованием прямой кодировки на основе хэша |
 
 ## <a name="time-series-data-transformations"></a>Преобразования данных временных рядов
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn%2A> | Обнаружение аномалий во входных данных временных рядов с помощью алгоритма спектрального остатка (SR) |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa%2A> | Обнаружение точек изменений в данных временных рядов с помощью анализа сингулярного спектра (SSA) |
@@ -104,34 +104,34 @@ ms.locfileid: "75739587"
 
 ## <a name="missing-values"></a>Отсутствующие значения
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues%2A> | Создание логического выходного столбца, который будет иметь значение true, если во входном столбце не указано значение |
 | <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A> | Создание выходного столбца, значение которого будет задано по умолчанию, если отсутствует значение из входного столбца. В противном случае по умолчанию будет задано значение из входного столбца. |
 
 ## <a name="feature-selection"></a>Выбор признаков
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount%2A> | Выбор признаков, у которых значения, заданные не по умолчанию, превышают порог |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation%2A> | Выбор признаков, от которых больше всего зависят данные в столбце метки |
 
 ## <a name="feature-transformations"></a>Преобразования признаков
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap%2A> | Сопоставление каждого входного вектора с пространством признаков нижнего измерения, где внутренние продукты приближены к функции ядра, чтобы эти признаки можно было использовать в качестве входных для линейных алгоритмов. |
 | <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents%2A> | Уменьшение измерений входного вектора признаков путем применения алгоритма анализа основных компонентов. |
 
 ## <a name="explainability-transformations"></a>Преобразования объясняемости
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution%2A> | Вычисление результатов вклада для каждого элемента вектора признаков |
 
 ## <a name="calibration-transformations"></a>Преобразования калибровки
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 |<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | Преобразует необработанный показатель двоичного классификатора в вероятность класса с помощью логистической регрессии с параметрами, оцененными с помощью обучающих данных |
 | <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | Преобразует необработанный показатель двоичного классификатора в вероятность класса с помощью логистической регрессии с фиксированными параметрами |
@@ -140,13 +140,13 @@ ms.locfileid: "75739587"
 
 ## <a name="deep-learning-transformations"></a>Преобразование глубокого обучения
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A> | Преобразование входных данных в импортированную модель ONNX |
 | <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel%2A> | Преобразование входных данных в импортированную модель TensorFlow |
 
 ## <a name="custom-transformations"></a>Пользовательские преобразования
 
-| Transform | Определение |
+| Обработка | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping%2A> | Преобразование существующих столбцов в новые с помощью пользовательского сопоставления |

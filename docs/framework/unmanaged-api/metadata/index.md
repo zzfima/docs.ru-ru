@@ -7,16 +7,16 @@ helpviewer_keywords:
 - metadata [.NET Framework], using the unmanaged API
 ms.assetid: 10cfea92-db5e-4bcb-b301-ef029bcf77a3
 ms.openlocfilehash: 4e8e59d1c8b413d15c55eb8f9478118f1f645293
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74443283"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>Метаданные (справочник по неуправляемым интерфейсам API)
 API метаданных позволяет клиенту, например компилятору, генерировать метаданные компонента или получать к ним доступ без типов, загружаемых средой CLR.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
  В этом разделе описываются неуправляемые интерфейсы, обеспечивающие доступ к метаданным, предоставляемым типами, методами, полями и прочими объектами .NET Framework.  
   

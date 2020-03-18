@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 72b02209d74b6b183af6c11d9bd037889ea08543
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347056"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187388"
 ---
 # <a name="how-to-view-assembly-contents"></a>Практическое руководство. Просмотр содержимого сборки
 
@@ -104,7 +104,7 @@ End Class
 
 В следующей таблице описаны все директивы в манифесте сборки *Hello.exe*, используемой в этом примере.
 
-|Директива|ОПИСАНИЕ|
+|Директива|Описание|
 |---------------|-----------------|
 |**.assembly extern \<имя_сборки>**|Определяет другую сборку, содержащую элементы, на которые имеются ссылки в текущем модуле (в этом примере — `mscorlib`).|
 |**.publickeytoken \<маркер>**|Определяет маркер действующего ключа сборки, на которую имеется ссылка.|
@@ -118,7 +118,7 @@ End Class
 
 Манифест сборки может содержать несколько различных директив, зависящих от содержимого сборки. Расширенный список директив манифеста сборки содержится в документации ECMA, в том числе в частях "Раздел II. Определение метаданных и семантика" и "Раздел III. Набор инструкций CIL".
 
-- [Стандарты ECMA для C# и Common Language Infrastructure](/dotnet/standard/components#applicable-standards)
+- [Стандарты ECMA для C# и Common Language Infrastructure](../components.md#applicable-standards)
 - [Стандарт ECMA-335 — Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
 ## <a name="see-also"></a>См. также

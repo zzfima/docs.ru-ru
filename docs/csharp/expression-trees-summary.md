@@ -4,12 +4,12 @@ description: Общие сведения о том, как можно испол
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: 43715c94b70f1cd7f758cde91ae7c8d1b2f70f9f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 513244a987e295c81cfb5d00d9a0cfd6912074e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036756"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145895"
 ---
 # <a name="expression-trees-summary"></a>Сводный обзор деревьев выражений
 
@@ -19,7 +19,7 @@ ms.locfileid: "73036756"
 
 Вы можете изучить деревья выражений, чтобы понять суть алгоритма. Но код можно не только просматривать. Вы можете создавать новые деревья выражений, представляющие измененные версии исходного кода.
 
-Кроме того, деревья выражений можно использовать для анализа алгоритма и его преобразования в другой язык или среду. 
+Кроме того, деревья выражений можно использовать для анализа алгоритма и его преобразования в другой язык или среду.
 
 ## <a name="limitations"></a>Ограничения
 

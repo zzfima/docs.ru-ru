@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
 ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345081"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (параметры компилятора C#)
@@ -25,7 +25,7 @@ ms.locfileid: "75345081"
 -nostdlib[+ | -]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Используйте этот параметр, если вы хотите определить или создать собственное пространство имен System и объекты.
 
@@ -48,6 +48,6 @@ ms.locfileid: "75345081"
 
 Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)

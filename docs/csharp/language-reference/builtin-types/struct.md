@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634641"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847733"
 ---
 # <a name="structure-types-c-reference"></a>Типы структур (справочник по C#)
 
-*Тип структуры*  представляет собой [тип значения](value-types.md), который может инкапсулировать данные и связанные функции. Для определения типа структуры используется ключевое слово `struct`:
+*Тип структуры*  ** представляет собой [тип значения](value-types.md), который может инкапсулировать данные и связанные функции. Для определения типа структуры используется ключевое слово `struct`:
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
 
 Типы структуры имеют *семантики значений*. То есть переменная типа структуры содержит экземпляр этого типа. По умолчанию значения переменных копируются при назначении, передаче аргумента в метод и возврате результата метода. В случае переменной типа структуры копируется экземпляр типа. Дополнительные сведения см. в разделе [Типы значений](value-types.md).
 
@@ -47,7 +47,7 @@ ms.locfileid: "77634641"
 
 Если все поля экземпляров типа структуры доступны, можно также создать его экземпляр без оператора `new`. В этом случае необходимо инициализировать все поля экземпляров перед первым использованием экземпляра. Следующий пример показывает, как это сделать:
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
 
 В случае [встроенных типов значения](value-types.md#built-in-value-types) используйте соответствующие литералы, чтобы указать значение типа.
 

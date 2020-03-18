@@ -8,12 +8,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cd76b2c33fe1a1a986bc05e3c3ed5f22809686ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713299"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173579"
 ---
 # <a name="orderby-clause-c-reference"></a>Предложение orderby (Справочник по C#)
 
@@ -31,14 +31,14 @@ ms.locfileid: "75713299"
 
 [!code-csharp[cscsrefQueryKeywords#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Orderby.cs#22)]
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Во время компиляции предложение `orderby` преобразуется в вызов метода <xref:System.Linq.Enumerable.OrderBy%2A>. Если в предложении `orderby` используется несколько ключей, они преобразуются в вызовы метода <xref:System.Linq.Enumerable.ThenBy%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Ключевые слова запроса (LINQ)](query-keywords.md)
-- [LINQ](../../linq/index.md)
+- [LINQ в C#](../../linq/index.md)
 - [предложение group](group-clause.md)
-- [Приступая к работе с LINQ в C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [LINQ](../../programming-guide/concepts/linq/index.md)

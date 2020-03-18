@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715788"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180431"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (программа импорта элементов ActiveX форм Windows)
 Программа для импорта элементов управления ActiveX преобразует определения типов в библиотеке типов COM для элемента управления ActiveX в элемент управления Windows Forms.  
@@ -22,7 +22,7 @@ ms.locfileid: "75715788"
   
  Чтобы разместить элемент управления ActiveX, необходимо создать элемент управления-оболочку, производный от <xref:System.Windows.Forms.AxHost>. Этот элемент управления-оболочка содержит экземпляр базового элемента управления ActiveX. Оболочка может взаимодействовать с элементом управления ActiveX, но выглядит как элемент управления Windows Forms. Созданный элемент управления размещает элемент управления ActiveX и представляет его свойства, методы и события как свои собственные.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
+ Это средство автоматически устанавливается с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -32,13 +32,13 @@ ms.locfileid: "75715788"
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-|Аргумент|Описание|  
+|Аргумент|Описание:|  
 |--------------|-----------------|  
-|*file*|Имя исходного файла, содержащего преобразуемый элемент управления ActiveX. Аргумент файла должен иметь расширение DLL или OCX.|  
+|*файл*|Имя исходного файла, содержащего преобразуемый элемент управления ActiveX. Аргумент файла должен иметь расширение DLL или OCX.|  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |`/delaysign`|Указывает программе Aximp.exe подписывать полученный элемент управления отложенной подписью. Этот параметр необходимо задавать вместе с параметром `/keycontainer:`, `/keyfile:` или `/publickey:`. Дополнительные сведения о процессе отложенной подписи см. в разделе [Отложенная подпись сборки](../../standard/assembly/delay-sign.md).|  
 |`/help`|Отображает синтаксис команд и параметров программы.|  
@@ -57,7 +57,7 @@ aximp [options]{file.dll | file.ocx}
   
  Прокси среды CLR для типов COM: *progid*.dll  
   
- Прокси Windows Forms для элементов управления ActiveX (Ax обозначает ActiveX): Ax*progid*.dll  
+ Прокси Windows Forms для элементов управления ActiveX (где Ax означает ActiveX): Ax*progid*.dll  
   
 > [!NOTE]
 > Если имя члена элемента управления ActiveX совпадает с именем, заданным в .NET Framework, к имени члена при создании производного класса AxHost программа Aximp.exe добавит префикс "Ctl". Например, если элемент управления ActiveX содержит член с именем "Layout", в производном классе "AxHost" он будет переименован в "CtlLayout", так как в .NET Framework задано событие "Layout".  
@@ -73,11 +73,11 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>Пример  
  При выполнении указанной ниже команды создаются библиотеки "MediaPlayer.dll" и "AxMediaPlayer.dll" для элемента управления Media Player `msdxm.ocx`.  
   
-```console 
+```console
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Инструменты](index.md)
 - [Ildasm.exe (дизассемблер IL)](ildasm-exe-il-disassembler.md)

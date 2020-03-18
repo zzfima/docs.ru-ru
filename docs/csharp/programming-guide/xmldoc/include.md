@@ -1,5 +1,5 @@
 ---
-title: <include> Руководство по программированию на C#
+title: <include> Руководство по программированию на C#.
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 1e3722cbed02775d0ad4f392840ea10275c96be1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 22d87559766c04e53141e843ee8768c8aab89a85
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793430"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156978"
 ---
 # <a name="include-c-programming-guide"></a>Руководство по программированию на C# \<include>
 
@@ -41,7 +41,7 @@ ms.locfileid: "76793430"
 
 Идентификатор тега, который предшествует комментариям. Идентификатор заключается в двойные кавычки (" ").
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Тег \<include> позволяет задать ссылку на комментарии в другом файле, которые описывают типы и члены вашего исходного кода. Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода. Помещая комментарии документации в отдельный файл, вы можете реализовать управление их версиями отдельно от версий исходного кода. В этом случае файл исходного кода может быть извлечен для изменения одним пользователем, а файл документации — другим.
 
@@ -86,19 +86,19 @@ The summary for this other type.
     <members>
         <member name="T:Test">
             <summary>
-The summary for this type.   
-</summary>   
-        </member>   
-        <member name="T:Test2">   
-            <summary>   
-The summary for this other type.   
-</summary>   
-        </member>   
-    </members>   
-</doc>   
+The summary for this type.
+</summary>
+        </member>
+        <member name="T:Test2">
+            <summary>
+The summary for this other type.
+</summary>
+        </member>
+    </members>
+</doc>
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

@@ -4,17 +4,17 @@ description: Узнайте, как перенести проекты библи
 author: cartermp
 ms.date: 12/07/2018
 ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157535"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397911"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Перенос библиотек .NET Framework в .NET Core
 
 Узнайте, как перенести код библиотеки .NET Framework в .NET Core, чтобы выполнять его на разных платформах и расширить диапазон использующих его приложений.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 В этой статье предполагается, что вы:
 
@@ -130,7 +130,7 @@ ms.locfileid: "78157535"
 
 Двигаясь от базовых объектов библиотеки к более высоким уровням и тестируя каждый из них требуемым образом, вы обеспечиваете систематичность переноса и изоляцию проблем, относящихся к отдельным уровням кода.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 >[!div class="nextstepaction"]
 >[Организация проектов для .NET Core](project-structure.md)

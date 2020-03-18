@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: ca55b8fab4aa9ca9f7e308cce57181e2c7e89f4b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157640"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397965"
 ---
 # <a name="install-the-net-core-runtime"></a>Установка среды выполнения .NET Core
 
@@ -144,8 +144,6 @@ set DOTNET_MULTILEVEL_LOOKUP=0
 Вы можете скачать и установить .NET Core напрямую, используя одну из следующих ссылок:
 
 - [Скачиваемые файлы для .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [Скачиваемые файлы для .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [Скачиваемые файлы для .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - [Скачиваемые файлы для .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker

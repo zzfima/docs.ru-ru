@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 30580b3fde5b8a99862896bb7d31c6c4024f97e8
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568150"
 ---
 ### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>Операции синтаксического анализа с плавающей запятой больше не завершаются ошибкой и не вызывают исключение OverflowException
@@ -20,13 +20,13 @@ ms.locfileid: "74568150"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Это изменение может повлиять на код одним из двух способов:
 
-- Код зависит от обработчика <xref:System.OverflowException> для выполнения при переполнении. В этом случае следует удалить оператор `catch` и поместить необходимый код в инструкцию `If`, которая проверяет, является ли <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType> или <xref:System.Single.IsInfinity%2A?displayProperty=nameWithType> `true`.
+- Код зависит от обработчика <xref:System.OverflowException> для выполнения при переполнении. В этом случае следует удалить оператор `catch` и поместить необходимый код в инструкцию `If`, которая проверяет, является ли <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType> или <xref:System.Single.IsInfinity%2A?displayProperty=nameWithType>`true`.
 
 - В коде предполагается, что значения с плавающей запятой не являются `Infinity`. В этом случае следует добавить необходимый код для проверки значений с плавающей запятой `PositiveInfinity` и `NegativeInfinity`.
 

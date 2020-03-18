@@ -5,11 +5,11 @@ author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
 ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160382"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398763"
 ---
 # <a name="net-architectural-components"></a>Архитектурные компоненты .NET
 
@@ -27,9 +27,9 @@ ms.locfileid: "78160382"
 
 Каждая реализация .NET включает в себя следующие компоненты.
 
-- Одна среда выполнения или несколько. Примеры: CLR для .NET Framework, CoreCLR и CoreRT для .NET Core.
+- Одна среда выполнения или несколько. Примеры CLR для .NET Framework, CoreCLR и CoreRT для .NET Core.
 - Библиотека классов, которая реализует .NET Standard, а также может реализовывать дополнительные API-интерфейсы. Примеры: библиотека базовых классов .NET Framework, библиотека базовых классов .NET Core.
-- (Необязательно) Одна платформа приложений или несколько. Примеры: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) и [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) входят в .NET Framework и .NET Core.
+- (Необязательно) Одна платформа приложений или несколько. Примеры [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) и [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) входят в .NET Framework и .NET Core.
 - (Необязательно) Средства разработки. Некоторые средства разработки, являются общими для нескольких реализаций.
 
 Существуют четыре основные реализации .NET, которые корпорация Майкрософт активно разрабатывает и обслуживает: .NET Core, .NET Framework, Mono и UWP.
@@ -103,12 +103,12 @@ UWP представляет собой реализацию .NET, котора�
 - **Информационные технологии — Common Language Infrastructure (CLI), разделы I–VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **Информационные технологии — Common Language Infrastructure (CLI) — технический отчет о данных, полученных из файла XML раздела IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Выбор между .NET Core и .NET Framework для серверных приложений](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
 - [Руководство по .NET Core](../core/index.md)
 - [Руководство по .NET Framework](../framework/index.md)
 - [Руководство по языку C#](../csharp/index.yml)
-- [Руководство по F#](../fsharp/index.yml)
+- [Руководство по языку F#](../fsharp/index.yml)
 - [Руководство по Visual Basic](../visual-basic/index.yml)

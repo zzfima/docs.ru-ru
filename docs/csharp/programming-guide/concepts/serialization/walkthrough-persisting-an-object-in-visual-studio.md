@@ -1,12 +1,12 @@
 ---
 title: Пошаговое руководство. Сохранение объекта с помощью C#
 ms.date: 04/26/2018
-ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851043"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167574"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Пошаговое руководство. Сохранение объекта с помощью C\#
 
@@ -20,7 +20,7 @@ ms.locfileid: "70851043"
 > [!IMPORTANT]
 > В этом примере данные сохраняются в двоичном формате. Эти форматы не следует использовать для конфиденциальных данных, таких как пароли или сведения о кредитных картах.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - Для сборки и запуска установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download).
 
@@ -29,7 +29,7 @@ ms.locfileid: "70851043"
 > [!TIP]
 > Нужно ли устанавливать редактор кода? Попробуйте использовать [Visual Studio](https://visualstudio.com/downloads).
 
-- Этот пример требует C# версии 7.3. См. [сведения о выборе версии языка C#](../../../language-reference/configure-language-version.md). 
+- Этот пример требует C# версии 7.3. См. [сведения о выборе версии языка C#](../../../language-reference/configure-language-version.md).
 
 Можно просмотреть образец кода онлайн [в репозитории GitHub с примерами .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 
@@ -41,7 +41,7 @@ ms.locfileid: "70851043"
 1. Откройте приложение в редакторе и добавьте новый класс с именем `Loan.cs`.
 1. Добавьте приведенный ниже код к классу `Loan`:
 
-[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#1)]
+[!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#1)]
 
 Также потребуется создать приложение, которое использует класс `Loan`.
 
@@ -49,11 +49,11 @@ ms.locfileid: "70851043"
 
 1. Откройте `Program.cs`. Добавьте следующий код:
 
-[!code-csharp[Create a loan object](../../../../../samples/csharp/serialization/Program.cs#1)]
+[!code-csharp[Create a loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#1)]
 
 Добавьте обработчик событий для события `PropertyChanged` и несколько строк, чтобы изменить объект `Loan` и отобразить изменения. Дополнения отображаются в следующем коде:
 
-[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/csharp/serialization/Program.cs#2)]
+[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/snippets/csharp/serialization/Program.cs#2)]
 
 На этом этапе можно запустить код и посмотреть текущие выходные данные:
 
@@ -69,37 +69,37 @@ New customer value: Henry Clay
 
 Чтобы сохранить значения для класса Loan, прежде всего необходимо отметить класс атрибутом `Serializable`. Добавьте следующий код непосредственно перед определением класса Loan:
 
-[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#2)]
+[!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
 Атрибут <xref:System.SerializableAttribute> сообщает компилятору, что все находящееся в классе может быть сохранено в файле. Поскольку событие `PropertyChanged` не представляет часть графа объекта, который должен быть сохранен, оно не подлежит сериализации. В противном случае будут сериализованы все объекты, присоединенные к этому событию. Можно добавить <xref:System.NonSerializedAttribute> к объявлению поля для обработчика событий `PropertyChanged`.
 
-[!code-csharp[Disable serialization for the event handler](../../../../../samples/csharp/serialization/Loan.cs#3)]
+[!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
 Начиная с C# 7.3 можно прикреплять атрибуты к резервному полю автоматически реализуемого свойства с помощью значения целевого объекта `field`. Следующий код добавляет свойство `TimeLastLoaded` и помечает его как не подлежащее сериализации:
 
-[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/csharp/serialization/Loan.cs#4)]
+[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/snippets/csharp/serialization/Loan.cs#4)]
 
 Следующим шагом будет добавление кода сериализации в приложение LoanApp. Чтобы выполнить сериализацию класса и записать данные в файл, используйте пространства имен <xref:System.IO> и <xref:System.Runtime.Serialization.Formatters.Binary>. Во избежание ввода полных имен можно добавить ссылки на необходимые пространства имен, как показано в следующем коде:
 
-[!code-csharp[Adding namespaces for serialization](../../../../../samples/csharp/serialization/Program.cs#3)]
+[!code-csharp[Adding namespaces for serialization](../../../../../samples/snippets/csharp/serialization/Program.cs#3)]
 
 Следующим шагом является добавление кода для десериализации объекта из файла при создании объекта. Добавьте в класс константу для имени файла сериализованных данных, как показано в следующем коде:
 
-[!code-csharp[Define the name of the saved file](../../../../../samples/csharp/serialization/Program.cs#4)]
+[!code-csharp[Define the name of the saved file](../../../../../samples/snippets/csharp/serialization/Program.cs#4)]
 
 Затем добавьте следующий код после строки, которая создает объект `TestLoan`:
 
-[!code-csharp[Read from a file if it exists](../../../../../samples/csharp/serialization/Program.cs#5)]
+[!code-csharp[Read from a file if it exists](../../../../../samples/snippets/csharp/serialization/Program.cs#5)]
 
 Прежде всего убедитесь, что файл существует. Если он существует, создайте класс <xref:System.IO.Stream> для чтения двоичного файла и класс <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> для преобразования файла. Кроме того, необходимо преобразовать тип потока в тип объекта Loan.
 
 Далее необходимо добавить код для сериализации класса в файл. Добавьте следующий код после существующего кода в методе `Main`:
 
-[!code-csharp[Save the existing Loan object](../../../../../samples/csharp/serialization/Program.cs#6)]
+[!code-csharp[Save the existing Loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#6)]
 
 Теперь можно снова собрать и запустить приложение. При первом запуске вы заметите, что процентная ставка имеет значение 7,5, а затем меняется на 7,1. Закройте приложение, а затем снова запустите его. Теперь приложение выводит сообщение о том, что сохраненный файл прочитан и процентная ставка составляет 7,1, даже раньше кода, который меняет ее.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Сериализация (C#)](index.md)
 - [Руководство по программированию на C#](../..//index.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1e84a0c3636f36794ca7795ac54d192d3cb44217
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727883"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141098"
 ---
 # <a name="net-docs"></a>Документация по .NET
 
@@ -18,7 +18,7 @@ ms.locfileid: "76727883"
 
 Мы приветствуем ваш вклад в улучшение и дополнение документации по .NET. Это очень большой репозиторий, охватывающий масштабную область. Если вы впервые посещаете его, ознакомьтесь с нашими [метками и планами проектов](styleguide/labels-projects.md). Это поможет вам при навигации по страницам со сведениями о проблемах и проектам в этом репозитории.
 
-Чтобы внести свой вклад, ознакомьтесь с предложениями в разделе [Проекты для участников сообщества .NET](https://github.com/dotnet/docs/projects/35). В [руководстве для участников](CONTRIBUTING.md) приведены инструкции по используемым процедурам. 
+Чтобы внести свой вклад, ознакомьтесь с предложениями в разделе [Проекты для участников сообщества .NET](https://github.com/dotnet/docs/projects/35). В [руководстве для участников](CONTRIBUTING.md) приведены инструкции по используемым процедурам.
 
 Если вы хотите перенести существующий код, предназначенный для .NET Framework, из сайта [устаревшей коллекции кода](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired) в приложения .NET Core, которые хранятся в нашем [репозитории примеров](https://github.com/dotnet/samples) и доступны для скачивания из [обозревателя примеров](https://docs.microsoft.com/samples/browse), см. проект [миграции коллекции кода](https://github.com/dotnet/docs/projects/88). Примеры из коллекции кода были перемещены в организацию [Microsoft Archive](https://github.com/microsoftarchive?q=msdn-code-gallery).
 

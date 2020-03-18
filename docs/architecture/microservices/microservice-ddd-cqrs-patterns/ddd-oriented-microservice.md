@@ -3,11 +3,11 @@ title: Проектирование микрослужбы, ориентиров
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Понимание структуры микрослужбы заказа, ориентированной на DDD, и ее прикладных уровней.
 ms.date: 10/08/2018
 ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739935"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401535"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Проектирование микрослужбы, ориентированной на DDD
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
 ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635799"
 ---
 # <a name="c-features-that-support-linq"></a>Возможности C#, поддерживающие LINQ
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 Переменные, объявленные как `var`, настолько же строго типизированы, как и переменные, тип которых вы задаете явно. Использование `var` делает возможным создание анонимных типов, однако его можно использовать только для локальных переменных. Массивы также могут быть объявлены путем неявной типизации.
 
-Дополнительные сведения см. в статье [Implicitly Typed Local Variables](../../classes-and-structs/implicitly-typed-local-variables.md) (Неявно типизированные локальные переменные).
+Дополнительные сведения см. в разделе [Неявно типизированные локальные переменные](../../classes-and-structs/implicitly-typed-local-variables.md).
 
 ## <a name="object-and-collection-initializers"></a>Инициализаторы объектов и коллекций
 
@@ -86,7 +86,7 @@ select new {name = cust.Name, phone = cust.Phone};
 
 Метод расширения представляет собой статический метод, который может быть связан с типом, чтобы его можно было вызывать, как если бы он являлся методом экземпляра типа. Эта возможность позволяет, по сути, "добавлять" новые методы в существующие типы, фактически не изменяя их. Стандартные операторы запросов — это набор методов расширения, предоставляющий функции запросов LINQ для любого типа, реализующего <xref:System.Collections.Generic.IEnumerable%601>.
 
-Дополнительные сведения см. в разделе [Методы расширения](../../classes-and-structs/extension-methods.md).
+Дополнительные сведения см. в статье [Методы расширения](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Лямбда-выражения
 
@@ -98,8 +98,8 @@ select new {name = cust.Name, phone = cust.Phone};
 
 - [Лямбда-выражения](../../statements-expressions-operators/lambda-expressions.md)
 
-- [Expression Trees (C#)](../expression-trees/index.md) (Деревья выражений (C#))
+- [Деревья выражений (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ (C#)](./index.md)

@@ -3,17 +3,17 @@ title: Команда dotnet new
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 ms.date: 02/13/2020
 ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157223"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398031"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Эта статья относится к следующему.** ✔️ SDK для .NET Core 2.0 и более поздних версий
 
-## <a name="name"></a>name
+## <a name="name"></a>Имя
 
 `dotnet new` - создает проект, файл конфигурации или решений на основе указанного шаблона.
 
@@ -26,7 +26,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Команда `dotnet new` создает проект .NET Core или другие артефакты на основе шаблона.
 
@@ -47,42 +47,42 @@ dotnet new [-h|--help]
 
   Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В следующей таблице показаны шаблоны, которые устанавливаются с пакетом SDK для .NET Core. Язык по умолчанию для шаблона указан внутри квадратных скобок. Нажмите на ссылку с коротким названием, чтобы увидеть конкретные параметры шаблона.
 
-| Шаблоны                                    | короткое имя;                      | Язык     | Tags                                  | Введенный |
+| Шаблоны                                    | короткое имя;                      | Язык     | Теги                                  | Введенный |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| Консольное приложение                          | [Консоль](#console)             | [C#], F#, VB | Общее/консоль                        | 1.0        |
-| Библиотека классов                                | [classlib](#classlib)           | [C#], F#, VB | Общее/библиотека                        | 1.0        |
-| Приложение WPF                              | [wpf](#wpf)                     | [C#]         | Общее/WPF                            | 3.0        |
-| Библиотека классов WPF                            | [wpflib](#wpf)                  | [C#]         | Общее/WPF                            | 3.0        |
-| Библиотека настраиваемых элементов управления WPF                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Общее/WPF                            | 3.0        |
-| Библиотека пользовательских элементов управления WPF                     | [wpfusercontrollib](#wpf)       | [C#]         | Общее/WPF                            | 3.0        |
-| Приложение Windows Forms (WinForms)         | [winforms](#winforms)           | [C#]         | Общее (WinForms)                       | 3.0        |
-| Библиотека классов для Windows Forms (WinForms)       | [winformslib](#winforms)        | [C#]         | Общее (WinForms)                       | 3.0        |
-| Служба Worker Service                               | [рабочая роль](#web-others)           | [C#]         | Общее/Рабочая роль/Веб                     | 3.0        |
-| Проект модульного теста                            | [mstest](#test)                 | [C#], F#, VB | Тест/MSTest                           | 1.0        |
+| Консольное приложение                          | [Консоль](#console)             | [C#], F#, VB | Общее/консоль                        | 1,0        |
+| Библиотека классов                                | [classlib](#classlib)           | [C#], F#, VB | Общее/библиотека                        | 1,0        |
+| Приложение WPF                              | [wpf](#wpf)                     | [C#]         | Общее/WPF                            | 3,0        |
+| Библиотека классов WPF                            | [wpflib](#wpf)                  | [C#]         | Общее/WPF                            | 3,0        |
+| Библиотека настраиваемых элементов управления WPF                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Общее/WPF                            | 3,0        |
+| Библиотека пользовательских элементов управления WPF                     | [wpfusercontrollib](#wpf)       | [C#]         | Общее/WPF                            | 3,0        |
+| Приложение Windows Forms (WinForms)         | [winforms](#winforms)           | [C#]         | Общее (WinForms)                       | 3,0        |
+| Библиотека классов для Windows Forms (WinForms)       | [winformslib](#winforms)        | [C#]         | Общее (WinForms)                       | 3,0        |
+| Служба Worker Service                               | [рабочая роль](#web-others)           | [C#]         | Общее/Рабочая роль/Веб                     | 3,0        |
+| Проект модульного теста                            | [mstest](#test)                 | [C#], F#, VB | Тест/MSTest                           | 1,0        |
 | Тестовый проект NUnit 3                         | [nunit](#nunit)                  | [C#], F#, VB | Тест/NUnit                            | 2.1.400    |
 | Элемент теста NUnit 3                            | `nunit-test`                    | [C#], F#, VB | Тест/NUnit                            | 2.2        |
-| Тестовый проект xUnit                           | [xunit](#test)                  | [C#], F#, VB | Тест/xUnit                            | 1.0        |
-| Компонент Razor                              | `razorcomponent`                | [C#]         | Веб/ASP.NET                           | 3.0        |
+| Тестовый проект xUnit                           | [xunit](#test)                  | [C#], F#, VB | Тест/xUnit                            | 1,0        |
+| Компонент Razor                              | `razorcomponent`                | [C#]         | Веб/ASP.NET                           | 3,0        |
 | Страница Razor                                   | [page](#page)                   | [C#]         | Веб/ASP.NET                           | 2.0        |
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Веб/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Веб/ASP.NET                           | 2.0        |
-| Серверное приложение Blazor                            | [blazorserver](#blazorserver)   | [C#]         | Веб/Blazor                            | 3.0        |
-| Пустой ASP.NET Core                           | [web](#web)                     | [C#], F#     | Веб/пусто                             | 1.0        |
-| Веб-приложение ASP.NET Core (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Веб/MVC                               | 1.0        |
+| Серверное приложение Blazor                            | [blazorserver](#blazorserver)   | [C#]         | Веб/Blazor                            | 3,0        |
+| Пустой ASP.NET Core                           | [web](#web)                     | [C#], F#     | Веб/пусто                             | 1,0        |
+| Веб-приложение ASP.NET Core (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Веб/MVC                               | 1,0        |
 | Веб-приложение ASP.NET Core                         | [webapp, razor](#web-options)   | [C#]         | Веб/MVC и Razor Pages                   | 2.2, 2.0   |
 | ASP.NET Core с Angular                    | [angular](#spa)                 | [C#]         | MVC/Веб/SPA                           | 2.0        |
 | ASP.NET Core с React.js                   | [react](#spa)                   | [C#]         | MVC/Веб/SPA                           | 2.0        |
 | ASP.NET Core с React.js и Redux         | [reactredux](#reactredux)       | [C#]         | MVC/Веб/SPA                           | 2.0        |
 | Библиотека классов Razor                          | [razorclasslib](#razorclasslib) | [C#]         | Веб/Razor/Библиотека/Библиотека классов Razor | 2.1        |
-| Веб-API ASP.NET Core                         | [webapi](#webapi)               | [C#], F#     | Веб/веб-API                            | 1.0        |
-| Служба ASP.NET Core gRPC                    | [grpc](#web-others)             | [C#]         | Веб/gRPC                              | 3.0        |
-| Файл буфера протокола                         | [proto](#namespace)             |              | Веб/gRPC                              | 3.0        |
-| Файл dotnet gitignore                        | `gitignore`                     |              | Config                                | 3.0        |
+| Веб-API ASP.NET Core                         | [webapi](#webapi)               | [C#], F#     | Веб/веб-API                            | 1,0        |
+| Служба ASP.NET Core gRPC                    | [grpc](#web-others)             | [C#]         | Веб/gRPC                              | 3,0        |
+| Файл буфера протокола                         | [proto](#namespace)             |              | Веб/gRPC                              | 3,0        |
+| Файл dotnet gitignore                        | `gitignore`                     |              | Config                                | 3,0        |
 | Файл global.json                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
-| Конфигурация NuGet                                 | `nugetconfig`                   |              | Config                                | 1.0        |
-| Локальное средство файла манифеста dotnet              | `tool-manifest`                 |              | Config                                | 3.0        |
-| Файл веб-конфигурации                                   | `webconfig`                     |              | Config                                | 1.0        |
-| Файл решения                                | `sln`                           |              | Решение                              | 1.0        |
+| Конфигурация NuGet                                 | `nugetconfig`                   |              | Config                                | 1,0        |
+| Локальное средство файла манифеста dotnet              | `tool-manifest`                 |              | Config                                | 3,0        |
+| Файл веб-конфигурации                                   | `webconfig`                     |              | Config                                | 1,0        |
+| Файл решения                                | `sln`                           |              | Решение                              | 1,0        |
 
 ## <a name="options"></a>Параметры
 
@@ -166,7 +166,7 @@ dotnet new [-h|--help]
   | Версия пакета SDK | Значение по умолчанию   |
   |-------------|-----------------|
   | 3.1         | `netcoreapp3.1` |
-  | 3.0         | `netcoreapp3.0` |
+  | 3,0         | `netcoreapp3.0` |
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -184,7 +184,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp<version>` для создания библиотеки классов .NET Core или `netstandard<version>` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
+  Указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp<version>` для создания библиотеки классов .NET Core или `netstandard<version>` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -202,7 +202,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp3.1`. Доступно, начиная с пакета SDK для .NET Core 3.1.
+  Указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp3.1`. Доступно, начиная с пакета SDK для .NET Core 3.1.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp3.1`. Доступно, начиная с пакета SDK для .NET Core 3.1.
+  Указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp3.1`. Доступно, начиная с пакета SDK для .NET Core 3.1.
 
 - **`--exclude-launch-settings`**
 
@@ -257,7 +257,7 @@ dotnet new [-h|--help]
   | Версия пакета SDK | Значение по умолчанию   |
   |-------------|-----------------|
   | 3.1         | `netcoreapp3.1` |
-  | 3.0         | `netcoreapp3.0` |
+  | 3,0         | `netcoreapp3.0` |
 
 - **`-p|--enable-pack`**
 
@@ -280,7 +280,7 @@ dotnet new [-h|--help]
   | Версия пакета SDK | Значение по умолчанию   |
   |-------------|-----------------|
   | 3.1         | `netcoreapp3.1` |
-  | 3.0         | `netcoreapp3.0` |
+  | 3,0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
   | 2.1         | `netcoreapp2.1` |
 
@@ -298,7 +298,7 @@ dotnet new [-h|--help]
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  Пространство имен для сформированного кода. Значение по умолчанию — `MyApp.Namespace`.
+  Пространство имен для сформированного кода. Значение по умолчанию — `MyApp.Namespace`.
 
 - **`-np|--no-pagemodel`**
 
@@ -310,7 +310,7 @@ dotnet new [-h|--help]
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  Пространство имен для сформированного кода. Значение по умолчанию — `MyApp.Namespace`.
+  Пространство имен для сформированного кода. Значение по умолчанию — `MyApp.Namespace`.
 
 ***
 
@@ -318,7 +318,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Тип проверки подлинности. Допустимые значения:
+  Тип проверки подлинности. Вы можете выбрать
 
   - `None` — без проверки подлинности (по умолчанию).
   - `Individual` — индивидуальная проверка подлинности.
@@ -329,7 +329,7 @@ dotnet new [-h|--help]
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+  Экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -345,23 +345,23 @@ dotnet new [-h|--help]
 
 - **`--aad-instance <INSTANCE>`**
 
-  Экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+  Экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+  Идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
+  Домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+  Идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
 
 - **`--callback-path <PATH>`**
 
-  Путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
+  Путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
 
 - **`-r|--org-read-access`**
 
@@ -400,7 +400,7 @@ dotnet new [-h|--help]
   | Версия пакета SDK | Значение по умолчанию   |
   |-------------|-----------------|
   | 3.1         | `netcoreapp3.1` |
-  | 3.0         | `netcoreapp3.0` |
+  | 3,0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
 
 - **`--no-restore`**
@@ -417,7 +417,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Тип проверки подлинности. Допустимые значения:
+  Тип проверки подлинности. Вы можете выбрать
 
   - `None` — без проверки подлинности (по умолчанию).
   - `Individual` — индивидуальная проверка подлинности.
@@ -428,7 +428,7 @@ dotnet new [-h|--help]
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+  Экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -444,23 +444,23 @@ dotnet new [-h|--help]
 
 - **`--aad-instance <INSTANCE>`**
 
-  Экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+  Экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+  Идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
+  Домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+  Идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
 
 - **`--callback-path <PATH>`**
 
-  Путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
+  Путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
 
 - **`-r|--org-read-access`**
 
@@ -487,7 +487,7 @@ dotnet new [-h|--help]
   | Версия пакета SDK | Значение по умолчанию   |
   |-------------|-----------------|
   | 3.1         | `netcoreapp3.1` |
-  | 3.0         | `netcoreapp3.0` |
+  | 3,0         | `netcoreapp3.0` |
 
 - **`--no-restore`**
 
@@ -505,7 +505,7 @@ dotnet new [-h|--help]
 
   Тип проверки подлинности. Доступно, начиная с пакета SDK для .NET Core 3.0.
   
-  Допустимые значения:
+  Вы можете выбрать
 
   - `None` — без проверки подлинности (по умолчанию).
   - `Individual` — индивидуальная проверка подлинности.
@@ -535,7 +535,7 @@ dotnet new [-h|--help]
   | Версия пакета SDK | Значение по умолчанию   |
   |-------------|-----------------|
   | 3.1         | `netcoreapp3.1` |
-  | 3.0         | `netcoreapp3.0` |
+  | 3,0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
 ***
@@ -555,7 +555,7 @@ dotnet new [-h|--help]
   | Версия пакета SDK | Значение по умолчанию   |
   |-------------|-----------------|
   | 3.1         | `netcoreapp3.1` |
-  | 3.0         | `netcoreapp3.0` |
+  | 3,0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
 - **`--no-restore`**
@@ -584,7 +584,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Тип проверки подлинности. Допустимые значения:
+  Тип проверки подлинности. Вы можете выбрать
 
   - `None` — без проверки подлинности (по умолчанию).
   - `IndividualB2C` — индивидуальная проверка подлинности с помощью Azure AD B2C.
@@ -593,7 +593,7 @@ dotnet new [-h|--help]
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+  Экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -601,19 +601,19 @@ dotnet new [-h|--help]
 
 - **`--aad-instance <INSTANCE>`**
 
-  Экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+  Экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+  Идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Домен клиента каталога. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `qualified.domain.name`.
+  Домен клиента каталога. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+  Идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
 
 - **`-r|--org-read-access`**
 
@@ -640,7 +640,7 @@ dotnet new [-h|--help]
   | Версия пакета SDK | Значение по умолчанию   |
   |-------------|-----------------|
   | 3.1         | `netcoreapp3.1` |
-  | 3.0         | `netcoreapp3.0` |
+  | 3,0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
 
 - **`--no-restore`**
@@ -725,7 +725,7 @@ dotnet new [-h|--help]
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Пользовательские шаблоны для команды dotnet new](custom-templates.md)
 - [Создание пользовательского шаблона для dotnet](../tutorials/cli-templates-create-item-template.md)

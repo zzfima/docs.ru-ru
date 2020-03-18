@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: dd76450c2a6a1726d630285f652d252c5f66183f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711913"
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
@@ -138,7 +138,7 @@ string s = String.Empty;
 |[Определение представления числового значения в строке](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Объясняет, как безопасно проанализировать строку, чтобы проверить, содержит ли она допустимое числовое значение.|  
 |[Интерполяция строк](../../language-reference/tokens/interpolated.md)|Описывает функцию интерполяции строк, которая предоставляет удобный синтаксис для форматирования строк.|
 |[Базовые операции со строками в .NET Framework](../../../standard/base-types/basic-string-operations.md)|Содержит ссылки на статьи, в которых показаны базовые операции над строками с помощью методов <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType>.|  
-|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Описывает, как преобразовать строковые представления базовых типов .NET в экземпляры соответствующих типов.|  
+|[Анализ строк в .NET](../../../standard/base-types/parsing-strings.md)|Описывает, как преобразовать строковые представления базовых типов .NET в экземпляры соответствующих типов.|  
 |[Синтаксический анализ строк даты и времени в .NET](../../../standard/base-types/parsing-datetime.md)|Показывает, как преобразовать строку, например "01/24/2008", в объект <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Сравнение строк в .NET Framework](../../../standard/base-types/comparing.md)|Объясняет, как сравнивать строки, и содержит примеры на языках C# и Visual Basic.|  
 |[Using the StringBuilder class](../../../standard/base-types/stringbuilder.md) (Использование класса StringBuilder)|Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.|  

@@ -1,17 +1,17 @@
 ---
-title: Повторяющиеся поля для списков и массивов — gRPC для разработчиков WCF
-description: Узнайте, как protobuf обрабатывает коллекции и как они связаны с коллекциями .NET.
+title: Повторные поля для списков и массивов - gRPC для разработчиков WCF
+description: Понять, как Protobuf обрабатывает коллекции и как они связаны с коллекциями .NET.
 ms.date: 09/09/2019
-ms.openlocfilehash: 16f2b5a54b032f32c8fcb9d572d5284fe589cb01
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 63d99532d14deea7800673dd5a6350dd9362ad54
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542963"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147975"
 ---
 # <a name="repeated-fields-for-lists-and-arrays"></a>Повторяющиеся поля для списков и массивов
 
-Списки в буфере протокола (protobuf) указываются с помощью ключевого слова prefix `repeated`. В следующем примере показано, как создать список.
+Вы указываете списки в Протоколе Буфер `repeated` (Protobuf) с помощью ключевого слова префикса. В следующем примере показано, как создать список:
 
 ```protobuf
 message Person {
@@ -20,10 +20,10 @@ message Person {
 }
 ```
 
-В созданном коде `repeated` поля представлены `Google.Protobuf.Collections.RepeatedField<T>` универсальным типом, а не любым из встроенных типов коллекций .NET. 
+В генерируемом `repeated` коде поля `Google.Protobuf.Collections.RepeatedField<T>` представлены общим типом, а не любым из встроенных типов коллекции .NET.
 
-Тип `RepeatedField<T>` включает код, необходимый для сериализации и десериализации списка в двоичный формат сети. Он реализует все стандартные интерфейсы коллекции .NET, такие как <xref:System.Collections.Generic.IList%601> и <xref:System.Collections.Generic.IEnumerable%601>. Поэтому можно легко использовать запросы LINQ или преобразовать их в массив или список.
+Тип `RepeatedField<T>` включает в себя код, необходимый для сериализации и десеризанизации списка в формате двоичного провода. Он реализует все стандартные интерфейсы коллекции <xref:System.Collections.Generic.IList%601> <xref:System.Collections.Generic.IEnumerable%601>.NET, такие как и . Таким образом, вы можете использовать запросы LIN'а или легко преобразовать их в массив или список.
 
 >[!div class="step-by-step"]
->[Назад](protobuf-nested-types.md)
->[Вперед](protobuf-reserved.md)
+>[Предыдущий](protobuf-nested-types.md)
+>[Следующий](protobuf-reserved.md)

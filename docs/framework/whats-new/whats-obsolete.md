@@ -7,12 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: eda60ce9e1396805541229c9756b13cdd167dc72
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7cfebfde859a95495e9d2d5e42bd034ad5d55e61
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901336"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79143139"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Что устарело в библиотеке классов .NET Framework
 
@@ -49,7 +49,7 @@ ms.locfileid: "75901336"
 
     ```xml
     <configuration>
-       <startup> 
+       <startup>
           <supportedRuntime version="v4.0" />
        </startup>
     </configuration>
@@ -64,10 +64,10 @@ ms.locfileid: "75901336"
 |4.6 (включая 4.6.1 и 4.6.2)|v4.0|
 |4.5 (включая 4.5.1 и 4.5.2)|v4.0|
 |4|v4.0|
-|3.5|v2.0.50727|
+|3,5|v2.0.50727|
 |2.0|v2.0.50727|
-|1.1|v1.1.4322|
-|1.0|v1.0.3705|
+|1,1|v1.1.4322|
+|1,0|v1.0.3705|
 
 ## <a name="obsolete-apis-for-net-framework-45-and-later-versions"></a>Списки устаревших API для .NET Framework 4.5 и более поздних версий
 
@@ -81,6 +81,6 @@ ms.locfileid: "75901336"
 - [Список устаревших элементов в платформе .NET Framework 3.5](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
 - [Список устаревших элементов в платформе .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [\<Поддерживаемый элемент среды выполнения](../configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -3,11 +3,11 @@ title: Новые возможности C# 7.1
 description: Обзор новых возможностей в C# 7.1.
 ms.date: 04/09/2019
 ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714581"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398355"
 ---
 # <a name="whats-new-in-c-71"></a>Новые возможности C# 7.1
 
@@ -28,14 +28,14 @@ C# 7.1 — это первая доработанная версия для C#. 
 
 Наконец, у компилятора есть два параметра `-refout` и `-refonly`, которые управляют [созданием базовой сборки](#reference-assembly-generation).
 
-Чтобы использовать новые возможности доработанного выпуска, [настройте версию языка компилятора](../language-reference/configure-language-version.md), выбрав необходимую.
+Чтобы использовать новые возможности доработанной версии, [настройте версию языка компилятора](../language-reference/configure-language-version.md) и выберите версию.
 
 В оставшейся части этой статьи представлены общие сведения об этих функциях. Каждая функция сопровождается обоснованием. Вы изучите синтаксис Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`:
 
 1. Установите глобальное средство [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
 1. Клонируйте репозиторий [dotnet/try-samples](https://github.com/dotnet/try-samples).
 1. Для репозитория *try-samples* установите в качестве текущего каталога подкаталог *csharp7*.
-1. Запустите `dotnet try`.
+1. Выполните `dotnet try`.
 
 ## <a name="async-main"></a>Async main
 

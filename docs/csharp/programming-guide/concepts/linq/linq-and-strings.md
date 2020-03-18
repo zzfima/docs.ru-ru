@@ -3,10 +3,10 @@ title: LINQ и строки (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
 ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635539"
 ---
 # <a name="linq-and-strings-c"></a>LINQ и строки (C#)
@@ -72,7 +72,7 @@ LINQ можно использовать для запроса и преобра
   
   Показывает, как выполнять математические расчеты на основе текстовых данных в CSV-файлах.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ (C#)](index.md)
 - [Создание кода XML из CSV-файлов](how-to-generate-xml-from-csv-files.md)

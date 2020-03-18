@@ -5,10 +5,10 @@ helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
 ms.openlocfilehash: a53a21d3028e588f5c4d5ce7bf35fad8d3720a08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75702991"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Универсальные типы во время выполнения (Руководство по программированию в C#)
@@ -46,7 +46,7 @@ ms.locfileid: "75702991"
   
  Кроме того, при создании экземпляра универсального класса C# с использованием параметра типа значения или ссылочного типа копия может выполнять запросы к нему во время выполнения, и при этом могут быть установлены его фактический тип и параметр типа.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Generic>
 - [Руководство по программированию на C#](../index.md)

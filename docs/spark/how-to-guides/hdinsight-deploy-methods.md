@@ -4,12 +4,12 @@ description: Узнайте, как отправить задание .NET дл�
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 83359f7f613b500a4ce121ce1612cda0ad1191ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868022"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185795"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Отправка задания .NET для Apache Spark в Azure HDInsight
 
@@ -18,7 +18,7 @@ ms.locfileid: "76868022"
 ## <a name="deploy-using-spark-submit"></a>Развертывание с помощью spark-submit
 
 Для отправки заданий .NET для Apache Spark в Azure HDInsight можно использовать команду [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html).
- 
+
 1. Перейдите к кластеру HDInsight Spark на портале Azure и выберите **SSH и вход в кластер**.
 
 2. Скопируйте данные для входа по протоколу SSH и вставьте имя для входа в терминал. Войдите в кластер, используя пароль, заданный во время создания кластера. Вы должны увидеть сообщение с приветствием в Ubuntu и Spark.
@@ -54,7 +54,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 EOF
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 * [Начало работы с .NET для Apache Spark](../tutorials/get-started.md)
 * [Развертывание приложения .NET для Apache Spark в Azure HDInsight](../tutorials/hdinsight-deployment.md)

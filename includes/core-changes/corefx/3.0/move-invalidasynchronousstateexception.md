@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 82835915efa0e113e81bb09bd5062ee3252f2a64
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 19359422f79f8240676b0057c7391f6b06f961ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568120"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147553"
 ---
 ### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>Исключение InvalidAsynchronousStateException перенесено в другую сборку
 
@@ -18,9 +18,9 @@ ms.locfileid: "74568120"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Это изменение влияет только на приложения, использующие отражение для загрузки <xref:System.ComponentModel.InvalidAsynchronousStateException> путем вызова метода, такого как <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>, или перегрузки <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>, которая предполагает, что тип находится в определенной сборке. В этом случае сборку, указанную в вызове метода, необходимо обновить в соответствии с новым расположением сборки типа.
 
@@ -30,7 +30,7 @@ CoreFX
 
 #### <a name="affected-apis"></a>Затронутые API
 
-- Нет
+Нет.
 
 <!--
 

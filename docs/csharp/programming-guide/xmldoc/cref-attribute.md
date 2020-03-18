@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 2a9b9966a28b62c41ac6091268ae172bae3a40d7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793444"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157017"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>Руководство по программированию на C#. Атрибут cref
 
@@ -49,12 +49,12 @@ ms.locfileid: "76793444"
             <summary>
             The GetZero method.
             </summary>
-            <example> 
+            <example>
             This sample shows how to call the <see cref="M:TestNamespace.TestClass.GetZero"/> method.
             <code>
-            class TestClass 
+            class TestClass
             {
-                static int Main() 
+                static int Main()
                 {
                     return GetZero();
                 }
@@ -66,7 +66,7 @@ ms.locfileid: "76793444"
             <summary>
             The GetGenericValue method.
             </summary>
-            <remarks> 
+            <remarks>
             This sample shows how to specify the <see cref="M:TestNamespace.TestClass.GetGenericValue``1(``0)"/> method as a cref attribute.
             </remarks>
         </member>
@@ -74,7 +74,7 @@ ms.locfileid: "76793444"
             <summary>
             GenericClass.
             </summary>
-            <remarks> 
+            <remarks>
             This example shows how to specify the <see cref="T:TestNamespace.GenericClass`1"/> type as a cref attribute.
             </remarks>
         </member>
@@ -82,7 +82,7 @@ ms.locfileid: "76793444"
 </doc>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Комментарии XML-документации](./index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: d366fb6f79593866cb8cb2ae761ba656fe33c598
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f09d9891f79eda44c428d5509e341a54ad3a3eee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867377"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157108"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Проверка равенства (руководство по программированию на C#)
 
@@ -33,7 +33,7 @@ ms.locfileid: "76867377"
 int a = GetOriginalValue();  
 int b = GetCurrentValue();  
   
-// Test for value equality.   
+// Test for value equality.
 if (b == a)
 {  
     // The two integers are equal.  
@@ -48,15 +48,15 @@ if (b == a)
 
  Проверка равенства значений с плавающей запятой ([double](../../language-reference/builtin-types/floating-point-numeric-types.md) и [float](../../language-reference/builtin-types/floating-point-numeric-types.md)) представляет проблему из-за неточности арифметических операций с плавающей запятой на двоичных компьютерах. Дополнительные сведения можно найти в заметках в разделе <xref:System.Double?displayProperty=nameWithType>.  
   
-## <a name="related-topics"></a>См. также  
+## <a name="related-topics"></a>Связанные разделы  
   
-|Заголовок|Описание|  
+|Название|Описание:|  
 |-----------|-----------------|  
 |[Проверка на равенство ссылок (идентичность)](./how-to-test-for-reference-equality-identity.md)|Описание процедуры проверки равенства ссылок двух переменных.|  
 |[Определение равенства значений для типа](./how-to-define-value-equality-for-a-type.md)|Описание предоставления пользовательского определения равенства значений для типа.|  
 |[Руководство по программированию на C#](../index.md)|Ссылки на подробные сведения о важных элементах языка C#, а также об элементах, доступных в этом языке благодаря .NET Framework.|  
 |[Типы](../types/index.md)|Сведения о системе типов C# и ссылки на дополнительные сведения.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)

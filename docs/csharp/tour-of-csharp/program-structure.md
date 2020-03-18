@@ -3,12 +3,12 @@ title: Структура программы в C#. Краткий обзор я
 description: Узнайте, из каких блоков составляется программа на C#
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 828146ba509daf9427e6dd1a4ebf3ad747ac7c39
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159121"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156835"
 ---
 # <a name="program-structure"></a>Структура программы
 
@@ -27,7 +27,7 @@ dotnet new classlib -o acme
 Полное имя этого класса: `Acme.Collections.Stack`. Этот класс содержит несколько членов: поле с именем `top`, два метода с именами `Push` и `Pop`, а также вложенный класс с именем `Entry`. Класс `Entry`, в свою очередь, содержит три члена: поле с именем `next`, поле с именем `data` и конструктор. Команда:
 
 ```console
-dotnet build 
+dotnet build
 ```
 
 Результатом компиляции будет библиотека (код без точки входа `Main`), сохраненная в сборке с именем `acme.dll`.

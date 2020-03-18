@@ -23,19 +23,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
 ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348910"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Создание, удаление и перемещение файлов и папок в Visual Basic
 
 В этом разделе перечислены задачи, связанные с созданием, удалением, перемещением и переименованием файлов и каталогов в Visual Basic.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
 
- [Практическое руководство. Копирование файлов с определенным шаблоном в каталог](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ [Практическое руководство. Копирование файлов по заданному шаблону в каталог](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  Демонстрация копирования файлов с определенным шаблоном имени файла, например только файлов с расширением TXT, в заданный каталог.  
   
  [Практическое руководство. Создание копии файла в том же каталоге](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
@@ -65,7 +65,7 @@ ms.locfileid: "74348910"
  [Практическое руководство. Создание каталога](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
  Демонстрация создания каталога.  
   
- [Практическое руководство. Поиск подкаталогов по заданному шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ [Практическое руководство. Поиск подкаталогов по шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
  Демонстрация получения списка каталогов с именами, удовлетворяющими конкретному шаблону.  
   
  [Практическое руководство. Получение коллекции содержащихся в каталоге файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "74348910"
  [Практическое руководство. Анализ путей к файлам](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  Демонстрация использования методов объекта `My` для объединения путей к файлам.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Описание объекта `My.Computer.FileSystem` и его членов.  

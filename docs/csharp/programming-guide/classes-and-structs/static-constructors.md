@@ -5,18 +5,18 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 744bcacbc38299c0ef7d16e814c415ec5caf95dd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115767"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170121"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Статические конструкторы (Руководство по программированию в C#)
 Статический конструктор используется для инициализации любых [статических](../../language-reference/keywords/static.md) данных или для выполнения определенного действия, которое требуется выполнить только один раз. Он вызывается автоматически перед созданием первого экземпляра или ссылкой на какие-либо статические члены.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
- 
+
 ## <a name="remarks"></a>Примечания
 Статические конструкторы обладают следующими свойствами.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76115767"
  В этом примере класс `Bus` имеет статический конструктор. При создании первого экземпляра класса `Bus` (`bus1`) для инициализации класса вызывается статический конструктор. В выходных данных этого примера можно увидеть, что статический конструктор выполняется только один раз, несмотря на то, что создается два экземпляра класса `Bus`. Кроме того, этот конструктор вызывается до выполнения конструктора экземпляра.  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
- 
+
 ## <a name="c-language-specification"></a>Спецификация языка C#
 Дополнительные сведения см. в разделе [Статические конструктор](~/_csharplang/spec/classes.md#static-constructors) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
   

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 0a209b9522202649765654013fdc3a468913c6b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 493c6c5f5bf47c6b2cd140ac0f6922f91ca4252b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714781"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170264"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Использование ключевых слов "Override" и "New" (Руководство по программированию в C#)
 
 В C# метод в производном классе может иметь то же имя, что и метод в базовом классе. Можно задать способ взаимодействия методов, воспользовавшись ключевыми словами [new](../../language-reference/keywords/new-modifier.md) и [override](../../language-reference/keywords/override.md). Модификатор `override`*расширяет* метод `virtual` базового класса, а модификатор `new`*скрывает* доступный метод базового класса. Эта разница показана в примере в этой статье.  
   
- В консольном приложении объявите два класса — `BaseClass` и `DerivedClass`. Тип`DerivedClass` наследуется от типа `BaseClass`.  
+ В консольном приложении объявите два класса — `BaseClass` и `DerivedClass`. Тип `DerivedClass` наследуется от типа `BaseClass`.  
   
 ```csharp  
 class BaseClass  
@@ -78,7 +78,7 @@ public void Method2()
 }  
 ```  
   
- Поскольку `BaseClass` теперь имеет метод `Method2`, можно добавить второй оператор вызова для переменных `bc` и `bcdc` класса `BaseClass`, как показано в следующем коде.  
+ Поскольку `BaseClass` теперь имеет метод `Method2`, можно добавить второй оператор вызова для переменных `BaseClass` и `bc` класса `bcdc`, как показано в следующем коде.  
   
 ```csharp  
 bc.Method1();  
@@ -134,7 +134,7 @@ public virtual void Method1()
 }  
 ```  
   
- Снова запустите проект. Обратите особое внимание на последние две строки следующих выходных данных.  
+ Запустите проект снова. Обратите особое внимание на последние две строки следующих выходных данных.  
   
 ```csharp  
 // Output:  
@@ -180,7 +180,7 @@ namespace OverrideAndNew
             // Derived - Method1  
             // Derived - Method2  
   
-            // The following two calls produce different results, depending   
+            // The following two calls produce different results, depending
             // on whether override (Method1) or new (Method2) is used.  
             bcdc.Method1();  
             bcdc.Method2();  
@@ -218,7 +218,7 @@ namespace OverrideAndNew
 }  
 ```  
   
- В следующем примере показано подобное поведение в другом контексте. В примере определяются три класса: базовый класс `Car` и два класса, производных от него: `ConvertibleCar` и `Minivan`. Базовый класс содержит метод `DescribeCar`. Этот метод отображает общее описание автомобиля, а затем вызывает `ShowDetails` для предоставления дополнительных сведений. Каждый из трех классов определяет метод `ShowDetails`. Для определения метода `ShowDetails` в классе `ConvertibleCar` используется модификатор `new`. Для определения метода `ShowDetails` в классе `Minivan` используется модификатор `override`.  
+ В следующем примере показано подобное поведение в другом контексте. В примере определяются три класса: базовый класс `Car` и два класса, производных от него: `ConvertibleCar` и `Minivan`. Базовый класс содержит метод `DescribeCar`. Этот метод отображает общее описание автомобиля, а затем вызывает `ShowDetails` для предоставления дополнительных сведений. Каждый из трех классов определяет метод `ShowDetails`. Для определения метода `new` в классе `ShowDetails` используется модификатор `ConvertibleCar`. Для определения метода `override` в классе `ShowDetails` используется модификатор `Minivan`.  
   
 ```csharp  
 // Define the base class, Car. The class defines two methods,  
@@ -276,7 +276,7 @@ public static void TestCars1()
   
     // Notice the output from this test case. The new modifier is  
     // used in the definition of ShowDetails in the ConvertibleCar  
-    // class.    
+    // class.
   
     ConvertibleCar car2 = new ConvertibleCar();  
     car2.DescribeCar();  
@@ -312,7 +312,7 @@ public static void TestCars2()
     System.Console.WriteLine("\nTestCars2");  
     System.Console.WriteLine("----------");  
   
-    var cars = new List<Car> { new Car(), new ConvertibleCar(),   
+    var cars = new List<Car> { new Car(), new ConvertibleCar(),
         new Minivan() };  
   
     foreach (var car in cars)  
@@ -419,7 +419,7 @@ namespace OverrideAndNew2
   
             // Notice the output from this test case. The new modifier is  
             // used in the definition of ShowDetails in the ConvertibleCar  
-            // class.    
+            // class.
             ConvertibleCar car2 = new ConvertibleCar();  
             car2.DescribeCar();  
             System.Console.WriteLine("----------");  
@@ -446,7 +446,7 @@ namespace OverrideAndNew2
             System.Console.WriteLine("\nTestCars2");  
             System.Console.WriteLine("----------");  
   
-            var cars = new List<Car> { new Car(), new ConvertibleCar(),   
+            var cars = new List<Car> { new Car(), new ConvertibleCar(),
                 new Minivan() };  
   
             foreach (var car in cars)  
@@ -542,7 +542,7 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы и структуры](./index.md)

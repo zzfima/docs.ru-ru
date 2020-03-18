@@ -2,12 +2,12 @@
 title: Обзор языка C# — руководство по C#
 description: Вы еще не знакомы с C#? Изучите основы этого языка.
 ms.date: 02/26/2020
-ms.openlocfilehash: 69651d6233bfaf217366be3850f6b3d9c550d8e2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bf5a200f2ee777698ae8564f348ffc117d9abab0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159147"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79156848"
 ---
 # <a name="a-tour-of-the-c-language"></a>Краткий обзор языка C#
 
@@ -33,12 +33,12 @@ C# является объектно-ориентированным языком
 
 Файлы исходного кода C# обычно имеют расширение `.cs`. Чтобы создать такую программу, сначала загрузите и установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download). Затем выполните команду `dotnet new console -o hello`, чтобы создать новую программу и скрипт сборки. Программа и сценарий сборки находятся в файлах `Program.cs` и `hello.csproj`соответственно. Вы собираете и запускаете приложение с помощью команд `run`:
 
-```console
+```dotnetcli
 cd hello
 dotnet run
 ```
 
-Программа выдает следующие результаты. 
+Программа выдает следующие результаты.
 
 ```console
 Hello, World!

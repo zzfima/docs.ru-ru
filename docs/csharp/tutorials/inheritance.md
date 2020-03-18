@@ -4,12 +4,12 @@ description: Сведения об использовании наследова
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120133"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156757"
 ---
 # <a name="inheritance-in-c-and-net"></a>Наследование в C# и .NET
 
@@ -291,7 +291,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-Следующий пример использует объекты, производные от `Shape`. Он создает массив объектов, производных от `Shape`, и вызывает статические методы для класса `Shape`, которые служат оболочкой для обращения к значениям свойств `Shape`. Среда выполнения извлекает значения переопределенных свойств для производных типов. Также в этом примере каждый объект `Shape` из созданного массива приводится к производному типу. Если это приведение выполняется успешно, выполняется обращение к свойствам, определенным для конкретного подкласса базового класса `Shape`. 
+Следующий пример использует объекты, производные от `Shape`. Он создает массив объектов, производных от `Shape`, и вызывает статические методы для класса `Shape`, которые служат оболочкой для обращения к значениям свойств `Shape`. Среда выполнения извлекает значения переопределенных свойств для производных типов. Также в этом примере каждый объект `Shape` из созданного массива приводится к производному типу. Если это приведение выполняется успешно, выполняется обращение к свойствам, определенным для конкретного подкласса базового класса `Shape`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

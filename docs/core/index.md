@@ -5,10 +5,10 @@ author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75740745"
 ---
 # <a name="net-core-guide"></a>Руководство по .NET Core
@@ -29,7 +29,7 @@ ms.locfileid: "75740745"
 
 .NET Core 3.1 является последней версией. В версии 3.1 были представлены незначительные улучшения по сравнению с .NET Core 3.0, однако именно .NET Core 3.1 является [долгосрочно поддерживаемой версией](https://dotnet.microsoft.com/platform/support/policy/dotnet-core). Дополнительные сведения о выпуске .NET Core 3.1 см. в разделе [Новые возможности .NET Core 3.1](./whats-new/dotnet-core-3-1.md).
 
-## <a name="create-your-first-application"></a>Создание первого приложения
+## <a name="create-your-first-application"></a>Создание своего первого приложения
 
 После установки пакета SDK для .NET Core откройте командную строку. Для создания и запуска приложения C# введите следующие команды `dotnet`:
 
@@ -38,7 +38,7 @@ dotnet new console
 dotnet run
 ```
 
-Должны выводиться следующие данные:
+Вы должны увидеть следующий результат.
 
 ```output
 Hello World!

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 276268d31670b5e7dcd0ae9c0b7a61c3c38ca663
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451901"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78968084"
 ---
 ### <a name="resource-manifest-file-names"></a>Имена файлов манифеста ресурса
 
@@ -63,7 +63,7 @@ ms.locfileid: "77451901"
   Файлы *MyTypes.cs* и *MyTypes.resx* или *MyTypes.fr-FR.resx* находятся в одной папке.
   
   **Имя созданного файла манифеста ресурса**: *Namespace.Classname.resources* или *Namespace.Classname.fr-FR.resources* (где `Namespace.Classname` — имя первого класса в *MyTypes.cs*).
-    
+
 - Если ни одно из предыдущих правил не применяется, то именем сгенерированного файла манифеста ресурса будет *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources*. Относительный путь — это значение атрибута `Link` элемента `EmbeddedResource`, если он установлен. В противном случае относительный путь — это значение атрибута `Identity` элемента `EmbeddedResource`. В Visual Studio это путь от корня проекта до файла в обозревателе решений.
 
 #### <a name="recommended-action"></a>Рекомендованное действие

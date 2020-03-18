@@ -3,17 +3,17 @@ title: Команда dotnet add package
 description: Команду dotnet list package удобно использовать для получения списка ссылок на пакеты для проекта или решения.
 ms.date: 02/14/2020
 ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157236"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
 **Эта статья относится к следующему** ✔️ SDK для .NET Core 2.2 и более поздних версий
 
-## <a name="name"></a>name
+## <a name="name"></a>Имя
 
 `dotnet list package` — перечисляет ссылки на пакет для проекта или решения.
 
@@ -25,7 +25,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-m
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Команду `dotnet list package` удобно использовать для получения списка всех ссылок на пакеты NuGet для определенного проекта или решения. Сначала нужно создать проект, чтобы получить ресурсы, необходимые для обработки этой командой. В следующем примере показаны выходные данные команды `dotnet list package` для проекта [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 
@@ -77,7 +77,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`--framework <FRAMEWORK>`**
 
-  Отображает только пакеты для указанной [целевой платформы](../../standard/frameworks.md). Чтобы указать несколько платформ, задайте параметр несколько раз. Например, `--framework netcoreapp2.2 --framework netstandard2.0`.
+  Отображает только пакеты для указанной [целевой платформы](../../standard/frameworks.md). Чтобы указать несколько платформ, задайте параметр несколько раз. Пример: `--framework netcoreapp2.2 --framework netstandard2.0`.
 
 - **`-h|--help`**
 
