@@ -3,21 +3,21 @@ title: Предварительная атомизация объектов XNam
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
 ms.openlocfilehash: 2fd754a352bd2988e52ec9c67a9915a8e587b107
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591497"
 ---
-# <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a><span data-ttu-id="2422e-102">Предварительная атомизация объектов XName (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="2422e-102">Pre-Atomization of XName Objects (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="2422e-103">Одним из способов повышения производительности в LINQ to XML является предварительная атомизация объектов <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="2422e-103">One way to improve performance in LINQ to XML is to pre-atomize <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="2422e-104">Предварительная атомизация состоит в том, что необходимо назначить строке объект <xref:System.Xml.Linq.XName>, прежде чем создавать XML-дерево с использованием конструкторов классов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="2422e-104">Pre-atomization means that you assign a string to an <xref:System.Xml.Linq.XName> object before you create the XML tree by using the constructors of the <xref:System.Xml.Linq.XElement> and  <xref:System.Xml.Linq.XAttribute> classes.</span></span> <span data-ttu-id="2422e-105">Затем, вместо того чтобы передавать строку в конструктор, где будет выполнено ее неявное преобразование в объект <xref:System.Xml.Linq.XName>, можно передать инициализированный объект <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="2422e-105">Then, instead of passing a string to the constructor, which would use the implicit conversion from string to <xref:System.Xml.Linq.XName>, you pass the initialized <xref:System.Xml.Linq.XName> object.</span></span>  
+# <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a><span data-ttu-id="f0603-102">Предварительная атомизация объектов XName (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f0603-102">Pre-Atomization of XName Objects (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="f0603-103">Одним из способов повышения производительности в LINQ to XML является предварительная атомизация объектов <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="f0603-103">One way to improve performance in LINQ to XML is to pre-atomize <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="f0603-104">Предварительная атомизация состоит в том, что необходимо назначить строке объект <xref:System.Xml.Linq.XName>, прежде чем создавать XML-дерево с использованием конструкторов классов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="f0603-104">Pre-atomization means that you assign a string to an <xref:System.Xml.Linq.XName> object before you create the XML tree by using the constructors of the <xref:System.Xml.Linq.XElement> and  <xref:System.Xml.Linq.XAttribute> classes.</span></span> <span data-ttu-id="f0603-105">Затем, вместо того чтобы передавать строку в конструктор, где будет выполнено ее неявное преобразование в объект <xref:System.Xml.Linq.XName>, можно передать инициализированный объект <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="f0603-105">Then, instead of passing a string to the constructor, which would use the implicit conversion from string to <xref:System.Xml.Linq.XName>, you pass the initialized <xref:System.Xml.Linq.XName> object.</span></span>  
   
- <span data-ttu-id="2422e-106">Таким способом можно повысить производительность при создании большого XML-дерева с рядом повторяющихся имен.</span><span class="sxs-lookup"><span data-stu-id="2422e-106">This improves performance when you create a large XML tree in which specific names are repeated.</span></span> <span data-ttu-id="2422e-107">Для этого перед построением XML-дерева необходимо объявить и инициализировать объекты <xref:System.Xml.Linq.XName>, а затем в качестве имен элементов и атрибутов указать эти объекты <xref:System.Xml.Linq.XName> вместо строк.</span><span class="sxs-lookup"><span data-stu-id="2422e-107">To do this, you declare and initialize <xref:System.Xml.Linq.XName> objects before you construct the XML tree, and then use the <xref:System.Xml.Linq.XName> objects instead of specifying strings for the element and attribute names.</span></span> <span data-ttu-id="2422e-108">Эта техника может дать существенный рост производительности, когда создается большое количество элементов (или атрибутов) с одним и тем же именем.</span><span class="sxs-lookup"><span data-stu-id="2422e-108">This technique can yield significant performance gains if you are creating a large number of elements (or attributes) with the same name.</span></span>  
+ <span data-ttu-id="f0603-106">Таким способом можно повысить производительность при создании большого XML-дерева с рядом повторяющихся имен.</span><span class="sxs-lookup"><span data-stu-id="f0603-106">This improves performance when you create a large XML tree in which specific names are repeated.</span></span> <span data-ttu-id="f0603-107">Для этого перед построением XML-дерева необходимо объявить и инициализировать объекты <xref:System.Xml.Linq.XName>, а затем в качестве имен элементов и атрибутов указать эти объекты <xref:System.Xml.Linq.XName> вместо строк.</span><span class="sxs-lookup"><span data-stu-id="f0603-107">To do this, you declare and initialize <xref:System.Xml.Linq.XName> objects before you construct the XML tree, and then use the <xref:System.Xml.Linq.XName> objects instead of specifying strings for the element and attribute names.</span></span> <span data-ttu-id="f0603-108">Эта техника может дать существенный рост производительности, когда создается большое количество элементов (или атрибутов) с одним и тем же именем.</span><span class="sxs-lookup"><span data-stu-id="f0603-108">This technique can yield significant performance gains if you are creating a large number of elements (or attributes) with the same name.</span></span>  
   
- <span data-ttu-id="2422e-109">Чтобы принять решение об использовании предварительной атомизации, протестируйте этот прием в вашем конкретном случае.</span><span class="sxs-lookup"><span data-stu-id="2422e-109">You should test pre-atomization with your scenario to decide if you should use it.</span></span>  
+ <span data-ttu-id="f0603-109">Чтобы принять решение об использовании предварительной атомизации, протестируйте этот прием в вашем конкретном случае.</span><span class="sxs-lookup"><span data-stu-id="f0603-109">You should test pre-atomization with your scenario to decide if you should use it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2422e-110">Пример</span><span class="sxs-lookup"><span data-stu-id="2422e-110">Example</span></span>  
- <span data-ttu-id="2422e-111">В следующем примере это показано.</span><span class="sxs-lookup"><span data-stu-id="2422e-111">The following example demonstrates this.</span></span>  
+## <a name="example"></a><span data-ttu-id="f0603-110">Пример</span><span class="sxs-lookup"><span data-stu-id="f0603-110">Example</span></span>  
+ <span data-ttu-id="f0603-111">В следующем примере это показано.</span><span class="sxs-lookup"><span data-stu-id="f0603-111">The following example demonstrates this.</span></span>  
   
 ```csharp  
 XName Root = "Root";  
@@ -39,7 +39,7 @@ XElement root = new XElement(Root,
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="2422e-112">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="2422e-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="f0603-112">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="f0603-112">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -49,7 +49,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- <span data-ttu-id="2422e-113">Следующий пример демонстрирует ту же технику, когда XML-документ находится в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="2422e-113">The following example shows the same technique where the XML document is in a namespace:</span></span>  
+ <span data-ttu-id="f0603-113">Следующий пример демонстрирует ту же технику, когда XML-документ находится в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="f0603-113">The following example shows the same technique where the XML document is in a namespace:</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -73,7 +73,7 @@ XElement root = new XElement(Root,
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="2422e-114">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="2422e-114">This example produces the following output:</span></span>  
+ <span data-ttu-id="f0603-114">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="f0603-114">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -83,7 +83,7 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
- <span data-ttu-id="2422e-115">Следующий пример наиболее приближен к реальной ситуации.</span><span class="sxs-lookup"><span data-stu-id="2422e-115">The following example is more similar to what you will likely encounter in the real world.</span></span> <span data-ttu-id="2422e-116">В этом примере содержимое элементов предоставляется запросом.</span><span class="sxs-lookup"><span data-stu-id="2422e-116">In this example, the content of the element is supplied by a query:</span></span>  
+ <span data-ttu-id="f0603-115">Следующий пример наиболее приближен к реальной ситуации.</span><span class="sxs-lookup"><span data-stu-id="f0603-115">The following example is more similar to what you will likely encounter in the real world.</span></span> <span data-ttu-id="f0603-116">В этом примере содержимое элементов предоставляется запросом.</span><span class="sxs-lookup"><span data-stu-id="f0603-116">In this example, the content of the element is supplied by a query:</span></span>  
   
 ```csharp  
 XName Root = "Root";  
@@ -102,7 +102,7 @@ DateTime t2 = DateTime.Now;
 Console.WriteLine("Time to construct:{0}", t2 - t1);  
 ```  
   
- <span data-ttu-id="2422e-117">Производительность кода в предыдущем примере выше, чем в следующем, где не выполняется предварительная атомизация имен.</span><span class="sxs-lookup"><span data-stu-id="2422e-117">The previous example performs better than the following example, in which names are not pre-atomized:</span></span>  
+ <span data-ttu-id="f0603-117">Производительность кода в предыдущем примере выше, чем в следующем, где не выполняется предварительная атомизация имен.</span><span class="sxs-lookup"><span data-stu-id="f0603-117">The previous example performs better than the following example, in which names are not pre-atomized:</span></span>  
   
 ```csharp  
 DateTime t1 = DateTime.Now;  
@@ -117,6 +117,6 @@ DateTime t2 = DateTime.Now;
 Console.WriteLine("Time to construct:{0}", t2 - t1);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2422e-118">См. также</span><span class="sxs-lookup"><span data-stu-id="2422e-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0603-118">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="f0603-118">See also</span></span>
 
-- [<span data-ttu-id="2422e-119">Атомарные объекты XName и XNamespace (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="2422e-119">Atomized XName and XNamespace Objects (LINQ to XML) (C#)</span></span>](./atomized-xname-and-xnamespace-objects-linq-to-xml.md)
+- [<span data-ttu-id="f0603-119">Атомарные объекты XName и XNamespace (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f0603-119">Atomized XName and XNamespace Objects (LINQ to XML) (C#)</span></span>](./atomized-xname-and-xnamespace-objects-linq-to-xml.md)

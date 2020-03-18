@@ -3,19 +3,19 @@ title: Пример, выводящий части документа в фор�
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
 ms.openlocfilehash: be4c0ba2ce2a007fa6e19a65d7d86854d85851c4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66486001"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="fdd61-102">Пример, выводящий части документа в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="fdd61-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
-<span data-ttu-id="fdd61-103">В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.</span><span class="sxs-lookup"><span data-stu-id="fdd61-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="d1a20-102">Пример, выводящий части документа в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="d1a20-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
+<span data-ttu-id="d1a20-103">В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.</span><span class="sxs-lookup"><span data-stu-id="d1a20-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fdd61-104">Пример</span><span class="sxs-lookup"><span data-stu-id="fdd61-104">Example</span></span>  
- <span data-ttu-id="fdd61-105">В следующем примере открывается документ Office Open XML, после чего часть, содержащая сам документ, и часть, содержащая стиль, выводятся на консоль.</span><span class="sxs-lookup"><span data-stu-id="fdd61-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="d1a20-104">Пример</span><span class="sxs-lookup"><span data-stu-id="d1a20-104">Example</span></span>  
+ <span data-ttu-id="d1a20-105">В следующем примере открывается документ Office Open XML, после чего часть, содержащая сам документ, и часть, содержащая стиль, выводятся на консоль.</span><span class="sxs-lookup"><span data-stu-id="d1a20-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- <span data-ttu-id="fdd61-106">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="fdd61-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="fdd61-107">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fdd61-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="d1a20-106">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="d1a20-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="d1a20-107">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1a20-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
