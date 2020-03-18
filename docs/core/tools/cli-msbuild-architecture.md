@@ -3,10 +3,10 @@ title: Архитектура программ командной строки .
 description: Дополнительные сведения об уровнях средств .NET Core, а также об изменениях в последних версиях.
 ms.date: 03/06/2017
 ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092919"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Краткий обзор изменений в средствах .NET Core
@@ -43,7 +43,7 @@ ms.locfileid: "77092919"
 
 Все наборы инструментов теперь используют общий компонент SDK и его целевые объекты, в том числе интерфейс командной строки. Например, Visual Studio 2019 не вызывает команду `dotnet restore` ([см. примечание](#dotnet-restore-note)) для восстановления зависимостей в проектах .NET Core. Вместо этого напрямую используется целевой объект Restore (Восстановление). Так как это целевые объекты MSBuild, их можно выполнить с помощью команды [dotnet msbuild](dotnet-msbuild.md) в самом модуле MSBuild.
 
-### <a name="cli-commands"></a>Команды CLI
+### <a name="cli-commands"></a>Команды интерфейса командной строки
 
 Внедрение общего компонента SDK означает, что большинство существующих команд CLI были заново реализованы как задачи и целевые объекты MSBuild. Как это повлияло на команды интерфейса командной строки и использование набора инструментов?
 

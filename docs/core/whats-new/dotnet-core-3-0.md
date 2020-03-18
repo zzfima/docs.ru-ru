@@ -7,11 +7,11 @@ author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
 ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156573"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397827"
 ---
 # <a name="whats-new-in-net-core-30"></a>Новые возможности .NET Core 3.0
 

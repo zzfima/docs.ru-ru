@@ -3,10 +3,10 @@ title: Пошаговое руководство. Доступ к Интерне
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74281784"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)
@@ -222,7 +222,7 @@ Control returned to startButton_Click.
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>Преобразование GetURLContents в асинхронный метод
 
-1. Чтобы преобразовать синхронное решение в асинхронное, лучше всего начать с метода `GetURLContents`, поскольку вызовы метода <xref:System.Net.HttpWebRequest> <xref:System.Net.HttpWebRequest.GetResponse%2A> и метода <xref:System.IO.Stream> <xref:System.IO.Stream.CopyTo%2A> выполняются, когда приложение подключается к Интернету. Платформа .NET Framework упрощает преобразование путем предоставления асинхронных версий этих методов.
+1. Чтобы преобразовать синхронное решение в асинхронное, лучше всего начать с метода `GetURLContents`, поскольку вызовы метода <xref:System.Net.HttpWebRequest><xref:System.Net.HttpWebRequest.GetResponse%2A> и метода <xref:System.IO.Stream><xref:System.IO.Stream.CopyTo%2A> выполняются, когда приложение подключается к Интернету. Платформа .NET Framework упрощает преобразование путем предоставления асинхронных версий этих методов.
 
      Дополнительные сведения о методах, которые используются в `GetURLContents`, см. в разделе <xref:System.Net.WebRequest>.
 
@@ -397,7 +397,7 @@ Control returned to startButton_Click.
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Замена GetURLContentsAsync методом .NET Framework
 
-1. Платформа .NET Framework 4.5 предоставляет много асинхронных методов, которые вы можете использовать. Один из них, метод <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> <xref:System.Net.Http.HttpClient>, выполняет именно те операции, которые требуются для данного пошагового руководства. Его можно использовать вместо метода `GetURLContentsAsync`, созданного в предыдущей процедуре.
+1. Платформа .NET Framework 4.5 предоставляет много асинхронных методов, которые вы можете использовать. Один из них, метод <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29><xref:System.Net.Http.HttpClient>, выполняет именно те операции, которые требуются для данного пошагового руководства. Его можно использовать вместо метода `GetURLContentsAsync`, созданного в предыдущей процедуре.
 
      Первым шагом является создание объекта `HttpClient` в методе `SumPageSizesAsync`. Добавьте следующее объявление в начале метода.
 

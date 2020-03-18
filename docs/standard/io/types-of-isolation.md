@@ -19,10 +19,10 @@ helpviewer_keywords:
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159433"
 ---
 # <a name="types-of-isolation"></a>Типы изоляции
@@ -57,7 +57,7 @@ ms.locfileid: "78159433"
 ## <a name="isolation-by-user-and-assembly"></a>Изоляция по пользователям и сборкам  
  Изоляция по пользователям и сборкам подходит в тех случаях, когда использующая это хранилище сборка должна быть доступна из любого домена приложения. Обычно таким образом изолированное хранилище используется для хранения данных, применяющихся в несколькими приложениях и не привязанных к любому из них, например имен пользователей и (или) сведений о лицензиях. Для доступа к хранилищу, изолированному по пользователю и сборке, код должен иметь доверие на передачу данных между приложениями. Как правило, изоляция по пользователям и сборкам допускается только в интрасетях, но не в Интернете. Чтобы получить хранилище с этим типом изоляции, вызовите статический метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> и передайте в него <xref:System.IO.IsolatedStorage.IsolatedStorageScope> с указанием пользователя и сборки.  
   
- Приведенный ниже код возвращает хранилище, изолированное по пользователю, сборке и домену. Доступ к этому хранилищу может осуществляться через объект `isoFile`.  
+ Приведенный ниже код возвращает хранилище, изолированное по пользователю, сборке и домену. Доступ к этому хранилищу можно осуществлять через объект `isoFile`.  
   
  [!code-cpp[Conceptual.IsolatedStorage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#17)]
  [!code-csharp[Conceptual.IsolatedStorage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#17)]

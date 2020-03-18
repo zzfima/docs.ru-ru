@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159771"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Пошаговое руководство. Использование потока данных в приложении Windows Forms
@@ -19,7 +19,7 @@ ms.locfileid: "78159771"
   
  В этом примере файлы изображения загружаются из указанной папки, из них создается составное изображение, и результат отображается. В данном примере для перемещения изображений по сети используется модель потока данных. В модели потока данных независимые компоненты программы взаимодействуют друг с другом, отправляя сообщения. Когда компонент получает сообщение, он выполняет какое-либо действие и затем передает результат другому компоненту. Сравните это с моделью потока управления, в который приложение использует структуры управления, например условные операторы, циклы и т. д., для управления порядком операций в программе.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Prerequisites  
  Прежде чем начать выполнение этого пошагового руководства, ознакомьтесь с документом [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "78159771"
   
 4. Добавьте второй элемент управления <xref:System.Windows.Forms.ToolStripButton> к элементу управления <xref:System.Windows.Forms.ToolStrip>. Задайте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение **Отмена**, а свойству <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> — значение `False`.  
   
-5. Добавьте объект <xref:System.Windows.Forms.PictureBox> на главную форму. Установите свойство <xref:System.Windows.Forms.Control.Dock%2A> в значение <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Добавьте объект <xref:System.Windows.Forms.PictureBox> на главную форму. Задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 <a name="network"></a>
 ## <a name="creating-the-dataflow-network"></a>Создание сети потока данных  
@@ -84,7 +84,7 @@ ms.locfileid: "78159771"
   
  Следующая таблица описывает члены сети.  
   
-|Участник|Тип|Описание|  
+|Участник|Type|Описание:|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Принимает путь папки на входе и создает коллекцию объектов <xref:System.Drawing.Bitmap> на выходе.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Принимает коллекцию объектов <xref:System.Drawing.Bitmap> на входе и подает составной точечный рисунок на выход.|  
@@ -99,7 +99,7 @@ ms.locfileid: "78159771"
   
  Поскольку блоки потоков данных `displayCompositeBitmap` и `operationCancelled` работают с интерфейсом пользователя, важно, чтобы эти действия происходили в потоке пользовательского интерфейса. Для этого в процессе создания каждый из этих объектов предоставляет объект <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>, который содержит свойство <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> со значением <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Метод <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> создает объект <xref:System.Threading.Tasks.TaskScheduler>, выполняющий работу в текущем контексте синхронизации. Так как метод `CreateImageProcessingNetwork` вызывается из обработчика кнопки **Выбрать папку**, которая выполняется в потоке пользовательского интерфейса, действия для блоков потока данных `displayCompositeBitmap` и `operationCancelled` также выполняются в потоке пользовательского интерфейса.  
   
- В этом примере используется общий токен отмены, а не устанавливается свойство <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, поскольку свойство <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> окончательно отменяет выполнение блока потока данных. Токен отмены в этом примере позволяет повторно использовать те же сети потоков данных несколько раз, даже если пользователь отменил одну или несколько операций. Пример, использующий <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, чтобы окончательно отменить выполнение блока потока данных, см. в разделе [Практическое руководство. Отмена блока потока данных](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ В этом примере используется общий токен отмены, а не устанавливается свойство <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, поскольку свойство <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> окончательно отменяет выполнение блока потока данных. Токен отмены в этом примере позволяет повторно использовать те же сети потоков данных несколько раз, даже если пользователь отменил одну или несколько операций. См. пример, который использует <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, чтобы окончательно [отменить выполнение блока потока данных](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Подключение сети потока данных к пользовательскому интерфейсу  

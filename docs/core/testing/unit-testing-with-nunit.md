@@ -3,12 +3,12 @@ title: Модульное тестирование кода C# с использ
 description: Сведения о концепциях модульного тестирования в C# и .NET Core в рамках пошаговой процедуры по созданию примера решения с помощью команды dotnet test и NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 8c099695b48e96ac47e41794082cd8dccaa0457a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157275"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240887"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Модульное тестирование кода C# с использованием NUnit и .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "78157275"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - [Пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии.
 - Текстовый редактор или редактор кода по вашему выбору.
@@ -87,7 +87,7 @@ dotnet new nunit
 
 Команда [dotnet new](../tools/dotnet-new.md) создает тестовый проект, который использует NUnit в качестве библиотеки тестов. Созданный шаблон настраивает средство запуска тестов в файле *PrimeServiceTests.csproj*:
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
 Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда `dotnet new` на предыдущем шаге добавляет пакет SDK тестирования от Майкрософт, платформу тестирования NUnit и адаптер тестирования NUnit. Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости. Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
@@ -120,35 +120,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 Напишите один тест сбоя теста, запустите его, а затем повторите этот процесс. В каталоге *PrimeService.Tests* переименуйте файл *UnitTest1.cs* в *PrimeService_IsPrimeShould.cs* и замените его содержимое следующим кодом:
 
-```csharp
-using NUnit.Framework;
-using Prime.Services;
-
-namespace Prime.UnitTests.Services
-{
-    [TestFixture]
-    public class PrimeService_IsPrimeShould
-    {
-        [Test]
-        public void IsPrime_InputIs1_ReturnFalse()
-        {
-            PrimeService primeService = CreatePrimeService();
-            var result = primeService.IsPrime(1);
-
-            Assert.IsFalse(result, "1 should not be prime");
-        }
-
-        /*
-        More tests
-        */
-
-        private PrimeService CreatePrimeService()
-        {
-             return new PrimeService();
-        }
-    }
-}
-```
+[!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
 
 Атрибут `[TestFixture]` обозначает класс, содержащий модульные тесты. Атрибут `[Test]` указывает, что метод — это метода теста.
 
@@ -167,15 +139,15 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Выполните команду `dotnet test` еще раз в каталоге *unit-testing-using-nunit*. Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`. После сборки обоих проектов она запускает этот отдельный тест. Он выполняется.
+Выполните команду *еще раз в каталоге*unit-testing-using-nunit`dotnet test`. Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`. После сборки обоих проектов она запускает этот отдельный тест. Он выполняется.
 
 ## <a name="adding-more-features"></a>Добавление дополнительных возможностей
 
-Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами 0, -1. Можно добавить новые тесты с помощью атрибута `[Test]`, но это скоро станет утомительным. Есть другие атрибуты NUnit, которые позволяют создавать наборы похожих тестов.  Атрибут `[TestCase]` используется для создания набора тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `[TestCase]` можно указать значения для этих входных аргументов.
+Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами: 0, -1. Можно добавить новые тесты с помощью атрибута `[Test]`, но это скоро станет утомительным. Есть другие атрибуты NUnit, которые позволяют создавать наборы похожих тестов.  Атрибут `[TestCase]` используется для создания набора тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `[TestCase]` можно указать значения для этих входных аргументов.
 
 Вместо того чтобы создавать новые тесты, используйте этот атрибут, чтобы создать единый управляемый данными тест, который проверяет несколько значений меньше 2, то есть наименьшего простого числа.
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Выполните команду `dotnet test`, и два из этих тестов завершаются ошибкой. Для успешного выполнения всех тестов нужно изменить предложение `if` в начале метода `Main` в файле *PrimeService.cs*:
 

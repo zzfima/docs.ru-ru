@@ -5,10 +5,10 @@ helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335358"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Практическое руководство. Перемещение файла в Visual Basic
@@ -51,7 +51,7 @@ ms.locfileid: "74335358"
   
 - У пользователя отсутствует необходимое разрешение (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
 - [Практическое руководство. Переименование файла](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

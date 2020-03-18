@@ -11,10 +11,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348202"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Практическое руководство. Поиск полного имени сборки
@@ -27,7 +27,7 @@ ms.locfileid: "74348202"
 
 - Если сборка уже загружена приложением, то для получения полного имени можно извлечь значение свойства <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>. Для получения ссылки на объект <xref:System.Reflection.Assembly> можно использовать свойство <xref:System.Type.Assembly> объекта <xref:System.Type>, определенного в этой сборке. Иллюстрация приведена в примере.
 
-- Если вы знаете путь к файлу сборки в системе, то можете вызвать метод <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> `static` (C#) или `Shared` (Visual Basic), чтобы получить полное имя сборки. Ниже приведен простой пример.
+- Если вы знаете путь к файлу сборки в системе, то можете вызвать метод <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType>`static` (C#) или `Shared` (Visual Basic), чтобы получить полное имя сборки. Ниже приведен простой пример.
 
   ```csharp
   using System;

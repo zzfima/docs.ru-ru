@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457748"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Устранение рисков. Проверка схемы XML
@@ -18,7 +18,7 @@ ms.locfileid: "73457748"
 ## <a name="impact"></a>Последствия  
  Влияние этого изменения должно быть минимальным: в зависимости от спецификации схемы ожидается ошибка проверки схемы в случае нарушения ограничения `xsd:unique` при использовании составного ключа с пустым ключом.  
   
-## <a name="mitigation"></a>Устранение рисков  
+## <a name="mitigation"></a>Меры по снижению риска  
  Обнаружение ошибки проверки схемы при наличии одного пустого ключа в составном ключе — это настраиваемая функция.  
   
 - Начиная с приложений, ориентированных на .NET Framework 4.6, функция обнаружения ошибок проверки схемы включена по умолчанию, однако ее можно отключить, чтобы не выполнять обнаружение ошибок проверки схемы.  
@@ -35,6 +35,6 @@ ms.locfileid: "73457748"
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#2)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Совместимость приложений](application-compatibility.md)

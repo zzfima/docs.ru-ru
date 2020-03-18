@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204697"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
 
  [Введение в подключаемые протоколы](introducing-pluggable-protocols.md)  
  Описание способов доступа к интернет-ресурсу вне зависимости от используемого протокола доступа  
@@ -85,7 +85,7 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  [Примеры сетевого программирования](network-programming-samples.md)  
  Ссылки на загружаемые примеры программ, в которых используются классы из пространств имен <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> .  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Net?displayProperty=nameWithType>  
  Предоставляет простой программный интерфейс для многих современных сетевых протоколов. Классы <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.WebResponse?displayProperty=nameWithType> в этом пространстве имен являются основой для подключаемых протоколов.  
   
@@ -126,7 +126,7 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  Предоставляет управляемую реализацию интерфейса WebSocket для разработчиков.  
   
  <xref:System.Uri?displayProperty=nameWithType>  
- Обеспечивает объектное представление универсального кода ресурсов (URI), а также простой доступ к его частям.  
+ Предоставляет объектное представление универсального идентификатора ресурсов (URI) и обеспечивает простой доступ к его частям.  
   
  <xref:System.Security.Authentication.ExtendedProtection?displayProperty=nameWithType>  
  Обеспечивает поддержку аутентификации за счет расширенной защиты приложений.  
@@ -134,7 +134,7 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Обеспечивает поддержку настройки аутентификации с помощью расширенной защиты приложений.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Рекомендации по использованию протокола TLS с .NET Framework](tls.md)
 - [Практические руководства по сетевому программированию](network-programming-how-to-topics.md)

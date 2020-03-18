@@ -3,17 +3,17 @@ title: Команда dotnet pack
 description: Команда dotnet pack создает пакеты NuGet для проекта .NET Core.
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503646"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
-## <a name="name"></a>name
+## <a name="name"></a>Имя
 
 `dotnet pack` — упаковывает код в пакет NuGet.
 
@@ -26,7 +26,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-sou
 dotnet pack [-h|--help]
 ```
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет NuGet (то есть файл *NUPKG*).
 
@@ -145,7 +145,7 @@ dotnet pack [-h|--help]
   dotnet pack --no-build --output nupkgs
   ```
 
-- Если суффикс версии пакета в файле *CSPROJ* настроен как `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`, упаковка текущего проекта и обновление версии полученных пакетов с использованием указанного суффикса:
+- Если суффикс версии пакета в файле `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`CSPROJ*настроен как*, упаковка текущего проекта и обновление версии полученных пакетов с использованием указанного суффикса:
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"

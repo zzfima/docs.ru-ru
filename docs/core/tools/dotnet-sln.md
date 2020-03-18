@@ -3,17 +3,17 @@ title: Команда dotnet sln
 description: Команда dotnet-sln предоставляет удобный способ добавлять проекты в файл решений, удалять или перечислять их.
 ms.date: 02/14/2020
 ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543486"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 **Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
-## <a name="name"></a>name
+## <a name="name"></a>Имя
 
 `dotnet sln` — перечисляет или изменяет проекты в файле решения .NET Core.
 
@@ -23,7 +23,7 @@ ms.locfileid: "77543486"
 dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Команда `dotnet sln` предоставляет удобный способ перечислять и изменять проекты в файле решений.
 

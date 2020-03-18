@@ -10,17 +10,17 @@ helpviewer_keywords:
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713057"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398115"
 ---
 # <a name="throw-c-reference"></a>throw (Справочник по C#)
 
 Сообщает о возникновении исключения во время выполнения программы.  
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Синтаксис `throw` выглядит следующим образом:
 
@@ -47,7 +47,7 @@ throw [e];
 
 ## <a name="the-throw-expression"></a>Выражение `throw`
 
-Начиная с C# 7.0 `throw` можно использовать в качестве выражения, а также как оператор. Это позволяет вызывать исключения в контекстах, которые ранее не поддерживались. Сюда входит следующее.
+Начиная с C# 7.0 `throw` можно использовать в качестве выражения, а также как оператор. Это позволяет вызывать исключения в контекстах, которые ранее не поддерживались. К ним относятся следующие методы.
 
 - [Условный оператор](../operators/conditional-operator.md). В следующем примере используется исключение `throw` для создания <xref:System.ArgumentException>, если методу передается массив пустых строк. До выхода C# 7.0 эта логика должна была отображаться в операторе `if`/`else`.
 
@@ -65,7 +65,7 @@ throw [e];
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

@@ -5,10 +5,10 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116023"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Процесс переноса классического приложения Windows Forms в .NET Core
@@ -17,14 +17,14 @@ ms.locfileid: "76116023"
 
 В этой статье применяются различные имена для обозначения типов файлов, используемых для переноса. При переносе вашего проекта файлы будут называться иначе, поэтому попытайтесь мысленно сопоставить их с именами из этой таблицы:
 
-| Файл | Описание |
+| Файл | Описание: |
 | ---- | ----------- |
 | **MyApps.sln** | Имя файла решения. |
 | **MyForms.csproj** | Имя проекта Windows Forms в .NET Framework, который нужно перенести. |
 | **MyFormsCore.csproj** | Имя создаваемого проекта .NET Core. |
 | **MyAppCore.exe** | Исполняемый файл приложения Windows Forms в .NET Core. |
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) для выполнения конструкторских задач.
 
@@ -188,7 +188,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
 
 Используя пример из предыдущего шага, расширим перечень проектов и файлов, с которыми мы работаем.
 
-| Файл | Описание |
+| Файл | Описание: |
 | ---- | ----------- |
 | **MyApps.sln** | Имя файла решения. |
 | **MyControls.csproj** | Имя проекта библиотеки элементов управления Windows Forms, который нужно перенести. |
@@ -297,7 +297,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 Когда в Visual Studio 2019 будет добавлена поддержка конструктора Windows Forms, можно скопировать и вставить содержимое файла проекта .NET Core в файл проекта .NET Framework. Затем можно удалить стандартные маски файлов, добавленные с помощью элементов `<Source>` и `<EmbeddedResource>`. Исправьте пути ссылок проекта, используемых приложением. Это позволит полноценно преобразовать проект .NET Framework в проект .NET Core.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Ознакомьтесь со [списком критических изменений, касающихся перехода с .NET Framework на .NET Core](../compatibility/fx-core.md).
 - Дополнительные сведения о [пакете обеспечения совместимости Windows][compat-pack].

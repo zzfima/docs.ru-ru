@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423038"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Очистка неуправляемых ресурсов
@@ -27,7 +27,7 @@ ms.locfileid: "73423038"
 
 - Реализуйте [шаблон удаления](implementing-dispose.md). Это требует реализации <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> для детерминированного освобождения неуправляемых ресурсов. Объект-получатель типа вызывает метод <xref:System.IDisposable.Dispose%2A>, когда объект и используемые им ресурсы больше не нужны. Метод <xref:System.IDisposable.Dispose%2A> немедленно освобождает неуправляемые ресурсы.
 
-- Предусмотрите освобождение неуправляемых ресурсов, в случае если метод <xref:System.IDisposable.Dispose%2A> не будет вызван объектом-получателем. Это можно сделать двумя способами.
+- Предусмотрите освобождение неуправляемых ресурсов, в случае если метод <xref:System.IDisposable.Dispose%2A> не будет вызван объектом-получателем. Это можно осуществить двумя путями:
 
   - Используйте безопасный дескриптор в качестве оболочки для неуправляемого ресурса. Это рекомендуемая методика. Безопасные дескрипторы являются производными от класса <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. Они включают надежный метод <xref:System.Object.Finalize%2A>. При использовании безопасного дескриптора нужно просто реализовать интерфейс <xref:System.IDisposable> и вызвать метод <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> этого безопасного дескриптора в реализации <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. Метод завершения безопасного дескриптора автоматически вызывается сборщиком мусора, если не вызывается метод <xref:System.IDisposable.Dispose%2A>.
 
@@ -37,13 +37,13 @@ ms.locfileid: "73423038"
 
 Объекты-получатели типа могут затем вызвать реализацию <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> непосредственно для освобождения памяти, используемой неуправляемыми ресурсами. При правильной реализации метода <xref:System.IDisposable.Dispose%2A> метод <xref:System.Object.Finalize%2A> или переопределенная версия метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType> становятся резервным средством очистки ресурсов в случае, если не вызывается метод <xref:System.IDisposable.Dispose%2A>.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание
 
 [Реализация метода Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) — описание способа реализации [шаблона удаления](implementing-dispose.md) для освобождения неуправляемых ресурсов.
 
 [Использование объектов, реализующих IDisposable](../../../docs/standard/garbage-collection/using-objects.md) — описание того, как объекты-получатели типа обеспечивают вызов своей реализации метода <xref:System.IDisposable.Dispose%2A>. Для этого рекомендуется использовать оператор `using` (C# ) или `Using` (Visual Basic).
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочник
 
 <xref:System.IDisposable?displayProperty=nameWithType>\
 Определяет метод <xref:System.IDisposable.Dispose%2A> для освобождения неуправляемых ресурсов.

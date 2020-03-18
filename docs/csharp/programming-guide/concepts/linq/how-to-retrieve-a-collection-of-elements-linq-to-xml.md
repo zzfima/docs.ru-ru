@@ -3,10 +3,10 @@ title: Извлечение коллекции элементов (LINQ to XML) 
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
 ms.openlocfilehash: 89799b17115fb56a93bda5fbc144b21b334a6974
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345017"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>Извлечение коллекции элементов (LINQ to XML) (C#)
@@ -15,7 +15,7 @@ ms.locfileid: "75345017"
 ## <a name="example"></a>Пример  
  В этом примере выполняется итерация по дочерним элементам элемента `purchaseOrder`.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -35,6 +35,6 @@ Name: DeliveryNotes
 Name: Items  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Оси LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

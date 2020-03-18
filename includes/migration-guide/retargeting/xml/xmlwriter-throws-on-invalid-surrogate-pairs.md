@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: b7f31060fd845f7618479fd064350b3cb5532fd3
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 284a578a732096e3081321342e37c0a59b46f6cd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804601"
 ---
 ### <a name="xmlwriter-throws-on-invalid-surrogate-pairs"></a>XmlWriter вызывает недействительные суррогатные пары
 
 |   |   |
 |---|---|
-|Подробные сведения|Для приложений с целевой платформой .NET Framework 4.5.2 или предыдущих версий запись недействительной суррогатной пары с помощью обработки резервного исключения не всегда вызывает исключение. Для приложений с целевой платформой .NET Framework 4.6 попытка записи недействительной суррогатной пары вызывает исключение <xref:System.ArgumentException?displayProperty=name>.|
+|Подробнее|Для приложений с целевой платформой .NET Framework 4.5.2 или предыдущих версий запись недействительной суррогатной пары с помощью обработки резервного исключения не всегда вызывает исключение. Для приложений с целевой платформой .NET Framework 4.6 попытка записи недействительной суррогатной пары вызывает исключение <xref:System.ArgumentException?displayProperty=name>.|
 |Предложение|При необходимости этого прерывания можно избежать, выбрав в качестве целевой платформы .NET Framework 4.5.2 или более ранней версии. Кроме того, до записи недействительных суррогатных пар можно предварительно обработать их и преобразовать в допустимый xml.|
 |Область|Пограничный случай|
-|Версия|4.6|
-|Тип|Изменение целевой платформы|
+|Version|4.6|
+|Type|Изменение целевой платформы|
 |Затронутые API|<ul><li><xref:System.Xml.XmlWriter.WriteAttributeString(System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteAttributeString(System.String,System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteAttributeString(System.String,System.String,System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteAttributeStringAsync(System.String,System.String,System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteCData(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteCDataAsync(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteChars(System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteCharsAsync(System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteComment(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteCommentAsync(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteEntityRef(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteEntityRefAsync(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteRaw(System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteProcessingInstruction(System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteProcessingInstructionAsync(System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteRaw(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteRawAsync(System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteRawAsync(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteString(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteStringAsync(System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteSurrogateCharEntity(System.Char,System.Char)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteSurrogateCharEntityAsync(System.Char,System.Char)?displayProperty=nameWithType></li><li><xref:System.Xml.XmlWriter.WriteValue(System.String)?displayProperty=nameWithType></li></ul>|
-

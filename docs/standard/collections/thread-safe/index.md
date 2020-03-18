@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75938107"
 ---
 # <a name="thread-safe-collections"></a>Потокобезопасные коллекции
@@ -32,7 +32,7 @@ ms.locfileid: "75938107"
   
  В следующей таблице перечислены типы коллекций в пространстве имен <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Type|Описание|  
+|Type|Описание:|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Предоставляет возможности блокировки и ограничения для всех типов, реализующих интерфейс <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Дополнительные сведения см. в разделе [Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Потокобезопасная реализация словаря пар "ключ-значение".|  
@@ -43,10 +43,10 @@ ms.locfileid: "75938107"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Название|Описание:|  
 |-----------|-----------------|  
 |[Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Приводится описание функциональных возможностей, которые предоставляются типом <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Приводится описание добавления и удаления элементов в классе <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
+|[Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из нее](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Приводится описание добавления и удаления элементов в классе <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
 |[Практическое руководство. Добавление и удаление отдельных элементов коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Приводится описание порядка добавления и получения элементов из заблокированной коллекции без использования перечислителя, доступного только для чтения.|  
 |[Практическое руководство. Добавление функций границы и блокировки в коллекцию](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Приводится описание порядка использования всех классов коллекций в качестве базового механизма хранения для коллекции <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
 |[Практическое руководство. Использование оператора ForEach для удаления элементов в коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Описание порядка использования `foreach` (`For Each` в Visual Basic) для удаления всех элементов в заблокированной коллекции.|  

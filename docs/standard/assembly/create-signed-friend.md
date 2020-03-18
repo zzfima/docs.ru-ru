@@ -1,23 +1,23 @@
 ---
-title: Руководство. Создание подписанных дружественных сборок
+title: Практическое руководство. Создание подписанных дружественных сборок
 ms.date: 08/19/2019
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 9912fa70014a8828e994cf528644aaa7cb351fea
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159498"
 ---
-# <a name="how-to-create-signed-friend-assemblies"></a>Руководство. Создание подписанных дружественных сборок
+# <a name="how-to-create-signed-friend-assemblies"></a>Практическое руководство. Создание подписанных дружественных сборок
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>Создание подписанной и дружественной сборки  
   
-1. Откройте командную строку.  
+1. Откройте окно командной строки.  
   
 2. Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. в разделе [Sn.exe (средство строгих имен)](../../framework/tools/sn-exe-strong-name-tool.md).  
   
@@ -126,12 +126,12 @@ ms.locfileid: "78159498"
 ## <a name="net-security"></a>Безопасность в .NET  
  Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal` (C#) или `Friend` (Visual Basic).  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Сборки в .NET](index.md)
 - [Дружественные сборки](friend.md)
-- [Руководство. Создание неподписанных дружественных сборок](create-unsigned-friend.md)
+- [Практическое руководство. Создание неподписанных дружественных сборок](create-unsigned-friend.md)
 - [-keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile (Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (средство строгих имен)](../../framework/tools/sn-exe-strong-name-tool.md)

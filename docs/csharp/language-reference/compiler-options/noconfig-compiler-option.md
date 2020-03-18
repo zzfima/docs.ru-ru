@@ -10,10 +10,10 @@ helpviewer_keywords:
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
 ms.openlocfilehash: 2d6d0c52be2306292224d7831f8818c6f865f2f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602736"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig (параметры компилятора C#)
@@ -25,7 +25,7 @@ ms.locfileid: "69602736"
 -noconfig  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Файл csc.rsp содержит ссылки на все сборки, поставляемые вместе с платформой .NET Framework. Фактические ссылки, которые включает среда разработки Visual Studio .NET, зависят от типа проекта.  
   
  Вы можете изменить файл csc.rsp и указать дополнительные параметры компилятора, которые нужно включать при каждой компиляции, из командной строки с помощью программы csc.exe (кроме параметра **-noconfig**).  
@@ -36,7 +36,7 @@ ms.locfileid: "69602736"
   
  Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

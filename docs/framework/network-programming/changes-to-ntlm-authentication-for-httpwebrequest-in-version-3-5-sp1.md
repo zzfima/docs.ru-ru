@@ -3,10 +3,10 @@ title: Изменения в аутентификации NTLM для HttpWebReq
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64754875"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)
@@ -53,7 +53,7 @@ ms.locfileid: "64754875"
 
 Менее безопасный способ — отключить проверку замыкания на себя, как описано на странице <https://support.microsoft.com/kb/896861>. При этом отключается защита от атак отражением. Поэтому лучше ограничить набор альтернативных имен только теми, которые действительно будут использоваться компьютером.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>

@@ -3,10 +3,10 @@ title: Протокол PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74428225"
 ---
 # <a name="peer-name-resolution-protocol"></a>Протокол PNRP
@@ -46,7 +46,7 @@ ms.locfileid: "74428225"
   
 - <xref:System.Net.PeerToPeer.PeerNameResolver>. Определяет процесс разрешения имени однорангового узла в его сетевые конечные точки, включая синхронные и асинхронные методы разрешения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>

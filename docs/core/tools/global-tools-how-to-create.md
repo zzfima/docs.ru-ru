@@ -3,10 +3,10 @@ title: Учебник. Создание средства .NET Core
 description: Сведения о создании средства .NET Core. Средство — это консольное приложение, которое устанавливается с помощью интерфейса командной строки .NET Core.
 ms.date: 02/12/2020
 ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156729"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Учебник. Создание средства .NET Core с помощью интерфейса командной строки .NET Core

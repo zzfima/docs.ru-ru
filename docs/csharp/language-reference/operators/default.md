@@ -4,12 +4,12 @@ description: Создания значения по умолчанию для т
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964621"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398187"
 ---
 # <a name="default-operator-c-reference"></a>Оператор default (справочник по C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "75964621"
 
 В следующем примере показано применение оператора `default`.
 
-[!code-csharp-interactive[default of T](~/samples/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 Также используется ключевое слово `default` в качестве метки варианта по умолчанию в [инструкции `switch`](../keywords/switch.md).
 
@@ -32,7 +32,7 @@ ms.locfileid: "75964621"
 
 Ниже приведен пример применения литерала `default`.
 
-[!code-csharp-interactive[default literal](~/samples/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -40,9 +40,9 @@ ms.locfileid: "75964621"
 
 Дополнительные сведения о литерале `default` см. в [примечании к предлагаемой функции](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Значения по умолчанию типов C#](../builtin-types/default-values.md)
-- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)
+- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)

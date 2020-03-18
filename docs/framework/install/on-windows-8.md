@@ -4,10 +4,10 @@ ms.custom: updateeachrelease
 description: Сведения об установке платформы .NET Framework в Windows 8
 ms.date: 04/18/2019
 ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76966001"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Установка .NET Framework в Windows 8 и Windows Server 2012
@@ -21,7 +21,7 @@ ms.locfileid: "76966001"
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [Скачать .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [скачать .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48).
 
 .NET Framework 4.8 поддерживается в Windows Server 2012. Она не поддерживается в Windows 8.
 
@@ -43,7 +43,7 @@ ms.locfileid: "76966001"
 
 Вы можете [обратиться за помощью в корпорацию Майкрософт](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help), если не можете определить правильную версию установленной платформы .NET Framework.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Скачивание .NET Framework](https://dotnet.microsoft.com/download)
 - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)

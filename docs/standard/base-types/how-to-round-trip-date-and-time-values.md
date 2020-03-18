@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сохранение и восстановление значения даты и времени
+title: Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132008"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Практическое руководство. Сохранение и восстановление значения даты и времени
+# <a name="how-to-round-trip-date-and-time-values"></a>Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени
 
 Во многих приложениях значение даты и времени предназначено для однозначного определения одного момента времени. В этой статье показано, как правильно сохранять и восстанавливать значения <xref:System.DateTime> и <xref:System.DateTimeOffset>, а также значения времени с информацией о часовом поясе, чтобы восстановленное значение определяло то же время, что и сохраненное значение.
 
@@ -38,7 +38,7 @@ ms.locfileid: "73132008"
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-Этот метод позволяет сохранить любое значение локального или универсального времени в процессе обработки значения <xref:System.DateTime>. Например, если локальное значение <xref:System.DateTime> сохранено в системе в тихоокеанском стандартном часовом поясе США и восстановлено в системе в центральном стандартном часовом поясе США, восстановленные дата и время будут на два часа больше исходного времени, что отражает разницу во времени между двумя часовыми поясами. Однако этот способ не всегда точен для неуказанного времени. Все значения <xref:System.DateTime>, для которых свойство <xref:System.DateTime.Kind%2A> имеет значение <xref:System.DateTimeKind.Unspecified>, обрабатываются как значения местного времени. Если это не так, <xref:System.DateTime> не сможет правильно установить нужный момент времени. Чтобы устранить это ограничение, нужно тесно связать значение даты и времени с его часовым поясом для операций сохранения и восстановления.
+Этот метод позволяет сохранить любое значение локального или универсального времени в процессе обработки значения <xref:System.DateTime>. Например, если локальное значение <xref:System.DateTime> сохранено в системе с тихоокеанским стандартным часовом поясом США, а затем восстановлено в системе с центральным стандартным часовым поясом США, извлеченные дата и время будут на два часа позже исходного времени, что соответствует разнице во времени между часовыми поясами. Однако этот способ не всегда точен для неуказанного времени. Все значения <xref:System.DateTime>, для которых свойство <xref:System.DateTime.Kind%2A> имеет значение <xref:System.DateTimeKind.Unspecified>, обрабатываются как значения местного времени. Если это не так, <xref:System.DateTime> не сможет правильно установить нужный момент времени. Чтобы устранить это ограничение, нужно тесно связать значение даты и времени с его часовым поясом для операций сохранения и восстановления.
 
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>Выполнение цикла обработки значения DateTimeOffset
 
@@ -97,8 +97,8 @@ ms.locfileid: "73132008"
 
 - Все примеры кода, кроме класса `DateInTimeZone`, нужно включить в класс или модуль Visual Basic, упаковать в методы и вызывать из метода `Main`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
-- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

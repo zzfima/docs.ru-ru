@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
 ms.openlocfilehash: c746615d0d7a7a3058fbe2f8506a7a7c5c4a8779
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789725"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Руководство по программированию на C#. Рекомендуемые теги для комментариев документации
@@ -23,7 +23,7 @@ ms.locfileid: "76789725"
   
  Компилятор обрабатывает любые теги, имеющие допустимый формат XML. С помощью следующих тегов реализуются часто используемые в пользовательской документации возможности.  
   
-## <a name="tags"></a>Tags  
+## <a name="tags"></a>Теги  
   
 |||||  
 |---|---|---|---|
@@ -44,7 +44,7 @@ ms.locfileid: "76789725"
 /// </summary>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [-doc (параметры компилятора C#)](../../language-reference/compiler-options/doc-compiler-option.md)

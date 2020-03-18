@@ -6,17 +6,17 @@ helpviewer_keywords:
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353614"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Пошаговое руководство. Создание пользовательских прослушивателей журнала (Visual Basic)
 
 В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.
 
-## <a name="getting-started"></a>Начало работы
+## <a name="getting-started"></a>Приступая к работе
 
 Прослушиватели журналов должны наследовать от класса <xref:System.Diagnostics.TraceListener>.
 
@@ -28,7 +28,7 @@ ms.locfileid: "74353614"
 
      Методы <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A>, которые нужны для базового класса, используют `MsgBox` для отображения входных данных.
 
-     К методам <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A> применяется атрибут <xref:System.Security.Permissions.HostProtectionAttribute>, чтобы их атрибуты соответствовали методы базового класса. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> позволяет узлу, на котором выполняется код, проверять наличие в коде синхронизации защиты узла.
+     К методам <xref:System.Security.Permissions.HostProtectionAttribute> и <xref:System.Diagnostics.TraceListener.Write%2A> применяется атрибут <xref:System.Diagnostics.TraceListener.WriteLine%2A>, чтобы их атрибуты соответствовали методы базового класса. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> позволяет узлу, на котором выполняется код, проверять наличие в коде синхронизации защиты узла.
 
     > [!NOTE]
     > Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> действует только для неуправляемых приложений, на которых размещена среда CLR и реализована защита узлов, например для SQL Server.
@@ -45,7 +45,7 @@ ms.locfileid: "74353614"
 
 3. Выберите поле **Подписать сборку**.
 
-4. В раскрывающемся списке **Выберите файл ключа строгого имени** щелкните **\<Новый...>** .
+4. В раскрывающемся списке **Выберите файл ключа строгого имени\< щелкните** **Новый...>** .
 
      Откроется диалоговое окно **Создание ключа строгого имени**.
 
@@ -107,10 +107,10 @@ ms.locfileid: "74353614"
 
      Изменить значение `SimpleLogStrongName` на строгое имя прослушивателя.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Практическое руководство. Исплючения журналов](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Практическое руководство. Запись в журнал сведений об исключениях](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Пошаговое руководство: Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

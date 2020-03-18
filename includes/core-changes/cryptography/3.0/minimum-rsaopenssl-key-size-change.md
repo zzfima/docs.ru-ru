@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567989"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>Увеличен минимальный размер создаваемых ключей RSAOpenSsl
@@ -20,9 +20,9 @@ ms.locfileid: "74567989"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Если вы вызываете любой затронутый API-интерфейс, убедитесь, что размер созданных ключей не меньше минимального значения, установленного поставщиком.
 

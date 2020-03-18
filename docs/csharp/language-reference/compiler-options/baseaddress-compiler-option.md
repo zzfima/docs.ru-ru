@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937213"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (параметры компилятора C#)
@@ -28,7 +28,7 @@ ms.locfileid: "75937213"
  `address`  
  Базовый адрес для библиотеки DLL. Этот адрес можно задать в десятичном, шестнадцатеричном или восьмеричном формате.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Базовый адрес по умолчанию для библиотеки DLL задается в среде CLR платформы .NET Framework.  
   
  Обратите внимание, что младшее слово этого адреса будет округляться. Например, значение 0x11110001 округляется до 0x11110000.  
@@ -47,7 +47,7 @@ ms.locfileid: "75937213"
   
      Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
 - [Параметры компилятора C# ](./index.md)

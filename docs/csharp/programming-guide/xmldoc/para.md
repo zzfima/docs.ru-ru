@@ -9,10 +9,10 @@ helpviewer_keywords:
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
 ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793410"
 ---
 # <a name="para-c-programming-guide"></a>Руководство по программированию на C#. \<para>
@@ -29,7 +29,7 @@ ms.locfileid: "76793410"
 
   Текст абзаца.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Тег \<para> используется внутри другого тега, например [\<summary>](./summary.md), [\<remarks>](./remarks.md) или [\<returns>](./returns.md), и позволяет добавить к тексту структуру.
 
@@ -39,7 +39,7 @@ ms.locfileid: "76793410"
 
 В разделе [\<summary>](./summary.md) можно найти пример использования тега \<para>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

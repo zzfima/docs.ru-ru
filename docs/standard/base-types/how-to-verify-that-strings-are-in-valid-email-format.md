@@ -19,10 +19,10 @@ helpviewer_keywords:
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73197582"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Проверка строк на соответствие формату электронной почты
@@ -35,7 +35,7 @@ ms.locfileid: "73197582"
 
 Чтобы проверить, что адрес электронной почты допустим, метод `IsValidEmail` вызывает метод <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> с шаблоном регулярного выражения `(@)(.+)$` для выделения доменного имени из адреса электронной почты. Третий параметр — это делегат <xref:System.Text.RegularExpressions.MatchEvaluator> , представляющий метод, который обрабатывает и заменяет найденный текст. Шаблон регулярного выражения интерпретируется следующим образом.
 
-|Шаблон|Описание:|
+|Шаблон|Описание|
 |-------------|-----------------|
 |`(@)`|Совпадение с символом @. Это первая группа записи.|
 |`(.+)`|Совпадение с одним или несколькими вхождениями любого символа. Это вторая группа записи.|

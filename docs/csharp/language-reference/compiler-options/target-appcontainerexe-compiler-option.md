@@ -3,10 +3,10 @@ title: -target:appcontainerexe (параметры компилятора C#)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: 64661e72f9efe190606cadd93558678cb849e8cc
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204527"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (параметры компилятора C#)
@@ -18,10 +18,10 @@ ms.locfileid: "74204527"
 -target:appcontainerexe  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Этот параметр устанавливает бит в [переносимом исполняемом](/windows/desktop/Debug/pe-format) файле (PE), чтобы обеспечить запуск приложения в контейнере. Если он установлен, при попытке запустить исполняемый файл вне контейнера приложения методом CreateProcess будет возникать ошибка.  
   
- Выходной файл получает имя входного файла, содержащего метод [Main](../../programming-guide/main-and-command-args/index.md), если только с помощью параметра [-out](./out-compiler-option.md) не указано иное.  
+ Выходной файл получает имя входного файла, содержащего метод [Main](./out-compiler-option.md), если только с помощью параметра [-out](../../programming-guide/main-and-command-args/index.md) не указано иное.  
   
  Если этот параметр указан в командной строке, все файлы до следующего параметра **-out** или **-target** будут использоваться для создания исполняемого файла.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74204527"
 csc -target:appcontainerexe filename.cs  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [-target (параметры компилятора C#)](./target-compiler-option.md)
 - [-target:winexe (параметры компилятора C#)](./target-winexe-compiler-option.md)

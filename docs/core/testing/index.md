@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78157405"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
@@ -32,7 +32,7 @@ ms.locfileid: "78157405"
 
 Попробуйте не создавать зависимости в инфраструктуре при написании модульных тестов. Из-за этого тесты выполняются медленно и нестабильно. Зависимости следует использовать в интеграционных тестах. Чтобы избежать появления зависимостей в коде приложения, следуйте [принципу явных зависимостей](https://deviq.com/explicit-dependencies-principle/) и используйте [внедрение зависимостей](/aspnet/core/fundamentals/dependency-injection). Вы также можете разместить модульные тесты в отдельном проекте, не содержащем интеграционных тестов. Это гарантирует отсутствие в проекте модульного теста ссылок на пакеты инфраструктуры или зависимостей от них.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о модульном тестировании в проектах .NET Core.
 

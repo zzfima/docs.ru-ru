@@ -3,10 +3,10 @@ title: Ресурсы по .NET для Apache Spark
 description: Следующие ресурсы по .NET для Apache Spark помогут вам создавать специализированные решения по обработке и анализу данных и интегрировать их в свои .NET-приложения.
 ms.date: 05/06/2019
 ms.openlocfilehash: 96ee1246d5322a1c62b4cbf30392010e6b4d70fd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "69620046"
 ---
 # <a name="net-for-apache-spark-resources"></a>Ресурсы по .NET для Apache Spark

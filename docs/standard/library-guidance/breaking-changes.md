@@ -3,11 +3,11 @@ title: Критические изменения и библиотеки .NET
 description: Практические рекомендации по работе с критическими изменениями при создании библиотек .NET.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731463"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398511"
 ---
 # <a name="breaking-changes"></a>Критические изменения
 
@@ -96,7 +96,7 @@ public class Document
 
 > Удаление API — это критическое изменение двоичного кода. Рассмотрите возможность сохранения устаревших типов и методов, если оно не влечет за собой больших затрат и рост технического долга. Отказ от удаления типов и методов может помочь избежать неблагоприятных ситуаций, упомянутых выше.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Соображения относительно версии и обновления для разработчиков на C#](../../csharp/whats-new/version-update-considerations.md)
 - [Полное руководство по критическим изменениям API в .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)

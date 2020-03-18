@@ -16,10 +16,10 @@ helpviewer_keywords:
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 ms.openlocfilehash: 13a9f4896a37be4297f2a1a11435b85ade381c66
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353677"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Выполнение в коллекциях строковых операций, не зависящих от языка и региональных параметров
@@ -57,7 +57,7 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
 
 ## <a name="using-the-collectionsutilcreatecaseinsensitivehashtable-method"></a>Использование метода CollectionsUtil.CreateCaseInsensitiveHashTable
 
-Для создания нового экземпляра класса `Hashtable`, который не учитывает регистр строк, удобно использовать метод `CollectionsUtil.CreateCaseInsensitiveHashTable`. Однако все перегруженные версии метода `CollectionsUtil.CreateCaseInsensitiveHashTable` учитывают язык и региональные параметры, так как они используют свойство `Thread.CurrentCulture`. С помощью этого метода нельзя создать `Hashtable`, который не учитывает язык и региональные параметры. Чтобы создать `Hashtable`, который не учитывает язык и региональные параметры, используйте конструктор `Hashtable`, который принимает параметр `culture`. В качестве параметра `culture` укажите `CultureInfo.InvariantCulture`. В следующем примере кода показан конструктор для `Hashtable`, который не учитывает язык и региональные параметры.
+Для создания нового экземпляра класса `CollectionsUtil.CreateCaseInsensitiveHashTable`, который не учитывает регистр строк, удобно использовать метод `Hashtable`. Однако все перегруженные версии метода `CollectionsUtil.CreateCaseInsensitiveHashTable` учитывают язык и региональные параметры, так как они используют свойство `Thread.CurrentCulture`. С помощью этого метода нельзя создать `Hashtable`, который не учитывает язык и региональные параметры. Чтобы создать `Hashtable`, который не учитывает язык и региональные параметры, используйте конструктор `Hashtable`, который принимает параметр `culture`. В качестве параметра `culture` укажите `CultureInfo.InvariantCulture`. В следующем примере кода показан конструктор для `Hashtable`, который не учитывает язык и региональные параметры.
 
 ```vb
 internalHashtable = New Hashtable(New
@@ -75,7 +75,7 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
 
 ## <a name="using-the-sortedlist-class"></a>Использование класса SortedList
 
-`SortedList` представляет коллекцию пар "ключ — значение", упорядоченных по ключу. Обращаться к парам можно по ключу и индексу. Если используется `SortedList` и в качестве ключей используются строки, на поиск и сортировку может повлиять свойство `Thread.CurrentCulture`. Чтобы `SortedList` не учитывал язык и региональные параметры, создайте `SortedList` с помощью одного из конструкторов, принимающих параметр `comparer`. Параметр `comparer` указывает реализацию <xref:System.Collections.IComparer>, которую нужно использовать при сравнении ключей. Для сравнения ключей в качестве параметра укажите пользовательский класс сравнения, который использует `CultureInfo.InvariantCulture`. В следующем примере показан пользовательский класс сравнения, не учитывающий язык и региональные параметры. Для этого в конструктор `SortedList` передается параметр `comparer`.
+`SortedList` представляет коллекцию пар "ключ — значение", упорядоченных по ключу. Обращаться к парам можно по ключу и индексу. Если используется `SortedList` и в качестве ключей используются строки, на поиск и сортировку может повлиять свойство `Thread.CurrentCulture`. Чтобы `SortedList` не учитывал язык и региональные параметры, создайте `SortedList` с помощью одного из конструкторов, принимающих параметр `comparer`. Параметр `comparer` указывает реализацию <xref:System.Collections.IComparer>, которую нужно использовать при сравнении ключей. Для сравнения ключей в качестве параметра укажите пользовательский класс сравнения, который использует `CultureInfo.InvariantCulture`. В следующем примере показан пользовательский класс сравнения, не учитывающий язык и региональные параметры. Для этого в конструктор `comparer` передается параметр `SortedList`.
 
 ```vb
 Imports System.Collections
@@ -137,7 +137,7 @@ internal class InvariantComparer : IComparer
 
 Перегруженные версии метода по умолчанию `ArrayList.Sort` выполняют сортировку с учетом языка и региональных параметров благодаря использованию свойства `Thread.CurrentCulture`. Результаты могут различаться из-за различного порядка сортировки в разных языках и региональных параметрах. Чтобы результат не зависел от языка и региональных параметров, используйте перегрузки этого метода, которые принимают реализацию `IComparer`. В качестве параметра `comparer` укажите пользовательский инвариантный класс сравнения, который использует `CultureInfo.InvariantCulture`. Пример пользовательского инвариантного класса сравнения приведен в разделе [Использование класса SortedList](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.CaseInsensitiveComparer>
 - <xref:System.Collections.CaseInsensitiveHashCodeProvider>

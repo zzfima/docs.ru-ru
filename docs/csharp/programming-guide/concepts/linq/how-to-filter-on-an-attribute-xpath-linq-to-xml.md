@@ -3,10 +3,10 @@ title: Практическое руководство. Фильтрация п�
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
 ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141272"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Практическое руководство. Фильтрация по атрибуту (XPath-LINQ to XML) (C#)
@@ -19,7 +19,7 @@ ms.locfileid: "74141272"
 ## <a name="example"></a>Пример  
  В этом примере обнаруживаются все элементы-потомки с именем `Address` и с атрибутом `Type`, имеющим значение «Доставка».  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

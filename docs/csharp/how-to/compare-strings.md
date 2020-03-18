@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
 ms.openlocfilehash: dda3ec8cb6a0131867e6ea3bb0cf7199d86058ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973325"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Сравнение строк в C\#
@@ -122,7 +122,7 @@ ms.locfileid: "73973325"
 
 ## <a name="reference-equality-and-string-interning"></a>Равенство ссылок и интернирование строк
 
-Ни один из примеров не использовал <xref:System.Object.ReferenceEquals%2A>. Этот метод определяет, являются ли две строки одним объектом. Это может привести к непредсказуемым результатам при сравнении строк. Следующий пример демонстрирует функцию *интернирования строк* в C#. При объявлении программой двух или более идентичных переменных строк компилятор сохраняет их в одном расположении. Вызвав метод <xref:System.Object.ReferenceEquals%2A>, можно увидеть, что две строки фактически ссылаются на один и тот же объект в памяти. Чтобы избежать интернирования, используйте метод <xref:System.String.Copy%2A?displayProperty=nameWithType>. После копирования две строки имеют разное расположение хранения, хотя и имеют одинаковое значение. Запустите следующий пример, показывающий, что строки `a` и `b` *интернированы*, находятся в одном хранилище. Строки `a` и `c` таковыми не являются.
+Ни один из примеров не использовал <xref:System.Object.ReferenceEquals%2A>. Этот метод определяет, являются ли две строки одним объектом. Это может привести к непредсказуемым результатам при сравнении строк. Следующий пример демонстрирует функцию *интернирования строк* в C#. При объявлении программой двух или более идентичных переменных строк компилятор сохраняет их в одном расположении. Вызвав метод <xref:System.Object.ReferenceEquals%2A>, можно увидеть, что две строки фактически ссылаются на один и тот же объект в памяти. Чтобы избежать интернирования, используйте метод <xref:System.String.Copy%2A?displayProperty=nameWithType>. После копирования две строки имеют разное расположение хранения, хотя и имеют одинаковое значение. Запустите следующий пример, показывающий, что строки `a` и `b`*интернированы*, находятся в одном хранилище. Строки `a` и `c` таковыми не являются.
 
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 
@@ -131,7 +131,7 @@ ms.locfileid: "73973325"
 
 Вы можете интернировать строку или получить ссылку на существующую интернированную строку, вызвав метод <xref:System.String.Intern%2A?displayProperty=nameWithType>. Чтобы определить, является ли строка интернированной, вызовите метод <xref:System.String.IsInterned%2A?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
 - <xref:System.StringComparer?displayProperty=nameWithType>

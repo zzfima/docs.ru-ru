@@ -11,13 +11,13 @@ helpviewer_keywords:
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160226"
 ---
-# <a name="managed-execution-process"></a>Процесс управляемого выполнения
+# <a name="managed-execution-process"></a>Процесс выполнения управляемого кода
 <a name="introduction"></a> Процесс управляемого исполнения включает следующие шаги, которые подробно разбираются позднее в этом разделе:  
   
 1. [Выбор компилятора](#choosing_a_compiler).  
@@ -40,7 +40,7 @@ ms.locfileid: "78160226"
 ## <a name="choosing-a-compiler"></a>Выбор компилятора  
  Чтобы воспользоваться преимуществами, предоставляемыми средой CLR, необходимо применить один или несколько языковых компиляторов, ориентированных на среду выполнения, например компилятор Visual Basic, C#, Visual C++, F# или один из многочисленных компиляторов от независимых разработчиков, например компилятор Eiffel, Perl или COBOL.  
   
- Поскольку среда выполнения является многоязычной, она поддерживает широкий набор разнообразных типов данных и языковых средств. Доступные средства среды выполнения определяются используемым языковым компилятором, и разработчики создают код с использованием этих средств. Используемый в коде синтаксис определяется компилятором, а не средой выполнения. Если компонент должен быть полностью доступен для компонентов, написанных на других языках, то экспортируемые этим компонентом типы должны предоставлять исключительно языковые функции, включенные в состав [статью Независимость от языка и независимые от языка компоненты](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Атрибут <xref:System.CLSCompliantAttribute> позволяет гарантировать, что код является CLS-совместимым. Для получения дополнительной информации см. [статью Независимость от языка и независимые от языка компоненты](../../docs/standard/language-independence-and-language-independent-components.md).  
+ Поскольку среда выполнения является многоязычной, она поддерживает широкий набор разнообразных типов данных и языковых средств. Доступные средства среды выполнения определяются используемым языковым компилятором, и разработчики создают код с использованием этих средств. Используемый в коде синтаксис определяется компилятором, а не средой выполнения. Если компонент должен быть полностью доступен для компонентов, написанных на других языках, то экспортируемые этим компонентом типы должны предоставлять исключительно языковые функции, включенные в состав [статью Независимость от языка и независимые от языка компоненты](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Атрибут <xref:System.CLSCompliantAttribute> позволяет гарантировать, что код является CLS-совместимым. Дополнительные сведения см. в разделе [Независимость от языка и независимые от языка компоненты](../../docs/standard/language-independence-and-language-independent-components.md).  
   
  [Вверх](#introduction)  
   
@@ -111,8 +111,8 @@ ms.locfileid: "78160226"
 - [Независимость от языка и независимые от языка компоненты](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Метаданные и компоненты с самоописанием](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (ассемблер IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Безопасность](../../docs/standard/security/index.md)
+- [Security](../../docs/standard/security/index.md)
 - [Взаимодействие с неуправляемым кодом](../../docs/framework/interop/index.md)
-- [Deployment](../../docs/framework/deployment/net-framework-applications.md)
+- [Развертывание](../../docs/framework/deployment/net-framework-applications.md)
 - [Сборки в .NET](assembly/index.md)
 - [Домены приложений](../../docs/framework/app-domains/application-domains.md)

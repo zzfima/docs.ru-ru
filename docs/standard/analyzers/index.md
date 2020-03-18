@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "62003058"
 ---
 # <a name="the-roslyn-based-analyzers"></a>Анализаторы на основе Roslyn
@@ -33,6 +33,6 @@ ms.locfileid: "62003058"
 
 Ниже перечислены анализаторы, рассматриваемые в этой статье:
 
-* [Анализатор API](api-analyzer.md): Этот анализатор проверяет код на наличие потенциальных угроз совместимости или использует устаревшие API.
-* [Анализатор Framework](framework-analyzer.md): Этот анализатор проверяет код, обеспечивая его соответствие руководствам по приложениям .NET Framework. Эти правила включают несколько рекомендаций, связанных с обеспечением безопасности.
-* [Анализатор переносимости .NET](portability-analyzer.md): Этот анализатор проверяет код, определяя объем работы, которую необходимо выполнить, чтобы обеспечить поддержку совместимости приложения с другими реализациями и профилями .NET, включая .NET Core, .NET Standard, UWP и Xamarin для iOS, Android и Mac.
+* [Анализатор API](api-analyzer.md): проверяет код на наличие потенциальных угроз совместимости или использует устаревшие API.
+* [Анализатор Framework](framework-analyzer.md): проверяет код, обеспечивая его соответствие руководствам по приложениям .NET Framework. Эти правила включают несколько рекомендаций, связанных с обеспечением безопасности.
+* [Анализатор переносимости .NET](portability-analyzer.md): проверяет код, обеспечивая поддержку совместимости приложения с другими реализациями и профилями .NET, включая .NET Core, .NET Standard, UWP и Xamarin для Mac, iOS и Android.

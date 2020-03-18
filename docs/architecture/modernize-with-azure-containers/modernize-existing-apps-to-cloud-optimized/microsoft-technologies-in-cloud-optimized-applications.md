@@ -3,10 +3,10 @@ title: Технологии Майкрософт в приложениях, оп
 description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows | Технологии Майкрософт в приложениях, оптимизированных для облака
 ms.date: 04/28/2018
 ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69578227"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Технологии Майкрософт в приложениях, оптимизированных для облака

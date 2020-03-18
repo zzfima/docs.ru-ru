@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625804"
 ---
 # <a name="namespace-c-reference"></a>namespace (Справочник по C#)
@@ -21,7 +21,7 @@ ms.locfileid: "77625804"
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 В пространстве имен можно объявить ноль или больше следующих типов:
 
@@ -55,7 +55,7 @@ ms.locfileid: "77625804"
 
 Дополнительные сведения см. в статье [Пространства имен](~/_csharplang/spec/namespaces.md) в разделе [Предварительная спецификация C# 6.0](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Ключевые слова C#](index.md)

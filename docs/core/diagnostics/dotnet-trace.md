@@ -3,10 +3,10 @@ title: Программа dotnet-trace — .NET Core
 description: Установка и использование программы командной строки dotnet-trace.
 ms.date: 11/21/2019
 ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76737639"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Программа анализа производительности dotnet-trace

@@ -3,10 +3,10 @@ title: Преобразование формы дерева XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
 ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347304"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Преобразование формы дерева XML (C#)
@@ -23,7 +23,7 @@ ms.locfileid: "75347304"
   
  Исходный XML-документ в этом примере содержит `Customers` элемент `Root`, в котором содержится список всех клиентов. Он также содержит элемент `Orders` под элементом `Root`, который содержит все заказы. В этом примере создается новое XML-дерево, в котором заказы каждого клиента содержатся в элементе `Orders`, который является дочерним по отношению к элементу `Customer`. Оригинальный документ также содержит элемент `CustomerID` внутри элемента `Order`. Этот элемент будет удален из преобразованного документа.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Клиенты и заказы (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -90,7 +90,7 @@ Console.WriteLine(newCustOrd);
   
  Код вызывает `ConvertAddress`, который возвращает объекты <xref:System.Xml.Linq.XElement>. По отношению к методу аргументом является запрос, который определяет сложный элемент `Address`, в котором атрибут `Type` обладает значением `"Shipping"`.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  

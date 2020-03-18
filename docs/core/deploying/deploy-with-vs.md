@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449027"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Развертывание приложений .NET Core с помощью Visual Studio

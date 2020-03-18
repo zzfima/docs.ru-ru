@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204001"
 ---
 # <a name="merge-options-in-plinq"></a>Параметры слияние в PLINQ
@@ -23,7 +23,7 @@ ms.locfileid: "74204001"
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Полный пример см. в подразделе [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Полный пример см. в статье [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
  Если выполняемый запрос не поддерживает запрошенный вариант, этот параметр просто игнорируется. В большинстве случаев нет необходимости указывать параметр слияния для запроса PLINQ. Однако, в некоторых случаях тесты и (или) измерения показывают, что запрос лучше всего выполняется в нестандартном режиме. Чаще всего этот параметр используется, чтобы заставить оператор с частичной буферизацией выдавать все результаты в общем потоке. Это позволяет улучшить скорость реагирования интерфейса на действия пользователя.  
   
@@ -45,25 +45,25 @@ ms.locfileid: "74204001"
 ## <a name="query-operators-that-support-merge-options"></a>Операторы запроса, поддерживающие параметры слияния  
  В следующей таблице перечислены операторы, которые поддерживают все параметры слияния, а также указаны возможные ограничения.  
   
-|Оператор|Ограничения|  
+|оператора|Ограничения|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Нет|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|None|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Неупорядоченные запросы, использующие в качестве источника только массив или список.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Нет|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|None|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Неупорядоченные запросы, использующие в качестве источника только массив или список.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Нет|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|None|  
   
  Все остальные операторы запроса PLINQ могут игнорировать указанные пользователем параметры слияния. Некоторые операторы запроса, например <xref:System.Linq.ParallelEnumerable.Reverse%2A> и <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, не могут вернуть ни одного элемента результата, пока не будут созданы и упорядочены все элементы. Таким образом, если в запросе есть параметр <xref:System.Linq.ParallelMergeOptions> и оператор типа <xref:System.Linq.ParallelEnumerable.Reverse%2A>, этот параметр слияния при обработке не применяется, пока не завершится выдача результатов этого оператора.  
   
  Поддержка некоторых параметров слияния некоторыми операторами зависит от типа исходной последовательности и наличия оператора <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> в более ранней позиции этого запроса. <xref:System.Linq.ParallelEnumerable.ForAll%2A> всегда использует <xref:System.Linq.ParallelMergeOptions.NotBuffered>, то есть возвращает все элементы немедленно. <xref:System.Linq.ParallelEnumerable.OrderBy%2A> всегда использует <xref:System.Linq.ParallelMergeOptions.FullyBuffered>, то есть сортирует полный список перед выдачей любых результатов.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

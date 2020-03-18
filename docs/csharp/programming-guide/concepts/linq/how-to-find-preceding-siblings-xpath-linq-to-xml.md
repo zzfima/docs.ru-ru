@@ -3,10 +3,10 @@ title: Практическое руководство. Поиск предше�
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141056"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML) (C#)
@@ -21,7 +21,7 @@ ms.locfileid: "74141056"
 ## <a name="example"></a>Пример  
  В следующем примере находится элемент `FullAddress`, после чего при помощи оси `preceding-sibling` получаются предыдущие элементы.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Клиенты и заказы (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

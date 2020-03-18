@@ -4,12 +4,12 @@ description: Сведения о типах C#, допускающих знач
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093192"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398277"
 ---
 # <a name="nullable-value-types-c-reference"></a>Справочник по C#. Типы значений, допускающие значение NULL
 
@@ -26,7 +26,7 @@ ms.locfileid: "77093192"
 
 Так как тип значения можно неявно преобразовать в соответствующий тип значения, допускающий значение NULL, вы назначаете значение переменной такого типа значения так же, как для базового типа значения. Вы также можете присвоить значение `null`. Пример:
 
-[!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
+[!code-csharp[declare and assign](snippets/NullableValueTypes.cs#Declaration)]
 
 Значение по умолчанию для типа значения, допускающего значение NULL, представляет `null`, то есть это экземпляр, свойство <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> которого возвращает `false`.
 
@@ -34,7 +34,7 @@ ms.locfileid: "77093192"
 
 Начиная с версии C# 7.0 можно использовать оператор [`is` с шаблоном типа ](../operators/type-testing-and-cast.md#type-testing-with-pattern-matching) как для проверки экземпляра типа, допускающего значение NULL, для `null`, так и для извлечения значения базового типа:
 
-[!code-csharp-interactive[use pattern matching](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#PatternMatching)]
+[!code-csharp-interactive[use pattern matching](snippets/NullableValueTypes.cs#PatternMatching)]
 
 Вы всегда можете использовать следующие свойства только для чтения, чтобы проверить и получить значение переменной типа, допускающего значение NULL:
 
@@ -44,23 +44,23 @@ ms.locfileid: "77093192"
 
 В следующем примере используется свойство `HasValue`, чтобы проверить, содержит ли переменная значение, перед его отображением:
 
-[!code-csharp-interactive[use HasValue](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#HasValue)]
+[!code-csharp-interactive[use HasValue](snippets/NullableValueTypes.cs#HasValue)]
 
 Вы также можете сравнить переменную типа значения, допускающего значение NULL, с `null` вместо использования свойства `HasValue`, как показано в следующем примере:
 
-[!code-csharp-interactive[use comparison with null](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#CompareWithNull)]
+[!code-csharp-interactive[use comparison with null](snippets/NullableValueTypes.cs#CompareWithNull)]
 
 ## <a name="conversion-from-a-nullable-value-type-to-an-underlying-type"></a>Преобразование из типа значения, допускающего значение NULL, в базовый тип
 
 Если необходимо присвоить значение типа, допускающего значение NULL, переменной типа значения, не допускающего значения NULL, может потребоваться указать значение, назначаемое вместо `null`. Для этого используйте [оператор объединения со значением NULL`??`](../operators/null-coalescing-operator.md) (можно также применить метод <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> для той же цели):
 
-[!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
+[!code-csharp-interactive[?? operator](snippets/NullableValueTypes.cs#NullCoalescing)]
 
 Если вы хотите использовать [значение по умолчанию](default-values.md) базового типа значения вместо `null`, воспользуйтесь методом <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
 
 Вы можете явно привести тип значения, допускающий значение NULL, к типу, не допускающему значение NULL, как показано в примере ниже.
 
-[!code-csharp[explicit cast](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Cast)]
+[!code-csharp[explicit cast](snippets/NullableValueTypes.cs#Cast)]
 
 Во время выполнения, если значение типа значения, допускающего значение NULL, равно `null`, явное приведение вызывает исключение <xref:System.InvalidOperationException>.
 
@@ -70,7 +70,7 @@ ms.locfileid: "77093192"
 
 Предопределенные унарные и бинарные [операторы](../operators/index.md) или любые перегруженные операторы, поддерживаемые типом значения `T`, также поддерживаются соответствующим типом значения, допускающим значение NULL, т. е. `T?`. Эти операторы, также называемые *операторами с нулификацией*, возвращают значение `null`, если один или оба операнда имеют значение `null`. В противном случае оператор использует содержащиеся значения операндов для вычисления результата. Пример:
 
-[!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
+[!code-csharp[lifted operators](snippets/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
 > Для типа `bool?` предопределенные операторы `&` и `|` не следуют правилам, описанным в этом разделе: результат вычисления оператора может быть отличным от NULL, даже если один из операндов имеет значение `null`. См. подробнее о [логических операторах, поддерживающих значение NULL](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) в описании [логических операторов](../operators/boolean-logical-operators.md).
@@ -80,7 +80,7 @@ ms.locfileid: "77093192"
 - не больше и не равно значению `null`,
 - не меньше чем `null`.
 
-[!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
+[!code-csharp-interactive[relational and equality operators](snippets/NullableValueTypes.cs#ComparisonOperators)]
 
 Для [оператора равенства](../operators/equality-operators.md#equality-operator-) `==`, если оба операнда равны `null`, результат будет равен `true`. Если один из операндов равен `null`, результат будет равен `false`. В противном случае сравниваются содержащиеся значения операндов.
 
@@ -97,27 +97,27 @@ ms.locfileid: "77093192"
 
 Можно распаковать упакованный тип значения `T` в соответствующий тип, допускающий значение NULL, `T?`, как показано в следующем примере:
 
-[!code-csharp-interactive[boxing and unboxing](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Boxing)]
+[!code-csharp-interactive[boxing and unboxing](snippets/NullableValueTypes.cs#Boxing)]
 
 ## <a name="how-to-identify-a-nullable-value-type"></a>Идентификация типа значений, допускающего значение NULL
 
 В следующем примере показано, как определить, представляет ли экземпляр <xref:System.Type?displayProperty=nameWithType> сконструированный тип значений, допускающий значение NULL, т. е. тип <xref:System.Nullable%601?displayProperty=nameWithType> с указанным параметром типа `T`:
 
-[!code-csharp-interactive[whether Type is nullable](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsTypeNullable)]
+[!code-csharp-interactive[whether Type is nullable](snippets/NullableValueTypes.cs#IsTypeNullable)]
 
 Как показано в примере, при помощи оператора [typeof](../operators/type-testing-and-cast.md#typeof-operator) можно создать экземпляр <xref:System.Type?displayProperty=nameWithType>.
 
 Если вы хотите определить, принадлежит ли экземпляр к типу значений, допускающему значение NULL, не используйте метод <xref:System.Object.GetType%2A?displayProperty=nameWithType> для получения экземпляра <xref:System.Type> для тестирования с помощью приведенного выше кода. При вызове метода <xref:System.Object.GetType%2A?displayProperty=nameWithType> в экземпляре типа значений, допускающего значение NULL, экземпляр [упаковывается](#boxing-and-unboxing) в <xref:System.Object>. Так как упаковка экземпляра типа значений, допускающего значение NULL, значение которого отлично от NULL, эквивалентна упаковке значения базового типа, <xref:System.Object.GetType%2A> возвращается экземпляр <xref:System.Type>, представляющий базовый тип типа значений, допускающего значение NULL:
 
-[!code-csharp-interactive[GetType example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
+[!code-csharp-interactive[GetType example](snippets/NullableValueTypes.cs#GetType)]
 
 Кроме того, не используйте оператор [is](../operators/type-testing-and-cast.md#is-operator), чтобы определить, принадлежит ли экземпляр к типу значений, допускающему значение NULL. Как показано в следующем примере, вы не можете отличить типы экземпляра типа значений, допускающего значение NULL, и его экземпляра базового типа с помощью оператора `is`:
 
-[!code-csharp-interactive[is operator example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsOperator)]
+[!code-csharp-interactive[is operator example](snippets/NullableValueTypes.cs#IsOperator)]
 
 Чтобы определить, принадлежит ли экземпляр типу значений, допускающему значение NULL, можно использовать код, представленный в следующем примере:
 
-[!code-csharp-interactive[whether an instance is of a nullable type](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsInstanceNullable)]
+[!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
 > Методы, описанные в этом разделе, неприменимы в случае [ссылочных типов, допускающих значения NULL](../../nullable-references.md).
@@ -132,7 +132,7 @@ ms.locfileid: "77093192"
 - [Явные преобразования, допускающие значения NULL](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [Операторы преобразования с нулификацией](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [What exactly does 'lifted' mean?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean) (Что означает термин "расширенные"?)

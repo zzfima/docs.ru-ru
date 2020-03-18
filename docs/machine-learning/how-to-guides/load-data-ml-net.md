@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
 ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74344759"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Загрузка данных из файлов и других источников
@@ -213,7 +213,7 @@ MLContext mlContext = new MLContext();
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Сведения об очистке или иной обработке данных см. в статье [Подготовка данных для построения модели](prepare-data-ml-net.md).
 - Когда вы будете готовы к созданию модели, обратитесь к статье [Обучение и оценка модели](train-machine-learning-model-ml-net.md).

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976492"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Преобразование типов в .NET Framework
@@ -85,7 +85,7 @@ ms.locfileid: "73976492"
   
  Например, типы данных <xref:System.UInt32>, <xref:System.Int64> и <xref:System.UInt64> имеют диапазоны, покрывающие диапазон типа данных <xref:System.Int32>, как показано в таблице ниже.  
   
-|Тип|Сравнение с диапазоном Int32|  
+|Type|Сравнение с диапазоном Int32|  
 |----------|------------------------------------|  
 |<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType> больше, чем <xref:System.Int32.MaxValue?displayProperty=nameWithType>, а <xref:System.Int64.MinValue?displayProperty=nameWithType> меньше (имеет больший отрицательный диапазон), чем <xref:System.Int32.MinValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt32>|Значение <xref:System.UInt32.MaxValue?displayProperty=nameWithType> больше значения <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
@@ -134,7 +134,7 @@ ms.locfileid: "73976492"
  Требование вызова метода преобразования для интерфейса, а не для реализующего типа, делает явные реализации интерфейса относительно требовательными к ресурсам. Вместо этого для выполнения преобразования между базовыми типами среды CLR рекомендуется вызывать соответствующий член класса <xref:System.Convert>. Дополнительные сведения см. в следующем разделе, [Класс Convert](#the-convert-class).  
   
 > [!NOTE]
-> В дополнение к интерфейсу <xref:System.IConvertible> и классу <xref:System.Convert>, предоставленным в .NET Framework, отдельные языки могут также предоставлять различные способы выполнения преобразования. Например, в C# используются операторы приведения типов. В Visual Basic используются функции преобразования, реализованные в компиляторе, такие как `CType` `CInt` и `DirectCast`.  
+> В дополнение к интерфейсу <xref:System.IConvertible> и классу <xref:System.Convert>, предоставленным в .NET Framework, отдельные языки могут также предоставлять различные способы выполнения преобразования. Например, в C# используются операторы приведения типов. В Visual Basic используются функции преобразования, реализованные в компиляторе, такие как `CType``CInt` и `DirectCast`.  
   
  Интерфейс <xref:System.IConvertible> по большей части предназначен для поддержки преобразований между базовыми типами в .NET Framework. При этом данный интерфейс также можно реализовать и в пользовательском типе, чтобы обеспечить поддержку преобразования этого типа в другой пользовательский тип. Дополнительные сведения см. в разделе [Настраиваемые преобразования с использованием метода ChangeType](#custom-conversions-with-the-changetype-method) ниже.
 

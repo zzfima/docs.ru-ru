@@ -4,10 +4,10 @@ description: Узнайте, как создавать запросы LINQ на 
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
 ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65632879"
 ---
 # <a name="write-linq-queries-in-c"></a>Создание запросов LINQ на языке C\#
@@ -79,8 +79,8 @@ var numCount = numbers.Where(n => n < 3 || n > 7).Count();
 int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Пошаговое руководство: Написание запросов на C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Пошаговое руководство. Написание запросов на C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [LINQ](index.md)
 - [предложение where](../language-reference/keywords/where-clause.md)

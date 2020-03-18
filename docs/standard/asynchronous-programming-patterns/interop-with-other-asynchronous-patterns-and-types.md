@@ -13,14 +13,14 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 ms.openlocfilehash: 981c13c68eaf1eb0c19f95eb1b097935ea02a16d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159758"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Взаимодействие с другими асинхронными шаблонами и типами
-В .NET Framework 1.0 появился шаблон <xref:System.IAsyncResult> , также известный как [Асинхронная модель программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)или шаблон `Begin/End` .  В .NET Framework 2.0 добавлен [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  Начиная с платформы .NET Framework 4 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) заменяет APM и EAP, но при этом предоставляет возможность легко строить процедуры миграции с более ранних шаблонов.  
+В .NET Framework 1.0 появился шаблон <xref:System.IAsyncResult> , также известный как [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)или шаблон `Begin/End` .  В .NET Framework 2.0 добавлен [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  Начиная с платформы .NET Framework 4 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) заменяет APM и EAP, но при этом предоставляет возможность легко строить процедуры миграции с более ранних шаблонов.  
   
  В этом разделе:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "78159758"
   
 <a name="ApmToTap"></a>
 ### <a name="from-apm-to-tap"></a>от APM к TAP  
- Так как шаблон [Асинхронная модель программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) сильно структурирован, можно довольно легко создавать оболочки для предоставления реализации APM в качестве реализации TAP. На деле платформа .NET Framework начиная с версии .NET Framework 4 включает вспомогательные процедуры в форме перегрузок методов <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> для реализации этого преобразования.  
+ Так как шаблон [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) сильно структурирован, можно довольно легко создавать оболочки для предоставления реализации APM в качестве реализации TAP. На деле платформа .NET Framework начиная с версии .NET Framework 4 включает вспомогательные процедуры в форме перегрузок методов <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> для реализации этого преобразования.  
   
  Рассмотрим класс <xref:System.IO.Stream> и его методы <xref:System.IO.Stream.BeginRead%2A> и <xref:System.IO.Stream.EndRead%2A> , которые представляют аналог APM для синхронного метода <xref:System.IO.Stream.Read%2A> :  
   
@@ -46,7 +46,7 @@ ms.locfileid: "78159758"
 [!code-csharp[Conceptual.AsyncInterop#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Stream1.cs#3)]
 [!code-vb[Conceptual.AsyncInterop#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/stream1.vb#3)]  
   
- Можно использовать метод <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> для реализации оболочки TAP этой операции следующим образом.  
+ Можно использовать метод <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> для реализации оболочки TAP этой операции следующим образом:  
   
  [!code-csharp[Conceptual.AsyncInterop#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap1.cs#4)]
  [!code-vb[Conceptual.AsyncInterop#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap1.vb#4)]  
@@ -115,4 +115,4 @@ ms.locfileid: "78159758"
 
 - [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))
 - [Реализация асинхронной модели на основе задач](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Использование асинхронной модели на основе задач](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

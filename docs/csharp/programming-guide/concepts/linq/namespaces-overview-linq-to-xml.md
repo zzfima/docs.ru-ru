@@ -3,10 +3,10 @@ title: Обзор пространств имен (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
 ms.openlocfilehash: d5f176a5561b77126ef23af996ab1e4bf51092ad
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68868824"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Обзор пространств имен (LINQ to XML)
@@ -23,4 +23,4 @@ ms.locfileid: "68868824"
 
 В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] следующий класс представляет имена XML: <xref:System.Xml.Linq.XName>. Имена XML часто появляются в API [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], и, когда требуется использовать имя XML, обнаруживается параметр <xref:System.Xml.Linq.XName>. Однако напрямую работать с <xref:System.Xml.Linq.XName> приходится редко. <xref:System.Xml.Linq.XName> содержит неявное преобразование строки.
 
-Дополнительные сведения см. в разделах <xref:System.Xml.Linq.XNamespace> и <xref:System.Xml.Linq.XName>.
+Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XNamespace> и <xref:System.Xml.Linq.XName>.

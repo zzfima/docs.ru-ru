@@ -6,10 +6,10 @@ helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77504059"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
@@ -35,9 +35,9 @@ ms.locfileid: "77504059"
 
 | | |
 | - | - |
-| [.NET Framework 4.8](#net-framework-48) | [.NET Framework 4.7.2](#net-framework-472) | [.NET Framework 4.7.1](#net-framework-471) | [.NET Framework 4.7](#net-framework-47) |
+| [.NET Framework 4.8](#net-framework-48) | [.NET Framework 4.7.2](#net-framework-472) | [.NET Framework 4.7.1](#net-framework-471) | [.NET Framework 4.7](#net-framework-47) |
 | [.NET Framework 4.6.2](#net-framework-462) | [.NET Framework 4.6.1](#net-framework-461) | [.NET Framework 4.6](#net-framework-46) | [.NET Framework 4.5.2](#net-framework-452) |
-| [.NET Framework 4.5.1](#net-framework-451) | [.NET Framework 4.5](#net-framework-45) | [.NET Framework 4](#net-framework-4) | [.NET Framework 3.5](#net-framework-35) |
+| [.NET Framework 4.5.1](#net-framework-451) | [.NET Framework 4.5](#net-framework-45) | [.NET Framework 4](#net-framework-4) | [.NET Framework 3.5](#net-framework-35) |
 | [.NET Framework 3.0](#net-framework-30) | [.NET Framework 2.0](#net-framework-20) | [.NET Framework 1.1](#net-framework-11) | [.NET Framework 1.0](#net-framework-10) |
 
 ### <a name="net-framework-48"></a>.NET Framework 4.8
@@ -53,7 +53,7 @@ ms.locfileid: "77504059"
 |**Версии Windows Server**|➕ Windows Server 2019<br/>➕ Windows Server, версия 1809<br/>➕ Windows Server, версия 1803<br/>➕ 2016<br/>➕ 2012 R2<br/>➕ 2012<br/>➕ 2008 R2 с пакетом обновления 1 (SP1)|
 |**Определение установленной версии .NET**|Используйте DWORD `Release`:<br/>- 528040 (обновление Windows 10 за май 2019 г.)<br/>– 528049 (все остальные версии ОС)<br/>(См. [инструкции](how-to-determine-which-versions-are-installed.md))|
 
-### <a name="net-framework-472"></a>.NET Framework 4.7.2
+### <a name="net-framework-472"></a>.NET Framework 4.7.2.
 
 - [Новые функции](../whats-new/index.md#whats-new-in-net-framework-472)
 - [Новые специальные возможности](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-472)
@@ -159,7 +159,7 @@ ms.locfileid: "77504059"
 |**Версии Windows Server**|✔️ 2012 R2<br /><br />➕ 2012<br />➕ 2008 R2 с пакетом обновления 1 (SP1)<br />➕ 2008 SP2|
 |**Определение установленной версии .NET**|Используйте DWORD `Release`:<br /><br />– 378675 (Windows 8.1)<br />– 378758 (все остальные)<br /><br />(См. [инструкции](how-to-determine-which-versions-are-installed.md))|
 
-### <a name="net-framework-45"></a>.NET Framework 4,5
+### <a name="net-framework-45"></a>.NET Framework 4.5
 
 - [Новые функции](../whats-new/index.md#whats-new-in-net-framework-45)
 - [Заметки о выпуске](https://github.com/Microsoft/dotnet/tree/master/releases/net45/README.md)
@@ -209,7 +209,7 @@ ms.locfileid: "77504059"
 
 [Новые функции](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb822048(v=vs.90)):
 
-- Windows Presentation Foundation
+- Windows Presentation Foundation (WPF)
 - Windows Communication Foundation
 - Windows Workflow Foundation
 - Windows CardSpace
@@ -236,7 +236,7 @@ ms.locfileid: "77504059"
 |-|-|
 |**Версия среды CLR**|2.0|
 |**Включено в версию Visual Studio**|2005|
-|**Версии Windows**|Н/Д|
+|**Версии Windows**|Недоступно|
 |**Версии Windows Server**|✔️ 2008 R2 с пакетом обновления 1 (SP1)<br />✔️ 2008 SP2<br />✔️ 2003|
 |**Определение установленной версии .NET**|См. [инструкции](how-to-determine-which-versions-are-installed.md)|
 
@@ -250,9 +250,9 @@ ms.locfileid: "77504059"
 
 |||
 |-|-|
-|**Версия среды CLR**|1.1|
+|**Версия среды CLR**|1,1|
 |**Включено в версию Visual Studio**|2003|
-|**Версии Windows**|Н/Д|
+|**Версии Windows**|Недоступно|
 |**Версии Windows Server**|✔️ 2003|
 |**Определение установленной версии .NET**|См. [инструкции](how-to-determine-which-versions-are-installed.md)|
 
@@ -260,10 +260,10 @@ ms.locfileid: "77504059"
 
 |||
 |-|-|
-|**Версия среды CLR**|1.0|
+|**Версия среды CLR**|1,0|
 |**Включено в версию Visual Studio**|Visual Studio .NET|
-|**Версии Windows**|Н/Д|
-|**Версии Windows Server**|Н/Д|
+|**Версии Windows**|Недоступно|
+|**Версии Windows Server**|Недоступно|
 |**Определение установленной версии .NET**|См. [инструкции](how-to-determine-which-versions-are-installed.md)|
 
 > [!NOTE]
@@ -292,7 +292,7 @@ ms.locfileid: "77504059"
 
 Кроме того, если в приложении выбрана целевая платформа версии 2.0, 3.0 или 3.5, пользователям может потребоваться включить .NET Framework 3.5 на компьютере с Windows 8, Windows 8.1 или Windows 10, прежде чем они смогут запустить это приложение. Дополнительные сведения см. в разделе [Установка .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../install/dotnet-35-windows-10.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Если у вас отсутствует опыт работы с .NET Framework, [ознакомьтесь](../get-started/overview.md) с общими сведениями об этой платформе, основными понятиями и ключевыми функциями.
 
@@ -300,9 +300,9 @@ ms.locfileid: "77504059"
 
 - Сведения о миграции приложения на более новую версию платформы .NET Framework см. в [руководстве по миграции](index.md).
 
-- Сведения о том, как определить, какие версии и обновления установлены на компьютере, см. в разделах [Практическое руководство. Практическое руководство. Определение установленных версий платформы .NET Framework](how-to-determine-which-versions-are-installed.md) и [Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework](how-to-determine-which-net-framework-updates-are-installed.md).
+- Сведения об определении версий или обновлений, установленных на компьютере, см. в разделах [Практическое руководство. Определение установленных версий .NET Framework](how-to-determine-which-versions-are-installed.md) и [Практическое руководство. Определение установленных обновлений .NET Framework](how-to-determine-which-net-framework-updates-are-installed.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Совместимость версий в .NET Framework](version-compatibility.md)
 | [.NET Framework Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) (Политика поддержки .NET Framework)

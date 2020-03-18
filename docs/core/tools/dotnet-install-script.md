@@ -3,15 +3,15 @@ title: Скрипты dotnet-install
 description: Сведения о скриптах dotnet-install, которые служат для установки пакета SDK для .NET Core и общей среды выполнения
 ms.date: 01/23/2020
 ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092867"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
 
-## <a name="name"></a>name
+## <a name="name"></a>Имя
 
 `dotnet-install.ps1` | `dotnet-install.sh` — скрипт, используемый для установки общей среды выполнения и пакета SDK для .NET Core.
 
@@ -33,7 +33,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
     [--runtime-id] [--skip-non-versioned-files] [--help]
 ```
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Скрипты `dotnet-install` используются для установки пакета SDK для .NET Core без прав администратора. Этот пакет включает общую среду выполнения и .NET Core CLI.
 
@@ -56,22 +56,22 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Channel|--channel <CHANNEL>`**
 
-  Указывает исходный канал для установки. Допустимые значения:
+  Указывает исходный канал для установки. Вы можете выбрать
 
   - `Current` — самый последний выпуск.
   - `LTS` — канал долгосрочной поддержки (самый последний поддерживаемый выпуск).
   - Версия из двух частей в формате X.Y, который представляет конкретный выпуск (например, `2.1` или `3.0`).
   - Имя ветви, например `release/3.1.1xx` или `master` (для ночных выпусков). Используйте этот параметр для установки версии из канала предварительной версии. Используйте имя канала, указанное в разделе [Установщики и двоичные файлы](https://github.com/dotnet/core-sdk#installers-and-binaries).
 
-  Значение по умолчанию — `LTS`. Дополнительные сведения о каналах поддержки .NET см. на странице о [политике поддержки .NET](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+  Значение по умолчанию — `LTS`. Дополнительные сведения о каналах поддержки .NET см. на странице о [политике поддержки .NET](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
 - **`-Version|--version <VERSION>`**
 
-  Представляет определенную версию сборки. Допустимые значения:
+  Представляет определенную версию сборки. Вы можете выбрать
 
   - `latest` — последняя сборка в канале (используется с параметром `-Channel`).
   - `coherent` — последняя согласованная сборка в канале. Использует последние сочетания стабильных пакетов. (Используется с параметрами `-Channel` имени ветви.)
-  - Версия из трех частей в формате X.Y.Z, который представляет определенную версию сборки. Заменяет параметр `-Channel`. Например, `2.0.0-preview2-006120`.
+  - Версия из трех частей в формате X.Y.Z, который представляет определенную версию сборки. Заменяет параметр `-Channel`. Пример: `2.0.0-preview2-006120`.
 
   Если не указано, `-Version` по умолчанию принимает значение `latest`.
 
@@ -96,7 +96,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
-  Устанавливается только общая среда выполнения, а не весь пакет SDK. Допустимые значения:
+  Устанавливается только общая среда выполнения, а не весь пакет SDK. Вы можете выбрать
 
   - `dotnet` — общая среда выполнения `Microsoft.NETCore.App`.
   - `aspnetcore` — общая среда выполнения `Microsoft.AspNetCore.App`.
@@ -116,7 +116,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-AzureFeed|--azure-feed`**
 
-  Указывает URL-адрес для веб-канала Azure этого установщика. Изменять это значение не рекомендуется. Значение по умолчанию — `https://dotnetcli.azureedge.net/dotnet`.
+  Указывает URL-адрес для веб-канала Azure этого установщика. Изменять это значение не рекомендуется. Значение по умолчанию — `https://dotnetcli.azureedge.net/dotnet`.
 
 - **`-UncachedFeed|--uncached-feed`**
 
@@ -216,7 +216,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Выпуски .NET Core](https://github.com/dotnet/core/releases)
 - [Архив загрузки пакета SDK и среды выполнения .NET Core](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333806"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Пошаговое руководство. Операции с файлами и каталогами в Visual Basic
@@ -44,13 +44,13 @@ ms.locfileid: "74333806"
   
 4. Добавьте в форму элементы управления из приведенной ниже таблицы и установите для их свойств соответствующие значения.  
   
-    |Элемент управления|Свойство.|Значение|  
+    |Элемент управления|Свойство|Значение|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Name**|`filesListBox`|  
-    |**Button**|**Name**<br /><br /> **Text**|`browseButton`<br /><br /> **Обзор**|  
-    |**Button**|**Name**<br /><br /> **Text**|`examineButton`<br /><br /> **Исследовать**|  
-    |**CheckBox**|**Name**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Сохранить результаты**|  
-    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Название**|`filesListBox`|  
+    |**Кнопка**|**Название**<br /><br /> **Текст**|`browseButton`<br /><br /> **Обзор**|  
+    |**Кнопка**|**Название**<br /><br /> **Текст**|`examineButton`<br /><br /> **Исследовать**|  
+    |**CheckBox**|**Название**<br /><br /> **Текст**|`saveCheckBox`<br /><br /> **Сохранить результаты**|  
+    |**FolderBrowserDialog**|**Название**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Выбор папки и перечисление файлов в ней  
   
@@ -162,9 +162,9 @@ ms.locfileid: "74333806"
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Пошаговое руководство: Управление файлами с помощью методов .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Пошаговое руководство. Управление файлами с помощью методов .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

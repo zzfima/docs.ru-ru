@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74282523"
 ---
 ### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP. Некоторые значения по умолчанию параметра SameSite для файлов cookie изменены на None
@@ -26,7 +26,7 @@ ms.locfileid: "74282523"
 
 Значение по умолчанию было изменено, чтобы сделать функцию `SameSite` необязательной.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Для каждого компонента, создающего файлы cookie, необходимо принять решение об использовании параметра `SameSite`. Проверьте использование затронутых интерфейсов API и при необходимости перенастройте параметр `SameSite`.
 

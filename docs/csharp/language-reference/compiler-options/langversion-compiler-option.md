@@ -9,10 +9,10 @@ helpviewer_keywords:
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 ms.openlocfilehash: 007b10f6f27233c43caad4c1910e3d1158682950
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920368"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (параметры компилятора C#)
@@ -29,12 +29,12 @@ ms.locfileid: "76920368"
 
 `option`
 
-Допустимы следующие значения.
+Допустимы следующие значения:
 
 |Параметр|Значение|
 |------------|-------------|
-|preview|Компилятор допускает использование любого допустимого синтаксиса языка из последней предварительной версии, которую он поддерживает.|
-|latest|Компилятор допускает использование любого допустимого синтаксиса языка из последней версии (включая дополнительные выпуски), которую он поддерживает.|
+|предварительный просмотр|Компилятор допускает использование любого допустимого синтаксиса языка из последней предварительной версии, которую он поддерживает.|
+|последняя|Компилятор допускает использование любого допустимого синтаксиса языка из последней версии (включая дополнительные выпуски), которую он поддерживает.|
 |latestMajor|Компилятор допускает использование любого допустимого синтаксиса языка из последней основной версии, которую он поддерживает.|
 |8.0|Компилятор принимает только синтаксис, включенный в спецификацию C# 8.0 или более ранней версии.|
 |7.3|Компилятор принимает только синтаксис, включенный в спецификацию C# 7.3 или более ранней версии.|
@@ -50,7 +50,7 @@ ms.locfileid: "76920368"
 
 Версия языка по умолчанию зависит от целевой платформы приложения, а также от установленной версии пакета SDK или Visual Studio. Эти правила определяются в статье о [настройке версии языка](../configure-language-version.md#defaults).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Параметр компилятора **-langversion** не влияет на метаданные, на которые ссылается ваше приложение C#.
 
@@ -66,15 +66,15 @@ ms.locfileid: "76920368"
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-|Version|Ссылка|Описание|
+|Version|Ссылка|Описание:|
 |-------|----|-----------|
 |C# 7.0 и более поздние версии||в настоящее время недоступно|
 |C# 6.0|[Ссылка](/dotnet/csharp/language-reference/language-specification/introduction)|Спецификация языка C# версии 6 (неофициальный проект): .NET Foundation|
-|C# 5.0|[Загрузить PDF-файл](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Стандарт ECMA-334, 5-й выпуск|
-|C# 3.0|[Загрузить DOC-файл](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Спецификация языка C#, версия 3.0: Microsoft Corporation|
-|C# 2.0|[Загрузить PDF-файл](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Стандарт ECMA-334, 4-й выпуск|
-|C# 1.2|[Загрузить DOC-файл](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Спецификация языка C#, версия 1.2: Microsoft Corporation|
-|C# 1.0|[Загрузить DOC-файл](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Спецификация языка C#, версия 1.0: Microsoft Corporation|
+|C# 5.0|[Скачать в формате PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Стандарт ECMA-334, 5-й выпуск|
+|C# 3.0|[Загрузить DOC-файл](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Спецификация языка C# версии 3.0: корпорация Майкрософт|
+|C# 2.0|[Скачать в формате PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Стандарт ECMA-334, 4-й выпуск|
+|C# 1.2|[Загрузить DOC-файл](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Спецификация языка C# версии 1.2: корпорация Майкрософт|
+|C# 1.0|[Загрузить DOC-файл](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Спецификация языка C# версии 1.0: корпорация Майкрософт|
 
 ## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>Минимальная версия пакета SDK, необходимая для поддержки всех возможностей языка
 
@@ -94,7 +94,7 @@ ms.locfileid: "76920368"
 |C# 2| Microsoft Visual Studio/Build Tools 2005 или встроенный компилятор .NET Framework 2.0 |
 |C# 1.0/1.2 | Microsoft Visual Studio/Build Tools .NET 2002 или встроенный компилятор .NET Framework 1.0 |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

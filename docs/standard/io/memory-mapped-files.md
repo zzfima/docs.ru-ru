@@ -10,10 +10,10 @@ helpviewer_keywords:
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 ms.openlocfilehash: 004da94bc7345bdc294562f0e1bedf6f1735adec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159719"
 ---
 # <a name="memory-mapped-files"></a>Сопоставленные в памяти файлы
@@ -59,7 +59,7 @@ ms.locfileid: "78159719"
 |Получение объекта <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> для использования с неуправляемым кодом.|Свойство <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> — или —<br /><br /> Свойство <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> — или —<br /><br /> Свойство <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
 |Задержка распределения памяти до момента, когда будет создано представление (только для непостоянных файлов).<br /><br /> (Чтобы определить текущий размер системной страницы, используйте свойство <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.)|Метод <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> со значением <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> — или —<br /><br /> Методы <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A>, которые принимают в качестве параметра перечисление <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions>.|  
   
-### <a name="security"></a>Безопасность  
+### <a name="security"></a>безопасность  
  При создании отображенного в память файла вы можете применить к нему права доступа. Для этого используйте следующие методы, которые принимают в качестве параметра перечисление <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess>:  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  

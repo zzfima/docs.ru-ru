@@ -3,10 +3,10 @@ title: Создание, развитие и управление версиям
 description: Создание API микрослужбы и контрактов с учетом развития и управления версиями из-за изменения потребностей.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672901"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб

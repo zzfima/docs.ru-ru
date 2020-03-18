@@ -5,10 +5,10 @@ helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628167"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Использование индексаторов. Руководство по программированию на C#
@@ -24,7 +24,7 @@ public int this[int index]    // Indexer declaration
 }  
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Тип индексатора и типы его параметров должны иметь по крайней мере такой же уровень доступности, как и сам индексатор. Дополнительные сведения об уровнях доступа см. в разделе [Модификаторы доступа](../../language-reference/keywords/access-modifiers.md).  
   
@@ -72,7 +72,7 @@ public int this[int index]   // Indexer declaration
   
 - Настройте максимально ограничивающие уровни доступа для методов доступа [get](../../language-reference/keywords/get.md) и [set](../../language-reference/keywords/set.md). Особенно важно сделать это для метода доступа `set`. Дополнительные сведения см. в разделе [Доступность методов доступа](../classes-and-structs/restricting-accessor-accessibility.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Индексаторы](./index.md)

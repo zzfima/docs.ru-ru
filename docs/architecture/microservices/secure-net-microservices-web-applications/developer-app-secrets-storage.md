@@ -4,10 +4,10 @@ description: Безопасность в микрослужбах .NET и веб
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501801"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>Безопасное хранение секретов приложения во время разработки
@@ -50,7 +50,7 @@ ms.locfileid: "77501801"
 
 Секреты, хранящиеся в диспетчере секретов, используются в приложении путем вызова `AddUserSecrets<T>` в экземпляре ConfigurationBuilder, чтобы включить секреты приложения в его конфигурацию. Общий параметр T должен обозначать тип в сборке, к которой применяется UserSecretId. Как правило, можно использовать `AddUserSecrets<Startup>`.
 
-`AddUserSecrets<Startup>()` относится к параметрам по умолчанию для среды разработки, если в *Program.cs* используется метод `CreateDefaultBuilder`.
+`AddUserSecrets<Startup>()` относится к параметрам по умолчанию для среды разработки, если в `CreateDefaultBuilder`Program.cs*используется метод*.
 
 >[!div class="step-by-step"]
 >[Назад](authorization-net-microservices-web-applications.md)

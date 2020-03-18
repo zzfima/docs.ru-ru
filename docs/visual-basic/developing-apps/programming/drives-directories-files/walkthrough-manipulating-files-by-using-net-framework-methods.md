@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
 ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333783"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Пошаговое руководство. Управление файлами с помощью методов .NET Framework (Visual Basic)
@@ -44,11 +44,11 @@ ms.locfileid: "74333783"
 
 4. Добавьте в форму элементы управления из следующей таблицы и установите для их свойств соответствующие значения.
 
-|**Объект**|**Свойства**|**Значение**|
+|**Объект**|**Свойства**|**Value**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Submit`<br /><br /> **Сохранить запись**|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Clear`<br /><br /> **Очистить запись**|
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **Введите произвольный текст.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Название**<br /><br /> **Текст**|`Submit`<br /><br /> **Сохранить запись**|
+|<xref:System.Windows.Forms.Button>|**Название**<br /><br /> **Текст**|`Clear`<br /><br /> **Очистить запись**|
+|<xref:System.Windows.Forms.TextBox>|**Название**<br /><br /> **Текст**<br /><br /> **Multiline**|`Entry`<br /><br /> **Введите произвольный текст.**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>Запись в файл
 
@@ -95,10 +95,10 @@ ms.locfileid: "74333783"
 
 |Элемент управления|Свойства|Значения|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Показывается**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Display`<br /><br /> **Отображение**|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`GetEntries`<br /><br /> **Показать записи**|
-|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Text**<br /><br /> **Включено**|`PickEntries`<br /><br /> **Выберите запись**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**Название**<br /><br /> **Visible**<br /><br /> **Размер**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**Название**<br /><br /> **Текст**|`Display`<br /><br /> **Отображение**|
+|<xref:System.Windows.Forms.Button>|**Название**<br /><br /> **Текст**|`GetEntries`<br /><br /> **Показать записи**|
+|<xref:System.Windows.Forms.ComboBox>|**Название**<br /><br /> **Текст**<br /><br /> **Включено**|`PickEntries`<br /><br /> **Выберите запись**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Заполнение элемента управления ComboBox
 
@@ -124,9 +124,9 @@ ms.locfileid: "74333783"
 
 |Элемент управления|Свойства|Значения|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Включено**|`DeleteEntry`<br /><br /> **Удалить запись**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Включено**|`EditEntry`<br /><br /> **Изменить запись**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Сохранить изменения**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Название**<br /><br /> **Текст**<br /><br /> **Включено**|`DeleteEntry`<br /><br /> **Удалить запись**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Название**<br /><br /> **Текст**<br /><br /> **Включено**|`EditEntry`<br /><br /> **Изменить запись**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Название**<br /><br /> **Текст**<br /><br /> **Включено**|`SubmitEdit`<br /><br /> **Сохранить изменения**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Включение возможности удаления и изменения записей
 
@@ -152,7 +152,7 @@ ms.locfileid: "74333783"
 
 Чтобы протестировать код, нажмите клавишу F5 для компиляции приложения. Щелкните **Показать записи**, выберите запись и нажмите кнопку **Посмотреть**. Выбранная запись появится в элементе `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Нажмите кнопку **Изменить запись**. Выбранная запись появится в элементе `Entry`<xref:System.Windows.Forms.TextBox>. Измените запись в `Entry`<xref:System.Windows.Forms.TextBox> и щелкните действие **Сохранить изменения**. Откройте `MyDiary.txt` файл, чтобы убедиться, что изменения внесены. Теперь выберите запись и нажмите кнопку **Удалить запись**. Когда <xref:System.Windows.Forms.MessageBox> запросит подтверждение, нажмите кнопку **ОК**. Закройте приложение и откройте файл `MyDiary.txt` для подтверждения удаления.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>

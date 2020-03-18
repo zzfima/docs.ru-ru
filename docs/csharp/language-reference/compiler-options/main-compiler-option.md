@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602722"
 ---
 # <a name="-main-c-compiler-options"></a>-main (параметры компилятора C#)
@@ -29,7 +29,7 @@ ms.locfileid: "69602722"
  Тип, содержащий метод **Main**.  
  Указанное имя класса должно быть полным; оно должно включать полное пространство имен, содержащее ключевое слово class, за которым следует имя класса. Например, если метод `Main` находится в классе `Program` в пространстве имен `MyApplication.Core`, необходимо указать параметр компилятора `-main:MyApplication.Core.Program`.
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если в компиляцию входят несколько типов с методом [Main](../../programming-guide/main-and-command-args/index.md), можно указать, какой из них содержит метод **Main**, который нужно использовать как точку входа в программу.  
   
  Этот параметр предназначен для использования при компиляции файлов EXE.  
@@ -51,7 +51,7 @@ ms.locfileid: "69602722"
 csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
 ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74884414"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Обзор среды CLR
@@ -64,9 +64,9 @@ ms.locfileid: "74884414"
 
 Номер версии платформы .NET Framework не всегда соответствует номеру версии среды CLR, которую он содержит. Список версий .NET Framework и соответствующих версий среды CLR см. в разделе [Версии и зависимости платформы .NET Framework](../framework/migration-guide/versions-and-dependencies.md). Выпуски .NET Core имеют одну версию продукта, т. е. не существует отдельной версии среды CLR. Список версий .NET Core см. в разделе [Загрузка .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
-## <a name="related-topics"></a>См. также
+## <a name="related-topics"></a>Связанные разделы
 
-|Заголовок|ОПИСАНИЕ|
+|Название|Описание:|
 |-----------|-----------------|
 |[Процесс управляемого выполнения](managed-execution-process.md)|Описание шагов, необходимых для использования преимуществ общеязыковой среды выполнения.|
 |[Автоматическое управление памятью](automatic-memory-management.md)|Описание выделения и освобождения памяти сборщиком мусора.|

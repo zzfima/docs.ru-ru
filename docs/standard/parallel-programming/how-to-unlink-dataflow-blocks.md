@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 ms.openlocfilehash: b49cfc9730ba154202baf15093a54ba3ce0e2a8a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139292"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Практическое руководство. Удаление связей с блоками потоков данных
@@ -32,6 +32,6 @@ ms.locfileid: "73139292"
   
  Чтобы оставшиеся вызовы `TrySolution` могли завершиться после вычисления значения одним из них, метод `TrySolution` принимает объект <xref:System.Threading.CancellationToken>, который отменяется после возврата вызова `ReceiveFromAny(T)`. Метод <xref:System.Threading.SpinWait.SpinUntil%2A> возвращает результат, когда объект <xref:System.Threading.CancellationToken> отменяется.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

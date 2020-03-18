@@ -6,15 +6,15 @@ helpviewer_keywords:
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
 ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75964735"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Конструкторы экземпляров (Руководство по программированию в C#)
 
-Конструкторы экземпляров используются для создания и инициализации переменных члена экземпляра, если создание объекта [class](../../language-reference/keywords/class.md) осуществляется с помощью выражения [new](../../language-reference/operators/new-operator.md). Для инициализации класса [static](../../language-reference/keywords/static.md) или статических переменных в нестатическом классе определяется статический конструктор. Дополнительные сведения см. в разделе [Статические конструкторы](./static-constructors.md).  
+Конструкторы экземпляров используются для создания и инициализации переменных члена экземпляра, если создание объекта [class](../../language-reference/operators/new-operator.md) осуществляется с помощью выражения [new](../../language-reference/keywords/class.md). Для инициализации класса [static](../../language-reference/keywords/static.md) или статических переменных в нестатическом классе определяется статический конструктор. Дополнительные сведения см. в разделе [Статические конструкторы](./static-constructors.md).  
   
  В следующем примере показан конструктор экземпляра.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "75964735"
   
  Дополнительные примеры вызова конструкторов базовых классов см. в разделах [virtual](../../language-reference/keywords/virtual.md), [override](../../language-reference/keywords/override.md) и [base](../../language-reference/keywords/base.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы и структуры](./index.md)

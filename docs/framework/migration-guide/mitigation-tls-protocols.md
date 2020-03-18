@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457834"
 ---
 # <a name="mitigation-tls-protocols"></a>Устранение рисков. Протоколы TLS
-Начиная с версии .NET Framework 4.6 классы <xref:System.Net.ServicePointManager?displayProperty=nameWithType> и <xref:System.Net.Security.SslStream?displayProperty=nameWithType> могут использовать один из трех протоколов: Tls1.0, Tls1.1 или Tls 1.2. Протокол SSL 3.0 и шифрование RC4 не поддерживаются.  
+Начиная с версии .NET Framework 4.6, классы <xref:System.Net.ServicePointManager?displayProperty=nameWithType> и <xref:System.Net.Security.SslStream?displayProperty=nameWithType> могут использовать один из трех следующих протоколов: Tls1.0, Tls1.1 или Tls 1.2. Протокол SSL 3.0 и шифрование RC4 не поддерживаются.  
   
 ## <a name="impact"></a>Последствия  
  Это изменение влияет:  
@@ -22,7 +22,7 @@ ms.locfileid: "73457834"
   
 - на все приложения на стороне сервера, которые нельзя обновить для поддержки Tls1.0, Tls1.1 или Tls 1.2.  
   
-## <a name="mitigation"></a>Устранение рисков  
+## <a name="mitigation"></a>Меры по снижению риска  
  Рекомендуется обновить приложения на стороне сервера для использования Tls1.0, Tls1.1 или Tls 1.2. Если это невозможно, или если клиентские приложения не работают, можно использовать класс <xref:System.AppContext>, чтобы отказаться от этой функции одним из двух способов.  
   
 - Программно с помощью фрагмента кода следующего вида:  
@@ -40,6 +40,6 @@ ms.locfileid: "73457834"
   
  Следует, тем не менее, заметить, что отказ от поведения по умолчанию не рекомендуется, поскольку приводит к снижению безопасности приложения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Совместимость приложений](application-compatibility.md)

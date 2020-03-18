@@ -8,24 +8,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625951"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398271"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (справочник по C#)
 
 *Типы значений* и [ссылочные типы](../keywords/reference-types.md) — это две основные категории типов C#. Переменная типа значения содержит экземпляр типа. Это отличается от переменной ссылочного типа, которая содержит ссылку на экземпляр типа. По умолчанию при [назначении](../operators/assignment-operator.md), передаче аргумента в метод и возврате результата метода копируются значения переменных. В случае переменных типа значения копируются соответствующие экземпляры типа. В следующем примере продемонстрировано такое поведение.
 
-[!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
 
 Как показано в предыдущем примере, операции с переменной типа значения влияют только на этот экземпляр типа значения, хранящийся в переменной.
 
 Если тип значения содержит элемент данных ссылочного типа, то при копировании экземпляра типа значения копируется только ссылка на экземпляр ссылочного типа. Как скопированный, так и исходный экземпляр типа значения имеют доступ к одному и тому же экземпляру ссылочного типа. В следующем примере продемонстрировано такое поведение.
 
-[!code-csharp[shallow copy](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > Чтобы сделать код менее подверженным ошибкам и более надежным, определите и используйте неизменяемые типы значений. В этой статье изменяемые типы значений используются только в демонстрационных целях.

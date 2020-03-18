@@ -4,11 +4,11 @@ description: Знакомство с LINQ для C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
 ms.openlocfilehash: fe408210b30b5f6118dc66b4c8f7057fb6654881
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66482984"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397566"
 ---
 # <a name="language-integrated-query-linq"></a>Синтаксис LINQ
 
@@ -50,4 +50,4 @@ ms.locfileid: "66482984"
 
 Чтобы глубже разобраться в базовой концепции LINQ изучите [статью о LINQ в C#](linq-in-csharp.md).
 
-Чтобы быстрее приступить к работе с LINQ в C#, переходите к руководству [Работа с LINQ.](../tutorials/working-with-linq.md).
+Чтобы быстрее приступить к работе с LINQ в C#, переходите к руководству [Работа с LINQ](../tutorials/working-with-linq.md).

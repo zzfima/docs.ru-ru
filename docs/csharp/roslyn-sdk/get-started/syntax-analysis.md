@@ -3,12 +3,12 @@ title: Начало работы с функциями синтаксическ�
 description: Введение в обходы, отправка запросов и прохождение деревьев синтаксиса.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346999"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240523"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Начало работы с функциями синтаксического анализа
 
@@ -58,7 +58,7 @@ namespace HelloWorld
 
 Заметки, токены и узлы иерархически компонуются для формирования дерева, которое полностью представляет все содержимое в фрагменте кода Visual Basic или C#. Эту структуру можно посмотреть с помощью окна **визуализатора синтаксиса**. В Visual Studio выберите **Вид** > **Другие окна** > **Визуализатор синтаксиса**. Например, предыдущий исходный файл на языке C# при просмотре с помощью **визуализатора синтаксиса** выглядит, как показано на следующем рисунке.
 
-**SyntaxNode**: синий текст | **SyntaxToken**: зеленый текст | **SyntaxTrivia**: красный текст ![файл с кодом C#](media/walkthrough-csharp-syntax-figure1.png)
+**Узел синтаксиса**: синий | **Токен синтаксиса**: зеленый | **Заметки к синтаксису**: красный ![Файл кода C#](media/walkthrough-csharp-syntax-figure1.png)
 
 При перемещении по структуре дерева вы можете найти в файле кода все инструкции, выражения, токены и пробелы.
 
@@ -84,35 +84,35 @@ namespace HelloWorld
 Вы будете анализировать программу "Hello World!", показанную ранее.
 Добавьте текст для программы "Hello World" в качестве константы в класс `Program`:
 
-[!code-csharp[Declare the program text](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-Затем добавьте в константу `programText` следующий код для создания **дерева синтаксиса** для текста кода.  Добавьте следующую строку в метод `Main`:
+Затем добавьте в константу **следующий код для создания**дерева синтаксиса`programText` для текста кода.  Добавьте следующую строку в метод `Main`:
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
 Эти две строки создают дерево и извлекают корневой узел этого дерева. Теперь можно исследовать узлы в дереве. Добавьте следующие строки в метод `Main` для отображения некоторых свойств корневого узла дерева:
 
-[!code-csharp[Examine the root node](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
+[!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
 Запустите приложение для просмотра сведений, которые код собрал о корневом узле этого дерева.
 
 Как правило, для получения сведений о коде выполняется обход дерева. В этом примере анализируется известный вам код для изучения API. Добавьте следующий код для исследования первого элемента узла `root`:
 
-[!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
+[!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
 Этот элемент — <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Он представляет все, что входит в объявление `namespace HelloWorld`. Добавьте следующий код, чтобы посмотреть, какие узлы объявляются внутри пространства имен `HelloWorld`:
 
-[!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
+[!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
 Запустите программу, чтобы посмотреть, что вы узнали.
 
 Теперь, когда известно, что объявление является <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType>, объявите новую переменную этого типа для исследования объявления класса. Этот класс содержит только один элемент: метод `Main`. Добавьте следующий код, чтобы найти метод `Main`, и приведите его к <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType>.
 
-[!code-csharp[Find the main declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
+[!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
 Узел объявления метода содержит полные синтаксические сведения о методе. Давайте посмотрим тип возвращаемого значения для метода `Main`, количество и типы аргументов, а также основной текст метода. Добавьте следующий код:
 
-[!code-csharp[Examine the syntax of the main method](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
+[!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
 Запустите программу, чтобы просмотреть все полученные сведения об этой программе:
 
@@ -144,7 +144,7 @@ The body text of the Main method follows:
 
 Эти методы запроса можно использовать для поиска аргументов к методу `Main` в качестве альтернативы навигации по дереву. Добавьте следующий код в конец метода `Main`:
 
-[!code-csharp[Query the tree for the arguments to Main](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
+[!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
 В первой инструкции используется выражение LINQ и метод <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> для обнаружения того же параметра, что и в предыдущем примере.
 
@@ -164,35 +164,35 @@ The body text of the Main method follows:
 
 Как показано в предыдущем примере, можно определить строковую константу, которая будет содержать текст программы для анализа:
 
-[!code-csharp[Define the code text to analyzer](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
+[!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
 Этот исходный текст содержит директивы `using`, расположенные в четырех разных местах: на уровне файлов, в пространстве имен верхнего уровня и в двух вложенных пространствах имен. В этом примере представлен основной сценарий использования класса <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> для выполнения запросов к коду. Было бы сложно посетить каждый узел в корневом дереве синтаксиса для поиска объявлений using. Вместо этого создается производный класс и переопределяется метод, который вызывается только в том случае, когда текущий узел в дереве является директивой using. Обходчик не работает с узлами других типов. Этот единичный метод проверяет каждую из инструкций `using` и создает коллекцию пространств имен, которые не входят в пространство имен `System`. Создается <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> для проверки всех инструкций `using`, но только инструкций `using`.
 
 Теперь, когда вы определили текст программы, необходимо создать `SyntaxTree` и получить корень этого дерева:
 
-[!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
+[!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
 Теперь создайте новый класс. В Visual Studio выберите **Проект** > **Добавить новый элемент**. В диалоге **Добавление нового элемента** введите имя файла *UsingCollector.cs*.
 
 Вы реализуете функцию обходчика `using` в классе `UsingCollector`. Для начала сделайте класс `UsingCollector` производным от <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>.
 
-[!code-csharp[Declare the base class for the using collector](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
+[!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
 Потребуется хранилище для хранения узлов пространства имен, которые вы будете собирать.  Объявите свойство только для чтения в классе `UsingCollector`. Эта переменная будет использоваться для хранения найденных узлов <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax>:
 
-[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
+[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
 Базовый класс, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>, реализует логику для посещения каждого узла в дереве синтаксиса. Производный класс переопределяет методы, вызываемые для определенных интересующих вас узлов. В этом примере вас интересует любая директива `using`. Это означает, что требуется переопределить метод <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)>. Единственный аргумент этого метода — объект <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType>. Это важное преимущество обходчиков: они вызывают переопределенные методы с использованием аргументов, уже приведенных к типу конкретного узла. Класс <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> имеет свойство <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name>, которое содержит имя импортируемого пространства имен. Это <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>. Добавьте следующий код в переопределение <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)>:
 
-[!code-csharp[Examine using nodes for the System namespace](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
+[!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
 Как и в прошлом примере, были добавлены разнообразные инструкции `WriteLine` для облегчения понимания этого метода. Вы можете посмотреть, когда он вызывается и какие при этом передаются аргументы.
 
 Наконец, необходимо добавить две строки кода для создания `UsingCollector` и направить его в корневой узел для сбора всех инструкций `using`. Затем добавьте цикл `foreach` для отображения всех инструкций `using`, найденных сборщиком:
 
-[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
+[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
-Скомпилируйте и запустите программу. Должны выводиться следующие данные:
+Скомпилируйте и запустите программу. Вы должны увидеть следующий результат.
 
 ```console
         VisitUsingDirective called with System.

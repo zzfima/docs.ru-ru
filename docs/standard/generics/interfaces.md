@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708328"
 ---
 # <a name="generic-interfaces"></a>Универсальные интерфейсы
@@ -40,7 +40,7 @@ ms.locfileid: "75708328"
   
  Универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> предоставляет структуру универсального перечислителя. Универсальный интерфейс <xref:System.Collections.Generic.IEnumerator%601>, реализуемый универсальными перечислителями, наследуется от неуниверсального интерфейса <xref:System.Collections.IEnumerator>. Члены <xref:System.Collections.IEnumerator.MoveNext%2A> и <xref:System.Collections.IEnumerator.Reset%2A>, которые не зависят от параметра типа `T`, присутствуют только в неуниверсальном интерфейсе. Это означает, что любой потребитель неуниверсального интерфейса также может использовать универсальный интерфейс.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

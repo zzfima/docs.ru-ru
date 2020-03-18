@@ -11,10 +11,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740470"
 ---
 # <a name="set-assembly-attributes"></a>Настройка атрибутов сборки
@@ -35,11 +35,11 @@ ms.locfileid: "73740470"
 
 В следующей таблице описаны атрибуты версии и языка и региональных параметров.
 
-|Атрибут удостоверения сборки|ОПИСАНИЕ|
+|Атрибут удостоверения сборки|Описание:|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|Перечислимое поле, указывающее язык и региональные параметры, поддерживаемые сборкой. В сборке можно также указать независимость от языка и региональных параметров, чтобы указать, что сборка содержит ресурсы для языка и региональных параметров по умолчанию. **Примечание.**  Среда выполнения рассматривает любую сборку, у которой для атрибута языка и региональных параметров не задано значение NULL, в качестве вспомогательной сборки. Такие сборки подчиняются правилам привязки вспомогательных сборок. Дополнительные сведения см. в разделе [Обнаружение сборок в среде выполнения](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
+|<xref:System.Reflection.AssemblyCultureAttribute>|Перечислимое поле, указывающее язык и региональные параметры, поддерживаемые сборкой. В сборке можно также указать независимость от языка и региональных параметров, чтобы указать, что сборка содержит ресурсы для языка и региональных параметров по умолчанию. **Примечание.** Среда выполнения рассматривает любую сборку, у которой для атрибута языка и региональных параметров не задано значение NULL, в качестве вспомогательной сборки. Такие сборки подчиняются правилам привязки вспомогательных сборок. Дополнительные сведения см. в разделе [Обнаружение сборок в среде выполнения](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Значение, задающее атрибуты сборки: например, может ли сборка выполняться параллельно.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Числовое значение в формате *основной_номер*.*дополнительный_номер*.*номер_сборки*.*номер_редакции* (например, 2.4.0.0). Среда CLR использует это значение для выполнения операций привязки в сборках со строгими именами. **Примечание.**  Если атрибут <xref:System.Reflection.AssemblyInformationalVersionAttribute> не применен к сборке, то номер версии, задаваемый атрибутом <xref:System.Reflection.AssemblyVersionAttribute>, используется свойствами <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Числовое значение в формате *основной_номер*.*дополнительный_номер*.*номер_сборки*.*номер_редакции* (например, 2.4.0.0). Среда CLR использует это значение для выполнения операций привязки в сборках со строгими именами. **Примечание.** Если атрибут <xref:System.Reflection.AssemblyInformationalVersionAttribute> не применен к сборке, то номер версии, задаваемый атрибутом <xref:System.Reflection.AssemblyVersionAttribute>, используется свойствами <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
 
 В следующем примере кода показано, как применить атрибуты версии и языка и региональных параметров сборки.
 
@@ -68,12 +68,12 @@ ms.locfileid: "73740470"
 
 Информационные атрибуты можно использовать для предоставления дополнительных сведений о компании или продукте в сборке. В следующей таблице описаны информационные атрибуты, которые можно применить к сборке.
 
-|Информационный атрибут|ОПИСАНИЕ|
+|Информационный атрибут|Описание:|
 |-----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Строковое значение, содержащее название компании.|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Строковое значение, содержащее сведения об авторских правах.|
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Строковое значение, содержащее номер версии файла Win32. Обычно по умолчанию здесь используется версия сборки.|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Строковое значение, содержащее сведения о версии, которые не используются средой CLR, например полный номер версии продукта. **Примечание.**  Если этот атрибут применен к сборке, указываемую им строку можно получить во время выполнения с помощью свойства <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. Эта строка также используется в пути и разделе реестра, предоставляемых свойствами <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Строковое значение, содержащее сведения о версии, которые не используются средой CLR, например полный номер версии продукта. **Примечание.** Если этот атрибут применен к сборке, указываемую им строку можно получить во время выполнения с помощью свойства <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. Эта строка также используется в пути и разделе реестра, предоставляемых свойствами <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> .|
 |<xref:System.Reflection.AssemblyProductAttribute>|Строковое значение, содержащее сведения о продукте.|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Строковое значение, содержащее сведения о товарном знаке.|
 
@@ -83,7 +83,7 @@ ms.locfileid: "73740470"
 
 Атрибуты манифеста сборки можно использовать для предоставления сведений в манифесте сборки, включая название, описание, псевдоним по умолчанию и конфигурацию. В следующей таблице описаны атрибуты манифеста сборки.
 
-|Атрибуты манифеста сборки|ОПИСАНИЕ|
+|Атрибуты манифеста сборки|Описание:|
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Строковое значение, содержащее конфигурацию сборки, например Retail или Debug. Среда выполнения не использует это значение.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Строковое значение, содержащее псевдоним по умолчанию, используемый для ссылки на эту сборку из других сборок. Это значение предоставляет понятное имя, если имя сборки само по себе не является понятным (например, если это значение идентификатора GUID). Это значение можно также использовать как краткую форму полного имени сборки.|
@@ -94,7 +94,7 @@ ms.locfileid: "73740470"
 
 Атрибуты строгого имени можно использовать для задания строгого имени сборки. В таблице ниже описываются атрибуты строгого имени.
 
-|Атрибут строгого имени|ОПИСАНИЕ|
+|Атрибут строгого имени|Описание:|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|Логическое значение, указывающее, что используется отложенная подпись.|
 |<xref:System.Reflection.AssemblyKeyFileAttribute>|Строковое значение, указывающее имя файла, который содержит открытый ключ (при использовании отложенной подписи), или открытый и закрытый ключи, передаваемые в качестве параметра в конструктор этого атрибута. Обратите внимание, что имя файла указано относительно пути к выходному файлу (*EXE* или *DLL*), а не пути к исходному файлу.|
@@ -117,6 +117,6 @@ ms.locfileid: "73740470"
 <Assembly:AssemblyDelaySignAttribute(True)>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Создание сборок](create.md)

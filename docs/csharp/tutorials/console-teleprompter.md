@@ -5,15 +5,15 @@ ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76921123"
 ---
 # <a name="console-app"></a>Консольное приложение
 
-Это руководство раскроет для вас некоторые возможности .NET Core и языка C#. Вы познакомитесь со следующими аспектами:
+Это руководство раскроет для вас некоторые возможности .NET Core и языка C#. Вы узнаете:
 
 - Общие сведения о .NET Core CLI
 - структура консольного приложения C#;
@@ -25,13 +25,13 @@ ms.locfileid: "76921123"
 
 В этом руководстве описано множество функций. Попробуем собрать их по одному.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - Настройте компьютер для выполнения .NET Core. Инструкции по установке см. на странице [скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download). Это приложение можно запустить в ОС Windows, Linux, macOS или в контейнере Docker.
 
 - Установите любой привычный для вас редактор кода.
 
-## <a name="create-the-app"></a>Создание приложения
+## <a name="create-the-app"></a>Создайте приложение
 
 Первым шагом является создание нового приложения. Откройте командную строку и создайте новый каталог для приложения. Перейдите в этот каталог. В командной строке введите команду `dotnet new console`. Эта команда создает начальный набор файлов для базового приложения Hello World.
 
@@ -303,7 +303,7 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-Новая версия метода `ShowTeleprompter` вызывает новый метод из класса `TeleprompterConfig`. Сейчас нужно изменить метод `Main`, чтобы вместо `ShowTeleprompter` он вызывал `RunTeleprompter`:
+Новая версия метода `ShowTeleprompter` вызывает новый метод из класса `TeleprompterConfig`. Сейчас нужно изменить метод `Main`, чтобы вместо `RunTeleprompter` он вызывал `ShowTeleprompter`:
 
 ```csharp
 RunTeleprompter().Wait();

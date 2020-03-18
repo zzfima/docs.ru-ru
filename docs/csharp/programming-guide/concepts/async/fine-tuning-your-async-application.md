@@ -3,10 +3,10 @@ title: Настройка асинхронного приложения (C#)
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
 ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73970240"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Настройка асинхронного приложения (C#)
@@ -41,6 +41,6 @@ ms.locfileid: "73970240"
   
  Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Асинхронное программирование с использованием ключевых слов async и await (C#)](./index.md)
+- [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](./index.md)

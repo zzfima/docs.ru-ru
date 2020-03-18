@@ -13,10 +13,10 @@ helpviewer_keywords:
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74960405"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Практическое руководство. Отображение миллисекунд в значениях даты и времени
@@ -26,7 +26,7 @@ ms.locfileid: "74960405"
   
 1. Если вы работаете со строковым представлением даты, преобразуйте ее в значение типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, используя статичный метод <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> или <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
   
-2. Чтобы извлечь строковое представление компонента миллисекунд, вызовите метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>или <xref:System.DateTimeOffset.ToString%2A> для значения даты и времени, передав ему в параметре `format` шаблон пользовательского формата `fff` или `FFF`, отдельно или с другим описателем пользовательского формата.  
+2. Чтобы извлечь строковое представление компонента миллисекунд, вызовите метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>или <xref:System.DateTimeOffset.ToString%2A> для значения даты и времени, передав ему в параметре `fff` шаблон пользовательского формата `FFF` или `format`, отдельно или с другим описателем пользовательского формата.  
   
 ## <a name="example"></a>Пример  
  Этот пример выводит в консоль компонент миллисекунд <xref:System.DateTime> и значение <xref:System.DateTimeOffset>, как отдельно, так и в составе более длинной строки даты и времени.  
@@ -49,7 +49,7 @@ ms.locfileid: "74960405"
 > [!NOTE]
 > Существует возможность отображать малые дробные части секунды, например десятитысячные или стотысячные доли секунды. Однако эти значения могут не иметь смысла. Точность значений даты и времени зависит от разрешения системных часов. В операционной системе Windows NT 3.5 и более поздних версий, а также Windows Vista разрешение часов приблизительно соответствует 10–15 миллисекундам.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69603081"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (параметры компилятора C#)
@@ -28,7 +28,7 @@ ms.locfileid: "69603081"
  `file`  
  Имя файла, который будет содержать отчет об ошибках.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Параметр **-bugreport** указывает, что в `file` нужно поместить следующую информацию:  
   
 - Копия всех файлов исходного кода, включенных в компиляцию.  
@@ -53,7 +53,7 @@ ms.locfileid: "69603081"
   
  Обратите внимание, что содержимое созданного файла раскрывает исходный код, что может привести к непреднамеренному разглашению информации.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [-errorreport (параметры компилятора C#)](./errorreport-compiler-option.md)

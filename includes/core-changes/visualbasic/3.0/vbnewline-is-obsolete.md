@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 95a4c807f5c1077cf52f54b196e904ebc98c32f8
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116366"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine устарела
@@ -16,7 +16,7 @@ ms.locfileid: "76116366"
 
 #### <a name="change-description"></a>Описание изменений
 
-Начиная с .NET Core 3.0 (предварительная версия 8), к константе <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> применяется атрибут [Obsolete](xref:System.ObsoleteAttribute). При использовании константы выдается предупреждение компилятора. В .NET Framework и предыдущих версиях .NET Core она не была помечена как устаревшая.
+Начиная с .NET Core 3.0 (предварительная версия 8), к константе [ применяется атрибут ](xref:System.ObsoleteAttribute)Obsolete<xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>. При использовании константы выдается предупреждение компилятора. В .NET Framework и предыдущих версиях .NET Core она не была помечена как устаревшая.
 
 Это изменение было внесено для поддержки Visual Basic в качестве языка для разработки на нескольких платформах. Константа <xref:Microsoft.VisualBasic.Constants.vbNewLine> эквивалентна `\r\n`, последовательности символов новой строки в Windows. В системах на основе Unix символ новой строки — `\n`.
 

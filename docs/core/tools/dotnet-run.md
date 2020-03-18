@@ -3,17 +3,17 @@ title: Команда dotnet run
 description: Команда dotnet run — это удобное средство для запуска приложения из исходного кода.
 ms.date: 02/19/2020
 ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157080"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 **Эта статья относится к следующему:** ✔️ пакет SDK для .NET Core 2.x и более поздних версий
 
-## <a name="name"></a>name
+## <a name="name"></a>Имя
 
 `dotnet run` — выполняет исходный код без дополнительных явных команд компиляции или запуска.
 
@@ -26,7 +26,7 @@ dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--la
 dotnet run [-h|--help]
 ```
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 `dotnet run` — это удобное средство для запуска приложения из исходного кода одной командой. Это полезно для быстрой последовательной разработки из командной строки. В отношении сборки кода эта команда зависима от команды [`dotnet build`](dotnet-build.md). Любые требования к сборке, например, то, что проект сначала нужно восстановить, применяются и к `dotnet run`.
 
@@ -102,7 +102,7 @@ dotnet myapp.dll
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `m`. Доступно начиная с пакета SDK для .NET Core 2.1.
+  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `m`. Доступно начиная с пакета SDK для .NET Core 2.1.
 
 ## <a name="examples"></a>Примеры
 

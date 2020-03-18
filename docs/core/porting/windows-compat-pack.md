@@ -4,10 +4,10 @@ description: Сведения о пакете обеспечения совме�
 author: terrajobst
 ms.date: 12/07/2018
 ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76733609"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Перенос кода в .NET Core с помощью пакета обеспечения совместимости Windows
@@ -24,17 +24,17 @@ ms.locfileid: "76733609"
 
 - Кодовые страницы
 - CodeDom
-- Параметр Configuration
+- Конфигурация
 - Служба каталогов
 - Рисование
 - ODBC
 - Разрешения
-- Порты
+- порты;
 - Списки управления доступом Windows (ACL)
 - Windows Communication Foundation (WCF)
 - Шифрование Windows
 - Windows EventLog
-- инструментирование управления Windows (WMI)
+- Инструментарий управления Windows (WMI)
 - Счетчики производительности Windows
 - Реестр Windows
 - Кэширование среды выполнения Windows

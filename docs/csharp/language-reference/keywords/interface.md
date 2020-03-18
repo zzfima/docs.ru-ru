@@ -7,10 +7,10 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625856"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (справочник по C#)
@@ -35,7 +35,7 @@ ms.locfileid: "77625856"
 Эти предыдущие объявления членов обычно не содержат тело. Начиная с C# 8.0, член интерфейса может объявлять тело. Этот называется *реализацией по умолчанию*. Члены с телом позволяют интерфейсу предоставлять реализацию по умолчанию для классов и структур, которые не предоставляют реализацию с переопределением. Кроме того, начиная с C# 8.0, интерфейс может включать следующее.
 
 - [Константы](const.md)
-- [Инструкции](../operators/operator-overloading.md)
+- [Операторы](../operators/operator-overloading.md)
 - [Статический конструктор](../../programming-guide/classes-and-structs/constructors.md#static-constructors)
 - [Вложенные типы](../../programming-guide/classes-and-structs/nested-types.md)
 - [Статические поля, методы, свойства, индексаторы и события](static.md)
@@ -69,7 +69,7 @@ public interface INamed
 
 Дополнительные сведения см. в разделе [Интерфейсы](~/_csharplang/spec/interfaces.md) статьи [Спецификация языка C#](~/_csharplang/spec/introduction.md), а также в спецификации функций для [элементов интерфейса по умолчанию — C# 8.0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

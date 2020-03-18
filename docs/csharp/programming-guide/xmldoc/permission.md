@@ -9,10 +9,10 @@ helpviewer_keywords:
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
 ms.openlocfilehash: 4f76d28d5531c1b9f01fa950589407934cc1244a
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093478"
 ---
 # <a name="permission-c-programming-guide"></a>Руководство по программированию на C#. \<permission>
@@ -35,7 +35,7 @@ ms.locfileid: "77093478"
 
   Описание уровня доступа для члена.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Тег \<permission> tag позволяет документировать уровень доступа для члена. Задать уровень доступа для члена можно с помощью класса <xref:System.Security.PermissionSet>.
 
@@ -45,7 +45,7 @@ ms.locfileid: "77093478"
 
 [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

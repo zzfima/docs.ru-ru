@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092620"
 ---
 # <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Интерпретация прогнозов модели с помощью функции PFI
@@ -26,7 +26,7 @@ ms.locfileid: "77092620"
 
 Компоненты набора данных, которые используются в этом примере, перечислены в столбцах 1–12. Цель — спрогнозировать `Price`.
 
-| Столбец | Функция | Описание
+| Столбец | Компонент | Описание:
 | --- | --- | --- |
 | 1 | CrimeRate | Уровень преступности на душу населения
 | 2 | ResidentialZones | Жилые районы в городе
@@ -158,7 +158,7 @@ foreach (var feature in featureImportanceMetrics)
 
 При печати значений для каждого параметра в `featureImportanceMetrics` выдается результат представленного ниже вида. У вас результаты будут другими, поскольку эти значения зависят от предоставленных данных.
 
-| Функция | Изменение в R-квадрат |
+| Компонент | Изменение в R-квадрат |
 |:--|:--:|
 HighwayAccess       |   –0,042731
 StudentTeacherRatio |   –0,012730

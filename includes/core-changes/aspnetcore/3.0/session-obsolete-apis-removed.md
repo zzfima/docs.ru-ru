@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4dcb357570cb6597fde86c9e8f2acb74364cfaa3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198548"
 ---
 ### <a name="session-state-obsolete-apis-removed"></a>Состояние сеанса: удалены устаревшие API
@@ -18,7 +18,7 @@ ms.locfileid: "73198548"
 
 Это изменение обеспечивает согласованность между API для настройки функций, использующих файлы cookie.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Перенесите использование удаленных API в их новые замены. Рассмотрим следующий пример в `Startup.ConfigureServices`:
 

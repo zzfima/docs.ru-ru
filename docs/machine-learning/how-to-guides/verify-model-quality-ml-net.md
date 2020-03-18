@@ -4,10 +4,10 @@ description: Сведения о том, как рассчитать метри�
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: d6409307cd283ae67d7546c4dc6e19e6089a0766
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73975843"
 ---
 # <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Расчет метрики для оценки качества модели машинного обучения

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75936846"
 ---
 # <a name="using-threads-and-threading"></a>Использование потоков и работа с потоками
@@ -44,7 +44,7 @@ ms.locfileid: "75936846"
 
 В приведенной ниже таблице показаны некоторые свойства <xref:System.Threading.Thread>.  
   
-|Свойство.|Описание|  
+|Свойство|Описание:|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Возвращает `true`, если поток был запущен и не был завершен нормально либо был прерван.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Возвращает или задает логическое значение, которое указывает, является ли поток фоновым потоком. Фоновые потоки отличаются от основных потоков лишь тем, что они не влияют на завершение процесса. Когда обработка всех основных потоков закончена, общеязыковая среда выполнения завершает процесс, применяя метод <xref:System.Threading.Thread.Abort%2A> к тем фоновым потокам, которые еще продолжают существовать. См. дополнительные сведения об [основных и фоновых потоках](foreground-and-background-threads.md).|  
@@ -52,7 +52,7 @@ ms.locfileid: "75936846"
 |<xref:System.Threading.Thread.Priority%2A>|Возвращает или задает значение <xref:System.Threading.ThreadPriority>, которое используется операционной системой для установки приоритетов потоков. Дополнительные сведения см. в разделе [Планирование потоков](scheduling-threads.md) и в справочнике по <xref:System.Threading.ThreadPriority>.|  
 |<xref:System.Threading.Thread.ThreadState%2A>|Возвращает значение <xref:System.Threading.ThreadState>, содержащее текущие состояния потока.|  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [Потоки и работа с потоками](threads-and-threading.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
 ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789663"
 ---
 # <a name="typeparamref-c-programming-guide"></a>Руководство по программированию на C#. \<typeparamref>
@@ -28,7 +28,7 @@ ms.locfileid: "76789663"
 
   Имя параметра типа. Имя заключается в двойные кавычки (" ").
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Дополнительные сведения о параметрах типа в универсальных типах и методах см. в разделе [Универсальные шаблоны](../generics/index.md).
 
@@ -40,7 +40,7 @@ ms.locfileid: "76789663"
 
 [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

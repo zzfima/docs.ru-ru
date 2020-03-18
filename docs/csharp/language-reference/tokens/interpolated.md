@@ -11,10 +11,10 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76980123"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочные материалы по C#)
@@ -37,7 +37,7 @@ ms.locfileid: "76980123"
 
 Элементы в квадратных скобках являются необязательными. Каждый из элементов описан в таблице ниже:
 
-|Элемент|Описание|
+|Элемент|Описание:|
 |-------------|-----------------|
 |`interpolationExpression`|Выражение, создающее форматируемый результат. Строковое представление `null` является <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Константное выражение, значение которого определяет минимальное количество символов в строковом представлении результата выражения. Если оно положительное, строковое представление выравнивается по правому краю, если отрицательное — по левому краю. Дополнительные сведения см. в разделе [Компонент выравнивания](../../../standard/base-types/composite-formatting.md#alignment-component).|
@@ -74,7 +74,7 @@ ms.locfileid: "76980123"
       - Метод <xref:System.FormattableString.Invariant%2A>, который формирует результирующую строку для <xref:System.Globalization.CultureInfo.InvariantCulture>.
       - Метод <xref:System.FormattableString.ToString(System.IFormatProvider)>, который формирует результирующую строку для указанного языка и региональных параметров.
 
-    Также можно использовать метод <xref:System.FormattableString.ToString(System.IFormatProvider)>, чтобы предоставить пользовательские реализации интерфейса <xref:System.IFormatProvider>, который поддерживает настраиваемое форматирование. Дополнительные сведения см. в статье [Типы форматирования в .NET](../../../standard/base-types/formatting-types.md), разделе [Настраиваемое форматирование с использованием интерфейса ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter).
+    Также можно использовать метод <xref:System.FormattableString.ToString(System.IFormatProvider)>, чтобы предоставить пользовательские реализации интерфейса <xref:System.IFormatProvider>, который поддерживает настраиваемое форматирование. Дополнительные сведения см. в статье [Типы форматирования в .NET](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter), разделе [Настраиваемое форматирование с использованием интерфейса ICustomFormatter](../../../standard/base-types/formatting-types.md).
 
 1. Преобразование интерполированной строки в экземпляр <xref:System.IFormattable>, который также позволяет создавать несколько результирующих строк с содержимым для конкретного языка из одного экземпляра <xref:System.IFormattable>.
 
@@ -96,7 +96,7 @@ ms.locfileid: "76980123"
 
 Дополнительные сведения см. в разделе [Интерполированные строки](~/_csharplang/spec/expressions.md#interpolated-strings)[спецификации языка C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Специальные символы C#](index.md)

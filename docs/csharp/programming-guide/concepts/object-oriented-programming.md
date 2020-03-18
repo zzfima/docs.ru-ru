@@ -3,10 +3,10 @@ title: Объектно ориентированное программиров�
 ms.date: 02/08/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
 ms.openlocfilehash: 01d6f55bf0752f902f351675c4596abbb8ac85c2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627894"
 ---
 # <a name="object-oriented-programming-c"></a>Объектно-ориентированное программирование (C#)

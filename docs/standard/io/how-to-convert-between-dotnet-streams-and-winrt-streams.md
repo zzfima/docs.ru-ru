@@ -1,5 +1,5 @@
 ---
-title: Руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows (только в Windows)
+title: Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows (только в Windows)
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,13 +7,13 @@ dev_langs:
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159472"
 ---
-# <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows (только в Windows)
+# <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows (только в Windows)
 
 .NET Framework для приложений UWP — это подмножество полной платформы .NET Framework. Из-за требований к безопасности и другим аспектам в приложениях UWP нельзя использовать полный набор API платформы .NET Framework для открытия и чтения файлов. Дополнительные сведения см. в статье [Обзор .NET для приложений UWP](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Однако может потребоваться использовать API платформы .NET Framework для других операций обработки потока. Для работы с потоками вы можете выполнить преобразование между типом потока .NET Framework, таким как <xref:System.IO.MemoryStream> или <xref:System.IO.FileStream>, и потоком среды выполнения Windows, таким как <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> или <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
@@ -32,7 +32,7 @@ ms.locfileid: "78159472"
 
 Рекомендуется использовать метод преобразования, соответствующий возможностям потока среды выполнения Windows, который необходимо преобразовать. Но поскольку поток <xref:Windows.Storage.Streams.IRandomAccessStream> поддерживает чтение и запись (реализует как <xref:Windows.Storage.Streams.IOutputStream>, так и <xref:Windows.Storage.Streams.IInputStream>), любые методы преобразования позволяют сохранить возможности исходного потока. Например, использование <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> для преобразования <xref:Windows.Storage.Streams.IRandomAccessStream> не ограничит возможности преобразованного потока .NET Framework только чтением. Он также доступен для записи.
 
-## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Пример Преобразование потока среды выполнения Windows с прямым доступом в поток .NET Framework
+## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Пример. Преобразование потока среды выполнения Windows с прямым доступом в поток .NET Framework
 Для преобразования случайного потока доступа в среде выполнения Windows в поток .NET Framework используйте метод <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType>.
 
 В следующем примере кода вам будет предложено выбрать файл, он откроется с API среды выполнения Windows, а затем преобразуется в поток .NET Framework. Поток считывается и выводится в текстовый блок. Обычно вы работаете с потоком с помощью API .NET Framework, прежде чем вывести результаты.
@@ -55,7 +55,7 @@ ms.locfileid: "78159472"
 
 Потоки .NET Framework не поддерживают клонирование даже после преобразования. В случае преобразования потока .NET Framework в поток среды выполнения Windows с последующим вызовом метода <xref:Windows.Storage.Streams.InMemoryRandomAccessStream.GetInputStreamAt%2A> или <xref:Windows.Storage.Streams.IRandomAccessStream.GetOutputStreamAt%2A>, который вызывает <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A>, или при вызове <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A> напрямую, возникнет исключение.
 
-## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Пример Преобразование потока .NET Framework в поток среды выполнения Windows с прямым доступом
+## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Пример. Преобразование потока .NET Framework в поток среды выполнения Windows с прямым доступом
 
 Чтобы преобразовать поток .NET Framework в поток среды выполнения Windows с прямым доступом, используйте метод <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A>, как показано в следующем примере:
 
@@ -67,7 +67,7 @@ ms.locfileid: "78159472"
   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage2.xaml.cs)]
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage2.xaml.vb)]
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Краткое руководство. Чтение и запись файла (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
 - [Общие сведения о платформе .NET для приложений Магазина Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  

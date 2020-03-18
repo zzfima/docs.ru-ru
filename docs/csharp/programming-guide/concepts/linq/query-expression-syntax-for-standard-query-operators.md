@@ -3,10 +3,10 @@ title: Синтаксис выражений запроса для станда�
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
 ms.openlocfilehash: dac63ae165b88924cb0e91336571173f764569ee
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591426"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Синтаксис выражений запроса для стандартных операторов запроса (C#)
@@ -29,7 +29,7 @@ ms.locfileid: "69591426"
 |<xref:System.Linq.Enumerable.ThenByDescending%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>|`orderby …, … descending`<br /><br /> (Дополнительные сведения см. в разделе [Предложение orderby](../../../language-reference/keywords/orderby-clause.md).)|  
 |<xref:System.Linq.Enumerable.Where%2A>|`where`<br /><br /> (Дополнительные сведения см. в разделе [Предложение where](../../../language-reference/keywords/where-clause.md).)|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>

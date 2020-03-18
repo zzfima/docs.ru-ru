@@ -7,10 +7,10 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 ms.openlocfilehash: afd19877d053cb414f08761cda4e461d88f9e21c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345599"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Практическое руководство. Получение строк из последовательных портов в Visual Basic
@@ -25,7 +25,7 @@ ms.locfileid: "74345599"
   
 2. Определите, какой последовательный порт должен предоставлять строки. В этом примере предполагается, что это `COM1`.  
   
-3. Воспользуйтесь методом `My.Computer.Ports.OpenSerialPort`, чтобы получить ссылку на порт. Дополнительные сведения можно найти по адресу: <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3. Воспользуйтесь методом `My.Computer.Ports.OpenSerialPort`, чтобы получить ссылку на порт. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
      Блок `Try...Catch...Finally` позволяет приложению закрыть последовательный порт даже в том случае, если он создает исключение. В этом блоке должен отображаться весь код, управляющий последовательным портом.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "74345599"
   
      [!code-vb[VbVbalrMyComputer#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#42)]  
   
-7. Добавьте в оператор `If` блок `Else` — он будет использоваться, если строка уже прочитана. Этот блок прикрепляет строку из последовательного порта к возвращаемой строке.  
+7. Добавьте в оператор `Else` блок `If` — он будет использоваться, если строка уже прочитана. Этот блок прикрепляет строку из последовательного порта к возвращаемой строке.  
   
      [!code-vb[VbVbalrMyComputer#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#43)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "74345599"
   
  В этом примере блок `Try...Catch...Finally` позволяет сделать так, чтобы приложение закрыло порт и перехватило все исключения времени ожидания. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>

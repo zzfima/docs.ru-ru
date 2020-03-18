@@ -5,10 +5,10 @@ helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
 ms.openlocfilehash: dff094aca237ed6146bd9b52813c40549bc99b9b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627789"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Руководство по программированию на C#. Явная реализация элементов интерфейса
@@ -27,7 +27,7 @@ ms.locfileid: "77627789"
   
      [!code-csharp[csProgGuideInheritance#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#46)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы и структуры](../classes-and-structs/index.md)

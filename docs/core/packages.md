@@ -4,11 +4,11 @@ description: В этой статье объясняется терминоло�
 author: richlander
 ms.date: 06/20/2016
 ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965897"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397935"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Пакеты, метапакеты и платформы
 
@@ -75,7 +75,7 @@ ms.locfileid: "76965897"
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) — включает в себя все поддерживаемые пакеты из ASP.NET Core, Entity Framework Core, а также из внутренних и сторонних зависимостей, используемых ASP.NET Core и Entity Framework Core. Дополнительные сведения см. в статье [Метапакет Microsoft.AspNetCore.All для ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage).
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) — набор интерфейсов совместимости, которые обеспечивают выполнение переносимых библиотек классов на основе mscorlib в .NET Core.
 
-## <a name="frameworks"></a>Инфраструктуры
+## <a name="frameworks"></a>Платформы
 
 Пакеты .NET Core поддерживают набор платформ среды выполнения. Платформа описывает доступный набор API (и, возможно, других характеристик), который можно применять при создании решения для данной платформы. Платформе присваивается новая версия при добавлении новых интерфейсов API.
 

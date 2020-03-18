@@ -3,10 +3,10 @@ title: Source Link и библиотеки .NET
 description: Практические рекомендации по использованию Source Link для повышения эффективности отладки для библиотек .NET.
 ms.date: 01/15/2019
 ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744551"
 ---
 # <a name="source-link"></a>Source Link

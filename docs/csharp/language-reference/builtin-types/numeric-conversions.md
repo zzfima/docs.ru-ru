@@ -9,11 +9,11 @@ helpviewer_keywords:
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
 ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72776021"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398289"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>Встроенные числовые преобразования (справочник по C#)
 
@@ -23,7 +23,7 @@ C# предоставляет набор [целочисленных](integral-n
 
 В следующей таблице приведены предопределенные неявные преобразования между встроенными числовыми типами:
 
-|Исходный тип|Кому|
+|От|Чтобы|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` или `decimal`|
 |[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|
@@ -31,8 +31,8 @@ C# предоставляет набор [целочисленных](integral-n
 |[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|
 |[int](integral-numeric-types.md)|`long`, `float`, `double` или `decimal`|
 |[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double` или `decimal`|
-|[long](integral-numeric-types.md)|`float`, `double`или `decimal`|
-|[ulong](integral-numeric-types.md)|`float`, `double`или `decimal`|
+|[long](integral-numeric-types.md)|`float`, `double` или `decimal`|
+|[ulong](integral-numeric-types.md)|`float`, `double` или `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
 
 > [!NOTE]
@@ -59,12 +59,12 @@ C# предоставляет набор [целочисленных](integral-n
 
 В следующей таблице показаны предопределенные явные преобразования между встроенными числовыми типами, для которых нет [неявного преобразования](#implicit-numeric-conversions):
 
-|Исходный тип|Кому|
+|От|Чтобы|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint` или `ulong`|
 |[byte](integral-numeric-types.md)|`sbyte`|
 |[short](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint` или `ulong`|
-|[ushort](integral-numeric-types.md)|`sbyte`, `byte`или `short`|
+|[ushort](integral-numeric-types.md)|`sbyte`, `byte` или `short`|
 |[int](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint` или `ulong`|
 |[uint](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort` или `int`|
 |[long](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` или `ulong`|
@@ -107,7 +107,7 @@ C# предоставляет набор [целочисленных](integral-n
 - [Неявные числовые преобразования](~/_csharplang/spec/conversions.md#implicit-numeric-conversions)
 - [Явные числовые преобразования](~/_csharplang/spec/conversions.md#explicit-numeric-conversions)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)

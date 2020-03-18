@@ -4,10 +4,10 @@ description: Начало работы с семейством технолог�
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124225"
 ---
 # <a name="welcome-to-net"></a>Добро пожаловать в .NET
@@ -20,7 +20,7 @@ ms.locfileid: "77124225"
 
 Новости о .NET см. в следующих блогах:
 
-- [Блог о .NET](https://devblogs.microsoft.com/dotnet/)
+- [Блог .NET](https://devblogs.microsoft.com/dotnet/)
 - [Блог об ASP.NET](https://devblogs.microsoft.com/aspnet/)
 - [Блог Visual Studio](https://devblogs.microsoft.com/visualstudio/)
 - [Группа Visual Basic](https://devblogs.microsoft.com/vbteam/)
@@ -46,7 +46,7 @@ ms.locfileid: "77124225"
 - [Руководство по .NET Core](core/index.md)
 - [Руководство по .NET Framework](framework/index.md)
 - [Руководство по языку C#](csharp/index.yml)
-- [Руководство по языку F#](fsharp/index.yml)
+- [Руководство по F#](fsharp/index.yml)
 - [Руководство по Visual Basic](visual-basic/index.yml)
 - [Руководство по ML.NET](machine-learning/index.yml)
 - [.NET для Apache Spark](spark/index.yml)
@@ -66,7 +66,7 @@ ms.locfileid: "77124225"
 
 - [Домашняя страница .NET Core](https://github.com/dotnet/core)
 - [Среда выполнения .NET Core](https://github.com/dotnet/runtime)
-- [Пакет SDK для .NET Core](https://github.com/dotnet/sdk)
+- [Базовый пакет SDK для .NET](https://github.com/dotnet/sdk)
 - [Платформа компилятора Roslyn (C# и Visual Basic) и средства IDE](https://github.com/dotnet/roslyn)
 - [Компилятор F# и средства IDE](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 ms.openlocfilehash: a8eaf0c80aa32978eead80c51a905cbcd66a537b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74283595"
 ---
 # <a name="latency-modes"></a>Режимы задержки
@@ -62,7 +62,7 @@ ms.locfileid: "74283595"
 
 - Можно принудительно запускать освобождение объектов поколения 2 в периоды небольшого времени ожидания путем вызова метода <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.GC?displayProperty=nameWithType>
 - [Индуцированные коллекции](../../../docs/standard/garbage-collection/induced.md)

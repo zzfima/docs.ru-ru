@@ -1,15 +1,15 @@
 ---
-title: 'Пример XML-файла: Заказчики и заказы в пространстве имен2'
+title: Пример XML-файла. Клиенты и заказы в пространстве имен2
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
 ms.openlocfilehash: 80bc052ecc62dfbd78f1dfdffac1925f8a03f31a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66483810"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Пример XML-файла: заказчики и заказы в пространстве имен
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Пример XML-файла. Клиенты и заказы в пространстве имен
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит сведения о заказчиках и заказах. XML располагается в пространстве имен.  
   
 ## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  

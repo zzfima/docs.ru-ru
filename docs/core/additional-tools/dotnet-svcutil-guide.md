@@ -4,10 +4,10 @@ description: Обзор инструмента Microsoft WCF dotnet-svcutil, к�
 author: mlacouture
 ms.date: 02/22/2019
 ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920946"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Средство WCF dotnet-svcutil для .NET Core
@@ -21,16 +21,16 @@ WCF (Windows Communication Foundation) **dotnet-svcutil** — это средс
 > [!IMPORTANT]
 > Ссылаться на службы следует только из надежного источника. Добавление ссылок из ненадежного источника может нарушить безопасность.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 - [пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии;
 - Любой редактор кода
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 - [пакет SDK для .NET Core 1.0.4](https://dotnet.microsoft.com/download) или более поздней версии;
 - Любой редактор кода
@@ -68,13 +68,13 @@ public interface ISayHello
     ```
 
 3. Установите [`dotnet-svcutil` (пакет NuGet)](https://nuget.org/packages/dotnet-svcutil) в качестве средства CLI:  <!-- markdownlint-disable MD023 -->
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
     Откройте в редакторе файл проекта `HelloSvcutil.csproj`, измените элемент `Project` и добавьте [пакет NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) в виде ссылки на средство командной строки, используя следующий код:
 
     ```xml
@@ -93,13 +93,13 @@ public interface ISayHello
 
 4. Выполните команду _dotnet-svcutil_, чтобы создать файл со ссылкой на веб-службу, как показано ниже:
 
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
     ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
@@ -153,16 +153,16 @@ public interface ISayHello
 
 6. Перейдите по указанному в консоли URL-адресу (например, `http://localhost:5000`) в веб-браузере.
 
-Должны выводиться следующие данные: "Hello dotnet-svcutil!"
+Вы увидите такой результат: "Hello dotnet-svcutil!".
 
 Подробное описание параметров средства `dotnet-svcutil` можно получить, вызвав это средство с параметром help, как показано ниже:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli
 dotnet-svcutil --help
 ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 ```dotnetcli
 dotnet svcutil --help
@@ -174,7 +174,7 @@ dotnet svcutil --help
 
 Если у вас появились вопросы или отзывы, [сообщите об этом на сайте GitHub](https://github.com/dotnet/wcf/issues/new). Вы также можете просмотреть имеющиеся вопросы или проблемы [в репозитории WCF на сайте GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
 
-## <a name="release-notes"></a>заметки о выпуске;
+## <a name="release-notes"></a>Заметки о выпуске
 
 - Актуальные сведения о выпуске, включая описание известных проблем, см. в [заметках о выпуске](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md).
 

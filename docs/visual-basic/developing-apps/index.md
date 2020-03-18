@@ -6,17 +6,17 @@ helpviewer_keywords:
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
 ms.openlocfilehash: f8eed001ed1daccdfb861b1bcc13337122133ab0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349250"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Разработка приложений в Visual Basic
 
 В этом разделе приведена основная документация по языку Visual Basic.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
 
  [Программирование в Visual Basic](../../visual-basic/developing-apps/programming/index.md)  
  Общие сведения о различных вопросах программирования.  

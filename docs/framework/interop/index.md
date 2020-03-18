@@ -11,10 +11,10 @@ helpviewer_keywords:
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457967"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Взаимодействие с неуправляемым кодом
@@ -23,7 +23,7 @@ ms.locfileid: "73457967"
 
 Код, выполняющийся под управлением среды выполнения, называется управляемым кодом. И наоборот, код, выполняемый вне среды выполнения, называется неуправляемым кодом. Примерами неуправляемого кода являются компоненты COM, интерфейсы ActiveX и функции Windows API.
 
-## <a name="in-this-section"></a>Содержание раздела
+## <a name="in-this-section"></a>В этом разделе
 
 [Предоставление COM-компонентов платформе .NET Framework](exposing-com-components.md)  
 Описывает способы использования COM-компонентов в приложениях .NET Framework.

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 ms.openlocfilehash: fa3079bf1431ba1a16b5a2eef0dd5500fe95909c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606613"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (параметры компилятора C#)
@@ -28,7 +28,7 @@ ms.locfileid: "69606613"
  `number1`, `number2`  
  Номер (номера) предупреждений, которые требуется отключить в компиляторе.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Необходимо указать только числовую часть идентификатора предупреждения. Например, если требуется отключить CS0028, можно указать `-nowarn:28`.  
   
  Компилятор просто пропустит номера предупреждений, переданные `-nowarn`, которые использовались в предыдущих версиях, но были удалены из компилятора. Например, предупреждение CS0679 использовалось в компиляторе Visual Studio .NET 2002, но было удалено в последующих версиях.  
@@ -51,7 +51,7 @@ ms.locfileid: "69606613"
   
  Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

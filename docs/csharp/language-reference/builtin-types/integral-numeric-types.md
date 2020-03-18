@@ -33,10 +33,10 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093205"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Целочисленные типы (справочник по C#)
@@ -51,9 +51,9 @@ C# поддерживает следующие предварительно оп
 |----------|-----------|----------|-------------|
 |`sbyte`|От -128 до 127|8-разрядное целое число со знаком|<xref:System.SByte?displayProperty=nameWithType>|
 |`byte`|От 0 до 255|8-разрядное целое число без знака|<xref:System.Byte?displayProperty=nameWithType>|
-|`short`|От -32 768 до 32 767|16-разрядное целое число со знаком|<xref:System.Int16?displayProperty=nameWithType>|
+|`short`|От −32 768 до 32 767|16-разрядное целое число со знаком|<xref:System.Int16?displayProperty=nameWithType>|
 |`ushort`|От 0 до 65 535|16-разрядное целое число без знака|<xref:System.UInt16?displayProperty=nameWithType>|
-|`int`|От -2 147 483 648 до 2 147 483 647|32-разрядное целое число со знаком|<xref:System.Int32?displayProperty=nameWithType>|
+|`int`|От −2 147 483 648 до 2 147 483 647|32-разрядное целое число со знаком|<xref:System.Int32?displayProperty=nameWithType>|
 |`uint`|От 0 до 4 294 967 295|32-разрядное целое число без знака|<xref:System.UInt32?displayProperty=nameWithType>|
 |`long`|От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807|64-разрядное целое число со знаком|<xref:System.Int64?displayProperty=nameWithType>|
 |`ulong`|От 0 до 18 446 744 073 709 551 615|64-разрядное целое число без знака|<xref:System.UInt64?displayProperty=nameWithType>|
@@ -127,7 +127,7 @@ var longVariable = (long)42;
 - [Целочисленные типы](~/_csharplang/spec/types.md#integral-types)
 - [Целочисленные литералы](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Типы значений](value-types.md)

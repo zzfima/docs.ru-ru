@@ -3,10 +3,10 @@ title: Учебник. Создание решения .NET Core в macOS с п�
 description: В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core в Visual Studio Code.
 ms.date: 12/19/2019
 ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156599"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Учебник. Создание решения .NET Core в macOS с помощью Visual Studio Code

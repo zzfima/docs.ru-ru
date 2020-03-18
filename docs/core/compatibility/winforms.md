@@ -3,11 +3,11 @@ title: Критические изменения в Windows Forms
 description: Список критических изменений в Windows Forms для .NET Core.
 ms.date: 01/08/2020
 ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093023"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398013"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Критические изменения в Windows Forms
 
@@ -95,6 +95,6 @@ ms.locfileid: "77093023"
 
 ***
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Перенос приложения Windows Forms в .NET Core](../porting/winforms.md)

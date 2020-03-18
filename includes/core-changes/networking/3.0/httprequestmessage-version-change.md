@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5ad9c494fd02059e05cc744aad3b06cfc9399995
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451900"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Значение по умолчанию HttpRequestMessage.Version изменено на 1.1
@@ -12,7 +12,7 @@ ms.locfileid: "77451900"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
 #### <a name="change-description"></a>Описание изменений
 
@@ -26,7 +26,7 @@ ms.locfileid: "77451900"
 
 #### <a name="category"></a>Категория
 
-Сети
+Сеть
 
 #### <a name="affected-apis"></a>Затронутые API
 

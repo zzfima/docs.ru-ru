@@ -12,10 +12,10 @@ helpviewer_keywords:
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
 ms.openlocfilehash: f5a507bc35b0cc0a679fd055bfc255bb3cb9a090
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76789786"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>Руководство по программированию на C#. Комментарии XML-документации
@@ -46,9 +46,9 @@ public class MyClass {}
 
 - [Практическое руководство. Использование XML-документации](./how-to-use-the-xml-documentation-features.md)
 
-## <a name="related-sections"></a>См. также
+## <a name="related-sections"></a>Связанные разделы
 
-Дополнительные сведения см. в разделе:
+Дополнительные сведения можно найти в разделе
 
 - [-doc (обработка комментариев документации)](../../language-reference/compiler-options/doc-compiler-option.md)
 

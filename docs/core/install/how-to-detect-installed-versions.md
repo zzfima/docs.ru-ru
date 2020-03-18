@@ -7,11 +7,11 @@ ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
 ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503834"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397983"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Проверка того, установлена ли платформа .NET Core
 
@@ -170,7 +170,7 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 Версии пакета SDK и среды выполнения можно просмотреть с помощью команды `dotnet --info`. Вы также получите другие сведения о среде, такие как версия операционной системы и идентификатор среды выполнения (RID).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Установка среды выполнения .NET Core](runtime.md).
 - [Установка пакета SDK для .NET Core](sdk.md).

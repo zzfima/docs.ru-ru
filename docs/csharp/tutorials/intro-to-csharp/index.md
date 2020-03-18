@@ -4,10 +4,10 @@ description: Изучите язык C# в браузере и начните р
 ms.date: 08/22/2019
 ms.custom: mvc
 ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423105"
 ---
 # <a name="introduction-to-c"></a>Знакомство с C\#
@@ -20,29 +20,29 @@ ms.locfileid: "73423105"
 
 Все ознакомительные руководства, в которых используется пример приложения "Hello World", можно проходить в веб-браузере или [в локальной среде разработки](local-environment.md). В конце каждого руководства вам предлагается на выбор возможность пройти следующее занятие в браузере или на локальном компьютере. Чтобы настроить среду и продолжить изучение следующего руководства на компьютере, можно воспользоваться соответствующими ссылками.
 
-## <a name="hello-worldhello-worldyml"></a>[Hello world](hello-world.yml)
+## <a name="hello-world"></a>[Hello world](hello-world.yml)
 
 В руководстве [Hello World](hello-world.yml) вы создадите самую простую программу на C#. Вы ознакомитесь с типом `string` и способами работы с текстом.
 
-## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Числа в C#](numbers-in-csharp.yml)
+## <a name="numbers-in-c"></a>[Числа в C#](numbers-in-csharp.yml)
 
 Из руководства [Числа в C#](numbers-in-csharp.yml) вы узнаете, как на компьютере хранятся числа и как выполнять вычисления с разными числовыми типами. Вы ознакомитесь с основами округления и научитесь выполнять математические вычисления с помощью C#. Это руководство можно изучить, [используя локальный компьютер](numbers-in-csharp-local.md).
 
 В этом руководстве предполагается, что вы уже прошли занятие [Hello World](hello-world.yml).
 
-## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Ветви и циклы](branches-and-loops.yml)
+## <a name="branches-and-loops"></a>[Ветви и циклы](branches-and-loops.yml)
 
 В руководстве [Ветви и циклы](branches-and-loops.yml) представлены общие принципы организации ветвления кода в зависимости от значений, хранящихся в переменных. Вы узнаете, что такое поток управления, являющийся основой принятия решений и выбора различных действий в программах. Это руководство можно изучить, [используя локальный компьютер](branches-and-loops-local.md).
 
 В этом руководстве предполагается, что вы уже прошли занятия [Hello World](hello-world.yml) и [Числа в C#](numbers-in-csharp.yml).
 
-## <a name="list-collectionlist-collectionyml"></a>[Коллекция списков](list-collection.yml)
+## <a name="list-collection"></a>[Коллекция списков](list-collection.yml)
 
 Занятие [Коллекция списков](list-collection.yml) содержит обзор типа "Коллекция списков", в котором хранятся последовательности данных. Вы узнаете, как добавлять и удалять элементы, выполнять их поиск и сортировать списки. Вы ознакомитесь с различными типами списков. Это руководство можно изучить, [используя локальный компьютер](arrays-and-collections.md).
 
 В этом руководстве предполагается, что вы уже прошли перечисленные выше занятия.
 
-## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Общие сведения о классах](introduction-to-classes.md)
+## <a name="introduction-to-classes"></a>[Общие сведения о классах](introduction-to-classes.md)
 
 Это заключительное руководство можно изучить, используя только локальную среду разработки с .NET Core.
 Вы создадите консольное приложение и изучите основные объектно-ориентированные функции языка C#.

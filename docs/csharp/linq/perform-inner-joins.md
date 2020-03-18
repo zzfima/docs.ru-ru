@@ -4,11 +4,11 @@ description: Узнайте, как выполнять внутренние со
 ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857961"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659843"
 ---
 # <a name="perform-inner-joins"></a>Выполнение внутренних соединений
 
@@ -46,7 +46,7 @@ ms.locfileid: "54857961"
 
 В следующем примере создаются три коллекции: список объектов `Person`, список объектов `Cat` и список объектов `Dog`.
 
-Первое предложение `join` в C# сопоставляет людей и кошек, сравнивая объекты `Person` `Cat.Owner`. Оно возвращает последовательность анонимных типов, содержащих объект `Person` и `Cat.Name`.
+Первое предложение `join` в C# сопоставляет людей и кошек, сравнивая объекты `Person``Cat.Owner`. Оно возвращает последовательность анонимных типов, содержащих объект `Person` и `Cat.Name`.
 
 Второе предложение `join` в C# сопоставляет анонимные типы, возвращаемые первым соединением, с объектами `Dog` в предоставленном списке собак на основе ключа, состоящего из свойства `Owner` типа `Person` и первой буквы имени животного. Оно возвращает последовательность анонимных типов, содержащих свойства `Cat.Name` и `Dog.Name` из каждой совпадающей пары. Поскольку это внутреннее соединение, возвращаются только объекты из первого источника данных, имеющие соответствие во втором источнике данных.
 
@@ -64,7 +64,7 @@ ms.locfileid: "54857961"
 
 [!code-csharp[CsLINQProgJoining#4](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>

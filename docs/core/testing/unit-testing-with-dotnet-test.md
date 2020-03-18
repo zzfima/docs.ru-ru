@@ -4,12 +4,12 @@ description: Сведения о концепциях модульного те�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714237"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240900"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit
 
@@ -97,7 +97,7 @@ ms.locfileid: "75714237"
   dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
   ```
 
-* Добавьте в проект *PrimeService.Tests* библиотеку классов `PrimeService` в качестве зависимости:
+* Добавьте в проект `PrimeService`PrimeService.Tests*библиотеку классов* в качестве зависимости:
 
   ```dotnetcli
   dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeService/PrimeService.csproj  
@@ -175,7 +175,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Запустите `dotnet test`. Тест проходит.
+Выполните `dotnet test`. Тест будет пройден.
 
 ### <a name="add-more-tests"></a>Добавьте дополнительные тесты.
 
@@ -205,9 +205,9 @@ public void IsPrime_InputIs1_ReturnFalse()
 }
 ```
 
-следующим кодом:
+на новый код:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 В приведенном выше коде `[Theory]` и `[InlineData]` позволяют тестировать несколько значений, не превышающих 2. Число 2 является наименьшим простым числом.
 

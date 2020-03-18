@@ -16,10 +16,10 @@ helpviewer_keywords:
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972310"
 ---
 # <a name="assembly-security-considerations"></a>Вопросы безопасности сборок
@@ -60,7 +60,7 @@ ms.locfileid: "73972310"
   
  Так как строгое именование и подпись с помощью [SignTool.exe (программы подписывания)](../../framework/tools/signtool-exe.md) гарантирует целостность, политику управления доступом для кода можно основать на этих двух видах свидетельства сборки. Строгое именование и подпись с помощью [SignTool.exe (программы подписывания)](../../framework/tools/signtool-exe.md) гарантируют целостность благодаря цифровым подписям и сертификатам. Все перечисленные технологии (проверка хэша, использование строгих имен и цифровая подпись с помощью [SignTool.exe (программы подписывания)](../../framework/tools/signtool-exe.md)) используются вместе, чтобы гарантировать, что сборка не была каким-либо образом изменена.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Сборки со строгими именами](strong-named.md)
 - [Сборки в .NET](index.md)

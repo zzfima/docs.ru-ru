@@ -2,11 +2,11 @@
 title: Атрибуты (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141565"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397644"
 ---
 # <a name="attributes-c"></a>Атрибуты (C#)
 
@@ -67,15 +67,15 @@ ms.locfileid: "74141565"
 
 Возможные значения `target` перечислены в следующей таблице.
 
-|Целевое значение|Применение|
+|Целевое значение|Применяется к|
 |------------------|----------------|
 |`assembly`|Вся сборка|
 |`module`|Модуль текущей сборки|
 |`field`|Поле в классе или структуре|
-|`event`|событие|
+|`event`|Событие|
 |`method`|Метод либо методы доступа к свойствам `get` и `set`|
 |`param`|Параметры метода или параметры метода доступа `set`|
-|`property`|Свойство.|
+|`property`|Свойство|
 |`return`|Возвращаемое значение метода, индексатора свойства или метода доступа к свойствам `get`|
 |`type`|Структура, класс, интерфейс, перечисление или делегат|
 
@@ -101,8 +101,8 @@ using System.Reflection;
 
 В следующем списке перечислены несколько распространенных применений для атрибутов.
 
-- Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Дополнительные сведения можно найти по адресу: <xref:System.Web.Services.WebMethodAttribute>.
-- Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Дополнительные сведения можно найти по адресу: <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Дополнительные сведения см. в разделе <xref:System.Web.Services.WebMethodAttribute>.
+- Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Описание свойств COM для классов, методов и интерфейсов.
 - Вызов неуправляемого кода с помощью класса <xref:System.Runtime.InteropServices.DllImportAttribute>.
 - Указание для сборки таких параметров, как заголовок, версия, описание или товарный знак.
@@ -121,11 +121,11 @@ using System.Reflection;
 - [Обращение к атрибутам с помощью отражения (C#)](accessing-attributes-by-using-reflection.md)  
 - [Практическое руководство. Создание объединения C/C++ с помощью атрибутов (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Общие атрибуты (C#)](common-attributes.md)  
-- [Caller Information (C#)](../caller-information.md) (Сведения о вызывающем объекте (C#))  
+- [Сведения о вызывающем объекте (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../../index.md)
-- [Reflection (C#)](../reflection.md) (Отражение (C#))
+- [Отражение (C#)](../reflection.md)
 - [Атрибуты](../../../../standard/attributes/index.md)
 - [Использование атрибутов в C#](../../../tutorials/attributes.md)

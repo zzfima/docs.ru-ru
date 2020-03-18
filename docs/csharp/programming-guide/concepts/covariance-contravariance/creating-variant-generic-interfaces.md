@@ -3,10 +3,10 @@ title: Создание вариантных универсальных инте
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
 ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595305"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Создание вариантных универсальных интерфейсов (C#)
@@ -190,7 +190,7 @@ class Program
 
 В этом примере не указано, каким образом метод `pets.GetEnumerator` делает выбор между `Cat` и `Dog`. Это может вызвать проблемы в вашем коде.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Вариативность в универсальных интерфейсах (C#)](./variance-in-generic-interfaces.md)
 - [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

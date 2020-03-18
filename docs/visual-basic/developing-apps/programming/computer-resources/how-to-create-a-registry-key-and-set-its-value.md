@@ -12,13 +12,13 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349204"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
 
 Метод `CreateSubKey` объекта `My.Computer.Registry` можно использовать для создания раздела реестра.
 
@@ -42,7 +42,7 @@ ms.locfileid: "74349204"
 
 ## <a name="example"></a>Пример
 
-В этом примере создается раздел реестра `MyTestKey` в HKEY_CURRENT_USER, а затем строке `This is a test value` задается значение `MyTestKeyValue`.
+В этом примере создается раздел реестра `MyTestKey` в HKEY_CURRENT_USER, а затем строке `MyTestKeyValue` задается значение `This is a test value`.
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
@@ -70,11 +70,11 @@ ms.locfileid: "74349204"
 
 - Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).
 
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework
+## <a name="net-framework-security"></a>Безопасность .NET Framework
 
 Для запуска этого процесса сборке нужен уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.RegistryPermission>. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../framework/misc/code-access-security-basics.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отправка файла
+title: Практическое руководство. Выгрузка файла
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
 ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345559"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Практическое руководство. Отправка файла в Visual Basic
+# <a name="how-to-upload-a-file-in-visual-basic"></a>Практическое руководство. Передача файла в Visual Basic
 
 Метод <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> можно использовать для отправки файла и сохранения его в удаленном расположении. Если для параметра `ShowUI` установлено значение `True`, отображается диалоговое окно, показывающее ход загрузки и позволяющее пользователю отменить операцию.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74345559"
   
 - Время ожидания соединения истекло (<xref:System.TimeoutException>).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>

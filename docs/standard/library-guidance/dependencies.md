@@ -3,10 +3,10 @@ title: Зависимости и библиотеки .NET
 description: Рекомендации по управлению зависимостями NuGet в библиотеках .NET.
 ms.date: 10/02/2018
 ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731477"
 ---
 # <a name="dependencies"></a>Зависимости
@@ -58,7 +58,7 @@ NuGet использует достаточно [сложные](/nuget/consume-
 
 ❌ НЕ СЛЕДУЕТ использовать ссылки на пакет NuGet без минимально допустимой версии.
 
-❌ НЕЖЕЛАТЕЛЬНО использовать ссылки на пакеты NuGet, требующие указания точной версии.
+❌ AVOID Ссылки на пакеты NuGet, требующие указания точной версии.
 
 ❌ НЕЖЕЛАТЕЛЬНО использовать ссылки на пакет NuGet с указанием верхнего предела.
 

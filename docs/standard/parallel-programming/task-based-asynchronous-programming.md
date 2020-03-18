@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204541"
 ---
 # <a name="task-based-asynchronous-programming"></a>Асинхронное программирование на основе задач
@@ -42,7 +42,7 @@ ms.locfileid: "74204541"
 > [!NOTE]
 > Число экземпляров <xref:System.Threading.Tasks.Task>, созданных <xref:System.Threading.Tasks.Parallel.Invoke%2A> в фоновом режиме, не обязательно равно числу предоставленных делегатов. Библиотека параллельных задач может применять различные оптимизации, особенно с большим количеством делегатов.
 
-Дополнительные сведения см. в разделе [Практическое руководство. Использование функции Parallel.Invoke для выполнения параллельных операций](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Дополнительные сведения см. в разделе [Практическое руководство. Использование метода Parallel.Invoke для выполнения простых параллельных задач](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 Для большего контроля над выполнением задач или возврата значения из задачи необходимо более явно работать с объектами <xref:System.Threading.Tasks.Task>.
 
@@ -95,7 +95,7 @@ ms.locfileid: "74204541"
 
 Большинство интерфейсов API, в которых создаются задачи, предоставляют перегрузки, принимающие параметр <xref:System.Threading.Tasks.TaskCreationOptions>. Указывая один из этих параметров, пользователь задает планировщику задач способ планирования задачи в пуле потоков. В следующей таблице перечислены различные параметры создания задач.
 
-|Значение параметра <xref:System.Threading.Tasks.TaskCreationOptions>|ОПИСАНИЕ|
+|Значение параметра <xref:System.Threading.Tasks.TaskCreationOptions>|Описание:|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Значение по умолчанию, если параметр не задан. Планировщик использует его эвристику по умолчанию для планирования задачи.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Указывает, что задачу необходимо планировать так, чтобы созданные раньше задачи выполнялись раньше, а более поздние задачи — позже.|
@@ -214,7 +214,7 @@ ms.locfileid: "74204541"
 
 ### <a name="tasktfromresult"></a>Task(T).FromResult
 
-С помощью метода <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> можно создать объект <xref:System.Threading.Tasks.Task%601>, содержащий предварительно вычисленный результат. Этот метод полезен тогда, когда выполняется асинхронная операция, возвращающая объект <xref:System.Threading.Tasks.Task%601>, и результат этого объекта <xref:System.Threading.Tasks.Task%601> уже вычислен. Пример использования метода <xref:System.Threading.Tasks.Task.FromResult%2A> для получения результатов асинхронных операций загрузки, удерживаемых в кэше, см. в разделе [Практическое руководство. Создание предварительно вычисляемых задач](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
+С помощью метода <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> можно создать объект <xref:System.Threading.Tasks.Task%601>, содержащий предварительно вычисленный результат. Этот метод полезен тогда, когда выполняется асинхронная операция, возвращающая объект <xref:System.Threading.Tasks.Task%601>, и результат этого объекта <xref:System.Threading.Tasks.Task%601> уже вычислен. Пример использования метода <xref:System.Threading.Tasks.Task.FromResult%2A> для получения сохраненных в кэше результатов асинхронных операций скачивания можно изучить в статье [Практическое руководство. Создание предварительно вычисленных задач](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
 
 ## <a name="handling-exceptions-in-tasks"></a>Обработка исключений в задачах
 
@@ -254,11 +254,11 @@ ms.locfileid: "74204541"
 
 ## <a name="tasks-without-delegates"></a>Задачи без делегатов
 
-В некоторых случаях может потребоваться использовать <xref:System.Threading.Tasks.Task> для инкапсуляции некоторой асинхронной операции, которая выполняется внешним компонентом, а не собственным пользовательским делегатом. Если операция основана на шаблоне Begin/End модели асинхронного программирования, можно использовать методы <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. В противном случае можно использовать объект <xref:System.Threading.Tasks.TaskCompletionSource%601> для заключения операции в задачу, чтобы получить некоторые преимущества программирования <xref:System.Threading.Tasks.Task>, например поддержку распространения исключений и продолжений. Дополнительные сведения можно найти по адресу: <xref:System.Threading.Tasks.TaskCompletionSource%601>.
+В некоторых случаях может потребоваться использовать <xref:System.Threading.Tasks.Task> для инкапсуляции некоторой асинхронной операции, которая выполняется внешним компонентом, а не собственным пользовательским делегатом. Если операция основана на шаблоне Begin/End модели асинхронного программирования, можно использовать методы <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. В противном случае можно использовать объект <xref:System.Threading.Tasks.TaskCompletionSource%601> для заключения операции в задачу, чтобы получить некоторые преимущества программирования <xref:System.Threading.Tasks.Task>, например поддержку распространения исключений и продолжений. Дополнительные сведения см. в разделе <xref:System.Threading.Tasks.TaskCompletionSource%601>.
 
 ## <a name="custom-schedulers"></a>Пользовательские планировщики
 
-Большинство разработчиков приложений или библиотек не обращают внимания на то, на каком процессоре запускается задача, как она синхронизирует свою работу с другими задачами или как она планируется в <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Им только требуется, чтобы она выполнялась максимально эффективно на главном компьютере. Если требуется более точное управление сведениями планирования, библиотека параллельных задач позволяет настроить некоторые параметры в планировщике задач по умолчанию и даже предоставить пользовательский планировщик. Дополнительные сведения можно найти по адресу: <xref:System.Threading.Tasks.TaskScheduler>.
+Большинство разработчиков приложений или библиотек не обращают внимания на то, на каком процессоре запускается задача, как она синхронизирует свою работу с другими задачами или как она планируется в <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Им только требуется, чтобы она выполнялась максимально эффективно на главном компьютере. Если требуется более точное управление сведениями планирования, библиотека параллельных задач позволяет настроить некоторые параметры в планировщике задач по умолчанию и даже предоставить пользовательский планировщик. Дополнительные сведения см. в разделе <xref:System.Threading.Tasks.TaskScheduler>.
 
 ## <a name="related-data-structures"></a>Структуры связанных данных
 
@@ -270,24 +270,24 @@ ms.locfileid: "74204541"
 
 Если необходимо наследовать от <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, классы <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> нельзя использовать для создания экземпляров настраиваемого типа задач, так как эти механизмы создают только объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>. Кроме того, механизмы продолжения задачи, работу которых обеспечивают <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> и <xref:System.Threading.Tasks.TaskFactory%601>, нельзя использовать для создания экземпляров настраиваемого типа задач, поскольку эти механизмы также создают только объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>.
 
-## <a name="related-topics"></a>См. также
+## <a name="related-topics"></a>Связанные разделы
 
-|Заголовок|ОПИСАНИЕ|
+|Название|Описание:|
 |-|-|
 |[Создание цепочки задач с помощью задач продолжения](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Описание работы продолжений.|
 |[Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Описание различий между присоединенными и отсоединенными дочерними задачами.|
 |[Отмена задач](../../../docs/standard/parallel-programming/task-cancellation.md)|Описание поддержки отмены, встроенной в объект <xref:System.Threading.Tasks.Task>.|
 |[Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Описание обработки исключений в параллельных потоках.|
-|[Практическое руководство. Использование функции Parallel.Invoke для выполнения параллельных операций](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Описание использования <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
+|[Практическое руководство. Использование функции Parallel_Invoke для выполнения параллельных операций](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Описание использования <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
 |[Практическое руководство. Возвращение значения из задачи](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Описание возврата значений из задач.|
 |[Практическое руководство. Отмена задачи и ее дочерних элементов](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Описание отмены задач.|
-|[Практическое руководство. Создание предварительно вычисляемых задач](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Описание использования метода <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> для получения результатов асинхронных операций загрузки, удерживаемых в кэше.|
+|[Практическое руководство. Создание предварительно вычисленных задач](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Описание использования метода <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> для получения результатов асинхронных операций загрузки, удерживаемых в кэше.|
 |[Практическое руководство. Переход по двоичному дереву с помощью параллельных задач](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Описание использования задач для прохождения двоичного дерева.|
 |[Практическое руководство. Извлечение вложенной задачи из оболочки](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Демонстрация использования метода расширения <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>.|
 |[Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Описывает способы использования методов <xref:System.Threading.Tasks.Parallel.For%2A> и <xref:System.Threading.Tasks.Parallel.ForEach%2A> для создания параллельных циклов для данных.|
 |[Параллельное программирование](../../../docs/standard/parallel-programming/index.md)|Узел верхнего уровня для параллельного программирования в .NET Framework.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)
 - [Примеры параллельного программирования в .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

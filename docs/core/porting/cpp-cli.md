@@ -4,10 +4,10 @@ description: Сведения о переносе проектов C++/CLI в .N
 author: mjrousos
 ms.date: 01/10/2020
 ms.openlocfilehash: eb03f2a5ff42e8279fd3ebd6ee6fb6d955f6798d
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75964863"
 ---
 # <a name="how-to-port-a-ccli-project-to-net-core"></a>Перенос проекта C++/CLI в .NET Core

@@ -1,15 +1,15 @@
 ---
-title: Устранение рисков. Период блокировки пула
+title: 'Устранение рисков: период блокировки пула'
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457849"
 ---
-# <a name="mitigation-pool-blocking-period"></a>Устранение рисков. Период блокировки пула
+# <a name="mitigation-pool-blocking-period"></a>Устранение рисков: период блокировки пула
 Период блокировки пула подключений был удален для подключений к базам данных Azure SQL.  
   
 ## <a name="additional-description"></a>Дополнительное описание  
@@ -20,7 +20,7 @@ ms.locfileid: "73457849"
 ## <a name="impact"></a>Последствия  
  Это изменение позволяет немедленно повторять попытку открытого подключения к базам данных Azure SQL, повышая тем самым производительность облачных приложений.  
   
-## <a name="mitigation"></a>Устранение рисков  
+## <a name="mitigation"></a>Меры по снижению риска  
  Для приложений, на которые это изменение оказывает существенное влияние, можно отдельно настроить интервал блокировки пула подключений, задав новое свойство <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A?displayProperty=nameWithType>.  Значение этого свойства является членом перечисления <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType>, которое принимает одно из трех значений:  
   
 - <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>
@@ -31,6 +31,6 @@ ms.locfileid: "73457849"
   
  Чтобы восстановить прежнее поведение, задайте свойству <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> значение <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Совместимость приложений](application-compatibility.md)

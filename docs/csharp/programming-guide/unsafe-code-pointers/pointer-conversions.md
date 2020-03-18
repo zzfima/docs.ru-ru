@@ -5,10 +5,10 @@ helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
 ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76745362"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Преобразования указателей (Руководство по программированию на C#)
@@ -16,7 +16,7 @@ ms.locfileid: "76745362"
   
 ## <a name="implicit-pointer-conversions"></a>Неявные преобразования указателей  
   
-|Исходный тип|Кому|  
+|От|Чтобы|  
 |----------|--------|  
 |Любой тип указателя|void*|  
 |null|Любой тип указателя|  
@@ -25,7 +25,7 @@ ms.locfileid: "76745362"
   
 ## <a name="explicit-pointer-conversions"></a>Явные преобразования указателей  
   
-|Исходный тип|Кому|  
+|От|Чтобы|  
 |----------|--------|  
 |Любой тип указателя|Любой другой тип указателя|  
 |sbyte, byte, short, ushort, int, uint, long или ulong|Любой тип указателя|  
@@ -38,7 +38,7 @@ ms.locfileid: "76745362"
   
  [!code-csharp[csProgGuidePointers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#4)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Типы указателей](pointer-types.md)

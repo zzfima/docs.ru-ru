@@ -3,17 +3,17 @@ title: Команда dotnet build-server
 description: Команда dotnet build-server взаимодействует с серверами, запущенными сборкой.
 ms.date: 02/14/2020
 ms.openlocfilehash: a6a9cd6de66371caef66d1101b3f844dffc771ef
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503775"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
 **Эта статья относится к следующему.** ✔️ SDK для .NET Core 2.1 и более поздних версий
 
-## <a name="name"></a>name
+## <a name="name"></a>Имя
 
 `dotnet build-server` — взаимодействует с серверами, запущенными сборкой.
 

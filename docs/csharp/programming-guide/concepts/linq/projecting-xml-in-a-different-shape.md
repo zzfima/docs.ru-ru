@@ -3,10 +3,10 @@ title: Проецирование XML в другую форму (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
 ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591531"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Проецирование XML в другую форму (C#)
@@ -230,7 +230,7 @@ class Program
 </Root>  
 ```  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  В следующем примере составлен запрос на выявление всего текста в документе Word:  
   
 - [Поиск текста в документах Word (C#)](./finding-text-in-word-documents.md)  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602439"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (параметры компилятора C#)
@@ -24,7 +24,7 @@ ms.locfileid: "69602439"
 -target:module  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  По умолчанию выходной файл, созданный при компиляции с этим параметром, имеет расширение .netmodule.  
   
  Файл без манифеста сборки не может быть загружен в общеязыковую среду выполнения .NET Framework. Тем не менее его можно включить в манифест сборки с помощью параметра [-addmodule](./addmodule-compiler-option.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "69602439"
 csc -target:module in.cs  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [-target (параметры компилятора C#)](./target-compiler-option.md)
 - [Параметры компилятора C# ](./index.md)

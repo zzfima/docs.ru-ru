@@ -3,10 +3,10 @@ title: Запуск составных и основанных на микрос
 description: Знакомство с ключевыми компонентами для запуска контейнерных приложений в рабочей среде
 ms.date: 02/15/2019
 ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672921"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Запуск составных и основанных на микрослужбах приложений в рабочих средах
