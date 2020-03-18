@@ -2,12 +2,12 @@
 title: Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 98fb57abfff985ab96cb5139f15ae4c29c986a18
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 73408afe9fcb35daa898c08b087a3411a6cb342b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040625"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180803"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6
 В следующем примере кода показано, как изменить файл конфигурации компьютера, *machine.config*, чтобы включить поддержку IPv6. Файл *machine.config* находится в папке *%Windir%\Microsoft.NET\Framework* в каталоге установки ОС Windows. В папках *%Windir%\Microsoft.NET\Framework* находятся отдельные файлы *machine.config* для каждой версии .NET Framework, установленной на компьютере (например, *C: \WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
@@ -28,14 +28,14 @@ ms.locfileid: "73040625"
     …………  
     <settings>  
         …………  
-        <ipv6 enabled="true"/>   
+        <ipv6 enabled="true"/>
     ……………  
     </settings>  
     ………………  
 </system.net>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Адресация IPv6](ipv6-addressing.md)
 - [Схема параметров сети](../configure-apps/file-schema/network/index.md)

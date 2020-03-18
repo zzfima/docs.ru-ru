@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712147"
 ---
 # <a name="hello-world----your-first-program"></a>Hello World — создаем первую программу
@@ -25,9 +25,9 @@ ms.locfileid: "75712147"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
-Запустите Visual Studio. В Windows вы увидите следующее изображение:
+Запустите среду Visual Studio. В Windows вы увидите следующее изображение:
 
 ![Экран приветствия Visual Studio в Windows](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
@@ -51,7 +51,7 @@ Press any key to close this window . . .
 
 Нажмите любую клавишу, чтобы закрыть окно.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 Запустите Visual Studio для Mac. В Mac вы увидите следующее изображение:
 
@@ -84,7 +84,7 @@ Press any key to close this window . . .
 
 [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
-Вы можете также закомментировать блок текста, заключив его между символами `/*` и `*/`. Эти действия показаны в следующем примере.
+Вы можете также закомментировать блок текста, заключив его между символами `/*` и `*/`. Это показано в следующем примере.
 
 [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
@@ -108,11 +108,11 @@ Press any key to close this window . . .
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы.
+Параметр `Main` метода `args` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы.
 
 Дополнительные сведения об использовании аргументов командной строки см. в примерах в разделе [Main() и аргументы командной строки](../main-and-command-args/index.md).
 
-## <a name="input-and-output"></a>Ввод и вывод
+## <a name="input-and-output"></a>Входные и выходные данные
 
 Программы на C#, как правило, используют службы ввода-вывода, предоставляемые библиотекой времени выполнения в .NET Framework. Инструкция `System.Console.WriteLine("Hello World!");` использует метод <xref:System.Console.WriteLine%2A>. Это один из методов вывода класса <xref:System.Console> в библиотеке времени выполнения. Он отображает свой строковый параметр в стандартном потоке вывода, за которым следует новая строка. Существуют и другие методы <xref:System.Console> для разных операций ввода и вывода. Если вы добавите в начало программы директиву `using System;`, классы и методы <xref:System> можно использовать напрямую, не указывая их полные имена. Например, можно вызвать `Console.WriteLine` вместо `System.Console.WriteLine`:
 
@@ -122,7 +122,7 @@ Press any key to close this window . . .
 
 Дополнительные сведения о методах ввода-вывода см. в описании <xref:System.IO>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Примеры и руководства](../../../samples-and-tutorials/index.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 ms.openlocfilehash: adabda4801abc7a11a9b22181701eb233b35a251
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711341"
 ---
 # <a name="sorted-collection-types"></a>Отсортированные типы коллекций
@@ -46,7 +46,7 @@ ms.locfileid: "75711341"
   
  Начиная с .NET Framework 4, класс <xref:System.Collections.Generic.SortedSet%601> предоставляет самобалансируемое дерево, в котором после операций вставки, удаления или поиска данные сохраняются в отсортированном порядке. Этот класс и класс <xref:System.Collections.Generic.HashSet%601> реализуют интерфейс <xref:System.Collections.Generic.ISet%601>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636046"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
@@ -79,5 +79,5 @@ ms.locfileid: "75636046"
 - [Сохранение объекта в Visual Basic](programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  В этом пошаговом руководстве описывается создание простого объекта и сохранение его данных в файл.
 
-- [Пошаговое руководство: основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
+- [Пошаговое руководство. Основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  В этом пошаговом руководстве описывается разработка типа "Сначала тест", при которой разработчик сначала пишет модульные тесты, а затем исходный код для их успешного выполнения.

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715801"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (средство проверки версий среды CLR)
 Программа версий среды CLR (Clrver.exe) выводит отчет обо всех установленных версиях среды CLR на компьютере.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
+ Это средство автоматически устанавливается с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -27,13 +27,13 @@ clrver [option]
   
 ## <a name="options"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |`-all`|Отображает все процессы на компьютере, которые используют среду CLR.|  
 |*pid*|Отображает версии среды CLR, используемой процессом с указанным идентификатором процесса (PID).|  
 |`-?`|Отображает синтаксис команд и параметров программы.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если программа Clrver.exe вызывается без параметров, отображаются все установленные версии среды CLR. Если указан PID для другого пользователя, для получения сведений о версии необходимо иметь права администратора.  
   
 > [!NOTE]
@@ -54,7 +54,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Инструменты](index.md)
 - [Командные строки](developer-command-prompt-for-vs.md)

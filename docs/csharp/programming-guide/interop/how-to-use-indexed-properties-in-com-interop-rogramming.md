@@ -7,10 +7,10 @@ helpviewer_keywords:
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
 ms.openlocfilehash: 864e2274f0e0e79b4843e0bb67b5c4384eac8588
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712069"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Руководство по программированию на C#. Использование индексированных свойств в программировании COM-взаимодействия
@@ -42,11 +42,11 @@ ms.locfileid: "75712069"
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Именованные и необязательные аргументы](../classes-and-structs/named-and-optional-arguments.md)
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Использование типа dynamic](../types/using-type-dynamic.md)
 - [Использование именованных и необязательных аргументов в программировании приложений Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка C#](./how-to-access-office-onterop-objects.md)
-- [Пошаговое руководство: Программирование для Office](./walkthrough-office-programming.md)
+- [Walkthrough: Office Programming](./walkthrough-office-programming.md) (Пошаговое руководство. Программирование приложений Office)

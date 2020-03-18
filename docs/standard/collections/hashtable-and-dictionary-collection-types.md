@@ -11,10 +11,10 @@ helpviewer_keywords:
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711380"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Типы коллекций Hashtable и Dictionary
@@ -34,7 +34,7 @@ ms.locfileid: "75711380"
   
  Классы <xref:System.Collections.Generic.Dictionary%602> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602> имеют ту же функциональность, что и класс <xref:System.Collections.Hashtable>. Объект <xref:System.Collections.Generic.Dictionary%602> конкретного типа (отличного от <xref:System.Object>) обеспечивает лучшую производительность, чем <xref:System.Collections.Hashtable> для типов значений. Это происходит потому, что элементы <xref:System.Collections.Hashtable> относятся к типу <xref:System.Object>, поэтому при сохранении или извлечении типа значения происходит упаковка или распаковка. Класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602> следует использовать в случае, когда к коллекции могут обращаться несколько потоков одновременно.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IDictionary>

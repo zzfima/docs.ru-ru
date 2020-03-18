@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Удаление хранилищ из изолированного хранения
+title: Практическое руководство. Удаление хранилищ из области изолированного хранения
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,10 +16,10 @@ helpviewer_keywords:
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707831"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>Практическое руководство. Удаление хранилищ из области изолированного хранения
@@ -36,7 +36,7 @@ ms.locfileid: "75707831"
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)

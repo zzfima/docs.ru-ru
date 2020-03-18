@@ -3,10 +3,10 @@ title: Начало работы с .NET Core с помощью Visual Studio д
 description: В этом разделе рассматривается создание простого консольного приложения с помощью Visual Studio для Mac и .NET Core.
 ms.date: 12/19/2019
 ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740489"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
@@ -19,7 +19,7 @@ Visual Studio для Mac предоставляет полнофункциона
 > * В Visual Studio для Mac выберите пункт **Справка** > **Сообщить о проблеме** в меню или элемент **Сообщить о проблеме** на экране приветствия. При этом открывается окно для заполнения отчета об ошибках. Отслеживать свои отзывы можно на портале [сообщества разработчиков](https://developercommunity.visualstudio.com/spaces/8/index.html).
 > * Чтобы внести предложение, выберите пункт **Справка** > **Отправить предложение** в меню или элемент **Отправить предложение** на экране приветствия. При этом открывается [веб-страница сообщества разработчиков Visual Studio для Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 См. описание [зависимостей и требований для .NET Core](../install/dependencies.md?pivots=os-macos).
 
@@ -51,7 +51,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
    ![Главное окно с открытым файлом Program.cs](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 
-## <a name="run-the-application"></a>Запуск приложения
+## <a name="run-the-application"></a>Выполнение приложения
 
 Запустите приложение в режиме отладки, нажав клавиши ⌘ ↵ (Command + ВВОД), или в режиме выпуска, нажав клавиши ⌥ ⌘ ↵ (Option + Command + ВВОД).
 

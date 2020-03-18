@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 720ece2f7f47961e0ab6ebf03c8afeb5fa3a6271
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 2ba2e54a6b0f24402fc3728dfe19b548a2368830
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093270"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846449"
 ---
 # <a name="bool-c-reference"></a>bool (справочник по C#)
 
@@ -27,7 +27,7 @@ ms.locfileid: "77093270"
 
 Вы можете использовать литералы `true` и `false` для инициализации переменной `bool` или передачи значения `bool`:
 
-[!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
+[!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
 
 ## <a name="three-valued-boolean-logic"></a>Трехзначная булева логика
 
@@ -43,7 +43,7 @@ ms.locfileid: "77093270"
 
 Дополнительные сведения см. в разделе [Тип bool](~/_csharplang/spec/types.md#the-bool-type)[спецификации языка C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Типы значений](value-types.md)

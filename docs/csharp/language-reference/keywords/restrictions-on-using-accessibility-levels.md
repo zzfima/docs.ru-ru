@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 90c76e68ca526106f3a8be6e3db2640edbb2bc80
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 48ab765db7c839ed0dd14df5e6b30f5bd6c0d29b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715163"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173540"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ограничения на использование уровней доступности (справочник по C#)
 
@@ -22,7 +22,7 @@ public class MyClass: BaseClass {...} // Error
 
 В таблице ниже приведены все ограничения на объявленные уровни доступности.
 
-|Контекст|Примечания|
+|Контекст|Remarks|
 |-------------|-------------|
 |[Классы](../../programming-guide/classes-and-structs/classes.md)|Прямой базовый класс для типа класса должен иметь по крайней мере такой же уровень доступности, как и сам тип класса.|
 |[Интерфейсы](../../programming-guide/interfaces/index.md)|Явные базовые интерфейсы для типа интерфейса должны иметь по крайней мере такой же уровень доступности, как и сам тип интерфейса.|
@@ -33,7 +33,7 @@ public class MyClass: BaseClass {...} // Error
 |[Свойства](../../programming-guide/classes-and-structs/properties.md)|Тип свойства должен иметь по крайней мере такой же уровень доступности, как и само свойство.|
 |[События](../../programming-guide/events/index.md)|Тип события должен иметь по крайней мере такой же уровень доступности, как и само событие.|
 |[Индексаторы](../../programming-guide/indexers/index.md)|Тип и типы параметров для индексатора должны иметь по крайней мере такой же уровень доступности, как и сам индексатор.|
-|[Инструкции](../operators/index.md)|Тип возвращаемого значения и типы параметров для оператора должны иметь по крайней мере такой же уровень доступности, как и сам оператор.|
+|[Операторы](../operators/index.md)|Тип возвращаемого значения и типы параметров для оператора должны иметь по крайней мере такой же уровень доступности, как и сам оператор.|
 |[Конструкторы](../../programming-guide/classes-and-structs/constructors.md)|Типы параметров для конструктора должны иметь по крайней мере такой же уровень доступности, как и сам конструктор.|
 
 ## <a name="example"></a>Пример
@@ -71,7 +71,7 @@ public class A
 
     public B MyMethod()
     {
-        // Error: The type B is less accessible 
+        // Error: The type B is less accessible
         // than the method A.MyMethod.
         return new B();
     }
@@ -85,8 +85,8 @@ public class A
     }
 
     MyDelegate d = new MyDelegate(B.MyPrivateMethod);
-    // Even when B is declared public, you still get the error: 
-    // "The parameter B.MyPrivateMethod is not accessible due to 
+    // Even when B is declared public, you still get the error:
+    // "The parameter B.MyPrivateMethod is not accessible due to
     // protection level."
 
     public static B operator +(A m1, B m2)
@@ -107,7 +107,7 @@ public class A
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../../language-reference/index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

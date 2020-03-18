@@ -8,10 +8,10 @@ helpviewer_keywords:
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
 ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712303"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Создание и генерация исключений (Руководство по программированию C#)
@@ -65,7 +65,7 @@ ms.locfileid: "75712303"
 
 Дополнительные сведения см. в разделах [Исключения](~/_csharplang/spec/exceptions.md) и [Оператор throw](~/_csharplang/spec/statements.md#the-throw-statement) в [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Исключения и обработка исключений](./index.md)

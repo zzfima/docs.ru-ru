@@ -4,10 +4,10 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.date: 06/19/2018
 ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159979"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
@@ -100,7 +100,7 @@ ms.locfileid: "78159979"
 
 Некоторые платформы Майкрософт и платформы сторонних поставщиков не поддерживают среду .NET Core. Некоторые службы Azure предоставляют пакеты SDK, недоступные в среде .NET Core. Это временные обстоятельства, так как все службы Azure используют среду .NET Core. В то же время в качестве альтернативы клиентскому пакету SDK всегда можно использовать REST API.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework)
 - [ASP.NET Core с целевой платформой .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)

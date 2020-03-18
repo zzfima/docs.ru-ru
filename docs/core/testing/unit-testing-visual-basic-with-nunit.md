@@ -3,12 +3,12 @@ title: Модульное тестирование Visual Basic в .NET Core с 
 description: Сведения о концепциях модульного тестирования в .NET Core в рамках пошаговой процедуры по созданию примера Visual Basic решения с помощью NUnit.
 author: rprouse
 ms.date: 10/04/2018
-ms.openlocfilehash: 8f05d25a0add76f5c552f5b9ac1eb310c3d6407a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a33447457344b241b4c2376d777b0deb7f556874
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715404"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240926"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit
 
@@ -16,7 +16,7 @@ ms.locfileid: "75715404"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - [Пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии.
 - Текстовый редактор или редактор кода по вашему выбору.
@@ -82,7 +82,7 @@ dotnet new nunit -lang VB
 
 Команда [dotnet new](../tools/dotnet-new.md) создает тестовый проект, который использует NUnit в качестве библиотеки тестов. Созданный шаблон позволяет настроить средство выполнения тестов в файле *PrimeServiceTests.vbproj*:
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
 Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда `dotnet new` на предыдущем шаге добавляет NUnit и адаптер тестирования NUnit. Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости. Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
@@ -147,15 +147,15 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-Выполните команду `dotnet test` еще раз в каталоге *unit-testing-vb-nunit*. Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`. После сборки обоих проектов она запускает этот отдельный тест. Он выполняется.
+Выполните команду *еще раз в каталоге*unit-testing-vb-nunit`dotnet test`. Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`. После сборки обоих проектов она запускает этот отдельный тест. Он выполняется.
 
 ## <a name="adding-more-features"></a>Добавление дополнительных возможностей
 
-Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами 0, -1. Можно добавить их в качестве тестов с помощью атрибута `<Test>`, но это скоро станет утомительным. Есть другие атрибуты xUnit, которые позволяют создавать наборы похожих тестов.  Атрибут `<TestCase>` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `<TestCase>` можно указать значения для этих входных аргументов.
+Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами: 0, -1. Можно добавить их в качестве тестов с помощью атрибута `<Test>`, но это скоро станет утомительным. Есть другие атрибуты xUnit, которые позволяют создавать наборы похожих тестов.  Атрибут `<TestCase>` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `<TestCase>` можно указать значения для этих входных аргументов.
 
 Вместо создания тестов примените эти два атрибута, чтобы создать последовательность тестов, которая проверяет несколько значений меньше 2, то есть наименьшего простого числа.
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
 Выполните команду `dotnet test`, и два из этих тестов завершаются ошибкой. Для успешного выполнения всех тестов нужно изменить предложение `if` в начале метода `Main` в файле *PrimeServices.cs*:
 

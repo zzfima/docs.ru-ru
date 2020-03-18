@@ -3,10 +3,10 @@ title: Ведение журнала и трассировка (.NET Core)
 description: Общие сведения о ведении журнала и трассировке в .NET Core.
 ms.date: 08/05/2019
 ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714414"
 ---
 # <a name="net-core-logging-and-tracing"></a>Ведение журнала и трассировка в .NET Core
@@ -85,7 +85,7 @@ ms.locfileid: "75714414"
 
 ## <a name="logging-related-references"></a>Справочные материалы по ведению журналов
 
-- [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).
+- [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
 - [Практическое руководство. Добавление операторов трассировки в код приложения](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
@@ -97,7 +97,7 @@ ms.locfileid: "75714414"
 
 - Класс <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> позволяет передать в журнал сведения о текущем состоянии стека.
 
-## <a name="performance-considerations"></a>Особенности производительности
+## <a name="performance-considerations"></a>Вопросы производительности
 
 Форматирование строк может создавать значительную нагрузку на ЦП.
 

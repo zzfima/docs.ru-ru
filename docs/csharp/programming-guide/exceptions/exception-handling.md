@@ -6,10 +6,10 @@ helpviewer_keywords:
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
 ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705305"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Обработка исключений (Руководство по программированию на C#)
@@ -55,7 +55,7 @@ ms.locfileid: "75705305"
 
 Дополнительные сведения см. в разделах [Исключения](~/_csharplang/spec/exceptions.md) и [Оператор try](~/_csharplang/spec/statements.md#the-try-statement) в [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../../language-reference/index.md)
 - [Руководство по программированию на C#](../index.md)

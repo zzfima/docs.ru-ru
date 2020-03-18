@@ -6,14 +6,14 @@ helpviewer_keywords:
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
 ms.openlocfilehash: 6af85d0314a44acbde0996cecbe6dad82cdcc8db
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712082"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Пример COM-класса (Руководство по программированию на C#)
-Далее приведен пример класса, который можно предоставить в качестве COM-объекта. После помещения этого кода в CS-файл и добавления в проект свойства **Регистрация для COM-взаимодействия** необходимо присвоить значение **Истина**. Дополнительные сведения см. в разделе [Практическое руководство. Register a Component for COM Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)) (Практическое руководство. Регистрация компонента для COM-взаимодействия).
+Далее приведен пример класса, который можно предоставить в качестве COM-объекта. После помещения этого кода в CS-файл и добавления в проект свойства **Регистрация для COM-взаимодействия** необходимо присвоить значение **Истина**. Дополнительные сведения см. в разделе [Практическое руководство. Регистрация компонента для COM-взаимодействия](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
   
  Предоставление объектов Visual C# для COM требует объявления интерфейса класса, интерфейса событий (если необходимо) и самого класса. Члены класса должны соответствовать указанным ниже правилам, чтобы стать доступными для COM.  
   
@@ -36,8 +36,8 @@ ms.locfileid: "75712082"
 ## <a name="example"></a>Пример  
  [!code-csharp[csProgGuideInterop#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/ExampleCOM.cs#8)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
-- [Взаимодействие](./index.md)
+- [Совместимость](./index.md)
 - [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

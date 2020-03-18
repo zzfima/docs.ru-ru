@@ -3,10 +3,10 @@ title: Учебники по C#
 description: Эти руководства расскажут о возможностях языка C# и научат вас создавать на нем программы.
 ms.date: 10/25/2018
 ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75346801"
 ---
 # <a name="c-tutorials"></a>Учебники по C#
@@ -19,29 +19,29 @@ ms.locfileid: "75346801"
 
 В первых занятиях с помощью небольших фрагментов кода объясняются основные понятия языка C#. Вы изучите основы синтаксиса C# и научитесь работать с такими типами данных, как строки, числа и логические значения. Вся серия интерактивна, и уже через считанные минуты вы будете писать и запускать собственный код. Для первых занятий не требуются какие-либо знания в области программировании или опыт работы с языком C#.
 
-## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello world](intro-to-csharp/hello-world.yml)
+## <a name="hello-world"></a>[Hello world](intro-to-csharp/hello-world.yml)
 
 В руководстве [Hello World](intro-to-csharp/hello-world.yml) вы создадите самую простую программу на C#. Вы ознакомитесь с типом `string` и способами работы с текстом.
 
-## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[Числа в C#](intro-to-csharp/numbers-in-csharp.yml)
+## <a name="numbers-in-c"></a>[Числа в C#](intro-to-csharp/numbers-in-csharp.yml)
 
 Из руководства [Числа в C#](intro-to-csharp/numbers-in-csharp.yml) вы узнаете, как на компьютере хранятся числа и как выполнять вычисления с разными числовыми типами. Вы ознакомитесь с основами округления и научитесь выполнять математические вычисления с помощью C#. Это руководство можно изучить, [используя локальный компьютер](intro-to-csharp/numbers-in-csharp-local.md).
 
 В этом руководстве предполагается, что вы уже прошли занятие [Hello World](intro-to-csharp/hello-world.yml).
 
-## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Ветви и циклы](intro-to-csharp/branches-and-loops.yml)
+## <a name="branches-and-loops"></a>[Ветви и циклы](intro-to-csharp/branches-and-loops.yml)
 
 В руководстве [Ветви и циклы](intro-to-csharp/branches-and-loops.yml) представлены общие принципы организации ветвления кода в зависимости от значений, хранящихся в переменных. Вы узнаете, что такое поток управления, являющийся основой принятия решений и выбора различных действий в программах. Это руководство можно изучить, [используя локальный компьютер](intro-to-csharp/branches-and-loops-local.md).
 
 В этом руководстве предполагается, что вы уже прошли занятия [Hello World](intro-to-csharp/hello-world.yml) и [Числа в C#](intro-to-csharp/numbers-in-csharp.yml).
 
-## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Коллекция списков](intro-to-csharp/list-collection.yml)
+## <a name="list-collection"></a>[Коллекция списков](intro-to-csharp/list-collection.yml)
 
 Занятие [Коллекция списков](intro-to-csharp/list-collection.yml) содержит обзор типа "Коллекция списков", в котором хранятся последовательности данных. Вы узнаете, как добавлять и удалять элементы, выполнять их поиск и сортировать списки. Вы ознакомитесь с различными типами списков. Это руководство можно изучить, [используя локальный компьютер](intro-to-csharp/arrays-and-collections.md).
 
 В этом руководстве предполагается, что вы уже прошли перечисленные выше занятия.
 
-## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Знакомство с C#: работа в локальной среде](intro-to-csharp/local-environment.md)
+## <a name="introduction-to-c----work-locally"></a>[Знакомство с C#: работа в локальной среде](intro-to-csharp/local-environment.md)
 
 Все ознакомительные руководства, в которых используется пример приложения "Hello World", можно проходить в локальной среде разработки. В конце каждого руководства вам предлагается на выбор возможность пройти следующее занятие в браузере или на локальном компьютере. Чтобы настроить среду и продолжить изучение следующего руководства на компьютере, можно воспользоваться соответствующими ссылками.
 

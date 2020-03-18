@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
 ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714717"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Передача параметров ссылочного типа (Руководство по программированию в C#)
@@ -38,7 +38,7 @@ ms.locfileid: "75714717"
   
  Дополнительные сведения о строках см. в [этом разделе](../../language-reference/builtin-types/reference-types.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Передача параметров](./passing-parameters.md)

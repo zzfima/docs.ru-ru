@@ -18,10 +18,10 @@ helpviewer_keywords:
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
 ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635942"
 ---
 # <a name="basic-linq-query-operations-c"></a>Основные операции запросов LINQ (C#)
@@ -31,7 +31,7 @@ ms.locfileid: "75635942"
   
  [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)  
   
- [Пошаговое руководство: Написание запросов на C#](./walkthrough-writing-queries-linq.md)  
+ [Пошаговое руководство. Написание запросов на C#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 > Если вы уже знакомы с языком запросов, таким как SQL или XQuery, можно пропустить большую часть этого раздела. Чтобы изучить порядок предложений в выражениях запроса LINQ, прочитайте о "предложении `from`" в следующем разделе.  
@@ -51,7 +51,7 @@ ms.locfileid: "75635942"
   
  [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
   
- Для применения нужного числа выражений фильтра в предложении `where` можно использовать знакомые логические операторы C# `AND` и `OR`. Например, для получения только заказчиков из Лондона `AND` с именем Devon следует написать следующий код:  
+ Для применения нужного числа выражений фильтра в предложении `AND` можно использовать знакомые логические операторы C# `OR` и `where`. Например, для получения только заказчиков из Лондона `AND` с именем Devon следует написать следующий код:  
   
  [!code-csharp[csLINQGettingStarted#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#25)]  
   
@@ -99,9 +99,9 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>Выбор (проецирование)  
  Предложение `select` создает результаты запроса и задает форму или тип каждого возвращаемого элемента. Например, можно указать, будут ли результаты состоять из полных объектов `Customer`, только из одного члена, подмножества членов или некоторых совершенно других типов, на основе вычислений или создания новых объектов. Когда предложение `select` создает что-либо отличное от копии исходного элемента, операция называется *проекцией*. Использование проекций для преобразования данных является эффективной возможностью выражений запросов LINQ. Дополнительные сведения см. в разделах [Преобразования данных с помощью LINQ (C#)](./data-transformations-with-linq.md) и [Предложение select](../../../language-reference/keywords/select-clause.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Выражения запросов LINQ](../../../linq/index.md)
-- [Пошаговое руководство: Написание запросов на C#](./walkthrough-writing-queries-linq.md)
+- [Пошаговое руководство. Написание запросов на C#](./walkthrough-writing-queries-linq.md)
 - [Ключевые слова запроса (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Анонимные типы](../../classes-and-structs/anonymous-types.md)

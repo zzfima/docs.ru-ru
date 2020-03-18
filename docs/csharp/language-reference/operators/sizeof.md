@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 8e4518718d0975f8b4a65870f15d8c52d692c2f5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625739"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847291"
 ---
 # <a name="sizeof-operator-c-reference"></a>Справочник по C#. Оператор sizeof
 
@@ -40,7 +40,7 @@ ms.locfileid: "77625739"
 
 В следующем примере иллюстрируется использование оператора `sizeof`.
 
-[!code-csharp[sizeof examples](~/samples/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
 
 Оператор `sizeof` возвращает число байт, выделяемых средой CLR в управляемой памяти. Для типов [структуры](../builtin-types/struct.md) в это значение входит любое заполнение, как показано в предыдущем примере. Результат использования оператора `sizeof` может отличаться от результата работы метода <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, который возвращает размер типа в *неуправляемой* памяти.
 
@@ -48,11 +48,11 @@ ms.locfileid: "77625739"
 
 Дополнительные сведения см. в разделе [Оператор sizeof](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)[спецификации языка C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Операторы, связанные с указателем](pointer-related-operators.md)
 - [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Типы, связанные с памятью и диапазонами](../../../standard/memory-and-spans/index.md)
-- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)
+- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)

@@ -3,12 +3,12 @@ title: Справочник по C#. Неуправляемые типы
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 8a4599514115aa21f17c32848ce203fea704072e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626949"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846472"
 ---
 # <a name="unmanaged-types-c-reference"></a>Справочник по C#. Неуправляемые типы
 
@@ -23,17 +23,17 @@ ms.locfileid: "77626949"
 
 Начиная с C# 8.0, *сконструированный* тип структуры, содержащий поля только неуправляемых типов, также является неуправляемым, как показано в следующем примере:
 
-[!code-csharp[unmanaged constructed types](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#ProgramExample)]
+[!code-csharp[unmanaged constructed types](snippets/UnmanagedTypes.cs#ProgramExample)]
 
 Универсальная структура может быть источником как для неуправляемых сконструированных типов, так и для сконструированных типов, отличных от неуправляемых. В предыдущем примере определяется универсальная структура `Coords<T>`, а также представлены примеры неуправляемых сконструированных типов. Примером типа, отличного от неуправляемого, является `Coords<object>`. Он не является неуправляемым, так как содержит поля типа `object`, которые являются отличными от неуправляемых. Если необходимо, чтобы *все* сконструированные типы были неуправляемыми, используйте ограничение `unmanaged` в определении универсальной структуры:
 
-[!code-csharp[unmanaged constraint in type definition](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#AlwaysUnmanaged)]
+[!code-csharp[unmanaged constraint in type definition](snippets/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
 Дополнительные сведения см. в разделе [Типы указателей](~/_csharplang/spec/unsafe-code.md#pointer-types) в статье [Спецификации языка C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)

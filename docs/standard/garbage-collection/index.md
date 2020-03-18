@@ -19,10 +19,10 @@ helpviewer_keywords:
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160148"
 ---
 # <a name="garbage-collection"></a>Сборка мусора
@@ -31,7 +31,7 @@ ms.locfileid: "78160148"
 <a name="related_topics"></a>
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Название|Описание:|  
 |-----------|-----------------|  
 |[Основы сборки мусора](../../../docs/standard/garbage-collection/fundamentals.md)|Описание работы сборки мусора, выделения объектов в управляемой куче и других базовых понятий.|  
 |[Сборка мусора и производительность](../../../docs/standard/garbage-collection/performance.md)|Проверки производительности, которые можно использовать для диагностики проблем со сборкой мусора и производительностью.|  
@@ -59,6 +59,6 @@ ms.locfileid: "78160148"
   
  <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Очистка неуправляемых ресурсов](../../../docs/standard/garbage-collection/unmanaged.md)

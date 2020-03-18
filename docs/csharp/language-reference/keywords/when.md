@@ -8,10 +8,10 @@ helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
 ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712836"
 ---
 # <a name="when-c-reference"></a>when (справочник по C#)
@@ -23,7 +23,7 @@ ms.locfileid: "75712836"
 
 ## <a name="when-in-a-catch-statement"></a>`when` в операторе `catch`
 
-Начиная с C# версии 6, `when` можно использовать в операторе `catch`, чтобы задать условие, которое должно быть истинным для выполнения обработчика определенного исключения. Он имеет следующий синтаксис:
+Начиная с C# версии 6, `when` можно использовать в операторе `catch`, чтобы задать условие, которое должно быть истинным для выполнения обработчика определенного исключения. Синтаксис:
 
 ```csharp
 catch (ExceptionType [e]) when (expr)
@@ -37,7 +37,7 @@ catch (ExceptionType [e]) when (expr)
 
 ## <a name="when-in-a-switch-statement"></a>`when` в операторе `switch`
 
-Начиная с версии C# 7.0 метки `case` больше не должны быть взаимоисключающими, а порядок отображения меток `case` в операторе `switch` может определять, какие блоки switch должны быть выполнены. Ключевое слово `when` позволяет задать условие фильтра, при котором соответствующая метка case будет иметь значение true, только если условие фильтра также имеет значение true. Он имеет следующий синтаксис:
+Начиная с версии C# 7.0 метки `case` больше не должны быть взаимоисключающими, а порядок отображения меток `case` в операторе `switch` может определять, какие блоки switch должны быть выполнены. Ключевое слово `when` позволяет задать условие фильтра, при котором соответствующая метка case будет иметь значение true, только если условие фильтра также имеет значение true. Синтаксис:
 
 ```csharp
 case (expr) when (when-condition):
@@ -49,7 +49,7 @@ case (expr) when (when-condition):
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Оператор switch](switch.md)
 - [Оператор try-catch](try-catch.md)

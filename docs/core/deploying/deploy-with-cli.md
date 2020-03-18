@@ -8,11 +8,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920900"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397995"
 ---
 # <a name="publish-net-core-apps-with-the-net-core-cli"></a>Публикация приложений .NET Core с помощью .NET Core CLI
 
@@ -22,15 +22,15 @@ ms.locfileid: "76920900"
 
 Ищете справку по работе с командной строкой? В следующей таблице показаны некоторые примеры публикации приложений. Вы можете указать целевую платформу с помощью параметра `-f <TFM>` или путем редактирования файла проекта. Дополнительные сведения см. в статье [Основы публикации](#publishing-basics).
 
-| Режим публикации | Версия SDK | Команда |
+| Режим публикации | Версия пакета SDK | Get-Help |
 | ------------ | ----------- | ------- |
 | развертывание, зависящее от платформы; | 2.x | `dotnet publish -c Release` |
 | Исполняемый файл, зависящий от платформы | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
-|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3,0 | `dotnet publish -c Release -r <RID> --self-contained false` |
 |                                | 3.0* | `dotnet publish -c Release` |
 | автономное развертывание;      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
-|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3,0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
 \* При использовании пакета SDK версии 3.0 режим публикации по умолчанию при выполнении базовой команды `dotnet publish` предусматривает использование зависящего от платформы исполняемого файла. Это относится только к проектам, предназначенным для **.NET Core 2.1** или **.NET Core 3.0**.
 
@@ -151,7 +151,7 @@ End Module
 > [!NOTE]
 > Можно уменьшить размер развертывания, включив **инвариантный режим глобализации**. Он подходит для приложений, которые не имеют глобальных параметров и могут использовать соглашения о форматировании, соглашения о регистре, сравнение строк и порядок сортировки для [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture). Дополнительные сведения об **инвариантном режиме глобализации** и том, как его включить, см. в статье об [инвариантном режиме глобализации .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения о развертывании приложений для .NET Core](index.md)
 - [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)

@@ -3,10 +3,10 @@ title: Сортировка или фильтрация текстовых да�
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
 ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347350"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ)
@@ -78,6 +78,6 @@ public class SortLines
 
 Создайте проект консольного приложения C# с директивами `using` для пространств имен System.Linq и System.IO.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ и строки (C#)](./linq-and-strings.md)

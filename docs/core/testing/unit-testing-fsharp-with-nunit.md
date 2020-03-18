@@ -6,10 +6,10 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.openlocfilehash: 3347e5b90c31589e9a0f99ac0d9298927a717f56
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715448"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек F# в .NET Core с использованием dotnet-test и NUnit
@@ -18,7 +18,7 @@ ms.locfileid: "75715448"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - [Пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии.
 - Текстовый редактор или редактор кода по вашему выбору.
@@ -210,7 +210,7 @@ let squaresOfOdds xs =
 
 Вы создали небольшую библиотеку и набор модульных тестов для нее. Вы структурировали решение, чтобы сделать добавление новых пакетов и тестов частью обычного рабочего процесса и получить возможность сосредоточиться на задачах приложения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [dotnet add reference](../tools/dotnet-add-reference.md)
 - [dotnet test](../tools/dotnet-test.md)

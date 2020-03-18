@@ -3,10 +3,10 @@ title: Практические руководства по ML.NET
 description: Узнайте, как выполнять конкретные задачи, которые помогут вам в создании специализированных решений на базе искусственного интеллекта и машинного обучения и интеграции их в свои .NET-приложения.
 ms.date: 03/01/2019
 ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715668"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Практические руководства по использованию .NET в машинном обучении
@@ -37,7 +37,7 @@ ms.locfileid: "75715668"
 
 * [Использование обобщенных аддитивных моделей и функций фигур для объясняемости модели](use-gams-for-model-explainability.md)
 
-## <a name="run"></a>Выполнить
+## <a name="run"></a>Run (Запустить)
 
 * [Проверка значений промежуточных данных при конвейерной обработке ML.NET](inspect-intermediate-data-ml-net.md)
 

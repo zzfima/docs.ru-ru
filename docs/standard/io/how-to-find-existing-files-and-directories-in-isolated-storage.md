@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Поиск существующих файлов и каталогов в изолированном хранилище
+title: Практическое руководство. Поиск существующих файлов и каталоги в изолированном хранилище
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 ms.openlocfilehash: dfebcc9acf0b699f898c106921d15ce0294bc5d2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707137"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Практическое руководство. Поиск существующих файлов и каталогов в изолированном хранилище
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Практическое руководство. Поиск существующих файлов и каталоги в изолированном хранилище
 
 Чтобы выполнить поиск по каталогу в изолированном хранилище, используйте метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Этот метод принимает строку, которая представляет шаблон для поиска. В шаблоне поиска вы можете использовать как одиночные (?), так и многосимвольные (\*) подстановочные знаки, но они должны находиться только в последней части имени. Например, допустимой строкой для поиска является `directory1/*ect*`, но не `*ect*/directory2`.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "75707137"
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)

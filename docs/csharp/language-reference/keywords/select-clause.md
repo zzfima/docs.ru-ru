@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: b4d25f80e4cdb08fbc28fa4db3cb1c790b1145e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713096"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173514"
 ---
 # <a name="select-clause-c-reference"></a>Предложение "select" (справочник по C#)
 
@@ -33,11 +33,11 @@ ms.locfileid: "75713096"
 
 Как показано в `studentQuery8` в предыдущем примере, в некоторых случаях требуется, чтобы элементы возвращаемой последовательности содержали только подмножество свойств элементов источника. Максимально уменьшая размер возвращаемой последовательности, вы можете снизить требования к памяти и, соответственно, повысить скорость выполнения запроса. Это можно сделать, создав анонимный тип в предложении `select` и используя инициализатор объекта для его инициализации с соответствующими свойствами из элементов источника. Пример того, как это сделать, см. в разделе [Инициализаторы объектов и коллекций](../../programming-guide/classes-and-structs/object-and-collection-initializers.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Во время компиляции предложение `select` преобразуется в вызов метода <xref:System.Linq.Enumerable.Select%2A> стандартного оператора запроса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Ключевые слова запроса (LINQ)](query-keywords.md)
@@ -45,4 +45,4 @@ ms.locfileid: "75713096"
 - [partial (метод) (справочник по C#)](partial-method.md)
 - [Анонимные типы](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [LINQ в C#](../../linq/index.md)
-- [Приступая к работе с LINQ в C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [LINQ](../../programming-guide/concepts/linq/index.md)

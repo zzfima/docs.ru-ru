@@ -9,10 +9,10 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713529"
 ---
 # <a name="extern-c-reference"></a>extern (справочник по C#)
@@ -77,7 +77,7 @@ private static extern void AVIFileInit();
 
     При этом будет создан исполняемый файл `cm.exe`.
 
-5. Запустите `cm.exe`. Метод `SampleMethod` передает значение 5 в файл DLL, который возвращает значение, умноженное на 10.  Программа выдает следующие результаты.
+5. Выполните `cm.exe`. Метод `SampleMethod` передает значение 5 в файл DLL, который возвращает значение, умноженное на 10.  Программа выдает следующие результаты.
 
     ```output
     SampleMethod() returns 50.
@@ -87,7 +87,7 @@ private static extern void AVIFileInit();
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
 - [Справочник по C#](../index.md)

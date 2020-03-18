@@ -6,10 +6,10 @@ helpviewer_keywords:
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
 ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699058"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Руководство по программированию на C#. Тестирование на равенство (идентичность) ссылок
@@ -26,6 +26,6 @@ ms.locfileid: "75699058"
   
  Константные строки в рамках одной сборки всегда интернируются во время выполнения. Таким образом, всегда присутствует только один экземпляр каждого уникального строкового литерала. Тем не менее во время выполнения не гарантируется интернирование строк, созданных во время выполнения, а также интернирование двух равных константных строк из разных сборок.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Сравнения на равенство](./equality-comparisons.md)

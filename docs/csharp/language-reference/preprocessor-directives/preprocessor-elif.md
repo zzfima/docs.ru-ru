@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
 ms.openlocfilehash: c78818f40b76414d289af6c704ff019b63befe37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712576"
 ---
 # <a name="elif-c-reference"></a>#elif (Справочник по C#)
@@ -28,7 +28,7 @@ ms.locfileid: "75712576"
   
  Для вычисления нескольких символов можно использовать операторы `==` (равенство), `!=` (неравенство), `&&` (И) и `||` (ИЛИ). Можно также группировать символы и операторы при помощи скобок.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Применение `#elif` эквивалентно следующему:  
   
 ```csharp
@@ -40,7 +40,7 @@ ms.locfileid: "75712576"
   
  В разделе [#if](./preprocessor-if.md) приводится пример использования директивы `#elif`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

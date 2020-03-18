@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 5289dbe3aff0a9e1f1024a293ff469df44d34a3b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d4315a09869b77b4ae8cbb43646f9a96280b678
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713031"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173475"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Справочник по C#)
 
@@ -62,7 +62,7 @@ catch (FileNotFoundException e)
 }
 catch (IOException e)
 {
-    // Extract some information from this exception, and then 
+    // Extract some information from this exception, and then
     // throw it to the parent method.
     if (e.Source != null)
         Console.WriteLine("IOException source: {0}", e.Source);
@@ -73,7 +73,7 @@ catch (IOException e)
 Вы можете перехватывать одно исключение и вызывать другое исключение. При этом следует указать перехватываемое исключение как внутреннее, как показано в следующем примере.
 
 ```csharp
-catch (InvalidCastException e) 
+catch (InvalidCastException e)
 {
     // Perform some action here, and then throw a new exception.
     throw new YourCustomException("Put your error message here.", e);
@@ -98,21 +98,21 @@ catch (InvalidCastException e)
 
 > [!NOTE]
 > Вы можете использовать фильтр исключений, чтобы получить тот же результат, но проще (при этом не изменяя стек, как описано ранее в этом документе). В следующем примере показано такое же поведение для вызывающих объектов, как и в предыдущем примере. Эта функция отправляет исключение `InvalidCastException` обратно вызывающему объекту, если `e.Data` имеет значение `null`.
-> 
+>
 > ```csharp
-> catch (InvalidCastException e) when (e.Data != null) 
+> catch (InvalidCastException e) when (e.Data != null)
 > {
 >     // Take some action.
 > }
-> ``` 
+> ```
 
 В блоке `try` инициализируйте только те переменные, которые в нем объявлены. В противном случае до завершения выполнения блока может возникнуть исключение. Например, в следующем примере кода переменная `n` инициализируется внутри блока `try`. Попытка использовать данную переменную вне этого блока `try` в инструкции `Write(n)` приведет к ошибке компилятора.
 
 ```csharp
-static void Main() 
+static void Main()
 {
     int n;
-    try 
+    try
     {
         // Do not initialize this variable here.
         n = 123;
@@ -177,7 +177,7 @@ static void Main()
 
 Дополнительные сведения см. в разделе [Оператор try](~/_csharplang/spec/statements.md#the-try-statement) в документации [Спецификация C# 6.0](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

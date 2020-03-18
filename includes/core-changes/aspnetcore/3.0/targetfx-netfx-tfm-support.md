@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937285"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Целевая платформа: прекращена поддержка .NET Framework
@@ -24,7 +24,7 @@ ms.locfileid: "75937285"
 
 #### <a name="version-introduced"></a>Представленная версия
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Старое поведение
 
@@ -36,7 +36,7 @@ ms.locfileid: "75937285"
 
 #### <a name="recommended-action"></a>Рекомендованное действие
 
-Выполните одно из указанных ниже действий.
+Выполните одно из следующих действий:
 
 - Сохраните приложение в ASP.NET Core 2.1.
 - Перенесите приложения и все его зависимости на .NET Core.
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Отсутствуют
+None
 
 <!-- 
 

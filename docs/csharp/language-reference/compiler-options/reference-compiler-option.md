@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606573"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173670"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (параметры компилятора C#)
 Параметр **-reference** предписывает компилятору импортировать сведения типа [public](../keywords/public.md) из указанного файла в текущий проект. Это позволяет ссылаться на метаданные из указанных файлов сборки.  
@@ -37,7 +37,7 @@ ms.locfileid: "69606573"
  `alias`  
  Допустимый идентификатор C#, который представляет корневое пространство имен, содержащее все пространства имен сборки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Чтобы импортировать данные из нескольких файлов, включите параметр **-reference** для каждого файла.  
   
  Импортируемые файлы должны содержать манифест; выходной файл следует компилировать с одним из параметров [-target](./target-compiler-option.md), отличных от [-target:module](./target-module-compiler-option.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "69606573"
  Файл ответов csc (RSP-файл), который ссылается на часто используемые сборки .NET Framework, используется по умолчанию. Параметр [-noconfig](./noconfig-compiler-option.md) позволяет запретить компилятору использовать файл csc.rsp.  
   
 > [!NOTE]
-> В Visual Studio используйте диалоговое окно **Добавление ссылки**. Дополнительные сведения см. в разделе [Практическое руководство. Добавление и удаление ссылок с помощью диспетчера ссылок](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Чтобы обеспечить эквивалентное поведение при добавлении ссылок с помощью `-reference` и диалогового окна **Добавление ссылки**, свойству **Внедрить типы взаимодействия** добавляемой сборки должно быть задано значение **False**. **True** является значением по умолчанию для этого свойства.  
+> В Visual Studio используйте диалоговое окно **Добавление ссылки**. Дополнительные сведения см. в разделе [Практическое руководство. Добавление или удаление ссылок с помощью диспетчера ссылок](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Чтобы обеспечить эквивалентное поведение при добавлении ссылок с помощью `-reference` и диалогового окна **Добавление ссылки**, свойству **Внедрить типы взаимодействия** добавляемой сборки должно быть задано значение **False**. **True** является значением по умолчанию для этого свойства.  
   
 ## <a name="example"></a>Пример  
  В этом примере показано, как использовать [псевдоним extern](../keywords/extern-alias.md).  
@@ -89,10 +89,10 @@ GridV1::Grid
  Кроме того, можно ссылаться на элемент управления "сетка" из файла `grid20.dll`, предваряя имя элемента управления префиксом `GridV2`, как показано в следующем коде.  
   
 ```csharp  
-GridV2::Grid   
+GridV2::Grid
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

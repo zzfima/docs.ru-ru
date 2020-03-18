@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708949"
 ---
 # <a name="exception-class-and-properties"></a>Класс и свойства исключений
@@ -24,7 +24,7 @@ ms.locfileid: "75708949"
 
 Класс <xref:System.Exception> имеет следующие свойства, которые облегчают анализ исключения.
 
-| Имя свойства | Описание |
+| Имя свойства | Описание: |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | Свойство <xref:System.Collections.IDictionary>, которое содержит произвольные данные в парах "ключ–значение". |
 | <xref:System.Exception.HelpLink> | Может содержать URL-адрес (или URN) файла справки, который предоставляет подробные сведения о причине возникновения исключения. |
@@ -37,6 +37,6 @@ ms.locfileid: "75708949"
 
 Мы рекомендуем создавать и перехватывать только те объекты, которые являются производными от <xref:System.Exception>, но в качестве исключения можно создать любой объект, производный от класса <xref:System.Object>. Обратите внимание, что не все языки поддерживают создание и перехват объектов, не являющихся производными от <xref:System.Exception>.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Исключения](index.md)

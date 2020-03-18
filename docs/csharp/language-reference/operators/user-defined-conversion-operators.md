@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6061492cc1a4f756196fb8a9050b68651431e38
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450678"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847275"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Операторы пользовательского преобразования (справочник по C#)
 
@@ -29,7 +29,7 @@ ms.locfileid: "77450678"
 
 Следующий пример иллюстрирует, как определить неявное и явное преобразования:
 
-[!code-csharp[implicit an explicit conversions](~/samples/csharp/language-reference/operators/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
 
 Можно также использовать ключевое слово `operator` для перегрузки предопределенного оператора C#. Для получения дополнительной информации см. раздел [Перегрузка операторов](operator-overloading.md).
 
@@ -42,7 +42,7 @@ ms.locfileid: "77450678"
 - [Неявные преобразования](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [Явные преобразования](~/_csharplang/spec/conversions.md#explicit-conversions)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - '@ language element [C#]'
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 ms.openlocfilehash: a3446eceb0d3c415e36ea1d2c7d8d6d34f65350d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712420"
 ---
 # <a name="-c-reference"></a>@ (справочник по C#)
 
-Специальный символ `@` является буквальным идентификатором. Его можно применять в следующих случаях.
+Специальный символ `@` является буквальным идентификатором. Это можно использовать следующими способами.
 
 1. Чтобы использовать ключевые слова C# в качестве идентификаторов. Символ `@` предшествует элементу кода, который компилятор должен интерпретировать как идентификатор, а не ключевое слово C#. В следующем примере символ `@` используется для определения идентификатора `for`, используемого в цикле `for`.
 
@@ -35,8 +35,8 @@ ms.locfileid: "75712420"
 
    [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Специальные символы в C#](./index.md)
+- [Специальные символы C#](./index.md)

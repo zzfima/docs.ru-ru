@@ -14,10 +14,10 @@ helpviewer_keywords:
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 ms.openlocfilehash: 7104ba665f60c2d55217a2d8628c85f6e469ad6f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706935"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Практическое руководство. Получение хранилищ для изолированного хранения
@@ -54,7 +54,7 @@ ms.locfileid: "75706935"
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]
  [!code-vb[Conceptual.IsolatedStorage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#7)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>

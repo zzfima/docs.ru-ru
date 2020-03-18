@@ -3,10 +3,10 @@ title: Таблица принятия решений. Использовани�
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Таблица принятия решений. Использование платформ .NET для Docker
 ms.date: 09/11/2018
 ms.openlocfilehash: 8ffe2b7bc0bee976d3a63b274994dbcc8aef0c61
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628323"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Таблица для принятия решений. Использование платформ .NET для Docker

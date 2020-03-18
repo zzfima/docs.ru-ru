@@ -19,10 +19,10 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711484"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Рекомендации по использованию строк в .NET
@@ -199,7 +199,7 @@ InvariantCulture: a + ̊ = å
 
 В следующей таблице приведено сопоставление семантического контекста строк с элементом перечисления <xref:System.StringComparison>:
 
-|Data|Поведение|Соответствующее сравнение System.StringComparison<br /><br /> значение|
+|Данные|Поведение|Соответствующее сравнение System.StringComparison<br /><br /> значение|
 |----------|--------------|-----------------------------------------------------|
 |Внутренние идентификаторы с учетом регистра<br /><br /> Идентификаторы с учетом регистра в таких стандартах, как XML и HTTP.<br /><br /> Параметры безопасности с учетом регистра.|Нелингвистические идентификаторы с точным соответствием байтов.|<xref:System.StringComparison.Ordinal>|
 |Внутренние идентификаторы без учета регистра.<br /><br /> Идентификаторы без учета регистра в таких стандартах, как XML и HTTP.<br /><br /> Пути к файлам.<br /><br /> Ключи реестра и значения.<br /><br /> Переменные среды.<br /><br /> Идентификаторы ресурсов (например, имена дескрипторов).<br /><br /> Параметры безопасности без учета регистра.|Нелингвистический идентификатор, в котором регистр не учитывается; особенно данные, хранящиеся в большинстве системных служб Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|

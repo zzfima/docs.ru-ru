@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976966"
 ---
 # <a name="re-train-a-model"></a>Повторное обучение модели
@@ -121,7 +121,7 @@ for(int i=0;i < weightDiffs.Count();i++)
 
 В следующей таблице показано, как могут выглядеть выходные данные.
 
-|До преобразования | Переобученная модель | Различие |
+|Исходное значение | Переобученная модель | Различие |
 |---|---|---|
 | 33 039,86 | 56 293,76 | –23 253,9 |
 | 29 099,14 | 49 586,03 | –20 486,89 |

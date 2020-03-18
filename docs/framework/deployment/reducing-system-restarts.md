@@ -7,10 +7,10 @@ helpviewer_keywords:
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716428"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5
@@ -31,8 +31,8 @@ ms.locfileid: "75716428"
   
  При использовании цепочечного установщика, если не требуется предоставлять собственное окно сообщения для завершения приложений, можно использовать параметры `/showrmui` и `/passive` в командной строке при добавлении платформы .NET Framework в процесс установки. При использовании этих параметров вместе установщик отображает окно сообщения для закрытия приложений, чтобы избежать перезапуска системы. Это диалоговое окно работает в пассивном режиме так же, как и при полном пользовательском интерфейсе. Полный набор параметров командной строки для распространяемого пакета .NET Framework см. в разделе [Руководство по развертыванию для разработчиков](deployment-guide-for-developers.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Развертывание](index.md)
 - [Руководство по развертыванию для разработчиков](deployment-guide-for-developers.md)
-- [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)
+- [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b7ea52eaccda4599969a5d1e3b683d2d842b0d82
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: c4e29e6437edfe549b36a04a2050f63caa0d3d2a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093244"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846526"
 ---
 # <a name="char-c-reference"></a>char (Справочник по C#)
 
@@ -34,7 +34,7 @@ ms.locfileid: "77093244"
 - escape-последовательность Юникода, то есть символы `\u`, за которыми следует шестнадцатеричное представление кода символа из четырех символов;
 - шестнадцатеричная escape-последовательность, то есть символы `\x`, за которыми следует шестнадцатеричное представление кода символа.
 
-[!code-csharp-interactive[char literals](~/samples/csharp/language-reference/builtin-types/CharType.cs#Literals)]
+[!code-csharp-interactive[char literals](snippets/CharType.cs#Literals)]
 
 Как показано в предыдущем примере, можно также привести значение кода символа к соответствующему значению `char`.
 
@@ -53,7 +53,7 @@ ms.locfileid: "77093244"
 
 Дополнительные сведения см. в разделе [Целочисленные типы](~/_csharplang/spec/types.md#integral-types) в статье [Спецификации языка C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [справочник по C#](../index.md)
 - [Типы значений](value-types.md)

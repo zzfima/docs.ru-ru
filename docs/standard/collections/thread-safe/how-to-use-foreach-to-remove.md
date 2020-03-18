@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование оператора ForEach для удаления элементов из коллекции BlockingCollection
+title: Практическое руководство. Использование оператора ForEach для удаления элементов в коллекции BlockingCollection
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 ms.openlocfilehash: f9a858dea74be63634f887c4204aefa8ac338ad0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711237"
 ---
-# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Практическое руководство. Использование оператора ForEach для удаления элементов из коллекции BlockingCollection
+# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Практическое руководство. Использование оператора ForEach для удаления элементов в коллекции BlockingCollection
 
 Помимо извлечения элементов из коллекции <xref:System.Collections.Concurrent.BlockingCollection%601> с помощью методов <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, можно использовать цикл [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) в Visual Basic) для удаления элементов до тех пор, пока добавление не будет завершено и коллекция не станет пустой. Это называется *изменяющим перечислением* или *поглощающим перечислением*, поскольку, в отличие от типичного цикла `foreach` (`For Each`), этот перечислитель изменяет исходную коллекцию путем удаления элементов.
 
@@ -32,7 +32,7 @@ ms.locfileid: "75711237"
 
 Для перечисления коллекции без ее изменения просто используйте оператор `foreach` (`For Each`) без использования метода <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>. Тем не менее важно понимать, что такой тип перечисления представляет снимок коллекции в конкретный момент времени. Если другие потоки добавят или удалят элементы параллельно с выполнением цикла, цикл может не отобразить фактическое состояние коллекции.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Параллельное программирование](../../../../docs/standard/parallel-programming/index.md)

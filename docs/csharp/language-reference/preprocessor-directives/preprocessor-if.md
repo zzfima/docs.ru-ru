@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899856"
 ---
 # <a name="if-c-reference"></a>Справочник по C#. #if
@@ -25,7 +25,7 @@ ms.locfileid: "75899856"
 
 Операторы [==](../operators/equality-operators.md#equality-operator-) (равенство) и [!=](../operators/equality-operators.md#inequality-operator-) (неравенство) можно использовать только для проверки значений [bool](../builtin-types/bool.md)`true` или `false`. Значение `true` означает, что символ определен. Инструкция `#if DEBUG` имеет то же значение, что и `#if (DEBUG == true)`. Вы можете использовать операторы [&& (и)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124; (или)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) и [! (не)](../operators/boolean-logical-operators.md#logical-negation-operator-), чтобы узнать, определено ли несколько символов. Можно также группировать символы и операторы при помощи скобок.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `#if`, как и директивы [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) и [#undef](preprocessor-undef.md), позволяет включить или исключить код в зависимости от существования одного или нескольких символов. Это может быть полезно при компиляции кода для отладки или для определенной конфигурации.
 
@@ -89,9 +89,9 @@ public class MyClass
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Директивы препроцессора C#](index.md)
-- [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).
+- [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

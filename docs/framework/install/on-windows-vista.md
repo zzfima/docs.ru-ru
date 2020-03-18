@@ -3,12 +3,12 @@ title: Установка платформы .NET Framework в Windows Vista
 description: Сведения об установке платформы .NET Framework в Windows Vista.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 02f57aee139621ba277731f9b76c3c48fc6abc57
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 9b8470f4cdfcc6ec85fb6677f5518203c0de5de1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965884"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181544"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Установка .NET Framework в Windows Vista и Windows Server 2008
 
@@ -22,7 +22,7 @@ ms.locfileid: "76965884"
 
 [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) является последней поддерживаемой версией платформы .NET Framework в Windows Vista и Windows Server 2008.
 
-Платформа [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) поддерживает приложения, созданные для платформы .NET Framework версий с 4.0 по 4.6.
+Платформа [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) поддерживает приложения, созданные для платформы .NET Framework версий с 4.0 по 4.6.
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 
@@ -30,7 +30,7 @@ ms.locfileid: "76965884"
 
 Платформа .NET Framework 3.5 поддерживает приложения, собранные для платформы .NET Framework версий с 1.0 по 3.5.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Скачивание .NET Framework](https://dotnet.microsoft.com/download)
 - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)

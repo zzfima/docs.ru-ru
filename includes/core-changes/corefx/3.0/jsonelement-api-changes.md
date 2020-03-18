@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 79901d0b57816915ca7ea73cfe7fa3d40820434e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568164"
 ---
 ### <a name="jsonelement-api-changes"></a>Изменения в API JsonElement
@@ -14,7 +14,7 @@ ms.locfileid: "74568164"
 
 В .NET Core 3.0 (предварительная версия 7) в API-интерфейсы <xref:System.Text.Json.JsonElement> были внесены указанные ниже изменения для удобства обнаружения и использования.
 
-1. Из <xref:System.Text.Json.JsonElement> удалены все перегрузки методов `WriteProperty`. Это влияет на следующий код:
+1. Из `WriteProperty` удалены все перегрузки методов <xref:System.Text.Json.JsonElement>. Это влияет на следующий код:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -47,11 +47,11 @@ ms.locfileid: "74568164"
 
 3.0, предварительная версия 7
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Если эти изменения влияют на ваш код, можно сделать следующее.
 
-- Для перегрузок метода `WriteProperty` в <xref:System.Text.Json.JsonElement> не существует заменяющего API. Вместо этого вместе с методом <xref:System.Text.Json.JsonElement.WriteTo%2A> можно вызвать одну из перегрузок <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType>, чтобы достичь того же результата. Например:
+- Для перегрузок метода `WriteProperty` в <xref:System.Text.Json.JsonElement> не существует заменяющего API. Вместо этого вместе с методом <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> можно вызвать одну из перегрузок <xref:System.Text.Json.JsonElement.WriteTo%2A>, чтобы достичь того же результата. Пример:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))

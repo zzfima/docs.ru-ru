@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713425"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173605"
 ---
 # <a name="internal-c-reference"></a>internal (Справочник по C#)
-Ключевое слово `internal` является [модификатором доступа](./access-modifiers.md) для типов и членов типов. 
+Ключевое слово `internal` является [модификатором доступа](./access-modifiers.md) для типов и членов типов.
   
  > Эта страница содержит доступ `internal`. Ключевое слово `internal` также является частью модификатора доступа [`protected internal`](./protected-internal.md).
   
 Внутренние типы или члены доступны только внутри файлов в той же сборке, как в следующем примере:  
   
 ```csharp  
-public class BaseClass   
+public class BaseClass
 {  
     // Only accessible within the same assembly.
     internal static int x = 0;
@@ -43,7 +43,7 @@ public class BaseClass
 ```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
-internal class BaseClass   
+internal class BaseClass
 {  
    public static int intM = 0;  
 }  
@@ -52,9 +52,9 @@ internal class BaseClass
 ```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
-class TestAccess   
+class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // CS0122  
    }  
@@ -67,7 +67,7 @@ class TestAccess
 ```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
-public class BaseClass   
+public class BaseClass
 {  
    internal static int intM = 0;  
 }  
@@ -76,9 +76,9 @@ public class BaseClass
 ```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly2.dll  
-public class TestAccess   
+public class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
@@ -90,7 +90,7 @@ public class TestAccess
 
 Дополнительные сведения см. в разделе [Объявленная доступность](~/_csharplang/spec/basic-concepts.md#declared-accessibility) в [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

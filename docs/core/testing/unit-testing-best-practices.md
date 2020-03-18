@@ -4,12 +4,12 @@ description: Ознакомьтесь с рекомендациями по на�
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157393"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240965"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Рекомендации по модульному тестированию для .NET Core и .NET Standard
 
@@ -118,10 +118,10 @@ Assert.True(mockOrder.Validated);
 Тесты не просто проверяют работоспособность кода — они также предоставляют документацию. Просто посмотрев на набор модульных тестов, вы должны определить поведение кода, не глядя на сам код. Кроме того, если тест не пройден, вы сразу увидите, какие сценарии не соответствуют вашим ожиданиям.
 
 #### <a name="bad"></a>Плохо:
-[!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
+[!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Лучше:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>Упорядочивание тестов
 **Упорядочивайте, действуйте, проверяйте** — это общий шаблон для модульного тестирования. Как и предполагает название, он состоит из трех элементов.
@@ -138,10 +138,10 @@ Assert.True(mockOrder.Validated);
 Удобочитаемость является одним из наиболее важных аспектов при написании тестов. Четкое разделение каждого из этих действий в тесте подчеркивает зависимости, необходимые для вызова кода, указывает, как вызывается ваш код и что вы пытаетесь проверить. Хотя некоторые шаги можно объединить и уменьшить размер теста, основной целью является удобочитаемость теста.
 
 #### <a name="bad"></a>Плохо:
-[!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
+[!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Лучше:
-[!code-csharp[AfterArranging](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterArranging)]
+[!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>Пишите минималистичные тесты
 Входные данные для модульного теста должны быть как можно проще, чтобы проверить поведение, которое вы тестируете в данный момент.
@@ -154,10 +154,10 @@ Assert.True(mockOrder.Validated);
 Тесты, которые включают больше информации, чем требуется для прохождения, могут содержать больше ошибок и затруднять понимание намерения. При написании тестов необходимо сосредоточиться на поведении. Установка дополнительных свойств для моделей или использование ненулевых значений, когда это не требуется, только затрудняет проверку.
 
 #### <a name="bad"></a>Плохо:
-[!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
+[!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Лучше:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>Избегайте "магических" строк
 Именование переменных в модульных тестах так же важно, как именование переменных в рабочем коде, если не важнее. Модульные тесты не должны содержать "магических" строк.
@@ -173,10 +173,10 @@ Assert.True(mockOrder.Validated);
 > При написании тестов старайтесь как можно яснее выразить свое намерение. В случае "магических" строк рекомендуется присваивать эти значения константам.
 
 #### <a name="bad"></a>Плохо:
-[!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
+[!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Лучше:
-[!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
+[!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>Избегайте логики в тестах
 При написании модульных тестов избегайте объединения строк вручную и логических условий, таких как `if`, `while`, `for`, `switch` и т. д.
@@ -192,10 +192,10 @@ Assert.True(mockOrder.Validated);
 > Если логика в тесте неизбежна, рекомендуется разбить тест на несколько тестов.
 
 #### <a name="bad"></a>Плохо:
-[!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
+[!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Лучше:
-[!code-csharp[AfterTestLogic](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterTestLogic)]
+[!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Выбирайте вспомогательные методы вместо установки и удаления
 Если вам требуется аналогичный объект или состояние для тестов, лучше используйте вспомогательный метод, чем атрибуты установки и удаления, если они существуют.
@@ -212,22 +212,22 @@ Assert.True(mockOrder.Validated);
 > В xUnit удалены SetUp и TearDown в версии 2.x.
 
 #### <a name="bad"></a>Плохо:
-[!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
+[!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[BeforeHelperMethod](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeHelperMethod)]
+[!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>Лучше:
-[!code-csharp[AfterHelperMethod](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterHelperMethod)]
+[!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[AfterSetup](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterSetup)]
+[!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>Избегайте нескольких проверочных утверждений
 При написании тестов попробуйте включить только одно проверочное утверждение в каждый тест. Общие подходы к использованию только одного проверочного утверждения включают следующее.
@@ -247,10 +247,10 @@ Assert.True(mockOrder.Validated);
 > Общее исключение из этого правила — проверка объекта. В этом случае обычно допустимо иметь несколько утверждений для каждого свойства, чтобы убедиться, что объект находится в ожидаемом состоянии.
 
 #### <a name="bad"></a>Плохо:
-[!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
+[!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Лучше:
-[!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
+[!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Проверяйте закрытые методы путем модульного тестирования открытых методов
 В большинстве случаев вам не понадобится тестировать закрытые методы. Закрытые методы относятся к тонкостям реализации. Подумайте об этом так: закрытые методы никогда не существуют в изоляции. Рано или поздно у вас будет открытый метод, вызывающий закрытый метод в рамках его реализации. Вам следует думать о конечном результате открытого метода, который вызывает закрытый метод.

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
 ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712030"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Руководство по программированию на C#. Отображение аргументов командной строки
@@ -28,7 +28,7 @@ ms.locfileid: "75712030"
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Сборка из командной строки с помощью csc.exe](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)

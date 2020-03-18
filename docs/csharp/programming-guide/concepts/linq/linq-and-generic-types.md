@@ -7,10 +7,10 @@ helpviewer_keywords:
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
 ms.openlocfilehash: 9a2d1ac72f70e7cd314d349e81ab2bc815a5bf13
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635578"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ и универсальные типы (C#)
@@ -34,8 +34,8 @@ ms.locfileid: "75635578"
   
  [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  
   
- Ключевое слово `var` удобно, если тип переменной является очевидным, или если не требуется явно указывать вложенные универсальные типы, например создаваемые групповыми запросами. Как правило, рекомендуется помнить о том, что использование `var` делает код более сложным для чтения. Дополнительные сведения см. в статье [Implicitly Typed Local Variables](../../classes-and-structs/implicitly-typed-local-variables.md) (Неявно типизированные локальные переменные).  
+ Ключевое слово `var` удобно, если тип переменной является очевидным, или если не требуется явно указывать вложенные универсальные типы, например создаваемые групповыми запросами. Как правило, рекомендуется помнить о том, что использование `var` делает код более сложным для чтения. Дополнительные сведения см. в разделе [Неявно типизированные локальные переменные](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Универсальные шаблоны](../../generics/index.md)

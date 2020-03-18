@@ -7,10 +7,10 @@ helpviewer_keywords:
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
 ms.openlocfilehash: d1ba761e64053d656ad4cd004133fc455a57c6f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705279"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Руководство по программированию на C#. Выполнение кода очистки с использованием блока finally
@@ -27,7 +27,7 @@ ms.locfileid: "75705279"
   
  Подключение к базе данных — еще один подходящий кандидат для заключения в блок `finally`. Так как количество разрешенных подключений к серверу базы данных иногда ограничено, закрывать подключения к базе данных рекомендуется как можно быстрее. Если перед закрытием подключения возникает исключение, это еще один случай, когда использование блока `finally` предпочтительнее, чем ожидание сборки мусора.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Исключения и обработка исключений](./index.md)

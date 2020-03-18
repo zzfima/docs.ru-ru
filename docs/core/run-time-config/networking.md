@@ -4,10 +4,10 @@ description: Сведения о параметрах времени выпол�
 ms.date: 11/27/2019
 ms.topic: reference
 ms.openlocfilehash: 622c4afbd36d3d9004edbd9219145fa9e5d326ae
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74998837"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>Параметры конфигурации времени выполнения для сети

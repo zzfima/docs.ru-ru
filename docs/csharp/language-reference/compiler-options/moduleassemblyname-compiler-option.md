@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7562c0609d61b2388f5063bc480a4dfc715155db
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1477eeb0f2e16e18cb86009739bc8e7d9dee2ac0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970076"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173722"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (параметры компилятора C#)
 Указывает сборку, к неоткрытым типам которой может обращаться .netmodule.  
@@ -28,7 +28,7 @@ ms.locfileid: "70970076"
  `assembly_name`  
  Имя сборки, к неоткрытым типам которой может обращаться .netmodule.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Параметр **-moduleassemblyname** нужно использовать при сборке модуля NETMODULE и выполнении следующий условий:  
   
 - .netmodule требуется доступ к неоткрытым типам в существующей сборке.  
@@ -56,11 +56,11 @@ using System.Runtime.CompilerServices;
   
 [assembly:InternalsVisibleTo ("csman_an_assembly")]  
   
-class An_Internal_Class   
+class An_Internal_Class
 {  
-    public void Test()   
-    {   
-        Console.WriteLine("An_Internal_Class.Test called");   
+    public void Test()
+    {
+        Console.WriteLine("An_Internal_Class.Test called");
     }  
 }  
 ```  
@@ -95,7 +95,7 @@ class A {
   
 **Вызывается An_Internal_Class.Test**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

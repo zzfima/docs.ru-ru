@@ -3,10 +3,10 @@ title: Справочник по C#. Комбинация ключевых сл�
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713213"
 ---
 # <a name="private-protected-c-reference"></a>private protected (справочник по C#)
@@ -68,7 +68,7 @@ class DerivedClass2 : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

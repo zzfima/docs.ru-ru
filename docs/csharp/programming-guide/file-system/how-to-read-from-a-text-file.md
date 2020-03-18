@@ -10,10 +10,10 @@ helpviewer_keywords:
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
 ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705019"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Руководство по программированию на C#. Чтение из текстового файла
@@ -37,10 +37,10 @@ ms.locfileid: "75705019"
   
 - Файл не существует или не существует в указанном месте. Проверьте правильность написания имени файла и путь к нему.  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+## <a name="net-framework-security"></a>Безопасность .NET Framework  
  Не следует полагаться на имя файла, чтобы определить содержимое файла. Например, файл `myFile.cs` может вовсе не быть исходным файлом C#.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [Руководство по программированию на C#](../index.md)
