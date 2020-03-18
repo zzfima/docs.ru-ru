@@ -12,45 +12,45 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
 ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345651"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a><span data-ttu-id="6d9d9-102">Практическое руководство. Удаление раздела реестра в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6d9d9-102">How to: Delete a Registry Key in Visual Basic</span></span>
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a><span data-ttu-id="08e09-102">Практическое руководство. Удаление раздела реестра в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="08e09-102">How to: Delete a Registry Key in Visual Basic</span></span>
 
-<span data-ttu-id="6d9d9-103">Методы <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> и <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> можно использовать для удаления разделов реестра.</span><span class="sxs-lookup"><span data-stu-id="6d9d9-103">The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.</span></span>  
+<span data-ttu-id="08e09-103">Методы <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> и <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> можно использовать для удаления разделов реестра.</span><span class="sxs-lookup"><span data-stu-id="08e09-103">The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.</span></span>  
   
-## <a name="procedure"></a><span data-ttu-id="6d9d9-104">Процедура</span><span class="sxs-lookup"><span data-stu-id="6d9d9-104">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="08e09-104">Процедура</span><span class="sxs-lookup"><span data-stu-id="08e09-104">Procedure</span></span>  
   
-#### <a name="to-delete-a-registry-key"></a><span data-ttu-id="6d9d9-105">Удаление раздела реестра</span><span class="sxs-lookup"><span data-stu-id="6d9d9-105">To delete a registry key</span></span>  
+#### <a name="to-delete-a-registry-key"></a><span data-ttu-id="08e09-105">Удаление раздела реестра</span><span class="sxs-lookup"><span data-stu-id="08e09-105">To delete a registry key</span></span>  
   
-- <span data-ttu-id="6d9d9-106">Для удаления раздела реестра используйте метод `DeleteSubKey`.</span><span class="sxs-lookup"><span data-stu-id="6d9d9-106">Use the `DeleteSubKey` method to delete a registry key.</span></span> <span data-ttu-id="6d9d9-107">В этом примере удаляется раздел Software/TestApp в кусте CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="6d9d9-107">This example deletes the key Software/TestApp in the CurrentUser hive.</span></span> <span data-ttu-id="6d9d9-108">Можно изменить его в коде на подходящую строку или запросить значение для этого раздела у пользователя.</span><span class="sxs-lookup"><span data-stu-id="6d9d9-108">You can change this in the code to the appropriate string, or have it rely on user-supplied information.</span></span>  
+- <span data-ttu-id="08e09-106">Для удаления раздела реестра используйте метод `DeleteSubKey`.</span><span class="sxs-lookup"><span data-stu-id="08e09-106">Use the `DeleteSubKey` method to delete a registry key.</span></span> <span data-ttu-id="08e09-107">В этом примере удаляется раздел Software/TestApp в кусте CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="08e09-107">This example deletes the key Software/TestApp in the CurrentUser hive.</span></span> <span data-ttu-id="08e09-108">Можно изменить его в коде на подходящую строку или запросить значение для этого раздела у пользователя.</span><span class="sxs-lookup"><span data-stu-id="08e09-108">You can change this in the code to the appropriate string, or have it rely on user-supplied information.</span></span>  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="6d9d9-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="6d9d9-109">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="08e09-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="08e09-109">Robust Programming</span></span>  
 
- <span data-ttu-id="6d9d9-110">Метод `DeleteSubKey` возвратит пустую строку, если пара "раздел-значение" не существует.</span><span class="sxs-lookup"><span data-stu-id="6d9d9-110">The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.</span></span>  
+ <span data-ttu-id="08e09-110">Метод `DeleteSubKey` возвратит пустую строку, если пара "раздел-значение" не существует.</span><span class="sxs-lookup"><span data-stu-id="08e09-110">The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.</span></span>  
   
- <span data-ttu-id="6d9d9-111">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="6d9d9-111">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="08e09-111">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="08e09-111">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="6d9d9-112">Имя раздела — `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="6d9d9-112">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+- <span data-ttu-id="08e09-112">Имя ключа имеет значение `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="08e09-112">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
-- <span data-ttu-id="6d9d9-113">У пользователя нет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="6d9d9-113">The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).</span></span>  
+- <span data-ttu-id="08e09-113">У пользователя нет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="08e09-113">The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).</span></span>  
   
-- <span data-ttu-id="6d9d9-114">Имя раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="6d9d9-114">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
+- <span data-ttu-id="08e09-114">Имя ключа превышает ограничение в 255 символов (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="08e09-114">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
   
-- <span data-ttu-id="6d9d9-115">Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="6d9d9-115">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
+- <span data-ttu-id="08e09-115">Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="08e09-115">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="6d9d9-116">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6d9d9-116">.NET Framework Security</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="08e09-116">Безопасность .NET Framework</span><span class="sxs-lookup"><span data-stu-id="08e09-116">.NET Framework Security</span></span>  
 
- <span data-ttu-id="6d9d9-117">Обращение к реестру невозможно, если не предоставлены достаточные разрешения времени выполнения (<xref:System.Security.Permissions.RegistryPermission>) или у пользователя нет надлежащих прав доступа (определенных списками управления доступом) для создания или записи параметров.</span><span class="sxs-lookup"><span data-stu-id="6d9d9-117">Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings.</span></span> <span data-ttu-id="6d9d9-118">Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы.</span><span class="sxs-lookup"><span data-stu-id="6d9d9-118">For example, a local application that has the code access security permission might not have operating system permission.</span></span>  
+ <span data-ttu-id="08e09-117">Обращение к реестру невозможно, если не предоставлены достаточные разрешения времени выполнения (<xref:System.Security.Permissions.RegistryPermission>) или у пользователя нет надлежащих прав доступа (определенных списками управления доступом) для создания или записи параметров.</span><span class="sxs-lookup"><span data-stu-id="08e09-117">Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings.</span></span> <span data-ttu-id="08e09-118">Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы.</span><span class="sxs-lookup"><span data-stu-id="08e09-118">For example, a local application that has the code access security permission might not have operating system permission.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d9d9-119">См. также</span><span class="sxs-lookup"><span data-stu-id="6d9d9-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08e09-119">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="08e09-119">See also</span></span>
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>
-- [<span data-ttu-id="6d9d9-120">Безопасность и реестр</span><span class="sxs-lookup"><span data-stu-id="6d9d9-120">Security and the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
-- [<span data-ttu-id="6d9d9-121">Чтение данных из реестра и запись в реестр</span><span class="sxs-lookup"><span data-stu-id="6d9d9-121">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [<span data-ttu-id="08e09-120">Безопасность и реестр</span><span class="sxs-lookup"><span data-stu-id="08e09-120">Security and the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
+- [<span data-ttu-id="08e09-121">Чтение данных из реестра и запись в реестр</span><span class="sxs-lookup"><span data-stu-id="08e09-121">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
