@@ -4,15 +4,15 @@ description: Общие сведения о процессе переноса и
 author: cartermp
 ms.date: 10/22/2019
 ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937315"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Общие сведения о переносе кода в .NET Core из .NET Framework
 
-Возможно, у вас есть код, который сейчас выполняется в .NET Framework, и вы хотите перенести его в .NET Core. В этой статье приводится следующее:
+Возможно, у вас есть код, который сейчас выполняется в .NET Framework, и вы хотите перенести его в .NET Core. Эта статья содержит:
 
 * Общие сведения о переносе.
 * Список средств, которые могут оказаться полезными при переносе кода в .NET Core.
@@ -47,7 +47,7 @@ ms.locfileid: "75937315"
 
 Кроме того, можно попытаться перенести за одну операцию более мелкие решения или отдельные проекты в формат файла проекта .NET Core с помощью средства [dotnet try-convert](https://github.com/dotnet/try-convert). Нет гарантии, что `dotnet try-convert` будет поддерживать все проекты. Кроме того, оно может вызвать незначительные изменения в ожидаемом поведении. Используйте это средство в качестве _начальной точки_, которая автоматизирует соответствующие основные процессы. Это решение не может гарантировать перенос проекта.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 >[!div class="nextstepaction"]
 >[Анализ зависимостей](third-party-deps.md)

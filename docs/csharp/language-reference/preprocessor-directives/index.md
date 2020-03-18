@@ -8,10 +8,10 @@ helpviewer_keywords:
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
 ms.openlocfilehash: f63ba3e0bd89a88ad04b14c2f359a8cde65e8f12
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "69608596"
 ---
 # <a name="c-preprocessor-directives"></a>Директивы препроцессора C#
@@ -38,7 +38,7 @@ ms.locfileid: "69608596"
 
 Директива препроцессора должна быть единственной инструкцией в строке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)

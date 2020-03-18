@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 ms.openlocfilehash: 795fb9b37b95a2e7bc1fb8f8f9547522efa46d82
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140048"
 ---
 # <a name="parallel-diagnostic-tools"></a>Средства диагностики параллельного выполнения
@@ -22,11 +22,11 @@ Visual Studio предоставляет расширенную поддержк
   
 - [Использование окна задач](/visualstudio/debugger/using-the-tasks-window)  
   
-- [Пошаговое руководство: отладка параллельного приложения](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
+- [Пошаговое руководство. Отладка параллельного приложения](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)  
   
 ## <a name="profiling"></a>Профилирование  
  Представления отчета визуализатора параллелизма позволяют визуализировать взаимодействие потоков в параллельной программе друг с другом и с потоками из других процессов в системе. Дополнительные сведения см. в разделе [Визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)

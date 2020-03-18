@@ -4,17 +4,17 @@ description: Узнайте, как создавать библиотеки дл
 author: cartermp
 ms.date: 05/01/2017
 ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503506"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Разработка библиотек с помощью .NET Core CLI
 
 В этой статье показано, как создавать библиотеки для .NET с помощью .NET Core CLI. CLI предоставляет эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. Вы по-прежнему можете создавать библиотеки с помощью Visual Studio. Если вы предпочитаете такой способ, обратитесь к [руководству по Visual Studio](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 На компьютере должны быть установлены [пакет SDK и интерфейс CLI для .NET Core ](https://dotnet.microsoft.com/download).
 
@@ -28,7 +28,7 @@ ms.locfileid: "77503506"
 | 4.6                    | .NET Framework 4.6 Targeting Pack                      |
 | 4.5.2                  | .NET Framework 4.5.2 Developer Pack                    |
 | 4.5.1                  | .NET Framework 4.5.1 Developer Pack                    |
-| 4.5                    | Пакет средств разработки программного обеспечения Windows для Windows 8         |
+| 4,5                    | Пакет средств разработки программного обеспечения Windows для Windows 8         |
 | 4.0                    | Пакет SDK для Windows 7 и .NET Framework 4         |
 | 2.0, 3.0 и 3.5      | Среда выполнения .NET Framework 3.5 с пакетом обновления 1 (SP1) (либо версия для Windows 8 или более поздняя) |
 
@@ -77,7 +77,7 @@ ms.locfileid: "77503506"
 | .NET Framework 3.0     | `net30`  |
 | .NET Framework 3,5     | `net35`  |
 | .NET Framework 4.0     | `net40`  |
-| .NET Framework 4,5     | `net45`  |
+| .NET Framework 4.5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
 | .NET Framework 4.5.2   | `net452` |
 | .NET Framework 4.6     | `net46`  |

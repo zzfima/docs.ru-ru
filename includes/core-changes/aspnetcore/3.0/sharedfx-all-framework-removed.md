@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 959f3959c28c7d0159be7a213986345e2865b9a2
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394438"
 ---
 ### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Общая платформа. Удаление Microsoft.AspNetCore.All
@@ -26,7 +26,7 @@ ms.locfileid: "72394438"
 
 Метапакет `Microsoft.AspNetCore.All` включал большое количество внешних зависимостей.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Перенесите проект для использования платформы `Microsoft.AspNetCore.App`. Компоненты, которые ранее были доступны в `Microsoft.AspNetCore.All`, по-прежнему будут доступными в NuGet. Теперь эти компоненты развертываются вместе с приложением, а не включаются в общую платформу.
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Нет
+Отсутствуют
 
 <!-- 
 

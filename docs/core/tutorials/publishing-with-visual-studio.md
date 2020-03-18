@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156638"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Публикация приложения Hello World .NET Core в Visual Studio
@@ -40,7 +40,7 @@ ms.locfileid: "78156638"
 
 В следующих шагах будут рассмотрены файлы, созданные в процессе публикации.
 
-1. Откройте окно командной строки.
+1. Откройте командную строку.
 
    Одним из способов открыть командную строку является ввод **командной строки** (или **cmd** если коротко) в поле поиска на панели задач Windows. Выберите приложение **Командной строки** для рабочего стола или нажмите **Ввод**, если оно уже выбрано в результатах поиска.
 

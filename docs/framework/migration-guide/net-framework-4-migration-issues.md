@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 ms.openlocfilehash: c1c3298d87ad0f481fa30182e40cd5edcd535d6a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73975622"
 ---
 # <a name="net-framework-4-migration-issues"></a>Проблемы при переходе на .NET Framework 4
@@ -117,7 +117,7 @@ ms.locfileid: "73975622"
 | **Вызов неуправляемого кода** | Чтобы улучшить производительность при взаимодействии с неуправляемым кодом, некорректные соглашения о вызовах в вызове неуправляемого кода теперь приводят к сбою приложения. В более ранних версиях слой маршалинга разрешал такие ошибки вверх по стеку. | При отладке приложений в Microsoft Visual Studio вы получите оповещения о таких ошибках и сможете исправить их.<br><br>Если у вас есть двоичные файлы, которые невозможно обновить, можно включить элемент [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) в файл конфигурации приложения, чтобы ошибки вызовов разрешались вверх по стеку, как в более ранних версиях. Однако это может повлиять на производительность приложения. |
 | **Удаленные интерфейсы** (неуправляемый интерфейс API) | Чтобы не вводить в заблуждение разработчиков, перечисленные ниже интерфейсы были удалены. Причина удаления в том, что они не обеспечивали никаких полезных сценариев времени выполнения и среда CLR не предоставляла и не принимала никаких реализаций.<br><br>* **INativeImageINativeImageDependency**<br>* **INativeImageInstallInfo**<br>* **INativeImageEvaluate**<br>* **INativeImageConverter**<br>* **ICorModule**<br>* **IMetaDataConverter** | Отсутствует. |
 
-## <a name="data"></a>Data
+## <a name="data"></a>Данные
 
 В этом разделе описаны проблемы с миграцией при использовании наборов данных и клиентов SQL, Entity Framework, LINQ to SQL и серверов данных WCF (ранее называвшихся службами данных ADO.NET).
 

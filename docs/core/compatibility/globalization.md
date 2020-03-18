@@ -3,10 +3,10 @@ title: Критические изменения в области глобал�
 description: Список критических изменений в области глобализации в .NET Core.
 ms.date: 09/20/2019
 ms.openlocfilehash: eebab2b43c1fc852cd728636518c6ac2ceef2d74
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093010"
 ---
 # <a name="globalization-breaking-changes"></a>Критические изменения в области глобализации

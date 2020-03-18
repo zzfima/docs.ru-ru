@@ -3,10 +3,10 @@ title: Реализация взаимодействия между микрос
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | События интеграции для реализации взаимодействия между микрослужбами на основе событий.
 ms.date: 10/02/2018
 ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712407"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Реализация взаимодействия между микрослужбами на основе событий (события интеграции)

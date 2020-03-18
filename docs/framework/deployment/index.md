@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716466"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Развертывание .NET Framework и приложений
@@ -30,9 +30,9 @@ ms.locfileid: "75716466"
 
   - Тип установщика:
 
-    - [веб-установщик](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable);
+    - [Web installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [автономный установщик](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable).
+    - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - Режимы установки:
 
@@ -134,7 +134,7 @@ ms.locfileid: "75716466"
 
      В этом случае вы создаете MSI-файлы для использования с установщиком Windows или пакет приложения для использования с другими установщиками.
 
-### <a name="distribution"></a>Распределение
+### <a name="distribution"></a>Distribution
 
 Платформа .NET Framework предоставляет следующие варианты распространения приложений.
 
@@ -158,7 +158,7 @@ ms.locfileid: "75716466"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание|
+|Название|Описание:|
 |-----------|-----------------|
 |[Обнаружение сборок в среде выполнения](how-the-runtime-locates-assemblies.md)|Описывается то, как среда CLR определяет, какую сборку следует использовать для выполнения запроса привязки.|
 |[Рекомендации для загрузки сборок](best-practices-for-assembly-loading.md)|Описывается, как избежать проблем с идентификацией типов, которые могут привести к возникновению исключений <xref:System.InvalidCastException> и <xref:System.MissingMethodException> и других ошибок.|
@@ -169,8 +169,8 @@ ms.locfileid: "75716466"
 |[Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Описывается, как упаковать приложение Windows Forms и развернуть его на клиентских компьютерах в сети с помощью технологии ClickOnce.|
 |[Упаковка и развертывание ресурсов](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|Описывается модель "звезда", которую платформа .NET Framework использует для упаковки и развертывания ресурсов; рассматриваются соглашения об именовании ресурсов, процесс перехода на резервные ресурсы и альтернативные способы упаковки.|
 |[Развертывание приложения взаимодействия](../interop/deploying-an-interop-application.md)|Описывается поставка и установка приложений взаимодействия, которые обычно включают клиентскую сборку .NET Framework, одну или несколько сборок взаимодействия (представляющих различные библиотеки типов COM) и один или несколько зарегистрированных COM-компонентов.|
-|[Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Описывается автоматический запуск и отслеживание процесса установки .NET Framework с выводом собственного представления хода выполнения установки.|
+|[Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Описывается автоматический запуск и отслеживание процесса установки .NET Framework с выводом собственного представления хода выполнения установки.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по разработке](../development-guide.md)

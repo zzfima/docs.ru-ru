@@ -11,10 +11,10 @@ helpviewer_keywords:
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
 ms.openlocfilehash: d5b28ee6db52d191f8454592d792ac0a1e1dc73b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793455"
 ---
 # <a name="c-c-programming-guide"></a>Руководство по программированию на C#. \<c>
@@ -31,7 +31,7 @@ ms.locfileid: "76793455"
 
   Текст, который нужно указать в качестве кода.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 С помощью тега \<c> можно указать, что текст в описании необходимо пометить как код. Чтобы определить несколько строк в качестве кода, используйте тег [\<code>](./code.md).
 
@@ -41,7 +41,7 @@ ms.locfileid: "76793455"
 
 [!code-csharp[csProgGuideDocComments#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#2)]
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

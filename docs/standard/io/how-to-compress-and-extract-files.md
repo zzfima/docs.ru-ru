@@ -1,5 +1,5 @@
 ---
-title: Руководство. Сжатие и извлечение файлов
+title: Практическое руководство. Сжатие и извлечение файлов
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159381"
 ---
-# <a name="how-to-compress-and-extract-files"></a>Руководство. Сжатие и извлечение файлов
+# <a name="how-to-compress-and-extract-files"></a>Практическое руководство. Сжатие и извлечение файлов
 
 Пространство имен <xref:System.IO.Compression> предоставляет следующие типы для сжатия и распаковки файлов и потоков. Вы также можете использовать эти типы для чтения и изменения содержимого сжатого файла.
 
@@ -29,7 +29,7 @@ ms.locfileid: "78159381"
 
 В примерах ниже показано несколько операций для работы со сжатыми файлами.
 
-## <a name="example-1-create-and-extract-a-zip-file"></a>Пример 1: Создание и извлечение ZIP-файла
+## <a name="example-1-create-and-extract-a-zip-file"></a>Пример 1: Создание и извлечение ZIP-файла
 
 В следующем примере показано, как создавать и извлекать сжатый файл *.zip* с помощью класса <xref:System.IO.Compression.ZipFile>. Он сжимает содержимое папки в новый *ZIP*-файл и затем извлекает его в новую папку.
 
@@ -40,7 +40,7 @@ ms.locfileid: "78159381"
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
 
-## <a name="example-2-extract-specific-file-extensions"></a>Пример 2. Извлечение файлов с определенными расширениями
+## <a name="example-2-extract-specific-file-extensions"></a>Пример 2: Извлечение файлов с определенными расширениями
 
 В этом примере выполняется итерация по содержимому существующего *ZIP*-файла и извлекаются файлы с расширением *.txt*. Здесь используется класс <xref:System.IO.Compression.ZipArchive> для доступа к ZIP-файлу и класс <xref:System.IO.Compression.ZipArchiveEntry> для проверки отдельных элементов. Метод расширения <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> для объекта <xref:System.IO.Compression.ZipArchiveEntry> доступен в классе <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
@@ -70,7 +70,7 @@ ms.locfileid: "78159381"
 [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
 [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - <xref:System.IO.Compression.ZipArchive>  
 - <xref:System.IO.Compression.ZipFile>  

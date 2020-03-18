@@ -3,10 +3,10 @@ title: Официальные .NET-образы Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Официальные .NET-образы Docker
 ms.date: 01/30/2020
 ms.openlocfilehash: 50a50587b35f811859841c4e049f40cb99479372
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501868"
 ---
 # <a name="official-net-docker-images"></a>Официальные .NET-образы Docker
@@ -45,7 +45,7 @@ ms.locfileid: "77501868"
 
 При просмотре репозиториев .NET-образов в центре Docker вы найдете несколько версий, классифицированных или помеченных тегами. Эти теги помогают определить, какую версию использовать, как показано в таблице:
 
-| Изображение | Комментарии |
+| Образ — | Комментарии |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**3.1** | ASP.NET Core только со средой выполнения и оптимизацией ASP.NET Core в Linux и Windows (для разных архитектур) |
 | mcr.microsoft.com/dotnet/core/sdk:**3.1** | .NET Core с пакетами SDK в Linux и Windows (для разных архитектур) |

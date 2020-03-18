@@ -9,10 +9,10 @@ helpviewer_keywords:
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 ms.openlocfilehash: 80c90254978495a58d228c4302eda84d6165c800
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138077"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
@@ -43,7 +43,7 @@ ms.locfileid: "73138077"
 ## <a name="features-common-to-automatic-and-manual-events"></a>Общие свойства событий с автоматическим сбросом и сбросом вручную  
  Как правило, <xref:System.Threading.EventWaitHandle> блокирует один или несколько потоков, пока незаблокированный поток не вызовет метод <xref:System.Threading.EventWaitHandle.Set%2A>, который освобождает один из потоков в состоянии ожидания (если это событие с автоматическим сбросом) или все потоки сразу (если это событие со сбросом вручную). Поток может создать событие <xref:System.Threading.EventWaitHandle> и заблокироваться в ожидании этого же события в рамках одной атомарной операции, вызвав статический метод <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType>.  
   
- В статических методах <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> и <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> можно использовать объекты <xref:System.Threading.EventWaitHandle>. Так как классы <xref:System.Threading.EventWaitHandle> и <xref:System.Threading.Mutex> являются производными от <xref:System.Threading.WaitHandle>, вы можете использовать оба этих класса с этими методами.  
+ В статических методах <xref:System.Threading.EventWaitHandle> и <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> можно использовать объекты <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>. Так как классы <xref:System.Threading.EventWaitHandle> и <xref:System.Threading.Mutex> являются производными от <xref:System.Threading.WaitHandle>, вы можете использовать оба этих класса с этими методами.  
   
 ### <a name="named-events"></a>Именованные события  
  Операционная система Windows позволяет присваивать имена дескрипторам ожидания. Именованное событие применяется во всей системе. Это означает, что после создания именованное событие будет видимым для всех потоков во всех процессах. Таким образом, именованное событие можно использовать для синхронизации действий в разных процессах и потоках.  
@@ -60,7 +60,7 @@ ms.locfileid: "73138077"
 > [!NOTE]
 > В отличие от класса <xref:System.Threading.EventWaitHandle>, производные классы <xref:System.Threading.AutoResetEvent> и <xref:System.Threading.ManualResetEvent> могут представлять только локальные дескрипторы ожидания. Они не могут представлять именованные системные события.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.EventWaitHandle>
 - <xref:System.Threading.WaitHandle>

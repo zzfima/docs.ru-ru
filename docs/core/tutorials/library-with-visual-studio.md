@@ -4,10 +4,10 @@ description: Узнайте, как создать библиотеку клас
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 748a1499e0c3a4a41613a69b715dbcfbd585bfe3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714010"
 ---
 # <a name="build-a-net-standard-library-in-visual-studio"></a>Создание библиотеки .NET Standard в Visual Studio
@@ -42,7 +42,7 @@ ms.locfileid: "75714010"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Добавьте в решение новый проект библиотеки классов .NET Standard на C# с именем StringLibrary.
 
@@ -64,7 +64,7 @@ ms.locfileid: "75714010"
 
 1. В строке меню выберите **Сборка** > **Собрать решение**.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Добавьте в решение новый проект библиотеки классов Visual Basic .NET Standard с именем StringLibrary.
 
@@ -92,7 +92,7 @@ ms.locfileid: "75714010"
 
    Проект должен скомпилироваться без ошибок.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Итак, вы успешно создали библиотеку. Пока вы еще не вызывали ее методов, поэтому нельзя быть уверенным, что все работает так, как ожидалось. Следующий шаг в разработке библиотеки — ее тестирование.
 

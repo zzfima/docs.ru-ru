@@ -5,10 +5,10 @@ helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
 ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093514"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Аргументы командной строки (Руководство по программированию на C#)
@@ -44,7 +44,7 @@ long num = long.Parse(args[0]);
 long num = Convert.ToInt64(s);
 ```
 
-Дополнительные сведения см. в разделах <xref:System.Int64.Parse%2A> и <xref:System.Convert>.
+Дополнительные сведения см. в разделе <xref:System.Int64.Parse%2A> и <xref:System.Convert>.
 
 ## <a name="example"></a>Пример
 
@@ -73,7 +73,7 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 > При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](/visualstudio/ide/reference/debug-page-project-designer).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [Руководство по программированию на C#](../index.md)

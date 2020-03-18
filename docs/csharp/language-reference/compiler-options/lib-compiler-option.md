@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606818"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (параметры компилятора C#)
@@ -31,7 +31,7 @@ ms.locfileid: "69606818"
  `dir2`  
  Один или несколько дополнительных каталогов для поиска связанных сборок. Имена дополнительных каталогов разделяются запятыми без пробелов.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Компилятор выполняет поиск связанных сборок, для которых не указано полное имя, в следующем порядке:  
   
 1. Текущая рабочая папка. Это папка, из которой был вызван компилятор.  
@@ -67,7 +67,7 @@ ms.locfileid: "69606818"
 csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,10 +5,10 @@ ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
 ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73458175"
 ---
 # <a name="what-is-apache-spark"></a>Что такое Apache Spark?
@@ -73,7 +73,7 @@ ms.locfileid: "73458175"
 * управление разделением программы;
 * управление выполнением программы.
 
-## <a name="language-support"></a>Языковая поддержка
+## <a name="language-support"></a>Поддержка языков
 
 Apache Spark поддерживает следующие языки программирования:
 
@@ -94,7 +94,7 @@ Apache Spark поддерживает следующие API:
 * [API R для Spark](https://spark.apache.org/docs/2.2.0/api/R/index.html);
 * [Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), встроенные функции.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения об использовании Apache Spark в приложениях .NET. .NET для Apache Spark позволяет разработчикам, имеющим опыт работы с .NET, создавать запросы для обработки больших данных на C# или F#.
 > [!div class="nextstepaction"]

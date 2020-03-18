@@ -2,12 +2,12 @@
 title: Проектирование уровня сохраняемости инфраструктуры
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Шаблон репозитория при проектировании уровня сохраняемости инфраструктуры.
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737942"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846813"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Проектирование уровня сохраняемости инфраструктуры
 
@@ -109,9 +109,6 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 ### <a name="repository-pattern"></a>Шаблон репозитория
-
-- **Шаблон репозитория** \
-  <https://deviq.com/repository-pattern/>
 
 - **Эдвард Хиятт и Роб Ми (Edward Hieatt и Rob Mee). Шаблон репозитория.** \
   <https://martinfowler.com/eaaCatalog/repository.html>

@@ -1,15 +1,15 @@
 ---
-title: Встроенная аутентификация Windows с расширенной защитой
+title: Интегрированная проверка подлинности Windows с расширенной защитой
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 ms.openlocfilehash: c4afc008f600c9be0040f8d7623f5e20623dfd7d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74444242"
 ---
-# <a name="integrated-windows-authentication-with-extended-protection"></a>Встроенная аутентификация Windows с расширенной защитой
+# <a name="integrated-windows-authentication-with-extended-protection"></a>Интегрированная проверка подлинности Windows с расширенной защитой
 Были добавлены улучшения, которые влияют на обработку встроенной проверки подлинности Windows в <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> и связанных классах в <xref:System.Net> и соответствующих пространствах имен. Была добавлена поддержка расширенной защиты для повышения безопасности.  
   
  Эти изменения могут влиять на приложения, которые используют эти классы для создания веб-запросов и получения ответов, в которых используется встроенная проверка подлинности Windows. Это изменение также может повлиять на веб-серверы и клиентские приложения, в которых используется встроенная проверка подлинности Windows.  
@@ -84,11 +84,11 @@ ms.locfileid: "74444242"
   
  Пространство имен <xref:System.Security.Authentication.ExtendedProtection.Configuration> обеспечивает поддержку настройки проверки подлинности для приложений с использованием расширенной защиты.  
   
- В существующем пространстве имен <xref:System.Net> были изменены некоторые функции для поддержки расширенной защиты. К этим изменениям относятся следующие:  
+ В существующем пространстве имен <xref:System.Net> были изменены некоторые функции для поддержки расширенной защиты. В число этих изменений входят следующие.  
   
-- В пространство имен <xref:System.Net> добавлен новый класс <xref:System.Net.TransportContext>, который представляет контекст транспорта.  
+- В пространство имен <xref:System.Net.TransportContext> добавлен новый класс <xref:System.Net>, который представляет контекст транспорта.  
   
-- В класс <xref:System.Net.HttpWebRequest> добавлены новые перегрузки методов <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> и <xref:System.Net.HttpWebRequest.GetRequestStream%2A>, которые позволяют получить <xref:System.Net.TransportContext> для поддержки расширенной защиты клиентских приложений.  
+- В класс <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> добавлены новые перегрузки методов <xref:System.Net.HttpWebRequest.GetRequestStream%2A> и <xref:System.Net.HttpWebRequest>, которые позволяют получить <xref:System.Net.TransportContext> для поддержки расширенной защиты клиентских приложений.  
   
 - Дополнения к классам <xref:System.Net.HttpListener> и <xref:System.Net.HttpListenerRequest> для поддержки серверных приложений.  
   
@@ -96,15 +96,15 @@ ms.locfileid: "74444242"
   
 - Свойство <xref:System.Net.Mail.SmtpClient.TargetName%2A> в классе <xref:System.Net.Mail.SmtpClient>, которое представляет имя участника-службы, используемое для проверки подлинности при использовании расширенной защиты для клиентских приложений SMTP.  
   
- В существующем пространстве имен <xref:System.Net.Security> были изменены некоторые функции для поддержки расширенной защиты. К этим изменениям относятся следующие:  
+ В существующем пространстве имен <xref:System.Net.Security> были изменены некоторые функции для поддержки расширенной защиты. В число этих изменений входят следующие.  
   
-- В класс <xref:System.Net.Security.NegotiateStream> добавлены новые перегрузки методов <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> и <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A>, которые позволяют передавать маркер привязки канала для поддержки расширенной защиты клиентских приложений.  
+- В класс <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> добавлены новые перегрузки методов <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> и <xref:System.Net.Security.NegotiateStream>, которые позволяют передавать маркер привязки канала для поддержки расширенной защиты клиентских приложений.  
   
-- В класс <xref:System.Net.Security.NegotiateStream> добавлены новые перегрузки методов <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> и <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A>, которые позволяют передавать <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> для поддержки расширенной защиты серверных приложений.  
+- В класс <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> добавлены новые перегрузки методов <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> и <xref:System.Net.Security.NegotiateStream>, которые позволяют передавать <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> для поддержки расширенной защиты серверных приложений.  
   
 - Новое свойство <xref:System.Net.Security.SslStream.TransportContext%2A> в классе <xref:System.Net.Security.SslStream> для поддержки расширенной защиты клиентских и серверных приложений.  
   
- В пространство имен <xref:System.Net.Security> добавлено свойство <xref:System.Net.Configuration.SmtpNetworkElement> для поддержки настройки расширенной защиты для клиентов SMTP.  
+ В пространство имен <xref:System.Net.Configuration.SmtpNetworkElement> добавлено свойство <xref:System.Net.Security> для поддержки настройки расширенной защиты для клиентов SMTP.  
   
 ## <a name="extended-protection-for-client-applications"></a>Расширенная защита для клиентских приложений  
  Для большинства приложений расширенная защита поддерживается автоматически. Классы <xref:System.Net.HttpWebRequest> и <xref:System.Net.Mail.SmtpClient> поддерживают расширенную защиту, если базовая версия Windows поддерживает расширенную защиту. Экземпляр <xref:System.Net.HttpWebRequest> отправляет имя участника-службы, сформированное из <xref:System.Uri>. По умолчанию экземпляр <xref:System.Net.Mail.SmtpClient> отправляет имя участника-службы, сформированное из имени узла на почтовом сервере SMTP.  
@@ -148,7 +148,7 @@ ms.locfileid: "74444242"
   
  Эти функции расширенной защиты также могут использоваться серверными приложениями для проверки подлинности с другими типами запросов, а также при использовании доверенного прокси.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

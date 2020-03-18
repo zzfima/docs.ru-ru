@@ -8,10 +8,10 @@ helpviewer_keywords:
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047634"
 ---
 # <a name="network-programming-how-to-topics"></a>Практические руководства по сетевому программированию
@@ -33,7 +33,7 @@ ms.locfileid: "71047634"
   
 - [Практическое руководство. Приведение типа объекта WebRequest для доступа к свойствам, связанным с определенным протоколом](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
   
-- [Практическое руководство. Доступ к свойствам, относящимся к HTTP](how-to-access-http-specific-properties.md)  
+- [Практическое руководство. Доступ к свойствам, относящимся с HTTP](how-to-access-http-specific-properties.md)  
   
 - [Практическое руководство. Присвоение данных пользователя групповым подключениям](how-to-assign-user-information-to-group-connections.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71047634"
   
 - [Практическое руководство. Отправка файлов с использованием FTP](how-to-upload-files-with-ftp.md)  
   
-- [Практическое руководство. Перечисление содержимого каталога с помощью FTP](how-to-list-directory-contents-with-ftp.md)  
+- [Практическое руководство. Список содержимого каталога с помощью FTP](how-to-list-directory-contents-with-ftp.md)  
   
  **IP-протокол версии 6:**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71047634"
   
 - [Практическое руководство. Проверка связи с узлом](how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Сетевое программирование в .NET Framework](index.md)
 - [Примеры сетевого программирования](network-programming-samples.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140010"
 ---
 # <a name="plinq-data-sample"></a>Пример данных PLINQ
@@ -29,7 +29,7 @@ ms.locfileid: "73140010"
   
 2. Замените содержимое файлов Module1.vb или Program.cs кодом, приведенным после следующих шагов.  
   
-3. В меню **Проект** выберите пункт **Добавить новый элемент**. Выберите **Текстовый файл** и щелкните **ОК**. Скопируйте данные из этой статьи и вставьте их в новый текстовый файл. В меню **Файл** щелкните команду **Сохранить**, введите имя файла Plinqdata.csv и сохраните его в папку, где расположены файлы исходного кода.  
+3. В меню **Проект** выберите **Добавить новый элемент**. Выберите **Текстовый файл** и щелкните **ОК**. Скопируйте данные из этой статьи и вставьте их в новый текстовый файл. В меню **Файл** щелкните команду **Сохранить**, введите имя файла Plinqdata.csv и сохраните его в папку, где расположены файлы исходного кода.  
   
 4. Нажмите клавишу F5 и убедитесь, что проект правильно компилируется и выполняется. В окне консоли вы увидите такие выходные данные, как показано ниже.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73140010"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>Данные  
   
 ```console  
 CUSTOMERS  
@@ -860,6 +860,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -3,10 +3,10 @@ title: Каталог идентификаторов сред выполнени
 description: Сведения об идентификаторах сред выполнения и их использовании в .NET Core.
 ms.date: 02/22/2019
 ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451737"
 ---
 # <a name="net-core-rid-catalog"></a>Каталог идентификаторов сред выполнения (RID) в .NET Core
@@ -35,7 +35,7 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 
 - `[architecture]` — это архитектура процессора. Например, `x86`, `x64`, `arm` или `arm64`.
 
-- `[additional qualifiers]` дополнительно дифференцируют разные платформы. Например, `aot`.
+- `[additional qualifiers]` дополнительно дифференцируют разные платформы. Пример: `aot`.
 
 ## <a name="rid-graph"></a>Схема RID
 
@@ -147,6 +147,6 @@ SDK для .NET Core 2.0 представляет концепцию перен
 
 Дополнительные сведения см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?pivots=os-macos).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Идентификаторы среды выполнения](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)

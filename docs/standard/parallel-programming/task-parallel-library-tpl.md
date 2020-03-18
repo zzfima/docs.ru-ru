@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
 ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139958"
 ---
 # <a name="task-parallel-library-tpl"></a>Библиотека параллельных задач (TPL)
@@ -21,7 +21,7 @@ ms.locfileid: "73139958"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|ОПИСАНИЕ|  
+|Название|Описание:|  
 |-|-|  
 |[Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Описание создания параллельных циклов `for` и `foreach` (`For` и `For Each` в Visual Basic).|  
 |[Асинхронное программирование на основе задач](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Описание создания и запуска задач неявно с использованием перегрузки <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> или явно с использованием объектов <xref:System.Threading.Tasks.Task> напрямую.|  
@@ -31,6 +31,6 @@ ms.locfileid: "73139958"
 |[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Описание способов достижения параллелизма данных с помощью запросов LINQ.|  
 |[Параллельное программирование](../../../docs/standard/parallel-programming/index.md)|Узел верхнего уровня для параллельного программирования в .NET.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Примеры параллельного программирования в .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

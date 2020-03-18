@@ -10,10 +10,10 @@ helpviewer_keywords:
 author: rick-anderson
 ms.author: riande
 ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77627556"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines в .NET
@@ -70,7 +70,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
-## <a name="pipe"></a>Pipe
+## <a name="pipe"></a>канал
 
 Класс <xref:System.IO.Pipelines.Pipe> можно использовать для создания пары `PipeWriter/PipeReader`. Все данные, записанные в `PipeWriter`, доступны в `PipeReader`:
 
@@ -125,12 +125,12 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 Чтобы устранить описанную выше проблему, `Pipe` имеет два параметра для управления потоком данных:
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: Определяет, сколько данных следует буферизовать, прежде чем вызовы к <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> будут приостановлены.
-* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: Определяет, сколько данных средство чтения должно пронаблюдать, прежде чем вызовы к `PipeWriter.FlushAsync` возобновятся.
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>. Определяет, сколько данных следует буферизовать, прежде чем вызовы к <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> будут приостановлены.
+* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>. Определяет, сколько данных средство чтения должно пронаблюдать, прежде чем вызовы к `PipeWriter.FlushAsync` возобновятся.
 
 ![Схема с ResumeWriterThreshold и PauseWriterThreshold](./media/pipelines/resume-pause.png)
 
-<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>:
+<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>.
 
 * Возвращает неполный `ValueTask<FlushResult>`, если объем данных в `Pipe` пересекает `PauseWriterThreshold`.
 * Завершает `ValueTask<FlushResult>`, когда он становится меньше `ResumeWriterThreshold`.
@@ -213,7 +213,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ### <a name="cancellation"></a>Отмена
 
-`PipeReader.ReadAsync`:
+`PipeReader.ReadAsync`.
 
 * Поддерживает передачу <xref:System.Threading.CancellationToken>.
 * Создает исключение <xref:System.OperationCanceledException>, если `CancellationToken` отменяется при ожидании чтения.

@@ -4,23 +4,23 @@ description: Узнайте, как создать приложение .NET Cor
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 4c03c70edcdba52c4e6029402b92d5478a0d312c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156651"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240848"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Создание приложения .NET Core с подключаемыми модулями
 
-В этом руководстве описывается, как создать и использовать пользовательский <xref:System.Runtime.Loader.AssemblyLoadContext> для загрузки подключаемых модулей. Он использует <xref:System.Runtime.Loader.AssemblyDependencyResolver> для разрешения зависимостей подключаемого модуля. Этот учебник правильно изолирует зависимости подключаемого модуля от ведущего приложения. Вы научитесь:
+В этом руководстве описывается, как создать и использовать пользовательский <xref:System.Runtime.Loader.AssemblyLoadContext> для загрузки подключаемых модулей. Он использует <xref:System.Runtime.Loader.AssemblyDependencyResolver> для разрешения зависимостей подключаемого модуля. Этот учебник правильно изолирует зависимости подключаемого модуля от ведущего приложения. Вы узнаете, как:
 
 - Создание структуры проекта для поддержки подключаемых модулей.
 - Создание пользовательского <xref:System.Runtime.Loader.AssemblyLoadContext> для загрузки каждого подключаемого модуля.
 - Использование типа <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName>, чтобы разрешить зависимости для подключаемых модулей.
 - Создание подключаемых модулей, которые можно легко развернуть путем копирования артефактов сборки.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 - Установите [пакет SDK для .NET Core 3.0](https://dotnet.microsoft.com/download) или более новой версии.
 
@@ -105,7 +105,7 @@ namespace AppWithPlugin
 
 В корневой папке проекта запустите `dotnet new classlib -o PluginBase`. Также запустите `dotnet sln add PluginBase/PluginBase.csproj`, чтобы добавить проект в файл решения. Удалите файл `PluginBase/Class1.cs` и создайте новый файл в папке `PluginBase` с именем `ICommand.cs` со следующим определением интерфейса:
 
-[!code-csharp[the-plugin-interface](~/samples/core/extensions/AppWithPlugin/PluginBase/ICommand.cs)]
+[!code-csharp[the-plugin-interface](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/PluginBase/ICommand.cs)]
 
 Этот интерфейс `ICommand` является интерфейсом, который будут реализовывать все подключаемые модули.
 
@@ -187,7 +187,7 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 Теперь приложение может правильно загрузить и создать экземпляры команд из загруженных сборок подключаемых модулей, но оно по-прежнему не может загрузить сборки подключаемых модулей. Создайте файл с именем *PluginLoadContext.cs* в папке *AppWithPlugin* со следующим содержимым:
 
-[!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
+[!code-csharp[loading-plugins](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/AppWithPlugin/PluginLoadContext.cs)]
 
 Тип `PluginLoadContext` наследуется от класса <xref:System.Runtime.Loader.AssemblyLoadContext>. Тип `AssemblyLoadContext` — это специальный тип в среде выполнения, который позволяет разработчикам изолировать загруженные сборки в разные группы, чтобы версии сборок не конфликтовали друг с другом. Кроме того, пользовательский `AssemblyLoadContext` может выбирать различные пути для загрузки сборок и переопределять поведение по умолчанию. `PluginLoadContext` использует экземпляр типа `AssemblyDependencyResolver`, появившегося в .NET Core 3.0, для разрешения имен сборок в пути. Объект `AssemblyDependencyResolver` создается с путем к библиотеке классов .NET. Он разрешает сборки и собственные библиотеки в относительные пути на основе файла *deps.json* для библиотеки классов, путь которой был передан конструктору `AssemblyDependencyResolver`. Пользовательский `AssemblyLoadContext` позволяет подключаемым модулям иметь собственные зависимости, а `AssemblyDependencyResolver` упрощает правильную загрузку зависимостей.
 
@@ -231,7 +231,7 @@ static Assembly LoadPlugin(string relativePath)
 
 3. Замените файл *HelloPlugin/Class1.cs* на файл с именем *HelloCommand.cs* со следующим содержимым:
 
-[!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
+[!code-csharp[the-hello-plugin](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/HelloPlugin/HelloCommand.cs)]
 
 Теперь откройте файл *HelloPlugin.csproj*. Он должен выглядеть следующим образом:
 

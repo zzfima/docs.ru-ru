@@ -6,17 +6,17 @@ helpviewer_keywords:
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74329597"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Доступ к портам компьютера (Visual Basic)
 
 Объект `My.Computer.Ports` предоставляет свойство и метод для доступа к последовательным портам компьютера.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
 
  [Практическое руководство. Отображение доступных последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  Демонстрация отображения доступных последовательных портов.  
@@ -33,7 +33,7 @@ ms.locfileid: "74329597"
  [Операции с портами в .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
  Описание использования .NET Framework при выполнении операций с портами.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Описание объекта `My.Computer.Ports` и его членов.  

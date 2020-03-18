@@ -12,10 +12,10 @@ metadata:
   interactive: csharp
   ms.custom: mvc
   ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969412"
 items:
 - durationInMinutes: 1
@@ -127,7 +127,7 @@ items:
 - title: Работа со строками
   durationInMinutes: 5
   content: >
-    Когда вы вносили последние изменения, вы ознакомились с возможностями работы со строками. Рассмотрим их подробнее.
+    Когда вы вносили последние изменения, вы ознакомились с возможностями работы со строками. Давайте рассмотрим его подробнее.
 
 
     Между фигурными скобками можно указать более одной переменной. Попробуйте выполнить следующий код:
@@ -256,7 +256,7 @@ items:
     ***Задача***
 
 
-    Существует два схожих метода (<xref:System.String.StartsWith%2A> и <xref:System.String.EndsWith%2A>) для поиска подстрок в строках. С их помощью выполняется поиск подстроки в начале или конце строки. Попробуйте изменить пример выше таким образом, чтобы вместо <xref:System.String.Contains%2A>использовались <xref:System.String.StartsWith%2A> и <xref:System.String.EndsWith%2A>. Выполните поиск слов You или goodbye в начале строки. Выполните поиск слов hello или goodbye в конце строки.
+    Существует два схожих метода (<xref:System.String.StartsWith%2A> и <xref:System.String.EndsWith%2A>) для поиска подстрок в строках. С их помощью выполняется поиск подстроки в начале или конце строки. Попробуйте изменить пример выше таким образом, чтобы вместо <xref:System.String.StartsWith%2A>использовались <xref:System.String.EndsWith%2A> и <xref:System.String.Contains%2A>. Выполните поиск слов You или goodbye в начале строки. Выполните поиск слов hello или goodbye в конце строки.
 
 
     > [!NOTE]

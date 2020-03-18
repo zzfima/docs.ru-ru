@@ -13,10 +13,10 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159342"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Классы символов в регулярных выражениях
@@ -71,7 +71,7 @@ ms.locfileid: "78159342"
 
 В следующей таблице перечислены некоторые распространенные шаблоны регулярных выражений, содержащие классы положительных символов.  
   
-|Модель|Описание|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`[aeiou]`|Соответствует всем гласным.|  
 |`[\p{P}\d]`|Соответствует всем знакам препинания и десятичным цифрам.|  
@@ -84,7 +84,7 @@ ms.locfileid: "78159342"
   
  Регулярное выражение `gr[ae]y\s\S+?[\s|\p{P}]` определяется следующим образом:  
   
-|Модель|Описание|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`gr`|Соответствует буквенным символам "gr".|  
 |`[ae]`|Соответствует букве "a" или "e".|  
@@ -99,7 +99,7 @@ ms.locfileid: "78159342"
   
  Определение регулярного выражения `\b[A-Z]\w*\b` показано в таблице ниже.  
   
-|Модель|Описание|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`\b`|Начало на границе слова.|  
 |`[A-Z]`|Соответствует любому символу верхнего регистра от А до Z.|  
@@ -134,7 +134,7 @@ ms.locfileid: "78159342"
   
  В следующей таблице перечислены некоторые распространенные шаблоны регулярных выражений, содержащие отрицательные группы символов.  
   
-|Модель|Описание|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`[^aeiou]`|Соответствует всем символам, кроме гласных.|  
 |`[^\p{P}\d]`|Соответствует всем символам, кроме знаков препинания и десятичных цифр.|  
@@ -146,7 +146,7 @@ ms.locfileid: "78159342"
   
  Определение регулярного выражения `\bth[^o]\w+\b` показано в таблице ниже.  
   
-|Модель|Описание|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`\b`|Начало на границе слова.|  
 |`th`|Соответствует буквенным символам "th".|  
@@ -193,7 +193,7 @@ ms.locfileid: "78159342"
   
  Определение регулярного выражения `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` показано в таблице ниже.  
   
-|Модель|Описание|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`\b`|Начало на границе слова.|  
 |`\p{IsGreek}+`|Соответствует одному или нескольким греческим символам.|  
@@ -526,7 +526,7 @@ ms.locfileid: "78159342"
 |D800 - DB7F|`IsHighSurrogates`|  
 |DB80 - DBFF|`IsHighPrivateUseSurrogates`|  
 |DC00 - DFFF|`IsLowSurrogates`|  
-|E000 - F8FF|`IsPrivateUse` либо `IsPrivateUseArea`|  
+|E000 - F8FF|`IsPrivateUse` или `IsPrivateUseArea`|  
 |F900 - FAFF|`IsCJKCompatibilityIdeographs`|  
 |FB00 - FB4F|`IsAlphabeticPresentationForms`|  
 |FB50 - FDFF|`IsArabicPresentationForms-A`|  
@@ -567,7 +567,7 @@ ms.locfileid: "78159342"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - <xref:System.Char.GetUnicodeCategory%2A>
 - [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

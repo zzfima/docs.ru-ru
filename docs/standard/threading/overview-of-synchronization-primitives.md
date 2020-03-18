@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106596"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Общие сведения о примитивах синхронизации
@@ -50,7 +50,7 @@ ms.locfileid: "73106596"
 
 Платформа .NET предоставляет ряд примитивов синхронизации для управления доступом нескольких потоков к общему ресурсу.
 
-### <a name="monitor-class"></a>Monitor класс
+### <a name="monitor-class"></a>Monitor - класс
 
 Класс <xref:System.Threading.Monitor?displayProperty=nameWithType> предоставляет монопольный доступ к общему ресурсу, блокируя или разблокируя объект, определяющий ресурс. Во время блокировки поток, удерживающий блокировку, может снова поставить и снять блокировку. Любой другой поток не может получить блокировку, и метод <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> ожидает снятия блокировки. Метод <xref:System.Threading.Monitor.Enter%2A> получает снятую блокировку. Можно также использовать метод <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, чтобы задать количество времени, в течение которого поток пытается получить блокировку. Так как класс <xref:System.Threading.Monitor> реализует привязку потока, поток, который получил блокировку, должен снять ее, вызвав метод <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>.
 
@@ -61,9 +61,9 @@ ms.locfileid: "73106596"
 > [!NOTE]
 > С помощью операторов [lock](../../csharp/language-reference/keywords/lock-statement.md) в C# и [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) в Visual Basic можно синхронизировать доступ к общему ресурсу вместо использования класса <xref:System.Threading.Monitor> напрямую. Эти операторы реализуются с помощью методов <xref:System.Threading.Monitor.Enter%2A>, <xref:System.Threading.Monitor.Exit%2A> и блока `try…finally`, обеспечивающих постоянное снятие полученной блокировки.
 
-### <a name="mutex-class"></a>Mutex класс
+### <a name="mutex-class"></a>Mutex - класс
 
-Класс <xref:System.Threading.Mutex?displayProperty=nameWithType>, как и <xref:System.Threading.Monitor>, предоставляет монопольный доступ к общему ресурсу. С помощью вызова одной из перегрузок метода [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) можно запросить владение мьютексом. Как и <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex>реализует привязку потока, и поток, который получил мьютекс, должен освободить его, вызвав метод <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
+Как и <xref:System.Threading.Mutex?displayProperty=nameWithType>, класс <xref:System.Threading.Monitor> предоставляет монопольный доступ к общему ресурсу. С помощью вызова одной из перегрузок метода [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) можно запросить владение мьютексом. Как и <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex>реализует привязку потока, и поток, который получил мьютекс, должен освободить его, вызвав метод <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
 
 В отличие от <xref:System.Threading.Monitor>, класс <xref:System.Threading.Mutex> может использоваться для межпроцессной синхронизации. Для этого нужно использовать именованный мьютекс, который виден в операционной системе. Чтобы создать экземпляр именованного мьютекса, используйте [конструктор Mutex](<xref:System.Threading.Mutex.%23ctor%2A>), который задает имя. Также можно вызвать метод <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType>, чтобы открыть существующий именованный системный мьютекс.
   
@@ -108,7 +108,7 @@ ms.locfileid: "73106596"
 - <xref:System.Threading.EventWaitHandle>, созданный с помощью флага <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>, автоматически сбрасывается после освобождения одного потока в состоянии ожидания. Это похоже на турникет, пропускающий только один поток каждый раз, когда он переводится в сигнальное состояние. Такое поведение характерно для класса <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>, наследующего <xref:System.Threading.EventWaitHandle>.
 - <xref:System.Threading.EventWaitHandle>, созданный с помощью флага <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>, находится в сигнальном состоянии, пока не будет вызван его метод <xref:System.Threading.EventWaitHandle.Reset%2A>. Это как ворота, которые закрыты до получения сигнала и остающиеся затем открытыми, пока кто-нибудь их не закроет. Такое поведение характерно для класса <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>, наследующего <xref:System.Threading.EventWaitHandle>. Класс <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> является упрощенной альтернативой <xref:System.Threading.ManualResetEvent>.
 
-В Windows можно использовать <xref:System.Threading.EventWaitHandle> для синхронизации между процессами. Для этого необходимо создать экземпляр <xref:System.Threading.EventWaitHandle>, выполняющий роль именованного системного события синхронизации. Это можно сделать с помощью [конструкторов EventWaitHandle](<xref:System.Threading.EventWaitHandle.%23ctor%2A>), которые задают имя или метод <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType>.
+В Windows можно использовать <xref:System.Threading.EventWaitHandle> для внутрипроцессной синхронизации. Для этого необходимо создать экземпляр <xref:System.Threading.EventWaitHandle>, выполняющий роль именованного системного события синхронизации. Это можно сделать с помощью [конструкторов EventWaitHandle](<xref:System.Threading.EventWaitHandle.%23ctor%2A>), которые задают имя или метод <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType>.
 
 Дополнительные сведения см. в статье о [EventWaitHandle](eventwaithandle.md). Справочные сведения об API см. здесь: <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.AutoResetEvent>, <xref:System.Threading.ManualResetEvent> и <xref:System.Threading.ManualResetEventSlim>.
 
@@ -128,7 +128,7 @@ ms.locfileid: "73106596"
 
 Дополнительные сведения см. в статье о [Barrier](barrier.md) и справочной документации по API <xref:System.Threading.Barrier>.
 
-## <a name="interlocked-class"></a>Interlocked класс
+## <a name="interlocked-class"></a>Interlocked - класс
 
 Класс <xref:System.Threading.Interlocked?displayProperty=nameWithType> предоставляет статические методы, которые выполняют простые атомарные операции над переменной. К этим атомарным операциям относится добавление, инкремент и декремент, обмен и условный обмен, зависящий от сравнения, а также операция чтения 64-разрядного целого числа.
 
@@ -140,7 +140,7 @@ ms.locfileid: "73106596"
 
 Дополнительные сведения см. в статье о [SpinWait](spinwait.md) и справочной документации по API <xref:System.Threading.SpinWait>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Потокобезопасные коллекции](../collections/thread-safe/index.md)

@@ -3,10 +3,10 @@ title: Переход с DNX на интерфейс CLI .NET Core
 description: Переход от средств DNX к средствам CLI .NET Core.
 ms.date: 06/20/2016
 ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503819"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Переход с DNX на интерфейс CLI .NET Core (project.json)
@@ -46,14 +46,14 @@ CLI упаковывается двумя способами:
 
 В таблице ниже приведены команды DNX и DNU и их аналоги в CLI.
 
-| Команда DNX                    | Команда CLI    | Описание                                                                                                     |
+| Команда DNX                    | Команда CLI    | Описание:                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | dnx run                        | `dotnet run`     | Выполнение кода из источника.                                                                                           |
 | dnu build                      | `dotnet build`   | Сборка двоичного файла с кодом на языке IL.                                                                                |
 | dnu pack                       | `dotnet pack`    | Упаковка кода в пакет NuGet.                                                                        |
 | dnx \[команда] (например, dnx web) | Н/Д \*          | Выполнение команды в среде DNX в соответствии с определением в файле project.json.                                                     |
 | dnu install                    | Н/Д \*          | В среде DNX установка пакета в качестве зависимости.                                                            |
-| dnu restore                    | `dotnet restore` | Восстановление зависимостей, указанных в файле project.json. ([см. примечание](#dotnet-restore-note))                                                            |
+| dnu restore                    | `dotnet restore` | Восстановление зависимостей, указанных в файле project.json. ([см. Примечание](#dotnet-restore-note))                                                            |
 | dnu publish                    | `dotnet publish` | Публикация приложения для развертывания в одной из трех форм (переносимое, переносимое с машинным кодом или автономное). |
 | dnu wrap                       | Н/Д \*          | В среде DNX упаковка файла project.json в файл CSPROJ.                                                                    |
 | dnu commands                   | Н/Д \*          | В среде DNX управление глобально установленными командами.                                                           |

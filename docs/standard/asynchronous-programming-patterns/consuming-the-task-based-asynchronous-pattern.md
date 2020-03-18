@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139813"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Использование асинхронного шаблона, основанного на задачах
@@ -21,7 +21,7 @@ ms.locfileid: "73139813"
 При работе асинхронными операциями с использованием асинхронного шаблона, основанного на задачах, можно использовать обратные вызовы для реализации неблокирующего ожидания.  Для задач это достигается с помощью таких методов, как <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Поддержка асинхронных операций на основе языка скрывает обратные вызовы, разрешая асинхронным операциям находиться в режиме ожидания в нормальном потоке управления, а код, созданный компилятором, предоставляет поддержку на том же уровне API.
 
 ## <a name="suspending-execution-with-await"></a>Приостановление выполнения с помощью Await
- Начиная с версии .NET Framework 4.5 для асинхронного ожидания объектов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> можно использовать ключевое слово [await](../../csharp/language-reference/operators/await.md) (в C#) и [оператор Await](../../visual-basic/language-reference/operators/await-operator.md) (в Visual Basic). Когда вы ожидаете <xref:System.Threading.Tasks.Task>, выражение `await` имеет тип `void`. Когда вы ожидаете <xref:System.Threading.Tasks.Task%601>, выражение `await` имеет тип `TResult`. Выражение `await` должно находиться в теле асинхронного метода. Дополнительные сведения о поддержке языков C# и Visual Basic в .NET Framework 4.5 см. в спецификациях языка C# и Visual Basic.
+ Начиная с версии .NET Framework 4.5 для асинхронного ожидания объектов [ и ](../../csharp/language-reference/operators/await.md) можно использовать ключевое слово [await](../../visual-basic/language-reference/operators/await-operator.md) (в C#) и <xref:System.Threading.Tasks.Task>оператор Await<xref:System.Threading.Tasks.Task%601> (в Visual Basic). Когда вы ожидаете <xref:System.Threading.Tasks.Task>, выражение `await` имеет тип `void`. Когда вы ожидаете <xref:System.Threading.Tasks.Task%601>, выражение `await` имеет тип `TResult`. Выражение `await` должно находиться в теле асинхронного метода. Дополнительные сведения о поддержке языков C# и Visual Basic в .NET Framework 4.5 см. в спецификациях языка C# и Visual Basic.
 
  На самом деле функция ожидания реализуется с помощью установки обратного вызова для задачи с помощью продолжения.  Этот обратный вызов возобновляет асинхронный методы в точке остановки. При возобновлении асинхронного метода, если ожидаемая операция была завершена успешно и имела тип <xref:System.Threading.Tasks.Task%601>, возвращается ее значение `TResult`.  Если ожидаемая операция <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> завершилась с состоянием <xref:System.Threading.Tasks.TaskStatus.Canceled>, создается исключение <xref:System.OperationCanceledException>.  Если ожидаемая операция <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> завершилась с состоянием <xref:System.Threading.Tasks.TaskStatus.Faulted>, создается вызвавшее эту проблему исключение. `Task` может завершиться с ошибкой из-за нескольких исключений, но распространяется только одно из этих исключений. Тем не менее, свойство <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> возвращает исключение <xref:System.AggregateException> с полным списком ошибок.
 
@@ -245,13 +245,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Используйте метод <xref:System.Threading.Tasks.Task.WhenAny%2A> для асинхронного ожидания завершения одной из нескольких асинхронных операций, которые представлены в виде задач.  Этот метод допускает четыре основных варианта использования.
 
-- Избыточность:  многократный запуск одной операции и выбор первой завершенной операции (например, обращение к нескольким веб-сервисам котировок акций с целью получить один результат и выбор операции, которая завершилась первой).
+- Избыточность: многократный запуск одной операции и выбор первой завершенной операции (например, обращение к нескольким веб-сервисам котировок акций с целью получить один результат и выбор операции, которая завершилась первой).
 
-- Чередование:  запуск и ожидание завершения нескольких операций, но обработка операций по мере выполнения.
+- Чередование: запуск и ожидание завершения нескольких операций, но обработка операций по мере выполнения.
 
-- Регулирование:  добавление новых операций по мере завершения предыдущих.  Это расширение сценария с чередованием.
+- Регулирование: добавление новых операций по мере завершения предыдущих.  Это расширение сценария с чередованием.
 
-- Ранняя остановка:  например, операция, представленная задачей t1, может сгруппироваться в задачу <xref:System.Threading.Tasks.Task.WhenAny%2A> с другой задачей t2, после чего можно ожидать задачу <xref:System.Threading.Tasks.Task.WhenAny%2A>. Например, задача t2 может представлять завершение ожидания, отмену или другой сигнал, требующий завершения задачи <xref:System.Threading.Tasks.Task.WhenAny%2A> до завершения задачи t1.
+- Ранняя остановка: например, операция, представленная задачей t1, может сгруппироваться в задачу <xref:System.Threading.Tasks.Task.WhenAny%2A> с другой задачей t2, после чего можно ожидать задачу <xref:System.Threading.Tasks.Task.WhenAny%2A>. Например, задача t2 может представлять завершение ожидания, отмену или другой сигнал, требующий завершения задачи <xref:System.Threading.Tasks.Task.WhenAny%2A> до завершения задачи t1.
 
 #### <a name="redundancy"></a>Избыточность
  Рассмотрим случай, когда вам требуется принять решение о необходимости покупки акций.  Существует несколько стандартных веб-служб с рекомендациями по покупке акций, которым вы доверяете, но в зависимости от ежедневной нагрузки каждая из этих служб иногда может работать медленно.  Для получения уведомлений о завершении любой операции можно использовать метод <xref:System.Threading.Tasks.Task.WhenAny%2A>:
@@ -288,7 +288,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Кроме того, даже если первая задача завершается успешно, следующие задачи могут завершиться сбоем.  В этом случае есть несколько вариантов обработки исключений:  можно ждать, пока не завершатся все задачи, используя метод <xref:System.Threading.Tasks.Task.WhenAll%2A>, или решить, что все исключения важны и должны быть записаны в журнал.  В этом случае используется продолжение для получения уведомлений об успешном завершении задач.
+ Кроме того, даже если первая задача завершается успешно, следующие задачи могут завершиться сбоем.  В этом случае есть несколько вариантов обработки исключений: можно ждать, пока не завершатся все задачи, используя метод <xref:System.Threading.Tasks.Task.WhenAll%2A>, или решить, что все исключения важны и должны быть записаны в журнал.  В этом случае используется продолжение для получения уведомлений об успешном завершении задач.
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -833,7 +833,7 @@ private static void Produce(int data)
 > [!NOTE]
 > Пространство имен <xref:System.Threading.Tasks.Dataflow> доступно в .NET Framework 4.5 через **NuGet**. Чтобы установить сборку, которая содержит пространство имен <xref:System.Threading.Tasks.Dataflow>, откройте проект в Visual Studio, в меню "Проект" выберите пункт **Управление пакетами NuGet** и найдите в Интернете пакет Microsoft.Tpl.Dataflow.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))
 - [Реализация асинхронной модели на основе задач](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)

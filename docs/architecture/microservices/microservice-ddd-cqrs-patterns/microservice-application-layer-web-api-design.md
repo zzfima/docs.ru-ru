@@ -3,10 +3,10 @@ title: Разработка веб-API и уровня приложений дл
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Краткое описание принципов SOLID для проектирования уровня приложений.
 ms.date: 10/08/2018
 ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68676521"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Разработка веб-API и уровня приложений для микрослужб

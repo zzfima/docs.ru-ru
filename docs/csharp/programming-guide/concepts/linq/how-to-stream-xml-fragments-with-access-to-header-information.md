@@ -3,10 +3,10 @@ title: Потоковая передача фрагментов XML с дост�
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
 ms.openlocfilehash: 5bc10bcadae0e33ee63f953608ca841d44dd6527
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712394"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)

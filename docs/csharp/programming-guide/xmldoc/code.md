@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
 ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789837"
 ---
 # <a name="code-c-programming-guide"></a>Руководство по программированию на C#. \<code>
@@ -29,7 +29,7 @@ ms.locfileid: "76789837"
 
   Текст, который необходимо пометить как код.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 С помощью тега \<code> можно определить несколько строк как код. С помощью тега [\<c>](./code-inline.md) можно указать, что текст в описании необходимо пометить как код.
 
@@ -39,7 +39,7 @@ ms.locfileid: "76789837"
 
 В разделе [\<example>](./example.md) можно найти пример использования тега \<code>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

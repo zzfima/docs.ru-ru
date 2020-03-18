@@ -7,10 +7,10 @@ helpviewer_keywords:
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
 ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77452023"
 ---
 # <a name="using-properties-c-programming-guide"></a>Использование свойств (Руководство по программированию в C#)
@@ -63,7 +63,7 @@ ms.locfileid: "77452023"
 
 Использование имени явного параметра (`value`) для объявления локальной переменной в методе доступа `set` является ошибкой.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Свойства могут быть помечены как `public`, `private`, `protected`, `internal`, `protected internal` или `private protected`. Эти модификаторы доступа определяют, каким образом пользователи класса смогут получать доступ к свойству. Методы доступа `get` и `set` для одного свойства могут иметь разные модификаторы доступа. Например, метод доступа `get` может иметь модификатор `public`, разрешающий доступ из-за пределов типа только для чтения, а метод доступа `set` — модификатор `private` или `protected`. Дополнительные сведения см. в статье [Модификаторы доступа](./access-modifiers.md).
 
@@ -106,7 +106,7 @@ ms.locfileid: "77452023"
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../index.md)
 - [Свойства](properties.md)

@@ -3,10 +3,10 @@ title: Что нового в C# 7.3
 description: Обзор новых возможностей в C# 7.3
 ms.date: 05/16/2018
 ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204559"
 ---
 # <a name="whats-new-in-c-73"></a>Что нового в C# 7.3
@@ -39,7 +39,7 @@ ms.locfileid: "74204559"
 1. Установите глобальное средство [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
 1. Клонируйте репозиторий [dotnet/try-samples](https://github.com/dotnet/try-samples).
 1. Для репозитория *try-samples* установите в качестве текущего каталога подкаталог *csharp7*.
-1. Запустите `dotnet try`.
+1. Выполните `dotnet try`.
 
 ## <a name="enabling-more-efficient-safe-code"></a>Повышение эффективности безопасного кода
 

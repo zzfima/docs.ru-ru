@@ -3,10 +3,10 @@ title: направляющая установки .NET Framework
 description: Сведения об установке платформы .NET Framework в Windows.
 ms.date: 08/03/2017
 ms.openlocfilehash: b14be7a429138069545ede835025dff33b4f3919
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716367"
 ---
 # <a name="installation-guide"></a>Руководство по установке
@@ -17,7 +17,7 @@ ms.locfileid: "75716367"
 
 - [Windows 10 и Windows Server 2016](on-windows-10.md)
 - [Windows 8.1 и Windows Server 2012 R2](on-windows-8-1.md)
-- [Windows 8 или Windows Server 2012](on-windows-8.md)
+- [Windows 8 и Windows Server 2012](on-windows-8.md)
 - [Windows 7 и Windows Server 2008 R2](on-windows-7.md)
 - [Windows Vista и Windows Server 2008](on-windows-vista.md)
 
@@ -25,7 +25,7 @@ ms.locfileid: "75716367"
 
 - [Windows XP и Windows Server 2003](on-windows-xp.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Скачивание .NET Framework](https://dotnet.microsoft.com/download)
 - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)

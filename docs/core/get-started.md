@@ -6,10 +6,10 @@ ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 0968d9db1dbfbdc8c586328ee8e02315f17950b9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714395"
 ---
 # <a name="get-started-with-net-core"></a>Начало работы с .NET Core
@@ -29,7 +29,7 @@ dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-Должны выводиться следующие данные:
+Вы должны увидеть следующий результат.
 
 ```console
 Hello World!
@@ -43,7 +43,7 @@ Hello World!
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 - [Создание первого консольного приложения .NET Core в Visual Studio 2019](./tutorials/with-visual-studio.md)
 - [Создание библиотеки классов с помощью .NET Standard в Visual Studio](./tutorials/library-with-visual-studio.md)
@@ -51,12 +51,12 @@ Hello World!
 
 |   |   |
 |---|---|
-| ![значок камеры для видеоролика](./media/video-icon.png "Посмотрите видео") | Посмотрите видео о том, [как установить и использовать Visual Studio Code и .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) на канале Channel 9. |
-| ![значок камеры для видеоролика](./media/video-icon.png "Посмотрите видео") | Просмотрите видео о [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) на YouTube. |
+| ![Значок кинокамеры для видео](./media/video-icon.png "Посмотрите видео") | Посмотрите видео о том, [как установить и использовать Visual Studio Code и .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) на канале Channel 9. |
+| ![Значок кинокамеры для видео](./media/video-icon.png "Посмотрите видео") | Просмотрите видео о [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) на YouTube. |
 
 Список поддерживаемых версий Windows см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?pivots=os-windows).
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 Начало работы с разработкой приложений .NET Core, используя следующие пошаговые руководства.
 
@@ -64,11 +64,11 @@ Hello World!
 
 |   |   |
 |---|---|
-| ![значок камеры для видеоролика](./media/video-icon.png "Посмотрите видео") | Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). |
+| ![Значок кинокамеры для видео](./media/video-icon.png "Посмотрите видео") | Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). |
 
 Список поддерживаемых дистрибутивов и версий Linux см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?pivots=os-linux).
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 Начало работы с разработкой приложений .NET Core, используя следующие пошаговые руководства.
 
@@ -79,7 +79,7 @@ Hello World!
 
 |   |   |
 |---|---|
-| ![значок камеры для видеоролика](media/video-icon.png "Посмотрите видео") | Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac). |
+| ![Значок кинокамеры для видео](media/video-icon.png "Посмотрите видео") | Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac). |
 
 Список поддерживаемых версий OS X и macOS см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?pivots=os-macos).
 

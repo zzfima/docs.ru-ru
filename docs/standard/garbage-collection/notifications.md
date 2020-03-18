@@ -10,10 +10,10 @@ helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131536"
 ---
 # <a name="garbage-collection-notifications"></a>Уведомления о сборке мусора
@@ -52,7 +52,7 @@ ms.locfileid: "73131536"
 ## <a name="notification-threshold-parameters"></a>Параметры порогов уведомлений  
  Метод <xref:System.GC.RegisterForFullGCNotification%2A> имеет два параметра, которые позволяют задать пороговые значения для объектов поколения 2 и кучи больших объектов. При достижении этих значений будет создаваться уведомление о сборке мусора. Эти параметры описаны в приведенной ниже таблице.  
   
-|Параметр|ОПИСАНИЕ|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Число от 1 до 99, которое указывает условия для создания уведомления в зависимости от объектов, переведенных в состояние поколения 2.|  
 |`largeObjectHeapThreshold`|Число от 1 до 99, которое указывает условия для создания уведомления в зависимости от объема объектов, помещенных в кучу больших объектов.|  
@@ -63,7 +63,7 @@ ms.locfileid: "73131536"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>ОПИСАНИЕ  
+### <a name="description"></a>Описание  
  В приведенном ниже примере группа серверов обрабатывает входящие веб-запросы. Для имитации рабочей нагрузки по обработке запросов в коллекцию <xref:System.Collections.Generic.List%601> добавляются массивы байтов. Каждый сервер регистрируется для получения уведомлений о сборке мусора и запускает поток с пользовательским методом `WaitForFullGCProc` для постоянного наблюдения за перечислением <xref:System.GCNotificationStatus>, которое возвращают методы <xref:System.GC.WaitForFullGCApproach%2A> и <xref:System.GC.WaitForFullGCComplete%2A>.  
   
  Методы <xref:System.GC.WaitForFullGCApproach%2A> и <xref:System.GC.WaitForFullGCComplete%2A> при получении уведомлений вызывают соответствующие пользовательские методы для обработки событий.  

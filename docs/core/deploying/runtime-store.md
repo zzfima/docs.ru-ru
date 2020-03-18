@@ -3,10 +3,10 @@ title: Хранилище пакетов среды выполнения
 description: Сведения о том, как использовать хранилище пакетов среды выполнения в качестве целевого для манифестов, используемых платформой .NET Core.
 ms.date: 08/12/2017
 ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448962"
 ---
 # <a name="runtime-package-store"></a>Хранилище пакетов среды выполнения
@@ -143,7 +143,7 @@ dotnet publish --manifest manifest.xml
 
 Если развертывание *усекается* при публикации, в публикуемых выходных данных будут отсутствовать только те версии пакетов манифеста, которые вы указали. Чтобы приложение могло запускаться, на узле должны присутствовать пакеты с указанными версиями.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

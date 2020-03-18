@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73418056"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Пошаговое руководство. Написание запросов на C# (LINQ)
@@ -24,9 +24,9 @@ ms.locfileid: "73418056"
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Создание проекта в Visual Studio  
   
-1. Запустите Visual Studio.  
+1. Запустите среду Visual Studio.  
   
-2. В строке меню выберите **Файл**, **Создать**, **Проект**.  
+2. В главном меню выберите **Файл**, **Создать**, **Проект**.  
   
      Откроется диалоговое окно **Новый проект** .  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73418056"
   
 #### <a name="to-create-a-simple-query"></a>Создание простого запроса  
   
-- В методе `Main` приложения создайте простой запрос, при выполнении которого будет возвращаться список учащихся, набравших в результате тестирования больше 90 баллов. Поскольку выбран весь объект `Student`, запрос имеет тип `IEnumerable<Student>`. Несмотря на то, что код можно также набрать напрямую, используя ключевое слово [var](../../../language-reference/keywords/var.md), для демонстрации результатов применяется неявная типизация. (Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../classes-and-structs/implicitly-typed-local-variables.md).)  
+- В методе `Main` приложения создайте простой запрос, при выполнении которого будет возвращаться список учащихся, набравших в первом тесте больше 90 баллов. Поскольку выбран весь объект `Student`, запрос имеет тип `IEnumerable<Student>`. Несмотря на то, что код можно также набрать напрямую, используя ключевое слово [var](../../../language-reference/keywords/var.md), для демонстрации результатов применяется неявная типизация. (Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Кроме того переменная диапазона в запросе, `student`, служит ссылкой на каждый объект `Student` в источнике и предоставляет доступ к каждому объекту.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73418056"
   
 ## <a name="execute-the-query"></a>Выполнение запроса  
   
-#### <a name="to-execute-the-query"></a>Порядок выполнения запроса  
+#### <a name="to-execute-the-query"></a>Выполнение запроса  
   
 1. Теперь напишите цикл `foreach`, вызывающий выполнение запроса. Обратите внимание на следующие моменты:  
   
@@ -171,7 +171,7 @@ ms.locfileid: "73418056"
   
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Ознакомившись с основными аспектами работы с запросами в C#, вы будете готовы прочитать документацию и примеры по интересующему вас типу поставщика LINQ:  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
@@ -182,7 +182,7 @@ ms.locfileid: "73418056"
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ (C#)](./index.md)
 - [Выражения запросов LINQ](../../../linq/index.md)

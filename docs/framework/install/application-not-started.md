@@ -3,10 +3,10 @@ title: Устранение неполадок при получении соо�
 description: Сведения о том, что делать, если отображается сообщение "Не удалось запустить это приложение".
 ms.date: 09/05/2019
 ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965910"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>Устранение неполадок при получении сообщения об ошибке "Не удалось запустить это приложение"
@@ -45,10 +45,10 @@ ms.locfileid: "76965910"
    |---|---|
    |Юбилейное обновление Windows 10 или более поздние версии|[Среда выполнения .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
    |Windows 10, Windows 10 с обновлением за ноябрь|[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)|
-   |Windows 8.1|[Среда выполнения .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
+   |Windows 8.1|[Среда выполнения .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
    |Windows 8|[.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)|
    |Windows 7 SP1|[Среда выполнения .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista SP2|[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
+   |Windows Vista с пакетом обновления 2 (SP2)|[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
 
    > [!NOTE]
    > .NET Framework 4.8, предустановленная в Windows 10 с обновлением за май 2019 г.
@@ -59,7 +59,7 @@ ms.locfileid: "76965910"
 
    ![Не удалось устранить проблему](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Требования к системе для .NET Framework](../get-started/system-requirements.md)
 - [Руководство по установке .NET Framework](index.md)

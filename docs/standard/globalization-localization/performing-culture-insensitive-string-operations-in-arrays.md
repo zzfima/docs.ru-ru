@@ -8,10 +8,10 @@ helpviewer_keywords:
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 ms.openlocfilehash: 051ee77ae5d6552e26e0216d58734d90188475f9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120808"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Выполнение в массивах строковых операций, не зависящих от языка и региональных параметров
@@ -21,7 +21,7 @@ ms.locfileid: "73120808"
 > [!NOTE]
 > Если передать **CultureInfo.InvariantCulture** в метод сравнения, сравнение выполняется без учета языка и региональных параметров. Однако при этом не выполняется нелингвистическое сравнение, например для путей к файлам, разделов реестра и переменных среды. Также не поддерживается принятие решений по безопасности на основе результата сравнения. Для нелингвистического сравнения и (или) поддержки принятия решений по безопасности в приложении следует использовать метод сравнения, который принимает значение <xref:System.StringComparison>. Приложение должно передавать <xref:System.StringComparison.Ordinal>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>

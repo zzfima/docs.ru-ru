@@ -9,10 +9,10 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715291"
 ---
 # <a name="from-clause-c-reference"></a>Предложение from (справочник по C#)
@@ -53,7 +53,7 @@ ms.locfileid: "75715291"
 
 Дополнительные сведения об операциях соединения, использующих несколько предложений `from`, см. в разделе [Выполнение левых внешних соединений](../../linq/perform-left-outer-joins.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Ключевые слова запроса (LINQ)](query-keywords.md)
 - [LINQ](../../linq/index.md)

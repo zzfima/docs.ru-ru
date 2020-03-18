@@ -7,10 +7,10 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714875"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office (руководство по программированию на C#)
@@ -25,7 +25,7 @@ ms.locfileid: "75714875"
 
 ## <a name="to-create-a-new-console-application"></a>Создание нового проекта консольного приложения
 
-1. Запустите Visual Studio.
+1. Запустите среду Visual Studio.
 
 2. В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.
 
@@ -107,6 +107,6 @@ ms.locfileid: "75714875"
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Именованные и необязательные аргументы](./named-and-optional-arguments.md)

@@ -4,10 +4,10 @@ description: Сведения об установке платформы .NET Fr
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 ms.openlocfilehash: 8d05c8c9cf961d3902b1d1287be5b1c2c73d349e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716302"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Установка .NET Framework в Windows XP и Windows Server 2003
@@ -35,7 +35,7 @@ ms.locfileid: "75716302"
 
 .NET Framework 3.5 можно использовать для запуска приложений, созданных для .NET Framework версии от 1.0 до 3.5.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Скачивание .NET Framework](https://dotnet.microsoft.com/download)
 - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)

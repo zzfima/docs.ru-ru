@@ -9,10 +9,10 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713409"
 ---
 # <a name="join-clause-c-reference"></a>Предложение join (Справочник по C#)
@@ -73,7 +73,7 @@ ms.locfileid: "75713409"
 
 В выражении запроса LINQ операции соединения выполняются для коллекций объектов. Коллекции объектов нельзя "соединять" точно так же, как две реляционные таблицы. В LINQ явные предложения `join` требуются, только если две исходные последовательности не связаны каким-либо отношением. При работе с [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] таблицы внешних ключей представлены в объектной модели как свойства основной таблицы. Например, в базе данных Northwind таблица Customer имеет связь типа "внешний ключ" с таблицей Orders. При сопоставлении таблиц с объектной моделью класс Customer имеет свойство Orders, содержащий коллекцию заказов, связанных с клиентом. Фактически соединение уже выполнено автоматически.
 
-Дополнительные сведения о создании запросов по связанным таблицам в контексте [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] см. в статье [Практическое руководство. Сопоставление связей баз данных](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
+Дополнительные сведения о создании запросов по связанным таблицам в контексте [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] см. в разделе [Практическое руководство. Сопоставление связей баз данных](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
 ## <a name="composite-keys"></a>Составные ключи
 
@@ -85,11 +85,11 @@ ms.locfileid: "75713409"
 
 [!code-csharp[cscsrefQueryKeywords#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#23)]
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Предложение `join`, за которым не следует `into`, преобразуется в вызов метода <xref:System.Linq.Enumerable.Join%2A>. Предложение `join`, за которым следует `into`, преобразуется в вызов метода <xref:System.Linq.Enumerable.GroupJoin%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Ключевые слова запроса (LINQ)](query-keywords.md)
 - [LINQ](../../linq/index.md)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73041663"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>Удостоверение. Пользовательский интерфейс использует функцию статических веб-ресурсов
@@ -33,7 +33,7 @@ ms.locfileid: "73041663"
 
 Внедрение функции статических веб-ресурсов, которое потребовало переноса конфигурация платформы пользовательского интерфейса в MSBuild. Решение о том, какая платформа будет внедрена, является решением времени сборки, а не среды выполнения.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Проверьте пользовательский интерфейс сайта, чтобы убедиться, что новые компоненты Bootstrap 4 совместимы. При необходимости используйте свойство MSBuild `IdentityUIFrameworkVersion`, чтобы вернуться к Bootstrap 3. Добавьте свойство в элемент `<PropertyGroup>` в файле проекта:
 

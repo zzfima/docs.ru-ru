@@ -3,10 +3,10 @@ title: Управление рабочими средами Docker
 description: Сведения о ключевых аспектах управления рабочей средой на базе контейнеров.
 ms.date: 02/15/2019
 ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834507"
 ---
 # <a name="manage-production-docker-environments"></a>Управление рабочими средами Docker
@@ -23,7 +23,7 @@ ms.locfileid: "71834507"
 
 **Таблица 6-1**. Средства управления Docker
 
-| Средства управления | ОПИСАНИЕ | Связанные оркестраторы |
+| Средства управления | Описание: | Связанные оркестраторы |
 |------------------|-------------|-----------------------|
 | [Azure Monitor для контейнеров](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Выделенное средство управления Kubernetes в Azure | Службы Azure Kubernetes (AKS) |
 | [Пользовательский веб-интерфейс Kubernetes (панель мониторинга)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Средство управления Kubernetes, позволяющее отслеживать локальный кластер Kubernetes и управлять им | Служба Azure Kubernetes (AKS)<br/>Локальные средства Kubernetes |

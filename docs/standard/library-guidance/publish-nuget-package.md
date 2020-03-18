@@ -3,10 +3,10 @@ title: Публикация пакета NuGet
 description: Рекомендации по публикации .NET-библиотек в NuGet.
 ms.date: 10/02/2018
 ms.openlocfilehash: 089c660bc51252c6295858b1462ae59bde968564
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744555"
 ---
 # <a name="publishing-a-nuget-package"></a>Публикация пакета NuGet
@@ -32,7 +32,7 @@ ms.locfileid: "76744555"
 
 Очень важно обеспечить защиту вашей учетной записи NuGet, чтобы злоумышленники не могли получить к ней доступ и выложить вредоносную версию вашей библиотеки. NuGet.org поддерживает двухфакторную проверку подлинности и уведомления по электронной почте при публикации пакетов. Вы можете включить эти функции, выполнив вход в NuGet.org и зайдя на страницу **Параметров учетной записи**.
 
-![alt text](./media/publish-nuget-package/nuget-2fa.png "Безопасность учетной записи NuGet")
+![замещающий текст](./media/publish-nuget-package/nuget-2fa.png "Безопасность учетной записи NuGet")
 
 ✔️ СЛЕДУЕТ использовать учетную запись Майкрософт для входа в NuGet.
 

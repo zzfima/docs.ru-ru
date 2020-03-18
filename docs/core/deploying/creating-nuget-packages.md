@@ -5,10 +5,10 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920922"
 ---
 # <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>Создание пакета NuGet с помощью .NET Core CLI
@@ -66,6 +66,6 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 Важно заметить, что команда `dotnet publish` в этом процессе не применяется. Команда `dotnet publish` предназначена для развертывания приложений со всеми зависимостями в одном пакете, а не для создания пакета NuGet, который будет распространяться и использоваться посредством NuGet.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Краткое руководство. Создание и публикация пакета (dotnet CLI)](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+- [Краткое руководство. Создание и публикация пакета](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

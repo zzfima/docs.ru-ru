@@ -1,5 +1,5 @@
 ---
-title: Руководство. Подписывание сборки строгим именем
+title: Практическое руководство. Подписывание сборки строгим именем
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
@@ -12,13 +12,13 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160317"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Руководство. Подписывание сборки строгим именем
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Практическое руководство. Подписывание сборки строгим именем
 
 > [!NOTE]
 > Хотя .NET Core поддерживает сборки со строгими именами и все сборки в библиотеке .NET Core подписаны, большинству сборок сторонних разработчиков строгие имена не требуются. Дополнительные сведения см. в разделе [Подпись строгим именем](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) в GitHub.
@@ -107,10 +107,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
 ```  
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Создание и использование сборок со строгими именами](create-use-strong-named.md)
-- [Руководство. Создание пары открытого и закрытого ключей](create-public-private-key-pair.md)
+- [Практическое руководство. Создание пары открытого и закрытого ключей](create-public-private-key-pair.md)
 - [Al.exe (компоновщик сборок)](../../framework/tools/al-exe-assembly-linker.md)
 - [Отложенная подпись сборки](delay-sign.md)
 - [Управление подписыванием сборок и манифестов](/visualstudio/ide/managing-assembly-and-manifest-signing)

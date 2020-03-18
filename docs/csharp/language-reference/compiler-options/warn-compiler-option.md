@@ -13,10 +13,10 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602403"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (параметры компилятора C#)
@@ -40,7 +40,7 @@ ms.locfileid: "69602403"
 |3|Отображает предупреждения уровня 2, а также некоторые менее серьезные предупреждения, в том числе связанные с выражениями, которые всегда возвращают значение `true` или `false`.|  
 |4 (по умолчанию)|Отображает все предупреждения уровня 3, а также информационные предупреждения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Чтобы получить сведения об ошибке или предупреждении, выполните поиск по соответствующему коду в указателе справочной системы. Дополнительные сведения о других способах получить информацию об ошибках и предупреждениях см. в разделе [Ошибки компилятора C#](../compiler-messages/index.md).  
   
  Параметр [-warnaserror](./warnaserror-compiler-option.md) позволяет обрабатывать все предупреждения как ошибки. Параметр [-nowarn](./nowarn-compiler-option.md) позволяет отключать определенные предупреждения.  
@@ -64,7 +64,7 @@ ms.locfileid: "69602403"
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

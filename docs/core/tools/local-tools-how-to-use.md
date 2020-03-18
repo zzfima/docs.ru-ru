@@ -3,10 +3,10 @@ title: Учебник. Установка и использование лока
 description: Узнайте, как устанавливать и использовать средство .NET в качестве локального.
 ms.date: 02/12/2020
 ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156703"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Учебник. Установка и использование локального средства .NET Core с помощью интерфейса командной строки .NET Core

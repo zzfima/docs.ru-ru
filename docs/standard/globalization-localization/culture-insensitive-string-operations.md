@@ -13,10 +13,10 @@ helpviewer_keywords:
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 ms.openlocfilehash: 06c46033936e16355b8d2eb6650e8731a04af6e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141274"
 ---
 # <a name="culture-insensitive-string-operations"></a>Операции со строками без учета языка и региональных параметров
@@ -31,6 +31,6 @@ ms.locfileid: "73141274"
 
 Независимо от того, содержит ли разрабатываемое приложение код для проведения локализации и глобализации, следует осторожно работать с методами .NET Framework, результат работы которых по умолчанию зависит от языка и региона. Цель этого раздела — показать правильный порядок использования этих методов для получения результатов, не зависящих от языка и региона.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)

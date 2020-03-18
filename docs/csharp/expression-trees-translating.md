@@ -5,10 +5,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
 ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76115779"
 ---
 # <a name="translate-expression-trees"></a>Преобразование деревьев выражений
@@ -190,7 +190,7 @@ Computed sum: 10
 
 Хотя окончательный ответ совпадает, способ обхода дерева совершенно другой. Узлы обходятся в другом порядке, так как дерево было создано с помощью других начальных операций.
 
-## <a name="learning-more"></a>Получение дополнительных сведений
+## <a name="learning-more"></a>Дополнительные сведения
 
 В этом примере показана малая часть кода, который необходимо создать для обхода и интерпретации алгоритмов, представляемых деревом выражения. Более полное рассмотрение всех действий, необходимых для создания библиотеки общего назначения, которая преобразует деревья выражений в другой язык, см. в [этой серии публикаций](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) Мэтта Уоррена (Matt Warren). Здесь преобразование кода, который можно найти в дереве выражения, рассматривается гораздо подробнее.
 

@@ -3,10 +3,10 @@ title: События LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
 ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253178"
 ---
 # <a name="linq-to-xml-events-c"></a>События LINQ to XML (C#)
@@ -19,21 +19,21 @@ ms.locfileid: "70253178"
 ## <a name="types-and-events"></a>Типы и события  
  Используйте следующие типы при работе с событиями.  
   
-|Тип|ОПИСАНИЕ|  
+|Type|Описание:|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Задает тип события, когда событие вызывается объектом <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Предоставляет данные для событий <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.|  
   
  При изменении дерева XML возникают следующие события.  
   
-|событие|ОПИСАНИЕ|  
+|Событие|Описание:|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Возникает непосредственно перед тем, как объект <xref:System.Xml.Linq.XObject> или какой-либо его потомок изменяется.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Возникает, когда изменился объект <xref:System.Xml.Linq.XObject> или один из его потомков.|  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>ОПИСАНИЕ  
+### <a name="description"></a>Описание:  
  События полезны, когда нужно поддержать какие-либо статистические данные в дереве XML. Например, нужно рассчитать сумму элементов строки. Следующий пример использует события для подсчета суммы всех дочерних элементов сложного элемента `Items`.  
   
 ### <a name="code"></a>Код  

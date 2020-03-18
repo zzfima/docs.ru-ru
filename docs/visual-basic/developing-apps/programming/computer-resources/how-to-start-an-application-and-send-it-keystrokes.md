@@ -8,10 +8,10 @@ helpviewer_keywords:
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
 ms.openlocfilehash: 033999c07bb5839a264122b2ca330916bdf844b8
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72919395"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Практическое руководство. Запуск приложения и отправка ему нажатий клавиш (Visual Basic)
@@ -26,11 +26,11 @@ ms.locfileid: "72919395"
 
 Если приложение с запрошенным идентификатором процесса не найдено, возникает исключение <xref:System.ArgumentException>.  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework
+## <a name="net-framework-security"></a>Безопасность .NET Framework
 
 Вызов функции `Shell` требует полного доверия (класс <xref:System.Security.SecurityException>).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
