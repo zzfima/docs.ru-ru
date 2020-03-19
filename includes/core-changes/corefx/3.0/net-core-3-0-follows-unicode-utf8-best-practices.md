@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: db1d09c8c9e606b5327a42977a74a74703282d84
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568118"
 ---
 ### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>В .NET Core 3.0 применяются рекомендации по Юникоду при замене некорректных последовательностей байтов UTF-8
 
-Когда класс <xref:System.Text.UTF8Encoding> обнаруживает некорректную последовательность байтов в кодировке UTF-8 при перекодировании байт в символы, он заменяет эту последовательность символом "�" (символ замены U+FFFD) в выходной строке. В .NET Core 3.0, в отличие от предыдущих версий .NET Core и .NET Framework, применяются рекомендации по Юникоду для таких замен при операциях перекодирования.
+Если в процессе кодирования байтов в символы класс <xref:System.Text.UTF8Encoding> обнаруживает некорректно сформированную последовательность байтов UTF-8, в выходной строке она будет заменена символом � (СИМВОЛ ЗАМЕНЫ U+FFFD). В .NET Core 3.0, в отличие от предыдущих версий .NET Core и .NET Framework, применяются рекомендации по Юникоду для таких замен при операциях перекодирования.
 
 Это лишь часть больших усилий улучшить обработку данных в формате UTF-8 в .NET, включая новые типы <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> и <xref:System.Text.Rune?displayProperty=nameWithType>. Для типа <xref:System.Text.UTF8Encoding> предоставлен улучшенный механизм обработки ошибок, чтобы его выходные данные соответствовали новым типам.
 
@@ -30,7 +30,7 @@ ms.locfileid: "74568118"
 
 3.0
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 От разработчика не требуется никаких действий.
 
