@@ -6,13 +6,13 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741530"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401169"
 ---
-# <a name="customizing-structure-marshaling"></a>Настройка маршалинга структуры
+# <a name="customizing-structure-marshaling"></a>Настройка маршалинга структур
 
 Иногда стандартные правила маршалинга структур не совсем подходят. В средах выполнения .NET предусмотрены точки расширения, которые позволяют настроить макет структуры и способ маршалинга полей.
 
@@ -20,17 +20,17 @@ ms.locfileid: "76741530"
 
 На платформе .NET предусмотрен атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> и перечисление <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType>, которые позволяют настроить способ размещения полей в памяти. Следуйте указаниям ниже, чтобы избежать распространенных проблем.
 
-✔️ Рассмотрите возможность использования `LayoutKind.Sequential` везде, где это возможно.
+✔️ ДОПУСТИМО использовать `LayoutKind.Sequential` во всех возможных случаях.
 
-✔️ использовать только `LayoutKind.Explicit` во время маршалирования, если структура в машинном коде также имеет явный макет, например объединение.
+✔️ РЕКОМЕНДУЕТСЯ использовать `LayoutKind.Explicit` для маршалинга только в тех случаях, когда ваша собственная структура также имеет явный макет, например объединение.
 
-❌ избегать использования `LayoutKind.Explicit` при упаковке структур на платформах, отличных от Windows, если необходимо выполнять целевые среды выполнения до .NET Core 3,0. Среда выполнения .NET Core до 3,0 не поддерживает передачу явных структур по значению в собственные функции в системах на основе Intel или AMD 64-разрядных систем, отличных от Windows. Но она поддерживает передачу явных структур по ссылке на всех платформах.
+❌AVOID `LayoutKind.Explicit` использует при маршалинге структуры на платформах, не связанных с Windows, если вам нужно таргетировать время выполнения до .NET Core 3.0. Время выполнения .NET Core до 3.0 не поддерживает передачу явных структур по значению народным функциям в системах Intel или AMD 64-битных не-Windows. Но она поддерживает передачу явных структур по ссылке на всех платформах.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Настройка маршалинга логических полей
 
 Машинный код имеет множество различных логических представлений. Только в системе Windows есть три способа представления логических значений. Среде выполнения не известно собственное определение вашей структуры, поэтому она пытается подобрать наиболее подходящий способ маршалинга ваших логических значений. В среде выполнения .NET можно указать, как маршалировать логические поля. В примере ниже показано, как маршалировать значение .NET `bool` в другие типы собственных логических значений.
 
-По умолчанию логические значения маршалируются как собственное 4-байтное значение Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL), как показано в примере ниже:
+Boolean значения по умолчанию к marshaling как родной 4-байт Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) значение, как показано в следующем примере:
 
 ```csharp
 public struct WinBool
@@ -247,7 +247,7 @@ struct UTF8String
 > [!NOTE]
 > Значение <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> доступно только на платформе .NET Framework 4.7 (или более поздних версий) или .NET Core 1.1 (или более поздних версий). Оно недоступно на платформе .NET Standard 2.0.
 
-Если вы работаете с API COM, возможно, вам потребуется маршалировать строку как `BSTR`. Вы можете маршалировать строку как <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType>, используя значение `BSTR`.
+Если вы работаете с API COM, возможно, вам потребуется маршалировать строку как `BSTR`. Вы можете маршалировать строку как `BSTR`, используя значение <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType>.
 
 ```csharp
 public struct BString
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-Если используется API на базе WinRT, возможно, потребуется маршалировать строку как `HSTRING`.  Вы можете маршалировать строку как <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, используя значение `HSTRING`.
+Если используется API на базе WinRT, возможно, потребуется маршалировать строку как `HSTRING`.  Вы можете маршалировать строку как `HSTRING`, используя значение <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>.
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Настройка маршалинга полей десятичных чисел
 
-Если вы работаете в системе Windows, то некоторые API могут использовать собственную структуру [`CY` или `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1). По умолчанию тип .NET `decimal` маршалируется в собственную структуру [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1). Но можно использовать атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> со значением <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType>, чтобы маршалер преобразовывал значение `decimal` в собственное значение `CY`.
+Если вы работаете над Windows, вы можете столкнуться [ `CY` `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) с некоторыми AA, которые используют родной или структуры. По умолчанию, `decimal` тип .NET приставов к родной [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) структуре. Но можно использовать атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> со значением <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType>, чтобы маршалер преобразовывал значение `decimal` в собственное значение `CY`.
 
 ```csharp
 public struct Currency

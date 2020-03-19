@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.openlocfilehash: 9df9b73a1a1347b952d76b76c9058578f5e9f401
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901044"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401271"
 ---
 # <a name="binary-serialization"></a>Двоичная сериализация
 
@@ -28,11 +28,11 @@ ms.locfileid: "75901044"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-Двоичная сериализация позволяет изменять закрытые члены внутри объекта и, следовательно, изменять их состояние. По этой причине рекомендуется использовать другие платформы сериализации, например <xref:System.Text.Json?displayProperty=fullName>, которые работают на поверхности общедоступного API.
+Двоичная сериализация позволяет изменять частных членов внутри объекта и, следовательно, изменять его состояние. Из-за этого рекомендуются другие <xref:System.Text.Json?displayProperty=fullName>фреймизации, например, работающие на общедоступной поверхности API.
 
 ## <a name="net-core"></a>.NET Core
 
-.NET Core поддерживает двоичную сериализацию для подмножества типов. Список поддерживаемых типов см. в разделе [сериализуемые типы](#serializable-types) , как показано ниже. Гарантируется, что перечисленные типы будут сериализуемыми между .NET Framework 4.5.1 и более поздними версиями, а также между .NET Core 2,0 и более поздними версиями. Другие реализации .NET, такие как Mono, официально не поддерживаются, но также должны работать.
+.NET Core поддерживает двоичную сериализацию для подмножества типов. Список поддерживаемых типов можно увидеть в следующем разделе [Serializable types.](#serializable-types) Перечисленные типы гарантированно будут сериализуемы между .NET Framework 4.5.1 и более поздними версиями и между .NET Core 2.0 и более поздними версиями. Другие реализации .NET, такие как Mono, официально не поддерживаются, но также должны работать.
 
 ### <a name="serializable-types"></a>Сериализуемые типы
 
@@ -96,7 +96,7 @@ ms.locfileid: "75901044"
 > | <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
-> | <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4.<br/>Сериализация из .NET Framework в .NET Core не поддерживается. |
+> | <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4.<br/>Сериализация от .NET Framework к .NET Core не поддерживается. |
 > | <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
@@ -112,7 +112,7 @@ ms.locfileid: "75901044"
 > | <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Data.DataException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Data.DataSet?displayProperty=nameWithType> | |
-> | <xref:System.Data.DataTable?displayProperty=nameWithType> | Если для `RemotingFormat` задано значение `SerializationFormat.Binary`, его можно использовать только в .NET Core 2,1 и более поздних версиях. |
+> | <xref:System.Data.DataTable?displayProperty=nameWithType> | Если вы `RemotingFormat` `SerializationFormat.Binary`установите, он может быть обменен только с .NET Core 2.1 и более поздних версий. |
 > | <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Data.EvaluateException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
@@ -126,7 +126,7 @@ ms.locfileid: "75901044"
 > | <xref:System.Data.PropertyCollection?displayProperty=nameWithType> | |
 > | <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
-> | <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4.<br/>Сериализация из .NET Framework в .NET Core не поддерживается |
+> | <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4.<br/>Сериализация от .NET Framework к .NET Core не поддерживается |
 > | <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType> | |
 > | <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType> | |
@@ -251,7 +251,7 @@ ms.locfileid: "75901044"
 > | <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
-> | <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4.<br/>Сериализация из .NET Framework в .NET Core не поддерживается. |
+> | <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4.<br/>Сериализация от .NET Framework к .NET Core не поддерживается. |
 > | <xref:System.Reflection.TargetException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
@@ -325,7 +325,7 @@ ms.locfileid: "75901044"
 > | <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Uri?displayProperty=nameWithType> | |
 > | <xref:System.UriFormatException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
-> | <xref:System.ValueTuple?displayProperty=nameWithType> | Не подлежит сериализации в .NET Framework 4,7 и более ранних версиях. |
+> | <xref:System.ValueTuple?displayProperty=nameWithType> | Не сериализуемый в .NET Framework 4.7 и более ранних версиях. |
 > | <xref:System.ValueType?displayProperty=nameWithType> | |
 > | <xref:System.Version?displayProperty=nameWithType> | |
 > | <xref:System.WeakReference%601?displayProperty=nameWithType> | |
@@ -338,19 +338,19 @@ ms.locfileid: "75901044"
 > | <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 > | <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> | Начиная с .NET Core 2.0.4. |
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Runtime.Serialization>\
 Содержит классы, которые можно использовать для сериализации и десериализации объектов.
 
-- [Сериализация XML и SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [XML и SOAP Сериализация](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
 Описывает механизм XML-сериализации , входящий в среду CLR.
 
 - [Безопасность и сериализация](../../../docs/framework/misc/security-and-serialization.md)\
 Содержит рекомендации по написанию безопасного кода, выполняющего сериализацию.
 
-- \ [удаленного взаимодействия .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
-Описание различных методов, запускаемых в .NET Framework для удаленного взаимодействия.
+- [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+Описывает различные методы, начиная с рамочной программы .NET для удаленной связи.
 
-- [Веб-службы XML, созданные с помощью ASP.NET и клиентов веб-службы xml](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+- [XML Web-сервисы, созданные с использованием ASP.NET и XML веб-сервисов клиентов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 Статьи, описывающие и объясняющие, как программировать веб-службы XML, созданные с помощью ASP.NET.

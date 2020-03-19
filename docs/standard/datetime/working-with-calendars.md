@@ -14,19 +14,19 @@ helpviewer_keywords:
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 ms.openlocfilehash: de8e5a03c769a22f3320c7785706555898bf8c1c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802743"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401235"
 ---
 # <a name="work-with-calendars"></a>Работа с календарями
 
-Несмотря на то что значение даты и времени обозначает момент во времени, его строковое представление зависит от конкретного языка и региональных параметров. На него влияют как принятые стандарты обозначения даты и времени, так и используемый календарь. В этом разделе рассматривается поддержка календарей в .NET и обсуждается использование классов календаря при работе со значениями дат.
+Несмотря на то что значение даты и времени обозначает момент во времени, его строковое представление зависит от конкретного языка и региональных параметров. На него влияют как принятые стандарты обозначения даты и времени, так и используемый календарь. Эта тема исследует поддержку календарей в .NET и обсуждает использование классов календаря при работе со значениями дат.
 
 ## <a name="calendars-in-net"></a>Календари в .NET
 
-Все календари в .NET являются производными от класса <xref:System.Globalization.Calendar?displayProperty=nameWithType>, который обеспечивает реализацию базового календаря. Одним из классов, наследующих от класса <xref:System.Globalization.Calendar>, является класс <xref:System.Globalization.EastAsianLunisolarCalendar> — базовый класс для всех лунно-солнечных календарей. .NET включает следующие реализации календаря:
+Все календари в .NET <xref:System.Globalization.Calendar?displayProperty=nameWithType> вытекают из класса, который обеспечивает реализацию базового календаря. Одним из классов, наследующих от класса <xref:System.Globalization.Calendar>, является класс <xref:System.Globalization.EastAsianLunisolarCalendar> — базовый класс для всех лунно-солнечных календарей. .NET включает в себя следующие реализации календаря:
 
 - <xref:System.Globalization.ChineseLunisolarCalendar>. Представляет китайский лунно-солнечный календарь.
 
@@ -58,13 +58,13 @@ ms.locfileid: "74802743"
 
 Календарь можно использовать одним из двух способов:
 
-- Как календарь, используемый для конкретных языка и региональных параметров. Каждый объект <xref:System.Globalization.CultureInfo> имеет текущий календарь, то есть календарь, который объект использует в настоящий момент. Строковое представление значений даты и времени автоматически отражает используемые язык и региональные параметры и текущий календарь. Обычно текущий календарь является календарем по умолчанию для языка и региональных параметров. <xref:System.Globalization.CultureInfo> объекты также имеют дополнительные календари, которые включают дополнительные календари, которые может использовать язык и региональные параметры.
+- Как календарь, используемый для конкретных языка и региональных параметров. Каждый объект <xref:System.Globalization.CultureInfo> имеет текущий календарь, то есть календарь, который объект использует в настоящий момент. Строковое представление значений даты и времени автоматически отражает используемые язык и региональные параметры и текущий календарь. Обычно текущий календарь является календарем по умолчанию для языка и региональных параметров. <xref:System.Globalization.CultureInfo>объекты также имеют дополнительные календари, которые включают дополнительные календари, которые может использовать культура.
 
 - Как самостоятельный календарь, не зависящий от конкретных языка и региональных параметров. В таком случае методы <xref:System.Globalization.Calendar> используются для выражения дат и значений календаря.
 
 Обратите внимание, что шесть классов календаря (<xref:System.Globalization.ChineseLunisolarCalendar>, <xref:System.Globalization.JapaneseLunisolarCalendar>, <xref:System.Globalization.JulianCalendar>, <xref:System.Globalization.KoreanLunisolarCalendar>, <xref:System.Globalization.PersianCalendar> и <xref:System.Globalization.TaiwanLunisolarCalendar>) можно использовать только как самостоятельные календари. Никакие языки и региональные параметры не используют их как календари по умолчанию или как дополнительные календари.
 
-## <a name="calendars-and-cultures"></a>Календари и языки и региональные параметры
+## <a name="calendars-and-cultures"></a>Календари и культуры
 
 Для любого языка и региональных параметров есть календарь по умолчанию, определенный свойством <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType>. Свойство <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> возвращает массив объектов <xref:System.Globalization.Calendar>, содержащий все календари, поддерживаемые конкретным языком и региональными параметрами, включая календарь по умолчанию для этого языка и региональных параметров.
 
@@ -92,7 +92,7 @@ ms.locfileid: "74802743"
 [!code-csharp[Conceptual.Calendars#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/datesandcalendars2.cs#3)]
 [!code-vb[Conceptual.Calendars#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/datesandcalendars2.vb#3)]
 
-### <a name="instantiate-dates-based-on-a-calendar"></a>Создание экземпляров дат на основе календаря
+### <a name="instantiate-dates-based-on-a-calendar"></a>Мгновенные даты, основанные на календаре
 
 Поскольку значения <xref:System.DateTime> и <xref:System.DateTimeOffset> основываются на григорианском календаре, необходимо вызвать перегруженный конструктор, включающий параметр типа <xref:System.Globalization.Calendar>, для создания значения даты, если требуется использовать значение дня, месяца или года по другому календарю. Можно также вызвать одну из перегрузок метода <xref:System.Globalization.Calendar.ToDateTime%2A?displayProperty=nameWithType> конкретного календаря для создания объекта <xref:System.DateTime> на основе значений конкретного календаря.
 
@@ -101,7 +101,7 @@ ms.locfileid: "74802743"
 [!code-csharp[Conceptual.Calendars#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatehcdate1.cs#4)]
 [!code-vb[Conceptual.Calendars#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatehcdate1.vb#4)]
 
-### <a name="represent-dates-in-the-current-calendar"></a>Представить даты в текущем календаре
+### <a name="represent-dates-in-the-current-calendar"></a>Представление дат в текущем календаре
 
 Методы форматирования даты и времени при преобразовании дат в строки всегда используют текущий календарь. Это значит, что строковое представление года, месяца и дня месяца отражают текущий календарь, а не обязательно григорианский календарь.
 
@@ -126,27 +126,27 @@ ms.locfileid: "74802743"
 
 Самая ранняя дата, поддерживаемая календарем, отображается свойством <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType> этого календаря. Для класса <xref:System.Globalization.GregorianCalendar> эта дата — 1 января 0001 года нашей эры. Большинство других календарей в .NET поддерживают более позднюю дату. При попытке работы с датой и временем, меньшими самой ранней поддерживаемой календарем даты, возникнет исключение <xref:System.ArgumentOutOfRangeException>.
 
-Однако существует одно важное исключение из этого правила. По умолчанию (неинициализированное) значение объекта <xref:System.DateTime> и объекта <xref:System.DateTimeOffset> равно значению <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType>. Если вы попытаетесь отформатировать эту дату в календаре, не поддерживающем 1 января 0001 года нашей эры и не предоставляется описатель формата, в методе форматирования используется описатель формата "s" (шаблон даты и времени с сортировкой) вместо описателя формата "G" (общий шаблон даты и времени). В результате операция форматирования не вызовет исключения <xref:System.ArgumentOutOfRangeException>. Вместо этого будет возвращена неподдерживаемая дата. Это продемонстрировано в следующем примере, отображающем значение <xref:System.DateTime.MinValue?displayProperty=nameWithType> во время установки текущих языка и региональных параметров в японские (Япония) с японским календарем и в арабские (Египет) с календарем Um Al Qura. Также текущие язык и региональные параметры устанавливаются в английские (США) и вызывается метод <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> с каждым из этих объектов <xref:System.Globalization.CultureInfo>. В каждом случае дата отображается с помощью сортируемого шаблона даты и времени.
+Однако существует одно важное исключение из этого правила. По умолчанию (неинициализированное) значение объекта <xref:System.DateTime> и объекта <xref:System.DateTimeOffset> равно значению <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType>. Если вы попытаетесь отформатировать эту дату в календаре, который не поддерживает 1 0001 января C.E. и вы не предоставляете спецификацию формата, метод форматирования использует s» (сортируемую дату/шаблон времени) формат ный разоснажитель вместо спецификации формата "G" (общая дата/время) формата. В результате операция форматирования не вызовет исключения <xref:System.ArgumentOutOfRangeException>. Вместо этого будет возвращена неподдерживаемая дата. Это продемонстрировано в следующем примере, отображающем значение <xref:System.DateTime.MinValue?displayProperty=nameWithType> во время установки текущих языка и региональных параметров в японские (Япония) с японским календарем и в арабские (Египет) с календарем Um Al Qura. Также текущие язык и региональные параметры устанавливаются в английские (США) и вызывается метод <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> с каждым из этих объектов <xref:System.Globalization.CultureInfo>. В каждом случае дата отображается с помощью сортируемого шаблона даты и времени.
 
 [!code-csharp[Conceptual.Calendars#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/minsupporteddatetime1.cs#11)]
 [!code-vb[Conceptual.Calendars#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/minsupporteddatetime1.vb#11)]
 
-## <a name="work-with-eras"></a>Работа с Эр
+## <a name="work-with-eras"></a>Работа с эрами
 
-В календарях даты обычно разделены на эры. Однако <xref:System.Globalization.Calendar> классы в .NET не поддерживают каждую эру, определенную календарем, и большинство классов <xref:System.Globalization.Calendar> поддерживают только одну эру. Только классы <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> поддерживают несколько эр.
+В календарях даты обычно разделены на эры. Однако <xref:System.Globalization.Calendar> классы в .NET не поддерживают каждую эпоху, <xref:System.Globalization.Calendar> определяемую календарем, и большинство классов поддерживают только одну эпоху. Только классы <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> поддерживают несколько эр.
 
 > [!IMPORTANT]
-> Эпоха Реива, Новая эра в <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar>, начинается 1 мая 2019. Это изменение затрагивает все приложения, использующие эти календари. Дополнительные сведения см. в следующих разделах:
+> Эра Рейвы, новая эра <xref:System.Globalization.JapaneseCalendar> <xref:System.Globalization.JapaneseLunisolarCalendar>в и , начинается 1 мая 2019 года. Это изменение затрагивает все приложения, использующие эти календари. Дополнительные сведения см. в этих статьях:
 >
-> - [Обработка новой эры в японском календаре в .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), которая документирует функции, добавленные в .NET для поддержки календарей с несколькими Эр, и обсуждаются рекомендации по обработке календарей с несколькими эрами.
-> - [Подготовьте свое приложение к изменению японской эры](/windows/uwp/design/globalizing/japanese-era-change), которое содержит сведения о тестировании приложений в Windows, чтобы гарантировать их готовность к изменению эры.
-> - [Сводка новых обновлений японской эры для .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), в которой перечислены .NET Framework обновления для отдельных версий Windows, которые относятся к новой эре для японского календаря, записываются новые функции .NET Framework для поддержки нескольких эпох, а также элементы, которые нужно искать при тестировании приложений.
+> - [Обработка новой эры в японском календаре в .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), которая документирует функции, добавленные в .NET для поддержки календарей с несколькими эпохами и обсуждает лучшие практики для использования при обработке календарей нескольких эпох.
+> - [Подготовьте приложение к изменению японской эпохи,](/windows/uwp/design/globalizing/japanese-era-change)которое предоставляет информацию о тестировании приложений на Windows, чтобы обеспечить их готовность к изменению эпохи.
+> - [Резюме новых обновлений японской эры для .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), в котором перечислены обновления .NET Framework для отдельных версий Windows, связанные с новой японской календарной эрой, отмечаются новые функции .NET Framework для поддержки нескольких эпох и включает в себя вещи, которые следует искать при тестировании приложений.
 
-Эра в большинстве календарей обозначает очень длинный период времени. Например, в григорианском календаре текущая эра охватывает более двух тысячелетий. Для <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar>два календаря, которые поддерживают несколько эр, это не так. Эра соответствует периоду Reign императора. Поддержка нескольких Эр, особенно если верхний предел текущей эры неизвестен, создает особые трудности.
+Эпоха в большинстве календарей обозначает чрезвычайно длительный период времени. В григорианском календаре, например, нынешняя эпоха охватывает более двух тысячелетий. Для <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar>, два календаря, которые поддерживают несколько эр, это не так. Эпоха соответствует периоду правления императора. Поддержка нескольких эпох, особенно когда верхний предел нынешней эпохи неизвестна, создает особые проблемы.
 
-### <a name="eras-and-era-names"></a>Эры и названия Эр
+### <a name="eras-and-era-names"></a>Имена эпохи и эпохи
 
-В .NET целые числа, представляющие эры, поддерживаемые конкретной реализацией календаря, хранятся в обратных последовательностях в массиве <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>. Текущая эра (эра с последним диапазоном времени) имеет нулевой индекс, а для <xref:System.Globalization.Calendar> классов, которые поддерживают несколько эр, каждый последовательный индекс отражает предыдущую эру. Статическое свойство <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> определяет индекс текущей эры в массиве <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>; это константа, значение которой всегда ноль. Отдельные классы <xref:System.Globalization.Calendar> также включают статические поля, возвращающие значение текущей эры. Они перечислены в следующей таблице.
+В .NET целые число, представляющие тетеры, поддерживаемые определенной реализацией календаря, хранятся в обратном порядке в массиве. <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> Нынешняя эра (которая является эпохой с последним диапазоном <xref:System.Globalization.Calendar> времени) находится на нулевом уровне индекса, а для классов, поддерживающих несколько эпох, каждый последовательный индекс отражает предыдущую эпоху. Статическое свойство <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> определяет индекс текущей эры в массиве <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>; это константа, значение которой всегда ноль. Отдельные классы <xref:System.Globalization.Calendar> также включают статические поля, возвращающие значение текущей эры. Они перечислены в следующей таблице.
 
 | Класс календаря                                        | Поле текущей эры                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -162,61 +162,61 @@ ms.locfileid: "74802743"
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-Имя, соответствующее номеру конкретной эры, которое можно получить, передав номер эры методу <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> или <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. В следующем примере эти методы вызываются для получения информации о поддержке эр в классе <xref:System.Globalization.GregorianCalendar>. Она отображает дату григорианского календаря, которая соответствует 1 января второго года текущей эры, а также дату григорианского календаря, которая соответствует 1 января второго года каждой поддерживаемой эры в японском календаре.
+Имя, соответствующее номеру конкретной эры, которое можно получить, передав номер эры методу <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> или <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. В следующем примере эти методы вызываются для получения информации о поддержке эр в классе <xref:System.Globalization.GregorianCalendar>. Он отображает григорианский календарный день, который соответствует 1 января второго года текущей эры, а также григорианский календарный день, который соответствует 1 января второго года каждой поддерживаемой японской календарной эры.
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
-Кроме того, строка пользовательского формата даты и времени "g" включает имя эры календаря в строковое представлении даты и времени. Дополнительные сведения см. в разделе [строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
+Кроме того, строка пользовательского формата даты и времени "g" включает имя эры календаря в строковое представлении даты и времени. Для получения дополнительной [информации см.](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 
-### <a name="instantiatie-a-date-with-an-era"></a>Создание экземпляра даты с эре
+### <a name="instantiatie-a-date-with-an-era"></a>Мгновенное свидание с эпохой
 
-Для двух <xref:System.Globalization.Calendar> классов, поддерживающих несколько эр, Дата, состоящая из определенного года, месяца и дня значения месяца, может быть неоднозначной. Например, все эры, поддерживаемые <xref:System.Globalization.JapaneseCalendar>, имеют годы, число которых равно 1. Обычно если эра не указана, методы даты и времени и календаря предполагают, что значения относятся к текущей эре. Это справедливо для конструкторов <xref:System.DateTime.%23ctor%2A> и <xref:System.DateTimeOffset.%23ctor%2A>, которые включают параметры типа <xref:System.Globalization.Calendar>, а также методы [жапанесекалендар. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) и [жапанеселунисоларкалендар. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) . В следующем примере создается экземпляр даты, представляющей 1 января второго года неуказанной эры. Если вы выполняете пример, когда эра Реива является текущая эра, Дата интерпретируется как второй год эры Реива. Эра, 令和, предшествует году в строке, возвращенной методом <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType>, и соответствует 1 января 2020 в григорианском календаре. (Реива эпоха начинается в 2019 григорианского календаря.)
+Для двух <xref:System.Globalization.Calendar> классов, поддерживающих несколько времен, дата, состоящая из определенного года, месяца и дня месяца, может быть неоднозначной. Например, во всех герах, поддерживаемых <xref:System.Globalization.JapaneseCalendar> годами, число которых составляет 1. Обычно если эра не указана, методы даты и времени и календаря предполагают, что значения относятся к текущей эре. Это относится <xref:System.DateTime.%23ctor%2A> и <xref:System.DateTimeOffset.%23ctor%2A> к конструкторам, которые <xref:System.Globalization.Calendar>включают параметры типа, а также [japaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) и [JapaneseLunisolarCalendar.ToDate](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) методы. Следующий пример мгновенно указывает дату, которая представляет 1 января второго года неустановленной эпохи. Если выполнить пример, когда эра Рейвы является текущая эра, дата интерпретируется как второй год эры Рейвы. Эпоха, No, предшествует году в строке возвращается <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> методом и соответствует 1 января 2020 года, в григорианском календаре. (Эра Рейвы начинается в 2019 году по григорианскому календарю.)
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]
 
-Однако при изменении эры цель этого кода станет неоднозначным. Дата, предназначенная для представления второго года текущей эры, или она должна представлять второй год эры Хэйсэй? Избежать этой неоднозначности можно двумя способами:
+Однако, если эпоха меняется, цель этого кода становится двусмысленной. Является ли дата предназначена для представления второго года нынешней эры, или она предназначена для представления второго года эпохи Хэйсэй? Есть два способа избежать этой двусмысленности:
 
-- Создайте экземпляр значения даты и времени с помощью класса <xref:System.Globalization.GregorianCalendar> по умолчанию. Затем можно использовать Японский календарь или японский лунного календаря для представления строк дат, как показано в следующем примере.
+- Мгновенное значение даты и времени с <xref:System.Globalization.GregorianCalendar> помощью класса по умолчанию. Затем можно использовать японский календарь или японский лунисолнечный календарь для представления строки дат, как показано в следующем примере.
 
   [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
   [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
 
-- Вызовите метод даты и времени, который явно указывает эру. Включены следующие методы:
+- Вызов метода даты и времени, который явно определяет эпоху. Включены следующие методы:
 
-  - Метод <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> класса <xref:System.Globalization.JapaneseCalendar> или <xref:System.Globalization.JapaneseLunisolarCalendar>.
+  - Метод <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> <xref:System.Globalization.JapaneseCalendar> или <xref:System.Globalization.JapaneseLunisolarCalendar> класс.
 
-  - Метод синтаксического анализа <xref:System.DateTime> или <xref:System.DateTimeOffset>, например <xref:System.DateTime.Parse%2A>, <xref:System.DateTime.TryParse%2A>, <xref:System.DateTime.ParseExact%2A>или <xref:System.DateTime.TryParseExact%2A>, который включает анализируемую строку и, при необходимости, аргумент <xref:System.Globalization.DateTimeStyles>, если текущий язык и региональные параметры являются японскими ("ja-JP"), а календарь этого языка и региональных параметров — <xref:System.Globalization.JapaneseCalendar>. Анализируемая строка должна включать эру.
+  - A <xref:System.DateTime> <xref:System.DateTimeOffset> или разбор метод, <xref:System.DateTime.Parse%2A>таких <xref:System.DateTime.TryParse%2A> <xref:System.DateTime.ParseExact%2A>как <xref:System.DateTime.TryParseExact%2A>, , или , который включает в <xref:System.Globalization.DateTimeStyles> себя строку, которая будет разогнана и дополнительно аргумент, <xref:System.Globalization.JapaneseCalendar>если нынешняя культура японско-японской ("ja-JP") и календарь культуры является . Строка, которая должна быть разогнана должна включать эпоху.
 
-  - Метод синтаксического анализа <xref:System.DateTime> или <xref:System.DateTimeOffset>, который включает параметр `provider` типа <xref:System.IFormatProvider>. `provider` должен быть <xref:System.Globalization.CultureInfo>ным объектом, представляющим язык и региональные параметры ("ja-JP"), текущий календарь которых <xref:System.Globalization.JapaneseCalendar>, или объект <xref:System.Globalization.DateTimeFormatInfo>, свойство <xref:System.Globalization.DateTimeFormatInfo.Calendar> которого <xref:System.Globalization.JapaneseCalendar>. Анализируемая строка должна включать эру.
+  - Метод <xref:System.DateTime> <xref:System.DateTimeOffset> а или разбора, `provider` включающий параметр типа. <xref:System.IFormatProvider> `provider`должен быть <xref:System.Globalization.CultureInfo> либо объект, представляющий японо-японскую ("ja-JP") <xref:System.Globalization.DateTimeFormatInfo.Calendar> культуру, <xref:System.Globalization.JapaneseCalendar>текущий <xref:System.Globalization.JapaneseCalendar> <xref:System.Globalization.DateTimeFormatInfo> календарь которого, либо объект, собственностью которого является . Строка, которая должна быть разогнана должна включать эпоху.
 
-  В следующем примере используются три из этих методов для создания экземпляра даты и времени в эпоху Меижи, которая началась 8 сентября 1868 и заканчивается 29 июля 1912.
+  В следующем примере используются три из этих методов для мгновенного даты и времени в эпоху Мэйдзи, которая началась 8 сентября 1868 года и закончилась 29 июля 1912 года.
 
   [!code-csharp[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/cs/program.cs)]
   [!code-vb[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/vb/program.vb)]
 
 > [!TIP]
-> При работе с календарями, поддерживающими несколько эр, *всегда* используйте дату григорианского задания для создания экземпляра даты или укажите эру при создании экземпляра даты и времени на основе этого календаря.
+> При работе с календарями, поддерживающими несколько эпох, *всегда* используйте григорианскую дату, чтобы мгновенно определить дату, или указать эпоху, когда вы мгновенно дате и времени на основе этого календаря.
 
-При указании эры для метода <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> вы предоставляете индекс эры в свойстве <xref:System.Globalization.Calendar.Eras> календаря. Однако для календарей, Эр которых может изменяться, эти индексы не являются постоянными значениями. Текущая эра имеет индекс 0, а самая старая эра — по индексу `Eras.Length - 1`. При добавлении новой эры в календарь индексы предыдущих Эр увеличиваются на единицу. Вы можете указать соответствующий индекс эры следующим образом:
+При указании эпохи <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> метода вы предоставляете индекс эпохи <xref:System.Globalization.Calendar.Eras> в свойстве календаря. Однако для календарей, чьи эры могут быть изменены, эти индексы не являются постоянными значениями; текущая эра находится на индексе 0, `Eras.Length - 1`а самая старая эпоха находится на индексе . Когда новая эра добавляется к календарю, индексы предыдущих эпох увеличиваются на один. Соответствующий индекс эпохи можно предоставить следующим образом:
 
-- Для дат в текущей эре всегда используйте свойство <xref:System.Globalization.Calendar.CurrentEra> календаря.
+- Для дат в текущую эпоху всегда <xref:System.Globalization.Calendar.CurrentEra> используйте свойство календаря.
 
-- Для дат в указанной эре используйте метод <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType>, чтобы получить индекс, соответствующий указанному названию эры. Для этого необходимо, чтобы <xref:System.Globalization.JapaneseCalendar> был текущим календарем <xref:System.Globalization.CultureInfo> объекта, представляющего культуру ja-JP.  (Этот метод работает также для <xref:System.Globalization.JapaneseLunisolarCalendar>, так как он поддерживает те же эры, что и <xref:System.Globalization.JapaneseCalendar>.) Этот подход показан в предыдущем примере.
+- Для дат в заданную <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> эпоху используйте метод для получения индекса, который соответствует заданной эпохе. Это требует, <xref:System.Globalization.JapaneseCalendar> чтобы текущий <xref:System.Globalization.CultureInfo> календарь объекта, представляющий культуру ja-JP.  (Этот метод работает <xref:System.Globalization.JapaneseLunisolarCalendar> и для того, чтобы поддерживать <xref:System.Globalization.JapaneseCalendar>те же эры, что и .) Предыдущий пример иллюстрирует этот подход.
 
-### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Календари, эры и диапазоны дат: нестрогие проверки диапазона
+### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Календари, эры и диапазоны дат: Проверки диапазона расслабленных
 
-Во многом так же, как в отдельных календарях поддерживаются диапазоны дат, эры в классах <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> также имеют поддерживаемые диапазоны. Ранее в .NET использовались долгосрочные проверки диапазона эры, чтобы гарантировать, что дата, относящаяся к эре, была в диапазоне этой эры. То есть, если дата находится за пределами диапазона указанной эры, метод создает исключение <xref:System.ArgumentOutOfRangeException>. В настоящее время .NET по умолчанию использует ослабленную проверку по диапазонам. Обновления для всех версий .NET предоставили более строгие проверки диапазона эры; попытка создать экземпляр даты, относящейся к эре, которая находится за пределами диапазона указанной эры "переполняет" до следующей эры, и исключение не создается.
+Очень похоже на то, что отдельные календари <xref:System.Globalization.JapaneseCalendar> <xref:System.Globalization.JapaneseLunisolarCalendar> поддерживали диапазоны дат, эры в классах и классах также поддерживали диапазоны. Ранее .NET использовал строгие проверки диапазона эпохи, чтобы убедиться, что дата, относясь к эпохе, находится в пределах той эпохи. То есть, если дата находится за пределами диапазона указанной <xref:System.ArgumentOutOfRangeException>эпохи, метод бросает . В настоящее время .NET использует расслабленную проверку диапазона по умолчанию. Обновления для всех версий .NET ввели расслабленной проверки диапазона эпохи; попытка мгновенного времени конкретной даты, которая находится за пределами диапазона указанной эпохи "переливы" в следующую эпоху, и не выбрасывается.
 
-В следующем примере предпринимается попытка создать экземпляр даты в 65th году эры Шова, которая началась 25 декабря 1926 и закончилась 7 января 1989. Эта дата соответствует 9 января 1990, который находится вне диапазона эры Шова в <xref:System.Globalization.JapaneseCalendar>. Как видно из выходных данных примера, Дата, показанная в примере, — 9 января 1990 г. во втором году эры Хэйсэй.
+Следующий пример пытается мгновенно учтивить дату в 65-м году эпохи Сёва, которая началась 25 декабря 1926 года и закончилась 7 января 1989 года. Эта дата соответствует 9 января 1990 года, который находится вне <xref:System.Globalization.JapaneseCalendar>диапазона эпохи Сая в . Как показано на примере, дата, показанная в этом примере, — 9 января 1990 года, на втором году эры Хэйсэй.
 
   [!code-csharp[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/cs/program.cs)]
   [!code-vb[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/vb/program.vb)]
 
-Если нежелательные проверки диапазона нежелательно, можно восстановить строгие проверки диапазона несколькими способами в зависимости от версии .NET, в которой выполняется приложение:
+Если непринужденные проверки диапазона нежелательны, вы можете восстановить строгие проверки диапазона несколькими способами, в зависимости от версии .NET, на которой работает приложение:
 
-- **.NET Core:** Добавьте следующий код в файл конфигурации *. netcore. Runtime. JSON* :
+- **Ядро .NET:** Добавьте следующее в файл конфигурации *.netcore.runtime.json:*
 
   ```json
   "runtimeOptions": {
@@ -226,7 +226,7 @@ ms.locfileid: "74802743"
   }
   ```
 
-- **.NET Framework 4,6 или более поздней версии:** В файле *app. config* задайте следующий параметр AppContext:
+- **Рамочный 4.NET 4.6 или более позднее:** Установите следующий переключатель AppContext в файле *app.config:*
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -237,16 +237,16 @@ ms.locfileid: "74802743"
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 или более ранней версии:** Задайте следующее значение реестра:
+- **Рамочная программа .NET 4.5.2 или ранее:** Установите следующее значение реестра:
 
    |  |  |
    |--|--|
-   | **Key** | **HKEY_LOCAL_MACHINE \Софтваре\микрософт\\. нетфрамеворк\аппконтекст** |
-   | **Name** | Switch. System. Globalization. Енфорцежапанесирайеарранжес |
-   | **Type** | REG_SZ |
-   | **Значение** | true |
+   | **Клавиша** | **HKEY_LOCAL_MACHINE-Программное\\обеспечение»Microsoft . NETFramework-AppContext** |
+   | **Название** | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
+   | **Тип** | REG_SZ |
+   | **Значение** | Да |
 
-Если включена поддержка оптимистических проверок диапазона, в предыдущем примере возникает исключение <xref:System.ArgumentOutOfRangeException> и отображаются следующие выходные данные:
+При строгом включении проверки <xref:System.ArgumentOutOfRangeException> диапазона предыдущий пример бросает и отображает следующий выход:
 
 ```console
 Unhandled Exception: System.ArgumentOutOfRangeException: Valid values are between 1 and 64, inclusive.
@@ -256,7 +256,7 @@ Parameter name: year
    at Example.Main()
 ```
 
-### <a name="represent-dates-in-calendars-with-multiple-eras"></a>Представление дат в календарях с несколькими Эр
+### <a name="represent-dates-in-calendars-with-multiple-eras"></a>Представление дат в календарях с несколькими эрами
 
 Если объект <xref:System.Globalization.Calendar> поддерживает эры и является текущим календарем объекта <xref:System.Globalization.CultureInfo>, эра включается в строковое представление даты и времени для полной даты, длинной даты и шаблонов короткой даты. В следующем примере показаны эти шаблоны даты при текущем языке и региональных параметрах "Японский (Япония)" и японском текущем календаре.
 
@@ -264,7 +264,7 @@ Parameter name: year
 [!code-vb[Conceptual.Calendars#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings1.vb#8)]
 
 > [!WARNING]
-> Класс <xref:System.Globalization.JapaneseCalendar> является единственным классом календаря в .NET, который поддерживает даты более чем в одной эре и может быть текущим календарем <xref:System.Globalization.CultureInfo> объекта, в частности, объекта <xref:System.Globalization.CultureInfo>, который представляет японский язык (Япония).
+> Класс <xref:System.Globalization.JapaneseCalendar> является единственным классом календаря в .NET, который поддерживает даты в более <xref:System.Globalization.CultureInfo> чем одной эпохе <xref:System.Globalization.CultureInfo> и который может быть текущим календарем объекта - в частности, объекта, представляющего японскую (японскую) культуру.
 
 Для всех календарей описатель пользовательского формата "g" добавляет эру в результирующую строку. В следующем примере используется строка пользовательского формата "мм-дд-гггг g", где в дату включается эра, при том что текущим является григорианский календарь.
 
@@ -276,22 +276,22 @@ Parameter name: year
 [!code-csharp[Conceptual.Calendars#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings3.cs#10)]
 [!code-vb[Conceptual.Calendars#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings3.vb#10)]
 
-В японских календарях первый год эры называется Ганнен (元年). Например, вместо эры 1 первый год эры Хэйсэй можно описать как эру Ганнен. .NET использует это соглашение в операциях форматирования для дат и времени, отформатированных со следующими стандартными или настраиваемыми строками формата даты и времени, когда они используются с <xref:System.Globalization.CultureInfo> объектом, представляющим язык и региональные параметры "ja-JP" с классом <xref:System.Globalization.JapaneseCalendar>:
+В японских календарях первый год эпохи называется Ганнен( Например, вместо Heisei 1, первый год эры Хэйсэй можно описать как Heisei Gannen. .NET принимает эту конвенцию в форматировании операций для дат и времен, отформатированных <xref:System.Globalization.CultureInfo> со следующими стандартными или пользовательскими строками <xref:System.Globalization.JapaneseCalendar> даты и формата времени, когда они используются с объектом, представляющим японско-японскую ("ja-JP") культуру с классом:
 
-- [Шаблон длинной даты](../base-types/standard-date-and-time-format-strings.md#LongDate), обозначенный строкой стандартного формата даты и времени "D".
-- [Шаблон полной даты длинного времени](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime), обозначенный строкой стандартного формата даты и времени "F".
-- [Шаблон полной даты и короткий формат времени](../base-types/standard-date-and-time-format-strings.md#FullDateShortTime), обозначенные строкой "f" стандартного формата даты и времени.
-- [Шаблон "год/месяц](../base-types/standard-date-and-time-format-strings.md#YearMonth)", обозначенный строкой "y" или "y" стандартного формата даты и времени.
-- [ [Строка настраиваемого формата даты и времени](../base-types/custom-date-and-time-format-strings.md)"ГГИ" 年 "" или "гги年".
+- [Длинный шаблон даты,](../base-types/standard-date-and-time-format-strings.md#LongDate)указанный строкой стандартной даты и формата времени "D".
+- [Полная дата длинная схема времени](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime), указано на "F" стандартная дата и время форматстрокстроки.
+- [Полная дата короткий шаблон времени](../base-types/standard-date-and-time-format-strings.md#FullDateShortTime), указанный "f" стандартная дата и время форматстроки строки.
+- [Шаблон год/месяц,](../base-types/standard-date-and-time-format-strings.md#YearMonth)указанный строкой Y» или "y" стандартной даты и формата времени.
+- «Ggy»» или «ggy» [пользовательские строки даты и формата времени.](../base-types/custom-date-and-time-format-strings.md)
 
-Например, в следующем примере отображается дата в первом году эры эры в <xref:System.Globalization.JapaneseCalendar>.
+Например, в следующем примере отображается дата в первый год <xref:System.Globalization.JapaneseCalendar>эры Хэйсэй в .
 
   [!code-csharp[gannen](~/samples/snippets/standard/datetime/calendars/gannen/cs/program.cs)]
   [!code-vb[gannen](~/samples/snippets/standard/datetime/calendars/gannen/vb/gannen-fmt.vb)]
 
-Если это поведение нежелательно в операциях форматирования, можно восстановить предыдущее поведение, которое всегда представляет первый год эры как "1", а не "Ганнен", выполнив следующие действия в зависимости от версии .NET:
+Если такое поведение является нежелательным при форматировании операций, можно восстановить предыдущее поведение, которое всегда представляет собой первый год эпохи как "1", а не "Ганнен", делая следующее, в зависимости от версии .NET:
 
-- **.NET Core:** Добавьте следующий код в файл конфигурации *. netcore. Runtime. JSON* :
+- **Ядро .NET:** Добавьте следующее в файл конфигурации *.netcore.runtime.json:*
 
   ```json
   "runtimeOptions": {
@@ -301,7 +301,7 @@ Parameter name: year
   }
   ```
 
-- **.NET Framework 4,6 или более поздней версии:** В файле *app. config* задайте следующий параметр AppContext:
+- **Рамочный 4.NET 4.6 или более позднее:** Установите следующий переключатель AppContext в файле *app.config:*
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -312,24 +312,24 @@ Parameter name: year
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 или более ранней версии:** Задайте следующее значение реестра:
+- **Рамочная программа .NET 4.5.2 или ранее:** Установите следующее значение реестра:
 
    |  |  |
    |--|--|
-   | **Key** | **HKEY_LOCAL_MACHINE \Софтваре\микрософт\\. нетфрамеворк\аппконтекст** |
-   | **Name** | Switch. System. Globalization. Форматжапанесефирстеарасанумбер |
-   | **Type** | REG_SZ |
-   | **Значение** | true |
+   | **Клавиша** | **HKEY_LOCAL_MACHINE-Программное\\обеспечение»Microsoft . NETFramework-AppContext** |
+   | **Название** | Switch.System.Globalization.FormatJapaneseFirstYearasANumber |
+   | **Тип** | REG_SZ |
+   | **Значение** | Да |
 
-Если поддержка ганнен в операциях форматирования отключена, в предыдущем примере выводятся следующие выходные данные:
+При отключении поддержки gannen при отключении операций форматирования предыдущий пример отображает следующий вывод:
 
 ```console
 Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 ```
 
-Платформа .NET также была обновлена так, что операции синтаксического анализа даты и времени поддерживают строки, содержащие год, представленный как "1" или Ганнен. Хотя это делать не нужно, можно восстановить предыдущее поведение, чтобы распознать только "1" в качестве первого года эры. Это можно сделать следующим образом в зависимости от версии .NET:
+.NET также был обновлен таким образом, чтобы строки поддержки операций даты и времени, содержащие год, представленный как "1" или Gannen. Хотя это не нужно делать, вы можете восстановить предыдущее поведение, чтобы распознать только "1" как первый год эпохи. Вы можете сделать это следующим образом, в зависимости от версии .NET:
 
-- **.NET Core:** Добавьте следующий код в файл конфигурации *. netcore. Runtime. JSON* :
+- **Ядро .NET:** Добавьте следующее в файл конфигурации *.netcore.runtime.json:*
 
   ```json
   "runtimeOptions": {
@@ -339,7 +339,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
   }
   ```
 
-- **.NET Framework 4,6 или более поздней версии:** В файле *app. config* задайте следующий параметр AppContext:
+- **Рамочный 4.NET 4.6 или более позднее:** Установите следующий переключатель AppContext в файле *app.config:*
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -350,17 +350,17 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 или более ранней версии:** Задайте следующее значение реестра:
+- **Рамочная программа .NET 4.5.2 или ранее:** Установите следующее значение реестра:
 
    |  |  |
    |--|--|
-   | **Key** | **HKEY_LOCAL_MACHINE \Софтваре\микрософт\\. нетфрамеворк\аппконтекст** |
-   | **Name** | Switch. System. Globalization. Енфорцелегацижапанеседатепарсинг |
-   | **Type** | REG_SZ |
-   | **Значение** | true |
+   | **Клавиша** | **HKEY_LOCAL_MACHINE-Программное\\обеспечение»Microsoft . NETFramework-AppContext** |
+   | **Название** | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
+   | **Тип** | REG_SZ |
+   | **Значение** | Да |
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Пошаговое руководство. Отображение дат в календарях, отличных от григорианского](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [Пример: служебная программа диапазона календарных недель](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
-- [Класс Calendar](xref:System.Globalization.Calendar)
+- [Как: Отображение дат в негригорианских календарях](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+- [Пример: Утилита диапазона календарной недели](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Класс календаря](xref:System.Globalization.Calendar)
