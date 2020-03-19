@@ -1,26 +1,15 @@
 ---
-ms.openlocfilehash: b5c193189e1733d44a215e20a8bd444c0e31b365
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9d64c22c02a877f32ed8aa47d51a79f800b9926a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568021"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75343736"
 ---
 > [!div class="op_multi_selector" title1="Из целевой версии" title2="В перенесенную версию"]
 >
 > - [(3.0 | 3.1)](~/docs/core/compatibility/3.0-3.1.md)
 > - [(2.2 | 3.1)](~/docs/core/compatibility/2.2-3.1.md)
 > - [(2.2 | 3.0)](~/docs/core/compatibility/2.2-3.0.md)
-
-<!--
-
-> - [(2.2 | 3.0 Preview 7)](~/docs/core/compatibility/2.2-3.0.7.md)
-> - [(2.2 | 3.0 Preview 8)](~/docs/core/compatibility/2.2-3.0.8.md)
-> - [(2.2 | 3.0 Preview 9)](~/docs/core/compatibility/2.2-3.0.9.md)
-> - [(3.0 Preview 7| 3.0 Preview 9)](~/docs/core/compatibility/3.0.7-3.0.9.md)
-> - [(3.0 Preview 7| 3.0)](~/docs/core/compatibility/3.0.7-3.0.md)
-> - [(3.0 Preview 8| 3.0 Preview 9)](~/docs/core/compatibility/3.0.8-3.0.9.md)
-> - [(3.0 Preview 8| 3.0)](~/docs/core/compatibility/3.0.8-3.0.md)
-> - [(3.0 Preview 9| 3.0)](~/docs/core/compatibility/3.0.9-3.0.md)
-
--->
+> - [(2.0 | 2.1)](~/docs/core/compatibility/2.0-2.1.md)
+> - [(.NET Framework | .NET Core)](~/docs/core/compatibility/fx-core.md)

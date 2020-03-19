@@ -5,10 +5,10 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973498"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>Алгоритм загрузки управляемых сборок
@@ -23,7 +23,7 @@ ms.locfileid: "73973498"
 
 Прямое использование конкретных интерфейсов API также приведет к загрузке сборки:
 
-|API  |ОПИСАНИЕ  |`Active` <xref:System.Runtime.Loader.AssemblyLoadContext> |
+|API  |Описание  |`Active` <xref:System.Runtime.Loader.AssemblyLoadContext> |
 |---------|---------|---------|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName%2A?displayProperty=nameWithType>|`Load-by-name`|Экземпляр [this](../../csharp/language-reference/keywords/this.md).|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath%2A?displayProperty=nameWithType><p><xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath%2A?displayProperty=nameWithType>|Загрузка на основе пути.|Экземпляр [this](../../csharp/language-reference/keywords/this.md).|
@@ -44,7 +44,7 @@ ms.locfileid: "73973498"
 
     - Для ссылки на статическую сборку `active` <xref:System.Runtime.Loader.AssemblyLoadContext> обозначает экземпляр, который загрузил ссылающуюся сборку.
     - Предпочитаемые API-интерфейсы делают экземпляр `active` <xref:System.Runtime.Loader.AssemblyLoadContext> явным.
-    - Другие API-интерфейсы выводят <xref:System.Runtime.Loader.AssemblyLoadContext> `active`. Для этих API-интерфейсов используется свойство <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType>. Если его значение равно `null`, то используется выводимый экземпляр <xref:System.Runtime.Loader.AssemblyLoadContext>.
+    - Другие API-интерфейсы выводят `active` <xref:System.Runtime.Loader.AssemblyLoadContext>. Для этих API-интерфейсов используется свойство <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType>. Если его значение равно `null`, то используется выводимый экземпляр <xref:System.Runtime.Loader.AssemblyLoadContext>.
     - См. приведенную выше таблицу.
 
 2. Для методов `Load-by-name` активный класс <xref:System.Runtime.Loader.AssemblyLoadContext> загружает сборку. Порядок приоритета:

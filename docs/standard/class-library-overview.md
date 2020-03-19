@@ -38,11 +38,11 @@ helpviewer_keywords:
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132848"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398769"
 ---
 # <a name="net-class-library-overview"></a>Обзор библиотеки классов .NET
 
@@ -84,7 +84,7 @@ ms.locfileid: "73132848"
   
  В следующей таблице перечислены базовые типы, предоставляемые в .NET, кратко описывается каждый тип и указывается соответствующий тип в Visual Basic, C#, C++ и F#.  
   
-|Категория|Имя класса|ОПИСАНИЕ|Тип данных в Visual Basic|Тип данных в C#|Тип данных С++/CLI|Тип данных F#|  
+|Категория|Имя класса|Описание|Тип данных в Visual Basic|Тип данных в C#|Тип данных С++/CLI|Тип данных F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Целое число|<xref:System.Byte>|8-разрядное целое число без знака.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8-битовое целое число со знаком.<br /><br /> Не является CLS-совместимым.|**SByte**|**sbyte**|**char**<br /> -или-<br /> **signed** **char**|**sbyte**|  
@@ -94,8 +94,8 @@ ms.locfileid: "73132848"
 ||<xref:System.UInt16>|16-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|32-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UInteger**|**uint**|**unsigned int**<br /> -или-<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|С плавающей запятой|<xref:System.Single>|Число с плавающей запятой с обычной точностью (32-разрядное).|**Single**|**float**|**float**|**float32**<br> или<br>**single**|  
-||<xref:System.Double>|Число с плавающей запятой с двойной точностью (64-разрядное).|**Double**|**double**|**double**|**float**<br> или <br> **double**|  
+|С плавающей запятой|<xref:System.Single>|Число с плавающей запятой с обычной точностью (32-разрядное).|**Single**|**float**|**float**|**float32**<br> or<br>**single**|  
+||<xref:System.Double>|Число с плавающей запятой с двойной точностью (64-разрядное).|**Double**|**double**|**double**|**float**<br> or <br> **double**|  
 |Logical|<xref:System.Boolean>|Логическое значение (true или false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Другой|<xref:System.Char>|Символ Юникода (16-разрядный).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|128-разрядное десятичное значение.|**Decimal**|**decimal**|**Decimal**|**decimal**|  

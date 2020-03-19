@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714835"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398433"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Неявно типизированные локальные переменные (руководство по программированию на C#)
 
@@ -88,7 +88,7 @@ private var bookTitles = new List<string>();
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-При этом использование ключевого слова `var` может усложнить понимание вашего кода для других разработчиков. В связи с этим в документации по C# `var` применяется только в тех случаях, когда это необходимо.
+Ключевое слово `var` позволяет упростить код, однако его следует использовать только там, где оно действительно необходимо или где оно облегчает понимание кода. Дополнительные сведения о том, когда следует использовать ключевое слово `var`, см. в разделе [Неявно типизированные локальные переменные](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) в статье с рекомендациями по написанию кода C#.
 
 ## <a name="see-also"></a>См. также
 

@@ -1,15 +1,15 @@
 ---
 title: Анализ диапазонов данных с помощью индексов и диапазонов
 description: В этом учебнике подробно рассказывается, как анализировать данные с помощью индексов и диапазонов и, таким образом, изучать срезы последовательного набора данных.
-ms.date: 09/20/2019
+ms.date: 03/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 82aad968e2efc437c82a7c8250bcd108b60b09e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345622"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156498"
 ---
 # <a name="indices-and-ranges"></a>Индексы и диапазоны
 
@@ -32,7 +32,7 @@ ms.locfileid: "75345622"
 - <xref:System.Range?displayProperty=nameWithType> представляет вложенный диапазон последовательности.
 - Оператор диапазона `..`, который задает начало и конец диапазона в качестве своих операндов.
 
-Начнем с правил для использования в индексах. Рассмотрим массив `sequence`. Индекс `0` совпадает с `sequence[0]`. Индекс `^0` совпадает с `sequence[sequence.Length]`. Обратите внимание, что `sequence[^0]` создает исключение так же, как и `sequence[sequence.Length]`. Для любого числа `n` индекс `^n` совпадает с `sequence[sequence.Length - n]`.
+Начнем с правил для использования в индексах. Рассмотрим массив `sequence`. Индекс `0` совпадает с `sequence[0]`. Индекс `^0` совпадает с `sequence[sequence.Length]`. Выражение `sequence[^0]` создает исключение так же, как и `sequence[sequence.Length]`. Для любого числа `n` индекс `^n` совпадает с `sequence[sequence.Length - n]`.
 
 ```csharp
 string[] words = new string[]
@@ -52,44 +52,46 @@ string[] words = new string[]
 
 Последнее слово можно получить с помощью индекса `^1`. Добавьте следующий код после инициализации:
 
-[!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+[!code-csharp[LastIndex](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
-Диапазон указывает *начало* и *конец* диапазона. Диапазоны являются открытыми, то есть *конечное значение* не включается в диапазон. Диапазон `[0..^0]` представляет весь диапазон так же, как `[0..sequence.Length]` представляет весь диапазон. 
+Диапазон указывает *начало* и *конец* диапазона. Диапазоны являются открытыми, то есть *конечное значение* не включается в диапазон. Диапазон `[0..^0]` представляет весь диапазон так же, как `[0..sequence.Length]` представляет весь диапазон.
 
 Следующий код создает поддиапазон со словами "quick", "brown" и "fox". Он включает в себя элементы от `words[1]` до `words[3]`. Элемент `words[4]` в диапазон не входит. Добавьте в тот же метод указанный ниже код. Скопируйте и вставьте этот код в нижней части интерактивного окна.
 
-[!code-csharp[Range](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
+[!code-csharp[Range](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
 Следующий код создает поддиапазон со словами "lazy" и "dog". Он включает элементы `words[^2]` и `words[^1]`. Конечный индекс `words[^0]` не включен. Добавьте также следующий код:
 
-[!code-csharp[LastRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
+[!code-csharp[LastRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
 В следующих примерах создаются диапазоны, которые должны быть открыты для начала, конца или в обоих случаях:
 
-[!code-csharp[PartialRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_PartialRanges)]
+[!code-csharp[PartialRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_PartialRanges)]
 
 Диапазоны или индексы можно также объявлять как переменные. Впоследствии такую переменную можно использовать внутри символов `[` и `]`:
 
-[!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
+[!code-csharp[IndexRangeTypes](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
 
 Следующий пример демонстрирует многие возможные причины для таких решений. Измените `x`, `y` и `z` и опробуйте различные комбинации. Поэкспериментируйте со значениями, у которых `x` меньше `y`, а `y` меньше, чем `z` для допустимых сочетаний. Добавьте в новый метод приведенный ниже код. Опробуйте различные комбинации:
 
-[!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+[!code-csharp[SemanticsExamples](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
 
 ## <a name="type-support-for-indices-and-ranges"></a>Поддержка типов для индексов и диапазонов
 
 Индексы и диапазоны предоставляют четкий и краткий синтаксис для доступа к одному элементу или поддиапазону элементов последовательности. Выражение индекса обычно возвращает тип элементов последовательности. Выражение диапазона обычно возвращает тот же тип последовательности, что и исходная последовательность.
 
-Если тип предоставляет [индексатор](../programming-guide/indexers/index.md) с параметром <xref:System.Index> или <xref:System.Range>, он явно поддерживает индексы или диапазоны соответственно. Если тип предоставляет индексатор, который принимает один параметр <xref:System.Range>, он может возвращать другой тип последовательности, например <xref:System.Span%601?displayProperty=nameWithType>.
+Любой тип, который предоставляет [индексатор](../programming-guide/indexers/index.md) с параметром <xref:System.Index> или <xref:System.Range>, явно поддерживает индексы или диапазоны соответственно. Индексатор, который принимает один параметр <xref:System.Range>, может возвращать другой тип последовательности, например <xref:System.Span%601?displayProperty=nameWithType>.
 
 Тип является **счетным**, если у него есть свойство с именем `Length` или `Count` с доступным методом получения и типом возвращаемого значения `int`. Счетный тип, который не поддерживает индексы или диапазоны явным образом, может предоставить неявную поддержку для них. Дополнительные сведения см. в разделах о [поддержке неявного индекса](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) и [неявного диапазона](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) в [примечании к предлагаемой функции](~/_csharplang/proposals/csharp-8.0/ranges.md). Диапазоны с поддержкой неявных диапазонов возвращают тот же тип последовательности, что и исходная.
 
-Например, следующие типы .NET поддерживают как индексы, так и диапазоны: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> и <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> поддерживает индексы, но не поддерживает диапазоны.
+Например, следующие типы .NET поддерживают как индексы, так и диапазоны: <xref:System.String>, <xref:System.Span%601> и <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> поддерживает индексы, но не поддерживает диапазоны.
+
+<xref:System.Array> реализует более сложное поведение. Одномерные массивы поддерживают как индексы, так и диапазоны. Многомерные массивы такую поддержку не обеспечивают. Индексатор для многомерного массива имеет не один, а несколько параметров. Массивы массивов также поддерживают и диапазоны и индексаторы. В следующем примере показано выполнение итерации для прямоугольного подраздела массива массивов. В этом примере выполняется итерация раздела в центре с исключением трех первых и последних строк, а также двух первых и последних столбцов из каждой выбранной строки:
+
+[!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Сценарии для индексов и диапазонов
 
-Часто для анализа отдельного поддиапазона последовательности используются диапазоны и индексы. В новом синтаксисе легче понять, о каком поддиапазоне идет речь. Локальная функция `MovingAverage` принимает <xref:System.Range> в качестве аргумента. После этого метод перечисляет только это диапазон и вычисляет минимальное, максимальное и среднее значение. Попробуйте добавить в свой проект следующий код:
+Часто диапазоны и индексы используются для анализа отдельного поддиапазона последовательности большего размера. В новом синтаксисе легче понять, о каком поддиапазоне идет речь. Локальная функция `MovingAverage` принимает <xref:System.Range> в качестве аргумента. После этого метод перечисляет только это диапазон и вычисляет минимальное, максимальное и среднее значение. Попробуйте добавить в свой проект следующий код:
 
-[!code-csharp[MovingAverages](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]
-
-Готовый код можно загрузить из репозитория [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/RangesIndexes).
+[!code-csharp[MovingAverages](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]

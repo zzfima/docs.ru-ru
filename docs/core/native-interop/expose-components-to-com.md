@@ -1,5 +1,6 @@
 ---
 title: Предоставление доступа к компонентам .NET Core для COM
+description: В этом руководстве демонстрируется, как предоставить доступ к классу .NET Core для COM. Вы создаете COM-сервер и параллельный манифест сервера для модели COM без поддержки реестра.
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157548"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146662"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Предоставление доступа к компонентам .NET Core для COM
 
@@ -41,7 +42,21 @@ ms.locfileid: "78157548"
 3. Добавьте `using System.Runtime.InteropServices;` в начало файла.
 4. Создайте интерфейс с именем `IServer`. Пример:
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
+
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
 
 5. Добавьте в интерфейс атрибут `[Guid("<IID>")]` с идентификатором GUID реализуемого интерфейса COM. Например, `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Обратите внимание, что этот идентификатор GUID должен быть уникальным, так как он является единственным идентификатором данного интерфейса для модели COM. Чтобы создать идентификатор GUID в Visual Studio, выберите "Сервис" > "Создать GUID". Откроется средство создания идентификатора GUID.
 6. Добавьте в интерфейс атрибут `[InterfaceType]` и укажите, какие базовые COM-интерфейсы должен реализовывать ваш интерфейс.

@@ -3,14 +3,14 @@ title: Практическое руководство. Поиск дочерн�
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
 ms.openlocfilehash: 37ce6c9d91d4edf2576ccddabd1d7f14a96b0a33
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141235"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск дочернего элемента (XPath-LINQ to XML) (C#)
-В этом разделе сравнивается ось дочерних элементов XPath с методом [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XContainer.Element%2A>.  
+В этом разделе сравнивается ось дочерних элементов XPath с методом [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>.  
   
  Выражение XPath - `DeliveryNotes`.  
   

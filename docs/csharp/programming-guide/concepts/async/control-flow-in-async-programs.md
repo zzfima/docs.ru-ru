@@ -3,10 +3,10 @@ title: Поток управления в асинхронных програм�
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204441"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Поток управления в асинхронных программах (C#)
@@ -19,7 +19,7 @@ ms.locfileid: "70204441"
 
 - `startButton_Click`, который вызывает метод `AccessTheWebAsync` и выводит результат;
 
-- `AccessTheWebAsync`, который загружает содержимое веб-сайта в виде строки и возвращает длину строки. `AccessTheWebAsync` использует для загрузки содержимого асинхронный метод <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.
+- `AccessTheWebAsync`, который загружает содержимое веб-сайта в виде строки и возвращает длину строки. `AccessTheWebAsync` использует для загрузки содержимого асинхронный метод <xref:System.Net.Http.HttpClient><xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.
 
 Выводимые строки помечены номерами на стратегических этапах программы, чтобы помочь вам понять, как работает программа и что происходит на каждом отмеченном этапе. Выводимые строки обозначены номерами от ONE (один) до SIX (шесть). Метки представляют порядок, в котором программа достигает эти строки кода.
 
@@ -272,9 +272,9 @@ Length of the downloaded string: 33946.
 
 ### <a name="steps-one-and-two"></a>Шаги ОДИН и ДВА
 
-В первых двух строках прослеживается путь по мере того, как метод `startButton_Click` вызывает `AccessTheWebAsync`, а `AccessTheWebAsync` вызывает асинхронный метод <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>. Ниже показаны вызовы из метода в метод.
+В первых двух строках прослеживается путь по мере того, как метод `startButton_Click` вызывает `AccessTheWebAsync`, а `AccessTheWebAsync` вызывает асинхронный метод <xref:System.Net.Http.HttpClient><xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>. Ниже показаны вызовы из метода в метод.
 
-![Шаги ONE (один) и TWO (два)](./media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![Шаги ОДИН и ДВА](./media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
 
 Типом возвращаемого значения и для `AccessTheWebAsync`, и для `client.GetStringAsync` является <xref:System.Threading.Tasks.Task%601>. Для `AccessTheWebAsync` значение TResult является целым числом. Для `GetStringAsync` значение TResult является строкой. Дополнительные сведения о возвращаемых типах асинхронных методов см. в разделе [Асинхронные типы возвращаемых значений (C#)](./async-return-types.md).
 
@@ -306,7 +306,7 @@ string urlContents = await getStringTask;
 
  На следующем рисунке показан поток управления из `client.GetStringAsync` к назначению `getStringTask` и из создания `getStringTask` к применению оператора await.
 
- ![Шаг THREE (три)](./media/asynctrace-three.png "AsyncTrace-Three")
+ ![Шаг ТРИ](./media/asynctrace-three.png "AsyncTrace-Three")
 
  Выражение await приостанавливает `AccessTheWebAsync` до возвращения результатов `client.GetStringAsync`. На это время управление возвращается вызывающему объекту метода `AccessTheWebAsync`, `startButton_Click`.
 
@@ -341,7 +341,7 @@ int contentLength = await getLengthTask;
 
  На следующем рисунке стрелками показан поток управления из выражения await в `AccessTheWebAsync` к назначению значения `getLengthTask`, за которым следует обычная обработка в методе `startButton_Click` до ожидания `getLengthTask`.
 
- ![Шаг FOUR (четыре)](./media/asynctrace-four.png "AsyncTrace-FOUR")
+ ![Шаг ЧЕТЫРЕ](./media/asynctrace-four.png "AsyncTrace-FOUR")
 
 ### <a name="step-five"></a>Шаг ПЯТЬ
 
@@ -358,7 +358,7 @@ FIVE:  Back in AccessTheWebAsync.
 
  На следующем рисунке показана передача управления после завершения `client.GetStringAsync` (и `getStringTask`).
 
- ![Шаг FIVE (пять)](./media/asynctrace-five.png "AsyncTrace-FIVE")
+ ![Шаг ПЯТЬ](./media/asynctrace-five.png "AsyncTrace-FIVE")
 
  `AccessTheWebAsync` выполняется до завершения, и управление возвращается к `startButton_Click`, который ожидает завершения.
 
@@ -383,7 +383,7 @@ int contentLength = await getLengthTask;
 
  На следующем рисунке показано возвращение управления от `AccessTheWebAsync` к `startButton_Click`.
 
- ![Шаг SIX (шесть)](./media/asynctrace-six.png "AsyncTrace-SIX")
+ ![Шаг ШЕСТЬ](./media/asynctrace-six.png "AsyncTrace-SIX")
 
 ## <a name="see-also"></a>См. также
 

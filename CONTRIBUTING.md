@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e5da9a98e8725880223df3737dc60f773db8d20e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336723"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141137"
 ---
 # <a name="contributing"></a>Добавление данных
 
@@ -25,6 +25,10 @@ ms.locfileid: "75336723"
 - [Примеры и фрагменты кода](https://github.com/dotnet/samples) Проблемы и задачи для этого репозитория рассматриваются в разделе [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
 - [Справочник по .NET API](https://github.com/dotnet/dotnet-api-docs) Проблемы и задачи для этого репозитория рассматриваются в разделе [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
 - [Справочник по пакету SDK для .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs) Проблемы и задачи для этого репозитория рассматриваются в разделе [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+
+### <a name="contributing-to-international-content"></a>Вклад в международные материалы
+
+Дополнения для материала, переведенные с помощью машинного перевода (MT), пока не принимаются. В целях улучшения качества материалов MT мы перешли на систему нейронного машинного перевода. Мы принимаем и поощряем работу над материалами, переводимыми людьми (HT), которые будем использовать для обучения системы нейронного машинного перевода. Со временем вклад в материалы НТ улучшит качество как HT, так и MT. В статьях с машинным переводом появится заявление о том, что часть статьи может представлять собой машинный перевод, а кнопка **Изменить** не будет отображаться, так как будет отключена.
 
 ## <a name="dos-and-donts"></a>Правила
 

@@ -1,13 +1,13 @@
 ---
 title: Реализация шлюзов API с помощью Ocelot
 description: Узнайте, как реализовывать шлюзы API с помощью Ocelot и как использовать Ocelot в среде на базе контейнеров.
-ms.date: 01/30/2020
-ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: 28b9ca22d232baf3545d71b876cecf72fea05c92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502418"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846950"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Реализация шлюзов API с помощью Ocelot
 
@@ -140,7 +140,7 @@ docker-compose run --service-ports catalog-api
 
 По сути, Ocelot — это набор ПО промежуточного слоя, которое можно применить в определенном порядке.
 
-Ocelot предназначен для работы только с ASP.NET Core. Он нацелен на `netstandard2.0`, поэтому его можно использовать везде, где поддерживается .NET Standard 2.0, включая среду выполнения .NET Core 2.0 и среду выполнения .NET Framework 4.6.1 и более поздних версий.
+Ocelot предназначен для работы только с ASP.NET Core. Последняя версия пакета предназначена для `.NETCoreApp 3.1` и не подходит для приложений .NET Framework.
 
 Вы устанавливаете Ocelot и его зависимости в проекте ASP.NET Core с помощью [пакета NuGet Ocelot](https://www.nuget.org/packages/Ocelot/) из Visual Studio.
 

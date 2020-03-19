@@ -4,12 +4,12 @@ description: Это расширенное руководство иллюстр
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: de090eb9cc1e8b511956313ab5169ee4d07a492f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039227"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156744"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Учебник. Создание и использование асинхронных потоков с использованием C# 8.0 и .NET Core 3.0
 
@@ -45,7 +45,7 @@ C# 8.0 представляет **асинхронные потоки**, кот
 
 Начальное приложение представляет собой консольное приложение, которое использует интерфейс [GraphQL GitHub](https://developer.github.com/v4/) для получения последних проблем, написанных в репозитории [dotnet/docs](https://github.com/dotnet/docs). Начнем с просмотра следующего кода для метода `Main` начального приложения.
 
-[!code-csharp[StarterAppMain](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
 
 Вы можете задать переменную среды `GitHubKey` личному маркеру доступа или заменить последний аргумент в вызове на `GenEnvVariable` с помощью личного маркера доступа. Не помещайте свой код доступа в исходный код, если вы будете сохранять исходный код вместе с другими или помещать его в общий репозиторий с исходным кодом.
 
@@ -57,7 +57,7 @@ C# 8.0 представляет **асинхронные потоки**, кот
 
 Реализация показывает, почему возникло поведение, обсуждавшееся в предыдущем разделе. Изучите код для `runPagedQueryAsync`.
 
-[!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
 Давайте сконцентрируемся на алгоритме разбивки по страницам и асинхронной структуре предыдущего кода. (Дополнительные сведения об API GraphQL GitHub см. в [этой документации](https://developer.github.com/v4/guides/).) Метод `runPagedQueryAsync` перечисляет проблемы от самых последних до самых старых. Чтобы продолжить с предыдущей страницы, он запрашивает по 25 выпусков на страницу и проверяет структуру ответа `pageInfo`. Это следует за стандартной поддержкой страниц GraphQL для многостраничных ответов. Ответ включает в себя объект `pageInfo`, который содержит значение `hasPreviousPages` и `startCursor`, используемые для запроса предыдущей страницы. Проблемы в массиве `nodes`. Метод `runPagedQueryAsync` добавляет эти узлы в массив, который содержит результаты со всех страниц.
 
@@ -108,29 +108,31 @@ namespace System
 
 Затем для создания асинхронного потока преобразуйте метод `runPagedQueryAsync`. Сначала измените подпись `runPagedQueryAsync`, чтобы вернуть `IAsyncEnumerable<JToken>`, затем удалите маркер отмены и объекты хода выполнения из списка параметров, как показано в следующем коде.
 
-[!code-csharp[FinishedSignature](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
 
 В следующем коде показано, как начальный код обрабатывает каждую страницу для извлечения.
 
-[!code-csharp[StarterPaging](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
 
 Замените эти три строки следующим кодом.
 
-[!code-csharp[FinishedPaging](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
 
 Вы также можете удалить объявление `finalResults` ранее в этом методе и оператор `return`, следующий за измененным циклом.
 
 Вы завершили изменения для создания асинхронного потока. Готовый метод должен напоминать код, указанный ниже.
 
-[!code-csharp[FinishedGenerate](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
 
 Затем измените код, который использует коллекцию, для асинхронного потока. Найдите следующий код в `Main`, который обрабатывает коллекцию проблем.
 
-[!code-csharp[EnumerateOldStyle](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
 
 Замените код следующим циклом `await foreach`.
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+
+Элементы потока по умолчанию обрабатываются в захваченном контексте. Чтобы отключить захват контекста, используйте метод расширения <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>. Дополнительные сведения о контекстах синхронизации и захвате текущего контекста см. в [статье](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md), посвященной использованию асинхронной модели на основе задач.
 
 Вы можете получить код для 	готового руководства, используемый в репозитории [dotnet/samples](https://github.com/dotnet/samples) в папке [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished).
 

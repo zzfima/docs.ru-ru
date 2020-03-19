@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449568"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78262443"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Частные поля, добавленные во встроенные типы структур
 
-Частные поля добавлены во встроенные типы структур в [ссылочных сборках](../../../../docs/standard/assembly/reference-assemblies.md). В результате, в C#, типы структуры всегда должны создаваться с помощью [нового оператора](../../../../docs/csharp/language-reference/operators/new-operator.md), [литерала по умолчанию](../../../../docs/csharp/language-reference/operators/default.md#default-literal)или путем инициализации каждого частного поля.
+Частные поля добавлены в [некоторые типы структур](#affected-apis) в [ссылочных сборках](../../../../docs/standard/assembly/reference-assemblies.md). В результате в C# эти типы структуры всегда должны создаваться с помощью [оператора new](../../../../docs/csharp/language-reference/operators/new-operator.md) или [литерала по умолчанию](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
 
 #### <a name="change-description"></a>Описание изменений
 
-В .NET Core 2.0 и предыдущих версиях некоторые встроенные типы структур, например <xref:System.ConsoleKeyInfo>, можно создать в C# без использования оператора `new` или [литерала по умолчанию](../../../../docs/csharp/language-reference/operators/default.md#default-literal). Это вызвано тем, что [ссылочные сборки](../../../../docs/standard/assembly/reference-assemblies.md), используемые компилятором C#, не содержат частных полей для структур. Все частные поля для типов структуры .NET добавляются в ссылочные сборки, начиная с .NET Core 2.1.
+В .NET Core 2.0 и предыдущих версиях некоторые типы структур, например <xref:System.ConsoleKeyInfo>, можно создать в C# без использования оператора `new` или [литерала по умолчанию](../../../../docs/csharp/language-reference/operators/default.md#default-literal). Это вызвано тем, что [ссылочные сборки](../../../../docs/standard/assembly/reference-assemblies.md), используемые компилятором C#, не содержат частных полей для структур. Все частные поля для типов структуры .NET добавляются в ссылочные сборки, начиная с .NET Core 2.1.
 
 Например, следующий код C# компилируется в .NET Core 2.0, но не в .NET Core 2.1:
 
@@ -49,16 +49,6 @@ ConsoleKeyInfo key = default;    // Struct type.
 
 if (key.ToString() == "y")
     Console.WriteLine("Yes!");
-```
-
-```csharp
-ConsoleKeyInfo[] keys = new ConsoleKeyInfo[5];    // Array of structs.
-
-for (int i = 0; i < keys.Length; i++)
-{
-    // Initialize each array element with the new operator.
-    keys[i] = new ConsoleKeyInfo();
-}
 ```
 
 #### <a name="category"></a>Категория

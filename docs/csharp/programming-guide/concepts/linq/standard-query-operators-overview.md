@@ -2,12 +2,12 @@
 title: Общие сведения о стандартных операторах запроса (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 76c2c4684f33c3fb30748b5f08efd215548661ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590977"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167859"
 ---
 # <a name="standard-query-operators-overview-c"></a>Общие сведения о стандартных операторах запроса (C#)
 *Стандартные операторы запросов* — это методы, формирующие шаблон LINQ. Большинство этих методов работают с последовательностями. В данном контексте последовательность — это объект, тип которого реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>. Функциональные возможности стандартных операторов запросов включают фильтрацию, проекцию, статистическую обработку, сортировку и многие другие.  
@@ -63,7 +63,7 @@ foreach (var obj in query)
 // Words of length 5:  
 // QUICK  
 // BROWN  
-// JUMPS   
+// JUMPS
 ```  
   
 ## <a name="query-expression-syntax"></a>Синтаксис выражений запросов  

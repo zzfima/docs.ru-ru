@@ -2,12 +2,12 @@
 title: Команда dotnet tool update
 description: Команда dotnet tool update обновляет указанное средство .NET Core на вашем компьютере.
 ms.date: 02/14/2020
-ms.openlocfilehash: 80e807a0fc06ad762334f888e701f6d9c448369a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 497b052a8b9cfa9dca8d80316075fe7565d6b35a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156950"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847824"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -20,9 +20,18 @@ ms.locfileid: "78156950"
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
-dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity] [--add-source]
-dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity] [--add-source]
-dotnet tool update <PACKAGE_NAME> [--configfile] [--framework] [-v|--verbosity] [--add-source]
+dotnet tool update <PACKAGE_NAME> <-g|--global>
+    [--configfile] [--framework] [-v|--verbosity]
+    [--add-source]
+
+dotnet tool update <PACKAGE_NAME> <--tool-path>
+    [--configfile] [--framework] [-v|--verbosity]
+    [--add-source]
+
+dotnet tool update <PACKAGE_NAME>
+    [--configfile] [--framework] [-v|--verbosity]
+    [--add-source]
+
 dotnet tool update <-h|--help>
 ```
 
@@ -93,3 +102,5 @@ dotnet tool update <-h|--help>
 ## <a name="see-also"></a>См. также
 
 - [Средства .NET Core](global-tools.md)
+- [Учебник. Установка и использование глобального средства .NET Core с помощью интерфейса командной строки .NET Core](global-tools-how-to-use.md)
+- [Учебник. Установка и использование локального средства .NET Core с помощью интерфейса командной строки .NET Core](local-tools-how-to-use.md)

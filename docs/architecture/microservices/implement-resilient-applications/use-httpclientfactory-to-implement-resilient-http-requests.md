@@ -1,68 +1,73 @@
 ---
-title: Использование HttpClientFactory для реализации устойчивых HTTP-запросов
-description: Узнайте, как использовать фабрику HttpClientFactory, доступную в .NET Core, начиная с версии 2.1, для создания экземпляров `HttpClient`, чтобы облегчить их применение в ваших приложениях.
-ms.date: 08/08/2019
-ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+title: Использование IHttpClientFactory для реализации устойчивых HTTP-запросов
+description: Узнайте, как использовать интерфейс IHttpClientFactory, доступный в .NET Core, начиная с версии 2.1, для создания экземпляров `HttpClient`, чтобы облегчить их применение в ваших приложениях.
+ms.date: 03/03/2020
+ms.openlocfilehash: 088fb6c7e10ad656247ee4065da5c13d383b2cf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900315"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847223"
 ---
-# <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Использование HttpClientFactory для реализации устойчивых HTTP-запросов
+# <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Использование IHttpClientFactory для реализации устойчивых HTTP-запросов
 
-`HttpClientFactory` — это проверенная фабрика, доступная начиная с .NET Core 2.1. С ее помощью можно создавать экземпляры <xref:System.Net.Http.HttpClient>, которые используются в приложениях.
+<xref:System.Net.Http.IHttpClientFactory> — это контракт, который реализуется `DefaultHttpClientFactory` и доступен, начиная с версии .NET Core 2.1. С его помощью можно создавать экземпляры <xref:System.Net.Http.HttpClient>, которые используются в приложениях.
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>Проблемы с исходным классом HttpClient, доступным в .NET Core
 
 Исходный и хорошо известный класс <xref:System.Net.Http.HttpClient> очень просто использовать, но иногда разработчики применяют его неправильно.
 
-Первая проблема в том, что, хотя этот класс и является одноразовым, лучше не использовать его с инструкцией `using`, поскольку даже при ликвидации объекта `HttpClient` базовый сокет не освобождается сразу, что может привести к исчерпанию сокетов. Дополнительные сведения об этой проблеме см. в записи блога [You're using HttpClient wrong and it's destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) (Неправильное использование HttpClient и нарушение стабильной работы программного обеспечения).
+Этот класс реализует `IDisposable`, однако объявлять и создавать его экземпляры в инструкции `using` не рекомендуется, поскольку при удалении объекта `HttpClient` не происходит немедленное освобождение базового сокета, в результате чего со временем может возникнуть проблема _нехватки сокетов_. Дополнительные сведения об этой проблеме см. в [записи блога](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/), посвященной неправильному использованию HttpClient и нарушению стабильной работы программного обеспечения.
 
-Таким образом, создается один экземпляр `HttpClient`, которые будет использоваться повторно на протяжении всего жизненного цикла приложения. Создание экземпляра класса `HttpClient` для каждого запроса будет сокращать количество доступных сокетов при больших нагрузках. В результате будут возникать ошибки `SocketException`. Возможные способы решения этой проблемы основаны на создании объекта `HttpClient` в виде класса-одиночки или статического класса, как описано в этой [статье Майкрософт об использовании HttpClient](../../../csharp/tutorials/console-webapiclient.md).
+Таким образом, создается один экземпляр `HttpClient`, которые будет использоваться повторно на протяжении всего жизненного цикла приложения. Создание экземпляра класса `HttpClient` для каждого запроса будет сокращать количество доступных сокетов при больших нагрузках. В результате будут возникать ошибки `SocketException`. Возможные способы решения этой проблемы основаны на создании объекта `HttpClient` в виде класса-одиночки или статического класса, как описано в этой [статье Майкрософт об использовании HttpClient](../../../csharp/tutorials/console-webapiclient.md). Это может быть хорошим решением для консольных приложений, которые выполняются непродолжительное время несколько раз в день, а также их аналогов.
 
-Но есть еще одна проблема с `HttpClient`, которая может возникнуть, когда вы используете его как класс-одиночку или статический объект. В этом случае класс-одиночка или статический класс `HttpClient` не учитывает изменения в DNS. Эта проблема описывается [в репозитории GitHub dotnet/corefx](https://github.com/dotnet/corefx/issues/11224).
+Кроме того, разработчики сталкиваются с проблемами при использовании общего экземпляра `HttpClient` в длительно выполняющихся процессах. Если экземпляр HttpClient создается в единичном виде или как статический объект, он не может обрабатывать изменения DNS, как описывается в этой [проблеме](https://github.com/dotnet/corefx/issues/11224) в репозитории GitHub dotnet/corefx.
 
-Чтобы решить эти проблемы и упростить управление экземплярами `HttpClient`, в .NET Core 2.1 появилась новая фабрика `HttpClientFactory`, которую также можно использовать для реализации устойчивых HTTP-вызовов путем интеграции с Polly.
+Тем не менее эта проблема связана не с самим объектом `HttpClient`, а с [конструктором по умолчанию для HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor), поскольку он создает новый конкретный экземпляр <xref:System.Net.Http.HttpMessageHandler>, который является источником описываемых выше проблем, связанных с *нехваткой сокетов* и изменениями DNS.
+
+Чтобы решить указанные выше проблемы и обеспечить возможность управления экземплярами `HttpClient`, в .NET Core 2.1 был представлен интерфейс <xref:System.Net.Http.IHttpClientFactory>, который можно использовать для настройки и создания экземпляров `HttpClient` в приложении путем внедрения зависимостей. Также этот интерфейс предоставляет расширения для ПО промежуточного слоя на основе Polly, что позволяет использовать преимущества делегирования обработчиков в HttpClient.
 
 [Polly](http://www.thepollyproject.org/) — это библиотека для обеспечения обработки временных сбоев, которая позволяет разработчикам повысить устойчивость своих приложений, используя некоторые стандартные политики более эффективным и потокобезопасным способом.
 
-## <a name="what-is-httpclientfactory"></a>Что такое HttpClientFactory
+## <a name="benefits-of-using-ihttpclientfactory"></a>Преимущества использования IHttpClientFactory
 
-Задачи `HttpClientFactory`:
+В текущей реализации <xref:System.Net.Http.IHttpClientFactory> также реализуется <xref:System.Net.Http.IHttpMessageHandlerFactory> и предлагаются следующие преимущества.
 
 - Центральное расположение для именования и настройки логических объектов `HttpClient`. Например, вы можете настроить клиент (агент службы), который предварительно настроен для доступа к определенной микрослужбе.
 - Кодификация концепции исходящего ПО промежуточного слоя путем делегирования обработчиков в `HttpClient` и реализация ПО промежуточного слоя на основе Polly для использования политик устойчивости Polly.
 - В `HttpClient` уже существует концепция делегирования обработчиков, которые можно связать друг с другом для исходящих HTTP-запросов. Вы можете регистрировать клиенты HTTP в фабрике, а также использовать обработчик Polly, чтобы использовать политики Polly для повторных попыток, размыкателя цепи и т. д.
-- Управление временем существования `HttpClientMessageHandlers`, чтобы избежать упомянутых проблем, которые могут возникнуть при управлении временем существования `HttpClient` самостоятельно.
+- Управление временем существования <xref:System.Net.Http.HttpMessageHandler>, чтобы избежать упомянутых проблем, которые могут возникнуть при управлении временем существования `HttpClient` самостоятельно.
+
+> [!TIP]
+> Экземпляры `HttpClient`, внедряемые в виде зависимостей, можно безопасно удалять, поскольку связанный с ними обработчик `HttpMessageHandler` управляется фабрикой. В сущности, внедренные экземпляры `HttpClient` с точки зрения внедрения зависимостей имеют *ограниченную область действия*.
 
 > [!NOTE]
-> `HttpClientFactory` тесно привязывается к реализации внедрения зависимостей (DI) в пакете NuGet `Microsoft.Extensions.DependencyInjection`. См. сведения об использовании других контейнеров внедрения зависимостей в этом [обсуждении GitHub](https://github.com/dotnet/extensions/issues/1345).
+> Реализация `IHttpClientFactory` (`DefaultHttpClientFactory`) тесно привязывается к реализации внедрения зависимостей в пакете NuGet `Microsoft.Extensions.DependencyInjection`. См. сведения об использовании других контейнеров внедрения зависимостей в этом [обсуждении GitHub](https://github.com/dotnet/extensions/issues/1345).
 
-## <a name="multiple-ways-to-use-httpclientfactory"></a>Способы применения HttpClientFactory
+## <a name="multiple-ways-to-use-ihttpclientfactory"></a>Способы применения IHttpClientFactory
 
-Есть несколько способов использования `HttpClientFactory` в вашем приложении:
+Есть несколько способов использования `IHttpClientFactory` в вашем приложении:
 
-- Использование `HttpClientFactory` напрямую
+- Основное использование
 - Использование именованных клиентов
 - Использование типизированных клиентов
 - Использование созданных клиентов
 
-Для краткости в этом руководстве показан наиболее структурированный способ использования `HttpClientFactory`, а именно — с помощью типизированных клиентов (шаблон агента службы). Все параметры описаны и перечислены в [этой статье об использовании HttpClientFactory](/aspnet/core/fundamentals/http-requests#consumption-patterns).
+Для краткости в этом руководстве показан наиболее структурированный способ использования `IHttpClientFactory`, а именно — с помощью типизированных клиентов (шаблон агента службы). Все параметры описаны и перечислены в [этой статье](/aspnet/core/fundamentals/http-requests#consumption-patterns), посвященной использованию `IHttpClientFactory`.
 
-## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>Как использовать типизированные клиенты с HttpClientFactory
+## <a name="how-to-use-typed-clients-with-ihttpclientfactory"></a>Как использовать типизированные клиенты с IHttpClientFactory
 
-Так что же такое типизированный клиент? Это просто класс `HttpClient`, настроенный после внедрения с помощью `DefaultHttpClientFactory`.
+Так что же такое типизированный клиент? Это просто объект `HttpClient`, предварительно настроенный для конкретной цели. Эта конфигурация может включать заданные значения, например базовый сервер, заголовки HTTP или величины времени ожидания.
 
-На следующей схеме показано, как использовать типизированные клиенты с `HttpClientFactory`.
+На следующей схеме показано, как использовать типизированные клиенты с `IHttpClientFactory`.
 
-![На схеме показано, как использовать типизированные клиенты с HttpClientFactory.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
+![На схеме показано, как использовать типизированные клиенты с IHttpClientFactory.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
-**Рис. 8-4**. Использование HttpClientFactory с классами типизированных клиентов.
+**Рис. 8-4**. Использование `IHttpClientFactory` с классами типизированных клиентов.
 
-На изображении выше ClientService (применяется контроллером или в коде клиента) использует объект `HttpClient`, созданный зарегистрированной фабрикой `IHttpClientFactory`. Эта фабрика назначает `HttpClient``HttpMessageHandler` из пула, которым она управляет. `HttpClient` можно настроить с помощью политик Polly при регистрации фабрики `IHttpClientFactory` в контейнере внедрения зависимостей, используя метод расширения `AddHttpClient`.
+На изображении выше `ClientService` (используется контроллером или в коде клиента) использует объект `HttpClient`, созданный зарегистрированной фабрикой `IHttpClientFactory`. Эта фабрика назначает `HttpMessageHandler` из пула объекту `HttpClient`. `HttpClient` можно настроить с помощью политик Polly при регистрации фабрики `IHttpClientFactory` в контейнере внедрения зависимостей, используя метод расширения <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*>.
 
-Чтобы настроить такую структуру, добавьте `HttpClientFactory` в приложение, установив пакет NuGet `Microsoft.Extensions.Http`, который содержит метод расширения `AddHttpClient()` для `IServiceCollection`. Этот метод расширения регистрирует класс `DefaultHttpClientFactory`, который будет использоваться как класс-одиночка для интерфейса `IHttpClientFactory`. Он определяет временную конфигурацию для `HttpMessageHandlerBuilder`. Этот обработчик сообщений (объект `HttpMessageHandler`), взятый из пула, используется классом `HttpClient`, который возвращается фабрикой.
+Чтобы настроить такую структуру, добавьте <xref:System.Net.Http.IHttpClientFactory> в приложение, установив пакет NuGet `Microsoft.Extensions.Http`, который содержит метод расширения <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> для <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>. Этот метод расширения регистрирует внутренний класс `DefaultHttpClientFactory`, который будет использоваться как класс-одиночка для интерфейса `IHttpClientFactory`. Он определяет временную конфигурацию для <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder>. Этот обработчик сообщений (объект <xref:System.Net.Http.HttpMessageHandler>), взятый из пула, используется классом `HttpClient`, который возвращается фабрикой.
 
 В приведенном далее коде показано, как `AddHttpClient()` может использоваться для регистрации типизированных клиентов (агентов службы), которым нужно использовать `HttpClient`.
 
@@ -107,7 +112,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 
 Создание пулов обработчиков желательно, поскольку каждый обработчик обычно управляет собственными базовыми HTTP-подключениями. Создание лишних обработчиков может привести к задержке подключения. Некоторые обработчики поддерживают подключения открытыми в течение неопределенного периода, что может помешать обработчику отреагировать на изменения DNS.
 
-Время существования объектов `HttpMessageHandler`это период, в течение которого экземпляр `HttpMessageHandler` в пуле может использоваться повторно. Значение по умолчанию — две минуты, но его можно переопределить для отдельных типизированных клиентов. Чтобы переопределить это значение, вызовите `SetHandlerLifetime()` в экземпляре `IHttpClientBuilder`, который возвращается при создании клиента, как показано в следующем примере кода:
+Время существования объектов `HttpMessageHandler`это период, в течение которого экземпляр `HttpMessageHandler` в пуле может использоваться повторно. Значение по умолчанию — две минуты, но его можно переопределить для отдельных типизированных клиентов. Чтобы переопределить это значение, вызовите `SetHandlerLifetime()` в экземпляре <xref:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder>, который возвращается при создании клиента, как показано в следующем примере кода:
 
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
@@ -119,7 +124,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Реализация классов типизированных клиентов, использующих внедренный и настроенный HttpClient
 
-Вы уже должны были уже определить классы типизированных клиентов, например классы в примере кода, такие как BasketService, CatalogService, OrderingService и т. д. Типизированный клиент — это класс, который принимает объект `HttpClient` (внедренный через конструктор) и использует его для вызова удаленной службы HTTP. Пример:
+Вы уже должны были определить классы типизированных клиентов, например классы в примере кода, такие как BasketService, CatalogService, OrderingService и т. д. Типизированный клиент — это класс, который принимает объект `HttpClient` (внедренный через конструктор) и использует его для вызова удаленной службы HTTP. Пример:
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -146,13 +151,13 @@ public class CatalogService : ICatalogService
 }
 ```
 
-Типизированный клиент (в нашем примере это CatalogService) активируется путем внедрения зависимостей, то есть он может принять любую зарегистрированную службу в свой конструктор в дополнение к HttpClient.
+Типизированный клиент (в нашем примере это `CatalogService`) активируется путем внедрения зависимостей, то есть он может принять любую зарегистрированную службу в свой конструктор в дополнение к `HttpClient`.
 
-По сути, типизированный клиент — это временный объект, то есть экземпляр создается каждый раз по необходимости и при этом он будет получать новый экземпляр `HttpClient`. Тем не менее объекты HttpMessageHandler в пуле используются повторно множеством HTTP-запросов.
+По сути, типизированный клиент — это временный объект, то есть экземпляр создается каждый раз по необходимости и при этом он будет получать новый экземпляр `HttpClient`. Тем не менее объекты `HttpMessageHandler` в пуле используются повторно множеством экземпляров `HttpClient`.
 
 ### <a name="use-your-typed-client-classes"></a>Использование классов типизированных клиентов
 
-Наконец, когда вы реализуете классы типов и зарегистрируете их в `AddHttpClient()`, их можно будет использовать везде, где можно внедрить службы с помощью внедрения зависимостей. Например, в любом коде страницы Razor или любом контроллере веб-приложения MVC, как в следующем коде из eShopOnContainers.
+Наконец, когда вы реализуете классы типов, а также зарегистрируете и настроите их в `AddHttpClient()`, их можно будет использовать везде, где можно внедрить службы с помощью внедрения зависимостей. Например, в любом коде страницы Razor или любом контроллере веб-приложения MVC, как в следующем коде из eShopOnContainers.
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -194,9 +199,9 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 - **Polly (библиотека для обеспечения отказоустойчивости .NET и обработки временных сбоев)**  
   <http://www.thepollyproject.org/>
   
-- **Использование HttpClientFactory без внедрения зависимостей (проблема GitHub)**  
+- **Использование IHttpClientFactory без внедрения зависимостей (проблема GitHub)**  
   <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
->[Назад](explore-custom-http-call-retries-exponential-backoff.md)
+>[Назад](implement-resilient-entity-framework-core-sql-connections.md)
 >[Вперед](implement-http-call-retries-exponential-backoff-polly.md)

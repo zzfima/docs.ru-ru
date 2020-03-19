@@ -3,12 +3,12 @@ title: Средства .NET Core
 description: Установка, использование, обновление и удаление средств .NET Core. Содержит сведения о глобальных средствах, средствах пути к средству и локальных средствах.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2f0101c6385c41eda49bcb2458428c1f14552617
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543395"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847795"
 ---
 # <a name="how-to-manage-net-core-tools"></a>Управление средствами .NET Core
 
@@ -273,3 +273,9 @@ dotnet <command> --help
 ```
 
 Если средство не удается установить или запустить, см. статью [Устранение неполадок при использовании средства .NET Core](troubleshoot-usage-issues.md).
+
+## <a name="see-also"></a>См. также
+
+- [Учебник. Создание средства .NET Core с помощью интерфейса командной строки .NET Core](global-tools-how-to-create.md)
+- [Учебник. Установка и использование глобального средства .NET Core с помощью интерфейса командной строки .NET Core](global-tools-how-to-use.md)
+- [Учебник. Установка и использование локального средства .NET Core с помощью интерфейса командной строки .NET Core](local-tools-how-to-use.md)

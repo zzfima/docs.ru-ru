@@ -1,13 +1,13 @@
 ---
 title: Мониторинг работоспособности
 description: Изучите один из способов реализации мониторинга работоспособности.
-ms.date: 01/30/2020
-ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: d3d2bc72cf29b3d1ac93191e7ff2bd827c9ee68d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502681"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401547"
 ---
 # <a name="health-monitoring"></a>Мониторинг работоспособности
 
@@ -19,7 +19,7 @@ ms.locfileid: "77502681"
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>Реализация проверки работоспособности в службах ASP.NET Core
 
-При разработке микрослужбы или веб-приложения ASP.NET Core можно использовать встроенную функцию проверки работоспособности, выпущенную в ASP .NET Core 3.1 ([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Как и многие функции ASP.NET Core, проверки работоспособности поставляются с набором служб и ПО промежуточного слоя.
+При разработке микрослужбы или веб-приложения ASP.NET Core можно использовать встроенную функцию проверки работоспособности, выпущенную в ASP .NET Core 2.2 ([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Как и многие функции ASP.NET Core, проверки работоспособности поставляются с набором служб и ПО промежуточного слоя.
 
 Службы и ПО промежуточного слоя проверки работоспособности просты в использовании и предоставляют функции, которые позволяют убедиться, что любой внешний ресурс, необходимый для вашего приложения (например, база данных SQL Server или удаленный API), работает правильно. При использовании этой функции также можно определить критерии работоспособности ресурса, о которых мы расскажем ниже.
 
@@ -27,7 +27,9 @@ ms.locfileid: "77502681"
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>Использование функции HealthChecks в серверных микрослужбах ASP.NET
 
-В этом разделе вы узнаете, как функция HealthChecks, реализованная в [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks), используется в примере приложения веб-API ASP.NET Core 3.1. Реализация этой функции в крупномасштабных микрослужбах, например eShopOnContainers, рассматривается в следующем разделе. Для начала необходимо определить, что входит в состояние работоспособности для каждой микрослужбы. В примере приложения микрослужба находится в работоспособном состоянии, если API микрослужбы доступен через HTTP и соответствующая база данных SQL Server также доступна.
+В этом разделе вы узнаете, как реализовать функцию HealthChecks в примере приложения веб-API ASP.NET Core 3.1 при использовании пакета [Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks). Реализация этой функции в крупномасштабных микрослужбах, например eShopOnContainers, рассматривается в следующем разделе.
+
+Для начала необходимо определить, что входит в состояние работоспособности для каждой микрослужбы. В примере приложения мы определяем, что микрослужба находится в работоспособном состоянии, если ее API доступен через HTTP и соответствующая база данных SQL Server также доступна.
 
 В .NET Core 3.1 со встроенными API-интерфейсами можно настроить службы, добавить проверку работоспособности для микрослужбы и ее зависимые базы данных SQL Server следующим образом:
 
@@ -40,10 +42,11 @@ public void ConfigureServices(IServiceCollection services)
     // Registers required services for health checks
     services.AddHealthChecks()
         // Add a health check for a SQL Server database
-        .AddSqlServer(
-            configuration["ConnectionString"],
-            name: "OrderingDB-check",
-            tags: new string[] { "orderingdb" });
+        .AddCheck(
+            "OrderingDB-check",
+            new SqlConnectionHealthCheck(Configuration["ConnectionString"]),
+            HealthStatus.Unhealthy,
+            new string[] { "orderingdb" });
 }
 ```
 
@@ -114,11 +117,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseEndpoints(endpoints =>
     {
         //...
-        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-        {
-            Predicate = _ => true,
-            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-        });
+        endpoints.MapHealthChecks("/hc");
         //...
     });
     //…
@@ -129,7 +128,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ### <a name="healthchecks-implementation-in-eshoponcontainers"></a>Реализация HealthChecks в eShopOnContainers
 
-Микрослужбы в eShopOnContainers зависят от нескольких служб, которые выполняют задачи. Например, микрослужба `Catalog.API` из eShopOnContainers зависит от многих служб, таких как хранилище BLOB-объектов Azure, SQL Server и RabbitMQ. Поэтому к ней добавляется несколько проверок работоспособности с помощью метода `AddCheck()`. Для каждой зависимой службы необходимо добавить пользовательскую реализацию `IHealthCheck`, которая определяет соответствующее состояние работоспособности.
+Микрослужбы в eShopOnContainers зависят от нескольких служб, которые выполняют задачи. Например, микрослужба `Catalog.API` из eShopOnContainers зависит от многих служб, таких как хранилище BLOB-объектов Azure, SQL Server и RabbitMQ. Поэтому к ней добавляется несколько проверок работоспособности с помощью метода `AddCheck()`. Для каждой зависимой службы необходимо добавить пользовательскую реализацию `IHealthCheck`, которая будет определять соответствующее состояние работоспособности.
 
 Проект с открытым кодом [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) решает эту проблему путем предоставления пользовательских реализаций проверки работоспособности для каждой из этих корпоративных служб, которые построены на основе .NET Core 3.1. Каждая проверка работоспособности доступна в виде отдельного пакета NuGet, который можно легко добавить в проект. eShopOnContainers широко использует их во всех своих микрослужбах.
 

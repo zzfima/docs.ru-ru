@@ -14,17 +14,18 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 19795cbed27ca979af813b6060163e76fc5b3780
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159355"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187217"
 ---
-# <a name="changing-case-in-net"></a>Смена регистра в .NET
-При написании приложения, которое принимает входные данные от пользователя, невозможно предугадать, какой регистр будет использоваться для ввода данных. Часто требуется обеспечить согласованность регистра строк, особенно если они отображаются в пользовательском интерфейсе. В таблице ниже описаны три метода изменения регистра. Для первых двух методов имеются перегруженные варианты, учитывающие язык и региональные параметры.  
+# <a name="change-case-in-net"></a>Изменение регистра в .NET
+
+При написании приложения, которое принимает вводимые пользователем данные, невозможно предугадать, какой регистр (верхний или нижний) будет при этом использоваться. Часто требуется обеспечить согласованность регистра строк, особенно если они отображаются в пользовательском интерфейсе. В таблице ниже описаны три метода изменения регистра. Для первых двух методов имеются перегруженные варианты, учитывающие язык и региональные параметры.  
   
-|Имя метода|Использование|  
+|Имя метода|Использовать|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Преобразует все символы в строке в верхний регистр.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Преобразует все символы в строке в нижний регистр.|  
@@ -34,7 +35,8 @@ ms.locfileid: "78159355"
 > Обратите внимание, что методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType> и <xref:System.String.ToLower%2A?displayProperty=nameWithType> не следует использовать для преобразования строк с целью их сравнения или проверки на равенство. См. дополнительные сведения о [сравнении строк, содержащих символы в разных регистрах](#Comparing).  
   
 <a name="Comparing"></a>
-## <a name="comparing-strings-of-mixed-case"></a>Сравнение строк, содержащих символы в разных регистрах  
+## <a name="compare-strings-of-mixed-case"></a>Сравнение строк, содержащих символы в разных регистрах  
+
  Чтобы сравнить строки, содержащие символы в разных регистрах, для их упорядочения, вызовите одну из перегрузок метода <xref:System.String.CompareTo%2A?displayProperty=nameWithType> с параметром `comparisonType` и укажите значение <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> или <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> для аргумента `comparisonType`. Для сравнения с использованием определенного языка, отличного от текущего языка и региональных параметров, вызовите перегрузку метода <xref:System.String.CompareTo%2A?displayProperty=nameWithType> с параметрами `culture` и `options` и укажите значение <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> для аргумента `options`.  
   
  Чтобы сравнить строки, содержащие символы в разных регистрах, для определения их равенства, вызовите одну из перегрузок метода <xref:System.String.Equals%2A?displayProperty=nameWithType> с параметром `comparisonType` и укажите значение <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> или <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> для аргумента `comparisonType`.  
@@ -69,7 +71,7 @@ ms.locfileid: "78159355"
   
  Обратите внимание на то, что хотя метод <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> и учитывает язык и региональные параметры, он не обеспечивает лингвистическую правильность использования прописных и строчных букв. Например, в предыдущем примере метод преобразует строку "a tale of two cities" в "A Tale Of Two Cities". При этом лингвистически правильным для языка и региональных параметров en-US будет преобразование "A Tale of Two Cities".  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)
 - [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

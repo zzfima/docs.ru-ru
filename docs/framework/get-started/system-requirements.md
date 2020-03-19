@@ -10,18 +10,18 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 6f67d01b4af4a72fb09e5f2aa225e226e268eee2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545015"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181585"
 ---
 # <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 
-Таблицы в этом разделе содержат требования к оборудованию, операционной системе и программному обеспечению для следующих версий .NET Framework:
+Таблицы в этой статье содержат требования к оборудованию, операционной системе и программному обеспечению для следующих версий .NET Framework:
 
-- .NET Framework 4.5.1 и ее точечные выпуски (4.5.1 и 4.5.2);
+- .NET Framework 4.5 и ее точечные выпуски (4.5.1 и 4.5.2);
 - .NET Framework 4.6 и ее точечные выпуски (4.6.1 и 4.6.2);
 - .NET Framework 4.7 и ее доработанный выпуск (4.7.1 и 4.7.2).
 - .NET Framework 4.8
@@ -70,7 +70,7 @@ ms.locfileid: "75545015"
 
  **Примечания.**
 
-- В системах Windows 7 платформе .NET Framework требуется пакет обновления 1 (SP1) для Windows 7. Если вы используете Windows 7 и еще не установили пакет обновления 1 (SP1), это необходимо сделать перед установкой платформы .NET Framework.
+- В системах Windows 7 платформе .NET Framework требуется пакет обновления 1 (SP1) для Windows 7. Если вы используете Windows 7 и еще не установили пакет обновления 1 (SP1), это необходимо сделать перед установкой платформы .NET Framework.
 
 - .NET Framework 4.5 поддерживается в среде предустановки Windows. (за исключением некоторых функций).
 
@@ -94,13 +94,13 @@ ms.locfileid: "75545015"
 | Windows Server 2008 R2 с пакетом обновления 1 (SP1)|64-разрядная версия | -- | .NET Framework 4<br /><br /> .NET Framework 4,5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows Server 2008 SP2|32- и 64-разрядные версии | -- | .NET Framework 4<br /><br /> .NET Framework 4,5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 
- **Примечания.**
+**Примечания.**
 
 - Windows Server 2012 включает .NET Framework 4.5, поэтому установка этого компонента не требуется. Аналогично Windows Server 2012 R2 включает .NET Framework 4.5.1.
 
-- .NET Framework имеет ограниченную поддержку роли Server Core с Windows Server 2008 R2 с пакетом обновления 1 (SP1) или более поздней версии. Список неподдерживаемых API см. в разделе [Функции Server Core в .NET](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)).
+- Платформа .NET Framework имеет ограниченную поддержку роли Server Core с Windows Server 2008 R2 с пакетом обновления 1 (SP1) или более поздней версии. Список неподдерживаемых API см. в разделе [Функции Server Core в .NET](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)).
 
-- Платформа .NET Framework не поддерживается в Windows Server 2008 R2 for Itanium-Based Systems.
+- Платформа .NET Framework не поддерживается в Windows Server 2008 R2 для систем на платформе Itanium.
 
 - В Windows Server 2008 с пакетом обновления 2 (SP2) платформа .NET Framework не поддерживается в роли Server Core.
 

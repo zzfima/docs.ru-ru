@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715187"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398133"
 ---
 # <a name="ref-c-reference"></a>ref (Справочник по C#)
 
@@ -41,7 +41,7 @@ ms.locfileid: "75715187"
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -115,9 +115,11 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 Начиная с версии C# 7.3, переменная итерации инструкции `foreach` может иметь вид локальной ссылочной переменной или локальной ссылочной переменной только для чтения. Дополнительные сведения см. в статье, посвященной [инструкции foreach](foreach-in.md).
 
+Также, начиная с версии C# 7.3, вы можете переназначать ссылочную локальную переменную или ссылочную локальную переменную только для чтения с помощью [ссылочного оператора присваивания](../operators/assignment-operator.md#ref-assignment-operator).
+
 ## <a name="ref-readonly-locals"></a>Ссылочные локальные переменные только для чтения
 
-Ссылочная локальная переменная только для чтения (ref readonly) позволяет сохранить ссылку на значения, возвращаемые методом или свойством, которые имеют в сигнатуре модификатор `ref readonly` и используют `return ref`. Переменная `ref readonly` сочетает свойства локальной переменной `ref` и переменной `readonly`. Она является псевдонимом для хранилища, которому она присвоена, и не может изменять свое значение. 
+Ссылочная локальная переменная только для чтения (ref readonly) позволяет сохранить ссылку на значения, возвращаемые методом или свойством, которые имеют в сигнатуре модификатор `ref readonly` и используют `return ref`. Переменная `ref readonly` сочетает свойства локальной переменной `ref` и переменной `readonly`. Она является псевдонимом для хранилища, которому она присвоена, и не может изменять свое значение.
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Пример использования возвращаемых ссылочных значений и ссылочных локальных переменных
 
@@ -137,7 +139,7 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 - `ref struct` не поддерживает упаковку. Тип `ref struct` невозможно присвоить переменной типа `object`, `dynamic` или любому типу интерфейса.
 - Типы `ref struct` не могут реализовывать интерфейсы.
-- `ref struct` невозможно объявить как член поля класса или обычной структуры. Сюда входит объявление автоматически реализуемого свойства, которое создает резервное поле, созданное компилятором. 
+- `ref struct` невозможно объявить как член поля класса или обычной структуры. Сюда входит объявление автоматически реализуемого свойства, которое создает резервное поле, созданное компилятором.
 - Невозможно объявить локальные переменные, которые являются типами `ref struct` в асинхронных методах. Вы можете объявлять их в синхронных методах, которые возвращают типы <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> или `Task`.
 - Локальные переменные `ref struct` невозможно объявить в итераторах.
 - Невозможно захватить переменные `ref struct` в лямбда-выражениях или локальных функциях.
@@ -155,7 +157,6 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 - [Написание безопасного и эффективного кода](../../write-safe-efficient-code.md)
 - [Возвращаемые значения ref и локальные переменные ref](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Условное выражение REF](../operators/conditional-operator.md#conditional-ref-expression)
-- [Ссылочный оператор присваивания](../operators/assignment-operator.md#ref-assignment-operator)
 - [Передача параметров](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Параметры методов](method-parameters.md)
 - [Справочник по C#](../index.md)

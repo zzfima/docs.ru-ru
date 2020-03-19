@@ -14,10 +14,10 @@ helpviewer_keywords:
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105072"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (инструмент для установки)
@@ -36,7 +36,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="parameters"></a>Параметры
 
-|Аргумент|ОПИСАНИЕ|
+|Аргумент|Описание|
 |--------------|-----------------|
 |`assembly`|Имя файла сборки, в которой должны выполняться компоненты установщика. Пропустите этот параметр, если указывается строгое имя сборки с помощью параметра `/AssemblyName`.|
 
@@ -44,7 +44,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="options"></a>Параметры
 
-|Параметр|ОПИСАНИЕ|
+|Параметр|Описание|
 |------------|-----------------|
 |`/h[elp]`<br /><br /> -или-<br /><br /> `/?`|Отображает синтаксис команд и параметров программы.|
 |`/help` *сборка*<br /><br /> -или-<br /><br /> `/?` *сборка*|Отображает дополнительные параметры, распознаваемые отдельными установщиками в пределах указанной сборки, вместе с синтаксисом команд и параметров для программы InstallUtil.exe. Этот параметр добавляет текст, возвращенный каждым свойством компонента установщика <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>, в текст справки программы InstallUtil.exe.|

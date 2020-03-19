@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8479168b64153d3c729f8814a2649df8d46f2135
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cd13e7560ee98e0c862c5e2293521c6aaa273455
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394234"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75344281"
 ---
 ### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor. Компиляция во время выполнения перемещена в пакет
 
@@ -20,12 +20,12 @@ ms.locfileid: "72394234"
 
 #### <a name="new-behavior"></a>Новое поведение
 
-Функциональные возможности перемещены в пакет `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
+Функциональные возможности перенесены в пакет [Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/).
 
 Следующие API ранее были доступны в `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` для поддержки компиляции во время выполнения. Теперь эти API доступны через `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`.
 
-- `RazorViewEngineOptions.FileProviders` -> `MvcRazorRuntimeCompilationOptions.FileProviders`
-- `RazorViewEngineOptions.AdditionalCompilationReferences` -> `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
+- `RazorViewEngineOptions.FileProviders` изменено на `MvcRazorRuntimeCompilationOptions.FileProviders`.
+- `RazorViewEngineOptions.AdditionalCompilationReferences` изменено на `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`.
 
 Кроме того, `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange` теперь не используется. Повторная компиляция с учетом изменения файлов включена по умолчанию с использованием ссылки на пакет `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
 
@@ -33,16 +33,16 @@ ms.locfileid: "72394234"
 
 Это изменение требовалось для удаления ASP.NET Core общей зависимости инфраструктуры от Roslyn.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Для приложений, требующих компиляции или перекомпиляции файлов Razor во время выполнения, требуются следующие действия:
 
 1. добавьте ссылку на пакет `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`;
-1. обновите метод `Startup.ConfigureServices` в проекте, чтобы включить вызов `AddMvcRazorRuntimeCompilation`. Например, для `Startup.ConfigureServices`:
+1. обновите метод `Startup.ConfigureServices` в проекте, чтобы включить вызов `AddRazorRuntimeCompilation`. Пример:
 
     ```csharp
     services.AddMvc()
-        .AddMvcRazorRuntimeCompilation();
+        .AddRazorRuntimeCompilation();
     ```
 
 #### <a name="category"></a>Категория

@@ -2,12 +2,12 @@
 title: Команда dotnet tool restore
 description: Команда dotnet tool restore устанавливает на компьютере локальные средства .NET Core, которые доступны для текущего каталога.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2900d431987661a9232ceed10d9a424093f8be45
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543854"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146441"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -20,7 +20,11 @@ ms.locfileid: "77543854"
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME> [--configfile] [--add-source] [tool-manifest] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [-interactive] [-v|--verbosity]
+dotnet tool restore <PACKAGE_NAME>
+    [--configfile] [--add-source] [tool-manifest]
+    [--disable-parallel] [--ignore-failed-sources]
+    [--no-cache] [-interactive] [-v|--verbosity]
+
 dotnet tool restore <-h|--help>
 ```
 
@@ -81,3 +85,4 @@ dotnet tool restore <-h|--help>
 ## <a name="see-also"></a>См. также
 
 - [Средства .NET Core](global-tools.md)
+- [Учебник. Установка и использование локального средства .NET Core с помощью интерфейса командной строки .NET Core](local-tools-how-to-use.md)

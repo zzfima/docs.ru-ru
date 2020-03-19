@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156339"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78238992"
 ---
 # <a name="implementing-a-dispose-method"></a>Реализация метода Dispose
 
@@ -33,7 +33,7 @@ ms.locfileid: "78156339"
   
 Чтобы обеспечить соответствующую очистку ресурсов, метод <xref:System.IDisposable.Dispose%2A> должен быть доступен для многократного вызова без выдачи исключения.  
   
-В приведенном для метода <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> примере показано, как чрезмерно активная сборка мусора может привести к выполнению финализатора до завершения выполнения утилизируемого объекта. Рекомендуется вызывать метод <xref:System.GC.KeepAlive%2A> в конце большого метода <xref:System.IDisposable.Dispose%2A>.  
+В приведенном для метода <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> примере показано, как сборка мусора может привести к выполнению метода завершения, в то время как по-прежнему будет использоваться неуправляемая ссылка на объект или его члены. Возможно, имеет смысл использовать <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>, чтобы запретить сборку мусора для объекта с момента начала текущей процедуры до вызова этого метода.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() и Dispose(Boolean)  
@@ -158,7 +158,7 @@ ms.locfileid: "78156339"
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>
@@ -166,5 +166,5 @@ ms.locfileid: "78156339"
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [Руководство. Определение и использование классов и структур (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
+- [Практическое руководство. Определение и использование классов и структур (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
 - [Шаблон ликвидации](implementing-dispose.md)

@@ -2,12 +2,12 @@
 title: Критические изменения в библиотеке базовых классов
 description: Список критических изменений в библиотеке базовых классов .NET CoreFx.
 ms.date: 09/20/2019
-ms.openlocfilehash: 7c59f2a96545e74e4099b6078ff52009740699c6
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449567"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147579"
 ---
 # <a name="corefx-breaking-changes"></a>Критические изменения CoreFx
 
@@ -33,6 +33,7 @@ CoreFx предоставляет примитивы и другие общие 
 | [FieldInfo.SetValue вызывает исключение для статических полей и полей только для инициализации](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [Во встроенные типы структур добавлены частные поля](#private-fields-added-to-built-in-struct-types) | 2.1 |
 | [Изменено значение по умолчанию для UseShellExecute](#change-in-default-value-of-useshellexecute) | 2.1 |
+| [Версии OpenSSL в macOS](#openssl-versions-on-macos) | 2.1 |
 | [Исключение UnauthorizedAccessException, вызванное FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
@@ -100,6 +101,10 @@ CoreFx предоставляет примитивы и другие общие 
 ***
 
 [!INCLUDE[Change in default value of UseShellExecute](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+[!INCLUDE [OpenSSL versions on macOS](../../../includes/core-changes/corefx/openssl-dependencies-macos.md)]
 
 ***
 

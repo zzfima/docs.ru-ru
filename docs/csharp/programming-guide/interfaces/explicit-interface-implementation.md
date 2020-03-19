@@ -5,12 +5,12 @@ helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: c6f1f849e0d4e831802b4c9b8b4bc3887363a34c
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: ea32a279b7c464174a7fada5ef93ccf62ef39884
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628154"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167677"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Явная реализация интерфейса (Руководство по программированию в C#)
 
@@ -34,7 +34,7 @@ ms.locfileid: "77628154"
 
 [!code-csharp[NameCollisions](~/samples/snippets/csharp/interfaces/ExplicitImplementation.cs#NameCollision)]
 
-Если класс наследует реализацию метода от интерфейса, этот метод доступен только через ссылку типа интерфейса. Наследуемый член не отображается как часть открытого интерфейса. Следующий пример определяет реализацию по умолчанию для метода интерфейса:
+Начиная с версии [C# 8.0](../../whats-new/csharp-8.md#default-interface-methods), вы можете определять реализацию для членов, объявленных в интерфейсе. Если класс наследует реализацию метода от интерфейса, этот метод доступен только через ссылку типа интерфейса. Наследуемый член не отображается как часть открытого интерфейса. Следующий пример определяет реализацию по умолчанию для метода интерфейса:
 
 [!code-csharp[NameCollisions](~/samples/snippets/csharp/interfaces/ExplicitImplementation.cs#DefaultImplementation)]
 

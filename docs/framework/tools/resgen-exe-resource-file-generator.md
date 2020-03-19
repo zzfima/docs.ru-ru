@@ -15,12 +15,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: 5fc2bcb03ae6814d69e229ba083c1d5c44ae8ff3
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: cf79e7c76fd54c6cb6b235251a57aba33c28552b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204614"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180335"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (генератор файлов ресурсов)
 Генератор файлов ресурсов (Resgen.exe) преобразует текстовые файлы (TXT или RESTEXT) и файлы ресурсов на основе XML (RESX) в двоичные файлы среды CLR (RESOURCES), которые можно внедрить в двоичный исполняемый файл среды выполнения или вспомогательную сборку. (См. раздел [Создание файлов ресурсов](../resources/creating-resource-files-for-desktop-apps.md).)  
@@ -60,7 +60,7 @@ resgen /?
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-resgen  [-define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
+resgen  [-define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]
 ```  
   
 ```console  
@@ -69,7 +69,7 @@ resgen filename.extension [outputDirectory]
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр или ключ|ОПИСАНИЕ|  
+|Параметр или ключ|Описание|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|Начиная с .NET Framework 4.5 поддерживается условная компиляция в файлы ресурсов на основе текста (TXT или RESTEXT). Если *symbol* соответствует символу, включенному во входной текстовый файл в конструкции `#ifdef`, соответствующий строковый ресурс включается в RESOURCES-файл. Если входной текстовый файл содержит оператор `#if !` с символом, который не определен ключом `/define`, соответствующий строковый ресурс включается в файл ресурсов.<br /><br /> Параметр `/define` игнорируется, если он применяется для нетекстовых файлов. В символах учитывается регистр.<br /><br /> Дополнительные сведения об этом параметре см. в разделе [Условная компиляция ресурсов](#Conditional) ниже.|  
 |`useSourcePath`|Задает использование текущего каталога входного файла для разрешения относительных путей к файлам.|  
@@ -126,14 +126,14 @@ resgen filename.extension [outputDirectory]
   
 - [Создание класса ресурсов со строгой типизацией](resgen-exe-resource-file-generator.md#Strong)  
   
-<a name="Compiling"></a>   
+<a name="Compiling"></a>
 ### <a name="compiling-resources-into-a-binary-file"></a>Компиляция ресурсов в двоичный файл  
  Чаще всего программа Resgen.exe используется для компиляции файла ресурсов на основе текста (TXT или RESTEXT) или XML (RESX) в двоичный RESOURCES-файл. После компиляции выходной файл можно встроить в основную сборку с помощью языкового компилятора или во вспомогательную сборку с помощью [Компоновщика сборок (AL.exe)](al-exe-assembly-linker.md).  
   
  Синтаксис компиляции файла ресурсов выглядит следующим образом.  
   
 ```console  
-resgen inputFilename [outputFilename]   
+resgen inputFilename [outputFilename]
 ```  
   
  Используются следующие параметры.  
@@ -149,7 +149,7 @@ resgen inputFilename [outputFilename]
  Следующая команда считывает пары имя/значение из файла "Resources.txt" и создает двоичный RESOURCES-файл с именем "Resources.resources". Поскольку имя выходного файла не указано явным образом, его имя по умолчанию аналогично имени входного файла.  
   
 ```console  
-resgen Resources.txt   
+resgen Resources.txt
 ```  
   
  Следующая команда считывает пары имя/значение из файла "Resources.restext" и создает двоичный файл ресурсов с именем "StringResources.resources".  
@@ -164,7 +164,7 @@ resgen Resources.restext StringResources.resources
 resgen Resources.resx Resources.resources  
 ```  
   
-<a name="Convert"></a>   
+<a name="Convert"></a>
 ### <a name="converting-between-resource-file-types"></a>Преобразование типов файлов ресурсов  
  Помимо компиляции файлов ресурсов на основе текста или XML в двоичные файлы ресурсов программа Resgen.exe может преобразовать любой поддерживаемый тип файлов в другой. Это означает, что программа может выполнить следующие преобразования.  
   
@@ -199,7 +199,7 @@ resgen Resources.resx Resources.txt
 resgen Resources.resx Resources.restext  
 ```  
   
-<a name="Multiple"></a>   
+<a name="Multiple"></a>
 ### <a name="compiling-or-converting-multiple-files"></a>Компиляция или преобразование нескольких файлов  
  С помощью ключа `/compile` можно преобразовать список файлов ресурсов из одного формата в другой за одну операцию. Синтаксис выглядит следующим образом.  
   
@@ -213,7 +213,7 @@ resgen /compile filename.extension [filename.extension...]
 resgen /compile StringResources.txt TableResources.resx ImageResources.resx  
 ```  
   
-<a name="Exporting"></a>   
+<a name="Exporting"></a>
 ### <a name="exporting-resources-to-a-resw-file"></a>Экспорт ресурсов в RESW-файл  
  При разработке приложения Магазина Windows 8.x может понадобиться использовать ресурсы из существующего классического приложения. Однако два типа приложений поддерживают разные форматы файлов. В классических приложениях ресурсы в текстовых файлах (TXT или RESTEXT) или RESX-файлах компилируются в двоичные RESOURCES-файлы. В приложениях Магазина Windows 8.x RESW-файлы компилируются в двоичные PRI-файлы. Чтобы решить эту проблему, с помощью программы Resgen.exe можно извлекать ресурсы из исполняемого файла или вспомогательной сборки и записывать их в один или несколько RESW-файлов, которые можно использовать при разработке приложения Магазина Windows 8.x.  
   
@@ -240,7 +240,7 @@ resgen filename.extension  [outputDirectory]
 resgen MyApp.exe Win8Resources  
 ```  
   
-<a name="Conditional"></a>   
+<a name="Conditional"></a>
 ### <a name="conditionally-compiling-resources"></a>Условная компиляция ресурсов  
  Начиная с .NET Framework 4.5 программа Resgen.exe поддерживает условную компиляцию строковых ресурсов в текстовых файлах (TXT и RESTEXT). Благодаря такому подходу можно использовать один файл ресурсов на основе текста для нескольких конфигураций построения.  
   
@@ -250,7 +250,7 @@ resgen MyApp.exe Win8Resources
   
 ```text
 #ifdef PRODUCTION  
-AppTitle=My Software Company Project Manager   
+AppTitle=My Software Company Project Manager
 #endif  
 #ifdef CONSULT  
 AppTitle=My Consulting Company Project Manager  
@@ -269,7 +269,7 @@ resgen /define:CONSULT UIResources.restext
   
  При этом создается RESOURCES-файл, содержащий два строковых ресурса. Значение ресурса `AppTitle` — "My Consulting Company Project Manager".  
   
-<a name="Strong"></a>   
+<a name="Strong"></a>
 ### <a name="generating-a-strongly-typed-resource-class"></a>Создание класса ресурсов со строгой типизацией  
  Программа Resgen.exe поддерживает ресурсы со строгой типизацией, при этом доступ к ресурсам инкапсулируется путем создания классов, содержащих набор статических свойств только для чтения. Это альтернативный способ прямого вызова методов класса <xref:System.Resources.ResourceManager> для извлечения ресурсов. Можно включить поддержку ресурсов со строгой типизацией с помощью параметра `/str` в программе Resgen.exe, при которой реализуются функциональные возможности класса <xref:System.Resources.Tools.StronglyTypedResourceBuilder>. Если задан параметр `/str`, результатом работы программы Resgen.exe будет класс, содержащий свойства со строгой типизацией, которые соответствуют ресурсам, указанным входным параметром. Этот класс обеспечивает доступ только для чтения со строгой типизацией к ресурсам в отрабатываемом файле.  
   
@@ -324,7 +324,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  Например, при выполнении следующей команды выполняется компиляция файла ресурсов с именем "StringResources.txt" в "StringResources.resources" и создается класс с именем `StringResources` в файле исходного кода Visual Basic с именем "StringResources.vb", который можно использовать для доступа к диспетчеру ресурсов.  
   
 ```console  
-resgen StringResources.txt /str:vb,,StringResources   
+resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>См. также

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920396"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397875"
 ---
 # <a name="whats-new-in-net-core-21"></a>Новые возможности .NET Core 2.1
 
@@ -43,7 +43,7 @@ ms.locfileid: "76920396"
 
 ### <a name="new-cli-commands"></a>Новые команды интерфейса командной строки
 
-Ряд средств, которые ранее были доступны только для отдельных проектов с использованием [`DotnetCliToolReference`](../tools/extensibility.md), теперь стали частью пакета SDK для .NET Core. К ним относятся следующие средства:
+Ряд средств, которые ранее были доступны только для отдельных проектов с использованием `DotnetCliToolReference`, теперь стали частью пакета SDK для .NET Core. К ним относятся следующие средства:
 
 - `dotnet watch` предоставляет наблюдатель файловой системы, который ожидает изменений в файле и выполняет для него указанный набор команд. Например, следующая команда автоматически перестраивает текущий проект и выводит подробные результаты при любом изменении файла в проекте:
 
@@ -65,7 +65,7 @@ ms.locfileid: "76920396"
 
 ### <a name="global-tools"></a>Глобальные инструменты
 
-.NET Core 2.1 поддерживает *глобальные инструменты*, то есть специальные средства, которые доступны глобально из командной строки. Модель расширяемости в предыдущих версиях .NET Core предоставляла пользовательские средства только отдельно для каждого проекта с использованием [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
+.NET Core 2.1 поддерживает *глобальные инструменты*, то есть специальные средства, которые доступны глобально из командной строки. Модель расширяемости в предыдущих версиях .NET Core предоставляла пользовательские средства только отдельно для каждого проекта с использованием `DotnetCliToolReference`.
 
 Чтобы установить глобальные инструменты, выполните команду [dotnet tool install](../tools/dotnet-tool-install.md). Пример:
 
@@ -177,17 +177,17 @@ dotnet tool install -g dotnetsay
 
 В следующем примере экземпляр <xref:System.Span%601> и <xref:System.Memory%601> используется для создания виртуального представления 10 элементов массива.
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Сжатие Brotli
 
 В .NET Core 2.1 добавлена поддержка сжатия и распаковки Brotli. Brotli — это универсальный алгоритм сжатия данных без потерь, который определен в [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) и поддерживается большинством веб-браузеров и всеми основными веб-серверами. Вы можете использовать потоковый класс <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> или высокопроизводительные классы <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> и <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> на основе диапазонов. Следующий пример демонстрирует сжатие с применением класса <xref:System.IO.Compression.BrotliStream>.
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> действует так же, как <xref:System.IO.Compression.DeflateStream> и <xref:System.IO.Compression.GZipStream>, что позволяет легко преобразовать в <xref:System.IO.Compression.BrotliStream> код, вызывающий эти API-интерфейсы.
 
@@ -244,6 +244,10 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 В Windows можно использовать также <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>, чтобы использовать собственную реализацию, или класс <xref:System.Net.Http.SocketsHttpHandler>, передав экземпляр этого класса в конструктор <xref:System.Net.Http.HttpClient>.
 
 В macOS и Linux вы можете настроить <xref:System.Net.Http.HttpClient> только отдельно для каждого процесса. В Linux необходимо развернуть [libcurl](https://curl.haxx.se/libcurl/), если вы хотите использовать старую реализацию <xref:System.Net.Http.HttpClient>. (Она устанавливается вместе с .NET Core 2.0.)
+
+### <a name="breaking-changes"></a>Критические изменения
+
+Дополнительные сведения о критических изменениях для перехода с версии 2.0 на 2.1 см. в [этой статье](../compatibility/2.0-2.1.md).
 
 ## <a name="see-also"></a>См. также
 

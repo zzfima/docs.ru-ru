@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802048"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187139"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 

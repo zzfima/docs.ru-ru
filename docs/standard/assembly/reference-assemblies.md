@@ -1,17 +1,17 @@
 ---
-title: Эталонные сборки
+title: Базовые сборки
 description: Сведения о базовых сборках как о специальном типе сборок в .NET, которые содержат только общедоступный API-интерфейс библиотеки
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156469"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79141072"
 ---
-# <a name="reference-assemblies"></a>Эталонные сборки
+# <a name="reference-assemblies"></a>Базовые сборки
 
 *Базовые сборки* являются особым типом сборки, которая содержит только минимальный объем метаданных, необходимый для представления общедоступного API-интерфейса библиотеки. Такие сборки включают в себя объявления для всех элементов, которые важны при указании ссылки на сборку в средствах сборки, но исключают все реализации элементов, а также объявления закрытых элементов, не имеющих наблюдаемого влияния на их контракт API. Обычные сборки, напротив, называются *сборками реализации*.
 
@@ -29,7 +29,7 @@ ms.locfileid: "78156469"
 
 При добавлении ссылок на сборки .NET Framework в Visual Studio с помощью диалогового окна **Добавление ссылки** вы выбираете сборку из списка, и Visual Studio автоматически находит базовые сборки, соответствующие требуемой версии .NET Framework, выбранной в проекте. То же самое применимо для добавления ссылок непосредственно в проект MSBuild с помощью элемента проекта [Reference](/visualstudio/msbuild/common-msbuild-project-items#reference). Вам необходимо указать только имя сборки, а не полный путь к файлу. При добавлении ссылок на эти сборки в командной строке с помощью параметра компилятора `-reference` ([в C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) и в [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) или с помощью метода <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> в API Roslyn необходимо вручную указать файлы базовой сборки для правильной версии целевой платформы. Файлы базовой сборки .NET Framework находятся в каталоге *%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework*. Для .NET Core можно принудительно выполнить операцию публикации, чтобы скопировать базовые сборки для целевой платформы в подкаталог *publish/refs* выходного каталога, установив для свойства проекта `PreserveCompilationContext` значение `true`. Затем можно передать эти файлы базовой сборки компилятору. Для поиска их путей можно использовать `DependencyContext` из пакета [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/).
 
-Так как базовые сборки не содержат реализации, они не могут быть загружены для выполнения. Любые попытки сделать это приведут к возникновению исключения <xref:System.BadImageFormatException?displayProperty=nameWithType>. Однако если необходимо просмотреть их содержимое, они могут быть загружены в контекст, предназначенный только для отражения (с помощью метода <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>).
+Так как базовые сборки не содержат реализации, они не могут быть загружены для выполнения. Любые попытки сделать это приведут к возникновению исключения <xref:System.BadImageFormatException?displayProperty=nameWithType>. Если вам нужно изучить содержимое базовой сборки, ее можно загрузить в контекст только для отражения в .NET Framework (с помощью метода <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>) или в <xref:System.Reflection.MetadataLoadContext> в .NET Core.
 
 ## <a name="generating-reference-assemblies"></a>Создание базовых сборок
 
@@ -70,8 +70,8 @@ ms.locfileid: "78156469"
 > [!NOTE]
 > Сведения в этом разделе применимы только к базовым сборкам, которые созданы компиляторами Roslyn, начиная с C# версии 7.1 или Visual Basic версии 15.3. Структура базовых сборок для библиотек .NET Framework и .NET Core может отличаться некоторыми деталями, так как они используют собственный механизм создания базовых сборок. Например, они могут иметь совершенно пустые тела методов вместо тела `throw null`. Но общие принципы по-прежнему применяются: у них нет пригодных для использования реализаций методов и они содержат метаданные только для элементов, которые имеют наблюдаемый эффект с точки зрения общедоступного API-интерфейса.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Сборки в .NET](index.md)
 - [Общие сведения о настройке для платформы](/visualstudio/ide/visual-studio-multi-targeting-overview)
-- [Руководство. Добавление и удаление ссылок с помощью диспетчера ссылок](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)
+- [Практическое руководство. Добавление и удаление ссылок с помощью диспетчера ссылок](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)

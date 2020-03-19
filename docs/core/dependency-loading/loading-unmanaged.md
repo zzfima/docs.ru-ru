@@ -5,10 +5,10 @@ ms.date: 10/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: c651aa6e0f37a968e6f8b26d1909def6fa488ccd
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72303698"
 ---
 # <a name="unmanaged-native-library-loading-algorithm"></a>Алгоритм загрузки неуправляемых (собственных) библиотек
@@ -23,7 +23,7 @@ ms.locfileid: "72303698"
 
 1. Определяется `active` <xref:System.Runtime.Loader.AssemblyLoadContext>. Для неуправляемой библиотеки `active` AssemblyLoadContext получает значение, соответствующее сборке, которая определяет `PInvoke`.
 
-2. Для `active` <xref:System.Runtime.Loader.AssemblyLoadContext> выполняется попытка найти сборку в следующем порядке приоритета:
+2. Для `active` <xref:System.Runtime.Loader.AssemblyLoadContext> выполняется попытка найти сборку в следующем порядке приоритета.
     * Проверяется кэш.
 
     * Вызывается текущий делегат <xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType>, заданный функцией <xref:System.Runtime.InteropServices.NativeLibrary.SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver)?displayProperty=nameWithType>.

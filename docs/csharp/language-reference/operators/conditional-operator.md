@@ -1,6 +1,6 @@
 ---
 title: Оператор ?:. Справочник по C#
-ms.date: 11/20/2018
+ms.date: 03/06/2020
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 60156585dd21d5d2f9c9f3916452bb8574ddd4e4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1a17ba092d4228ba909c8774a2f7e15c2c50cfdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712732"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398217"
 ---
 # <a name="-operator-c-reference"></a>Оператор ?: (справочник по C#)
 
-Условный оператор `?:`, известный как тернарный условный оператор, вычисляет логическое выражение и возвращает результат вычисления одного из двух выражений в зависимости от того, чему равно значение логического выражения: `true` или `false`. Начиная с C# 7.2, [условное выражение REF](#conditional-ref-expression) возвращает ссылку на результат одного из двух выражений.
+Условный оператор `?:`, известный как тернарный условный оператор, вычисляет логическое выражение и возвращает результат вычисления одного из двух выражений в зависимости от того, чему равно значение логического выражения: `true` или `false`.
 
 Для условного оператора используется следующий синтаксис:
 
@@ -51,11 +51,11 @@ a ? b : (c ? d : e)
 
 В следующем примере иллюстрируется использование условного оператора:
 
-[!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](snippets/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Условное выражение REF
 
-Начиная с C# 7.2, условное выражение REF можно использовать для того, чтобы вернуть ссылку на результат одного из двух выражений. Можно назначить эту ссылку [ссылочной локальной переменной](../keywords/ref.md#ref-locals) или [ссылочной локальной переменной только для чтения](../keywords/ref.md#ref-readonly-locals) или же использовать ее как [возвращаемое ссылочное значение](../keywords/ref.md#reference-return-values) или как [`ref` параметр метода](../keywords/ref.md#passing-an-argument-by-reference).
+Начиная с версии C# 7.2, [ссылочные локальные](../keywords/ref.md#ref-locals) и [предназначенные только для чтения ссылочные локальные](../keywords/ref.md#ref-readonly-locals) переменные можно присваивать условным образом с использованием условного ссылочного выражения. Кроме того, условное ссылочное выражение можно использовать как [возвращаемое ссылочное значение](../keywords/ref.md#reference-return-values) или как [аргумент метода `ref`](../keywords/ref.md#passing-an-argument-by-reference).
 
 Для условного выражения REF используется следующий синтаксис:
 
@@ -69,13 +69,13 @@ condition ? ref consequent : ref alternative
 
 В следующем примере иллюстрируется использование условного выражения REF:
 
-[!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](snippets/ConditionalOperator.cs#ConditionalRef)]
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>Условный оператор и оператор `if..else`
 
 Если использовать условный оператор с оператором [if-else](../keywords/if-else.md), может получиться более лаконичный код в случаях, когда необходимо условно вычислить значение. В следующем примере иллюстрируются два вида классификации целого числа как положительного или отрицательного:
 
-[!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](snippets/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 

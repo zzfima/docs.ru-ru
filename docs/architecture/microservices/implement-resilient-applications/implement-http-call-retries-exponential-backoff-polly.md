@@ -1,27 +1,25 @@
 ---
 title: Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью библиотеки Polly
-description: Узнайте, как обрабатывать сбои HTTP-запросов с помощью Polly и HttpClientFactory.
-ms.date: 01/30/2020
-ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+description: Сведения о том, как обрабатывать сбои HTTP-запросов с помощью Polly и IHttpClientFactory.
+ms.date: 03/03/2020
+ms.openlocfilehash: 49396dd545a05699278254474c77acf1483e0e0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502671"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846800"
 ---
-# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью HttpClientFactory и политик Polly
+# <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>Реализация повторных попыток вызова HTTP с экспоненциальной задержкой с помощью IHttpClientFactory и политик Polly
 
 Рекомендуемый подход к выполнению повторных попыток с экспоненциальной выдержкой заключается в использовании расширенных библиотек .NET, таких как [библиотека Polly](https://github.com/App-vNext/Polly) с открытым кодом.
 
 Polly — это библиотека .NET, которая предоставляет возможности обеспечения отказоустойчивости и обработки временных сбоев. Эти возможности можно реализовать путем применения политик Polly, таких как политики повтора, размыкателя цепи, изоляции отсеков, времени ожидания и отката. Polly используется с .NET Framework 4.x, а также .NET Standard 1.0, 1.1 и 2.0 (с поддержкой .NET Core).
 
-Тем не менее использовать библиотеку Polly с вашим кодом с помощью HttpClient может быть довольно сложно. В исходной версии eShopOnContainers существовал [стандартный блок ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) на базе Polly. Но с появлением [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) стало гораздо проще реализовывать устойчивое соединение c Polly по протоколу HTTP, так что этот стандартный блок был исключен из eShopOnContainers.
-
-Ниже показано, как можно использовать повторные HTTP-запросы через Polly с интеграцией HttpClientFactory, как описано в предыдущем разделе.
+Ниже показано, как можно использовать повторные HTTP-запросы через Polly с интеграцией `IHttpClientFactory`, как описано в предыдущем разделе.
 
 **Ссылка на пакеты ASP.NET Core 3.1**
 
-Решение `HttpClientFactory` доступно с версии .NET Core 2.1, но мы рекомендуем использовать в проекте последние пакеты ASP.NET Core 3.1 из NuGet. Обычно также требуется ссылка на пакет расширения `Microsoft.Extensions.Http.Polly`.
+Решение `IHttpClientFactory` доступно с версии .NET Core 2.1, но мы рекомендуем использовать в проекте последние пакеты ASP.NET Core 3.1 из NuGet. Обычно также требуется ссылка на пакет расширения `Microsoft.Extensions.Http.Polly`.
 
 **Настройка клиента с помощью политики повтора Polly в параметрах запуска**
 
@@ -73,7 +71,7 @@ Polly предоставляет готовые к работе алгоритм
 - **Шаблон повтора**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Использование Polly и HttpClientFactory**  
+- **Использование Polly и IHttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
 - **Polly (библиотека для обеспечения отказоустойчивости .NET и обработки временных сбоев)**  
@@ -86,5 +84,5 @@ Polly предоставляет готовые к работе алгоритм
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
->[Назад](explore-custom-http-call-retries-exponential-backoff.md)
+>[Назад](use-httpclientfactory-to-implement-resilient-http-requests.md)
 >[Вперед](implement-circuit-breaker-pattern.md)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 958dede03e1c15f69f4ee676f13713ff43c29e96
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394102"
 ---
 ### <a name="logging-debuglogger-class-made-internal"></a>Ведение журнала: класс DebugLogger стал внутренним
@@ -21,7 +21,7 @@ ms.locfileid: "72394102"
 * обеспечение согласованности с другими реализациями средства ведения журналов, например `ConsoleLogger`;
 * уменьшение контактной зоны API.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Используйте метод расширения <xref:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug%2A> `ILoggingBuilder`, чтобы включить ведение журналов отладки. <xref:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider> также имеет атрибут `public` на тот случай, если потребуется зарегистрировать службу вручную.
 

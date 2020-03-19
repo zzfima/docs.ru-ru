@@ -8,10 +8,10 @@ helpviewer_keywords:
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104947"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (средство регистрации сборок)
@@ -30,11 +30,11 @@ regasm assemblyFile [options]
 
 ## <a name="parameters"></a>Параметры
 
-|Параметр|ОПИСАНИЕ|
+|Параметр|Описание|
 |---------------|-----------------|
 |*assemblyFile*|Сборка, которая должна быть зарегистрирована в COM.|
 
-|Параметр|ОПИСАНИЕ|
+|Параметр|Описание|
 |------------|-----------------|
 |**/codebase**|Создает в реестре запись Codebase. Запись Codebase указывает путь к файлу сборки, которая не установлена в глобальном кэше сборок. Не следует указывать этот параметр, если впоследствии вы будете устанавливать регистрируемую сборку в глобальном кэше сборок. Аргумент *assemblyFile*, задаваемый с помощью параметра **/codebase**, должен быть [сборкой со строгим именем](../../standard/assembly/strong-named.md).|
 |**/registered**|Указывает, что это средство будет ссылаться только на библиотеки типов, которые уже были зарегистрированы.|
