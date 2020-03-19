@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6557c2277e4c8063b7d7d08ae7bc2ba5414a5d9d
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 24e990d0561f1f0faade2c8e62ca640e4daba93f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163232"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78848084"
 ---
 
 > [!div class="op_single_selector"]
@@ -20,9 +20,9 @@ ms.locfileid: "76163232"
 > - [Fedora 30 — x64](../linux-package-manager-fedora30.md)
 > - [Fedora 29 — x64](../linux-package-manager-fedora29.md)
 > - [OpenSUSE 15 — x64](../linux-package-manager-opensuse15.md)
-> - [RHEL 8.1 — x64](../linux-package-manager-rhel81.md)
+> - [RHEL 8 — x64](../linux-package-manager-rhel8.md)
 > - [RHEL 7 — x64](../linux-package-manager-rhel7.md)
 > - [SLES 15 — x64](../linux-package-manager-sles15.md)
 > - [SLES 12 — x64](../linux-package-manager-sles12.md)
 
-<span data-ttu-id="8295a-116">_Установка диспетчера пакетов поддерживается только в архитектуре **x64**_ .</span><span class="sxs-lookup"><span data-stu-id="8295a-116">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="8295a-117">Для других архитектур, например **ARM**, нужно вручную установить [пакет SDK для .NET Core](../sdk.md?pivots=os-linux#download-and-manually-install) или [среду выполнения .NET Core](../runtime.md?pivots=os-linux#download-and-manually-install).</span><span class="sxs-lookup"><span data-stu-id="8295a-117">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="8295a-118">Дополнительные сведения см. в статье [Зависимости и требования для .NET Core](../dependencies.md).</span><span class="sxs-lookup"><span data-stu-id="8295a-118">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
+<span data-ttu-id="c3f8e-116">_Установка диспетчера пакетов поддерживается только в архитектуре **x64**_ .</span><span class="sxs-lookup"><span data-stu-id="c3f8e-116">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="c3f8e-117">Для других архитектур, например **ARM**, нужно вручную установить [пакет SDK для .NET Core](../sdk.md?pivots=os-linux#download-and-manually-install) или [среду выполнения .NET Core](../runtime.md?pivots=os-linux#download-and-manually-install).</span><span class="sxs-lookup"><span data-stu-id="c3f8e-117">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="c3f8e-118">Дополнительные сведения см. в статье [Зависимости и требования для .NET Core](../dependencies.md).</span><span class="sxs-lookup"><span data-stu-id="c3f8e-118">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
