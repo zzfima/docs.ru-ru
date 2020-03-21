@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 563be8494cb84dc74b45985d3ba74e4b6a07eb8a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947846"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182498"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="e9fde-102">Практическое руководство. Отправка данных в активную дочернюю MDI-форму</span><span class="sxs-lookup"><span data-stu-id="e9fde-102">How to: Send Data to the Active MDI Child</span></span>
-<span data-ttu-id="e9fde-103">Часто в контексте приложений с многодокументным [интерфейсом (MDI)](multiple-document-interface-mdi-applications.md)необходимо отправить данные в активное дочернее окно, например когда пользователь вставил данные из буфера обмена в приложение MDI.</span><span class="sxs-lookup"><span data-stu-id="e9fde-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="e9340-102">Практическое руководство. Отправка данных в активную дочернюю MDI-форму</span><span class="sxs-lookup"><span data-stu-id="e9340-102">How to: Send Data to the Active MDI Child</span></span>
+<span data-ttu-id="e9340-103">Часто в контексте [приложений с многопользовательским интерфейсом (MDI)](multiple-document-interface-mdi-applications.md)необходимо отправлять данные в активное окно дочернего ребенка, например, когда пользователь вставляет данные из Clipboard в приложение MDI.</span><span class="sxs-lookup"><span data-stu-id="e9340-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="e9fde-104">Сведения о проверке того, какое дочернее окно имеет фокус и отправляет свое содержимое в буфер обмена, см. в разделе [Определение активной дочерней MDI-формы](how-to-determine-the-active-mdi-child.md).</span><span class="sxs-lookup"><span data-stu-id="e9fde-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
+> <span data-ttu-id="e9340-104">Для получения информации о проверке того, какое окно ребенка имеет фокус и отправки его содержимого в Clipboard, [см. Определение активного ребенка MDI](how-to-determine-the-active-mdi-child.md).</span><span class="sxs-lookup"><span data-stu-id="e9340-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="e9fde-105">Отправка данных в активное дочернее окно MDI из буфера обмена</span><span class="sxs-lookup"><span data-stu-id="e9fde-105">To send data to the active MDI child window from the Clipboard</span></span>  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="e9340-105">Отправка данных в активное окно ребенка MDI из буфера обмена</span><span class="sxs-lookup"><span data-stu-id="e9340-105">To send data to the active MDI child window from the Clipboard</span></span>  
   
-1. <span data-ttu-id="e9fde-106">В методе скопируйте текст из буфера обмена в активный элемент управления активной дочерней формы.</span><span class="sxs-lookup"><span data-stu-id="e9fde-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
+1. <span data-ttu-id="e9340-106">В рамках метода скопируйте текст на Clipboard для активного контроля активной детской формы.</span><span class="sxs-lookup"><span data-stu-id="e9340-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="e9fde-107">В этом примере предполагается, что имеется родительская`Form1`форма MDI () с одним или несколькими дочерними <xref:System.Windows.Forms.RichTextBox> окнами MDI, содержащими элемент управления.</span><span class="sxs-lookup"><span data-stu-id="e9fde-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="e9fde-108">Дополнительные сведения см. в разделе [Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="e9fde-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
+    > <span data-ttu-id="e9340-107">Этот пример предполагает, что есть родительская форма MDI (),`Form1`которая <xref:System.Windows.Forms.RichTextBox> имеет одно или несколько детских окон MDI, содержащих элемент управления.</span><span class="sxs-lookup"><span data-stu-id="e9340-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="e9340-108">Для получения дополнительной информации [см.](how-to-create-mdi-parent-forms.md)</span><span class="sxs-lookup"><span data-stu-id="e9340-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -45,7 +45,7 @@ ms.locfileid: "69947846"
              If (Not theBox Is Nothing) Then  
                 ' Create a new instance of the DataObject interface.  
                 Dim data As IDataObject = Clipboard.GetDataObject()  
-                ' If the data is text, then set the text of the   
+                ' If the data is text, then set the text of the
                 ' RichTextBox to the text in the clipboard.  
                 If (data.GetDataPresent(DataFormats.Text)) Then  
                    theBox.SelectedText = data.GetData(DataFormats.Text).ToString()  
@@ -68,22 +68,22 @@ ms.locfileid: "69947846"
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
        {  
-          try   
+          try
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
              if (theBox != null)  
              {  
                 // Create a new instance of the DataObject interface.  
                 IDataObject data = Clipboard.GetDataObject();  
-                // If the data is text, then set the text of the   
+                // If the data is text, then set the text of the
                 // RichTextBox to the text in the clipboard.  
                 if (data.GetDataPresent(DataFormats.Text))  
                 {  
-                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();                 
+                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();
                 }  
              }  
           }  
-          catch   
+          catch
           {  
              MessageBox.Show("You need to select a RichTextBox.");  
           }  
@@ -91,10 +91,10 @@ ms.locfileid: "69947846"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e9fde-109">См. также</span><span class="sxs-lookup"><span data-stu-id="e9fde-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9340-109">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="e9340-109">See also</span></span>
 
-- [<span data-ttu-id="e9fde-110">Приложения с интерфейсом MDI</span><span class="sxs-lookup"><span data-stu-id="e9fde-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="e9fde-111">Практическое руководство. Создание родительских MDI-форм</span><span class="sxs-lookup"><span data-stu-id="e9fde-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="e9fde-112">Практическое руководство. Создание дочерних форм MDI</span><span class="sxs-lookup"><span data-stu-id="e9fde-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="e9fde-113">Практическое руководство. Определение активной дочерней MDI-формы</span><span class="sxs-lookup"><span data-stu-id="e9fde-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
-- [<span data-ttu-id="e9fde-114">Практическое руководство. Расположить дочерние формы MDI</span><span class="sxs-lookup"><span data-stu-id="e9fde-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
+- [<span data-ttu-id="e9340-110">Приложения с интерфейсом MDI</span><span class="sxs-lookup"><span data-stu-id="e9340-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="e9340-111">Практическое руководство. Создание родительских MDI-форм</span><span class="sxs-lookup"><span data-stu-id="e9340-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="e9340-112">Практическое руководство. Создание дочерних MDI-форм</span><span class="sxs-lookup"><span data-stu-id="e9340-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="e9340-113">Практическое руководство. Определение активной дочерней MDI-формы</span><span class="sxs-lookup"><span data-stu-id="e9340-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
+- [<span data-ttu-id="e9340-114">Практическое руководство. Упорядочение дочерних форм интерфейса MDI</span><span class="sxs-lookup"><span data-stu-id="e9340-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)

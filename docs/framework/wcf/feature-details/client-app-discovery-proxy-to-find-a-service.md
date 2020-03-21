@@ -1,33 +1,33 @@
 ---
-title: Практическое руководство. Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
+title: Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963877"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185375"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="5d9bf-102">Практическое руководство. Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения</span><span class="sxs-lookup"><span data-stu-id="5d9bf-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
-<span data-ttu-id="5d9bf-103">Это последний из трех разделов, в которых рассматривается реализация прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="5d9bf-104">В предыдущем разделе [: Реализуйте обнаруживаемую службу, которая регистрируется в прокси-](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)сервере обнаружения. вы реализовали службу WCF, которая регистрирует себя с помощью прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a WCF service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="5d9bf-105">В этом разделе вы создадите клиент WCF, который использует прокси-сервер обнаружения для поиска службы WCF.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-105">In this topic you create a WCF client that uses the discovery proxy to find the WCF service.</span></span>  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="f0aab-102">Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения</span><span class="sxs-lookup"><span data-stu-id="f0aab-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
+<span data-ttu-id="f0aab-103">Это последний из трех разделов, в которых рассматривается реализация прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="f0aab-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="f0aab-104">В предыдущей теме, [Как: Реализация обнаруживаемой службы, которая регистрируется с Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), вы реализовали службу WCF, которая регистрирует сят в прокси-сервере обнаружения.</span><span class="sxs-lookup"><span data-stu-id="f0aab-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a WCF service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="f0aab-105">В этой теме вы создаете клиент WCF, который использует прокси-сервер обнаружения, чтобы найти службу WCF.</span><span class="sxs-lookup"><span data-stu-id="f0aab-105">In this topic you create a WCF client that uses the discovery proxy to find the WCF service.</span></span>  
   
-### <a name="implement-the-client"></a><span data-ttu-id="5d9bf-106">Реализация клиента</span><span class="sxs-lookup"><span data-stu-id="5d9bf-106">Implement the client</span></span>  
+### <a name="implement-the-client"></a><span data-ttu-id="f0aab-106">Реализация клиента</span><span class="sxs-lookup"><span data-stu-id="f0aab-106">Implement the client</span></span>  
   
-1. <span data-ttu-id="5d9bf-107">Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Client`.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
+1. <span data-ttu-id="f0aab-107">Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Client`.</span><span class="sxs-lookup"><span data-stu-id="f0aab-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
   
-2. <span data-ttu-id="5d9bf-108">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="5d9bf-108">Add references to the following assemblies:</span></span>  
+2. <span data-ttu-id="f0aab-108">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="f0aab-108">Add references to the following assemblies:</span></span>  
   
-    1. <span data-ttu-id="5d9bf-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="5d9bf-109">System.ServiceModel</span></span>  
+    1. <span data-ttu-id="f0aab-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f0aab-109">System.ServiceModel</span></span>  
   
-    2. <span data-ttu-id="5d9bf-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="5d9bf-110">System.ServiceModel.Discovery</span></span>  
+    2. <span data-ttu-id="f0aab-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="f0aab-110">System.ServiceModel.Discovery</span></span>  
   
-3. <span data-ttu-id="5d9bf-111">Добавьте в проект файл GeneratedClient.cs, приведенный в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
+3. <span data-ttu-id="f0aab-111">Добавьте в проект файл GeneratedClient.cs, приведенный в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="f0aab-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="5d9bf-112">Этот файл обычно создается с помощью программы Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="5d9bf-113">В этом разделе он приведен для того, чтобы упростить задачу.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-113">It is provided in this topic to simplify the task.</span></span>  
+    > <span data-ttu-id="f0aab-112">Этот файл обычно создается с помощью программы Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="f0aab-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="f0aab-113">В этом разделе он приведен для того, чтобы упростить задачу.</span><span class="sxs-lookup"><span data-stu-id="f0aab-113">It is provided in this topic to simplify the task.</span></span>  
   
-4. <span data-ttu-id="5d9bf-114">Откройте файл Program.cs и добавьте следующий метод:</span><span class="sxs-lookup"><span data-stu-id="5d9bf-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="5d9bf-115">Этот метод принимает адрес конечной точки и использует его для инициализации клиента службы (прокси-сервера).</span><span class="sxs-lookup"><span data-stu-id="5d9bf-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
+4. <span data-ttu-id="f0aab-114">Откройте файл Program.cs и добавьте следующий метод:</span><span class="sxs-lookup"><span data-stu-id="f0aab-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="f0aab-115">Этот метод принимает адрес конечной точки и использует его для инициализации клиента службы (прокси-сервера).</span><span class="sxs-lookup"><span data-stu-id="f0aab-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ ms.locfileid: "69963877"
     }  
     ```  
   
-5. <span data-ttu-id="5d9bf-116">Добавьте следующий код в метод `Main` .</span><span class="sxs-lookup"><span data-stu-id="5d9bf-116">Add the following code to the `Main` method.</span></span>  
+5. <span data-ttu-id="f0aab-116">Добавьте в метод `Main` следующий код.</span><span class="sxs-lookup"><span data-stu-id="f0aab-116">Add the following code to the `Main` method.</span></span>  
   
     ```csharp  
     public static void Main()  
@@ -79,7 +79,7 @@ ms.locfileid: "69963877"
 
         try  
         {  
-            // Search for services that implement ICalculatorService              
+            // Search for services that implement ICalculatorService
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
 
             Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -101,10 +101,10 @@ ms.locfileid: "69963877"
     }  
     ```  
   
- <span data-ttu-id="5d9bf-117">Реализация клиентского приложения завершена.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-117">You have completed implementing the client application.</span></span> <span data-ttu-id="5d9bf-118">Перейдите к [процедуре: Протестируйте прокси-](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)сервер обнаружения.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
+ <span data-ttu-id="f0aab-117">Реализация клиентского приложения завершена.</span><span class="sxs-lookup"><span data-stu-id="f0aab-117">You have completed implementing the client application.</span></span> <span data-ttu-id="f0aab-118">Продолжить на [Как: Проверить Discovery прокси](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="f0aab-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5d9bf-119">Пример</span><span class="sxs-lookup"><span data-stu-id="5d9bf-119">Example</span></span>  
- <span data-ttu-id="5d9bf-120">Ниже приведен полный листинг кода для этого раздела.</span><span class="sxs-lookup"><span data-stu-id="5d9bf-120">This is the full code listing for this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="f0aab-119">Пример</span><span class="sxs-lookup"><span data-stu-id="f0aab-119">Example</span></span>  
+ <span data-ttu-id="f0aab-120">Ниже приведен полный листинг кода для этого раздела.</span><span class="sxs-lookup"><span data-stu-id="f0aab-120">This is the full code listing for this topic.</span></span>  
   
 ```csharp  
 // GeneratedClient.cs  
@@ -226,7 +226,7 @@ namespace Microsoft.Samples.Discovery
   
             try  
             {  
-                // Find ICalculatorService endpoints              
+                // Find ICalculatorService endpoints
                 FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
   
                 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -281,8 +281,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5d9bf-121">См. также</span><span class="sxs-lookup"><span data-stu-id="5d9bf-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0aab-121">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="f0aab-121">See also</span></span>
 
-- [<span data-ttu-id="5d9bf-122">Общие сведения об обнаружении WCF</span><span class="sxs-lookup"><span data-stu-id="5d9bf-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [<span data-ttu-id="5d9bf-123">Практическое руководство. Реализация прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="5d9bf-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [<span data-ttu-id="5d9bf-124">Практическое руководство. Реализация обнаруживаемой службы, которая регистрируется в прокси-сервере обнаружения</span><span class="sxs-lookup"><span data-stu-id="5d9bf-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [<span data-ttu-id="f0aab-122">Общие сведения об обнаружении WCF</span><span class="sxs-lookup"><span data-stu-id="f0aab-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [<span data-ttu-id="f0aab-123">Как реализовать прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="f0aab-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [<span data-ttu-id="f0aab-124">Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения</span><span class="sxs-lookup"><span data-stu-id="f0aab-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

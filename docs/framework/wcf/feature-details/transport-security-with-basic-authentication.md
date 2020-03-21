@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: eace5ce9a84d99cb2526896cca36a9e2a13fd5f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1b2b451eb1ea6a1a49ce1ba8cc1edef1fe72d01b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742700"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184356"
 ---
-# <a name="transport-security-with-basic-authentication"></a><span data-ttu-id="ac6aa-102">Безопасность транспорта с обычной проверкой подлинности</span><span class="sxs-lookup"><span data-stu-id="ac6aa-102">Transport Security with Basic Authentication</span></span>
-<span data-ttu-id="ac6aa-103">На следующем рисунке показана служба Windows Communication Foundation (WCF) и клиент.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-103">The following illustration shows a Windows Communication Foundation (WCF) service and client.</span></span> <span data-ttu-id="ac6aa-104">Серверу требуется действительный сертификат X.509, который можно использовать для протокола SSL, а клиенты должны доверять сертификату сервера.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-104">The server needs a valid X.509 certificate that can be used for Secure Sockets Layer (SSL), and the clients must trust the server’s certificate.</span></span> <span data-ttu-id="ac6aa-105">Кроме того, у веб-службы уже имеется сертификат SSL, который можно использовать.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-105">Further, the Web service already has an SSL implementation that can be used.</span></span> <span data-ttu-id="ac6aa-106">Дополнительные сведения о включении обычной проверки подлинности для службы IIS (IIS) см. в разделе <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-106">For more information about enabling basic authentication on Internet Information Services (IIS), see <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>.</span></span>  
+# <a name="transport-security-with-basic-authentication"></a><span data-ttu-id="967c7-102">Безопасность транспорта с обычной проверкой подлинности</span><span class="sxs-lookup"><span data-stu-id="967c7-102">Transport Security with Basic Authentication</span></span>
+<span data-ttu-id="967c7-103">На следующей иллюстрации показана служба и клиент Фонда связи Windows (WCF).</span><span class="sxs-lookup"><span data-stu-id="967c7-103">The following illustration shows a Windows Communication Foundation (WCF) service and client.</span></span> <span data-ttu-id="967c7-104">Серверу требуется действительный сертификат X.509, который можно использовать для протокола SSL, а клиенты должны доверять сертификату сервера.</span><span class="sxs-lookup"><span data-stu-id="967c7-104">The server needs a valid X.509 certificate that can be used for Secure Sockets Layer (SSL), and the clients must trust the server’s certificate.</span></span> <span data-ttu-id="967c7-105">Кроме того, у веб-службы уже имеется сертификат SSL, который можно использовать.</span><span class="sxs-lookup"><span data-stu-id="967c7-105">Further, the Web service already has an SSL implementation that can be used.</span></span> <span data-ttu-id="967c7-106">Для получения дополнительной информации о возможности базовой <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>аутентификации на Интернет информационных услуг (IIS), см.</span><span class="sxs-lookup"><span data-stu-id="967c7-106">For more information about enabling basic authentication on Internet Information Services (IIS), see <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>.</span></span>  
   
- ![Снимок экрана, показывающий безопасность транспорта с обычной проверкой подлинности.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
+ ![Скриншот, который показывает транспортную безопасность с базовой аутентификацией.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|<span data-ttu-id="ac6aa-108">Характеристика</span><span class="sxs-lookup"><span data-stu-id="ac6aa-108">Characteristic</span></span>|<span data-ttu-id="ac6aa-109">Description</span><span class="sxs-lookup"><span data-stu-id="ac6aa-109">Description</span></span>|  
+|<span data-ttu-id="967c7-108">Характеристика</span><span class="sxs-lookup"><span data-stu-id="967c7-108">Characteristic</span></span>|<span data-ttu-id="967c7-109">Описание</span><span class="sxs-lookup"><span data-stu-id="967c7-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="ac6aa-110">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="ac6aa-110">Security Mode</span></span>|<span data-ttu-id="ac6aa-111">Транспортировка</span><span class="sxs-lookup"><span data-stu-id="ac6aa-111">Transport</span></span>|  
-|<span data-ttu-id="ac6aa-112">Совместимость</span><span class="sxs-lookup"><span data-stu-id="ac6aa-112">Interoperability</span></span>|<span data-ttu-id="ac6aa-113">С существующими службами и клиентами веб-служб</span><span class="sxs-lookup"><span data-stu-id="ac6aa-113">With existing Web service clients and services</span></span>|  
-|<span data-ttu-id="ac6aa-114">Проверка подлинности (сервера)</span><span class="sxs-lookup"><span data-stu-id="ac6aa-114">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="ac6aa-115">Проверка подлинности (клиента)</span><span class="sxs-lookup"><span data-stu-id="ac6aa-115">Authentication (Client)</span></span>|<span data-ttu-id="ac6aa-116">Да (по протоколу HTTPS)</span><span class="sxs-lookup"><span data-stu-id="ac6aa-116">Yes (using HTTPS)</span></span><br /><br /> <span data-ttu-id="ac6aa-117">Да (по имени/паролю пользователя)</span><span class="sxs-lookup"><span data-stu-id="ac6aa-117">Yes (through User name/Password)</span></span>|  
-|<span data-ttu-id="ac6aa-118">Целостность</span><span class="sxs-lookup"><span data-stu-id="ac6aa-118">Integrity</span></span>|<span data-ttu-id="ac6aa-119">Да</span><span class="sxs-lookup"><span data-stu-id="ac6aa-119">Yes</span></span>|  
-|<span data-ttu-id="ac6aa-120">Конфиденциальность</span><span class="sxs-lookup"><span data-stu-id="ac6aa-120">Confidentiality</span></span>|<span data-ttu-id="ac6aa-121">Да</span><span class="sxs-lookup"><span data-stu-id="ac6aa-121">Yes</span></span>|  
-|<span data-ttu-id="ac6aa-122">Транспортировка</span><span class="sxs-lookup"><span data-stu-id="ac6aa-122">Transport</span></span>|<span data-ttu-id="ac6aa-123">HTTPS</span><span class="sxs-lookup"><span data-stu-id="ac6aa-123">HTTPS</span></span>|  
-|<span data-ttu-id="ac6aa-124">Привязка</span><span class="sxs-lookup"><span data-stu-id="ac6aa-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="967c7-110">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="967c7-110">Security Mode</span></span>|<span data-ttu-id="967c7-111">Транспортировка</span><span class="sxs-lookup"><span data-stu-id="967c7-111">Transport</span></span>|  
+|<span data-ttu-id="967c7-112">Совместимость</span><span class="sxs-lookup"><span data-stu-id="967c7-112">Interoperability</span></span>|<span data-ttu-id="967c7-113">С существующими службами и клиентами веб-служб</span><span class="sxs-lookup"><span data-stu-id="967c7-113">With existing Web service clients and services</span></span>|  
+|<span data-ttu-id="967c7-114">Проверка подлинности (сервера)</span><span class="sxs-lookup"><span data-stu-id="967c7-114">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="967c7-115">Проверка подлинности (клиента)</span><span class="sxs-lookup"><span data-stu-id="967c7-115">Authentication (Client)</span></span>|<span data-ttu-id="967c7-116">Да (по протоколу HTTPS)</span><span class="sxs-lookup"><span data-stu-id="967c7-116">Yes (using HTTPS)</span></span><br /><br /> <span data-ttu-id="967c7-117">Да (по имени/паролю пользователя)</span><span class="sxs-lookup"><span data-stu-id="967c7-117">Yes (through User name/Password)</span></span>|  
+|<span data-ttu-id="967c7-118">Целостность</span><span class="sxs-lookup"><span data-stu-id="967c7-118">Integrity</span></span>|<span data-ttu-id="967c7-119">Да</span><span class="sxs-lookup"><span data-stu-id="967c7-119">Yes</span></span>|  
+|<span data-ttu-id="967c7-120">Конфиденциальность</span><span class="sxs-lookup"><span data-stu-id="967c7-120">Confidentiality</span></span>|<span data-ttu-id="967c7-121">Да</span><span class="sxs-lookup"><span data-stu-id="967c7-121">Yes</span></span>|  
+|<span data-ttu-id="967c7-122">Транспортировка</span><span class="sxs-lookup"><span data-stu-id="967c7-122">Transport</span></span>|<span data-ttu-id="967c7-123">HTTPS</span><span class="sxs-lookup"><span data-stu-id="967c7-123">HTTPS</span></span>|  
+|<span data-ttu-id="967c7-124">Привязка</span><span class="sxs-lookup"><span data-stu-id="967c7-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="ac6aa-125">Служба</span><span class="sxs-lookup"><span data-stu-id="ac6aa-125">Service</span></span>  
- <span data-ttu-id="ac6aa-126">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="ac6aa-127">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="967c7-125">Служба</span><span class="sxs-lookup"><span data-stu-id="967c7-125">Service</span></span>  
+ <span data-ttu-id="967c7-126">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="967c7-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="967c7-127">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="967c7-127">Do one of the following:</span></span>  
   
-- <span data-ttu-id="ac6aa-128">Создайте автономную службу, используя код без конфигурации.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-128">Create a stand-alone service using the code with no configuration.</span></span>  
+- <span data-ttu-id="967c7-128">Создайте автономную службу, используя код без конфигурации.</span><span class="sxs-lookup"><span data-stu-id="967c7-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
-- <span data-ttu-id="ac6aa-129">Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+- <span data-ttu-id="967c7-129">Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="967c7-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="ac6aa-130">Код</span><span class="sxs-lookup"><span data-stu-id="ac6aa-130">Code</span></span>  
- <span data-ttu-id="ac6aa-131">В следующем примере кода показано, как создавать конечную точку службы, использующую имя и пароль пользователя в домене Windows для безопасности передачи.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-131">The following code shows how to create a service endpoint that uses a Windows domain user name and password for transfer security.</span></span> <span data-ttu-id="ac6aa-132">Обратите внимание, что для проверки подлинности клиента службе требуется сертификат X.509.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-132">Note that the service requires an X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="ac6aa-133">Дополнительные сведения см. в статьях [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [инструкции. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="ac6aa-133">For more information, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
+### <a name="code"></a><span data-ttu-id="967c7-130">Код</span><span class="sxs-lookup"><span data-stu-id="967c7-130">Code</span></span>  
+ <span data-ttu-id="967c7-131">В следующем примере кода показано, как создавать конечную точку службы, использующую имя и пароль пользователя в домене Windows для безопасности передачи.</span><span class="sxs-lookup"><span data-stu-id="967c7-131">The following code shows how to create a service endpoint that uses a Windows domain user name and password for transfer security.</span></span> <span data-ttu-id="967c7-132">Обратите внимание, что для проверки подлинности клиента службе требуется сертификат X.509.</span><span class="sxs-lookup"><span data-stu-id="967c7-132">Note that the service requires an X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="967c7-133">Для получения дополнительной информации [см. Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [как: Нанастройка порта с сертификатом SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="967c7-133">For more information, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a><span data-ttu-id="ac6aa-134">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="ac6aa-134">Configuration</span></span>  
- <span data-ttu-id="ac6aa-135">Следующий код служит для настройки службы на использование обычной проверки подлинности с безопасностью на уровне транспорта.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-135">The following configures a service to use basic authentication with transport-level security:</span></span>  
+## <a name="configuration"></a><span data-ttu-id="967c7-134">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="967c7-134">Configuration</span></span>  
+ <span data-ttu-id="967c7-135">Следующий код служит для настройки службы на использование обычной проверки подлинности с безопасностью на уровне транспорта.</span><span class="sxs-lookup"><span data-stu-id="967c7-135">The following configures a service to use basic authentication with transport-level security:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -59,9 +59,9 @@ ms.locfileid: "76742700"
         <services>  
             <service name="BasicAuthentication.Calculator">  
                 <endpoint address="https://localhost/Calculator"  
-                          binding="wsHttpBinding"   
+                          binding="wsHttpBinding"
                           bindingConfiguration="UsernameWithTransport"  
-                          name="BasicEndpoint"   
+                          name="BasicEndpoint"
                           contract="BasicAuthentication.ICalculator" />  
             </service>  
         </services>  
@@ -69,22 +69,22 @@ ms.locfileid: "76742700"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="ac6aa-136">клиент</span><span class="sxs-lookup"><span data-stu-id="ac6aa-136">Client</span></span>  
+## <a name="client"></a><span data-ttu-id="967c7-136">клиент</span><span class="sxs-lookup"><span data-stu-id="967c7-136">Client</span></span>  
   
-### <a name="code"></a><span data-ttu-id="ac6aa-137">Код</span><span class="sxs-lookup"><span data-stu-id="ac6aa-137">Code</span></span>  
- <span data-ttu-id="ac6aa-138">В следующем примере кода демонстрируется код клиента, который содержит имя и пароль пользователя.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-138">The following code shows the client code that includes the user name and password.</span></span> <span data-ttu-id="ac6aa-139">Обратите внимание, что пользователь должен предоставить действительные имя и пароль пользователя в Windows.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-139">Note that the user must provide a valid Windows user name and password.</span></span> <span data-ttu-id="ac6aa-140">В данном разделе не представлен код, возвращающий имя и пароль пользователя.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-140">The code to return the user name and password is not shown here.</span></span> <span data-ttu-id="ac6aa-141">Используйте диалоговое окно или другой интерфейс, чтобы запросить пользователя об этой информации.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-141">Use a dialog box or other interface to query the user for the information.</span></span>  
+### <a name="code"></a><span data-ttu-id="967c7-137">Код</span><span class="sxs-lookup"><span data-stu-id="967c7-137">Code</span></span>  
+ <span data-ttu-id="967c7-138">В следующем примере кода демонстрируется код клиента, который содержит имя и пароль пользователя.</span><span class="sxs-lookup"><span data-stu-id="967c7-138">The following code shows the client code that includes the user name and password.</span></span> <span data-ttu-id="967c7-139">Обратите внимание, что пользователь должен предоставить действительные имя и пароль пользователя в Windows.</span><span class="sxs-lookup"><span data-stu-id="967c7-139">Note that the user must provide a valid Windows user name and password.</span></span> <span data-ttu-id="967c7-140">В данном разделе не представлен код, возвращающий имя и пароль пользователя.</span><span class="sxs-lookup"><span data-stu-id="967c7-140">The code to return the user name and password is not shown here.</span></span> <span data-ttu-id="967c7-141">Используйте диалоговое окно или другой интерфейс, чтобы запросить пользователя об этой информации.</span><span class="sxs-lookup"><span data-stu-id="967c7-141">Use a dialog box or other interface to query the user for the information.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="ac6aa-142">Имя и пароль пользователя задаются только с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-142">User name and password can only be set using code.</span></span>  
+> <span data-ttu-id="967c7-142">Имя и пароль пользователя задаются только с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="967c7-142">User name and password can only be set using code.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="ac6aa-143">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="ac6aa-143">Configuration</span></span>  
- <span data-ttu-id="ac6aa-144">В следующем примере кода показана конфигурация клиента.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-144">The following code shows the client configuration.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="967c7-143">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="967c7-143">Configuration</span></span>  
+ <span data-ttu-id="967c7-144">В следующем примере кода показана конфигурация клиента.</span><span class="sxs-lookup"><span data-stu-id="967c7-144">The following code shows the client configuration.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="ac6aa-145">Конфигурацию невозможно использовать для задания имени и пароля пользователя.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-145">You cannot use configuration to set the user name and password.</span></span> <span data-ttu-id="ac6aa-146">Представленную в этом примере конфигурацию необходимо дополнить с помощью кода, чтобы разрешить задание имени и пароля пользователя.</span><span class="sxs-lookup"><span data-stu-id="ac6aa-146">The configuration shown here must be augmented using code to set the user name and password.</span></span>  
+> <span data-ttu-id="967c7-145">Конфигурацию невозможно использовать для задания имени и пароля пользователя.</span><span class="sxs-lookup"><span data-stu-id="967c7-145">You cannot use configuration to set the user name and password.</span></span> <span data-ttu-id="967c7-146">Представленную в этом примере конфигурацию необходимо дополнить с помощью кода, чтобы разрешить задание имени и пароля пользователя.</span><span class="sxs-lookup"><span data-stu-id="967c7-146">The configuration shown here must be augmented using code to set the user name and password.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -100,9 +100,9 @@ ms.locfileid: "76742700"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="https://machineName/Calculator"   
+      <endpoint address="https://machineName/Calculator"
                 binding="wsHttpBinding"  
-                bindingConfiguration="WSHttpBinding_ICalculator"   
+                bindingConfiguration="WSHttpBinding_ICalculator"
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator" />  
     </client>  
@@ -110,12 +110,12 @@ ms.locfileid: "76742700"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ac6aa-147">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="ac6aa-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="967c7-147">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="967c7-147">See also</span></span>
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
-- [<span data-ttu-id="ac6aa-148">Работа с сертификатами</span><span class="sxs-lookup"><span data-stu-id="ac6aa-148">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="ac6aa-149">Практическое руководство. Настройка порта с использованием SSL-сертификата</span><span class="sxs-lookup"><span data-stu-id="ac6aa-149">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [<span data-ttu-id="ac6aa-150">Общие сведения о безопасности для служб R SQL Server</span><span class="sxs-lookup"><span data-stu-id="ac6aa-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="ac6aa-151">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="ac6aa-151">\<clientCredentials></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- <span data-ttu-id="ac6aa-152">[Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="ac6aa-152">[Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>
+- [<span data-ttu-id="967c7-148">Работа с сертификатами</span><span class="sxs-lookup"><span data-stu-id="967c7-148">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="967c7-149">Практическое руководство. Настройка порта с использованием SSL-сертификата</span><span class="sxs-lookup"><span data-stu-id="967c7-149">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [<span data-ttu-id="967c7-150">Обзор безопасности</span><span class="sxs-lookup"><span data-stu-id="967c7-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="967c7-151">\<клиентАли></span><span class="sxs-lookup"><span data-stu-id="967c7-151">\<clientCredentials></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- <span data-ttu-id="967c7-152">[Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="967c7-152">[Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>

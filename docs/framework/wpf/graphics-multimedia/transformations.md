@@ -8,31 +8,31 @@ helpviewer_keywords:
 - transformations [WPF], about transformations
 - transformations [WPF]
 - graphics [WPF], transformations
-- transform classes [WPF], 2-D
+- transform classes [WPF], 2D
 - scaling objects [WPF]
 - translating objects [WPF]
-- 2-D transform classes
+- 2D transform classes
 - rotating objects [WPF]
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26956b8ae692d6092a1c81643b94d05e297ef130
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926007"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111911"
 ---
-# <a name="transformations"></a><span data-ttu-id="9290b-102">Преобразования</span><span class="sxs-lookup"><span data-stu-id="9290b-102">Transformations</span></span>
-<span data-ttu-id="9290b-103">Преобразования используются для поворота, масштабирования, перевод и наклонять <xref:System.Windows.FrameworkElement> объектов.</span><span class="sxs-lookup"><span data-stu-id="9290b-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="f7c3c-102">Преобразования</span><span class="sxs-lookup"><span data-stu-id="f7c3c-102">Transformations</span></span>
+<span data-ttu-id="f7c3c-103">Преобразования используются для вращения, масштабирования, перевода <xref:System.Windows.FrameworkElement> или перекоса объектов.</span><span class="sxs-lookup"><span data-stu-id="f7c3c-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9290b-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="9290b-104">In This Section</span></span>  
- [<span data-ttu-id="9290b-105">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="9290b-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="9290b-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="9290b-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f7c3c-104">в этом разделе</span><span class="sxs-lookup"><span data-stu-id="f7c3c-104">In This Section</span></span>  
+ [<span data-ttu-id="f7c3c-105">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="f7c3c-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="f7c3c-106">Как-к темам</span><span class="sxs-lookup"><span data-stu-id="f7c3c-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9290b-107">См. также</span><span class="sxs-lookup"><span data-stu-id="9290b-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7c3c-107">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="f7c3c-107">See also</span></span>
 
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="9290b-108">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="9290b-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="9290b-109">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="9290b-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="9290b-110">Макет</span><span class="sxs-lookup"><span data-stu-id="9290b-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="f7c3c-108">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="f7c3c-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="f7c3c-109">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="f7c3c-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="f7c3c-110">Макет</span><span class="sxs-lookup"><span data-stu-id="f7c3c-110">Layout</span></span>](../advanced/layout.md)

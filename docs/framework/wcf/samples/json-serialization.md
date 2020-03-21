@@ -1,24 +1,24 @@
 ---
-title: Пример DataContractJsonSerializer
+title: Образец DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: 52e10ee28137b16bd90e6f3f3ac41f839528f334
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: d3456582d73640f1802c17d7f29f4931a6f920b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904543"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144634"
 ---
-# <a name="datacontractjsonserializer-sample"></a><span data-ttu-id="22765-102">Пример DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="22765-102">DataContractJsonSerializer sample</span></span>
+# <a name="datacontractjsonserializer-sample"></a><span data-ttu-id="2a8c3-102">Образец DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="2a8c3-102">DataContractJsonSerializer sample</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="22765-103">Этот пример предназначен для <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span><span class="sxs-lookup"><span data-stu-id="22765-103">This sample is for <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span> <span data-ttu-id="22765-104">В большинстве сценариев, в которых участвует сериализация и десериализация JSON, мы рекомендуем использовать интерфейсы API в [пространстве имен System. Text. JSON](../../../standard/serialization/system-text-json-overview.md).</span><span class="sxs-lookup"><span data-stu-id="22765-104">For most scenarios that involve serializing and deserializing JSON, we recommend the APIs in the [System.Text.Json namespace](../../../standard/serialization/system-text-json-overview.md).</span></span> 
+> <span data-ttu-id="2a8c3-103">Этот образец <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>предназначен для .</span><span class="sxs-lookup"><span data-stu-id="2a8c3-103">This sample is for <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span> <span data-ttu-id="2a8c3-104">Для большинства сценариев, связанных с сериализуем и десериализизацией JSON, мы рекомендуем AA в [пространстве имен System.Text.Json.](../../../standard/serialization/system-text-json-overview.md)</span><span class="sxs-lookup"><span data-stu-id="2a8c3-104">For most scenarios that involve serializing and deserializing JSON, we recommend the APIs in the [System.Text.Json namespace](../../../standard/serialization/system-text-json-overview.md).</span></span>
 
-<span data-ttu-id="22765-105"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> поддерживает те же типы, что и <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="22765-105"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supports the same types as <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="22765-106">Формат данных JSON бывает особенно полезен при написании веб-приложений AJAX (Asynchronous JavaScript and XML).</span><span class="sxs-lookup"><span data-stu-id="22765-106">The JSON data format is especially useful when writing Asynchronous JavaScript and XML (AJAX)-style Web applications.</span></span> <span data-ttu-id="22765-107">Поддержка AJAX в Windows Communication Foundation (WCF) оптимизирована для использования с ASP.NET AJAX через элемент управления ScriptManager.</span><span class="sxs-lookup"><span data-stu-id="22765-107">AJAX support in Windows Communication Foundation (WCF) is optimized for use with ASP.NET AJAX through the ScriptManager control.</span></span> <span data-ttu-id="22765-108">Примеры использования Windows Communication Foundation (WCF) с ASP.NET AJAX см. в разделе [примеры AJAX](ajax.md).</span><span class="sxs-lookup"><span data-stu-id="22765-108">For examples of how to use Windows Communication Foundation (WCF) with ASP.NET AJAX, see the [AJAX Samples](ajax.md).</span></span>  
+<span data-ttu-id="2a8c3-105"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> поддерживает те же типы, что и <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-105"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supports the same types as <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="2a8c3-106">Формат данных JSON бывает особенно полезен при написании веб-приложений AJAX (Asynchronous JavaScript and XML).</span><span class="sxs-lookup"><span data-stu-id="2a8c3-106">The JSON data format is especially useful when writing Asynchronous JavaScript and XML (AJAX)-style Web applications.</span></span> <span data-ttu-id="2a8c3-107">Поддержка AJAX в Фонде связи Windows (WCF) оптимизирована для использования с ASP.NET AJAX через контроль ScriptManager.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-107">AJAX support in Windows Communication Foundation (WCF) is optimized for use with ASP.NET AJAX through the ScriptManager control.</span></span> <span data-ttu-id="2a8c3-108">Примеры использования Windows Communication Foundation (WCF) с ASP.NET AJAX можно найти в [примере AJAX.](ajax.md)</span><span class="sxs-lookup"><span data-stu-id="2a8c3-108">For examples of how to use Windows Communication Foundation (WCF) with ASP.NET AJAX, see the [AJAX Samples](ajax.md).</span></span>  
   
-<span data-ttu-id="22765-109">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="22765-109">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+<span data-ttu-id="2a8c3-109">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-109">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-<span data-ttu-id="22765-110">В этом образце для демонстрации сериализации и десериализации используется контракт данных `Person`.</span><span class="sxs-lookup"><span data-stu-id="22765-110">The sample uses a `Person` data contract to demonstrate serialization and deserialization.</span></span>  
+<span data-ttu-id="2a8c3-110">В этом образце для демонстрации сериализации и десериализации используется контракт данных `Person`.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-110">The sample uses a `Person` data contract to demonstrate serialization and deserialization.</span></span>  
 
 ```csharp
 [DataContract]
@@ -32,7 +32,7 @@ class Person
 }
 ```
 
- <span data-ttu-id="22765-111">Чтобы сериализовать экземпляр типа `Person` в формат JSON, создайте объект <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> и с помощью метода `WriteObject` запишите данные JSON в поток.</span><span class="sxs-lookup"><span data-stu-id="22765-111">To serialize an instance of the `Person` type to JSON, create the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> first and use the `WriteObject` method to write JSON data to a stream.</span></span>  
+ <span data-ttu-id="2a8c3-111">Чтобы сериализовать экземпляр типа `Person` в формат JSON, создайте объект <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> и с помощью метода `WriteObject` запишите данные JSON в поток.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-111">To serialize an instance of the `Person` type to JSON, create the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> first and use the `WriteObject` method to write JSON data to a stream.</span></span>  
 
 ```csharp
 Person p = new Person();
@@ -42,31 +42,31 @@ DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));
 ser.WriteObject(stream1, p);
 ```
 
- <span data-ttu-id="22765-112">Поток памяти содержит допустимые данные JSON.</span><span class="sxs-lookup"><span data-stu-id="22765-112">The memory stream contains valid JSON data.</span></span>
+ <span data-ttu-id="2a8c3-112">Поток памяти содержит допустимые данные JSON.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-112">The memory stream contains valid JSON data.</span></span>
   
 ```json  
 {"age":42,"name":"John"}  
 ```  
   
- <span data-ttu-id="22765-113">В этом образце показана десериализация данных JSON в объект.</span><span class="sxs-lookup"><span data-stu-id="22765-113">The sample demonstrates deserializing from JSON data into an object.</span></span> <span data-ttu-id="22765-114">Для этого необходимо перемотать назад поток и вызвать метод `ReadObject`.</span><span class="sxs-lookup"><span data-stu-id="22765-114">You then rewind the stream and call `ReadObject`.</span></span>  
+ <span data-ttu-id="2a8c3-113">В этом образце показана десериализация данных JSON в объект.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-113">The sample demonstrates deserializing from JSON data into an object.</span></span> <span data-ttu-id="2a8c3-114">Для этого необходимо перемотать назад поток и вызвать метод `ReadObject`.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-114">You then rewind the stream and call `ReadObject`.</span></span>  
 
 ```csharp
 Person p2 = (Person)ser.ReadObject(stream1);
 ```
 
- <span data-ttu-id="22765-115">Проверка объекта `p2` позволяет понять, что данные JSON были десериализованы правильно.</span><span class="sxs-lookup"><span data-stu-id="22765-115">Examining the `p2` object reveals that the JSON data has been deserialized correctly.</span></span>  
+ <span data-ttu-id="2a8c3-115">Проверка объекта `p2` позволяет понять, что данные JSON были десериализованы правильно.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-115">Examining the `p2` object reveals that the JSON data has been deserialized correctly.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="22765-116">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="22765-116">The samples may already be installed on your machine.</span></span> <span data-ttu-id="22765-117">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="22765-117">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="2a8c3-116">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-116">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2a8c3-117">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="2a8c3-117">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="22765-118">Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples.</span><span class="sxs-lookup"><span data-stu-id="22765-118">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="22765-119">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="22765-119">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="2a8c3-118">Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-118">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2a8c3-119">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-119">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\JsonSerialization`  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="22765-120">Настройка, построение и выполнение примера</span><span class="sxs-lookup"><span data-stu-id="22765-120">To set up, build and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2a8c3-120">Настройка, построение и выполнение примера</span><span class="sxs-lookup"><span data-stu-id="2a8c3-120">To set up, build and run the sample</span></span>  
   
-1. <span data-ttu-id="22765-121">Создайте решение Жсонсериализатион. sln, как описано в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="22765-121">Build the solution JsonSerialization.sln as described in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="2a8c3-121">Создайте решение JsonSerialization.sln, как описано в [создании образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/building-the-samples.md)</span><span class="sxs-lookup"><span data-stu-id="2a8c3-121">Build the solution JsonSerialization.sln as described in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="22765-122">Запустите получившееся консольное приложение.</span><span class="sxs-lookup"><span data-stu-id="22765-122">Run the resulting console application.</span></span>  
+2. <span data-ttu-id="2a8c3-122">Запустите получившееся консольное приложение.</span><span class="sxs-lookup"><span data-stu-id="2a8c3-122">Run the resulting console application.</span></span>  

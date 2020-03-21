@@ -2,20 +2,20 @@
 title: Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 26894a3951b91879a7b3e6f66731891113394082
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7ea0a2aa386f747b89f56f21d75a97e4409140a1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045295"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184872"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="cb24b-102">Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="cb24b-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
-<span data-ttu-id="cb24b-103">Это один из двух инструкций, демонстрирующих публикацию метаданных для службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="cb24b-103">This is one of two how-to topics that demonstrate publishing metadata for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="cb24b-104">Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="cb24b-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="cb24b-105">В этом разделе показано, как публиковать метаданные для службы с помощью файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="cb24b-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="5ca42-102">Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="5ca42-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
+<span data-ttu-id="5ca42-103">Это одна из двух тем, демонстрирующих публикацию метаданных для службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="5ca42-103">This is one of two how-to topics that demonstrate publishing metadata for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="5ca42-104">Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="5ca42-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="5ca42-105">В этом разделе показано, как публиковать метаданные для службы с помощью файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="5ca42-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  
   
 > [!CAUTION]
-> <span data-ttu-id="cb24b-106">В этом разделе показано, как опубликовать метаданные незащищенным образом.</span><span class="sxs-lookup"><span data-stu-id="cb24b-106">This topic shows how to publish metadata in an unsecure manner.</span></span> <span data-ttu-id="cb24b-107">Любой клиент может получить метаданные из службы.</span><span class="sxs-lookup"><span data-stu-id="cb24b-107">Any client can retrieve the metadata from the service.</span></span> <span data-ttu-id="cb24b-108">Если требуется безопасная публикация метаданных в службе, см. раздел Настраиваемая [Конечная точка безопасных метаданных](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span><span class="sxs-lookup"><span data-stu-id="cb24b-108">If you require your service to publish metadata in a secure manner, see [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span></span>  
+> <span data-ttu-id="5ca42-106">В этом разделе показано, как опубликовать метаданные незащищенным образом.</span><span class="sxs-lookup"><span data-stu-id="5ca42-106">This topic shows how to publish metadata in an unsecure manner.</span></span> <span data-ttu-id="5ca42-107">Любой клиент может получить метаданные из службы.</span><span class="sxs-lookup"><span data-stu-id="5ca42-107">Any client can retrieve the metadata from the service.</span></span> <span data-ttu-id="5ca42-108">Если вам требуется, чтобы служба безопасно публиковала метаданные, [см.](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)</span><span class="sxs-lookup"><span data-stu-id="5ca42-108">If you require your service to publish metadata in a secure manner, see [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span></span>  
   
- <span data-ttu-id="cb24b-109">Дополнительные сведения о публикации метаданных в коде см. в [разделе как Публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span><span class="sxs-lookup"><span data-stu-id="cb24b-109">For more information about publishing metadata in code, see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span> <span data-ttu-id="cb24b-110">Публикация метаданных позволяет клиентам извлекать метаданные с помощью запроса WS-Transfer GET или запроса HTTP/GET, используя строку запроса `?wsdl`.</span><span class="sxs-lookup"><span data-stu-id="cb24b-110">Publishing metadata allows clients to retrieve the metadata using a WS-Transfer GET request or an HTTP/GET request using the `?wsdl` query string.</span></span> <span data-ttu-id="cb24b-111">Чтобы убедиться в том, что код работает, создайте базовую службу WCF.</span><span class="sxs-lookup"><span data-stu-id="cb24b-111">To be sure that the code is working, create a basic WCF service.</span></span> <span data-ttu-id="cb24b-112">Для упрощения в следующем коде представлена несложная резидентная служба.</span><span class="sxs-lookup"><span data-stu-id="cb24b-112">For simplicity, a basic self-hosted service is provided in the following code.</span></span>  
+ <span data-ttu-id="5ca42-109">Для получения дополнительной информации о публикации метаданных в коде [см.](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)</span><span class="sxs-lookup"><span data-stu-id="5ca42-109">For more information about publishing metadata in code, see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span> <span data-ttu-id="5ca42-110">Публикация метаданных позволяет клиентам извлекать метаданные с помощью запроса WS-Transfer GET или запроса HTTP/GET, используя строку запроса `?wsdl`.</span><span class="sxs-lookup"><span data-stu-id="5ca42-110">Publishing metadata allows clients to retrieve the metadata using a WS-Transfer GET request or an HTTP/GET request using the `?wsdl` query string.</span></span> <span data-ttu-id="5ca42-111">Чтобы убедиться, что код работает, создайте базовый сервис WCF.</span><span class="sxs-lookup"><span data-stu-id="5ca42-111">To be sure that the code is working, create a basic WCF service.</span></span> <span data-ttu-id="5ca42-112">Для упрощения в следующем коде представлена несложная резидентная служба.</span><span class="sxs-lookup"><span data-stu-id="5ca42-112">For simplicity, a basic self-hosted service is provided in the following code.</span></span>  
   
 ```csharp  
 using System;  
@@ -46,7 +46,7 @@ namespace Metadata.Samples
         static void Main(string[] args)  
         {  
             ServiceHost host = new ServiceHost(typeof(SimpleService),  
-                new Uri("http://localhost:8001/MetadataSample"));   
+                new Uri("http://localhost:8001/MetadataSample"));
             try  
             {  
                 // Open the service host to accept incoming calls  
@@ -71,7 +71,7 @@ namespace Metadata.Samples
 }  
 ```  
   
- <span data-ttu-id="cb24b-113">Эта служба представляет собой резидентную службу, настраиваемую посредством файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="cb24b-113">This service is a self-hosted service, which is configured using a configuration file.</span></span> <span data-ttu-id="cb24b-114">Отправной точкой будет служить следующий файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="cb24b-114">The following configuration file serves as a starting point.</span></span>  
+ <span data-ttu-id="5ca42-113">Эта служба представляет собой резидентную службу, настраиваемую посредством файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="5ca42-113">This service is a self-hosted service, which is configured using a configuration file.</span></span> <span data-ttu-id="5ca42-114">Отправной точкой будет служить следующий файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="5ca42-114">The following configuration file serves as a starting point.</span></span>  
   
 ```xml  
 <configuration>  
@@ -90,17 +90,17 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a><span data-ttu-id="cb24b-115">Публикация метаданных для службы WCF с помощью файла конфигурации приложения</span><span class="sxs-lookup"><span data-stu-id="cb24b-115">To publish metadata for a WCF service using an application configuration file</span></span>  
+### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a><span data-ttu-id="5ca42-115">Публикация метаданных для службы WCF с помощью файла конфигурации приложения</span><span class="sxs-lookup"><span data-stu-id="5ca42-115">To publish metadata for a WCF service using an application configuration file</span></span>  
   
-1. <span data-ttu-id="cb24b-116">В файле App.config после закрывающего элемента `</services>`behaviors&gt; создайте элемент`<behaviors>`.</span><span class="sxs-lookup"><span data-stu-id="cb24b-116">Within the App.config file, after the closing `</services>` element, create a `<behaviors>` element.</span></span>  
+1. <span data-ttu-id="5ca42-116">В файле App.config после закрывающего элемента `</services>`.</span><span class="sxs-lookup"><span data-stu-id="5ca42-116">Within the App.config file, after the closing `</services>` element, create a `<behaviors>` element.</span></span>  
 
-2. <span data-ttu-id="cb24b-117">Внутри элемента `<behaviors>` добавьте элемент `<serviceBehaviors>`.</span><span class="sxs-lookup"><span data-stu-id="cb24b-117">Within the `<behaviors>` element, add a `<serviceBehaviors>` element.</span></span>  
+2. <span data-ttu-id="5ca42-117">В элемент `<behaviors>` добавьте элемент `<serviceBehaviors>`.</span><span class="sxs-lookup"><span data-stu-id="5ca42-117">Within the `<behaviors>` element, add a `<serviceBehaviors>` element.</span></span>  
 
-3. <span data-ttu-id="cb24b-118">Добавить `<behavior>` элемент `<serviceBehaviors>` элемент и указать значение для `name` атрибут `<behavior>` элемента.</span><span class="sxs-lookup"><span data-stu-id="cb24b-118">Add a `<behavior>` element to the `<serviceBehaviors>` element and specify a value for the `name` attribute of the `<behavior>` element.</span></span>  
+3. <span data-ttu-id="5ca42-118">Добавьте элемент `<behavior>``<serviceBehaviors>` элемента .</span><span class="sxs-lookup"><span data-stu-id="5ca42-118">Add a `<behavior>` element to the `<serviceBehaviors>` element and specify a value for the `name` attribute of the `<behavior>` element.</span></span>  
 
-4. <span data-ttu-id="cb24b-119">Добавьте элемент `<serviceMetadata>` в элемент `<behavior>`.</span><span class="sxs-lookup"><span data-stu-id="cb24b-119">Add a `<serviceMetadata>` element to the `<behavior>` element.</span></span> <span data-ttu-id="cb24b-120">Задайте атрибуту `httpGetEnabled` значение `true`, а атрибуту `policyVersion` значение Policy15.</span><span class="sxs-lookup"><span data-stu-id="cb24b-120">Set the `httpGetEnabled` attribute to `true` and the `policyVersion` attribute to Policy15.</span></span> <span data-ttu-id="cb24b-121">`httpGetEnabled` позволяет службе отвечать на запросы метаданных, переданные с помощью запроса HTTP GET.</span><span class="sxs-lookup"><span data-stu-id="cb24b-121">`httpGetEnabled` allows the service to respond to metadata requests made by an HTTP GET request.</span></span> <span data-ttu-id="cb24b-122">`policyVersion` сообщает службе, что формируемые метаданные должны соответствовать спецификации WS-Policy 1.5.</span><span class="sxs-lookup"><span data-stu-id="cb24b-122">`policyVersion` tells the service to conform to WS-Policy 1.5 when generating metadata.</span></span>  
+4. <span data-ttu-id="5ca42-119">Добавьте элемент `<serviceMetadata>` в элемент `<behavior>`.</span><span class="sxs-lookup"><span data-stu-id="5ca42-119">Add a `<serviceMetadata>` element to the `<behavior>` element.</span></span> <span data-ttu-id="5ca42-120">Задайте атрибуту `httpGetEnabled` значение `true`, а атрибуту `policyVersion` значение Policy15.</span><span class="sxs-lookup"><span data-stu-id="5ca42-120">Set the `httpGetEnabled` attribute to `true` and the `policyVersion` attribute to Policy15.</span></span> <span data-ttu-id="5ca42-121">`httpGetEnabled` позволяет службе отвечать на запросы метаданных, переданные с помощью запроса HTTP GET.</span><span class="sxs-lookup"><span data-stu-id="5ca42-121">`httpGetEnabled` allows the service to respond to metadata requests made by an HTTP GET request.</span></span> <span data-ttu-id="5ca42-122">`policyVersion` сообщает службе, что формируемые метаданные должны соответствовать спецификации WS-Policy 1.5.</span><span class="sxs-lookup"><span data-stu-id="5ca42-122">`policyVersion` tells the service to conform to WS-Policy 1.5 when generating metadata.</span></span>  
 
-5. <span data-ttu-id="cb24b-123">Добавьте атрибут `behaviorConfiguration` элементу `<service>`name и задайте атрибут`name`&lt;behavior&gt; элемента`<behavior>`, добавленного на шаге 1, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="cb24b-123">Add a `behaviorConfiguration` attribute to the `<service>` element and specify the `name` attribute of the `<behavior>` element added in step 1, as shown in the following code example.</span></span>  
+5. <span data-ttu-id="5ca42-123">Добавьте атрибут `behaviorConfiguration` элементу `<service>``name`, добавленного на шаге 1, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="5ca42-123">Add a `behaviorConfiguration` attribute to the `<service>` element and specify the `name` attribute of the `<behavior>` element added in step 1, as shown in the following code example.</span></span>  
   
     ```xml  
     <services>  
@@ -119,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6. <span data-ttu-id="cb24b-124">Добавьте один или несколько элементов `<endpoint>`IMetadataExchange с контрактом`IMetadataExchange`, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="cb24b-124">Add one or more `<endpoint>` elements with the contract set to `IMetadataExchange`, as shown in the following code example.</span></span>  
+6. <span data-ttu-id="5ca42-124">Добавьте один или несколько элементов `<endpoint>`, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="5ca42-124">Add one or more `<endpoint>` elements with the contract set to `IMetadataExchange`, as shown in the following code example.</span></span>  
   
     ```xml  
     <services>  
@@ -138,31 +138,31 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7. <span data-ttu-id="cb24b-125">В конечных точках метаданных, добавленных на предыдущем шаге, присвойте атрибуту `binding` одно из следующих значений:</span><span class="sxs-lookup"><span data-stu-id="cb24b-125">For the metadata endpoints added in the previous step, set the `binding` attribute to one of the following:</span></span>  
+7. <span data-ttu-id="5ca42-125">В конечных точках метаданных, добавленных на предыдущем шаге, присвойте атрибуту `binding` одно из следующих значений:</span><span class="sxs-lookup"><span data-stu-id="5ca42-125">For the metadata endpoints added in the previous step, set the `binding` attribute to one of the following:</span></span>  
   
-    - <span data-ttu-id="cb24b-126">`mexHttpBinding` для публикации по HTTP;</span><span class="sxs-lookup"><span data-stu-id="cb24b-126">`mexHttpBinding` for HTTP publication.</span></span>  
+    - <span data-ttu-id="5ca42-126">`mexHttpBinding` для публикации по HTTP;</span><span class="sxs-lookup"><span data-stu-id="5ca42-126">`mexHttpBinding` for HTTP publication.</span></span>  
   
-    - <span data-ttu-id="cb24b-127">`mexHttpsBinding` для публикации по HTTPS;</span><span class="sxs-lookup"><span data-stu-id="cb24b-127">`mexHttpsBinding` for HTTPS publication.</span></span>  
+    - <span data-ttu-id="5ca42-127">`mexHttpsBinding` для публикации по HTTPS;</span><span class="sxs-lookup"><span data-stu-id="5ca42-127">`mexHttpsBinding` for HTTPS publication.</span></span>  
   
-    - <span data-ttu-id="cb24b-128">`mexNamedPipeBinding` для публикации по именованному каналу;</span><span class="sxs-lookup"><span data-stu-id="cb24b-128">`mexNamedPipeBinding` for named pipe publication.</span></span>  
+    - <span data-ttu-id="5ca42-128">`mexNamedPipeBinding` для публикации по именованному каналу;</span><span class="sxs-lookup"><span data-stu-id="5ca42-128">`mexNamedPipeBinding` for named pipe publication.</span></span>  
   
-    - <span data-ttu-id="cb24b-129">`mexTcpBinding` для публикации по TCP.</span><span class="sxs-lookup"><span data-stu-id="cb24b-129">`mexTcpBinding` for TCP publication.</span></span>  
+    - <span data-ttu-id="5ca42-129">`mexTcpBinding` для публикации по TCP.</span><span class="sxs-lookup"><span data-stu-id="5ca42-129">`mexTcpBinding` for TCP publication.</span></span>  
   
-8. <span data-ttu-id="cb24b-130">В конечных точках метаданных, добавленных на предыдущем шаге, задайте для адреса одно из следующих значений:</span><span class="sxs-lookup"><span data-stu-id="cb24b-130">For the metadata endpoints added in a previous step, set the address equal to:</span></span>  
+8. <span data-ttu-id="5ca42-130">В конечных точках метаданных, добавленных на предыдущем шаге, задайте для адреса одно из следующих значений:</span><span class="sxs-lookup"><span data-stu-id="5ca42-130">For the metadata endpoints added in a previous step, set the address equal to:</span></span>  
   
-    - <span data-ttu-id="cb24b-131">пустую строку, чтобы использовать в качестве точки публикации базовый адрес ведущего приложения, если базовый адрес совпадает с привязкой метаданных;</span><span class="sxs-lookup"><span data-stu-id="cb24b-131">An empty string to use the host application's base address as the publication point if the base address is the same as the metadata binding.</span></span>  
+    - <span data-ttu-id="5ca42-131">пустую строку, чтобы использовать в качестве точки публикации базовый адрес ведущего приложения, если базовый адрес совпадает с привязкой метаданных;</span><span class="sxs-lookup"><span data-stu-id="5ca42-131">An empty string to use the host application's base address as the publication point if the base address is the same as the metadata binding.</span></span>  
   
-    - <span data-ttu-id="cb24b-132">относительный адрес, если ведущее приложение имеет базовый адрес;</span><span class="sxs-lookup"><span data-stu-id="cb24b-132">A relative address if the host application has a base address.</span></span>  
+    - <span data-ttu-id="5ca42-132">относительный адрес, если ведущее приложение имеет базовый адрес;</span><span class="sxs-lookup"><span data-stu-id="5ca42-132">A relative address if the host application has a base address.</span></span>  
   
-    - <span data-ttu-id="cb24b-133">абсолютный адрес.</span><span class="sxs-lookup"><span data-stu-id="cb24b-133">An absolute address.</span></span>  
+    - <span data-ttu-id="5ca42-133">абсолютный адрес.</span><span class="sxs-lookup"><span data-stu-id="5ca42-133">An absolute address.</span></span>  
   
-9. <span data-ttu-id="cb24b-134">Постройте и запустите консольное приложение.</span><span class="sxs-lookup"><span data-stu-id="cb24b-134">Build and run the console application.</span></span>  
+9. <span data-ttu-id="5ca42-134">Скомпилируйте и запустите консольное приложение.</span><span class="sxs-lookup"><span data-stu-id="5ca42-134">Build and run the console application.</span></span>  
   
-10. <span data-ttu-id="cb24b-135">С помощью Internet Explorer перейдите к базовому адресу службы (http://localhost:8001/MetadataSample в этом примере) и убедитесь, что публикация метаданных включена.</span><span class="sxs-lookup"><span data-stu-id="cb24b-135">Use Internet Explorer to browse to the base address of the service (http://localhost:8001/MetadataSample in this sample) and verify that the metadata publishing is turned on.</span></span> <span data-ttu-id="cb24b-136">Если нет, появится сообщение в верхней части полученной страницы: "Публикация метаданных для этой службы сейчас отключена".</span><span class="sxs-lookup"><span data-stu-id="cb24b-136">If not, a message at the top of the resulting page displays: "Metadata publishing for this service is currently disabled."</span></span>  
+10. <span data-ttu-id="5ca42-135">Используйте Internet Explorer, чтобы просмотретьhttp://localhost:8001/MetadataSample базовый адрес службы (в этом примере) и убедиться, что публикация метаданных включена.</span><span class="sxs-lookup"><span data-stu-id="5ca42-135">Use Internet Explorer to browse to the base address of the service (http://localhost:8001/MetadataSample in this sample) and verify that the metadata publishing is turned on.</span></span> <span data-ttu-id="5ca42-136">В противном случае вверху страницы отображается сообщение "Публикация метаданных для этой службы в настоящее время отключена".</span><span class="sxs-lookup"><span data-stu-id="5ca42-136">If not, a message at the top of the resulting page displays: "Metadata publishing for this service is currently disabled."</span></span>  
   
-### <a name="to-use-default-endpoints"></a><span data-ttu-id="cb24b-137">Использование конечных точек по умолчанию</span><span class="sxs-lookup"><span data-stu-id="cb24b-137">To use default endpoints</span></span>  
+### <a name="to-use-default-endpoints"></a><span data-ttu-id="5ca42-137">Использование конечных точек по умолчанию</span><span class="sxs-lookup"><span data-stu-id="5ca42-137">To use default endpoints</span></span>  
   
-1. <span data-ttu-id="cb24b-138">Чтобы настроить метаданные в службе, которая использует конечные точки по умолчанию, укажите <xref:System.ServiceModel.Description.ServiceMetadataBehavior> в файле конфигурации, как показано в предыдущем примере, но не указывайте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="cb24b-138">To configure metadata on a service that uses default endpoints, specify the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in the configuration file as in the previous example, but do not specify any endpoints.</span></span> <span data-ttu-id="cb24b-139">Файл конфигурации будет иметь следующий вид.</span><span class="sxs-lookup"><span data-stu-id="cb24b-139">The configuration file would then look like this.</span></span>  
+1. <span data-ttu-id="5ca42-138">Чтобы настроить метаданные в службе, которая использует конечные точки по умолчанию, укажите <xref:System.ServiceModel.Description.ServiceMetadataBehavior> в файле конфигурации, как показано в предыдущем примере, но не указывайте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="5ca42-138">To configure metadata on a service that uses default endpoints, specify the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in the configuration file as in the previous example, but do not specify any endpoints.</span></span> <span data-ttu-id="5ca42-139">Файл конфигурации будет иметь следующий вид.</span><span class="sxs-lookup"><span data-stu-id="5ca42-139">The configuration file would then look like this.</span></span>  
   
     ```xml  
     <configuration>  
@@ -179,10 +179,10 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     <span data-ttu-id="cb24b-140">Поскольку служба имеет <xref:System.ServiceModel.Description.ServiceMetadataBehavior> со свойством `httpGetEnabled`, установленным в значение `true`, то для службы включена публикация метаданных, а поскольку конечные точки не были добавлены явно, среда выполнения добавляет конечные точки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="cb24b-140">Because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> with the `httpGetEnabled` set to `true`, the service has publishing metadata enabled, and because no endpoints were explicitly added, the runtime adds the default endpoints.</span></span> <span data-ttu-id="cb24b-141">Дополнительные сведения о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Упрощенная конфигурация](../../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="cb24b-141">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+     <span data-ttu-id="5ca42-140">Поскольку служба имеет <xref:System.ServiceModel.Description.ServiceMetadataBehavior> со свойством `httpGetEnabled`, установленным в значение `true`, то для службы включена публикация метаданных, а поскольку конечные точки не были добавлены явно, среда выполнения добавляет конечные точки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5ca42-140">Because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> with the `httpGetEnabled` set to `true`, the service has publishing metadata enabled, and because no endpoints were explicitly added, the runtime adds the default endpoints.</span></span> <span data-ttu-id="5ca42-141">Дополнительные сведения о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Упрощенная конфигурация](../../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="5ca42-141">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cb24b-142">Пример</span><span class="sxs-lookup"><span data-stu-id="cb24b-142">Example</span></span>  
- <span data-ttu-id="cb24b-143">В следующем примере кода показана реализация базовой службы WCF и файла конфигурации, который публикует метаданные для службы.</span><span class="sxs-lookup"><span data-stu-id="cb24b-143">The following code example shows the implementation of a basic WCF service and the configuration file that publishes metadata for the service.</span></span>  
+## <a name="example"></a><span data-ttu-id="5ca42-142">Пример</span><span class="sxs-lookup"><span data-stu-id="5ca42-142">Example</span></span>  
+ <span data-ttu-id="5ca42-143">Следующий пример кода показывает реализацию базовой службы WCF и файла конфигурации, который публикует метаданные для службы.</span><span class="sxs-lookup"><span data-stu-id="5ca42-143">The following code example shows the implementation of a basic WCF service and the configuration file that publishes metadata for the service.</span></span>  
   
 ```csharp  
 using System;  
@@ -213,7 +213,7 @@ namespace Metadata.Samples
         static void Main(string[] args)  
         {  
             ServiceHost host = new ServiceHost(typeof(SimpleService),  
-                new Uri("http://localhost:8001/MetadataSample"));   
+                new Uri("http://localhost:8001/MetadataSample"));
             try  
             {  
                 // Open the service host to accept incoming calls  
@@ -253,11 +253,11 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cb24b-144">См. также</span><span class="sxs-lookup"><span data-stu-id="cb24b-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ca42-144">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="5ca42-144">See also</span></span>
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [<span data-ttu-id="cb24b-145">Практическое руководство. Размещение службы WCF в управляемом приложении</span><span class="sxs-lookup"><span data-stu-id="cb24b-145">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [<span data-ttu-id="cb24b-146">Резидентное размещение</span><span class="sxs-lookup"><span data-stu-id="cb24b-146">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)
-- [<span data-ttu-id="cb24b-147">Общие сведения об архитектуре метаданных</span><span class="sxs-lookup"><span data-stu-id="cb24b-147">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [<span data-ttu-id="cb24b-148">Использование метаданных</span><span class="sxs-lookup"><span data-stu-id="cb24b-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [<span data-ttu-id="cb24b-149">Практическое руководство. Публикация метаданных для службы с помощью кода</span><span class="sxs-lookup"><span data-stu-id="cb24b-149">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [<span data-ttu-id="5ca42-145">Практическое руководство. Размещение службы WCF в управляемом приложении</span><span class="sxs-lookup"><span data-stu-id="5ca42-145">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [<span data-ttu-id="5ca42-146">Резидентное размещение</span><span class="sxs-lookup"><span data-stu-id="5ca42-146">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)
+- [<span data-ttu-id="5ca42-147">Общие сведения об архитектуре метаданных</span><span class="sxs-lookup"><span data-stu-id="5ca42-147">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [<span data-ttu-id="5ca42-148">Использование метаданных</span><span class="sxs-lookup"><span data-stu-id="5ca42-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [<span data-ttu-id="5ca42-149">Практическое руководство. Публикация метаданных для службы с использованием кода</span><span class="sxs-lookup"><span data-stu-id="5ca42-149">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

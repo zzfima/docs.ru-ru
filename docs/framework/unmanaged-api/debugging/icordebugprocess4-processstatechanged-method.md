@@ -1,5 +1,5 @@
 ---
-title: Метод ICorDebugProcess4::ProcessStateChanged
+title: ICorDebugПроцесс4::ProcessStateChanged Метод
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,18 +15,18 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767185"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178632"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a><span data-ttu-id="c14ac-102">Метод ICorDebugProcess4::ProcessStateChanged</span><span class="sxs-lookup"><span data-stu-id="c14ac-102">ICorDebugProcess4::ProcessStateChanged Method</span></span>
+# <a name="icordebugprocess4processstatechanged-method"></a><span data-ttu-id="caefb-102">ICorDebugПроцесс4::ProcessStateChanged Метод</span><span class="sxs-lookup"><span data-stu-id="caefb-102">ICorDebugProcess4::ProcessStateChanged Method</span></span>
 
-<span data-ttu-id="c14ac-103">Уведомляет конвейера ICorDebug о том, что внепроцессные отладчик процесс продолжает выполнение отлаживаемого кода.</span><span class="sxs-lookup"><span data-stu-id="c14ac-103">Notifies the ICorDebug pipeline that the out of process debugger is continuing the debugee's execution.</span></span>
+<span data-ttu-id="caefb-103">Уведомляет конвейер ICorDebug о том, что недогибающий процесс продолжает выполнение debugee.</span><span class="sxs-lookup"><span data-stu-id="caefb-103">Notifies the ICorDebug pipeline that the out of process debugger is continuing the debugee's execution.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c14ac-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c14ac-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="caefb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="caefb-104">Syntax</span></span>
 
 ```cpp
 HRESULT ProcessStateChanged(
@@ -34,27 +34,27 @@ HRESULT ProcessStateChanged(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="c14ac-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c14ac-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="caefb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="caefb-105">Parameters</span></span>
 
  `eChange`\
-<span data-ttu-id="c14ac-106">[in] Является членом [перечисление CorDebugStateChange](cordebugstatechange-enumeration.md) описывающие изменения в состоянии выполнения процесса.</span><span class="sxs-lookup"><span data-stu-id="c14ac-106">[in] A member of the [CorDebugStateChange enumeration](cordebugstatechange-enumeration.md) describing a change in the process's execution state.</span></span>
+<span data-ttu-id="caefb-106">(в) Участник [перечисления CorDebugStateChange,](cordebugstatechange-enumeration.md) описывающий состояние выполнения процесса.</span><span class="sxs-lookup"><span data-stu-id="caefb-106">[in] A member of the [CorDebugStateChange enumeration](cordebugstatechange-enumeration.md) describing a change in the process's execution state.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="c14ac-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="c14ac-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="caefb-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="caefb-107">Remarks</span></span>
 
-<span data-ttu-id="c14ac-108">Указанный метод является частью `ICorDebugProcess4` интерфейса и соответствует четвертый слот в таблице виртуального метода.</span><span class="sxs-lookup"><span data-stu-id="c14ac-108">The provided method is part of the `ICorDebugProcess4` interface and corresponds to the fourth slot of the virtual method table.</span></span>
+<span data-ttu-id="caefb-108">Предоставленный метод является `ICorDebugProcess4` частью интерфейса и соответствует четвертому слоту таблицы виртуального метода.</span><span class="sxs-lookup"><span data-stu-id="caefb-108">The provided method is part of the `ICorDebugProcess4` interface and corresponds to the fourth slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c14ac-109">Требования</span><span class="sxs-lookup"><span data-stu-id="c14ac-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="caefb-109">Требования</span><span class="sxs-lookup"><span data-stu-id="caefb-109">Requirements</span></span>
 
- <span data-ttu-id="c14ac-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c14ac-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+ <span data-ttu-id="caefb-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="caefb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="c14ac-111">**Заголовок.** None</span><span class="sxs-lookup"><span data-stu-id="c14ac-111">**Header:** None</span></span>
+ <span data-ttu-id="caefb-111">**Заголовок:** Ни один</span><span class="sxs-lookup"><span data-stu-id="caefb-111">**Header:** None</span></span>
 
- <span data-ttu-id="c14ac-112">**Библиотека:** None</span><span class="sxs-lookup"><span data-stu-id="c14ac-112">**Library:** None</span></span>
- 
- <span data-ttu-id="c14ac-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c14ac-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="caefb-112">**Библиотека:** Ни один</span><span class="sxs-lookup"><span data-stu-id="caefb-112">**Library:** None</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c14ac-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c14ac-114">See also</span></span>
+ <span data-ttu-id="caefb-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="caefb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
 
-- [<span data-ttu-id="c14ac-115">Интерфейс ICorDebugProcess4</span><span class="sxs-lookup"><span data-stu-id="c14ac-115">ICorDebugProcess4 Interface</span></span>](icordebugprocess4-interface.md)
-- [<span data-ttu-id="c14ac-116">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="c14ac-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="c14ac-117">Отладка</span><span class="sxs-lookup"><span data-stu-id="c14ac-117">Debugging</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="caefb-114">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="caefb-114">See also</span></span>
+
+- [<span data-ttu-id="caefb-115">Интерфейс ICorDebugProcess4</span><span class="sxs-lookup"><span data-stu-id="caefb-115">ICorDebugProcess4 Interface</span></span>](icordebugprocess4-interface.md)
+- [<span data-ttu-id="caefb-116">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="caefb-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="caefb-117">Отладки</span><span class="sxs-lookup"><span data-stu-id="caefb-117">Debugging</span></span>](index.md)

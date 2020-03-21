@@ -1,36 +1,36 @@
 ---
-title: Практическое руководство. Анимация трехмерных преобразований
+title: Как анимировать 3D переводы
 ms.date: 03/30/2017
 helpviewer_keywords:
-- animation [WPF], 3-D translations
-- 3-D translations [WPF], animating
+- animation [WPF], 3D translations
+- 3D translations [WPF], animating
 ms.assetid: d4eece1f-0cd2-4a2c-8370-293354c380e4
-ms.openlocfilehash: 6d7e0b422d6e76d5d0e25ad276550613f264e9bc
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d4fff9c74663bd220ad5d15a983bcb639621afd
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661192"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112262"
 ---
-# <a name="how-to-animate-3-d-translations"></a><span data-ttu-id="b0755-102">Практическое руководство. Анимация трехмерных преобразований</span><span class="sxs-lookup"><span data-stu-id="b0755-102">How to: Animate 3-D Translations</span></span>
-<span data-ttu-id="b0755-103">В этом разделе показано, как анимировать преобразования перевода на трехмерной модели.</span><span class="sxs-lookup"><span data-stu-id="b0755-103">This topic demonstrates how to animate a translation transformation set on a 3-D model.</span></span>  
+# <a name="how-to-animate-3d-translations"></a><span data-ttu-id="f18cc-102">Как анимировать 3D переводы</span><span class="sxs-lookup"><span data-stu-id="f18cc-102">How to: Animate 3D Translations</span></span>
+<span data-ttu-id="f18cc-103">Эта тема демонстрирует, как оживить преобразование перевода, установленное на 3D-модели.</span><span class="sxs-lookup"><span data-stu-id="f18cc-103">This topic demonstrates how to animate a translation transformation set on a 3D model.</span></span>  
   
- <span data-ttu-id="b0755-104">В приведенном ниже коде показано применение <xref:System.Windows.Media.Media3D.TranslateTransform3D> объект <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> свойство <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span><span class="sxs-lookup"><span data-stu-id="b0755-104">The code below shows the application of a <xref:System.Windows.Media.Media3D.TranslateTransform3D> object to the <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
+ <span data-ttu-id="f18cc-104">Приведенный ниже код показывает <xref:System.Windows.Media.Media3D.TranslateTransform3D> применение <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> объекта к <xref:System.Windows.Media.Media3D.GeometryModel3D>свойству .</span><span class="sxs-lookup"><span data-stu-id="f18cc-104">The code below shows the application of a <xref:System.Windows.Media.Media3D.TranslateTransform3D> object to the <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#Translation3DAnimationInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationinline1)]  
   
- <span data-ttu-id="b0755-105"><xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> Свойства данного объекта <xref:System.Windows.Media.Media3D.TranslateTransform3D> объекта анимируется с помощью следующего кода.</span><span class="sxs-lookup"><span data-stu-id="b0755-105">The <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> property of this <xref:System.Windows.Media.Media3D.TranslateTransform3D> object is animated using the code below.</span></span>  
+ <span data-ttu-id="f18cc-105">Свойство <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> этого <xref:System.Windows.Media.Media3D.TranslateTransform3D> объекта анимировано с помощью приведенного ниже кода.</span><span class="sxs-lookup"><span data-stu-id="f18cc-105">The <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> property of this <xref:System.Windows.Media.Media3D.TranslateTransform3D> object is animated using the code below.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#Translation3DAnimationInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationinline2)]  
   
-## <a name="example"></a><span data-ttu-id="b0755-106">Пример</span><span class="sxs-lookup"><span data-stu-id="b0755-106">Example</span></span>  
- <span data-ttu-id="b0755-107">В следующем коде показано весь пример.</span><span class="sxs-lookup"><span data-stu-id="b0755-107">The following code shows the entire sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="f18cc-106">Пример</span><span class="sxs-lookup"><span data-stu-id="f18cc-106">Example</span></span>  
+ <span data-ttu-id="f18cc-107">Следующий код показывает весь образец.</span><span class="sxs-lookup"><span data-stu-id="f18cc-107">The following code shows the entire sample.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#Translation3DAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="b0755-108">См. также</span><span class="sxs-lookup"><span data-stu-id="b0755-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f18cc-108">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="f18cc-108">See also</span></span>
 
-- [<span data-ttu-id="b0755-109">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="b0755-109">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="b0755-110">Создание трехмерной сцены</span><span class="sxs-lookup"><span data-stu-id="b0755-110">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)
-- [<span data-ttu-id="b0755-111">Обзор трехмерной графики</span><span class="sxs-lookup"><span data-stu-id="b0755-111">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
-- [<span data-ttu-id="b0755-112">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="b0755-112">Transforms Overview</span></span>](transforms-overview.md)
+- [<span data-ttu-id="f18cc-109">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="f18cc-109">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="f18cc-110">Создание 3D-сцены</span><span class="sxs-lookup"><span data-stu-id="f18cc-110">Create a 3D Scene</span></span>](how-to-create-a-3-d-scene.md)
+- [<span data-ttu-id="f18cc-111">3D Графика Обзор</span><span class="sxs-lookup"><span data-stu-id="f18cc-111">3D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="f18cc-112">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="f18cc-112">Transforms Overview</span></span>](transforms-overview.md)
