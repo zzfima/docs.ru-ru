@@ -5,21 +5,21 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: 076d940e0c15cf48013480fef68b8fac42cf76e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c1345022b79df371ad9c89a39a0a8b625e26608c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252892"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154509"
 ---
-# <a name="add-element-for-namedcaches"></a>\<Добавление элемента > для \<намедкачес >
-`namedCache` Добавляет запись`namedCaches` в коллекцию для кэша памяти.  
+# <a name="add-element-for-namedcaches"></a>\<добавить> \<элемент для названныхCaches>
+Добавляет `namedCache` запись в `namedCaches` коллекцию для кэша памяти.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Runtime. Caching >** ](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Намедкачес >** ](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.кэширования>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<памятьCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<имени Кэшес>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<добавить>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,12 +38,12 @@ ms.locfileid: "70252892"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|Целочисленное значение, указывающее максимально допустимый размер (в мегабайтах), до которого <xref:System.Runtime.Caching.MemoryCache> может увеличиваться экземпляр. Значение по умолчанию — 0. Это означает, <xref:System.Runtime.Caching.MemoryCache> что по умолчанию используется эвристика автоопределения размеров класса.|  
+|`CacheMemoryLimitMegabytes`|Значение, которое определяет максимально допустимый размер (в мегабайтах), <xref:System.Runtime.Caching.MemoryCache> до которого может вырасти экземпляр а. Значение по умолчанию составляет 0, что означает, что аупизилистика <xref:System.Runtime.Caching.MemoryCache> класса используется по умолчанию.|  
 |`Name`|Имя кэша.|  
-|`PhysicalMemoryLimitPercentage`|Целочисленное значение от 0 до 100, которое указывает максимальный процент физической памяти компьютера, который может потребляться кэшем. Значение по умолчанию — 0. Это означает, <xref:System.Runtime.Caching.MemoryCache> что по умолчанию используется эвристика автоопределения размеров класса.|  
-|`PollingInterval`|Значение, указывающее интервал, по истечении которого реализация кэша сравнивает текущую загрузку памяти с абсолютными и процентными ограничениями по памяти, заданными для данного экземпляра кэша. Это значение указывается в формате "чч: мм: СС".|  
+|`PhysicalMemoryLimitPercentage`|Значение всей доли от 0 до 100, которое определяет максимальный процент физически установленной памяти компьютера, который может быть использован кэшем. Значение по умолчанию составляет 0, что означает, что аупизилистика <xref:System.Runtime.Caching.MemoryCache> класса используется по умолчанию.|  
+|`PollingInterval`|Значение, указывающее интервал, по истечении которого реализация кэша сравнивает текущую загрузку памяти с абсолютными и процентными ограничениями по памяти, заданными для данного экземпляра кэша. Это значение вводится в формате "HH:MM:SS".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  `None`  
@@ -52,13 +52,13 @@ ms.locfileid: "70252892"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<namedCaches>](namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для именованных <xref:System.Runtime.Caching.MemoryCache> экземпляров.|  
+|[\<имени Кэшес>](namedcaches-element-cache-settings.md)|Содержит набор параметров конфигурации <xref:System.Runtime.Caching.MemoryCache> для названных экземпляров.|  
   
-## <a name="remarks"></a>Примечания  
- Элемент добавляет запись `namedCaches` в коллекцию для кэша памяти. `add` Элемент [clear](clear-element-for-namedcaches.md) можно использовать перед тем, как использовать `add` элемент, чтобы убедиться в отсутствии других именованных кэшей в коллекции. Этот элемент можно использовать в файле Machine. config и в файле Web. config.  
+## <a name="remarks"></a>Remarks  
+ Элемент `add` добавляет запись в `namedCaches` коллекцию для кэша памяти. Вы можете использовать [четкий](clear-element-for-namedcaches.md) элемент, прежде чем использовать `add` элемент, чтобы быть уверенным, что в коллекции нет других названных кэшов. Этот элемент может быть использован в файле machine.config и в файле Web.config.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как определить параметры для записи `namedCache` `namedCaches` по умолчанию в коллекцию для кэша памяти.  
+ В следующем примере показано, как `namedCache` определить параметры `namedCaches` для входа по умолчанию в коллекцию для кэша памяти.  
   
 ```xml  
 <configuration>  
@@ -66,8 +66,8 @@ ms.locfileid: "70252892"
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="Default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="Default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -77,6 +77,6 @@ ms.locfileid: "70252892"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [\<Элемент > Намедкачес (параметры кэша)](namedcaches-element-cache-settings.md)
+- [\<имени Кэши> элемент (Настройки кэша)](namedcaches-element-cache-settings.md)

@@ -1,5 +1,5 @@
 ---
-title: XpsDocumentWriter. raise__WritingCompleted, метод (System. Windows. XPS)
+title: Метод XpsDocumentWriter.raise__WritingCompleted (System.Windows.Xps)
 TOCTitle: raise__WritingCompleted Method
 ms.date: 12/12/2007
 api_location:
@@ -10,21 +10,21 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 642c7188b135427bc7fe32260802f47517d93350
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5d4c11b20624b543ee5c366f5da15afb573fb22d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72525061"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155678"
 ---
-# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>Метод \_ \_WritingCompleted XpsDocumentWriter. Raise
+# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter.raise\_\_WritingЗавершенный метод
 
 Вызывает событие <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted>.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```csharp
-public void raise__WritingCompleted (object value0, 
+public void raise__WritingCompleted (object value0,
   System.Windows.Documents.Serialization.WritingCompletedEventArgs value1);
 ```
 
@@ -38,8 +38,8 @@ public void raise__WritingCompleted (object value0,
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Windows.Xps>
+**Пространство имен:**<xref:System.Windows.Xps>
 
-**Сборка:** System. Printing (в System. Printing. dll)
+**Сборка:** System.Printing (в системе.printing.dll)
 
-**.NET Framework версии:** 3,0
+**Рамочные версии .NET:** 3.0

@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: dc417300eb6f62b89a1c07a4f2291b7366e410b1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4e4887b73a517c2241cbe84b55909817e2e30a5d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716553"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144777"
 ---
 # <a name="default-nettcpbinding"></a>Привязка NetTcpBinding по умолчанию
-В этом образце демонстрируется использование привязки <xref:System.ServiceModel.NetTcpBinding>. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) , который реализует службу калькулятора. В этом образце служба является резидентной. И клиент, и служба являются консольными приложениями.  
+В этом образце демонстрируется использование привязки <xref:System.ServiceModel.NetTcpBinding>. Этот пример основан на [getting Started,](../../../../docs/framework/wcf/samples/getting-started-sample.md) который реализует услугу калькулятора. В этом образце служба является резидентной. И клиент, и служба являются консольными приложениями.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- Привязка задается в файлах конфигурации для клиента и службы. Тип привязки указывается в атрибуте `binding` элемента [> конечной точки\<](../../configure-apps/file-schema/wcf/endpoint-element.md) , как показано в следующем примере конфигурации.  
+ Привязка задается в файлах конфигурации для клиента и службы. Тип связывания указан `binding` в атрибуте [ \<конечной точки>](../../configure-apps/file-schema/wcf/endpoint-element.md) элемента, как показано в следующей конфигурации образца.  
   
 ```xml  
 <endpoint address=""  
@@ -43,7 +43,7 @@ ms.locfileid: "74716553"
     ...  
     <endpoint address=""  
               binding="netTcpBinding"  
-              bindingConfiguration="Binding1"   
+              bindingConfiguration="Binding1"
               contract="Microsoft.ServiceModel.Samples.ICalculator" />  
     ...  
   </service>  
@@ -51,26 +51,26 @@ ms.locfileid: "74716553"
   
 <bindings>  
   <netTcpBinding>  
-    <binding name="Binding1"   
+    <binding name="Binding1"
              closeTimeout="00:01:00"  
-             openTimeout="00:01:00"   
-             receiveTimeout="00:10:00"   
+             openTimeout="00:01:00"
+             receiveTimeout="00:10:00"
              sendTimeout="00:01:00"  
-             transactionFlow="false"   
-             transferMode="Buffered"   
+             transactionFlow="false"
+             transferMode="Buffered"
              transactionProtocol="OleTransactions"  
-             hostNameComparisonMode="StrongWildcard"   
+             hostNameComparisonMode="StrongWildcard"
              listenBacklog="10"  
-             maxBufferPoolSize="524288"   
-             maxBufferSize="65536"   
+             maxBufferPoolSize="524288"
+             maxBufferSize="65536"
              maxConnections="10"  
              maxReceivedMessageSize="65536">  
-      <readerQuotas maxDepth="32"   
-                    maxStringContentLength="8192"   
+      <readerQuotas maxDepth="32"
+                    maxStringContentLength="8192"
                     maxArrayLength="16384"  
-                    maxBytesPerRead="4096"   
+                    maxBytesPerRead="4096"
                     maxNameTableCharCount="16384" />  
-      <reliableSession ordered="true"   
+      <reliableSession ordered="true"
                        inactivityTimeout="00:10:00"  
                        enabled="false" />  
       <security mode="Transport">  
@@ -94,17 +94,17 @@ Press ENTER to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Установите ASP.NET 4,0 с помощью следующей команды.  
+1. Установите ASP.NET 4.0 с помощью следующей команды.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 3. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
     > [!NOTE]
     > Поскольку сервер является резидентным, чтобы выполнить образец на нескольких компьютерах, необходимо указать удостоверение в файле App.config клиента.  
@@ -112,8 +112,8 @@ Press ENTER to terminate client.
     ```xml  
     <client>  
       <endpoint name=""  
-          address="net.tcp://servername:9000/servicemodelsamples/service"   
-          binding="netTcpBinding"   
+          address="net.tcp://servername:9000/servicemodelsamples/service"
+          binding="netTcpBinding"
           contract="Microsoft.ServiceModel.Samples.ICalculator">  
             <identity>  
               <userPrincipalName value = "user_name@service_domain"/>  

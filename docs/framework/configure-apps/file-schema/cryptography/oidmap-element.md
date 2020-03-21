@@ -8,25 +8,25 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 5f055d6e665f68586191ab760fb5658eeb5c2cb2
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: a28eaf68fe1e6ab3f26592eee5ae2d0f2e7a3256
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087985"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155171"
 ---
-# <a name="oidmap-element"></a>\<Оидмап > элемент
-Содержит сопоставления идентификатора объекта (OID) ASN. 1 для классов.  
+# <a name="oidmap-element"></a>\<oidMap> Элемент
+Содержит отображение идентификатора объектов ASN.1 (OID) для классов.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> mscorlib**](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<криптографисеттингс >** ](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<оидмап >**
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<мскориб>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<криптографияНастройки>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidMap>**
 
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<oidMap>   
+<oidMap>
 </oidMap>  
 ```  
   
@@ -34,13 +34,13 @@ ms.locfileid: "74087985"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Оидентри >](oidentry-element.md)|Сопоставляет идентификатор объекта ASN. 1 с понятным именем.|  
+|[\<oidEntry>](oidentry-element.md)|Карты ASN.1 OID с дружественным именем.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -48,10 +48,10 @@ ms.locfileid: "74087985"
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`cryptographySettings`|Содержит параметры шифрования.|  
-|`mscorlib`|Содержит элемент `cryptographySettings`.|  
+|`mscorlib`|Содержит `cryptographySettings` элемент.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать элемент **\<оидмап >** для включения сопоставления OID для алгоритма хэширования RIPEMD-160 к реализации этого хэш-алгоритма.  
+ Ниже приводится, как использовать ** \<элемент oidMap>** содержать отображение OID для алгоритма хэша RIPEMD-160 для реализации этого хэш-алгоритма.  
   
 ```xml  
 <configuration>  
@@ -73,10 +73,10 @@ ms.locfileid: "74087985"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Схема файла конфигурации](../index.md)
-- [Схема параметров шифрования](index.md)
-- [Службы криптографии](../../../../standard/security/cryptographic-services.md)
+- [Схема конфигурации файлов](../index.md)
+- [Криптография Настройки Схема](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [Настройка криптографических классов](../../configure-cryptography-classes.md)
 - [Отображение идентификаторов объектов на криптографические алгоритмы](../../map-object-identifiers-to-cryptography-algorithms.md)

@@ -2,15 +2,15 @@
 title: Действия коллекции в WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5935b569bc46a6f38a7158049336f1e57fd8b0e5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935457"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143152"
 ---
 # <a name="collection-activities-in-wf"></a>Действия коллекции в WF
-Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции. `ExistsInCollection`и `RemoveFromCollection` имеюттип<xref:System.Boolean>,которыйуказываетрезультат. <xref:System.Activities.OutArgument%601>  
+Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции. `ExistsInCollection`и `RemoveFromCollection` имеют <xref:System.Activities.OutArgument%601> тип, <xref:System.Boolean>который указывает на результат.  
   
 > [!IMPORTANT]
 > Если действие коллекции выполняется до задания базового объекта коллекции, то формируется исключение <xref:System.InvalidOperationException> и действие завершается ошибкой.  
@@ -43,7 +43,7 @@ Activity wf = new Sequence
 {  
     Variables = { fruitList, result },  
   
-    Activities =   
+    Activities =
     {  
         new If  
         {  
@@ -243,7 +243,7 @@ Activity wf = new Sequence
 {  
     Variables = { fruitList, result },  
   
-    Activities =   
+    Activities =
     {  
         new If  
         {  
@@ -425,6 +425,6 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Разработка рабочих процессов, действий и выражений с использованием императивного кода](authoring-workflows-activities-and-expressions-using-imperative-code.md)

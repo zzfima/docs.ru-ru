@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00b467836d8e60aeee51a010a6384abf7dd73c56
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746767"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141852"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms
-Элемент управления <xref:System.Windows.Forms.CheckBox> Windows Forms используется для предоставления пользователям значения true/false или да/нет. При выборе элемента управления отображается галочка.  
+Элемент управления <xref:System.Windows.Forms.CheckBox> Windows Forms используется для предоставления пользователям true/False или Да/Нет опций. Элемент управления отображает контрольную отметку при выборе.  
   
-### <a name="to-set-options-with-checkbox-controls"></a>Задание параметров с помощью элементов управления CheckBox  
+### <a name="to-set-options-with-checkbox-controls"></a>Установить параметры с помощью элементов управления CheckBox  
   
-1. Проверьте значение свойства <xref:System.Windows.Forms.CheckBox.Checked%2A>, чтобы определить его состояние, и используйте это значение для установки параметра.  
+1. Изучите значение <xref:System.Windows.Forms.CheckBox.Checked%2A> свойства, чтобы определить его состояние, и используйте это значение для установки опции.  
   
-     В приведенном ниже примере кода при возникновении события <xref:System.Windows.Forms.CheckBox.CheckedChanged> элемента управления <xref:System.Windows.Forms.CheckBox> свойство формы <xref:System.Windows.Forms.Control.AllowDrop%2A> устанавливается в значение `false`, если установлен флажок. Это полезно в ситуациях, когда требуется ограничить взаимодействие с пользователем.  
+     В приведенном ниже примере кода <xref:System.Windows.Forms.CheckBox.CheckedChanged> при поднятии события <xref:System.Windows.Forms.Control.AllowDrop%2A> <xref:System.Windows.Forms.CheckBox> элемента `false` управления свойство формы устанавливается в случае проверки флажка. Это полезно для ситуаций, когда требуется ограничить взаимодействие с пользователем.  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -43,7 +43,7 @@ ms.locfileid: "76746767"
     private void checkBox1_CheckedChanged(object sender, System.EventArgs e)  
     {  
        // Determine the CheckState of the check box.  
-       if (checkBox1.CheckState == CheckState.Checked)   
+       if (checkBox1.CheckState == CheckState.Checked)
        {  
           // If checked, do not allow items to be dragged onto the form.  
           this.AllowDrop = false;  
@@ -57,7 +57,7 @@ ms.locfileid: "76746767"
           System::EventArgs ^ e)  
        {  
           // Determine the CheckState of the check box.  
-          if (checkBox1->CheckState == CheckState::Checked)   
+          if (checkBox1->CheckState == CheckState::Checked)
           {  
              // If checked, do not allow items to be dragged onto the form.  
              this->AllowDrop = false;  
@@ -70,4 +70,4 @@ ms.locfileid: "76746767"
 - <xref:System.Windows.Forms.CheckBox>
 - [Общие сведения об элементе управления CheckBox](checkbox-control-overview-windows-forms.md)
 - [Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [Элемент управления CheckBox](checkbox-control-windows-forms.md)
+- [Контроль checkBox](checkbox-control-windows-forms.md)

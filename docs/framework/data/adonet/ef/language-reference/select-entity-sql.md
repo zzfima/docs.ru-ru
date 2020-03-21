@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 4142dca604c0f6dd521f45a8cadd26b9574000f0
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: de6c497e7d781d705c68092e4a13ee07b727b2b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319367"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149913"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Указывает элементы, возвращаемые запросом.  
@@ -15,7 +15,7 @@ ms.locfileid: "72319367"
 ## <a name="syntax"></a>Синтаксис  
   
 ```sql  
-SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr   
+SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr
       [{ , aliasedExpr }] FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause ]  
 -- or  
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
@@ -23,29 +23,29 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
   
 ## <a name="arguments"></a>Аргументы  
  ALL  
- Указывает на то, что в результирующем наборе могут появляться повторяющиеся элементы. ALL является значением по умолчанию.  
+ Указывает на то, что в результирующем наборе могут появляться повторяющиеся элементы. ALL является параметром по умолчанию.  
   
  DISTINCT  
  Указывает, что в результирующем наборе возвращаются только уникальные результаты.  
   
- VALUE  
+ Значение  
  Позволяет указать только один элемент и не добавляет оболочку строк.  
   
  `topSubclause`  
  Любое допустимое выражение, указывающее число первых результатов, возвращаемых запросом, в формате `top(expr)`.  
   
- Параметр LIMIT оператора [ORDER BY](order-by-entity-sql.md) также позволяет выбрать первые n элементов в результирующем наборе.  
+ Параметр LIMIT оператора [ORDER BY](order-by-entity-sql.md) также позволяет выбрать первые n элементы в наборе результатов.  
   
  `aliasedExpr`  
  Выражение в следующем формате.  
   
- `expr` как `identifier` &#124; `expr`  
+ `expr`как `identifier` &#124;`expr`  
   
  `expr`  
  Литерал или выражение.  
   
-## <a name="remarks"></a>Заметки  
- Предложение SELECT вычисляется после вычисления предложений [from](from-entity-sql.md), [Group By](group-by-entity-sql.md)и [HAVING](having-entity-sql.md) . В предложении SELECT могут быть указаны только те элементы, которые в настоящий момент находящиеся в области (из предложения FROM, из внешних областей). Если указано предложение GROUP BY, то предложение SELECT может ссылаться только на псевдонимы для ключей GROUP BY. Обращение к элементам предложения FROM допустимо только в агрегатных функциях.  
+## <a name="remarks"></a>Remarks  
+ Положение SELECT оценивается после оценки положений [FROM,](from-entity-sql.md) [GROUP BY](group-by-entity-sql.md)и [HAVING.](having-entity-sql.md) В предложении SELECT могут быть указаны только те элементы, которые в настоящий момент находящиеся в области (из предложения FROM, из внешних областей). Если указано предложение GROUP BY, то предложение SELECT может ссылаться только на псевдонимы для ключей GROUP BY. Обращение к элементам предложения FROM допустимо только в агрегатных функциях.  
   
  Список, содержащий одно или более выражений запросов, следующих за ключевым словом SELECT, называется списком выбора, или более формально - проекцией. Наиболее распространенная форма проекции - единственное выражение запроса. Если выбрать элемент `member1` из коллекции `collection1`, то будет подготовлена новая коллекция всех значений `member1` для каждого объекта в `collection1`, как показано в следующем примере.  
   
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  Можно также воспользоваться синтаксисом JOIN (FULL, INNER, LEFT, OUTER, ON и RIGHT). ON требуется для внутренних соединений и недопустим для перекрестных соединений.  
   
 ## <a name="row-and-value-select-clauses"></a>Предложения выбора строк и значений  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает два варианта предложения SELECT. Первый вариант, строка Select, определяется с помощью ключевого слова SELECT и может использоваться для указания одного или нескольких значений, которые должны быть выбраны для проецирования. Поскольку оболочка строк неявно добавляется вокруг возвращаемых значений, результатом выражения запроса всегда является мультинабор строк.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает два варианта предложения SELECT. Первый вариант, выбранный строкой, идентифицируется по ключевому слову SELECT и может использоваться для указания одного или нескольких значений, которые должны быть проецированы. Поскольку обертка строки неявно добавляется вокруг возвращенных значений, результатом выражения запроса всегда является многообразие строк.  
   
  Для каждого выражения запроса в выборе строки должен быть указан псевдоним. Если псевдоним не указан, то[!INCLUDE[esql](../../../../../../includes/esql-md.md)] пытается создать его на основе правил создания псевдонимов.  
   
@@ -72,7 +72,7 @@ SELECT customers.Name FROM customers AS c
   
 ```sql  
 SELECT 1 AS a, "abc" AS b FROM C  
-SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
+SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ```  
   
 ## <a name="all-and-distinct-modifiers"></a>Модификаторы All и Distinct  
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- Предыдущее выражение запроса Transact-SQL выражается в [!INCLUDE[esql](../../../../../../includes/esql-md.md)] следующим образом.  
+ Предыдущее выражение запроса Transact-S'L выражается [!INCLUDE[esql](../../../../../../includes/esql-md.md)] следующим образом.  
   
 ```sql  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
@@ -100,8 +100,8 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
  [!code-sql[DP EntityServices Concepts#LESS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#less)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Выражения запросов](query-expressions-entity-sql.md)
 - [Справочник по Entity SQL](entity-sql-reference.md)
-- [TOP](top-entity-sql.md)
+- [Вверх](top-entity-sql.md)

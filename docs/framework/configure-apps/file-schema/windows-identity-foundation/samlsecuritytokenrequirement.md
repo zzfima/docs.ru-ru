@@ -3,22 +3,22 @@ title: <samlSecurityTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
 author: BrucePerlerMS
-ms.openlocfilehash: cab7572518a7a6dc26f8bbcf67cd424fa1c01085
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b27f337189a7d0b66ffd38e032b5eb864e5094a1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251899"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152636"
 ---
 # <a name="samlsecuritytokenrequirement"></a>\<samlSecurityTokenRequirement>
-Предоставляет конфигурацию для <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> класса <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , класса или производного класса любого из этих классов. Представляется <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> классом.  
+Обеспечивает конфигурацию <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> для <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> класса, класса или производного класса любого из этих классов. Представлено классом. <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. identityModel**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Добавить >** ](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<samlSecurityTokenRequirement >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityМодель>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<идентичностьНастройка>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<добавить>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<samlSecurityTokenRequirement>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -27,7 +27,7 @@ ms.locfileid: "70251899"
   <identityConfiguration>  
     <securityTokenHandlers>  
       <add>  
-        <samlSecurityTokenRequirement   
+        <samlSecurityTokenRequirement
             issuerCertificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
             issuerCertificateRevocationMode="NoCheck||Offline||Online"  
             issuerCertificateTrustedStoreLocation="CurrentLocation||LocalMachine"  
@@ -47,29 +47,29 @@ ms.locfileid: "70251899"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|mapToWindows|Указывает, должен ли обработчик маркера сопоставлять проверяющий токен с учетной записью Windows, используя входящее утверждение имени участника-пользователя. Значение по умолчанию — false.|  
-|иссуерцертификатеревокатионмоде|Значение <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> типа, указывающее режим отзыва, используемый для сертификата X. 509. Значение по умолчанию — "Online".|  
-|иссуерцертификатевалидатионмоде|Значение <xref:System.ServiceModel.Security.X509CertificateValidationMode> типа, указывающее режим проверки, используемый для сертификата X. 509. Значение по умолчанию — "PeerOrChainTrust".|  
-|иссуерцертификатетрустедсторелокатион|Значение <xref:System.Security.Cryptography.X509Certificates.StoreLocation> типа, указывающее хранилище сертификатов X. 509. Значение по умолчанию — LocalMachine.|  
-|иссуерцертификатевалидатор|Пользовательский тип, производный от <xref:System.IdentityModel.Selectors.X509CertificateValidator>. `issuerCertificateValidationMode` Если атрибут имеет значение Custom, для проверки сертификата издателя используется экземпляр этого типа.|  
+|mapToWindows|Уточняется, следует ли обработчику маркеров отображения токена проверки в учетную запись Windows с помощью входящего требования UPN. Значение по умолчанию — «false».|  
+|эмитентCertificateRevocationMode|Значение, <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> оговариваев режим отзыва для использования для сертификата X.509. Значение по умолчанию "Онлайн".|  
+|issuerCertificateValidationMode|Значение, <xref:System.ServiceModel.Security.X509CertificateValidationMode> опознавававававрежим проверки для использования для сертификата X.509. Значение по умолчанию — «PeerOrChainTrust».|  
+|issuerCertificateTrustedStoreLocation|Значение, <xref:System.Security.Cryptography.X509Certificates.StoreLocation> опоедая магазин сертификатов X.509. Значение по умолчанию — «LocalMachine».|  
+|эмитентCertificateValidator|Пользовательский тип, который <xref:System.IdentityModel.Selectors.X509CertificateValidator>происходит от . Если `issuerCertificateValidationMode` атрибут является "Custom", экземпляр этого типа используется для проверки сертификата эмитента.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Намеклаимтипе >](nameclaimtype.md)|Задает тип утверждения, указывающий <xref:System.Security.Principal.IIdentity.Name%2A> свойство.|  
-|[\<Ролеклаимтипе >](roleclaimtype.md)|Указывает тип утверждения, определяющего утверждения типа роли в коллекции <xref:System.Security.Claims.ClaimsIdentity> объектов, возвращаемых <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> методом обработчика маркеров.|  
+|[\<nameClaimType>](nameclaimtype.md)|Устанавливает тип претензии, который <xref:System.Security.Principal.IIdentity.Name%2A> определяет свойство.|  
+|[\<roleClaimType>](roleclaimtype.md)|Определяет тип претензии, определяющий требования типа роли <xref:System.Security.Claims.ClaimsIdentity> в сборе <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> объектов, возвращенных методом обработчика маркеров.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](add.md)|Добавляет указанный обработчик маркеров безопасности в коллекцию обработчиков маркеров.|  
+|[\<добавить>](add.md)|Добавляет указанный обработчик маркеров безопасности в коллекцию обработчика маркеров.|  
   
-## <a name="remarks"></a>Примечания  
- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> `SamlSecurityTokenRequirement` Элемент представлен <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> классом в объектной модели и используется для настройки свойства в или. `<samlSecurityTokenRequirement>`  
+## <a name="remarks"></a>Remarks  
+ Элемент `<samlSecurityTokenRequirement>` представлен <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> классом в модели объекта и используется для `SamlSecurityTokenRequirement` настройки <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> свойства <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>на или .  
   
 ## <a name="example"></a>Пример  
   

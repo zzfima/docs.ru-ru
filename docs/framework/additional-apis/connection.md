@@ -1,5 +1,5 @@
 ---
-title: Класс Connection (System.Net)
+title: Класс подключения (System.Net)
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -11,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: e9e0f4eed5eb4a7efd27177ab65551afa87fb7f6
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: dc0a594f7ae2bb9fc1883ec7ef672805bbc08778
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215093"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156185"
 ---
 # <a name="connection-class"></a>Класс Connection
 
-Класс `Connection` анализирует ответы сервера, запросы очереди и конвейерные запросы.
+Класс `Connection` разбирает ответы сервера, запросы очередей и конвейерные запросы.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -29,14 +29,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> Класс `Connection` является внутренним и не предназначен для непосредственного использования в коде.
-> 
-> Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.
+> Класс `Connection` является внутренним и не предназначен для использования непосредственно в коде.
+>
+> Корпорация Майкрософт ни при каких обстоятельствах не поддерживает использование этого класса в производственном приложении.
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Net>
+**Пространство имен:**<xref:System.Net>
 
-**Сборка:** Система (в System. dll)
+**Сборка:** Система (в System.dll)
 
-**.NET Framework версии:** Доступно с 2,0.
+**Рамочные версии .NET:** Доступно с 2.0.

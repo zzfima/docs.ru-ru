@@ -2,12 +2,12 @@
 title: Образец обнаружения рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: eafe031b71836eae8de5ce15cd669459c866e89f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: b3a2d88028f3854746d4e1d2fad80aae4f6be7be
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094765"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143490"
 ---
 # <a name="workflow-discovery-sample"></a>Образец обнаружения рабочего процесса
 В этом образце показано, как сделать службу рабочего процесса обнаруживаемой, а также как создать настраиваемое действие кода, используемое для поиска определенной службы.  
@@ -20,15 +20,15 @@ ms.locfileid: "77094765"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. В этом примере используются конечные точки HTTP, для выполнения которых должны быть нужны соответствующие списки ACL URL-адресов (см. Дополнительные сведения о [настройке HTTP и HTTPS](../feature-details/configuring-http-and-https.md) ). Нужные списки управления доступом будут добавлены после выполнения следующей команды в командной строке с повышенными привилегиями. Если оболочке не понимает формат переменной, замените домен и имя пользователя следующими аргументами.  
+1. В этом примере используются конечные точки HTTP, которые должны иметь надлежащие URL-аКЛ для запуска (подробнее см. [Настройка HTTP и HTTPS).](../feature-details/configuring-http-and-https.md) Нужные списки управления доступом будут добавлены после выполнения следующей команды в командной строке с повышенными привилегиями. Если оболочка не понимает переменный формат, замените домен и имя пользователя для следующих аргументов.  
   
-     **netsh http add urlacl URL =http://+:8000/ пользователь =% домен%\\% UserName%**  
+     **netsh http добавить urlacl URL'user'%DOMAIN%http://+:8000/ \\%UserName%**  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\WorkflowDiscovery`

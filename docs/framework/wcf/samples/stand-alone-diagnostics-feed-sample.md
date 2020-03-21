@@ -2,17 +2,17 @@
 title: Пример автономного веб-канала диагностики
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 4520883b5db19c28544a5576ca600b83e37eede3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 29d8caee48925040db9f1812f015870e3a1272bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787930"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144010"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Пример автономного веб-канала диагностики
-В этом примере показано, как создать канал RSS/Atom для синдикации с помощью Windows Communication Foundation (WCF). Это базовая программа "Hello World", которая показывает основы объектной модели и способ ее настройки в службе Windows Communication Foundation (WCF).  
+В этом примере показано, как создать канал RSS/Atom для синдикации с Фондом связи Windows (WCF). Это основная программа "Hello World", которая показывает основы модели объекта и как настроить ее на службу Windows Communication Foundation (WCF).  
   
- WCF моделирует веб-каналы синдикации как операции службы, возвращающие Специальный тип данных <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Экземпляры <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> могут сериализовать веб-канал в форматы RSS 2.0 и Atom 1.0. В следующем примере кода показан использованный контракт.  
+ WCF моделирует синдикации каналов в качестве <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>сервисных операций, которые возвращают специальный тип данных, . Экземпляры <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> могут сериализовать веб-канал в форматы RSS 2.0 и Atom 1.0. В следующем примере кода показан использованный контракт.  
   
 ```csharp  
 [ServiceContract(Namespace = "")]  
@@ -24,7 +24,7 @@ ms.locfileid: "76787930"
         //(the part of the request URI after the endpoint address)  
         //using the HTTP GET method. The UriTemplate specifies a relative  
         //path of 'feed', and specifies that the format is  
-        //supplied using a query string.   
+        //supplied using a query string.
         [WebGet(UriTemplate="feed?format={format}")]  
         [ServiceKnownType(typeof(Atom10FeedFormatter))]  
         [ServiceKnownType(typeof(Rss20FeedFormatter))]  
@@ -32,9 +32,9 @@ ms.locfileid: "76787930"
     }  
 ```  
   
- Операция `GetProcesses` замечается атрибутом <xref:System.ServiceModel.Web.WebGetAttribute>, который позволяет управлять тем, как WCF отправляет HTTP-запросы GET к операциям службы и определяет формат отправленных сообщений.  
+ Операция `GetProcesses` аннотирована атрибутом, <xref:System.ServiceModel.Web.WebGetAttribute> который позволяет контролировать, как WCF отправляет запросы HTTP GET на обслуживание операций и указать формат отправленных сообщений.  
   
- Как и любая служба WCF, веб-каналы синдикации могут размещаться в любом управляемом приложении. Для правильной работы служб синдикации требуются особая привязка (<xref:System.ServiceModel.WebHttpBinding>) и специальное поведение конечной точки (<xref:System.ServiceModel.Description.WebHttpBehavior>). Новый класс <xref:System.ServiceModel.Web.WebServiceHost> обеспечивает удобный программный интерфейс для создания таких конечных точек без особой конфигурации.  
+ Как и любая служба WCF, каналы синдикации могут быть самостоятельно размещены в любом управляемом приложении. Для правильной работы служб синдикации требуются особая привязка (<xref:System.ServiceModel.WebHttpBinding>) и специальное поведение конечной точки (<xref:System.ServiceModel.Description.WebHttpBehavior>). Новый класс <xref:System.ServiceModel.Web.WebServiceHost> обеспечивает удобный программный интерфейс для создания таких конечных точек без особой конфигурации.  
   
 ```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -49,9 +49,9 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
 ```
   
- Поскольку эта служба получает запросы с использованием стандартного метода HTTP GET, для доступа к службе можно использовать любой клиент, поддерживающий RSS или ATOM. Например, можно просмотреть выходные данные этой службы, перейдя к `http://localhost:8000/diagnostics/feed/?format=atom` или `http://localhost:8000/diagnostics/feed/?format=rss` в браузере, поддерживающем RSS.
+ Поскольку эта служба получает запросы с использованием стандартного метода HTTP GET, для доступа к службе можно использовать любой клиент, поддерживающий RSS или ATOM. Например, вы можете просмотреть выход этой службы, перемещаясь в браузер RSS-информацию `http://localhost:8000/diagnostics/feed/?format=atom` или `http://localhost:8000/diagnostics/feed/?format=rss` в нее.
   
- Вы также можете использовать [объектную модель синдикации WCF для сопоставления с Atom и RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) , чтобы считывать данные из синдикации и обрабатывать их с помощью императивного кода.  
+ Вы также можете использовать [как WCF Синдикации объект модели карты для atom и RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) для чтения синдицированных данных и обработки его с помощью императивного кода.  
   
 ```csharp
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
@@ -74,26 +74,26 @@ foreach (SyndicationItem i in feed.Items)
 }
 ```
   
-## <a name="set-up-build-and-run-the-sample"></a>Настройка, сборка и запуск примера
+## <a name="set-up-build-and-run-the-sample"></a>Настройка, создание и запуск образца
   
-1. Убедитесь, что у вас есть право на регистрацию адресов HTTP и HTTPS на компьютере, как описано в разделе Настройка инструкций в ходе [одноразовой настройки для Windows Communication Foundation примеров](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Убедитесь, что у вас есть правильное разрешение на регистрацию адреса для HTTP и HTTPS на компьютере, как это объясняется в инструкциях в [одноразовой настройке процедуры для образцов Фонда связи Windows.](one-time-setup-procedure-for-the-wcf-samples.md)
 
-2. Выполните сборку решения.
+2. Создайте решение.
 
 3. Запустите консольное приложение.
 
-4. Во время работы консольного приложения перейдите к `http://localhost:8000/diagnostics/feed/?format=atom` или `http://localhost:8000/diagnostics/feed/?format=rss` с помощью браузера, поддерживающего RSS.
+4. Во время работы консольного приложения перейдите к `http://localhost:8000/diagnostics/feed/?format=atom` браузеру, известному rsS, или `http://localhost:8000/diagnostics/feed/?format=rss` с помощью.
 
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Модель веб-программирования HTTP WCF](../feature-details/wcf-web-http-programming-model.md)
 - [Синдикация WCF](../feature-details/wcf-syndication.md)

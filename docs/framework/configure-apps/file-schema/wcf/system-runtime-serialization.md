@@ -2,18 +2,18 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: b67f51e634d1294830690dad8c8cffb1fc9a6cd2
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: c93a1f482882cc8cd9d229d82597efa64ba209bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399465"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152974"
 ---
-# <a name="systemruntimeserialization"></a>\<System. Runtime. Serialization >
+# <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 Представляет корневой элемент для раздела пространства имен <xref:System.Runtime.Serialization> и содержит элементы для установки параметров <xref:System.Runtime.Serialization.DataContractSerializer>.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. Runtime. Serialization >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.runtime.serialization>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,17 +44,16 @@ ms.locfileid: "70399465"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<dataContractSerializer >](datacontractserializer-of-system-runtime-serialization.md)|Включает добавление известных типов при десериализации.|  
+|[\<dataContractSerializer>](datacontractserializer-of-system-runtime-serialization.md)|Включает добавление известных типов при десериализации.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[Элемент \<configuration>](../configuration-element.md)|Элемент конфигурации верхнего уровня.|  
+|[\<конфигурация> Элемент](../configuration-element.md)|Элемент конфигурации верхнего уровня.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Runtime.Serialization>
 - [Использование контрактов данных](../../../wcf/feature-details/using-data-contracts.md)
 - [Известные типы контрактов данных](../../../wcf/feature-details/data-contract-known-types.md)
- 

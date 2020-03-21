@@ -1,5 +1,5 @@
 ---
-title: XpsDocumentWriter. raise__WritingCancelled, метод (System. Windows. XPS)
+title: Метод XpsDocumentWriter.raise__WritingCancelled (System.Windows.Xps)
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,21 +9,21 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 7c04533c56a8e88c88c3cea824b0437ae204bb52
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8cede25e9041d99ac3c601000e4afbef666a897c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72525055"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155727"
 ---
-# <a name="xpsdocumentwriterraise__writingcancelled-method"></a>Метод \_ \_WritingCancelled XpsDocumentWriter. Raise
+# <a name="xpsdocumentwriterraise__writingcancelled-method"></a>XpsDocumentWriter.raise\_\_WritingCancelled метод
 
 Вызывает событие <xref:System.Windows.Xps.XpsDocumentWriter.WritingCancelled>.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```csharp
-public void raise__WritingCancelled (object value0, 
+public void raise__WritingCancelled (object value0,
   System.Windows.Documents.Serialization.WritingCancelledEventArgs value1);
 ```
 
@@ -37,8 +37,8 @@ public void raise__WritingCancelled (object value0,
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Windows.Xps>
+**Пространство имен:**<xref:System.Windows.Xps>
 
-**Сборка:** System. Printing (в System. Printing. dll)
+**Сборка:** System.Printing (в системе.printing.dll)
 
-**.NET Framework версии:** 3,0
+**Рамочные версии .NET:** 3.0

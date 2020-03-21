@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 39a14a3df5059cc47cd4879e4d4ba351cc7b655b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741016"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156120"
 ---
 # <a name="coreresponsedata-class"></a>Класс CoreResponseData
 
-Класс `CoreResponseData` представляет синтаксический анализ заголовков HTTP и текста ответа.
+Класс `CoreResponseData` представляет разбор заголовков HTTP и органа реагирования.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Этот API является внутренним и не предназначен для непосредственного использования в коде. Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода. Ознакомьтесь с [руководством пользователя DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.
+> Этот API является внутренним и не предназначен для непосредственного использования в коде. Вместо этого следует <xref:System.Diagnostics.DiagnosticSource> использовать сетевой код. Смотрите [руководство DiagnosticSource пользователя](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
+> Корпорация Майкрософт ни при каких обстоятельствах не поддерживает использование этого класса в производственном приложении.
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Net>
+**Пространство имен:**<xref:System.Net>
 
-**Сборка:** Система (в System. dll)
+**Сборка:** Система (в System.dll)
 
-**.NET Framework версии:** Доступно с 2,0.
+**Рамочные версии .NET:** Доступно с 2.0.

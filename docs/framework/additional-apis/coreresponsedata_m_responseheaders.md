@@ -1,5 +1,5 @@
 ---
-title: Поле Коререспонседата. m_ResponseHeaders
+title: CoreResponseData.m_ResponseHeaders Поле
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 723df6dc2de978695608d106e3a01bde286fc4fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741005"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156107"
 ---
-# <a name="coreresponsedatam_responseheaders-field"></a>Коререспонседата. m\_поле ResponseHeaders
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData.m\_ResponseHeaders Field
 
-`CoreResponseData.m_ResponseHeaders` — это <xref:System.Net.WebHeaderCollection> заголовков, связанных с ответом сервера.
+`CoreResponseData.m_ResponseHeaders`— <xref:System.Net.WebHeaderCollection> это заголовки, связанные с ответом сервера.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Этот API не предназначен для непосредственного использования в коде. Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода. Ознакомьтесь с [руководством пользователя DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.
+> Этот API не предназначен для использования непосредственно в коде. Вместо этого следует <xref:System.Diagnostics.DiagnosticSource> использовать сетевой код. Смотрите [руководство DiagnosticSource пользователя](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
+> Корпорация Майкрософт ни при каких обстоятельствах не поддерживает использование этого класса в производственном приложении.
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Net>
+**Пространство имен:**<xref:System.Net>
 
-**Сборка:** Система (в System. dll)
+**Сборка:** Система (в System.dll)
 
-**.NET Framework версии:** Доступно с 2,0.
+**Рамочные версии .NET:** Доступно с 2.0.

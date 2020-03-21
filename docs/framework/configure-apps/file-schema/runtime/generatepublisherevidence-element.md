@@ -5,24 +5,24 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: b04ef53d6e9c3d954b0925ea8634b3d220b36af7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116577"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154118"
 ---
-# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > элемент
-Указывает, создает ли среда выполнения <xref:System.Security.Policy.Publisher> свидетельство для управления доступом для кода (CAS).  
+# <a name="generatepublisherevidence-element"></a>\<Элемент generatePublisherEvidence>
+Уточняется, создает <xref:System.Security.Policy.Publisher> ли время выполнения доказательства безопасности доступа к коду (CAS).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<генерироватьPublisherEvidence>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<generatePublisherEvidence    
+<generatePublisherEvidence
    enabled="true|false"/>  
 ```  
   
@@ -31,19 +31,19 @@ ms.locfileid: "73116577"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, создает ли среда выполнения <xref:System.Security.Policy.Publisher> свидетельство.|  
+|`enabled`|Обязательный атрибут.<br /><br /> Уточняется, создает <xref:System.Security.Policy.Publisher> ли время выполнения доказательства.|  
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|значения|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|`false`|Не создает <xref:System.Security.Policy.Publisher> свидетельство.|  
-|`true`|Создает <xref:System.Security.Policy.Publisher> свидетельство. Это значение по умолчанию.|  
+|`false`|Не создает <xref:System.Security.Policy.Publisher> доказательств.|  
+|`true`|Создает <xref:System.Security.Policy.Publisher> доказательства. Это значение по умолчанию.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -52,21 +52,21 @@ ms.locfileid: "73116577"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
-> В .NET Framework 4 и более поздних версиях этот элемент не влияет на время загрузки сборки. Дополнительные сведения см. в разделе "упрощение политики безопасности" раздела [изменения в системе безопасности](../../../security/security-changes.md).  
+> В рамках .NET 4 и позже этот элемент не влияет на время сборки. Для получения дополнительной информации смотрите раздел "Упрощение политики [безопасности" в разделе "Изменения безопасности".](../../../security/security-changes.md)  
   
- Среда CLR пытается проверить подпись Authenticode во время загрузки, чтобы создать <xref:System.Security.Policy.Publisher> свидетельство для сборки. Однако по умолчанию большинству приложений не требуется <xref:System.Security.Policy.Publisher> свидетельство. Стандартная политика CAS не зависит от <xref:System.Security.Policy.PublisherMembershipCondition>. Следует избегать ненужных затрат на запуск, связанных с проверкой подписи издателя, если приложение не выполняется на компьютере с настраиваемой политикой CAS или планирует удовлетворить требования к <xref:System.Security.Permissions.PublisherIdentityPermission> в среде с частичным доверием. (Требования для разрешений идентификации всегда выполняются в среде с полным доверием.)  
+ Общее время выполнения языка (CLR) пытается проверить подпись Authenticode <xref:System.Security.Policy.Publisher> во время загрузки, чтобы создать улики для сборки. Однако по умолчанию большинству <xref:System.Security.Policy.Publisher> приложений не нужны доказательства. Стандартная политика CAS не <xref:System.Security.Policy.PublisherMembershipCondition>опирается на . Следует избегать ненужных затрат на запуск, связанных с проверкой подписи издателя, если приложение не <xref:System.Security.Permissions.PublisherIdentityPermission> выполняется на компьютере с пользовательской политикой CAS или не намерено удовлетворять требования в среде частичного доверия. (Требования к разрешению на идентификацию всегда удались в условиях полного доверия.)  
   
 > [!NOTE]
-> Для повышения производительности при запуске службы рекомендуется использовать элемент `<generatePublisherEvidence>`.  Использование этого элемента также может помочь избежать задержек, которые могут привести к превышению времени ожидания и отмене запуска службы.  
+> Мы рекомендуем службам `<generatePublisherEvidence>` использовать элемент для повышения производительности запуска.  Использование этого элемента также может помочь избежать задержек, которые могут привести к тайм-ауту и отмене запуска службы.  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
- Этот элемент может использоваться только в файле конфигурации приложения.  
+ Этот элемент может быть использован только в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать элемент `<generatePublisherEvidence>`, чтобы отключить проверку политики издателя CAS для приложения.  
+ Ниже приводится следующий `<generatePublisherEvidence>` пример, как использовать элемент для отсеивания проверки политики издателя CAS для приложения.  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ ms.locfileid: "73116577"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Схема параметров среды выполнения](index.md)
-- [Схема файла конфигурации](../index.md)
+- [Схема конфигурации файлов](../index.md)

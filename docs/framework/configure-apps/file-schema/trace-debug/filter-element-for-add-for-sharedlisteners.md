@@ -1,5 +1,5 @@
 ---
-title: Элемент <filter> для <add> для <sharedListeners>
+title: <filter>Элемент <add> для<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: e04ecd773bd6aa7791858711edbd72128dc391ea
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 6fb52cdfa5792ab6059b60d8dbb91c107cd666ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088882"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153457"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<> элемент фильтра для \<Добавить > для \<Шаредлистенерс >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<фильтр> \<элемент амва для добавления> для \<> общей слушателей
 Добавляет фильтр к прослушивателю в коллекции `sharedListeners`.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<шаредлистенерс >** ](sharedlisteners-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<добавление >** ](add-element-for-sharedlisteners.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<filter >**
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<общиеслушатели>**](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<добавить>**](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<фильтр>**
 
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<filter type="System.Diagnostics.EventTypeFilter"   
+<filter type="System.Diagnostics.EventTypeFilter"
   initializeData="Warning" />  
 ```  
   
@@ -38,13 +38,13 @@ ms.locfileid: "74088882"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|**type**|Обязательный атрибут.<br /><br /> Указывает тип фильтра. Можно использовать только полное имя типа (в формате свойства <xref:System.Type.FullName%2A?displayProperty=nameWithType>) или можно использовать полное имя типа, включая сведения о сборке (в формате свойства <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>). Сведения о создании полного имени типа см. в разделе [Указание полных имен типов](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**initializeData**|Необязательный атрибут.<br /><br /> Строка, передаваемая конструктору для указанного класса.|  
+|**тип**|Обязательный атрибут.<br /><br /> Определяет тип фильтра. Вы можете использовать только полное имя типа (в формате <xref:System.Type.FullName%2A?displayProperty=nameWithType> свойства), или вы можете использовать полностью квалифицированное имя типа, включая информацию о сборке (в формате <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> свойства). Для получения информации о создании полностью квалифицированного имени типа [см.](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)|  
+|**инициализацияДанны**|Необязательный атрибут.<br /><br /> Строка перешла к конструктору для указанного класса.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -52,16 +52,16 @@ ms.locfileid: "74088882"
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
-|`sharedListeners`|Коллекция прослушивателей, на которые может ссылаться любой источник или элемент трассировки.|  
-|`add`|Добавляет прослушиватель в коллекцию **шаредлистенерс** .|  
+|`sharedListeners`|Коллекция слушателей, на которую может ссылаться любой источник или элемент микро- информации.|  
+|`add`|Добавляет слушателя в коллекцию **sharedListeners.**|  
   
-## <a name="remarks"></a>Заметки  
- Если прослушиватель определен в элементе `<add>` элемента `<sharedListeners>`, то фильтр для этого прослушивателя должен быть определен в элементе `<filter>`, который является дочерним по отношению к элементу `<add>`.  
+## <a name="remarks"></a>Remarks  
+ Если слушатель определен в `<add>` элементе `<sharedListeners>` элемента, фильтр для этого слушателя `<filter>` должен быть определен `<add>` в элементе, который является ребенком элемента.  
   
- Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
+ Этот элемент может быть использован в файле конфигурации машины (Machine.config) и файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать элемент `<filter>` для добавления фильтра в прослушиватель трассировки `console` в коллекции `sharedListeners`.  
+ В следующем примере показано, как использовать `<filter>` элемент для `console` добавления фильтра к слушателю трассировки в коллекции. `sharedListeners`  
   
 ```xml  
 <configuration>  
@@ -75,9 +75,9 @@ ms.locfileid: "74088882"
       </source>  
     </sources>  
     <sharedListeners>  
-      <add name="console"   
+      <add name="console"
         type="System.Diagnostics.ConsoleTraceListener" >  
-        <filter type="System.Diagnostics.EventTypeFilter"   
+        <filter type="System.Diagnostics.EventTypeFilter"
           initializeData="Error" />  
       </add>  
     </sharedListeners>  
@@ -85,9 +85,9 @@ ms.locfileid: "74088882"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [Схема параметров трассировки и отладки](index.md)
+- [Схема настроек трассировки и отпараги](index.md)

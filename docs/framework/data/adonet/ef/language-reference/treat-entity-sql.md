@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 38099fa83ed78b40d46faeb5e617157f7aa7c1a1
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 06c4200434f443446e8981dcefe2baf43b1af4b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319265"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149899"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 Обрабатывает объект некоторого базового типа, как объект указанного производного типа.  
@@ -34,7 +34,7 @@ TREAT ( expression as type)
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение указанного типа данных.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
  Оператор TREAT предназначен для приведения связанных классов к базовому типу. Например, если тип `Employee` является производным от типа `Person` , а «p» относится к типу `Person`, то выражение `TREAT(p AS NamespaceName.Employee)` приводит общий экземпляр типа `Person` к типу `Employee`. Иными словами, он позволяет обрабатывать «p» как тип `Employee`.  
   
  Оператор TREAT используется в сценариях наследования, в которых можно выполнить запрос наподобие следующего.  
@@ -42,17 +42,17 @@ TREAT ( expression as type)
 ```sql  
 SELECT TREAT(p AS NamespaceName.Employee)  
 FROM ContainerName.Person AS p  
-WHERE p IS OF (NamespaceName.Employee)   
+WHERE p IS OF (NamespaceName.Employee)
 ```  
   
  Этот запрос приводит сущности `Person` к типу `Employee` . Если значение «p» фактически не относится к типу `Employee`, то выражение имеет значение `null`.  
   
 > [!NOTE]
-> Указанное выражение `Employee` должно быть подтипом указанного типа данных `Person`, либо тип данных должен быть подтипом выражения. В противном случае это выражение вызовет ошибку во время компиляции.  
+> Указанное `Employee` выражение должно быть подтипом `Person`указанного типа данных, или тип данных должен быть подтипом выражения. В противном случае это выражение вызовет ошибку во время компиляции.  
   
  Следующая таблица показывает, каким образом оператор TREAT работает с некоторыми стандартными и не очень часто используемыми конструкциями. Все исключения формируются на стороне клиента перед вызовом поставщика.  
   
-|Шаблон|Поведение|  
+|Модель|Поведение|  
 |-------------|--------------|  
 |`TREAT (null AS EntityType)`|Возвращает `DbNull`.|  
 |`TREAT (null AS ComplexType)`|Создает исключение.|  
@@ -66,7 +66,7 @@ WHERE p IS OF (NamespaceName.Employee)
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по Entity SQL](entity-sql-reference.md)
 - [Допускающие значения NULL структурированные типы](nullable-structured-types-entity-sql.md)

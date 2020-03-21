@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: 8667cffb032daf0043915d3bee7127ef9b70756b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 62a61051e5b9d896f8a89ed3d2745859fc07a7ec
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794517"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149262"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Выполнение пакетных операций с использованием объектов DataAdapters
 Поддержка пакетных операций в ADO.NET позволяет объекту <xref:System.Data.Common.DataAdapter> группировать операции INSERT, UPDATE и DELETE из <xref:System.Data.DataSet> или <xref:System.Data.DataTable> к серверу вместо отправки за один раз одной операции. Уменьшение числа двусторонних передач сигнала на сервер обычно приводит к значительному повышению производительности. Пакетные обновления поддерживаются для поставщиков .NET-данных для SQL Server (<xref:System.Data.SqlClient>) и Oracle (<xref:System.Data.OracleClient>).  
@@ -24,7 +24,7 @@ ms.locfileid: "70794517"
 ## <a name="using-the-updatebatchsize-property"></a>Использование свойства UpdateBatchSize  
  Если пакетные обновления включены, значение свойства <xref:System.Data.IDbCommand.UpdatedRowSource%2A> для `UpdateCommand`, `InsertCommand` и `DeleteCommand` объекта DataAdapter должно быть установлено в <xref:System.Data.UpdateRowSource.None> или <xref:System.Data.UpdateRowSource.OutputParameters>. При выполнении пакетного обновления значение свойства <xref:System.Data.IDbCommand.UpdatedRowSource%2A> команды для <xref:System.Data.UpdateRowSource.FirstReturnedRecord> или <xref:System.Data.UpdateRowSource.Both> недействительно.  
   
- Следующая процедура демонстрирует использование свойства `UpdateBatchSize`. <xref:System.Data.DataSet> Процедура принимает два аргумента — объект со столбцами, представляющими поля **ProductCategoryID** и **Name** в таблице **Production. ProductCategory** , и целое число, представляющее размер пакета (число строк в пакете). Код создает новый объект <xref:System.Data.SqlClient.SqlDataAdapter>, устанавливая его свойства <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> и <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. В коде предполагается, что объект <xref:System.Data.DataSet> имеет измененные строки. В нем устанавливается свойство `UpdateBatchSize` и выполняется обновление.  
+ Следующая процедура демонстрирует использование свойства `UpdateBatchSize`. Процедура занимает два <xref:System.Data.DataSet> аргумента: объект, представляющий столбцы, представляющие поля **ProductCategoryID** и **Name** в таблице **Production.ProductCategory,** и целый ряд, представляющий размер партии (количество строк в пакете). Код создает новый объект <xref:System.Data.SqlClient.SqlDataAdapter>, устанавливая его свойства <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> и <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. В коде предполагается, что объект <xref:System.Data.DataSet> имеет измененные строки. В нем устанавливается свойство `UpdateBatchSize` и выполняется обновление.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -82,7 +82,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
     string connectionString = GetConnectionString();  
   
     // Connect to the AdventureWorks database.  
-    using (SqlConnection connection = new   
+    using (SqlConnection connection = new
       SqlConnection(connectionString))  
     {  
   
@@ -92,19 +92,19 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         // Set the UPDATE command and parameters.  
         adapter.UpdateCommand = new SqlCommand(  
             "UPDATE Production.ProductCategory SET "  
-            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",   
+            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",
             connection);  
-        adapter.UpdateCommand.Parameters.Add("@Name",   
+        adapter.UpdateCommand.Parameters.Add("@Name",
            SqlDbType.NVarChar, 50, "Name");  
-        adapter.UpdateCommand.Parameters.Add("@ProdCatID",   
+        adapter.UpdateCommand.Parameters.Add("@ProdCatID",
            SqlDbType.Int, 4, "ProductCategoryID");  
          adapter.UpdateCommand.UpdatedRowSource = UpdateRowSource.None;  
   
         // Set the INSERT command and parameter.  
         adapter.InsertCommand = new SqlCommand(  
-            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",   
+            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",
             connection);  
-        adapter.InsertCommand.Parameters.Add("@Name",   
+        adapter.InsertCommand.Parameters.Add("@Name",
           SqlDbType.NVarChar, 50, "Name");  
         adapter.InsertCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -112,7 +112,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         adapter.DeleteCommand = new SqlCommand(  
             "DELETE FROM Production.ProductCategory "  
             + "WHERE ProductCategoryID=@ProdCatID;", connection);  
-        adapter.DeleteCommand.Parameters.Add("@ProdCatID",   
+        adapter.DeleteCommand.Parameters.Add("@ProdCatID",
           SqlDbType.Int, 4, "ProductCategoryID");  
         adapter.DeleteCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Обработка событий и ошибок, связанных с обновлением пакета  
- У **DataAdapter** есть два события, связанных с обновлением: **RowUpdating** и **RowUpdated**. В более ранних версиях ADO.NET, если пакетная обработка отключена, каждое из этих событий формируется для каждой обрабатываемой строки. **Событие RowUpdating** создается до выполнения обновления, а **событие RowUpdated** создается после завершения обновления базы данных.  
+ **DataAdapter** имеет два связанных с обновлениями события: **RowUpdating** и **RowUpdated**. В более ранних версиях ADO.NET, если пакетная обработка отключена, каждое из этих событий формируется для каждой обрабатываемой строки. **Строка** генерируется до начала обновления, а **RowUpdated** генерируется после завершения обновления базы данных.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Изменение поведения событий при пакетных обновлениях  
  Если пакетное обновление включено, несколько строк обновляются одной операцией базы данных. Поэтому для каждого пакета происходит только одно событие `RowUpdated`, в то время как событие `RowUpdating` происходит для каждой обрабатываемой строки. Если пакетное обновление отключено, два события инициируются с чередованием один к одному, где одно событие `RowUpdating` и одно событие `RowUpdated` инициируется для строки, а затем одно событие `RowUpdating` и одно событие `RowUpdated` инициируются для следующей строки, до тех пор пока не будут обработаны все строки.  
@@ -141,7 +141,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  Поставщик данных и сервер базы данных определяют, какие конструкции SQL поддерживаются для пакетного обновления. Если неподдерживаемая инструкция подается на выполнение, создается исключение.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Объекты DataAdapter и DataReader](dataadapters-and-datareaders.md)
 - [Обновление источников данных с объектами DataAdapter](updating-data-sources-with-dataadapters.md)

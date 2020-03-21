@@ -2,21 +2,21 @@
 title: Составление вложенных запросов Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: cd41c36853f50597a32d511d455148d649d9eb64
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6b2fc9a32fc30d205b9c33257bf98781cfa07499
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395558"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150393"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Составление вложенных запросов Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] - это богатый функциональный язык. Стандартный блок [!INCLUDE[esql](../../../../../../includes/esql-md.md)] является выражением. В отличие от обычного SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не ограничивается табличным результирующим набором: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает составление сложных выражений, которые могут иметь литералы, параметры или вложенные выражения. Значение в выражении может быть параметризовано или состоять из другого выражения.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] - это богатый функциональный язык. Строительный [!INCLUDE[esql](../../../../../../includes/esql-md.md)] блок является выражением. В отличие от [!INCLUDE[esql](../../../../../../includes/esql-md.md)] обычного S'L, не [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ограничивается таблочным набором результатов: поддерживает составление сложных выражений, которые могут иметь буквальные, параметры или вложенные выражения. Значение в выражении может быть параметризованным или состоять из другого выражения.  
   
 ## <a name="nested-expressions"></a>Вложенные выражения  
  Вложенное выражение можно разместить в любом месте, где допустим тип возвращаемого им значения. Пример:  
   
 ```sql  
--- Returns a hierarchical collection of three elements at top-level.   
+-- Returns a hierarchical collection of three elements at top-level.
 -- x must be passed in the parameter collection.  
 ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})  
   
@@ -30,8 +30,8 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
 -- and a collection of references to its corresponding SalesOrderHeader entities.  
-SELECT address, (SELECT DEREF(soh)   
-                    FROM NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS soh)   
+SELECT address, (SELECT DEREF(soh)
+                    FROM NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
@@ -46,10 +46,10 @@ UNION ALL
 FROM … );  
 ```  
   
- В следующем примере показано, как правильно вкладывать выражения в [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [как упорядочить объединение двух запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
+ Следующий пример демонстрирует, как правильно [!INCLUDE[esql](../../../../../../includes/esql-md.md)]гнездить выражения в: [Как: Заказать Союз двух запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
 ## <a name="nested-queries-in-projection"></a>Вложенные запросы в проекции  
- Вложенные запросы в предложении проекции могут быть переведены в запросы декартового произведения на сервере. На некоторых внутренних серверах, в том числе SQL Server, это может привести к тому, что таблица TempDB будет иметь очень большой размер, что может негативно сказаться на производительности сервера.  
+ Вложенные запросы в предложении проекции могут быть переведены в запросы декартового произведения на сервере. На некоторых серверах бэкэнда, втомя, в том числе на сервере S'L Server, это может привести к тому, что таблица TempDB будет очень большой, что может негативно сказаться на производительности сервера.  
   
  Ниже приводится пример подобного запроса:  
   
@@ -75,6 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об Entity SQL](entity-sql-overview.md)

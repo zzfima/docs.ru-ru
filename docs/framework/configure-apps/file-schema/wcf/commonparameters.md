@@ -2,23 +2,23 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: ab21be7b5e2738ac6a7c9bea676d8180c69d1afd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73d8549f68e8ca77115619431c857c4a2aac3fdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968566"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153026"
 ---
-# <a name="commonparameters"></a>\<Общиепараметры >
+# <a name="commonparameters"></a>\<общиепараметры>
 Представляет коллекцию параметров, используемых глобально в нескольких службах. Эта коллекция, как правило, включает строку подключения базы данных, которая может совместно использоваться постоянными службами.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<поведения**](behaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**поведение**](behavior-of-servicebehaviors.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowRuntime >** ](workflowruntime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<общиепараметры >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceМодель>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<поведение>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<поведение>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<рабочий процессRuntime>**](workflowruntime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<общиепараметры>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,21 +35,21 @@ ms.locfileid: "73968566"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](add-of-commonparameters.md)|Добавляет в коллекцию пару общих параметров вида «имя-значение», используемых службами.|  
+|[\<добавить>](add-of-commonparameters.md)|Добавляет в коллекцию пару общих параметров вида «имя-значение», используемых службами.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<workflowRuntime >](workflowruntime.md)|Задает параметры для экземпляра <xref:System.Workflow.Runtime.WorkflowRuntime> для размещения служб Windows Communication Foundation на основе рабочего процесса (WCF).|  
+|[\<рабочий процессRuntime>](workflowruntime.md)|Определяет настройки для экземпляра <xref:System.Workflow.Runtime.WorkflowRuntime> услуг Windows Communication Foundation (WCF) на основе рабочего процесса.|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
  Элемент `<commonParameters>` определяет любые параметры, которые используются глобально несколькими службами, например `ConnectionString` при использовании <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
   
 > [!NOTE]
@@ -57,7 +57,7 @@ ms.locfileid: "73968566"
 
 ```xml  
 <add
-type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 
+type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
 ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />
 ```  
   
@@ -80,9 +80,9 @@ ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated
 </workflowRuntime>
 ```  
   
- Обратите внимание, что параметр `EnableRetries` может быть установлен либо на глобальном уровне (как показано в разделе *общиепараметры* ), либо в отдельных службах, поддерживающих `EnableRetries` (как показано в разделе *службы* ).  
+ Обратите `EnableRetries` внимание, что параметр может быть установлен либо на глобальном уровне (как показано в разделе *CommonParameters),* либо для отдельных служб, поддерживающих `EnableRetries` (как показано в разделе *Службы).*  
   
- В следующем примере кода показано, как программно изменить общие параметры:
+ Следующий пример кода показывает, как изменять общие параметры программно:
   
 ```csharp  
 Configuration config = WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");
@@ -92,7 +92,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- Дополнительные сведения об использовании файла конфигурации для управления поведением объекта <xref:System.Workflow.Runtime.WorkflowRuntime> Windows Workflow Foundation хост-приложения см. в разделе [файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
+ Для получения дополнительной информации об использовании <xref:System.Workflow.Runtime.WorkflowRuntime> файла конфигурации для управления поведением объекта приложения Windows Workflow Foundation [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))  
   
 ## <a name="example"></a>Пример  
   
@@ -105,12 +105,12 @@ config.Save();
 </commonParameters>
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
-- [Файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<add>](add-of-commonparameters.md)
+- [Файлы конфигурации рабочих процессов](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [\<добавить>](add-of-commonparameters.md)

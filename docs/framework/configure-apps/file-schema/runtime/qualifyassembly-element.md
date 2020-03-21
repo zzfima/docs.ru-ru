@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115788"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153923"
 ---
-# <a name="qualifyassembly-element"></a>\<qualifyAssembly > элемент
+# <a name="qualifyassembly-element"></a>\<квалификацияСборка> Элемент
 Задает полное имя сборки, которая должна загружаться динамически в случае использования неполного имени.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<сборкаОбязательная>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<квалификацияСобрание>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,13 +37,13 @@ ms.locfileid: "73115788"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|`partialName`|Обязательный атрибут.<br /><br /> Задает частичное имя сборки в том виде, в котором оно отображается в коде.|  
-|`fullName`|Обязательный атрибут.<br /><br /> Задает полное имя сборки в том виде, в каком оно отображается в глобальном кэше сборок.|  
+|`partialName`|Обязательный атрибут.<br /><br /> Определяет частичное название сборки по мере ее отослания в коде.|  
+|`fullName`|Обязательный атрибут.<br /><br /> Упоняет полное название сборки, как она появляется в глобальном кэше сборки.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -53,19 +53,19 @@ ms.locfileid: "73115788"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Заметки  
- Вызов метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> с использованием частичных имен сборок приводит к тому, что среда CLR ищет сборку только в базовом каталоге приложения. Используйте элемент **\<qualifyAssembly >** в файле конфигурации приложения, чтобы предоставить полные сведения о сборке (имя, версию, маркер открытого ключа и язык и региональные параметры) и заставить среду CLR искать сборку в глобальном кэш сборок.  
+## <a name="remarks"></a>Remarks  
+ Вызов <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> метода с использованием названий частичной сборки приводит к тому, что время выполнения общего языка будет искать сборку только в базовом каталоге приложения. Используйте ** \<элемент квалификационной сборки>** в файле конфигурации приложения, чтобы предоставить полную информацию о сборке (имя, версия, маркер общедоступного ключа и культуру) и вызвать время выполнения общего языка для поиска сборки в глобальном кэше сборки.  
   
- Атрибут **FullName** должен включать четыре поля удостоверения сборки: имя, версия, токен открытого ключа и язык и региональные параметры. Атрибут **партиалнаме** должен ссылаться на сборку частично. Необходимо указать по крайней мере текстовое имя сборки (наиболее распространенный случай), но можно также включить версию, токен открытого ключа или язык и региональные параметры (или любое сочетание четырех, но не все четыре). **Партиалнаме** должно соответствовать имени, указанному в вызове. Например, нельзя указать `"math"` в качестве атрибута **партиалнаме** в файле конфигурации и вызвать `Assembly.Load("math, Version=3.3.3.3")` в коде.  
+ Атрибут **fullName** должен включать четыре поля идентификатора сборки: имя, версия, маркер общедоступных ключей и культуру. Атрибут **частичного имени** должен частично ссылаться на сборку. Необходимо указать хотя бы имя текста сборки (наиболее распространенный случай), но вы также можете включить версию, маркер общедоступного ключа или культуру (или любую комбинацию из четырех, но не все четыре). **PartialName** должен соответствовать имени, указанному в вашем вызове. Например, нельзя `"math"` указать атрибут **частичного имени** `Assembly.Load("math, Version=3.3.3.3")` в файле конфигурации и вызов в коде.  
   
 ## <a name="example"></a>Пример  
- Следующий пример логически преобразует `Assembly.Load("math")` вызова в `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
+ Следующий пример логически превращает `Assembly.Load("math")` `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`вызов в .  
   
 ```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <qualifyAssembly partialName="math"   
+         <qualifyAssembly partialName="math"
                          fullName=  
 "math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral"/>  
       </assemblyBinding>  
@@ -73,8 +73,8 @@ ms.locfileid: "73115788"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Схема параметров среды выполнения](index.md)
-- [Обнаружение сборок в среде выполнения](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Как Время выполнения находит сборки](../../../deployment/how-the-runtime-locates-assemblies.md)
 - [Частичные ссылки на сборки](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

@@ -3,18 +3,18 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: e9488c0681e1a5f0fe94112a36b65ec73bf9fd09
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 57757aaec39bc5c552e7ba12c9779cb3a92a9025
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251810"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152508"
 ---
-# <a name="systemidentitymodelservices"></a>\<> System. identityModel. Services
-Раздел конфигурации для проверки подлинности с помощью протокола WS-Federation.  
+# <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
+Раздел конфигурации для проверки подлинности с использованием протокола WS-Federation.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<> System. identityModel. Services**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.identityModel.services>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,27 +29,27 @@ ms.locfileid: "70251810"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствуют  
+ None  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](federationconfiguration.md)|Содержит параметры, которые настраивают <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (всфам) <xref:System.IdentityModel.Services.SessionAuthenticationModule> и HTTP-модули (SAM).|  
+|[\<федерацияКонфигурация>](federationconfiguration.md)|Содержит настройки, настраивающие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> модули (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) HTTP.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
- Отсутствуют  
+ None  
   
-## <a name="remarks"></a>Примечания  
- `<system.identityModel.services>` Добавьте раздел в файл конфигурации приложения, чтобы указать параметры для SAM и всфам.  
+## <a name="remarks"></a>Remarks  
+ Добавьте `<system.identityModel.services>` раздел в файл конфигурации приложения, чтобы предоставить настройки для SAM и WSFAM.  
   
 > [!IMPORTANT]
-> <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса или для предоставления управления доступом на основе утверждений в коде Диспетчер авторизации утверждений (<xref:System.Security.Claims.ClaimsAuthorizationManager>) и политика, используемые `<identityConfiguration>` для принятия решений об авторизации, настраиваются с помощью элемент, который неявно или явно указан из `<federationConfiguration>` элемента в этом разделе. Дополнительные сведения см. в разделе **"Примечания** " в [ \<элементе > federationConfiguration](federationconfiguration.md) .  
+> При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> или класса для обеспечения элемента доступа на основе<xref:System.Security.Claims.ClaimsAuthorizationManager>утверждений в коде менеджер авторизации претензий () и политика, используемая для принятия решений о авторизации, настраиваются через `<identityConfiguration>` элемент, на который косвенно или явно ссылается `<federationConfiguration>` элемент в этом разделе. Для получения дополнительной **информации** см [ \<>.](federationconfiguration.md)  
   
- `<system.identityModel.services>` Раздел представлен<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> классом. Коллекция дочерних `<federationConfiguration>` элементов, настроенных в разделе, представлена <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> классом.  
+ Раздел `<system.identityModel.services>` представлен <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> классом. Коллекция элементов `<federationConfiguration>` ребенка, настроенная в разделе, представлена <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> классом.  
   
 ## <a name="example"></a>Пример  
- В следующем коде XML показано, как добавить `<system.identityModel.services>` раздел в файл конфигурации. Сначала необходимо добавить объявления разделов как для `<system.identityModel.services>` раздела `<system.identityModel>` , так и для разделов. (При добавлении `<system.identityModel.services>` раздела необходимо также добавить объявление `<system.identityModel>` для раздела, чтобы гарантировать, что при необходимости раздел по умолчанию `<identityConfiguration>` может быть создан средой выполнения.) После добавления объявлений разделов можно настроить параметры федеративной проверки подлинности в `<system.identityModel.services>` элементе.  
+ В следующем XML показано, `<system.identityModel.services>` как добавить раздел в файл конфигурации. Сначала необходимо добавить объявления раздела как для раздела, `<system.identityModel.services>` так и для разделов. `<system.identityModel>` (При добавлении раздела `<system.identityModel.services>` следует также добавить декларацию для `<system.identityModel>` раздела, чтобы при необходимости можно было создать раздел по умолчанию `<identityConfiguration>` к времени выполнения.) После добавления объявлений раздела можно настроить настройки федеративной аутентификации под элементом. `<system.identityModel.services>`  
   
 ```xml  
 <configuration>  
@@ -62,12 +62,12 @@ ms.locfileid: "70251810"
   
   <system.identityModel.services>  
     <federationConfiguration>  
-      <wsFederation passiveRedirectEnabled="true"   
-        issuer="http://localhost:15839/wsFederationSTS/Issue"   
-        realm="http://localhost:50969/" reply="http://localhost:50969/"   
-        requireHttps="false"   
-        signOutReply="http://localhost:50969/SignedOutPage.html"   
-        signOutQueryString="Param1=value2&Param2=value2"   
+      <wsFederation passiveRedirectEnabled="true"
+        issuer="http://localhost:15839/wsFederationSTS/Issue"
+        realm="http://localhost:50969/" reply="http://localhost:50969/"
+        requireHttps="false"
+        signOutReply="http://localhost:50969/SignedOutPage.html"
+        signOutQueryString="Param1=value2&Param2=value2"
         persistentCookiesOnPassiveRedirects="true" />  
       <cookieHandler requireSsl="false" />  
     </federationConfiguration>  

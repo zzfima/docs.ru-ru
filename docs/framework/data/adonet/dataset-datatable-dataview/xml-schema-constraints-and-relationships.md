@@ -2,26 +2,26 @@
 title: Ограничения и отношения схемы XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2388d7c277ba1f01bea8d419e5aedf487b843ed7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040031"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150718"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Ограничения и отношения схемы XML
-В схеме языка определения схемы XML (XSD) можно указать ограничения (ограничения UNIQUE, Key и keyref) и отношения (с помощью аннотации **msdata: relationship** ). В этом разделе описана интерпретация ограничений и связей, указанных в схеме XML, при формировании набора данных <xref:System.Data.DataSet>.  
+В схеме определения xML Schema (XSD) можно указать ограничения (уникальные, ключевые и ключевые ограничения) и отношения (с помощью аннотации **msdata:Relationship).** В этом разделе описана интерпретация ограничений и связей, указанных в схеме XML, при формировании набора данных <xref:System.Data.DataSet>.  
   
- Как правило, в XML-схеме задается Аннотация **msdata: relationship** , если нужно создать только связи в **наборе данных**. Дополнительные сведения см. [в разделе Создание связей наборов данных из схемы XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md). Если необходимо создать ограничения в **наборе данных**, необходимо указать ограничения (уникальные, ключ и keyref). Обратите внимание, что ограничения key и keyref используются также для формирования связей, как объясняется далее в подразделе.  
+ Как правило, в XML Schema вы указываете аннотацию **msdata:Relationship,** если вы хотите генерировать только отношения в **DataSet.** Для получения дополнительной [информации](generating-dataset-relations-from-xml-schema-xsd.md)см. Вы указываете ограничения (уникальные, ключевые и keyref), если вы хотите создать ограничения в **DataSet.** Обратите внимание, что ограничения key и keyref используются также для формирования связей, как объясняется далее в подразделе.  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Формирование связи из ограничений key и keyref  
- Вместо указания аннотации **msdata: relationship** можно указать ограничения key и keyref, которые используются в процессе СОПОСТАВЛЕНИЯ схем XML для создания не только ограничений, но и связи в **наборе данных**. Однако при указании `msdata:ConstraintOnly="true"` в элементе **keyref** **набор данных** будет включать только ограничения и не будет включать связь.  
+ Вместо указания аннотации **msdata:Relationship** можно указать ограничения клавиш и ключей, которые используются в процессе картирования XML Schema для генерации не только ограничений, но и взаимосвязи в **DataSet.** Однако, если `msdata:ConstraintOnly="true"` вы укажете в элементе **keyref,** **DataSet** будет включать только ограничения и не будет включать в себя связь.  
   
- В следующем примере показана схема XML, включающая элементы **Order** и **OrderDetail** , которые не являются вложенными. Схема также указывает ограничения key и keyref.  
+ В следующем примере показана схема XML, которая включает элементы **Заказа** и **ЗаказаDetail,** которые не вложены. Схема также указывает ограничения key и keyref.  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -59,7 +59,7 @@ ms.locfileid: "73040031"
 </xs:schema>  
 ```  
   
- **Набор данных** , формируемый в процессе СОПОСТАВЛЕНИЯ схем XML, включает таблицы **Order** и **OrderDetail** . Кроме того, **набор данных** содержит отношения и ограничения. Эти связи и ограничения показаны в приведенном ниже примере. Обратите внимание, что в схеме не указана Аннотация **msdata: relationship** ; Вместо этого для создания отношения используются ограничения key и keyref.  
+ **DataSet,** генерируемый в процессе картирования XML Schema, включает таблицы **заказа** и **заказаDetail.** Кроме того, **DataSet** включает в себя отношения и ограничения. Эти связи и ограничения показаны в приведенном ниже примере. Обратите внимание, что в схеме не указана аннотация **msdata:Relationship;** вместо этого для создания связи используются ограничения клавиш и ключ.  
   
 ```text
 ....ConstraintName: OrderNumberKey  
@@ -85,11 +85,11 @@ ms.locfileid: "73040031"
 ..Nested: False  
 ```  
   
- В приведенном выше примере схемы элементы **Order** и **OrderDetail** не являются вложенными. В следующем примере схемы эти элементы являются вложенными. Однако Аннотация **msdata: relationship** не указана. Поэтому предполагается неявное отношение. Дополнительные сведения см. в разделе [Сопоставление неявных отношений между вложенными элементами схемы](map-implicit-relations-between-nested-schema-elements.md). Схема также указывает ограничения key и keyref.  
+ В предыдущем примере схемы элементы **Заказа** и **ЗаказаDetail** не вложены. В следующем примере схемы эти элементы являются вложенными. Однако аннотация **msdata:Relationship** не указана; поэтому предполагается неявная связь. Для получения дополнительной информации [см. Карта неявные отношения между Nested Schema Элементы](map-implicit-relations-between-nested-schema-elements.md). Схема также указывает ограничения key и keyref.  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -129,14 +129,14 @@ ms.locfileid: "73040031"
 </xs:schema>  
 ```  
   
- **Набор данных** , полученный из процесса СОПОСТАВЛЕНИЯ схем XML, включает две таблицы:  
+ **DataSet** в результате процесса картирования XML Schema включает в себя две таблицы:  
   
 ```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- **Набор данных** также содержит две связи (одна на основе аннотации **msdata: relationship** , а другая — на основе ограничений key и keyref) и различных ограничений. Эти связи и ограничения показаны в следующем примере.  
+ **DataSet** также включает в себя два отношения (один на основе **аннотации msdata:relationship,** а другой на основе ключевых и ключевых ограничений) и различные ограничения. Эти связи и ограничения показаны в следующем примере.  
   
 ```text
 ..RelationName: Order_OrderDetail  
@@ -184,9 +184,9 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- Если ограничение keyref, ссылающееся на вложенную таблицу, содержит аннотацию **msdata: Nested = "true"** , **набор данных** создаст одну вложенную связь, основанную на ограничении keyref, и связанное ограничение UNIQUE/Key.  
+ Если ограничение keyref, относящееся к вложенной таблице, содержит аннотацию **msdata:IsNested"true"** **DataSet** создаст единую вложенную связь, основанную на ограничении keyref и связанном с этим уникальном/ключевом ограничении.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Наследование реляционной структуры DataSet от схемы XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Наследование реляционной структуры набора данных от схемы XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [Общие сведения об ADO.NET](../ado-net-overview.md)

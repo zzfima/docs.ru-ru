@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319444"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150073"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Указывает порядок сортировки для объектов, возвращаемых инструкцией SELECT.  
@@ -15,13 +15,13 @@ ms.locfileid: "72319444"
 ## <a name="syntax"></a>Синтаксис  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72319444"
  SKIP `n`  
  Пропускает первые `n` элементов.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
  Предложение ORDER BY логически применяется к результату предложения SELECT. Предложение ORDER BY может ссылаться на элементы списка выбора по их псевдонимам. Предложение ORDER BY может также ссылаться на другие переменные, находящиеся в области видимости. Однако если предложение SELECT указано с модификатором DISTINCT, то предложение ORDER BY может ссылаться только на псевдонимы из предложения SELECT.  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
@@ -53,7 +53,7 @@ ms.locfileid: "72319444"
   
  Если код проходит по упорядоченному набору, отличному от проекции верхнего уровня, то сохранение порядка в выходных данных не гарантируется.  
 
-В следующем примере гарантируется сохранение порядка:
+В следующем примере заказ гарантированно сохраняется:
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -61,7 +61,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-В следующем запросе не учитывается порядок вложенных запросов:  
+В следующем запросе заказ вложенного запроса игнорируется:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -97,12 +97,12 @@ ORDER BY ...
   
 - ROW  
   
-- VALUE  
+- Значение  
   
 ## <a name="ordering-nested-queries"></a>Упорядочение вложенных запросов  
  Платформа Entity Framework позволяет разместить вложенное выражение в любом месте запроса. Порядок вложенного запроса не сохраняется.  
 
-Следующий запрос упорядочивает результаты по фамилии:  
+Следующий запрос закажет результаты по фамилии:  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +110,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-В следующем запросе не учитывается порядок вложенных запросов:  
+В следующем запросе заказ вложенного запроса игнорируется:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -128,10 +128,10 @@ SELECT C2.FirstName, C2.LastName
   
  [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Выражения запросов](query-expressions-entity-sql.md)
 - [Справочник по Entity SQL](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [Пропустить](skip-entity-sql.md)
+- [Предел](limit-entity-sql.md)
+- [Вверх](top-entity-sql.md)

@@ -3,22 +3,22 @@ title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 30a53c11b551623311f7ca3f957143fc702568a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0983380e553acfe246d6b987784d818b8ae85b17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251852"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152584"
 ---
-# <a name="servicetokenresolver"></a>\<Сервицетокенресолвер >
-Регистрирует сопоставитель маркеров службы, используемый обработчиками в коллекции обработчиков маркеров. Сопоставитель токенов службы используется для разрешения маркера шифрования входящих токенов и сообщений.  
+# <a name="servicetokenresolver"></a>\<serviceTokenResolver>
+Регистрирует разрешителер маркеров службы, используемый обработчиками в коллекции обработчиков токенов. Разрешители токенов службы используются для разрешения маркера шифрования на входящих токенах и сообщениях.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. identityModel**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Секурититокенхандлерконфигуратион >** ](securitytokenhandlerconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Сервицетокенресолвер >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityМодель>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<идентичностьНастройка>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenhandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceTokenResolver>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,30 +40,29 @@ ms.locfileid: "70251852"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|type|Указывает тип сопоставителя токенов службы. Либо тип, либо тип, производный <xref:System.IdentityModel.Selectors.SecurityTokenResolver> от класса. <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Дополнительные сведения об указании `type` атрибута см. в разделе [ссылки на пользовательские типы]. Обязательный.|  
+|type|Определяет тип разрешительного маркера токенов службы. <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Тип или тип, который вытекает <xref:System.IdentityModel.Selectors.SecurityTokenResolver> из класса. Для получения дополнительной информации `type` о том, как указать атрибут, см. Обязательный элемент.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствуют  
+ None  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Секурититокенхандлерконфигуратион >](securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции обработчиков маркеров безопасности.|  
+|[\<securityTokenhandlerConfiguration>](securitytokenhandlerconfiguration.md)|Обеспечивает конфигурацию для сбора обработчиков маркеров безопасности.|  
   
-## <a name="remarks"></a>Примечания  
- Сопоставитель токенов службы можно использовать для разрешения маркера шифрования входящих токенов и сообщений. Он используется для получения ключа, который должен использоваться для расшифровки входящих токенов. Необходимо указать `type` атрибут. Указанный тип может быть либо <xref:System.IdentityModel.Selectors.SecurityTokenResolver> либо пользовательским типом, производным <xref:System.IdentityModel.Selectors.SecurityTokenResolver> от класса.  
+## <a name="remarks"></a>Remarks  
+ Разрешители токенов службы могут быть использованы для разрешения маркера шифрования на входящих токенах и сообщениях. Он используется для получения ключа, который должен быть использован для расшифровки входящих токенов. Необходимо указать `type` атрибут. Указанный тип может <xref:System.IdentityModel.Selectors.SecurityTokenResolver> быть либо или пользовательским <xref:System.IdentityModel.Selectors.SecurityTokenResolver> типом, который вытекает из класса.  
   
- Некоторые обработчики маркеров позволяют задавать параметры сопоставителя токенов служб в конфигурации. Параметры отдельных обработчиков маркеров переопределяют те, которые указаны в коллекции обработчика маркеров безопасности.  
+ Некоторые обработчики маркеров позволяют указать настройки разрешителя маркеров службы в конфигурации. Настройки отдельных обработчиков маркеров переопределяют те, которые указаны в коллекции обработчика маркеров безопасности.  
   
 > [!NOTE]
-> Указание элемента в качестве дочернего элемента [ \<элемента > identityConfiguration](identityconfiguration.md) является устаревшим, но по-прежнему поддерживается для обратной совместимости. `<serviceTokenResolver>` Параметры элемента переопределяют их `<identityConfiguration>` для элемента. `<securityTokenHandlerConfiguration>`  
+> Определение элемента `<serviceTokenResolver>` в качестве элемента ребенка [ \<идентификационных конфигураций>](identityconfiguration.md) элемента было изуродовано, но по-прежнему поддерживается для обратной совместимости. Настройки элемента `<securityTokenHandlerConfiguration>` переопределяют элементы на элементе. `<identityConfiguration>`  
   
 ## <a name="example"></a>Пример  
   
 ```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
 ```
- 

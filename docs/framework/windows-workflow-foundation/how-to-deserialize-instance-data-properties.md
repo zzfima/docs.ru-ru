@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Десериализация свойств данных экземпляра
+title: Как десериализовать свойства данных экземпляра
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989638"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143087"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a>Практическое руководство. Десериализация свойств данных экземпляра
+# <a name="how-to-deserialize-instance-data-properties"></a>Как десериализовать свойства данных экземпляра
 Могут возникнуть ситуации, когда пользователю или администратору рабочего процесса потребуется вручную проанализировать состояние сохраненного экземпляра рабочего процесса. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> содержит представление по таблицам экземпляров, предоставляющее следующие четыре столбца:  
   
 - ReadWritePrimitiveDataProperties  
@@ -20,11 +20,11 @@ ms.locfileid: "70989638"
   
 - WriteOnlyComplexDataProperties  
   
- Свойства примитивных данных ссылаются на свойства, типы .NET Framework которых считаются общими (например, Int32 и String), а сложные свойства данных ссылаются на все остальные типы. Полное перечисление типов-примитивов приведен далее в примере кода.  
+ Примитивные свойства данных относятся к свойствам, типы которых считаются «общими» (например, Int32 и String), в то время как сложные свойства данных относятся ко всем другим типам. Полное перечисление типов-примитивов приведен далее в примере кода.  
   
  Свойствами чтения-записи называются свойства, невозвращаемые обратно в среду выполнения рабочих процессов при загрузке экземпляра. Свойства WriteOnly записываются в базу данных и никогда оттуда впоследствии не считываются.  
   
- В этом образце приведен код, позволяющий пользователю десериализировать свойства примитивных данных. При чтении массива байтов из столбца реадвритепримитиведатапропертиес или вритеонлипримитиведатапропертиес этот код преобразует большой двоичный объект (BLOB) в <xref:System.Collections.Generic.Dictionary%602> тип \<XName, объект >, где каждое значение ключа пара представляет имя свойства и его соответствующее значение.  
+ В этом образце приведен код, позволяющий пользователю десериализировать свойства примитивных данных. Учитывая массив байт, прочитанная либо из колонки ReadWritePrimitiveDataProperties, либо из колонки WriteOnlyPrimitiveDataProperties, этот код преобразует двоичный большой объект (BLOB) в <xref:System.Collections.Generic.Dictionary%602> тип \<XName, объект>, где каждая ключевая пара значений представляет имя свойства и соответствующее значение.  
   
  Этот пример не демонстрирует десериализацию свойств сложных типов данных, поскольку данная операция в настоящее время не поддерживается.  
   
@@ -104,7 +104,7 @@ namespace PropertyReader
                     // if the instance state is compressed using GZip algorithm  
                     if (isCompressed)  
                     {  
-                        // decompress the data using the GZip   
+                        // decompress the data using the GZip
                         using (GZipStream stream = new GZipStream(memoryStream, CompressionMode.Decompress))  
                         {  
                             // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
@@ -117,7 +117,7 @@ namespace PropertyReader
                     }  
                     else  
                     {  
-                        // if the instance data is not compressed   
+                        // if the instance data is not compressed
                         // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
                         using (XmlReader reader = XmlDictionaryReader.CreateBinaryReader(memoryStream, XmlDictionaryReaderQuotas.Max))  
                         {  

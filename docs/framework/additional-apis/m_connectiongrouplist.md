@@ -1,5 +1,5 @@
 ---
-title: Поле ServicePoint. m_ConnectionGroupList
+title: ServicePoint.m_ConnectionGroupList поле
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: f2759f82f335415edf7bab33edbd446eec6ffbb5
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215517"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155899"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint. m\_поле Коннектионграуплист
+# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList Поле
 
-`ServicePoint.m_ConnectionGroupList` — это <xref:System.Collections.Hashtable> групп соединений, каждый из которых владеет соединением с URI <xref:System.Net.ServicePoint>.
+`ServicePoint.m_ConnectionGroupList`<xref:System.Collections.Hashtable> является соединение групп, каждая из <xref:System.Net.ServicePoint>которых проведение связи для 's URI.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -28,14 +28,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> Поле `ServicePoint.m_ConnectionGroupList` является закрытым и не предназначено для непосредственного использования в коде.
-> 
-> Корпорация Майкрософт не поддерживает использование этого поля в рабочем приложении при каких-либо обстоятельствах.
+> Поле `ServicePoint.m_ConnectionGroupList` является частным и не предназначено для использования непосредственно в коде.
+>
+> Корпорация Майкрософт ни при каких обстоятельствах не поддерживает использование этого поля в производственном приложении.
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Net>
+**Пространство имен:**<xref:System.Net>
 
-**Сборка:** Система (в System. dll)
+**Сборка:** Система (в System.dll)
 
-**.NET Framework версии:** Доступно с 2,0.
+**Рамочные версии .NET:** Доступно с 2.0.

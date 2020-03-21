@@ -8,27 +8,27 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 1acc724bb14c3610f14d06452c30b3d5dac42e13
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 4b0cbaf9a7bfe2a9b1610811f4201253d219a6b2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089078"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154612"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>Элемент \<СпеЦифиедпиккупдиректори > (параметры сети)
-Настраивает локальный каталог для SMTP-сервера.  
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory> элемент (Настройки сети)
+Настраивает локальный каталог для сервера Простого почтового транспортного протокола (SMTP).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<маилсеттингс >** ](mailsettings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<smtp >** ](smtp-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<спеЦифиедпиккупдиректори >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<smtp>**](smtp-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<specifiedPickupDirectory>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
 <specifiedPickupDirectory  
-  pickupDirectoryLocation="directory"   
+  pickupDirectoryLocation="directory"
 />  
 ```  
   
@@ -37,24 +37,24 @@ ms.locfileid: "74089078"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|Каталог, в котором приложения сохраняют электронную почту для последующей обработки SMTP-сервером.|  
+|`pickupDirectoryLocation`|Каталог, где приложения сохраняют электронную почту для последующей обработки сервером SMTP.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[Элемент > SMTP \<(параметры сети)](smtp-element-network-settings.md)|Настраивает параметры отправки почты по протоколу SMTP.|  
+|[\<smtp> Элемент (Настройки сети)](smtp-element-network-settings.md)|Настраивает опции отправки почты Simple Mail Transport Protocol (SMTP).|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
  Атрибут `specifiedPickupDirectory` задает каталог, в который приложения сохраняют сообщения электронной почты для их последующей обработки SMTP-сервером.  
   
 ## <a name="example"></a>Пример  
- В следующем примере в качестве каталога подбора почты указывается к:\маилдроп.  
+ В следующем примере указывается c: 'maildrop как каталог почтовых пикапов.  
   
 ```xml  
 <configuration>  
@@ -70,9 +70,9 @@ ms.locfileid: "74089078"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [Схема параметров сети](index.md)
+- [Схема настройки сети](index.md)

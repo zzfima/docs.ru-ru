@@ -2,12 +2,12 @@
 title: Раздел конфигурации Windows Forms
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 4a54df0b6301f1aae14d5561c91c6792cb0a1620
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109813"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151836"
 ---
 # <a name="windows-forms-configuration-section"></a>Раздел конфигурации Windows Forms
 Параметры конфигурации Windows Forms позволяют приложению Windows Forms хранить и извлекать сведения о настроенных параметрах приложения, таких как поддержка нескольких мониторов, поддержка высокого разрешения (DPI) и другие предопределенные параметры конфигурации.
@@ -30,7 +30,7 @@ ms.locfileid: "73109813"
 
 ### <a name="attributes"></a>Атрибуты
 
-Отсутствует.
+Нет.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -42,15 +42,15 @@ ms.locfileid: "73109813"
 
 Элемент  |Описание |
 ---------|---------|
-[\<configuration>](../configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями Windows Forms. |
+[\<конфигурация>](../configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями Windows Forms. |
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Начиная с версии .NET Framework 4.7 элемент `<System.Windows.Forms.ApplicationConfigurationSection>` позволяет настраивать в приложениях Windows Forms функции, добавленные в последних выпусках .NET Framework. 
+Начиная с версии .NET Framework 4.7 элемент `<System.Windows.Forms.ApplicationConfigurationSection>` позволяет настраивать в приложениях Windows Forms функции, добавленные в последних выпусках .NET Framework.
 
-Элемент `<System.Windows.Forms.ApplicationConfigurationSection>` может содержать один или несколько дочерних элементов [`<add>`](windows-forms-add-configuration-element.md), каждый из которых определяет конкретный параметр конфигурации.
+Элемент `<System.Windows.Forms.ApplicationConfigurationSection>` может включать один [`<add>`](windows-forms-add-configuration-element.md) или несколько элементов ребенка, каждый из которых определяет определенную настройку конфигурации.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Схема файла конфигурации](../index.md)
-- [Поддержка высокого DPI в Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Схема конфигурации файлов](../index.md)
+- [Высокая поддержка DPI в формах Windows](../../../winforms/high-dpi-support-in-windows-forms.md)

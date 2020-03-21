@@ -2,27 +2,27 @@
 title: Пользовательский узел службы
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 271233015739024428a7a29815f66278c9d7aa04
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2aed557d1d045c08aed206660aa7b4b75ffe0e2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789930"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145076"
 ---
 # <a name="custom-service-host"></a>Пользовательский узел службы
 Этот образец показывает, как применять пользовательский производный класс для класса <xref:System.ServiceModel.ServiceHost>, чтобы изменять поведение службы во время выполнения. Такой подход обеспечивает поддерживающую повторное использование альтернативу настройке большого числа служб одинаковым образом. Кроме того, в этом примере демонстрируется, как с помощью класса <xref:System.ServiceModel.Activation.ServiceHostFactory> применять пользовательский объект ServiceHost в среде размещения IIS или службы активации Windows (WAS).  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
 ## <a name="about-the-scenario"></a>Сценарий
- Чтобы предотвратить непреднамеренное раскрытие потенциально конфиденциальных метаданных службы, конфигурация по умолчанию для служб Windows Communication Foundation (WCF) отключает публикацию метаданных. Такое расширение функциональности по умолчанию защищено, но это также означает, что при этом невозможно использовать средство импорта метаданных (например, Svcutil.exe) для создания клиентского кода, необходимого для вызова службы, если поведение публикации не включено явно в конфигурации.  
+ Для предотвращения непреднамеренного раскрытия потенциально чувствительных метаданных службы конфигурация Windows Communication Foundation (WCF) отскакивает к публикации метаданных. Такое расширение функциональности по умолчанию защищено, но это также означает, что при этом невозможно использовать средство импорта метаданных (например, Svcutil.exe) для создания клиентского кода, необходимого для вызова службы, если поведение публикации не включено явно в конфигурации.  
   
  Включение публикации метаданных для большого числа служб связано с добавлением одинаковых элементов конфигурации для всех служб по отдельности, что приводит к появлению значительного объема повторяющейся информации конфигураций. Вместо конфигурации всех служб по отдельности можно написать принудительный код, один раз включающий публикацию метаданных, а затем использовать его повторно для нескольких других служб. Для этого создается новый класс, наследуемый от класса <xref:System.ServiceModel.ServiceHost>, переопределяющий метод `ApplyConfiguration`() так, чтобы принудительно добавить поведение публикации метаданных.  
   
@@ -40,9 +40,9 @@ class SelfDescribingServiceHost : ServiceHost
     public SelfDescribingServiceHost(Type serviceType, params Uri[] baseAddresses)  
         : base(serviceType, baseAddresses) { }  
   
-    //Overriding ApplyConfiguration() allows us to   
+    //Overriding ApplyConfiguration() allows us to
     //alter the ServiceDescription prior to opening  
-    //the service host.   
+    //the service host.
     protected override void ApplyConfiguration()  
     {  
         //First, we call base.ApplyConfiguration()  
@@ -50,7 +50,7 @@ class SelfDescribingServiceHost : ServiceHost
         //the service we're hosting. After this call,  
         //this.Description describes the service  
         //as it was configured.  
-        base.ApplyConfiguration();       
+        base.ApplyConfiguration();
   
         //(rest of implementation elided for clarity)  
     }  
@@ -68,7 +68,7 @@ if (mexBehavior == null)
 }  
 else  
 {  
-    //Metadata behavior has already been configured,   
+    //Metadata behavior has already been configured,
     //so we do not have any work to do.  
     return;  
 }  
@@ -114,7 +114,7 @@ foreach (Uri baseAddress in this.BaseAddresses)
  Выполненную реализацию пользовательского ServiceHost можно использовать для добавления поведения публикации метаданных к любой службе, разместив эту службу внутри экземпляра `SelfDescribingServiceHost`. В следующем примере кода демонстрируется его использование с резидентной службой.  
   
 ```csharp
-SelfDescribingServiceHost host =   
+SelfDescribingServiceHost host =
          new SelfDescribingServiceHost( typeof( Calculator ) );  
 host.Open();  
 ```  
@@ -122,20 +122,20 @@ host.Open();
  Пользовательское ведущее приложение продолжает считывать конфигурацию конечной точки службы из файла конфигурации приложения, как если бы для размещения службы использовался класс <xref:System.ServiceModel.ServiceHost> по умолчанию. Но так как в пользовательское основное приложение добавлена логика, включающая публикацию метаданных, нет необходимости явно включать поведение публикации метаданных в конфигурации. Этот подход удобен при создании приложения, содержащего несколько служб, для которых нужно включить публикацию метаданных. Он позволяет не повторять несколько раз запись одинаковых элементов конфигурации.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Использование пользовательского ServiceHost в службах IIS или WAS  
- Использовать пользовательский узел службы в резидентных сценариях нетрудно, потому что за создание и открытие экземпляра основного приложения службы отвечает в итоге код вашего приложения. Однако в среде IIS или WAS инфраструктура WCF динамически создает экземпляр узла службы в ответ на входящие сообщения. В этой среде размещения также можно использовать пользовательские узлы служб, но для этого требуется дополнительный код в виде ServiceHostFactory. В следующем коде приведен класс, наследуемый от <xref:System.ServiceModel.Activation.ServiceHostFactory>, возвращающий экземпляры пользовательского `SelfDescribingServiceHost`.  
+ Использовать пользовательский узел службы в резидентных сценариях нетрудно, потому что за создание и открытие экземпляра основного приложения службы отвечает в итоге код вашего приложения. Однако в среде хостинга IIS или WAS инфраструктура WCF динамически мгновенно принимает универсал службы в ответ на входящие сообщения. В этой среде размещения также можно использовать пользовательские узлы служб, но для этого требуется дополнительный код в виде ServiceHostFactory. В следующем коде приведен класс, наследуемый от <xref:System.ServiceModel.Activation.ServiceHostFactory>, возвращающий экземпляры пользовательского `SelfDescribingServiceHost`.  
   
 ```csharp
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
 {  
-    protected override ServiceHost CreateServiceHost(Type serviceType,   
+    protected override ServiceHost CreateServiceHost(Type serviceType,
      Uri[] baseAddresses)  
     {  
         //All the custom factory does is return a new instance  
         //of our custom host class. The bulk of the custom logic should  
-        //live in the custom host (as opposed to the factory)   
+        //live in the custom host (as opposed to the factory)
         //for maximum  
         //reuse value outside of the IIS/WAS hosting environment.  
-        return new SelfDescribingServiceHost(serviceType,     
+        return new SelfDescribingServiceHost(serviceType,
                                              baseAddresses);  
     }  
 }  
@@ -151,29 +151,29 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>
 ```
   
- В директиву `Factory` добавлен дополнительный атрибут `@ServiceHost`, в качестве значения которого передано имя типа CLR пользовательской фабрики. Когда IIS или WAS получает сообщение для этой службы, инфраструктура размещения WCF сначала создает экземпляр ServiceHostFactory, а затем создает его экземпляр, вызывая `ServiceHostFactory.CreateServiceHost()`.  
+ В директиву `Factory` добавлен дополнительный атрибут `@ServiceHost`, в качестве значения которого передано имя типа CLR пользовательской фабрики. Когда IIS или WAS получает сообщение для этой службы, инфраструктура хостинга WCF сначала создает экземпляр ServiceHostFactory, а затем мгновенно вызывает сам ухож службы, позвонив. `ServiceHostFactory.CreateServiceHost()`  
   
-## <a name="running-the-sample"></a>Запуск образца  
+## <a name="running-the-sample"></a>Выполнение примера  
  В этом примере содержатся полностью функциональные реализации клиента и службы, но цель этого примера — продемонстрировать изменение поведения службы во время выполнения с помощью пользовательского ведущего приложения, выполните следующие действия.  
   
-### <a name="observe-the-effect-of-the-custom-host"></a>Наблюдение за результатом пользовательского узла
+### <a name="observe-the-effect-of-the-custom-host"></a>Обратите внимание на влияние пользовательского хоста
   
-1. Откройте файл Web. config службы и убедитесь, что в конфигурации нет явного включения метаданных для службы.  
+1. Откройте файл Web.config службы и заметьте, что нет конфигурации, явно позволяющей метаданным для службы.  
   
-2. Откройте SVC-файл службы и убедитесь, что его директива @ServiceHost содержит атрибут Factory, указывающий имя настраиваемого ServiceHostFactory.  
+2. Откройте файл .svc службы и @ServiceHost заметьте, что его директива содержит атрибут Factory, который определяет название пользовательского ServiceHostFactory.  
   
-### <a name="set-up-build-and-run-the-sample"></a>Настройка, сборка и запуск примера
+### <a name="set-up-build-and-run-the-sample"></a>Настройка, создание и запуск образца
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](one-time-setup-procedure-for-the-wcf-samples.md)
 
-2. Чтобы выполнить сборку решения, следуйте инструкциям в разделе [Создание примеров Windows Communication Foundation](building-the-samples.md).
+2. Чтобы создать решение, следуйте инструкциям по [созданию образцов Фонда связи Windows.](building-the-samples.md)
 
-3. После построения решения запустите программу Setup. bat, чтобы настроить приложение ServiceModelSamples в IIS 7,0. Теперь каталог ServiceModelSamples должен отображаться как приложение IIS 7,0.
+3. После того, как решение было построено, запустите Setup.bat для настройки приложения ServiceModelSamples в IIS 7.0. Каталог ServiceModelSamples теперь должен отображаться как приложение IIS 7.0.
 
-4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](running-the-samples.md).
+4. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](running-the-samples.md)
 
-5. Чтобы удалить приложение IIS 7,0, запустите программу *Cleanup. bat*.
+5. Чтобы удалить приложение IIS 7.0, запустите *Cleanup.bat*.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Практическое руководство. Размещение службы WCF в IIS](../feature-details/how-to-host-a-wcf-service-in-iis.md)

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e5135aca49a63aafa3330832c54f2d28d31d60d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785511"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151355"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Создание таблицы данных из объекта DataView
-После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если необходимо создать <xref:System.Data.DataTable> новый объект <xref:System.Data.DataView>из <xref:System.Data.DataView.ToTable%2A> , можно использовать метод, чтобы скопировать все строки и столбцы или подмножество данных в новый <xref:System.Data.DataTable>. Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
+После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если вам нужно <xref:System.Data.DataTable> создать <xref:System.Data.DataView>новый из, вы можете использовать <xref:System.Data.DataView.ToTable%2A> метод, чтобы скопировать все строки <xref:System.Data.DataTable>и столбцы, или подмножество данных в новый . Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
   
 - Создание таблицы <xref:System.Data.DataTable>, содержащей столбцы, которые являются подмножеством столбцов в представлении <xref:System.Data.DataView>.  
   
-- Создание, включающее в себя только уникальные строки <xref:System.Data.DataView>из, аналогично ключевому слову DISTINCT в Transact-SQL. <xref:System.Data.DataTable>  
+- <xref:System.Data.DataTable> Создайте, который включает в <xref:System.Data.DataView>себя только различные строки из , аналогично ключевому слову DISTINCT в Transact-S'L.  
   
 ## <a name="example"></a>Пример  
- В следующем примере консольного приложения создается <xref:System.Data.DataTable> объект, содержащий данные из таблицы **Person. Contact** в образце базы данных **AdventureWorks** . Далее в примере создается Сортировка и фильтрация <xref:System.Data.DataView> на основе. <xref:System.Data.DataTable> <xref:System.Data.DataTable> После отображения содержимого <xref:System.Data.DataView.ToTable%2A> <xref:System.Data.DataView> <xref:System.Data.DataTable> и, в примере создается новый объект из, вызывая метод, выбирая только подмножество доступных столбцов. <xref:System.Data.DataView> Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  
+ Следующий пример приложения <xref:System.Data.DataTable> консоли создает данные из таблицы **Person.Contact** в выборочной базе данных **AdventureWorks.** Далее пример создает отсортированную и отфильтрованную <xref:System.Data.DataView> на основе <xref:System.Data.DataTable>. После отображения <xref:System.Data.DataTable> содержимого <xref:System.Data.DataView>и, пример <xref:System.Data.DataTable> создает <xref:System.Data.DataView> новый <xref:System.Data.DataView.ToTable%2A> из вызова метода, выбирая только подмножество доступных столбцов. Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -114,7 +114,7 @@ private static void DemonstrateDataView()
 // connectionString is assumed to be a valid connection string.  
 SqlDataAdapter adapter = new SqlDataAdapter(  
     "SELECT FirstName, LastName, EmailAddress " +  
-    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",   
+    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",
        GetConnectionString());  
 DataTable table = new DataTable();  
   
@@ -205,7 +205,7 @@ Console.WriteLine();
   
  }  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Data.DataView.ToTable%2A>
 - [Объекты DataView](dataviews.md)

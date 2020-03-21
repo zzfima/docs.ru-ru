@@ -3,21 +3,21 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 28d73bb74c4a49052589040adc26194b1300668c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 968cfa8e5402458afd6f13545ed999a472adf2e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397606"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151914"
 ---
-# <a name="tracking"></a>\<Отслеживание >
+# <a name="tracking"></a>\<отслеживание>
 Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.  
   
- Дополнительные сведения об отслеживании рабочих процессов и его конфигурации см. в разделе Отслеживание рабочего процесса [и трассировка](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) и [Настройка отслеживания рабочего процесса](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+ Для получения дополнительной информации о отслеживании рабочего процесса и [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)его конфигурации [см.](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<системой. > ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Отслеживание >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Системы. СервисМодель>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<отслеживание>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,14 +26,14 @@ ms.locfileid: "70397606"
   <tracking>
     <profiles>
       <participants>
-        <add name="String" 
-             profileName="String" 
+        <add name="String"
+             profileName="String"
              type="String" />
       </participants>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String"/>
           </activityScheduledQueries>
           <activityStateQueries>
@@ -52,15 +52,15 @@ ms.locfileid: "70397606"
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestQueries>
-            <cancelRequestQuery activityName="String" 
+            <cancelRequestQuery activityName="String"
                                 childActivityName="String"/>
           </cancelRequestQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
+            <customTrackingQuery activityName="String"
                                  name="String"/>
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery activityName="String" 
+            <faultPropagationQuery activityName="String"
                                    faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <workflowInstanceQueries>
@@ -87,8 +87,8 @@ ms.locfileid: "70397606"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Участники >](participants.md)|Коллекция элементов конфигурации, определяющих участников, которые подписываются на отслеживание записей. Участники содержат логику обработки полезных данных из записей отслеживания (например, они могут записать данные в файл).|  
-|[\<trackingProfile >](trackingprofile.md)|Профиль отслеживания для фильтрации записей отслеживания, выдаваемых экземпляром рабочего процесса.|  
+|[\<участники>](participants.md)|Коллекция элементов конфигурации, которые определяют участников, подписанных на записи отслеживания. Участники содержат логику обработки полезных данных из записей отслеживания (например, они могут записать данные в файл).|  
+|[\<отслеживаниеПрофильная>](trackingprofile.md)|Профиль отслеживания для фильтрации записей отслеживания, выдаваемых экземпляром рабочего процесса.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -96,10 +96,10 @@ ms.locfileid: "70397606"
 |-------------|-----------------|  
 |system.ServiceModel|Корневой элемент всех элементов конфигурации рабочего процесса.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Отслеживание позволяет исследовать выполнение рабочего процесса. Инфраструктура отслеживания рабочего процесса инструментирует процесс таким образом, что выдаются записи, отражающие ключевые события выполнения. Например, записи отслеживания создаются при запуске и завершении экземпляра рабочего процесса. Отслеживание также позволяет извлекать важные бизнес-данные, связанные с переменными рабочего процесса. Например, если рабочий процесс представляет собой систему обработки заказов, то вместе с записью отслеживания можно извлечь идентификатор заказа. В общем, функции отслеживания WF обеспечивают диагностику и анализ исполнения рабочих задач.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
 - [Отслеживание и трассировка рабочих процессов](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3f066f29b99ade6e92a263110fed8079208567b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834273"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151498"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Применение преобразования XSLT к набору данных
 
-Метод **WriteXml** <xref:System.Data.DataSet> позволяет записывать содержимое **набора** данных в виде XML-данных. После этого типичной задачей является преобразование этого XML в другой формат с помощью XSLT-преобразования (XSLT). Однако синхронизация **набора данных** с <xref:System.Xml.XmlDataDocument> позволяет применять таблицу стилей XSLT к содержимому **набора данных** без необходимости сначала писать содержимое **набора** данных в виде XML-данных с помощью метода **WriteXml**.  
+Метод **WriteXml** <xref:System.Data.DataSet> позволяет записывать содержимое **DataSet** в виде данных XML. После этого типичной задачей является преобразование этого XML в другой формат с помощью XSLT-преобразования (XSLT). Тем не менее, синхронизация **DataSet** <xref:System.Xml.XmlDataDocument> с возможностью применения таблицы стиля XSLT к содержимому **DataSet** без необходимости сначала записывать содержимое **DataSet** как данные XML с помощью **WriteXml.**  
   
- Следующий пример заполняет **набор данных** таблицами и связями, синхронизирует **набор** данных с объектом **XmlDataDocument**и записывает часть **набора данных** в виде файла HTML с помощью таблицы стилей XSLT. Ниже приведено содержимое таблицы стилей XSLT.
+ Следующий пример заполняет **DataSet** таблицами и отношениями, синхронизирует **DataSet** с **XmlDataDocument**и записывает часть **DataSet** как HTML-файл, используя таблицу стиля XSLT. Ниже приводится содержание таблицы стилей XSLT:
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -57,10 +57,10 @@ ms.locfileid: "71834273"
 </xsl:stylesheet>  
 ```  
   
- Следующий код заполняет **набор данных** и применяет таблицу стилей XSLT.  
+ Следующий код заполняет **DataSet** и применяет лист стиля XSLT.  
   
 > [!NOTE]
-> При применении таблицы стилей XSLT к **набору данных** , содержащему связи, обеспечивается лучшая производительность, если для **вложенного** свойства <xref:System.Data.DataRelation> задано **значение true** для каждого вложенного отношения. Это позволяет использовать таблицы стилей XSLT, реализующие естественную нисходящую обработку для перемещения по иерархии и преобразования данных, в отличие от ресурсоемких осей расположения XPath (например, предшествующий одноуровневый элемент и следующий элемент того же уровня в тестовых выражениях узла таблицы стилей). Дополнительные сведения о вложенных отношениях см. в разделе [вложенность связей](nesting-datarelations.md)данных.  
+> Если вы применяете лист стиля XSLT к **DataSet,** который содержит отношения, вы достигаете <xref:System.Data.DataRelation> наилучшей производительности, если вы установите свойство **Nested** **true** для каждого вложенного отношения. Это позволяет использовать таблицы стилей XSLT, реализующие естественную нисходящую обработку для перемещения по иерархии и преобразования данных, в отличие от ресурсоемких осей расположения XPath (например, предшествующий одноуровневый элемент и следующий элемент того же уровня в тестовых выражениях узла таблицы стилей). Для получения дополнительной информации о вложенных отношениях [см.](nesting-datarelations.md)  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -80,7 +80,7 @@ dataSet.Relations.Add("CustOrders", _
 dataSet.Tables("Customers").Columns("CustomerID"), _  
 dataSet.Tables("Orders").Columns("CustomerID")).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim xslTran As XslTransform = New XslTransform  
 xslTran.Load("transform.xsl")  
@@ -112,19 +112,19 @@ custDS.Relations.Add("CustOrders",
   custDS.Tables["Customers"].Columns["CustomerID"],  
                      custDS.Tables["Orders"].Columns["CustomerID"]).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(custDS);   
+XmlDataDocument xmlDoc = new XmlDataDocument(custDS);
   
 XslTransform xslTran = new XslTransform();  
 xslTran.Load("transform.xsl");  
   
-XmlTextWriter writer = new XmlTextWriter("xslt_output.html",   
+XmlTextWriter writer = new XmlTextWriter("xslt_output.html",
   System.Text.Encoding.UTF8);  
   
 xslTran.Transform(xmlDoc, null, writer);  
 writer.Close();  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Синхронизация DataSet и XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
+- [Синхронизация набора данных и XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
 - [Общие сведения об ADO.NET](../ado-net-overview.md)

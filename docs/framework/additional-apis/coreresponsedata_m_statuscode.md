@@ -1,5 +1,5 @@
 ---
-title: Поле Коререспонседата. m_StatusCode
+title: CoreResponseData.m_StatusCode Поле
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 8abe619a57cc61fc3502807f60deccbbd578f382
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: dfed9a748e959f0f751408566c7cbb4d2fa13e3c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741000"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156077"
 ---
-# <a name="coreresponsedatam_statuscode-field"></a>Коререспонседата. m\_поле StatusCode
+# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData.m\_StatusCode Field
 
-`CoreResponseData.m_StatusCode` — это <xref:System.Net.HttpStatusCode>, содержащий состояние ответа.
+`CoreResponseData.m_StatusCode`<xref:System.Net.HttpStatusCode> содержащей статус ответа.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> Этот API не предназначен для непосредственного использования в коде. Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода. Ознакомьтесь с [руководством пользователя DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.
+> Этот API не предназначен для использования непосредственно в коде. Вместо этого следует <xref:System.Diagnostics.DiagnosticSource> использовать сетевой код. Смотрите [руководство DiagnosticSource пользователя](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
+> Корпорация Майкрософт ни при каких обстоятельствах не поддерживает использование этого класса в производственном приложении.
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Net>
+**Пространство имен:**<xref:System.Net>
 
-**Сборка:** Система (в System. dll)
+**Сборка:** Система (в System.dll)
 
-**.NET Framework версии:** Доступно с 2,0.
+**Рамочные версии .NET:** Доступно с 2.0.

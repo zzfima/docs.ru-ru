@@ -1,13 +1,13 @@
 ---
-title: Определение образцов свойств use и Style
+title: Настройка образцов свойств использования и стиля
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 36111aa05680fb8b369cde6b42d22c9c3b8474ad
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f400c0bc08588afa951ae33f221663b47b37602c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345135"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144036"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Установка свойств Use и Style
 
@@ -16,7 +16,7 @@ ms.locfileid: "75345135"
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.
 
-Свойство <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> определяет форматирование метаданных WSDL службы. Допустимые значения: <xref:System.ServiceModel.OperationFormatStyle.Document> и <xref:System.ServiceModel.OperationFormatStyle.Rpc>. Стиль RPC означает, что WSDL-представление сообщений, которыми осуществляется обмен в ходе операции, содержит такие же параметры, как при удаленном вызове процедур. Ниже приведен пример.
+Свойство <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> определяет форматирование метаданных WSDL службы. Допустимые значения: <xref:System.ServiceModel.OperationFormatStyle.Document> и <xref:System.ServiceModel.OperationFormatStyle.Rpc>. Стиль RPC означает, что WSDL-представление сообщений, которыми осуществляется обмен в ходе операции, содержит такие же параметры, как при удаленном вызове процедур. Пример приведен ниже.
 
 ```xml
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">
@@ -53,13 +53,13 @@ ms.locfileid: "75345135"
 
 Профиль WS-I Basic Profile 1.0 запрещает использование стиля <xref:System.ServiceModel.OperationFormatUse.Encoded>, поэтому его следует использовать, только когда того требуют службы, созданные по устаревшим стандартам. Формат сообщений `Encoded` доступен только при использовании сериализатора XmlSerializer.
 
-Для просмотра отправляемых и получаемых сообщений Этот образец основан на [трассировке и регистрации сообщений](tracing-and-message-logging.md). В конфигурацию службы и исходный код внесены изменения, позволяющие использовать трассировку и журнал сообщений. Кроме того, привязка <xref:System.ServiceModel.WSHttpBinding> настроена без использования средств безопасности, что позволяет просматривать сообщения в журнале в формате без шифрования. Результирующие журналы трассировки (System. ServiceModel. E2E и Message. log) должны быть просмотрены с помощью [средства Service Trace Viewer (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). В конфигурации задана следующая папка для создания трассировок: C:\LOGS. Создайте эту папку, прежде чем выполнять код из этого образца. Чтобы просмотреть содержимое сообщения в средстве просмотра трассировки, выберите **сообщения** в левой и правой панелях инструмента.
+Чтобы увидеть отправляемые и полученные сообщения, этот пример основан на [отслеживании и регистрации сообщений.](tracing-and-message-logging.md) В конфигурацию службы и исходный код внесены изменения, позволяющие использовать трассировку и журнал сообщений. Кроме того, привязка <xref:System.ServiceModel.WSHttpBinding> настроена без использования средств безопасности, что позволяет просматривать сообщения в журнале в формате без шифрования. Полученные журналы трасс (System.ServiceModel.e2e и Message.log) следует просматривать с помощью [инструмента просмотра служебного следа (SvcTraceViewer.exe).](../service-trace-viewer-tool-svctraceviewer-exe.md) В конфигурации задана следующая папка для создания трассировок: C:\LOGS. Создайте эту папку, прежде чем выполнять код из этого образца. Для просмотра содержимого сообщений в инструменте Trace Viewer выберите **Сообщения** как в левом, так и в правом стежке инструмента.
 
 В следующем примере кода приведен контракт службы, в котором свойству <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> задано значение <xref:System.ServiceModel.OperationFormatUse>, и вместо формата тела сообщения по умолчанию (<xref:System.ServiceModel.OperationFormatStyle>) задан формат <xref:System.ServiceModel.OperationFormatStyle.Document>.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),
-XmlSerializerFormat(Style = OperationFormatStyle.Rpc, 
+XmlSerializerFormat(Style = OperationFormatStyle.Rpc,
                                  Use = OperationFormatUse.Encoded)]
 public interface IUseAndStyleCalculator
 {
@@ -74,23 +74,23 @@ public interface IUseAndStyleCalculator
 }
 ```
 
-Чтобы проверить различия между параметрами <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> и <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>, измените их для службы, заново создайте клиент, выполните пример и просмотрите файл c:\logs\message.logs с помощью средства Service Trace Viewer. Также обратите внимание на влияние на метаданные, просматривая `http://localhost/ServiceModelSamples/service.svc?wsdl`. Метаданные служб обычно подразделяются на несколько страниц. Главная страница WSDL содержит привязки WSDL, но просмотр `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` для просмотра определений сообщений.
+Чтобы проверить различия между параметрами <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> и <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>, измените их для службы, заново создайте клиент, выполните пример и просмотрите файл c:\logs\message.logs с помощью средства Service Trace Viewer. Также наблюдать влияние на метаданные `http://localhost/ServiceModelSamples/service.svc?wsdl`при просмотре . Метаданные служб обычно подразделяются на несколько страниц. Основная страница wsdl содержит привязки WSDL, но представление `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` для наблюдения за определениями сообщений.
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](one-time-setup-procedure-for-the-wcf-samples.md)
 
 2. Создайте каталог C:\LOGS для регистрации сообщений. Предоставьте сетевой службе пользователя разрешение на запись в этот каталог.
 
 3. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](running-the-samples.md).
+4. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](running-the-samples.md)
 
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
-> 
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`

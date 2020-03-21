@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest. _CoreResponse поле
+title: HttpWebRequest._CoreResponse поле
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: d16936f6984e73a886f5f48e05b53501ced63c1b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b275f3eece96ac8a9ae3fb0ebd030c8d79e21fc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740447"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155925"
 ---
-# <a name="httpwebrequest_coreresponse-field"></a>HttpWebRequest.\_поле Коререспонсе
+# <a name="httpwebrequest_coreresponse-field"></a>HttpWebRequest. \_Поле CoreResponse
 
-`HttpWebRequest._CoreResponse` — это объект ( [коререспонседата](coreresponsedata.md) или <xref:System.Exception>), содержащий результат синтаксического анализа ответа HTTP.
+`HttpWebRequest._CoreResponse`— объект (либо [CoreResponseData,](coreresponsedata.md) либо <xref:System.Exception>), содержащий результат анализа ответов HTTP.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -28,14 +28,14 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Этот API не предназначен для непосредственного использования в коде. Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода. Ознакомьтесь с [руководством пользователя DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.
+> Этот API не предназначен для использования непосредственно в коде. Вместо этого следует <xref:System.Diagnostics.DiagnosticSource> использовать сетевой код. Смотрите [руководство DiagnosticSource пользователя](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
+> Корпорация Майкрософт ни при каких обстоятельствах не поддерживает использование этого класса в производственном приложении.
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Net>
+**Пространство имен:**<xref:System.Net>
 
-**Сборка:** Система (в System. dll)
+**Сборка:** Система (в System.dll)
 
-**.NET Framework версии:** Доступно с 2,0.
+**Рамочные версии .NET:** Доступно с 2.0.

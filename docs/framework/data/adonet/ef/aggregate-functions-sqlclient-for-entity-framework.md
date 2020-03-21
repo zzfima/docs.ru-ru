@@ -2,27 +2,27 @@
 title: Статистические функции (SqlClient для Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 3dbd4c0a24a5fc41153ea16747325e824669b0e5
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1fad25f2229b4fa810cf82a96dcb8c50a9de3070
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700047"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150653"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Статистические функции (SqlClient для Entity Framework)
 Поставщик данных .NET Framework для SQL Server (SqlClient) предоставляет агрегатные функции. Агрегатные функции выполняют вычисления на наборе входных значений и возвращают значение. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции.  
   
- Ниже приведены агрегатные функции SqlClient.  
+ Ниже приведены агрегированные функции SqlClient.  
 
 ## <a name="avgexpression"></a>AVG (выражение)
 
-Возвращает среднее значение для значений в коллекции. Значения NULL не учитываются.
+Возвращает среднее значение для значений в коллекции. Значения NULL пропускаются.
 
-**аргументы**
+**Аргументы**
 
-`Int32`, `Int64`, `Double`и `Decimal`.
+Ан `Int32` `Int64`, `Double`, `Decimal`и .
 
-**Возвращаемое значение**
+**Значение возврата**
 
 Тип параметра `expression`.
 
@@ -30,57 +30,57 @@ ms.locfileid: "71700047"
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
 
-## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (коллекция)
- 
- Возвращает контрольную сумму значений в коллекции. Значения NULL не учитываются.
- 
- **аргументы**
- 
- Коллекция (`Int32`).
- 
- **Возвращаемое значение**
- 
+## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (сбор)
+
+ Возвращает контрольную сумму значений в коллекции. Значения NULL пропускаются.
+
+ **Аргументы**
+
+ Коллекция ().`Int32`
+
+ **Значение возврата**
+
  `Int32`.
- 
+
  **Пример**
- 
+
 [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]
-   
+
 ## <a name="countexpression"></a>COUNT (выражение)
 
 Возвращает число элементов в коллекции в виде `Int32`.
 
-**аргументы**
+**Аргументы**
 
-Коллекция\<T >, где T — один из следующих типов:
+Коллекция\<T>, где T является одним из следующих типов:
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` (не возвращается в SQL Server 2000)|
+|`Time`|`String`|`Binary`|`Guid`(не возвращенв в сервере S'L 2000)|
 
-**Возвращаемое значение**
+**Значение возврата**
 
 `Int32`.
 
 **Пример**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]
- 
+
 ## <a name="count_bigexpression"></a>COUNT_BIG (выражение)
- 
+
 Возвращает число элементов в коллекции в виде `bigint`.
- 
- **аргументы**
- 
- Коллекция (T), где T — один из следующих типов:
- 
+
+ **Аргументы**
+
+ Коллекция (T), где T является одним из следующих типов:
+
  |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` (не возвращается в SQL Server 2000)|
+|`Time`|`String`|`Binary`|`Guid`(не возвращенв в сервере S'L 2000)|
 
-**Возвращаемое значение**
+**Значение возврата**
 
 `Int64`.
 
@@ -92,16 +92,16 @@ ms.locfileid: "71700047"
 
 Возвращает максимальное значение, содержащееся в коллекции.
 
-**аргументы**
+**Аргументы**
 
-Коллекция (T), где T — один из следующих типов: 
+Коллекция (T), где T является одним из следующих типов:
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
 |`Time`|`String`|`Binary`||
 
-**Возвращаемое значение**
+**Значение возврата**
 
 Тип параметра `expression`.
 
@@ -113,16 +113,16 @@ ms.locfileid: "71700047"
 
 Возвращает минимальное значение в коллекции.
 
-**аргументы**
+**Аргументы**
 
-Коллекция (T), где T — один из следующих типов: 
+Коллекция (T), где T является одним из следующих типов:
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
 |`Time`|`String`|`Binary`||
 
-**Возвращаемое значение**
+**Значение возврата**
 
 Тип параметра `expression`.
 
@@ -134,13 +134,13 @@ ms.locfileid: "71700047"
 
 Возвращает статистическое стандартное отклонение всех значений в указанном выражении.
 
-**аргументы**
+**Аргументы**
 
-Коллекция (`Double`).
+Коллекция ().`Double`
 
-**Возвращаемое значение**
+**Значение возврата**
 
-Объект `Double`.
+`Double`.
 
 **Пример**
 
@@ -150,13 +150,13 @@ ms.locfileid: "71700047"
 
 Возвращает статистическое стандартное отклонение совокупности всех значений в указанном выражении.
 
-**аргументы**
+**Аргументы**
 
-Коллекция (`Double`).
+Коллекция ().`Double`
 
-**Возвращаемое значение**
+**Значение возврата**
 
-Объект `Double`.
+`Double`.
 
 **Пример**
 
@@ -166,11 +166,11 @@ ms.locfileid: "71700047"
 
 Возвращает сумму всех значений в коллекции.
 
-**аргументы**
+**Аргументы**
 
-Коллекция (T), в которой T является одним из следующих типов: `Int32`, `Int64`, `Double`, `Decimal`.
+Коллекция (T), где T является одним `Int32`из `Int64` `Double`следующих типов: , , `Decimal`.
 
-**Возвращаемое значение**
+**Значение возврата**
 
 Тип параметра `expression`.
 
@@ -182,13 +182,13 @@ ms.locfileid: "71700047"
 
 Возвращает статистическую дисперсию всех значений в указанном выражении.
 
-**аргументы**
+**Аргументы**
 
-Коллекция (`Double`).
+Коллекция ().`Double`
 
-**Возвращаемое значение**
+**Значение возврата**
 
-Объект `Double`.
+`Double`.
 
 **Пример**
 
@@ -196,21 +196,21 @@ ms.locfileid: "71700047"
 
 ## <a name="varpexpression"></a>VARP (выражение)
 
-Возвращает статистическую дисперсию совокупности всех значений в указанном выражении.
+Возвращает статистическую дисперсию для заполнения всех значений в указанном выражении.
 
-**аргументы**
+**Аргументы**
 
-Коллекция (`Double`).
+Коллекция ().`Double`
 
-**Возвращаемое значение**
+**Значение возврата**
 
-Объект `Double`.
+`Double`.
 
 **Пример**
 
-[!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)] 
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)]
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Агрегатные функции (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
 - [Язык Entity SQL](./language-reference/entity-sql-language.md)

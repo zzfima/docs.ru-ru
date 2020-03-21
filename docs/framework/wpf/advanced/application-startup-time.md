@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0fae3ac1769163101dcdb183f4c5c2135354b1fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487177"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145427"
 ---
 # <a name="application-startup-time"></a>Время запуска приложения
 Время, необходимое для запуска WPF-приложения, может сильно варьироваться. В этом разделе описаны различные способы, позволяющие сократить воспринимаемое и фактическое время запуска приложений Windows Presentation Foundation (WPF).  
@@ -24,9 +24,9 @@ ms.locfileid: "67487177"
  Горячий запуск происходит, когда большинство страниц для основных компонентов среды CLR уже загружены в память, что экономит дорогостоящее время доступа к диску. Вот почему при повторном запуске управляемое приложение запускается быстрее.  
   
 ## <a name="implement-a-splash-screen"></a>Реализация экрана-заставки  
- В случаях когда между запуском приложения и отображением первого графического интерфейса происходит значительная неизбежная задержка, можно оптимизировать воспринимаемое время запуска с помощью *экрана-заставки*. В этом случае изображение появляется практически сразу после того, как пользователь запустит приложение. Когда приложение будет готово к отображению первого пользовательского интерфейса, экран-заставка исчезнет. Начиная с .NET Framework 3.5 SP1, можно использовать <xref:System.Windows.SplashScreen> класс для реализации экрана-заставки. Дополнительные сведения см. в разделе [Практическое руководство. Добавление в WPF-приложение экрана-заставки](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ В случаях когда между запуском приложения и отображением первого графического интерфейса происходит значительная неизбежная задержка, можно оптимизировать воспринимаемое время запуска с помощью *экрана-заставки*. В этом случае изображение появляется практически сразу после того, как пользователь запустит приложение. Когда приложение будет готово к отображению первого пользовательского интерфейса, экран-заставка исчезнет. Начиная с .NET Framework 3.5 SP1, <xref:System.Windows.SplashScreen> вы можете использовать класс для реализации экрана всплеска. Дополнительные сведения см. в разделе [Практическое руководство. Добавление в WPF-приложение экрана-заставки](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- Кроме того, используя собственные графические средства Win32, вы можете реализовать свой собственный экран заставки. Отобразите реализацию перед <xref:System.Windows.Application.Run%2A> вызывается метод.  
+ Кроме того, используя собственные графические средства Win32, вы можете реализовать свой собственный экран заставки. Отобразить <xref:System.Windows.Application.Run%2A> реализацию до вызова метода.  
   
 ## <a name="analyze-the-startup-code"></a>Анализ кода запуска  
  Определите причину задержки холодного запуска. Она может быть связана с дисковым вводом-выводом, но необязательно. В целом использование внешних ресурсов, таких как сеть, веб-службы или диск, следует минимизировать.  
@@ -65,7 +65,7 @@ ms.locfileid: "67487177"
  Одновременное присутствие модулей Ngen и JIT может вызвать противоположный эффект. Это связано с тем, что при этом требуется загрузка mscorjit.dll, а когда JIT-компилятор работает с вашим кодом и считывает метаданные сборок, происходит обращение к многим страницам в образах Ngen.  
   
 ### <a name="ngen-and-clickonce"></a>NGen и ClickOnce  
- Время загрузки вашего приложения может также зависеть от выбранного способа его развертывания. Развертывание приложений ClickOnce не поддерживает Ngen. Если вы решите использовать Ngen.exe для своего приложения, выберите другой механизм развертывания, например установщик Windows.  
+ Время загрузки вашего приложения может также зависеть от выбранного способа его развертывания. Развертывание приложения ClickOnce не поддерживает Ngen. Если вы решите использовать Ngen.exe для своего приложения, выберите другой механизм развертывания, например установщик Windows.  
   
  См. дополнительные сведения о [файле Ngen.exe (генераторе образов в машинном коде)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -81,17 +81,17 @@ ms.locfileid: "67487177"
   
  Вы можете установить сертификат CA на клиентский компьютер или не использовать Authenticode, когда это возможно. Если вашему приложению не требуется свидетельство издателя, платить за проверку подписи вам не нужно.  
   
- Начиная с версии .NET Framework 3.5, имеется параметр конфигурации, позволяющий отключить проверку Authenticode. Для этого добавьте в файл конфигурации app.exe следующий параметр.  
+ Начиная с .NET Framework 3.5, есть опция конфигурации, которая позволяет обойти проверку Authenticode. Для этого добавьте в файл конфигурации app.exe следующий параметр.  
   
 ```xml  
 <configuration>  
     <runtime>  
-        <generatePublisherEvidence enabled="false"/>   
+        <generatePublisherEvidence enabled="false"/>
     </runtime>  
 </configuration>  
 ```  
   
- Дополнительные сведения см. в разделе [\<Элемент generatePublisherEvidence>](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Для получения дополнительной информации см [ \<>.](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)  
   
 ## <a name="compare-performance-on-windows-vista"></a>Сравнение производительности в Windows Vista  
  Диспетчер памяти в Windows Vista включает технологию, которая называется SuperFetch. SuperFetch анализирует шаблоны использования памяти с течением времени, определяя оптимальное содержимое памяти для конкретного пользователя. Она работает постоянно, поддерживая содержимое памяти в любой момент времени.  
@@ -104,25 +104,25 @@ ms.locfileid: "67487177"
  Чтобы повысить производительность, необходимо обеспечить взаимодействие между доменами, сократив число междоменных вызовов. По возможности используйте вызовы без аргументов или с аргументами примитивного типа.  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>Использование атрибута NeutralResourcesLanguage  
- Используйте <xref:System.Resources.NeutralResourcesLanguageAttribute> для указания нейтрального языка и региональных параметров для <xref:System.Resources.ResourceManager>. Этот подход позволяет избежать неудачного поиска сборок.  
+ Используйте <xref:System.Resources.NeutralResourcesLanguageAttribute> для указания нейтральной <xref:System.Resources.ResourceManager>культуры для . Этот подход позволяет избежать неудачного поиска сборок.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>Использование класса BinaryFormatter для сериализации  
- Если необходимо использовать сериализацию, используйте <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> вместо класса <xref:System.Xml.Serialization.XmlSerializer> класса. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Класс реализован в библиотеке базовых классов (BCL) в сборке mscorlib.dll. <xref:System.Xml.Serialization.XmlSerializer> Реализуется в сборке System.Xml.dll, что может быть загрузку дополнительного DLL.  
+ Если необходимо использовать сериализацию, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> используйте <xref:System.Xml.Serialization.XmlSerializer> класс вместо класса. Класс <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> реализован в библиотеке базового класса (BCL) в сборке mscorlib.dll. Реализованв <xref:System.Xml.Serialization.XmlSerializer> сборка System.Xml.dll, которая может стать дополнительной DLL для загрузки.  
   
- Если необходимо использовать <xref:System.Xml.Serialization.XmlSerializer> класс, вы может повысить производительность, можно создать предварительную сборку сериализации.  
+ Если вы должны <xref:System.Xml.Serialization.XmlSerializer> использовать класс, вы можете достичь более высокой производительности, если вы предварительно создать сборку сериализации.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Настройка технологии ClickOnce на проверку обновлений после запуска  
- Если приложение использует ClickOnce, запретите подключение к сети при запуске, настроив ClickOnce, чтобы проверить наличие обновлений на сайте развертывания после запуска приложения.  
+ Если приложение использует ClickOnce, избегайте доступа к сети при запуске, настраивая ClickOnce для проверки места развертывания на наличие обновлений после запуска приложения.  
   
- Если вы используете модель приложения (XBAP) браузера XAML, имейте в виду, что ClickOnce проверяет наличие обновлений на сайте развертывания, даже если XBAP уже присутствует в кэше ClickOnce. Для получения дополнительной информации см. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Если вы используете модель браузерного приложения XAML (XBAP), имейте в виду, что ClickOnce проверяет сайт развертывания на наличие обновлений, даже если XBAP уже находится в кэше ClickOnce. Для получения дополнительной информации см. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Настройка автоматического запуска службы PresentationFontCache  
  Первым WPF-приложением, которое загружается после перезагрузки, является служба PresentationFontCache. Служба кэширует системные шрифты, делает их более доступными и повышает общую производительность. Поскольку с запуском службы, а также с некоторыми управляемыми средами связаны временные задержки, службу можно настроить на автоматический запуск при перезагрузке системы.  
   
 ## <a name="set-data-binding-programmatically"></a>Настройка программной привязки данных  
- Вместо использования XAML для задания <xref:System.Windows.FrameworkElement.DataContext%2A> декларативно для главного окна, рассмотрите возможность установки его в обработчике <xref:System.Windows.Application.OnActivated%2A> метод.  
+ Вместо того, чтобы использовать <xref:System.Windows.FrameworkElement.DataContext%2A> XAML для декларативного набора для основного окна, рассмотрите возможность программного установки в методе. <xref:System.Windows.Application.OnActivated%2A>  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
@@ -130,4 +130,4 @@ ms.locfileid: "67487177"
 - <xref:System.Resources.ResourceManager>
 - [Добавление в WPF-приложение экрана-заставки](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (генератор образов в машинном коде)](../../tools/ngen-exe-native-image-generator.md)
-- [\<Элемент generatePublisherEvidence>](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<генерироватьPublisherEvidence> элемент](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

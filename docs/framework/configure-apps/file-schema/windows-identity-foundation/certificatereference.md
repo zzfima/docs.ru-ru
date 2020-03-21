@@ -3,21 +3,21 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: 782ca3344774b8412a18e3cf13bff5f969751ea3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47d432a84d070476ddffd9b98a4ba46d8163bdc3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252144"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152818"
 ---
-# <a name="certificatereference"></a>\<certificateReference >
-Задает параметры, используемые для поиска и проверки сертификата X. 509 в хранилище сертификатов.  
+# <a name="certificatereference"></a>\<сертификатСправка>
+Определяет настройки, которые используются для поиска и проверки сертификата X.509 в магазине сертификатов.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. identityModel. Services**](system-identitymodel-services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateReference >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<федерацияКонфигурация>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>сервис-сертификат**](servicecertificate.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<сертификатСправка>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,7 +25,7 @@ ms.locfileid: "70252144"
 <system.identityModel.services>  
   <federationConfiguration>  
     <serviceCertificate>  
-      <certificateReference   
+      <certificateReference
         storeName="AddressBook||AuthRoot||CertificateAuthority||Disallowed||My||Root||TrustedPeople||TrustedPublisher"  
         storeLocation="CurrentUser||LocalMachine"  
         x509FindType="FindByThumbprint||FindBySubjectName||FindBySubjectDistinguishedName||FindByIssuerName||FindByIssuerDistinguishedName||FindBySerialNumber||FindByTimeValid||FindByTimeNotYetValid||FindByTimeExpired||FindByTemplateName||FindByApplicationPolicy||FindByCertificatePolicy||FindByExtension||FindByKeyUsage||FindBySubjectKeyIdentifier"  
@@ -42,22 +42,22 @@ ms.locfileid: "70252144"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|storeName|Имя хранилища сертификатов X. 509. Значение по умолчанию — "My". Необязательный параметр.|  
-|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation> Значение, указывающее расположение хранилища сертификатов X. 509. Значение по умолчанию — LocalMachine. Необязательный параметр.|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Значение типа, указывающее тип выполняемого поиска. Значение по умолчанию — "Финдбисубжектдистингуишеднаме". Необязательный параметр.|  
+|storeName|Имя хранилища сертификатов X.509. По умолчанию "Мой". Необязательный параметр.|  
+|storeLocation|Значение, <xref:System.Security.Cryptography.X509Certificates.StoreLocation> опоглавивававаев оместонахождение магазина сертификатов X.509. Значение по умолчанию — «LocalMachine». Необязательный параметр.|  
+|x509FindType|Значение, <xref:System.Security.Cryptography.X509Certificates.X509FindType> описавававававаемый тип поиска, который должен быть выполнен. По умолчанию является "FindBySubjectDistinguishedName". Необязательный параметр.|  
 |findValue|Значение для поиска в хранилище сертификатов X.509. Необязательный параметр.|  
-|isChainIncluded|Указывает, следует ли выполнять проверку с помощью цепочки сертификатов. Значение по умолчанию — true; Проверка выполняется с помощью цепочки сертификатов. Необязательный параметр.|  
+|isChainIncluded|Уточняется, следует ли проводить проверку с помощью цепочки сертификатов. По умолчанию является "истинным"; проверка осуществляется с помощью цепочки сертификатов. Необязательный параметр.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствуют  
+ None  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](servicecertificate.md)|Настраивает сертификат, используемый для шифрования и расшифровки маркеров.|  
+|[\<>сервис-сертификат](servicecertificate.md)|Настраивает сертификат, который используется для шифрования и расшифровки токенов.|  
   
-## <a name="remarks"></a>Примечания  
- `<certificateReference>` Элемент задает параметры, используемые для поиска и проверки сертификата X. 509 в хранилище сертификатов. Если он указан как дочерний элемент `<serviceCertificate>` , он указывает параметры расположения и проверки сертификата X. 509, который используется для шифрования и расшифровки токенов. `<certificateReference>` Элемент представлен<xref:System.ServiceModel.Configuration.CertificateReferenceElement> классом.
+## <a name="remarks"></a>Remarks  
+ Элемент `<certificateReference>` определяет параметры, которые используются для поиска и проверки сертификата X.509 в магазине сертификатов. Когда он указан в качестве `<serviceCertificate>` элемента элемента ребенка, он определяет настройки местоположения и проверки сертификата X.509, который используется для шифрования и расшифровки токенов. Элемент `<certificateReference>` представлен <xref:System.ServiceModel.Configuration.CertificateReferenceElement> классом.

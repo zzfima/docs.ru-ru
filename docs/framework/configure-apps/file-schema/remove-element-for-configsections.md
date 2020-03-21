@@ -7,20 +7,20 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215393"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154534"
 ---
-# <a name="remove-element-for-configsections"></a>\<удалить элемент > для \<configSections >
+# <a name="remove-element-for-configsections"></a>\<удалить элемент \<> для> конфигураций
 
-Удаляет предопределенный раздел или группу разделов.
+Удаляет заранее определенный раздел или группу раздела.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<удалить >**
+[**\<конфигурация>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<конфигурации>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<удалить>**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,31 +28,31 @@ ms.locfileid: "77215393"
 <remove name="section name or section group name" />
 ```
 
-## <a name="attribute"></a>Атрибут
+## <a name="attribute"></a>attribute
 
 |           | Описание |
 | --------- | ----------- |
-| **name**  | Обязательный атрибут.<br><br>Указывает имя раздела или группы разделов, которые нужно удалить. |
+| **name**  | Обязательный атрибут.<br><br>Уотек названия группы раздела или раздела для удаления. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<configSections >** Дерев](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
+| [** \<конфигурации>** Элемент](configsections-element-for-configuration.md) | Содержит раздел конфигурации и декларации пространства имен. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Нет
+None
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Элемент **\<удалить >** можно использовать для удаления разделов и групп разделов из приложения, которые были определены на более высоком уровне в иерархии файлов конфигурации.
+Элемент ** \<удаления>** можно удалить разделы и группы разделов из приложения, которые были определены на более высоком уровне в иерархии файлов конфигурации.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано использование элемента **\<Remove >** в файле конфигурации приложения для удаления раздела, ранее определенного в файле конфигурации компьютера.
+В следующем примере показано, как использовать ** \<элемент удаления>** в файле конфигурации приложения для удаления раздела, ранее определенного в файле конфигурации машины.
 
-В следующем коде файла конфигурации компьютера объявляется раздел **\<самплесектион >** :
+Следующий файл овый код конфигурации машины объявляет ** \<образец разделаРаздел>: **
 
 ```xml
 <!-- Machine.config file -->
@@ -61,13 +61,13 @@ ms.locfileid: "77215393"
     <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
-В следующем коде файла конфигурации приложения удаляется раздел **\<самплесектион >** . После удаления приложение не сможет получить параметры в **\<самплесектион >** .
+Следующий файл конфигурации приложения код удаляет ** \<образецРаздел>** раздел. После удаления приложение не может получить настройки в ** \<>sampleSection. **
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ ms.locfileid: "77215393"
 
 ## <a name="configuration-file"></a>Файл конфигурации
 
-Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
+Этот элемент может быть использован в файле конфигурации приложения, файле конфигурации машины *(Machine.config)* и файлах *Web.config,* которые не находятся на уровне каталога приложений.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Схема файла конфигурации для .NET Framework](index.md)
+- [Схема конфигурации файла для рамочного соглашения .NET](index.md)

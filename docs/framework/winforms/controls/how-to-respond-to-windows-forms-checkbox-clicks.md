@@ -12,23 +12,23 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: ba2afb52939a6274978ce725dac19b5622419b99
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6ff20c443519446d3804b325924cb3c5cbedea97
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735661"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141930"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms
-Когда пользователь щелкает элемент управления Windows Forms <xref:System.Windows.Forms.CheckBox>, возникает событие <xref:System.Windows.Forms.Control.Click>. Приложение можно запрограммировать для выполнения некоторых действий в зависимости от состояния флажка.  
+Всякий раз, когда пользователь <xref:System.Windows.Forms.CheckBox> нажимает на элемент управления Windows Forms, <xref:System.Windows.Forms.Control.Click> происходит событие. Вы можете запрограммировать приложение для выполнения некоторых действий в зависимости от состояния флажка.  
   
-### <a name="to-respond-to-checkbox-clicks"></a>Реагирование на нажатия кнопки CheckBox  
+### <a name="to-respond-to-checkbox-clicks"></a>Ответы на клики CheckBox  
   
-1. В обработчике событий <xref:System.Windows.Forms.Control.Click> используйте свойство <xref:System.Windows.Forms.CheckBox.Checked%2A>, чтобы определить состояние элемента управления и выполнить все необходимые действия.  
+1. В <xref:System.Windows.Forms.Control.Click> обработчике <xref:System.Windows.Forms.CheckBox.Checked%2A> событий используйте свойство для определения состояния элемента управления и выполняйте все необходимые действия.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
-       ' The CheckBox control's Text property is changed each time the   
+       ' The CheckBox control's Text property is changed each time the
        ' control is clicked, indicating a checked or unchecked state.  
        If CheckBox1.Checked = True Then  
           CheckBox1.Text = "Checked"  
@@ -41,7 +41,7 @@ ms.locfileid: "76735661"
     ```csharp  
     private void checkBox1_Click(object sender, System.EventArgs e)  
     {  
-       // The CheckBox control's Text property is changed each time the   
+       // The CheckBox control's Text property is changed each time the
        // control is clicked, indicating a checked or unchecked state.  
        if (checkBox1.Checked)  
        {  
@@ -71,16 +71,16 @@ ms.locfileid: "76735661"
     ```  
   
     > [!NOTE]
-    > Если пользователь пытается дважды щелкнуть элемент управления <xref:System.Windows.Forms.CheckBox>, каждый щелчок будет обрабатываться отдельно. то есть элемент управления <xref:System.Windows.Forms.CheckBox> не поддерживает событие двойного щелчка.  
+    > Если пользователь пытается дважды нажать <xref:System.Windows.Forms.CheckBox> на элемент управления, каждый клик будет обрабатываться отдельно; то есть <xref:System.Windows.Forms.CheckBox> элемент управления не поддерживает событие с двойным щелчком мыши.  
   
     > [!NOTE]
-    > Если свойство <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> `true` (по умолчанию), <xref:System.Windows.Forms.CheckBox> автоматически выбирается или удаляется при щелчке. В противном случае необходимо вручную задать свойство <xref:System.Windows.Forms.CheckBox.Checked%2A> при возникновении события <xref:System.Windows.Forms.Control.Click>.  
+    > Когда <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> свойство `true` (по умолчанию), автоматически <xref:System.Windows.Forms.CheckBox> выбирается или очищается при нажатии. В противном случае необходимо <xref:System.Windows.Forms.CheckBox.Checked%2A> вручную <xref:System.Windows.Forms.Control.Click> настроить свойство при возникновении события.  
   
-     Для определения курса действий можно также использовать элемент управления <xref:System.Windows.Forms.CheckBox>.  
+     Вы также можете <xref:System.Windows.Forms.CheckBox> использовать элемент управления для определения курса действий.  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Определение курса действий при нажатии на флажок  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Определить курс действий при нажатии флажка  
   
-1. Используйте оператор Case для запроса значения свойства <xref:System.Windows.Forms.CheckBox.CheckState%2A>, чтобы определить направление действия. Если свойство <xref:System.Windows.Forms.CheckBox.ThreeState%2A> имеет значение `true`, то свойство <xref:System.Windows.Forms.CheckBox.CheckState%2A> может возвращать три возможных значения, которые представляют собой проверяемую рамку, флажок снят или третье неопределенное состояние, при котором окно отображается серым цветом, чтобы указать, что параметр недоступен.  
+1. Используйте выписку по случаю случая <xref:System.Windows.Forms.CheckBox.CheckState%2A> для запроса стоимости свойства для определения хода действий. Когда <xref:System.Windows.Forms.CheckBox.ThreeState%2A> свойство настроено `true` <xref:System.Windows.Forms.CheckBox.CheckState%2A> на, свойство может вернуть три возможных значения, которые представляют собой окно проверяется, окно не проверяется, или третье неопределенное состояние, в котором окно отображается с затемненным видом, чтобы указать опцию недоступна.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -91,7 +91,7 @@ ms.locfileid: "76735661"
              ' Code for unchecked state.  
           Case CheckState.Indeterminate  
              ' Code for indeterminate state.  
-       End Select   
+       End Select
     End Sub  
     ```  
   
@@ -133,11 +133,11 @@ ms.locfileid: "76735661"
     ```  
   
     > [!NOTE]
-    > Если свойство <xref:System.Windows.Forms.CheckBox.ThreeState%2A> имеет значение `true`, свойство <xref:System.Windows.Forms.CheckBox.Checked%2A> возвращает `true` для <xref:System.Windows.Forms.CheckState.Checked> и <xref:System.Windows.Forms.CheckState.Indeterminate>.  
+    > Когда <xref:System.Windows.Forms.CheckBox.ThreeState%2A> имущество `true`установлено, <xref:System.Windows.Forms.CheckBox.Checked%2A> имущество `true` возвращается <xref:System.Windows.Forms.CheckState.Checked> <xref:System.Windows.Forms.CheckState.Indeterminate>для обоих и .  
   
 ## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Общие сведения об элементе управления CheckBox](checkbox-control-overview-windows-forms.md)
 - [Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [Элемент управления CheckBox](checkbox-control-windows-forms.md)
+- [Контроль checkBox](checkbox-control-windows-forms.md)

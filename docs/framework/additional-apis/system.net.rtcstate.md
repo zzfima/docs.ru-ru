@@ -1,5 +1,5 @@
 ---
-title: Класс Рткстате (System.Net)
+title: Класс Rtcstate (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -11,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: 1a88adeefe0095bf514d36cadc9b44efd8ab61ee
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 861bf2fc0dfef8f836e98e45ba22c7e2e24e19f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214884"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155782"
 ---
-# <a name="rtcstate-class"></a>Класс Рткстате
+# <a name="rtcstate-class"></a>Класс RtcState
 
-Класс `RtcState` представляет данные о состоянии для запроса на подключение в режиме реального времени (RTC).
+Класс `RtcState` представляет данные состояния для запроса связи в режиме реального времени (RTC).
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -29,14 +29,14 @@ internal class RtcState
 ```
 
 > [!WARNING]
-> Класс `RtcState` является внутренним и не предназначен для непосредственного использования в коде.
-> 
-> Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.
+> Класс `RtcState` является внутренним и не предназначен для использования непосредственно в коде.
+>
+> Корпорация Майкрософт ни при каких обстоятельствах не поддерживает использование этого класса в производственном приложении.
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Net>
+**Пространство имен:**<xref:System.Net>
 
-**Сборка:** Система (в System. dll)
+**Сборка:** Система (в System.dll)
 
-**.NET Framework версии:** Доступно с 4,5.
+**Рамочные версии .NET:** Доступно с 4.5.

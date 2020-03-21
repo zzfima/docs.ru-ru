@@ -1,5 +1,5 @@
 ---
-title: Поле Коннектионграуп. m_ConnectionList
+title: СоединениеГруппа.m_ConnectionList Поле
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-ms.openlocfilehash: d53eeb54d212adb011dae138e103ea5b30f7fb99
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8eb6f215c36e214f7095eeba90bf0aed66dfcea0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215544"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155854"
 ---
-# <a name="connectiongroupm_connectionlist-field"></a>Коннектионграуп. m\_поле Коннектионлист
+# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup.m\_ConnectionList Поле
 
-`ConnectionGroup.m_ConnectionList` — это <xref:System.Collections.ArrayList> объектов подключения, которые служат одинаковым URI и имеют одни и те же значения для некоторых других свойств, таких как срок действия и проверка подлинности.
+`ConnectionGroup.m_ConnectionList`является <xref:System.Collections.ArrayList> объектом соединения, который обслуживает те же URI и имеют те же значения для некоторых других свойств, таких как истечение срока действия и аутентификация.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -28,14 +28,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> Поле `ConnectionGroup.m_ConnectionList` является закрытым и не предназначено для непосредственного использования в коде.
-> 
-> Корпорация Майкрософт не поддерживает использование этого поля в рабочем приложении при каких-либо обстоятельствах.
+> Поле `ConnectionGroup.m_ConnectionList` является частным и не предназначено для использования непосредственно в коде.
+>
+> Корпорация Майкрософт ни при каких обстоятельствах не поддерживает использование этого поля в производственном приложении.
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:** <xref:System.Net>
+**Пространство имен:**<xref:System.Net>
 
-**Сборка:** Система (в System. dll)
+**Сборка:** Система (в System.dll)
 
-**.NET Framework версии:** Доступно с 2,0.
+**Рамочные версии .NET:** Доступно с 2.0.

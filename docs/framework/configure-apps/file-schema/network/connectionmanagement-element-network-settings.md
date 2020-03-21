@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: b769dd8d3ed0c617d0d8f908e7ef516615da09a7
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088460"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154898"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>Элемент \<элемент connectionManagement > (параметры сети)
+# <a name="connectionmanagement-element-network-settings"></a>\<Элемент connectionManagement> (параметры сети)
 Задает максимальное число подключений к сетевому узлу.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<элемент connectionmanagement >**
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<подключениеУправление>**
 
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<connectionManagement>   
+<connectionManagement>
 </connectionManagement>  
 ```  
   
@@ -33,15 +33,15 @@ ms.locfileid: "74088460"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[add](add-element-for-connectionmanagement-network-settings.md)|Добавляет IP-адрес или DNS-имя в список управления подключениями.|  
-|[clear](clear-element-for-connectionmanagement-network-settings.md)|Очищает список управления подключениями.|  
-|[remove](remove-element-for-connectionmanagement-network-settings.md)|Удаляет IP-адрес или DNS-имя из списка управления подключениями.|  
+|[добавление](add-element-for-connectionmanagement-network-settings.md)|Добавляет IP-адрес или DNS-имя в список управления подключениями.|  
+|[Ясно](clear-element-for-connectionmanagement-network-settings.md)|Очищает список управления подключением.|  
+|[удаление](remove-element-for-connectionmanagement-network-settings.md)|Удаляет IP-адрес или имя DNS из списка управления подключением.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -49,14 +49,14 @@ ms.locfileid: "74088460"
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
-## <a name="remarks"></a>Заметки  
- Элемент `connectionManagement` определяет максимальное число подключений к серверу или группе серверов.  
+## <a name="remarks"></a>Remarks  
+ Элемент `connectionManagement` определяет максимальное количество подключений к серверу или группе серверов.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере приложение настраивается для использования четырех подключений к серверу `www.contoso.com` и двух подключений ко всем остальным серверам.  
+ Следующий пример настраивает приложение на использование `www.contoso.com` четырех подключений к серверу и двух подключений ко всем другим серверам.  
   
 ```xml  
 <configuration>  
@@ -69,8 +69,8 @@ ms.locfileid: "74088460"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Схема параметров сети](index.md)
+- [Схема настройки сети](index.md)

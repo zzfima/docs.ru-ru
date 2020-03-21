@@ -3,22 +3,22 @@ title: <sendMessageChannelCache>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: ac38a43b39496bdeee59a591f7b8f5bc4dd30de0
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: b68c6d2e526eb22328806558d7c167b7f2ed0820
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398695"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152005"
 ---
 # <a name="sendmessagechannelcache"></a>\<sendMessageChannelCache>
-Поведение службы, которое позволяет настраивать уровни совместного использования кэша, параметры кэша фабрики каналов и параметры кэша канала для рабочих процессов, которые отправляют сообщения в конечные точки службы с помощью операций отправки сообщений.  
+Поведение службы, которое позволяет изменить уровни доступа к кэшу, параметры кэша фабрики канала и параметры кэша канала для рабочих процессов, которые отправляют сообщения в конечные точки служб с использованием действий отправки сообщений.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<системой. > ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sendMessageChannelCache >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Системы. СервисМодель>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<поведение>**](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<поведение>**](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sendMessageChannelCache>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,10 +28,10 @@ ms.locfileid: "70398695"
     <behavior name="String">
       <sendMessageChannelCache allowUnsafeCaching="Boolean">
         <channelSettings idleTimeout="TimeSpan"
-                         leaseTimeout="TimeSpan" 
+                         leaseTimeout="TimeSpan"
                          maxItemsInCache="Integer" />
-        <factorySettings idleTimeout="TimeSpan" 
-                         leaseTimeout="TimeSpan" 
+        <factorySettings idleTimeout="TimeSpan"
+                         leaseTimeout="TimeSpan"
                          maxItemsInCache="Integer" />
       </sendMessageChannelCache>
     </behavior>
@@ -44,42 +44,42 @@ ms.locfileid: "70398695"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|allowUnsafeCaching|Логическое значение, указывающее, следует ли включить кэширование. Если служба рабочего процесса имеет пользовательские привязки или поведения, то кэширование может оказаться небезопасным (и будет отключено по умолчанию). Однако если вы хотите включить кэширование, присвойте этому свойству значение **true**.|  
+|allowUnsafeCaching|Логическое значение, указывающее, следует ли включить кэширование. Если служба рабочего процесса имеет пользовательские привязки или поведения, то кэширование может оказаться небезопасным (и будет отключено по умолчанию). Однако, если вы хотите превратить кэширование на набор этого свойства к **истине.**|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Чаннелсеттингс >](channelsettings.md)|Указывает параметры кэша канала.|  
-|[\<Факторисеттингс >](factorysettings.md)|Указывает параметры кэша фабрики канала.|  
+|[\<channelSettings>](channelsettings.md)|Указывает параметры кэша канала.|  
+|[\<заводНастройки>](factorysettings.md)|Указывает параметры кэша фабрики канала.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<> поведения > \<serviceBehaviors](behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
+|[\<поведение> \<сервисовПоведение>](behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Это поведение службы предназначено для рабочих процессов, отправляющих сообщения в конечные точки служб. Эти рабочие процессы обычно являются клиентскими, но также могут быть службами рабочих процессов, размещенными в <xref:System.ServiceModel.WorkflowServiceHost>.  
   
  По умолчанию в рабочем процессе, размещенном в <xref:System.ServiceModel.WorkflowServiceHost>, кэш, используемый действиями обмена сообщениями <xref:System.ServiceModel.Activities.Send>, совместно используется всеми экземплярами рабочих процессов в <xref:System.ServiceModel.WorkflowServiceHost> (кэширование уровня узла). Для клиентского рабочего процесса, не размещенного в <xref:System.ServiceModel.WorkflowServiceHost>, кэш доступен только для экземпляра рабочего процесса (кэширование уровня экземпляра). По умолчанию кэширование отключено для всех действий отправки в рабочем процессе, в конфигурации которого определены конечные точки.  
   
- Дополнительные сведения о том, как изменить уровни общего доступа к кэшу по умолчанию и параметры кэша для фабрики каналов и кэша каналов, см. [в разделе изменение уровней общего доступа к кэшу для действий отправки](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+ Для получения дополнительной информации о том, как изменить уровни совместного использования кэша по умолчанию и настройки кэша для фабрики каналов и кэша канала, [см.](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)  
   
 ## <a name="example"></a>Пример  
- В размещенной службе рабочего процесса в файле конфигурации приложения можно указать параметры кэша фабрики и канала. Для этого необходимо создать поведение службы, содержащее параметры для кэша фабрики и канала, и добавить это поведение в службу. В следующем примере показано содержимое файла конфигурации, содержащего `MyChannelCacheBehavior` поведение службы с настройками кэша настраиваемой фабрики и канала. Это поведение службы добавляется в службу с помощью `behaviorConfiguration` атрибута.  
+ В размещенной службе рабочего процесса в файле конфигурации приложения можно указать параметры кэша фабрики и канала. Для этого необходимо создать поведение службы, содержащее параметры для кэша фабрики и канала, и добавить это поведение в службу. В следующем примере отображается содержимое `MyChannelCacheBehavior` файла конфигурации, содержащего поведение службы с настройками кэша назакази и кэша каналов. Это поведение службы добавляется `behaviorConfiguration` в службу через атрибут.  
   
 ```xml  
-<configuration>    
+<configuration>
   <system.serviceModel>  
-    <!-- List of other config sections here -->   
+    <!-- List of other config sections here -->
     <behaviors>  
       <serviceBehaviors>  
         <behavior name="MyChannelCacheBehavior">  
           <sendMessageChannelCache allowUnsafeCaching ="false" >  
-            <!-- Control only the host level settings -->   
+            <!-- Control only the host level settings -->
             <factorySettings maxItemsInCache = "8" idleTimeout = "00:05:00" leaseTimeout="10:00:00" />  
             <channelSettings maxItemsInCache = "32" idleTimeout = "00:05:00" leaseTimeout="00:06:00" />  
           </sendMessageChannelCache>  
@@ -93,9 +93,9 @@ ms.locfileid: "70398695"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.Activities.SendMessageChannelCache>
 - <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>
 - <xref:System.ServiceModel.Activities.Send>
-- [Изменение уровней совместного использования кэша для действий "Send"](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+- [Изменение уровней совместного использования кэша для действий «Send»](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

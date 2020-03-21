@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e9a00ab78a57c3c1686d7c87ed8b45d9b2649af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784376"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150835"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Выполнение запроса XPath к набору данных
-Связь между синхронизированной <xref:System.Data.DataSet> и <xref:System.Xml.XmlDataDocument> позволяет использовать службы XML, такие как запрос языка XML Path (XPath), которые обращаются к **XmlDataDocument** и могут выполнять определенные функции более удобно, чем доступ к **набору данных** напрямую. Например, вместо использования метода **SELECT** объекта <xref:System.Data.DataTable> для перехода между связями с другими таблицами в **наборе данных**можно выполнить запрос XPath к **XmlDataDocument** , который синхронизируется с **набором данных**, чтобы получить список XML-элементов в виде <xref:System.Xml.XmlNodeList>. Узлы в **XmlNodeList**, приведенные как <xref:System.Xml.XmlElement> узлы, могут затем передаваться в метод **жетровфромелемент** объекта **XmlDataDocument**для возврата совпадающих <xref:System.Data.DataRow> ссылок на строки таблицы в синхронизированном  **Набор данных**.  
+Взаимосвязь между синхронизированным <xref:System.Data.DataSet> <xref:System.Xml.XmlDataDocument> и позволяет использовать службы XML, такие как запрос XML Path Language (XPath), которые имеют доступ к **XmlDataDocument** и могут выполнять определенные функциональные возможности более удобно, чем напрямую получить доступ к **DataSet.** Например, вместо того, <xref:System.Data.DataTable> чтобы использовать метод **Выбора** для навигации по отношениям с другими таблицами в **DataSet,** можно выполнить запрос XPath на **XmlDataDocument,** который <xref:System.Xml.XmlNodeList>синхронизирован с **DataSet,** чтобы получить список элементов XML в виде . Узлы в **XmlNodeList**, <xref:System.Xml.XmlElement> отлитые в виде узлов, могут быть переданы методу **GetRowFromElement** **XmlDataDocument**, чтобы вернуть соответствующие <xref:System.Data.DataRow> ссылки на строки таблицы в синхронизированном **DataSet**.  
   
- Например, следующий образец кода выполняет запрос XPath «по внукам». **Набор данных** заполняется тремя таблицами: **Клиенты**, **заказы**и **OrderDetails**. В примере сначала создается связь «родители-потомки» между таблицами **Customers** и **Orders** , а также между таблицами **Orders** и **OrderDetails** . Затем выполняется запрос XPath, возвращающий **XmlNodeList** из узлов **Customers** , где узел внучатый **OrderDetails** имеет узел **ProductID** со значением 43. По сути, в примере используется запрос XPath для определения того, какие клиенты разказали продукт с **ProductID** 43.  
+ Например, следующий образец кода выполняет запрос XPath «по внукам». **DataSet** заполнен тремя таблицами: **Клиенты,** **Заказы**и **OrderDetails**. В выборке сначала создается отношение родителя и ребенка между таблицами **Заказчиков** и **Заказов,** а также между таблицами **заказов** и **orderDetails.** Затем выполняется запрос XPath, чтобы вернуть **узлы XmlNodeList** **клиентов,** где узла **OrderDetails** grandchild имеет узлы **ProductID** со значением 43. В сущности, образец использует запрос XPath, чтобы определить, какие клиенты заказали продукт, который имеет **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -43,7 +43,7 @@ dataSet.Relations.Add("OrderDetail", _
   dataSet.Tables("Orders").Columns("OrderID"), _  
 dataSet.Tables("OrderDetails").Columns("OrderID"), false).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim nodeList As XmlNodeList = xmlDoc.DocumentElement.SelectNodes( _  
   "descendant::Customers[*/OrderDetails/ProductID=43]")  
@@ -84,10 +84,10 @@ dataSet.Relations.Add("CustOrders",
   
 dataSet.Relations.Add("OrderDetail",  
   dataSet.Tables["Orders"].Columns["OrderID"],  
-  dataSet.Tables["OrderDetails"].Columns["OrderID"],   
+  dataSet.Tables["OrderDetails"].Columns["OrderID"],
   false).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);   
+XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);
   
 XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes(  
   "descendant::Customers[*/OrderDetails/ProductID=43]");  
@@ -101,7 +101,7 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Синхронизация DataSet и XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
+- [Синхронизация набора данных и XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
 - [Общие сведения об ADO.NET](../ado-net-overview.md)
