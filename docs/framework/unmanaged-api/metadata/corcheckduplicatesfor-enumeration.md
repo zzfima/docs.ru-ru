@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443787"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176192"
 ---
-# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="281fe-102">Перечисление CorCheckDuplicatesFor</span><span class="sxs-lookup"><span data-stu-id="281fe-102">CorCheckDuplicatesFor Enumeration</span></span>
-<span data-ttu-id="281fe-103">Указывает маркеры метаданных, которые будут проверяться на наличие дубликатов.</span><span class="sxs-lookup"><span data-stu-id="281fe-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
+# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="fba20-102">Перечисление CorCheckDuplicatesFor</span><span class="sxs-lookup"><span data-stu-id="fba20-102">CorCheckDuplicatesFor Enumeration</span></span>
+<span data-ttu-id="fba20-103">Определяет токены метаданных, которые будут проверены на наличие дубликатов.</span><span class="sxs-lookup"><span data-stu-id="fba20-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="281fe-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="281fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fba20-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fba20-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorCheckDuplicatesFor {  
@@ -57,52 +57,52 @@ typedef enum CorCheckDuplicatesFor {
   
     MDDupAssembly               = 0x10000000,  
   
-    MDDupDefault =   
-        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |   
+    MDDupDefault =
+        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |
         MDDupSignature | MDDupTypeSpec | MDDupMethodSpec  
   
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="281fe-105">Члены</span><span class="sxs-lookup"><span data-stu-id="281fe-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fba20-105">Члены</span><span class="sxs-lookup"><span data-stu-id="fba20-105">Members</span></span>  
   
-|<span data-ttu-id="281fe-106">Член</span><span class="sxs-lookup"><span data-stu-id="281fe-106">Member</span></span>|<span data-ttu-id="281fe-107">Описание</span><span class="sxs-lookup"><span data-stu-id="281fe-107">Description</span></span>|  
+|<span data-ttu-id="fba20-106">Участник</span><span class="sxs-lookup"><span data-stu-id="fba20-106">Member</span></span>|<span data-ttu-id="fba20-107">Описание</span><span class="sxs-lookup"><span data-stu-id="fba20-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDDupAll`|<span data-ttu-id="281fe-108">Проверьте все маркеры метаданных на наличие дубликатов.</span><span class="sxs-lookup"><span data-stu-id="281fe-108">Check all metadata tokens for duplicates.</span></span>|  
-|`MDDupENC`|<span data-ttu-id="281fe-109">Не используется.</span><span class="sxs-lookup"><span data-stu-id="281fe-109">Not used.</span></span>|  
-|`MDNoDupChecks`|<span data-ttu-id="281fe-110">Не проверяйте маркеры метаданных для дубликатов.</span><span class="sxs-lookup"><span data-stu-id="281fe-110">Do not check metadata tokens for duplicates.</span></span>|  
-|`MDDupTypeDef`|<span data-ttu-id="281fe-111">Проверьте наличие дубликатов токенов `mdTypeDef`.</span><span class="sxs-lookup"><span data-stu-id="281fe-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
-|`MDDupInterfaceImpl`|<span data-ttu-id="281fe-112">Проверьте наличие дубликатов токенов `mdInterfaceImpl`.</span><span class="sxs-lookup"><span data-stu-id="281fe-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
-|`MDDupMethodDef`|<span data-ttu-id="281fe-113">Проверьте наличие дубликатов токенов `mdMethodDef`.</span><span class="sxs-lookup"><span data-stu-id="281fe-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
-|`MDDupTypeRef`|<span data-ttu-id="281fe-114">Проверьте наличие дубликатов токенов `mdTypeRef`.</span><span class="sxs-lookup"><span data-stu-id="281fe-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
-|`MDDupMemberRef`|<span data-ttu-id="281fe-115">Проверьте наличие дубликатов токенов `mdMemberRef`.</span><span class="sxs-lookup"><span data-stu-id="281fe-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
-|`MDDupCustomAttribute`|<span data-ttu-id="281fe-116">Проверьте наличие дубликатов токенов `mdCustomAttribute`.</span><span class="sxs-lookup"><span data-stu-id="281fe-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
-|`MDDupParamDef`|<span data-ttu-id="281fe-117">Проверьте наличие дубликатов токенов `mdParamDef`.</span><span class="sxs-lookup"><span data-stu-id="281fe-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
-|`MDDupPermission`|<span data-ttu-id="281fe-118">Проверьте наличие дубликатов токенов `mdPermission`.</span><span class="sxs-lookup"><span data-stu-id="281fe-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
-|`MDDupProperty`|<span data-ttu-id="281fe-119">Проверьте наличие дубликатов токенов `mdProperty`.</span><span class="sxs-lookup"><span data-stu-id="281fe-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
-|`MDDupEvent`|<span data-ttu-id="281fe-120">Проверьте наличие дубликатов токенов `mdEvent`.</span><span class="sxs-lookup"><span data-stu-id="281fe-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
-|`MDDupFieldDef`|<span data-ttu-id="281fe-121">Проверьте наличие дубликатов токенов `mdFieldDef`.</span><span class="sxs-lookup"><span data-stu-id="281fe-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
-|`MDDupSignature`|<span data-ttu-id="281fe-122">Проверьте наличие дубликатов токенов `mdSignature`.</span><span class="sxs-lookup"><span data-stu-id="281fe-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
-|`MDDupModuleRef`|<span data-ttu-id="281fe-123">Проверьте наличие дубликатов токенов `mdModuleRef`.</span><span class="sxs-lookup"><span data-stu-id="281fe-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
-|`MDDupTypeSpec`|<span data-ttu-id="281fe-124">Проверьте наличие дубликатов токенов `mdTypeSpec`.</span><span class="sxs-lookup"><span data-stu-id="281fe-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
-|`MDDupImplMap`|<span data-ttu-id="281fe-125">Проверьте наличие дубликатов токенов `mdImplMap`.</span><span class="sxs-lookup"><span data-stu-id="281fe-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
-|`MDDupAssemblyRef`|<span data-ttu-id="281fe-126">Проверьте наличие дубликатов токенов `mdAssemblyRef`.</span><span class="sxs-lookup"><span data-stu-id="281fe-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
-|`MDDupFile`|<span data-ttu-id="281fe-127">Проверьте наличие дубликатов токенов `mdFile`.</span><span class="sxs-lookup"><span data-stu-id="281fe-127">Check for duplicates of `mdFile` tokens.</span></span>|  
-|`MDDupExportedType`|<span data-ttu-id="281fe-128">Проверьте наличие дубликатов токенов `mdExportedType`.</span><span class="sxs-lookup"><span data-stu-id="281fe-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
-|`MDDupManifestResource`|<span data-ttu-id="281fe-129">Проверьте наличие дубликатов токенов `mdManifestResource`.</span><span class="sxs-lookup"><span data-stu-id="281fe-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
-|`MDDupGenericParam`|<span data-ttu-id="281fe-130">Проверьте наличие дубликатов токенов `mdGenericParam`.</span><span class="sxs-lookup"><span data-stu-id="281fe-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
-|`MDDupMethodSpec`|<span data-ttu-id="281fe-131">Проверьте наличие дубликатов токенов `mdMethodSpec`.</span><span class="sxs-lookup"><span data-stu-id="281fe-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
-|`MDDupGenericParamConstraint`|<span data-ttu-id="281fe-132">Проверьте наличие дубликатов токенов `mdGenericParamConstraint`.</span><span class="sxs-lookup"><span data-stu-id="281fe-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
-|`MDDupAssembly`|<span data-ttu-id="281fe-133">Проверьте наличие дубликатов токенов `mdAssembly`.</span><span class="sxs-lookup"><span data-stu-id="281fe-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
-|`MDDupDefault`|<span data-ttu-id="281fe-134">Проверьте наличие дубликатов `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`и маркеров `mdMethodSpec`.</span><span class="sxs-lookup"><span data-stu-id="281fe-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
+|`MDDupAll`|<span data-ttu-id="fba20-108">Проверьте все токены метаданных на наличие дубликатов.</span><span class="sxs-lookup"><span data-stu-id="fba20-108">Check all metadata tokens for duplicates.</span></span>|  
+|`MDDupENC`|<span data-ttu-id="fba20-109">Не используется.</span><span class="sxs-lookup"><span data-stu-id="fba20-109">Not used.</span></span>|  
+|`MDNoDupChecks`|<span data-ttu-id="fba20-110">Не проверяйте токены метаданных на наличие дубликатов.</span><span class="sxs-lookup"><span data-stu-id="fba20-110">Do not check metadata tokens for duplicates.</span></span>|  
+|`MDDupTypeDef`|<span data-ttu-id="fba20-111">Проверьте наличие `mdTypeDef` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
+|`MDDupInterfaceImpl`|<span data-ttu-id="fba20-112">Проверьте наличие `mdInterfaceImpl` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
+|`MDDupMethodDef`|<span data-ttu-id="fba20-113">Проверьте наличие `mdMethodDef` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
+|`MDDupTypeRef`|<span data-ttu-id="fba20-114">Проверьте наличие `mdTypeRef` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
+|`MDDupMemberRef`|<span data-ttu-id="fba20-115">Проверьте наличие `mdMemberRef` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
+|`MDDupCustomAttribute`|<span data-ttu-id="fba20-116">Проверьте наличие `mdCustomAttribute` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
+|`MDDupParamDef`|<span data-ttu-id="fba20-117">Проверьте наличие `mdParamDef` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
+|`MDDupPermission`|<span data-ttu-id="fba20-118">Проверьте наличие `mdPermission` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
+|`MDDupProperty`|<span data-ttu-id="fba20-119">Проверьте наличие `mdProperty` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
+|`MDDupEvent`|<span data-ttu-id="fba20-120">Проверьте наличие `mdEvent` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
+|`MDDupFieldDef`|<span data-ttu-id="fba20-121">Проверьте наличие `mdFieldDef` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
+|`MDDupSignature`|<span data-ttu-id="fba20-122">Проверьте наличие `mdSignature` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
+|`MDDupModuleRef`|<span data-ttu-id="fba20-123">Проверьте наличие `mdModuleRef` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
+|`MDDupTypeSpec`|<span data-ttu-id="fba20-124">Проверьте наличие `mdTypeSpec` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
+|`MDDupImplMap`|<span data-ttu-id="fba20-125">Проверьте наличие `mdImplMap` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
+|`MDDupAssemblyRef`|<span data-ttu-id="fba20-126">Проверьте наличие `mdAssemblyRef` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
+|`MDDupFile`|<span data-ttu-id="fba20-127">Проверьте наличие `mdFile` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-127">Check for duplicates of `mdFile` tokens.</span></span>|  
+|`MDDupExportedType`|<span data-ttu-id="fba20-128">Проверьте наличие `mdExportedType` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
+|`MDDupManifestResource`|<span data-ttu-id="fba20-129">Проверьте наличие `mdManifestResource` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
+|`MDDupGenericParam`|<span data-ttu-id="fba20-130">Проверьте наличие `mdGenericParam` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
+|`MDDupMethodSpec`|<span data-ttu-id="fba20-131">Проверьте наличие `mdMethodSpec` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
+|`MDDupGenericParamConstraint`|<span data-ttu-id="fba20-132">Проверьте наличие `mdGenericParamConstraint` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
+|`MDDupAssembly`|<span data-ttu-id="fba20-133">Проверьте наличие `mdAssembly` дубликатов токенов.</span><span class="sxs-lookup"><span data-stu-id="fba20-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
+|`MDDupDefault`|<span data-ttu-id="fba20-134">`mdMemberRef`Проверьте дубликаты, `mdSignature` `mdTypeRef` `mdTypeSpec`, `mdMethodSpec` , и жетоны.</span><span class="sxs-lookup"><span data-stu-id="fba20-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="281fe-135">Требования</span><span class="sxs-lookup"><span data-stu-id="281fe-135">Requirements</span></span>  
- <span data-ttu-id="281fe-136">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="281fe-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fba20-135">Требования</span><span class="sxs-lookup"><span data-stu-id="fba20-135">Requirements</span></span>  
+ <span data-ttu-id="fba20-136">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fba20-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="281fe-137">**Заголовок:** Корхдр. h</span><span class="sxs-lookup"><span data-stu-id="281fe-137">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="fba20-137">**Заголовок:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="fba20-137">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="281fe-138">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="281fe-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fba20-138">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fba20-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="281fe-139">См. также:</span><span class="sxs-lookup"><span data-stu-id="281fe-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fba20-139">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="fba20-139">See also</span></span>
 
-- [<span data-ttu-id="281fe-140">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="281fe-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="fba20-140">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="fba20-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

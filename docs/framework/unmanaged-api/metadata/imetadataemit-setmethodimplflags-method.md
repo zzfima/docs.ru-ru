@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 4bc82d9b-9544-4be3-ba51-a2d4d806158a
 topic_type:
 - apiref
-ms.openlocfilehash: b8755629cca27784609de8166dddf44ed1c82bdc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7ed7770f26ea4620d79f3be3f67e72f73c75057d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432537"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175633"
 ---
-# <a name="imetadataemitsetmethodimplflags-method"></a><span data-ttu-id="039f3-102">Метод IMetaDataEmit::SetMethodImplFlags</span><span class="sxs-lookup"><span data-stu-id="039f3-102">IMetaDataEmit::SetMethodImplFlags Method</span></span>
-<span data-ttu-id="039f3-103">Задает или обновляет сигнатуру метаданных реализации унаследованного метода, на которую ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="039f3-103">Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.</span></span>  
+# <a name="imetadataemitsetmethodimplflags-method"></a><span data-ttu-id="e71b6-102">Метод IMetaDataEmit::SetMethodImplFlags</span><span class="sxs-lookup"><span data-stu-id="e71b6-102">IMetaDataEmit::SetMethodImplFlags Method</span></span>
+<span data-ttu-id="e71b6-103">Устанавливает или обновляет подпись метаданных реализации унаследованного метода, на которую ссылается указанный маркер.</span><span class="sxs-lookup"><span data-stu-id="e71b6-103">Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="039f3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="039f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e71b6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e71b6-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT SetMethodImplFlags (   
-    [in]  mdMethodDef   md,   
-    [in]  DWORD         dwImplFlags   
+HRESULT SetMethodImplFlags (
+    [in]  mdMethodDef   md,
+    [in]  DWORD         dwImplFlags
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="039f3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="039f3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e71b6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e71b6-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="039f3-106">окне Токен для изменяемого метода.</span><span class="sxs-lookup"><span data-stu-id="039f3-106">[in] The token for the method to be changed.</span></span>  
+ <span data-ttu-id="e71b6-106">(в) Токен для изменения метода.</span><span class="sxs-lookup"><span data-stu-id="e71b6-106">[in] The token for the method to be changed.</span></span>  
   
  `dwImplFlags`  
- <span data-ttu-id="039f3-107">окне Сочетание значений перечисления [кормесодимпл](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) , определяющих функции реализации метода.</span><span class="sxs-lookup"><span data-stu-id="039f3-107">[in] A combination of the values of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.</span></span>  
+ <span data-ttu-id="e71b6-107">(в) Комбинация значений перечисления [CorMethodImpl,](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) которая определяет особенности реализации метода.</span><span class="sxs-lookup"><span data-stu-id="e71b6-107">[in] A combination of the values of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="039f3-108">Требования</span><span class="sxs-lookup"><span data-stu-id="039f3-108">Requirements</span></span>  
- <span data-ttu-id="039f3-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="039f3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e71b6-108">Требования</span><span class="sxs-lookup"><span data-stu-id="e71b6-108">Requirements</span></span>  
+ <span data-ttu-id="e71b6-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e71b6-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="039f3-110">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="039f3-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e71b6-110">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e71b6-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="039f3-111">**Библиотека:** Используется в качестве ресурса в MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="039f3-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e71b6-111">**Библиотека:** Используется в качестве ресурса в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e71b6-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="039f3-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="039f3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e71b6-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e71b6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="039f3-113">См. также</span><span class="sxs-lookup"><span data-stu-id="039f3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e71b6-113">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="e71b6-113">See also</span></span>
 
-- [<span data-ttu-id="039f3-114">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="039f3-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="039f3-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="039f3-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="e71b6-114">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="e71b6-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e71b6-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="e71b6-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

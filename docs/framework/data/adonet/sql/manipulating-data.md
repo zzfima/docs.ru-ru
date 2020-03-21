@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a84f74bde8da9ca7e40184b76efe51cea129b66a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451854"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174294"
 ---
-# <a name="manipulating-data"></a><span data-ttu-id="728c6-102">Манипулирование данными</span><span class="sxs-lookup"><span data-stu-id="728c6-102">Manipulating Data</span></span>
-<span data-ttu-id="728c6-103">До того как был введен в действие режим MARS, для поиска решений в некоторых сценариях разработчикам приходилось использовать либо несколько соединений, либо серверные курсоры.</span><span class="sxs-lookup"><span data-stu-id="728c6-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="728c6-104">Кроме того, при использовании нескольких соединений в условиях транзакции приходилось прибегать к связанным соединениям (на основе системных хранимых процедур **sp_getbindtoken** и **sp_bindsession**).</span><span class="sxs-lookup"><span data-stu-id="728c6-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="728c6-105">В следующих сценариях показано использование соединения с включенным режимом MARS вместо нескольких соединений.</span><span class="sxs-lookup"><span data-stu-id="728c6-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  
+# <a name="manipulating-data"></a><span data-ttu-id="73cc6-102">Манипулирование данными</span><span class="sxs-lookup"><span data-stu-id="73cc6-102">Manipulating Data</span></span>
+<span data-ttu-id="73cc6-103">Перед введением функции MARS для решения определенных сценариев разработчикам приходилось использовать несколько подключений или курсоров на стороне сервера.</span><span class="sxs-lookup"><span data-stu-id="73cc6-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="73cc6-104">Кроме того, при использовании нескольких соединений в условиях транзакции приходилось прибегать к связанным соединениям (на основе системных хранимых процедур **sp_getbindtoken** и **sp_bindsession**).</span><span class="sxs-lookup"><span data-stu-id="73cc6-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="73cc6-105">В следующих сценариях показано, как использовать подключение с включенным режимом MARS вместо нескольких подключений.</span><span class="sxs-lookup"><span data-stu-id="73cc6-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  
   
-## <a name="using-multiple-commands-with-mars"></a><span data-ttu-id="728c6-106">Использование нескольких команд с помощью режима MARS</span><span class="sxs-lookup"><span data-stu-id="728c6-106">Using Multiple Commands with MARS</span></span>  
- <span data-ttu-id="728c6-107">Следующее приложение командной строки демонстрирует использование двух модулей <xref:System.Data.SqlClient.SqlDataReader> с двумя объектами <xref:System.Data.SqlClient.SqlCommand> и одним объектом <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS.</span><span class="sxs-lookup"><span data-stu-id="728c6-107">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span>  
+## <a name="using-multiple-commands-with-mars"></a><span data-ttu-id="73cc6-106">Использование нескольких команд с помощью режима MARS</span><span class="sxs-lookup"><span data-stu-id="73cc6-106">Using Multiple Commands with MARS</span></span>  
+ <span data-ttu-id="73cc6-107">В следующем консольном приложении показано, как использовать два объекта <xref:System.Data.SqlClient.SqlDataReader> с двумя объектами <xref:System.Data.SqlClient.SqlCommand> и один объект <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS.</span><span class="sxs-lookup"><span data-stu-id="73cc6-107">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="728c6-108">Пример</span><span class="sxs-lookup"><span data-stu-id="728c6-108">Example</span></span>  
- <span data-ttu-id="728c6-109">В этом примере открывается одно соединение с базой данных **AdventureWorks** .</span><span class="sxs-lookup"><span data-stu-id="728c6-109">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="728c6-110">С помощью объекта <xref:System.Data.SqlClient.SqlCommand> создается объект <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="728c6-110">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="728c6-111">После использования модуля чтения данных открывается второй объект <xref:System.Data.SqlClient.SqlDataReader>, использующий данные из первого объекта <xref:System.Data.SqlClient.SqlDataReader> в качестве входа для предложения WHERE второго модуля чтения данных.</span><span class="sxs-lookup"><span data-stu-id="728c6-111">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
+### <a name="example"></a><span data-ttu-id="73cc6-108">Пример</span><span class="sxs-lookup"><span data-stu-id="73cc6-108">Example</span></span>  
+ <span data-ttu-id="73cc6-109">В примере открывается одно соединение с базой данных **AdventureWorks**.</span><span class="sxs-lookup"><span data-stu-id="73cc6-109">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="73cc6-110">С помощью объекта <xref:System.Data.SqlClient.SqlCommand> создается <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="73cc6-110">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="73cc6-111">По мере использования модуля чтения открывается второй класс <xref:System.Data.SqlClient.SqlDataReader>, который использует данные из первого класса <xref:System.Data.SqlClient.SqlDataReader> в качестве входных данных для второго средства чтения.</span><span class="sxs-lookup"><span data-stu-id="73cc6-111">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="728c6-112">В следующем примере используется образец базы данных **AdventureWorks**, входящий в состав SQL Server.</span><span class="sxs-lookup"><span data-stu-id="728c6-112">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="728c6-113">Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="728c6-113">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="728c6-114">Измените строку соединения при необходимости в соответствии с вашей средой.</span><span class="sxs-lookup"><span data-stu-id="728c6-114">Modify the connection string as necessary for your environment.</span></span>  
+> <span data-ttu-id="73cc6-112">В следующем примере используется образец базы данных **AdventureWorks**, входящий в состав SQL Server.</span><span class="sxs-lookup"><span data-stu-id="73cc6-112">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="73cc6-113">В строке подключения в примере кода предполагается, что база данных установлена и доступна на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="73cc6-113">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="73cc6-114">При необходимости измените строку подключения для вашей среды.</span><span class="sxs-lookup"><span data-stu-id="73cc6-114">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -44,7 +44,7 @@ Module Module1
     Dim productCmd As SqlCommand  
     Dim productReader As SqlDataReader  
   
-    Dim vendorSQL As String = & _   
+    Dim vendorSQL As String = & _
       "SELECT VendorId, Name FROM Purchasing.Vendor"  
     Dim productSQL As String = _  
         "SELECT Production.Product.Name FROM Production.Product " & _  
@@ -108,20 +108,20 @@ static void Main()
   
   int vendorID;  
   SqlDataReader productReader = null;  
-  string vendorSQL =   
+  string vendorSQL =
     "SELECT VendorId, Name FROM Purchasing.Vendor";  
-  string productSQL =   
+  string productSQL =
     "SELECT Production.Product.Name FROM Production.Product " +  
     "INNER JOIN Purchasing.ProductVendor " +  
-    "ON Production.Product.ProductID = " +   
+    "ON Production.Product.ProductID = " +
     "Purchasing.ProductVendor.ProductID " +  
     "WHERE Purchasing.ProductVendor.VendorID = @VendorId";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     SqlCommand vendorCmd = new SqlCommand(vendorSQL, awConnection);  
-    SqlCommand productCmd =   
+    SqlCommand productCmd =
       new SqlCommand(productSQL, awConnection);  
   
     productCmd.Parameters.Add("@VendorId", SqlDbType.Int);  
@@ -157,20 +157,20 @@ static void Main()
   {  
     // To avoid storing the connection string in your code,  
     // you can retrieve it from a configuration file.  
-    return "Data Source=(local);Integrated Security=SSPI;" +   
+    return "Data Source=(local);Integrated Security=SSPI;" +
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
-## <a name="reading-and-updating-data-with-mars"></a><span data-ttu-id="728c6-115">Считывание и обновление данных с помощью режима MARS</span><span class="sxs-lookup"><span data-stu-id="728c6-115">Reading and Updating Data with MARS</span></span>  
- <span data-ttu-id="728c6-116">Режим MARS позволяет использовать соединение как для операций чтения, так и для операций языка DML более чем с одной отложенной операцией.</span><span class="sxs-lookup"><span data-stu-id="728c6-116">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="728c6-117">Эта возможность избавляет приложение от необходимости решения ошибок занятости соединения.</span><span class="sxs-lookup"><span data-stu-id="728c6-117">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="728c6-118">Кроме того, режим MARS может заменить использование курсоров на стороне сервера, которые обычно потребляют больше ресурсов.</span><span class="sxs-lookup"><span data-stu-id="728c6-118">In addition, MARS can replace the use of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="728c6-119">Наконец, несколько операций могут осуществляться одновременно в одном соединении, поэтому в них может совместно использоваться один и тот же контекст транзакции, в результате чего отпадает необходимость использования системных хранимых процедур **sp_getbindtoken** и **sp_bindsession**.</span><span class="sxs-lookup"><span data-stu-id="728c6-119">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
+## <a name="reading-and-updating-data-with-mars"></a><span data-ttu-id="73cc6-115">Считывание и обновление данных с помощью режима MARS</span><span class="sxs-lookup"><span data-stu-id="73cc6-115">Reading and Updating Data with MARS</span></span>  
+ <span data-ttu-id="73cc6-116">Режим MARS позволяет использовать соединение как для операций чтения, так и для операций языка обработки данных (DML) с более чем одной ожидающей операцией.</span><span class="sxs-lookup"><span data-stu-id="73cc6-116">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="73cc6-117">Эта функция устраняет необходимость приложения решать проблемы, связанные с ошибками во время подключения.</span><span class="sxs-lookup"><span data-stu-id="73cc6-117">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="73cc6-118">Кроме того, MARS может заменить использование курсоров сервера, которые обычно потребляют больше ресурсов.</span><span class="sxs-lookup"><span data-stu-id="73cc6-118">In addition, MARS can replace the use of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="73cc6-119">Наконец, несколько операций могут осуществляться одновременно в одном соединении, поэтому в них может совместно использоваться один и тот же контекст транзакции, в результате чего отпадает необходимость использования системных хранимых процедур **sp_getbindtoken** и **sp_bindsession**.</span><span class="sxs-lookup"><span data-stu-id="73cc6-119">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="728c6-120">Пример</span><span class="sxs-lookup"><span data-stu-id="728c6-120">Example</span></span>  
- <span data-ttu-id="728c6-121">Следующее приложение командной строки демонстрирует использование двух модулей <xref:System.Data.SqlClient.SqlDataReader> с тремя объектами <xref:System.Data.SqlClient.SqlCommand> и одним объектом <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS.</span><span class="sxs-lookup"><span data-stu-id="728c6-121">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="728c6-122">Первый объект команды получает список поставщиков, оценка кредитоспособности которых равна 5.</span><span class="sxs-lookup"><span data-stu-id="728c6-122">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="728c6-123">Второй объект команды по идентификатору поставщика из объекта <xref:System.Data.SqlClient.SqlDataReader> загружает второй объект <xref:System.Data.SqlClient.SqlDataReader>, содержащий все продукты данного поставщика.</span><span class="sxs-lookup"><span data-stu-id="728c6-123">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="728c6-124">Каждая запись продукта обрабатывается вторым модулем <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="728c6-124">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="728c6-125">Для определения нового состояния **OnOrderQty** выполняется вычисление.</span><span class="sxs-lookup"><span data-stu-id="728c6-125">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="728c6-126">Затем используется третий объект команды для занесения в таблицу **ProductVendor** нового значения.</span><span class="sxs-lookup"><span data-stu-id="728c6-126">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="728c6-127">Весь процесс выполняется в пределах одной транзакции, для которой в конце выполняется откат.</span><span class="sxs-lookup"><span data-stu-id="728c6-127">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
+### <a name="example"></a><span data-ttu-id="73cc6-120">Пример</span><span class="sxs-lookup"><span data-stu-id="73cc6-120">Example</span></span>  
+ <span data-ttu-id="73cc6-121">В следующем консольном приложении показано, как использовать два объекта <xref:System.Data.SqlClient.SqlDataReader> с тремя объектами <xref:System.Data.SqlClient.SqlCommand> и один объект <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS.</span><span class="sxs-lookup"><span data-stu-id="73cc6-121">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="73cc6-122">Первый объект команды получает список поставщиков с кредитоспособностью — 5.</span><span class="sxs-lookup"><span data-stu-id="73cc6-122">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="73cc6-123">Второй объект команды использует идентификатор поставщика из <xref:System.Data.SqlClient.SqlDataReader> для загрузки второго объекта <xref:System.Data.SqlClient.SqlDataReader> со всеми продуктами данного поставщика.</span><span class="sxs-lookup"><span data-stu-id="73cc6-123">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="73cc6-124">Каждая запись продукта посещается вторым <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="73cc6-124">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="73cc6-125">Для определения нового состояния **OnOrderQty** выполняется вычисление.</span><span class="sxs-lookup"><span data-stu-id="73cc6-125">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="73cc6-126">Затем используется третий объект команды для занесения в таблицу **ProductVendor** нового значения.</span><span class="sxs-lookup"><span data-stu-id="73cc6-126">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="73cc6-127">Весь процесс выполняется в рамках одной транзакции, которая откатывается в конце.</span><span class="sxs-lookup"><span data-stu-id="73cc6-127">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="728c6-128">В следующем примере используется образец базы данных **AdventureWorks**, входящий в состав SQL Server.</span><span class="sxs-lookup"><span data-stu-id="728c6-128">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="728c6-129">Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="728c6-129">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="728c6-130">Измените строку соединения при необходимости в соответствии с вашей средой.</span><span class="sxs-lookup"><span data-stu-id="728c6-130">Modify the connection string as necessary for your environment.</span></span>  
+> <span data-ttu-id="73cc6-128">В следующем примере используется образец базы данных **AdventureWorks**, входящий в состав SQL Server.</span><span class="sxs-lookup"><span data-stu-id="73cc6-128">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="73cc6-129">В строке подключения в примере кода предполагается, что база данных установлена и доступна на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="73cc6-129">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="73cc6-130">При необходимости измените строку подключения для вашей среды.</span><span class="sxs-lookup"><span data-stu-id="73cc6-130">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -211,7 +211,7 @@ Module Module1
         "FROM Purchasing.ProductVendor " & _  
         "WHERE VendorID = @VendorID"  
     Dim updateSQL As String = _  
-        "UPDATE Purchasing.ProductVendor " & _   
+        "UPDATE Purchasing.ProductVendor " & _
         "SET OnOrderQty = @OrderQty " & _  
         "WHERE ProductID = @ProductID AND VendorID = @VendorID"  
   
@@ -263,7 +263,7 @@ Module Module1
         End While  
       End Using  
   
-      Console.WriteLine("Total Records Updated: " & _   
+      Console.WriteLine("Total Records Updated: " & _
         CStr(totalRecordsUpdated))  
       updateTx.Rollback()  
       Console.WriteLine("Transaction Rolled Back")  
@@ -315,18 +315,18 @@ static void Main()
   int totalRecordsUpdated = 0;  
   
   string vendorSQL =  
-      "SELECT VendorID, Name FROM Purchasing.Vendor " +   
+      "SELECT VendorID, Name FROM Purchasing.Vendor " +
       "WHERE CreditRating = 5";  
   string prodVendSQL =  
       "SELECT ProductID, MaxOrderQty, MinOrderQty, OnOrderQty " +  
-      "FROM Purchasing.ProductVendor " +   
+      "FROM Purchasing.ProductVendor " +
       "WHERE VendorID = @VendorID";  
   string updateSQL =  
-      "UPDATE Purchasing.ProductVendor " +   
+      "UPDATE Purchasing.ProductVendor " +
       "SET OnOrderQty = @OrderQty " +  
       "WHERE ProductID = @ProductID AND VendorID = @VendorID";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     awConnection.Open();  
@@ -382,7 +382,7 @@ static void Main()
         }  
       }  
     }  
-    Console.WriteLine("Total Records Updated: " +   
+    Console.WriteLine("Total Records Updated: " +
       totalRecordsUpdated.ToString());  
     updateTx.Rollback();  
     Console.WriteLine("Transaction Rolled Back");  
@@ -395,14 +395,14 @@ private static string GetConnectionString()
 {  
   // To avoid storing the connection string in your code,  
   // you can retrieve it from a configuration file.  
-  return "Data Source=(local);Integrated Security=SSPI;" +   
-    "Initial Catalog=AdventureWorks;" +   
+  return "Data Source=(local);Integrated Security=SSPI;" +
+    "Initial Catalog=AdventureWorks;" +
     "MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="728c6-131">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="728c6-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73cc6-131">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="73cc6-131">See also</span></span>
 
-- [<span data-ttu-id="728c6-132">Режим MARS</span><span class="sxs-lookup"><span data-stu-id="728c6-132">Multiple Active Result Sets (MARS)</span></span>](multiple-active-result-sets-mars.md)
-- [<span data-ttu-id="728c6-133">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="728c6-133">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="73cc6-132">Режим MARS</span><span class="sxs-lookup"><span data-stu-id="73cc6-132">Multiple Active Result Sets (MARS)</span></span>](multiple-active-result-sets-mars.md)
+- [<span data-ttu-id="73cc6-133">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="73cc6-133">ADO.NET Overview</span></span>](../ado-net-overview.md)

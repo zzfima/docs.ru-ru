@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d8b8bfd0e70e75c702f32555c10f433a1ff4ae10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437953"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175425"
 ---
-# <a name="imetadataimportfindmemberref-method"></a><span data-ttu-id="65c23-102">Метод IMetaDataImport::FindMemberRef</span><span class="sxs-lookup"><span data-stu-id="65c23-102">IMetaDataImport::FindMemberRef Method</span></span>
-<span data-ttu-id="65c23-103">Возвращает указатель на токен MemberRef для ссылки на элемент, заключенный в заданный <xref:System.Type> и имеющий указанное имя и подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="65c23-103">Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
+# <a name="imetadataimportfindmemberref-method"></a><span data-ttu-id="b4bf4-102">Метод IMetaDataImport::FindMemberRef</span><span class="sxs-lookup"><span data-stu-id="b4bf4-102">IMetaDataImport::FindMemberRef Method</span></span>
+<span data-ttu-id="b4bf4-103">Получает указатель на токен MemberRef для ссылки участника, <xref:System.Type> которая прилагается указанным и имеет указанное имя и подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-103">Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65c23-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="65c23-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4bf4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b4bf4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FindMemberRef (  
    [in]  mdTypeRef          td,  
-   [in]  LPCWSTR            szName,   
-   [in]  PCCOR_SIGNATURE    pvSigBlob,   
-   [in]  ULONG              cbSigBlob,   
+   [in]  LPCWSTR            szName,
+   [in]  PCCOR_SIGNATURE    pvSigBlob,
+   [in]  ULONG              cbSigBlob,
    [out] mdMemberRef        *pmr  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="65c23-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="65c23-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b4bf4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b4bf4-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="65c23-106">окне Токен TypeRef для класса или интерфейса, который заключает в себя ссылку на элемент для поиска.</span><span class="sxs-lookup"><span data-stu-id="65c23-106">[in] The TypeRef token for the class or interface that encloses the member reference to search for.</span></span> <span data-ttu-id="65c23-107">Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной или ссылки на глобальную функцию.</span><span class="sxs-lookup"><span data-stu-id="65c23-107">If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.</span></span>  
+ <span data-ttu-id="b4bf4-106">(в) Токен TypeRef для класса или интерфейса, который примыкает к поиску участника.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-106">[in] The TypeRef token for the class or interface that encloses the member reference to search for.</span></span> <span data-ttu-id="b4bf4-107">Если это `mdTokenNil`значение, то поиск выполняется для глобальной переменной или глобальной функциональной ссылки.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-107">If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.</span></span>  
   
  `szName`  
- <span data-ttu-id="65c23-108">окне Имя искомой ссылки на член.</span><span class="sxs-lookup"><span data-stu-id="65c23-108">[in] The name of the member reference to search for.</span></span>  
+ <span data-ttu-id="b4bf4-108">(в) Имя участника ссылки на поиск.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-108">[in] The name of the member reference to search for.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="65c23-109">окне Указатель на сигнатуру двоичных метаданных ссылки на элемент.</span><span class="sxs-lookup"><span data-stu-id="65c23-109">[in] A pointer to the binary metadata signature of the member reference.</span></span>  
+ <span data-ttu-id="b4bf4-109">(в) Указатель на двоичную подпись метаданных ссылки участника.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-109">[in] A pointer to the binary metadata signature of the member reference.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="65c23-110">окне Размер в байтах `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="65c23-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="b4bf4-110">(в) Размер байтов `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
   
  `pmr`  
- <span data-ttu-id="65c23-111">заполняет Указатель на соответствующий токен MemberRef.</span><span class="sxs-lookup"><span data-stu-id="65c23-111">[out] A pointer to the matching MemberRef token.</span></span>  
+ <span data-ttu-id="b4bf4-111">(ваут) Указатель на соответствующий токен MemberRef.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-111">[out] A pointer to the matching MemberRef token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="65c23-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="65c23-112">Remarks</span></span>  
- <span data-ttu-id="65c23-113">Элемент указывается с помощью включающего класса или интерфейса (`td`), его имени (`szName`) и, при необходимости, его сигнатуры (`pvSigBlob`).</span><span class="sxs-lookup"><span data-stu-id="65c23-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b4bf4-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="b4bf4-112">Remarks</span></span>  
+ <span data-ttu-id="b4bf4-113">Вы указываете участника, используя его`td`прилагающий`szName`класс или интерфейс (), его имя (), и по желанию его подпись ().`pvSigBlob`</span><span class="sxs-lookup"><span data-stu-id="b4bf4-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span>  
   
- <span data-ttu-id="65c23-114">Подпись, передаваемая `FindMemberRef`, должна быть создана в текущей области, так как сигнатуры привязаны к определенной области.</span><span class="sxs-lookup"><span data-stu-id="65c23-114">The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="65c23-115">Сигнатура может внедрять маркер, идентифицирующий включающий класс или тип значения.</span><span class="sxs-lookup"><span data-stu-id="65c23-115">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="65c23-116">Токен является индексом локальной таблицы TypeDef.</span><span class="sxs-lookup"><span data-stu-id="65c23-116">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="65c23-117">Нельзя построить подпись времени выполнения вне контекста текущей области и использовать эту сигнатуру в качестве входных данных для `FindMemberRef`.</span><span class="sxs-lookup"><span data-stu-id="65c23-117">You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.</span></span>  
+ <span data-ttu-id="b4bf4-114">Подпись, `FindMemberRef` переданная, должна быть сгенерирована в текущей области, поскольку подписи привязаны к определенной области.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-114">The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="b4bf4-115">Подпись может вставлять маркер, который определяет класс или тип значения.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-115">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="b4bf4-116">Токен — это индекс в локальной таблице TypeDef.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-116">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="b4bf4-117">Нельзя создавать подпись времени выполнения вне контекста текущей области и `FindMemberRef`использовать эту подпись в качестве ввода.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-117">You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.</span></span>  
   
- <span data-ttu-id="65c23-118">`FindMemberRef` находит только те ссылки на элементы, которые были определены непосредственно в классе или интерфейсе; Он не находит унаследованные ссылки на члены.</span><span class="sxs-lookup"><span data-stu-id="65c23-118">`FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.</span></span>  
+ <span data-ttu-id="b4bf4-118">`FindMemberRef`находит только ссылки членов, которые были определены непосредственно в классе или интерфейсе; он не находит унаследованных ссылок членов.</span><span class="sxs-lookup"><span data-stu-id="b4bf4-118">`FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="65c23-119">Требования</span><span class="sxs-lookup"><span data-stu-id="65c23-119">Requirements</span></span>  
- <span data-ttu-id="65c23-120">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65c23-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4bf4-119">Требования</span><span class="sxs-lookup"><span data-stu-id="b4bf4-119">Requirements</span></span>  
+ <span data-ttu-id="b4bf4-120">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4bf4-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="65c23-121">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="65c23-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b4bf4-121">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b4bf4-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="65c23-122">**Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="65c23-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b4bf4-122">**Библиотека:** Включено в качестве ресурса в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b4bf4-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="65c23-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65c23-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b4bf4-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4bf4-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65c23-124">См. также</span><span class="sxs-lookup"><span data-stu-id="65c23-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4bf4-124">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="b4bf4-124">See also</span></span>
 
-- [<span data-ttu-id="65c23-125">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="65c23-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="65c23-126">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="65c23-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="b4bf4-125">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="b4bf4-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="b4bf4-126">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="b4bf4-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,6 +1,6 @@
 ---
-title: Функция QualifierSet_Get (Справочник по неуправляемым API)
-description: Функция QualifierSet_Get Возвращает именованный квалификатор.
+title: QualifierSet_Get функция (неуправляемая справка API)
+description: Функция QualifierSet_Get получает названный квалификатор.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -14,72 +14,66 @@ helpviewer_keywords:
 - QualifierSet_Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: dc09cd30c43647fa00cccc1dc00da4f8de367e84
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2f4e2d4518e01f3415b8f17ce5778dd98b2a45c3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127278"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174892"
 ---
-# <a name="qualifierset_get-function"></a><span data-ttu-id="d3936-103">Функция QualifierSet_Get</span><span class="sxs-lookup"><span data-stu-id="d3936-103">QualifierSet_Get function</span></span>
-<span data-ttu-id="d3936-104">Получает указанный именованный квалификатор.</span><span class="sxs-lookup"><span data-stu-id="d3936-104">Gets the specified named qualifier.</span></span>  
+# <a name="qualifierset_get-function"></a><span data-ttu-id="9f436-103">Функция QualifierSet_Get</span><span class="sxs-lookup"><span data-stu-id="9f436-103">QualifierSet_Get function</span></span>
+<span data-ttu-id="9f436-104">Получает указанный именованный квалификатор.</span><span class="sxs-lookup"><span data-stu-id="9f436-104">Gets the specified named qualifier.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="d3936-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d3936-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f436-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9f436-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT QualifierSet_Get (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LPCWSTR              wszName,
    [in] LONG                 lFlags,
    [out] VARIANT*            pVal,
-   [out] LONG*               plFlavor                 
-); 
+   [out] LONG*               plFlavor
+);
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="d3936-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="d3936-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="9f436-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="9f436-106">Parameters</span></span>
 
-`vFunc`   
-<span data-ttu-id="d3936-107">окне Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="d3936-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="9f436-107">`vFunc`(в) Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="9f436-107">`vFunc` [in] This parameter is unused.</span></span>
 
-`ptr`   
-<span data-ttu-id="d3936-108">окне Указатель на экземпляр [ивбемкуалифиерсет](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .</span><span class="sxs-lookup"><span data-stu-id="d3936-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+<span data-ttu-id="9f436-108">`ptr`(в) Указатель на экземпляр [IWbemqualifierSet.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)</span><span class="sxs-lookup"><span data-stu-id="9f436-108">`ptr` [in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
-`wszName`   
-<span data-ttu-id="d3936-109">окне Имя квалификатора, значение которого запрашивается.</span><span class="sxs-lookup"><span data-stu-id="d3936-109">[in] The name of the qualifier whose value is requested.</span></span>
+<span data-ttu-id="9f436-109">`wszName`(в) Имя квалификатора, значение которого запрашивается.</span><span class="sxs-lookup"><span data-stu-id="9f436-109">`wszName` [in] The name of the qualifier whose value is requested.</span></span>
 
-`lFlags`   
-<span data-ttu-id="d3936-110">[in] Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="d3936-110">[in] Reserved.</span></span> <span data-ttu-id="d3936-111">Этот параметр должен иметь значение 0.</span><span class="sxs-lookup"><span data-stu-id="d3936-111">This parameter must be 0.</span></span>
+<span data-ttu-id="9f436-110">`lFlags`(в) Защищены.</span><span class="sxs-lookup"><span data-stu-id="9f436-110">`lFlags` [in] Reserved.</span></span> <span data-ttu-id="9f436-111">Этот параметр должен быть 0.</span><span class="sxs-lookup"><span data-stu-id="9f436-111">This parameter must be 0.</span></span>
 
-`pVal`   
-<span data-ttu-id="d3936-112">заполняет При успешном выполнении, правильный тип и значение для квалификатора.</span><span class="sxs-lookup"><span data-stu-id="d3936-112">[out] When successful, the correct type and value for the qualifier.</span></span> <span data-ttu-id="d3936-113">Если функция завершается ошибкой, `VARIANT`, на которую указывает `pVal`, не изменяется.</span><span class="sxs-lookup"><span data-stu-id="d3936-113">If the function fails, the `VARIANT` pointed to by `pVal` is not modified.</span></span> <span data-ttu-id="d3936-114">Если этот параметр имеет значение `null`, параметр игнорируется.</span><span class="sxs-lookup"><span data-stu-id="d3936-114">If this parameter is `null`, the parameter is ignored.</span></span>
+<span data-ttu-id="9f436-112">`pVal`(ваут) В случае успеха правильный тип и значение для квалификатора.</span><span class="sxs-lookup"><span data-stu-id="9f436-112">`pVal` [out] When successful, the correct type and value for the qualifier.</span></span> <span data-ttu-id="9f436-113">Если функция выходит `VARIANT` из строя, указанная `pVal` не изменяется.</span><span class="sxs-lookup"><span data-stu-id="9f436-113">If the function fails, the `VARIANT` pointed to by `pVal` is not modified.</span></span> <span data-ttu-id="9f436-114">Если этот `null`параметр, параметр игнорируется.</span><span class="sxs-lookup"><span data-stu-id="9f436-114">If this parameter is `null`, the parameter is ignored.</span></span>
 
-`plFlavor`   
-<span data-ttu-id="d3936-115">заполняет Указатель на значение типа LONG, которое получает биты флагов для запрошенного описателя.</span><span class="sxs-lookup"><span data-stu-id="d3936-115">[out] A pointer to a LONG that receives the qualifier flavor bits for the requested qualifier.</span></span> <span data-ttu-id="d3936-116">Если сведения о разновидностях не нужны, этот параметр можно `null`.</span><span class="sxs-lookup"><span data-stu-id="d3936-116">If flavor information is not desired, this parameter can be `null`.</span></span> 
+<span data-ttu-id="9f436-115">`plFlavor`(ваут) Указатель на LONG, который получает квалификатор вкусбитые биты для запрошенного квалификатора.</span><span class="sxs-lookup"><span data-stu-id="9f436-115">`plFlavor` [out] A pointer to a LONG that receives the qualifier flavor bits for the requested qualifier.</span></span> <span data-ttu-id="9f436-116">Если информация о вкусе не `null`желательна, этот параметр может быть.</span><span class="sxs-lookup"><span data-stu-id="9f436-116">If flavor information is not desired, this parameter can be `null`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="d3936-117">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d3936-117">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="9f436-117">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9f436-117">Return value</span></span>
 
-<span data-ttu-id="d3936-118">Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="d3936-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="9f436-118">Следующие значения, возвращенные этой функцией, определяются в файле заголовка *WbemCli.h* или вы можете определить их как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="9f436-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="d3936-119">Константа</span><span class="sxs-lookup"><span data-stu-id="d3936-119">Constant</span></span>  |<span data-ttu-id="d3936-120">значения</span><span class="sxs-lookup"><span data-stu-id="d3936-120">Value</span></span>  |<span data-ttu-id="d3936-121">Описание</span><span class="sxs-lookup"><span data-stu-id="d3936-121">Description</span></span>  |
+|<span data-ttu-id="9f436-119">Постоянно</span><span class="sxs-lookup"><span data-stu-id="9f436-119">Constant</span></span>  |<span data-ttu-id="9f436-120">Значение</span><span class="sxs-lookup"><span data-stu-id="9f436-120">Value</span></span>  |<span data-ttu-id="9f436-121">Описание</span><span class="sxs-lookup"><span data-stu-id="9f436-121">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="d3936-122">0x80041008</span><span class="sxs-lookup"><span data-stu-id="d3936-122">0x80041008</span></span> | <span data-ttu-id="d3936-123">Недопустимый параметр.</span><span class="sxs-lookup"><span data-stu-id="d3936-123">A parameter is not valid.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="d3936-124">0x80041002</span><span class="sxs-lookup"><span data-stu-id="d3936-124">0x80041002</span></span> | <span data-ttu-id="d3936-125">Указанный квалификатор не существует.</span><span class="sxs-lookup"><span data-stu-id="d3936-125">The specified qualifier does not exist.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="d3936-126">0</span><span class="sxs-lookup"><span data-stu-id="d3936-126">0</span></span> | <span data-ttu-id="d3936-127">Вызов функции выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="d3936-127">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="9f436-122">0x80041008</span><span class="sxs-lookup"><span data-stu-id="9f436-122">0x80041008</span></span> | <span data-ttu-id="9f436-123">Недействительный параметр.</span><span class="sxs-lookup"><span data-stu-id="9f436-123">A parameter is not valid.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="9f436-124">0x80041002</span><span class="sxs-lookup"><span data-stu-id="9f436-124">0x80041002</span></span> | <span data-ttu-id="9f436-125">Указанный квалификатор не существует.</span><span class="sxs-lookup"><span data-stu-id="9f436-125">The specified qualifier does not exist.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="9f436-126">0</span><span class="sxs-lookup"><span data-stu-id="9f436-126">0</span></span> | <span data-ttu-id="9f436-127">Вызов функции был успешным.</span><span class="sxs-lookup"><span data-stu-id="9f436-127">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="d3936-128">Заметки</span><span class="sxs-lookup"><span data-stu-id="d3936-128">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9f436-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="9f436-128">Remarks</span></span>
 
-<span data-ttu-id="d3936-129">Эта функция заключает в оболочку вызов метода [ивбемкуалифиерсет:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) .</span><span class="sxs-lookup"><span data-stu-id="d3936-129">This function wraps a call to the [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) method.</span></span>
+<span data-ttu-id="9f436-129">Эта функция обертывает вызов [iWbemqualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) метод.</span><span class="sxs-lookup"><span data-stu-id="9f436-129">This function wraps a call to the [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d3936-130">Требования</span><span class="sxs-lookup"><span data-stu-id="d3936-130">Requirements</span></span>  
- <span data-ttu-id="d3936-131">**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3936-131">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f436-130">Требования</span><span class="sxs-lookup"><span data-stu-id="9f436-130">Requirements</span></span>  
+ <span data-ttu-id="9f436-131">**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f436-131">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3936-132">**Заголовок:** WMINet_Utils. idl</span><span class="sxs-lookup"><span data-stu-id="d3936-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="9f436-132">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="9f436-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="d3936-133">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d3936-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="9f436-133">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="9f436-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3936-134">См. также</span><span class="sxs-lookup"><span data-stu-id="d3936-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f436-134">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="9f436-134">See also</span></span>
 
-- [<span data-ttu-id="d3936-135">WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)</span><span class="sxs-lookup"><span data-stu-id="d3936-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="9f436-135">WMI и счетчики производительности (справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="9f436-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

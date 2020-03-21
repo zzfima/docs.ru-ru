@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: e2146726-0084-4c9e-a2d2-e8d461b13b21
 topic_type:
 - apiref
-ms.openlocfilehash: d0718ff9a7e288ffc6a856032aa47949fda443f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5ec4fe2a8e949cf6e9aa0ce68f4d4e49b72170b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447888"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177435"
 ---
-# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="43ded-102">Метод IMetaDataEmit2::SaveDeltaToMemory</span><span class="sxs-lookup"><span data-stu-id="43ded-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
-<span data-ttu-id="43ded-103">Сохраняет изменения из текущего сеанса "изменить и продолжить" в память.</span><span class="sxs-lookup"><span data-stu-id="43ded-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
+# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="4dab8-102">Метод IMetaDataEmit2::SaveDeltaToMemory</span><span class="sxs-lookup"><span data-stu-id="4dab8-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
+<span data-ttu-id="4dab8-103">Сохраняет изменения от текущего сеанса отсеиваний и продолжения в памяти.</span><span class="sxs-lookup"><span data-stu-id="4dab8-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43ded-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="43ded-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4dab8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4dab8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
-    [out] void        *pbData,   
+    [out] void        *pbData,
     [in]  ULONG       cbData  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="43ded-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="43ded-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4dab8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4dab8-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="43ded-106">заполняет Адрес, с которого начинается запись разностных метаданных.</span><span class="sxs-lookup"><span data-stu-id="43ded-106">[out] The address at which to begin writing the metadata delta.</span></span>  
+ <span data-ttu-id="4dab8-106">(ваут) Адрес, по которому можно начать писать дельту метаданных.</span><span class="sxs-lookup"><span data-stu-id="4dab8-106">[out] The address at which to begin writing the metadata delta.</span></span>  
   
  `cbData`  
- <span data-ttu-id="43ded-107">окне Размер изменений.</span><span class="sxs-lookup"><span data-stu-id="43ded-107">[in] The size of the changes.</span></span> <span data-ttu-id="43ded-108">Чтобы определить размер, используйте [IMetaDataEmit2:: жетделтасавесизе](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) .</span><span class="sxs-lookup"><span data-stu-id="43ded-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
+ <span data-ttu-id="4dab8-107">(в) Размер изменений.</span><span class="sxs-lookup"><span data-stu-id="4dab8-107">[in] The size of the changes.</span></span> <span data-ttu-id="4dab8-108">Используйте [IMetaDataEmit2::GetDeltaSaveSize,](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) чтобы определить размер.</span><span class="sxs-lookup"><span data-stu-id="4dab8-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="43ded-109">Требования</span><span class="sxs-lookup"><span data-stu-id="43ded-109">Requirements</span></span>  
- <span data-ttu-id="43ded-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43ded-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4dab8-109">Требования</span><span class="sxs-lookup"><span data-stu-id="4dab8-109">Requirements</span></span>  
+ <span data-ttu-id="4dab8-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4dab8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="43ded-111">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="43ded-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4dab8-111">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4dab8-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="43ded-112">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="43ded-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4dab8-112">**Библиотека:** Используется в качестве ресурса в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4dab8-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="43ded-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43ded-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4dab8-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4dab8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43ded-114">См. также</span><span class="sxs-lookup"><span data-stu-id="43ded-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4dab8-114">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="4dab8-114">See also</span></span>
 
-- [<span data-ttu-id="43ded-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="43ded-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="43ded-116">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="43ded-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="4dab8-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="4dab8-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="4dab8-116">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="4dab8-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

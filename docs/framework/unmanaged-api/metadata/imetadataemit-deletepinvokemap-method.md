@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 3c4f6b54-5ce7-4a2a-83e1-6dec16441f50
 topic_type:
 - apiref
-ms.openlocfilehash: 1621e955795fcdbb651114c60eb6a1126a23d037
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45f40dcd419e8e2fdf8a3349ccc9461854ad9aaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434358"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175737"
 ---
-# <a name="imetadataemitdeletepinvokemap-method"></a><span data-ttu-id="b6d50-102">Метод IMetaDataEmit::DeletePinvokeMap</span><span class="sxs-lookup"><span data-stu-id="b6d50-102">IMetaDataEmit::DeletePinvokeMap Method</span></span>
-<span data-ttu-id="b6d50-103">Уничтожает метаданные сопоставления PInvoke для объекта, на который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="b6d50-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdeletepinvokemap-method"></a><span data-ttu-id="3a79f-102">Метод IMetaDataEmit::DeletePinvokeMap</span><span class="sxs-lookup"><span data-stu-id="3a79f-102">IMetaDataEmit::DeletePinvokeMap Method</span></span>
+<span data-ttu-id="3a79f-103">Уничтожает метаданные pInvoke для картографической для объекта, на который ссылается указанный маркер.</span><span class="sxs-lookup"><span data-stu-id="3a79f-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6d50-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b6d50-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a79f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3a79f-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT DeletePinvokeMap (   
-    [in]  mdToken     tk   
+HRESULT DeletePinvokeMap (
+    [in]  mdToken     tk
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6d50-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b6d50-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a79f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3a79f-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="b6d50-106">окне Маркер `mdFieldDef` или `mdMethodDef`, представляющий объект, для которого необходимо удалить метаданные сопоставления PInvoke.</span><span class="sxs-lookup"><span data-stu-id="b6d50-106">[in] An `mdFieldDef` or `mdMethodDef` token that represents the object for which to delete the PInvoke mapping metadata.</span></span>  
+ <span data-ttu-id="3a79f-106">(в) Токен, `mdFieldDef` `mdMethodDef` представляющий объект для удаления метаданных отображения PInvoke.</span><span class="sxs-lookup"><span data-stu-id="3a79f-106">[in] An `mdFieldDef` or `mdMethodDef` token that represents the object for which to delete the PInvoke mapping metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6d50-107">Требования</span><span class="sxs-lookup"><span data-stu-id="b6d50-107">Requirements</span></span>  
- <span data-ttu-id="b6d50-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6d50-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a79f-107">Требования</span><span class="sxs-lookup"><span data-stu-id="3a79f-107">Requirements</span></span>  
+ <span data-ttu-id="3a79f-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a79f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6d50-109">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="b6d50-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3a79f-109">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3a79f-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b6d50-110">**Библиотека:** Используется в качестве ресурса в MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="b6d50-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3a79f-110">**Библиотека:** Используется в качестве ресурса в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3a79f-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b6d50-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6d50-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3a79f-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a79f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6d50-112">См. также:</span><span class="sxs-lookup"><span data-stu-id="b6d50-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a79f-112">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="3a79f-112">See also</span></span>
 
-- [<span data-ttu-id="b6d50-113">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="b6d50-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="b6d50-114">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="b6d50-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="3a79f-113">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="3a79f-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="3a79f-114">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="3a79f-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
