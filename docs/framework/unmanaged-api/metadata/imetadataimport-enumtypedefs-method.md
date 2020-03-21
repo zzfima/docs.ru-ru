@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d6e86a7f5a93b900e79907f8ee0762869d7f737
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449997"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177295"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Метод IMetaDataImport::EnumTypeDefs
 Перечисляет токены TypeDef, представляющие все типы в текущей области.  
@@ -29,46 +29,46 @@ ms.locfileid: "74449997"
   
 ```cpp  
 HRESULT EnumTypeDefs (  
-   [out] HCORENUM   *phEnum,   
+   [out] HCORENUM   *phEnum,
    [in]  mdTypeDef  rTypeDefs[],  
-   [in]  ULONG      cMax,   
+   [in]  ULONG      cMax,
    [out] ULONG      *pcTypeDefs  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- заполняет Указатель на новый перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
+ (ваут) Указатель на новый регистратор. Это должно быть NULL для первого вызова этого метода.  
   
  `rTypeDefs`  
- окне Массив, используемый для хранения токенов TypeDef.  
+ (в) Массив, используемый для хранения токенов TypeDef.  
   
  `cMax`  
  [in] Максимальный размер массива `rTypeDefs`.  
   
  `pcTypeDefs`  
- заполняет Число токенов TypeDef, возвращаемых в `rTypeDefs`.  
+ (ваут) Число возвращенных токенов TypeDef `rTypeDefs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` успешно возвращено.|  
-|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTypeDefs` равно нулю.|  
+|`S_OK`|`EnumTypeDefs`вернулся успешно.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом `pcTypeDefs` случае, равна нулю.|  
   
-## <a name="remarks"></a>Примечания  
- Маркер TypeDef представляет тип, например класс или интерфейс, а также любой тип, добавленный с помощью механизма расширяемости.  
+## <a name="remarks"></a>Remarks  
+ Токен TypeDef представляет собой тип, например класс или интерфейс, а также любой тип, добавленный с помощью механизма расширяемости.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

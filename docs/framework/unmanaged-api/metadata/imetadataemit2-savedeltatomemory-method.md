@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: e2146726-0084-4c9e-a2d2-e8d461b13b21
 topic_type:
 - apiref
-ms.openlocfilehash: d0718ff9a7e288ffc6a856032aa47949fda443f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5ec4fe2a8e949cf6e9aa0ce68f4d4e49b72170b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447888"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177435"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>Метод IMetaDataEmit2::SaveDeltaToMemory
-Сохраняет изменения из текущего сеанса "изменить и продолжить" в память.  
+Сохраняет изменения от текущего сеанса отсеиваний и продолжения в памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
-    [out] void        *pbData,   
+    [out] void        *pbData,
     [in]  ULONG       cbData  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pbData`  
- заполняет Адрес, с которого начинается запись разностных метаданных.  
+ (ваут) Адрес, по которому можно начать писать дельту метаданных.  
   
  `cbData`  
- окне Размер изменений. Чтобы определить размер, используйте [IMetaDataEmit2:: жетделтасавесизе](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) .  
+ (в) Размер изменений. Используйте [IMetaDataEmit2::GetDeltaSaveSize,](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) чтобы определить размер.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

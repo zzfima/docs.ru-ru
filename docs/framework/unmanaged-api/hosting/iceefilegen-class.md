@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126810"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176400"
 ---
 # <a name="iceefilegen-class"></a>Класс ICeeFileGen
-Предоставляет функциональные возможности для создания машинного переносимого исполняемого файла (PE). Интерфейс, как правило, используется компиляторами для создания скомпилированного выходного исполняемого файла.  
+Обеспечивает функциональность для создания родного портативного исполняемого (PE) файла. Интерфейс обычно используется компиляторами для создания компилированного вывода.  
   
 > [!NOTE]
-> `ICeeFileGen` поддерживает инфраструктуру .NET Framework и не предназначена для непосредственного использования в коде.  
+> `ICeeFileGen`поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из кода.  
   
- Этот интерфейс является устаревшим и будет удален в следующем выпуске.  
+ Этот интерфейс был обесточен и будет удален в будущем выпуске.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -149,7 +149,7 @@ public:
         HCEESECTION section, ULONG num, ULONG size, ULONG offset = 0);  
   
     virtual HRESULT EmitMetaDataEx (HCEEFILE ceeFile,  
-        IMetaDataEmit *emitter);   
+        IMetaDataEmit *emitter);
   
     virtual HRESULT EmitLibraryNameEx (HCEEFILE ceeFile,  
         IMetaDataEmit *emitter);  
@@ -237,10 +237,10 @@ public:
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Ицеефилежен. h  
+ **Заголовок:** ICeeFileGen.h  
   
- **Версия .NET Framework:** 1,0  
+ **Рамочная версия .NET:** 1.0  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

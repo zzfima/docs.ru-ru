@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108014"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176556"
 ---
 # <a name="identity_attribute_blob-structure"></a>Структура IDENTITY_ATTRIBUTE_BLOB
-Содержит сведения об одном атрибуте в сборке и состоит из трех `DWORD`s. Каждый `DWORD` является смещением в символьном буфере, созданном методом `CurrentIntoBuffer` интерфейса [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
+Содержит информацию об одном атрибуте в `DWORD`сборке и состоит из трех с. Каждый из них `DWORD` представляет собой `CurrentIntoBuffer` смещение в буфер символов, производимый методом [интерфейса IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,22 +38,22 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
-|`ofsNamespace`|Первое смещение в символьном буфере. За этим смещением не следует пространство имен атрибута, а набор символов NULL. Поэтому он не используется.|  
-|`ofsName`|Второе смещение в символьном буфере. Это расположение отмечает начало имени атрибута.|  
-|`ofsValue`|Третье смещение в символьном буфере. Это расположение отмечает начало значения атрибута.|  
+|`ofsNamespace`|Первое смещение в буфер символов. За этим смещением следует не пространство имен атрибута, а серия нулевых символов. Таким образом, он не используется.|  
+|`ofsName`|Второе смещение в буфер символов. Это место означает начало имени атрибута.|  
+|`ofsValue`|Третье смещение в буфер символов. Это место означает начало значения атрибута.|  
   
-## <a name="sample"></a>Пример  
- В следующем примере показаны некоторые основные шаги, которые в итоге приводят к заполненной структуре `IDENTITY_ATTRIBUTE_BLOB`:  
+## <a name="sample"></a>Образец  
+ Следующий пример иллюстрирует несколько основных шагов, `IDENTITY_ATTRIBUTE_BLOB` которые в конечном итоге приводят к заселенной структуре:  
   
-1. Получите [иреференцеидентити](ireferenceidentity-interface.md) для сборки.  
+1. Получите [IReferenceIdentity](ireferenceidentity-interface.md) для сборки.  
   
-2. Вызовите метод `IReferenceIdentity::EnumAttributes` и получите [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
+2. Вызов `IReferenceIdentity::EnumAttributes` метода и получение [IEnumIDENTITY_ATTRIBUTE.](ienumidentity-attribute-interface.md)  
   
-3. Создайте символьный буфер и приведите его в качестве структуры `IDENTITY_ATTRIBUTE_BLOB`.  
+3. Создайте буфер символов и `IDENTITY_ATTRIBUTE_BLOB` отбросьте его в качестве структуры.  
   
-4. Вызовите метод `CurrentIntoBuffer` интерфейса `IEnumIDENTITY_ATTRIBUTE`. Этот метод копирует атрибуты `Namespace`, `Name`и `Value` в символьный буфер. Три смещения для этих строк станут доступными в структуре `IDENTITY_ATTRIBUTE_BLOB`.  
+4. Вызовите `CurrentIntoBuffer` метод `IEnumIDENTITY_ATTRIBUTE` интерфейса. Этот метод копирует `Namespace`атрибуты `Name` `Value` и в буфер символов. Три смещения к этим строкам `IDENTITY_ATTRIBUTE_BLOB` станут доступны в структуре.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -97,7 +97,7 @@ bool Init()
                                 (VOID **)&g_pfnGetIdentityAuthority);  
     }  
   
-    if (!g_pfnGetAssemblyIdentityFromFile ||   
+    if (!g_pfnGetAssemblyIdentityFromFile ||
         !g_pfnGetIdentityAuthority)  
     {  
         printf("Error: Cannot get required APIs from fusion.dll!\n");  
@@ -120,7 +120,7 @@ void Shutdown()
   
 void Usage()  
 {  
-    printf("EnumAssemblyAttributes: A tool to enumerate the identity   
+    printf("EnumAssemblyAttributes: A tool to enumerate the identity
             attributes of a given assembly.\n\n");  
     printf("Usage: EnumAssemblyAttributes AssemblyFilePath\n");  
     printf("\n");  
@@ -131,7 +131,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
     int     iResult = 1;  
     IUnknown                    *pUnk  = NULL;  
     IReferenceIdentity          *pRef  = NULL;  
-    HRESULT                     hr     = S_OK;     
+    HRESULT                     hr     = S_OK;
     IEnumIDENTITY_ATTRIBUTE     *pEnum = NULL;  
     BYTE                        abData[1024];  
     DWORD                       cbAvailable;  
@@ -148,16 +148,16 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         goto Exit;  
     }  
   
-    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],   
+    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],
                             __uuidof(IReferenceIdentity), &pUnk);  
   
     if (FAILED(hr)) {  
-        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",   
+        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",
                 hr);  
         goto Exit;  
     }  
   
-    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),   
+    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),
                               (void**)&pRef);  
     if (FAILED(hr)) {  
         goto Exit;  
@@ -165,7 +165,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
     hr = pRef->EnumAttributes(&pEnum);  
     if (FAILED(hr)) {  
-        printf("IReferenceIdentity::EnumAttributes failed with hr =   
+        printf("IReferenceIdentity::EnumAttributes failed with hr =
                 0x%x", hr);  
         goto Exit;  
     }  
@@ -175,7 +175,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         cbAvailable = sizeof(abData);  
         hr = pEnum->CurrentIntoBuffer(cbAvailable, abData, &cbUsed);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed   
+            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed
                     with hr = 0x%x", hr);  
             goto Exit;  
         }  
@@ -191,7 +191,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
         hr = pEnum->Skip(1);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =   
+            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =
                     0x%x", hr);  
             goto Exit;  
         }  
@@ -219,28 +219,28 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a>Выполнение образца  
- C:\\> Енумассембляттрибутес. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+### <a name="to-run-the-sample"></a>Запуск образца  
+ C:\\> EnumAssemblyAttributes.exe C: »WINDOWS»Microsoft.NET-Framework-v2.0.50727-System.dll  
   
-### <a name="sample-output"></a>Пример полученных результатов  
- Culture = Neutral  
+### <a name="sample-output"></a>Пример выходных данных  
+ Культура и нейтральная  
   
- имя = система  
+ имя - Система  
   
- processorArchitecture = MSIL  
+ processorArchitecture - MSIL  
   
- PublicKeyToken = b77a5c561934e089»  
+ PublicKeyToken - b77a5c561934e089  
   
- Версия = 2.0.0.0  
+ Версия No 2.0.0.0.0  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** Изоляция. h  
+ **Заголовок:** Изоляция.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IReferenceIdentity](ireferenceidentity-interface.md)
 - [Интерфейс IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)

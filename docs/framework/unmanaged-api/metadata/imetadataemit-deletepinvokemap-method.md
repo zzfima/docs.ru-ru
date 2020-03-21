@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 3c4f6b54-5ce7-4a2a-83e1-6dec16441f50
 topic_type:
 - apiref
-ms.openlocfilehash: 1621e955795fcdbb651114c60eb6a1126a23d037
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45f40dcd419e8e2fdf8a3349ccc9461854ad9aaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434358"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175737"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a>Метод IMetaDataEmit::DeletePinvokeMap
-Уничтожает метаданные сопоставления PInvoke для объекта, на который ссылается указанный токен.  
+Уничтожает метаданные pInvoke для картографической для объекта, на который ссылается указанный маркер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DeletePinvokeMap (   
-    [in]  mdToken     tk   
+HRESULT DeletePinvokeMap (
+    [in]  mdToken     tk
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- окне Маркер `mdFieldDef` или `mdMethodDef`, представляющий объект, для которого необходимо удалить метаданные сопоставления PInvoke.  
+ (в) Токен, `mdFieldDef` `mdMethodDef` представляющий объект для удаления метаданных отображения PInvoke.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

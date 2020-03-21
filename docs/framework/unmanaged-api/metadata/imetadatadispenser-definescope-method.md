@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 381c38542dcde242c0a1a4e71e9b99316328159d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2f9325f3795262a0c33af02f87fc5d3a020658cf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436247"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177642"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>Метод IMetaDataDispenser::DefineScope
-Создает новую область в памяти, в которой можно создавать новые метаданные.  
+Создает новую область памяти, в которой можно создавать новые метаданные.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,41 +31,41 @@ ms.locfileid: "74436247"
 HRESULT DefineScope (  
     [in]  REFCLSID    rclsid,  
     [in]  DWORD       dwCreateFlags,  
-    [in]  REFIID      riid,   
+    [in]  REFIID      riid,
     [out] IUnknown    **ppIUnk  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `rclsid`  
- окне Идентификатор CLSID версии создаваемых структур метаданных. Это значение должно быть CLSID_CorMetaDataRuntime для .NET Framework версии 2,0.  
+ (в) CLSID версии структур метаданных, которые будут созданы. Это значение должно быть CLSID_CorMetaDataRuntime для версии .NET Framework 2.0.  
   
  `dwCreateFlags`  
- окне Флаги, указывающие параметры. Для .NET Framework 2,0 это значение должно быть равно нулю.  
+ (в) Флаги, определяющие параметры. Это значение должно быть нулевым для рамочной 2.0 .NET.  
   
  `riid`  
- окне Идентификатор IID требуемого интерфейса метаданных, который должен быть возвращен; вызывающий объект будет использовать интерфейс для создания новых метаданных.  
+ (в) IID желаемого интерфейса метаданных, который должен быть возвращен; абонент будет использовать интерфейс для создания новых метаданных.  
   
- Значение `riid` должно указывать один из интерфейсов "Emit". Допустимые значения: IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit или IID_IMetaDataEmit2.  
+ Значение `riid` должно указывать один из интерфейсов "emit". Допустимые значения — это IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit или IID_IMetaDataEmit2.  
   
  `ppIUnk`  
- заполняет Указатель на возвращаемый интерфейс.  
+ (ваут) Указатель на возвращенный интерфейс.  
   
-## <a name="remarks"></a>Заметки  
- `DefineScope` создает набор таблиц метаданных в памяти, создает уникальный идентификатор GUID (идентификатор версии модуля или MVID) для метаданных и создает запись в таблице Module для выдаваемой единицы компиляции.  
+## <a name="remarks"></a>Remarks  
+ `DefineScope`создает набор таблиц метаданных в памяти, генерирует уникальный GUID (идентификатор версии модуля, или MVID) для метаданных и создает запись в таблице модуля для испускаемого единицы компиляции.  
   
- Вы можете прикрепить атрибуты к области метаданных в целом с помощью метода [IMetaDataEmit:: сетмодулепропс](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) или [IMetaDataEmit::D ефинекустоматтрибуте](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) , в зависимости от ситуации.  
+ Приложить атрибуты к области метаданных в целом можно с помощью метода [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) или [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) метод.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** Смотрите [системные требования](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)

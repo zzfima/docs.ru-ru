@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437587"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177271"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Метод IMetaDataImport::GetEventProps
-Возвращает сведения о метаданных для события, представленного указанным маркером события, включая объявляющий тип, методы добавления и удаления для делегатов, а также любые флаги и другие связанные данные.  
+Получает информацию о метаданных для события, представленную указанным маркером события, включая тип декларирования, способы добавления и удаления для делегатов, а также любые флаги и другие связанные данные.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
-   [out] mdTypeDef     *pClass,   
-   [out] LPCWSTR       szEvent,   
-   [in]  ULONG         cchEvent,   
-   [out] ULONG         *pchEvent,   
+   [out] mdTypeDef     *pClass,
+   [out] LPCWSTR       szEvent,
+   [in]  ULONG         cchEvent,
+   [out] ULONG         *pchEvent,
    [out] DWORD         *pdwEventFlags,  
    [out] mdToken       *ptkEventType,  
-   [out] mdMethodDef   *pmdAddOn,   
-   [out] mdMethodDef   *pmdRemoveOn,   
-   [out] mdMethodDef   *pmdFire,   
-   [out] mdMethodDef   rmdOtherMethod[],   
+   [out] mdMethodDef   *pmdAddOn,
+   [out] mdMethodDef   *pmdRemoveOn,
+   [out] mdMethodDef   *pmdFire,
+   [out] mdMethodDef   rmdOtherMethod[],
    [in]  ULONG         cMax,  
    [out] ULONG         *pcOtherMethod  
 );  
@@ -47,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Параметры  
  `ev`  
- окне Токен метаданных события, представляющий событие, для которого необходимо получить метаданные.  
+ (в) Токен метаданных события, представляющий событие для получения метаданных.  
   
  `pClass`  
- заполняет Указатель на маркер TypeDef, представляющий класс, объявляющий событие.  
+ (ваут) Указатель на маркер TypeDef, представляющий класс, объявляющий событие.  
   
  `szEvent`  
- заполняет Имя события, на которое ссылается `ev`.  
+ (ваут) Название события, на которое `ev`ссылается .  
   
  `pchEvent`  
- окне Запрошенная длина в расширенных символах `szEvent`.  
+ (в) Запрошенная длина в широких `szEvent`символах .  
   
  `pdwEventFlags`  
- заполняет Возвращаемая длина в расширенных символах `szEvent`.  
+ (ваут) Возвращается длина в `szEvent`широких символов .  
   
  `ptkEventType`  
- заполняет Указатель на маркер метаданных TypeRef или TypeDef, представляющий тип <xref:System.Delegate> события.  
+ (ваут) Указатель на маркер метаданных TypeRef или TypeDef, представляющий <xref:System.Delegate> тип события.  
   
  `pmdAddOn`  
- заполняет Указатель на маркер метаданных, представляющий метод, который добавляет обработчики для события.  
+ (ваут) Указатель на маркер метаданных, представляющий метод, который добавляет обработчики для события.  
   
  `pmdRemoveOn`  
- заполняет Указатель на маркер метаданных, представляющий метод, который удаляет обработчики для события.  
+ (ваут) Указатель на маркер метаданных, представляющий метод, удаляющий обработчики для события.  
   
  `pmdFire`  
- заполняет Указатель на маркер метаданных, представляющий метод, который вызывает событие.  
+ (ваут) Указатель на маркер метаданных, представляющий метод, повысивший событие.  
   
  `rmdOtherMethod`  
- заполняет Массив указателей токенов на другие методы, связанные с событием.  
+ (ваут) Массив указателей токенов на другие методы, связанные с событием.  
   
  `cMax`  
  [in] Максимальный размер массива `rmdOtherMethod`.  
   
  `pcOtherMethod`  
- заполняет Число токенов, возвращаемых в `rmdOtherMethod`.  
+ (ваут) Количество возвращенных токенов `rmdOtherMethod`в .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

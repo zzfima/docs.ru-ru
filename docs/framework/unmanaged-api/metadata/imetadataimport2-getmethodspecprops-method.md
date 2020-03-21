@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 6b5b3b3b5a3613668f4470f48083ae010cc9d336
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0bfbfec930c193ea05a01bd5bd9f46d2ec6714b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445251"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175295"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>Метод IMetaDataImport2::GetMethodSpecProps
-Возвращает сигнатуру метаданных метода, на который ссылается указанный токен MethodSpec.  
+Получает подпись метаданных метода, на который ссылается указанный токен MethodSpec.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,34 +31,34 @@ ms.locfileid: "74445251"
 HRESULT GetMethodSpecProps (  
    [in]  mdMethodSpec     mi,  
    [out] mdToken          *tkParent,  
-   [out] PCCOR_SIGNATURE  *ppvSigBlob,   
+   [out] PCCOR_SIGNATURE  *ppvSigBlob,
    [out] ULONG            *pcbSigBlob  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `mi`  
- окне Токен MethodSpec, представляющий создание экземпляра метода.  
+ (в) Токен MethodSpec, представляющий моментацию метода.  
   
  `tkParent`  
- заполняет Указатель на токен MethodDef или Месодреф, представляющий определение метода.  
+ (ваут) Указатель на токен MethodDef или MethodRef, представляющий определение метода.  
   
  `ppvSigBlob`  
- заполняет Указатель на сигнатуру двоичных метаданных метода.  
+ (ваут) Указатель на двоичную подпись метаданных метода.  
   
  `pcbSigBlob`  
- заполняет Размер `ppvSigBlob`в байтах.  
+ (ваут) Размер, в байтах, из `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

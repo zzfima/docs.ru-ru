@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: 480d596a-759f-4d29-ac1a-3dbff8f3544d
 topic_type:
 - apiref
-ms.openlocfilehash: 3ab29fc8c983b354ad5088d26c547868940ec70a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e59e7695246b2c83171e77352e16464258516f8d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447718"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177466"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>Метод IMetaDataEmit::SetTypeDefProps
-Задает функции типа, определенного при предыдущем вызове метода [IMetaDataEmit::D ефинетипедеф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Устанавливает функции типа, определяемого предыдущим вызовом на [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT SetTypeDefProps (  
-    [in]  mdTypeDef   td,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[]   
+    [in]  mdTypeDef   td,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[]
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- окне Маркер `mdTypeDef`, полученный из исходного вызова функции [IMetaDataEmit::D ефинетипедеф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+ (в) Токен, `mdTypeDef` полученный от оригинального вызова на [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` атрибуты. Это битовая маска `CorTypeAttr` значений.  
+ (в) `TypeDef` атрибуты. Это битмаска ценностей. `CorTypeAttr`  
   
  `tkExtends`  
- окне `mdToken` базового класса. Получено из предыдущего вызова [IMetaDataEmit::D ефинеимпорттипе](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)или `null`.  
+ (в) Базовый `mdToken` класс. Получено от предыдущего звонка к [IMetaDataEmit::DefineИмпортТип](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), или `null`.  
   
  `rtkImplements[]`  
- окне Массив токенов для интерфейсов, реализуемых этим типом. Эти `mdTypeRef` токены получаются с помощью метода [IMetaDataEmit::D ефинеимпорттипе](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). Последний элемент массива должен быть `mdTokenNil`.  
+ (в) Массив токенов для интерфейсов, которые реализует этот тип. Эти `mdTypeRef` токены получены с помощью [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). Последний элемент массива должен `mdTokenNil`быть.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

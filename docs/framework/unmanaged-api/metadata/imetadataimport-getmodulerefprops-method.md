@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f46033b9e643ef6b4a0063c4995b8c024b8c1f7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437319"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175360"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>Метод IMetaDataImport::GetModuleRefProps
 Возвращает имя модуля, на который ссылается указанный токен метаданных.  
@@ -30,35 +30,35 @@ ms.locfileid: "74437319"
 ```cpp  
 HRESULT GetModuleRefProps (  
    [in]  mdModuleRef         mur,  
-   [out] LPWSTR              szName,   
-   [in]  ULONG               cchName,   
-   [out] ULONG               *pchName   
+   [out] LPWSTR              szName,
+   [in]  ULONG               cchName,
+   [out] ULONG               *pchName
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `mur`  
- окне Токен метаданных ModuleRef, который ссылается на модуль для получения сведений о метаданных.  
+ (в) Токен метаданных ModuleRef, который ссылается на модуль для получения информации о метаданных.  
   
  `szName`  
- заполняет Буфер для хранения имени модуля.  
+ (ваут) Буфер для удержания имени модуля.  
   
  `cchName`  
- окне Запрошенный размер `szName` в расширенных символах.  
+ (в) Запрошенный размер `szName` в широких символах.  
   
  `pchName`  
- заполняет Возвращаемый размер `szName` в расширенных символах.  
+ (ваут) Возвращаемый размер в широких `szName` символах.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

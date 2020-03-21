@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a5d9342b8bfe650106ccf9daf2a91dfbcd575446
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432740"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175543"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Метод IMetaDataEmit2::DefineMethodSpec
-Создает универсальный экземпляр метода и получает маркер для определения.  
+Создает общий экземпляр метода и получает маркер в определение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT DefineMethodSpec (  
-    [in]  mdToken           tkParent,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
+    [in]  mdToken           tkParent,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
     [out] mdMethodSpec      *pmi  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `tkParent`  
- окне Токен для метода, для которого создается универсальный экземпляр. Токен должен иметь тип `mdMethodDef` или `mdMemberRef`.  
+ (в) Токен для метода создания общего экземпляра. Токен должен быть `mdMethodDef` типа `mdMemberRef`или .  
   
  `pvSigBlob`  
- окне Указатель на двоичную сигнатуру COM+ метода.  
+ (в) Указатель на двоичную сигнатуру метода КОМЗ.  
   
  `cbSibBlob`  
- окне Размер `pvSigBlob`в байтах.  
+ (в) Размер, в байтах, из `pvSigBlob`.  
   
  `pmi`  
- заполняет Токен для определения сигнатуры метаданных метода.  
+ (ваут) Токен к определению подписи метаданных метода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 3ab24ab869e1f2cff9beafe50e6982ba2e7cf0aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436701"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175321"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>Метод IMetaDataImport::GetTypeSpecFromToken
 Возвращает двоичную подпись метаданных для спецификации типа, представленного указанным токеном.  
@@ -28,36 +28,36 @@ ms.locfileid: "74436701"
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT GetTypeSpecFromToken (   
-   [in]  mdTypeSpec            typespec,   
-   [out] PCCOR_SIGNATURE       *ppvSig,   
+HRESULT GetTypeSpecFromToken (
+   [in]  mdTypeSpec            typespec,
+   [out] PCCOR_SIGNATURE       *ppvSig,
    [out] ULONG                 *pcbSig  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `typespec`  
- окне Токен TypeSpec, связанный с запрошенной сигнатурой метаданных.  
+ (в) Токен TypeSpec, связанный с запрашиваемой подписью метаданных.  
   
  `ppvSig`  
- заполняет Указатель на сигнатуру двоичных метаданных.  
+ (ваут) Указатель на двоичную подпись метаданных.  
   
  `pcbSig`  
- заполняет Размер подписи метаданных в байтах.  
+ (ваут) Размер, в байтах, подписи метаданных.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее на успешное выполнение или сбой. Сбои можно проверить с помощью макроса FAILed.  
+ HRESULT, указывающий на успех или неудачу. Сбои могут быть протестированы с помощью макроса FAILED.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

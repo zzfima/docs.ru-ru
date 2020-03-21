@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d8b8bfd0e70e75c702f32555c10f433a1ff4ae10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437953"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175425"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>Метод IMetaDataImport::FindMemberRef
-Возвращает указатель на токен MemberRef для ссылки на элемент, заключенный в заданный <xref:System.Type> и имеющий указанное имя и подпись метаданных.  
+Получает указатель на токен MemberRef для ссылки участника, <xref:System.Type> которая прилагается указанным и имеет указанное имя и подпись метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT FindMemberRef (  
    [in]  mdTypeRef          td,  
-   [in]  LPCWSTR            szName,   
-   [in]  PCCOR_SIGNATURE    pvSigBlob,   
-   [in]  ULONG              cbSigBlob,   
+   [in]  LPCWSTR            szName,
+   [in]  PCCOR_SIGNATURE    pvSigBlob,
+   [in]  ULONG              cbSigBlob,
    [out] mdMemberRef        *pmr  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- окне Токен TypeRef для класса или интерфейса, который заключает в себя ссылку на элемент для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной или ссылки на глобальную функцию.  
+ (в) Токен TypeRef для класса или интерфейса, который примыкает к поиску участника. Если это `mdTokenNil`значение, то поиск выполняется для глобальной переменной или глобальной функциональной ссылки.  
   
  `szName`  
- окне Имя искомой ссылки на член.  
+ (в) Имя участника ссылки на поиск.  
   
  `pvSigBlob`  
- окне Указатель на сигнатуру двоичных метаданных ссылки на элемент.  
+ (в) Указатель на двоичную подпись метаданных ссылки участника.  
   
  `cbSigBlob`  
- окне Размер в байтах `pvSigBlob`.  
+ (в) Размер байтов `pvSigBlob`.  
   
  `pmr`  
- заполняет Указатель на соответствующий токен MemberRef.  
+ (ваут) Указатель на соответствующий токен MemberRef.  
   
-## <a name="remarks"></a>Примечания  
- Элемент указывается с помощью включающего класса или интерфейса (`td`), его имени (`szName`) и, при необходимости, его сигнатуры (`pvSigBlob`).  
+## <a name="remarks"></a>Remarks  
+ Вы указываете участника, используя его`td`прилагающий`szName`класс или интерфейс (), его имя (), и по желанию его подпись ().`pvSigBlob`  
   
- Подпись, передаваемая `FindMemberRef`, должна быть создана в текущей области, так как сигнатуры привязаны к определенной области. Сигнатура может внедрять маркер, идентифицирующий включающий класс или тип значения. Токен является индексом локальной таблицы TypeDef. Нельзя построить подпись времени выполнения вне контекста текущей области и использовать эту сигнатуру в качестве входных данных для `FindMemberRef`.  
+ Подпись, `FindMemberRef` переданная, должна быть сгенерирована в текущей области, поскольку подписи привязаны к определенной области. Подпись может вставлять маркер, который определяет класс или тип значения. Токен — это индекс в локальной таблице TypeDef. Нельзя создавать подпись времени выполнения вне контекста текущей области и `FindMemberRef`использовать эту подпись в качестве ввода.  
   
- `FindMemberRef` находит только те ссылки на элементы, которые были определены непосредственно в классе или интерфейсе; Он не находит унаследованные ссылки на члены.  
+ `FindMemberRef`находит только ссылки членов, которые были определены непосредственно в классе или интерфейсе; он не находит унаследованных ссылок членов.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

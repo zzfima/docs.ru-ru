@@ -15,70 +15,70 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432545"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177704"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Метод IMetaDataEmit::DefineField
-Создает определение для поля с указанной сигнатурой метаданных и получает маркер для этого определения поля.  
+Создает определение для поля с указанной подписью метаданных и получает маркер в этом определении поля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DefineField (   
-    [in]  mdTypeDef   td,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  PCCOR_SIGNATURE pvSigBlob,   
-    [in]  ULONG       cbSigBlob,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue,   
-    [out] mdFieldDef  *pmd   
+HRESULT DefineField (
+    [in]  mdTypeDef   td,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwFieldFlags,
+    [in]  PCCOR_SIGNATURE pvSigBlob,
+    [in]  ULONG       cbSigBlob,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue,
+    [out] mdFieldDef  *pmd
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- окне Токен `mdTypeDef` для включающего класса или интерфейса.  
+ (в) Токен `mdTypeDef` для прилагающего класса или интерфейса.  
   
  `szName`  
- окне Имя поля в Юникоде.  
+ (в) Название поля в Unicode.  
   
  `dwFieldFlags`  
- окне Атрибуты поля. Это битовая маска `CorFieldAttr` значений.  
+ (в) Атрибуты поля. Это битмаска ценностей. `CorFieldAttr`  
   
  `pvSigBlob`  
- окне Подпись поля в виде большого двоичного объекта.  
+ (в) Подпись поля как BLOB.  
   
  `cbSigBlob`  
- окне Число байтов в `pvSigBlob`.  
+ (в) Количество байтов `pvSigBlob`в .  
   
  `dwCPlusTypeFlag`  
- окне *\** `ELEMENT_TYPE_`для постоянного значения. Это `CorElementType` значение. Если для поля не определено постоянное значение, используйте `ELEMENT_TYPE_END`.  
+ (в) Для `ELEMENT_TYPE_` *\** постоянного значения. Это `CorElementType` значение. Если не определить постоянное значение `ELEMENT_TYPE_END`для поля, используйте .  
   
  `pValue`  
- окне Постоянное значение для поля.  
+ (в) Постоянное значение для поля.  
   
  `cchValue`  
- окне Размер (в Юникоде) символов `pValue`.  
+ (в) Размер в (Unicode) символы `pValue`.  
   
  `pmd`  
- заполняет Назначенный маркер `mdFieldDef`.  
+ (ваут) Назначенный `mdFieldDef` маркер.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

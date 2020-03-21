@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: e0c6ac12-22ea-43f5-b799-8cda0faf3336
 topic_type:
 - apiref
-ms.openlocfilehash: 1fb3f4486bc0ee7a85975770f94a8241999f10e0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9662a14b4ea97aed16968083489324d46c38dda2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442114"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177511"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>Метод IMetaDataEmit::SetMethodProps
-Задает или обновляет компонент, хранящийся по указанному относительному виртуальному адресу метода, определенного в предыдущем вызове [IMetaDataEmit::D ефинемесод](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
+Устанавливает или обновляет функцию, хранящуюся по указанному относительному виртуальному адресу, метода, определяемого предыдущим вызовом [в IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT SetMethodProps (   
-    [in]  mdMethodDef md,   
+HRESULT SetMethodProps (
+    [in]  mdMethodDef md,
     [in]  DWORD       dwMethodFlags,  
-    [in]  ULONG       ulCodeRVA,   
-    [in]  DWORD       dwImplFlags   
+    [in]  ULONG       ulCodeRVA,
+    [in]  DWORD       dwImplFlags
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `md`  
- окне Токен для изменяемого метода.  
+ (в) Токен для изменения метода.  
   
  `dwMethodFlags`  
- окне Атрибуты элемента.  
+ (в) Атрибуты участника.  
   
  `ulCodeRVA`  
- окне Адрес кода.  
+ (в) Адрес кода.  
   
  `dwImplFlags`  
- окне Флаги реализации для метода.  
+ (в) Флаги реализации для метода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

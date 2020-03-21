@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: b5785468-fcd7-4cc3-8a5d-8796337b53fc
 topic_type:
 - apiref
-ms.openlocfilehash: 69e3ecfc82985d52bd5b14e9faf2566e395b622b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aacf9de36dc39b63ed36b672e31f40704413d608
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124659"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176335"
 ---
 # <a name="iclrtaskrudeabort-method"></a>Метод ICLRTask::RudeAbort
-Инструктирует среду CLR, чтобы немедленно и безусловно прерывать выполнение задачи, представленной текущим экземпляром [интерфейса ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) .  
+Поручает общему времени выполнения языка (CLR) немедленно и безоговорочно прервать задачу, представленную текущим экземпляром [Интерфейса ICLRTask.](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT RudeAbort ();   
+HRESULT RudeAbort ();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`RudeAbort` успешно возвращено.|  
-|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
-|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
-|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`RudeAbort`вернулся успешно.|  
+|HOST_E_CLRNOTAVAILABLE|CLR не был загружен в процесс, или CLR находится в состоянии, в котором он не может запустить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Вызов приурочен.|  
+|HOST_E_NOT_OWNER|Звонящее не владеет замком.|  
+|HOST_E_ABANDONED|Событие было отменено в то время как заблокированный поток или волокно ждало на нем.|  
+|E_FAIL|Произошел неизвестный катастрофический сбой. Когда метод возвращается E_FAIL, CLR больше не используется в процессе. Последующие вызовы к методам хостинга возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Заметки  
- Узел вызывает `RudeAbort` для немедленного прерывания задачи. Выполнение методов завершения и подпрограмм обработки исключений не гарантируется.  
+## <a name="remarks"></a>Remarks  
+ Хост `RudeAbort` призывает немедленно прервать задачу. Окончательные процедуры обработки и обработки исключений не гарантируются выполнением.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

@@ -14,59 +14,59 @@ helpviewer_keywords:
 ms.assetid: b3c526a4-8fb4-4ad6-b6af-42ce9c06492e
 topic_type:
 - apiref
-ms.openlocfilehash: ffa25b1ec6fda80099f333c1d0a4cf57b76379e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ea2b70f37668587fb02513ab54da6c1915e2918d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140691"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176985"
 ---
 # <a name="gethashfromfile-function"></a>Функция GetHashFromFile
 Создает хэш содержимого указанного файла.  
   
- Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md) .  
+ Эта функция была амортизирована. Вместо этого используйте метод [ICLRStrongName::GetHashFromFile.](../hosting/iclrstrongname-gethashfromfile-method.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetHashFromFile (  
     [in]  LPCSTR   szFilePath,  
-    [in, out] unsigned int   *piHashAlg,   
-    [out] BYTE     *pbHash,      
-    [in]  DWORD    cchHash,      
+    [in, out] unsigned int   *piHashAlg,
+    [out] BYTE     *pbHash,
+    [in]  DWORD    cchHash,
     [out] DWORD    *pchHash  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `szFilePath`  
- окне Имя файла для хэширования.  
+ (в) Название файла хэшу.  
   
  `piHashAlg`  
- [вход, выход] Алгоритм, используемый при формировании хэша. Допустимыми являются алгоритмы, определяемые интерфейсом Win32 CryptoAPI. Если `piHashAlg` имеет значение 0, используется алгоритм по умолчанию CALG_SHA-1.  
+ (в, вне) Алгоритм для использования при генерации хэша. Действительные алгоритмы определяются Win32 CryptoAPI. Если `piHashAlg` установлен до 0, используется алгоритм по умолчанию CALG_SHA-1.  
   
  `pbHash`  
- заполняет Массив байтов, содержащий созданный хэш.  
+ (ваут) Массив байта, содержащий генерируемый хэш.  
   
  `cchHash`  
- окне Максимальный размер буфера, на который `pbHash` указывает.  
+ (в) Максимальный размер буфера, на который `pbHash` указывает.  
   
  `pchHash`  
- заполняет Размер возвращаемого `pbHash`в байтах.  
+ (ваут) Размер, в байтах, `pbHash`возвращенного .  
   
-## <a name="remarks"></a>Заметки  
- Эта функция аналогична [GetHashFromFileW](gethashfromfilew-function.md), за исключением того, что спецификация имени файла является ANSI, а не Unicode.  
+## <a name="remarks"></a>Remarks  
+ Эта функция такая же, как [GetHashFromFileW](gethashfromfilew-function.md), за исключением того, что спецификация имени файла ANSI вместо Unicode.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** StrongName. h  
+ **Заголовок:** StrongName.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Метод GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md)
 - [Метод GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md)

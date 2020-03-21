@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450212"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175763"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Метод IMetaDataEmit::DefineTypeDef
-Создает определение типа для типа среды CLR и получает маркер метаданных для этого определения типа.  
+Создает определение типа для общего типа времени выполнения языка и получает токен метаданных для определения этого типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DefineTypeDef (   
-    [in]  LPCWSTR     szTypeDef,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
+HRESULT DefineTypeDef (
+    [in]  LPCWSTR     szTypeDef,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `szTypeDef`  
- окне Имя типа в Юникоде.  
+ (в) Название типа в Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` атрибуты. Это битовая маска `CoreTypeAttr` значений.  
+ (в) `TypeDef` атрибуты. Это битмаска ценностей. `CoreTypeAttr`  
   
  `tkExtends`  
- окне Маркер базового класса. Это должен быть либо `mdTypeDef`, либо маркер `mdTypeRef`.  
+ (в) Токен базового класса. Это должен быть `mdTypeDef` либо `mdTypeRef` знак, либо жетон.  
   
  `rtkImplements`  
- окне Массив токенов, указывающий интерфейсы, реализуемые этим классом или интерфейсом.  
+ (в) Массив токенов, указывающих интерфейсы, которые реализует этот класс или интерфейс.  
   
  `ptd`  
- заполняет Назначенный маркер `mdTypeDef`.  
+ (ваут) Назначенный `mdTypeDef` маркер.  
   
-## <a name="remarks"></a>Примечания  
- Флаг в `dwTypeDefFlags` указывает, является ли создаваемый тип ссылочным типом системы общих типов (класс или интерфейс) или типом значения системы общего типа.  
+## <a name="remarks"></a>Remarks  
+ Флаг в `dwTypeDefFlags` опознавательных данных определяет, является ли создаваемый тип обычным типом системы (класс или интерфейс) или общим типом значения системы.  
   
- В зависимости от предоставленных параметров этот метод, как побочный результат, может также создавать запись `mdInterfaceImpl` для каждого интерфейса, унаследованного или реализуемого этим типом. Однако этот метод не возвращает ни одного из этих маркеров `mdInterfaceImpl`. Если клиент хочет позже добавить или изменить маркер `mdInterfaceImpl`, он должен использовать интерфейс `IMetaDataImport`, чтобы перечислить их. Если вы хотите использовать семантику COM интерфейса `[default]`, необходимо указать интерфейс по умолчанию в качестве первого элемента в `rtkImplements`; настраиваемый атрибут, заданный для класса, указывает, что класс имеет интерфейс по умолчанию (который всегда считается первым маркером `mdInterfaceImpl`, объявленным для класса).  
+ В зависимости от поставленных параметров, этот метод, как `mdInterfaceImpl` побочный эффект, может также создать запись для каждого интерфейса, который наследуется или реализован этим типом. Однако этот метод не возвращает `mdInterfaceImpl` ни одного из этих токенов. Если клиент хочет позже добавить или изменить `mdInterfaceImpl` маркер, он должен использовать `IMetaDataImport` интерфейс для их перечисления. Если вы хотите использовать семантику интерфейса `[default]` COM, следует предоставить `rtkImplements`интерфейс по умолчанию в качестве первого элемента в; пользовательский набор атрибутов в классе будет указывать на то, что класс `mdInterfaceImpl` имеет интерфейс по умолчанию (который всегда считается первым маркером, объявленным для класса).  
   
- Каждый элемент массива `rtkImplements` содержит маркер `mdTypeDef` или `mdTypeRef`. Последний элемент в массиве должен быть `mdTokenNil`.  
+ Каждый элемент `rtkImplements` массива `mdTypeDef` `mdTypeRef` содержит маркер или жетон. Последний элемент в массиве должен быть. `mdTokenNil`  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

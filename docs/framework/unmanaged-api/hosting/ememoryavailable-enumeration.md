@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-ms.openlocfilehash: aec3c5f140df7eab10ea2bfa33634a4d853adcb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0073a532f680d8764ec9e76ea22326a630457043
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134293"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176439"
 ---
 # <a name="ememoryavailable-enumeration"></a>Перечисление EMemoryAvailable
-Содержит значения, указывающие объем свободной физической памяти на компьютере. Эти значения логически сопоставляются с событиями для высокого и нехватки памяти, возвращаемой функцией `CreateMemoryResourceNotification` в Windows API.  
+Содержит значения, указывающие количество свободной физической памяти на компьютере. Эти значения логически отображают события для высокой и низкой памяти, возвращенные из `CreateMemoryResourceNotification` функции в API Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,30 +30,30 @@ ms.locfileid: "73134293"
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  
-    eMemoryAvailableHigh    = 3   
+    eMemoryAvailableHigh    = 3
 } EMemoryAvailable;  
 ```  
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Доступно достаточно физической памяти.|  
-|`eMemoryAvailableLow`|Доступно очень мало физической памяти.|  
-|`eMemoryAvailableNeutral`|Доступная физическая память не является нейтральной.|  
+|`eMemoryAvailableHigh`|Много физической памяти доступно.|  
+|`eMemoryAvailableLow`|Очень мало физической памяти доступна.|  
+|`eMemoryAvailableNeutral`|Доступная физическая память нейтральна.|  
   
-## <a name="remarks"></a>Заметки  
- Это значение передается узлом в среду CLR с помощью вызова метода [ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) .  
+## <a name="remarks"></a>Remarks  
+ Это значение передается хостом на общее время выполнения языка (CLR) с помощью вызова в метод [ICLRMemoryNotificationCallback::OnMemoryNotification.](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
- **Библиотека:** MSCorEE. dll  
+ **Библиотека:** MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

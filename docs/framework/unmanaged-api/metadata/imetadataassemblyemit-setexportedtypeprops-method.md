@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431944"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177854"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>Метод IMetaDataAssemblyEmit::SetExportedTypeProps
 Изменяет указанную структуру метаданных `ExportedType`.  
@@ -29,7 +29,7 @@ ms.locfileid: "74431944"
   
 ```cpp  
 HRESULT SetExportedTypeProps (  
-    [in] mdExportedType   ct,   
+    [in] mdExportedType   ct,
     [in] mdToken          tkImplementation,  
     [in] mdTypeDef        tkTypeDef,  
     [in] DWORD            dwExportedTypeFlags  
@@ -38,29 +38,29 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>Параметры  
  `ct`  
- окне Маркер метаданных, указывающий структуру метаданных `ExportedType`, которую необходимо изменить.  
+ (в) Токен метаданных, который определяет `ExportedType` структуру метаданных для изменения.  
   
  `tkImplementation`  
- окне Токен типа `File`, `AssemblyRef`или `ExportedType`, который указывает, как этот тип реализуется.  
+ (в) Токен, типа, `File` `AssemblyRef`или `ExportedType`, который определяет, как этот тип реализуется.  
   
  `tkTypeDef`  
- окне Токен `TypeDef`, на который ссылается файл кода.  
+ (в) Токен, `TypeDef` упомянутый в файле кода.  
   
  `dwExportedTypeFlags`  
- окне Побитовое сочетание значений, определяющих атрибуты типа.  
+ (в) Битовая комбинация значений, определяющих атрибуты типа.  
   
-## <a name="remarks"></a>Примечания  
- Чтобы создать `ExportedType` структуру метаданных, используйте метод [IMetaDataAssemblyEmit::D ефиникспортедтипе](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) .  
+## <a name="remarks"></a>Remarks  
+ Для создания `ExportedType` структуры метаданных используйте метод [IMetaDataAssemblyEmit::DefineExportedType.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

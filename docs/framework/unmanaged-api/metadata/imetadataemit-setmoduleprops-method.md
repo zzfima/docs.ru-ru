@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: b74d7629-5f46-458f-8d67-2456a1e7030c
 topic_type:
 - apiref
-ms.openlocfilehash: 2d3c820975488fa722e7af6070611ba7e9686ce8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 69c3ee366dbb8505e0df744037c480da996bb836
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445442"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175620"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>Метод IMetaDataEmit::SetModuleProps
-Обновляет ссылки на модуль, определенный в предыдущем вызове [IMetaDataEmit::D ефинемодулереф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
+Обновления ссылок на модуль, определенный предыдущим вызовом на [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT SetModuleProps (   
+HRESULT SetModuleProps (
     [in]  LPCWSTR     szName  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- окне Имя модуля в Юникоде. Это только имя файла, а не полный путь.  
+ (в) Имя модуля в Unicode. Это только имя файла, а не полное имя пути.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

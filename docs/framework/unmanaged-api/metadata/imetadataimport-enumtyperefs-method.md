@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5d4ddd43b27d733a63c2e0dc5e92ffd2ba94a7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449979"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175438"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>Метод IMetaDataImport::EnumTypeRefs
 Перечисляет токены TypeRef, определенные в текущей области метаданных.  
@@ -29,46 +29,46 @@ ms.locfileid: "74449979"
   
 ```cpp  
 HRESULT EnumTypeRefs (  
-   [in, out] HCORENUM    *phEnum,   
+   [in, out] HCORENUM    *phEnum,
    [out] mdTypeRef       rTypeRefs[],  
-   [in]  ULONG           cMax,   
+   [in]  ULONG           cMax,
    [out] ULONG           *pcTypeRefs  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
+ (в, вне) Указатель на регистратор. Это должно быть NULL для первого вызова этого метода.  
   
  `rTypeRefs`  
- заполняет Массив, используемый для хранения токенов TypeRef.  
+ (ваут) Массив, используемый для хранения токенов TypeRef.  
   
  `cMax`  
  [in] Максимальный размер массива `rTypeRefs`.  
   
  `pcTypeRefs`  
- заполняет Указатель на число токенов TypeRef, возвращаемых в `rTypeRefs`.  
+ (ваут) Указатель на количество возвращенных токенов TypeRef в `rTypeRefs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` успешно возвращено.|  
-|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTypeRefs` равно нулю.|  
+|`S_OK`|`EnumTypeRefs`вернулся успешно.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом `pcTypeRefs` случае, равна нулю.|  
   
-## <a name="remarks"></a>Заметки  
- Токен TypeRef представляет ссылку на тип.  
+## <a name="remarks"></a>Remarks  
+ Токен TypeRef представляет собой отсылку к типу.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -14,54 +14,54 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: a8856790b655f071df704879a247169f456ae2f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a19d875b8fb81f2af3821e69452f0f0ed591cd22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130876"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176894"
 ---
 # <a name="strongnamesignaturesize-function"></a>Функция StrongNameSignatureSize
-Возвращает размер подписи строгого имени. `StrongNameSignatureSize` обычно используются компиляторами для определения объема пространства, резервируемого в файле при создании сборки с отложенной подписью.  
+Возвращает размер подписи строгого имени. `StrongNameSignatureSize`обычно используется компиляторами для определения места для резервирования в файле при создании сборки, подписанной задержкой.  
   
- Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) .  
+ Эта функция была амортизирована. Вместо этого используйте метод [ICLRStrongName::StrongNameSignatureSize.](../hosting/iclrstrongname-strongnamesignaturesize-method.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-BOOLEAN StrongNameSignatureSize (   
+BOOLEAN StrongNameSignatureSize (
     [in]  BYTE   *pbPublicKeyBlob,  
-    [in]  ULONG  cbPublicKeyBlob,   
+    [in]  ULONG  cbPublicKeyBlob,
     [in]  DWORD  *pcbSize  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pbPublicKeyBlob`  
- окне Структура типа [публиккэйблоб](publickeyblob-structure.md) , содержащая открытую часть пары ключей, используемую для создания подписи строгого имени.  
+ (в) Структура типа [PublicKeyBlob,](publickeyblob-structure.md) содержащая публичную часть ключевой пары, используемой для создания сильной подписи имен.  
   
  `cbPublicKeyBlob`  
- окне Размер `pbPublicKeyBlob`в байтах.  
+ (в) Размер, в байтах, из `pbPublicKeyBlob`.  
   
  `pcbSize`  
- окне Число байтов, необходимое для хранения подписи строгого имени.  
+ (в) Количество байтов, необходимых для хранения сильной подписи имени.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` при успешном завершении; в противном случае `false`.  
+ `true`при успешном завершении; в `false`противном случае, .  
   
-## <a name="remarks"></a>Заметки  
- Если функция `StrongNameSignatureSize` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
+## <a name="remarks"></a>Remarks  
+ Если `StrongNameSignatureSize` функция не выполняется успешно, позвоните в функцию [StrongNameErrorInfo,](strongnameerrorinfo-function.md) чтобы получить последнюю сгенерированную ошибку.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** StrongName. h  
+ **Заголовок:** StrongName.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Метод StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md)
 - [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

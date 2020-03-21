@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: c1792ed0f15f8cfb62567593c9694453650f0bb9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d87d0d46ede65cf44c84edba92fe246174088a4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436315"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177661"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>Метод IMetaDataAssemblyImport::GetManifestResourceProps
-Возвращает набор свойств ресурса манифеста с указанной сигнатурой метаданных.  
+Получает набор свойств ресурса манифеста с указанной подписью метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetManifestResourceProps (  
-    [in]  mdManifestResource   mdmr,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] mdToken              *ptkImplementation,   
-    [out] DWORD                *pdwOffset,   
+    [in]  mdManifestResource   mdmr,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] mdToken              *ptkImplementation,
+    [out] DWORD                *pdwOffset,
     [out] DWORD                *pdwResourceFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `mdmr`  
- окне Токен `mdManifestResource`, представляющий ресурс, для которого необходимо получить свойства.  
+ (в) Токен, `mdManifestResource` представляющий ресурс для получения свойств.  
   
  `szName`  
- заполняет Имя ресурса.  
+ (ваут) Название ресурса.  
   
  `cchName`  
- окне Размер `szName`в расширенных символах.  
+ (в) Размер, в широких chars, . `szName`  
   
  `pchName`  
- заполняет Указатель на число расширенных символов, фактически возвращаемых в `szName`.  
+ (ваут) Указатель на количество широких chars `szName`фактически вернулся в .  
   
  `ptkImplementation`  
- заполняет Указатель на маркер `mdFile` или маркер `mdAssemblyRef`, представляющий файл или сборку соответственно, который содержит ресурс.  
+ (ваут) Указатель на `mdFile` маркер или `mdAssemblyRef` маркер, представляющий файл или сборку, соответственно, содержащий ресурс.  
   
  `pdwOffset`  
- заполняет Указатель на значение, указывающее смещение к началу ресурса в файле.  
+ (ваут) Указатель значения, опознававававававаемый смещением к началу ресурса в файле.  
   
  `pdwResourceFlags`  
- заполняет Указатель на флаги, описывающие метаданные, применяемые к ресурсу. Значение Flags является сочетанием одного или нескольких значений [корманифестресаурцефлагс](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) .  
+ (ваут) Указатель на флаги, описывающие метаданные, применяемые к ресурсу. Значение флагов представляет собой сочетание одного или нескольких значений [CorManifestResourceFlags.](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

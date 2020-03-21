@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e371330336002c673f2c54d882e70dbed41b743c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431823"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175841"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>Метод IMetaDataEmit::DefineMemberRef
-Определяет ссылку на член модуля вне текущей области и получает маркер для этого эталонного определения.  
+Определяет ссылку на участника модуля за пределами текущей области и получает маркер этого эталонного определения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DefineMemberRef (   
-    [in]  mdToken           tkImport,   
-    [in]  LPCWSTR           szName,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
-    [out] mdMemberRef       *pmr   
+HRESULT DefineMemberRef (
+    [in]  mdToken           tkImport,
+    [in]  LPCWSTR           szName,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
+    [out] mdMemberRef       *pmr
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `tkImport`  
- окне Токен для класса или интерфейса целевого элемента, если элемент не является глобальным; Если элемент является глобальным, то маркер `mdModuleRef` для этого другого файла.  
+ (в) Токен для класса или интерфейса целевого участника, если участник не является глобальным; если участник является глобальным, `mdModuleRef` токен для другого файла.  
   
  `szName`  
- окне Имя целевого элемента.  
+ (в) Имя целевого участника.  
   
  `pvSigBlob`  
- окне Сигнатура целевого элемента.  
+ (в) Подпись целевого члена.  
   
  `cbSigBlob`  
- окне Число байтов в `pvSigBlob`.  
+ (в) Количество байтов `pvSigBlob`в .  
   
  `pmr`  
- заполняет Назначенный маркер `mdMemberRef`.  
+ (ваут) Назначенный `mdMemberRef` маркер.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,74 +15,74 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: c12d3a7a7d1e52529435361aa12e22e4edeecf03
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c0f81e3767d4ea3bc336203fbe8c914b4e2bd07b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448292"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177803"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>Метод IMetaDataAssemblyImport::FindAssembliesByName
-Возвращает массив сборок с указанным параметром `szAssemblyName`, используя стандартные правила, используемые средой CLR для разрешения ссылок.  
+Получает массив сборок с указанным `szAssemblyName` параметром, используя стандартные правила, используемые общим временем выполнения языка (CLR) для решения ссылок.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT FindAssembliesByName (  
-    [in]  LPCWSTR     szAppBase,   
-    [in]  LPCWSTR     szPrivateBin,   
-    [in]  LPCWSTR     szAssemblyName,   
-    [out] IUnknown    *ppIUnk[],   
-    [in]  ULONG       cMax,   
+    [in]  LPCWSTR     szAppBase,
+    [in]  LPCWSTR     szPrivateBin,
+    [in]  LPCWSTR     szAssemblyName,
+    [out] IUnknown    *ppIUnk[],
+    [in]  ULONG       cMax,
     [out] ULONG       *pcAssemblies  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `szAppBase`  
- окне Корневой каталог, в котором выполняется поиск данной сборки. Если это значение равно `null`, `FindAssembliesByName` будет искать сборку только в глобальном кэше сборок.  
+ (в) Корневой каталог, в котором можно найти данную сборку. Если это значение `null`настроено на, `FindAssembliesByName` будет выглядеть только в глобальном кэше сборки для сборки.  
   
  `szPrivateBin`  
- окне Список подкаталогов, разделенных точкой с запятой (например, "bin; BIN2"), в корневом каталоге, в котором выполняется поиск сборки. Эти каталоги проверяются в дополнение к тем, которые указаны в правилах проверки по умолчанию.  
+ (в) Список субдиректоров, делемых заполколонией (например, "bin;bin2"), в котором можно найти сборку. Эти каталоги проверяются в дополнение к тем, которые указаны в правилах зондирования по умолчанию.  
   
  `szAssemblyName`  
- окне Имя искомой сборки. Формат этой строки определяется на странице ссылки на класс для <xref:System.Reflection.AssemblyName>.  
+ (в) Название сборки, чтобы найти. Формат этой строки определяется на странице <xref:System.Reflection.AssemblyName>ссылки класса для .  
   
  `ppIUnk`  
- окне Массив типа [IUnknown](/cpp/atl/iunknown) , в который помещаются указатели интерфейса `IMetadataAssemblyImport`.  
+ (в) Массив типа [IUnknown,](/cpp/atl/iunknown) в котором `IMetadataAssemblyImport` можно поставить указатели интерфейса.  
   
  `cMax`  
- заполняет Максимальное число указателей интерфейса, которые могут быть помещены в `ppIUnk`.  
+ (ваут) Максимальное количество указателей интерфейса, `ppIUnk`которые могут быть размещены в .  
   
  `pcAssemblies`  
- заполняет Число возвращаемых указателей на интерфейс. То есть число указателей интерфейса, фактически помещенных в `ppIUnk`.  
+ (ваут) Число указателей интерфейса вернулось. То есть, количество указателей интерфейса `ppIUnk`фактически помещено в .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName` успешно возвращено.|  
-|`S_FALSE`|Нет сборок.|  
+|`S_OK`|`FindAssembliesByName`вернулся успешно.|  
+|`S_FALSE`|Сборок нет.|  
   
-## <a name="remarks"></a>Заметки  
- При наличии имени сборки метод `FindAssembliesByName` находит сборку, следуя стандартным правилам разрешения ссылок на сборки. (Дополнительные сведения см. [в разделе Обнаружение сборок в среде выполнения](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` позволяет вызывающему объекту настраивать различные аспекты контекста сопоставителя сборок, такие как базовый и частный путь поиска приложения.  
+## <a name="remarks"></a>Remarks  
+ Учитывая имя сборки, `FindAssembliesByName` метод находит сборку, следуя стандартным правилам для разрешения ссылок сборки. (Для получения дополнительной информации, [см. Как Runtime находит сборки](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` позволяет вызывающему настроить различные аспекты контекста разрешения сборки, такие как база приложений и частный путь поиска.  
   
- Метод `FindAssembliesByName` требует инициализации среды CLR в процессе для вызова логики разрешения сборки. Поэтому необходимо вызвать [CoInitialize](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (передав COINITEE_DEFAULT) перед вызовом `FindAssembliesByName`, а затем выполнить вызов [каунинитиализекор](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
+ Метод `FindAssembliesByName` требует, чтобы CLR был инициализирован в процессе, чтобы вызвать логику разрешения сборки. Таким образом, вы должны позвонить [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (проходя COINITEE_DEFAULT) перед вызовом, `FindAssembliesByName`а затем следовать с вызовом [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName` возвращает указатель [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) на файл, содержащий манифест сборки для переданного имени сборки. Если заданное имя сборки не указано полностью (например, если оно не включает версию), может возвращаться несколько сборок.  
+ `FindAssembliesByName`возвращает указатель [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) в файл, содержащий манифест сборки для имени сборки, в котором находится передаваемое. Если данное имя сборки не полностью указано (например, если оно не содержит версию), может быть возвращено несколько сборок.  
   
- `FindAssembliesByName` часто используется компилятором, который пытается найти ссылочную сборку во время компиляции.  
+ `FindAssembliesByName`обычно используется компилятором, который пытается найти ссылку сборки во время компиляции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Обнаружение сборок в среде выполнения](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Как Время выполнения находит сборки](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

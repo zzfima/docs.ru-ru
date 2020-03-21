@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4ea16a212ac5f0120d63510f07eaee69af739e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431486"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177744"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>Метод IMetaDataEmit::DefinePinvokeMap
-Задает функции сигнатуры PInvoke метода, на который ссылается указанный токен.  
+Устанавливает особенности подписи PInvoke метода, на который ссылается указанный токен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DefinePinvokeMap (   
-    [in]  mdToken            tk,   
-    [in]  DWORD              dwMappingFlags,   
-    [in]  LPCWSTR            szImportName,   
-    [in]  mdModuleRef        mrImportDLL   
+HRESULT DefinePinvokeMap (
+    [in]  mdToken            tk,
+    [in]  DWORD              dwMappingFlags,
+    [in]  LPCWSTR            szImportName,
+    [in]  mdModuleRef        mrImportDLL
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- окне Токен для целевого метода.  
+ (в) Токен для целевого метода.  
   
  `dwMappingFlags`  
- окне Флаги, используемые PInvoke для сопоставления.  
+ (в) Флаги, используемые PInvoke для отображения.  
   
  `szImportName`  
- окне Имя целевого метода экспорта в неуправляемой библиотеке DLL.  
+ (в) Название целевого метода экспорта в неуправляемом DLL.  
   
  `mrImportDLL`  
- окне Токен для собственной DLL-библиотеки целевого объекта.  
+ (в) Токен для целевого родного DLL.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

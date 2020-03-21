@@ -15,77 +15,77 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: 75711b3d87699ff5db21a04351ff0acaccabb5aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a7449ffc8a8ccf2db62ab3cff2f9cfaffd0c72a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431858"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175867"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Метод IMetaDataEmit::DefineImportMember
-Создает ссылку на указанный элемент типа или модуля, который определен за пределами текущей области, и определяет маркер для этой ссылки.  
+Создает ссылку на указанный член типа или модуля, который определяется вне текущей области, и определяет маркер для этой ссылки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DefineImportMember (   
-    [in]  IMetaDataAssemblyImport  *pAssemImport,   
-    [in]  const void               *pbHashValue,   
+HRESULT DefineImportMember (
+    [in]  IMetaDataAssemblyImport  *pAssemImport,
+    [in]  const void               *pbHashValue,
     [in]  ULONG                    cbHashValue,  
-    [in]  IMetaDataImport          *pImport,   
-    [in]  mdToken                  mbMember,   
-    [in]  IMetaDataAssemblyEmit    *pAssemEmit,   
-    [in]  mdToken                  tkParent,   
-    [out] mdMemberRef              *pmr   
+    [in]  IMetaDataImport          *pImport,
+    [in]  mdToken                  mbMember,
+    [in]  IMetaDataAssemblyEmit    *pAssemEmit,
+    [in]  mdToken                  tkParent,
+    [out] mdMemberRef              *pmr
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pAssemImport`  
- окне Интерфейс [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) , представляющий сборку, из которой импортируется целевой элемент.  
+ (в) [Интерфейс IMetaDataAssemblyImport,](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) представляющий сборку, из которой импортируется целевой элемент.  
   
  `pbHashValue`  
- окне Массив, содержащий хэш для сборки, заданной `pAssemImport`.  
+ (в) Массив, содержащий хэш для сборки, `pAssemImport`указанный .  
   
  `cbHashValue`  
  [in] Число байтов в массиве `pbHashValue`.  
   
  `pImport`  
- окне Интерфейс [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) , представляющий область метаданных, из которой импортируется целевой элемент.  
+ (в) Интерфейс [IMetaDataImport,](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) представляющий область метаданных, из которой импортируется целевой элемент.  
   
  `mbMember`  
- окне Токен метаданных, указывающий целевой элемент. Токен может быть `mdMethodDef` (для метода-члена), `mdProperty` (для свойства элемента) или маркера `mdFieldDef` (для поля члена).  
+ (в) Токен метаданных, опозначавший целевой символ. Токен может быть `mdMethodDef` (для элемента) `mdProperty` (для свойства `mdFieldDef` участника) или (для поля участника) маркера.  
   
  `pAssemEmit`  
- окне Интерфейс [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) , представляющий сборку, в которую импортируется целевой элемент.  
+ (в) Интерфейс [IMetaDataAssemblyEmit,](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) представляющий сборку, в которую импортируется целевой элемент.  
   
  `tkParent`  
- окне Маркер `mdTypeRef` или `mdModuleRef` для типа или модуля соответственно, которому принадлежит целевой элемент.  
+ (в) `mdTypeRef` Токен `mdModuleRef` или токен для типа или модуля, соответственно, который владеет целевым членом.  
   
  `pmr`  
- заполняет Токен `mdMemberRef`, определенный в текущей области для ссылки на элемент.  
+ (ваут) Токен, `mdMemberRef` определяемый в текущей области для ссылки участника.  
   
-## <a name="remarks"></a>Заметки  
- Метод `DefineImportMember` ищет элемент, заданный `mbMember`, который определен в другой области, заданной `pImport`, и получает его свойства. Эта информация используется для вызова метода [IMetaDataEmit::D ефинемемберреф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) в текущей области для создания ссылки на элемент.  
+## <a name="remarks"></a>Remarks  
+ Метод `DefineImportMember` ищет участника, `mbMember`указанного, который определяется в другой `pImport`области, указанной, и извлекает его свойства. Он использует эту информацию для вызова [метода IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) в текущей области для создания ссылки участника.  
   
- Как правило, перед использованием метода `DefineImportMember` необходимо создать в текущей области ссылку на тип или ссылку на модуль для родительского класса, интерфейса или модуля целевого элемента. Затем маркер метаданных для этой ссылки передается в аргумент `tkParent`. Не нужно создавать ссылку на родительский элемент целевого элемента, если он будет разрешен позже компилятором или компоновщиком. Подведение итогов.  
+ Как правило, перед `DefineImportMember` использованием метода необходимо создать в текущей области ссылку на тип или ссылку на модуль для родительского класса, интерфейса или модуля целевого члена. Токен метаданных для этой ссылки `tkParent` затем передается в аргументе. Вам не нужно создавать ссылку на родителей целевого участника, если она будет решена позже компилятором или связующим звеном. Итог:  
   
-- Если целевой элемент является полем или методом, используйте метод [IMetaDataEmit::D ефинетиперефбинаме](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) или [IMetaDataEmit::D ефинеимпорттипе](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) для создания ссылки на тип в текущей области для родительского класса члена или родительского интерфейса.  
+- Если целевой участник является полем или методом, используйте либо [IMetaDataEmit::DefineTypeRefByName,](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) либо метод [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) для создания ссылки типа в текущем объеме для родительского класса или родительского интерфейса участника.  
   
-- Если целевой элемент является глобальной переменной или глобальной функцией (то есть не членом класса или интерфейса), используйте метод [IMetaDataEmit::D ефинемодулереф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) , чтобы создать ссылку на модуль в текущей области для родительского модуля элемента.  
+- Если целевой участник является глобальной переменной или глобальной функцией (т.е. не является членом класса или интерфейса), используйте метод [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) для создания ссылки на модуль в текущей области для родительского модуля участника.  
   
-- Если родительский элемент целевого элемента будет разрешен позже компилятором или компоновщиком, то передайте `mdTokenNil` в `tkParent`. Единственный сценарий, в котором это применимо, — это то, что глобальная функция или глобальная переменная импортируется из OBJ-файла, который в конечном итоге будет связан с текущим модулем и объединенными метаданными.  
+- Если родитель целевого участника будет решен позже компилятором `mdTokenNil` `tkParent`или связующим, затем перейдите в . Единственный сценарий, при котором это применимо, это когда глобальная функция или глобальная переменная импортируется из файла .obj, который в конечном итоге будет связан с текущим модулем и объединены метаданными.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

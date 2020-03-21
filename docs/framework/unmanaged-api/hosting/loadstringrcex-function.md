@@ -14,71 +14,71 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a300c2679ef11a84edb2ab89c8dea96e445c9ee3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122037"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177981"
 ---
 # <a name="loadstringrcex-function"></a>Функция LoadStringRCEx
-Преобразует значение HRESULT в соответствующее сообщение об ошибке для указанного языка и региональных параметров.  
+Переводит значение HRESULT в соответствующее сообщение об ошибке для указанной культуры.  
   
- Эта функция является устаревшей в .NET Framework 4.  
+ Эта функция была унесена в системе .NET 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT LoadStringRCEx (  
-    [in]  LCID    lcid,   
-    [in]  UINT    iResouceID,   
-    [out] LPWSTR  szBuffer,   
-    [in]  int     iMax,   
-    [in]  int     bQuiet,   
+    [in]  LCID    lcid,
+    [in]  UINT    iResouceID,
+    [out] LPWSTR  szBuffer,
+    [in]  int     iMax,
+    [in]  int     bQuiet,
     [out] int    *pcwchUsed  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `lcid`  
- окне Идентификатор языка и региональных параметров. Pass-1 для `lcid` для использования языка и региональных параметров по умолчанию.  
+ (в) Идентификатор культуры. Pass -1 `lcid` для использования культуры по умолчанию.  
   
  `iResourceID`  
- окне Значение HRESULT.  
+ [in] Значение HRESULT.  
   
  `szBuffer`  
- заполняет Буфер, содержащий сообщение об ошибке после успешного завершения.  
+ (ваут) Буфер, содержащий сообщение об ошибке при успешном завершении.  
   
  `iMax`  
- окне Размер буфера сообщений об ошибках.  
+ (в) Размер буфера сообщения об ошибке.  
   
  `bQuiet`  
- окне Игнорируют.  
+ (в) Игнорировать.  
   
  `pcwchUsed`  
- заполняет Указатель на длину сообщения об ошибке.  
+ (ваут) Указатель на длину сообщения об ошибке.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError. h, а также следующие значения.  
+ Этот метод возвращает стандартные коды ошибок COM, как это определено в WinError.h, в дополнение к следующим значениям.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`szBuffer` имеет значение null или `iMax` равен нулю (0).|  
+|E_INVALIDARG|`szBuffer`является нулевым, или `iMax` равна нулю (0).|  
   
-## <a name="remarks"></a>Заметки  
- Если метод не завершается успешно, `szBuffer` содержит пустую строку.  
+## <a name="remarks"></a>Remarks  
+ Если метод не выполняется `szBuffer` успешно, содержитпустую строку.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
- **Библиотека:** MSCorEE. dll  
+ **Библиотека:** MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
 - [Функция LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)

@@ -8,41 +8,41 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 97e878e4932ca9122bf27f76c32d1a56e69f253a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 91e89dbf36024c31f4afcd9b6d956944baf13576
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740602"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174190"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Практическое руководство. Обеспечение доступности данных для привязки в XAML
-В этом разделе обсуждаются различные способы обеспечения доступности данных для привязки в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]в зависимости от потребностей приложения.  
+Эта тема обсуждает различные способы, которыми можно сделать данные доступными для связывания в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]зависимости от потребностей приложения.  
   
 ## <a name="example"></a>Пример  
- Если у вас есть объект среды CLR, к которому вы хотите выполнить привязку [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], можно сделать объект доступным для привязки, чтобы определить его как ресурс и присвоить ему `x:Key`. В следующем примере имеется объект `Person` со строковым свойством с именем `PersonName`. Объект `Person` (в строке, выделенной цветом, который содержит элемент `<src>`), определяется в пространстве имен с именем `SDKSample`.  
+ Если у вас есть общий язык времени выполнения (CLR) объект, который вы хотели бы привязать к от [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], `x:Key`один из способов вы можете сделать объект доступным для связывания, чтобы определить его как ресурс и дать ему . В следующем примере у `Person` вас есть объект `PersonName`с именем свойства строки. Объект `Person` (в строке, показанной, `<src>` которая содержит элемент) определяется в подзванном `SDKSample`пространстве имен.  
   
  [!code-xaml[SimpleBinding#Instantiation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- Затем можно привязать элемент управления <xref:System.Windows.Controls.TextBlock> к объекту в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], так как отображается выделенная линия, содержащая элемент `<TextBlock>`. 
+ Затем можно связать <xref:System.Windows.Controls.TextBlock> элемент управления [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]с объектом в, как `<TextBlock>` показано выделенной строке, содержащей элемент.
   
- Кроме того, можно использовать класс <xref:System.Windows.Data.ObjectDataProvider>, как показано в следующем примере:  
+ Кроме того, вы <xref:System.Windows.Data.ObjectDataProvider> можете использовать класс, как в следующем примере:  
   
  [!code-xaml[ObjectDataProvider}](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
   
- Привязка определяется таким же образом, как и выделенная линия, содержащая элемент `<TextBlock>`.  
+ Связывание определяется таким же образом, как `<TextBlock>` показано на выделенной строке, содержащей элемент.  
   
- В этом конкретном примере результат будет таким же: у вас есть <xref:System.Windows.Controls.TextBlock> с текстовым содержимым `Joe`. Однако класс <xref:System.Windows.Data.ObjectDataProvider> предоставляет такие функции, как возможность привязки к результату метода. Можно выбрать использование класса <xref:System.Windows.Data.ObjectDataProvider>, если требуются предоставляемые им функции.  
+ В данном конкретном примере результат тот <xref:System.Windows.Controls.TextBlock> же: у `Joe`вас есть с текстовым контентом. Тем не <xref:System.Windows.Data.ObjectDataProvider> менее, класс предоставляет такие функциональные возможности, как возможность привязываться к результату метода. Вы можете использовать <xref:System.Windows.Data.ObjectDataProvider> класс, если вам нужна функция, которая она предоставляет.  
   
- Однако при привязке к уже созданному объекту необходимо задать `DataContext` в коде, как показано в следующем примере.  
+ Однако, если вы привязываетесь к объекту, `DataContext` который уже создан, необходимо установить код, как в следующем примере.  
   
  [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- Сведения о доступе к XML-данным для привязки с помощью класса <xref:System.Windows.Data.XmlDataProvider> см. в разделе [Bind to XML Data using a XmlDataProvider and XPath Queries](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md). Сведения о доступе к XML-данным для привязки с помощью класса <xref:System.Windows.Data.ObjectDataProvider> см. в разделе [Bind to XDocument, XElement или LINQ for XML Results](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
+ Чтобы получить доступ к данным <xref:System.Windows.Data.XmlDataProvider> XML для связывания с помощью класса, см. [Привязка к данным XML С помощью XMLDataProvider и XPath-запросов.](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md) Для доступа к данным XML для связывания с <xref:System.Windows.Data.ObjectDataProvider> помощью класса см. [Bind to XDocument, XElement, or LINQ for XML Query Results](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
   
- Дополнительные сведения о различных способах указания данных, к которым выполняется привязка, см. в разделе [Указание источника привязки](how-to-specify-the-binding-source.md). Сведения о типах данных, к которым можно выполнить привязку, или о том, как реализовать собственные объекты среды CLR для привязки, см. в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).  
+ Для получения информации о многих способах указания связываемых данных [см.](how-to-specify-the-binding-source.md) Для получения информации о том, какие типы данных можно связывать или как реализовать объекты общего времени выполнения языка (CLR) для связывания, [см.](binding-sources-overview.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Обзор связывания данных](../../../desktop-wpf/data/data-binding-overview.md)
+- [Как-к темам](data-binding-how-to-topics.md)

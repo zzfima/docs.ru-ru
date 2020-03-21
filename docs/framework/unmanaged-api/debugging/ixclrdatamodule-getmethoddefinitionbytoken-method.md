@@ -1,5 +1,5 @@
 ---
-title: Метод IXCLRDataModule::GetMethodDefinitionByToken
+title: IXCLRDataModule::GetMethodDefinitionByToken Метод
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744674"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176673"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>Метод IXCLRDataModule::GetMethodDefinitionByToken
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken Метод
 
-Возвращает определение метода, соответствующей токену метаданных.
+Получает определение метода, соответствующее заданного маркеру метаданных.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDefinitionByToken(
 ## <a name="parameters"></a>Параметры
 
 `token`\
-[in] Маркер метода.
+(в) Токен метода.
 
 `methodDefinition`\
-[out] Определение метода.
+(ваут) Определение метода.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Указанный метод является частью `IXCLRDataModule` интерфейса и соответствует 25 слот в таблице виртуального метода.
+Предоставляемый метод является `IXCLRDataModule` частью интерфейса и соответствует 25-му слоту таблицы виртуального метода.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** None  
-**Библиотека:** None  
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Заголовок:** Ни один  
+**Библиотека:** Ни один  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
- 
-## <a name="see-also"></a>См. также
 
-- [Отладка](index.md)
+## <a name="see-also"></a>См. также раздел
+
+- [Отладки](index.md)
 - [Интерфейс IXCLRDataModule](ixclrdatamodule-interface.md)

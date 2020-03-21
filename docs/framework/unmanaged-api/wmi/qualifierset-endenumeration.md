@@ -1,5 +1,5 @@
 ---
-title: Функция QualifierSet_EndEnumeration (Справочник по неуправляемым API)
+title: функция QualifierSet_EndEnumeration (неуправляемая справка API)
 description: Функция QualifierSet_EndEnumeration завершает перечисление.
 ms.date: 11/06/2017
 api_name:
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - QualifierSet_EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 82627fa416f71e123ed2c03bae4584e4433310eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c606580ff2e02c5659c14b134b1a17a65651952b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127289"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176751"
 ---
 # <a name="qualifierset_endenumeration-function"></a>Функция QualifierSet_EndEnumeration
-Завершает перечисление, начатое вызовом функции [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) .  
+Прекращает перечисление, начатое с вызова на [функцию QualifierSet_BeginEnumeration.](qualifierset-beginenumeration.md)  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,41 +30,40 @@ ms.locfileid: "73127289"
   
 ```cpp  
 HRESULT QualifierSet_EndEnumeration (
-   [in] int                  vFunc, 
+   [in] int                  vFunc,
    [in] IWbemQualifierSet*   ptr
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Параметры
 
 `vFunc`  
-окне Этот параметр не используется.
+(в) Этот параметр не используется.
 
-`ptr`   
-окне Указатель на экземпляр [ивбемкуалифиерсет](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
+`ptr`(в) Указатель на экземпляр [IWbemqualifierSet.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующее значение, возвращаемое этой функцией, определено в файле заголовка *вбемкли. h* , или его можно определить как константу в коде:
+Следующее значение, возвращенное этой функцией, определяется в файле заголовка *WbemCli.h* или вы можете определить его как константу в коде:
 
-|Константа  |значения  |Описание  |
+|Постоянно  |Значение  |Описание  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Эта функция заключает в оболочку вызов метода [ивбемкуалифиерсет:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) .
+Эта функция завершает вызов [iWbemqualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) метод.
 
-Этот вызов рекомендуется, но не является обязательным. Он немедленно освобождает ресурсы, связанные с перечислением.
+Этот вызов рекомендуется, но не требуется. Он немедленно выпускает ресурсы, связанные с перечислением.
 
 ## <a name="requirements"></a>Требования  
 
 **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
-**Заголовок:** WMINet_Utils. idl  
+**Заголовок:** WMINet_Utils.idl  
   
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dda867b5-1050-49ba-b01c-fcc83b7a5617
 topic_type:
 - apiref
-ms.openlocfilehash: 3f965ab215ff861c6df61de82dcbbea6b389c8da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3dd82588cf2dbf92fdda66fd7674c17ddc8b7306
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426778"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177190"
 ---
 # <a name="imetadataimportresetenum-method"></a>Метод IMetaDataImport::ResetEnum
 Возвращает заданный перечислитель в указанную позицию.  
@@ -29,28 +29,28 @@ ms.locfileid: "74426778"
   
 ```cpp  
 HRESULT ResetEnum (  
-   [in] HCORENUM    hEnum,   
+   [in] HCORENUM    hEnum,
    [in] ULONG       ulPos  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `hEnum`  
- окне Перечислитель для сброса.  
+ (в) Регистратор для сбросить.  
   
  `ulPos`  
- окне Новое место для размещения перечислителя.  
+ (в) Новая позиция, на которой можно разместить регистратор.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

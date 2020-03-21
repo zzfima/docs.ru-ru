@@ -18,40 +18,40 @@ helpviewer_keywords:
 ms.assetid: eda21ecf-4734-4f92-aaba-9f34884385db
 topic_type:
 - apiref
-ms.openlocfilehash: 11821acbeeb04ae09464eb0e032b9bf387914168
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50e3cc6e677de45be9256a2a818ebd6ed7d8b843
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095054"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176920"
 ---
 # <a name="strongnamefreebuffer-function"></a>Функция StrongNameFreeBuffer
 Освобождает память, выделенную предыдущим вызовом функции строгого имени, такой как [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md) или [StrongNameSignatureGeneration ](strongnamesignaturegeneration-function.md).  
   
- Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
+ Эта функция была амортизирована. Вместо этого используйте метод [ICLRStrongName::StrongNameFreeBuffer.](../hosting/iclrstrongname-strongnamefreebuffer-method.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-VOID StrongNameFreeBuffer (   
+VOID StrongNameFreeBuffer (
    [in] BYTE   *pbMemory  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pbMemory`  
- окне Указатель на память для освобождения.  
+ (в) Указатель на память, чтобы освободить.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** StrongName. h  
+ **Заголовок:** StrongName.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Метод StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md)
 - [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

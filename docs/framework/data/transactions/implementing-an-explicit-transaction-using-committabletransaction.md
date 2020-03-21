@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 19b62c24d00903d1494a755dbeabb460935cdacd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f8db79db6c4a66dfe13ec936313c4cf2c3b93be5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205943"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174411"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Реализация явной транзакции с помощью класса CommittableTransaction
 Класс <xref:System.Transactions.CommittableTransaction> позволяет приложениям использовать транзакцию явным образом вместо неявного использования с помощью класса <xref:System.Transactions.TransactionScope>. Он полезен при создании приложений, которым требуется использовать одну и ту же транзакцию в нескольких вызовах функций или нескольких вызовах потоков. В отличие от класса <xref:System.Transactions.TransactionScope> для фиксации или прерывания транзакции модуль записи приложения должен специально вызывать методы <xref:System.Transactions.CommittableTransaction.Commit%2A> и <xref:System.Transactions.Transaction.Rollback%2A>.  
@@ -43,7 +43,7 @@ ms.locfileid: "70205943"
   
  Можно вызвать метод <xref:System.Transactions.CommittableTransaction.BeginCommit%2A>, чтобы передать задачу фиксации потоку из пула потоков. Кроме того, можно вызвать метод <xref:System.Transactions.CommittableTransaction.EndCommit%2A>, чтобы определить, была ли выполнена фиксация транзакции. Если фиксацию транзакции по какой-либо причине выполнить не удалось, метод <xref:System.Transactions.CommittableTransaction.EndCommit%2A> вызывает исключение. Если на момент вызова метода <xref:System.Transactions.CommittableTransaction.EndCommit%2A> транзакция не зафиксирована, вызов блокируется до фиксации или отката транзакции.  
   
- Самый простой способ выполнения асинхронной фиксации - предоставление метода обратного вызова, вызываемого при завершении фиксации. Однако метод <xref:System.Transactions.CommittableTransaction.EndCommit%2A> необходимо вызвать для исходного объекта <xref:System.Transactions.CommittableTransaction>, который использовался для активизации вызова. Чтобы получить этот объект, можно выполнить приведение к параметру *IAsyncResult* метода обратного вызова, <xref:System.Transactions.CommittableTransaction> так как <xref:System.IAsyncResult> класс реализует класс.  
+ Самый простой способ выполнения асинхронной фиксации - предоставление метода обратного вызова, вызываемого при завершении фиксации. Однако метод <xref:System.Transactions.CommittableTransaction.EndCommit%2A> необходимо вызвать для исходного объекта <xref:System.Transactions.CommittableTransaction>, который использовался для активизации вызова. Чтобы получить этот объект, можно ухудшить параметр *IAsyncResult* <xref:System.Transactions.CommittableTransaction> метода <xref:System.IAsyncResult> обратного вызова, так как класс реализует класс.  
   
  В следующем примере показано, как выполнить асинхронную фиксацию.  
   
@@ -62,14 +62,14 @@ public void DoTransactionalWork()
      }  
      finally  
      {  
-          //Restore the ambient transaction   
+          //Restore the ambient transaction
           Transaction.Current = oldAmbient;  
      }  
 }  
 void OnCommitted(IAsyncResult asyncResult)  
 {  
      CommittableTransaction committableTransaction;  
-     committableTransaction = asyncResult as CommittableTransaction;     
+     committableTransaction = asyncResult as CommittableTransaction;
      Debug.Assert(committableTransaction != null);  
      try  
      {  
@@ -85,7 +85,7 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Реализация неявной транзакции с использованием области транзакции](implementing-an-implicit-transaction-using-transaction-scope.md)
 - [Обработка транзакций](index.md)

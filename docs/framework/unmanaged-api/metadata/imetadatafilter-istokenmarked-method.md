@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: 10f31d56a9727e99157f49038c19781f12cd9958
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47377e892aaf2bdd96a297630c47fe52215b0564
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440433"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177380"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>Метод IMetaDataFilter::IsTokenMarked
-Возвращает значение, указывающее, помечен ли заданный маркер метаданных как обработанный.  
+Получает значение, указывающее, был ли указанный токен метаданных помечен как обработанный.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT IsTokenMarked (  
-    [in]  mdToken  tk,   
+    [in]  mdToken  tk,
     [out] BOOL     *pIsMarked  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- окне Токен для проверки на наличие метки обработки.  
+ (в) Токен для изучения для обрабатывающего знака.  
   
  `pIsMarked`  
- заполняет Значение, которое `true` при обработке `tk`. в противном случае `false`.  
+ (ваут) Значение, если `true` `tk` обработано; в `false`противном случае .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

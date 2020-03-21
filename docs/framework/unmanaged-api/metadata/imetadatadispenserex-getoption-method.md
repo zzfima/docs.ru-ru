@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: d7f794e5-8e25-4d65-850a-7c34fbfce87d
 topic_type:
 - apiref
-ms.openlocfilehash: ab74b02df959fe6e6457273e67ba3b82ae6a015c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 816e2f2dc7d4d00f74f67720ee45d7b3483e57fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435990"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177721"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>Метод IMetaDataDispenserEx::GetOption
-Возвращает значение указанного параметра для текущей области метаданных. Параметр определяет, как обрабатываются вызовы к текущей области метаданных.  
+Получает значение указанного параметра для текущей области метаданных. Опция контролирует обработку вызовов в текущую область метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetOption (  
-    [in]  REFGUID         optionId,   
+    [in]  REFGUID         optionId,
     [out] const VARIANT   *pValue  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `optionId`  
- окне Указатель на идентификатор GUID, указывающий параметр, который необходимо получить. Список поддерживаемых идентификаторов GUID см. в разделе "Примечания".  
+ (в) Указатель на GUID, который определяет возможность для извлечения. Ознакомьтесь с разделом «Замечания» для получения списка поддерживаемых GUID.  
   
  `pValue`  
- заполняет Значение возвращаемого параметра. Тип этого значения будет представлять собой вариант типа указанного параметра.  
+ (ваут) Значение возвращенного опциона. Тип этого значения будет вариантом указанного типа опции.  
   
-## <a name="remarks"></a>Примечания  
- В следующем списке показаны идентификаторы GUID, которые поддерживаются для этого метода. Описание см. в описании метода [IMetaDataDispenserEx:: SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) . Если `optionId` отсутствует в этом списке, этот метод возвращает значение HRESULT `E_INVALIDARG`, указывающее на неверный параметр.  
+## <a name="remarks"></a>Remarks  
+ В следующем списке показаны GUID, которые поддерживаются для этого метода. Для описания см. [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) Если `optionId` его нет в этом списке, этот метод возвращает HRESULT, `E_INVALIDARG`указывая неправильный параметр.  
   
-- метадатачеккдупликатесфор  
+- MetaDataCheckМилидаксДля  
   
-- метадатарефтодефчекк  
+- MetaDataRefToDefCheck  
   
-- метадатанотификатионфортокенмовемент  
+- MetaDataNotificationForTo  
   
-- метадатасетенк  
+- MetaDataSetENC  
   
-- метадатаеррорифемитаутофордер  
+- MetaDataErrorIfEmitOutOrder  
   
-- метадатаженератетцеадаптерс  
+- MetaDataGenerateTCEAdapters  
   
-- метадаталинкероптионс  
+- MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** Смотрите [системные требования](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

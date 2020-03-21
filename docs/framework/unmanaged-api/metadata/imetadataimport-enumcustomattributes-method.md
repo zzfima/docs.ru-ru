@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: a43c1883038e41cac1b58c78bc26f20d436ebbd1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440237"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175529"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Метод IMetaDataImport::EnumCustomAttributes
-Перечисляет токены определения пользовательских атрибутов, связанные с указанным типом или членом.  
+Перечисляет пользовательские маркеры определения атрибутов, связанные с указанным типом или участником.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT EnumCustomAttributes (   
+HRESULT EnumCustomAttributes (
    [in, out] HCORENUM      *phEnum,  
-   [in]  mdToken            tk,   
-   [in]  mdToken            tkType,   
-   [out] mdCustomAttribute  rCustomAttributes[],   
+   [in]  mdToken            tk,
+   [in]  mdToken            tkType,
+   [out] mdCustomAttribute  rCustomAttributes[],
    [in]  ULONG              cMax,  
    [out, optional] ULONG   *pcCustomAttributes  
 );  
@@ -40,40 +40,40 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на возвращаемый перечислитель.  
+ (в, вне) Указатель на возвращенный регистратор.  
   
  `tk`  
- окне Токен для области перечисления или ноль для всех настраиваемых атрибутов.  
+ (в) Токен для области перечисления или ноль для всех пользовательских атрибутов.  
   
  `tkType`  
- окне Токен для конструктора типа атрибутов для перечисления или `null` для всех типов.  
+ (в) Токен для конструктора типа атрибутов, которые будут перечислены, `null` или для всех типов.  
   
  `rCustomAttributes`  
- заполняет Массив токенов настраиваемых атрибутов.  
+ (ваут) Массив пользовательских токенов атрибутов.  
   
  `cMax`  
  [in] Максимальный размер массива `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, необязательно] Фактическое число значений токенов, возвращаемых в `rCustomAttributes`.  
+ (вне, необязательно) Фактическое количество значений токенов, возвращенных в `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` успешно возвращено.|  
-|`S_FALSE`|Нет настраиваемых атрибутов для перечисления. В этом случае `pcCustomAttributes` равно нулю.|  
+|`S_OK`|`EnumCustomAttributes`вернулся успешно.|  
+|`S_FALSE`|Нет пользовательских атрибутов для перечисления. В этом `pcCustomAttributes` случае, равна нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

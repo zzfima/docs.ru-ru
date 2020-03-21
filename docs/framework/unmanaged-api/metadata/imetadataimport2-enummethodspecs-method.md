@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 4a1de144163ec2b4952bd16b59fb1c92b706631b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2df53ba53c64e042abc54a1d2ac043d301acdde9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428295"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177176"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>Метод IMetaDataImport2::EnumMethodSpecs
-Возвращает перечислитель для массива токенов MethodSpec, связанных с указанным токеном MethodDef или MemberRef.  
+Получает регистратор для массива токенов MethodSpec, связанных с указанным токеном MethodDef или MemberRef.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT EnumMethodSpecs (  
-    [in, out] HCORENUM      *phEnum,   
+    [in, out] HCORENUM      *phEnum,
     [in]      mdToken       tk,  
     [out]     mdMethodSpec  rMethodSpecs[],  
     [in]      ULONG         cMax,  
     [out]     ULONG         *pcMethodSpecs  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель для `rMethodSpecs`.  
+ (в, вне) Указатель на регистратор для `rMethodSpecs`.  
   
  `tk`  
- окне Токен MemberRef или MethodDef, представляющий метод, для которого необходимо перечислить маркеры MethodSpec. Если значение `tk` равно 0 (нулю), будут перечислены все токены MethodSpec в области.  
+ (в) Токен MemberRef или MethodDef, представляющий метод, токены которого должны быть перечислены. Если значение `tk` 0 (ноль), все токены MethodSpec в области будут перечислены.  
   
  `rMethodSpecs`  
- заполняет Массив токенов MethodSpec для перечисления.  
+ (ваут) Массив токенов MethodSpec для перечисления.  
   
  `cMax`  
- окне Запрошенное максимальное число токенов, помещаемых в `rMethodSpecs`.  
+ (в) Запрошенное максимальное количество токенов `rMethodSpecs`для размещения в .  
   
  `pcMethodSpecs`  
- заполняет Возвращенное число токенов, помещенных в `rMethodSpecs`.  
+ (ваут) Возвратное количество токенов, помещенных в `rMethodSpecs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` успешно возвращено.|  
-|`S_FALSE`|у `phEnum` нет элементов Member. В этом случае `pcMethodSpecs` имеет значение 0 (ноль).|  
+|`S_OK`|`EnumMethodSpecs`вернулся успешно.|  
+|`S_FALSE`|`phEnum`не имеет элементов-членов. В этом `pcMethodSpecs` случае устанавливается до 0 (ноль).|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

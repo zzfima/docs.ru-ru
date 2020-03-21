@@ -1,6 +1,6 @@
 ---
-title: Функция Блессивбемсервицесобжект (Справочник по неуправляемым API)
-description: Функция Блессивбемсервицесобжект указывает, допускают ли учетные данные пользователя доступ к объекту IWbemServices.
+title: Функция BlessIWbemServicesObject (Неуправляемая справка API)
+description: Функция BlessIWbemServicesObject показывает, позволяют ли учетные данные пользователей получить доступ к объекту IWbemServices
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - BlessIWbemServicesObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: f77ff394668a235dd63cf0cddf71ea418a28125b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fd822f78d29ad3a75fb5e57dd7c23b7049d445b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141683"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175035"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Функция BlessIWbemServicesObject
-Указывает, допускают ли учетные данные пользователя доступ к указанному объекту [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) . 
+Указывает, позволяют ли учетные данные пользователя получить доступ к указанному объекту [IWbemServices.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -31,10 +31,10 @@ ms.locfileid: "73141683"
 ```cpp
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
-   [in] BSTR strUser, 
-   [in] BSTR strPassword, 
-   [in] BSTR strAuthority, 
-   [in] DWORD impLevel, 
+   [in] BSTR strUser,
+   [in] BSTR strPassword,
+   [in] BSTR strAuthority,
+   [in] DWORD impLevel,
    [in] DWORD authnLevel
 );
 ```
@@ -42,43 +42,43 @@ HRESULT BlessIWbemServicesObject (
 ## <a name="parameters"></a>Параметры
 
 `pIWbemServices`\
-окне Указатель на объект службы WMI.
+(в) Указатель на объект службы WMI.
 
 `strUser`\
-окне Имя пользователя.
+(в) Имя пользователя.
 
 `strPassword`\
-окне Пароль, связанный с `strUser`.
+(в) Пароль, связанный с `strUser`.
 
 `strAuthority`\
-окне Доменное имя пользователя. Дополнительные сведения см. в описании функции [коннектсервервми](connectserverwmi.md) .
+(в) Доменное имя пользователя. Дополнительную информацию можно узнать из функции [ConnectServerWmi.](connectserverwmi.md)
 
 `impLevel`\
-окне Уровень олицетворения.
+(в) Уровень олицетворения.
 
 `authnLevel`\
-окне Уровень авторизации.
+(в) Уровень авторизации.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определены в файле заголовка *Winerror. h* , или их можно определить как константы в коде:
+Следующие значения, возвращенные этой функцией, определяются в файле заголовка *WinError.h* или вы можете определить их как константы в коде:
 
-|Константа  |значения  |Описание  |
+|Постоянно  |Значение  |Описание  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов недопустимы. |
-| `E_POINTER` | 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 
-| `E_FAIL` | 0x80000008 | Произошла неопределенная ошибка. |
-| `E_OUTOFMEMORY` | 0x80000002 | Недостаточно свободной памяти для выполнения операции. | 
-| `S_OK` | 0 | Вызов функции выполнен успешно. | 
+| `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов недействительны. |
+| `E_POINTER` | 0x80004003 | Параметр `pIWbemServices` равен `null`. |
+| `E_FAIL` | 0x80000008 | Возникла неопределенная ошибка. |
+| `E_OUTOFMEMORY` | 0x80000002 | Недостаточно памяти доступно для выполнения операции. |
+| `S_OK` | 0 | Вызов функции был успешным. |
 
 ## <a name="requirements"></a>Требования
 
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
- **Заголовок:** WMINet_Utils. idl
+ **Заголовок:** WMINet_Utils.idl
 
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

@@ -2,35 +2,35 @@
 title: N-уровневые и удаленные приложения и LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 94ca057da10c3570e85e17b5caec2d86154d8a3f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6758ae23c25d8e7a4255d0a784cccd1eb404bfe7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781402"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174307"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N-уровневые и удаленные приложения и LINQ to SQL
-Существует возможность создания многоуровневых приложений, использующих [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Как правило, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] контекст данных, классы сущностей и логика создания запросов расположены на среднем уровне в качестве уровня доступа к данным (DAL). Бизнес-логика и непостоянные данные могут быть полностью реализованы в разделяемых классах, методах сущностей, контексте данных либо в отдельных классах.
+Существует возможность создания многоуровневых приложений, использующих [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Как правило, контекст [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] данных, классы сущностей и логика построения запросов расположены на среднем уровне в виде слоя доступа к данным (DAL). Бизнес-логика и непостоянные данные могут быть полностью реализованы в разделяемых классах, методах сущностей, контексте данных либо в отдельных классах.
 
  Уровень клиента или представления вызывает методы в удаленном интерфейсе среднего уровня; DAL в этом интерфейсе выполнит запросы или хранимые процедуры, сопоставленные методам <xref:System.Data.Linq.DataContext>. Обычно средний уровень возвращает данные клиентам в виде XML-представлений сущностей или прокси-объектов.
 
  На среднем уровне сущности создаются при помощи контекста данных, который отслеживает их состояние и управляет отложенной загрузкой из базы данных и передачей изменений в базу данных. Эти сущности присоединены к `DataContext`. Однако после отправки сущностей на другой уровень с помощью сериализации происходит их отсоединение, означающее, что `DataContext` больше не отслеживает их состояние. Сущности, отправляемые клиентом обратно для обновлений, следует повторно присоединить к контексту данных, прежде чем [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сможет отправить изменения в базу данных. Если для проверок оптимистической блокировки требуются исходные значения и/или метки времени, клиент должен предоставить их обратно на средний уровень.
 
- В приложениях ASP.NET <xref:System.Web.UI.WebControls.LinqDataSource> управляет большей частью данного сложного процесса. Дополнительные сведения см. в статье [Общие сведения о серверном веб-элементе управления LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)).
+ В приложениях ASP.NET <xref:System.Web.UI.WebControls.LinqDataSource> управляет большей частью данного сложного процесса. Для получения дополнительной [LinqDataSource Web Server Control Overview](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))информации см.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
  Дополнительные сведения о развертывании многоуровневого приложения, использующего [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], см. в следующих разделах.
 
 - [N-уровневое использование LINQ to SQL с ASP.NET](linq-to-sql-n-tier-with-aspnet.md)
 
-- [N-уровневое использование LINQ to SQL с веб-службами](linq-to-sql-n-tier-with-web-services.md) 
+- [N-уровневое использование LINQ to SQL с веб-службами](linq-to-sql-n-tier-with-web-services.md)
 
 - [Реализация N-уровневой бизнес-логики](implementing-business-logic-linq-to-sql.md)
 
-- [Получение данных и операции создания, обновления и удаления в N-уровневых приложениях (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md)
+- [Извлечение данных и операции создания, обновления и удаления в N-уровневых приложениях (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md)
 
- Дополнительные сведения о n-уровневых приложениях, использующих наборы данных ADO.NET, см. [в разделе Работа с наборами данных в n-уровневых приложениях](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
+ Для получения дополнительной информации о n-уровне приложений, которые используют ADO.NET DataSets, см [Работа с наборами данных в n-уровня приложений](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Основные сведения](background-information.md)
+- [Справочная информация](background-information.md)

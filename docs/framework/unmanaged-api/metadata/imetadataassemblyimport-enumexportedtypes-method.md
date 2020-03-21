@@ -15,56 +15,56 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f00fe5bce2f808265add228406dfaa2ccc267545
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450332"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176010"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>Метод IMetaDataAssemblyImport::EnumExportedTypes
-Перечисляет экспортированные типы, на которые ссылается манифест сборки в текущей области метаданных.  
+Перечисляет экспортированные типы, упомянутые в сборке в текущей области метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT EnumExportedTypes (  
-    [in, out] HCORENUM     *phEnum,   
-    [out] mdExportedType   rExportedTypes[],   
-    [in]  ULONG            cMax,   
+    [in, out] HCORENUM     *phEnum,
+    [out] mdExportedType   rExportedTypes[],
+    [in]  ULONG            cMax,
     [out] ULONG            *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель. Это значение должно быть null, если метод `EnumExportedTypes` вызывается в первый раз.  
+ (в, вне) Указатель на регистратор. Это должно быть нулевая величина, `EnumExportedTypes` когда метод вызывается в первый раз.  
   
  `rExportedTypes`  
- заполняет Перечисление `mdExportedType` маркеров метаданных.  
+ (ваут) Перечисление `mdExportedType` токенов метаданных.  
   
  `cMax`  
- окне Максимальное число маркеров `mdExportedType`, которые могут быть помещены в массив `rExportedTypes`.  
+ (в) Максимальное количество `mdExportedType` токенов, которые могут `rExportedTypes` быть размещены в массиве.  
   
  `pcTokens`  
- заполняет Число маркеров `mdExportedType`, фактически помещаемых в `rExportedTypes`.  
+ (ваут) Количество `mdExportedType` токенов фактически помещено в `rExportedTypes`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` успешно возвращено.|  
-|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTokens` имеет значение 0.|  
+|`S_OK`|`EnumExportedTypes`вернулся успешно.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом `pcTokens` случае, устанавливается до нуля.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** Смотрите [системные требования](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

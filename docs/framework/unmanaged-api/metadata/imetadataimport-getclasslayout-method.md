@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e02d7dd4b287d027b633ae9bf2e98e036062bdd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437778"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175412"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>Метод IMetaDataImport::GetClassLayout
 Возвращает сведения о структуре для класса, на который ссылается указанный токен TypeDef.  
@@ -28,8 +28,8 @@ ms.locfileid: "74437778"
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT GetClassLayout  (   
-   [in]  mdTypeDef          td,   
+HRESULT GetClassLayout  (
+   [in]  mdTypeDef          td,
    [out] DWORD              *pdwPackSize,  
    [out] COR_FIELD_OFFSET   rFieldOffset[],  
    [in]  ULONG              cMax,  
@@ -40,33 +40,33 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- окне Токен TypeDef для класса с макетом, который должен быть возвращен.  
+ (в) Токен TypeDef для класса с макетом для возврата.  
   
  `pdwPackSize`  
- заполняет Одно из значений 1, 2, 4, 8 или 16, представляющее размер пакета класса.  
+ (ваут) Одно из значений 1, 2, 4, 8 или 16, представляющее размер упаковки класса.  
   
  `rFieldOffset`  
- заполняет Массив значений [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) .  
+ (ваут) Массив [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) значений.  
   
  `cMax`  
  [in] Максимальный размер массива `rFieldOffset`.  
   
  `pcFieldOffset`  
- заполняет Число элементов, возвращаемых в `rFieldOffset`.  
+ (ваут) Количество элементов, `rFieldOffset`возвращенных в .  
   
  `pulClassSize`  
- заполняет Размер в байтах класса, представленного `td`.  
+ (ваут) Размер байтов класса, представленных `td`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 18bb03e17b19243ee1bc6e3f7ebd70afb4d4c60b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780612"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174450"
 ---
 # <a name="updating-data-in-a-data-source"></a>Обновление данных в источнике данных
-Инструкции SQL, изменяющие данные (например, INSERT, UPDATE, или DELETE), не возвращают строки. Аналогичным образом, многие хранимые процедуры выполняют некоторое действие, но не возвращают строки. Для выполнения команд, которые не возвращают строки, создайте объект **команды** с соответствующей командой SQL и **соединением**, включая все необходимые **Параметры**. Выполните команду с помощью метода **ExecuteNonQuery** объекта **Command** .  
+Инструкции SQL, изменяющие данные (например, INSERT, UPDATE, или DELETE), не возвращают строки. Аналогичным образом, многие хранимые процедуры выполняют некоторое действие, но не возвращают строки. Для выполнения команд, которые не возвращают строки, создайте объект **командования** с соответствующей командой S'L и **соединением,** включая **любые необходимые параметры.** Выполняйте команду методом **выполненияNon-кери** **объекта Командования.**  
   
- Метод **ExecuteNonQuery** возвращает целое число, представляющее количество строк, затронутых выполняемой инструкцией или хранимой процедурой. Если выполняется несколько инструкций, возвращенное значение является суммой количеств записей, затронутых всеми выполненными инструкциями.  
+ Метод **ВыполненияNon'sвозвращает** целый ряд, представляющий количество строк, затронутых выполнением оператора или сохраненной процедурой. Если выполняется несколько инструкций, возвращенное значение является суммой количеств записей, затронутых всеми выполненными инструкциями.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода инструкция INSERT выполняется для вставки записи в базу данных с помощью **ExecuteNonQuery**.  
+ Следующий пример кода выполняет заявление INSERT для вставки записи в базу данных с помощью **ВыполненияНьюри.**  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- В следующем примере кода выполняется хранимая процедура, созданная в примере кода для [выполнения операций с каталогом](performing-catalog-operations.md). Хранимая процедура не возвращает ни одной строки, поэтому используется метод **ExecuteNonQuery** , но хранимая процедура получает входной параметр и возвращает выходной параметр и возвращаемое значение.  
+ Следующий пример кода выполняет сохраненную процедуру, созданную примером кода в [операциях «Выполнение каталога».](performing-catalog-operations.md) Никакие строки не возвращаются по процедуре хранения, поэтому используется метод **ExecuteNon''query,** но сохраненная процедура получает параметр ввода и возвращает параметры вывода и значение возврата.  
   
- Для объекта необходимо сначала добавить параметр **ReturnValue** в коллекцию **Parameters.** <xref:System.Data.OleDb.OleDbCommand>  
+ Для <xref:System.Data.OleDb.OleDbCommand> объекта параметр **ReturnValue** должен быть добавлен в коллекцию **параметров** в первую очередь.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -66,7 +66,7 @@ command.Parameters("@CategoryName").Value = "New Category"
 command.ExecuteNonQuery()  
   
 Dim categoryID As Int32 = CInt(command.Parameters("@Identity").Value)  
-Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)   
+Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)
 ```  
   
 ```csharp  
@@ -91,7 +91,7 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Использование команд для изменения данных](using-commands-to-modify-data.md)
 - [Обновление источников данных с объектами DataAdapter](updating-data-sources-with-dataadapters.md)

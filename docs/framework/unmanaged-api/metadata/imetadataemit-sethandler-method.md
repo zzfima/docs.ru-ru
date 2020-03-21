@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: c6c1aaaf-e2cd-407c-b73e-fbe6ffd83bb3
 topic_type:
 - apiref
-ms.openlocfilehash: 6737275fb77e6f177832eb1d96214c37942bcd22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 375c4b2cece0bdfd763ae383c5412c9e25614baf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442152"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177545"
 ---
 # <a name="imetadataemitsethandler-method"></a>Метод IMetaDataEmit::SetHandler
-Задает метод, на который ссылается указанный указатель `IUnknown` в качестве обратного вызова уведомления для повторного сопоставления токенов.  
+Устанавливает метод, указанный `IUnknown` указателем, в качестве обратного вызова уведомлений для рекарт маркеров.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT SetHandler (   
+HRESULT SetHandler (
     [in]  IUnknown    *pUnk  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pUnk`  
- окне Регистрируемый обработчик.  
+ (в) Обработчик для регистрации.  
   
-## <a name="remarks"></a>Заметки  
- Обработчик метаданных отправляет уведомление с помощью метода, предоставляемого `SetHandler`, компиляторам, которые не создают записи оптимизированным образом и которым требуется оптимизировать сохраненные записи.  
+## <a name="remarks"></a>Remarks  
+ Движок метаданных отправляет уведомления с помощью `SetHandler`предоставленного метода компиляторы, которые не генерируют записи оптимизированным способом и которые хотели бы оптимизировать сохраненные записи.  
   
- Если метод обратного вызова не предоставляется через `SetHandler`, оптимизация не будет выполняться при сохранении, за исключением случаев, когда несколько областей импорта были объединены с помощью `IMapToken` для каждой области слияния.  
+ Если метод обратного откаивается не через, `SetHandler`не будет выполнена оптимизация при `IMapToken` сохранении, за исключением случаев, когда несколько областей импорта были объединены с использованием на слиянии для каждой области.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -1,6 +1,6 @@
 ---
-title: Функция Клонинумвбемклассобжект (Справочник по неуправляемым API)
-description: Функция Клонинумвбемклассобжект создает логическую копию перечислителя.
+title: Функция CloneEnumWbemClassObject (Неуправляемая справка API)
+description: Функция CloneEnumWbemClassObject является логической копией регистратора.
 ms.date: 11/06/2017
 api_name:
 - CloneEnumWbemClassObject
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CloneEnumWbemClassObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 9d2442161aaa83693a33f9efc230c09b8c4426e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2a3a7e848108e50c04f0ec70cf42586755a0a88
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128731"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175022"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>Функция CloneEnumWbemClassObject
 Создает логическую копию перечислителя, сохраняя текущую позицию в перечислении.
@@ -30,69 +30,70 @@ ms.locfileid: "73128731"
 
 ```cpp
 HRESULT CloneEnumWbemClassObject (
-   [out] IEnumWbemClassObject**  ppEnum, 
+   [out] IEnumWbemClassObject**  ppEnum,
    [in] DWORD                    authLevel,
    [in] DWORD                    impLevel,
-   [in] IEnumWbemClassObject*    pCurrentEnumWbemClassObject, 
+   [in] IEnumWbemClassObject*    pCurrentEnumWbemClassObject,
    [in] BSTR                     strUser,
    [in] BSTR                     strPassword,
-   [in BSTR]                     strAuthority 
-); 
+   [in BSTR]                     strAuthority
+);
 ```
 
 ## <a name="parameters"></a>Параметры
 
 `ppEnum`\
-заполняет Получает указатель на новый [иенумвбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
+(ваут) Получает указатель на новый [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
 
 `authLevel`\
-окне Уровень авторизации.
+(в) Уровень авторизации.
 
 `impLevel`\
-окне Уровень олицетворения.
+(в) Уровень олицетворения.
 
 `pCurrentEnumWbemClassObject`\
-заполняет Указатель на экземпляр [иенумвбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) для клонирования.
+(ваут) Указатель на экземпляр [IEnumWbemClassObject,](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) который будет клонирован.
 
 `strUser`\
-окне Имя пользователя. Дополнительные сведения см. в описании функции [коннектсервервми](connectserverwmi.md) .
+(в) Имя пользователя. Дополнительную информацию можно узнать из функции [ConnectServerWmi.](connectserverwmi.md)
 
 `strPassword`\
-окне Пароль. Дополнительные сведения см. в описании функции [коннектсервервми](connectserverwmi.md) .
+(в) Пароль. Дополнительную информацию можно узнать из функции [ConnectServerWmi.](connectserverwmi.md)
 
-`strAuthority`\ [in] доменное имя пользователя. Дополнительные сведения см. в описании функции [коннектсервервми](connectserverwmi.md) .
+`strAuthority`\
+(в) Доменное имя пользователя. Дополнительную информацию можно узнать из функции [ConnectServerWmi.](connectserverwmi.md)
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
+Следующие значения, возвращенные этой функцией, определяются в файле заголовка *WbemCli.h* или вы можете определить их как константы в коде:
 
-|Константа  |значения  |Описание  |
+|Постоянно  |Значение  |Описание  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | Общий сбой. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Не удалось создать ссылку на удаленный вызов процедур (RPC) между текущим процессом и WMI. |
-| `WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
+| `WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр недействителен. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти доступно завершить операцию. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Соединение удаленной процедуры (RPC) между текущим процессом и WMI не удалось. |
+| `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Эта функция заключает в оболочку вызов метода [иенумвбемклассобжект:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
+Эта функция завершает вызов методом [IEnumWbemClassObject::Clone.](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)
 
-Этот метод делает только «наилучшую» копию. Из-за динамической природы многих объектов CIM возможно, что новый перечислитель не перечисляет тот же набор объектов, что и перечислитель источника.
+Этот метод делает только "лучшее усилие" копию. Из-за динамического характера многих объектов CIM, возможно, что новый регистратор не перечисляет тот же набор объектов, что и исходный регистратор.
 
-Если вызов функции завершается неудачно, можно получить дополнительные сведения об ошибке, вызвав функцию [жетерроринфо](geterrorinfo.md) .
+Если вызов функции не удается, вы можете получить дополнительную информацию об ошибке, позвонив в функцию [GetErrorInfo.](geterrorinfo.md)
 
 ## <a name="example"></a>Пример
 
-Пример см. в описании метода [иенумвбемклассобжект:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
+Например, [см.](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)
 
 ## <a name="requirements"></a>Требования
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
- **Заголовок:** WMINet_Utils. idl
+ **Заголовок:** WMINet_Utils.idl
 
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

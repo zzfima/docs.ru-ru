@@ -15,76 +15,76 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 4149db74adfa26df221eed5c590766a023bb105e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448225"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175971"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Метод IMetaDataAssemblyImport::GetAssemblyRefProps
-Возвращает набор свойств для ссылки на сборку с указанной сигнатурой метаданных.  
+Получает набор свойств для ссылки сборки с указанной подписью метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetAssemblyRefProps (  
-    [in]  mdAssemblyRef        mdar,   
-    [out] const void          **ppbPublicKeyOrToken,   
-    [out] ULONG                *pcbPublicKeyOrToken,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] ASSEMBLYMETADATA     *pMetaData,   
-    [out] const void           **ppbHashValue,   
-    [out] ULONG                *pcbHashValue,   
+    [in]  mdAssemblyRef        mdar,
+    [out] const void          **ppbPublicKeyOrToken,
+    [out] ULONG                *pcbPublicKeyOrToken,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] ASSEMBLYMETADATA     *pMetaData,
+    [out] const void           **ppbHashValue,
+    [out] ULONG                *pcbHashValue,
     [out] DWORD                *pdwAssemblyRefFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `mdar`  
- окне `mdAssemblyRef` маркер метаданных, представляющий ссылку на сборку, для которой необходимо получить свойства.  
+ (в) Токен `mdAssemblyRef` метаданных, представляющий ссылку сборки для получения свойств.  
   
  `ppbPublicKeyOrToken`  
- заполняет Указатель на открытый ключ или маркер метаданных.  
+ (ваут) Указатель на открытый ключ или токен метаданных.  
   
  `pcbPublicKeyOrToken`  
- заполняет Число байтов в возвращенном открытом ключе или токене.  
+ (ваут) Количество байтов в возвращенном публичном ключе или маркере.  
   
  `szName`  
- заполняет Простое имя сборки.  
+ (ваут) Простое название сборки.  
   
  `cchName`  
- окне Размер `szName`в расширенных символах.  
+ (в) Размер, в широких chars, . `szName`  
   
  `pchName`  
- заполняет Указатель на число расширенных символов, фактически возвращаемых в `szName`.  
+ (ваут) Указатель на количество широких chars `szName`фактически вернулся в .  
   
  `pMetaData`  
- заполняет Указатель на структуру ASSEMBLYMETADATA, содержащую метаданные сборки.  
+ (ваут) Указатель на структуру ASSEMBLYMETADATA, содержащую метаданные сборки.  
   
  `ppbHashValue`  
- заполняет Указатель на хэш-значение. Это хэш с использованием алгоритма SHA-1 `PublicKey` свойства сборки, на которую указывает ссылка, если не задан флаг Арффуллоригинатор перечисления [ассемблиреффлагс](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) .  
+ (ваут) Указатель на значение хэша. Это хэш, использующий алгоритм SHA-1, `PublicKey` имущества сборки, на который ссылается, если только не установлен флаг ArfFullOriginator в перечислении [AssemblyRefFlags.](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)  
   
  `pcbHashValue`  
- заполняет Число расширенных символов в возвращенном хэш-значении.  
+ (ваут) Количество широких chars в возвращенном значении хэша.  
   
  `pdwAssemblyRefFlags`  
- заполняет Указатель на флаги, описывающие метаданные, примененные к сборке. Значение Flags является сочетанием одного или нескольких значений [корассемблифлагс](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) .  
+ (ваут) Указатель на флаги, описывающие метаданные, применяемые к сборке. Значение флагов представляет собой сочетание одного или нескольких значений [CorAssemblyFlags.](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает S_OK, если он выполнен. в противном случае возвращается один из кодов ошибок, определенных в файле заголовка Winerror. h.  
+ Этот метод возвращает S_OK, если он преуспевает; в противном случае он возвращает один из кодов ошибок, определенных в файле заголовка Winerror.h.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

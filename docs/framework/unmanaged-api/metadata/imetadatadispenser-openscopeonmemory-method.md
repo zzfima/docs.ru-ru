@@ -15,63 +15,63 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 04e0fabfc0d70c9d922e0715f32bd07237ce8741
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 492c37540ad68b5b134520218eedc59013c68519
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442308"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175932"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>Метод IMetaDataDispenser::OpenScopeOnMemory
-Открывает область памяти, которая содержит существующие метаданные. Это значит, что этот метод открывает указанную область памяти, в которой существующие данные обрабатываются как метаданные.  
+Открывает область памяти, содержащую существующие метаданные. То есть этот метод открывает заданную область памяти, в которой существующие данные рассматриваются как метаданные.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT OpenScopeOnMemory (  
-    [in]  LPCVOID     pData,   
-    [in]  ULONG       cbData,   
-    [in]  DWORD       dwOpenFlags,   
-    [in]  REFIID      riid,   
+    [in]  LPCVOID     pData,
+    [in]  ULONG       cbData,
+    [in]  DWORD       dwOpenFlags,
+    [in]  REFIID      riid,
     [out] IUnknown    **ppIUnk  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pData`  
- окне Указатель, указывающий начальный адрес области памяти.  
+ (в) Указатель, обоужаемый начальный адрес области памяти.  
   
  `cbData`  
- окне Размер области памяти в байтах.  
+ (в) Размер области памяти, байтов.  
   
  `dwOpenFlags`  
- окне Значение перечисления [коропенфлагс](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) , определяющее режим (чтение, запись и т. д.) для открытия.  
+ (в) Значение значения [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) перечисления указать режим (читать, писать и так далее) для открытия.  
   
  `riid`  
- окне Идентификатор IID требуемого интерфейса метаданных, который должен быть возвращен; вызывающий объект будет использовать интерфейс для импорта (чтения) или выдачи (записи) метаданных.  
+ (в) IID желаемого интерфейса метаданных, который должен быть возвращен; абонент будет использовать интерфейс для импорта (чтения) или испускателя (записи) метаданных.  
   
- Значение `riid` должно указывать один из интерфейсов "import" или "Emit". Допустимые значения: IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 или IID_IMetaDataImport2.  
+ Значение `riid` должно указывать один из интерфейсов "импорт" или "излучать". Действительные значения— IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 или IID_IMetaDataImport2.  
   
  `ppIUnk`  
- заполняет Указатель на возвращаемый интерфейс.  
+ (ваут) Указатель на возвращенный интерфейс.  
   
-## <a name="remarks"></a>Заметки  
- Копию метаданных в памяти можно запросить с помощью методов из одного из интерфейсов "Импорт" или добавить к методам из одного из интерфейсов "выдачи".  
+## <a name="remarks"></a>Remarks  
+ Копия метаданных в памяти может быть запрошена с помощью методов одного из «импортных» интерфейсов или добавлена к методам одного из интерфейсов «излучать».  
   
- Метод `OpenScopeOnMemory` аналогичен методу [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) , за исключением того, что интересующие метаданные уже существуют в памяти, а не в файле на диске.  
+ Метод `OpenScopeOnMemory` аналогичен [методу IMetaDataDispenser::OpenScope,](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) за исключением того, что метаданные, представляющие интерес, уже существуют в памяти, а не в файле на диске.  
   
- Если целевая область памяти не содержит метаданных среды CLR, метод `OpenScopeOnMemory` завершится ошибкой.  
+ Если целевая область памяти не содержит метаданных общего времени `OpenScopeOnMemory` выполнения языка (CLR), метод выйдет из строя.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** Смотрите [системные требования](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 83170815f4aa65988bb6a6394bd466a0ba376ebf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5aa5d78faa8ca9261594e2a649b11088e1d78ee7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432055"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177860"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>Метод IMetaDataAssemblyEmit::DefineManifestResource
 Создает структуру `ManifestResource`, содержащую метаданные для указанного ресурса манифеста, и возвращает связанный токен метаданных.  
@@ -29,9 +29,9 @@ ms.locfileid: "74432055"
   
 ```cpp  
 HRESULT DefineManifestResource (  
-    [in] LPCWSTR                szName,   
-    [in] mdToken                tkImplementation,   
-    [in] DWORD                  dwOffset,   
+    [in] LPCWSTR                szName,
+    [in] mdToken                tkImplementation,
+    [in] DWORD                  dwOffset,
     [in] DWORD                  dwResourceFlags,  
     [out] mdManifestResource    *pmdmr  
 );  
@@ -39,32 +39,32 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- окне Имя ресурса.  
+ [in] Имя ресурса.  
   
  `tkImplementation`  
- окне Токен метаданных типа `mdtFile` или `mdtAssemblyRef`, который сопоставляется с поставщиком ресурсов. Значение NULL указывает, что файл, в котором внедрены метаданные, является поставщиком ресурсов.  
+ (в) Токен метаданных типа `mdtFile` `mdtAssemblyRef` или карты поставщика ресурсов. Значение NULL указывает на то, что файл, в который встроены метаданные, является поставщиком ресурсов.  
   
  `dwOffset`  
- окне Смещение в начале ресурса в файле. Для ресурсов в отдельных файлах это значение всегда будет равно нулю. Если ресурс внедряется в PE-файл, это смещение большого двоичного объекта ресурса, которое начинается в расположении, указанном в файле заголовка COR. h.  
+ (в) Смещение до начала ресурса в файле. Для ресурсов в автономных файлах этот вопрос всегда будет равен нулю. Если ресурс встроен в файл PE (портативный исполняемый) файл, это смещение ресурса BLOB, которое начинается в месте, указанном в файле заголовка cor.h.  
   
  `dwResourceFlags`  
- окне Побитовое сочетание значений флагов, задающих настройки свойств для определения ресурса.  
+ (в) Битовая комбинация значений флага, определяющих параметры свойств для определения ресурса.  
   
  `pmdmr`  
- заполняет Указатель на возвращаемый маркер метаданных.  
+ (ваут) Указатель на токен возвращенных метаданных.  
   
-## <a name="remarks"></a>Примечания  
- Для каждого ресурса, реализованного в каждом файле сборки, необходимо определить одну `ManifestResource` структуру метаданных.  
+## <a name="remarks"></a>Remarks  
+ Для `ManifestResource` каждого ресурса, реализованного в файлах сборки, должна быть определена одна структура метаданных.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** Смотрите [системные требования](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

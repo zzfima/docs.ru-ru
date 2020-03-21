@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f7cd45a90a750c357706f720453ff23697875b58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446235"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176621"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>Метод ISymUnmanagedScope2::GetConstants
-Возвращает локальные константы, определенные в этой области.  
+Получает локальные константы, определяемые в этой области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,26 +32,26 @@ HRESULT GetConstants(
      [in]  ULONG32  cConstants,  
      [out] ULONG32  *pcConstants,  
      [out, size_is(cConstants),  
-         length_is(*pcConstants)] ISymUnmanagedConstant*   
+         length_is(*pcConstants)] ISymUnmanagedConstant*
              constants[]);  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `cConstants`  
- окне Длина буфера, на который указывает параметр `pcConstants`.  
+ (в) Длина буфера, `pcConstants` на который указывает параметр.  
   
  `pcConstants`  
- заполняет Указатель на `ULONG32`, который получает размер буфера (в символах), необходимого для хранения констант.  
+ (ваут) Указатель на `ULONG32` то, что получает размер, в символах, буфера, необходимого для содержать константы.  
   
  `constants`  
- заполняет Буфер, в котором хранятся константы.  
+ (ваут) Буфер, который хранит константы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
+ S_OK, если метод удается; в противном случае, E_FAIL или какой-либо другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** Корсим. idl, Корсим. h  
+ **Заголовок:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ISymUnmanagedScope2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

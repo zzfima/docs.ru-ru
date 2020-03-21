@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: ae64edd8a3a628100d4c51d0b78be1bc8d49fc17
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138284"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176478"
 ---
 # <a name="customdumpitem-structure"></a>Структура CustomDumpItem
-Описывает элемент, добавляемый в пользовательский дамп в отчетах об ошибках.  
+Описывает элемент, который должен быть добавлен в пользовательский дамп в сообщении об ошибке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 struct {  
-    ECustomDumpItemKind itemKind;   
+    ECustomDumpItemKind itemKind;
     union {  
         UINT_PTR pReserved;  
     }  
@@ -37,23 +37,23 @@ struct {
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
-|`itemKind`|Значение [екустомдумпитемкинд](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) , указывающее тип добавляемого элемента.|  
-|`pReserved`|В настоящее время не используется. Все элементы, добавляемые в объединение, не должны быть больше размера указателя. Если требуется `struct`, необходимо выделить его отдельно и указать на него.|  
+|`itemKind`|Значение [ECustomDumpItemKind,](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) которое указывает вид товара, который будет добавлен.|  
+|`pReserved`|В настоящий момент не используется. Любые элементы, добавленные в союз, должны быть не больше размера указателя. Если `struct` требуется, вы должны выделить его отдельно и указать на него.|  
   
-## <a name="remarks"></a>Заметки  
- [Iclrerrorreportingmanagergetbucketparametersforcurrentexception:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) принимает параметр типа `CustomDumpItem`.  
+## <a name="remarks"></a>Remarks  
+ [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) принимает параметр `CustomDumpItem`типа .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. idl  
+ **Заголовок:** MSCorEE.idl  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

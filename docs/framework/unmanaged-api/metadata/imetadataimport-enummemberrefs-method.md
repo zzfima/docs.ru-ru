@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: 743b6bed1a5d62f5214b8366b1a3c6e4ebecb98b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441719"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177334"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>Метод IMetaDataImport::EnumMemberRefs
 Перечисляет токены MemberRef, представляющие члены указанного типа.  
@@ -29,47 +29,47 @@ ms.locfileid: "74441719"
   
 ```cpp  
 HRESULT EnumMemberRefs (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]   mdToken        tkParent,   
-   [out]  mdMemberRef    rMemberRefs[],   
-   [in]   ULONG          cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]   mdToken        tkParent,
+   [out]  mdMemberRef    rMemberRefs[],
+   [in]   ULONG          cMax,
    [out]  ULONG          *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель.  
+ (в, вне) Указатель на регистратор.  
   
  `tkParent`  
- окне Токен TypeDef, TypeRef, MethodDef или ModuleRef для типа, элементы которого необходимо перечислить.  
+ (в) Токен TypeDef, TypeRef, MethodDef или ModuleRef для типа, члены которого должны быть перечислены.  
   
  `rMemberRefs`  
- заполняет Массив, используемый для хранения токенов MemberRef.  
+ (ваут) Массив, используемый для хранения токенов MemberRef.  
   
  `cMax`  
  [in] Максимальный размер массива `rMemberRefs`.  
   
  `pcTokens`  
- заполняет Фактическое число токенов MemberRef, возвращаемых в `rMemberRefs`.  
+ (ваут) Фактическое количество возвращенных токенов `rMemberRefs`MemberRef в .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` успешно возвращено.|  
-|`S_FALSE`|Отсутствуют токены MemberRef для перечисления. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumMemberRefs`вернулся успешно.|  
+|`S_FALSE`|Нет токенов MemberRef для перечисления. В этом `pcTokens` случае, до нуля.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

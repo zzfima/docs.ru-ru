@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: 8d25f178a3c5e160e78e042d5016bb93aabf3e2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443450"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175256"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>Метод IMetaDataTables::GetNextString
-Возвращает индекс следующей строки в текущем столбце таблицы.  
+Получает индекс следующей строки в текущей таблице столбца.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT GetNextString (   
+HRESULT GetNextString (
     [in]  ULONG   ixString,  
     [out] ULONG   *pNext  
 );  
@@ -36,21 +36,21 @@ HRESULT GetNextString (
   
 ## <a name="parameters"></a>Параметры  
  `ixString`  
- окне Значение индекса из столбца таблицы строк.  
+ (в) Значение индекса из столбца строки таблицы.  
   
  `pNext`  
- заполняет Указатель на индекс следующей строки в столбце.  
+ (ваут) Указатель на индекс следующей строки в столбце.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

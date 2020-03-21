@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 5b21b2bdf3447e3a61c8fff0a311b4144ecaecb2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791929"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174528"
 ---
 # <a name="polling-in-console-applications"></a>Выполнение опросов в консольных приложениях
-Асинхронные операции в ADO.NET позволяют запускать трудоемкие операции базы данных в одном потоке, а остальные задачи выполнять в другом потоке. Однако в большинстве сценариев в конечном итоге достигается положение, в котором не следует продолжать работу приложения, пока не завершится операция базы данных. В таких случаях полезно опросить асинхронную операцию, чтобы определить, завершена ли эта операция.  
+Асинхронные операции в ADO.NET позволяют инициировать длительные операции с базами данных в одном потоке, одновременно выполняя другие задачи в другом. Однако в большинстве сценариев, в конечном счете, вы достигнете точки, при которой вам нужно будет остановить работу приложения до завершения операции с базой данных. В таких случаях полезно выполнить опрос асинхронной операции, чтобы определить, завершена ли операция.  
   
- Для выяснения того, завершена ли операция, можно использовать свойство <xref:System.IAsyncResult.IsCompleted%2A>.  
+ Чтобы узнать, завершилась ли операция, можно использовать свойство <xref:System.IAsyncResult.IsCompleted%2A>.  
   
 ## <a name="example"></a>Пример  
- Следующее консольное приложение обновляет данные в образце базы данных **AdventureWorks** , делая работу асинхронно. Для моделирования длительного процесса в данном примере в текст команды вставлена инструкция WAITFOR. Обычно замедление выполнения команд не производится, однако в данном случае это упрощает демонстрацию асинхронного поведения.  
+ В следующем приложении командной строки происходит асинхронное обновление данных в образце базы данных **AdventureWorks**. Чтобы эмулировать длительный процесс, в этом примере в текст команды вставляется инструкция WAITFOR. Обычно вам не нужно пытаться сделать выполнение команд медленнее, но в этом случае это упрощает демонстрацию асинхронного поведения.  
   
 ```vb  
 Imports System  
@@ -27,7 +27,7 @@ Imports System.Data.SqlClient
 Module Module1  
   
     Sub Main()  
-        ' The WAITFOR statement simply adds enough time to prove the   
+        ' The WAITFOR statement simply adds enough time to prove the
         ' asynchronous nature of the command.  
         Dim commandText As String = _  
          "UPDATE Production.Product " & _  
@@ -47,10 +47,10 @@ Module Module1
     Private Sub RunCommandAsynchronously( _  
      ByVal commandText As String, ByVal connectionString As String)  
   
-        ' Given command text and connection string, asynchronously   
-        ' execute the specified command against the connection. For   
-        ' this example, the code displays an indicator as it's working,   
-        ' verifying the asynchronous behavior.   
+        ' Given command text and connection string, asynchronously
+        ' execute the specified command against the connection. For
+        ' this example, the code displays an indicator as it's working,
+        ' verifying the asynchronous behavior.
         Using connection As New SqlConnection(connectionString)  
             Try  
                 Dim count As Integer = 0  
@@ -61,7 +61,7 @@ Module Module1
                 While Not result.IsCompleted  
                     Console.WriteLine("Waiting ({0})", count)  
                     ' Wait for 1/10 second, so the counter  
-                    ' doesn't consume all available resources   
+                    ' doesn't consume all available resources
                     ' on the main thread.  
                     Threading.Thread.Sleep(100)  
                     count += 1  
@@ -83,17 +83,17 @@ Module Module1
     End Sub  
   
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
-        ' If you have not included "Asynchronous Processing=true"   
+        ' If you have not included "Asynchronous Processing=true"
         ' in the connection string, the command will not be able  
         ' to execute asynchronously.  
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks; " & _  
           "Asynchronous Processing=true"  
     End Function  
-End Module   
+End Module
 ```  
   
 ```csharp  
@@ -106,7 +106,7 @@ class Class1
     [STAThread]  
     static void Main()  
     {  
-        // The WAITFOR statement simply adds enough time to   
+        // The WAITFOR statement simply adds enough time to
         // prove the asynchronous nature of the command.  
   
         string commandText =  
@@ -129,27 +129,27 @@ class Class1
       string commandText, string connectionString)  
     {  
         // Given command text and connection string, asynchronously  
-        // execute the specified command against the connection.   
-        // For this example, the code displays an indicator as it's   
-        // working, verifying the asynchronous behavior.   
+        // execute the specified command against the connection.
+        // For this example, the code displays an indicator as it's
+        // working, verifying the asynchronous behavior.
         using (SqlConnection connection =  
           new SqlConnection(connectionString))  
         {  
             try  
             {  
                 int count = 0;  
-                SqlCommand command =   
+                SqlCommand command =
                     new SqlCommand(commandText, connection);  
                 connection.Open();  
   
-                IAsyncResult result =   
+                IAsyncResult result =
                     command.BeginExecuteNonQuery();  
                 while (!result.IsCompleted)  
                 {  
                     Console.WriteLine(  
                                     "Waiting ({0})", count++);  
                     // Wait for 1/10 second, so the counter  
-                    // doesn't consume all available   
+                    // doesn't consume all available
                     // resources on the main thread.  
                     System.Threading.Thread.Sleep(100);  
                 }  
@@ -159,7 +159,7 @@ class Class1
             }  
             catch (SqlException ex)  
             {  
-                Console.WriteLine("Error ({0}): {1}",   
+                Console.WriteLine("Error ({0}): {1}",
                     ex.Number, ex.Message);  
             }  
             catch (InvalidOperationException ex)  
@@ -177,20 +177,20 @@ class Class1
   
     private static string GetConnectionString()  
     {  
-        // To avoid storing the connection string in your code,              
-        // you can retrieve it from a configuration file.   
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
   
         // If you have not included "Asynchronous Processing=true"  
         // in the connection string, the command will not be able  
         // to execute asynchronously.  
         return "Data Source=(local);Integrated Security=SSPI;" +  
-        "Initial Catalog=AdventureWorks; " +   
+        "Initial Catalog=AdventureWorks; " +
         "Asynchronous Processing=true";  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Асинхронные операции](asynchronous-operations.md)
 - [Общие сведения об ADO.NET](../ado-net-overview.md)

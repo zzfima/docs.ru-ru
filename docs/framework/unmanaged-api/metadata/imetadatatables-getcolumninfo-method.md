@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cc8aac32149fed952737d928e16a8f6efc448c79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436104"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177121"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>Метод IMetaDataTables::GetColumnInfo
-Получает данные о указанном столбце в указанной таблице.  
+Получает данные об указанном столбце в указанной таблице.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT GetColumnInfo (   
+HRESULT GetColumnInfo (
     [in]  ULONG        ixTbl,  
     [in]  ULONG        ixCol,  
     [out] ULONG        *poCol,  
@@ -42,59 +42,59 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- окне Индекс требуемой таблицы.  
+ (в) Индекс желаемой таблицы.  
   
  `ixCol`  
- окне Индекс нужного столбца.  
+ (в) Индекс желаемого столбца.  
   
  `poCol`  
- заполняет Указатель на смещение столбца в строке.  
+ (ваут) Указатель на смещение столбца в строке.  
   
  `pcbCol`  
- заполняет Указатель на размер столбца в байтах.  
+ (ваут) Указатель на размер, в байтах, столбца.  
   
  `pType`  
- заполняет Указатель на тип значений в столбце.  
+ (ваут) Указатель на тип значений в столбце.  
   
  `ppName`  
- заполняет Указатель на указатель на имя столбца.  
- 
-## <a name="remarks"></a>Примечания
+ (ваут) Указатель указателя на имя столбца.  
 
-Возвращаемый тип столбца попадает в диапазон значений:
+## <a name="remarks"></a>Remarks
 
-| птипе                    | Описание   | Вспомогательная функция                   |
+Тип возвращенной колонки относится к диапазону значений:
+
+| pType                    | Описание   | Функция помощника                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0.. 63)   | Избежать           | **исридтипе**<br>**исридортокен** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Закодированный маркер | **искодедтокентипе** <br>**исридортокен** |
-| `iSHORT` (96)            | Int16         | **исфикседтипе**                   |
-| `iUSHORT` (97)           | UInt16        | **исфикседтипе**                   |
-| `iLONG` (98)             | Int32         | **исфикседтипе**                   |
-| `iULONG` (99)            | UInt32        | **исфикседтипе**                   |
-| `iBYTE` (100)            | Байт          | **исфикседтипе**                   |
-| `iSTRING` (101)          | Строка        | **ишеаптипе**                    |
-| `iGUID` (102)            | Идентификатор GUID          | **ишеаптипе**                    |
-| `iBLOB` (103)            | Blob          | **ишеаптипе**                    |
+| `0`..`iRidMax`<br>(0..63)   | Избавить           | **IsRidType**<br>**Исидортокен** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Закодированный токен | **IsCodedTokenType** <br>**Исидортокен** |
+| `iSHORT`(96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT`(97)           | UInt16        | **IsFixedType**                   |
+| `iLONG`(98)             | Int32         | **IsFixedType**                   |
+| `iULONG`(99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE`(100)            | Byte          | **IsFixedType**                   |
+| `iSTRING`(101)          | Строка        | **IsHeapType**                    |
+| `iGUID`(102)            | Guid          | **IsHeapType**                    |
+| `iBLOB`(103)            | BLOB-объект          | **IsHeapType**                    |
 
-Значения, хранящиеся в *куче* (то есть `IsHeapType == true`), могут быть считаны с помощью:
+Значения, которые хранятся в *куче* `IsHeapType == true`(т.е.), можно прочитать с помощью:
 
-- `iSTRING`: **IMetadataTables. GetString**
-- `iGUID`: **IMetadataTables... GUID**
-- `iBLOB`: **IMetadataTables. BLOB**
+- `iSTRING`: **IMetadataTables.GetString**
+- `iGUID`: **IMetadataTables.GetGUID**
+- `iBLOB`: **IMetadataTables.GetBlob**
 
 > [!IMPORTANT]
-> Чтобы использовать константы, определенные в приведенной выше таблице, включите директиву `#define _DEFINE_META_DATA_META_CONSTANTS`, предоставляемую файлом заголовка *COR. h* .
+> Чтобы использовать константы, определенные в `#define _DEFINE_META_DATA_META_CONSTANTS` таблице выше, включите директиву, предоставляемую файлом *заголовка cor.h.*
 
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

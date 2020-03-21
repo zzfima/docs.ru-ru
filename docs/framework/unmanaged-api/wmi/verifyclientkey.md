@@ -1,6 +1,6 @@
 ---
-title: Функция Верификлиенткэй (Справочник по неуправляемым API)
-description: Функция Верификлиенткэй обеспечивает правильную защиту ключа клиента.
+title: Функция VerifyClientKey (Неуправляемая справка API)
+description: Функция VerifyClientKey гарантирует, что ключ клиента имеет правильную безопасность.
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 0a0680651eb192e2798ede00048599c5130e63f1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ebb794240494deb0c831b50e95461ec52017a215
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107359"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176712"
 ---
-# <a name="verifyclientkey-function"></a>Функция Верификлиенткэй
+# <a name="verifyclientkey-function"></a>Функция VerifyClientKey
 Проверяет, что ключ клиента имеет верные параметры безопасности.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "73107359"
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-LONG VerifyClientKey(); 
+LONG VerifyClientKey();
 ```  
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполнена удачно, возвращается значение `ERROR_SUCCESS` (0).
+Если функция успешно, значение возврата `ERROR_SUCCESS` (0).
 
-Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в *файле Winerror. h*.
+Если функция выходит из строя, значение возврата представляет собой ненулевой код ошибки, определенный в *WinError.h*.
 
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils. def  
+ **Заголовок:** WMINet_Utils.def  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

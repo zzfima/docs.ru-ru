@@ -15,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-ms.openlocfilehash: b5da781f148c23efcc909ad65e198e4f3c6fe5b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7e8376f3a029b0e3ec51a1e7587dd14b3e7530ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447882"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177426"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>Метод IMetaDataEmit2::SaveDeltaToStream
-Сохраняет изменения из текущего сеанса "изменить и продолжить" в указанный поток.  
+Сохраняет изменения от текущего сеанса отсеиваний и продолжения в указанный поток.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT SaveDeltaToStream (  
-    [in] IStream     *pIStream,   
+    [in] IStream     *pIStream,
     [in] DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pIStream`  
- окне Указатель интерфейса на поток, доступный для записи, в который необходимо сохранить изменения.  
+ (в) Указатель интерфейса к потоку, в который можно сохранить изменения.  
   
  `dwSaveFlags`  
  [in] Зарезервировано. Это значение должно быть равно нулю.  
@@ -44,13 +44,13 @@ HRESULT SaveDeltaToStream (
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

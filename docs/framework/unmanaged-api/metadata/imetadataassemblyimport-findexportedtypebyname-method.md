@@ -15,49 +15,49 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449450"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175997"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>Метод IMetaDataAssemblyImport::FindExportedTypeByName
-Возвращает указатель на экспортированный тип по заданному имени и включающему его типу.  
+Получает указатель на экспортированный тип, учитывая его имя и прилагающий тип.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
-    [in]  LPCWSTR           szName,   
-    [in]  mdToken           mdtExportedType,   
+    [in]  LPCWSTR           szName,
+    [in]  mdToken           mdtExportedType,
     [out] mdExportedType    *ptkExportedType  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- окне Имя экспортированного типа.  
+ (в) Название экспортируемого типа.  
   
  `mdtExportedType`  
- окне Токен метаданных для включающего класса экспортируемого типа. Это значение `mdExportedTypeNil`, если запрошенный экспортированный тип не является вложенным типом.  
+ (в) Токен метаданных для прилагаемого класса экспортируемого типа. Это значение, `mdExportedTypeNil` если запрашиваемый экспортированный тип не является вложенным типом.  
   
  `ptkExportedType`  
- заполняет Указатель на маркер `mdExportedType`, представляющий экспортируемый тип.  
+ (ваут) Указатель на `mdExportedType` токен, представляющий экспортированный тип.  
   
-## <a name="remarks"></a>Примечания  
- Метод `FindExportedTypeByName` использует стандартные правила, используемые средой CLR для разрешения ссылок.  
+## <a name="remarks"></a>Remarks  
+ Метод `FindExportedTypeByName` использует стандартные правила, используемые общим языком времени выполнения для решения ссылок.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [Обнаружение сборок в среде выполнения](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Как Время выполнения находит сборки](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

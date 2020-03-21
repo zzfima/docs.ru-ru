@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-ms.openlocfilehash: e23dfb86c2129a02a0ca95de8c89d8294e97ad81
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adc8ea16f0ab2bf383f8a63c49ba7d61c6bac113
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136841"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176452"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>Функция CreateDebuggingInterfaceFromVersion
-Создает объект [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) на основе указанных сведений о версии.  
+Создает объект [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) на основе указанной информации версии.  
   
- Эта функция является устаревшей в .NET Framework 4. Вместо этого для получения интерфейса для среды CLR 2,0 используйте метод [ICLRRuntimeInfo::](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) coclass и укажите идентификатор класса CLSID_CLRDebuggingLegacy и идентификатор интерфейса IID_ICorDebug. Чтобы получить интерфейс для CLR 4 или более поздней версии, вызовите функцию [клркреатеинстанце](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) и укажите идентификатор класса CLSID_CLRDebugging и идентификатор интерфейса IID_ICLRDebugging.  
+ Эта функция устарела в рамках .NET 4. Вместо этого, чтобы получить интерфейс для общего времени выполнения языка (CLR) 2.0, используйте метод [ICLRRuntimeInfo::GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) и укажите идентификатор класса CLSID_CLRDebuggingLegacy и идентификатор интерфейса IID_ICorDebug. Чтобы получить интерфейс для CLR 4 или позже, позвоните в функцию [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) и укажите идентификатор класса CLSID_CLRDebugging и идентификатор интерфейса IID_ICLRDebugging.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
-    [in]  int      iDebuggerVersion,   
-    [in]  LPCWSTR  szDebuggeeVersion,   
+    [in]  int      iDebuggerVersion,
+    [in]  LPCWSTR  szDebuggeeVersion,
     [out] IUnknown **ppCordb  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `iDebuggerVersion`  
- окне Версия `ICorDebug`, ожидаемая отладчиком. Допустимые значения см. в описании перечисления [CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) .  
+ (в) Версия `ICorDebug` этого, как ожидается, отладчик. Смотрите перечисление [CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) для допустимых значений.  
   
  `szDebuggeeVersion`  
- окне Версия среды CLR, связанная с приложением или процессом для отладки. Сведения о получении этого значения см. в описании метода [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) или [жетрекуестедрунтимеверсион](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) .  
+ (в) Общая версия выполнения языка, связанная с приложением или процессом для отладки. Ознакомиться с информацией о получении этого значения можно посмотреть в методе [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) или [GetRequestedRuntimeVersion.](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
   
  `ppCordb`  
- заполняет Расположение, которое получает указатель на объект `ICorDebug`.  
+ (ваут) Место, которое получает указатель на `ICorDebug` объект.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, определенные в файле WinError. h, а также следующие значения.  
+ Этот метод возвращает стандартные коды ошибок COM, определенные в файле WinError.h в дополнение к следующим значениям.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`szDebuggeeVersion` или `ppCordb` имеет значение null или строка версии неверна.|  
+|E_INVALIDARG|`szDebuggeeVersion`или `ppCordb` является нулевым, или строка версии неверна.|  
   
-## <a name="remarks"></a>Заметки  
- Параметр `szDebuggeeVersion` сопоставляется с соответствующей версией MSCorDbi. dll.  
+## <a name="remarks"></a>Remarks  
+ Параметр `szDebuggeeVersion` отображает соответствующую версию MSCorDbi.dll.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
- **Библиотека:** MSCorEE. dll  
+ **Библиотека:** MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

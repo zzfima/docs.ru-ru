@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: 3898b095809e2b84f71aba2036f4d7a294dfdf6a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1868d13a9dbb73dbdf64e49c395bdbff02ce89d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444650"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177445"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>Метод IMetaDataEmit2::DefineGenericParam
-Создает определение для параметра универсального типа и получает маркер для этого параметра универсального типа.  
+Создает определение для общего параметра типа и получает маркер к этому общему параметру типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DefineGenericParam (   
-    [in]  mdToken         tk,   
-    [in]  ULONG           ulParamSeq,   
-    [in]  DWORD           dwParamFlags,   
-    [in]  LPCWSTR         szname,   
-    [in]  DWORD           reserved,   
-    [in]  mdToken         rtkConstraints[],   
+HRESULT DefineGenericParam (
+    [in]  mdToken         tk,
+    [in]  ULONG           ulParamSeq,
+    [in]  DWORD           dwParamFlags,
+    [in]  LPCWSTR         szname,
+    [in]  DWORD           reserved,
+    [in]  mdToken         rtkConstraints[],
     [out] mdGenericParam  *pgp  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- окне Маркер `mdTypeDef` или `mdMethodDef`, представляющий метод или конструктор, для которого определяется универсальный параметр.  
+ (в) Символ `mdTypeDef` `mdMethodDef` или маркер, представляющий метод или конструктор для определения общего параметра.  
   
  `ulParamSeq`  
- окне Индекс универсального параметра.  
+ (в) Индекс общего параметра.  
   
  `dwParamFlags`  
- окне Значение перечисления [корженерикпараматтр](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) , описывающее тип универсального параметра.  
+ (в) Значение перечисления [CorGenericParamAttr,](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) описывающий тип для общего параметра.  
   
  `szname`  
- окне Имя параметра.  
+ (в) Название параметра.  
   
  `reserved`  
- окне Этот параметр зарезервирован для расширения в будущем.  
+ (в) Этот параметр зарезервирован для будущей расширяемости.  
   
  `rtkConstraints`  
- окне Массив ограничений типа, заканчивающийся нулем. Элементы массива должны быть `mdTypeDef`, `mdTypeRef`или маркером метаданных `mdTypeSpec`.  
+ (в) Нулевой уровень ограничений типа. Члены массива `mdTypeDef` `mdTypeRef`должны `mdTypeSpec` быть токеном метаданных.  
   
  `pgp`  
- заполняет Токен, представляющий универсальный параметр.  
+ (ваут) Токен, представляющий общий параметр.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

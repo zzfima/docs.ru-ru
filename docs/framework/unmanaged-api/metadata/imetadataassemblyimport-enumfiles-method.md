@@ -15,56 +15,56 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-ms.openlocfilehash: e4549789ea1af584c0850a535d9f6bb54f844ce0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 70f76318f51047cb81262f744a6fbed5fe401692
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443543"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177816"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>Метод IMetaDataAssemblyImport::EnumFiles
-Перечисляет файлы, на которые ссылается текущий манифест сборки.  
+Перечисляет файлы, упомянутые в текущем манифесте сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT EnumFiles (  
-    [in, out] HCORENUM    *phEnum,   
-    [out] mdFile          rFiles[],   
-    [in]  ULONG           cMax,   
+    [in, out] HCORENUM    *phEnum,
+    [out] mdFile          rFiles[],
+    [in]  ULONG           cMax,
     [out] ULONG           *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть нулевым.  
+ (в, вне) Указатель на регистратор. Это должно быть нулевая стоимость для первого вызова этого метода.  
   
  `rFiles`  
- заполняет Массив, используемый для хранения маркеров метаданных `mdFile`.  
+ (ваут) Массив, используемый `mdFile` для хранения токенов метаданных.  
   
  `cMax`  
- окне Максимальное число маркеров `mdFile`, которые могут быть помещены в `rFiles`.  
+ (в) Максимальное количество `mdFile` токенов, которые `rFiles`могут быть размещены в .  
   
  `pcTokens`  
- заполняет Число маркеров `mdFile`, фактически помещаемых в `rFiles`.  
+ (ваут) Количество `mdFile` токенов фактически помещено в `rFiles`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` успешно возвращено.|  
-|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTokens` имеет значение 0.|  
+|`S_OK`|`EnumFiles`вернулся успешно.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом `pcTokens` случае, устанавливается до нуля.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

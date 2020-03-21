@@ -1,6 +1,6 @@
 ---
-title: Функция Жетмесодоригин (Справочник по неуправляемым API)
-description: Функция Жетмесодоригин определяет класс, в котором объявлен метод.
+title: Функция GetMethodOrigin (Неуправляемая справка API)
+description: Функция GetMethodOrigin определяет класс, в котором объявляется метод.
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -14,68 +14,68 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 1f669d5721a7bd9434f0ce4b1e2290c0633e1b46
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b4609b6649be875aea7dfcf52ba36b1e98ab7bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73102534"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176803"
 ---
 # <a name="getmethodorigin-function"></a>Функция GetMethodOrigin
 Определяет класс, в котором объявлен метод.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetMethodOrigin (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszMethodName,
    [out] BSTR*              pstrClassName
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Параметры
 
 `vFunc`  
-окне Этот параметр не используется.
+(в) Этот параметр не используется.
 
 `ptr`  
-окне Указатель на экземпляр [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
+(в) Указатель на экземпляр [IWbemClassObject.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)
 
 `wszMethodName`  
-окне Имя метода для объекта, класс-владелец которого запрашивается. 
+(в) Имя метода для объекта, владеющий классом.
 
 `pstrClassName`  
-заполняет Получает имя класса, владеющего методом.
+(ваут) Получает название класса, которому принадлежит метод.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
+Следующие значения, возвращенные этой функцией, определяются в файле заголовка *WbemCli.h* или вы можете определить их как константы в коде:
 
-|Константа  |значения  |Описание  |
+|Постоянно  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не найден. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недопустимы. |
-|`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недействительны. |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: жетмесодоригин](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) .
+Эта функция завершает вызов методом [IWbemClassObject::GetMethodOrigin.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)
 
-Поскольку класс может наследовать методы от одного или нескольких базовых классов, разработчики часто хотят определить класс, в котором определен определенный метод.
+Поскольку класс может наследовать методы из одного или нескольких базовых классов, разработчики часто хотят определить класс, в котором определен данный метод.
 
-Перед вызовом функции параметр `pstrClassName` не должен указывать на допустимый `BSTR`, так как это параметр `out`; Этот указатель не освобождается после возвращения функции.
+Параметр `pstrClassName` не должен указывать на допустимый `BSTR` перед `out` вызовом функции, поскольку это параметр; этот указатель не разбирается после возврата функции.
 
 ## <a name="requirements"></a>Требования  
 **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

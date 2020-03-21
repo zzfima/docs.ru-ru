@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 13220dcfdd260688494d5aebc50f94abf8a82215
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432493"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177496"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>Метод IMetaDataEmit::SetParamProps
-Задает или изменяет функции параметра метода, который был определен при предыдущем вызове [IMetaDataEmit::D ефинепарам](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Устанавливает или изменяет особенности параметра метода, который был определен предыдущим вызовом [на IMetaDataEmit::DefineParam.](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT SetParamProps (   
-    [in]  mdParamDef  pd,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+HRESULT SetParamProps (
+    [in]  mdParamDef  pd,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pd`  
- окне Токен для целевого параметра.  
+ (в) Токен для целевого параметра.  
   
  `szName`  
- окне Имя параметра в Юникоде.  
+ (в) Название параметра в Unicode.  
   
  `dwParamFlags`  
- окне Флаги для параметра.  
+ (в) Флаги для параметра.  
   
  `dwCPlusTypeFlag`  
- окне ELEMENT_TYPE_ * для постоянного значения.  
+ (в) За постоянную стоимость ELEMENT_TYPE_.  
   
  `pValue`  
- окне Постоянное значение для параметра.  
+ (в) Постоянное значение параметра.  
   
  `cchValue`  
- окне Размер (в Юникоде) символов `pValue`.  
+ (в) Размер в (Unicode) символы `pValue`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

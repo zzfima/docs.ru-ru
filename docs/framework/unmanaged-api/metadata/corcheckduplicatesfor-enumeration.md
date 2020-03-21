@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443787"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176192"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>Перечисление CorCheckDuplicatesFor
-Указывает маркеры метаданных, которые будут проверяться на наличие дубликатов.  
+Определяет токены метаданных, которые будут проверены на наличие дубликатов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,8 +57,8 @@ typedef enum CorCheckDuplicatesFor {
   
     MDDupAssembly               = 0x10000000,  
   
-    MDDupDefault =   
-        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |   
+    MDDupDefault =
+        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |
         MDDupSignature | MDDupTypeSpec | MDDupMethodSpec  
   
 } CorCheckDuplicatesFor;  
@@ -66,43 +66,43 @@ typedef enum CorCheckDuplicatesFor {
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
-|`MDDupAll`|Проверьте все маркеры метаданных на наличие дубликатов.|  
+|`MDDupAll`|Проверьте все токены метаданных на наличие дубликатов.|  
 |`MDDupENC`|Не используется.|  
-|`MDNoDupChecks`|Не проверяйте маркеры метаданных для дубликатов.|  
-|`MDDupTypeDef`|Проверьте наличие дубликатов токенов `mdTypeDef`.|  
-|`MDDupInterfaceImpl`|Проверьте наличие дубликатов токенов `mdInterfaceImpl`.|  
-|`MDDupMethodDef`|Проверьте наличие дубликатов токенов `mdMethodDef`.|  
-|`MDDupTypeRef`|Проверьте наличие дубликатов токенов `mdTypeRef`.|  
-|`MDDupMemberRef`|Проверьте наличие дубликатов токенов `mdMemberRef`.|  
-|`MDDupCustomAttribute`|Проверьте наличие дубликатов токенов `mdCustomAttribute`.|  
-|`MDDupParamDef`|Проверьте наличие дубликатов токенов `mdParamDef`.|  
-|`MDDupPermission`|Проверьте наличие дубликатов токенов `mdPermission`.|  
-|`MDDupProperty`|Проверьте наличие дубликатов токенов `mdProperty`.|  
-|`MDDupEvent`|Проверьте наличие дубликатов токенов `mdEvent`.|  
-|`MDDupFieldDef`|Проверьте наличие дубликатов токенов `mdFieldDef`.|  
-|`MDDupSignature`|Проверьте наличие дубликатов токенов `mdSignature`.|  
-|`MDDupModuleRef`|Проверьте наличие дубликатов токенов `mdModuleRef`.|  
-|`MDDupTypeSpec`|Проверьте наличие дубликатов токенов `mdTypeSpec`.|  
-|`MDDupImplMap`|Проверьте наличие дубликатов токенов `mdImplMap`.|  
-|`MDDupAssemblyRef`|Проверьте наличие дубликатов токенов `mdAssemblyRef`.|  
-|`MDDupFile`|Проверьте наличие дубликатов токенов `mdFile`.|  
-|`MDDupExportedType`|Проверьте наличие дубликатов токенов `mdExportedType`.|  
-|`MDDupManifestResource`|Проверьте наличие дубликатов токенов `mdManifestResource`.|  
-|`MDDupGenericParam`|Проверьте наличие дубликатов токенов `mdGenericParam`.|  
-|`MDDupMethodSpec`|Проверьте наличие дубликатов токенов `mdMethodSpec`.|  
-|`MDDupGenericParamConstraint`|Проверьте наличие дубликатов токенов `mdGenericParamConstraint`.|  
-|`MDDupAssembly`|Проверьте наличие дубликатов токенов `mdAssembly`.|  
-|`MDDupDefault`|Проверьте наличие дубликатов `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`и маркеров `mdMethodSpec`.|  
+|`MDNoDupChecks`|Не проверяйте токены метаданных на наличие дубликатов.|  
+|`MDDupTypeDef`|Проверьте наличие `mdTypeDef` дубликатов токенов.|  
+|`MDDupInterfaceImpl`|Проверьте наличие `mdInterfaceImpl` дубликатов токенов.|  
+|`MDDupMethodDef`|Проверьте наличие `mdMethodDef` дубликатов токенов.|  
+|`MDDupTypeRef`|Проверьте наличие `mdTypeRef` дубликатов токенов.|  
+|`MDDupMemberRef`|Проверьте наличие `mdMemberRef` дубликатов токенов.|  
+|`MDDupCustomAttribute`|Проверьте наличие `mdCustomAttribute` дубликатов токенов.|  
+|`MDDupParamDef`|Проверьте наличие `mdParamDef` дубликатов токенов.|  
+|`MDDupPermission`|Проверьте наличие `mdPermission` дубликатов токенов.|  
+|`MDDupProperty`|Проверьте наличие `mdProperty` дубликатов токенов.|  
+|`MDDupEvent`|Проверьте наличие `mdEvent` дубликатов токенов.|  
+|`MDDupFieldDef`|Проверьте наличие `mdFieldDef` дубликатов токенов.|  
+|`MDDupSignature`|Проверьте наличие `mdSignature` дубликатов токенов.|  
+|`MDDupModuleRef`|Проверьте наличие `mdModuleRef` дубликатов токенов.|  
+|`MDDupTypeSpec`|Проверьте наличие `mdTypeSpec` дубликатов токенов.|  
+|`MDDupImplMap`|Проверьте наличие `mdImplMap` дубликатов токенов.|  
+|`MDDupAssemblyRef`|Проверьте наличие `mdAssemblyRef` дубликатов токенов.|  
+|`MDDupFile`|Проверьте наличие `mdFile` дубликатов токенов.|  
+|`MDDupExportedType`|Проверьте наличие `mdExportedType` дубликатов токенов.|  
+|`MDDupManifestResource`|Проверьте наличие `mdManifestResource` дубликатов токенов.|  
+|`MDDupGenericParam`|Проверьте наличие `mdGenericParam` дубликатов токенов.|  
+|`MDDupMethodSpec`|Проверьте наличие `mdMethodSpec` дубликатов токенов.|  
+|`MDDupGenericParamConstraint`|Проверьте наличие `mdGenericParamConstraint` дубликатов токенов.|  
+|`MDDupAssembly`|Проверьте наличие `mdAssembly` дубликатов токенов.|  
+|`MDDupDefault`|`mdMemberRef`Проверьте дубликаты, `mdSignature` `mdTypeRef` `mdTypeSpec`, `mdMethodSpec` , и жетоны.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Корхдр. h  
+ **Заголовок:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

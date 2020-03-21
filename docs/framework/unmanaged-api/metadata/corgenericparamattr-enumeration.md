@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: e4abf876681d5b04555c9f030a94b722874e326e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bf0008ce9429671f0c156df4256bed0b2aaee184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450281"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176179"
 ---
 # <a name="corgenericparamattr-enumeration"></a>Перечисление CorGenericParamAttr
-Содержит значения, описывающие параметры <xref:System.Type> для универсальных типов, которые используются в вызовах метода [IMetaDataEmit2::D ефинеженерикпарам](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Содержит значения, описывающие <xref:System.Type> параметры для генерических типов, используемые при вызовах на [IMetaDataEmit2::DefineGenericParam.](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,13 +30,13 @@ ms.locfileid: "74450281"
 typedef enum CorGenericParamAttr {  
   
     gpVarianceMask                     =   0x0003,  
-    gpNonVariant                       =   0x0000,   
+    gpNonVariant                       =   0x0000,
     gpCovariant                        =   0x0001,  
     gpContravariant                    =   0x0002,  
   
     gpSpecialConstraintMask            =   0x001C,  
     gpNoSpecialConstraint              =   0x0000,  
-    gpReferenceTypeConstraint          =   0x0004,   
+    gpReferenceTypeConstraint          =   0x0004,
     gpNotNullableValueTypeConstraint   =   0x0008,  
     gpDefaultConstructorConstraint     =   0x0010  
   
@@ -45,25 +45,25 @@ typedef enum CorGenericParamAttr {
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
-|`gpVarianceMask`|Дисперсия параметров применяется только к универсальным параметрам для интерфейсов и делегатов.|  
-|`gpNonVariant`|Указывает отсутствие дисперсии.|  
-|`gpCovariant`|Указывает ковариацию.|  
-|`gpContravariant`|Указывает контрвариация.|  
-|`gpSpecialConstraintMask`|Специальные ограничения могут применяться к любому параметру <xref:System.Type>.|  
-|`gpNoSpecialConstraint`|Указывает, что ограничение не применяется к параметру <xref:System.Type>.|  
-|`gpReferenceTypeConstraint`|Указывает, что параметр <xref:System.Type> должен быть ссылочным типом.|  
-|`gpNotNullableValueTypeConstraint`|Указывает, что параметр <xref:System.Type> должен быть типом значения, который не может иметь значение null.|  
-|`gpDefaultConstructorConstraint`|Указывает, что параметр <xref:System.Type> должен иметь открытый конструктор по умолчанию, который не принимает параметров.|  
+|`gpVarianceMask`|Разница параметров применяется только к общим параметрам для интерфейсов и делегатов.|  
+|`gpNonVariant`|Указывает на отсутствие дисперсии.|  
+|`gpCovariant`|Указывает на коварность.|  
+|`gpContravariant`|Указывает на противопоказания.|  
+|`gpSpecialConstraintMask`|Специальные ограничения могут <xref:System.Type> применяться к любому параметру.|  
+|`gpNoSpecialConstraint`|Означает, что к параметру <xref:System.Type> не применяется ограничение.|  
+|`gpReferenceTypeConstraint`|Означает, <xref:System.Type> что параметр должен быть эталонным типом.|  
+|`gpNotNullableValueTypeConstraint`|Означает, <xref:System.Type> что параметр должен быть типом значения, который не может быть нулевая величина.|  
+|`gpDefaultConstructorConstraint`|Означает, <xref:System.Type> что параметр должен иметь общедоступный конструктор по умолчанию, который не принимает никаких параметров.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Корхдр. h  
+ **Заголовок:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

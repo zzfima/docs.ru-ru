@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bb8b531a884c9d3c2f33aa4aec5c4dbeaafe2b66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449514"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177344"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>Метод IMetaDataImport::EnumFieldsWithName
 Перечисляет токены FieldDef заданного типа с указанным именем.  
@@ -29,54 +29,54 @@ ms.locfileid: "74449514"
   
 ```cpp  
 HRESULT EnumFieldsWithName (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]  mdTypeDef       cl,   
-   [in]  LPCWSTR         szName,   
-   [out] mdFieldDef      rFields[],   
-   [in]  ULONG           cMax,   
-   [out] ULONG           *pcTokens   
+   [in, out] HCORENUM    *phEnum,
+   [in]  mdTypeDef       cl,
+   [in]  LPCWSTR         szName,
+   [out] mdFieldDef      rFields[],
+   [in]  ULONG           cMax,
+   [out] ULONG           *pcTokens
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель.  
+ (в, вне) Указатель на регистратор.  
   
  `cl`  
- окне Токен типа, поля которого необходимо перечислить.  
+ (в) Токен типа, поля которого должны быть перечислены.  
   
  `szName`  
- окне Имя поля, ограничивающее область перечисления.  
+ (в) Имя поля, ограничивающее область перечисления.  
   
  `rFields`  
- заполняет Массив, используемый для хранения маркеров FieldDef.  
+ (ваут) Array используется для хранения токенов FieldDef.  
   
  `cMax`  
  [in] Максимальный размер массива `rFields`.  
   
  `pcTokens`  
- заполняет Фактическое число маркеров FieldDef, возвращаемых в `rFields`.  
+ (ваут) Фактическое количество токенов FieldDef `rFields`вернулось в .  
   
-## <a name="remarks"></a>Заметки  
- В отличие от [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` отменяет все маркеры полей, у которых нет указанного имени.  
+## <a name="remarks"></a>Remarks  
+ В отличие от [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` отбрасывает все токены поля, которые не имеют указанного имени.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` успешно возвращено.|  
-|`S_FALSE`|Нет полей для перечисления. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumFieldsWithName`вернулся успешно.|  
+|`S_FALSE`|Нет полей для перечисления. В этом `pcTokens` случае, равна нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

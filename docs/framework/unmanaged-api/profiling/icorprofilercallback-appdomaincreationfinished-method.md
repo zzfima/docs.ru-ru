@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf3f2b62b388b6c2d6fcd75b1b07a67d5b2e49f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866707"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177076"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Метод ICorProfilerCallback::AppDomainCreationFinished
-Уведомляет профилировщик о том, что домен приложения создан.  
+Уведомляет профайлера о том, что был создан домен приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT AppDomainCreationFinished(  
     [in] AppDomainID appDomainId,  
-    [in] HRESULT     hrStatus);   
+    [in] HRESULT     hrStatus);
 ```  
   
 ## <a name="parameters"></a>Параметры
 
 - `appDomainId`
 
-  \[в] определяет домен, который был создан.
+  \[в» определяет созданный домен.
 
 - `hrStatus`
 
-  \[in] значение HRESULT, указывающее, успешно ли выполнено создание домена приложения.
+  \[в HRESULT, который указывает, успешно ли завершено создание домена приложения.
 
-## <a name="remarks"></a>Заметки  
- Идентификатор приложения не является допустимым для запроса информации, пока не будет вызван метод `AppDomainCreationFinished`.  
+## <a name="remarks"></a>Remarks  
+ Идентификатор приложения не действителен `AppDomainCreationFinished` для любого запроса информации до тех пор, пока метод не будет вызван.  
   
- Некоторые части загрузки домена приложения могут продолжаться после обратного вызова `AppDomainCreationFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает, что первая часть создания домена приложения успешно выполнена.  
+ Некоторые части загрузки домена приложения `AppDomainCreationFinished` могут продолжиться после обратного вызова. Сбой HRESULT `hrStatus` в указывает на сбой. Тем не менее, `hrStatus` успех HRESULT в указывает только на то, что первая часть создания домена приложения удалось.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,6 +57,6 @@ HRESULT AppDomainCreationFinished(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)

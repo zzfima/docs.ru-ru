@@ -15,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-ms.openlocfilehash: afd60cdf566bea459816ee890d44cc09258de516
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 76f18336808e6832b2ded94349efd7948f23a1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435948"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175698"
 ---
 # <a name="imetadataemitsave-method"></a>Метод IMetaDataEmit::Save
-Сохраняет все метаданные в текущей области в файле по указанному адресу.  
+Сохраняет все метаданные в текущей области файла по указанному адресу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT Save (   
-    [in]  LPCWSTR     szFile,   
+HRESULT Save (
+    [in]  LPCWSTR     szFile,
     [in]  DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `wzFile`  
- окне Имя файла, в который необходимо выполнить сохранение. Если это значение равно null, копия в памяти будет сохранена в последнем используемом расположении.  
+ (в) Имя файла, чтобы сохранить. Если это значение является нулевым, копия в памяти будет сохранена до последнего используемого места.  
   
  `dwSaveFlags`  
  [in] Зарезервировано. Должен равняться нулю.  
@@ -44,13 +44,13 @@ HRESULT Save (
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431702"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175815"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Метод IMetaDataEmit::DefineNestedType
-Создает сигнатуру метаданных определения типа, возвращает маркер `mdTypeDef` для этого типа и указывает, что определенный тип является членом типа, на который ссылается параметр `tdEncloser`.  
+Создает подпись метаданных определения типа, `mdTypeDef` возвращает маркер для этого типа и указывает, что определенный тип является членом типа, на который ссылается `tdEncloser` параметр.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DefineNestedType (   
+HRESULT DefineNestedType (
     [in]  LPCWSTR     szTypeDef,  
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
-    [in]  mdTypeDef   tdEncloser,   
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
+    [in]  mdTypeDef   tdEncloser,
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `szTypeDef`  
- окне Имя типа в Юникоде.  
+ (в) Название типа в Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` атрибуты. Это битовая маска `CorTypeAttr` значений.  
+ (в) `TypeDef` атрибуты. Это битмаска ценностей. `CorTypeAttr`  
   
  `tkExtends`  
- окне Маркер базового класса. Это либо `mdTypeDef`, либо маркер `mdTypeRef`.  
+ (в) Токен базового класса. Это либо `mdTypeDef` знак, `mdTypeRef` либо жетон.  
   
  `rtkImplements`[]  
- окне Массив токенов, задающих интерфейсы, реализуемые этим классом или интерфейсом.  
+ (в) Массив токенов, определяющих интерфейсы, реализуемые этим классом или интерфейсом.  
   
  `tdEncloser`  
- окне Токен включающего типа. Последний элемент массива должен быть `mdTokenNil`.  
+ (в) Токен типа прилагаемого. Последний элемент массива `mdTokenNil`должен быть.  
   
  `ptd`  
- заполняет Назначенный маркер `mdTypeDef`.  
+ (ваут) Назначенный `mdTypeDef` маркер.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,78 +15,78 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440472"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175555"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Метод IMetaDataEmit::TranslateSigWithScope
-Импортирует сборку в текущую область и получает новую сигнатуру метаданных для Объединенной области.  
+Импортирует сборку в текущую область и получает новую подпись метаданных для объединенной области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pAssemImport`  
- окне Интерфейс для импортируемой сборки (где определена сигнатура).  
+ (в) Интерфейс для сборки импорта (где определена подпись).  
   
  `pbHashValue`  
- окне Хэш-объект хэша для сборки.  
+ (в) Хэш-капля для сборки.  
   
  `cbHashValue`  
- окне Число байтов в `pbHashValue`.  
+ (в) Количество байтов `pbHashValue`в .  
   
  `import`  
- окне Интерфейс для области действия метаданных импорта.  
+ (в) Интерфейс для области метаданных импорта.  
   
  `pbSigBlob`  
- окне Импортируемая подпись.  
+ (в) Подпись, которая будет импортирована.  
   
  `cbSigBlob`  
- окне Размер `pbSigBlob`в байтах.  
+ (в) Размер, в байтах, из `pbSigBlob`.  
   
  `pAssemEmit`  
- окне Интерфейс для экспорта сборки.  
+ (в) Интерфейс для сборки экспорта.  
   
  `emit`  
- окне Интерфейс для области экспорта метаданных.  
+ (в) Интерфейс для области экспортных метаданных.  
   
  `pvTranslatedSig`  
- заполняет Буфер для хранения переведенного большого двоичного объекта сигнатуры.  
+ (ваут) Буфер для удержания переведенной подписи капли.  
   
  `cbTranslatedSigMax`  
- окне Емкость (в байтах) `pvTranslatedSig`.  
+ (в) Емкость, в байтах, `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- заполняет Число фактических байтов в переведенной сигнатуре.  
+ (ваут) Количество фактических байтов в переведенной подписи.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

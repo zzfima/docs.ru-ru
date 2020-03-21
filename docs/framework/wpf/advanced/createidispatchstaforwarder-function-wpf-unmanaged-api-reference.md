@@ -1,5 +1,5 @@
 ---
-title: Функция Креатеидиспатчстафорвардер — Справочник по неуправляемым API в WPF
+title: Функция CreateIDispatchSTAForwarder - ссылка на Неуправляемый API WPF
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,15 +9,15 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: 67f2542733fb9c6af197c99ede2bd097ce876b5d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e151ffa6eb5f1dc7479c699e0d7f9f3f57833ebd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738030"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174723"
 ---
-# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Функция Креатеидиспатчстафорвардер (Справочник по неуправляемым интерфейсам API WPF)
-Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для непосредственного использования из кода.  
+# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Функция CreateIDispatchSTAForwarder (Ссылка на Неуправляемый API WPF)
+Этот API поддерживает инфраструктуру Фонда презентаций Windows (WPF) и не предназначен для использования непосредственно из вашего кода.  
   
  Используется инфраструктурой Windows Presentation Foundation (WPF) для управления потоками и окнами.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "76738030"
   
 ```cpp  
 HRESULT CreateIDispatchSTAForwarder(  
-   __in IDispatch *pDispatchDelegate,   
+   __in IDispatch *pDispatchDelegate,
    __deref_out IDispatch **ppForwarder  
 )  
 ```  
@@ -33,22 +33,22 @@ HRESULT CreateIDispatchSTAForwarder(
 ## <a name="parameters"></a>Параметры  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
- пдиспатчделегате  
- Указатель на интерфейс `IDispatch`.  
+ pDispatchДелегат  
+ Указатель на `IDispatch` интерфейс.  
   
- ппфорвардер  
- Указатель на адрес интерфейса `IDispatch`.  
+ ppForwarder  
+ Указатель на адрес интерфейса. `IDispatch`  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. [.NET Framework требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** Смотрите [требования рамочной системы .NET](../../get-started/system-requirements.md).  
   
- **КОМПОНОВКИ**  
+ **Dll:**  
   
- В .NET Framework 3,0 и 3,5: Пресентатионхостдлл. dll  
+ В рамках .NET 3.0 и 3.5: PresentationHostDLL.dll  
   
- В .NET Framework 4 и более поздних версиях: PresentationHost_v0400. dll  
+ В рамках .NET 4 и позже: PresentationHost_v0400.dll  
   
- **Версия .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Рамочная версия .NET:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>См. также раздел
 

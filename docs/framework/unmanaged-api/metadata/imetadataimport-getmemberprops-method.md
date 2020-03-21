@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437518"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177232"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Метод IMetaDataImport::GetMemberProps
-Возвращает сведения, хранящиеся в метаданных для указанного определения элемента, включая имя, двоичную подпись и относительный виртуальный адрес элемента <xref:System.Type>, на который ссылается указанный маркер метаданных. Это простой вспомогательный метод: Если *МБ* является MethodDef, то вызывается **жетмесодпропс** . Если *МБ* является FieldDef, вызывается **жетфиелдпропс** . Дополнительные сведения см. в этих других методах. 
+Получает информацию, хранящуюся в метаданных для определенного определения участника, <xref:System.Type> включая имя, двоичную подпись и относительный виртуальный адрес, участника, на которого ссылается указанный маркер метаданных. Это простой метод помощника: если *mb* является MethodDef, то **GetMethodProps** называется; если *mb* является FieldDef, то **GetFieldProps** называется. Ознакомьтесь с другими методами для получения подробной информации.
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetMemberProps (  
-   [in]  mdToken           mb,   
+   [in]  mdToken           mb,
    [out] mdTypeDef         *pClass,  
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
    [out] DWORD             *pdwAttr,  
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] ULONG             *pulCodeRVA,   
-   [out] DWORD             *pdwImplFlags,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] ULONG             *pulCodeRVA,
+   [out] DWORD             *pdwImplFlags,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Параметры  
  `mb`  
- окне Токен, ссылающийся на элемент, для которого необходимо получить связанные метаданные.  
+ (в) Токен, который ссылается на символ для получения связанных метаданных.  
   
  `pClass`  
- заполняет Указатель на маркер метаданных, представляющий класс члена.  
+ (ваут) Указатель на маркер метаданных, представляющий класс участника.  
   
  `szMember`  
- заполняет Имя элемента.  
+ (ваут) Имя участника.  
   
  `cchMember`  
- окне Размер в расширенных символах буфера `szMember`.  
+ (в) Размер в широких символах буфера. `szMember`  
   
  `pchMember`  
- заполняет Размер в расширенных символах возвращаемого имени.  
+ (ваут) Размер в широких символах возвращенного имени.  
   
  `pdwAttr`  
- заполняет Все значения флагов, примененные к элементу.  
+ (ваут) Любые значения флага, применяемые к участнику.  
   
  `ppvSigBlob`  
- заполняет Указатель на сигнатуру двоичных метаданных элемента.  
+ (ваут) Указатель на двоичную подпись метаданных участника.  
   
  `pcbSigBlob`  
- заполняет Размер в байтах `ppvSigBlob`.  
+ (ваут) Размер байтов `ppvSigBlob`.  
   
  `pulCodeRVA`  
- заполняет Указатель на относительный виртуальный адрес элемента.  
+ (ваут) Указатель на относительный виртуальный адрес участника.  
   
  `pdwImplFlags`  
- заполняет Любые флаги реализации метода, связанные с элементом.  
+ (ваут) Флаги реализации любого метода, связанные с участником.  
   
  `pdwCPlusTypeFlag`  
- заполняет Флаг, помечающий <xref:System.ValueType>. Это одно из значений `ELEMENT_TYPE_*`.
+ (ваут) Флаг, который <xref:System.ValueType>отмечает . Это одна из `ELEMENT_TYPE_*` ценностей.
   
  `ppValue`  
- заполняет Константное строковое значение, возвращаемое этим элементом.  
+ (ваут) Постоянное значение строки, возвращенное этим участником.  
   
  `pcchValue`  
- заполняет Размер в символах `ppValue`или нуль, если `ppValue` не содержит строку.  
+ (ваут) Размер в `ppValue`символах, или `ppValue` ноль, если не держит строку.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

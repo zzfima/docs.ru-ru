@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 5434aa2d12bd9a29a8c2fc784421442469ceb1ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440564"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176049"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>Метод IMetaDataAssemblyEmit::SetAssemblyRefProps
 Изменяет указанную структуру метаданных `AssemblyRef`.  
@@ -32,8 +32,8 @@ HRESULT SetAssemblyRefProps (
     [in] mdAssemblyRef              ar,  
     [in] const void                 *pbPublicKeyOrToken,  
     [in] ULONG                      cbPublicKeyOrToken,  
-    [in] LPCWSTR                    szName,   
-    [in] const ASSEMBLYMETADATA     *pMetaData,   
+    [in] LPCWSTR                    szName,
+    [in] const ASSEMBLYMETADATA     *pMetaData,
     [in] const void                 *pbHashValue,  
     [in] ULONG                      cbHashValue,  
     [in] DWORD                      dwAssemblyRefFlags  
@@ -42,41 +42,41 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Параметры  
  `ar`  
- окне Маркер метаданных, указывающий структуру метаданных `AssemblyRef`, которую необходимо изменить.  
+ (в) Токен метаданных, который определяет `AssemblyRef` структуру метаданных для изменения.  
   
  `pbPublicKeyOrToken`  
- окне Открытый ключ издателя сборки, на которую указывает ссылка.  
+ (в) Открытый ключ издателя ссылки сборки.  
   
  `cbPublicKeyOrToken`  
- окне Размер в байтах `pbPublicKeyOrToken`.  
+ (в) Размер байтов `pbPublicKeyOrToken`.  
   
  `szName`  
- окне Понятное для человека текстовое имя сборки.  
+ (в) Читаемое человеком текстовое название сборки.  
   
  `pMetaData`  
- окне Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформе и локали для сборки.  
+ (в) Указатель на экземпляр ASSEMBLYMETADATA, содержащий информацию о версии, платформе и локализации для сборки.  
   
  `pbHashValue`  
- окне Указатель на хэш-данные, связанные со сборкой.  
+ (в) Указатель на хэш-данные, связанные с сборкой.  
   
  `cbHashValue`  
- окне Размер в байтах `pbHashValue`.  
+ (в) Размер байтов `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- окне Побитовое сочетание значений [ассемблиреффлагс](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) , задающих атрибуты упоминаемой сборки.  
+ (в) Битовая комбинация значений [AssemblyRefFlags,](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) которые указывают атрибуты указанной сборки.  
   
-## <a name="remarks"></a>Примечания  
- Чтобы создать `AssemblyRef` структуру метаданных, используйте метод [IMetaDataAssemblyEmit::D ефинеассемблиреф](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) .  
+## <a name="remarks"></a>Remarks  
+ Для создания `AssemblyRef` структуры метаданных используйте метод [IMetaDataAssemblyEmit::DefineAssemblyRef.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

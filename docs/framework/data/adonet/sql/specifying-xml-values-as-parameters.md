@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: acb94efd8b6b6b66d0cc84309c2d68ad692b08d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780870"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174502"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Указание значений XML как параметров
-Если запросу требуется параметр, значение которого является строкой XML, разработчики могут предоставить это значение с помощью экземпляра типа данных **SQLXML** . В действительности нет никаких взятий; XML-столбцы в SQL Server принимают значения параметров точно так же, как и другие типы данных.  
+Если запрос требует параметров, значения которых представляет XML-строка, разработчики могут передать это значение с помощью экземпляра типа данных **SqlXml**. Это не составляет никакой сложности, поскольку XML-столбцы в SQL Server принимают значения параметров точно так же, как другие типы данных.  
   
 ## <a name="example"></a>Пример  
- Следующее консольное приложение создает новую таблицу в базе данных **AdventureWorks** . Новая таблица содержит столбец с именем **салесид** и XML-столбец с именем **салесинфо**.  
+ Следующее приложение командной строки создает новую таблицу в базе данных **AdventureWorks**. Новая таблица содержит столбец с именем **SalesID** и XML-столбец с именем **SalesInfo**.  
   
 > [!NOTE]
-> Образец базы данных **AdventureWorks** по умолчанию не устанавливается при установке SQL Server. Чтобы установить его, запустите программу установки SQL Server.  
+> Образец базы данных **AdventureWorks** не устанавливается по умолчанию при установке SQL Server. Чтобы установить его, запустите программу установки SQL Server.  
   
- Пример подготавливает объект <xref:System.Data.SqlClient.SqlCommand>, чтобы вставить строку в новую таблицу. Сохраненный файл содержит XML-данные, необходимые для столбца **салесинфо** .  
+ Наш пример подготавливает объект <xref:System.Data.SqlClient.SqlCommand> для вставки строки в новую таблицу. Сохраненный файл предоставляет XML-данные, необходимые для столбца **SalesInfo**.  
   
- Чтобы создать файл, требующийся для выполнения примера, создайте новый текстовый файл в папке проекта. Присвойте файлу имя MyTestStoreData.xml. Откройте файл в приложении «Блокнот» и скопируйте следующий текст.  
+ Чтобы получить файл, необходимый для выполнения этого примера, создайте пустой текстовый файл в той же папке, где размещен проект. Присвойте этому файлу имя MyTestStoreData.xml. Откройте файл в Блокноте, скопируйте и вставьте в него следующий текст:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -74,7 +74,7 @@ Module Module1
   
         Dim command As New SqlCommand(commandText, connection)  
   
-        ' Read the saved XML document as a   
+        ' Read the saved XML document as a
         ' SqlXml-data typed variable.  
         Dim newXml As SqlXml = _  
          New SqlXml(New XmlTextReader("MyTestStoreData.xml"))  
@@ -90,8 +90,8 @@ Module Module1
 End Sub  
   
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks"  
     End Function  
@@ -115,28 +115,28 @@ class Class1
         //  Create a sample table (dropping first if it already  
         //  exists.)  
   
-        string commandNewTable =   
-            "IF EXISTS (SELECT * FROM dbo.sysobjects " +   
+        string commandNewTable =
+            "IF EXISTS (SELECT * FROM dbo.sysobjects " +
             "WHERE id = " +  
-                  "object_id(N'[dbo].[XmlDataTypeSample]') " +   
-            "AND OBJECTPROPERTY(id, N'IsUserTable') = 1) " +   
-            "DROP TABLE [dbo].[XmlDataTypeSample];" +   
-            "CREATE TABLE [dbo].[XmlDataTypeSample](" +   
-            "[SalesID] [int] IDENTITY(1,1) NOT NULL, " +   
+                  "object_id(N'[dbo].[XmlDataTypeSample]') " +
+            "AND OBJECTPROPERTY(id, N'IsUserTable') = 1) " +
+            "DROP TABLE [dbo].[XmlDataTypeSample];" +
+            "CREATE TABLE [dbo].[XmlDataTypeSample](" +
+            "[SalesID] [int] IDENTITY(1,1) NOT NULL, " +
             "[SalesInfo] [xml])";  
-        SqlCommand commandAdd =   
+        SqlCommand commandAdd =
                    new SqlCommand(commandNewTable, connection);  
         commandAdd.ExecuteNonQuery();  
-        string commandText =   
-            "INSERT INTO [dbo].[XmlDataTypeSample] " +   
-            "([SalesInfo] ) " +   
+        string commandText =
+            "INSERT INTO [dbo].[XmlDataTypeSample] " +
+            "([SalesInfo] ) " +
             "VALUES(@xmlParameter )";  
-        SqlCommand command =   
+        SqlCommand command =
                   new SqlCommand(commandText, connection);  
   
-        //  Read the saved XML document as a   
+        //  Read the saved XML document as a
         //  SqlXml-data typed variable.  
-        SqlXml newXml =   
+        SqlXml newXml =
             new SqlXml(new XmlTextReader("MyTestStoreData.xml"));  
   
         //  Supply the SqlXml value for the value of the parameter.  
@@ -151,16 +151,16 @@ class Class1
   
     private static string GetConnectionString()  
     {  
-        // To avoid storing the connection string in your code,              
-        // you can retrieve it from a configuration file.   
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
         return "Data Source=(local);Integrated Security=true;" +  
         "Initial Catalog=AdventureWorks; ";  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [Данные XML в SQL Server](xml-data-in-sql-server.md)
+- [Данные XML в сервере S'L](xml-data-in-sql-server.md)
 - [Общие сведения об ADO.NET](../ado-net-overview.md)

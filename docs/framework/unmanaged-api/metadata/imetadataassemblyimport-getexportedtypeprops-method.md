@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448220"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177758"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>Метод IMetaDataAssemblyImport::GetExportedTypeProps
-Возвращает набор свойств экспортированного типа с указанной сигнатурой метаданных.  
+Получает набор свойств экспортируемого типа с указанной подписью метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetExportedTypeProps (  
-    [in]  mdExportedType    mdct,   
-    [out] LPWSTR            szName,   
-    [in]  ULONG             cchName,   
-    [out] ULONG             *pchName,   
-    [out] mdToken           *ptkImplementation,   
-    [out] mdTypeDef         *ptkTypeDef,   
+    [in]  mdExportedType    mdct,
+    [out] LPWSTR            szName,
+    [in]  ULONG             cchName,
+    [out] ULONG             *pchName,
+    [out] mdToken           *ptkImplementation,
+    [out] mdTypeDef         *ptkTypeDef,
     [out] DWORD             *pdwExportedTypeFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `mdct`  
- окне Токен метаданных `mdExportedType`, представляющий экспортированный тип.  
+ (в) Токен `mdExportedType` метаданных, представляющий экспортированный тип.  
   
  `szName`  
- заполняет Имя экспортированного типа.  
+ (ваут) Название экспортируемого типа.  
   
  `cchName`  
- окне Размер в расширенных символах `szName`.  
+ (в) Размер, в широких символов, из `szName`.  
   
  `pchName`  
- заполняет Число расширенных символов, фактически возвращаемых в `szName`  
+ (ваут) Количество широких символов фактически вернулся в`szName`  
   
  `ptkImplementation`  
- заполняет `mdFile`, `mdAssemblyRef`или `mdExportedType` маркер метаданных, который содержит или разрешает доступ к свойствам экспортируемого типа.  
+ (ваут) `mdFile`Токен `mdAssemblyRef`метаданных, содержащий или позволяющий получить доступ к свойствам экспортируемого типа, или `mdExportedType` метаданный.  
   
  `ptkTypeDef`  
- заполняет Указатель на маркер `mdTypeDef`, представляющий тип в файле.  
+ (ваут) Указатель на `mdTypeDef` маркер, представляющий тип файла.  
   
  `pdwExportedTypeFlags`  
- заполняет Указатель на флаги, описывающие метаданные, применяемые к экспортируемому типу. Значение Flags может быть одним или несколькими [кортипеаттр](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) значениями.  
+ (ваут) Указатель на флаги, описывающие метаданные, применяемые к экспортируемому типу. Значение флагов может быть одним или более значениями [CorTypeAttr.](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

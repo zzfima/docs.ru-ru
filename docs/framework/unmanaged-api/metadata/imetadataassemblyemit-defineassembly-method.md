@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 20628e708261076c6e172ff30c366a0d69c2e0f2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432118"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177888"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>Метод IMetaDataAssemblyEmit::DefineAssembly
-Создает структуру `Assembly`, содержащую метаданные для указанной сборки, и возвращает связанный маркер метаданных.  
+Создает `Assembly` структуру, содержащую метаданные для указанной сборки, и возвращает связанный токен метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,7 +32,7 @@ HRESULT DefineAssembly (
     [in]  void                 *pbPublicKey,  
     [in]  ULONG                cbPublicKey,  
     [in]  ULONG                uHashAlgId,  
-    [in]  LPCWSTR              szName,   
+    [in]  LPCWSTR              szName,
     [in]  ASSEMBLYMETADATA     *pMetaData,  
     [in]  DWORD                dwAssemblyFlags,  
     [out] mdAssembly           *pmda  
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `pbPublicKey`  
- окне Открытый ключ, определяющий издателя сборки, или значение NULL, если сборка не имеет строгого имени.  
+ (в) Открытый ключ, который идентифицирует издателя сборки, или NULL, если сборка не названа решительно.  
   
  `cbPublicKey`  
- окне Размер в байтах `pbPublicKey`.  
+ (в) Размер байтов `pbPublicKey`.  
   
  `uHashAlgId`  
- окне Идентификатор алгоритма хэширования, используемого для шифрования файлов в сборке, или значение NULL для указания алгоритма SHA-1.  
+ (в) Идентификатор алгоритма хэширования для шифрования файлов в сборке или NULL для указания алгоритма SHA-1.  
   
  `szName`  
- окне Понятное для человека текстовое имя сборки. Это значение не должно превышать 1024 символов.  
+ (в) Читаемое человеком текстовое название сборки. Это значение не должно превышать 1024 символов.  
   
  `pMetaData`  
- окне Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформе и локали для сборки.  
+ (в) Указатель на экземпляр ASSEMBLYMETADATA, содержащий информацию о версии, платформе и локализации для сборки.  
   
  `dwAssemblyFlags`  
- окне Сочетание значений [корассемблифлагс](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) , описывающих функции сборки.  
+ (в) Сочетание значений [CorAssemblyFlags,](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) описывающие особенности сборки.  
   
  `pmda`  
- заполняет Указатель на маркер метаданных.  
+ (ваут) Указатель на маркер метаданных.  
   
-## <a name="remarks"></a>Примечания  
- В манифесте может быть определена только одна структура метаданных `Assembly`.  
+## <a name="remarks"></a>Remarks  
+ Только `Assembly` одна структура метаданных может быть определена в манифесте.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

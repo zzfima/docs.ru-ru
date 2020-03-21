@@ -15,82 +15,82 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431521"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175789"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>Метод IMetaDataEmit::DefineProperty
-Создает определение свойства для указанного типа с указанными методами доступа `get` и `set` и получает маркер для этого определения свойства.  
+Создает определение свойства для указанного типа `get` `set` с указанными и доступными для метода, и получает маркер к определению этого свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT DefineProperty (   
-    [in]  mdTypeDef          td,   
-    [in]  LPCWSTR            szProperty,   
-    [in]  DWORD              dwPropFlags,   
-    [in]  PCCOR_SIGNATURE    pvSig,   
-    [in]  ULONG              cbSig,   
-    [in]  DWORD              dwCPlusTypeFlag,   
-    [in]  void const         *pValue,   
-    [in]  ULONG              cchValue,   
-    [in]  mdMethodDef        mdSetter,   
-    [in]  mdMethodDef        mdGetter,   
-    [in]  mdMethodDef        rmdOtherMethods[],   
-    [out] mdProperty         *pmdProp   
+HRESULT DefineProperty (
+    [in]  mdTypeDef          td,
+    [in]  LPCWSTR            szProperty,
+    [in]  DWORD              dwPropFlags,
+    [in]  PCCOR_SIGNATURE    pvSig,
+    [in]  ULONG              cbSig,
+    [in]  DWORD              dwCPlusTypeFlag,
+    [in]  void const         *pValue,
+    [in]  ULONG              cchValue,
+    [in]  mdMethodDef        mdSetter,
+    [in]  mdMethodDef        mdGetter,
+    [in]  mdMethodDef        rmdOtherMethods[],
+    [out] mdProperty         *pmdProp
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- окне Токен для класса или интерфейса, для которого определяется свойство.  
+ (в) Токен для класса или интерфейса, на котором определяется свойство.  
   
  `szProperty`  
- окне Имя свойства.  
+ [in] Имя свойства.  
   
  `dwPropFlags`  
- окне Флаги свойств.  
+ (в) Флаги свойств.  
   
  `pvSig`  
- окне Сигнатура свойства.  
+ (в) Подпись собственности.  
   
  `cbSig`  
- окне Число байтов в `pvSig`.  
+ (в) Количество байтов `pvSig`в .  
   
  `dwCPlusTypeFlag`  
- окне Тип значения свойства по умолчанию.  
+ (в) Тип значения по умолчанию.  
   
  `pValue`  
- окне Значение по умолчанию для свойства.  
+ (в) Значение значения по умолчанию для свойства.  
   
  `cchValue`  
- окне Число символов Юникода в `pValue`.  
+ (в) Количество символов (Unicode) `pValue`в .  
   
  `mdSetter`  
- окне Метод, который задает значение свойства.  
+ (в) Метод, устанавливающие значение свойства.  
   
  `mdGetter`  
- окне Метод, который получает значение свойства.  
+ (в) Метод, который получает значение свойства.  
   
  `rmdOtherMethods[]`  
- окне Массив других методов, связанных со свойством. Завершите работу массива с помощью `mdTokenNil`.  
+ (в) Массив других методов, связанных с свойством. Упраздните `mdTokenNil`массив с помощью .  
   
  `pmdProp`  
- заполняет Назначенный маркер `mdProperty`.  
+ (ваут) Назначенный `mdProperty` маркер.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

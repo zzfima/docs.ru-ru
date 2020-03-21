@@ -15,63 +15,63 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: 794a39f1e2c4a93a34ae39641519c79fd4c4e79e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3520af5f55f43183920dce7fbd24b70359c023a2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131228"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176504"
 ---
 # <a name="corbindtoruntimeex-function"></a>Функция CorBindToRuntimeEx
-Позволяет неуправляемым узлам загружать среду CLR в процесс. Функции [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) и `CorBindToRuntimeEx` выполняют одну и ту же операцию, но функция `CorBindToRuntimeEx` позволяет устанавливать флаги для указания поведения среды CLR.  
+Позволяет неуправляемым хостам загружать время выполнения общего языка (CLR) в процесс. [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) и `CorBindToRuntimeEx` функции выполняют ту `CorBindToRuntimeEx` же операцию, но функция позволяет установить флаги, чтобы указать поведение CLR.  
   
- Эта функция является устаревшей в .NET Framework 4.  
+ Эта функция была унесена в системе .NET 4.  
   
- Эта функция принимает набор параметров, позволяющих узлу выполнять следующие действия:  
+ Эта функция выполняет набор параметров, которые позволяют хосту сделать следующее:  
   
-- Укажите версию среды выполнения, которая будет загружена.  
+- Укажите версию времени выполнения, которая будет загружена.  
   
-- Укажите, следует ли загружать сборку сервера или рабочей станции.  
+- Укажите, следует ли загрузить сборку сервера или рабочей станции.  
   
-- Управление тем, выполняется ли параллельная сборка мусора или не параллельная сборка мусора.  
+- Контролируйте, осуществляется ли параллельный сбор мусора или непараллельный сбор мусора.  
   
 > [!NOTE]
-> Параллельная сборка мусора не поддерживается в приложениях, использующих Эмулятор WOW64 x86 в 64-разрядных системах, которые реализуют архитектуру Intel Itanium (прежнее название — IA-64). Дополнительные сведения об использовании WOW64 в 64-разрядных системах Windows см. в разделе [выполнение 32-разрядных приложений](/windows/desktop/WinProg64/running-32-bit-applications).  
+> Параллельный сбор мусора не поддерживается в приложениях под управлением эмулятора WOW64 x86 на 64-битных системах, реализуемых в архитектуре Intel Itanium (ранее именуемой IA-64). Для получения дополнительной информации об использовании WOW64 на 64-битных системах Windows [см.](/windows/desktop/WinProg64/running-32-bit-applications)  
   
-- Определяет, загружаются ли сборки как нейтральные к домену.  
+- Контролируйте, загружаются ли сборки как нейтральные домены.  
   
-- Получите указатель интерфейса на [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) , который можно использовать для установки дополнительных параметров для настройки экземпляра среды CLR перед его запуском.  
+- Получите указатель интерфейса на [ICorRuntimeHost,](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) который можно использовать для настройки экземпляра CLR до его запуска.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT CorBindToRuntimeEx (  
-    [in]  LPCWSTR      pwszVersion,   
-    [in]  LPCWSTR      pwszBuildFlavor,   
-    [in]  DWORD        startupFlags,   
-    [in]  REFCLSID     rclsid,   
-    [in]  REFIID       riid,   
+    [in]  LPCWSTR      pwszVersion,
+    [in]  LPCWSTR      pwszBuildFlavor,
+    [in]  DWORD        startupFlags,
+    [in]  REFCLSID     rclsid,
+    [in]  REFIID       riid,
     [out] LPVOID FAR  *ppv  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pwszVersion`  
- окне Строка, описывающая версию среды CLR, которую требуется загрузить.  
+ (в) Строка, описывающая версию CLR, которая вы хотите загрузить.  
   
- Номер версии в .NET Framework состоит из четырех частей, разделенных точками: *основной. дополнительный. сборка. Редакция*. Строка, передаваемая как `pwszVersion`, должна начинаться с символа "v", за которым следуют первые три части номера версии (например, "v 1.0.1529").  
+ Номер версии в рамочном варианте .NET состоит из четырех частей, разделенных периодами: *major.minor.build.revision*. Строка прошла `pwszVersion` так, как должна начаться с символа "v", за которым следуют первые три части номера версии (например, "v1.0.1529").  
   
- Некоторые версии среды CLR устанавливаются с инструкцией политики, которая определяет совместимость с предыдущими версиями среды CLR. По умолчанию оболочка запуска проверяет `pwszVersion` в соответствии с инструкциями политики и загружает последнюю версию среды выполнения, совместимую с запрашиваемой версией. Узел может заставить оболочку пропускать вычисление политики и загружать точную версию, указанную в `pwszVersion`, передав значение `STARTUP_LOADER_SAFEMODE` для параметра `startupFlags`, как описано ниже.  
+ Некоторые версии CLR установлены с программным заявлением, которое определяет совместимость с предыдущими версиями CLR. По умолчанию shim запуска `pwszVersion` оценивается в соответствии с политическими заявлениями и загружает последнюю версию времени выполнения, совместимую с запрашиваемым вариантом. Хост может заставить shim пропустить оценку `pwszVersion` политики и `STARTUP_LOADER_SAFEMODE` загрузить `startupFlags` точную версию, указанную в, передавая значение для параметра, как описано ниже.  
   
- Если вызывающий объект указывает значение NULL для `pwszVersion`, `CorBindToRuntimeEx` определяет набор установленных сред выполнения, Номера версий которых ниже среды выполнения .NET Framework 4, и загружают последнюю версию среды выполнения из этого набора. Он не загружает .NET Framework 4 или более поздней версии и завершается ошибкой, если предыдущая версия не установлена. Обратите внимание, что передача значения NULL позволяет узлу не контролировать, какая версия среды выполнения загружена. Хотя такой подход может быть приемлемым в некоторых сценариях, настоятельно рекомендуется, чтобы узел предоставил определенную версию для загрузки.  
+ Если абонент указывает null for, `pwszVersion` `CorBindToRuntimeEx` определяет набор установленных времен выполнения, номера версий которых ниже, чем время выполнения .NET Framework 4, и загружает последнюю версию времени выполнения из этого набора. Он не будет загружать сяррамки .NET 4 или позже, и выходит из строя, если не будет установлена более ранняя версия. Обратите внимание, что прохождение нулевой не дает хосту никакого контроля над тем, какая версия времени выполнения загружается. Хотя этот подход может быть уместным в некоторых сценариях, настоятельно рекомендуется, чтобы ухост поставлял определенную версию для загрузки.  
   
  `pwszBuildFlavor`  
- окне Строка, указывающая, загружать ли сервер или рабочую станцию сборку среды CLR. Допустимые значения: `svr` и `wks`. Сборка сервера оптимизирована для использования нескольких процессоров для сборок мусора, а сборка рабочей станции оптимизирована для клиентских приложений, работающих на однопроцессорном компьютере.  
+ (в) Строка, которая определяет, загружать ли сервер или сборку рабочей станции CLR. Допустимые значения: `svr` и `wks`. Сборка сервера оптимизирована, чтобы использовать преимущества нескольких процессоров для сбора мусора, а сборка рабочих станций оптимизирована для клиентских приложений, работающих на однопроцессорной машине.  
   
- Если `pwszBuildFlavor` имеет значение null, загружается сборка рабочей станции. При запуске на однопроцессорном компьютере сборка рабочей станции всегда загружается, даже если `pwszBuildFlavor` имеет значение `svr`. Однако если `pwszBuildFlavor` имеет значение `svr` и задана параллельная сборка мусора (см. Описание параметра `startupFlags`), то загружается серверная сборка.  
+ Если `pwszBuildFlavor` установка сведена на нет, сборка рабочей станции загружается. При работе на однопроцессорной машине сборка рабочей станции всегда загружается, даже если `pwszBuildFlavor` настроена на. `svr` Однако, `pwszBuildFlavor` если `svr` установлен и одновременное вывоз мусора `startupFlags` указан (см. описание параметра), сборка сервера загружается.  
   
  `startupFlags`  
- окне Сочетание значений перечисления [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) . Эти флаги контролируют параллельную сборку мусора, код, нейтральный к домену, и поведение параметра `pwszVersion`. Значение по умолчанию — один домен, если флаг не установлен. Допустимы следующие значения.  
+ (в) Сочетание значений [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) перечисления. Эти флаги контролируют параллельный сбор мусора, нейтральный код домена и поведение `pwszVersion` параметра. По умолчанию один домен, если флаг не установлен. Допустимы следующие значения:  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -99,45 +99,45 @@ HRESULT CorBindToRuntimeEx (
   
 - `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
- Описание этих флагов см. в описании перечисления [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .  
+ Описания этих флагов смотрите [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) перечисления.  
   
  `rclsid`  
- окне `CLSID` компонентного класса, реализующего интерфейс [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) или [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . Поддерживаемые значения: CLSID_CorRuntimeHost или CLSID_CLRRuntimeHost.  
+ (в) Кокласс, `CLSID` который реализует либо [iCorRuntimeHost,](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) либо интерфейс [ICLRRuntimeHost.](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) Поддерживаемые значения являются CLSID_CorRuntimeHost или CLSID_CLRRuntimeHost.  
   
  `riid`  
- окне `IID` запрашиваемого интерфейса из `rclsid`. Поддерживаемые значения: IID_ICorRuntimeHost или IID_ICLRRuntimeHost.  
+ (в) Запрашиваемый `IID` интерфейс `rclsid`от . Поддерживаемые значения IID_ICorRuntimeHost или IID_ICLRRuntimeHost.  
   
  `ppv`  
- заполняет Возвращаемый указатель интерфейса на `riid`.  
+ (ваут) Возвращается указатель `riid`интерфейса к .  
   
-## <a name="remarks"></a>Заметки  
- Если `pwszVersion` указывает несуществующую версию среды выполнения, `CorBindToRuntimeEx` возвращает значение HRESULT CLR_E_SHIM_RUNTIMELOAD.  
+## <a name="remarks"></a>Remarks  
+ Если `pwszVersion` указывается версия времени выполнения, которая `CorBindToRuntimeEx` не существует, возвращает значение HRESULT CLR_E_SHIM_RUNTIMELOAD.  
   
-## <a name="execution-context-and-flow-of-windows-identity"></a>Контекст выполнения и поток удостоверения Windows  
- В версии 1 среды CLR объект <xref:System.Security.Principal.WindowsIdentity> не перетекает через асинхронные точки, такие как новые потоки, пулы потоков или обратные вызовы таймера. В версии 2,0 среды CLR объект <xref:System.Threading.ExecutionContext> заключает некоторые сведения о выполняемом в данный момент потоке и передает его через любую асинхронную точку, но не через границы домена приложения. Аналогичным образом объект <xref:System.Security.Principal.WindowsIdentity> также проходит через любую асинхронную точку. Таким образом, текущее олицетворение в потоке, если таковое имеется, также проходит.  
+## <a name="execution-context-and-flow-of-windows-identity"></a>Контекст выполнения и поток идентификации Windows  
+ В версии 1 CLR <xref:System.Security.Principal.WindowsIdentity> объект не перетекает через асинхронные точки, такие как новые потоки, пулы потоков или обратные вызовы таймер. В версии 2.0 CLR <xref:System.Threading.ExecutionContext> объект обертывает некоторую информацию о исполняемый в настоящее время потоке и перетекает в любую асинхронную точку, но не через границы доменов приложения. Аналогичным образом, <xref:System.Security.Principal.WindowsIdentity> объект также течет через любую асинхронную точку. Таким образом, текущее олицетворение на потоке, если таковые имеется, течет тоже.  
   
- Изменить последовательность можно двумя способами:  
+ Вы можете изменить поток двумя способами:  
   
-1. Изменяя параметры <xref:System.Threading.ExecutionContext> для подавления потока на основе потока (см. методы <xref:System.Threading.ExecutionContext.SuppressFlow%2A>, <xref:System.Security.SecurityContext.SuppressFlow%2A>и <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A>).  
+1. Изменяя <xref:System.Threading.ExecutionContext> настройки для подавления потока на основе потока <xref:System.Threading.ExecutionContext.SuppressFlow%2A> <xref:System.Security.SecurityContext.SuppressFlow%2A>(см. , и <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> методы).  
   
-2. Изменив режим обработки по умолчанию на режим совместимости версии 1, где объект <xref:System.Security.Principal.WindowsIdentity> не пополняется по какой бы то ни было асинхронной точке, независимо от параметров <xref:System.Threading.ExecutionContext> в текущем потоке. Изменение режима по умолчанию зависит от того, используется ли управляемый исполняемый файл или неуправляемый интерфейс размещения для загрузки среды CLR:  
+2. Изменяя режим по умолчанию процесса на режим <xref:System.Security.Principal.WindowsIdentity> совместимости версии 1, где объект не <xref:System.Threading.ExecutionContext> проходит через какую-либо асинхронную точку, независимо от настроек текущего потока. Как изменить режим по умолчанию зависит от того, используете ли вы управляемый исполняемый или неуправляемый интерфейс хостинга для загрузки CLR:  
   
-    1. Для управляемых исполняемых файлов необходимо задать атрибут `enabled` элемента [\<легациимперсонатионполици >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) для `true`.  
+    1. Для управляемых исполнителей необходимо установить `enabled` атрибут [ \<legacyImpersonationPolicy>](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) `true`элемент.  
   
-    2. Для неуправляемых интерфейсов размещения установите флаг `STARTUP_LEGACY_IMPERSONATION` в параметре `startupFlags` при вызове функции `CorBindToRuntimeEx`.  
+    2. Для неуправляемых интерфейсов `STARTUP_LEGACY_IMPERSONATION` хостинга `startupFlags` установите флаг `CorBindToRuntimeEx` в параметре при вызове функции.  
   
-     Режим совместимости версии 1 применяется ко всему процессу и всем доменам приложения в процессе.  
+     Режим совместимости версии 1 применяется ко всему процессу и ко всем доменам приложений в процессе.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
- **Библиотека:** MSCorEE. dll  
+ **Библиотека:** MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Функция CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
 - [Функция CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)

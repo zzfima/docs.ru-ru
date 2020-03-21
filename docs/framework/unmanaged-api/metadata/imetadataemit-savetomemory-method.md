@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: d5237628-2675-45ed-a39e-65c0731b6a56
 topic_type:
 - apiref
-ms.openlocfilehash: be4fb0b4b49408a97b318e0f54f5a753f3f24ef1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d8843b2b5f69696dc206e9b530e3062ff225e89e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435798"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177580"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>Метод IMetaDataEmit::SaveToMemory
-Сохраняет все метаданные в текущей области в указанную область памяти.  
+Сохраняет все метаданные в текущем диапазоне в заданную область памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT SaveToMemory (   
-    [out]  void        *pbData,   
-    [in]   ULONG       cbData   
+HRESULT SaveToMemory (
+    [out]  void        *pbData,
+    [in]   ULONG       cbData
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pbData`  
- заполняет Адрес, с которого начинается запись метаданных.  
+ (ваут) Адрес, по которому можно начать писать метаданные.  
   
  `cbData`  
- окне Размер выделенной памяти в байтах.  
+ (в) Размер, в байтах, выделенной памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

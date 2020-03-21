@@ -9,19 +9,19 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-ms.openlocfilehash: cc2987499aa094960c08d220940fe1aed5440b2d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: eeccad44bd2719a3cb2a721ba4e32a7bf477636f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449963"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174736"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Практическое руководство. Создание и инициализация источников трассировки
 Класс <xref:System.Diagnostics.TraceSource> используется приложениями для создания трассировок, которые могут быть связаны с приложением. <xref:System.Diagnostics.TraceSource> предоставляет методы трассировки, позволяющие легко трассировать события, трассировать данные и выпускать информационные трассировки. Выходные данные трассировки из объектов <xref:System.Diagnostics.TraceSource> можно создавать и инициализировать с использованием или без использования файлов конфигурации. В этом разделе содержатся инструкции для обоих вариантов. Однако рекомендуется использовать файлы конфигурации для упрощения повторной настройки трассировки, создаваемой источниками трассировки во время выполнения.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Создание и инициализация источника трассировки с помощью файла конфигурации  
   
-1. Создайте проект консольного приложения Visual Studio (.NET Framework) и замените указанный код следующим кодом. Этот код регистрирует ошибки и предупреждения, выводит некоторые из них на консоль, а некоторые в файл myListener, созданный записями в файле конфигурации.  
+1. Создайте проект приложения для консоли Visual Studio (.NET Framework) и замените поставляемый код следующим кодом. Этот код регистрирует ошибки и предупреждения, выводит некоторые из них на консоль, а некоторые в файл myListener, созданный записями в файле конфигурации.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
@@ -34,13 +34,13 @@ ms.locfileid: "77449963"
     <configuration>  
       <system.diagnostics>  
         <sources>  
-          <source name="TraceSourceApp"   
-            switchName="sourceSwitch"   
+          <source name="TraceSourceApp"
+            switchName="sourceSwitch"
             switchType="System.Diagnostics.SourceSwitch">  
             <listeners>  
-              <add name="console"   
+              <add name="console"
                 type="System.Diagnostics.ConsoleTraceListener">  
-                <filter type="System.Diagnostics.EventTypeFilter"   
+                <filter type="System.Diagnostics.EventTypeFilter"
                   initializeData="Error"/>  
               </add>  
               <add name="myListener"/>  
@@ -52,10 +52,10 @@ ms.locfileid: "77449963"
           <add name="sourceSwitch" value="Error"/>  
         </switches>  
         <sharedListeners>  
-          <add name="myListener"   
-            type="System.Diagnostics.TextWriterTraceListener"   
+          <add name="myListener"
+            type="System.Diagnostics.TextWriterTraceListener"
             initializeData="myListener.log">  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error"/>  
           </add>  
         </sharedListeners>  
@@ -82,4 +82,4 @@ ms.locfileid: "77449963"
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Трассировка и инструментирование приложений](tracing-and-instrumenting-applications.md)
+- [Трассировка и оборудование приложений](tracing-and-instrumenting-applications.md)

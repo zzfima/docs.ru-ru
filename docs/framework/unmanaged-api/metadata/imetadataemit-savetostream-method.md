@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 23f6186b2561cbcd52db767616d986084f33860b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7db27670b72a5018a03d4614b69486f67bcef155
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435926"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175685"
 ---
 # <a name="imetadataemitsavetostream-method"></a>Метод IMetaDataEmit::SaveToStream
-Сохраняет все метаданные в текущей области в указанном `IStream`.  
+Сохраняет все метаданные в текущем диапазоне к указанному. `IStream`  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT SaveToStream (   
+HRESULT SaveToStream (
     [in]  IStream     *pIStream,  
     [in]  DWORD       dwSaveFlags  
 );  
@@ -36,7 +36,7 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>Параметры  
  `pIStream`  
- окне Доступный для записи поток для сохранения.  
+ (в) Порядок потока, чтобы сохранить.  
   
  `dwSaveFlags`  
  [in] Зарезервировано. Должен равняться нулю.  
@@ -44,13 +44,13 @@ HRESULT SaveToStream (
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

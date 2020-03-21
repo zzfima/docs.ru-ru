@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440204"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176062"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>Метод IMetaDataAssemblyEmit::DefineFile
 Создает структуру метаданных `File`, содержащую метаданные для сборки, на которую ссылается данная сборка, и возвращает связанный токен метаданных.  
@@ -29,8 +29,8 @@ ms.locfileid: "74440204"
   
 ```cpp  
 HRESULT DefineFile (  
-    [in]  LPCWSTR        szName,   
-    [in]  const void     *pbHashValue,   
+    [in]  LPCWSTR        szName,
+    [in]  const void     *pbHashValue,
     [in]  ULONG          cbHashValue,  
     [in]  DWORD          dwFileFlags,  
     [out] mdFile         *pmdf  
@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- окне Имя файла, который будет использоваться.  
+ (в) Имя файла, который будет употребляться.  
   
  `pbHashValue`  
- окне Указатель на хэш-данные, связанные со сборкой.  
+ (в) Указатель на хэш-данные, связанные с сборкой.  
   
  `cbHashValue`  
- окне Размер в байтах `pbHashValue`.  
+ (в) Размер байтов `pbHashValue`.  
   
  `dwFileFlags`  
- окне Побитовое сочетание значений `FileFlags`, определяющих настройки свойств.  
+ (в) Битовая комбинация значений, `FileFlags` определяющих параметры свойств.  
   
  `pmdf`  
- заполняет Указатель на возвращаемый маркер `File`.  
+ (ваут) Указатель на возвращенный `File` токен.  
   
-## <a name="remarks"></a>Примечания  
- Одна `File` структура метаданных должна быть определена для каждого файла, который был частью этой сборки на момент построения этой сборки, за исключением файла, содержащего метаданные.  
+## <a name="remarks"></a>Remarks  
+ Для `File` каждого файла, который был частью этой сборки на момент построения сборки, должна быть определена одна структура метаданных, за исключением файла, содержащего метаданные.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** Смотрите [системные требования](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: e5eb735acac73d694a0719c206bd22711a8c0333
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b8ddf7fec12d175f030c0ea0ed982c6fb334aee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437537"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175386"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>Метод IMetaDataImport::GetInterfaceImplProps
-Возвращает указатель на маркеры метаданных для <xref:System.Type>, реализующей указанный метод, а также для интерфейса, объявляющего этот метод.
+Получает указатель на маркеры метаданных <xref:System.Type> для того, который реализует указанный метод, и для интерфейса, который декларирует этот метод.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,25 +37,25 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Параметры  
  `iiImpl`  
- окне Токен метаданных, представляющий метод, для которого необходимо вернуть маркеры класса и интерфейса.  
+ (в) Токен метаданных, представляющий метод возврата маркеров класса и интерфейса.  
   
  `pClass`  
- заполняет Маркер метаданных, представляющий класс, реализующий метод.  
+ (ваут) Токен метаданных, представляющий класс, реализующий метод.  
   
  `ptkIface`  
- заполняет Токен метаданных, представляющий интерфейс, определяющий реализованный метод.  
+ (ваут) Токен метаданных, представляющий интерфейс, определяющий реализованный метод.  
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
- Чтобы получить значение для `iImpl`, вызовите метод [енуминтерфацеимплс](imetadataimport-enuminterfaceimpls-method.md) .
- 
- Например, предположим, что класс имеет `mdTypeDef` значение токена 0x02000007 и реализует три интерфейса, типы которых имеют токены: 
+ Значение для `iImpl` получения, позвонив в метод [EnumInterfaceImpls.](imetadataimport-enuminterfaceimpls-method.md)
 
-- 0x02000003 (TypeDef)
+ Например, предположим, что `mdTypeDef` класс имеет значение маркера 0x02000007 и что он реализует три интерфейса, типы которых имеют токены:
+
+- 0x0200003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-По сути, эта информация хранится в таблице реализации интерфейса следующим образом:
+Концептуально эта информация хранится в таблице реализации интерфейса как:
 
 | Номер строки | Токен класса | Токен интерфейса |
 |------------|-------------|-----------------|
@@ -65,23 +65,23 @@ HRESULT GetInterfaceImplProps (
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Помните, что маркер является 4-байтовым значением:
+Напомним, токен представляет собой значение 4 байт:
 
-- 3 младших байта содержат номер строки или RID.
-- Верхний байт содержит тип токена — 0x09 для `mdtInterfaceImpl`.
+- Нижние 3 байта удерживают рядное число, или RID.
+- Верхний байт содержит тип маркера - `mdtInterfaceImpl`0x09 для .
 
-`GetInterfaceImplProps` возвращает информацию, удерживаемую в строке, токен которой вы задаете в аргументе `iImpl`. 
+`GetInterfaceImplProps`возвращает информацию, хранявшуюся в `iImpl` строке, токен которой вы предоставляете в споре.
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

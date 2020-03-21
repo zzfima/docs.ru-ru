@@ -15,39 +15,39 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: 5de522c00da76e7c01369c706cb7f9e2bdad4b3b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f840438e175790a2b4c97302963b910f98dffb7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134514"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176569"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>Метод IAssemblyCacheItem::Commit
-Фиксирует в памяти ссылку на кэшированную сборку.  
+Фиксирует ссылку кэшированной сборки на память.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT Commit (  
-    [in] DWORD dwFlags,   
+    [in] DWORD dwFlags,
     [out, optional] ULONG *pulDisposition  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `dwFlags`  
- окне Флаги, определенные в Fusion. idl.  
+ (в) Флаги, определенные в Fusion.idl.  
   
  `pulDisposition`  
- [out, необязательно] Значение, указывающее результат операции.  
+ (вне, необязательно) Значение, указывававание результата операции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** Fusion. h  
+ **Заголовок:** Fusion.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IAssemblyCacheItem](iassemblycacheitem-interface.md)

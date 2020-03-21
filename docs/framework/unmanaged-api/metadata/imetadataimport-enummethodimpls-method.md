@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: 193e8788d5a1b28f43f2fb0d4d935a18542dd923
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427492"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175477"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Метод IMetaDataImport::EnumMethodImpls
 Перечисляет токены MethodBody и MethodDeclaration, представляющие методы указанного типа.  
@@ -29,51 +29,51 @@ ms.locfileid: "74427492"
   
 ```cpp  
 HRESULT EnumMethodImpls (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdToken     rMethodBody[],   
-   [out]     mdToken     rMethodDecl[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdToken     rMethodBody[],
+   [out]     mdToken     rMethodDecl[],
+   [in]      ULONG       cMax,
    [in]      ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
+ (в, вне) Указатель на регистратор. Это должно быть NULL для первого вызова этого метода.  
   
  `td`  
- окне Токен TypeDef для типа, реализации методов которого требуется перечислить.  
+ (в) Токен TypeDef для типа, метод реализации которого перечислять.  
   
  `rMethodBody`  
- заполняет Массив для хранения токенов Месодбоди.  
+ (ваут) Массив для хранения токенов MethodBody.  
   
  `rMethodDecl`  
- заполняет Массив для хранения токенов MethodDeclaration.  
+ (ваут) Массив для хранения токенов MethodDeclaration.  
   
  `cMax`  
- окне Максимальный размер массивов `rMethodBody` и `rMethodDecl`.  
+ (в) Максимальный размер `rMethodBody` и `rMethodDecl` массивов.  
   
  `pcTokens`  
- окне Фактическое число методов, возвращаемых в `rMethodBody` и `rMethodDecl`.  
+ (в) Фактическое количество методов, `rMethodBody` `rMethodDecl`возвращенных в и .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` успешно возвращено.|  
-|`S_FALSE`|Нет токенов метода для перечисления. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumMethodImpls`вернулся успешно.|  
+|`S_FALSE`|Нет маркеров метода для перечисления. В этом `pcTokens` случае, равна нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

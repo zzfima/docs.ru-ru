@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 92f9457dd0c118c9a7c578a7088f66cdea1e5ad0
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e7ee1a8ce358c77e46db39af67bd9dc20114fb3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320669"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174827"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Настройка привязок для служб Windows Communication Foundation
 При создании приложения часто нужно отложить решения для администратора после развертывания приложения. Например, часто нет способа узнать заранее, какими будут адрес службы или универсальный код ресурса (URI). Вместо жестко запрограммированного адреса желательно разрешить администратору ввести его после создания службы. Такая гибкость достигается благодаря конфигурации.  
   
 > [!NOTE]
-> Для быстрого создания файлов конфигурации используйте [средство служебной программы метаданных ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) с параметром `/config`.  
+> Используйте [инструмент Utility Tool ServiceModel Metadata (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) с переходом `/config` для быстрого создания файлов конфигурации.  
   
 ## <a name="major-sections"></a>Основные разделы  
- Схема конфигурации Windows Communication Foundation (WCF) включает следующие три основных раздела (`serviceModel`, `bindings` и `services`):  
+ Схема конфигурации Windows Communication Foundation (WCF) включает`serviceModel` `bindings`в `services`себя следующие три основных раздела (, и):  
   
 ```xml  
 <configuration>  
@@ -34,15 +34,15 @@ ms.locfileid: "72320669"
 ```  
   
 ### <a name="servicemodel-elements"></a>Элементы ServiceModel  
- Можно использовать раздел, ограниченный элементом `system.ServiceModel`, чтобы настроить тип службы с одной или несколькими конечными точками, а также параметры службы. После этого каждая конечная точка может быть настроена с адресом, контрактом и привязкой. Дополнительные сведения о конечных точках см. в разделе [Общие сведения о создании конечных](endpoint-creation-overview.md)точек. Если конечные точки не указаны, то среда выполнения добавит конечные точки по умолчанию. Дополнительные сведения о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Упрощенная конфигурация](simplified-configuration.md) и [Упрощенная конфигурация служб WCF](./samples/simplified-configuration-for-wcf-services.md).  
+ Раздел, ограниченный `system.ServiceModel` элементом, можно настроить тип службы с одной или более конечными точками, а также настройками службы. После этого каждая конечная точка может быть настроена с адресом, контрактом и привязкой. Для получения дополнительной информации о конечных точках, см [Endpoint Создание Обзор](endpoint-creation-overview.md). Если конечные точки не указаны, то среда выполнения добавит конечные точки по умолчанию. Дополнительные сведения о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Упрощенная конфигурация](simplified-configuration.md) и [Упрощенная конфигурация служб WCF](./samples/simplified-configuration-for-wcf-services.md).  
   
  Привязка задает транспорт (HTTP, TCP, каналы, очередь сообщений) и протоколы (безопасность, надежность, потоки транзакций) и состоит из элементов привязки, каждый из которых задает определенный аспект способа связи конечной точки с миром.  
   
- Например, указание элемента [\<basicHttpBinding >](../configure-apps/file-schema/wcf/basichttpbinding.md) указывает на использование HTTP в качестве транспорта для конечной точки. Это используется для подключения конечной точки во время выполнения, когда открыта служба, использующая данную конечную точку.  
+ Например, указание [ \<элемента basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md) указывает на использование HTTP в качестве переноса для конечных точек. Это используется для подключения конечной точки во время выполнения, когда открыта служба, использующая данную конечную точку.  
   
- Существует два вида привязок: предопределенная и пользовательская. Предопределенные привязки содержат полезные комбинации элементов, которые используются в общих сценариях. Список предопределенных типов привязки, предоставляемых WCF, см. в разделе [привязки, предоставляемые системой](system-provided-bindings.md). Если ни одна из стандартных коллекций привязок не имеет нужного для приложения службы сочетания возможностей, для соответствия требованиям приложения можно создать специальные привязки. Дополнительные сведения о пользовательских привязках см. в разделе [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md).  
+ Существует два вида привязок: предопределенная и пользовательская. Предопределенные привязки содержат полезные комбинации элементов, которые используются в общих сценариях. Для списка предопределенных типов связывания, [System-Provided Bindings](system-provided-bindings.md)которые предоставляет WCF, см. Если ни одна из стандартных коллекций привязок не имеет нужного для приложения службы сочетания возможностей, для соответствия требованиям приложения можно создать специальные привязки. Для получения дополнительной информации о пользовательских привязок, см [ \<пользовательскихОбязательные>](../configure-apps/file-schema/wcf/custombinding.md).  
   
- В следующих четырех примерах показаны наиболее распространенные конфигурации привязки, используемые для настройки службы WCF.  
+ Следующие четыре примера иллюстрируют наиболее распространенные обязательные конфигурации, используемые для настройки службы WCF.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Указание конечной точки для использования типа привязки  
  В первом примере показано, как указать конечную точку, настроенную по адресу, контракту и привязке.  
@@ -51,14 +51,14 @@ ms.locfileid: "72320669"
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
   <!-- This section is optional with the default configuration introduced  
        in .NET Framework 4. -->  
-  <endpoint   
+  <endpoint
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
       binding="basicHttpBinding" />
 </service>  
 ```  
   
- В данном примере атрибут `name` указывает на тип службы, для которой предназначена конфигурация. При создании в коде при помощи контракта `HelloWorld` служба инициализируется со всеми конечными точками, указанными в конфигурации примера. Если сборка реализует только один контракт службы, атрибут `name` можно опустить, так как служба использует единственный доступный тип. Атрибут принимает строку, которая должна иметь формат `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ В данном примере атрибут `name` указывает на тип службы, для которой предназначена конфигурация. При создании в коде при помощи контракта `HelloWorld` служба инициализируется со всеми конечными точками, указанными в конфигурации примера. Если сборка выполняет только один `name` контракт службы, атрибут может быть опущен, поскольку служба использует единственный доступный тип. Атрибут принимает строку, которая должна иметь формат `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  Атрибут `address` указывает универсальный код ресурса (URI), который другие конечные точки используют для связи со службой. Универсальный код ресурса (URI) может быть как абсолютным, так и относительным путем. Если указан относительный адрес, от узла ожидается предоставление базового адреса, подходящего для используемой в привязке схемы транспорта. Если адрес не настроен, в качестве базового адреса используется адрес соответствующей конечной точки.  
   
@@ -76,20 +76,20 @@ ms.locfileid: "72320669"
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
-  <endpoint   
+  <endpoint
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
       binding="basicHttpBinding" />
 </service>  
 <bindings>  
-    <basicHttpBinding   
+    <basicHttpBinding
         receiveTimeout="00:00:01"  
     />  
 </bindings>  
 ```  
   
 ## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Настройка поведения для применения к службе  
- В следующем примере специальное поведение настраивается для типа службы. Элемент `ServiceMetadataBehavior` используется для включения [средства служебной программы метаданных ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) для запроса службы и создания документов языка описания веб-служб (WSDL) из метаданных.  
+ В следующем примере специальное поведение настраивается для типа службы. Элемент `ServiceMetadataBehavior` используется для того, чтобы позволить [Utility Tool ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) задать запрос службы и создать документы языка описания web-сервисов (WSDL) из метаданных.  
   
 > [!NOTE]
 > Если задать определенное имя для поведения, то значение `behaviorConfiguration`, указанное в разделе службы или конечной точки, должно совпадать с этим именем.  
@@ -97,13 +97,13 @@ ms.locfileid: "72320669"
 ```xml  
 <behaviors>  
     <behavior>  
-        <ServiceMetadata httpGetEnabled="true" />   
+        <ServiceMetadata httpGetEnabled="true" />
     </behavior>  
 </behaviors>  
 <services>  
-    <service   
+    <service
        name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-       <endpoint   
+       <endpoint
           address="http://computer:8080/Hello"  
           contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
           binding="basicHttpBinding" />
@@ -116,7 +116,7 @@ ms.locfileid: "72320669"
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
 ## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Указание службы с двумя конечными точками при помощи различных значений привязки  
- В последнем примере две конечные точки настраиваются для типа службы `HelloWorld`. Каждая конечная точка использует другой настраиваемый атрибут `bindingConfiguration` для того же типа привязки (каждый из них изменяет `basicHttpBinding`).  
+ В последнем примере две конечные точки настраиваются для типа службы `HelloWorld`. Каждая конечная точка `bindingConfiguration` использует различные индивидуальные атрибуты `basicHttpBinding`одного и того же типа связывания (каждая изменяет).  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -132,11 +132,11 @@ ms.locfileid: "72320669"
         bindingConfiguration="Secure" />
 </service>  
 <bindings>  
-    <basicHttpBinding   
+    <basicHttpBinding
         name="shortTimeout"  
-        timeout="00:00:00:01"   
+        timeout="00:00:00:01"
      />  
-     <basicHttpBinding   
+     <basicHttpBinding
         name="Secure">  
         <Security mode="Transport" />  
      </basicHttpBinding>
@@ -151,17 +151,17 @@ ms.locfileid: "72320669"
     <add scheme="https" binding="basicHttpBinding" bindingConfiguration="Secure" />  
 </protocolMapping>  
 <bindings>  
-    <basicHttpBinding   
+    <basicHttpBinding
         name="shortTimeout"  
-        timeout="00:00:00:01"   
+        timeout="00:00:00:01"
      />  
-     <basicHttpBinding   
+     <basicHttpBinding
         name="Secure" />  
         <Security mode="Transport" />  
 </bindings>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Упрощенная конфигурация](simplified-configuration.md)
 - [Привязки, предоставляемые системой](system-provided-bindings.md)

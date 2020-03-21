@@ -1,6 +1,6 @@
 ---
-title: Функция Блессивбемсервицес (Справочник по неуправляемым API)
-description: Функция Блессивбемсервицес указывает, допускают ли учетные данные пользователя доступ к классу IWbemServices.
+title: Функция BlessIWbemServices (Неуправляемая справка API)
+description: Функция BlessIWbemServices указывает, позволяют ли учетные данные пользователей получить доступ к классу IWbemServices.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b15af840cc00b3ec261604db4f3625c6b975d3e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138783"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176868"
 ---
 # <a name="blessiwbemservices-function"></a>Функция BlessIWbemServices
-Указывает, допускают ли учетные данные пользователя доступ к указанному классу [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) .   
+Указывает, позволяют ли учетные данные пользователя получить доступ к указанному классу [IWbemServices.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -31,10 +31,10 @@ ms.locfileid: "73138783"
 ```cpp
 HRESULT BlessIWbemServices (
    [in] IWbemServices* pIWbemServices,
-   [in] BSTR strUser, 
-   [in] BSTR strPassword, 
-   [in] BSTR strAuthority, 
-   [in] DWORD impLevel, 
+   [in] BSTR strUser,
+   [in] BSTR strPassword,
+   [in] BSTR strAuthority,
+   [in] DWORD impLevel,
    [in] DWORD authnLevel
 );
 ```  
@@ -42,43 +42,43 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Параметры
 
 `pIWbemServices`\
-окне Указатель на объект [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) , для которого требуются разрешения.
+(в) Указатель на объект [IWbemServices,](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) для которого требуются разрешения.
 
 `strUser`\
-окне Имя пользователя.
+(в) Имя пользователя.
 
 `strPassword`\
-окне Пароль, связанный с `strUser`.
+(в) Пароль, связанный с `strUser`.
 
 `strAuthority`\
-окне Доменное имя пользователя. Дополнительные сведения см. в описании функции [коннектсервервми](connectserverwmi.md) .
+(в) Доменное имя пользователя. Дополнительную информацию можно узнать из функции [ConnectServerWmi.](connectserverwmi.md)
 
 `impLevel`\
-окне Уровень олицетворения.
+(в) Уровень олицетворения.
 
 `authnLevel`\
-окне Уровень авторизации.
+(в) Уровень авторизации.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определены в файле заголовка *Winerror. h* , или их можно определить как константы в коде:
+Следующие значения, возвращенные этой функцией, определяются в файле заголовка *WinError.h* или вы можете определить их как константы в коде:
 
-|Константа  |значения  |Описание  |
+|Постоянно  |Значение  |Описание  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов недопустимы. |
-| `E_POINTER` | 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 
-| `E_FAIL` | 0x80000008 | Произошла неопределенная ошибка. |
-| `E_OUTOFMEMORY` | 0x80000002 | Недостаточно свободной памяти для выполнения операции. | 
-| `S_OK` | 0 | Вызов функции выполнен успешно. | 
+| `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов недействительны. |
+| `E_POINTER` | 0x80004003 | Параметр `pIWbemServices` равен `null`. |
+| `E_FAIL` | 0x80000008 | Возникла неопределенная ошибка. |
+| `E_OUTOFMEMORY` | 0x80000002 | Недостаточно памяти доступно для выполнения операции. |
+| `S_OK` | 0 | Вызов функции был успешным. |
 
 ## <a name="requirements"></a>Требования  
 
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

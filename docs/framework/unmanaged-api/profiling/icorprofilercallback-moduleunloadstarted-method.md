@@ -15,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: 7e43f58f619aaa63fa2294dd3e989026dcdfc604
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fcfdddbd5316c098754ea7b0d4714b050c64fe55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866134"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175152"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>Метод ICorProfilerCallback::ModuleUnloadStarted
-Уведомляет профилировщик о выгрузке модуля.  
+Уведомляет профайлера о том, что модуль выгружается.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT ModuleUnloadStarted(  
-    [in] ModuleID moduleId);   
+    [in] ModuleID moduleId);
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- окне Идентификатор выгружается модуля.  
+ (в) Идентификатор разгрузки модуля.  
   
-## <a name="remarks"></a>Заметки  
- Значение `moduleId` недопустимо для информационного запроса после возврата метода `ModuleUnloadStarted` — это последний шанс профилировщика получить сведения об этом модуле.  
+## <a name="remarks"></a>Remarks  
+ Значение не `moduleId` является действительным для запроса информации после возврата `ModuleUnloadStarted` метода - это последний шанс профайлера получить информацию об этом модуле.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,7 +48,7 @@ HRESULT ModuleUnloadStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Метод ModuleUnloadFinished](icorprofilercallback-moduleunloadfinished-method.md)

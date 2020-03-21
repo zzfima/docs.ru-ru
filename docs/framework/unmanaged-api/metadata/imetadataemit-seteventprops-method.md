@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450316"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177531"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Метод IMetaDataEmit::SetEventProps
-Задает или обновляет указанную функцию события, определенного при предыдущем вызове метода [IMetaDataEmit::D ефинивент](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Устанавливает или обновляет указанную функцию события, определяемую предыдущим вызовом [на IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT SetEventProps (  
-    [in]  mdEvent     ev,   
-    [in]  DWORD       dwEventFlags,   
-    [in]  mdToken     tkEventType,   
-    [in]  mdMethodDef mdAddOn,   
-    [in]  mdMethodDef mdRemoveOn,   
-    [in]  mdMethodDef mdFire,   
-    [in]  mdMethodDef rmdOtherMethods[]   
+    [in]  mdEvent     ev,
+    [in]  DWORD       dwEventFlags,
+    [in]  mdToken     tkEventType,
+    [in]  mdMethodDef mdAddOn,
+    [in]  mdMethodDef mdRemoveOn,
+    [in]  mdMethodDef mdFire,
+    [in]  mdMethodDef rmdOtherMethods[]
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `ev`  
- окне Токен события.  
+ (в) Токен события.  
   
  `dwEventFlags`  
- окне Флаги событий. Это битовая маска `CorEventAttr` значений.  
+ (в) Флаги событий. Это битмаска ценностей. `CorEventAttr`  
   
  `tkEventType`  
- окне Токен для класса событий. Это либо `mdTypeDef`, либо маркер `mdTypeRef`.  
+ (в) Токен для класса событий. Это либо `mdTypeDef` знак, `mdTypeRef` либо жетон.  
   
  `mdAddOn`  
- окне Метод, используемый для подписки на событие, или значение null.  
+ (в) Метод, используемый для подписки на событие, или нулевой.  
   
  `mdRemoveOn`  
- окне Метод, используемый для отмены подписки на событие или значение null.  
+ (в) Метод, используемый для отписаться от события или свести на нет.  
   
  `mdFire`  
- окне Метод, используемый (производным классом) для вызова события.  
+ (в) Метод, используемый (производным классом) для поднятия события.  
   
  `rmdOtherMethods[]`  
- окне Массив токенов для других методов, связанных с событием. Последний элемент массива должен быть `mdMethodDefNil`.  
+ (в) Массив токенов для других методов, связанных с событием. Последний элемент массива `mdMethodDefNil`должен быть.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

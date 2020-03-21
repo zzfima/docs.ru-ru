@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-ms.openlocfilehash: 0a1d244a4bf077970d2031c3c3b2bc56a0dd3d79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe0b4b7fef0d05c4acc06dad5bc8a4eaf0722c9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426820"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175581"
 ---
 # <a name="imetadataemitsetrva-method"></a>Метод IMetaDataEmit::SetRVA
-Задает относительный виртуальный адрес указанного метода.  
+Устанавливает относительный виртуальный адрес указанного метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT SetRVA (  
-    [in]  mdMethodDef  md,   
-    [in]  ULONG        ulRVA   
+    [in]  mdMethodDef  md,
+    [in]  ULONG        ulRVA
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `md`  
- окне Токен для реализации целевого метода или метода.  
+ (в) Токен для реализации целевого метода или метода.  
   
  `ulRVA`  
- окне Адрес кода или области данных.  
+ (в) Адрес кода или области данных.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

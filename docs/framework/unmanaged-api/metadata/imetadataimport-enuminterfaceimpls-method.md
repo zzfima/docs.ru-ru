@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b535fdd5027a26cc4dd0eafec9883f0186773dd1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338063"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175503"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Метод IMetaDataImport::EnumInterfaceImpls
-Перечисляет все интерфейсы, реализованные указанным `TypeDef`. 
+Перечисляет все интерфейсы, реализованные `TypeDef`указанным .
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT EnumInterfaceImpls (  
-   [in, out]  HCORENUM       *phEnum,   
+   [in, out]  HCORENUM       *phEnum,
    [in]   mdTypeDef          td,  
-   [out]  mdInterfaceImpl    rImpls[],   
+   [out]  mdInterfaceImpl    rImpls[],
    [in]   ULONG              cMax,  
    [out]  ULONG*             pcImpls  
 );  
@@ -39,41 +39,41 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель.  
+ (в, вне) Указатель на регистратор.  
   
  `td`  
- окне Токен TypeDef, маркеры MethodDef которого представляют реализации интерфейса для перечисления.  
+ (в) В перечне будет перечислен токен TypeDef, токены которого MethodDef, представляющие реализации интерфейса.  
   
  `rImpls`  
- заполняет Массив, используемый для хранения маркеров MethodDef.  
+ (ваут) Массив, используемый для хранения токенов MethodDef.  
   
  `cMax`  
- окне Максимальная длина массива `rImpls`.  
+ (в) Максимальная длина `rImpls` массива.  
   
  `pcImpls`  
- заполняет Фактическое число токенов, возвращаемых в `rImpls`.  
+ (ваут) Фактическое количество токенов, `rImpls`возвращенных в .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` успешно возвращено.|  
-|`S_FALSE`|Отсутствуют токены MethodDef для перечисления. В этом случае `pcImpls` имеет значение 0.|  
+|`S_OK`|`EnumInterfaceImpls`вернулся успешно.|  
+|`S_FALSE`|Нет токенов MethodDef для перечисления. В этом `pcImpls` случае, устанавливается до нуля.|  
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Перечисление Возвращает коллекцию токенов `mdInterfaceImpl` для каждого интерфейса, реализованного с помощью указанного `TypeDef`. Маркеры интерфейса возвращаются в том порядке, в котором были указаны интерфейсы (с помощью `DefineTypeDef` или `SetTypeDefProps`). Свойства возвращенных маркеров `mdInterfaceImpl` можно запрашивать с помощью [жетинтерфацеимплпропс](imetadataimport-getinterfaceimplprops-method.md).
+Перечисление возвращает коллекцию `mdInterfaceImpl` токенов для каждого интерфейса, реализованного указанным `TypeDef`. Токены интерфейса возвращаются в порядке, указанном интерфейсами (через `DefineTypeDef` или). `SetTypeDefProps` Свойства возвращенных `mdInterfaceImpl` токенов можно поставить под вопрос с помощью [GetInterfaceImplProps.](imetadataimport-getinterfaceimplprops-method.md)
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861142"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177011"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Метод ICorProfilerObjectEnum::Next
-Возвращает указанное количество смежных объектов из последовательной коллекции объектов, начиная с текущей позиции перечислителя в последовательности.  
+Получает указанное количество смежных объектов из последовательной коллекции объектов, начиная с текущего положения перечисленного в последовательности.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG                    celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]    
+    [out, size_is(celt), length_is(*pceltFetched)]
         ObjectID                  objects[],  
     [out] ULONG                   *pceltFetched  
 );  
@@ -41,7 +41,7 @@ HRESULT Next (
  [in] Количество объектов, которые должны быть получены.  
   
  `objects`  
- заполняет Массив значений `ObjectID`, каждый из которых представляет извлеченный объект.  
+ (ваут) Массив значений, `ObjectID` каждое из которых представляет собой извлеченный объект.  
   
  `pceltFetched`  
  [out] Указатель на число элементов, фактически извлеченных в массив `objects`.  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)
