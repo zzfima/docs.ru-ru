@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 4ac0216ce2965d555f7283ba66a085ea9d7cac3c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783838"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149561"
 ---
-# <a name="getschema-and-schema-collections"></a><span data-ttu-id="824c3-102">Коллекции GetSchema и Schema</span><span class="sxs-lookup"><span data-stu-id="824c3-102">GetSchema and Schema Collections</span></span>
-<span data-ttu-id="824c3-103">Классы **Connection** в каждом из управляемых поставщиков .NET Framework реализуют метод **GetSchema** , который используется для получения сведений о схеме базы данных, подключенной в данный момент, и сведений о схеме, возвращаемых  **Метод GetSchema** имеет форму <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="824c3-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="824c3-104">Метод **GetSchema** является перегруженным методом, который предоставляет необязательные параметры для указания возвращаемой коллекции схем и ограниченный объем возвращаемой информации.</span><span class="sxs-lookup"><span data-stu-id="824c3-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
+# <a name="getschema-and-schema-collections"></a><span data-ttu-id="0cf86-102">Коллекции GetSchema и Schema</span><span class="sxs-lookup"><span data-stu-id="0cf86-102">GetSchema and Schema Collections</span></span>
+<span data-ttu-id="0cf86-103">Классы **подключения** в каждом из управляемых провайдеров .NET используют метод **GetSchema,** который используется для получения информации о схеме, которая в настоящее время подключена, и информация о схеме, возвращенная из метода **GetSchema,** поступает в виде <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="0cf86-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="0cf86-104">Метод **GetSchema** — это перегруженный метод, который предоставляет дополнительные параметры для определения сбора схемы для возврата и ограничения объема возвращенной информации.</span><span class="sxs-lookup"><span data-stu-id="0cf86-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
   
-## <a name="specifying-the-schema-collections"></a><span data-ttu-id="824c3-105">Указание коллекций схем</span><span class="sxs-lookup"><span data-stu-id="824c3-105">Specifying the Schema Collections</span></span>  
- <span data-ttu-id="824c3-106">Первый необязательный параметр метода **GetSchema** — это имя коллекции, которое указано в виде строки.</span><span class="sxs-lookup"><span data-stu-id="824c3-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="824c3-107">Существует два типа коллекций схем: стандартные (общие для всех поставщиков) и специальные (определенные для каждого поставщика).</span><span class="sxs-lookup"><span data-stu-id="824c3-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
+## <a name="specifying-the-schema-collections"></a><span data-ttu-id="0cf86-105">Указание коллекций схем</span><span class="sxs-lookup"><span data-stu-id="0cf86-105">Specifying the Schema Collections</span></span>  
+ <span data-ttu-id="0cf86-106">Первым дополнительным параметром метода **GetSchema** является имя коллекции, которое указывается как строка.</span><span class="sxs-lookup"><span data-stu-id="0cf86-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="0cf86-107">Существует два типа коллекций схем: стандартные (общие для всех поставщиков) и специальные (определенные для каждого поставщика).</span><span class="sxs-lookup"><span data-stu-id="0cf86-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
   
- <span data-ttu-id="824c3-108">Можно запросить управляемый поставщик .NET Framework, чтобы определить список поддерживаемых коллекций схем, вызвав метод **GetSchema** без аргументов или с именем коллекции схем «MetaDataCollections».</span><span class="sxs-lookup"><span data-stu-id="824c3-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="824c3-109">При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.</span><span class="sxs-lookup"><span data-stu-id="824c3-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
+ <span data-ttu-id="0cf86-108">Вы можете задать запрос управляемому провайдеру .NET Framework для определения списка поддерживаемых коллекций схем, позвонив в метод **GetSchema** без каких-либо аргументов или с именем коллекции схемы "MetaDataCollections".</span><span class="sxs-lookup"><span data-stu-id="0cf86-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="0cf86-109">При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.</span><span class="sxs-lookup"><span data-stu-id="0cf86-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
   
-### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="824c3-110">Получение примера коллекций схем</span><span class="sxs-lookup"><span data-stu-id="824c3-110">Retrieving Schema Collections Example</span></span>  
- <span data-ttu-id="824c3-111">В следующих примерах показано, как использовать <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> метод поставщика данных .NET Framework для класса SQL Server <xref:System.Data.SqlClient.SqlConnection> , чтобы получить сведения о схеме всех таблиц, содержащихся в образце базы данных **AdventureWorks** :</span><span class="sxs-lookup"><span data-stu-id="824c3-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
+### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="0cf86-110">Получение примера коллекций схем</span><span class="sxs-lookup"><span data-stu-id="0cf86-110">Retrieving Schema Collections Example</span></span>  
+ <span data-ttu-id="0cf86-111">Следующие примеры демонстрируют, <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> как использовать метод поставщика рамочных <xref:System.Data.SqlClient.SqlConnection> данных .NET для класса S'L Server для получения информации о схемах обо всех таблицах, содержащихся в базе данных **образцов AdventureWorks:**</span><span class="sxs-lookup"><span data-stu-id="0cf86-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -42,7 +42,7 @@ Module Module1
    End Sub  
   
    Private Function GetConnectionString() As String  
-      ' To avoid storing the connection string in your code,    
+      ' To avoid storing the connection string in your code,
       ' you can retrieve it from a configuration file.  
       Return "Data Source=(local);Database=AdventureWorks;" _  
          & "Integrated Security=true;"  
@@ -104,7 +104,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="824c3-112">См. также</span><span class="sxs-lookup"><span data-stu-id="824c3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cf86-112">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="0cf86-112">See also</span></span>
 
-- [<span data-ttu-id="824c3-113">Извлечение сведений о схеме базы данных</span><span class="sxs-lookup"><span data-stu-id="824c3-113">Retrieving Database Schema Information</span></span>](retrieving-database-schema-information.md)
-- [<span data-ttu-id="824c3-114">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="824c3-114">ADO.NET Overview</span></span>](ado-net-overview.md)
+- [<span data-ttu-id="0cf86-113">Извлечение сведений о схеме базы данных</span><span class="sxs-lookup"><span data-stu-id="0cf86-113">Retrieving Database Schema Information</span></span>](retrieving-database-schema-information.md)
+- [<span data-ttu-id="0cf86-114">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0cf86-114">ADO.NET Overview</span></span>](ado-net-overview.md)
