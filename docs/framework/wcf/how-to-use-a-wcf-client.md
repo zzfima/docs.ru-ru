@@ -1,5 +1,5 @@
 ---
-title: Учебник. Использование клиента Windows Communication Foundation
+title: 'Учебник: Используйте клиент Фонда связи Windows'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,34 +7,34 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: d0ef525db16b2b2cedeea5fa03376fb4f3489a4a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d2357c134aef8da204dcdb19d6c1fc93cfdc068c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346774"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184012"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Учебник. Использование клиента Windows Communication Foundation
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Учебник: Используйте клиент Фонда связи Windows
 
-В этом руководстве описываются пять задач, необходимых для создания базового приложения Windows Communication Foundation (WCF). Общие сведения о учебниках см. в разделе [учебник. Начало работы с Windows Communication Foundation приложениями](getting-started-tutorial.md).
+В этом уроке описана последняя из пяти задач, необходимых для создания базового приложения Windows Communication Foundation (WCF). Для обзора учебников [см.](getting-started-tutorial.md)
 
-После создания и настройки прокси-сервера Windows Communication Foundation (WCF) необходимо создать экземпляр клиента и скомпилировать клиентское приложение. Затем его можно использовать для взаимодействия со службой WCF. 
+После того как вы создали и настроили прокси-сервер Windows Communication Foundation (WCF), вы создаете экземпляр клиента и компилируете клиентское приложение. Затем вы используете его для связи с службой WCF.
 
-В этом руководстве вы узнаете, как:
+В этом руководстве описано следующее:
 > [!div class="checklist"]
 >
 > - Добавьте код для использования клиента WCF.
-> - Протестируйте клиент WCF.
+> - Проверьте клиента WCF.
 
 ## <a name="add-code-to-use-the-wcf-client"></a>Добавление кода для использования клиента WCF
 
-Клиентский код выполняет следующие действия:
+Код клиента делает следующие шаги:
 
-- Создает экземпляр клиента WCF.
+- Множец клиента WCF.
 - Вызывает операции службы из созданной учетной записи-посредника.
-- Закрывает клиент после завершения вызова операции.
+- Закрывает клиента после завершения вызова операции.
 
-Откройте файл **Program.CS** или **Module1. vb** из проекта **GettingStartedClient** и замените его код следующим кодом:
+Откройте файл **Program.cs** или **Module1.vb** из проекта **GettingStartedClient** и замените его код следующим кодом:
 
 ```csharp
 using System;
@@ -134,27 +134,27 @@ Module Module1
 End Module
 ```
 
-Обратите внимание на инструкцию C#`using` (для Visual) или `Imports` (для Visual Basic), которая импортирует `GettingStartedClient.ServiceReference1`. Эта инструкция импортирует код, созданный Visual Studio с помощью функции **Добавление ссылки на службу** . Код создает прокси-сервер WCF и вызывает каждую из операций службы, предоставляемых службой калькулятора. Затем он закрывает прокси-сервер и завершает программу.
+Обратите `using` внимание на (для `Imports` Visual C) или (для Visual Basic) заявление, импорткоторое `GettingStartedClient.ServiceReference1`. Это заявление импортирует код, созданный Visual Studio с функцией **Справки добавленной службы.** Код мгновенно вызывает прокси WCF и вызывает каждую из операций службы, которые предоставляет служба калькулятора. Затем он закрывает прокси и завершает программу.
 
-## <a name="test-the-wcf-client"></a>Тестирование клиента WCF
+## <a name="test-the-wcf-client"></a>Протестуйте клиента WCF
 
-### <a name="test-the-application-from-visual-studio"></a>Тестирование приложения из Visual Studio
+### <a name="test-the-application-from-visual-studio"></a>Протестируйте приложение от Visual Studio
 
-1. Сохраните и создайте решение.
+1. Сохраните решение и выполните его построение.
 
-2. Выберите папку **жеттингстартедлиб** , а затем в контекстном меню выберите **Назначить запускаемым проектом** .
+2. Выберите папку **GettingStartedLib,** а затем выберите **Set as Startup Project** из меню ярлыка.
 
-3. В **меню запускаемые проекты**выберите **жеттингстартедлиб** из раскрывающегося списка, а затем выберите **выполнить** или нажмите клавишу **F5**.
+3. Из **startup Projects**выберите **GettingStartedLib** из списка выпадающих, а затем выберите **Run** или нажмите **F5.**
 
-### <a name="test-the-application-from-a-command-prompt"></a>Тестирование приложения из командной строки
+### <a name="test-the-application-from-a-command-prompt"></a>Проверить приложение с помощью командного запроса
 
-1. Откройте командную строку от имени администратора и перейдите к каталогу решения Visual Studio. 
+1. Откройте запрос команды в качестве администратора, а затем перейдите в каталог решений Visual Studio.
 
-2. Чтобы запустить службу, введите *жеттингстартедхост\бин\дебуг\жеттингстартедхост.ЕКСЕ*.
+2. Для запуска сервиса: Введите *GettingStartedHost-bin-Debug-GettingStartedHost.exe*.
 
-3. Чтобы запустить клиент: Откройте еще одну командную строку, перейдите в каталог решения Visual Studio и введите *жеттингстартедклиент\бин\дебуг\жеттингстартедклиент.ЕКСЕ*.
+3. Для запуска клиента: откройте другую команду, перейдите в каталог решений Visual Studio, а затем введите *GettingStartedClient-bin-Debug-GettingStartedClient.exe*.
 
-   *GettingStartedHost. exe* выдает следующие выходные данные:
+   *GettingStartedHost.exe* производит следующий выход:
 
    ```text
    The service is ready.
@@ -170,7 +170,7 @@ End Module
    Return: 3.14285714285714
    ```
 
-   *GettingStartedClient. exe* выдает следующие выходные данные:
+   *GettingStartedClient.exe* производит следующие выходы:
 
    ```text
    Add(100,15.99) = 115.99
@@ -181,17 +181,17 @@ End Module
    Press <Enter> to terminate the client.
    ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Теперь вы выполнили все задачи в руководстве по началу работы с WCF. В этом руководстве вы узнали, как:
+Теперь вы завершили все задачи в WCF начать учебник. В этом руководстве вы узнали, как выполнять следующие задачи:
 
-В этом руководстве вы узнаете, как:
+В этом руководстве описано следующее:
 > [!div class="checklist"]
 >
 > - Добавьте код для использования клиента WCF.
-> - Протестируйте клиент WCF.
+> - Проверьте клиента WCF.
 
-При возникновении проблем или ошибок во всех шагах выполните действия, описанные в статье Устранение неполадок, чтобы устранить их.
+Если у вас есть проблемы или ошибки в любом из шагов, выполните шаги в статье устранения неполадок, чтобы исправить их.
 
 > [!div class="nextstepaction"]
-> [Устранение неполадок в учебниках Приступая к работе с WCF](troubleshooting-the-getting-started-tutorial.md)
+> [Troubleshoot Начало начать с WCF учебники](troubleshooting-the-getting-started-tutorial.md)

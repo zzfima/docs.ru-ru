@@ -2,12 +2,12 @@
 title: Сохраняемая дуплексная корреляция
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: bb73cef5190a0b146e713ef1adae24219dc2eed8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291577"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185172"
 ---
 # <a name="durable-duplex-correlation"></a>Сохраняемая дуплексная корреляция
 Сохраняемую дуплексную корреляцию, также называемую корреляцией обратных вызовов, удобно использовать, когда служба рабочего процесса должна отправлять обратный вызов исходному вызывающему объекту. В отличие от дуплекса WCF, обратный вызов может выполняться в любой момент в будущем и не связан с одним и тем же каналом или временем существования канала. Единственное требование - у вызывающего должна быть конечная точка, прослушивающая сообщение обратного вызова. Благодаря этому обеспечивается возможность взаимодействия двух служб рабочего процесса в долговременных диалогах. В данном разделе приведены общие сведения о сохраняемой дуплексной корреляции.  
@@ -16,7 +16,7 @@ ms.locfileid: "72291577"
  Чтобы использовать сохраняемую дуплексную корреляцию, две службы должны использовать контекстную привязку, которая поддерживает двусторонние операции, такие как <xref:System.ServiceModel.NetTcpContextBinding> или <xref:System.ServiceModel.WSHttpContextBinding>. Вызывающая служба регистрирует <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> с привязкой на их клиентской конечной точке <xref:System.ServiceModel.Endpoint>. Принимающая служба получает эти данные в первоначальном вызове, а затем использует их для собственных <xref:System.ServiceModel.Endpoint> в действии <xref:System.ServiceModel.Activities.Send>, выполняющем обратный вызов вызывающей службы. В этом примере две службы взаимодействуют друг с другом. Первая служба вызывает метод для второй службы, а затем ожидает ответа. Второй службе известно имя метода обратного вызова, но во время разработки конечная точка службы, реализующая этот метод, неизвестна.  
   
 > [!NOTE]
-> Сохраняемая дуплексная корреляция может быть использована только в случае, если параметр <xref:System.ServiceModel.Channels.AddressingVersion> конечной точки установлен в значение <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Если это не так, возникает исключение <xref:System.InvalidOperationException> со следующим сообщением: "Сообщение содержит заголовок контекста обратного вызова со ссылкой на конечную точку для [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Контекст обратного вызова можно передавать, только если для AddressingVersion настроено значение "WSAddressing10".
+> Сохраняемая дуплексная корреляция может быть использована только в случае, если параметр <xref:System.ServiceModel.Channels.AddressingVersion> конечной точки установлен в значение <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Если это не так, то <xref:System.InvalidOperationException> исключение брошено со следующим сообщением: "Сообщение содержит заголовок контекста обратного вызова с конечной точкой ссылки для [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Контекст обратного вызова может передаваться только тогда, когда AddressingVersion настроен с 'WSAddressing10'.
   
  В следующем примере выполняется размещение службы рабочего процесса, с помощью которой создается обратный вызов <xref:System.ServiceModel.Endpoint> с помощью привязки <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -51,7 +51,7 @@ Receive StartOrder = new Receive
   
 Send GetItems = new Send  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -65,7 +65,7 @@ Send GetItems = new Send
         AddressUri = new Uri("http://localhost:8081/Service2"),  
         Binding = new WSHttpContextBinding  
         {  
-            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")                          
+            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")
         }  
     }  
 };  
@@ -127,7 +127,7 @@ Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle
   
 Receive StartItems = new Receive  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -189,7 +189,7 @@ Activity wf = new Sequence
 ```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
-Press enter to exit.   
+Press enter to exit.
 WF1 - Started  
 WF2 - Request Received  
 WF1 - Request Submitted  

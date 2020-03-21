@@ -2,15 +2,15 @@
 title: Адресация
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 2a737552ef5ea2a8e4544f9ec2c2f84b4b994a75
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4403ac2bf8e0e5193006f6ec19b24a9bcb00bf35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183979"
 ---
 # <a name="addressing"></a>Адресация
-В образце адресации показаны различные аспекты и возможности адресов конечных точек. Образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md). В этом образце служба является резидентной. Как служба, так и клиент являются консольными приложениями. Служба определяет несколько конечных точек, используя сочетание их относительных и абсолютных адресов.  
+В образце адресации показаны различные аспекты и возможности адресов конечных точек. Образец основан на [запущенном.](../../../../docs/framework/wcf/samples/getting-started-sample.md) В этом образце служба является резидентной. Как служба, так и клиент являются консольными приложениями. Служба определяет несколько конечных точек, используя сочетание их относительных и абсолютных адресов.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -40,7 +40,7 @@ ms.locfileid: "74715878"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- В этом случае относительный адрес пустой (""), поэтому адрес конечной точки совпадает с базовым адресом. Фактический адрес конечной точки — `http://localhost:8000/servicemodelsamples/service`.
+ В этом случае относительный адрес пустой (""), поэтому адрес конечной точки совпадает с базовым адресом. Фактический адрес конечных точек `http://localhost:8000/servicemodelsamples/service`.
   
  Во втором определении конечной точки также задается относительный адрес, как показано в следующем образце конфигурации.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74715878"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Относительный адрес, "test", присоединяется к базовому адресу. Фактический адрес конечной точки — `http://localhost:8000/servicemodelsamples/service/test`.
+ Относительный адрес, "test", присоединяется к базовому адресу. Фактический адрес конечных точек `http://localhost:8000/servicemodelsamples/service/test`.
   
  В третьем определении конечной точки задается абсолютный адрес, как показано в следующем образце конфигурации.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74715878"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечной точки — `http://localhost:8001/hello/servicemodelsamples`.
+ Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечных точек `http://localhost:8001/hello/servicemodelsamples`.
   
- В четвертом определении конечной точки задаются абсолютный адрес и другой транспорт - TCP. Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечной точки — `net.tcp://localhost:9000/servicemodelsamples/service`.
+ В четвертом определении конечной точки задаются абсолютный адрес и другой транспорт - TCP. Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечных точек `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -118,20 +118,20 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
     > [!NOTE]
     > Если для восстановления конфигурации этого образца используется программа Svcutil.exe, измените имя конечной точки в конфигурации клиента, чтобы оно соответствовало клиентскому коду.  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  

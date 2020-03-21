@@ -2,15 +2,15 @@
 title: Контракт ошибок
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: d8ea7010bef389b49f68c811565a641a580e230a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c8e93f73d150132c9d6750b81ba2ade944808d40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716956"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183668"
 ---
 # <a name="fault-contract"></a>Контракт ошибок
-Этот образец демонстрирует передачу информации об ошибке из службы клиенту. Образец основан на [Начало работые](../../../../docs/framework/wcf/samples/getting-started-sample.md)с дополнительным кодом, добавленным в службу для преобразования внутреннего исключения в ошибку. Клиент пытается выполнить операцию деления на ноль для принудительного сбоя службы.  
+Этот образец демонстрирует передачу информации об ошибке из службы клиенту. Выборка основана на [Getting Started,](../../../../docs/framework/wcf/samples/getting-started-sample.md)с некоторым дополнительным кодом, добавленным в службу для преобразования внутреннего исключения в неисправность. Клиент пытается выполнить операцию деления на ноль для принудительного сбоя службы.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -38,7 +38,7 @@ public interface ICalculator
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class MathFault  
-{      
+{
     private string operation;  
     private string problemType;  
   
@@ -49,7 +49,7 @@ public class MathFault
         set { operation = value; }  
     }  
   
-    [DataMember]          
+    [DataMember]
     public string ProblemType  
     {  
         get { return problemType; }  
@@ -113,7 +113,7 @@ catch (FaultException<MathFault> e)
 </behaviors>  
 ```  
   
- Кроме того, поведение должно быть связано со службой путем установки атрибута `behaviorConfiguration` службы в файле конфигурации в значение "Калкулаторсервицебехавиор".  
+ Кроме того, поведение должно быть связано `behaviorConfiguration` с службой, установив атрибут службы в файле конфигурации на "CalculatorServiceBehavior".  
   
  Для перехвата таких сбоев на клиенте необходимо перехватывать неуниверсальное исключение <xref:System.ServiceModel.FaultException>.  
   
@@ -121,17 +121,17 @@ catch (FaultException<MathFault> e)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  

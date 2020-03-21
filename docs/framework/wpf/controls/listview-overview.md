@@ -8,84 +8,84 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 0148ded31f1c637f533f8e80427672a79ef05e02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2f336d1eb8dcdfec3c3c8059ba865147c6b6c825
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621276"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187523"
 ---
 # <a name="listview-overview"></a>Общие сведения об элементе управления ListView
-<xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях. Например, у пользователя может возникнуть необходимость в отображении элементов данных в таблице, а также в сортировке ее столбцов.  
+Элемент <xref:System.Windows.Controls.ListView> управления обеспечивает инфраструктуру для отображения набора элементов данных в различных макетах или представлениях. Например, у пользователя может возникнуть необходимость в отображении элементов данных в таблице, а также в сортировке ее столбцов.  
 
-<a name="WhatisaListView"></a>   
+<a name="WhatisaListView"></a>
 ## <a name="what-is-a-listview"></a>Понятие об элементе управления ListView  
- <xref:System.Windows.Controls.ListView> Элемент управления является <xref:System.Windows.Controls.ItemsControl> , производный от <xref:System.Windows.Controls.ListBox>. Как правило, его элементы являются элементами коллекции данных и представляются в виде <xref:System.Windows.Controls.ListViewItem> объектов. Объект <xref:System.Windows.Controls.ListViewItem> является <xref:System.Windows.Controls.ContentControl> и может содержать только один дочерний элемент. Но дочерним может быть любой визуальный элемент.  
+ Контроль <xref:System.Windows.Controls.ListView> является <xref:System.Windows.Controls.ItemsControl> то, что <xref:System.Windows.Controls.ListBox>происходит от . Как правило, его элементы являются членами <xref:System.Windows.Controls.ListViewItem> сбора данных и представлены в качестве объектов. A <xref:System.Windows.Controls.ListViewItem> является <xref:System.Windows.Controls.ContentControl> и может содержать только один элемент ребенка. Но дочерним может быть любой визуальный элемент.  
   
-<a name="DefiningaListViewView"></a>   
+<a name="DefiningaListViewView"></a>
 ## <a name="defining-a-view-mode-for-a-listview"></a>Определение режима представления для элемента управления ListView  
- Чтобы указать режим просмотра содержимого <xref:System.Windows.Controls.ListView> элемента управления, задайте <xref:System.Windows.Controls.ListView.View%2A> свойство. Одним из режимов, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет является <xref:System.Windows.Controls.GridView>, отображающий коллекцию элементов данных в таблице с настраиваемыми столбцами.  
+ Чтобы указать режим представления для <xref:System.Windows.Controls.ListView> содержимого элемента управления, вы установите свойство. <xref:System.Windows.Controls.ListView.View%2A> Один режим [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представления, <xref:System.Windows.Controls.GridView>который обеспечивает, который отображает сбор элементов данных в таблице, которая имеет настраиваемые столбцы.  
   
- В следующем примере показано определение <xref:System.Windows.Controls.GridView> для <xref:System.Windows.Controls.ListView> элемент управления, который отображает данные о сотрудниках.  
+ В следующем примере показано, <xref:System.Windows.Controls.ListView> как определить <xref:System.Windows.Controls.GridView> элемент управления, отображая информацию о сотрудниках.  
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  На следующем рисунке показано, как будут отображаться данные для предыдущего примера.  
   
- ![Снимок экрана с ListView с выводом GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![Скриншот, на который показан ListView с выходом GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
- Пользовательского режима представления можно создать, определив класс, наследуемый от <xref:System.Windows.Controls.ViewBase> класса. <xref:System.Windows.Controls.ViewBase> Класс предоставляет инфраструктуру, вам нужно создать пользовательское представление. Дополнительные сведения о создании пользовательского представления см. в разделе [Создание пользовательского режима представления для ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
+ Можно создать пользовательский режим представления, определив <xref:System.Windows.Controls.ViewBase> класс, который наследует из класса. Класс <xref:System.Windows.Controls.ViewBase> предоставляет инфраструктуру, необходимую для создания пользовательского представления. Дополнительные сведения о создании пользовательского представления см. в разделе [Создание пользовательского режима представления для ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
-<a name="BindingDatatoaListView"></a>   
+<a name="BindingDatatoaListView"></a>
 ## <a name="binding-data-to-a-listview"></a>Привязка данных к элементу управления ListView  
- Используйте <xref:System.Windows.Controls.ItemsControl.Items%2A> и <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойства, чтобы указать элементы для <xref:System.Windows.Controls.ListView> элемента управления. В следующем примере задается <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойство коллекции данных, которая называется `EmployeeInfoDataSource`.  
+ Используйте <xref:System.Windows.Controls.ItemsControl.Items%2A> <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> и свойства для <xref:System.Windows.Controls.ListView> указания элементов для элемента управления. Следующий пример <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> устанавливает свойство к сбору данных, который называется `EmployeeInfoDataSource`.  
   
  [!code-xaml[ListViewCode#ItemsSource](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
   
- В <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> привязать объекты к указанным полям данных. Следующий пример связывает <xref:System.Windows.Controls.GridViewColumn> объекта к полю данных путем указания <xref:System.Windows.Data.Binding> для <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> свойство.  
+ В <xref:System.Windows.Controls.GridView>объекты <xref:System.Windows.Controls.GridViewColumn> связываются с указанными полями данных. Следующий пример связывает <xref:System.Windows.Controls.GridViewColumn> объект с полем данных, указывая <xref:System.Windows.Data.Binding> для <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> свойства.  
   
  [!code-csharp[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
  [!code-vb[ListViewCode#GridViewColumnProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
  [!code-xaml[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
   
- Можно также указать <xref:System.Windows.Data.Binding> как часть <xref:System.Windows.DataTemplate> определение, которое используется для применения стиля к ячейкам столбца. В следующем примере <xref:System.Windows.DataTemplate> , определяемому с <xref:System.Windows.ResourceKey> задает <xref:System.Windows.Data.Binding> для <xref:System.Windows.Controls.GridViewColumn>. Обратите внимание, что в этом примере не определяет <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> так, как это переопределяет привязку, которая определяется <xref:System.Windows.DataTemplate>.  
+ Можно также указать <xref:System.Windows.Data.Binding> как <xref:System.Windows.DataTemplate> часть определения, которое используется для стилизации ячеек в столбце. <xref:System.Windows.DataTemplate> В следующем примере, что идентифицируется с наборами <xref:System.Windows.ResourceKey> <xref:System.Windows.Data.Binding> для . <xref:System.Windows.Controls.GridViewColumn> Обратите внимание, что этот <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> пример не определяет, потому <xref:System.Windows.DataTemplate>что это переопределяет привязку, указанную .  
   
  [!code-xaml[ListViewTemplate#GridViewCellTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
  [!code-xaml[ListViewTemplate#CellTemplateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
-<a name="StylingaListView"></a>   
+<a name="StylingaListView"></a>
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>Задание стиля ListView, который реализует GridView  
- <xref:System.Windows.Controls.ListView> Элемент управления содержит <xref:System.Windows.Controls.ListViewItem> объектов, представляющих элементы данных, которые отображаются. Можно использовать следующие свойства для определения содержимого и стиля элементов данных:  
+ Элемент <xref:System.Windows.Controls.ListView> ыи управления содержит <xref:System.Windows.Controls.ListViewItem> объекты, представляющие отображаемые элементы данных. Можно использовать следующие свойства для определения содержимого и стиля элементов данных:  
   
-- На <xref:System.Windows.Controls.ListView> управления, используйте <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, и <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> свойства.  
+- На <xref:System.Windows.Controls.ListView> элементе <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>управления, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>используйте, и <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> свойства.  
   
-- На <xref:System.Windows.Controls.ListViewItem> управления, используйте <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> и <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> свойства.  
+- На <xref:System.Windows.Controls.ListViewItem> элементе управления <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> используйте и свойства.  
   
- Чтобы избежать проблем выравнивания между ячейками в <xref:System.Windows.Controls.GridView>, не используйте <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> для задания свойств или добавления содержимого, которое влияет на ширину элемента в <xref:System.Windows.Controls.ListView>. Например, проблема выравнивания может возникнуть при установке <xref:System.Windows.FrameworkElement.Margin%2A> свойство в <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>. Чтобы задать свойства или определить содержимое, влияющее на ширину элементов в <xref:System.Windows.Controls.GridView>, используйте свойства класса <xref:System.Windows.Controls.GridView> класс и связанные с ним классы, такие как <xref:System.Windows.Controls.GridViewColumn>.  
+ Чтобы избежать проблем выравнивания <xref:System.Windows.Controls.GridView>между ячейками <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> в, не используйте для установки свойств <xref:System.Windows.Controls.ListView>или добавления содержимого, которое влияет на ширину элемента в . Например, при установке <xref:System.Windows.FrameworkElement.Margin%2A> свойства в <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>заранее может возникнуть проблема выравнивания Чтобы указать свойства или определить содержимое, <xref:System.Windows.Controls.GridView>которое влияет на <xref:System.Windows.Controls.GridView> ширину элементов в, используйте свойства класса и связанные с ним классы, такие как. <xref:System.Windows.Controls.GridViewColumn>  
   
- Дополнительные сведения об использовании <xref:System.Windows.Controls.GridView> и его вспомогательных классов см. в разделе [Общие сведения о GridView](gridview-overview.md).  
+ Для получения дополнительной информации о том, как использовать <xref:System.Windows.Controls.GridView> и его вспомогательные классы, см. [GridView Overview](gridview-overview.md)  
   
- При определении <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> для <xref:System.Windows.Controls.ListView> также определять и управлять ими <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, необходимо включить <xref:System.Windows.Controls.ContentPresenter> в стиле выполнился <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> для правильной работы.  
+ Если вы <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> определяете <xref:System.Windows.Controls.ListView> для управления, <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>а также <xref:System.Windows.Controls.ContentPresenter> определить, вы должны <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> включить в стиле для того, чтобы работать правильно.  
   
- Не используйте <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> и <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> свойства <xref:System.Windows.Controls.ListView> содержимое, которое отображается с помощью <xref:System.Windows.Controls.GridView>. Чтобы указать выравнивание содержимого в столбце <xref:System.Windows.Controls.GridView>, определить <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>.  
+ Не используйте <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> свойства <xref:System.Windows.Controls.ListView> и свойства для содержимого, <xref:System.Windows.Controls.GridView>отображаемого с помощью . Чтобы указать выравнивание содержимого <xref:System.Windows.Controls.GridView>в <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>столбце, определить .  
   
-<a name="UsingtheSameViewMoreThanOnce"></a>   
+<a name="UsingtheSameViewMoreThanOnce"></a>
 ## <a name="sharing-the-same-view-mode"></a>Совместное использование одного режима представления  
- Два <xref:System.Windows.Controls.ListView> элементы управления не могут совместно использовать один и тот же режим представления, в то же время. Если вы попытаетесь использовать тот же режим представления с более чем одним <xref:System.Windows.Controls.ListView> управления, возникает исключение.  
+ Два <xref:System.Windows.Controls.ListView> элемента управления не могут совместно снимить один и тот же режим представления одновременно. Если вы попытаетесь использовать один и <xref:System.Windows.Controls.ListView> тот же режим представления с более чем одним элементом управления, происходит исключение.  
   
- Чтобы указать режим представления, который может одновременно использоваться более чем одной <xref:System.Windows.Controls.ListView>, используйте шаблоны или стили.
+ Чтобы указать режим представления, который может <xref:System.Windows.Controls.ListView>быть одновременно использован более чем одним, используйте шаблоны или стили.
   
-<a name="CreatingaCustomView"></a>   
+<a name="CreatingaCustomView"></a>
 ## <a name="creating-a-custom-view-mode"></a>Создание пользовательского режима представления  
- Настраиваемые представления, такие как <xref:System.Windows.Controls.GridView> являются производными от <xref:System.Windows.Controls.ViewBase> абстрактный класс, который предоставляет средства для отображения элементов данных, которые отображаются в виде <xref:System.Windows.Controls.ListViewItem> объектов.    
+ Индивидуальные представления, как <xref:System.Windows.Controls.GridView> являются <xref:System.Windows.Controls.ViewBase> производными от абстрактного класса, <xref:System.Windows.Controls.ListViewItem> который предоставляет инструменты для отображения элементов данных, которые представлены в качестве объектов.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Controls.GridView>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
 - [Общие сведения о GridView](gridview-overview.md)
-- [Разделы практического руководства](listview-how-to-topics.md)
-- [Элементы управления](../advanced/optimizing-performance-controls.md)
+- [Как-к темам](listview-how-to-topics.md)
+- [Управление](../advanced/optimizing-performance-controls.md)

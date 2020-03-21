@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d420ac8fcb98ddec195093be8ae25be37443da4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977127"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184975"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets
 Службы и клиенты WCF могут использовать привязку <xref:System.ServiceModel.NetHttpBinding> для обмена данными через WebSockets.  WebSockets будет использоваться в тех случаях, когда <xref:System.ServiceModel.NetHttpBinding> распознает, что в контракте службы определен контракт обратного вызова. В этом разделе описано, как реализовать службу WCF и клиент, использующий <xref:System.ServiceModel.NetHttpBinding> для обмена данными через WebSockets.  
@@ -66,10 +66,10 @@ ms.locfileid: "73977127"
     ```xml  
     <configuration>  
         <appSettings>  
-          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
         </appSettings>  
         <system.web>  
-          <compilation debug="true" targetFramework="4.5" />        
+          <compilation debug="true" targetFramework="4.5" />
         </system.web>  
         <system.serviceModel>  
             <protocolMapping>  
@@ -117,7 +117,7 @@ ms.locfileid: "73977127"
             {  
                 var context = new InstanceContext(new CallbackHandler());  
                 var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-                client.StartSendingQuotes();              
+                client.StartSendingQuotes();
                 Console.ReadLine();  
             }  
   
@@ -138,7 +138,7 @@ ms.locfileid: "73977127"
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
         <configuration>  
-            <startup>   
+            <startup>
                 <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
             </startup>  
             <system.serviceModel>  
@@ -233,10 +233,10 @@ namespace Server
   
 <configuration>  
     <appSettings>  
-      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
     </appSettings>  
     <system.web>  
-      <compilation debug="true" targetFramework="4.5" />        
+      <compilation debug="true" targetFramework="4.5" />
     </system.web>  
     <system.serviceModel>  
         <protocolMapping>  
@@ -279,7 +279,7 @@ namespace Client
         {  
             var context = new InstanceContext(new CallbackHandler());  
             var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-            client.StartSendingQuotes();              
+            client.StartSendingQuotes();
             Console.ReadLine();  
         }  
   
@@ -298,7 +298,7 @@ namespace Client
 <!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
-    <startup>   
+    <startup>
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
     </startup>  
     <system.serviceModel>  
@@ -318,7 +318,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Синхронные и асинхронные операции](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [Использование NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

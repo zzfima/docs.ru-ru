@@ -7,23 +7,23 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 0ab343da821e8994ac3a652bfc55db261d5e48f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e82d1898bec7cda474a5a92958b5af1b30c9de7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857653"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185410"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Различия проверки сертификатов с использованием средств обеспечения безопасности HTTPS, SSL по TCP и SOAP
-Можно использовать сертификаты в Windows Communication Foundation (WCF) (SOAP) на уровне сообщений безопасности в дополнение к функциям безопасности транспортного уровня (TLS) по протоколу HTTP (HTTPS) или TCP. В данном разделе описываются различия в способе, который используется для проверки сертификатов.  
+Вы можете использовать сертификаты в Windows Communication Foundation (WCF) с безопасностью на уровне сообщений (SOAP) в дополнение к безопасности транспортного слоя (TLS) по сравнению с HTTP (HTTPS) или TCP. В данном разделе описываются различия в способе, который используется для проверки сертификатов.  
   
 ## <a name="validation-of-https-client-certificates"></a>Проверка сертификатов клиента HTTPS  
- При использовании HTTPS для связи клиента и службы сертификат, который клиент использует для проверки подлинности службы, должен поддерживать цепь доверия. То есть, сертификат должен связываться по цепочке с доверенным корневым центром сертификации. Если нет, уровень HTTP вызывает исключение <xref:System.Net.WebException> с сообщением «удаленный сервер вернул ошибку: (403 запрещено).» WCF обрабатывает данное исключение как <xref:System.ServiceModel.Security.MessageSecurityException>.  
+ При использовании HTTPS для связи клиента и службы сертификат, который клиент использует для проверки подлинности службы, должен поддерживать цепь доверия. То есть, сертификат должен связываться по цепочке с доверенным корневым центром сертификации. Если нет, то слой <xref:System.Net.WebException> HTTP поднимает сообщение "Удаленный сервер вернул ошибку: (403) Запрещено". WCF всплывает на <xref:System.ServiceModel.Security.MessageSecurityException>поверхность этого исключения как .  
   
 ## <a name="validation-of-https-service-certificates"></a>Проверка сертификатов службы HTTPS  
  При использовании HTTPS для связи клиента и службы сертификат, используемый сервером для проверки подлинности службы, должен поддерживать цепь доверия. То есть, сертификат должен связываться по цепочке с доверенным корневым центром сертификации. Для проверки отмены сертификата проверка в сети не выполняется. Данное поведение можно переопределить, зарегистрировав обратный звонок <xref:System.Net.Security.RemoteCertificateValidationCallback>, как показано в следующем коде.  
   
- [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)] 
+ [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)]
  [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  
   
  где подписывание `ValidateServerCertificate` показано ниже:  
@@ -47,7 +47,7 @@ ms.locfileid: "61857653"
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

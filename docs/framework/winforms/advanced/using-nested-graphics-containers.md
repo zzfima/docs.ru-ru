@@ -9,54 +9,54 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 460ebb37ee62691a1e282f756840121fd378ebd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505056"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182468"
 ---
 # <a name="using-nested-graphics-containers"></a>Использование вложенных графических контейнеров
-GDI + предоставляет контейнеры, которые можно использовать для временно заменить или дополнить некоторую часть состояния в <xref:System.Drawing.Graphics> объекта. Вы создадите контейнер путем вызова <xref:System.Drawing.Graphics.BeginContainer%2A> метод <xref:System.Drawing.Graphics> объекта. Вы можете вызвать <xref:System.Drawing.Graphics.BeginContainer%2A> несколько раз для создания вложенных контейнеров. Каждый вызов <xref:System.Drawing.Graphics.BeginContainer%2A> должны быть связаны с вызовом <xref:System.Drawing.Graphics.EndContainer%2A>.  
+GDI предоставляет контейнеры, которые можно использовать для временной замены <xref:System.Drawing.Graphics> или увеличения части состояния в объекте. Вы создаете контейнер, <xref:System.Drawing.Graphics.BeginContainer%2A> вызывая <xref:System.Drawing.Graphics> метод объекта. Вы можете <xref:System.Drawing.Graphics.BeginContainer%2A> звонить неоднократно, чтобы сформировать вложенные контейнеры. Каждый <xref:System.Drawing.Graphics.BeginContainer%2A> звонок должен быть сопряжен <xref:System.Drawing.Graphics.EndContainer%2A>с вызовом.  
   
-## <a name="transformations-in-nested-containers"></a>Преобразования во вложенных контейнерах  
- В следующем примере создается <xref:System.Drawing.Graphics> объект и контейнер внутри этого <xref:System.Drawing.Graphics> объекта. Мировое преобразование объекта <xref:System.Drawing.Graphics> объект является сдвиг 100 единиц по оси x и на 80 единиц по оси y. Мировое преобразование контейнера является поворот на 30 градусов. Код выполняет вызов `DrawRectangle(pen, -60, -30, 120, 60)` дважды. Первый вызов <xref:System.Drawing.Graphics.DrawRectangle%2A> находится внутри контейнера; то есть происходит между вызовы <xref:System.Drawing.Graphics.BeginContainer%2A> и <xref:System.Drawing.Graphics.EndContainer%2A>. Второй вызов <xref:System.Drawing.Graphics.DrawRectangle%2A> — после вызова <xref:System.Drawing.Graphics.EndContainer%2A>.  
+## <a name="transformations-in-nested-containers"></a>Преобразования в nested контейнерах  
+ Следующий пример <xref:System.Drawing.Graphics> создает объект и <xref:System.Drawing.Graphics> контейнер внутри этого объекта. Мировая трансформация <xref:System.Drawing.Graphics> объекта представляет собой перевод 100 единиц в направлении x и 80 единиц в направлении y. Мировая трансформация контейнера представляет собой 30-градусное вращение. Код делает звонок `DrawRectangle(pen, -60, -30, 120, 60)` дважды. Первый вызов <xref:System.Drawing.Graphics.DrawRectangle%2A> находится внутри контейнера; то есть, вызов находится между <xref:System.Drawing.Graphics.BeginContainer%2A> вызовами и <xref:System.Drawing.Graphics.EndContainer%2A>. Второй вызов <xref:System.Drawing.Graphics.DrawRectangle%2A> находится после вызова <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- В приведенном выше коде прямоугольника, отображаемые из контейнера, применяется сначала объемное преобразование контейнера (поворот), а затем по мировое преобразование объекта <xref:System.Drawing.Graphics> (сдвиг). Прямоугольник, извлеченных из вне контейнера, применяется только мировое преобразование объекта <xref:System.Drawing.Graphics> (сдвиг). На следующем рисунке показано два прямоугольника: 
+ В предыдущем коде прямоугольник, взятый изнутри контейнера, преобразуется сначала мировой трансформацией контейнера <xref:System.Drawing.Graphics> (вращения), а затем мировой трансформацией объекта (переводом). Прямоугольник, вырисованный извне контейнера, преобразуется только мировой трансформацией <xref:System.Drawing.Graphics> объекта (переводом). На следующей иллюстрации показаны два прямоугольника:
   
- ![Рисунок, показывающий вложенные контейнеры.](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
+ ![Иллюстрация, которая показывает вложенные контейнеры.](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
   
-## <a name="clipping-in-nested-containers"></a>Обрезка во вложенных контейнерах  
- В следующем примере показано, как вложенные контейнеры обрабатывать отсеченных областей. Код создает <xref:System.Drawing.Graphics> объект и контейнер внутри этого <xref:System.Drawing.Graphics> объекта. Отсеченная область объекта <xref:System.Drawing.Graphics> объект представляет собой прямоугольник, а отсеченная область объекта контейнера — эллипс. Код делает два вызова <xref:System.Drawing.Graphics.DrawLine%2A> метод. Первый вызов <xref:System.Drawing.Graphics.DrawLine%2A> находится внутри контейнера, а второй вызов <xref:System.Drawing.Graphics.DrawLine%2A> выходит за пределы контейнера (после вызова <xref:System.Drawing.Graphics.EndContainer%2A>). Первая строка обрезается пересечение двух отсеченных областей. Вторая строка обрезается по прямоугольный вырезанной <xref:System.Drawing.Graphics> объекта.  
+## <a name="clipping-in-nested-containers"></a>Отсечение в вложенных контейнерах  
+ Следующий пример показывает, как вложенные контейнеры обрабатывают области отсечения. Код создает <xref:System.Drawing.Graphics> объект и контейнер <xref:System.Drawing.Graphics> внутри этого объекта. Область отсечения <xref:System.Drawing.Graphics> объекта представляет собой прямоугольник, а область отсечения контейнера — эллипс. Код делает два вызова <xref:System.Drawing.Graphics.DrawLine%2A> метода. Первый вызов <xref:System.Drawing.Graphics.DrawLine%2A> находится внутри контейнера, а <xref:System.Drawing.Graphics.DrawLine%2A> второй звонок находится за <xref:System.Drawing.Graphics.EndContainer%2A>пределами контейнера (после вызова). Первая линия обрезается пересечением двух областей отсечения. Вторая линия обрезается только прямоугольной областью <xref:System.Drawing.Graphics> отсечения объекта.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- На следующем рисунке показано два усеченные строки:
+ На следующей иллюстрации показаны две обрезанные линии:
   
- ![Рисунок, показывающий вложенного контейнера с усеченные строки.](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
+ ![Иллюстрация, на рисунке вложенный контейнер с обрезанными линиями.](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
   
- Как показано в двух приведенных выше примерах, преобразования и отсеченные области накапливаются в вложенные контейнеры. Если задать объемные преобразования контейнера и <xref:System.Drawing.Graphics> объекта, оба вида преобразований применяются к отображаемым внутри контейнера. Преобразование контейнера будут сначала применяется и преобразование <xref:System.Drawing.Graphics> объекта, которые будут применяться во-вторых. Если задать отсеченные области контейнера и <xref:System.Drawing.Graphics> объектов, отображаемых внутри контейнера будет обрезаться пересечение двух отсеченных областей.  
+ Как видно из двух предыдущих примеров, преобразования и области отсечения являются кумулятивными в вложенных контейнерах. Если установить мировые преобразования контейнера <xref:System.Drawing.Graphics> и объекта, то оба преобразования будут применяться к элементам, взятым из контейнера. Преобразование контейнера будет применяться в первую очередь, а преобразование <xref:System.Drawing.Graphics> объекта будет применяться во-вторых. При установке областей отсечения контейнера и <xref:System.Drawing.Graphics> объекта элементы, взятые из контейнера, будут обрезаны пересечением двух областей отсечения.  
   
-## <a name="quality-settings-in-nested-containers"></a>Параметры качества во вложенные контейнеры  
- Параметры качества (<xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.TextRenderingHint%2A>и ей подобные) в вложенные контейнеры не являются накопительными; вместо этого параметры качества контейнера временно Замените параметры качества <xref:System.Drawing.Graphics> объекта. При создании нового контейнера, параметры качества для этого контейнера присваиваются значения по умолчанию. Например, предположим, что у вас есть <xref:System.Drawing.Graphics> объект с режим сглаживания <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. При создании контейнера, режим сглаживания в контейнер по умолчанию режим сглаживания. Вы можете задать режим сглаживания контейнера и все элементы, отображаемые из контейнера привязки будет рисоваться в соответствии с режимом, которые можно задать. Объекты, отображаемые после вызова <xref:System.Drawing.Graphics.EndContainer%2A> будут отображаться в соответствии с режимом сглаживания (<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>), которая была до вызова <xref:System.Drawing.Graphics.BeginContainer%2A>.  
+## <a name="quality-settings-in-nested-containers"></a>Настройки качества в вложенных контейнерах  
+ Настройки качества<xref:System.Drawing.Graphics.SmoothingMode%2A> <xref:System.Drawing.Graphics.TextRenderingHint%2A>(, и т.п.) в вложенных контейнерах не являются кумулятивными; скорее, параметры качества контейнера временно заменяют параметры <xref:System.Drawing.Graphics> качества объекта. При создании нового контейнера параметры качества этого контейнера устанавливаются значениями по умолчанию. Например, предположим, <xref:System.Drawing.Graphics> что у вас <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>есть объект с режимом сглаживания. При создании контейнера режим сглаживания внутри контейнера является режимом сглаживания по умолчанию. Вы можете установить режим сглаживания контейнера, и любые предметы, взятые из контейнера, будут нарисованы в соответствии с режимом, который вы установите. Элементы, нарисованные после вызова, <xref:System.Drawing.Graphics.EndContainer%2A> будут нарисованы в соответствии с режимом сглаживания (),<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>который был на месте до <xref:System.Drawing.Graphics.BeginContainer%2A>вызова.  
   
-## <a name="several-layers-of-nested-containers"></a>Несколько уровней вложенных контейнеров  
- Вы не ограничены один контейнер в <xref:System.Drawing.Graphics> объекта. Можно создать последовательность контейнеров, вложенных друг в друга, и можно указать мировое преобразование, отсеченной области и параметры качества для каждого из этих вложенных контейнеров. Если вызвать метод рисования из внутреннего контейнера, преобразования применяются в порядке, начиная с контейнером внутреннего и внешнего контейнера. Объекты, отображаемые из внутреннего контейнера обрезаются пересечением отсеченных областей.  
+## <a name="several-layers-of-nested-containers"></a>Несколько слоев вложенных контейнеров  
+ Вы не ограничены одним <xref:System.Drawing.Graphics> контейнером в объекте. Можно создать последовательность контейнеров, каждый из которых вложен в предшествующее, и можно указать преобразование мира, область отсечения и параметры качества каждого из этих вложенных контейнеров. Если вы называете метод рисования изнутри внутреннего контейнера, преобразования будут применены в порядке, начиная с внутреннего контейнера и заканчивая внешним контейнером. Элементы, извлеченные из внутреннего контейнера, будут обрезаны пересечением всех областей отсечения.  
   
- В следующем примере создается <xref:System.Drawing.Graphics> и устанавливает его подсказка отрисовки текста <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. Код создает два контейнеров — по одному вложен в другой. Подсказка по визуализации текста внешнего контейнера имеет значение <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>, и подсказка по визуализации текста внутреннего контейнера имеет значение <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. Код рисует три строки: одну из внутреннего контейнера, одну из внешнего контейнера и один из <xref:System.Drawing.Graphics> сам объект.  
+ Следующий пример <xref:System.Drawing.Graphics> создает объект и устанавливает его <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>намек на визуализацию текста. Код создает два контейнера, один из них вложен в другой. Текст отображения намек на <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>внешний контейнер установлен на , и текст <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>рендеринга намек внутреннего контейнера установлен на . Код рисует три строки: одну из внутреннего контейнера, одну из <xref:System.Drawing.Graphics> внешнего контейнера и одну из самого объекта.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#63](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#63)]
  [!code-vb[System.Drawing.MiscLegacyTopics#63](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#63)]  
   
- На следующем рисунке эти три строки. Строки, выводимые из внутреннего контейнера и <xref:System.Drawing.Graphics> объект Сглаживается, с помощью сглаживания. Строка, выводимая из внешнего контейнера не подвергается сглаживанию, так как <xref:System.Drawing.Graphics.TextRenderingHint%2A> свойству <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
+ На следующей иллюстрации показаны три строки. Строки, взятые из внутреннего <xref:System.Drawing.Graphics> контейнера и от объекта, сглаживаются путем антиализа. Строка, извлеченная из внешнего контейнера, не сглаживается антиализамией, так как <xref:System.Drawing.Graphics.TextRenderingHint%2A> свойство настроено на <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
   
- ![Рисунок, показывающий строк, извлеченных из вложенных контейнеров.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
+ ![Иллюстрация, которая показывает строки, взятые из вложенных контейнеров.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Drawing.Graphics>
-- [Управление состоянием графического объекта](managing-the-state-of-a-graphics-object.md)
+- [Управление состоянием объекта Graphics](managing-the-state-of-a-graphics-object.md)

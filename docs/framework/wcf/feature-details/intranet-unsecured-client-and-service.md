@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 1ffd0421195b0339ad966b661c229e5a5ebb94ec
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 2fa13a12a377cc16a95318367605d8b5d92769a7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212101"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184684"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Незащищенные интранет-клиент и служба
-На следующем рисунке показана простая служба Windows Communication Foundation (WCF), разработанная для предоставления информации о защищенной частной сети приложению WCF. Безопасность не требуется, поскольку данные имеют низкую важность, ожидается безопасность сети, или безопасность обеспечивается уровнем, который находится под инфраструктурой WCF.  
+На следующей иллюстрации показан ажурный сервис Windows Communication Foundation (WCF), разработанный для предоставления информации о защищенной частной сети для приложения WCF. Безопасность не требуется, поскольку данные имеют малое значение, сеть, как ожидается, будет по своей сути безопасной, или безопасность обеспечивается слоем ниже инфраструктуры WCF.  
   
- ![Сценарий незащищенного клиента и службы в интрасети.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![Сценарий необеспеченного клиента и обслуживания Intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Режим безопасности|Нет|  
-|Transport|TCP|  
+|Режим безопасности|None|  
+|Транспортировка|TCP|  
 |Привязка|<xref:System.ServiceModel.NetTcpBinding>|  
-|Взаимодействие|Только WCF|  
-|Проверка подлинности|Нет|  
-|Целостность|Нет|  
-|Конфиденциальность|Нет|  
+|Совместимость|Только WCF|  
+|Аутентификация|None|  
+|Целостность|None|  
+|Конфиденциальность|None|  
   
-## <a name="service"></a>Service  
+## <a name="service"></a>Служба  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономную службу, используя код без конфигурации.  
@@ -49,11 +49,11 @@ ms.locfileid: "76212101"
   <system.serviceModel>  
     <behaviors />  
     <services>  
-      <service behaviorConfiguration=""   
+      <service behaviorConfiguration=""
                name="ServiceModel.Calculator">  
-        <endpoint address="net.tcp://localhost:8008/Calculator"   
+        <endpoint address="net.tcp://localhost:8008/Calculator"
                   binding="netTcpBinding"  
-                  bindingConfiguration="tcp_Unsecured"   
+                  bindingConfiguration="tcp_Unsecured"
                   name="netTcp_ICalculator"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -70,18 +70,18 @@ ms.locfileid: "76212101"
 </configuration>  
 ```  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>клиент  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономный клиент, используя код (и код клиента).  
   
-- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
+- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Пример:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Код  
- В следующем коде показан базовый клиент WCF, обращающийся к незащищенной конечной точке по протоколу TCP.  
+ Следующий код показывает основного клиента WCF, который получает доступ к незащищенной конечной точке с помощью протокола TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -103,17 +103,17 @@ ms.locfileid: "76212101"
     </bindings>  
     <client>  
       <endpoint address="net.tcp://machineName:8008/Calculator "  
-                binding="netTcpBinding"   
+                binding="netTcpBinding"
                 bindingConfiguration="NetTcpBinding_ICalculator"  
-                contract="ICalculator"   
+                contract="ICalculator"
                 name="NetTcpBinding_ICalculator" />  
     </client>  
   </system.serviceModel>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.NetTcpBinding>
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Обзор безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

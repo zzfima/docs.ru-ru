@@ -2,12 +2,12 @@
 title: Обязательные аргументы и группы перегруженных аргументов
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989312"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142944"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Обязательные аргументы и группы перегруженных аргументов
 Действия можно настроить таким образом, чтобы для их выполнения требовалась привязка определенных аргументов. Атрибут `RequiredArgument` указывает, что для действия необходимы определенные аргументы, а атрибут `OverloadGroup` используется для группирования категорий необходимых аргументов. С помощью атрибутов авторы действий могут реализовать простые или сложные конфигурации проверки правильности действий.  
@@ -61,13 +61,13 @@ public sealed class Add : CodeActivity<int>
   
  При использовании действия, если любой из необходимых аргументов не привязан, будет возвращена следующая ошибка проверки.  
   
- **Не указано значение обязательного аргумента действия "Операнд1".**  
+ **Не указано значение необходимого аргумента действия Operand1.**  
 > [!NOTE]
-> Дополнительные сведения о проверке и обработке ошибок и предупреждений проверки см. в разделе [вызов проверки активности](invoking-activity-validation.md).  
+> Для получения дополнительной информации о проверке и [Invoking Activity Validation](invoking-activity-validation.md)обработке ошибок и предупреждений проверки, см.  
   
 ## <a name="using-overload-groups"></a>Использование групп перегрузки
 
-Группы перегрузки предоставляют метод, позволяющий определить, какие комбинации аргументов допустимы для действия. Аргументы группируются с помощью <xref:System.Activities.OverloadGroupAttribute>. Каждой группе присваивается имя, заданное <xref:System.Activities.OverloadGroupAttribute>параметром. Действие допустимо, только если привязываются только один набор аргументов в группе перегрузки. В следующем примере определяется класс `CreateLocation`.  
+Группы перегрузки предоставляют метод, позволяющий определить, какие комбинации аргументов допустимы для действия. Аргументы группируются с помощью <xref:System.Activities.OverloadGroupAttribute>. Каждой группе дается имя, <xref:System.Activities.OverloadGroupAttribute>указанное . Действие действительно, когда связан только один набор аргументов в группе перегрузок. В следующем примере определяется класс `CreateLocation`.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -100,13 +100,13 @@ class CreateLocation: Activity
   
     [RequiredArgument]  
     [OverloadGroup("G3")]  
-    public InArgument<int> Zip { get; set; }                  
+    public InArgument<int> Zip { get; set; }
 }  
 ```  
   
  Задача данного действия - указать местоположение в США. Для этого пользователь действия может указать местоположение с помощью одной из трех групп аргументов. Чтобы указать допустимые сочетания аргументов, определены 3 группы перегрузки. `G1` содержит аргументы `Latitude` и `Longitude`. `G2` содержит `Street`, `City` и `State`. `G3` содержит `Street` и `Zip`. `Name` также является обязательным аргументом, но не входит в группу перегрузки. Чтобы данное действие было допустимым, `Name` должно быть привязано вместе со всеми аргументами только из одной группы перегрузки.  
   
- В следующем примере, взятом из примера [действий доступа к базе данных](./samples/database-access-activities.md) , есть две группы перегруженных `ConnectionString` версий `ConfigFileSectionName`: и. Чтобы данное действие было допустимым, должны быть связаны либо аргументы `ProviderName` и `ConnectionString`, либо аргумент `ConfigName`, но не оба.  
+ В следующем примере, взятом из выборки [деятельности по доступу к базе данных,](./samples/database-access-activities.md) есть две группы перегрузок: `ConnectionString` и `ConfigFileSectionName`. Чтобы данное действие было допустимым, должны быть связаны либо аргументы `ProviderName` и `ConnectionString`, либо аргумент `ConfigName`, но не оба.  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  
@@ -138,7 +138,7 @@ public class DbUpdate: AsyncCodeActivity
     public IDictionary<string, Argument> Parameters { get; }  
   
     [DependsOn("Parameters")]  
-    public OutArgument<int> AffectedRecords { get; set; }       
+    public OutArgument<int> AffectedRecords { get; set; }
 }  
 ```  
   

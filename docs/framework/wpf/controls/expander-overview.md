@@ -8,58 +8,58 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892d972a5704d50e91d04e05d6fdea7180a3155d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054930"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187114"
 ---
 # <a name="expander-overview"></a>Общие сведения об элементе управления Expander
-<xref:System.Windows.Controls.Expander> Управления обеспечивает способ предоставления содержимого в развертываемой области, имеющей вид окна и включающей заголовок.  
+Элемент <xref:System.Windows.Controls.Expander> управления обеспечивает способ предоставления содержимого в расширяемой области, которая напоминает окно и включает в себя заголовок.  
 
-<a name="CreatinganExpanderinXAML"></a>   
+<a name="CreatinganExpanderinXAML"></a>
 ## <a name="creating-a-simple-expander"></a>Создание простого элемента управления Expander  
- Приведенный ниже показано, как создать простое <xref:System.Windows.Controls.Expander> элемента управления. В этом примере создается <xref:System.Windows.Controls.Expander> что выглядит как на предыдущем рисунке.  
+ Ниже приводится следующий пример, как создать простой <xref:System.Windows.Controls.Expander> элемент управления. Этот пример <xref:System.Windows.Controls.Expander> создает, который выглядит как предыдущая иллюстрация.  
   
  [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
- <xref:System.Windows.Controls.ContentControl.Content%2A> И <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> из <xref:System.Windows.Controls.Expander> могут также содержать сложного содержимого, такие как <xref:System.Windows.Controls.RadioButton> и <xref:System.Windows.Controls.Image> объектов.  
+ И <xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> <xref:System.Windows.Controls.Expander> может также содержать сложный контент, такие как <xref:System.Windows.Controls.RadioButton> и <xref:System.Windows.Controls.Image> объекты.  
   
-<a name="SettingtheDirectionoftheExpandingWindow"></a>   
+<a name="SettingtheDirectionoftheExpandingWindow"></a>
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Задание направления развертывания области содержимого  
- Можно задать область содержимого <xref:System.Windows.Controls.Expander> управления для развертывания в одном из четырех направлений (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, или <xref:System.Windows.Controls.ExpandDirection.Right>) с помощью <xref:System.Windows.Controls.ExpandDirection> свойство. Когда область содержимого свернута, только <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и его выключатель. Объект <xref:System.Windows.Controls.Button> элемент управления, отображающий стрелку направления используется в качестве выключателя для развертывания или свертывания области содержимого. При развертывании <xref:System.Windows.Controls.Expander> пытается отобразить все его содержимое в области, подобной окну.  
+ Вы можете установить область <xref:System.Windows.Controls.Expander> содержимого элемента управления,<xref:System.Windows.Controls.ExpandDirection.Down>чтобы <xref:System.Windows.Controls.ExpandDirection.Up> <xref:System.Windows.Controls.ExpandDirection.Left>расширить <xref:System.Windows.Controls.ExpandDirection.Right>в одном <xref:System.Windows.Controls.ExpandDirection> из четырех направлений (, , или ) с помощью свойства. При стомоте содержимого <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> появляется только кнопка переключения и ее переключения. Элемент <xref:System.Windows.Controls.Button> управления, отображаемый направленной стрелкой, используется в качестве кнопки переключения для расширения или сворачивания области содержимого. При расширении, <xref:System.Windows.Controls.Expander> пытается отобразить все его содержимое в окне, как область.  
   
-<a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
+<a name="SettingSizeDimensionsonanExpanderinaPanel"></a>
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Управление размером элемента управления Expander на панели  
- Если <xref:System.Windows.Controls.Expander> управления находится в элементе управления макета, который наследует от <xref:System.Windows.Controls.Panel>, такие как <xref:System.Windows.Controls.StackPanel>, не указывайте <xref:System.Windows.FrameworkElement.Height%2A> на <xref:System.Windows.Controls.Expander> при <xref:System.Windows.Controls.Expander.ExpandDirection%2A> свойству <xref:System.Windows.Controls.ExpandDirection.Down> или <xref:System.Windows.Controls.ExpandDirection.Up>. Аналогично, не следует задавать <xref:System.Windows.FrameworkElement.Width%2A> на <xref:System.Windows.Controls.Expander> при <xref:System.Windows.Controls.Expander.ExpandDirection%2A> свойству <xref:System.Windows.Controls.ExpandDirection.Left> или <xref:System.Windows.Controls.ExpandDirection.Right>.  
+ Если <xref:System.Windows.Controls.Expander> элемент управления находится внутри элемента <xref:System.Windows.Controls.Panel>управления макета, который наследует от, <xref:System.Windows.Controls.StackPanel>например, не укажите <xref:System.Windows.FrameworkElement.Height%2A> на том, <xref:System.Windows.Controls.Expander> когда <xref:System.Windows.Controls.Expander.ExpandDirection%2A> свойство установлено <xref:System.Windows.Controls.ExpandDirection.Down> или <xref:System.Windows.Controls.ExpandDirection.Up>. Аналогичным образом, не <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.Controls.Expander> указать <xref:System.Windows.Controls.Expander.ExpandDirection%2A> на, когда <xref:System.Windows.Controls.ExpandDirection.Left> <xref:System.Windows.Controls.ExpandDirection.Right>свойство установлено или .  
   
- Если выбрано измерение размера на <xref:System.Windows.Controls.Expander> элемента управления в направлении отображения развернутого содержимого, <xref:System.Windows.Controls.Expander> берет на себя управление области, который используется по содержимому и отображает рамку вокруг нее. Рамка отображается даже тогда, когда содержимое свернуто. Чтобы задать размер развернутой области содержимого, задайте размерности для содержимого <xref:System.Windows.Controls.Expander>, или если требуется возможность прокрутки, для <xref:System.Windows.Controls.ScrollViewer> , вмещающего содержимое.  
+ При установке размера размера <xref:System.Windows.Controls.Expander> на элементе управления в направлении <xref:System.Windows.Controls.Expander> отображения расширенного содержимого, берет под контроль область, которая используется содержимого и отображает границу вокруг него. Рамка отображается даже тогда, когда содержимое свернуто. Чтобы установить размер расширенной области содержимого, установите <xref:System.Windows.Controls.Expander>размерразмеры на содержимое, или <xref:System.Windows.Controls.ScrollViewer> если вы хотите возможность прокрутки, на том, что привязает содержимое.  
   
- Когда <xref:System.Windows.Controls.Expander> управления является последним элементом в <xref:System.Windows.Controls.DockPanel>, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] автоматически задает <xref:System.Windows.Controls.Expander> размерности равными оставшейся области <xref:System.Windows.Controls.DockPanel>. Чтобы предотвратить такое поведение по умолчанию, задайте <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> свойство <xref:System.Windows.Controls.DockPanel> объект `false`, или убедитесь, что <xref:System.Windows.Controls.Expander> не является последним элементом в <xref:System.Windows.Controls.DockPanel>.  
+ Когда <xref:System.Windows.Controls.Expander> элемент управления является последним <xref:System.Windows.Controls.DockPanel> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] элементом <xref:System.Windows.Controls.Expander> в, автоматически устанавливает размеры, чтобы равняться оставшейся <xref:System.Windows.Controls.DockPanel>области . Чтобы предотвратить это поведение <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> по умолчанию, установите свойство на <xref:System.Windows.Controls.DockPanel> объекте, или `false`убедитесь, что <xref:System.Windows.Controls.Expander> это не последний элемент в . <xref:System.Windows.Controls.DockPanel>  
   
-<a name="CreatingScrollableContent"></a>   
+<a name="CreatingScrollableContent"></a>
 ## <a name="creating-scrollable-content"></a>Создание прокручиваемого содержимого  
- Если содержимое слишком велико для размера области содержимого, можно поместить содержимое <xref:System.Windows.Controls.Expander> в <xref:System.Windows.Controls.ScrollViewer> чтобы обеспечить прокрутку содержимого. <xref:System.Windows.Controls.Expander> Управления автоматически не предоставляет возможность прокрутки. На следующем рисунке показано <xref:System.Windows.Controls.Expander> элемент управления, содержащий <xref:System.Windows.Controls.ScrollViewer> элемента управления.  
+ Если содержимое слишком велико для размера области содержимого, можно <xref:System.Windows.Controls.Expander> обернуть <xref:System.Windows.Controls.ScrollViewer> содержимое содержимого, чтобы обеспечить прокрутки содержимого. Элемент <xref:System.Windows.Controls.Expander> управления автоматически не обеспечивает возможность прокрутки. На следующей <xref:System.Windows.Controls.Expander> иллюстрации показан <xref:System.Windows.Controls.ScrollViewer> элемент управления, содержащий элемент управления.  
   
  **Expander в ScrollViewer**  
   
- ![Снимок экрана, показывающий управления expander со ScrollBar.](./media/expander-overview/expander-scrollbar-control.jpg)  
+ ![Скриншот, который показывает расширитель с ScrollBar.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
- При размещении <xref:System.Windows.Controls.Expander> контролировать <xref:System.Windows.Controls.ScrollViewer>, задайте <xref:System.Windows.Controls.ScrollViewer> измерения свойство, соответствующее направление, в котором <xref:System.Windows.Controls.Expander> открывается содержимое размер <xref:System.Windows.Controls.Expander> области содержимого. Например, если задать <xref:System.Windows.Controls.Expander.ExpandDirection%2A> свойство <xref:System.Windows.Controls.Expander> для <xref:System.Windows.Controls.ExpandDirection.Down> (область содержимого открывается вниз), задайте <xref:System.Windows.FrameworkElement.Height%2A> свойство <xref:System.Windows.Controls.ScrollViewer> требуемую высоту для области содержимого элемента управления. Если вместо этого задать размерность высоты самого содержимого, <xref:System.Windows.Controls.ScrollViewer> не распознает этот параметр и таким образом, не предоставит прокручиваемое содержимое.  
+ При установке <xref:System.Windows.Controls.Expander> элемента <xref:System.Windows.Controls.ScrollViewer>управления <xref:System.Windows.Controls.ScrollViewer> в свойство измерения, которое <xref:System.Windows.Controls.Expander> соответствует направлению, в <xref:System.Windows.Controls.Expander> котором содержимое открывается размеру области содержимого. Например, если вы <xref:System.Windows.Controls.Expander.ExpandDirection%2A> установите <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.ExpandDirection.Down> свойство на to (область <xref:System.Windows.FrameworkElement.Height%2A> содержимого <xref:System.Windows.Controls.ScrollViewer> открывается вниз), установите свойство на элементе управления на требуемую высоту для области содержимого. Если вместо этого вы установите размер <xref:System.Windows.Controls.ScrollViewer> высоты на само содержимое, не распознает эту настройку и, следовательно, не предоставляет прокрутки содержимого.  
   
- В следующем примере показано, как создать <xref:System.Windows.Controls.Expander> элемента управления, который имеет сложное содержимое и содержит <xref:System.Windows.Controls.ScrollViewer> элемента управления. В этом примере создается <xref:System.Windows.Controls.Expander> это похоже на рисунке в начале этого раздела.  
+ В следующем примере показано, как создать <xref:System.Windows.Controls.Expander> элемент управления, который имеет сложное содержимое и содержащий <xref:System.Windows.Controls.ScrollViewer> элемент управления. Этот пример <xref:System.Windows.Controls.Expander> создает иллюстрацию в начале этого раздела.  
   
  [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
  [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
-<a name="UsingtheAlignmentProperties"></a>   
+<a name="UsingtheAlignmentProperties"></a>
 ## <a name="using-the-alignment-properties"></a>Использование свойств выравнивания  
- Содержимое можно выровнять, задавая <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> и <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> свойства <xref:System.Windows.Controls.Expander> элемента управления. При задании этих свойств выравнивание применяется к заголовку и развернутому содержимому.  
+ Содержимое можно выровнять, установив элементируи <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> и <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> свойства на элементе <xref:System.Windows.Controls.Expander> управления. При задании этих свойств выравнивание применяется к заголовку и развернутому содержимому.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Разделы практического руководства](expander-how-to-topics.md)
+- [Как-к темам](expander-how-to-topics.md)

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 3a1e369fe52a2a529fb3511d9a65067b4a56ec1e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 67db06649d6059ff6b6e6fb8d84058621fcc7dab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797253"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185657"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Настройка и расширение среды выполнения с помощью поведений
-Поведение позволяет изменять поведение по умолчанию и добавлять пользовательские расширения, которые проверяют и проверяют конфигурацию службы или изменяют поведение во время выполнения в приложениях клиента Windows Communication Foundation (WCF) и служб. В этом разделе описаны интерфейсы поведений, способы их реализации, а также порядок их добавления в описания служб (в приложениях служб) и конечных точек (в клиентских приложениях) как программным образом, так и с помощью файла конфигурации. Дополнительные сведения об использовании предоставляемых системой поведений см. в разделе [Определение поведения службы во время выполнения](../specifying-service-run-time-behavior.md) и [Указание поведения клиента во время выполнения](../specifying-client-run-time-behavior.md).  
+Поведение позволяет изменять поведение по умолчанию и добавлять пользовательские расширения, которые проверяют и проверяют конфигурацию службы или изменяют поведение в работе в приложениях для клиентов и сервисных приложений Windows Communication Foundation (WCF). В этом разделе описаны интерфейсы поведений, способы их реализации, а также порядок их добавления в описания служб (в приложениях служб) и конечных точек (в клиентских приложениях) как программным образом, так и с помощью файла конфигурации. Для получения дополнительной информации об использовании системного поведения [Specifying Client Run-Time Behavior](../specifying-client-run-time-behavior.md)см. [Specifying Service Run-Time Behavior](../specifying-service-run-time-behavior.md)  
   
-## <a name="behaviors"></a>поведения  
- Типы поведения добавляются в объекты описания конечной точки службы или службы (в службе или на клиенте соответственно), прежде чем эти объекты будут использоваться Windows Communication Foundation (WCF) для создания среды выполнения, которая выполняет службу WCF или клиент WCF. Если эти поведения вызываются в процессе создания среды выполнения, то они могут получать доступ к свойствам и методам среды выполнения, которые позволяют изменить создаваемую среду выполнения с использованием других контрактов, привязок и адресов.  
+## <a name="behaviors"></a>Расширения функциональности  
+ Типы поведения добавляются к объектам описания конечных точек службы или службы (на службе или клиенте, соответственно), прежде чем эти объекты будут использованы Фондом связи Windows (WCF) для создания времени выполнения службы WCF или клиента WCF. Если эти поведения вызываются в процессе создания среды выполнения, то они могут получать доступ к свойствам и методам среды выполнения, которые позволяют изменить создаваемую среду выполнения с использованием других контрактов, привязок и адресов.  
   
 ### <a name="behavior-methods"></a>Методы поведений  
- Все поведения имеют `AddBindingParameters` метод `ApplyDispatchBehavior` , метод, `Validate` метод и `ApplyClientBehavior` метод с одним исключением: Поскольку <xref:System.ServiceModel.Description.IServiceBehavior> не может выполняться в клиенте, он не реализует `ApplyClientBehavior`.  
+ У всех поведений имеется метод `AddBindingParameters`, метод `ApplyDispatchBehavior`, метод `Validate` и метод `ApplyClientBehavior` за единственным исключением: поскольку интерфейс <xref:System.ServiceModel.Description.IServiceBehavior> не может выполняться на клиенте, он не реализует метод `ApplyClientBehavior`.  
   
 - Метод `AddBindingParameters` служит для изменения или добавления пользовательских объектов в коллекцию, к которой могут общаться пользовательские привязки при создании среды выполнения. Например, с помощью этого метода можно задать требования защиты, которые влияют на способ создания канала, но не известны разработчику канала.  
   
@@ -32,19 +32,19 @@ ms.locfileid: "70797253"
  Доступ к свойствам, которые можно изменить, и к интерфейсам настройки, которые можно реализовать, осуществляется через классы среды выполнения службы и клиента. Типами службы являются классы <xref:System.ServiceModel.Dispatcher.DispatchRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchOperation>. Типами клиента являются классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.ClientOperation>. Классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime> являются точками входа расширяемости для доступа к коллекциям расширения и свойствам среды выполнения клиента и службы соответственно. Аналогично классы <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> предоставляют доступ к коллекциям расширения и свойствам среды выполнения операций клиента и операций службы соответственно. Однако из объекта среды выполнения операции, если это требуется, можно получить доступ к объекту среды выполнения с более широкой областью и наоборот.  
   
 > [!NOTE]
-> Описание свойств среды выполнения и типов расширений, которые можно использовать для изменения поведения клиента, см. в разделе [расширение клиентов](extending-clients.md). Описание свойств среды выполнения и типов расширений, которые можно использовать для изменения поведения при выполнении диспетчера служб, см. в разделе [Расширение диспетчеров](extending-dispatchers.md).  
+> Для обсуждения свойств времени выполнения и типов расширений, которые можно использовать для изменения поведения клиента выполнения, [см.](extending-clients.md) Для обсуждения свойств времени выполнения и типов расширений, которые можно использовать для изменения поведения диспетчера службы, [см.](extending-dispatchers.md)  
   
- Большинство пользователей WCF не взаимодействуют с средой выполнения напрямую; Вместо этого они используют основные конструкции модели программирования, такие как конечные точки, контракты, привязки, адреса и атрибуты поведения для классов или поведения в файлах конфигурации. Эти конструкции составляют *дерево Description*, которое является полной спецификацией для создания среды выполнения для поддержки службы или клиента, описываемого деревом описания.  
+ Большинство пользователей WCF не взаимодействуют с временем выполнения напрямую; вместо этого они используют основные модели программирования, такие как конечные точки, контракты, привязки, адреса и атрибуты поведения на классах или поведениях в файлах конфигурации. Эти конструкции составляют *дерево описания,* которое является полной спецификацией для построения времени выполнения для поддержки службы или клиента, описанного деревом описания.  
   
- В WCF существует четыре вида поведения:  
+ Есть четыре вида поведения в WCF:  
   
 - поведения служб (типы <xref:System.ServiceModel.Description.IServiceBehavior>) позволяют настраивать среду выполнения службы целиком, включая <xref:System.ServiceModel.ServiceHostBase>;  
   
-- Поведения конечных точек (типы <xref:System.ServiceModel.Description.IEndpointBehavior>) позволяют настраивать конечные точки служб и соответствующие объекты <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>;  
+- поведения конечных точек (типы <xref:System.ServiceModel.Description.IEndpointBehavior>) позволяют настраивать конечные точки служб и соответствующие объекты <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>;  
   
-- Поведения контрактов (типы <xref:System.ServiceModel.Description.IContractBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime> в приложениях клиентов и служб соответственно;  
+- поведения контрактов (типы <xref:System.ServiceModel.Description.IContractBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime> в приложениях клиентов и служб соответственно;  
   
-- Поведения операций (типы <xref:System.ServiceModel.Description.IOperationBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> в приложениях клиентов и служб.  
+- поведения операций (типы <xref:System.ServiceModel.Description.IOperationBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> в приложениях клиентов и служб.  
   
  Эти поведения можно добавлять в различные объекты описания путем реализации пользовательских атрибутов, с помощью файлов конфигурации приложений или путем их непосредственного добавления в коллекцию поведений соответствующего объекта описания. Однако их обязательно необходимо добавлять в объекты описания службы или конечной точки службы до вызова метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> объектов <xref:System.ServiceModel.ServiceHost> и <xref:System.ServiceModel.ChannelFactory%601>.  
   
@@ -65,24 +65,24 @@ ms.locfileid: "70797253"
   
 3. Реализация пользовательского элемента <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, который расширяет конфигурацию. Это позволяет использовать поведение службы в файлах конфигурации приложения.  
   
- Примерами поведения службы в WCF являются <xref:System.ServiceModel.ServiceBehaviorAttribute> атрибут <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>, и <xref:System.ServiceModel.Description.ServiceMetadataBehavior> поведение.  
+ Примеры поведения службы в <xref:System.ServiceModel.ServiceBehaviorAttribute> WCF <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>включают атрибут, и <xref:System.ServiceModel.Description.ServiceMetadataBehavior> поведение.  
   
 #### <a name="contract-behaviors"></a>Поведения контрактов  
  Поведения контрактов, реализующие интерфейс <xref:System.ServiceModel.Description.IContractBehavior>, служат для расширения сред выполнения клиента и службы в рамках контракта.  
   
- Имеется два механизма добавления поведений контрактов к контрактам.  Первый механизм предполагает создание пользовательского атрибута, который будет использоваться в интерфейсе контракта. Когда интерфейс контракта передается либо <xref:System.ServiceModel.ServiceHost> в <xref:System.ServiceModel.ChannelFactory%601>, либо в, WCF проверяет атрибуты интерфейса. Все атрибуты, реализующие интерфейс <xref:System.ServiceModel.Description.IContractBehavior>, добавляются в коллекцию поведений в объекте <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>, созданном для этого интерфейса.  
+ Имеется два механизма добавления поведений контрактов к контрактам.  Первый механизм предполагает создание пользовательского атрибута, который будет использоваться в интерфейсе контракта. Когда интерфейс контракта передается <xref:System.ServiceModel.ServiceHost> либо <xref:System.ServiceModel.ChannelFactory%601>a, либо a, WCF изучает атрибуты интерфейса. Все атрибуты, реализующие интерфейс <xref:System.ServiceModel.Description.IContractBehavior>, добавляются в коллекцию поведений в объекте <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>, созданном для этого интерфейса.  
   
  Кроме того, можно реализовать интерфейс <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> в атрибуте поведения пользовательского контракта. В этом случае поведение, если оно применяется, выглядит следующим образом:  
   
- •Интерфейс контракта. В этом случае поведение применяется ко всем контрактам этого типа в любой конечной точке, а WCF игнорирует значение <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> свойства.  
+ •Интерфейс контракта. В этом случае поведение применяется ко всем контрактам этого типа в любой <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> конечной точке, и WCF игнорирует стоимость свойства.  
   
  •Класс службы. В этом случае поведение применяется только к конечным точкам, контракт которых имеет значение, равное значению свойства <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>.  
   
- •Класс обратного вызова. В этом случае поведение применяется к конечной точке дуплексного клиента, а WCF игнорирует значение <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> свойства.  
+ •Класс обратного вызова. В этом случае поведение применяется к конечной точке дуплексного клиента, <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> и WCF игнорирует значение свойства.  
   
  Второй механизм предполагает добавление поведения в коллекцию поведений объекта <xref:System.ServiceModel.Description.ContractDescription>.  
   
- Примеры поведения контрактов в WCF включают <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> атрибут. Дополнительные сведения и пример см. в справочном разделе.  
+ Примеры поведения по контрактам <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> в WCF включают атрибут. Дополнительные сведения и пример см. в справочном разделе.  
   
 #### <a name="endpoint-behaviors"></a>Поведения конечных точек  
  Поведения конечных точек, реализующие интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior>, являются основным механизмом для изменения всей среды выполнения службы или клиента для конкретной конечной точки.  
@@ -98,11 +98,11 @@ ms.locfileid: "70797253"
 #### <a name="operation-behaviors"></a>Поведения операций  
  Поведения операций, реализующие интерфейс <xref:System.ServiceModel.Description.IOperationBehavior>, служат для расширения сред выполнения клиента и службы для каждой из операций.  
   
- Имеется два механизма добавления поведений операций к операциям. Первый механизм предполагает создание пользовательского атрибута, который будет использоваться в методе, моделирующем операцию. <xref:System.ServiceModel.ServiceHost> При добавлении операции в <xref:System.ServiceModel.ChannelFactory>или в WCF добавляет любые <xref:System.ServiceModel.Description.IOperationBehavior> атрибуты в коллекцию <xref:System.ServiceModel.Description.OperationDescription> поведений, созданную для этой операции.  
+ Имеется два механизма добавления поведений операций к операциям. Первый механизм предполагает создание пользовательского атрибута, который будет использоваться в методе, моделирующем операцию. При добавлении операции <xref:System.ServiceModel.ServiceHost> к <xref:System.ServiceModel.ChannelFactory>a или a, WCF добавляет <xref:System.ServiceModel.Description.IOperationBehavior> любые <xref:System.ServiceModel.Description.OperationDescription> атрибуты в коллекцию поведения в созданной для этой операции.  
   
  Второй механизм предполагает непосредственное добавление поведения в коллекцию поведений объекта <xref:System.ServiceModel.Description.OperationDescription>.  
   
- Примерами поведения операций в WCF являются <xref:System.ServiceModel.OperationBehaviorAttribute> <xref:System.ServiceModel.TransactionFlowAttribute>и.  
+ Примеры эксплуатации поведения в <xref:System.ServiceModel.OperationBehaviorAttribute> WCF <xref:System.ServiceModel.TransactionFlowAttribute>включают и .  
   
  Дополнительные сведения и пример см. в справочном разделе.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70797253"
  Поведения служб, конечных точек и контрактов можно разрабатывать таким образом, чтобы задавать их в коде с помощью атрибутов. Только поведения служб и конечных точек можно настраивать с помощью файлов конфигурации приложения и веб-службы. Предоставление доступа к поведениям с помощью атрибутов позволяет разработчикам задавать поведение во время компиляции; это значит, что такое поведение нельзя добавлять, удалять или изменять во время выполнения. Этот подход часто применяется для поведений, которые обязательно нужны для правильной работы службы (например, связанные с транзакциями параметры атрибута <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>). Предоставление доступа к поведениям с помощью файлов конфигурации позволяет разработчикам переложить обязанности по спецификации и настойке этих поведений на тех, кто будет развертывать службу. Такой подход удобно применять для поведений, которые являются необязательными компонентами, или для других конфигураций, которые зависят от развертывания, например, чтобы определить, нужно ли предоставлять метаданные всей службе или же только конкретной конфигурации авторизации службы.  
   
 > [!NOTE]
-> Также можно использовать поведения, которые поддерживают файлы конфигурации, для реализации политик применения путем их вставки в файл конфигурации machine.config и блокировки соответствующих элементов от изменений. Описание и пример см. в разделе [как Блокировка конечных точек предприятия](how-to-lock-down-endpoints-in-the-enterprise.md).  
+> Также можно использовать поведения, которые поддерживают файлы конфигурации, для реализации политик применения путем их вставки в файл конфигурации machine.config и блокировки соответствующих элементов от изменений. Для описания и примера см. [Как: Блокировка конечных точек в предприятии.](how-to-lock-down-endpoints-in-the-enterprise.md)  
   
  Чтобы сделать поведение доступным с помощью файла конфигурации, разработчик должен создать производный класс для класса <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, а затем зарегистрировать расширение в конфигурации.  
   
@@ -135,7 +135,7 @@ protected override object CreateBehavior()
 <configuration>  
   <system.serviceModel>  
     <services>  
-      <service   
+      <service
         name="Microsoft.WCF.Documentation.SampleService"  
         behaviorConfiguration="metadataSupport"  
       >  
@@ -147,7 +147,7 @@ protected override object CreateBehavior()
         <endpoint  
           address="/SampleService"  
           binding="wsHttpBinding"  
-          behaviorConfiguration="withMessageInspector"   
+          behaviorConfiguration="withMessageInspector"
           contract="Microsoft.WCF.Documentation.ISampleService"  
         />  
         <endpoint  
@@ -171,7 +171,7 @@ protected override object CreateBehavior()
     </behaviors>  
     <extensions>  
       <behaviorExtensions>  
-        <add   
+        <add
           name="endpointMessageInspector"  
           type="Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector, HostApplication, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"  
         />  
@@ -181,7 +181,7 @@ protected override object CreateBehavior()
 </configuration>  
 ```  
   
- Где `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` — это тип расширения поведения, `HostApplication` а — имя сборки, в которую был скомпилирован этот класс.  
+ Где `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` тип расширения поведения `HostApplication` и это имя сборки, в которую был составлен этот класс.  
   
 ### <a name="evaluation-order"></a>Порядок вычисления  
  Классы <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> и <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> отвечают за построение среды выполнения на основе модели программирования и описания. Как было сказано выше, поведения участвуют в этом процессе, оказывая влияние на службы, конечные точки, контракты и операции.  
