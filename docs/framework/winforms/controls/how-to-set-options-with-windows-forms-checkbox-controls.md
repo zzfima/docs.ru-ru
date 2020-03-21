@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00b467836d8e60aeee51a010a6384abf7dd73c56
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746767"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141852"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="fb46b-102">Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fb46b-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
-<span data-ttu-id="fb46b-103">Элемент управления <xref:System.Windows.Forms.CheckBox> Windows Forms используется для предоставления пользователям значения true/false или да/нет.</span><span class="sxs-lookup"><span data-stu-id="fb46b-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="fb46b-104">При выборе элемента управления отображается галочка.</span><span class="sxs-lookup"><span data-stu-id="fb46b-104">The control displays a check mark when it is selected.</span></span>  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="7e184-102">Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7e184-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
+<span data-ttu-id="7e184-103">Элемент управления <xref:System.Windows.Forms.CheckBox> Windows Forms используется для предоставления пользователям true/False или Да/Нет опций.</span><span class="sxs-lookup"><span data-stu-id="7e184-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="7e184-104">Элемент управления отображает контрольную отметку при выборе.</span><span class="sxs-lookup"><span data-stu-id="7e184-104">The control displays a check mark when it is selected.</span></span>  
   
-### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="fb46b-105">Задание параметров с помощью элементов управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="fb46b-105">To set options with CheckBox controls</span></span>  
+### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="7e184-105">Установить параметры с помощью элементов управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="7e184-105">To set options with CheckBox controls</span></span>  
   
-1. <span data-ttu-id="fb46b-106">Проверьте значение свойства <xref:System.Windows.Forms.CheckBox.Checked%2A>, чтобы определить его состояние, и используйте это значение для установки параметра.</span><span class="sxs-lookup"><span data-stu-id="fb46b-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
+1. <span data-ttu-id="7e184-106">Изучите значение <xref:System.Windows.Forms.CheckBox.Checked%2A> свойства, чтобы определить его состояние, и используйте это значение для установки опции.</span><span class="sxs-lookup"><span data-stu-id="7e184-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
   
-     <span data-ttu-id="fb46b-107">В приведенном ниже примере кода при возникновении события <xref:System.Windows.Forms.CheckBox.CheckedChanged> элемента управления <xref:System.Windows.Forms.CheckBox> свойство формы <xref:System.Windows.Forms.Control.AllowDrop%2A> устанавливается в значение `false`, если установлен флажок.</span><span class="sxs-lookup"><span data-stu-id="fb46b-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="fb46b-108">Это полезно в ситуациях, когда требуется ограничить взаимодействие с пользователем.</span><span class="sxs-lookup"><span data-stu-id="fb46b-108">This is useful for situations where you want to restrict user interaction.</span></span>  
+     <span data-ttu-id="7e184-107">В приведенном ниже примере кода <xref:System.Windows.Forms.CheckBox.CheckedChanged> при поднятии события <xref:System.Windows.Forms.Control.AllowDrop%2A> <xref:System.Windows.Forms.CheckBox> элемента `false` управления свойство формы устанавливается в случае проверки флажка.</span><span class="sxs-lookup"><span data-stu-id="7e184-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="7e184-108">Это полезно для ситуаций, когда требуется ограничить взаимодействие с пользователем.</span><span class="sxs-lookup"><span data-stu-id="7e184-108">This is useful for situations where you want to restrict user interaction.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -43,7 +43,7 @@ ms.locfileid: "76746767"
     private void checkBox1_CheckedChanged(object sender, System.EventArgs e)  
     {  
        // Determine the CheckState of the check box.  
-       if (checkBox1.CheckState == CheckState.Checked)   
+       if (checkBox1.CheckState == CheckState.Checked)
        {  
           // If checked, do not allow items to be dragged onto the form.  
           this.AllowDrop = false;  
@@ -57,7 +57,7 @@ ms.locfileid: "76746767"
           System::EventArgs ^ e)  
        {  
           // Determine the CheckState of the check box.  
-          if (checkBox1->CheckState == CheckState::Checked)   
+          if (checkBox1->CheckState == CheckState::Checked)
           {  
              // If checked, do not allow items to be dragged onto the form.  
              this->AllowDrop = false;  
@@ -65,9 +65,9 @@ ms.locfileid: "76746767"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="fb46b-109">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="fb46b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e184-109">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="7e184-109">See also</span></span>
 
 - <xref:System.Windows.Forms.CheckBox>
-- [<span data-ttu-id="fb46b-110">Общие сведения об элементе управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="fb46b-110">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="fb46b-111">Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fb46b-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [<span data-ttu-id="fb46b-112">Элемент управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="fb46b-112">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
+- [<span data-ttu-id="7e184-110">Общие сведения об элементе управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="7e184-110">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="7e184-111">Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7e184-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [<span data-ttu-id="7e184-112">Контроль checkBox</span><span class="sxs-lookup"><span data-stu-id="7e184-112">CheckBox Control</span></span>](checkbox-control-windows-forms.md)

@@ -7,21 +7,20 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: e0b83c4b3573ab6819654e72cac1bf3e4a0ba637
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21cf5e749b0dae310c3326f8abf82c6678fc97e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921277"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155483"
 ---
-# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="8b078-102">\<Элемент > assemblyBinding для \<> конфигурации</span><span class="sxs-lookup"><span data-stu-id="8b078-102">\<assemblyBinding> element for \<configuration></span></span>
+# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="a8529-102">\<сборкаСвязы> \<элемент для> конфигурации</span><span class="sxs-lookup"><span data-stu-id="a8529-102">\<assemblyBinding> element for \<configuration></span></span>
 
-<span data-ttu-id="8b078-103">Определяет политику привязки сборок на уровне конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8b078-103">Specifies assembly binding policy at the configuration level.</span></span>
+<span data-ttu-id="a8529-103">Определяет политику привязки сборок на уровне конфигурации.</span><span class="sxs-lookup"><span data-stu-id="a8529-103">Specifies assembly binding policy at the configuration level.</span></span>
 
-<span data-ttu-id="8b078-104">[ **\<configuration>** ](configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="8b078-104">[**\<configuration>**](configuration-element.md) </span></span>  
-<span data-ttu-id="8b078-105">&nbsp;&nbsp; **\<assemblyBinding >**</span><span class="sxs-lookup"><span data-stu-id="8b078-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
+<span data-ttu-id="a8529-104">конфигурация &nbsp; &nbsp; [\*\* \<>\*\*](configuration-element.md) \*\* \<сборкиОбязательная>\*\*</span><span class="sxs-lookup"><span data-stu-id="a8529-104">[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;**\<assemblyBinding>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="8b078-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8b078-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a8529-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a8529-105">Syntax</span></span>
 
 ```xml
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
@@ -29,34 +28,34 @@ ms.locfileid: "69921277"
 </assemblyBinding>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="8b078-107">Атрибут</span><span class="sxs-lookup"><span data-stu-id="8b078-107">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="a8529-106">attribute</span><span class="sxs-lookup"><span data-stu-id="a8529-106">Attribute</span></span>
 
-|           | <span data-ttu-id="8b078-108">Описание</span><span class="sxs-lookup"><span data-stu-id="8b078-108">Description</span></span> |
+|           | <span data-ttu-id="a8529-107">Описание</span><span class="sxs-lookup"><span data-stu-id="a8529-107">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="8b078-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="8b078-109">**xmlns**</span></span> | <span data-ttu-id="8b078-110">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="8b078-110">Required attribute.</span></span><br><br><span data-ttu-id="8b078-111">Задает пространство имен XML, необходимое для привязки сборок.</span><span class="sxs-lookup"><span data-stu-id="8b078-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="8b078-112">Используйте строку urn:schemas-microsoft-com:asm.v1 в качестве значения.</span><span class="sxs-lookup"><span data-stu-id="8b078-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
+| <span data-ttu-id="a8529-108">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="a8529-108">**xmlns**</span></span> | <span data-ttu-id="a8529-109">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="a8529-109">Required attribute.</span></span><br><br><span data-ttu-id="a8529-110">Задает пространство имен XML, необходимое для привязки сборок.</span><span class="sxs-lookup"><span data-stu-id="a8529-110">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="a8529-111">Используйте строку urn:schemas-microsoft-com:asm.v1 в качестве значения.</span><span class="sxs-lookup"><span data-stu-id="a8529-111">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="8b078-113">Родительский элемент</span><span class="sxs-lookup"><span data-stu-id="8b078-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="a8529-112">Родительский элемент</span><span class="sxs-lookup"><span data-stu-id="a8529-112">Parent element</span></span>
 
-|     | <span data-ttu-id="8b078-114">Описание</span><span class="sxs-lookup"><span data-stu-id="8b078-114">Description</span></span> |
+|     | <span data-ttu-id="a8529-113">Описание</span><span class="sxs-lookup"><span data-stu-id="a8529-113">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="8b078-115"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="8b078-115">**\<configuration>**</span></span>](configuration-element.md) | <span data-ttu-id="8b078-116">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8b078-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="a8529-114">**\<конфигурация>**</span><span class="sxs-lookup"><span data-stu-id="a8529-114">**\<configuration>**</span></span>](configuration-element.md) | <span data-ttu-id="a8529-115">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a8529-115">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-element"></a><span data-ttu-id="8b078-117">Дочерний элемент</span><span class="sxs-lookup"><span data-stu-id="8b078-117">Child element</span></span>
+## <a name="child-element"></a><span data-ttu-id="a8529-116">Дочерний элемент</span><span class="sxs-lookup"><span data-stu-id="a8529-116">Child element</span></span>
 
-|     | <span data-ttu-id="8b078-118">Описание</span><span class="sxs-lookup"><span data-stu-id="8b078-118">Description</span></span> |
+|     | <span data-ttu-id="a8529-117">Описание</span><span class="sxs-lookup"><span data-stu-id="a8529-117">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="8b078-119"> **\<Линкедконфигуратион >** </span><span class="sxs-lookup"><span data-stu-id="8b078-119">**\<linkedConfiguration>**</span></span>](linkedconfiguration-element.md) | <span data-ttu-id="8b078-120">Указание файла конфигурации, который следует включить.</span><span class="sxs-lookup"><span data-stu-id="8b078-120">Specifies a configuration file to include.</span></span> |
+| [<span data-ttu-id="a8529-118">**\<связаныКонфигурация>**</span><span class="sxs-lookup"><span data-stu-id="a8529-118">**\<linkedConfiguration>**</span></span>](linkedconfiguration-element.md) | <span data-ttu-id="a8529-119">Указание файла конфигурации, который следует включить.</span><span class="sxs-lookup"><span data-stu-id="a8529-119">Specifies a configuration file to include.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="8b078-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="8b078-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a8529-120">Remarks</span><span class="sxs-lookup"><span data-stu-id="a8529-120">Remarks</span></span>
 
-<span data-ttu-id="8b078-122">Элемент [**линкедконфигуратион > упрощает управление сборками компонентов, позволяя файлам конфигурации приложения включать файлы конфигурации сборки в хорошо известные расположения, а не дублировать сборку. \<** ](linkedconfiguration-element.md) параметры конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8b078-122">The [**\<linkedConfiguration>**](linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
+<span data-ttu-id="a8529-121">[\*\* \<LinkedConfiguration>\*\*](linkedconfiguration-element.md) элемент упрощает управление сборками компонентов, позволяя файлам конфигурации приложений включать файлы конфигурации сборки в хорошо известных местах, а не дублировать настройки конфигурации сборки.</span><span class="sxs-lookup"><span data-stu-id="a8529-121">The [**\<linkedConfiguration>**](linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8b078-123">Элемент **линкедконфигуратион > не поддерживается для приложений с параллельными манифестами Windows. \<**</span><span class="sxs-lookup"><span data-stu-id="8b078-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
+> <span data-ttu-id="a8529-122">\*\* \<Элемент linkedConfiguration>\*\* не поддерживается для приложений с windows бок о бок.</span><span class="sxs-lookup"><span data-stu-id="a8529-122">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
 
-## <a name="example"></a><span data-ttu-id="8b078-124">Пример</span><span class="sxs-lookup"><span data-stu-id="8b078-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a8529-123">Пример</span><span class="sxs-lookup"><span data-stu-id="a8529-123">Example</span></span>
 
-<span data-ttu-id="8b078-125">В следующем примере показано, как включить файл конфигурации на локальный жесткий диск:</span><span class="sxs-lookup"><span data-stu-id="8b078-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
+<span data-ttu-id="a8529-124">Ниже приводится следующий пример, как включить файл конфигурации на локальном жестком диске:</span><span class="sxs-lookup"><span data-stu-id="a8529-124">The following example shows how to include a configuration file on the local hard disk:</span></span>
 
 ```xml
 <configuration>
@@ -66,6 +65,6 @@ ms.locfileid: "69921277"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="8b078-126">См. также</span><span class="sxs-lookup"><span data-stu-id="8b078-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8529-125">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="a8529-125">See also</span></span>
 
-- [<span data-ttu-id="8b078-127">Схема файла конфигурации для .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8b078-127">Configuration file schema for the .NET Framework</span></span>](index.md)
+- [<span data-ttu-id="a8529-126">Схема конфигурации файла для рамочного соглашения .NET</span><span class="sxs-lookup"><span data-stu-id="a8529-126">Configuration file schema for the .NET Framework</span></span>](index.md)

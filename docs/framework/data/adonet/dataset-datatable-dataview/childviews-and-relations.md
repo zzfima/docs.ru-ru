@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf67304f564729172d1b7f3565d52abffeb90049
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786584"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151485"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="b908a-102">ChildView и отношения</span><span class="sxs-lookup"><span data-stu-id="b908a-102">ChildViews and Relations</span></span>
-<span data-ttu-id="b908a-103">Если какая-то связь существует между таблицами в <xref:System.Data.DataSet>, то можно создать объект <xref:System.Data.DataView>, содержащий строки из связанной дочерней таблицы, с применением метода <xref:System.Data.DataRowView.CreateChildView%2A> объекта <xref:System.Data.DataRowView> по отношению к строкам в родительской таблице.</span><span class="sxs-lookup"><span data-stu-id="b908a-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="b908a-104">Например, следующий код отображает **категории** и связанные с ними **продукты** в алфавитном порядке, отсортированном по **CategoryName** и **ProductName**.</span><span class="sxs-lookup"><span data-stu-id="b908a-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="d63d9-102">ChildView и отношения</span><span class="sxs-lookup"><span data-stu-id="d63d9-102">ChildViews and Relations</span></span>
+<span data-ttu-id="d63d9-103">Если какая-то связь существует между таблицами в <xref:System.Data.DataSet>, то можно создать объект <xref:System.Data.DataView>, содержащий строки из связанной дочерней таблицы, с применением метода <xref:System.Data.DataRowView.CreateChildView%2A> объекта <xref:System.Data.DataRowView> по отношению к строкам в родительской таблице.</span><span class="sxs-lookup"><span data-stu-id="d63d9-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="d63d9-104">Например, следующий код отображает **Категории** и связанные с ними **продукты** в алфавитном порядке, отсортированном по **CategoryName** и **ProductName.**</span><span class="sxs-lookup"><span data-stu-id="d63d9-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -50,12 +50,12 @@ DataTable catTable = catDS.Tables["Categories"];
 DataTable prodTable = catDS.Tables["Products"];  
   
 // Create a relation between the Categories and Products tables.  
-DataRelation relation = catDS.Relations.Add("CatProdRel",   
+DataRelation relation = catDS.Relations.Add("CatProdRel",
   catTable.Columns["CategoryID"],  
                                                             prodTable.Columns["CategoryID"]);  
   
 // Create DataViews for the Categories and Products tables.  
-DataView catView = new DataView(catTable, "", "CategoryName",   
+DataView catView = new DataView(catTable, "", "CategoryName",
   DataViewRowState.CurrentRows);  
 DataView prodView;  
   
@@ -73,10 +73,10 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b908a-105">См. также</span><span class="sxs-lookup"><span data-stu-id="b908a-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d63d9-105">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="d63d9-105">See also</span></span>
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="b908a-106">Объекты DataView</span><span class="sxs-lookup"><span data-stu-id="b908a-106">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="b908a-107">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b908a-107">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="d63d9-106">Объекты DataView</span><span class="sxs-lookup"><span data-stu-id="d63d9-106">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="d63d9-107">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d63d9-107">ADO.NET Overview</span></span>](../ado-net-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Событие XpsDocumentWriter. _WritingProgressChanged (System. Windows. XPS)
+title: XpsDocumentWriter._WritingProgressChanged Event (System.Windows.Xps)
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,27 +11,27 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 59df080b4c07e4aa9714a5b00f3ed87be44a9449
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4d61a11ec6546ed4e1b0011d541f10fec4f86b68
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72525001"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155587"
 ---
-# <a name="xpsdocumentwriter_writingprogresschanged-event"></a><span data-ttu-id="f97ec-102">XpsDocumentWriter. \_WritingProgressChanged событие</span><span class="sxs-lookup"><span data-stu-id="f97ec-102">XpsDocumentWriter.\_WritingProgressChanged Event</span></span>
+# <a name="xpsdocumentwriter_writingprogresschanged-event"></a><span data-ttu-id="9ed6f-102">XpsDocumentWriter. \_WritingProgressChanged Событие</span><span class="sxs-lookup"><span data-stu-id="9ed6f-102">XpsDocumentWriter.\_WritingProgressChanged Event</span></span>
 
-<span data-ttu-id="f97ec-103">Происходит, когда <xref:System.Windows.Xps.XpsDocumentWriter> обновляет ход выполнения.</span><span class="sxs-lookup"><span data-stu-id="f97ec-103">Occurs when the <xref:System.Windows.Xps.XpsDocumentWriter> updates its progress.</span></span> 
+<span data-ttu-id="9ed6f-103">Происходит, когда <xref:System.Windows.Xps.XpsDocumentWriter> обновляет ход выполнения.</span><span class="sxs-lookup"><span data-stu-id="9ed6f-103">Occurs when the <xref:System.Windows.Xps.XpsDocumentWriter> updates its progress.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f97ec-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f97ec-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="9ed6f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ed6f-104">Syntax</span></span>
 
 ``` csharp
 internal event WritingProgressChangedEventHandler _WritingProgressChanged
 ```
 
-## <a name="requirements"></a><span data-ttu-id="f97ec-105">Требования</span><span class="sxs-lookup"><span data-stu-id="f97ec-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="9ed6f-105">Требования</span><span class="sxs-lookup"><span data-stu-id="9ed6f-105">Requirements</span></span>
 
-<span data-ttu-id="f97ec-106">**Пространство имен:** <xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="f97ec-106">**Namespace:** <xref:System.Windows.Xps></span></span>
+<span data-ttu-id="9ed6f-106">**Пространство имен:**<xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="9ed6f-106">**Namespace:** <xref:System.Windows.Xps></span></span>
 
-<span data-ttu-id="f97ec-107">**Сборка:** System. Printing (в System. Printing. dll)</span><span class="sxs-lookup"><span data-stu-id="f97ec-107">**Assembly:** System.Printing (in system.printing.dll)</span></span>
+<span data-ttu-id="9ed6f-107">**Сборка:** System.Printing (в системе.printing.dll)</span><span class="sxs-lookup"><span data-stu-id="9ed6f-107">**Assembly:** System.Printing (in system.printing.dll)</span></span>
 
-<span data-ttu-id="f97ec-108">**.NET Framework версии:** Доступно с 3,0</span><span class="sxs-lookup"><span data-stu-id="f97ec-108">**.NET Framework versions:** Available since 3.0</span></span>
+<span data-ttu-id="9ed6f-108">**Рамочные версии .NET:** Доступно с 3.0</span><span class="sxs-lookup"><span data-stu-id="9ed6f-108">**.NET Framework versions:** Available since 3.0</span></span>
