@@ -2,25 +2,25 @@
 title: Практическое руководство. Поиск элементов с определенным атрибутом (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: ef8dd26d40f15d3d5a27f0ca5d62f7337f2054ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343690"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267045"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="84455-102">Пошаговое руководство. Поиск элементов с указанным атрибутом (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84455-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="84455-103">Иногда может понадобиться найти все элементы, имеющие конкретный атрибут.</span><span class="sxs-lookup"><span data-stu-id="84455-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="84455-104">Вас не интересует содержимое атрибута.</span><span class="sxs-lookup"><span data-stu-id="84455-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="84455-105">Вместо этого вы хотите сделать выбор на основании самого существования атрибута.</span><span class="sxs-lookup"><span data-stu-id="84455-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="8a0d1-102">Как: Найти элементы с конкретным атрибутом (XPath-LIN' к XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a0d1-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="8a0d1-103">Иногда может понадобиться найти все элементы, имеющие конкретный атрибут.</span><span class="sxs-lookup"><span data-stu-id="8a0d1-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="8a0d1-104">Вас не интересует содержимое атрибута.</span><span class="sxs-lookup"><span data-stu-id="8a0d1-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="8a0d1-105">Вместо этого вы хотите сделать выбор на основании самого существования атрибута.</span><span class="sxs-lookup"><span data-stu-id="8a0d1-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="84455-106">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="84455-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="8a0d1-106">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="8a0d1-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="84455-107">Пример</span><span class="sxs-lookup"><span data-stu-id="84455-107">Example</span></span>  
- <span data-ttu-id="84455-108">Следующий код осуществляет выборку элементов с атрибутом `Select`.</span><span class="sxs-lookup"><span data-stu-id="84455-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="8a0d1-107">Пример</span><span class="sxs-lookup"><span data-stu-id="8a0d1-107">Example</span></span>  
+ <span data-ttu-id="8a0d1-108">Следующий код осуществляет выборку элементов с атрибутом `Select`.</span><span class="sxs-lookup"><span data-stu-id="8a0d1-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```vb  
-Dim doc As XElement = _   
+Dim doc As XElement = _
     <Root>  
         <Child1>1</Child1>  
         <Child2 Select='true'>2</Child2>  
@@ -51,7 +51,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="84455-109">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="84455-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="8a0d1-109">В примере получается следующий вывод.</span><span class="sxs-lookup"><span data-stu-id="8a0d1-109">This example produces the following output:</span></span>  
   
 ```console
 Results are identical  
@@ -59,6 +59,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="84455-110">См. также</span><span class="sxs-lookup"><span data-stu-id="84455-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a0d1-110">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="8a0d1-110">See also</span></span>
 
-- [<span data-ttu-id="84455-111">LINQ to XML для пользователей XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84455-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="8a0d1-111">ДЛЯ пользователей XPath (Visual Basic) линков к XML</span><span class="sxs-lookup"><span data-stu-id="8a0d1-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
