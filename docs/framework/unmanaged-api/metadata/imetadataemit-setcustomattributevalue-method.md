@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-ms.openlocfilehash: fd5e71071de9e6afebc8f1848e0af8835f22c9bf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25b7f478ae0bd05b82fa960561fb8534efe2b4db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448125"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175672"
 ---
-# <a name="imetadataemitsetcustomattributevalue-method"></a><span data-ttu-id="794eb-102">Метод IMetaDataEmit::SetCustomAttributeValue</span><span class="sxs-lookup"><span data-stu-id="794eb-102">IMetaDataEmit::SetCustomAttributeValue Method</span></span>
-<span data-ttu-id="794eb-103">Задает или обновляет значение настраиваемого атрибута, определенного при предыдущем вызове метода [IMetaDataEmit::D ефинекустоматтрибуте](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span><span class="sxs-lookup"><span data-stu-id="794eb-103">Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span></span>  
+# <a name="imetadataemitsetcustomattributevalue-method"></a><span data-ttu-id="bbaf0-102">Метод IMetaDataEmit::SetCustomAttributeValue</span><span class="sxs-lookup"><span data-stu-id="bbaf0-102">IMetaDataEmit::SetCustomAttributeValue Method</span></span>
+<span data-ttu-id="bbaf0-103">Устанавливает или обновляет значение пользовательского атрибута, определяемого предыдущим вызовом [на IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span><span class="sxs-lookup"><span data-stu-id="bbaf0-103">Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="794eb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="794eb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bbaf0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bbaf0-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT SetCustomAttributeValue (   
-    [in]  mdCustomAttribute       pcv,   
-    [in]  void const              *pCustomAttribute,    
-    [in]  ULONG                   cbCustomAttribute   
+HRESULT SetCustomAttributeValue (
+    [in]  mdCustomAttribute       pcv,
+    [in]  void const              *pCustomAttribute,
+    [in]  ULONG                   cbCustomAttribute
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="794eb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="794eb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bbaf0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bbaf0-105">Parameters</span></span>  
  `pcv`  
- <span data-ttu-id="794eb-106">окне Токен целевого настраиваемого атрибута.</span><span class="sxs-lookup"><span data-stu-id="794eb-106">[in] The token of the target custom attribute.</span></span>  
+ <span data-ttu-id="bbaf0-106">(в) Токен пользовательского атрибута цели.</span><span class="sxs-lookup"><span data-stu-id="bbaf0-106">[in] The token of the target custom attribute.</span></span>  
   
  `pCustomAttribute`  
- <span data-ttu-id="794eb-107">окне Указатель на массив, содержащий настраиваемый атрибут.</span><span class="sxs-lookup"><span data-stu-id="794eb-107">[in] A pointer to the array that contains the custom attribute.</span></span>  
+ <span data-ttu-id="bbaf0-107">(в) Указатель на массив, содержащий пользовательский атрибут.</span><span class="sxs-lookup"><span data-stu-id="bbaf0-107">[in] A pointer to the array that contains the custom attribute.</span></span>  
   
  `cbCustomAttribute`  
- <span data-ttu-id="794eb-108">окне Размер настраиваемого атрибута в байтах.</span><span class="sxs-lookup"><span data-stu-id="794eb-108">[in] The size, in bytes, of the custom attribute.</span></span>  
+ <span data-ttu-id="bbaf0-108">(в) Размер, в байтах, пользовательского атрибута.</span><span class="sxs-lookup"><span data-stu-id="bbaf0-108">[in] The size, in bytes, of the custom attribute.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="794eb-109">Требования</span><span class="sxs-lookup"><span data-stu-id="794eb-109">Requirements</span></span>  
- <span data-ttu-id="794eb-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="794eb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bbaf0-109">Требования</span><span class="sxs-lookup"><span data-stu-id="bbaf0-109">Requirements</span></span>  
+ <span data-ttu-id="bbaf0-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bbaf0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="794eb-111">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="794eb-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bbaf0-111">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bbaf0-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="794eb-112">**Библиотека:** Используется в качестве ресурса в MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="794eb-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bbaf0-112">**Библиотека:** Используется в качестве ресурса в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bbaf0-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="794eb-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="794eb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bbaf0-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bbaf0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="794eb-114">См. также</span><span class="sxs-lookup"><span data-stu-id="794eb-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bbaf0-114">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="bbaf0-114">See also</span></span>
 
-- [<span data-ttu-id="794eb-115">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="794eb-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="794eb-116">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="794eb-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="bbaf0-115">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="bbaf0-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="bbaf0-116">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="bbaf0-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
