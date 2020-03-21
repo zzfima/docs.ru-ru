@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a9474b392052900952f5b677ad94b16025de8dd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746205"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186575"
 ---
 # <a name="wpf-brushes-overview"></a>Общие сведения о кистях WPF
-Все, что видно на экране, видимо, так как оно было закрашено кистью. Например, кисть используется для описания фона кнопки, переднего плана текста и заливки фигуры. В этом разделе приводятся основные понятия рисования с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кистей и приведены примеры. Кисти позволяют заполнять объекты [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] различными изображениями, начиная с просто сплошного цвета и заканчивая сложными наборами шаблонов и изображений.  
+Все видимое на экране видно, потому что оно было окрашено кистью. Например, для описания фона кнопки, переднего плана текста и заполнения формы используется кисть. Эта тема знакомит с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] понятиями живописи кистями и приводит примеры. Кисти позволяют заполнять объекты [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] различными изображениями, начиная с просто сплошного цвета и заканчивая сложными наборами шаблонов и изображений.  
   
-<a name="paintingwithbrush"></a>   
-## <a name="painting-with-a-brush"></a>Рисование с помощью кисти  
- <xref:System.Windows.Media.Brush> «закрашивает» область с выходными данными. Различные кисти имеют различные типы выходных данных. Некоторые кисти закрашивать область сплошным цветом, другими — градиентом, узором, изображением или рисованием. На следующем рисунке показаны примеры различных типов <xref:System.Windows.Media.Brush>.  
+<a name="paintingwithbrush"></a>
+## <a name="painting-with-a-brush"></a>Картина с кистью  
+ "Красит" <xref:System.Windows.Media.Brush> область с ее выходом. Разные кисти имеют различные типы выводимых данных. Некоторые кисти рисуют область с твердым цветом, другие с градиентом, рисунком, изображением или рисунком. На следующей иллюстрации показаны <xref:System.Windows.Media.Brush> примеры каждого из различных типов.  
   
  ![Типы кистей](./media/graphicsmm-brushtypes.jpg "graphicsmm_brushtypes")  
-Примеры кистей  
+Примеры кисти  
   
- Большинство визуальных объектов позволяют указать, как они рисуются. В следующей таблице перечислены некоторые распространенные объекты и свойства, с помощью которых можно использовать <xref:System.Windows.Media.Brush>.  
+ Большинство визуальных объектов позволяют указать, как они окрашены. В следующей таблице перечислены некоторые общие объекты и свойства, с помощью которых можно <xref:System.Windows.Media.Brush>использовать.  
   
 |Class|Свойства кисти|  
 |-----------|----------------------|  
@@ -35,140 +35,140 @@ ms.locfileid: "76746205"
 |<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
- В следующих разделах описываются различные типы <xref:System.Windows.Media.Brush> и приводится пример каждого из них.  
+ В следующих разделах описывают различные <xref:System.Windows.Media.Brush> типы и приводятся примеры каждого из них.  
   
-<a name="paintwithsolidcolorbrush"></a>   
-## <a name="paint-with-a-solid-color"></a>Заливка сплошным цветом  
- <xref:System.Windows.Media.SolidColorBrush> закрашивает область сплошным <xref:System.Windows.Media.Color>. Существует множество способов указать <xref:System.Windows.Media.SolidColorBrush.Color%2A> <xref:System.Windows.Media.SolidColorBrush>. Например, можно указать его альфа-, красный, синий и зеленый каналы или использовать один из стандартных цветов, предоставленных классом <xref:System.Windows.Media.Colors>.  
+<a name="paintwithsolidcolorbrush"></a>
+## <a name="paint-with-a-solid-color"></a>Краска с твердым цветом  
+ Красит <xref:System.Windows.Media.SolidColorBrush> область <xref:System.Windows.Media.Color>твердым. Существует множество способов <xref:System.Windows.Media.SolidColorBrush.Color%2A> <xref:System.Windows.Media.SolidColorBrush>указать: например, можно указать его альфа-, красный, синий и зеленый каналы или использовать один из предопределенных цветов, предусмотренных <xref:System.Windows.Media.Colors> классом.  
   
- В следующем примере используется <xref:System.Windows.Media.SolidColorBrush> для рисования <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. На следующем рисунке показан закрашенный прямоугольник.  
+ Следующий пример <xref:System.Windows.Media.SolidColorBrush> использует для <xref:System.Windows.Shapes.Shape.Fill%2A> рисования <xref:System.Windows.Shapes.Rectangle>. На следующей иллюстрации изображен окрашенный прямоугольник.  
   
  ![Прямоугольник, закрашенный с помощью SolidColorBrush](./media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm_brush_ovw_solidcolorbrush")  
-Прямоугольник, закрашенный с помощью SolidColorBrush  
+Прямоугольник, окрашенный с помощью SolidColorBrush  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmsolidcolorbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
   
- Дополнительные сведения о классе <xref:System.Windows.Media.SolidColorBrush> см. в статье [Общие сведения о рисовании с помощью сплошных цветов и градиентов](painting-with-solid-colors-and-gradients-overview.md).  
+ Для получения дополнительной <xref:System.Windows.Media.SolidColorBrush> информации о классе, см [Картина с твердыми цветами и градиентов Обзор](painting-with-solid-colors-and-gradients-overview.md).  
   
-<a name="paintwithlineargradientbrush"></a>   
-## <a name="paint-with-a-linear-gradient"></a>Рисование с помощью линейного градиента  
- <xref:System.Windows.Media.LinearGradientBrush> закрашивает область линейным градиентом. Линейный градиент смешивает два или более цвета в линии, оси градиента. Для указания цветов в градиенте и их позиций используются <xref:System.Windows.Media.GradientStop> объекты.  
+<a name="paintwithlineargradientbrush"></a>
+## <a name="paint-with-a-linear-gradient"></a>Краска с линейным градиентом  
+ Краска <xref:System.Windows.Media.LinearGradientBrush> области с линейным градиентом. Линейный градиент смешивает два или более цветов вдоль линии, то есть оси градиента. Для <xref:System.Windows.Media.GradientStop> указания цветов в градиенте и их положениях используются объекты.  
   
- В следующем примере используется <xref:System.Windows.Media.LinearGradientBrush> для рисования <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. На следующем рисунке показан закрашенный прямоугольник.  
+ Следующий пример <xref:System.Windows.Media.LinearGradientBrush> использует для <xref:System.Windows.Shapes.Shape.Fill%2A> рисования <xref:System.Windows.Shapes.Rectangle>. На следующей иллюстрации изображен окрашенный прямоугольник.  
   
  ![Прямоугольник, закрашенный с помощью LinearGradientBrush](./media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")  
-Прямоугольник, закрашенный с помощью LinearGradientBrush  
+Прямоугольник, окрашенный с помощью линейнойГрадентной щетки  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmlineargradientbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
   
- Дополнительные сведения о классе <xref:System.Windows.Media.LinearGradientBrush> см. в статье [Общие сведения о рисовании с помощью сплошных цветов и градиентов](painting-with-solid-colors-and-gradients-overview.md).  
+ Для получения дополнительной <xref:System.Windows.Media.LinearGradientBrush> информации о классе, см [Картина с твердыми цветами и градиентов Обзор](painting-with-solid-colors-and-gradients-overview.md).  
   
-<a name="paintwithradialgradientbrush"></a>   
-## <a name="paint-with-a-radial-gradient"></a>Рисование с помощью радиального градиента  
- <xref:System.Windows.Media.RadialGradientBrush> закрашивает область с радиальным градиентом. Радиальный градиент смешивает два или более цвета в окружности. Как и в случае с классом <xref:System.Windows.Media.LinearGradientBrush>, для указания цветов в градиенте и их позиций используются <xref:System.Windows.Media.GradientStop> объекты.  
+<a name="paintwithradialgradientbrush"></a>
+## <a name="paint-with-a-radial-gradient"></a>Краска с радиальным градиентом  
+ Краска <xref:System.Windows.Media.RadialGradientBrush> области с радиальным градиентом. Радиальный градиент смешивает два или более цветов по кругу. Как и <xref:System.Windows.Media.LinearGradientBrush> в классе, вы используете <xref:System.Windows.Media.GradientStop> объекты для определения цветов в градиенте и их положения.  
   
- В следующем примере используется <xref:System.Windows.Media.RadialGradientBrush> для рисования <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. На следующем рисунке показан закрашенный прямоугольник.  
+ Следующий пример <xref:System.Windows.Media.RadialGradientBrush> использует для <xref:System.Windows.Shapes.Shape.Fill%2A> рисования <xref:System.Windows.Shapes.Rectangle>. На следующей иллюстрации изображен окрашенный прямоугольник.  
   
- ![Прямоугольник, закрашенный с помощью RadialGradientBrush](./media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")  
-Прямоугольник, закрашенный с помощью RadialGradientBrush  
+ ![Прямоугольник, закрашенный с использованием RadialGradientBrush](./media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")  
+Прямоугольник, окрашенный с помощью РадиалГрадientBrush  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmradialgradientbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
   
- Дополнительные сведения о классе <xref:System.Windows.Media.RadialGradientBrush> см. в статье [Общие сведения о рисовании с помощью сплошных цветов и градиентов](painting-with-solid-colors-and-gradients-overview.md).  
+ Для получения дополнительной <xref:System.Windows.Media.RadialGradientBrush> информации о классе, см [Картина с твердыми цветами и градиентов Обзор](painting-with-solid-colors-and-gradients-overview.md).  
   
-<a name="paintwithimage"></a>   
-## <a name="paint-with-an-image"></a>Рисование с помощью изображения  
- <xref:System.Windows.Media.ImageBrush> закрашивает область с <xref:System.Windows.Media.ImageSource>.  
+<a name="paintwithimage"></a>
+## <a name="paint-with-an-image"></a>Краска с изображением  
+ Краска <xref:System.Windows.Media.ImageBrush> области с <xref:System.Windows.Media.ImageSource>.  
   
- В следующем примере используется <xref:System.Windows.Media.ImageBrush> для рисования <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. На следующем рисунке показан закрашенный прямоугольник.  
+ Следующий пример <xref:System.Windows.Media.ImageBrush> использует для <xref:System.Windows.Shapes.Shape.Fill%2A> рисования <xref:System.Windows.Shapes.Rectangle>. На следующей иллюстрации изображен окрашенный прямоугольник.  
   
- ![Прямоугольник, закрашенный ImageBrush](./media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")  
-Прямоугольник, закрашенный с помощью изображения  
+ ![Прямоугольник, созданный при помощи ImageBrush](./media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")  
+Прямоугольник, окрашенный с помощью изображения  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmimagebrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmimagebrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmimagebrushexampleinline)]  
   
- Дополнительные сведения о классе <xref:System.Windows.Media.ImageBrush> см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md).  
+ Для получения дополнительной <xref:System.Windows.Media.ImageBrush> информации о классе, см [Картина с изображениями, рисунки и визуальные эффекты](painting-with-images-drawings-and-visuals.md).  
   
-<a name="paintwithdrawing"></a>   
-## <a name="paint-with-a-drawing"></a>Рисование с помощью рисования  
- <xref:System.Windows.Media.DrawingBrush> закрашивает область с <xref:System.Windows.Media.Drawing>. <xref:System.Windows.Media.Drawing> может содержать фигуры, изображения, текст и мультимедиа.  
+<a name="paintwithdrawing"></a>
+## <a name="paint-with-a-drawing"></a>Краска с рисунком  
+ Красит <xref:System.Windows.Media.DrawingBrush> область с <xref:System.Windows.Media.Drawing>. А <xref:System.Windows.Media.Drawing> может содержать формы, изображения, текст и носители.  
   
- В следующем примере используется <xref:System.Windows.Media.DrawingBrush> для рисования <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. На следующем рисунке показан закрашенный прямоугольник.  
+ Следующий пример <xref:System.Windows.Media.DrawingBrush> использует для <xref:System.Windows.Shapes.Shape.Fill%2A> рисования <xref:System.Windows.Shapes.Rectangle>. На следующей иллюстрации изображен окрашенный прямоугольник.  
   
  ![Прямоугольник, закрашенный с помощью DrawingBrush](./media/graphicsmm-brush-ovw-drawingbrush.jpg "graphicsmm_brush_ovw_drawingbrush")  
-Прямоугольник, закрашенный с помощью DrawingBrush  
+Прямоугольник, окрашенный с помощью чертежной щетки  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmdrawingbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmdrawingbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmdrawingbrushexampleinline)]  
   
- Дополнительные сведения о классе <xref:System.Windows.Media.DrawingBrush> см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md).  
+ Для получения дополнительной <xref:System.Windows.Media.DrawingBrush> информации о классе, см [Картина с изображениями, рисунки и визуальные эффекты](painting-with-images-drawings-and-visuals.md).  
   
-<a name="paintwithvisual"></a>   
-## <a name="paint-with-a-visual"></a>Рисование с помощью визуального элемента  
- <xref:System.Windows.Media.VisualBrush> закрашивает область с <xref:System.Windows.Media.Visual>ным объектом. Примерами визуальных объектов могут служить <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Page>и <xref:System.Windows.Controls.MediaElement>. <xref:System.Windows.Media.VisualBrush> также позволяет проецировать содержимое из одной части приложения в другую область; Это очень полезно для создания эффектов отражения и увеличения фрагментов экрана.  
+<a name="paintwithvisual"></a>
+## <a name="paint-with-a-visual"></a>Краска с визуальным  
+ Нарисована <xref:System.Windows.Media.VisualBrush> область с <xref:System.Windows.Media.Visual> объектом. Примеры визуальных <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Page>объектов <xref:System.Windows.Controls.MediaElement>включают, и . Также <xref:System.Windows.Media.VisualBrush> позволяет проецировать содержимое из одной части приложения в другую область; это очень полезно для создания эффектов отражения и увеличительные части экрана.  
   
- В следующем примере используется <xref:System.Windows.Media.VisualBrush> для рисования <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. На следующем рисунке показан закрашенный прямоугольник.  
+ Следующий пример <xref:System.Windows.Media.VisualBrush> использует для <xref:System.Windows.Shapes.Shape.Fill%2A> рисования <xref:System.Windows.Shapes.Rectangle>. На следующей иллюстрации изображен окрашенный прямоугольник.  
   
- ![Прямоугольник, закрашенный с помощью VisualBrush](./media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")  
-Прямоугольник, закрашенный с помощью VisualBrush  
+ ![Прямоугольник, закрашенный с использованием VisualBrush](./media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")  
+Прямоугольник, окрашенный с помощью VisualBrush  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmvisualbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmvisualbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmvisualbrushexampleinline)]  
   
- Дополнительные сведения о классе <xref:System.Windows.Media.VisualBrush> см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md).  
+ Для получения дополнительной <xref:System.Windows.Media.VisualBrush> информации о классе, см [Картина с изображениями, рисунки и визуальные эффекты](painting-with-images-drawings-and-visuals.md).  
   
-<a name="paintwithpredefinedbrushesandsystemcolors"></a>   
-## <a name="paint-using-predefined-and-system-brushes"></a>Рисование с помощью стандартных и системных кистей  
- Для удобства Windows Presentation Foundation (WPF) предоставляет набор стандартных и системных кистей, которые можно использовать для рисования объектов.  
+<a name="paintwithpredefinedbrushesandsystemcolors"></a>
+## <a name="paint-using-predefined-and-system-brushes"></a>Краска с помощью предопределенных и системных кистей  
+ Для удобства Фонд презентации Windows (WPF) предоставляет набор предопределенных и системных кистей, которые можно использовать для покраски объектов.  
   
-- Список доступных стандартных кистей см. в разделе класс <xref:System.Windows.Media.Brushes>. Пример, демонстрирующий использование предопределенной кисти, см. в разделе [Закраска области сплошным цветом](how-to-paint-an-area-with-a-solid-color.md).  
+- Список доступных предопределенных кистей см. <xref:System.Windows.Media.Brushes> Например, с указанием того, как использовать предопределенную кисть, [см.](how-to-paint-an-area-with-a-solid-color.md)  
   
-- Список доступных системных кистей см. в разделе класс <xref:System.Windows.SystemColors>. Пример см. в разделе [закрашивание области с помощью системной кисти](how-to-paint-an-area-with-a-system-brush.md).  
+- Список доступных системных кистей см. <xref:System.Windows.SystemColors> Например, [см. Paint an Area с помощью системной кисти.](how-to-paint-an-area-with-a-system-brush.md)  
   
-<a name="commonbrushfeatures"></a>   
-## <a name="common-brush-features"></a>Общие функции кисти  
- <xref:System.Windows.Media.Brush> объекты предоставляют свойство <xref:System.Windows.Media.Brush.Opacity%2A>, которое можно использовать для того, чтобы сделать кисть прозрачной или частично прозрачной. Значение <xref:System.Windows.Media.Brush.Opacity%2A> 0 делает кисть полностью прозрачной, а <xref:System.Windows.Media.Brush.Opacity%2A> значение 1 делает кисть полностью непрозрачной. В следующем примере используется свойство <xref:System.Windows.Media.Brush.Opacity%2A>, чтобы сделать <xref:System.Windows.Media.SolidColorBrush> 25% непрозрачным.  
+<a name="commonbrushfeatures"></a>
+## <a name="common-brush-features"></a>Общие особенности кисти  
+ <xref:System.Windows.Media.Brush>объекты <xref:System.Windows.Media.Brush.Opacity%2A> обеспечивают свойство, которое может быть использовано для того, чтобы сделать кисть прозрачной или частично прозрачной. Значение <xref:System.Windows.Media.Brush.Opacity%2A> 0 делает кисть полностью <xref:System.Windows.Media.Brush.Opacity%2A> прозрачной, в то время как значение 1 делает кисть полностью непрозрачной. В следующем примере <xref:System.Windows.Media.Brush.Opacity%2A> свойство <xref:System.Windows.Media.SolidColorBrush> делает 25 процентов непрозрачным.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   
  [!code-csharp[BrushOverviewExamples_snip#OpacityExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/OpacityExample.cs#opacityexample1csharp)]  
   
- Если кисть содержит частично прозрачные цвета, значение прозрачности цвета объединяется посредством умножения со значением прозрачности кисти. Например, если кисть имеет значение Opacity, равное 0,5, а цвет, используемый в кисти, также имеет значение Opacity, равное 0,5, то выходной цвет имеет значение непрозрачности, равное 0,25.  
+ Если кисть содержит частично прозрачные цвета, то непрозрачность цвета сочетается с умножением с непрозрачностью качества кисти. Например, если кисть имеет значение непрозрачности 0,5, а цвет, используемый в кисти, также имеет значение непрозрачности 0,5, выходной цвет имеет значение непрозрачности 0,25.  
   
 > [!NOTE]
-> Изменение значения прозрачности кисти более эффективно, чем изменение прозрачности всего элемента с помощью его свойства <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType>.  
+> Более эффективно изменять непрозрачность кисти, чем изменять непрозрачность всего элемента, используя <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> ее свойство.  
   
- Можно поворачивать, масштабировать, отклонять и преобразовывать содержимое кисти с помощью свойств <xref:System.Windows.Media.Brush.Transform%2A> или <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Дополнительные сведения см. в разделе [Общие сведения о преобразовании кисти](brush-transformation-overview.md).  
+ Вы можете поворачивать, масштабировать, исказить и перевести <xref:System.Windows.Media.Brush.Transform%2A> <xref:System.Windows.Media.Brush.RelativeTransform%2A> содержимое кисти, используя ее или свойства. Для получения дополнительной информации смотрите [обзор трансформации кисти](brush-transformation-overview.md).  
   
- Так как они являются <xref:System.Windows.Media.Animation.Animatable> объектами, <xref:System.Windows.Media.Brush> объекты могут быть анимированы. Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](animation-overview.md).  
+ Поскольку <xref:System.Windows.Media.Animation.Animatable> они <xref:System.Windows.Media.Brush> являются объектами, объекты могут быть анимированы. Для получения дополнительной информации [см.](animation-overview.md)  
   
-<a name="freezable_features"></a>   
+<a name="freezable_features"></a>
 ### <a name="freezable-features"></a>Возможности объектов Freezable  
- Поскольку он наследуется от класса <xref:System.Windows.Freezable>, класс <xref:System.Windows.Media.Brush> предоставляет несколько специальных функций: <xref:System.Windows.Media.Brush> объекты могут быть объявлены как [ресурсы](../../../desktop-wpf/fundamentals/xaml-resources-define.md), совместно использоваться несколькими объектами и клонированы. Кроме того, все типы <xref:System.Windows.Media.Brush>, за исключением <xref:System.Windows.Media.VisualBrush>, можно сделать доступными только для чтения, чтобы повысить производительность и обеспечить потокобезопасность.  
+ Поскольку класс наследует <xref:System.Windows.Freezable> из <xref:System.Windows.Media.Brush> класса, он <xref:System.Windows.Media.Brush> предоставляет несколько специальных функций: объекты могут быть объявлены в качестве [ресурсов,](../../../desktop-wpf/fundamentals/xaml-resources-define.md)общими между несколькими объектами и клонированы. Кроме того, <xref:System.Windows.Media.Brush> все <xref:System.Windows.Media.VisualBrush> типы, кроме, могут быть сделаны только для чтения, чтобы повысить производительность и сделать поток безопасным.  
   
- Дополнительные сведения о различных возможностях, предоставляемых <xref:System.Windows.Freezable> объектами, см. в разделе [Общие сведения об объектах Freezable](../advanced/freezable-objects-overview.md).  
+ Для получения дополнительной информации <xref:System.Windows.Freezable> о различных функциях, предоставляемых объектами, см. [Freezable Objects Overview](../advanced/freezable-objects-overview.md)  
   
- Дополнительные сведения о том, почему <xref:System.Windows.Media.VisualBrush> объекты не могут быть заморожены, см. на странице типа <xref:System.Windows.Media.VisualBrush>.  
+ Для получения дополнительной <xref:System.Windows.Media.VisualBrush> информации о том, почему объекты не могут быть заморожены, см. <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
-- [Общие сведения о закрашивании сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
-- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
+- [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
-- [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973)
-- [Пример ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Разделы практического руководства](brushes-how-to-topics.md)
+- [Пример использования кистей](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes)
+- [Пример использования ImageBrush](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ImageBrush)
+- [Пример использования VisualBrush](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/VisualBrush)
+- [Как-к темам](brushes-how-to-topics.md)
 - [Дополнительные рекомендации по повышению производительности](../advanced/optimizing-performance-other-recommendations.md)

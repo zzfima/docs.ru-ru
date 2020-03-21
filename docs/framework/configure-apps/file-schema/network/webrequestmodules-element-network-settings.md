@@ -8,40 +8,40 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7f2805283f89e6165d336b3e593d34054e02115d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697465"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154547"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>Элемент \<webRequestModules > (параметры сети)
-Указывает модули, используемые для запроса сведений от сетевых узлов.  
+# <a name="webrequestmodules-element-network-settings"></a>\<Элемент webRequestModules> (параметры сети)
+Определяет модули для использования для запроса информации у сетевых хостов.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. NET >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
+[**\<конфигурация>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules>  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<webRequestModules>   
+<webRequestModules>
 </webRequestModules>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[add](add-element-for-webrequestmodules-network-settings.md)|Добавляет пользовательский модуль веб-запросов в приложение.|  
-|[clear](clear-element-for-webrequestmodules-network-settings.md)|Удаляет из приложения все зарегистрированные модули веб-запросов.|  
-|[remove](remove-element-for-webrequestmodules-network-settings.md)|Удаляет пользовательский модуль веб-запросов из приложения.|  
+|[добавление](add-element-for-webrequestmodules-network-settings.md)|Добавляет пользовательский модуль веб-запроса в приложение.|  
+|[Ясно](clear-element-for-webrequestmodules-network-settings.md)|Удаляет из приложения все зарегистрированные модули веб-запросов.|  
+|[удаление](remove-element-for-webrequestmodules-network-settings.md)|Удаляет из приложения пользовательский модуль веб-запроса.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -49,16 +49,16 @@ ms.locfileid: "71697465"
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
-## <a name="remarks"></a>Примечания  
- Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов должны реализовывать интерфейс <xref:System.Net.IWebRequestCreate>.  
+## <a name="remarks"></a>Remarks  
+ Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запроса должны реализовать <xref:System.Net.IWebRequestCreate> интерфейс.  
   
- .NET Framework включает модули веб-запросов для URI, которые начинаются с `http://`, `https://`и `file://`. Модули по умолчанию можно переопределить только путем регистрации пользовательского модуля в файле конфигурации.  
+ Рамочка .NET включает в себя веб-запросы модулей для URI, которые начинаются с `http://` `https://`, и `file://`. Переопределить модули по умолчанию можно только зарегистрировав пользовательский модуль в файле конфигурации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере регистрируется HTTP-модуль по умолчанию. Необходимо заменить значения для Version и PublicKeyToken правильными значениями для указанного модуля.  
+ Следующий пример регистрирует модуль HTTP по умолчанию. Необходимо заменить значения для версии и PublicKeyToken правильными значениями для указанного модуля.  
   
 ```xml  
 <configuration>  
@@ -73,8 +73,8 @@ ms.locfileid: "71697465"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>
-- [Схема параметров сети](index.md)
+- [Схема настройки сети](index.md)

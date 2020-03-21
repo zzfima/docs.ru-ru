@@ -2,15 +2,15 @@
 title: Доверенная фасадная служба
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 40264ee018d3c09d86e1bcd0b8cc96c0610219f9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 17901b7a68d4701287d02bc7ee3174683e777fd1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711881"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143750"
 ---
 # <a name="trusted-facade-service"></a>Доверенная фасадная служба
-В этом образце сценария показано, как передать сведения об удостоверении вызывающего объекта из одной службы в другую с помощью инфраструктуры безопасности Windows Communication Foundation (WCF).  
+В этом примере сценария показано, как передавать идентификационную информацию вызывающего абонента из одной службы в другую с помощью инфраструктуры безопасности Windows Communication Foundation (WCF).  
   
  Обычно разработчики обеспечивают предоставление функциональных возможностей службы в открытую сеть через "фасадную" службу. Фасадная служба обычно размещается в демилитаризованной зоне (также называемой промежуточной подсетью или DMZ) и взаимодействует с серверной службой, реализующей бизнес-логику и имеющей доступ к внутренним данным. Коммуникационный канал между фасадной службой и серверной службой проходит через брандмауэр, и обычно он используется только для одной цели.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "74711881"
   
 - Серверная служба калькулятора  
   
- Фасадная служба проверяет запрос и подлинность вызывающей стороны. После успешного выполнения этих проверок она передает запрос серверной службе по управляемому коммуникационному каналу из демилитаризованной зоны во внутреннюю сеть. В передаваемый запрос фасадная служба добавляет удостоверение вызывающей стороны, чтобы серверная служба могла использовать его при обработке. Это удостоверение передается с помощью маркера безопасности `Username` в заголовке сообщения `Security` . В примере используется инфраструктура безопасности WCF для передачи и извлечения этих сведений из заголовка `Security`.  
+ Фасадная служба проверяет запрос и подлинность вызывающей стороны. После успешного выполнения этих проверок она передает запрос серверной службе по управляемому коммуникационному каналу из демилитаризованной зоны во внутреннюю сеть. В передаваемый запрос фасадная служба добавляет удостоверение вызывающей стороны, чтобы серверная служба могла использовать его при обработке. Это удостоверение передается с помощью маркера безопасности `Username` в заголовке сообщения `Security` . Выборка использует инфраструктуру безопасности WCF для `Security` передачи и извлечения этой информации из заголовка.  
   
 > [!IMPORTANT]
 > Серверная служба доверяет результатам проверки подлинности вызывающей стороны, выполненной фасадной службой. Поэтому серверная служба не выполняет проверку подлинности повторно. Она использует удостоверение, предоставленное фасадной службой в переданном запросе. Это отношение доверия требует, чтобы серверная служба проверяла подлинность фасадной службы, чтобы убедиться, что сообщение передано из надежного источника (в данном случае - от фасадной службы).  
@@ -77,10 +77,10 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
       <!--This configuration references the "localhost"  -->  
       <!--certificate installed during the setup instructions. -->  
       <serviceCredentials>  
-        <serviceCertificate   
-               findValue="localhost"   
-               storeLocation="LocalMachine"   
-               storeName="My"   
+        <serviceCertificate
+               findValue="localhost"
+               storeLocation="LocalMachine"
+               storeName="My"
                x509FindType="FindBySubjectName" />  
         <userNameAuthentication userNamePasswordValidationMode="Custom"  
             customUserNamePasswordValidatorType=  
@@ -109,9 +109,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- Элемент привязки [> безопасности\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) отвечает за передачу и извлечение имени пользователя исходного вызывающего объекта. [\<windowsstreamsecurity инициирует обновление >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) и [\<tcpTransport платформы >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) позаботится о проверке подлинности фасадной и серверных служб и защите сообщений.  
+ [ \<Элемент безопасности>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) связывающий элемент заботится о передаче и извлечении имени пользователя исходного абонента. WindowsStreamSecurity>и [ \<tcpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) заботиться о аутентификации фасада и бэкэнд услуг и защиты сообщений. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)  
   
- Чтобы перенаправить запрос, реализация службы фасадной должна предоставить имя пользователя исходного вызывающего объекта, чтобы инфраструктура безопасности WCF могла поместить его в перенаправленное сообщение. Фасадная служба предоставляет имя пользователя изначальной вызывающей стороны в виде значения свойства `ClientCredentials` экземпляра клиентского прокси-класса, используемого для обмена информацией между фасадной и серверной службами.  
+ Для переадресовывания запроса реализация службы фасада должна предоставить имя пользователя исходного вызываемого абонента, чтобы инфраструктура безопасности WCF смогли поместить это в переадресованное сообщение. Фасадная служба предоставляет имя пользователя изначальной вызывающей стороны в виде значения свойства `ClientCredentials` экземпляра клиентского прокси-класса, используемого для обмена информацией между фасадной и серверной службами.  
   
  В следующем примере кода показана реализация метода `GetCallerIdentity` фасадной службы. В прочих методах используются аналогичные принципы.  
   
@@ -126,23 +126,23 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Как показано в предыдущем примере кода, в свойстве `ClientCredentials` не задается пароль (в нем содержится только имя пользователя). Инфраструктура безопасности WCF создает маркер безопасности имени пользователя без пароля в этом случае, что именно необходимо в этом сценарии.  
+ Как показано в предыдущем примере кода, в свойстве `ClientCredentials` не задается пароль (в нем содержится только имя пользователя). Инфраструктура безопасности WCF создает маркер безопасности имени пользователя без пароля в данном случае, что и требуется в этом сценарии.  
   
- В серверной службе должна быть проверена подлинность информации, содержащейся в маркере безопасности. По умолчанию система безопасности WCF пытается сопоставлять пользователя с учетной записью Windows, используя указанный пароль. В данном случае пароль не предоставляется, и серверной службе не требуется проверять имя пользователя, поскольку эта процедура уже выполнена фасадной службой. Для реализации этой функции в WCF предоставляется настраиваемый `UserNamePasswordValidator`, который обеспечивает только принудительное использование имени пользователя в маркере и не выполняет дополнительной проверки подлинности.  
+ В серверной службе должна быть проверена подлинность информации, содержащейся в маркере безопасности. По умолчанию служба безопасности WCF пытается сопоставить пользователя с учетной записью Windows с помощью предоставленного пароля. В данном случае пароль не предоставляется, и серверной службе не требуется проверять имя пользователя, поскольку эта процедура уже выполнена фасадной службой. Для реализации этой функции в `UserNamePasswordValidator` WCF предусмотрен пользовательский обычай, который только присровает, что имя пользователя указано в маркере и не выполняет никакой дополнительной проверки подлинности.  
   
 ```csharp  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
 {  
     public override void Validate(string userName, string password)  
     {  
-        // Ignore the password because it is empty,   
+        // Ignore the password because it is empty,
         // we trust the facade service to authenticate the client.  
-        // Accept the username information here so that the   
+        // Accept the username information here so that the
         // application gets access to it.  
         if (null == userName)  
         {  
             Console.WriteLine("Invalid username");  
-            throw new   
+            throw new
              SecurityTokenValidationException("Invalid username");  
         }  
     }  
@@ -158,7 +158,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
       <serviceCredentials>  
         <userNameAuthentication userNamePasswordValidationMode="Custom"  
            customUserNamePasswordValidatorType=  
-          "Microsoft.ServiceModel.Samples.MyUserNamePasswordValidator,   
+          "Microsoft.ServiceModel.Samples.MyUserNamePasswordValidator,
            BackendService"/>  
       </serviceCredentials>  
     </behavior>  
@@ -174,22 +174,22 @@ public string GetCallerIdentity()
     // Facade service is authenticated using Windows authentication.  
     //Its identity is accessible.  
     // On ServiceSecurityContext.Current.WindowsIdentity.  
-    string facadeServiceIdentityName =   
+    string facadeServiceIdentityName =
           ServiceSecurityContext.Current.WindowsIdentity.Name;  
   
-    // The client name is transmitted using Username authentication on   
+    // The client name is transmitted using Username authentication on
     //the message level without the password  
     // using a supporting encrypted UserNameToken.  
-    // Claims extracted from this supporting token are available in   
-    // ServiceSecurityContext.Current.AuthorizationContext.ClaimSets   
+    // Claims extracted from this supporting token are available in
+    // ServiceSecurityContext.Current.AuthorizationContext.ClaimSets
     // collection.  
     string clientName = null;  
-    foreach (ClaimSet claimSet in   
+    foreach (ClaimSet claimSet in
         ServiceSecurityContext.Current.AuthorizationContext.ClaimSets)  
     {  
         foreach (Claim claim in claimSet)  
         {  
-            if (claim.ClaimType == ClaimTypes.Name &&   
+            if (claim.ClaimType == ClaimTypes.Name &&
                                    claim.Right == Rights.Identity)  
             {  
                 clientName = (string)claim.Resource;  
@@ -200,7 +200,7 @@ public string GetCallerIdentity()
     if (clientName == null)  
     {  
         // In case there was no UserNameToken attached to the request.  
-        // In the real world implementation the service should reject   
+        // In the real world implementation the service should reject
         // this request.  
         return "Anonymous caller via " + facadeServiceIdentityName;  
     }  
@@ -209,9 +209,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Информация об учетной записи фасадной службы извлекается с помощью свойства `ServiceSecurityContext.Current.WindowsIdentity` . Для доступа к информации об изначальной вызывающей стороне серверная служба использует свойство `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Она выполняет поиск утверждения `Identity` , принадлежащего к типу `Name`. Это утверждение автоматически создается инфраструктурой безопасности WCF из сведений, содержащихся в маркере безопасности `Username`.  
+ Информация об учетной записи фасадной службы извлекается с помощью свойства `ServiceSecurityContext.Current.WindowsIdentity` . Для доступа к информации об изначальной вызывающей стороне серверная служба использует свойство `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Она выполняет поиск утверждения `Identity` , принадлежащего к типу `Name`. Эта претензия автоматически генерируется инфраструктурой безопасности `Username` WCF из информации, содержащейся в маркере безопасности.  
   
-## <a name="running-the-sample"></a>Запуск образца  
+## <a name="running-the-sample"></a>Выполнение примера  
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента. Можно нажать клавишу ВВОД в окнах консолей фасадной и серверной служб, чтобы закрыть их.  
   
 ```console  
@@ -260,7 +260,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
   
 5. Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-6. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
@@ -284,9 +284,9 @@ Press <ENTER> to terminate client.
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

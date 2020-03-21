@@ -1,24 +1,23 @@
 ---
-title: Настраиваемый элемент для Синглетагсектионхандлер
+title: Пользовательский элемент для SingleTagSectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 04360a796b18cf1e414f1f84bff247a1e9d8ef9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214785"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155158"
 ---
-# <a name="custom-element-for-singletagsectionhandler"></a>Настраиваемый элемент для Синглетагсектионхандлер
+# <a name="custom-element-for-singletagsectionhandler"></a>Пользовательский элемент для SingleTagSectionHandler
 
-Определяет параметры в пользовательском разделе конфигурации, определяемом \<разделе > элемента и использующем класс <xref:System.Configuration.SingleTagSectionHandler>.
+Определяет настройки в специальном разделе конфигурации, который определяется разделом \<> элементом и использует <xref:System.Configuration.SingleTagSectionHandler> класс.
 
-[ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName >*
+конфигурация &nbsp; &nbsp; [** \<>**](configuration-element.md) * \<разделаName>*
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,36 +33,36 @@ ms.locfileid: "77214785"
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<configuration>** ](configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
+| [**\<конфигурация>**](configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Нет
+None
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Элемент **\<sectionName >** — это пользовательский элемент, определяемый тегом [ **\<раздела >** ](section-element.md) в элементе [ **\<configSections >** ](configsections-element-for-configuration.md) . Система конфигурации возвращает объект <xref:System.Collections.IDictionary> при вызове <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+** \<Элемент sectionName>** является пользовательским элементом, определяемым [** \<разделом>**](section-element.md) тегом [** \<в элементе configSections>.**](configsections-element-for-configuration.md) Система конфигурации <xref:System.Collections.IDictionary> возвращает объект <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>при вызове.
 
 ## <a name="example"></a>Пример
 
-В следующем примере объявляется пользовательский элемент с именем **\<самплесектион >** , который содержит параметры, считанные классом <xref:System.Configuration.SingleTagSectionHandler>:
+В следующем примере объявляется пользовательский элемент, называемый <xref:System.Configuration.SingleTagSectionHandler> ** \<sampleSection>,** содержащий параметры, прочитаны классом:
 
 ```xml
 <configuration>
   <configSections>
-    <section name="sampleSection" 
+    <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
 ## <a name="configuration-file"></a>Файл конфигурации
 
-Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
+Этот элемент может быть использован в файле конфигурации приложения, файле конфигурации машины *(Machine.config)* и файлах *Web.config,* которые не находятся на уровне каталога приложений.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Схема файла конфигурации для .NET Framework](index.md)
+- [Схема конфигурации файла для рамочного соглашения .NET](index.md)

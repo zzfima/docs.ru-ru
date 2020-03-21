@@ -8,26 +8,26 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 78f6418160b80096214c6e37268a5a90498d6d4d
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: ed28ae4a52085cbfa781b4baf2ee1eafbeff6eb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089238"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154833"
 ---
-# <a name="module-element-network-settings"></a>Элемент > модуля \<(параметры сети)
+# <a name="module-element-network-settings"></a>\<модуль> элемент (Настройки сети)
 Добавляет в приложение новый модуль прокси-сервера.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **&nbsp;&nbsp;\<** >
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<по умолчаниюПрокси>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<модуль>**
 
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<module   
-  type="type_fullname, assembly_fullname"   
+<module
+  type="type_fullname, assembly_fullname"
 />  
 ```  
   
@@ -36,12 +36,12 @@ ms.locfileid: "74089238"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|**Атрибут**|**Описание**|  
 |-------------------|---------------------|  
-|`type`|Полное имя типа (обозначенное свойством <xref:System.Type.FullName%2A>) и имя сборки (обозначенное свойством <xref:System.Reflection.Assembly.FullName%2A>), разделенные запятыми, которые реализуют прокси-сервер.|  
+|`type`|Полностью квалифицированное имя <xref:System.Type.FullName%2A> типа (указано свойством) <xref:System.Reflection.Assembly.FullName%2A> и название сборки (указанное свойством), разделенное запятой, которая реализует прокси.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -49,16 +49,16 @@ ms.locfileid: "74089238"
 |-----------------|---------------------|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
-## <a name="remarks"></a>Заметки  
- Элемент `module` регистрирует прокси-классы, реализующие интерфейс <xref:System.Net.IWebProxy>. После регистрации прокси-класса элемент `module` может использоваться для запроса данных через поддерживаемый прокси.  
+## <a name="remarks"></a>Remarks  
+ Элемент `module` регистрирует прокси-классы, <xref:System.Net.IWebProxy> реализующие интерфейс. После регистрации прокси-класса элемент `module` может использоваться для запроса данных через поддерживаемый прокси.  
   
- Значение атрибута `type` должно быть именем класса модуля и именем соответствующей библиотеки динамической компоновки (DLL).  
+ Значение множеству атрибута `type` должно быть классовым названием модуля и названием соответствующей библиотеки динамической ссылки (DLL).  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере регистрируется пользовательский прокси-класс.  
+ В следующем примере регистрируется пользовательский класс прокси.  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "74089238"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
-- [Схема параметров сети](index.md)
+- [Схема настройки сети](index.md)

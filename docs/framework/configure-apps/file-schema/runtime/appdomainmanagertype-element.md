@@ -5,24 +5,24 @@ helpviewer_keywords:
 - appDomainManagerType element
 - <appDomainManagerType> element
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
-ms.openlocfilehash: bae4aa39f9c43480ac2ef984f78834b68646742d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8eb6129b3fafaeb81a94d5a4078e41a16583a226
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118245"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154434"
 ---
-# <a name="appdomainmanagertype-element"></a>\<Аппдомаинманажертипе > элемент
+# <a name="appdomainmanagertype-element"></a>\<appDomainManagerType> Элемент
 Указывает тип, который служит диспетчером домена приложения для домена приложения, используемого по умолчанию.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<аппдомаинманажертипе >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<appDomainManagerType>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<appDomainManagerAssembly   
+<appDomainManagerAssembly
    value="type name" />  
 ```  
   
@@ -31,12 +31,12 @@ ms.locfileid: "73118245"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|`value`|Обязательный атрибут. Указывает имя типа, включая пространство имен, которое служит диспетчером доменов приложений для домена приложения по умолчанию в процессе.|  
+|`value`|Обязательный атрибут. Упогоняет имя типа, включая пространство имен, которое служит в качестве менеджера домена приложения для домена приложения по умолчанию в процессе.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -45,37 +45,37 @@ ms.locfileid: "73118245"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Заметки  
- Чтобы указать тип диспетчера домена приложения, необходимо указать и этот элемент, и элемент [\<аппдомаинманажерассембли >](appdomainmanagerassembly-element.md) . Если один из этих элементов не указан, другой игнорируется.  
+## <a name="remarks"></a>Remarks  
+ Чтобы указать тип менеджера домена приложения, необходимо указать как этот элемент, так и [ \<элемент appDomainManagerAssembly>](appdomainmanagerassembly-element.md) элемент. Если какой-либо из этих элементов не указан, другой игнорируется.  
   
- При загрузке домена приложения по умолчанию <xref:System.TypeLoadException> вызывается, если указанный тип не существует в сборке, указанной в элементе [\<аппдомаинманажерассембли >](appdomainmanagerassembly-element.md) . и процесс не запускается.  
+ При загрузке <xref:System.TypeLoadException> домена приложения по умолчанию, если указанный тип не существует в сборке, указанной [ \<элементом appDomainManagerAssembly>;](appdomainmanagerassembly-element.md) и процесс не может начаться.  
   
- При указании типа диспетчера домена приложения для домена приложения по умолчанию другие домены приложений, созданные из домена приложения по умолчанию, наследуют тип диспетчера домена приложения. Используйте свойства <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> и <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>, чтобы указать другой тип диспетчера домена приложения для нового домена приложения.  
+ При указании типа менеджера домена приложения для домена приложения по умолчанию другие домены приложений, созданные из домена приложения по умолчанию, наследуют тип менеджера домена приложения. Используйте <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> и свойства, чтобы указать другой тип менеджера домена приложения для нового домена приложения.  
   
- Чтобы указать тип диспетчера доменов приложений, приложение должно иметь полное доверие. (Например, приложение, работающее на рабочем столе, имеет полное доверие.) Если приложение не имеет полного доверия, выдается <xref:System.TypeLoadException>.  
+ Определение типа диспетчера домена приложения требует, чтобы приложение было полностью доверчиво. (Например, приложение, работая на рабочем столе, имеет полное доверие.) Если приложение не имеет полного <xref:System.TypeLoadException> доверия, a брошен.  
   
- Формат типа и пространства имен совпадает с форматом, используемым для свойства <xref:System.Type.FullName%2A?displayProperty=nameWithType>.  
+ Формат типа и пространства имен является тем же форматом, который используется для <xref:System.Type.FullName%2A?displayProperty=nameWithType> свойства.  
   
- Этот элемент конфигурации доступен только в .NET Framework 4 и более поздних версиях.  
+ Этот элемент конфигурации доступен только в системе .NET 4 и позже.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как указать, что диспетчер домена приложения для домена приложения по умолчанию процесса является типом `MyMgr` в сборке `AdMgrExample`.  
+ В следующем примере показано, как указать, что менеджер домена `MyMgr` приложения `AdMgrExample` для домена приложения приложения по умолчанию процесса — это тип сборки.  
   
 ```xml  
 <configuration>  
    <runtime>  
       <appDomainManagerType value="MyMgr" />  
-      <appDomainManagerAssembly   
+      <appDomainManagerAssembly
          value="AdMgrExample, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6856bccf150f00b3" />  
    </runtime>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<Аппдомаинманажерассембли > элемент](appdomainmanagerassembly-element.md)
+- [\<appDomainManagerСборка> Элемент](appdomainmanagerassembly-element.md)
 - [Схема параметров среды выполнения](index.md)
-- [Схема файла конфигурации](../index.md)
+- [Схема конфигурации файлов](../index.md)
 - [Метод SetAppDomainManagerType](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

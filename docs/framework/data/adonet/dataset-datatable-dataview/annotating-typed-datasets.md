@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 757a87f92d8dc6049de1844fed892d95dc57c990
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040397"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151524"
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
-Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменение имен элементов в базовой схеме приведет к тому, что типизированный **набор данных** будет ссылаться на объекты, не существующие в источнике данных, а также будет потеряна ссылка на объекты, существующие в источнике данных.  
+Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменение имен элементов в базовой схеме приведет к тому, что набранный **DataSet** отсылает к объектам, не существующих в источнике данных, а также потеряет ссылку на объекты, которые существуют в источнике данных.  
   
- С помощью заметок можно настроить имена объектов в типизированном **наборе данных** с более информативными именами, сделать код более удобочитаемым, а типизированный **набор данных** проще использовать для использования клиентами, при этом не изменяя базовую схему. Например, следующий элемент схемы для таблицы **Customers** базы данных **Northwind** приведет к появлению имени объекта **DataRow** **кустомерсров** и <xref:System.Data.DataRowCollection> с именем **Customers**.  
+ Используя аннотации, можно настроить имена объектов в набранном **DataSet** с более значимыми именами, что упрощает использование кода DataSet и упрощает использование **DataSet,** оставляя базовую схему нетронутой. Например, следующий элемент схемы для таблицы **клиентов** базы данных **Northwind** приведет к <xref:System.Data.DataRowCollection> названию объекта **DataRow** **CustomersRow** и названному **Заказчику.**  
   
 ```xml  
 <xs:element name="Customers">  
@@ -27,7 +27,7 @@ ms.locfileid: "73040397"
 </xs:element>  
 ```  
   
- **Датаровколлектион** имя **клиентов** имеет смысл в клиентском коде, но имя **DataRow** **кустомерсров** является ошибочным, поскольку является одним объектом. Кроме того, в обычных сценариях объект будет называться без идентификатора **строки** , а вместо этого будет просто называться объектом **Customer** . Решение заключается в создании заметка схемы и определении новых имен для объектов **DataRow** и **датаровколлектион** . Далее приводится версия предыдущей схемы с добавленными заметками.  
+ Имя **клиентов** **DataRowCollection** имеет значение в клиентском коде, но имя **DataRow** **CustomersRow** вводит в заблуждение, потому что это один объект. Кроме того, в обычных сценариях объект будет называться без идентификатора **строки** и вместо этого будет просто называться объектом **клиента.** Решение состоит в том, чтобы аннотировать схему и определить новые имена для объектов **DataRow** и **DataRowCollection.** Далее приводится версия предыдущей схемы с добавленными заметками.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -39,55 +39,55 @@ ms.locfileid: "73040397"
 </xs:element>  
 ```  
   
- При указании значения **типеднаме** для **Customer** будет выдаваться имя объекта **DataRow** **Customer**. Указание значения **типедплурал** для **клиентов** сохраняет имя **датаровколлектион** **клиентов**.  
+ Указать **значение typedName** **клиента** приведет к названию объекта **DataRow** **Клиента.** Указание **набраннойВоялезначение** **клиентов** сохраняет имя **Клиентов** **DataRowCollection.**  
   
  В следующей таблице показаны доступные для использования заметки.  
   
-|Комментарий|Описание|  
+|Заметка|Описание|  
 |----------------|-----------------|  
-|**типеднаме**|Имя объекта.|  
-|**типедплурал**|Имя коллекции объектов.|  
-|**типедпарент**|Имя объекта при ссылке на родительскую связь.|  
-|**типедчилдрен**|Имя метода, возвращающего объекты по дочерней связи.|  
-|**nullValue**|Значение, если базовое значение равно **DBNull**. См. следующую таблицу для **NullValue** Annotations. Значение по умолчанию — **_throw**.|  
+|**typedName**|Имя объекта.|  
+|**typedPlural**|Имя коллекции объектов.|  
+|**typedParent**|Имя объекта при ссылке на родительскую связь.|  
+|**typedChildren**|Имя метода, возвращающего объекты по дочерней связи.|  
+|**Nullvalue**|Значение, если базовое значение **DBNull**. Смотрите следующую таблицу для аннотаций **nullValue.** По умолчанию **_throw**.|  
   
- В следующей таблице приведены значения, которые можно указать для аннотации **NullValue** .  
+ В следующей таблице показаны значения, которые могут быть указаны для аннотации **nullValue.**  
   
 |Значение nullValue|Описание|  
 |---------------------|-----------------|  
-|*Заменяющее значение*|Задает возвращаемое значение. Возвращаемое значение должно соответствовать типу элемента. Например, чтобы для целочисленных полей вместо null возвращался 0, используйте `nullValue="0"`.|  
+|*Значение замены*|Задает возвращаемое значение. Возвращаемое значение должно соответствовать типу элемента. Например, чтобы для целочисленных полей вместо null возвращался 0, используйте `nullValue="0"`.|  
 |**_throw**|Создание исключения. Это значение по умолчанию.|  
 |**_null**|Возвращает ссылку null или создает исключение, если встречается примитивный тип.|  
-|**_empty**|Для строк возвращает **String. Empty**, в противном случае возвращает объект, созданный из пустого конструктора. Если встречается примитивный тип, вызывает исключение.|  
+|**_empty**|Для строк верните **String.Empty,** в противном случае верните объект, созданный из пустого конструктора. Если встречается примитивный тип, вызывает исключение.|  
   
- В следующей таблице показаны значения по умолчанию для объектов в типизированном **наборе данных** и доступных аннотациях.  
+ В следующей таблице отображались значения по умолчанию для объектов в набранном **DataSet** и доступные аннотации.  
   
-|Объект/Метод/Событие|Значение по умолчанию|Комментарий|  
+|Объект/Метод/Событие|По умолчанию|Заметка|  
 |---------------------------|-------------|----------------|  
-|**DataTable**|TableNameDataTable|typedPlural|  
-|**DataTable** Метод|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
-|**датаровколлектион**|TableName|typedPlural|  
-|**Строку**|TableNameRow|typedName|  
+|**Datatable**|TableNameDataTable|typedPlural|  
+|**DataTable** Методы|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
+|**DataRowCollection**|TableName|typedPlural|  
+|**Datarow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
-|**Дочерний элемент** Возмож|GetChildTableNameRows|typedChildren|  
-|**Родительский элемент** Возмож|TableNameRow|typedParent|  
-|**Набор данных** Событиях|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
+|**Свойство**|PropertyName|typedName|  
+|**Детский дом** Доступа|GetChildTableNameRows|typedChildren|  
+|**Родительская** Доступа|TableNameRow|typedParent|  
+|**DataSet** События|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Чтобы использовать зааннотации типизированного **набора данных** , необходимо включить следующую ссылку **xmlns** в схему языка определения схемы XML (XSD). Сведения о создании XSD из таблиц базы данных см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [Работа с наборами DataSet в Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Для использования набранных аннотаций **DataSet** необходимо включить в схему определения XML Schema (XSD) следующую ссылку **xmlns.** Чтобы создать xsd из таблиц <xref:System.Data.DataSet.WriteXmlSchema%2A> баз данных, смотрите или [работайте с наборами данных в Visual Studio.](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
   
 ```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Ниже приведен пример схемы с заметками, которая предоставляет таблицу **Customers** базы данных **Northwind** с отношением к включенной таблице **Orders** .  
+ Ниже приводится пример аннотированной схемы, которая предоставляет таблицу **клиентов** базы данных **Northwind** со отсылкой к таблице **заказов** включены.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
-<xs:schema id="CustomerDataSet"   
+<xs:schema id="CustomerDataSet"
       xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
-      xmlns=""   
-      xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+      xmlns=""
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
       xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="CustomerDataSet" msdata:IsDataSet="true">  
     <xs:complexType>  
@@ -111,10 +111,10 @@ type="xs:int" minOccurs="0" />
               <xs:element name="CustomerID"  
 codegen:typedName="CustomerID"                  codegen:nullValue="" type="xs:string" minOccurs="0" />  
               <xs:element name="EmployeeID"  
-codegen:typedName="EmployeeID" codegen:nullValue="0"   
+codegen:typedName="EmployeeID" codegen:nullValue="0"
 type="xs:int" minOccurs="0" />  
               <xs:element name="OrderAdapter"  
-codegen:typedName="OrderAdapter" codegen:nullValue="1980-01-01T00:00:00"   
+codegen:typedName="OrderAdapter" codegen:nullValue="1980-01-01T00:00:00"
 type="xs:dateTime" minOccurs="0" />  
             </xs:sequence>  
           </xs:complexType>  
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- В следующем примере кода используется строго типизированный **набор данных** , созданный из образца схемы. Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения таблицы **Customers** и другой <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения таблицы **Orders** . Строго типизированный **набор данных** определяет **DataRelation**.  
+ В следующем примере кода используется сильно набранный **DataSet,** созданный из схемы образца. Он использует <xref:System.Data.SqlClient.SqlDataAdapter> один для заполнения таблицы **Заказчиков,** а другой <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения таблицы **Заказов.** Сильно набранный **DataSet** определяет **DataRelations.**  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -187,7 +187,7 @@ SqlDataAdapter customerAdapter = new SqlDataAdapter(
     "SELECT CustomerID, CompanyName, Phone FROM Customers",  
     connection);  
 SqlDataAdapter orderAdapter = new SqlDataAdapter(  
-    "SELECT OrderID, CustomerID, EmployeeID, OrderAdapter FROM Orders",   
+    "SELECT OrderID, CustomerID, EmployeeID, OrderAdapter FROM Orders",
     connection);  
   
 // Populate a strongly typed DataSet.  
@@ -198,11 +198,11 @@ orderAdapter.Fill(customers, "Orders");
 connection.Close();  
   
 // Add a strongly typed event.  
-customers.Customers.CustomerChanged += new   
+customers.Customers.CustomerChanged += new
   CustomerDataSet.CustomerChangeEventHandler(OnCustomerChanged);  
   
 // Add a strongly typed DataRow.  
-CustomerDataSet.Customer newCustomer =   
+CustomerDataSet.Customer newCustomer =
     customers.Customers.NewCustomer();  
 newCustomer.CustomerID = "NEW01";  
 newCustomer.CompanyName = "My New Company";  
@@ -222,7 +222,7 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>

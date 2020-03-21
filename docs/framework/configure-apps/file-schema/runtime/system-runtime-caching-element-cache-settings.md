@@ -6,19 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-ms.openlocfilehash: 70573f92f1799a54116bc91f7a39d157a7ae5b36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df4887c8801dcf8af06b3826673a03cbc7dbc9b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115506"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153858"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<System. Runtime. Caching > элемент (параметры кэша)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.кэширования> элемент (Настройки кэша)
 
 Обеспечивает настройку реализации <xref:System.Runtime.Caching.ObjectCache> в памяти по умолчанию посредством записи `memoryCache` в файле конфигурации.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. Runtime. caching >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.runtime.кэширования>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,24 +40,24 @@ ms.locfileid: "73115506"
 
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<memoryCache>](memorycache-element-cache-settings.md)|Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> .|  
+|[\<памятьCache>](memorycache-element-cache-settings.md)|Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> .|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|Указывает корневой элемент в каждом файле конфигурации, который используется средой CLR и .NET Framework приложениями.|  
+|[\<конфигурация>](../configuration-element.md)|Определяет корневой элемент в каждом файле конфигурации, который используется приложениями общего языка и приложениями .NET Framework.|  
   
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Классы в этом пространстве имен предоставляют способ использования средств кэширования, например таких, которые имеются в ASP.NET, но без зависимости от сборки `System.Web` . Для получения дополнительной информации см. [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
-> Функции кэширования выходных данных и типы в пространстве имен <xref:System.Runtime.Caching> являются новыми в .NET Framework 4.  
+> Функциональность и типы кэширования вывода в пространстве <xref:System.Runtime.Caching> имен являются новыми в системе .NET 4.  
   
 ## <a name="example"></a>Пример
 
-В следующем примере кода показано, как настроить кэш, основанный на классе <xref:System.Runtime.Caching.MemoryCache> . В примере показано, как построить экземпляр записи `namedCaches` для кэша памяти. Для имени кэша задается имя записи кэша по умолчанию, присвоенное атрибуту `name` значение "по умолчанию".  
+В следующем примере кода показано, как настроить кэш, основанный на классе <xref:System.Runtime.Caching.MemoryCache> . В примере показано, как построить экземпляр записи `namedCaches` для кэша памяти. Имя кэша устанавливается на имя входа кэша `name` по умолчанию, установив атрибут на "По умолчанию".  
   
 Атрибутам `cacheMemoryLimitMegabytes` и `physicalMemoryPercentage` присваивается нулевое значение. Это означает, что эвристика автомасштабирования <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию. Реализация кэша должна каждые две минуты сравнивать текущую загрузку памяти с абсолютными и процентными ограничениями по памяти.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "73115506"
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="Default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="Default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -76,6 +76,6 @@ ms.locfileid: "73115506"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Элемент \<memoryCache > (параметры кэша)](memorycache-element-cache-settings.md)
+- [\<memoryCache> элемент (Настройки кэша)](memorycache-element-cache-settings.md)

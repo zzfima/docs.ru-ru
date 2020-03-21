@@ -9,19 +9,19 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: 85729082d34cc976fabdbc50629b528c5f28cf54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e3480c5a56170ce94d5b5bde0208542c82e7702
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624084"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182315"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>Практическое руководство. Добавление элементов меню в элемент управления ContextMenuStrip
-Можно добавить только один элемент меню или несколько элементов за раз, чтобы <xref:System.Windows.Forms.ContextMenuStrip>.  
+Вы можете добавить только один пункт меню <xref:System.Windows.Forms.ContextMenuStrip>или несколько пунктов одновременно в .  
   
-### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a>Чтобы добавить отдельный элемент меню в элемент управления ContextMenuStrip  
+### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a>Добавление одного элемента меню в ContextMenuStrip  
   
-- Используйте <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> метод для добавления одного пункта меню <xref:System.Windows.Forms.ContextMenuStrip>.  
+- Используйте <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> метод, чтобы добавить <xref:System.Windows.Forms.ContextMenuStrip>один элемент меню в .  
   
     ```vb  
     Me.contextMenuStrip1.Items.Add(Me.toolStripMenuItem1)  
@@ -31,9 +31,9 @@ ms.locfileid: "64624084"
     this.contextMenuStrip1.Items.Add(toolStripMenuItem1);  
     ```  
   
-### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a>Чтобы добавить несколько пунктов меню в элемент управления ContextMenuStrip  
+### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a>Добавить несколько элементов меню в ContextMenuStrip  
   
-- Используйте <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> метод, чтобы добавить несколько пунктов меню, чтобы <xref:System.Windows.Forms.ContextMenuStrip>.  
+- Используйте <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> метод, чтобы добавить <xref:System.Windows.Forms.ContextMenuStrip>несколько пунктов меню в .  
   
     ```vb  
     Me.contextMenuStrip1.Items.AddRange(New _  
@@ -42,11 +42,11 @@ ms.locfileid: "64624084"
     ```  
   
     ```csharp  
-    this.contextMenuStrip1.Items.AddRange(new   
+    this.contextMenuStrip1.Items.AddRange(new
        System.Windows.Forms.ToolStripItem[] {  
           this.toolStripMenuItem1, this.toolStripMenuItem2});  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Элемент управления ContextMenuStrip](contextmenustrip-control.md)

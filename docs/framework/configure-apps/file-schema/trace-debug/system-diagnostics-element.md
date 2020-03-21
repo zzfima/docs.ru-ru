@@ -1,5 +1,5 @@
 ---
-title: < System. Diagnostics > элемент
+title: <система.диагностика> Элемент
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,42 +8,42 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4f831592d7d178276b1625e1ef7d8512085342af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699197"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153211"
 ---
-# <a name="systemdiagnostics-element"></a>\<System. Diagnostics > элемент
+# <a name="systemdiagnostics-element"></a>\<system.diagnostics> Элемент
 Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<System. diagnostics >**  
+[**\<конфигурация>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<system.diagnostics>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<system.diagnostics>   
+<system.diagnostics>
 </system.diagnostics>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<assert>](assert-element.md)|Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Кроме того, задает имя файла, в который записываются сообщения.|  
-|[\<performanceCounters>](performancecounters-element.md)|Задает размер глобальной памяти, совместно используемой счетчиками производительности.|  
-|[\<sharedListeners>](sharedlisteners-element.md)|Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки. Прослушиватели, идентифицированные как общие прослушиватели, можно добавлять в источники или трассировки по имени.|  
-|[\<sources>](sources-element.md)|Указывает источники трассировки, инициирующие сообщения трассировки.|  
-|[\<switches>](switches-element.md)|Содержит переключатели трассировки и уровни, на которых заданы переключатели трассировки.|  
-|[\<trace>](trace-element.md)|Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.|  
+|[\<утверждать>](assert-element.md)|Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Кроме того, задает имя файла, в который записываются сообщения.|  
+|[\<производительностьКонтры>](performancecounters-element.md)|Задает размер глобальной памяти, совместно используемой счетчиками производительности.|  
+|[\<общиеслушатели>](sharedlisteners-element.md)|Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки. Слушатели, идентифицированные как общие слушатели, могут быть добавлены к источникам или следам по имени.|  
+|[\<источники>](sources-element.md)|Определяет источники трассировки, которые инициируют отслеживание сообщений.|  
+|[\<переключатели>](switches-element.md)|Содержит переключатели трассировки и уровни, на которых установлены переключатели трассировки.|  
+|[\<след>](trace-element.md)|Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -52,10 +52,10 @@ ms.locfileid: "71699197"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как внедрить переключатель трассировки и прослушиватель трассировки в элемент **\<System. diagnostics >** . Для параметра трассировки `General` задан уровень <xref:System.Diagnostics.TraceLevel>. Прослушиватель трассировки `myListener` создает файл с именем `MyListener.log` и записывает выходные данные в файл.  
+ В следующем примере показано, как встраить в ** \<>систему** переключатель трассировки и слушателя. Переключатель `General` трассировки <xref:System.Diagnostics.TraceLevel> установлен на уровне. Слушатель `myListener` трассировки создает `MyListener.log` вызванный файл и записывает вывод в файл.  
   
 > [!NOTE]
-> В .NET Framework версии 2.0 для указания значения переключателя можно использовать текст. Например, можно указать `true` для <xref:System.Diagnostics.BooleanSwitch> или использовать текст, представляющий значение перечисления, например `Error` для <xref:System.Diagnostics.TraceSwitch>. Строка `<add name="myTraceSwitch" value="Error" />` эквивалентна `<add name="myTraceSwitch" value="1" />`.  
+> В .NET Framework версии 2.0 для указания значения переключателя можно использовать текст. Например, можно `true` указать <xref:System.Diagnostics.BooleanSwitch> текст или использовать текст, представляющий значение `Error` перечисления, например <xref:System.Diagnostics.TraceSwitch>для . Строка `<add name="myTraceSwitch" value="Error" />` эквивалентна `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  
@@ -72,8 +72,8 @@ ms.locfileid: "71699197"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
-- [Схема параметров трассировки и отладки](index.md)
+- [Схема настроек трассировки и отпараги](index.md)

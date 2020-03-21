@@ -10,62 +10,62 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 1db0ba3b0a213de1175e6e0cee347753d2a413b7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699614"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155081"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<добавить элемент > для бипасслист (параметры сети)
-Добавление в список обхода прокси IP-адреса или DNS-имени.  
+# <a name="add-element-for-bypasslist-network-settings"></a>\<добавить элемент> для обвисать (Настройки сети)
+Добавляет IP-адрес или имя DNS в список обхода прокси.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. NET >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<бипасслист >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<добавить >**  
+[**\<конфигурация>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<по умолчаниюПрокси>**](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<обвахние>**](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<добавить>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<add   
-  address="regular expression"   
+<add
+  address="regular expression"
 />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
 |**Атрибут**|**Описание**|  
 |-------------------|---------------------|  
-|**address**|Регулярное выражение, описывающее IP-адрес или DNS-имя.|  
+|**address**|Регулярное выражение, описывающее IP-адрес или имя DNS.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[бипасслист](bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающие адреса, которые не используют прокси.|  
   
-## <a name="remarks"></a>Примечания  
- Элемент `add` вставляет регулярные выражения, описывающие IP-адреса или имена DNS-серверов, в список адресов, которые обходят прокси-сервер.  
+## <a name="remarks"></a>Remarks  
+ Элемент `add` вставляет регулярные выражения, описывающие IP-адреса или имена серверов DNS, в список адресов, которые обходят прокси-сервер.  
   
- Значение атрибута `address` должно быть регулярным выражением, описывающим набор IP-адресов или имен узлов.  
+ Значение `address` атрибута должно быть регулярным выражением, описывая набор IP-адресов или имен узла.  
   
- При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] +\\. contoso\\. com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] +\\. contoso\\. com $".  
+ При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение «a-z»\\.contoso\\.com соответствует любому хозяину в домене contoso.com, но также соответствует любому хозяину в домене contoso.com.cpandl.com. Чтобы соответствовать только хостелу в домене contoso.com, используйте якорь («$»): «А-з.з\\.contoso\\.com$».  
   
- Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../standard/base-types/regular-expressions.md).  
+ Для получения дополнительной информации о регулярных выражениях см. [.NET Рамки Регулярные выражения](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере в список обхода добавляется два адреса. Первый обход прокси-сервера для всех серверов в домене contoso.com; во втором пропускается прокси-сервер для всех серверов, IP-адрес которых начинается с 192,168.  
+ Следующий пример добавляет два адреса в список обхода. Первый обходит прокси для всех серверов в домене contoso.com; второй обходит прокси для всех серверов, чей IP-адрес начинается с 192.168.  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,7 @@ ms.locfileid: "71699614"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Схема параметров сети](index.md)
+- [Схема настройки сети](index.md)

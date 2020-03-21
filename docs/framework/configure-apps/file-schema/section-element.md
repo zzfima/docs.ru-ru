@@ -1,5 +1,5 @@
 ---
-title: <section> элемент
+title: <section> element
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
@@ -8,32 +8,32 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 88f74c02ef627e9136e4437ffa150c36445266a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215731"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153738"
 ---
-# <a name="section-element"></a>\<раздела > элемента
+# <a name="section-element"></a>\<раздел> элемент
 
-Содержит объявление раздела конфигурации.
+Содержит декларацию раздела конфигурации.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-раздел &nbsp;&nbsp;&nbsp;&nbsp; **\<**
+[**\<конфигурация>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<конфигурации>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<раздел>**
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)\
-&nbsp; **&nbsp;&nbsp;** &nbsp;&nbsp;&nbsp;\<
+[**\<конфигурация>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<конфигурации>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<разделГруппа>**](sectiongroup-element-for-configsections.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<раздел>**
 
 ## <a name="syntax"></a>Синтаксис
 
 ```xml
 <section name="section name"
          type="configuration section handler class, assembly"
-         allowDefinition="Everywhere|MachineOnly|MachineToApplication" 
+         allowDefinition="Everywhere|MachineOnly|MachineToApplication"
          allowLocation="true|false" />
 ```
 
@@ -41,59 +41,59 @@ ms.locfileid: "77215731"
 
 |           | Описание |
 | --------- | ----------- |
-| **name**  | Задает имя раздела конфигурации. |
-| **type**  | Указывает имя класса обработчика раздела конфигурации, считывающего раздел из файла конфигурации. Значение типа имеет синтаксис "полное имя-раздела-класса-обработчика", простое-Assembly-Name ". В качестве простого имени сборки используется имя корневого файла без расширения *DLL* . |
+| **name**  | Упогоняет название раздела конфигурации. |
+| **тип**  | Упогоняет название класса обработчика раздела конфигурации, который читает раздел из файла конфигурации. Значение типа имеет синтаксис "полностью квалифицированный раздел-обработчик-класс-имя, просто-сборка-имя". Простое имя сборки — это корневое имя файла без расширения файла *.dll.* |
 
-## <a name="optional-attributes"></a>Необязательные атрибуты
+## <a name="optional-attributes"></a>Дополнительные атрибуты
 
-Следующие атрибуты применимы только для приложений ASP.NET. Система конфигурации пропускает эти атрибуты для других типов приложений.
+Следующие атрибуты применимы только для ASP.NET приложений. Система конфигурации игнорирует эти атрибуты для других типов приложений.
 
 |                     | Описание |
 | ------------------- | ----------- |
-| **allowDefinition** | Указывает файл конфигурации, в котором может использоваться раздел. Укажите одно из следующих значений:<br><br>**Везде**<br>Позволяет использовать раздел в любом файле конфигурации. Это значение по умолчанию.<br>**MachineOnly**<br>Позволяет использовать раздел только в файле конфигурации компьютера (*Machine. config*).<br>**MachineToApplication**<br>Позволяет использовать раздел в файле конфигурации компьютера или файле конфигурации приложения. |
-| **allowLocation**   | Определяет, можно ли использовать раздел в элементе **\<location >** . Укажите одно из следующих значений:<br><br>**true**<br>Позволяет использовать раздел в элементе **\<расположение >** . Это значение по умолчанию.<br>**false**<br>Не разрешает использование раздела в элементе **\<location >** . |
+| **allowDefinition** | Определяет, в какой конфигурации можно использовать файл раздела. Используйте одно из следующих значений:<br><br>**Везде**<br>Позволяет использовать раздел в любом файле конфигурации. Это значение по умолчанию.<br>**МашинаТолько**<br>Позволяет использовать раздел только в файле конфигурации машины *(Machine.config).*<br>**Машинное применение**<br>Позволяет использовать раздел в файле конфигурации машины или файле конфигурации приложения. |
+| **allowLocation**   | Определяет, можно ли использовать раздел в ** \<пределах элемента>местоположения.** Используйте одно из следующих значений:<br><br>**true**<br>Позволяет использовать раздел в ** \<пределах элемента>местоположения.** Это значение по умолчанию.<br>**false**<br>Не позволяет использовать раздел в ** \<элементе>местоположения.** |
 
 ## <a name="parent-elements"></a>Родительские элементы
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<configSections >** Дерев](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
-| [ **\<sectionGroup >** Дерев](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
+| [** \<конфигурации>** Элемент](configsections-element-for-configuration.md) | Содержит раздел конфигурации и декларации пространства имен. |
+| [** \<разделГруппа>** Элемент](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
 
 > [!NOTE]
-> **\<раздел >** является дочерним элементом либо **\<configSections >** , либо **\<sectionGroup >** , но не оба.
+> ** \<Раздел>** элемент является элементом ребенка либо ** \<configSections>** или ** \<разделаГруппа>** но не оба.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Нет
+None
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Объявление раздела конфигурации фактически определяет новый элемент для файла конфигурации. Новый элемент содержит параметры, которые выполняет обработчик раздела конфигурации (то есть класс, реализующий интерфейс <xref:System.Configuration.IConfigurationSectionHandler>). Атрибуты и дочерние элементы определяемого раздела зависят от обработчика раздела, используемого для чтения параметров.
+Объявление раздела конфигурации по существу определяет новый элемент для файла конфигурации. Новый элемент содержит настройки, которые читает обработчик раздела <xref:System.Configuration.IConfigurationSectionHandler> конфигурации (т.е. класс, реализующий интерфейс). Атрибуты и элементы ребенка в определенном разделе зависят от обработчика раздела, который вы используете для чтения настроек.
 
-Объявление обработчика раздела конфигурации в файле *Machine. config* позволяет использовать раздел конфигурации в любом файле конфигурации приложения на этом компьютере, если в атрибуте **allowDefinition** не указано иное.
+Объявление обработчика раздела конфигурации в файле *Machine.config* позволяет использовать раздел конфигурации в любом файле конфигурации приложения на этом компьютере, если атрибут **allowDefinition** не указывает обратное.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как определить раздел конфигурации и определить параметры для этого раздела.
+В следующем примере показано, как определить раздел конфигурации и определить параметры для этого раздела:
 
 ```xml
 <configuration>
   <configSections>
     <section name="sampleSection"
-             type="System.Configuration.SingleTagSectionHandler" 
+             type="System.Configuration.SingleTagSectionHandler"
              allowLocation="false" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
 ## <a name="configuration-file"></a>Файл конфигурации
 
-Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
+Этот элемент может быть использован в файле конфигурации приложения, файле конфигурации машины *(Machine.config)* и файлах *Web.config,* которые не находятся на уровне каталога приложений.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Схема файла конфигурации для .NET Framework](index.md)
+- [Схема конфигурации файла для рамочного соглашения .NET](index.md)

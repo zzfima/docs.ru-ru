@@ -9,26 +9,26 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7d51ef5c4107fc6a40a472a660f53bb0ded59683
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d96585b397f75dcb9fac7e7fce93799cc95e7c6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252788"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154300"
 ---
-# <a name="bindingredirect-element"></a>\<Элемент bindingRedirect >
+# <a name="bindingredirect-element"></a>\<связывающаярепрямая> элемент
 Перенаправляет одну версию сборки на другую.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> bindingRedirect**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<сборкаОбязательная>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<зависимаясборка>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<связывающаяРепрямая>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-   <bindingRedirect    
+   <bindingRedirect
 oldVersion="existing assembly version"  
 newVersion="new assembly version"/>  
 ```  
@@ -38,16 +38,16 @@ newVersion="new assembly version"/>
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|`oldVersion`|Обязательный атрибут.<br /><br /> Задает первоначально запрошенную версию сборки. Номер версии сборки имеет формат *основной. дополнительный. сборка. Редакция*. Допустимые значения для каждой части этого номера версии — от 0 до 65535.<br /><br /> Диапазон версий можно также задать в следующем формате:<br /><br /> *n. n. n. n-n. n. n. n*|  
-|`newVersion`|Обязательный атрибут.<br /><br /> Указывает версию сборки, используемую вместо первоначально запрошенной версии в формате: *n. n. n. n*<br /><br /> Это значение может указывать более раннюю версию, чем `oldVersion`.|  
+|`oldVersion`|Обязательный атрибут.<br /><br /> Задает первоначально запрошенную версию сборки. Формат номера сборочной версии *major.minor.build.revision*. Допустимые значения для каждой части этого номера версии — от 0 до 65535.<br /><br /> Диапазон версий можно также задать в следующем формате:<br /><br /> *n.n.n.n - n.n.n.n*|  
+|`newVersion`|Обязательный атрибут.<br /><br /> Определяет версию сборки для использования вместо первоначально запрошенной версии в формате: *n.n.n.n*<br /><br /> Это значение может указывать более раннюю версию, чем `oldVersion`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|Отсутствуют||  
+|None||  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -58,12 +58,12 @@ newVersion="new assembly version"/>
 |`dependentAssembly`|Инкапсулирует политику привязки и расположение каждой сборки. Для каждой сборки используется только один элемент dependentAssembly.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Примечания  
- При сборке приложения .NET Framework с использованием сборки со строгим именем приложение во время выполнения по умолчанию будет использовать эту версию сборки, даже если доступна новая версия. Однако приложение можно настроить для выполнения с новой версией сборки. Дополнительные сведения о том, как среда выполнения использует эти файлы для определения используемой версии сборки, см. в разделе [как среда выполнения находит сборки](../../../deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="remarks"></a>Remarks  
+ При сборке приложения .NET Framework с использованием сборки со строгим именем приложение во время выполнения по умолчанию будет использовать эту версию сборки, даже если доступна новая версия. Однако приложение можно настроить для выполнения с новой версией сборки. Для получения подробной информации о том, как время выполнения [How the Runtime Locates Assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)использует эти файлы, чтобы определить, какую сборочную версию использовать, см.  
   
  Перенаправление нескольких версий сборок можно выполнить, включив в элемент `bindingRedirect` несколько элементов `dependentAssembly`. Можно также выполнить перенаправление с более новой версии на более раннюю версию сборки.  
   
- Для явного перенаправления привязки сборки в файле конфигурации приложения необходимо разрешение безопасности. Это относится к перенаправлению как сборок платформы .NET Framework, так и сторонних сборок. Разрешение предоставляется путем установки <xref:System.Security.Permissions.SecurityPermissionFlag> флага <xref:System.Security.Permissions.SecurityPermission>для. Дополнительные сведения см. в статье [разрешение безопасности перенаправления привязки сборок](../../assembly-binding-redirection-security-permission.md).  
+ Для явного перенаправления привязки сборки в файле конфигурации приложения необходимо разрешение безопасности. Это относится к перенаправлению как сборок платформы .NET Framework, так и сторонних сборок. Разрешение выдается путем <xref:System.Security.Permissions.SecurityPermissionFlag> установки <xref:System.Security.Permissions.SecurityPermission>флага на . Для получения дополнительной [Assembly Binding Redirection Security Permission](../../assembly-binding-redirection-security-permission.md)информации см.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показан способ перенаправления одной версии сборки на другую.  
@@ -84,8 +84,8 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Схема параметров среды выполнения](index.md)
-- [Схема файла конфигурации](../index.md)
+- [Схема конфигурации файлов](../index.md)
 - [Перенаправление версий сборки](../../redirect-assembly-versions.md)

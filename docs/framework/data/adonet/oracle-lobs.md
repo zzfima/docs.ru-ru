@@ -2,34 +2,34 @@
 title: Большие двоичные объекты (LOB) Oracle
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: a52203ad62e8761897f7b2bef90f1915db9433f8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 62525fed85525e26b7c61208fe44b108de562fb0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783331"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149431"
 ---
 # <a name="oracle-lobs"></a>Большие двоичные объекты (LOB) Oracle
-Поставщик данных .NET Framework для Oracle включает <xref:System.Data.OracleClient.OracleLob> класс, который используется для работы с типами данных Oracle **LOB** .  
+Поставщик рамочных данных .NET для Oracle включает <xref:System.Data.OracleClient.OracleLob> в себя класс, который используется для работы с типами данных Oracle **LOB.**  
   
- **OracleLob** может иметь один из следующих <xref:System.Data.OracleClient.OracleType> типов данных:  
+ **OracleLob** может быть одним <xref:System.Data.OracleClient.OracleType> из этих типов данных:  
   
 |Тип данных|Описание|  
 |---------------|-----------------|  
-|**Объекте**|Тип данных **большого двоичного объекта** Oracle, который содержит двоичные данные с максимальным размером 4 гигабайта. Он сопоставляется с **массивом** типа **Byte**.|  
-|**CLOB**|Тип данных **CLOB** Oracle, который содержит символьные данные на основе набора символов по умолчанию на сервере с максимальным размером 4 гигабайта. Это сопоставляется со **строкой**.|  
-|**NClob**|Тип данных Oracle **NCLOB** , который содержит символьные данные на основе набора национальных символов на сервере с максимальным размером 4 гигабайта. Это сопоставляется со **строкой**.|  
+|**BLOB-объект**|Тип данных Oracle **BLOB,** содержащий двоичные данные с максимальным размером 4 гигабайта. Это карты для **массива** типа **Байт**.|  
+|**Clob**|Тип данных Oracle **CLOB,** содержащий данные о персонажах, основанный на наборе символов по умолчанию на сервере, с максимальным размером 4 гигабайта. Это карты для **строки**.|  
+|**Nclob**|Тип данных Oracle **NCLOB,** содержащий данные о символах, основанный на национальном символе, установленном на сервере с максимальным размером 4 гигабайта. Это карты для **строки**.|  
   
- **OracleLob** отличается от <xref:System.Data.OracleClient.OracleBFile> в том, что данные хранятся на сервере, а не в физическом файле в операционной системе. Он также может быть объектом, предназначенным для чтения и записи, в отличие от **ораклебфиле**, который всегда доступен только для чтения.  
+ **OracleLob** отличается от <xref:System.Data.OracleClient.OracleBFile> того, что данные хранятся на сервере, а не в физическом файле в операционной системе. Он также может быть читать писать объект, в отличие от **OracleBFile**, который всегда читается только.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Создание, получение и запись LOB  
- В следующем C# примере показано, как можно создавать большие объекты в таблице Oracle, а затем получать их и записывать в них в виде объектов **OracleLob** . В примере демонстрируется использование <xref:System.Data.OracleClient.OracleDataReader> объекта и методов **чтения** и **записи** OracleLob. В этом примере используются типы данных Oracle **BLOB**, **CLOB**и **NCLOB** .  
+ Следующий пример C-образного примера показывает, как можно создавать LOBs в таблице Oracle, а затем извлекать и писать им в виде объектов **OracleLob.** Пример демонстрирует использование <xref:System.Data.OracleClient.OracleDataReader> объекта и **oracleLob** **методы чтения** и **записи.** В примере используются типы данных Oracle **BLOB,** **CLOB**и **NCLOB.**  
   
 ```csharp  
 using System;  
-using System.IO;              
-using System.Text;             
-using System.Data;              
+using System.IO;
+using System.Text;
+using System.Data;
 using System.Data.OracleClient;  
   
 // LobExample  
@@ -83,31 +83,31 @@ public class LobExample
          //Example - Reading binary data (in chunks).  
          byte[] buffer = new byte[100];  
          while((actual = blob.Read(buffer, 0, buffer.Length)) >0)  
-            Console.WriteLine(blob.LobType + ".Read(" + buffer + ", " +   
+            Console.WriteLine(blob.LobType + ".Read(" + buffer + ", " +
               buffer.Length + ") => " + actual);  
   
          // Example - Reading CLOB/NCLOB data (in chunks).  
-         // Note: You can read character data as raw Unicode bytes   
+         // Note: You can read character data as raw Unicode bytes
          // (using OracleLob.Read as in the above example).  
-         // However, because the OracleLob object inherits directly   
-         // from the .NET stream object,   
-         // all the existing classes that manipluate streams can   
-         // also be used. For example, the   
-         // .NET StreamReader makes it easier to convert the raw bytes   
+         // However, because the OracleLob object inherits directly
+         // from the .NET stream object,
+         // all the existing classes that manipluate streams can
+         // also be used. For example, the
+         // .NET StreamReader makes it easier to convert the raw bytes
          // into actual characters.  
-         StreamReader streamreader =   
+         StreamReader streamreader =
            new StreamReader(clob, Encoding.Unicode);  
          char[] cbuffer = new char[100];  
-         while((actual = streamreader.Read(cbuffer,   
+         while((actual = streamreader.Read(cbuffer,
            0, cbuffer.Length)) >0)  
             Console.WriteLine(clob.LobType + ".Read(  
-              " + new string(cbuffer, 0, actual) + ", " +   
+              " + new string(cbuffer, 0, actual) + ", " +
               cbuffer.Length + ") => " + actual);  
   
          // Example - Reading data (all at once).  
-         // You could use StreamReader.ReadToEnd to obtain   
+         // You could use StreamReader.ReadToEnd to obtain
          // all the string data, or simply  
-         // call OracleLob.Value to obtain a contiguous allocation   
+         // call OracleLob.Value to obtain a contiguous allocation
          // of all the data.  
          Console.WriteLine(nclob.LobType + ".Value => " + nclob.Value);  
       }  
@@ -133,15 +133,15 @@ public class LobExample
          // Obtain a LOB.  
          OracleLob blob = reader.GetOracleLob(1/*0:based ordinal*/);  
   
-         // Perform any desired operations on the LOB   
+         // Perform any desired operations on the LOB
          // (read, position, and so on).  
   
          // Example - Writing binary data (directly to the backend).  
          // To write, you can use any of the stream classes, or write  
-         // raw binary data using   
-         // the OracleLob write method. Writing character vs. binary   
+         // raw binary data using
+         // the OracleLob write method. Writing character vs. binary
          // is the same;  
-         // however note that character is always in terms of   
+         // however note that character is always in terms of
          // Unicode byte counts  
          // (for example, even number of bytes - 2 bytes for every  
          // Unicode character).  
@@ -153,7 +153,7 @@ public class LobExample
          Console.WriteLine(blob.LobType + ".Write(  
            " + buffer + ", 0, 2) => " + blob.Value);  
   
-         // Example - Obtaining a temp LOB and copying data   
+         // Example - Obtaining a temp LOB and copying data
          // into it from another LOB.  
          OracleLob templob = CreateTempLob(cmd, blob.LobType);  
          long actual = blob.CopyTo(templob);  
@@ -161,7 +161,7 @@ public class LobExample
             " + templob.Value + ") => " + actual);  
   
          // Commit the transaction now that everything succeeded.  
-         // Note: On error, Transaction.Dispose is called   
+         // Note: On error, Transaction.Dispose is called
          // (from the using statement)  
          // and will automatically roll back the pending transaction.  
          cmd.Transaction.Commit();  
@@ -205,10 +205,10 @@ public class LobExample
       {  
       }  
   
-      cmd.CommandText =   
+      cmd.CommandText =
         "CREATE TABLE tablewithlobs (a int, b BLOB, c CLOB, d NCLOB)";  
       cmd.ExecuteNonQuery();  
-      cmd.CommandText =   
+      cmd.CommandText =
         "INSERT INTO tablewithlobs VALUES (1, 'AA', 'AAA', N'AAAA')";  
       cmd.ExecuteNonQuery();  
    }  
@@ -227,7 +227,7 @@ OracleTransaction tx = conn.BeginTransaction();
   
 OracleCommand cmd = conn.CreateCommand();  
 cmd.Transaction = tx;  
-cmd.CommandText =   
+cmd.CommandText =
   "declare xx blob; begin dbms_lob.createtemporary(  
   xx, false, 0); :tempblob := xx; end;";  
 cmd.Parameters.Add(new OracleParameter("tempblob",  
@@ -239,7 +239,7 @@ tempLob.Write(tempbuff,0,tempbuff.Length);
 tempLob.EndBatch();  
 cmd.Parameters.Clear();  
 cmd.CommandText = "myTable.myProc";  
-cmd.CommandType = CommandType.StoredProcedure;    
+cmd.CommandType = CommandType.StoredProcedure;
 cmd.Parameters.Add(new OracleParameter(  
   "ImportDoc", OracleType.Blob)).Value = tempLob;  
 cmd.ExecuteNonQuery();  
@@ -247,7 +247,7 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Oracle и ADO.NET](oracle-and-adonet.md)
 - [Общие сведения об ADO.NET](ado-net-overview.md)

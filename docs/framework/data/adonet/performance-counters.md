@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 985951180a5c8ee09460b7fe4bf3213b986c3bb6
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: b68787980a8b64d9ee90ed8d834fab2c5c69006b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980071"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149340"
 ---
 # <a name="performance-counters-in-adonet"></a>Счетчики производительности в ADO.NET
 В ADO.NET 2.0 появилась расширенная поддержка счетчиков производительности, включая поддержку как <xref:System.Data.SqlClient>, так и <xref:System.Data.OracleClient>. Счетчики производительности <xref:System.Data.SqlClient> предыдущих версий ADO.NET устарели и заменены новыми счетчиками производительности, которые рассматриваются в этом разделе. Счетчики производительности ADO.NET можно использовать для контроля состояния приложения и используемых им ресурсов соединения. Показания счетчиков производительности можно отслеживать с помощью системного монитора Windows или получить к ним доступ программным путем с помощью класса <xref:System.Diagnostics.PerformanceCounter> в пространстве имен <xref:System.Diagnostics>.  
@@ -24,21 +24,21 @@ ms.locfileid: "76980071"
 |`HardDisconnectsPerSecond`|Количество разрывов соединений с сервером базы данных в секунду.|  
 |`NumberOfActiveConnectionPoolGroups`|Количество уникальных активных групп пулов соединений. Этот счетчик управляется числом уникальных строк соединения, найденных в домене приложения.|  
 |`NumberOfActiveConnectionPools`|Общее число пулов соединений.|  
-|`NumberOfActiveConnections`|Количество текущих активных соединений. **Примечание.**  Этот счетчик производительности не включен по умолчанию. Сведения о включении этого счетчика производительности см. в разделе [Активация счетчиков по умолчанию](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|Количество соединений, доступных в пулах соединений. **Примечание.**  Этот счетчик производительности не включен по умолчанию. Сведения о включении этого счетчика производительности см. в разделе [Активация счетчиков по умолчанию](#ActivatingOffByDefault).|  
+|`NumberOfActiveConnections`|Количество текущих активных соединений. **Примечание:**  Этот счетчик производительности не включен по умолчанию. Для включения этого счетчика производительности [см.](#ActivatingOffByDefault)|  
+|`NumberOfFreeConnections`|Количество соединений, доступных в пулах соединений. **Примечание:**  Этот счетчик производительности не включен по умолчанию. Для включения этого счетчика производительности [см.](#ActivatingOffByDefault)|  
 |`NumberOfInactiveConnectionPoolGroups`|Количество уникальных групп пулов соединений, отмеченных для усечения. Этот счетчик управляется числом уникальных строк соединения, найденных в домене приложения.|  
 |`NumberOfInactiveConnectionPools`|Количество неактивных пулов соединений, не участвовавших в последних операциях и ожидающих удаления.|  
 |`NumberOfNonPooledConnections`|Количество активных соединений, не помещенных в пулы.|  
 |`NumberOfPooledConnections`|Количество активных соединений, которые управляются инфраструктурой пулов соединений.|  
 |`NumberOfReclaimedConnections`|Количество соединений, затребованных сборкой мусора, в которой приложение не вызывает методы `Close` и `Dispose`. Если соединения не закрывать и не удалять явно, производительность может снижаться.|  
 |`NumberOfStasisConnections`|Количество соединений, ожидающих в настоящий момент завершения действия и поэтому доступных для приложения.|  
-|`SoftConnectsPerSecond`|Количество активных соединений, извлекаемых из пула соединений. **Примечание.**  Этот счетчик производительности не включен по умолчанию. Сведения о включении этого счетчика производительности см. в разделе [Активация счетчиков по умолчанию](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|Количество активных соединений, возвращаемых в пул соединений. **Примечание.**  Этот счетчик производительности не включен по умолчанию. Сведения о включении этого счетчика производительности см. в разделе [Активация счетчиков по умолчанию](#ActivatingOffByDefault).|  
+|`SoftConnectsPerSecond`|Количество активных соединений, извлекаемых из пула соединений. **Примечание:**  Этот счетчик производительности не включен по умолчанию. Для включения этого счетчика производительности [см.](#ActivatingOffByDefault)|  
+|`SoftDisconnectsPerSecond`|Количество активных соединений, возвращаемых в пул соединений. **Примечание:**  Этот счетчик производительности не включен по умолчанию. Для включения этого счетчика производительности [см.](#ActivatingOffByDefault)|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Группы пула соединений и пулы соединений  
- При использовании проверки подлинности Windows (встроенная безопасность) необходимо следить за счетчиками `NumberOfActiveConnectionPoolGroups` и `NumberOfActiveConnectionPools`. Причина в том, что группы пулов соединений сопоставлены с уникальными строками соединений. Если используется встроенная безопасность, то пулы соединений сопоставляются со строками соединений и дополнительно создают специальные пулы для отдельных идентификаторов Windows. Например, если Кирилл и Мария, находящиеся в одном домене приложений, используют строку соединения `"Data Source=MySqlServer;Integrated Security=true"`, создается группа пула соединений для этой строки соединения и два дополнительных пула - один для Кирилла, другой для Марии. Если Джон и марта используют строку подключения с идентичным именем входа SQL Server, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, то для удостоверения **ловпривусер** создается только один пул.  
+ При использовании проверки подлинности Windows (встроенная безопасность) необходимо следить за счетчиками `NumberOfActiveConnectionPoolGroups` и `NumberOfActiveConnectionPools`. Причина в том, что группы пулов соединений сопоставлены с уникальными строками соединений. Если используется встроенная безопасность, то пулы соединений сопоставляются со строками соединений и дополнительно создают специальные пулы для отдельных идентификаторов Windows. Например, если Кирилл и Мария, находящиеся в одном домене приложений, используют строку соединения `"Data Source=MySqlServer;Integrated Security=true"`, создается группа пула соединений для этой строки соединения и два дополнительных пула - один для Кирилла, другой для Марии. Если Джон и Марта используют строку соединения с `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`идентичным логином сервера S'L, то для **идентификации lowPrivUser** создается только один пул.  
   
-<a name="ActivatingOffByDefault"></a>   
+<a name="ActivatingOffByDefault"></a>
 ### <a name="activating-off-by-default-counters"></a>Активация счетчиков, отключенных по умолчанию  
  Счетчики производительности `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond` и `SoftConnectsPerSecond` отключены по умолчанию. Чтобы включить их, добавьте в файл конфигурации приложения следующие данные:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "76980071"
  В следующем приложении командной строки показан способ получения значений счетчиков производительности. Чтобы возвратить данные для всех счетчиков производительности ADO.NET, соединения должны быть открыты и активны.  
   
 > [!NOTE]
-> В этом примере используется образец базы данных **AdventureWorks** , входящий в состав SQL Server. Строка соединения, представленная в образце кода, предполагает, что база данных установлена и доступна на локальном компьютере с именем экземпляра SqlExpress, и что созданы имена входа SQL Server, соответствующие представленным в строках соединения. Имена входа SQL Server придется создать, если сервер использует параметры безопасности по умолчанию, разрешающие только проверку подлинности Windows. При необходимости измените строки соединения, чтобы они соответствовали среде.  
+> В этом примере используется образец базы данных **AdventureWorks,** включенный в состав сервера S'L. Строка соединения, представленная в образце кода, предполагает, что база данных установлена и доступна на локальном компьютере с именем экземпляра SqlExpress, и что созданы имена входа SQL Server, соответствующие представленным в строках соединения. Имена входа SQL Server придется создать, если сервер использует параметры безопасности по умолчанию, разрешающие только проверку подлинности Windows. При необходимости измените строки соединения, чтобы они соответствовали среде.  
   
 ### <a name="example"></a>Пример  
   
@@ -74,7 +74,7 @@ Class Program
   
     Public Shared Sub Main()  
         Dim prog As Program = New Program  
-        ' Open a connection and create the performance counters.   
+        ' Open a connection and create the performance counters.
         prog.connection.ConnectionString = _  
            GetIntegratedSecurityConnectionString()  
         prog.SetUpPerformanceCounters()  
@@ -171,17 +171,17 @@ Class Program
     Private Declare Function GetCurrentProcessId Lib "kernel32.dll" () As Integer  
   
     Private Function GetInstanceName() As String  
-        'This works for Winforms apps.   
+        'This works for Winforms apps.
         Dim instanceName As String = _  
            System.Reflection.Assembly.GetEntryAssembly.GetName.Name  
   
-        ' Must replace special characters like (, ), #, /, \\   
+        ' Must replace special characters like (, ), #, /, \\
         Dim instanceName2 As String = _  
            AppDomain.CurrentDomain.FriendlyName.ToString.Replace("(", "[") _  
            .Replace(")", "]").Replace("#", "_").Replace("/", "_").Replace("\\", "_")  
   
-        'For ASP.NET applications your instanceName will be your CurrentDomain's   
-        'FriendlyName. Replace the line above that sets the instanceName with this:   
+        'For ASP.NET applications your instanceName will be your CurrentDomain's
+        'FriendlyName. Replace the line above that sets the instanceName with this:
         'instanceName = AppDomain.CurrentDomain.FriendlyName.ToString.Replace("(", "[") _  
         '    .Replace(")", "]").Replace("#", "_").Replace("/", "_").Replace("\\", "_")  
   
@@ -201,22 +201,22 @@ Class Program
     End Sub  
   
     Private Shared Function GetIntegratedSecurityConnectionString() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
-        Return ("Data Source=.\SqlExpress;Integrated Security=True;" &   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
+        Return ("Data Source=.\SqlExpress;Integrated Security=True;" &
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionString() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
-        Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
+        Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionStringDifferent() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
         Return ("Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" & _  
           "User Id=LowPriv;Password=Data!05;")  
     End Function  
@@ -347,7 +347,7 @@ class Program
             AppDomain.CurrentDomain.FriendlyName.ToString().Replace('(', '[')  
             .Replace(')', ']').Replace('#', '_').Replace('/', '_').Replace('\\', '_');  
   
-        // For ASP.NET applications your instanceName will be your CurrentDomain's   
+        // For ASP.NET applications your instanceName will be your CurrentDomain's
         // FriendlyName. Replace the line above that sets the instanceName with this:  
         // instanceName = AppDomain.CurrentDomain.FriendlyName.ToString().Replace('(','[')  
         // .Replace(')',']').Replace('#','_').Replace('/','_').Replace('\\','_');  
@@ -394,11 +394,11 @@ class Program
 }  
 ```  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Подключение к источнику данных](connecting-to-a-data-source.md)
 - [Организация пулов соединений OLE DB, ODBC и Oracle](ole-db-odbc-and-oracle-connection-pooling.md)
 - [Счетчики производительности для ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [Профилирование среды выполнения](../../debug-trace-profile/runtime-profiling.md)
-- [Общие сведения о мониторинге пороговых значений производительности](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Профилирование времени выполнения](../../debug-trace-profile/runtime-profiling.md)
+- [Введение в мониторинг пороговых значений производительности](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Общие сведения об ADO.NET](ado-net-overview.md)

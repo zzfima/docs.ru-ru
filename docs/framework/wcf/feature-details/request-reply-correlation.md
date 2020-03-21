@@ -2,18 +2,18 @@
 title: Корреляция запросов и ответов
 ms.date: 03/30/2017
 ms.assetid: cf4379bf-2d08-43f3-9584-dfa30ffcb1f6
-ms.openlocfilehash: c38854ad42ad4dddce5171482f3ddcfe5bd16b61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34a41a149e740faf0f3816bba2c9bd9b47d4996e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991137"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184544"
 ---
 # <a name="request-reply-correlation"></a>Корреляция запросов и ответов
-Корреляция запросов и ответов используется с <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары для реализации двусторонней операции в службе рабочего процесса и с <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> пары, вызывающей двустороннюю операцию в другой веб- Служба. При вызове двусторонней операции в службе WCF, служба может быть либо традиционного императивного службы Windows Communication Foundation (WCF) на основе кода, или он может быть службы рабочего процесса. Чтобы использовать корреляцию «запрос-ответ», необходимо использовать двустороннюю привязку, например <xref:System.ServiceModel.BasicHttpBinding>. Шаги инициализации корреляции, связанные с вызовом или реализацией двусторонней операции, похожи и описаны в данном разделе.  
+Корреляция запроса и <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> ответа используется с парой для реализации двусторонней <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> операции в службе рабочего процесса и с парой, которая вызывает двустороннюю операцию в другой web-службе. При поступлении на двустороннюю операцию в службе WCF служба может быть либо традиционной императивной службой Windows Communication Foundation (WCF), либо службой рабочего процесса. Чтобы использовать корреляцию «запрос-ответ», необходимо использовать двустороннюю привязку, например <xref:System.ServiceModel.BasicHttpBinding>. Шаги инициализации корреляции, связанные с вызовом или реализацией двусторонней операции, похожи и описаны в данном разделе.  
   
 ## <a name="using-correlation-in-a-two-way-operation-with-receivesendreply"></a>Использование корреляции в двусторонней операции с действиями Receive/SendReply  
- Объект <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары используется для реализации двусторонней операции в службе рабочего процесса. Среда выполнения использует корреляцию «запрос-ответ» для обеспечения отправки ответа нужному вызывающему объекту. Если рабочий процесс размещен при помощи объекта <xref:System.ServiceModel.Activities.WorkflowServiceHost>, как бывает со службами рабочего процесса, то достаточно инициализации корреляции по умолчанию. В этом случае <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> рабочим процессом используется пара, и требуется специальная конфигурация корреляции.  
+ <xref:System.ServiceModel.Activities.Receive> / Пара <xref:System.ServiceModel.Activities.SendReply> используется для реализации двусторонней операции в службе рабочего процесса. Среда выполнения использует корреляцию «запрос-ответ» для обеспечения отправки ответа нужному вызывающему объекту. Если рабочий процесс размещен при помощи объекта <xref:System.ServiceModel.Activities.WorkflowServiceHost>, как бывает со службами рабочего процесса, то достаточно инициализации корреляции по умолчанию. В этом сценарии <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пара используется рабочим процессом, и конкретная конфигурация корреляции не требуется.  
   
 ```csharp  
 Receive StartOrder = new Receive  
@@ -33,7 +33,7 @@ SendReply ReplyToStartOrder = new SendReply
 ```  
   
 ### <a name="explicitly-initializing-request-reply-correlation"></a>Явная инициализация корреляции «запрос-ответ»  
- Если параллельно работают другие двусторонние операции, корреляция должна быть явно настроена. Это можно сделать, указав <xref:System.ServiceModel.Activities.CorrelationHandle> и <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>, либо поместить <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> внутри <xref:System.ServiceModel.Activities.CorrelationScope>. В этом примере настраивается корреляция запросов и ответов на <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары.  
+ Если параллельно работают другие двусторонние операции, корреляция должна быть явно настроена. Это может быть сделано <xref:System.ServiceModel.Activities.CorrelationHandle> путем указания и, <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>или путем размещения <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> внутри <xref:System.ServiceModel.Activities.CorrelationScope>. В этом примере корреляция запроса <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> и ответа настраивается на пару.  
   
 ```csharp  
 Variable<CorrelationHandle> RRHandle = new Variable<CorrelationHandle>();  
@@ -81,7 +81,7 @@ CorrelationScope s = new CorrelationScope
 {  
     Body = new Sequence  
     {  
-        Activities =   
+        Activities =
         {  
             StartOrder,  
             // Activities that create the reply.  
@@ -96,6 +96,6 @@ CorrelationScope s = new CorrelationScope
  Если требуются дополнительные корреляции, их можно настроить с помощью свойства <xref:System.ServiceModel.Activities.Send.CorrelationInitializers%2A> соответствующих действий по обмену сообщениями, использующих нужные типы `CorrelationInitializer`.  
   
 ## <a name="using-correlation-in-a-two-way-operation-with-sendreceivereply"></a>Использование корреляции в двусторонней операции с действиями Send/ReceiveReply  
- Хотя <xref:System.ServiceModel.Activities.Receive> действие может использоваться только в службе рабочего процесса, размещенного по <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> пары могут использоваться в любой рабочий процесс, необходимо вызвать метод веб-службы. Если рабочий процесс размещен при помощи <xref:System.ServiceModel.Activities.WorkflowServiceHost>, то действует по умолчанию корреляция, описанная в предыдущем разделе; в противном случае корреляцию необходимо настроить либо явно при помощи желаемого <xref:System.ServiceModel.Activities.CorrelationInitializer> и <xref:System.ServiceModel.Activities.CorrelationHandle>, либо при помощи неявного управления обработкой <xref:System.ServiceModel.Activities.CorrelationScope>.  
+ В <xref:System.ServiceModel.Activities.Receive> то время как действие может быть <xref:System.ServiceModel.Activities.WorkflowServiceHost>использовано только в службе рабочего процесса, размещенной, <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> пара может быть использована в любом рабочем процессе, который должен вызвать метод в Web-службе. Если рабочий процесс размещен при помощи <xref:System.ServiceModel.Activities.WorkflowServiceHost>, то действует по умолчанию корреляция, описанная в предыдущем разделе; в противном случае корреляцию необходимо настроить либо явно при помощи желаемого <xref:System.ServiceModel.Activities.CorrelationInitializer> и <xref:System.ServiceModel.Activities.CorrelationHandle>, либо при помощи неявного управления обработкой <xref:System.ServiceModel.Activities.CorrelationScope>.  
   
- При использовании **Add Service Reference** службы с двусторонними операциями формируются действия, которые упаковывают <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> явно связать действие изнутри с помощью корреляция запросов и ответов указан.
+ При использовании **Справки** службы добавления на службу <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> с двусторонними операциями создаются действия, которые обертывают действие пары внутренне с четко указанной корреляцией Запрос/Ответ.

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: c36c68b0375e7d03aac36de7d02b2c9579ea9316
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b625fad846c4c6cf008843bff1f6b0eabe0e1de4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784598"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151108"
 ---
 # <a name="handling-dataview-events"></a>Обработка событий DataView
-Событие <xref:System.Data.DataView.ListChanged> объекта <xref:System.Data.DataView> используется для определения того, было ли обновлено представление. К обновлениям, которые вызывают это событие, относятся добавление, удаление или изменение строки в базовой таблице, добавление или удаление столбца из схемы базовой таблицы, изменение в родительской или дочерней связи. Событие **ListChanged** также уведомляет вас, если список просматриваемых строк существенно изменился из-за применения нового порядка сортировки или фильтра.  
+Событие <xref:System.Data.DataView.ListChanged> объекта <xref:System.Data.DataView> используется для определения того, было ли обновлено представление. К обновлениям, которые вызывают это событие, относятся добавление, удаление или изменение строки в базовой таблице, добавление или удаление столбца из схемы базовой таблицы, изменение в родительской или дочерней связи. Событие **ListChanged** также уведомляет вас, если список строк, которые вы просматриваете, значительно изменился из-за применения нового порядка сортировки или фильтра.  
   
- Событие **ListChanged** реализует <xref:System.ComponentModel> делегат **листчанжедевенсандлер** <xref:System.ComponentModel.ListChangedEventArgs> пространства имен и принимает в качестве входных данных объект. Вы можете определить, <xref:System.ComponentModel.ListChangedType> какой тип изменения произошло с помощью значения перечисления в свойстве **ListChangedType** объекта **ListChangedEventArgs** . Для изменений, затрагивающих Добавление, удаление или перемещение строк, можно получить доступ к новому индексу добавленной или перемещенной строки и предыдущему индексу удаленной строки с помощью свойства **невиндекс** объекта **ListChangedEventArgs** . В случае перемещенной строки доступ к предыдущему индексу перемещенной строки можно получить с помощью свойства **олдиндекс** объекта **ListChangedEventArgs** .  
+ Событие **ListChanged** реализует делегирование **ListChangedEventHandler** пространства <xref:System.ComponentModel> имен и <xref:System.ComponentModel.ListChangedEventArgs> принимает в качестве ввода объекта. Определить, какой тип изменений <xref:System.ComponentModel.ListChangedType> произошел, используя значение перечисления в свойстве **ListChangedType** объекта **ListChangedEventArgs.** Для изменений, связанных с добавлением, удалением или перемещением строк, новый индекс добавленной или перемещенной строки и предыдущий индекс удаленной строки можно получить с помощью свойства **NewIndex** объекта **ListChangedEventArgs.** В случае перемещенной строки предыдущий индекс перемещенной строки может быть доступен с помощью свойства **OldIndex** объекта **ListChangedEventArgs.**  
   
- **DataViewManager** также предоставляет событие **ListChanged** для уведомления о том, что таблица была добавлена или удалена, или если в коллекцию **связей** базового **набора данных**было внесено изменение.  
+ **DataViewManager** также предоставляет событие **ListChanged,** чтобы уведомить вас, если таблица была добавлена или удалена, или если было внесено изменение в сбор **отношений** базового **DataSet.**  
   
- В следующем примере кода показано, как добавить обработчик событий **ListChanged** .  
+ В следующем примере кода показано, как добавить обработчик событий **ListChanged.**  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -38,10 +38,10 @@ End Sub
 ```  
   
 ```csharp  
-custView.ListChanged  += new   
+custView.ListChanged  += new
   System.ComponentModel.ListChangedEventHandler(OnListChanged);  
   
-protected static void OnListChanged(object sender,   
+protected static void OnListChanged(object sender,
   System.ComponentModel.ListChangedEventArgs args)  
 {  
   Console.WriteLine("ListChanged:");  
@@ -51,7 +51,7 @@ protected static void OnListChanged(object sender,
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>

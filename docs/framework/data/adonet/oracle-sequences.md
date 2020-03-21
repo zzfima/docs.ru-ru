@@ -2,12 +2,12 @@
 title: Последовательности Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 772aeda94215ccc8e1eff0e1145ed0399791197d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d6e6bb51b8bd317c7161500b89993be689659fad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794597"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149418"
 ---
 # <a name="oracle-sequences"></a>Последовательности Oracle
 Поставщик данных .NET Framework для Oracle поддерживает получение сформированных на сервере ключевых значений последовательности Oracle после выполнения вставок с помощью <xref:System.Data.OracleClient.OracleDataAdapter>.  
@@ -20,7 +20,7 @@ ms.locfileid: "70794597"
   
  При создании последовательности в базе данных Oracle можно определить ее начальное значение и приращение значений. Перед вставкой новых строк можно также запросить новые значения последовательности. Это означает, что код может получить ключевые значения для новых строк перед вставкой их в базу данных.  
   
- Дополнительные сведения о создании столбцов с автоматическим приращением с помощью SQL Server и ADO.NET см. в разделе [Получение значений идентификаторов или автонумерации](retrieving-identity-or-autonumber-values.md) и [Создание столбцов с автоувеличением](./dataset-datatable-dataview/creating-autoincrement-columns.md).  
+ Для получения дополнительной информации о создании столбцов с автоматическим приращением с помощью сервера s-L и ADO.NET [см.](retrieving-identity-or-autonumber-values.md) [Creating AutoIncrement Columns](./dataset-datatable-dataview/creating-autoincrement-columns.md)  
   
 ## <a name="example"></a>Пример  
  В следующем примере на языке C# показано получение новых значений последовательности в базе данных Oracle. Пример ссылается на последовательность в запросе INSERT INTO, который используется для вставки новых строк, и возвращает значение последовательности, сформированное предложением RETURNING, впервые появившемся в Oracle10g. В примере добавляется набор новых строк в таблицу <xref:System.Data.DataTable> с помощью возможности автоприращения ADO.NET для формирования значений «местозаполнителей» первичного ключа. Обратите внимание, что значение приращения ADO.NET, сформированное для новых строк, представляет собой просто «местозаполнитель». Это означает, что база данных может сама сформировать эти значения вместо значений, созданных ADO.NET.  
@@ -30,7 +30,7 @@ ms.locfileid: "70794597"
 ```csharp  
 public void OracleSequence(String connectionString)  
 {  
-   String insertString =   
+   String insertString =
       "INSERT INTO SequenceTest_Table (ID, OtherColumn)" +  
       "VALUES (SequenceTest_Sequence.NEXTVAL, :OtherColumn)" +  
       "RETURNING ID INTO :ID";  
@@ -75,7 +75,7 @@ public void OracleSequence(String connectionString)
       }  
       Console.WriteLine();  
   
-      cmd.CommandText =   
+      cmd.CommandText =
         "SELECT ID, OtherColumn FROM SequenceTest_Table";  
       OracleDataAdapter da = new OracleDataAdapter(cmd);  
       da.InsertCommand = new OracleCommand(insertString, conn);  
@@ -98,7 +98,7 @@ public void OracleSequence(String connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Oracle и ADO.NET](oracle-and-adonet.md)
 - [Общие сведения об ADO.NET](ado-net-overview.md)

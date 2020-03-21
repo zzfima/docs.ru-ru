@@ -2,15 +2,15 @@
 title: Поставщик членства и ролей
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 117be783c2d4a72ff9d1c4509566274b1043a43d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424672"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144465"
 ---
 # <a name="membership-and-role-provider"></a>Поставщик членства и ролей
-В образце поставщика членства и роли показано, как служба может использовать поставщиков членства и ролей ASP.NET для проверки подлинности и авторизации клиентов.  
+В примере поставщика членства и роли показано, как служба может использовать ASP.NET членство и ролевые поставщики для проверки подлинности и авторизации клиентов.  
   
  В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
   
@@ -21,11 +21,11 @@ ms.locfileid: "73424672"
   
 - Клиент может проходить проверку подлинности по имени пользователя и паролю.  
   
-- Сервер может проверить учетные данные клиента по отношению к поставщику членства ASP.NET.  
+- Сервер может проверять учетные данные клиента в отношении поставщика ASP.NET членства.  
   
 - Сервер может проходить проверку подлинности с помощью сертификата X.509 сервера.  
   
-- Сервер может сопоставлять прошедший проверку подлинности клиент с ролью с помощью поставщика роли ASP.NET.  
+- Сервер может сопоставить подлинное клиента с ролью, используя ASP.NET ролевой провайдер.  
   
 - Сервер может использовать атрибут `PrincipalPermissionAttribute` для управления доступом к определенным методам, предоставляемым службой.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73424672"
 ```xml  
 <!-- Set the connection string for SQL Server -->  
 <connectionStrings>  
-  <add name="SqlConn"   
+  <add name="SqlConn"
        connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
 </connectionStrings>  
   
@@ -43,9 +43,9 @@ ms.locfileid: "73424672"
   <membership defaultProvider="SqlMembershipProvider" userIsOnlineTimeWindow="15">  
     <providers>  
       <clear />  
-      <add   
-        name="SqlMembershipProvider"   
-        type="System.Web.Security.SqlMembershipProvider"   
+      <add
+        name="SqlMembershipProvider"
+        type="System.Web.Security.SqlMembershipProvider"
         connectionStringName="SqlConn"  
         applicationName="MembershipAndRoleProviderSample"  
         enablePasswordRetrieval="false"  
@@ -57,19 +57,19 @@ ms.locfileid: "73424672"
   </membership>  
   
   <!-- Configure the Sql Role Provider -->  
-  <roleManager enabled ="true"   
+  <roleManager enabled ="true"
                defaultProvider ="SqlRoleProvider" >  
     <providers>  
-      <add name ="SqlRoleProvider"   
-           type="System.Web.Security.SqlRoleProvider"   
-           connectionStringName="SqlConn"   
+      <add name ="SqlRoleProvider"
+           type="System.Web.Security.SqlRoleProvider"
+           connectionStringName="SqlConn"
            applicationName="MembershipAndRoleProviderSample"/>  
     </providers>  
   </roleManager>  
 </system.web>  
 ```  
   
- Служба предоставляет одну конечную точку для взаимодействия с ней. Эта точка задается в файле конфигурации Web.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настраивается с помощью стандартного элемента `wsHttpBinding`, который по умолчанию использует проверку подлинности Windows. В этом образце стандартная привязка `wsHttpBinding` использует проверку подлинности имени пользователя. Поведение определяет, что для проверки подлинности службы должен использоваться сертификат сервера. Сертификат сервера должен содержать то же значение для `SubjectName`, что и атрибут `findValue` в элементе [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Configuration. Кроме того, поведение указывает, что проверка подлинности пар "имя пользователя-пароль" выполняется поставщиком членства ASP.NET, а сопоставление ролей выполняется поставщиком роли ASP.NET путем указания имен, определенных для двух поставщиков.  
+ Служба предоставляет одну конечную точку для взаимодействия с ней. Эта точка задается в файле конфигурации Web.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настраивается с помощью стандартного элемента `wsHttpBinding`, который по умолчанию использует проверку подлинности Windows. В этом образце стандартная привязка `wsHttpBinding` использует проверку подлинности имени пользователя. Поведение определяет, что для проверки подлинности службы должен использоваться сертификат сервера. Сертификат сервера должен содержать такое же значение, как `SubjectName` и `findValue` атрибут в элементе [ \<конфигурации serviceCertificate>.](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Кроме того, в поведении указывается, что аутентификация пар имен пользователя и паролей выполняется ASP.NET поставщиком членства, а отображение ролей выполняется поставщиком ASP.NET роли, указывая имена, определенные для двух поставщиков.  
   
 ```xml  
 <system.serviceModel>  
@@ -97,11 +97,11 @@ ms.locfileid: "73424672"
                               roleProviderName ="SqlRoleProvider" />  
         <serviceCredentials>  
           <!-- Configure user name authentication to use the Membership Provider -->  
-          <userNameAuthentication userNamePasswordValidationMode ="MembershipProvider"   
+          <userNameAuthentication userNamePasswordValidationMode ="MembershipProvider"
                                   membershipProviderName ="SqlMembershipProvider"/>  
           <!-- Configure the service certificate -->  
-          <serviceCertificate storeLocation ="LocalMachine"   
-                              storeName ="My"   
+          <serviceCertificate storeLocation ="LocalMachine"
+                              storeName ="My"
                               x509FindType ="FindBySubjectName"  
                               findValue ="localhost" />  
         </serviceCredentials>  
@@ -118,15 +118,15 @@ ms.locfileid: "73424672"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Чтобы создать C# или Visual Basic выпуск .NET решения, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1. Чтобы создать выпуск решения для C-или Visual Basic .NET, следуйте инструкциям в [«Запуске образцов Фонда коммуникаций Windows».](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
-2. Убедитесь, что вы настроили [базу данных Службы приложений ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94997).  
-  
-    > [!NOTE]
-    > Если используется выпуск SQL Server Express Edition, то сервер имеет имя .\SQLEXPRESS. Этот сервер следует использовать при настройке базы данных ASP.NET Службы приложений, а также в строке подключения Web. config.  
+2. Убедитесь, что вы настроили [базу данных ASP.NET служб приложений.](https://go.microsoft.com/fwlink/?LinkId=94997)  
   
     > [!NOTE]
-    > Учетная запись рабочего процесса ASP.NET должна иметь разрешения на базу данных, созданную на этом шаге. Для этого воспользуйтесь служебной программой sqlcmd или средой SQL Server Management Studio.  
+    > Если используется выпуск SQL Server Express Edition, то сервер имеет имя .\SQLEXPRESS. Этот сервер следует использовать при настройке базы данных ASP.NET служб приложений, а также в строке подключения Web.config.  
+  
+    > [!NOTE]
+    > Учетная запись ASP.NET рабочего процесса должна иметь разрешения в базе данных, которая создается на этом этапе. Для этого воспользуйтесь служебной программой sqlcmd или средой SQL Server Management Studio.  
   
 3. Чтобы запустить образец на одном или нескольких компьютерах, следуйте приведенным далее инструкциям.  
   
@@ -134,11 +134,11 @@ ms.locfileid: "73424672"
   
 1. Убедитесь, что путь включает папку, в которой хранится файл Makecert.exe.  
   
-2. Запустите программу Setup. bat из образца папки установки в Командная строка разработчика для запуска Visual Studio с правами администратора. Он устанавливает сертификаты службы, необходимые для запуска образца.  
+2. Выполнить Setup.bat из папки установки образца в командном запросе разработчика для Visual Studio с привилегиями администратора. Он устанавливает сертификаты службы, необходимые для запуска образца.  
   
 3. Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -150,24 +150,24 @@ ms.locfileid: "73424672"
   
 4. Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента. Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.  
   
-5. На сервере откройте Командная строка разработчика для Visual Studio с правами администратора и запустите `setup.bat service`. При запуске `setup.bat` с аргументом `service` создается сертификат службы с полным доменным именем компьютера и экспортируется сертификат службы в файл с именем Service. cer.  
+5. На сервере откройте командный запрос разработчика для `setup.bat service`Visual Studio с административными привилегиями и запустите. Запуск `setup.bat` с `service` аргументом создает сертификат обслуживания с полностью квалифицированным доменным именем компьютера и экспортирует сертификат службы в файл под названием Service.cer.  
   
-6. Измените файл Web. config в соответствии с новым именем сертификата (в атрибуте `findValue` в [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), который совпадает с полным доменным именем компьютера.  
+6. Оторите Web.config, чтобы отразить `findValue` новое имя сертификата (в атрибуте в [ \<сервисеСертификат>), ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)который является таким же, как полностью квалифицированное доменное имя компьютера.  
   
 7. Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   
 8. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.  
   
-9. На клиенте откройте Командная строка разработчика для Visual Studio с правами администратора и запустите Импортсервицецерт. bat. Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.  
+9. На клиенте откройте командный запрос разработчика для Visual Studio с административными привилегиями и запустите ImportServiceCert.bat. Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.  
   
-10. На клиентском компьютере из командной строки запустите программу Client.exe. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. На клиентском компьютере из командной строки запустите программу Client.exe. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 ### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
 - После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
   
 > [!NOTE]
-> Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы выполнили примеры Windows Communication Foundation (WCF), использующие сертификаты на нескольких компьютерах, обязательно очистите сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы используете образцы Windows Communication Foundation (WCF), которые используют сертификаты на всех компьютерах, обязательно очистите сертификаты службы, установленные в магазине CurrentUser - TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Файл Setup.bat  
  Входящий в состав образца файл Setup.bat позволяет настроить для сервера соответствующие сертификаты, необходимые для выполнения резидентного приложения, которое требует обеспечения безопасности на основе сертификата сервера. Этот пакетный файл необходимо изменить, чтобы его можно было использовать на нескольких компьютерах или без размещения приложения.  

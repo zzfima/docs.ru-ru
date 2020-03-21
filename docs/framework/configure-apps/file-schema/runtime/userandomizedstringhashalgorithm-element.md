@@ -8,24 +8,24 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-ms.openlocfilehash: 3863bc1376d89ef804022fb9c87fac3a25fc910f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a9afa0db516a542b74d08a4c3754a3244abbbea7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968835"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153781"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > элемент
-Определяет, вычисляет ли среда CLR хэш-коды для строк на уровне домена приложения.  
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> элемент
+Определяет, вычисляет ли общее время выполнения языка хэш-коды для строк на основе домена приложения.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseRandomizedStringHashAlgorithm >**  
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<UseRandomizedStringHashAlgorithm>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<UseRandomizedStringHashAlgorithm   
+<UseRandomizedStringHashAlgorithm
    enabled=0|1 />  
 ```  
   
@@ -34,19 +34,19 @@ ms.locfileid: "73968835"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, рассчитываются ли хэш-коды для строк на уровне домена приложения.|  
+|`enabled`|Обязательный атрибут.<br /><br /> Уточняется, рассчитываются ли хэш-коды для строк на основе домена приложения.|  
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|значения|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|`0`|Среда CLR не выполняет вычисление хэш-кодов для строк на уровне отдельных приложений. для вычисления хэш-кодов строк используется один алгоритм. Это значение по умолчанию.|  
-|`1`|Среда CLR выдает хэш-коды для строк на уровне домена приложения. Идентичные строки в разных доменах приложений и в разных процессах будут иметь разные хэш-коды.|  
+|`0`|Общее время выполнения языка не вычисляет хэш-коды для строк на основе домена в приложении; для расчета кодов хэша строк используется один алгоритм. Это значение по умолчанию.|  
+|`1`|Общий язык runtime вычисляет коды хэша для строк на основе домена приложения. Идентичные строки в разных доменах приложений и в разных процессах будут иметь разные хэш-коды.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -55,27 +55,27 @@ ms.locfileid: "73968835"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
-## <a name="remarks"></a>Заметки  
- По умолчанию класс <xref:System.StringComparer> и метод <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> используют один алгоритм хэширования, который создает согласованный хэш-код между доменами приложений. Это эквивалентно установке атрибута `enabled` элемента `<UseRandomizedStringHashAlgorithm>` для `0`. Это алгоритм хэширования, используемый в .NET Framework 4.  
+## <a name="remarks"></a>Remarks  
+ По умолчанию <xref:System.StringComparer> класс <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> и метод используют единый алгоритм хэширования, который производит согласованный хэш-код в доменах приложений. Это эквивалентно настройке атрибута `enabled` элемента. `<UseRandomizedStringHashAlgorithm>` `0` Это алгоритм хэширования, используемый в системе .NET 4.  
   
- Класс <xref:System.StringComparer> и метод <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> также могут использовать другой алгоритм хэширования, который выполняет вычисление хэш-кодов для каждого домена приложения. В результате хэш-коды для эквивалентных строк будут различаться в разных доменах приложений. Эта функция является обязательной. чтобы воспользоваться его преимуществами, необходимо задать атрибуту `enabled` элемента `<UseRandomizedStringHashAlgorithm>` значение `1`.  
+ Класс <xref:System.StringComparer> и <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> метод также могут использовать другой алгоритм хэширования, который вычисляет хэш-коды на основе домена приложения. В результате хэш-коды для эквивалентных строк будут отличаться в разных доменах приложений. Это функция выбора; чтобы воспользоваться им, вы `enabled` должны установить `1`атрибут элемента. `<UseRandomizedStringHashAlgorithm>`  
   
- Поиск строки в хэш-таблице обычно является операцией O (1). Однако при возникновении большого количества конфликтов Поиск может стать операцией O (n<sup>2</sup>). Можно использовать элемент конфигурации `<UseRandomizedStringHashAlgorithm>`, чтобы создать случайный алгоритм хэширования для каждого домена приложений, который, в свою очередь, ограничивает количество потенциальных конфликтов, особенно когда ключи, из которых вычисляется хэш-коды, основываются на вводе данных. пользователей.  
+ Поиск строки в таблице хэша обычно является операцией O(1). Однако при большом количестве столкновений поиск может стать операцией O(n<sup>2).</sup> Элемент `<UseRandomizedStringHashAlgorithm>` конфигурации можно использовать для генерации алгоритма случайного хэширования в домене приложения, что, в свою очередь, ограничивает количество потенциальных столкновений, особенно когда ключи, из которых рассчитываются хэш-коды, основаны на ввода данных пользователями.  
   
 ## <a name="example"></a>Пример  
- В следующем примере определяется класс `DisplayString`, содержащий закрытую строковую константу, `s`, значением которой является строка. Он также включает метод `ShowStringHashCode`, который отображает строковое значение и его хэш-код, а также имя домена приложения, в котором выполняется метод.  
+ Следующий пример определяет `DisplayString` класс, который включает `s`в себя константу частной строки, значение которого "Это строка". Он также включает метод `ShowStringHashCode`, который отображает значение строки и ее хэш-код вместе с именем домена приложения, в котором метод выполняется.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- При запуске примера без указания файла конфигурации отображаются выходные данные, аналогичные приведенным ниже. Обратите внимание, что хэш-коды строк идентичны в двух доменах приложений.  
+ При выполнении примера без указания файла конфигурации он отображает подобный следующему вывод. Обратите внимание, что хэш-коды для строки идентичны в обоих доменах приложений.  
   
 ```console
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
   
- Однако, если добавить следующий файл конфигурации в каталог примера, а затем запустить пример, хэш-коды для одной и той же строки будут отличаться для домена приложения.  
+ Однако при добавлении следующего файла конфигурации в каталог примеров и запуске примера, хэш-коды для той же строки будут отличаться по домену приложения.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -86,14 +86,14 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
 </configuration>  
 ```  
   
- При наличии файла конфигурации в примере выводятся следующие выходные данные:  
+ Если файл конфигурации существует, пример отображает следующие выходные данные:  
   
 ```console
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>

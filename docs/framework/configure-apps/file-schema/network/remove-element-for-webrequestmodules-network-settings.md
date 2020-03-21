@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: ca3a78a491c61b6e23dab0f96eebceb3157706ae
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: afa1aef8ea71f43a136987ec5b6e1925c6d9fb40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089137"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154729"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<удалить элемент > для webRequestModules (параметры сети)
-Удаляет пользовательский модуль веб-запросов из приложения.  
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<удалить элемент> для webRequestModules (Настройки сети)
+Удаляет из приложения пользовательский модуль веб-запроса.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<удалить >**
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<удалить>**
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<remove   
-  prefix="URI prefix"   
+<remove
+  prefix="URI prefix"
 />  
 ```  
   
@@ -38,30 +38,30 @@ ms.locfileid: "74089137"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|**Атрибут**|**Описание**|  
 |-------------------|---------------------|  
 |`prefix`|Префикс URI для запросов, обрабатываемых этим модулем веб-запросов.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|Указывает модули, используемые для запроса сведений от сетевых узлов.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Определяет модули для использования для запроса информации у сетевых хостов.|  
   
-## <a name="remarks"></a>Заметки  
- Элемент `remove` удаляет зарегистрированный модуль веб-запросов для указанного префикса URI.  
+## <a name="remarks"></a>Remarks  
+ Элемент `remove` удаляет зарегистрированный модуль веб-запроса для указанной префикса URI.  
   
- Значение атрибута `prefix` должно быть начальными символами допустимого URI-типа, например "`http`" или "`http://www.contoso.com`".  
+ Значение для `prefix` атрибута должно быть ведущими символами действительного URI`http`- например, "" или ""`http://www.contoso.com`  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
 
-В следующем примере удаляется существующий модуль веб-запросов для HTTP, а затем регистрируется новый пользовательский модуль веб-запросов для `www.contoso.com`запросов HTTP.
+Следующий пример удаляет существующий модуль веб-запроса для HTTP, а затем `www.contoso.com`регистрирует новый пользовательский модуль веб-запроса для запросов HTTP.
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "74089137"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.WebRequest>
-- [Схема параметров сети](index.md)
+- [Схема настройки сети](index.md)

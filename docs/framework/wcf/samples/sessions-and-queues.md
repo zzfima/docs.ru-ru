@@ -2,12 +2,12 @@
 title: Сеансы и очереди
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 719212d908b9d5b5207dd5b4e7701ef903de31a0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8a342b185c7965e9ee0ff9941a09e00fc392ad4b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715071"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144103"
 ---
 # <a name="sessions-and-queues"></a>Сеансы и очереди
 В этом образце показано, как отправлять и принимать набор связанных сообщений при взаимодействии с использованием очередей с помощью транспорта очереди сообщений (MSMQ). В этом примере используется привязка `netMsmqBinding`. Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  
@@ -17,11 +17,11 @@ ms.locfileid: "74715071"
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
   
  При использовании очередей клиент взаимодействует со службой посредством очереди. Конкретно, клиент отправляет сообщения в очередь. Служба получает сообщения из очереди. Поэтому клиенту и службе не обязательно выполняться одновременно, чтобы взаимодействовать посредством очереди.  
@@ -55,7 +55,7 @@ public class OrderTakerService : IOrderTaker
 {  
     PurchaseOrder po;  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                  TransactionAutoComplete = false)]  
     public void OpenPurchaseOrder(string customerId)  
     {  
@@ -63,16 +63,16 @@ public class OrderTakerService : IOrderTaker
         po = new PurchaseOrder(customerId);  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                   TransactionAutoComplete = false)]  
     public void AddProductLineItem(string productId, int quantity)  
     {  
         po.AddProductLineItem(productId, quantity);  
-        Console.WriteLine("Product " + productId + " quantity " +   
+        Console.WriteLine("Product " + productId + " quantity " +
                             quantity + " added to purchase order");  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                   TransactionAutoComplete = true)]  
     public void EndPurchaseOrder()  
     {  
@@ -109,7 +109,7 @@ public static void Main()
         Console.ReadLine();  
   
         // Close the ServiceHost to shutdown the service.  
-        serviceHost.Close();   
+        serviceHost.Close();
     }  
 }  
 ```
@@ -162,7 +162,7 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     client.EndPurchaseOrder();  
   
     //Closing the client gracefully closes the connection and cleans up resources.  
-    client.Close();                  
+    client.Close();
   
     // Complete the transaction.  
     scope.Complete();  
@@ -207,13 +207,13 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
-2. Чтобы создать выпуск C#решения C++, или Visual Basic .NET, следуйте инструкциям в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы создать выпуск решения для C,, C-, или Visual Basic .NET, следуйте инструкциям по [созданию образцов Фонда коммуникаций Windows.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
- По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена. Есть два соответствующих свойства: имя безопасности транспорта MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` по умолчанию, для режима проверки подлинности устанавливается значение `Windows`, а для уровня защиты — значение `Sign`. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory. Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.  
+ По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена. Для транспортной безопасности МСМЗ есть <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` два соответствующих свойства, а `Windows` именно: и по `Sign`умолчанию режим проверки подлинности установлен, а уровень защиты установлен. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory. Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Запуск образца на компьютере, входящем в рабочую группу, или без интеграции с Active Directory  
   
@@ -237,7 +237,7 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
               binding="netMsmqBinding"  
               bindingConfiguration="Binding1"  
            contract="Microsoft.ServiceModel.Samples.IOrderTaker" />  
-          <!-- The mex endpoint is exposed at-->      
+          <!-- The mex endpoint is exposed at-->
           <!--http://localhost:8000/ServiceModelSamples/service/mex. -->  
           <endpoint address="mex"  
                     binding="mexHttpBinding"  

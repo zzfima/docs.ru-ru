@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 2113b2b81ae347b398b0f25028dc6c361aec8447
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d171fea193bbae068e69b8976abb8e56a5623f02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089183"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154781"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<удалить элемент > для authenticationModules (параметры сети)
-Удаляет модуль проверки подлинности из приложения.  
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<удалить элемент> для проверки подлинностиМодульы (настройки сети)
+Удаляет модуль аутентификации из приложения.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<удалить >**
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<аутентификацияМоды>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<удалить>**
 
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<remove   
-   type="authentication module name"   
+<remove
+   type="authentication module name"
 />  
 ```  
   
@@ -38,29 +38,29 @@ ms.locfileid: "74089183"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|**Атрибут**|**Описание**|  
 |-------------------|---------------------|  
-|**type**|Имя удаляемого модуля проверки подлинности.|  
+|**тип**|Название модуля проверки подлинности для удаления.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Указывает модули, используемые для проверки подлинности сетевых запросов.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Определяет модули, используемые для проверки подлинности сетевых запросов.|  
   
-## <a name="remarks"></a>Заметки  
- Элемент `remove` удаляет модули проверки подлинности, которые были определены ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
+## <a name="remarks"></a>Remarks  
+ Элемент `remove` удаляет модули аутентификации, которые были определены ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
   
- Значение атрибута `type` должно быть допустимым именем класса.  
+ Значение для `type` атрибута должно быть действительным именем класса.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере удаляется модуль проверки подлинности.  
+ Следующий пример удаляет модуль проверки подлинности.  
   
 ```xml  
 <configuration>  
@@ -72,8 +72,8 @@ ms.locfileid: "74089183"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Схема параметров сети](index.md)
+- [Схема настройки сети](index.md)

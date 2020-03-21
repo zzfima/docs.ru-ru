@@ -1,5 +1,5 @@
 ---
-title: Схема разделов конфигурации
+title: Схема конфигурации секций
 ms.date: 05/02/2017
 helpviewer_keywords:
 - configuration settings [.NET Framework], custom
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], custom settings in configuration files
 - elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-ms.openlocfilehash: b97fea90be301e791bc4109142e6a8b8e1dedaa1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 28f936e6fd7c9e7f6f895396df8e8b8d36ab9139
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214767"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155327"
 ---
-# <a name="configuration-sections-schema"></a>Схема разделов конфигурации
+# <a name="configuration-sections-schema"></a>Схема конфигурации секций
 
-Схема разделов конфигурации содержит элементы, определяющие пользовательские параметры в файлах конфигурации. Общие сведения о файлах конфигурации и схемах см. [в разделе Схема файла конфигурации для .NET Framework](index.md).
+Схема секций конфигурации содержит элементы, определяющие пользовательские настройки в файлах конфигурации. Для получения общей информации о файлах конфигурации и схемах [см.](index.md)
 
-[ **\<configuration>** ](configuration-element.md)   
-[ **>\<configSections**](configsections-element-for-configuration.md)   
-[ **\<очистить >** ](clear-element-for-configsections.md)   
-[ **\<удалить >** ](remove-element-for-configsections.md)   
-[ **> раздел\<** ](section-element.md)   
-[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)
+[**\<конфигурация>** ](configuration-element.md) 
+ [** \<конфигурации **](configsections-element-for-configuration.md) 
+>[** \<четкой>**](clear-element-for-configsections.md) 
+ [** \<удалить раздел>**](remove-element-for-configsections.md) 
+ [** \<>**](section-element.md) 
+ [** \<разделаГруппа>**](sectiongroup-element-for-configsections.md)
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<очистить >** для **\<configSections >** ](clear-element-for-configsections.md) | Удаляет все ранее определенные разделы и группы разделов. |
-| [ **\<clear>** ](clear-element-for-configsections.md) | Удаляет все ранее определенные разделы и группы разделов. |
-| [ **\<configSections >** ](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
-| [ **\<удалить >** для **\<configSections >** ](remove-element-for-configsections.md) | Удаляет предопределенный раздел или группу разделов. |
-| [ **\<разделе >** **\<configSections >** и **\<sectionGroup >** ](section-element.md) | Содержит объявление раздела конфигурации. |
-| [ **>\<sectionGroup** для **\<configSections >** ](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
+| [четкая>для ** \<** ** \<>configSections**](clear-element-for-configsections.md) | Очищает все ранее определенные разделы и группы разделов. |
+| [**\<ясно>**](clear-element-for-configsections.md) | Очищает все ранее определенные разделы и группы разделов. |
+| [**\<конфигурации>**](configsections-element-for-configuration.md) | Содержит раздел конфигурации и декларации пространства имен. |
+| [удалить>для ** \<** ** \<>конфигураций**](remove-element-for-configsections.md) | Удаляет заранее определенный раздел или группу раздела. |
+| [раздел>для ** \<configSections>** и ** \<разделгруппы>** ** \<**](section-element.md) | Содержит декларацию раздела конфигурации. |
+| [разделГруппа>для ** \<** ** \<configSections>**](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
