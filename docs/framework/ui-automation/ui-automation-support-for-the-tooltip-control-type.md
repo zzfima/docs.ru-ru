@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-ms.openlocfilehash: ce1a3fa79c9e0074b3e0f7bfe5aa316fd0d28426
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8531270efb5a7bc5896c5d2fa04dd0632547cac7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785726"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179467"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элементов управления ToolTip
 > [!NOTE]
@@ -21,25 +21,25 @@ ms.locfileid: "76785726"
   
  Элементы управления "Подсказка" —это всплывающие окна, содержащие текст.  
   
- В следующих разделах описывается необходимая древовидная структура [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , свойства, шаблоны элементов управления и события для типа элемента управления ToolTip. Требования к [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] применяются ко всем элементам управления "всплывающая подсказка", будь то [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 или Windows Forms.  
+ В следующих разделах описывается необходимая древовидная структура [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , свойства, шаблоны элементов управления и события для типа элемента управления ToolTip. Требования [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] применяются ко всем элементам [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]управления наконечником инструмента, будь то, Win32, или Windows Forms.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
+<a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Требуемая древовидная структура модели автоматизации пользовательского интерфейса  
  В следующей таблице описывается представление элемента управления и представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , относящиеся к элементам управления "Подсказка", и показывается, что может содержаться в каждом представлении. Дополнительные сведения о дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
-|Представление элемента управления|Представление контента|  
+|Представление элемента управления|Представление содержимого|  
 |------------------|------------------|  
-|Подсказка<br /><br /> — Текст (0 или более)<br />-Image (0 или более)|Подсказка|  
+|ToolTip<br /><br /> - Текст (0 или более)<br />- Изображение (0 или более)|ToolTip|  
   
  Элементы управления "Подсказка" отображаются только в представлении содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] если они могут получать фокус клавиатуры. В противном случае все сведения всплывающей подсказки доступны из свойства `HelpTextProperty` в элементе [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , на который ссылается эта всплывающая подсказка.  
   
  Всплывающие подсказки должны появляться под элементом управления, к которому относятся их сведения. Клиенты должны прослушивать `ToolTipOpenedEvent` , чтобы убедиться, что они постоянно получают сведения, содержащиеся во всплывающих подсказках.  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значение или определение которых в первую очередь относится к элементам управления "Подсказка". Дополнительные сведения о свойствах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
-|Свойство[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|{2&gt;Value&lt;2}|Примечания|  
+|Свойство[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|Значение|Примечания|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|См. примечания.|Значение этого свойства должно быть уникальным среди всех элементов управления в приложении.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|См. примечания.|Внешний прямоугольник, содержащий весь элемент управления.|  
@@ -47,21 +47,21 @@ ms.locfileid: "76785726"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|См. примечания.|Если элемент управления может получать фокус клавиатуры, он должен поддерживать это свойство.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|См. примечания.|Имя элемента управления "Подсказка" — это текст, который отображается в подсказке.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Элементы управления "Подсказка" всегда помечаются автоматически по их содержимому.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Подсказка|Это значение одинаково для всех инфраструктур пользовательского интерфейса.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ToolTip|Это значение одинаково для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"подсказка"|Локализованная строка, соответствующая типу элемента управления ToolTip.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Зависит от обстоятельств|Если элемент управления "Подсказка" может получать фокус клавиатуры, он должен отображаться в представлении содержимого дерева. Если это только текст, то он доступен как свойство HelpTextProperty элемента управления, вызвавшего подсказку.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Подсказка" всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Зависит|Если элемент управления "Подсказка" может получать фокус клавиатуры, он должен отображаться в представлении содержимого дерева. Если это только текст, то он доступен как свойство HelpTextProperty элемента управления, вызвавшего подсказку.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Подсказка" всегда должен быть элементом управления.|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
+<a name="Required_UI_Automation_Control_Patterns"></a>
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены шаблоны элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , которые должны поддерживаться элементами управления "Подсказка". Дополнительные сведения о шаблонах элементов управления см. в разделе [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 |Шаблон элемента управления|Поддержка|Примечания|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider>|Зависит от обстоятельств|Всплывающие подсказки, которые могут быть закрыты щелчком элемента пользовательского интерфейса, должны поддерживать WindowPattern, чтобы они могли закрываться автоматически.|  
-|<xref:System.Windows.Automation.Provider.ITextProvider>|Зависит от обстоятельств|Для улучшения специальных возможностей элемент управления "Подсказка" может поддерживать шаблон элемента управления Text, хотя это не обязательно. Шаблон элемента управления Text целесообразно использовать, если текст имеет множество стилей и атрибутов (например, цвет, полужирный шрифт и курсив).|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider>|Зависит|Всплывающие подсказки, которые могут быть закрыты щелчком элемента пользовательского интерфейса, должны поддерживать WindowPattern, чтобы они могли закрываться автоматически.|  
+|<xref:System.Windows.Automation.Provider.ITextProvider>|Зависит|Для улучшения специальных возможностей элемент управления "Подсказка" может поддерживать шаблон элемента управления Text, хотя это не обязательно. Шаблон элемента управления Text целесообразно использовать, если текст имеет множество стилей и атрибутов (например, цвет, полужирный шрифт и курсив).|  
   
-<a name="Required_UI_Automation_Events"></a>   
+<a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  
  Элементы управления "Подсказка" должны вызывать событие `ToolTipOpenedEvent` при отображении на экране. Это событие будет включать ссылку на элемент [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] самой всплывающей подсказки.  
   
@@ -69,21 +69,21 @@ ms.locfileid: "76785726"
   
 |Событие[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Поддержка|Примечания|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Зависит от обстоятельств|Нет|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Зависит от обстоятельств|Нет|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|Зависит от обстоятельств|Нет|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Зависит от обстоятельств|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|Обязательное|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|Обязательное|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Обязательное|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Обязательное|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>|Обязательное|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Обязательное|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty>|Зависит от обстоятельств|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательное|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательное|Нет|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Зависит|None|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Зависит|None|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|Зависит|None|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Зависит|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|Обязательно|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|Обязательно|None|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Обязательно|None|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Обязательно|None|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>|Обязательно|None|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Обязательно|None|  
+|Событие изменения свойства<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty>|Зависит|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательно|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательно|None|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Automation.ControlType.ToolTip>
 - [Общие сведения о типах элементов управления автоматизации пользовательского интерфейса](ui-automation-control-types-overview.md)

@@ -2,12 +2,12 @@
 title: Пример строго типизированных расширений
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 4ad0a8e10ecbcb5e3ddf9106dbbaa55356314020
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3cfbcddfdc7700618d499dd41d3a8c3b629bf550
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716622"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183316"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Пример строго типизированных расширений
 В этом примере используется класс <xref:System.ServiceModel.Syndication.SyndicationFeed>. Однако показанные в примере шаблоны можно использовать со всеми классами Syndication, которые поддерживают данные расширения.  
@@ -27,10 +27,10 @@ ms.locfileid: "74716622"
          This is a response to the original entry</summary>  
     <updated>2006-03-01T12:12:13Z</updated>  
     <link href="http://www.example.org/entries/1/2" />  
-    <in-reply-to p3:ref="tag:example.org,2005:1"   
-                 p3:href="http://www.example.org/entries/1"   
-                 p3:type="application/xhtml+xml"   
-                 xmlns:p3="http://contoso.org/syndication/thread/1.0"   
+    <in-reply-to p3:ref="tag:example.org,2005:1"
+                 p3:href="http://www.example.org/entries/1"
+                 p3:type="application/xhtml+xml"
+                 xmlns:p3="http://contoso.org/syndication/thread/1.0"
                  xmlns="http://contoso.org/syndication/thread/1.0">  
       <anotherElement xmlns="http://www.w3.org/2005/Atom">  
                      Some more data</anotherElement>  
@@ -40,7 +40,7 @@ ms.locfileid: "74716622"
 </entry>  
 ```  
   
- Элемент `<in-reply-to>` задает три обязательных атрибута (`ref`, `type` и `href`), а также разрешение на присутствие дополнительных атрибутов расширения и элементов расширения.  
+ Элемент `<in-reply-to>` определяет три требуемых атрибута `type` `href`(и),`ref`а также позволяет наличие дополнительных атрибутов расширения и элементов расширения.  
   
 ## <a name="modeling-the-in-reply-to-element"></a>Моделирование элемента In-Reply-To  
  В этом образце элемент `<in-reply-to>` моделируется в среде CLR, которая реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>, позволяющий использовать его с <xref:System.Runtime.Serialization.DataContractSerializer>. Кроме того, в образце реализованы методы и свойства для доступа к данным элемента, как показано в следующем образце кода.  
@@ -50,7 +50,7 @@ ms.locfileid: "74716622"
 public class InReplyToElement : IXmlSerializable  
 {  
     internal const string ElementName = "in-reply-to";  
-    internal const string NsUri =   
+    internal const string NsUri =
                   "http://contoso.org/syndication/thread/1.0";  
     private Dictionary<XmlQualifiedName, string> extensionAttributes;  
     private Collection<XElement> extensionElements;  
@@ -58,7 +58,7 @@ public class InReplyToElement : IXmlSerializable
     public InReplyToElement()  
     {  
         this.extensionElements = new Collection<XElement>();  
-        this.extensionAttributes = new Dictionary<XmlQualifiedName,   
+        this.extensionAttributes = new Dictionary<XmlQualifiedName,
                                                           string>();  
     }  
   
@@ -121,9 +121,9 @@ public void ReadXml(System.Xml.XmlReader reader)
                 }  
                 else  
                 {  
-                    this.AttributeExtensions.Add(new   
-                                 XmlQualifiedName(reader.LocalName,   
-                                 reader.NamespaceURI),   
+                    this.AttributeExtensions.Add(new
+                                 XmlQualifiedName(reader.LocalName,
+                                 reader.NamespaceURI),
                                  reader.Value);  
                 }  
             }  
@@ -151,29 +151,29 @@ public void WriteXml(System.Xml.XmlWriter writer)
 {  
     if (this.Ref != null)  
     {  
-        writer.WriteAttributeString("ref", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("ref", InReplyToElement.NsUri,
                                             this.Ref);  
     }  
     if (this.Href != null)  
     {  
-        writer.WriteAttributeString("href", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("href", InReplyToElement.NsUri,
                                                 this.Href.ToString());  
     }  
     if (this.Source != null)  
     {  
-        writer.WriteAttributeString("source", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("source", InReplyToElement.NsUri,
                                               this.Source.ToString());  
     }  
     if (this.MediaType != null)  
     {  
-        writer.WriteAttributeString("type", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("type", InReplyToElement.NsUri,
                                                     this.MediaType);  
     }  
   
-    foreach (KeyValuePair<XmlQualifiedName, string> kvp in   
+    foreach (KeyValuePair<XmlQualifiedName, string> kvp in
                                              this.AttributeExtensions)  
     {  
-        writer.WriteAttributeString(kvp.Key.Name, kvp.Key.Namespace,   
+        writer.WriteAttributeString(kvp.Key.Name, kvp.Key.Namespace,
                                                    kvp.Value);  
     }  
   
@@ -234,7 +234,7 @@ public class ThreadedItem : SyndicationItem
     }  
   
     protected override bool TryParseElement(  
-                        System.Xml.XmlReader reader,   
+                        System.Xml.XmlReader reader,
                         string version)  
     {  
         if (version == SyndicationVersions.Atom10 &&  
@@ -253,13 +253,13 @@ public class ThreadedItem : SyndicationItem
         }  
     }  
   
-    protected override void WriteElementExtensions(XmlWriter writer,   
+    protected override void WriteElementExtensions(XmlWriter writer,
                                                  string version)  
     {  
-        if (this.InReplyTo != null &&   
+        if (this.InReplyTo != null &&
                      version == SyndicationVersions.Atom10)  
         {  
-            writer.WriteStartElement(InReplyToElement.ElementName,   
+            writer.WriteStartElement(InReplyToElement.ElementName,
                                            InReplyToElement.NsUri);  
             this.InReplyTo.WriteXml(writer);  
             writer.WriteEndElement();  
@@ -272,17 +272,17 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

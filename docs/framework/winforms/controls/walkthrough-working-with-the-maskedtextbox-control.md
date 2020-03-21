@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Работа с элементом управления MaskedTextBox
+title: Пример. Работа с элементом управления MaskedTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,48 +11,48 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: 7f25e21008c77ebf5e55e7affbb4cf07db377c5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db32b3ec88a07747ea3e286af9f04edce3f1ba3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623290"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182057"
 ---
-# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Пошаговое руководство. Работа с элементом управления MaskedTextBox
+# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Пример. Работа с элементом управления MaskedTextBox
 В данном пошаговом руководстве представлены следующие задачи.  
   
-- Инициализация <xref:System.Windows.Forms.MaskedTextBox> элемента управления  
+- Инициализация <xref:System.Windows.Forms.MaskedTextBox> управления  
   
-- С помощью <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> обработчик событий для оповещения пользователя, когда символ не соответствует маске  
+- Использование <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> обработчика событий для оповещения пользователя о том, что персонаж не соответствует маске  
   
-- Присвоение типа <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> свойство и с помощью <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> обработчик событий для оповещения пользователя, когда он пытается зафиксировать значение недопустимо для типа  
+- Назначение типа <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> к свойству и <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> использование обработчика событий для оповещения пользователя о том, что значение, которое он пытается совершить, не является действительным для типа  
   
 ## <a name="creating-the-project-and-adding-a-control"></a>Создание проекта и добавление элемента управления  
   
-#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>Для добавления в форму элемент управления MaskedTextBox  
+#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>Добавление элемента управления MaskedTextBox в форму  
   
-1. Откройте форму, на котором вы хотите поместить <xref:System.Windows.Forms.MaskedTextBox> элемента управления.  
+1. Откройте форму, на которой <xref:System.Windows.Forms.MaskedTextBox> вы хотите разместить элемент управления.  
   
-2. Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления из **элементов** в форму.  
+2. Перетащите <xref:System.Windows.Forms.MaskedTextBox> элемент управления из **ящика инструментов** в форму.  
   
-3. Щелкните правой кнопкой мыши элемент управления и выберите **свойства**. В **свойства** выберите **маска** свойство и нажмите кнопку **...**  (многоточие) рядом с именем свойства.  
+3. Нажмите правой кнопкой мыши управления и выбрать **Свойства**. В окне **Свойства** выберите свойство **Маска** и нажмите кнопку **...** (ellipsis) рядом с именем свойства.  
   
-4. В **маска ввода** выберите **короткого формата даты** замаскированы, а затем нажмите кнопку **ОК**.  
+4. В диалоговом окне **ввода маски** выберите маску **«Короткая дата»** и **нажмите OK.**  
   
-5. В **свойства** задайте <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> свойства `true`. Это свойство создает короткий звуковой сигнал всякий раз пользователь пытается ввести знак, не соответствует определению маски.  
+5. В **Properties** окне Свойства <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> установить свойство `true`. Это свойство вызывает короткий звуковой сигнал, чтобы звучать каждый раз, когда пользователь пытается ввести символ, который нарушает определение маски.  
   
- Сводка символы, которые поддерживает свойство маски, см. в разделе "Примечания" <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство.  
+ Для краткого изложения символов, которые поддерживает свойство <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Маска, см.  
   
-## <a name="alert-the-user-to-input-errors"></a>Оповещать пользователя об ошибках ввода  
+## <a name="alert-the-user-to-input-errors"></a>Предупредите пользователя об ошибках ввода  
   
-#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Добавьте всплывающую подсказку об отклоненном вводе  
+#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Добавить наконечник шара для отклоненного ввода маски  
   
-1. Вернитесь к **элементов** и добавьте <xref:System.Windows.Forms.ToolTip> в форму.  
+1. Вернитесь в **Toolbox** <xref:System.Windows.Forms.ToolTip> и добавьте в свою форму.  
   
-2. Создайте обработчик событий для <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> событие, которое вызывает <xref:System.Windows.Forms.ToolTip> при возникновении ошибки ввода. Всплывающая подсказка остается видимым, в течение пяти секунд, или пока пользователь не щелкнет его.  
+2. Создайте обработчик <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> событий, <xref:System.Windows.Forms.ToolTip> который повышает, когда происходит ошибка ввода. Наконечник шарика остается видимым в течение пяти секунд, или до тех пор, пока пользователь не нажмет на него.  
   
     ```csharp  
-    public void Form1_Load(Object sender, EventArgs e)   
+    public void Form1_Load(Object sender, EventArgs e)
     {  
         ... // Other initialization code  
         maskedTextBox1.Mask = "00/00/0000";  
@@ -78,11 +78,11 @@ ms.locfileid: "64623290"
     End Sub  
     ```  
   
-## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>Предупредить пользователя к типу, который является недопустимым  
+## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>Оповещение пользователя о недопустимом типе  
   
-#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Добавьте всплывающую подсказку для недопустимые типы данных  
+#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Добавление наконечника шара для недействительных типов данных  
   
-1. В вашей форме <xref:System.Windows.Forms.Form.Load> обработчик событий, назначить <xref:System.Type> объект, представляющий <xref:System.DateTime> тип <xref:System.Windows.Forms.MaskedTextBox> элемента управления <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> свойство:  
+1. В обработчике <xref:System.Windows.Forms.Form.Load> событий вашей <xref:System.Type> формы присвоите объекту, представляющему <xref:System.DateTime> тип, свойство <xref:System.Windows.Forms.MaskedTextBox> <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> управления:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -124,7 +124,7 @@ ms.locfileid: "64623290"
     End Sub  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Элемент управления MaskedTextBox](maskedtextbox-control-windows-forms.md)

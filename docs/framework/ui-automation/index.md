@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965871"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180023"
 ---
 # <a name="microsoft-ui-automation"></a>Модель автоматизации пользовательского интерфейса Майкрософт
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET, желающих использовать управляемые классы автоматизации пользовательского интерфейса, определенные в пространстве имен <xref:System.Windows.Automation>. Последние сведения об автоматизации пользовательского интерфейса см. в разделе [API автоматизации Windows: Модель автоматизации пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).
+> Эта документация предназначена для разработчиков .NET, которые хотят <xref:System.Windows.Automation> использовать управляемые классы автоматизации uI, определенные в пространстве имен. Для получения последней информации [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32)об автоматизации uI см.
 
- Microsoft UI Automation — это платформа специальных возможностей для Microsoft Windows. Она решает потребности в продуктах вспомогательных технологий и автоматических тестовых платформах, предоставляя программный доступ к сведениям о пользовательском интерфейсе. Кроме того, модель автоматизации пользовательского интерфейса позволяет разработчикам элементов управления и приложений предоставлять доступ к их продуктам.
+ Microsoft UI Automation — это платформа доступности для Microsoft Windows. Он удовлетворяет потребности вспомогательных технологических продуктов и автоматизированных тестовых рамок, предоставляя программный доступ к информации о пользовательском интерфейсе (UI). Кроме того, UI Automation позволяет разработчикам управления и приложений сделать свои продукты доступными.
 
- В этой документации описывается API автоматизации пользовательского интерфейса для управляемого кода. Сведения о программировании для модели автоматизации пользовательского C++интерфейса в см. в разделе [Модель автоматизации пользовательского интерфейса для приложений Win32](/windows/desktop/winauto/windows-automation-api-portal).
+ В этой документации описывается API автоматизации uI для управляемого кода. Для получения информации о программировании для [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal)автоматизации uI в области Си-Уаз см.
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 - [Рекомендации по специальным возможностям](accessibility-best-practices.md)
-- [Основы модели автоматизации пользовательского интерфейса](ui-automation-fundamentals.md)
+- [Основы автоматизации uI](ui-automation-fundamentals.md)
 - [Поставщики автоматизации пользовательского интерфейса для управляемого кода](ui-automation-providers-for-managed-code.md)
 - [Клиенты автоматизации пользовательского интерфейса для управляемого кода](ui-automation-clients-for-managed-code.md)
 - [Шаблоны модели автоматизации пользовательского интерфейса](ui-automation-control-patterns.md)
 - [Шаблон текста модели автоматизации пользовательского интерфейса](ui-automation-text-pattern.md)
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [Типы элементов управления автоматизации пользовательского интерфейса](ui-automation-control-types.md)
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
-- [Образцы специальных возможностей](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [Образцы специальных возможностей](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

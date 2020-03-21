@@ -2,22 +2,22 @@
 title: Практическое руководство. Размещение службы WCF в WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9945e398bbd33776cce808b44388a4415da297a1
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 823c3b8452a3fd1c95758d2d09a9effdf02075c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964770"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184912"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Практическое руководство. Размещение службы WCF в WAS
-В этом разделе описаны основные шаги, необходимые для создания службы активации процессов Windows (также известной как WAS), размещенной Windows Communication Foundation служб (WCF). WAS является службой активации нового процесса, представляющей собой обобщение возможностей Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. WCF использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы, отличные от HTTP, которые поддерживаются WCF, такие как TCP, именованные каналы и очередь сообщений.  
+В этой теме излагаются основные шаги, необходимые для создания службы активации процессов Windows (также известной как WAS), размещенной в Windows Communication Foundation (WCF). WAS является службой активации нового процесса, представляющей собой обобщение возможностей Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. WCF использует интерфейс адаптера слушателя для передачи запросов активации, которые поступают по протоколам, не всхожствов, поддерживаемым WCF, таким как TCP, названные трубы и Сообщение Квьюинг.  
   
- Данный параметр размещения требует правильно установленных и настроенных компонентов активации WAS, но не требует написания кода размещения как части приложения. Дополнительные сведения об установке и настройке см. в разделе [как установить и настроить компоненты активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Данный параметр размещения требует правильно установленных и настроенных компонентов активации WAS, но не требует написания кода размещения как части приложения. Для получения дополнительной информации об установке и настройке WAS [см. Как: Установка и настройка компонентов активации WCF.](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
   
 > [!WARNING]
 > Активация WAS не поддерживается, если канал обработки запросов веб-сервера работает в классическом режиме. Чтобы использовать активацию WAS, канал обработки запросов веб-сервера необходимо перевести в интегрированный режим.  
   
- Если служба WCF размещена в WAS, стандартные привязки используются обычным способом. Однако при использовании <xref:System.ServiceModel.NetTcpBinding> и <xref:System.ServiceModel.NetNamedPipeBinding> для настройки служб, размещенных на WAS, ограничение должно быть удовлетворено. Если разные конечные точки используют один и тот же транспорт, параметры привязки должны соответствовать семи следующим свойствам:  
+ Когда служба WCF размещается в WAS, стандартные привязки используются обычным способом. Однако при использовании <xref:System.ServiceModel.NetTcpBinding> и <xref:System.ServiceModel.NetNamedPipeBinding> для настройки служб, размещенных на WAS, ограничение должно быть удовлетворено. Если разные конечные точки используют один и тот же транспорт, параметры привязки должны соответствовать семи следующим свойствам:  
   
 - ConnectionBufferSize  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75964770"
   
  В противном случае, конечная точка, запущенная первой, всегда определяет значения этих параметров, а добавленные позже конечные точки, если они не совпадают с этими настройками, вызывают <xref:System.ServiceModel.ServiceActivationException>.  
   
- Исходный экземпляр этого примера см. в разделе [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
+ Для исходной копии этого [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md)примера см.  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>Создание базовой службы, размещенной на WAS  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75964770"
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Создание клиента для использования службы  
   
-1. Используйте [служебную программу метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из командной строки для создания кода из метаданных службы.  
+1. Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из командной строки для генерации кода из метаданных службы.  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -90,7 +90,7 @@ ms.locfileid: "75964770"
   
 4. Конфигурация для клиента, использующего <xref:System.ServiceModel.NetTcpBinding>, также создается программой Svcutil.exe. Имя этого файла должно задаваться в файле App.config, если используется Visual Studio.  
   
-     [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
+     [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]
   
 5. Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "75964770"
   
 6. Скомпилируйте и запустите клиент.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Функции размещения Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

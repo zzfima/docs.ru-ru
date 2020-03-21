@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: e9e85729b10d1c992a22f6c0bea65dfd1e21e7e4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 10a8d243b3f053879f183864e955d9260c07865b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742551"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183611"
 ---
 # <a name="impersonating-the-client"></a>Олицетворение клиента
 Пример олицетворения демонстрирует, как олицетворять приложение абонента в службе таким образом, чтобы служба могла получить доступ к ресурсам системы от лица абонента.  
   
- Этот пример основан на образце с использованием [самообслуживания.](../../../../docs/framework/wcf/samples/self-host.md) Файлы конфигурации службы и клиента те же, что и в примере с [самостоятельным размещением](../../../../docs/framework/wcf/samples/self-host.md) .  
+ Этот образец основан на примере [Self-Host.](../../../../docs/framework/wcf/samples/self-host.md) Файлы конфигурации службы и клиентской конфигурации такие же, как и в образце [Self-Host.](../../../../docs/framework/wcf/samples/self-host.md)  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -44,7 +44,7 @@ static void DisplayIdentityInformation()
 {  
     Console.WriteLine("\t\tThread Identity            :{0}",  
          WindowsIdentity.GetCurrent().Name);  
-    Console.WriteLine("\t\tThread Identity level  :{0}",   
+    Console.WriteLine("\t\tThread Identity level  :{0}",
          WindowsIdentity.GetCurrent().ImpersonationLevel);  
     Console.WriteLine("\t\thToken                     :{0}",  
          WindowsIdentity.GetCurrent().Token.ToString());  
@@ -69,8 +69,8 @@ public double Subtract(double n1, double n2)
         // Impersonate.  
         using (ServiceSecurityContext.Current.WindowsIdentity.Impersonate())  
         {  
-            // Make a system call in the caller's context and ACLs   
-            // on the system resource are enforced in the caller's context.   
+            // Make a system call in the caller's context and ACLs
+            // on the system resource are enforced in the caller's context.
             Console.WriteLine("Impersonating the caller imperatively");  
             DisplayIdentityInformation();  
         }  
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  При запуске данного примера запросы и ответы операций отображаются в окнах консоли как службы, так и клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  
   
 > [!NOTE]
-> Служба должна быть запущена с учетной записью администратора или учетной записью, под которой он выполняется, должны быть предоставлены права на регистрацию `http://localhost:8000/ServiceModelSamples` URI на уровне HTTP. Такие права можно предоставить, настроив [резервирование пространства имен](/windows/win32/http/namespace-reservations-registrations-and-routing) с помощью [средства Httpcfg. exe](/windows/win32/http/httpcfg-exe).  
+> Служба должна либо работать под административным счетом, либо учетная `http://localhost:8000/ServiceModelSamples` запись, под которым она работает, должна быть предоставлена права на регистрацию URI с слоем HTTP. Такие права могут быть предоставлены путем создания [резервации Namespace](/windows/win32/http/namespace-reservations-registrations-and-routing) с помощью [инструмента Httpcfg.exe.](/windows/win32/http/httpcfg-exe)  
   
 > [!NOTE]
-> На компьютерах под управлением Windows Server 2003 олицетворение поддерживается только в том случае, если приложение Host. exe имеет привилегию олицетворения. (По умолчанию это разрешение имеют только администраторы.) Чтобы добавить эту привилегию к учетной записи, от имени которой запущена служба, перейдите в раздел **Администрирование**, откройте **локальную политику безопасности**, откройте **локальные**политики, щелкните **Назначение прав пользователя**и выберите **Олицетворять клиента после проверки подлинности** и дважды щелкните **Свойства** , чтобы добавить пользователя или группу.  
+> На компьютерах под управлением Windows Server 2003 олицетворение поддерживается только в том случае, если приложение Host.exe имеет привилегию олицетворения. (По умолчанию только администраторы имеют это разрешение.) Чтобы добавить эту привилегию в учетную запись службы работает как, перейдите на **административные инструменты**, открыть **местные политики безопасности**, открыть **локальные политики**, нажмите **назначение прав пользователей**, и выберите **Олицетворение клиента после аутентификации** и дважды нажмите **Свойства,** чтобы добавить пользователя или группу.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 4. Для демонстрации олицетворения абонента службой, запустите клиент под другой учетной записью, отличной от той, под которой работает служба. Чтобы сделать это, введите в командной строке следующую команду.  
   

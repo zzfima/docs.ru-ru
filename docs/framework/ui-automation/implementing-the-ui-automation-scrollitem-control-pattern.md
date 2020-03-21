@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: 1e33a64e66bc084e8cc5f75ece2ac2a4d7ea85aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3a0647ab98dcb86306573a0e9826fa7232fa9ad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447139"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180146"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Реализация шаблона элемента управления ScrollItem модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -21,23 +21,23 @@ ms.locfileid: "74447139"
   
  Шаблон элемента управления <xref:System.Windows.Automation.ScrollItemPattern> используется для поддержки отдельных дочерних элементов управления контейнеров, реализующих <xref:System.Windows.Automation.Provider.IScrollProvider>. Этот шаблон элемента управления действует как отдельный канал связи между дочерним элементом управления и его контейнером, чтобы контейнер гарантированно мог изменять видимое в настоящий момент содержимое (или область) в его области просмотра для отображения дочернего элемента управления. Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
  При реализации шаблона элемента управления ScrollItem обратите внимание на следующие правила и соглашения.  
   
 - Не требуется, чтобы элементы, содержащиеся в элементе управления "Окно" или "Полотно", реализовывали интерфейс IScrollItemProvider. Однако в качестве альтернативы они должны предоставлять действительное расположение для <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Это позволит клиентскому приложению модели автоматизации пользовательского интерфейса использовать методы шаблона элемента управления <xref:System.Windows.Automation.ScrollPattern> в контейнере для отображения дочернего элемента шаблона элемента управления.  
   
-<a name="Required_Members_for_IScrollItemProvider"></a>   
+<a name="Required_Members_for_IScrollItemProvider"></a>
 ## <a name="required-members-for-iscrollitemprovider"></a>Обязательные члены для IScrollItemProvider  
  Следующий метод является обязательным для реализации интерфейса IScrollProvider.  
   
-|Обязательные члены|Тип элемента|Примечания|  
+|Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Method|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|- Метод|None|  
   
  Этот шаблон элемента управления не имеет связанных свойств или событий.  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Исключения  
  Поставщики должны вызывать следующие исключения.  
   
@@ -45,10 +45,10 @@ ms.locfileid: "74447139"
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|Если элемент не может быть прокручен в представлении:<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
-- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](ui-automation-control-patterns-for-clients.md)
-- [Общие сведения о дереве модели автоматизации пользовательского интерфейса](ui-automation-tree-overview.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](use-caching-in-ui-automation.md)

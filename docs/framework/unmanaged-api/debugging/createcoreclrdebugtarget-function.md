@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: a7fed8cb70785f0ccfcadf1e16181db303ac98e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0b210f105495fa3f5595adbcb0805e1d1fb62310
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789185"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179219"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>Функция CreateCoreClrDebugTarget
-Создает подключение к прокси-серверу отладчика, запущенному на удаленном компьютере, и возвращает объект [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) , который можно использовать для запроса выполняющихся процессов и загрузки сред выполнения на удаленном компьютере.  
+Создает подключение к прокси-серверу отладчика, который работает на удаленной машине, и возвращает объект [ICoreClrDebugTarget,](icoreclrdebugtarget-interface.md) который может быть использован для запроса запущенных процессов и загруженных времен выполнения на удаленной машине.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT CreateCoreClrDebugTarget (  
-       [in]  DWORD    dwAddress,   
+       [in]  DWORD    dwAddress,
        [out] ICoreClrDebugTarget**     ppTarget  
 );  
 ```  
@@ -40,7 +40,7 @@ HRESULT CreateCoreClrDebugTarget (
  [in] IPv4-адрес удаленного целевого компьютера.  
   
  `ppTarget`  
- заполняет Указатель на указатель на объект [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) , который будет создан.  
+ (ваут) Указатель на указатель на объект [ICoreClrDebugTarget,](icoreclrdebugtarget-interface.md) который будет создан.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -55,8 +55,8 @@ HRESULT CreateCoreClrDebugTarget (
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Кореклрремотедебуггингинтерфацес. h  
+ **Заголовок:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Библиотека:** mscordbi_macx86. dll  
+ **Библиотека:** mscordbi_macx86.dll  
   
- **.NET Framework версии:** 3,5 SP1
+ **Рамочные версии .NET:** 3.5 SP1

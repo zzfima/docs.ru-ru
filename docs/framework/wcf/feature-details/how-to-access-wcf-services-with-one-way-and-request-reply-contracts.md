@@ -1,16 +1,16 @@
 ---
-title: Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа запрос ответ
+title: Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа "запрос-ответ"
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855118"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185141"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа запрос ответ
-Следующие процедуры описывают, как получить доступ к службе Windows Communication Foundation (WCF), определяющий односторонний контракт и контракт типа запрос ответ и не использует дуплексном обмене данными.  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа "запрос-ответ"
+Следующие процедуры описывают, как получить доступ к службе Windows Communication Foundation (WCF), которая определяет односторонний контракт и контракт на ответ запроса и не использует шаблон дуплексной коммуникации.  
   
 ### <a name="to-define-the-service"></a>Определение службы  
   
@@ -109,7 +109,7 @@ ms.locfileid: "61855118"
   
 ### <a name="to-access-the-service"></a>Доступ к службе  
   
-1. Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с помощью адрес конечной точки обмена метаданными, чтобы создать класс клиента для службы, используя следующую команду: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает набор интерфейсы и классы, как показано в следующем примере кода.  
+1. Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с помощью адреса конечной точки обмена метаданными `Svcutil http://localhost:8000/Service` для создания класса клиента для службы, используя следующую командную строку: [Инструмент Утилиты Метадата ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) генерирует набор интерфейсов и классов, как показано в следующем примере кода.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -147,22 +147,22 @@ ms.locfileid: "61855118"
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName) :   
+        public OneWayCalculatorClient(string endpointConfigurationName) :
                 base(endpointConfigurationName)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)  
         {  
         }  
@@ -258,7 +258,7 @@ using System.ServiceModel.Description;
   
 namespace Microsoft.ServiceModel.Samples  
 {  
-    // Define a service contract.   
+    // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
     public interface IOneWayCalculator  
     {  
@@ -341,7 +341,7 @@ namespace Microsoft.ServiceModel.Samples
             }  
         }  
     }  
-} 
+}
 ```
 
 ```csharp
@@ -400,6 +400,6 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Односторонние службы](../../../../docs/framework/wcf/feature-details/one-way-services.md)

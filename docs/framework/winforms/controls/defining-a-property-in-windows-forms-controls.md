@@ -1,5 +1,5 @@
 ---
-title: Определение свойств элемента управления
+title: Определение свойств управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: 0fec817226a7da4b44ec992f9e384a2ad5449001
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7223f8c88bee4ee9c1db621cc39bbcf70d0c4589
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746105"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182373"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Определение свойства элемента управления Windows Forms
 Обзор свойств см. в разделе [Общие сведения о свойствах](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). При определении свойства обратите внимание на приведенные ниже соображения:  
   
 - К определяемым свойствам необходимо применять атрибуты. Атрибуты указывают, как конструктор должен отображать свойство. Дополнительные сведения см. в разделе [Атрибуты времени разработки для компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
-- Если изменение свойства влияет на визуальное отображение элемента управления, вызовите метод <xref:System.Windows.Forms.Control.Invalidate%2A> (элемент управления наследует от <xref:System.Windows.Forms.Control>) от метода доступа `set`. <xref:System.Windows.Forms.Control.Invalidate%2A>, в свою очередь, вызывает метод <xref:System.Windows.Forms.Control.OnPaint%2A>, который перерисовывает элемент управления. Несколько вызовов <xref:System.Windows.Forms.Control.Invalidate%2A> приводят к одному вызову <xref:System.Windows.Forms.Control.OnPaint%2A> для повышения эффективности.  
+- Если изменение свойства влияет на визуальное отображение элемента управления, позвоните <xref:System.Windows.Forms.Control.Invalidate%2A> в метод (который ваш элемент наследует) <xref:System.Windows.Forms.Control>от `set` аксессуара. <xref:System.Windows.Forms.Control.Invalidate%2A>в свою <xref:System.Windows.Forms.Control.OnPaint%2A> очередь вызывает метод, который перерисовывает элемент управления. Несколько <xref:System.Windows.Forms.Control.Invalidate%2A> вызовов, чтобы <xref:System.Windows.Forms.Control.OnPaint%2A> привести к одному вызову для повышения эффективности.  
   
 - Библиотека классов .NET Framework предоставляет преобразователи типов для общих типов данных, таких как целые числа, десятичные числа, логические значения и прочие. Преобразователь типов обычно предназначен для преобразования строки в значение (из строковых данных в данные другого типа). Общие типы данных связаны с преобразователями типов по умолчанию, которые преобразуют значения в строки, а строки — в соответствующие типы данных. При определении свойства, являющегося пользовательским (то есть, нестандартным) типом данных необходимо применить атрибут, указывающий преобразователь типов для связи с этим свойством. Также можно использовать атрибут, чтобы связать пользовательский редактор типов пользовательского интерфейса со свойством. Редактор типов пользовательского интерфейса предоставляет пользовательский интерфейс для редактирования свойства или типа данных. Палитра — это пример редактора типов пользовательского интерфейса. Примеры атрибутов приведены в конце этого раздела.  
   
@@ -37,9 +37,9 @@ Public Class FlashTrackBar
    Private _endColor As Color = Color.LimeGreen  
   
    ' The Category attribute tells the designer to display  
-   ' it in the Flash grouping.   
+   ' it in the Flash grouping.
    ' The Description attribute provides a description of  
-   ' the property.   
+   ' the property.
    <Category("Flash"), _  
    Description("The ending color of the bar.")>  _  
    Public Property EndColor() As Color  
@@ -53,7 +53,7 @@ Public Class FlashTrackBar
             baseBackground.Dispose()  
             baseBackground = Nothing  
          End If  
-         ' The Invalidate method calls the OnPaint method, which redraws    
+         ' The Invalidate method calls the OnPaint method, which redraws
          ' the control.  
          Invalidate()  
       End Set  
@@ -68,9 +68,9 @@ public class FlashTrackBar : Control {
    // Private data member that backs the EndColor property.  
    private Color endColor = Color.LimeGreen;  
    // The Category attribute tells the designer to display  
-   // it in the Flash grouping.   
+   // it in the Flash grouping.
    // The Description attribute provides a description of  
-   // the property.   
+   // the property.
    [  
    Category("Flash"),  
    Description("The ending color of the bar.")  
@@ -86,7 +86,7 @@ public class FlashTrackBar : Control {
             baseBackground.Dispose();  
             baseBackground = null;  
          }  
-         // The Invalidate method calls the OnPaint method, which redraws   
+         // The Invalidate method calls the OnPaint method, which redraws
          // the control.  
          Invalidate();  
       }  
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- В следующем фрагменте кода преобразователь типов и редактор типов пользовательского интерфейса связывается со свойством `Value`. В этом случае `Value` является целым числом и имеет преобразователь типов по умолчанию, но атрибут <xref:System.ComponentModel.TypeConverterAttribute> применяет пользовательский преобразователь типов (`FlashTrackBarValueConverter`), который позволяет конструктору отображать его в процентах. Редактор типов пользовательского интерфейса, `FlashTrackBarValueEditor`, позволяет визуально отображать проценты. В этом примере также показано, что преобразователь типов или редактор, заданный атрибутом <xref:System.ComponentModel.TypeConverterAttribute> или <xref:System.ComponentModel.EditorAttribute>, переопределяет преобразователь по умолчанию.  
+ В следующем фрагменте кода преобразователь типов и редактор типов пользовательского интерфейса связывается со свойством `Value`. В этом `Value` случае представляет собой целый ряд и имеет <xref:System.ComponentModel.TypeConverterAttribute> преобразователь типа`FlashTrackBarValueConverter`по умолчанию, но атрибут применяется пользовательский конвертер типа ( ), что позволяет дизайнеру отобразить его в процентах. Редактор типов пользовательского интерфейса, `FlashTrackBarValueEditor`, позволяет визуально отображать проценты. В этом примере также показано, что <xref:System.ComponentModel.TypeConverterAttribute> преобразователь или редактор типа, указанный <xref:System.ComponentModel.EditorAttribute> или атрибутом, переопределяет преобразователь по умолчанию.  
   
 ```vb  
 <Category("Flash"), _  
@@ -110,7 +110,7 @@ End Property
   
 ```csharp  
 [  
-Category("Flash"),   
+Category("Flash"),
 TypeConverter(typeof(FlashTrackBarValueConverter)),  
 Editor(typeof(FlashTrackBarValueEditor), typeof(UITypeEditor)),  
 Description("The current value of the track bar.  You can enter an actual value or a percentage.")  

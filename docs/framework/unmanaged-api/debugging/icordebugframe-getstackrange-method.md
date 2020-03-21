@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-ms.openlocfilehash: 828e4dc67cb93d0a35879e94b54c9fac6e5bda16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a35ce025360e0ec8b7085d68e54548026b7c7fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124088"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178902"
 ---
 # <a name="icordebugframegetstackrange-method"></a>Метод ICorDebugFrame::GetStackRange
-Возвращает диапазон абсолютных адресов этого кадра стека.  
+Получает абсолютный диапазон адресов этого стека кадра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetStackRange (  
-    [out] CORDB_ADDRESS      *pStart,   
+    [out] CORDB_ADDRESS      *pStart,
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pStart`  
- заполняет Указатель на `CORDB_ADDRESS`, указывающий начальный адрес кадра стека, представленного данным объектом `ICorDebugFrame`.  
+ (ваут) Указатель на `CORDB_ADDRESS` указатель, который определяет начальный адрес кадра `ICorDebugFrame` стека, представленного этим объектом.  
   
  `pEnd`  
- заполняет Указатель на `CORDB_ADDRESS`, указывающий конечный адрес кадра стека, представленного данным объектом `ICorDebugFrame`.  
+ (ваут) Указатель на `CORDB_ADDRESS` указатель, который определяет конечный адрес кадра `ICorDebugFrame` стека, представленного этим объектом.  
   
-## <a name="remarks"></a>Заметки  
- Диапазон адресов стека полезен для пиеЦинг вместе чередующихся трассировок стека, собранных из нескольких ядер отладки. Числовой диапазон не предоставляет сведений о содержимом кадра стека. Он имеет смысл только для сравнения расположений в кадрах стека.  
+## <a name="remarks"></a>Remarks  
+ Диапазон адресов стека полезен для склеивания взаимосвязанных следов стека, собранных из нескольких двигателей отладки. Числовой диапазон не содержит информации о содержимом кадра стека. Это имеет смысл только для сравнения расположения стек кадра.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

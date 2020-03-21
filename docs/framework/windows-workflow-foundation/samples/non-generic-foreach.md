@@ -2,12 +2,12 @@
 title: Неуниверсальное действие ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 93a6b1d815ef6478974ceadf8ad935be2a3bdea5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08dbac3974915f823a4f6e39f35927453a7c4b3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338657"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142710"
 ---
 # <a name="non-generic-foreach"></a>Неуниверсальное действие ForEach
 В область элементов [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] входит набор действий потока управления, включая элемент <xref:System.Activities.Statements.ForEach%601>, который позволяет проходить по коллекциям <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -17,7 +17,7 @@ ms.locfileid: "75338657"
  В этом образце показано, как реализовать неуниверсальное действие <xref:System.Activities.Statements.ForEach%601> и конструктор для него. Это действие позволяет проходить по <xref:System.Collections.ArrayList>.  
   
 ## <a name="foreach-activity"></a>Действие ForEach  
- Инструкция C#/Visual Basic `foreach` перечисляет элементы коллекции, выполняя внедренный оператор для каждого элемента коллекции. Действиями [!INCLUDE[wf1](../../../../includes/wf1-md.md)], эквивалентными `foreach`, являются действия <xref:System.Activities.Statements.ForEach%601> и <xref:System.Activities.Statements.ParallelForEach%601>. Действие <xref:System.Activities.Statements.ForEach%601> содержит список значений и содержимое. Во время выполнения действие проходит по списку, и текст действия выполняется для каждого значения в списке.  
+ В отчете C/Visual Basic `foreach` перечислены элементы коллекции, исправления встроенного оператора для каждого элемента коллекции. Действиями [!INCLUDE[wf1](../../../../includes/wf1-md.md)], эквивалентными `foreach`, являются действия <xref:System.Activities.Statements.ForEach%601> и <xref:System.Activities.Statements.ParallelForEach%601>. Действие <xref:System.Activities.Statements.ForEach%601> содержит список значений и содержимое. Во время выполнения действие проходит по списку, и текст действия выполняется для каждого значения в списке.  
   
  Для большинства случаев универсальная версия действия является предпочтительной, поскольку она охватывает большинство сценариев, в которых будет использоваться действие, и предоставляет возможность проверки соответствия типов во время компиляции. Неуниверсальная версия позволяет проходить по типам, где реализован неуниверсальный интерфейс <xref:System.Collections.IEnumerable>.  
   
@@ -34,7 +34,7 @@ public class ForEach : NativeActivity
   
     [DefaultValue(null)]  
     [DependsOn("Values")]  
-    ActivityAction<object> Body { get; set; }   
+    ActivityAction<object> Body { get; set; }
 }  
 ```  
   
@@ -56,8 +56,8 @@ Activity sampleUsage =
     new ForEach  
     {  
        Values = new InArgument<IEnumerable>(c=> names),  
-       Body = new ActivityAction<object>   
-       {                          
+       Body = new ActivityAction<object>
+       {
            Argument = iterationVariable,  
            Handler = new WriteLine  
            {  
@@ -67,12 +67,12 @@ Activity sampleUsage =
    };  
 ```  
   
-|Условие|Message|Серьезность|Тип исключения|  
+|Условие|Сообщение|Severity|Тип исключения|  
 |---------------|-------------|--------------|--------------------|  
-|Значением является `null`|Не указано значение необходимого аргумента действия "Values".|Ошибка .|<xref:System.InvalidOperationException>|  
+|Значением является `null`|Не указано значение необходимого аргумента действия "Values".|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Конструктор ForEach  
- Конструктор действий для образца аналогичен конструктору, предоставляемому для встроенного действия <xref:System.Activities.Statements.ForEach%601>. Конструктор появится в области элементов в категории **примеры**, **неуниверсальные действия** . Конструктор называется **фореачвисбодифактори** на панели элементов, так как действие предоставляет <xref:System.Activities.Presentation.IActivityTemplateFactory> на панели элементов, что создает действие с правильно настроенным <xref:System.Activities.ActivityAction>.  
+ Конструктор действий для образца аналогичен конструктору, предоставляемому для встроенного действия <xref:System.Activities.Statements.ForEach%601>. Дизайнер появляется в наборе инструментов в категории **«Образцы»,** **несвязанные действия.** Дизайнер называется **ForEachWithBodyFactory** в наборе инструментов, <xref:System.Activities.Presentation.IActivityTemplateFactory> потому что действие подвергает в наборе <xref:System.Activities.ActivityAction>инструментов, который создает деятельность с правильно настроенной.  
   
 ```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -97,17 +97,17 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Установите выбранный проект в качестве проекта для запуска решения.  
   
-    1. **Кодетестклиент** показывает, как использовать действие с помощью кода.  
+    1. **CodeTestClient** показывает, как использовать действие с помощью кода.  
   
-    2. **Десигнертестклиент** показывает, как использовать действие в конструкторе.  
+    2. **DesignerTestClient** показывает, как использовать деятельность в рамках дизайнера.  
   
 2. Постройте и запустите проект.  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

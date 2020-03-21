@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: e8c8c9ebff259ccd991768afb8cdf9925a66aad0
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 79772d19ddaec041aa1fac936b9951731507b6e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141616"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184457"
 ---
 # <a name="servicemodel-transaction-configuration"></a>Конфигурация транзакции ServiceModel
-Windows Communication Foundation (WCF) предоставляет три атрибута для настройки транзакций для службы: `transactionFlow`, `transactionProtocol`и `transactionTimeout`.  
+Windows Communication Foundation (WCF) предоставляет три атрибута для `transactionFlow`настройки транзакций для службы: `transactionProtocol`, и `transactionTimeout`.  
   
 ## <a name="configuring-transactionflow"></a>Настройка атрибута transactionFlow  
- Большинство предопределенных привязок WCF содержит атрибуты `transactionFlow` и `transactionProtocol`, чтобы можно было настроить привязку для приема входящих транзакций для определенной конечной точки с помощью определенного протокола потока транзакций. Кроме того, вы можете использовать элемент `transactionFlow` и его атрибут `transactionProtocol` для сборки вашей собственной пользовательской привязки. Дополнительные сведения о настройке элементов конфигурации см. в разделе [\<binding >](../../configure-apps/file-schema/wcf/bindings.md) и [Схема конфигурации WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+ Большинство предопределенных привязок, которые `transactionFlow` `transactionProtocol` предоставляет WCF, содержат атрибуты и атрибуты, так что можно настроить привязку для приема входящих транзакций для определенной конечной точки с помощью определенного протокола потока транзакций. Кроме того, вы можете использовать элемент `transactionFlow` и его атрибут `transactionProtocol` для сборки вашей собственной пользовательской привязки. Для получения дополнительной информации о настройке [WCF Configuration Schema](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)элементов конфигурации см [ \<>.](../../configure-apps/file-schema/wcf/bindings.md)  
   
  Атрибут `transactionFlow` задает, разрешен ли поток транзакций для конечных точек службы, использующих данную привязку.  
   
@@ -28,21 +28,21 @@ Windows Communication Foundation (WCF) предоставляет три атр�
 <netNamedPipeBinding>  
    <binding name="test"  
       closeTimeout="00:00:10"  
-      openTimeout="00:00:20"   
+      openTimeout="00:00:20"
       receiveTimeout="00:00:30"  
       sendTimeout="00:00:40"  
       transactionFlow="true"  
       transactionProtocol="WSAtomicTransactionOctober2004"  
       hostNameComparisonMode="WeakWildcard"  
       maxBufferSize="1001"  
-      maxConnections="123"   
+      maxConnections="123"
       maxReceivedMessageSize="1000">  
    </binding>  
 </netNamedPipeBinding>  
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>Настройка атрибута transactionTimeout  
- Атрибут `transactionTimeout` для службы WCF можно настроить в элементе `behavior` файла конфигурации. В следующем коде показано, как это сделать.  
+ Можно настроить `transactionTimeout` атрибут для службы WCF `behavior` в элемент файла конфигурации. В следующем коде показано, как это сделать.  
   
 ```xml  
 <configuration>  
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) предоставляет три атр�
   
  Обратите внимание, что для времени ожидания всегда используется меньшее из значений этого параметра конфигурации `transactionTimeout` и любого из свойств <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [> привязки \<](../../configure-apps/file-schema/wcf/bindings.md)
-- [Схема конфигурации WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+- [\<связывающая>](../../configure-apps/file-schema/wcf/bindings.md)
+- [Схема конфигурации WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

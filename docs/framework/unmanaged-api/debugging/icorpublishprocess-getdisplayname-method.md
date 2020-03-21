@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 7f2e644340a2ec7fe807830422b927ce811ddcf9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790562"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178385"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>Метод ICorPublishProcess::GetDisplayName
-Возвращает полный путь к исполняемому файлу для процесса, на который ссылается этот [ICorPublishProcess](icorpublishprocess-interface.md).  
+Получает полный путь выполнения процесса, на который ссылается этот [ICorPublishProcess.](icorpublishprocess-interface.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetDisplayName (  
-    [in]  ULONG32                    cchName,   
+    [in]  ULONG32                    cchName,
     [out] ULONG32                    *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
         WCHAR                        *szName  
 );  
 ```  
@@ -41,20 +41,20 @@ HRESULT GetDisplayName (
  [in] Размер массива `szName`.  
   
  `pcchName`  
- заполняет Число расширенных символов, возвращаемых в массиве `szName`.  
+ (ваут) Количество широких символов, `szName` возвращенных в массив.  
   
  `szName`  
- заполняет Массив для хранения имени исполняемого файла, включая полный путь к нему. Имя заканчивается нулем.  
+ (ваут) Массив для хранения имени, включая полный путь, исполняемого. Имя непрекращается.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Корпуб. idl, Корпуб. h  
+ **Заголовок:** CorPub.idl, CorPub.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorPublishProcess](icorpublishprocess-interface.md)

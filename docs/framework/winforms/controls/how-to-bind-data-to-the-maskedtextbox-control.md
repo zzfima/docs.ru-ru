@@ -10,29 +10,29 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: f10a19433c70eb0a1dacf99925f70d6796727da9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0cbb239e24b254c37c453486590185e934adf482
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612404"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142177"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Практическое руководство. Связывание данных с элементом управления MaskedTextBox
-Вы можете привязывать данные к <xref:System.Windows.Forms.MaskedTextBox> управления так же, как и любым другим элементом управления Windows Forms. Тем не менее если формат данных в базе данных не соответствует формату, ожидаемому определения маски, необходимо будет изменять формат данных. Ниже описано, как это сделать с помощью <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события <xref:System.Windows.Forms.Binding> класс для отображения отдельных телефонный номер и телефон расширение поля базы данных, одного изменяемого поля.  
+Вы можете привязать <xref:System.Windows.Forms.MaskedTextBox> данные к элементу управления так же, как вы можете к любому другому управлению Windows Forms. Однако, если формат данных в базе данных не соответствует формату, ожидаемому по определению маски, необходимо переформатировать данные. Следующая процедура показывает, как это <xref:System.Windows.Forms.Binding.Format> <xref:System.Windows.Forms.Binding.Parse> сделать, <xref:System.Windows.Forms.Binding> используя и события класса для отображения отдельного номера телефона и полей базы данных расширения телефона в качестве единого раздельного поля.  
   
- Следующая процедура требует наличия доступа к базе данных SQL Server с установленным образец базы данных "Борей".  
+ Следующая процедура требует, чтобы у вас был доступ к базе данных S'L Server с установленной выборочной базой данных Northwind.  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Привязка данных к элементу управления MaskedTextBox  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Связывать данные с управлением MaskedTextBox  
   
 1. Создайте проект Windows Forms.  
   
-2. Перетащите два <xref:System.Windows.Forms.TextBox> элементов управления на форму; присвойте им названия `FirstName` и `LastName`.  
+2. Перетащите два <xref:System.Windows.Forms.TextBox> элемента управления на форму; назвать `FirstName` их `LastName`и .  
   
-3. Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления на форму, назовите его `PhoneMask`.  
+3. Перетащите <xref:System.Windows.Forms.MaskedTextBox> элемент управления на форму; назвать `PhoneMask`его .  
   
-4. Задайте <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство `PhoneMask` для `(000) 000-0000 x9999`.  
+4. Установите <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство `PhoneMask` . `(000) 000-0000 x9999`  
   
-5. Добавьте следующее пространство имен импортируется в форму.  
+5. Добавьте в форму следующий импорт пространства имен.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "64612404"
     Imports System.Data.SqlClient  
     ```  
   
-6. Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**. Этот код в любом помещается в класс.  
+6. Нажмите правой кнопкой мыши на форму и выберите **Код представления.** Разместите этот код в любом месте в классе формы.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -72,8 +72,8 @@ ms.locfileid: "64612404"
         dataConnect.Fill(employeesTable, "Employees");  
   
         // Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects  
-        // before adding them to the control - otherwise, we won't get a Format event on the   
-        // initial load.   
+        // before adding them to the control - otherwise, we won't get a Format event on the
+        // initial load.
         try  
         {  
             currentBinding = new Binding("Text", employeesTable, "Employees.FirstName");  
@@ -120,7 +120,7 @@ ms.locfileid: "64612404"
         DataConnect.Fill(EmployeesTable, "Employees")  
   
         ' Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects  
-        ' before adding them to the control - otherwise, we won't get a Format event on the   
+        ' before adding them to the control - otherwise, we won't get a Format event on the
         ' initial load.  
         Try  
             CurrentBinding = New Binding("Text", EmployeesTable, "Employees.FirstName")  
@@ -136,7 +136,7 @@ ms.locfileid: "64612404"
     End Sub  
     ```  
   
-7. Добавьте обработчики событий для <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события для объединения и отделения `PhoneNumber` и `Extension` поля из границы <xref:System.Data.DataSet>.  
+7. Добавьте <xref:System.Windows.Forms.Binding.Format> обработчики <xref:System.Windows.Forms.Binding.Parse> событий для событий, `Extension` чтобы объединить <xref:System.Data.DataSet>и отделить `PhoneNumber` поля от границы.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -144,10 +144,10 @@ ms.locfileid: "64612404"
         String ext;  
   
         DataRowView currentRow = (DataRowView)BindingContext[employeesTable, "Employees"].Current;  
-        if (currentRow["Extension"] == null)   
+        if (currentRow["Extension"] == null)
         {  
             ext = "";  
-        } else   
+        } else
         {  
             ext = currentRow["Extension"].ToString();  
         }  
@@ -163,7 +163,7 @@ ms.locfileid: "64612404"
         String ext = phoneNumberAndExt.Substring(extIndex).Trim();  
         String phoneNumber = phoneNumberAndExt.Substring(0, extIndex).Trim();  
   
-        //Get the current binding object, and set the new extension manually.   
+        //Get the current binding object, and set the new extension manually.
         DataRowView currentRow = (DataRowView)BindingContext[employeesTable, "Employees"].Current;  
         // Remove the "x" from the extension.  
         currentRow["Extension"] = ext.Substring(1);  
@@ -194,7 +194,7 @@ ms.locfileid: "64612404"
         Dim Ext As String = PhoneNumberAndExt.Substring(ExtIndex).Trim()  
         Dim PhoneNumber As String = PhoneNumberAndExt.Substring(0, ExtIndex).Trim()  
   
-        ' Get the current binding object, and set the new extension manually.   
+        ' Get the current binding object, and set the new extension manually.
         Dim CurrentRow As DataRowView = CType(Me.BindingContext(EmployeesTable, "Employees").Current, DataRowView)  
         ' Remove the "x" from the extension.  
         CurrentRow("Extension") = CObj(Ext.Substring(1))  
@@ -204,7 +204,7 @@ ms.locfileid: "64612404"
     End Sub  
     ```  
   
-8. Добавьте два <xref:System.Windows.Forms.Button> элементов управления в форму. Присвойте им названия `previousButton` и `nextButton`. Дважды щелкните каждую кнопку, чтобы добавить <xref:System.Windows.Forms.Control.Click> обработчик событий и заполните обработчики событий, как показано в следующем примере кода.  
+8. Добавьте <xref:System.Windows.Forms.Button> два элемента управления в форму. Назовите их `previousButton` и `nextButton`. Дважды щелкните <xref:System.Windows.Forms.Control.Click> каждую кнопку, чтобы добавить обработчик событий, и заполните обработчики событий, как показано в следующем примере кода.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,10 +228,10 @@ ms.locfileid: "64612404"
     End Sub  
     ```  
   
-9. Выполните образец. Изменение данных и использовать **Назад** и **Далее** кнопки, чтобы убедиться, что данные правильно сохранены <xref:System.Data.DataSet>.  
+9. Запустите образец. Отспособите данные и используйте **кнопки «Предыдущий»** и **«Следующий»,** чтобы увидеть, что данные должным образом сохраняются в <xref:System.Data.DataSet>.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода приведен полный код, которые являются результатом выполнения описанной процедуры.  
+ Следующим примером кода является полный код, который приводит к завершению предыдущей процедуры.  
   
  [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
@@ -239,16 +239,16 @@ ms.locfileid: "64612404"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
-- Создание визуального элемента C# проект или Visual Basic.  
+- Создайте визуальный проект «Си- » или «Визуальный базовый».  
   
-- Добавить <xref:System.Windows.Forms.TextBox> и <xref:System.Windows.Forms.MaskedTextBox> в форму элементы управления, как описано в предыдущей процедуре.  
+- Добавьте <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.MaskedTextBox> и элементы управления в форму, как описано в предыдущей процедуре.  
   
 - Откройте файл исходного кода для формы по умолчанию проекта.  
   
-- Замените исходный код в этот файл код, приведенный в предыдущем разделе «Код».  
+- Замените исходный код в этом файле кодом, указанным в предыдущем разделе "Код".  
   
 - Скомпилируйте приложение.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Пошаговое руководство: Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+- [Пример. Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

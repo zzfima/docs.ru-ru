@@ -2,12 +2,12 @@
 title: Модель объектов обнаружения WCF
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-ms.openlocfilehash: d305528c379bd4ded339854ee1f9fa55c76b40c0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: debcb08802894a34e16d9aa65bbbb1b0282794f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614796"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184223"
 ---
 # <a name="wcf-discovery-object-model"></a>Модель объектов обнаружения WCF
 Обнаружение WCF включает в себя набор типов, обеспечивающих унифицированную модель программирования, которая позволяет создавать службы, доступные для обнаружения во время выполнения, а также клиентов, которые могут находить и использовать их.  
@@ -19,7 +19,7 @@ ms.locfileid: "64614796"
   
  Клиент пользуется для поиска доступных служб классом <xref:System.ServiceModel.Discovery.DiscoveryClient>. Приложение клиента создает класс <xref:System.ServiceModel.Discovery.DiscoveryClient>, передавая конечную точку обнаружения, которая указывает, куда следует отправлять сообщения обнаружения. Клиент вызывает метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, который отправляет запрос `Probe`. Службы, следящие за сообщениями обнаружения, получают запрос `Probe`. Если служба совпадает с критериями, заданными в `Probe`, то она отправляет сообщение `ProbeMatch` обратно клиенту.  
   
-## <a name="object-model"></a>Объектная модель  
+## <a name="object-model"></a>Модель объектов  
  API-интерфейс обнаружения WCF определяет следующие классы:  
   
 - <xref:System.ServiceModel.Discovery.AnnouncementClient>  
@@ -61,7 +61,7 @@ ms.locfileid: "64614796"
 - <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
 - <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
- 
+
 - <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 - <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  

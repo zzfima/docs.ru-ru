@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Миграция DCOM с управляемым кодом в WCF
+title: Практическое руководство. Миграция DCOM с управляемым кодов в WCF
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: 4d814d9c2e62af9aa5cc2a8d1f84738b69e36ad1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2576e88c25ae381e90ec7d613efb648048145b3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217180"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181394"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Практическое руководство. Миграция DCOM с управляемым кодом в WCF
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Практическое руководство. Миграция DCOM с управляемым кодов в WCF
 Для вызовов управляемого кода между серверами и клиентами в распределенной среде рекомендуется использовать технологию Windows Communication Foundation (WCF), а не модель DCOM, из соображений безопасности. В этом разделе описывается, как перенести код из DCOM в WCF в перечисленных ниже ситуациях.  
   
 - Удаленная служба возвращает клиенту объект по значению.  
@@ -64,7 +64,7 @@ public interface IRemoteService
 ```csharp  
 using System.Runtime.Serialization;  
 using System.ServiceModel;  
-using System.ServiceModel.Web;   
+using System.ServiceModel.Web;
 . . .  
 [ServiceContract]  
 public interface ICustomerManager  
@@ -72,7 +72,7 @@ public interface ICustomerManager
     [OperationContract]  
     void StoreCustomer(Customer customer);  
   
-    [OperationContract]     Customer GetCustomer(string firstName, string lastName);   
+    [OperationContract]     Customer GetCustomer(string firstName, string lastName);
   
 }  
 ```  
@@ -123,7 +123,7 @@ public class Address
  Далее следует реализовать класс службы WCF, который реализует интерфейс, определенный в предыдущем шаге.  
   
 ```csharp  
-public class CustomerService: ICustomerManager    
+public class CustomerService: ICustomerManager
 {  
     public void StoreCustomer(Customer customer)  
     {  
@@ -144,7 +144,7 @@ public class CustomerService: ICustomerManager
   <system.serviceModel>  
     <services>  
       <service name="Server.CustomerService">  
-        <endpoint address="http://localhost:8083/CustomerManager"   
+        <endpoint address="http://localhost:8083/CustomerManager"
                   binding="basicHttpBinding"  
                   contract="Shared.ICustomerManager" />  
       </service>  
@@ -159,9 +159,9 @@ public class CustomerService: ICustomerManager
 <configuration>  
   <system.serviceModel>  
     <client>  
-      <endpoint name="customermanager"   
-                address="http://localhost:8083/CustomerManager"   
-                binding="basicHttpBinding"   
+      <endpoint name="customermanager"
+                address="http://localhost:8083/CustomerManager"
+                binding="basicHttpBinding"
                 contract="Shared.ICustomerManager"/>  
     </client>  
   </system.serviceModel>  
@@ -180,7 +180,7 @@ customerServiceHost.Open();
  Для вызова службы из клиента нужно создать для нее фабрику каналов, а затем запросить канал, чтобы получить возможность вызывать метод `GetCustomer` непосредственно из клиента. Канал реализует интерфейс службы и отвечает за базовую логику запросов и ответов.  Возвращаемое значение метода представляет собой десериализованную копию ответа службы.  
   
 ```csharp  
-ChannelFactory<ICustomerManager> factory =   
+ChannelFactory<ICustomerManager> factory =
      new ChannelFactory<ICustomerManager>("customermanager");  
 ICustomerManager service = factory.CreateChannel();  
 Customer customer = service.GetCustomer("Mary", "Smith");  
@@ -301,12 +301,12 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Ниже приведена реализация этой службы. Эта реализация поддерживает единственную фабрику каналов для создания объектов, связанных с сеансами.  При вызове метода `GetInstanceAddress` создается канал и объект <xref:System.ServiceModel.EndpointAddress10>, указывающий на удаленный адрес, связанный с этим каналом.   <xref:System.ServiceModel.EndpointAddress10> — это тип данных, который можно вернуть клиенту по значению.
+ Ниже приводится реализация этой службы. Эта реализация поддерживает единственную фабрику каналов для создания объектов, связанных с сеансами.  При вызове метода `GetInstanceAddress` создается канал и объект <xref:System.ServiceModel.EndpointAddress10>, указывающий на удаленный адрес, связанный с этим каналом.   <xref:System.ServiceModel.EndpointAddress10> — это тип данных, который можно вернуть клиенту по значению.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
     {  
-        public static ChannelFactory<ISessionBoundObject> _factory =   
+        public static ChannelFactory<ISessionBoundObject> _factory =
             new ChannelFactory<ISessionBoundObject>("sessionbound");  
   
         public SessionBoundFactory()  
@@ -328,7 +328,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. В разделе `<services>` объявите конечные точки службы для фабрики и объекта сеанса.  Это позволит клиенту связаться с конечными точками службы, получить адрес <xref:System.ServiceModel.EndpointAddress10> и создать канал сеанса.  
   
- Ниже приведен пример файла конфигурации с этими параметрами.  
+ Ниже приводится пример файла конфигурации с этими настройками:  
   
 ```xml  
 <configuration>  
@@ -343,12 +343,12 @@ public class SessionBoundFactory : ISessionBoundFactory
     <services>  
       <service name="Server.MySessionBoundObject">  
         <endpoint address="net.tcp://localhost:8081/SessionBoundObject"  
-                  binding="netTcpBinding"   
+                  binding="netTcpBinding"
                   contract="Shared.ISessionBoundObject" />  
       </service>  
       <service name="Server.SessionBoundFactory">  
         <endpoint address="net.tcp://localhost:8081/SessionBoundFactory"  
-                  binding="netTcpBinding"   
+                  binding="netTcpBinding"
                   contract="Shared.ISessionBoundFactory" />  
       </service>  
     </services>  
@@ -374,15 +374,15 @@ sessionBoundServiceHost.Open();
 <configuration>  
   <system.serviceModel>  
     <client>  
-      <endpoint name="sessionbound"   
-                address="net.tcp://localhost:8081/SessionBoundObject"   
-                binding="netTcpBinding"   
+      <endpoint name="sessionbound"
+                address="net.tcp://localhost:8081/SessionBoundObject"
+                binding="netTcpBinding"
                 contract="Shared.ISessionBoundObject"/>  
-      <endpoint name="factory"   
-                address="net.tcp://localhost:8081/SessionBoundFactory"   
-                binding="netTcpBinding"   
+      <endpoint name="factory"
+                address="net.tcp://localhost:8081/SessionBoundFactory"
+                binding="netTcpBinding"
                 contract="Shared.ISessionBoundFactory"/>  
-    </client>    
+    </client>
   </system.serviceModel>  
 </configuration>  
 ```  
@@ -420,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Базовое программирование для WCF](../wcf/basic-wcf-programming.md)
 - [Проектирование и реализация служб](../wcf/designing-and-implementing-services.md)

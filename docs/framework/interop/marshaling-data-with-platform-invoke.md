@@ -9,11 +9,11 @@ helpviewer_keywords:
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113932"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400947"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Маршалинг данных при вызове неуправляемого кода
 
@@ -34,22 +34,22 @@ ms.locfileid: "73113932"
 |Неуправляемый тип в API Windows|Неуправляемый тип языка C|Управляемый тип|Описание|
 |--------------------------------|-------------------------------|------------------------|-----------------|
 |`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|Применяется к функции, которая не возвращает значение.|
-|`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> или <xref:System.UIntPtr?displayProperty=nameWithType>|32 бита в 32-разрядных операционных системах Windows, 64 бита в 64-разрядных операционных системах Windows.|
+|`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> либо <xref:System.UIntPtr?displayProperty=nameWithType>|32 бита в 32-разрядных операционных системах Windows, 64 бита в 64-разрядных операционных системах Windows.|
 |`BYTE`|`unsigned char`|<xref:System.Byte?displayProperty=nameWithType>|8 бит|
 |`SHORT`|`short`|<xref:System.Int16?displayProperty=nameWithType>|16 бит|
 |`WORD`|`unsigned short`|<xref:System.UInt16?displayProperty=nameWithType>|16 бит|
 |`INT`|`int`|<xref:System.Int32?displayProperty=nameWithType>|32 бита|
 |`UINT`|`unsigned int`|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
 |`LONG`|`long`|<xref:System.Int32?displayProperty=nameWithType>|32 бита|
-|`BOOL`|`long`|<xref:System.Boolean?displayProperty=nameWithType> или <xref:System.Int32?displayProperty=nameWithType>|32 бита|
+|`BOOL`|`long`|<xref:System.Boolean?displayProperty=nameWithType> либо <xref:System.Int32?displayProperty=nameWithType>|32 бита|
 |`DWORD`|`unsigned long`|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
 |`ULONG`|`unsigned long`|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
 |`CHAR`|`char`|<xref:System.Char?displayProperty=nameWithType>|В кодировке ANSI.|
 |`WCHAR`|`wchar_t`|<xref:System.Char?displayProperty=nameWithType>|В кодировке Юникод.|
-|`LPSTR`|`char *`|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|
-|`LPCSTR`|`const char *`|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|
-|`LPWSTR`|`wchar_t *`|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|
-|`LPCWSTR`|`const wchar_t *`|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|
+|`LPSTR`|`char *`|<xref:System.String?displayProperty=nameWithType> либо <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|
+|`LPCSTR`|`const char *`|<xref:System.String?displayProperty=nameWithType> либо <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|
+|`LPWSTR`|`wchar_t *`|<xref:System.String?displayProperty=nameWithType> либо <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|
+|`LPCWSTR`|`const wchar_t *`|<xref:System.String?displayProperty=nameWithType> либо <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|
 |`FLOAT`|`float`|<xref:System.Single?displayProperty=nameWithType>|32 бита|
 |`DOUBLE`|`double`|<xref:System.Double?displayProperty=nameWithType>|64 бита|
 

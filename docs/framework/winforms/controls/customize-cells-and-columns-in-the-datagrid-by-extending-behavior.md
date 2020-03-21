@@ -1,5 +1,5 @@
 ---
-title: Настройка ячеек и столбцов в элементе управления DataGridView путем расширения их поведения и внешнего вида
+title: Настройка ячеек и столбцов в управлении DataGridView путем расширения их поведения и внешнего вида
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: be01e085d4fa74c0c49f0a0494183482875c6a09
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e111f0bce812fc0851fabd1fde0fc2a6d44dd25f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744060"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182392"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms
 Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами с помощью свойств, событий и классов-компаньонов. В ряде случаев к ячейкам могут предъявляться требования, когда этих возможностей будет недостаточно. Вы можете создать пользовательский класс <xref:System.Windows.Forms.DataGridViewCell> для расширения функциональных возможностей.  
@@ -28,7 +28,7 @@ ms.locfileid: "76744060"
 > [!NOTE]
 > Пример не будет работать правильно с пустыми строками. Пустые строки создаются, например, при добавлении строк в элемент управления путем задания свойства <xref:System.Windows.Forms.DataGridView.RowCount%2A>. Это происходит потому, что добавленные в этом случае строки автоматически становятся общими. Это означает, что экземпляры объектов `DataGridViewRolloverCell` не будут создаваться до тех пор, пока не будут нажаты отдельные ячейки, что отменяет блокирование связанных общих строк.  
   
- Так как подобная настройка ячеек требует, чтобы строки не были общими, она не подходит для использования с большими наборами данных. Дополнительные сведения о совместном использовании строк см. в разделе рекомендации [по масштабированию элемента управления Windows Forms DataGridView](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Так как подобная настройка ячеек требует, чтобы строки не были общими, она не подходит для использования с большими наборами данных. Для получения дополнительной информации [Best Practices for Scaling the Windows Forms DataGridView Control](best-practices-for-scaling-the-windows-forms-datagridview-control.md)о совместном использовании строк см.  
   
 > [!NOTE]
 > При наследовании от класса <xref:System.Windows.Forms.DataGridViewCell> или <xref:System.Windows.Forms.DataGridViewColumn> и добавлении новых свойств к производному классу необходимо переопределить метод `Clone`, чтобы скопировать новые свойства во время операций копирования. Кроме того, необходимо вызвать метод `Clone` базового класса, чтобы свойства базового класса скопировались в новую ячейку или столбец.  
@@ -67,7 +67,7 @@ ms.locfileid: "76744060"
  Для этого примера требуются:  
   
 - ссылки на сборки System, System.Windows.Forms и System.Drawing.  
- 
+
 ## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.DataGridView>

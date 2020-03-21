@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1512c49a658c80f3ab6af652839c3562af3dd205
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942094"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141553"
 ---
 # <a name="how-to-repeat-an-animation"></a>Практическое руководство. Повторение анимации
-В этом примере показано, как использовать <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойство <xref:System.Windows.Media.Animation.Timeline> чтобы контролировать поведение при повторе анимации.  
+В этом примере <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> показано, <xref:System.Windows.Media.Animation.Timeline> как использовать свойство объекта для управления повторным поведением анимации.  
   
 ## <a name="example"></a>Пример  
- <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> Свойство <xref:System.Windows.Media.Animation.Timeline> определяет, сколько раз анимации повторе его простой длительности. С помощью <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, можно указать, что <xref:System.Windows.Media.Animation.Timeline> повторяется для определенное число раз (итераций) или в течение указанного времени. В любом случае анимация пройдет такое столько запусков начала до конца, сколько необходимо для заполнения запрошенное количество или длительность.  
+ Свойство <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> элемента <xref:System.Windows.Media.Animation.Timeline> управления, сколько раз анимация повторяет свою простую продолжительность. С <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>помощью этого можно <xref:System.Windows.Media.Animation.Timeline> указать, что повторяется определенное количество раз (количество итерации) или за определенный период времени. В любом случае анимация проходит столько от начала до конца, что ему нужно для заполнения запрошенного подсчета или продолжительности.  
   
- По умолчанию временных шкал установлено число повторов, равным 1,0, это означает, воспроизведение происходит один раз и не повторяется. Тем не менее если задать <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойство <xref:System.Windows.Media.Animation.Timeline> для <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, временная шкала повторяется бесконечно.  
+ По умолчанию, сроки имеют повторный подсчет 1,0, что означает, что они играют один раз и не повторяются. Однако, если <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> вы установите свойство <xref:System.Windows.Media.Animation.Timeline> к, <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>сроки повторяется на неопределенный срок.  
   
- В следующем примере показано, как использовать <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойства для управления повторением анимации. В примере выполняется анимация <xref:System.Windows.FrameworkElement.Width%2A> свойство пяти прямоугольников, каждый с помощью другой тип поведения повтора.  
+ В следующем примере показано, как использовать свойство <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> для управления повторным поведением анимации. Пример оживляет <xref:System.Windows.FrameworkElement.Width%2A> свойство пяти прямоугольников с каждым прямоугольником, используя другой тип повторного поведения.  
   
  [!code-xaml[timingbehaviors_snip#RepeatBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/RepeatBehaviorExample.xaml#repeatbehaviorwholepage)]  
   
- Полный пример см. в разделе [пример поведения анимации времени](https://go.microsoft.com/fwlink/?LinkID=159970).  
+ Для полного примера [см.](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Накапливание значений анимации в повторяющихся циклах](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Определение автоматического реверса для шкалы времени](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [Анимации и практические руководства](animation-and-timing-how-to-topics.md)
+- [Разделы руководства по анимации и таймерам](animation-and-timing-how-to-topics.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Пример поведения анимации с учетом времени](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Пример поведения анимации с учетом времени](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)

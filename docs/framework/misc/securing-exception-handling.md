@@ -9,24 +9,24 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ad27e62197f6fdaa6b5e706f4ae02c03fecae9f1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215790"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181141"
 ---
 # <a name="securing-exception-handling"></a>Безопасность обработки исключений
-В Visual C++ и Visual Basic выражение фильтра, расположенное дальше вверх по стеку, выполняется перед любым оператором **finally** . Блок **catch** , связанный с этим фильтром, выполняется после оператора **finally** . Дополнительные сведения см. [в разделе Использование исключений с пользовательской фильтрацией](../../standard/exceptions/using-user-filtered-exception-handlers.md). В этом разделе рассматриваются аспекты безопасности в этом порядке. Рассмотрим следующий пример псевдокода, демонстрирующий порядок выполнения операторов Filter и операторов **finally** .  
+В Visual C и Visual Basic выражение фильтра далее вверх по стеку запускается до того, как **наконец-либо** заявление. Блок **улова,** связанный с этим фильтром, работает **после, наконец,** оператора. Для получения дополнительной [информации см.](../../standard/exceptions/using-user-filtered-exception-handlers.md) В этом разделе рассматриваются последствия этого приказа для безопасности. Рассмотрим следующий пример псевдокода, иллюстрирующий порядок выполнения инструкций фильтра и, **наконец,** инструкций.  
   
 ```cpp  
-void Main()   
+void Main()
 {  
-    try   
+    try
     {  
         Sub();  
-    }   
-    except (Filter())   
+    }
+    except (Filter())
     {  
         Console.WriteLine("catch");  
     }  
@@ -35,21 +35,21 @@ bool Filter () {
     Console.WriteLine("filter");  
     return true;  
 }  
-void Sub()   
+void Sub()
 {  
-    try   
+    try
     {  
         Console.WriteLine("throw");  
         throw new Exception();  
-    }   
-    finally   
+    }
+    finally
     {  
         Console.WriteLine("finally");  
     }  
-}                        
+}
 ```  
   
- Этот код выводит следующие фрагменты кода.  
+ Этот код печатает следующее.  
   
 ```output
 Throw  
@@ -58,26 +58,26 @@ Finally
 Catch  
 ```  
   
- Фильтр выполняется перед оператором **finally** , поэтому проблемы безопасности могут быть сделаны любыми, которые делают изменение состояния, когда выполнение другого кода может воспользоваться преимуществами. Например:  
+ Фильтр работает до **окончательного** оператора, поэтому проблемы безопасности могут быть введены через все, что вносит изменение состояния, где выполнение другого кода может воспользоваться. Пример:  
   
 ```cpp  
-try   
+try
 {  
     Alter_Security_State();  
     // This means changing anything (state variables,  
-    // switching unmanaged context, impersonation, and   
-    // so on) that could be exploited if malicious   
+    // switching unmanaged context, impersonation, and
+    // so on) that could be exploited if malicious
     // code ran before state is restored.  
     Do_some_work();  
-}   
-finally   
+}
+finally
 {  
     Restore_Security_State();  
     // This simply restores the state change above.  
 }  
 ```  
   
- Этот псевдокод позволяет использовать фильтр выше в стеке для выполнения произвольного кода. Другие примеры операций, которые будут иметь подобный результат, — это временное олицетворение другого удостоверения, установка внутреннего флага, который обходит некоторую проверку безопасности, или изменение языка и региональных параметров, связанных с потоком. Рекомендуемым решением является ввод обработчика исключений для изоляции изменений кода от блоков фильтра вызывающих объектов. Однако важно правильно представить обработчик исключений, иначе эта проблема не будет исправлена. В следующем примере переключается язык и региональные параметры пользовательского интерфейса, но любой тип изменения состояния потока может быть аналогичным.  
+ Этот псевдокод позволяет фильтру выше стека для запуска произвольного кода. Другими примерами операций, которые будут иметь аналогичный эффект, являются временное олицетворение другого удостоверения, установление внутреннего флага, который обходит некоторую проверку безопасности, или изменение культуры, связанной с потоком. Рекомендуемое решение заключается в введении обработчика исключений для изоляции изменений кода в состоянии потока от блоков фильтров абонентов. Однако важно, чтобы обработчик исключений был надлежащим образом введен или эта проблема не была исправлена. Следующий пример переключает культуру uI, но любое изменение состояния потока может быть также подвержено.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -101,7 +101,7 @@ Public Class UserCode
          obj.YourMethod()  
       Catch e As Exception When FilterFunc  
          Console.WriteLine("An error occurred: '{0}'", e)  
-         Console.WriteLine("Current Culture: {0}",   
+         Console.WriteLine("Current Culture: {0}",
 Thread.CurrentThread.CurrentUICulture)  
       End Try  
    End Sub  
@@ -114,42 +114,42 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Правильным исправлением в этом случае является заключение существующего блока **try**/**finally** в блок **try**/**catch** . Простое введение предложения **catch-throw** в существующий блок **try**/**finally** не устраняет проблему, как показано в следующем примере.  
+ Правильное исправление в этом случае заключается в том, чтобы обернуть существующую **попытку,**/**наконец,** блокировать в **блоке поймать попытку.**/**catch** Простое введение оговорки **о броске в** существующую **попытку,**/**наконец,** блокирует не исправляет проблему, как показано в следующем примере.  
   
 ```cpp  
 YourObject.YourMethod()  
 {  
     CultureInfo saveCulture = Thread.CurrentThread.CurrentUICulture;  
   
-    try   
+    try
     {  
         Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");  
         // Do something that throws an exception.  
     }  
     catch { throw; }  
-    finally   
+    finally
     {  
         Thread.CurrentThread.CurrentUICulture = saveCulture;  
     }  
 }  
 ```  
   
- Это не устраняет проблему, так как оператор **finally** не выполнялся до того, как `FilterFunc` получает управление.  
+ Это не исправляет проблему, поскольку **окончательное** заявление не выполняется до того, как `FilterFunc` получит контроль.  
   
- Следующий пример устраняет проблему, гарантируя, что предложение **finally** выполнялось до того, как будет предложено исключение в блоках фильтра исключений вызывающих объектов.  
+ Следующий пример исправляет проблему, гарантируя, **что, наконец,** оговорка выполнена, прежде чем предлагать исключение вверх блоки фильтра исключения абонентов.  
   
 ```cpp  
 YourObject.YourMethod()  
 {  
     CultureInfo saveCulture = Thread.CurrentThread.CurrentUICulture;  
-    try    
+    try
     {  
-        try   
+        try
         {  
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");  
             // Do something that throws an exception.  
         }  
-        finally   
+        finally
         {  
             Thread.CurrentThread.CurrentUICulture = saveCulture;  
         }  
@@ -158,6 +158,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Правила написания безопасного кода](../../standard/security/secure-coding-guidelines.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: bb2748b16a16d7d01b076402889829f5b31a1912
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7d0acf16ace5aad60b32b7139a58a258fb080ee0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126372"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181299"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Средство анализа композиции (Mefx)
 Средство анализа композиции (Mefx) — это приложение командной строки, анализирующее файлы библиотеки (.dll) и приложений (.exe) с частями Managed Extensibility Framework (MEF). Основное назначение Mefx — предоставить разработчикам способ диагностики ошибок композиции в приложениях MEF, не добавляя громоздкий код трассировки в само приложение. Это средство также помогает понять части из сторонней библиотеки. В этом разделе описывается использование Mefx, содержится справочная информация по его синтаксису.  
   
-<a name="getting_mefx"></a>   
+<a name="getting_mefx"></a>
 ## <a name="getting-mefx"></a>Получение Mefx  
  Средство Mefx доступно в GitHub по следующей ссылке: [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0). Просто загрузите и распакуйте средство.  
   
-<a name="basic_syntax"></a>   
+<a name="basic_syntax"></a>
 ## <a name="basic-syntax"></a>Базовый синтаксис  
  Mefx вызывается из командной строки в следующем формате.  
   
@@ -39,7 +39,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
   
  После списка файлов и каталогов необходимо указать команду и параметры для этой команды.  
   
-<a name="listing_available_parts"></a>   
+<a name="listing_available_parts"></a>
 ## <a name="listing-available-parts"></a>Составление списка доступных частей  
  Используйте действие `/parts` , чтобы составить список всех частей, объявленных в загруженных файлах. Результатом является простой список имен частей.  
   
@@ -57,7 +57,7 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
   [Export] MyAddIn.MemberPart (ContractName=" MyAddIn.MemberPart")  
 ```  
   
-<a name="listing_imports_and_exports"></a>   
+<a name="listing_imports_and_exports"></a>
 ## <a name="listing-imports-and-exports"></a>Составление списка импортируемых и экспортируемых элементов  
  Действия `/imports` и `/exports` позволяют перечислить все импортируемые и экспортируемые части соответственно. Также можно составить список частей, импортирующих или экспортирующих определенный тип, воспользовавшись действиями `/importers` или `/exporters` .  
   
@@ -68,7 +68,7 @@ MyAddin.AddIn
   
  К этим действиям также можно применить параметр `/verbose` .  
   
-<a name="finding_rejected_parts"></a>   
+<a name="finding_rejected_parts"></a>
 ## <a name="finding-rejected-parts"></a>Поиск отклоненных частей  
  После загрузки доступных частей Mefx с помощью модуля композиции MEF составляет из них композицию. Части, которые не удается включить в композицию, называются *отклоненными*. Чтобы составить список всех отклоненных частей, воспользуйтесь действием `/rejected` .  
   
@@ -105,7 +105,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
  Интересные сведения содержатся в результатах `[Exception]` и `[Unsuitable]` . Результат `[Exception]` предоставляет сведения о том, почему часть была отклонена. Результат `[Unsuitable]` показывает, почему подходящую по остальным параметрам часть невозможно использовать для заполнения импорта. В данном случае причина в том, что сама эта часть была отклонена из-за отсутствующих импортируемых элементов.  
   
-<a name="analyzing_primary_causes"></a>   
+<a name="analyzing_primary_causes"></a>
 ## <a name="analyzing-primary-causes"></a>Анализ основных причин  
  Если несколько частей связаны в длинную цепочку зависимостей, проблема с частью в нижней области может стать причиной отклонения всей цепочки. Диагностировать эти проблемы может быть сложно, потому что причина сбоя не всегда очевидна. Чтобы упростить проблему, можно использовать действие `/causes` , которое пытается найти причину любого каскадного отклонения.  
   
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
 > [!NOTE]
 > В большинстве случаев Mefx сможет диагностировать основную причину каскадного сбоя. Однако в тех случаях, когда части программным способом добавляются в контейнер, Mefx не сможет диагностировать причину проблемы, если задействованы иерархические контейнеры или пользовательские реализации `ExportProvider` . В общем случае вышеописанных случаев следует по возможности избегать, поскольку сбои, как правило, сложно диагностировать.  
   
-<a name="white_lists"></a>   
+<a name="white_lists"></a>
 ## <a name="white-lists"></a>Белые списки  
  Параметр `/whitelist` позволяет задать текстовый файл с перечислением частей, которые, как ожидается, будут отклонены. Непредвиденные отклонения будут помечены. Это может быть полезным при анализе неполной библиотеки или вложенной библиотеки, в которой отсутствуют некоторые зависимости. Параметр `/whitelist` можно применить к действиям `/rejected` или `/causes` .  
   

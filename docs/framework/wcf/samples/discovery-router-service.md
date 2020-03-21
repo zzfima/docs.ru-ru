@@ -2,17 +2,17 @@
 title: Служба обнаружения маршрутизатора
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 09309b23d2a3cc672811c2f617e6fb81a2b4e021
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 149dd69cdd1972465f4b7cb48ab657492d3f21d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712291"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183726"
 ---
 # <a name="discovery-router-service"></a>Служба обнаружения маршрутизатора
 В этом образце показаны способы направления сообщений обнаружения другой конечной точке.  
   
-## <a name="demonstrates"></a>Демонстрации  
+## <a name="demonstrates"></a>Что демонстрирует  
  Маршрутизация обнаружения  
   
 ## <a name="discussion"></a>Обсуждение  
@@ -22,7 +22,7 @@ ms.locfileid: "74712291"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Постройте образец.  
+1. Выполните сборку примера.  
   
 2. Запустите исполняемый файл DiscoveryRouter.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "74712291"
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

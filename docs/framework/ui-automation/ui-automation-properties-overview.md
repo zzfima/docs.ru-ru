@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 2f96f3c7261882af58cd10038d729c4e723d6fa0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447950"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179871"
 ---
 # <a name="ui-automation-properties-overview"></a>Общие сведения о свойствах автоматизированного пользовательского интерфейса
 > [!NOTE]
@@ -24,13 +24,13 @@ ms.locfileid: "74447950"
   
 - [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](server-side-ui-automation-provider-implementation.md)  
   
-<a name="Property_Identifiers"></a>   
+<a name="Property_Identifiers"></a>
 ## <a name="property-identifiers"></a>Идентификаторы свойств  
- Каждое свойство определяется номером и именем. Имена свойств используются только для отладки и диагностики. Поставщики используют числовые идентификаторы для идентификации входящих запросов свойств. Однако клиентские приложения используют для идентификации свойств, которые им требуется получить, только ссылку <xref:System.Windows.Automation.AutomationProperty>, которая включает номер и имя.  
+ Каждое свойство определяется номером и именем. Имена свойств используются только для отладки и диагностики. Поставщики используют числовые идолы для идентификации входящих запросов свойств. Однако клиентские приложения используют для идентификации свойств, которые им требуется получить, только ссылку <xref:System.Windows.Automation.AutomationProperty>, которая включает номер и имя.  
   
  Объекты<xref:System.Windows.Automation.AutomationProperty> , представляющие конкретные свойства, доступны как поля в различных классах. По соображениям безопасности поставщики автоматизации пользовательского интерфейса получают эти объекты из отдельного набора классов, содержащихся в Uiautomationtypes.dll.  
   
- В следующей таблице перечислены свойства классов, содержащих идентификаторы <xref:System.Windows.Automation.AutomationProperty>.  
+ В следующей таблице классифицируются свойства <xref:System.Windows.Automation.AutomationProperty>по классам, содержащим итоговые иудиции.  
   
 |Виды свойств|Клиенты получают идентификаторы из|Поставщики получают идентификаторы из|  
 |-------------------------|--------------------------|----------------------------|  
@@ -51,26 +51,26 @@ ms.locfileid: "74447950"
 |Значение и возможности чтения/записи элемента, который имеет значение|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
 |Возможности и состояние окна|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
-<a name="Properties_by_Category"></a>   
-## <a name="properties-by-category"></a>Свойства по категориям  
- В следующих таблицах указаны свойства, идентификаторы которых находятся в <xref:System.Windows.Automation.AutomationElement> и <xref:System.Windows.Automation.AutomationElementIdentifiers>. Эти свойства являются общими для всех элементов управления. Почти все из них, скорее всего, будут статическими во время существования приложения поставщика; большинство динамических свойств связано с шаблонами элементов управления.  
+<a name="Properties_by_Category"></a>
+## <a name="properties-by-category"></a>Свойства, упорядоченные по категориям  
+ Следующие таблицы классифицируют свойства, идентифицированные в исследуемые <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers>ими Эти свойства являются общими для всех элементов управления. Почти все из них, скорее всего, будут статическими во время существования приложения поставщика; большинство динамических свойств связано с шаблонами элементов управления.  
   
  В столбце **Доступ к свойству** перечислены другие методы доступа для каждого свойства, в дополнение к <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> и <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Дополнительные сведения о получении свойств в клиентском приложении см. в разделе [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
 > Чтобы получить сведения о конкретном свойстве, используйте ссылку в столбце **Доступ к свойству** .  
   
-### <a name="display-characteristics"></a>Отобразить характеристики  
+### <a name="display-characteristics"></a>Характеристики отображения  
   
 |Идентификатор свойства|Доступ к свойству|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
-|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|н/д|  
+|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|Недоступно|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>Элемент Type  
+### <a name="element-type"></a>Тип элемента  
   
 |Идентификатор свойства|Доступ к свойству|  
 |-------------------------|---------------------|  
@@ -127,7 +127,7 @@ ms.locfileid: "74447950"
 |<xref:System.Windows.Automation.AutomationElement.IsValuePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsWindowPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
   
-### <a name="miscellaneous"></a>Прочее  
+### <a name="miscellaneous"></a>Разное  
   
 |Идентификатор свойства|Доступ к свойству|  
 |-------------------------|---------------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "74447950"
 |<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
-<a name="Localization"></a>   
+<a name="Localization"></a>
 ## <a name="localization"></a>Локализация  
  Поставщики[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должны представлять следующие свойства на языке операционной системы.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "74447950"
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
-<a name="Properties_and_Events"></a>   
+<a name="Properties_and_Events"></a>
 ## <a name="properties-and-events"></a>Свойства и события  
  Тесная связь со свойствами в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — это концепция событий изменения свойств. Для динамических свойств клиентскому приложению требуется способ узнать об изменении значения свойства, чтобы оно могло обновить свой кэш данных или отреагировать на новые сведения другим способом.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "74447950"
   
  Клиенты прослушивают события, подписавшись на их. Подписка на события означает создание методов делегата, могущих обрабатывать эти события, и затем передачу этих методов в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] вместе с конкретными событиями, которые будут обработаны в этих методах. В частности, для событий изменения свойств клиенты должны реализовать <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Кэширование в клиентах автоматизации пользовательского интерфейса](caching-in-ui-automation-clients.md)
 - [Свойства автоматизации пользовательского интерфейса для клиентов](ui-automation-properties-for-clients.md)

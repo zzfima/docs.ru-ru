@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: dfbc10bdbe633450dee2e27524c29ead21fb739e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5a8442b1f0869e1592a05dfeeb0f5e6d583f3ea8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445534"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179392"
 ---
 # <a name="setpekind-method"></a>Метод SetPEKind
-Определяет тип переносимого исполняемого файла, который зависит от компьютера или компьютера.  
+Определяет портативный исполняемый тип, либо машинно-специфический, либо машинно-агностик.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,7 +32,7 @@ HRESULT SetPEKind(
     mdToken FileToken,  
     DWORD dwPEKind,  
     DWORD dwMachine  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>Параметры  
@@ -40,21 +40,21 @@ HRESULT SetPEKind(
  Идентификатор сборки.  
   
  `FileToken`  
- Токен файла, для которого задается тип PE. Может иметь значение NULL, если `AssemblyID` не указывает на непривязанный netmodule.  
+ Токен файла, для которого должен быть установлен тип PE. Может быть `AssemblyID` NULL, если не указывается несвязанный нетмодуль.  
   
  `dwPEKind`  
- Тип PE, как указано в [перечислении CorPEKind](../metadata/corpekind-enumeration.md).  
+ Тип PE, как указано [в CorPEKind Enumeration](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- Архитектура целевого компьютера, как указано в заголовке NT.  
+ Архитектура целевой машины, как указано в заголовке NT.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод завершается с ошибкой.  
+ Возвращает S_OK, если метод успешно.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h.  
+ Требуетa alink.h.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Метод GetPEKind](../metadata/imetadataimport2-getpekind-method.md)
 - [Интерфейс IALink2](ialink2-interface.md)

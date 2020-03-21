@@ -9,89 +9,89 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 4b948a64a14df7ea79b54b810f734056d57ef406
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 532c254f997da183b073ddc9e00b4364ecfcd739
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964862"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186336"
 ---
 # <a name="data-and-data-objects"></a>Данные и объекты данных
-Данные, передаваемые в рамках операции перетаскивания, сохраняются в объекте данных.  По сути, объект данных состоит из одной или нескольких следующих пар.  
+Данные, передаваемые в рамках операции перетаскивания и падения, хранятся в объекте данных.  Концептуально объект данных состоит из одной или нескольких из следующих пар:  
   
-- Объект <xref:System.Object> , содержащий фактические данные.  
+- Который <xref:System.Object> содержит фактические данные.  
   
 - Соответствующий идентификатор формата данных.  
   
- Сами данные могут состоять из любого объекта, который можно представить в виде <xref:System.Object>основы.  Соответствующий формат данных — это строка или <xref:System.Type> , которая предоставляет подсказку о том, в каком формате находятся данные.  Объекты данных поддерживают размещение нескольких пар данных и форматов данных; Это позволяет одному объекту данных предоставлять данные в нескольких форматах.  
+ Данные сами по себе могут состоять из <xref:System.Object>всего, что может быть представлено в качестве основы.  Соответствующий формат данных <xref:System.Type> представляет собой строку или дает подсказку о том, в каком формате находится данные.  Объекты данных поддерживают размещение нескольких пар формата данных/данных; это позволяет одному объекту данных предоставлять данные в нескольких форматах.  
   
-<a name="Data_and_Data_Objects"></a>   
+<a name="Data_and_Data_Objects"></a>
 ## <a name="data-objects"></a>Объекты данных  
- Все объекты данных должны реализовывать <xref:System.Windows.IDataObject> интерфейс, который предоставляет следующий стандартный набор методов, которые позволяют и упрощают перенос данных.  
+ Все объекты данных должны реализовать <xref:System.Windows.IDataObject> интерфейс, который обеспечивает следующий стандартный набор методов, которые позволяют и облегчают передачу данных.  
   
 |Метод|Сводка|  
 |------------|-------------|  
 |<xref:System.Windows.IDataObject.GetData%2A>|Извлекает объект данных в указанном формате данных.|  
-|<xref:System.Windows.IDataObject.GetDataPresent%2A>|Проверяет, доступны ли данные в указанном формате или их можно преобразовать в.|  
-|<xref:System.Windows.IDataObject.GetFormats%2A>|Возвращает список форматов, в которых хранятся данные в этом объекте данных, или их можно преобразовать в.|  
-|<xref:System.Windows.IDataObject.SetData%2A>|Сохраняет указанные данные в этом объекте данных.|  
+|<xref:System.Windows.IDataObject.GetDataPresent%2A>|Проверяет, доступны ли данные в указанном формате, или возможность их преобразования в указанный формат.|  
+|<xref:System.Windows.IDataObject.GetFormats%2A>|Возвращает список форматов, в которых данные хранятся в этом объекте данных или в которые их можно преобразовать.|  
+|<xref:System.Windows.IDataObject.SetData%2A>|Сохраняет указанные данные в объекте данных.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет базовую реализацию <xref:System.Windows.IDataObject> <xref:System.Windows.DataObject> в классе. Класс акции <xref:System.Windows.DataObject> достаточно для многих распространенных сценариев обмена данными.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]обеспечивает базовую <xref:System.Windows.IDataObject> реализацию <xref:System.Windows.DataObject> в классе. Класс <xref:System.Windows.DataObject> запасов достаточен для многих распространенных сценариев передачи данных.  
   
- Существует несколько предварительно определенных форматов, таких как точечный рисунок, CSV, файл, HTML, RTF, строка, текст и звук. Сведения о предварительно определенных форматах данных, предоставляемых с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в разделе Справочник по <xref:System.Windows.DataFormats> классам.  
+ Существует несколько предопределенных форматов, таких как bitmap, CSV, файл, HTML, RTF, строка, текст и звук. Для получения информации о заранее [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]определенных <xref:System.Windows.DataFormats> форматах данных, с помощью, см.  
   
- Объекты данных обычно включают в себя средство для автоматического преобразования данных, хранящихся в одном формате, в другой формат при извлечении данных. Это средство называется автоматическое преобразование. При запросе форматов данных, доступных в объекте данных, автоматическое преобразование форматов данных <xref:System.Windows.DataObject.GetFormats%28System.Boolean%29> может быть отфильтровано из собственных форматов данных путем вызова метода или <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> с указанием `autoConvert` параметра в виде `false`.  При добавлении данных в объект данных с помощью <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> метода автоматическое преобразование данных может быть запрещено путем `autoConvert` присвоения параметру `false`значения.  
+ Объекты данных обычно включают средство для автоматической преобразования данных, хранящихся в одном формате, в другой формат при извлечении данных; этот объект называется автоматической конвертатом. При запросе форматов данных, доступных в объекте данных, автоматически конвертируемые форматы данных <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> могут быть `autoConvert` отфильтрованы из родных форматов данных, позвонив `false` <xref:System.Windows.DataObject.GetFormats%28System.Boolean%29> или метод и указав параметр как.  При добавлении данных <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> к объекту данных с помощью `autoConvert` метода `false`автопреобразование данных может быть запрещено, установив параметр.  
   
-<a name="Working_with_Data_Objects"></a>   
+<a name="Working_with_Data_Objects"></a>
 ## <a name="working-with-data-objects"></a>Работа с объектами данных  
- В этом разделе описываются распространенные методы создания объектов данных и работы с ними.  
+ В этом разделе описаны общие методы создания и работы с объектами данных.  
   
 ### <a name="creating-new-data-objects"></a>Создание новых объектов данных  
- Класс предоставляет несколько перегруженных конструкторов, которые упрощают заполнение нового <xref:System.Windows.DataObject> экземпляра одной парой данных и формата данных. <xref:System.Windows.DataObject>  
+ Класс <xref:System.Windows.DataObject> предоставляет несколько перегруженных конструкторов, которые <xref:System.Windows.DataObject> облегчают заполнение нового экземпляра одной парой формата данных/данных.  
   
- В следующем примере кода создается новый объект данных и используется один из перегруженных конструкторов <xref:System.Windows.DataObject.%23ctor%2A>(<xref:System.Windows.DataObject.%23ctor(System.String,System.Object)>) для инициализации объекта данных строкой и указанным форматом данных.  В этом случае формат данных задается строкой. <xref:System.Windows.DataFormats> класс предоставляет набор строк предварительно определенных типов. Автоматическое преобразование сохраненных данных по умолчанию разрешено.  
+ Следующий пример кода создает новый объект данных и использует <xref:System.Windows.DataObject.%23ctor%2A><xref:System.Windows.DataObject.%23ctor(System.String,System.Object)>один из перегруженных конструкторов () для инициализации объекта данных со строкой и указанным форматом данных.  В этом случае формат данных определяется строкой; <xref:System.Windows.DataFormats> класс предоставляет набор заранее определенных строк типа. Авто-конверсия хранимых данных допускается по умолчанию.  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
   
- Дополнительные примеры кода, который создает объект данных, см. [в разделе Создание объекта данных](how-to-create-a-data-object.md).  
+ Для получения дополнительных примеров кода, создающий объект данных, [см.](how-to-create-a-data-object.md)  
   
 ### <a name="storing-data-in-multiple-formats"></a>Хранение данных в нескольких форматах  
- Один объект данных может хранить данные в нескольких форматах.   Стратегическое использование нескольких форматов данных в одном объекте данных потенциально делает объект данных более широко большим, чем в случае, если может быть представлен только один формат данных.  Обратите внимание, что в общем случае источник перетаскивания должен быть независимым от форматов данных, которые могут быть потреблены потенциальными целями перетаскивания.  
+ Один объект данных способен хранить данные в нескольких форматах.   Стратегическое использование нескольких форматов данных в рамках одного объекта данных потенциально делает объект данных расходуемым более широким кругом целей падения, чем если бы можно было бы представить только один формат данных.  Обратите внимание, что, как правило, источник перетаскивания должен быть агностиком в форматах данных, которые могут быть расходуемыми потенциальными целями падения.  
   
  В следующем примере показано, как использовать <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> метод для добавления данных в объект данных в нескольких форматах.  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_storemultipleformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_storemultipleformats)]  
   
-### <a name="querying-a-data-object-for-available-formats"></a>Запрос к объекту данных для доступных форматов  
- Поскольку один объект данных может содержать произвольное число форматов данных, объекты данных включают средства для получения списка доступных форматов данных.  
+### <a name="querying-a-data-object-for-available-formats"></a>Запрос объекта данных для доступных форматов  
+ Поскольку один объект данных может содержать произвольное количество форматов данных, объекты данных включают объекты для поиска списка доступных форматов данных.  
   
- В следующем примере кода <xref:System.Windows.DataObject.GetFormats%2A> перегрузка используется для получения массива строк, обозначающих все форматы данных, доступные в объекте данных (как в собственном коде, так и с помощью автоматического преобразования).  
+ В следующем примере <xref:System.Windows.DataObject.GetFormats%2A> код использует перегрузку для получения массива строк, обозначающего все форматы данных, доступные в объекте данных (как родной, так и путем автоматического преобразования).  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats)]  
   
- Дополнительные примеры кода, который запрашивает объект данных для доступных форматов данных, см. в разделе [Вывод списка форматов данных в объекте данных](how-to-list-the-data-formats-in-a-data-object.md).  Примеры запроса объекта данных на наличие определенного формата данных см. [в разделе Определение наличия формата данных в объекте данных](how-to-determine-if-a-data-format-is-present-in-a-data-object.md).  
+ Дополнительные примеры кода, запрашиваемого объектом данных для доступных форматов данных, [см.](how-to-list-the-data-formats-in-a-data-object.md)  Примеры запроса объекта данных о наличии определенного формата данных [см.](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
   
-### <a name="retrieving-data-from-a-data-object"></a>Получение данных из объекта данных  
- Извлечение данных из объекта данных в определенном формате просто подразумевает вызов одного из <xref:System.Windows.DataObject.GetData%2A> методов и указание требуемого формата данных.  Один из <xref:System.Windows.DataObject.GetDataPresent%2A> методов можно использовать для проверки наличия определенного формата данных.  <xref:System.Windows.DataObject.GetData%2A>Возвращает данные в <xref:System.Object>; в зависимости от формата данных этот объект можно привести к контейнеру определенного типа.  
+### <a name="retrieving-data-from-a-data-object"></a>Извлечение данных из объекта данных  
+ Извлечение данных с объекта данных в определенном <xref:System.Windows.DataObject.GetData%2A> формате просто включает вызов одного из методов и определение желаемого формата данных.  Один из <xref:System.Windows.DataObject.GetDataPresent%2A> методов может быть использован для проверки на наличие определенного формата данных.  <xref:System.Windows.DataObject.GetData%2A>возвращает данные <xref:System.Object>в ; в зависимости от формата данных, этот объект может быть отлит в контейнер для конкретного типа.  
   
- В следующем примере кода используется <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> перегрузка для проверки доступности указанного формата данных (собственного или с помощью автоматического преобразования). Если указанный формат доступен, в примере данные извлекаются с помощью <xref:System.Windows.DataObject.GetData%28System.String%29> метода.  
+ В следующем примере <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> код использует перегрузку для проверки наличия определенного формата данных (родного или автоматического преобразования). Если указанный формат доступен, пример извлекает <xref:System.Windows.DataObject.GetData%28System.String%29> данные с помощью метода.  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getspecificdataformat)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat)]  
   
- Дополнительные примеры кода, получающего данные из объекта данных, см. [в разделе Получение данных в определенном формате данных](how-to-retrieve-data-in-a-particular-data-format.md).  
+ Для получения дополнительных примеров кода, извлекаемого данные из объекта данных, [см.](how-to-retrieve-data-in-a-particular-data-format.md)  
   
 ### <a name="removing-data-from-a-data-object"></a>Удаление данных из объекта данных  
- Данные нельзя удалить непосредственно из объекта данных.  Чтобы эффективно удалить данные из объекта данных, выполните следующие действия.  
+ Данные не могут быть удалены непосредственно из объекта данных.  Чтобы эффективно удалить данные из объекта данных, выполните следующие действия:  
   
-1. Создайте новый объект данных, который будет содержать только те данные, которые необходимо хранить.  
+1. Создайте новый объект данных, который будет содержать только те данные, которые вы хотите сохранить.  
   
-2. Скопируйте нужные данные из старого объекта данных в новый объект данных.  Чтобы скопировать данные, используйте один из <xref:System.Windows.DataObject.GetData%2A> методов для получения объекта <xref:System.Object> , содержащего необработанные данные, а <xref:System.Windows.DataObject.SetData%2A> затем используйте один из методов для добавления данных в новый объект данных.  
+2. "Копировать" желаемые данные из старого объекта данных новому объекту данных.  Чтобы скопировать данные, <xref:System.Windows.DataObject.GetData%2A> используйте один из <xref:System.Object> методов для извлечения необработанных данных, а затем используйте один из <xref:System.Windows.DataObject.SetData%2A> методов для добавления данных в новый объект данных.  
   
 3. Замените старый объект данных новым.  
   
 > [!NOTE]
-> <xref:System.Windows.DataObject.SetData%2A> Методы добавляют данные только в объект данных; они не заменяют данные, даже если данные и формат данных точно совпадают с предыдущим вызовом. Вызов <xref:System.Windows.DataObject.SetData%2A> дважды для одних и тех же данных и формата данных приведет к тому, что формат данных и данных будет представлен дважды в объекте данных.
+> Методы <xref:System.Windows.DataObject.SetData%2A> только добавляют данные к объекту данных; они не заменяют данные, даже если данные и формат данных точно такие же, как предыдущий вызов. Вызов <xref:System.Windows.DataObject.SetData%2A> дважды для одних и тех же данных и формата данных приведет к тому, что формат данных/данных будет дважды присутствовать в объекте данных.

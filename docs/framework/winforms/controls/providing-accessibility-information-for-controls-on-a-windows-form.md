@@ -10,12 +10,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 672104db94826cfbe113a7ae0ea29546b0c3b9da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991711"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182000"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms
 Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры. Примеры: средства чтения с экрана для слепых и служебные программы голосового ввода для людей, использующих голосовые команды вместо мыши и клавиатуры. Специальные возможности взаимодействуют со свойствами специальных возможностей, представленными элементами управления Windows Forms. К этим свойствам относятся следующие.  
@@ -39,10 +39,10 @@ ms.locfileid: "70991711"
 ```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-``` 
+```
 
 ```csharp  
-Button1.AccessibleDefaultActionDescription =   
+Button1.AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```
 
@@ -84,7 +84,7 @@ button1->AccessibleName = "Order";
 ## <a name="accessiblerole-property"></a>Свойство AccessibleRole  
  Это свойство, содержащее <xref:System.Windows.Forms.AccessibleRole> , описывает роль пользовательского интерфейса для элемента управления. Для нового элемента управления задано значение `Default`. Это означает, что по умолчанию элемент управления **Кнопка** работает как **Кнопка**. Возможно, потребуется сбросить это свойство, если у элемента управления есть другая роль. Например, вы можете использовать элемент управления **PictureBox** в качестве **Chart**и вам может потребоваться, чтобы специальные возможности передавали роль как **Chart**, а не как **PictureBox**. Возможно, вы захотите указать это свойство для разработанных пользовательских элементов управления. Это свойство можно задать в окне "Свойства" или в коде следующим образом.  
   
-```vb 
+```vb
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
 ```
 
@@ -96,7 +96,7 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.AccessibleObject>
 - <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>

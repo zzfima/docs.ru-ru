@@ -1,5 +1,5 @@
 ---
-title: Метод DacpGetModuleAddress::Request
+title: DacpGetModuleАдрес::Запрос Метод
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 07ad83da2bc608e3c5925664a68eec4a548860e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6850dc256a70e0c0343104b3904e9eda62d11e7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739230"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179198"
 ---
-# <a name="dacpgetmoduleaddressrequest-method"></a>Метод DacpGetModuleAddress::Request
+# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleАдрес::Запрос Метод
 
-Выполняет запрос для заполнения структуры из структуры данной среды выполнения.
+Выполняет запрос на заселяют структуру из заданной структуры времени выполнения.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,22 +39,21 @@ HRESULT Request(
 ## <a name="parameters"></a>Параметры
 
 `pDataModule`\
-[in] Указатель на модуль начальное значение данных.
+(в) Указатель на модуль данных семян.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Эта структура находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек. Чтобы использовать его, проще всего имитируют реализации:
+Эта структура живет в времени выполнения и не подвергается воздействию каких-либо заголовков или файлов библиотек. Проще всего имитировать реализацию:
 
-- Возвращает значение, полученное от вызова `Request` метод `IXCLRDataModule*` параметра со следующими параметрами: `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- Возврат значения, полученного `Request` от вызова `IXCLRDataModule*` метода по параметру со следующими параметрами:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** None     
-**Библиотека:** None  
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Заголовок:** Нет **библиотеки:** Нет  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Отладка](index.md)
-- [Интерфейс DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)
+- [Отладки](index.md)
+- [Интерфейс DacpGetModuleАдрес](dacpgetmoduleaddress-structure.md)

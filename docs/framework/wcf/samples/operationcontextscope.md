@@ -2,15 +2,15 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 581f75ece1a601b3baf590c1923a17a353de1ff1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ce21d9d099d893015ea828bdc3b136ab83f6d8e8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714610"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183430"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-В примере OperationContextScope показано, как отправить дополнительные сведения о вызове Windows Communication Foundation (WCF) с помощью заголовков. В этом образце сервер и клиент являются консольными приложениями.  
+В примере OperationContextScope показано, как отправлять дополнительную информацию о вызове Windows Communication Foundation (WCF) с помощью заголовков. В этом образце сервер и клиент являются консольными приложениями.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -23,14 +23,14 @@ ms.locfileid: "74714610"
 ```csharp
 public bool RetrieveHeader(string guid)  
 {  
-     MessageHeaders messageHeaderCollection =   
+     MessageHeaders messageHeaderCollection =
              OperationContext.Current.IncomingMessageHeaders;  
      String guidHeader = null;  
   
      Console.WriteLine("Trying to check if IncomingMessageHeader " +  
                " collection contains header with value {0}", guid);  
      if (messageHeaderCollection.FindHeader(  
-                       CustomHeader.HeaderName,   
+                       CustomHeader.HeaderName,
                        CustomHeader.HeaderNamespace) != -1)  
      {  
           guidHeader = messageHeaderCollection.GetHeader<String>(  
@@ -42,8 +42,8 @@ public bool RetrieveHeader(string guid)
      }  
      if (guidHeader != null)  
      {  
-          Console.WriteLine("Found header with value {0}. "+   
-         "Does it match with GUID sent as parameter: {1}",   
+          Console.WriteLine("Found header with value {0}. "+
+         "Does it match with GUID sent as parameter: {1}",
           guidHeader, guidHeader.Equals(guid));  
       }  
   
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Это реализация клиента, использующая прокси-сервер, созданный с помощью [средства служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для взаимодействия с удаленной службой. Сначала создается два прокси-объекта `MessageHeaderReaderClient`.  
+ Это клиентская реализация, которая использует прокси, генерируемый [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для связи с удаленной службой. Сначала создается два прокси-объекта `MessageHeaderReaderClient`.  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- Затем клиент создает область OperationContextScope, связанную с `client1`. Он добавляет заголовок <xref:System.ServiceModel.Channels.MessageHeader> в свойство <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> и осуществляет вызов на обоих клиентах. Это гарантирует, что заголовок отправляется только `client1`, а не `client2`, путем проверки возвращаемого значения `RetrieveHeader` вызова.  
+ Затем клиент создает область OperationContextScope, связанную с `client1`. Он добавляет заголовок <xref:System.ServiceModel.Channels.MessageHeader> в свойство <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> и осуществляет вызов на обоих клиентах. Это гарантирует, что заголовок отправляется только на, `client1` а не на, `client2` проверяя значение возврата от `RetrieveHeader` вызова.  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -77,7 +77,7 @@ using (new OperationContextScope(client1.InnerChannel))
     //Add the header to the OutgoingMessageHeader collection.  
     OperationContext.Current.OutgoingMessageHeaders.Add(customHeader);  
   
-    //Now call RetrieveHeader on both the proxies. Since the OperationContextScope is tied to   
+    //Now call RetrieveHeader on both the proxies. Since the OperationContextScope is tied to
     //client1's InnerChannel, the header should only be added to calls made on that client.  
     //Calls made on client2 should not be sending the header across even though the call  
     //is made in the same OperationContextScope.  
@@ -115,17 +115,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

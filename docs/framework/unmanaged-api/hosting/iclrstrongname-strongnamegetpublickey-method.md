@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: a31dcaa9-a404-4c1d-8cc7-081827c52935
 topic_type:
 - apiref
-ms.openlocfilehash: fd7f95ea01de397509c2a7b5fc08c0ac401a8da9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: cb96c7e17627205db0573e56fc8c2a29e7717434
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899609"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181937"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>Метод ICLRStrongName::StrongNameGetPublicKey
-Возвращает открытый ключ из пары открытого и закрытого ключей. Пара ключей может быть задана как имя контейнера ключей в поставщике служб шифрования (CSP) или как необработанная коллекция байтов.  
+Получает открытый ключ от публичной/частной ключевой пары. Ключевая пара может поставляться либо в качестве ключевого имени контейнера в рамках криптографического поставщика услуг (CSP), либо в виде сырой коллекции байтов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT StrongNameGetPublicKey (   
+HRESULT StrongNameGetPublicKey (
     [in]  LPCWSTR   szKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
     [in]  ULONG     cbKeyBlob,  
@@ -39,40 +39,40 @@ HRESULT StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>Параметры  
  `szKeyContainer`  
- окне Имя контейнера ключей, содержащего пару открытого и закрытого ключей. Если `pbKeyBlob` имеет значение null, `szKeyContainer` необходимо указать допустимый контейнер в CSP. В этом случае метод [метод iclrstrongname:: StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) извлекает открытый ключ из пары ключей, хранящейся в контейнере.  
+ (в) Название ключевого контейнера, содержащего публичную/частную ключевую пару. Если `pbKeyBlob` он `szKeyContainer` недействителен, необходимо указать действительный контейнер в рамках CSP. В этом случае метод [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) извлекает общедоступный ключ из пары ключей, хранящейся в контейнере.  
   
- Если `pbKeyBlob` не равно null, предполагается, что пара ключей содержится в большом двоичном объекте Key (BLOB).  
+ Если `pbKeyBlob` он не является нулевым, то предполагается, что ключевая пара содержится в ключевом бинарном большом объекте (BLOB).  
   
- Ключи должны состоять из 1024-разрядных ключей подписывания Ривест-Шамир-Адельман (RSA). В настоящее время не поддерживаются никакие другие типы ключей.  
+ Ключи должны быть 1024-разрядные ривест-Шамир-Адлеман (RSA) подписания ключей. В настоящее время никакие другие типы ключей не поддерживаются.  
   
  `pbKeyBlob`  
- окне Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданный функцией Win32 `CryptExportKey`. Если `pbKeyBlob` имеет значение null, предполагается, что контейнер ключей, заданный параметром `szKeyContainer`, содержит пару ключей.  
+ (в) Указатель на публичную/частную ключевую пару. Эта пара находится в формате, `CryptExportKey` созданном функцией Win32. Если `pbKeyBlob` он недействителен, `szKeyContainer` то предполагается, что указанный ключевым контейнер омыт в паре ключа.  
   
  `cbKeyBlob`  
- окне Размер `pbKeyBlob`в байтах.  
+ (в) Размер, в байтах, из `pbKeyBlob`.  
   
  `ppbPublicKeyBlob`  
- заполняет Возвращенный большой двоичный объект открытого ключа. Параметр `ppbPublicKeyBlob` выделяется средой CLR и возвращается вызывающему объекту. Вызывающий объект должен освободить память с помощью метода [метод iclrstrongname:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
+ (ваут) Вернулся общественный ключ BLOB. Параметр `ppbPublicKeyBlob` выделяется общим временем выполнения языка и возвращается вызывающему. Звонящее должно освободить память с помощью метода [ICLRStrongName::StrongNameFreeBuffer.](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)  
   
  `pcbPublicKeyBlob`  
- заполняет Размер возвращенного большого двоичного объекта открытого ключа.  
+ (ваут) Размер возвращенного публичного ключа BLOB.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](/windows/win32/seccrypto/common-hresult-values) для списка).  
+ `S_OK`если метод успешно завершен; в противном случае значение HRESULT, указывающем на сбой (см. [Общие значения HRESULT](/windows/win32/seccrypto/common-hresult-values) для списка).  
   
-## <a name="remarks"></a>Заметки  
- Открытый ключ содержится в структуре [публиккэйблоб](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) .  
+## <a name="remarks"></a>Remarks  
+ Открытый ключ содержится в структуре [PublicKeyBlob.](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Метахост. h  
+ **Заголовок:** MetaHost.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Метод StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
 - [Структура PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)

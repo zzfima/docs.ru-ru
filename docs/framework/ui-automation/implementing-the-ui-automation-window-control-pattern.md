@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: d8afaa13bd4eca9f9fcd4c8ed26c09c62ad74931
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd677ca9f610d463acc7c69f99767bd7b8781589
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447030"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180032"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Реализация шаблона элемента управления Window автоматизированного пользовательского интерфейса
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "74447030"
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IWindowProvider>, включая сведения о свойствах, методах и событиях <xref:System.Windows.Automation.WindowPattern> . Ссылки на дополнительные материалы перечислены в конце раздела.  
   
- Шаблон элемента управления <xref:System.Windows.Automation.WindowPattern> используется для поддержки элементов управления, которые предоставляют фундаментальные функции на основе окна в традиционном графическом интерфейсе пользователя. Примеры элементов управления, которые должны реализовывать этот шаблон элемента управления, включают в себя окна приложений верхнего уровня, дочерние окна многодокументного интерфейса (MDI), элементы управления "область разделения" с изменяемыми размерами, модальные диалоговые окна и окна справки.  
+ Шаблон <xref:System.Windows.Automation.WindowPattern> управления используется для поддержки элементов управления, которые обеспечивают фундаментальную функциональность на основе окон в традиционном графическом пользовательском интерфейсе (GUI). Примеры элементов управления, которые должны реализовать этот шаблон управления, включают окна приложений верхнего уровня, детские окна интерфейса с несколькими документами (MDI), изменяемые элементы управления сплит-панелью, модальные диалоги и окна помощи шара.  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
  При реализации шаблона элемента управления Window обратите внимание на следующие правила и соглашения.  
   
@@ -35,38 +35,38 @@ ms.locfileid: "74447030"
   
 - IWindowProvider не поддерживает полноэкранный режим, так как он зависит от компонентов в приложении и не является типичным поведением окна.  
   
-<a name="Required_Members_for_IWindowProvider"></a>   
+<a name="Required_Members_for_IWindowProvider"></a>
 ## <a name="required-members-for-iwindowprovider"></a>Обязательные члены для IWindowProvider  
  Следующие свойства, методы и события обязательны для реализации интерфейса IWindowProvider.  
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|событие|Нет|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|событие|Нет|  
-|<xref:System.Windows.Automation.WindowInteractionState>|событие|Не гарантируется, что будет <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Событие|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Событие|None|  
+|<xref:System.Windows.Automation.WindowInteractionState>|Событие|Не гарантируется, что будет <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Исключения  
  Поставщики должны вызывать следующие исключения.  
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> — Если элемент управления не поддерживает запрошенное поведение.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> — Если параметр не является допустимым числом.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> - Если элемент управления не поддерживает запрашиваемый поведение.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> - Когда параметр не является действительным номером.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
-- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](ui-automation-control-patterns-for-clients.md)
-- [Общие сведения о дереве модели автоматизации пользовательского интерфейса](ui-automation-tree-overview.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](use-caching-in-ui-automation.md)

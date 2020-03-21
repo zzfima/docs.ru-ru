@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: cbc24ab20d28e877dd8b1a41d965d9176f15c581
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 62b6f24bab1c655038ad3295f5af3dee0fa198fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424086"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183501"
 ---
 # <a name="message-security-user-name"></a>Безопасность сообщений с использованием имени пользователя
 В этом образце показано, как реализовать приложение, использующее протокол WS-Security и проверку подлинности имен пользователя для клиента и требующее проверки подлинности сервера с использованием сертификата X.509v3 сервера. Все сообщения приложений, которыми обмениваются служба и клиент, подписываются и шифруются. По умолчанию для входа от имени действующей учетной записи Windows используются предоставляемые клиентом имя пользователя и пароль. Этот образец основан на [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Этот образец содержит консольную программу клиента (Client.exe) и библиотеку службы (Service.dll), размещаемую в службах IIS. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".  
@@ -23,7 +23,7 @@ ms.locfileid: "73424086"
   
 - Способ доступа к данным идентификации клиента из кода службы.  
   
- Служба предоставляет одну конечную точку для взаимодействия с нею; она определена в файле конфигурации Web.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настраивается с помощью стандартного [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), который по умолчанию использует безопасность сообщений. В этом примере задается стандартная [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) для использования проверки подлинности имени пользователя клиента. Поведение указывает, что для проверки подлинности службы следует использовать учетные данные пользователя. Сертификат сервера должен содержать то же значение для имени субъекта, что и атрибут `findValue` в [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+ Служба предоставляет одну конечную точку для взаимодействия с нею; она определена в файле конфигурации Web.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настроена со стандартной [ \<wsHttpBinding>, ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)которая по умолчанию использует безопасность сообщений. Этот пример устанавливает стандартный [ \<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) использовать проверку подлинности имени пользователя клиента. Поведение указывает, что для проверки подлинности службы следует использовать учетные данные пользователя. Сертификат сервера должен содержать то же значение `findValue` для имени объекта, что и атрибут в [ \<>. ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)  
   
 ```xml  
 <system.serviceModel>  
@@ -71,9 +71,9 @@ ms.locfileid: "73424086"
 ```xml  
 <system.serviceModel>  
   <client>  
-    <endpoint address="http://localhost/servicemodelsamples/service.svc"   
-              binding="wsHttpBinding"   
-              bindingConfiguration="Binding1"   
+    <endpoint address="http://localhost/servicemodelsamples/service.svc"
+              binding="wsHttpBinding"
+              bindingConfiguration="Binding1"
               behaviorConfiguration="ClientCredentialsBehavior"  
               contract="Microsoft.ServiceModel.Samples.ICalculator" />  
   </client>  
@@ -173,7 +173,7 @@ Press <ENTER> to terminate client.
   
 - Предоставление разрешений в закрытом ключе сертификата  
   
-     Следующие строки в пакетном файле Setup. bat делают сертификат сервера, хранящийся в хранилище LocalMachine, доступным для учетной записи рабочего процесса ASP.NET.  
+     Следующие строки в пакетном файле Setup.bat делают серверный сертификат, хранящийся в магазине LocalMachine, доступным для учетной записи процесса ASP.NET работника.  
   
     ```bat
     echo ************  
@@ -187,11 +187,11 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    > Если вы используете версию Windows, отличную от версии на английском языке, необходимо изменить файл Setup. bat и заменить имя учетной записи `NT AUTHORITY\NETWORK SERVICE` своим региональным эквивалентом.  
+    > Если вы используете неамериканское английское издание Windows, вы должны отсеить `NT AUTHORITY\NETWORK SERVICE` файл Setup.bat и заменить имя учетной записи региональным эквивалентом.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -199,16 +199,16 @@ Press <ENTER> to terminate client.
   
 1. Убедитесь, что путь включает папку, в которой хранятся файлы Makecert.exe и FindPrivateKey.exe.  
   
-2. Запустите setup. bat из образца папки установки в Командная строка разработчика для Visual Studio, открытой с правами администратора. При этом устанавливаются все сертификаты, необходимые для выполнения образца.  
+2. Выполнить Setup.bat из папки установки образца в команде разработчика Prompt для визуальной студии, открытой с привилегиями администратора. При этом устанавливаются все сертификаты, необходимые для выполнения образца.  
   
     > [!NOTE]
-    > Пакетный файл Setup. bat предназначен для запуска из Командная строка разработчика для Visual Studio. Необходимо, чтобы переменная среды path указывала на каталог, в котором установлен пакет SDK. Эта переменная среды автоматически задается в Командная строка разработчика для Visual Studio.  
+    > Пакетный файл Setup.bat предназначен для запуска от команды разработчиков Prompt для Visual Studio. Необходимо, чтобы переменная среды path указывала на каталог, в котором установлен пакет SDK. Эта переменная среды автоматически устанавливается в командном запросе разработчика для Visual Studio.  
   
-3. Проверьте доступ к службе с помощью браузера, введя адрес `http://localhost/servicemodelsamples/service.svc`.
+3. Проверить доступ к службе с помощью браузера, введя адрес. `http://localhost/servicemodelsamples/service.svc`
   
 4. Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-5. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+5. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -220,7 +220,7 @@ Press <ENTER> to terminate client.
   
 4. Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента. Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.  
   
-5. На сервере запустите `setup.bat service` в Командная строка разработчика для Visual Studio, открытой с правами администратора. При запуске `setup.bat` с аргументом `service` создается сертификат службы с полным доменным именем компьютера и экспортируется сертификат службы в файл с именем Service. cer.  
+5. На сервере, `setup.bat service` запуск в команде разработчиков Prompt для Visual Studio открыт с администратором привилегий. Запуск `setup.bat` с `service` аргументом создает сертификат обслуживания с полностью квалифицированным доменным именем компьютера и экспортирует сертификат службы в файл под названием Service.cer.  
   
 6. Внесите в файл Web.config изменения в соответствии с новым именем сертификата (в атрибуте findValue в элементе serviceCertificate), которое совпадает с полным именем домена компьютера`.`  
   
@@ -228,13 +228,13 @@ Press <ENTER> to terminate client.
   
 8. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.  
   
-9. На клиенте запустите Импортсервицецерт. bat в Командная строка разработчика для Visual Studio, открытой с правами администратора. Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.  
+9. На клиенте, запустить ImportServiceCert.bat в разработчика команды Prompt для Visual Studio открыл с администратором привилегий. Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.  
   
-10. На клиентском компьютере из командной строки запустите программу Client.exe. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. На клиентском компьютере из командной строки запустите программу Client.exe. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 ### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
 - После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
   
     > [!NOTE]
-    > Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы выполнили примеры Windows Communication Foundation (WCF), использующие сертификаты на нескольких компьютерах, обязательно очистите сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    > Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы используете образцы Windows Communication Foundation (WCF), которые используют сертификаты на всех компьютерах, обязательно очистите сертификаты службы, установленные в магазине CurrentUser - TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

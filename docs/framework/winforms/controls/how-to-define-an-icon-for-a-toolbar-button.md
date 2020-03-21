@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 2b85f734a5f8b31531cfe48f87681d98304db09b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84c67c7d2584390ba3e48cb83820c65c6bb45d1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929634"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182213"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Практическое руководство. Определение значка для кнопки элемента управления ToolBar
 > [!NOTE]
 > Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- <xref:System.Windows.Forms.ToolBar>кнопки могут отображать значки в них для простоты идентификации пользователями. Это достигается путем добавления изображений в компонент [компонента ImageList](imagelist-component-windows-forms.md) и последующего связывания <xref:System.Windows.Forms.ImageList> компонента с <xref:System.Windows.Forms.ToolBar> элементом управления.  
+ <xref:System.Windows.Forms.ToolBar>кнопки могут отображать значки внутри них для легкой идентификации пользователями. Это достигается путем добавления [изображений в компонент Компонент ImageList,](imagelist-component-windows-forms.md) а затем связывания <xref:System.Windows.Forms.ImageList> компонента с элементом <xref:System.Windows.Forms.ToolBar> управления.  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Установка значка для кнопки панели инструментов программными средствами  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Установить значок для кнопки панели инструментов программно  
   
-1. В процедуре создайте экземпляр <xref:System.Windows.Forms.ImageList> компонента <xref:System.Windows.Forms.ToolBar> и элемент управления.  
+1. В процедуре мгновенно ели <xref:System.Windows.Forms.ImageList> компонент <xref:System.Windows.Forms.ToolBar> и элемент управления.  
   
-2. В той же процедуре назначьте образ <xref:System.Windows.Forms.ImageList> компоненту.  
+2. В той же процедуре присвоите изображение компоненту. <xref:System.Windows.Forms.ImageList>  
   
-3. В той же процедуре назначьте <xref:System.Windows.Forms.ImageList> элемент <xref:System.Windows.Forms.ToolBar> управления элементу управления и назначьте <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> свойство отдельных кнопок панели инструментов.  
+3. В той же процедуре, назначить <xref:System.Windows.Forms.ImageList> элемент управления для <xref:System.Windows.Forms.ToolBar> управления и назначить свойство <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> отдельных кнопок панели инструментов.  
   
-     В следующем примере кода путь, заданный для расположения изображения, является папкой " **Мои документы** ". Это делается, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут включать этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, <xref:System.Windows.Forms.PictureBox> что форма с уже добавленным элементом управления.  
+     В следующем примере кода путь, установленный для расположения изображения, является папкой **«Мои документы».** Это делается, потому что можно предположить, что большинство компьютеров под управлением операционной системы Windows будет включать в себя этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. Приведенный ниже пример предполагает <xref:System.Windows.Forms.PictureBox> форму с уже добавленным элементом управления.  
   
-     Выполнив приведенные выше действия, необходимо написать код, аналогичный показанному ниже.  
+     Следуя вышеприведенным шагам, вы должны были написать код, аналогичный тому, который отображается ниже.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -46,7 +46,7 @@ ms.locfileid: "69929634"
     ' Assign an image to the ImageList component.  
     ' You should replace the bold image  
     ' in the sample below with an icon of your own choosing.  
-       Dim myImage As System.Drawing.Image = _   
+       Dim myImage As System.Drawing.Image = _
           Image.FromFile Image.FromFile _  
           (System.Environment.GetFolderPath _  
           (System.Environment.SpecialFolder.Personal) _  
@@ -67,10 +67,10 @@ ms.locfileid: "69929634"
     public void InitializeMyToolBar()  
     {  
        // Instantiate an ImageList component and a ToolBar control.  
-       ToolBar toolBar1 = new  ToolBar();   
+       ToolBar toolBar1 = new  ToolBar();
        ImageList imageList1 = new ImageList();  
        // Assign an image to the ImageList component.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        Image myImage = Image.FromFile  
@@ -94,10 +94,10 @@ ms.locfileid: "69929634"
        void InitializeMyToolBar()  
        {  
           // Instantiate an ImageList component and a ToolBar control.  
-          ToolBar ^ toolBar1 = gcnew  ToolBar();   
+          ToolBar ^ toolBar1 = gcnew  ToolBar();
           ImageList ^ imageList1 = gcnew ImageList();  
           // Assign an image to the ImageList component.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           Image ^ myImage = Image::FromFile(String::Concat  
              (System::Environment::GetFolderPath  
@@ -115,9 +115,9 @@ ms.locfileid: "69929634"
        }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Практическое руководство. События меню триггера для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)
 - [Компонент ImageList](imagelist-component-windows-forms.md)

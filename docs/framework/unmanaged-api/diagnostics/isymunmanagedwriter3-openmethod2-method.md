@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438122"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178321"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>Метод ISymUnmanagedWriter3::OpenMethod2
-Открывает метод и предоставляет его фактическое смещение раздела в изображении.  
+Открывает метод и обеспечивает его реальное смещение раздела на изображении.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT OpenMethod2(   
+HRESULT OpenMethod2(
     [in] mdMethodDef method,  
     [in] ULONG32 isect,  
     [in] ULONG32 offset);  
@@ -36,21 +36,21 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Параметры  
  `method`  
- окне Токен метаданных для открываемого метода.  
+ (в) Токен метаданных для открываемого метода.  
   
  `isect`  
- окне Смещение раздела в изображении.  
+ (в) Раздел смещен иссяк в изображении.  
   
  `offset`  
- окне Смещение в изображении.  
+ (в) Смещение на изображении.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
+ S_OK, если метод удается; в противном случае, E_FAIL или какой-либо другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** Корсим. idl, Корсим. h  
+ **Заголовок:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
 - [Метод OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

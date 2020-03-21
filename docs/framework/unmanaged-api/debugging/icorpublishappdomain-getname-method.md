@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 4325d61d12a66b17f88e5e368cbbc7806d0a3ec5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 762c637696fdf79ccab6702918b5bf962ea55903
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790708"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178407"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>Метод ICorPublishAppDomain::GetName
-Возвращает имя домена приложения, представленного этим [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
+Получает название домена приложения, который представлен этим [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetName (  
-    [in]  ULONG32   cchName,   
+    [in]  ULONG32   cchName,
     [out] ULONG32   *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
         WCHAR       *szName  
 );  
 ```  
@@ -41,25 +41,25 @@ HRESULT GetName (
  [in] Размер массива `szName`.  
   
  `pcchName`  
- заполняет Указатель на число расширенных символов, включая символ null, возвращенный в массиве `szName`.  
+ (ваут) Указатель на количество широких символов, включая нулевой `szName` символ, вернулся в массив.  
   
  `szName`  
- заполняет Массив, в котором сохраняется имя.  
+ (ваут) Массив, в котором можно хранить имя.  
   
-## <a name="remarks"></a>Заметки  
- Если `szName` не равно null, метод `GetName` копирует в `szName``cchName` символы (включая знак завершения null). Если в `pcchName`возвращается значение, отличное от NULL, фактическое число символов в имени (включая знак завершения null) сохраняется в массиве `szName`.  
+## <a name="remarks"></a>Remarks  
+ Если `szName` `GetName` метод не является нулевым, `cchName` метод копирует символы (включая `szName`терминатор null) в . Если не-недействительной `pcchName`возвращается в , фактическое число символов в имени (в том `szName` числе нулевой терминатор) хранится в массиве.  
   
- Метод `GetName` возвращает S_OK HRESULT, независимо от количества скопированных символов.  
+ Метод `GetName` возвращает S_OK HRESULT независимо от того, сколько символов было скопировано.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Корпуб. idl, Корпуб. h  
+ **Заголовок:** CorPub.idl, CorPub.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorPublishAppDomain](icorpublishappdomain-interface.md)

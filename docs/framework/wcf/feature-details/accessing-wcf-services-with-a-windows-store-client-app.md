@@ -2,12 +2,12 @@
 title: Доступ к службам WCF из клиентского приложения Магазина Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b4b91c103aa91e3b2c9e811c642a8347c7db1a88
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938174"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185485"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Доступ к службам WCF из клиентского приложения Магазина Windows
 В Windows 8 появился новый тип приложения - приложения Магазина Windows. Эти приложения предназначены для работы с сенсорным экраном. .NET Framework 4.5 позволяет приложениям Магазина Windows вызывать службы WCF.  
@@ -55,7 +55,7 @@ ms.locfileid: "75938174"
  Поддерживается текстовое и двоичное кодирование. Поддерживаются все режимы передачи WCF. Дополнительные сведения см. в разделе [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Добавление ссылки на службу  
- Для вызова службы WCF из приложения Магазина Windows пользуйтесь функцией «Добавить ссылку на службу» среды Visual Studio 2012. Можно заметить небольшие изменения в работе функции «Добавить ссылку на службу» при работе с приложением Магазина Windows. Во-первых, не создается файл конфигурации. Приложения Магазина Windows не используют файлы конфигурации, поэтому их необходимо настраивать в коде. Код конфигурации можно найти в файле References.cs, который создается функцией «Добавить ссылку на службу». Чтобы просмотреть этот файл, выберите "Показать все файлы" в обозревателе решений. Файл будет расположен под пунктом «Ссылки на службу», а затем в узлах Reference.svcmap в рамках проекта. Все операции, созданные для служб WCF внутри приложения Магазина Windows, будут асинхронными, использующими асинхронную технологию на основе событий. Дополнительные сведения см. в разделе [Async Tasks — упрощение асинхронного программирования с помощью задач](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
+ Для вызова службы WCF из приложения Магазина Windows пользуйтесь функцией «Добавить ссылку на службу» среды Visual Studio 2012. Можно заметить небольшие изменения в работе функции «Добавить ссылку на службу» при работе с приложением Магазина Windows. Во-первых, не создается файл конфигурации. Приложения Магазина Windows не используют файлы конфигурации, поэтому их необходимо настраивать в коде. Код конфигурации можно найти в файле References.cs, который создается функцией «Добавить ссылку на службу». Чтобы увидеть этот файл, не забудьте выбрать "Показать все файлы" в проводнике решения. Файл будет расположен под пунктом «Ссылки на службу», а затем в узлах Reference.svcmap в рамках проекта. Все операции, созданные для служб WCF внутри приложения Магазина Windows, будут асинхронными, использующими асинхронную технологию на основе событий. Для получения дополнительной [Async Tasks - Simplify Asynchronous Programming with Tasks](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)информации см.  
   
  Поскольку конфигурация создается в коде, любые изменения, внесенные в файл Reference.cs, будут перезаписываться при каждом обновлении ссылки на службу. Чтобы исправить эту ситуацию, код конфигурации создается внутри разделяемого метода, который вы можно реализовать в клиентском прокси-классе. Разделяемый метод определяется следующим образом:  
   
@@ -68,23 +68,23 @@ static partial void Configure(System.ServiceModel.Description.ServiceEndpoint se
   
 ```csharp  
 public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfClient.ServiceRefMultiEndpt.IService1>, MetroWcfClient.ServiceRefMultiEndpt.IService1  
-    {   
-        static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,   
+    {
+        static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,
             System.ServiceModel.Description.ClientCredentials clientCredentials)  
         {  
-            if (serviceEndpoint.Name ==   
+            if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.BasicHttpBinding_IService1.ToString())  
             {  
                 serviceEndpoint.Binding.SendTimeout = new System.TimeSpan(0, 1, 0);  
             }  
-            else if (serviceEndpoint.Name ==   
+            else if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.BasicHttpBinding_IService11.ToString())  
             {  
                 serviceEndpoint.Binding.SendTimeout = new System.TimeSpan(0, 1, 0);  
                 clientCredentials.UserName.UserName = "username1";  
                 clientCredentials.UserName.Password = "password";  
             }  
-            else if (serviceEndpoint.Name ==   
+            else if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.NetTcpBinding_IService1.ToString())  
             {  
                 serviceEndpoint.Binding.Name = "MyTcpBinding";  
@@ -106,9 +106,9 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 > [!WARNING]
 > XmlDictionaryWriter.Write (DateTime) теперь записывает объект DateTime в виде строки.  
   
-### <a name="security"></a>по безопасности  
+### <a name="security"></a>Безопасность  
 
-В приложениях Магазина Windows поддерживаются следующие режимы безопасности:
+Следующие режимы безопасности поддерживаются в приложениях Магазина Windows:
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,30 +118,30 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-В приложениях Магазина Windows поддерживаются следующие типы учетных данных клиента:
+Следующие типы учетных данных клиентов поддерживаются в приложениях Магазина Windows:
   
-1. Нет  
+1. None  
   
 2. Basic  
   
-3. Digest  
+3. Дайджест  
   
-4. Negotiate  
+4. Согласование  
   
 5. NTLM  
   
-6. Портал  
+6. Windows  
   
 7. Имя пользователя (безопасность сообщений)  
   
 8. Windows (безопасность транспорта)  
   
- Чтобы приложения Магазина Windows могли получать и передавать учетные данные Windows по умолчанию, необходимо включить эту возможность в файле Package.appmanifest. Откройте этот файл и перейдите на вкладку "возможности" и выберите "учетные данные Windows по умолчанию". Это позволит приложению подключаться к ресурсам интрасети, для доступа к которым требуются учетные данные домена.  
+ Чтобы приложения Магазина Windows могли получать и передавать учетные данные Windows по умолчанию, необходимо включить эту возможность в файле Package.appmanifest. Откройте этот файл и выберите вкладку «Возможности для Windows» и выберите «Учетные данные Windows по умолчанию». Это позволит приложению подключаться к ресурсам интрасети, для доступа к которым требуются учетные данные домена.  
   
 > [!IMPORTANT]
-> Чтобы приложения Магазина Windows могли выполнять вызовы между компьютерами, необходимо включить другую возможность, называемую "Домашняя или Рабочая сеть". Этот параметр также находится в файле Package. appmanifest на вкладке возможности. Установите флажок Домашняя или Рабочая сеть. Приложение получит входящий и исходящий доступ к доверенным сетям пользователя - домашней и рабочей. Важные входящие порты всегда заблокированы. Для доступа к службам в Интернете необходимо также включить возможность «Интернет (клиент)».  
+> Для того, чтобы приложения Магазина Windows могли совершать перекрестные вызовы, необходимо включить еще одну возможность под названием "Домашняя/Рабочая сеть". Эта настройка также находится в файле Package.appmanifest под вкладкой «Возможности. Выберите чекбокс Home/Work Networking». Приложение получит входящий и исходящий доступ к доверенным сетям пользователя - домашней и рабочей. Важные входящие порты всегда заблокированы. Для доступа к службам в Интернете необходимо также включить возможность «Интернет (клиент)».  
   
-### <a name="misc"></a>Прочее  
+### <a name="misc"></a>Разное  
  Поддерживается использование следующих классов для приложений Магазина Windows:  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
@@ -174,11 +174,11 @@ void async SomeMethod()
   
  Обратите внимание на использование ключевого слова async при асинхронном вызове, а также ключевого слова await при вызове асинхронного метода.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Блог по WCF в приложениях для Магазина Windows](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
-- [Клиенты и безопасность магазина Windows в WCF](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
-- [Приложения Магазина Windows и вызовы между компьютерами](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [Вызов службы WCF, развернутой в Azure, из приложения Магазина Windows](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [WCF в блоге о приложениях для Магазина Windows](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [Клиенты магазина Windows WCF и безопасность](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Приложения для магазина Windows и межкомпьютерные вызовы](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Вызов службы WCF, развернутой в Azure из приложения для магазина Windows](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Привязки](../../../../docs/framework/wcf/bindings.md)

@@ -2,12 +2,12 @@
 title: Настройка обнаружения в файле конфигурации
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: 0ad44d0ad1f0d67d84cc42f6b9938d096c245417
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834760"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185330"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Настройка обнаружения в файле конфигурации
 При обнаружении используются четыре основные группы параметров конфигурации. В этом разделе кратко описана каждая из них, а также приведены примеры их настройки. В конце каждого раздела имеется ссылка на более подробную документацию о каждой области.  
@@ -28,7 +28,7 @@ ms.locfileid: "71834760"
       </serviceBehaviors>  
 ```  
   
- Указав поведение, укажите ссылку на него из элемента < `service` >, как показано в следующем примере.  
+ Как только вы укажете поведение, ссылайтесь на него из <`service`> элемент, как показано в следующем примере.  
   
 ```xml  
 <system.serviceModel>  
@@ -46,7 +46,7 @@ ms.locfileid: "71834760"
   
  Чтобы обеспечить возможность обнаружения службы, также необходимо добавить конечную точку обнаружения. В рассмотренном выше примере добавляется стандартная конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
- При добавлении конечных точек объявления необходимо также добавить службу прослушивателя объявлений в < `services` >, как показано в следующем примере.  
+ При добавлении конечных точек объявления необходимо также `services` добавить службу слушателя объявления в <> элемент, показанный в следующем примере.  
   
 ```xml  
 <services>  
@@ -75,7 +75,7 @@ ms.locfileid: "71834760"
         <!-- Application Endpoints -->  
         <endpoint address="endpoint0"  
                  binding="basicHttpBinding"  
-                 contract="IHelloWorldService"   
+                 contract="IHelloWorldService"
                  behaviorConfiguration="ep0Behavior" />  
   
         <endpoint address="endpoint1"  
@@ -104,7 +104,7 @@ ms.locfileid: "71834760"
    </behaviors>  
 ```  
   
- Поведение <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> можно также использовать для добавления пользовательских метаданных к метаданным конечной точки, возвращенным службой. Следующий пример показывает, как это сделать.  
+ Поведение <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> можно также использовать для добавления пользовательских метаданных к метаданным конечной точки, возвращенным службой. В приведенном ниже примере показано, как это сделать.  
   
 ```xml  
 <behavior name="ep4Behavior">  
@@ -137,7 +137,7 @@ ms.locfileid: "71834760"
 </behavior>  
 ```  
   
- Дополнительные сведения о <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> и <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> см. в статье [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Для получения <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> дополнительной <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> информации и [см.](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="binding-element-configuration"></a>Настройка элемента привязки  
  Настройка элемента привязки представляет наибольший интерес на стороне клиента. С ее помощью можно указать критерии поиска, используемые для обнаружения служб из клиентского приложения WCF.  Следующий пример создает пользовательскую привязку с каналом <xref:System.ServiceModel.Discovery.DiscoveryClient> и указывает критерии поиска, включая тип и область. Кроме того, он также указывает значения для свойств <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> и <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>.  
@@ -158,7 +158,7 @@ ms.locfileid: "71834760"
               </types>  
               <scopes>  
                 <add scope="http://www.microsoft.com/building42/floor1"/>  
-              </scopes>              
+              </scopes>
             </findCriteria>  
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
@@ -177,15 +177,15 @@ ms.locfileid: "71834760"
     </client>  
 ```  
   
- Дополнительные сведения о критериях поиска см. в разделе [Обнаружение Find и FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Дополнительные сведения об элементах обнаружения и привязки см. в разделе [Обзор обнаружения WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md) .  
+ Для получения дополнительной информации о критериях поиска см. [Поиск и поиск criteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Для получения дополнительной информации об обнаружении и связывающих элементах см., [Обзор обнаружения WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Конфигурация стандартной конечной точки  
- Стандартные конечные точки - точки, имеющие значения по умолчанию одного или нескольких свойств (адрес, привязка или контракт), либо одно или несколько свойств, значения которых нельзя изменить. Платформа .NET 4 поставляется с тремя стандартными конечными точками, связанными с обнаружением: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> и <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  Конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ― это стандартная конечная точка, настроенная для операций обнаружения через привязку для многоадресной рассылки. Конечная точка <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ― это стандартная конечная точка, настроенная для отправки сообщений с объявлениями по привязке UDP. Конечная точка <xref:System.ServiceModel.Discovery.DynamicEndpoint> ― это стандартная конечная точка, которая использует обнаружение для динамического обнаружения адреса конечной точки во время выполнения.  Стандартные привязки указываются с помощью элемента < `endpoint` >, который содержит атрибут Kind, заданный типом стандартной конечной точки для добавления. В следующем примере демонстрируется, как добавить <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> и <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+ Стандартные конечные точки - точки, имеющие значения по умолчанию одного или нескольких свойств (адрес, привязка или контракт), либо одно или несколько свойств, значения которых нельзя изменить. Платформа .NET 4 поставляется с тремя стандартными конечными точками, связанными с обнаружением: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> и <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  Конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ― это стандартная конечная точка, настроенная для операций обнаружения через привязку для многоадресной рассылки. Конечная точка <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ― это стандартная конечная точка, настроенная для отправки сообщений с объявлениями по привязке UDP. Конечная точка <xref:System.ServiceModel.Discovery.DynamicEndpoint> ― это стандартная конечная точка, которая использует обнаружение для динамического обнаружения адреса конечной точки во время выполнения.  Стандартные привязки `endpoint` указаны с <> элементом, содержащим вид атрибута, который определил тип стандартной конечной точки для добавления. В следующем примере демонстрируется, как добавить <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> и <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
   
 ```xml  
 <services>  
    <service name="HelloWorldService">  
-      <!-- ...  -->          
+      <!-- ...  -->
       <endpoint kind="udpDiscoveryEndpoint" />  
    </service>  
    <service name="AnnouncementListener">  
@@ -194,14 +194,14 @@ ms.locfileid: "71834760"
 </services>  
 ```  
   
- Стандартные конечные точки настраиваются в элементе < `standardEndpoints` >. В следующем примере показано, как настроить <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> и <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+ Стандартные конечные точки настроены в элемент <`standardEndpoints`>. В следующем примере показано, как настроить <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> и <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
   
 ```xml  
 <standardEndpoints>  
       <udpAnnouncementEndpoint>  
-        <standardEndpoint   
-            name="udpAnnouncementEndpointSettings"   
-            multicastAddress="soap.udp://239.255.255.250:3703"    
+        <standardEndpoint
+            name="udpAnnouncementEndpointSettings"
+            multicastAddress="soap.udp://239.255.255.250:3703"
             maxAnnouncementDelay="00:00:00.800">  
           <transportSettings  
             duplicateMessageHistoryLength="1028"  
@@ -226,12 +226,12 @@ ms.locfileid: "71834760"
       </udpDiscoveryEndpoint>  
 ```  
   
- После добавления стандартной конфигурации конечной точки сослаться на конфигурацию в элементе < `endpoint` > для каждой конечной точки, как показано в следующем примере.  
+ После добавления стандартной конфигурации конечных точек `endpoint` ссылка на конфигурацию в <> элементом для каждой конечной точки, как показано в следующем примере.  
   
 ```xml  
 <services>  
    <service name="HelloWorldService">  
-      <!-- ...  -->          
+      <!-- ...  -->
       <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="udpDiscoveryEndpointSettings"/>  
    </service>  
    <service name="AnnouncementListener">  
@@ -246,7 +246,7 @@ ms.locfileid: "71834760"
 <system.serviceModel>  
     <client>  
       <endpoint kind="dynamicEndpoint" binding="basicHttpBinding" contract="IHelloWorldService" endpointConfiguration="dynamicEndpointConfiguration" />  
-    </client>   
+    </client>
    <standardEndpoints>  
       <dynamicEndpoint>  
          <standardEndpoint name="dynamicEndpointConfiguration">  
@@ -259,7 +259,7 @@ ms.locfileid: "71834760"
                    <add scope="http://www.microsoft.com/building42/floor1"/>  
                  </scopes>  
                  <extensions>  
-                   <CustomMetadata>This is custom metadata.</CustomMetadata>          
+                   <CustomMetadata>This is custom metadata.</CustomMetadata>
                  </extensions>  
                </findCriteria>  
              </discoveryClientSettings>  
@@ -269,4 +269,4 @@ ms.locfileid: "71834760"
 </system.ServiceModel>  
 ```  
   
- Дополнительные сведения о стандартных конечных точках см. в разделе [Стандартные конечные точки](standard-endpoints.md).
+ Для получения дополнительной информации о стандартных конечных точках [см.](standard-endpoints.md)

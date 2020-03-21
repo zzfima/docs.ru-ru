@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742643"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184318"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Безопасность транспорта с проверкой подлинности Windows
-В следующем сценарии показан клиент Windows Communication Foundation (WCF) и служба, защищенная системой безопасности Windows. Дополнительные сведения о программировании см. [в разделе как защитить службу с помощью учетных данных Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+В следующем сценарии показан клиент и сервис Windows Communication Foundation (WCF), обеспеченный безопасностью Windows. Для получения дополнительной информации о программировании [см.](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
   
  Веб-служба интрасети отображает информацию о персонале. Клиентом является приложение Windows Forms. Приложение развернуто на домене с защищающем его контроллером Kerberos.  
   
  ![Безопасность транспорта с аутентификацией Windows](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Режим безопасности|Транспортировка|  
 |Совместимость|Только WCF|  
@@ -52,9 +52,9 @@ ms.locfileid: "76742643"
     <behaviors />  
     <services>  
       <service behaviorConfiguration="" name="ServiceModel.Calculator">  
-        <endpoint address="net.tcp://localhost:8008/Calculator"   
+        <endpoint address="net.tcp://localhost:8008/Calculator"
                   binding="netTcpBinding"  
-          bindingConfiguration="WindowsClientOverTcp"   
+          bindingConfiguration="WindowsClientOverTcp"
                   name="WindowsClientOverTcp"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -106,9 +106,9 @@ ms.locfileid: "76742643"
       </netTcpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="net.tcp://localhost:8008/Calculator"   
-                binding="netTcpBinding"            
-                bindingConfiguration="NetTcpBinding_ICalculator"   
+      <endpoint address="net.tcp://localhost:8008/Calculator"
+                binding="netTcpBinding"
+                bindingConfiguration="NetTcpBinding_ICalculator"
                 contract="ICalculator"  
                 name="NetTcpBinding_ICalculator">  
       </endpoint>  
@@ -119,6 +119,6 @@ ms.locfileid: "76742643"
   
 ## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Обзор безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Практическое руководство. Защита службы с использованием учетных данных Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,12 +2,12 @@
 title: Свойства выполнения рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0f958e7e112bfddc2740c2605d446493f2d49010
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988588"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182666"
 ---
 # <a name="workflow-execution-properties"></a>Свойства выполнения рабочего процесса
 Через локальную память потока (TLS) CLR поддерживает контекст выполнения для каждого потока. Этот контекст выполнения управляет хорошо известными свойствами потоков, например идентификатором потока, внешней транзакцией и текущим набором разрешений, а также пользовательскими свойствами потока, например именованными областями.  
@@ -75,14 +75,14 @@ public sealed class ConsoleColorScope : NativeActivity
 ```csharp  
 Activity wf = new Parallel  
 {  
-    Branches =   
+    Branches =
     {  
         new ConsoleColorScope  
         {  
             Color = ConsoleColor.Blue,  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new WriteLine  
                     {  
@@ -104,7 +104,7 @@ Activity wf = new Parallel
             Color = ConsoleColor.Red,  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new WriteLine  
                     {  
@@ -123,7 +123,7 @@ Activity wf = new Parallel
         },  
         new Sequence  
         {  
-            Activities =   
+            Activities =
             {  
                 new WriteLine  
                 {  
@@ -161,7 +161,7 @@ End default text.
   
  Создатели настраиваемого действия могут использовать свойства выполнения рабочего процесса, а также предоставлять механизм управления обработкой для таких действий, как <xref:System.ServiceModel.Activities.CorrelationScope> и <xref:System.Activities.Statements.TransactionScope>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>

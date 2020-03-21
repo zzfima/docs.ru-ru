@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088500"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179017"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>Метод ICorDebugArrayValue::GetDimensions
-Возвращает количество элементов в каждом измерении этого массива.  
+Получает количество элементов в каждом измерении этого массива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetDimensions (  
     [in] ULONG32         cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32          dims[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `cdim`  
- окне Число измерений данного объекта ICorDebugArrayValue.  
+ (в) Количество размеров этого объекта ICorDebugArrayValue.  
   
- Это значение также является размером массива `dims`, так как его размер равен числу измерений объекта `ICorDebugArrayValue`.  
+ Это значение также является `dims` размером массива, поскольку его размер `ICorDebugArrayValue` равен количеству размеров объекта.  
   
  `dims`  
- заполняет Массив целых чисел, каждый из которых указывает количество элементов в измерении в этом `ICorDebugArrayValue` объекте.  
+ (ваут) Массив целых чипов, каждый из которых определяет количество элементов `ICorDebugArrayValue` в измерении в этом объекте.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

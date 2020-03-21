@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 306e0dbf7fb819d1214d7d5d93d335b5d2db75e6
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8a015c199193dfd9c43bec53cc93cbf9dc201413
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053618"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142047"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Практическое руководство. Определение свойств страницы с помощью компонента PageSetupDialog
 Компонент [PageSetupDialog](pagesetupdialog-component-windows-forms.md) предоставляет пользователю макет, размер бумаги и другие параметры разметки страницы для документа.  
@@ -30,7 +30,7 @@ ms.locfileid: "66053618"
   
      В следующем примере обработчик событий <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> открывает экземпляр компонента <xref:System.Windows.Forms.PageSetupDialog> . Существующий документ указывается в свойстве <xref:System.Windows.Forms.PageSetupDialog.Document%2A> , а его свойство <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> имеет значение `false`.  
   
-     В примере предполагается, в форме есть <xref:System.Windows.Forms.Button> управления <xref:System.Drawing.Printing.PrintDocument> компонент с именем `myDocument`и <xref:System.Windows.Forms.PageSetupDialog> компонента.  
+     Пример предполагает, что ваша <xref:System.Windows.Forms.Button> форма <xref:System.Drawing.Printing.PrintDocument> имеет `myDocument`элемент управления, названный компонент и <xref:System.Windows.Forms.PageSetupDialog> компонент.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,19 +76,19 @@ ms.locfileid: "66053618"
        }  
     ```  
   
-     (Visual C# и визуальное C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C и Визуальный C ) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
     ```cpp  
-    this->button1->Click += gcnew   
+    this->button1->Click += gcnew
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Практическое руководство. Создание заданий печати стандартный Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [Компонент PageSetupDialog](pagesetupdialog-component-windows-forms.md)
+- [Практическое руководство. Создание стандартных заданий печати в Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: a83b1aa0b2cc068ed2f73dca04083b1085d45201
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789162"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179143"
 ---
 # <a name="debugging-enumerations"></a>Перечисления отладки
 В этом разделе описываются неуправляемые перечисления, которые использует API отладки.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Перечисление CLR_DEBUGGING_PROCESS_FLAGS](clr-debugging-process-flags-enumeration.md)  
- Предоставляет значения, используемые методом [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) .  
+ Предоставляет значения, используемые методом [ICLRDebugging::OpenVirtualProcess.](iclrdebugging-openvirtualprocess-method.md)  
   
  [Перечисление CLRDataEnumMemoryFlags](clrdataenummemoryflags-enumeration.md)  
- Указывает, к каким областям памяти должен быть вызван вызов метода [иклрдатаенуммеморирегионс:: енуммеморирегионс](iclrdataenummemoryregions-enummemoryregions-method.md) .  
+ Указывает, в какие области памяти должен быть включен вызов [iCLRDataEnumMemoryRegions::EnumMemoryRegions.](iclrdataenummemoryregions-enummemoryregions-method.md)  
   
  [Перечисление COR_PUB_ENUMPROCESS](cor-pub-enumprocess-enumeration.md)  
  Идентифицирует тип процесса для перечисления.  
@@ -39,16 +39,16 @@ ms.locfileid: "76789162"
  Описывает, почему экспортируемая функция вызывает управляемый код.  
   
  CorDebugCreateProcessFlags  
- Предоставляет дополнительные параметры отладки, которые можно использовать при вызове метода [ICorDebug:: CreateProcess](icordebug-createprocess-method.md) .  
+ Предоставляет дополнительные параметры отладки, которые могут быть использованы при вызове к методу [ICorDebug::CreateProcess.](icordebug-createprocess-method.md)  
   
  [Перечисление CorDebugDebugEventKind](cordebugdebugeventkind-enumeration.md)  
- Указывает тип события, сведения о котором декодированы методом [DecodeEvent](icordebugprocess6-decodeevent-method.md) .  
+ Указывает тип события, информация которого расшифровывается методом [DecodeEvent.](icordebugprocess6-decodeevent-method.md)  
   
  [Перечисление CorDebugDecodeEventFlagsWindows](cordebugdecodeeventflagswindows-enumeration.md)  
  Предоставляет дополнительную информацию о событиях отладки на платформе Windows.  
   
  CorDebugExceptionCallbackType  
- Указывает тип обратного вызова, сделанный из события [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) .  
+ Указывает тип обратного вызова, который сделан из [ICorDebugManagedCallback2::Исключение](icordebugmanagedcallback2-exception-method.md) события.  
   
  [Перечисление CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md)  
  Предоставляет дополнительные сведения об исключении.  
@@ -81,7 +81,7 @@ ms.locfileid: "76789162"
  Содержит значения, которые влияют на поведение управляемого JIT-компилятора.  
   
  [Перечисление CorDebugJITCompilerFlagsDeprecated](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- Устаревшее. Вместо этого используйте элемент `CORDEBUG_JIT_DEFAULT` перечисления [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) .  
+ Устаревшее. Вместо `CORDEBUG_JIT_DEFAULT` этого используйте список [CorDebugJITCompilerFlags.](cordebugjitcompilerflags-enumeration.md)  
   
  CorDebugMappingResult  
  Предоставляет сведения о том, как было получено значение указателя инструкций.  
@@ -93,7 +93,7 @@ ms.locfileid: "76789162"
  Предоставляет значение, который определяет, загружает ли отладчик образы в машинном коде (NGen) из кэша образов в машинном коде.  
   
  [Перечисление CorDebugPlatform](cordebugplatform-enumeration.md)  
- Предоставляет значения целевой платформы, используемые методом [ICorDebugDataTarget::](icordebugdatatarget-getplatform-method.md) WebMethod.  
+ Предоставляет значения целевой платформы, которые используются методом [ICorDebugDataTarget::GetPlatform.](icordebugdatatarget-getplatform-method.md)  
   
  [Перечисление CorDebugRecordFormat](cordebugrecordformat-enumeration.md)  
  Описывает формат данных в массиве байтов, который содержит информацию о событии отладки собственного исключения.  
@@ -113,7 +113,7 @@ ms.locfileid: "76789162"
  CorDebugThreadState  
  Указывает состояние потока для отладки.  
   
- \>Кордебугунмаппедстоп  
+ \>CorDebugUnmappedStop  
  Указывает тип несопоставимого кода, который может привести к прерыванию выполнения кода пошаговым средством.  
   
  CorDebugUserState  
@@ -132,15 +132,15 @@ ms.locfileid: "76789162"
  Указывает операцию, выполненную на переключателе отладки и трассировки.  
   
  [Перечисление VariableLocationType](variablelocationtype-enumeration.md)  
- Указывает тип собственного расположения переменной.  
+ Указывает тип родного местоположения переменной.  
   
  [Перечисление WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md)  
- Предоставляет значения, указывающие, будут ли видны в отладчике обновления копии метаданных в памяти. 
+ Предоставляет значения, указывающие, будут ли видны в отладчике обновления копии метаданных в памяти.
 
- [Перечисление клрдатасаурцетипе](clrdatasourcetype-enumeration.md) Предоставляет значения, используемые структурой CLRDATA_IL_ADDRESS_MAP.
+ [Цифра ClrDataSourceType](clrdatasourcetype-enumeration.md) Обеспечивает значения, используемые структурой CLRDATA_IL_ADDRESS_MAP.
 
-## <a name="related-sections"></a>Связанные разделы  
- [Коклассы отладки](debugging-coclasses.md)  
+## <a name="related-sections"></a>См. также  
+ [Компонентные классы отладки](debugging-coclasses.md)  
   
  [Интерфейсы отладки](debugging-interfaces.md)  
   

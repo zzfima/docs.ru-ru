@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-ms.openlocfilehash: 71836108dbd0ce01a64b4d9ac773c28d385dfd7c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c24963a6e56adfb9f763c6521027744db82cc357
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099678"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179365"
 ---
 # <a name="clrdatacreateinstance-function"></a>Функция CLRDataCreateInstance
 Создает объект интерфейса для указанного целевого элемента.  
@@ -29,34 +29,34 @@ ms.locfileid: "73099678"
   
 ```cpp  
 HRESULT CLRDataCreateInstance (  
-    [in]  REFIID           iid,   
-    [in]  ICLRDataTarget  *target,   
+    [in]  REFIID           iid,
+    [in]  ICLRDataTarget  *target,
     [out] void           **iface  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `iid`  
- окне Идентификатор интерфейса, для которого создается экземпляр.  
+ (в) Идентификатор интерфейса, который должен быть мгновенно.  
   
  `target`  
- окне Указатель на реализуемый пользователем объект [ICLRDataTarget](iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.  
+ (в) Указатель на реализованный пользователем объект [ICLRDataTarget,](iclrdatatarget-interface.md) представляющий целевой элемент для создания объекта интерфейса.  
   
  `iface`  
- заполняет Указатель на адрес возвращенного объекта интерфейса.  
+ (ваут) Указатель на адрес возвращенного объекта интерфейса.  
   
-## <a name="remarks"></a>Заметки  
- Объект `ICLRDataTarget` реализуется модулем записи приложения отладки. Реализация зависит от типа представляемого целевого элемента. Целевой элемент может быть процессом, дампом памяти, удаленным компьютером и т. д.  
+## <a name="remarks"></a>Remarks  
+ Объект `ICLRDataTarget` реализован автором приложения отладки. Реализация зависит от типа представленного целевого элемента. Целевой элемент может быть процесс, свалка памяти, удаленной машины, и так далее.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** Клрдата. idl  
+ **Заголовок:** ClrData.idl  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Глобальные статические функции отладки](debugging-global-static-functions.md)

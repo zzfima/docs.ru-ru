@@ -1,5 +1,5 @@
 ---
-title: Установка значения, отображаемого элементом управления ProgressBar
+title: Установите значение, отображаемые progressBar Control
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 79ce1e576652d00b323d31dfc6551e168ea0a9a0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d295079a96ca19a4e4c98e113a3f3051c6403182
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743800"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141815"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Практическое руководство. Установка значения, отображаемого c помощью элемента управления ProgressBar в Windows Forms
 > [!IMPORTANT]
 > Элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> заменяет элемент управления <xref:System.Windows.Forms.ProgressBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ProgressBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- .NET Framework предоставляет несколько различных способов отобразить заданное значение в элементе управления <xref:System.Windows.Forms.ProgressBar>. Выбор способа зависит от поставленной задачи или от решаемой проблемы. В следующей таблице показаны подходы, которые можно выбрать.  
+ Рамочность .NET предоставляет несколько различных <xref:System.Windows.Forms.ProgressBar> способов отображения заданного значения в элементе управления. Какой подход вы выберете, будет зависеть от поставленной задачи или от решения проблемы. В следующей таблице показаны подходы, которые вы можете выбрать.  
   
-|Подход|Description|  
+|Подход|Описание|  
 |--------------|-----------------|  
-|Установите значение элемента управления <xref:System.Windows.Forms.ProgressBar> напрямую.|Этот подход удобен для задач, где известно общее количество элементов, которые будут задействованы, например чтение записей из источника данных. Кроме того, если необходимо задать значение только один раз или дважды, это легко сделать. Наконец, используйте этот процесс, если необходимо уменьшить значение, отображаемое индикатором выполнения.|  
-|Увеличение <xref:System.Windows.Forms.ProgressBar> отображение фиксированным значением.|Этот подход удобен при отображении простого счетчика между минимальным и максимальным значением, например прошедшее время или числом файлов, которые были обработаны из известного итога.|  
-|Увеличение <xref:System.Windows.Forms.ProgressBar> отображается в зависимости от значения.|Этот подход удобен, если необходимо изменить отображаемое значение на несколько раз в разных объемах. Пример показывает объем занятого места на жестком диске при записи ряда файлов на диск.|  
+|Установите значение <xref:System.Windows.Forms.ProgressBar> элемента управления напрямую.|Этот подход полезен для задач, где вы знаете общее количество измеренного элемента, который будет задействован, например, для чтения записей из источника данных. Кроме того, если вам нужно установить значение только один или два раза, это простой способ сделать это. Наконец, используйте этот процесс, если вам нужно уменьшить значение, отображаемые баром прогресса.|  
+|Увеличьте <xref:System.Windows.Forms.ProgressBar> дисплей на фиксированное значение.|Этот подход полезен при отображении простого количества между минимальным и максимальным, например, прошедшее время или количество файлов, которые были обработаны из известного общего числа.|  
+|Увеличьте <xref:System.Windows.Forms.ProgressBar> дисплей на значение, которое изменяется.|Этот подход полезен, когда необходимо изменить отображаемые значения несколько раз в разных количествах. Примером может быть отображение количества удерживаемого пространства жесткого диска при написании ряда файлов на диске.|  
   
- Самым прямым способом задания значения, отображаемого индикатором выполнения, является установка свойства <xref:System.Windows.Forms.ProgressBar.Value%2A>. Это можно сделать либо во время разработки, либо во время выполнения.  
+ Самый прямой способ установить значение, отображаемое панелью прогресса, — это установка <xref:System.Windows.Forms.ProgressBar.Value%2A> свойства. Это может быть сделано либо во время проектирования или во время выполнения.  
   
-### <a name="to-set-the-progressbar-value-directly"></a>Установка значения ProgressBar напрямую  
+### <a name="to-set-the-progressbar-value-directly"></a>Установить значение ProgressBar напрямую  
   
-1. Задайте значения <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> элемента управления <xref:System.Windows.Forms.ProgressBar>.  
+1. Установите <xref:System.Windows.Forms.ProgressBar> элемент <xref:System.Windows.Forms.ProgressBar.Minimum%2A> управления <xref:System.Windows.Forms.ProgressBar.Maximum%2A> и значения.  
   
-2. В коде задайте для свойства <xref:System.Windows.Forms.ProgressBar.Value%2A> элемента управления целочисленное значение между минимальным и максимальным значениями.  
+2. В коде установите <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство элемента управления на максимальное значение между установленными минимальными значениями и максимальными значениями.  
   
     > [!NOTE]
-    > Если задать свойство <xref:System.Windows.Forms.ProgressBar.Value%2A> за пределами границ, заданных свойствами <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A>, то элемент управления вызывает исключение <xref:System.ArgumentException>.  
+    > Если вы <xref:System.Windows.Forms.ProgressBar.Value%2A> установите свойство за <xref:System.Windows.Forms.ProgressBar.Minimum%2A> пределами границ, установленных <xref:System.Windows.Forms.ProgressBar.Maximum%2A> свойствами и свойствами, элемент управления выбрасывает <xref:System.ArgumentException> исключение.  
   
-     В следующем примере кода показано, как задать значение <xref:System.Windows.Forms.ProgressBar> напрямую. Код считывает записи из источника данных и обновляет индикатор выполнения и метку при каждом считывании записи данных. Для этого примера требуется, чтобы в форме был элемент управления <xref:System.Windows.Forms.Label>, <xref:System.Windows.Forms.ProgressBar> элемент управления и таблица данных со строкой, именуемой `CustomerRow` с `FirstName` и `LastName` полями.  
+     Следующий пример кода иллюстрирует, <xref:System.Windows.Forms.ProgressBar> как настроить значение напрямую. Код считывает записи из источника данных и обновляет панель прогресса и маркирует каждый раз, когда запись данных читается. Этот пример требует, чтобы <xref:System.Windows.Forms.Label> в <xref:System.Windows.Forms.ProgressBar> вашей форме были элемент управления, `FirstName` `LastName` элемент управления и таблица данных с строкой, с концентрировавающейся `CustomerRow` и полями.  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +83,19 @@ ms.locfileid: "76743800"
     }  
     ```  
   
-     Если отображается ход выполнения с фиксированным интервалом, можно задать значение и затем вызвать метод, который увеличивает значение <xref:System.Windows.Forms.ProgressBar> элемента управления на этот интервал. Это полезно для таймеров и других сценариев, в которых ход выполнения не измеряется в процентах от целого.  
+     Если вы отображаете прогресс, который происходит с фиксированным интервалом, можно установить значение, а затем вызвать метод, который увеличивает значение <xref:System.Windows.Forms.ProgressBar> элемента к этому интервалу. Это полезно для таймеры и других сценариев, где вы не измеряете прогресс в процентах от целого.  
   
-### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Увеличение индикатора выполнения на фиксированное значение  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Увеличение панели прогресса на фиксированное значение  
   
-1. Задайте значения <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> элемента управления <xref:System.Windows.Forms.ProgressBar>.  
+1. Установите <xref:System.Windows.Forms.ProgressBar> элемент <xref:System.Windows.Forms.ProgressBar.Minimum%2A> управления <xref:System.Windows.Forms.ProgressBar.Maximum%2A> и значения.  
   
-2. Задайте для свойства <xref:System.Windows.Forms.ProgressBar.Step%2A> элемента управления целое число, представляющее величину, чтобы увеличить отображаемое значение индикатора выполнения.  
+2. Установите свойство <xref:System.Windows.Forms.ProgressBar.Step%2A> элемента управления в число, представляющее сумму для увеличения отображаемого значения панели прогресса.  
   
-3. Вызовите метод <xref:System.Windows.Forms.ProgressBar.PerformStep%2A>, чтобы изменить значение, отображаемое на величину, заданную в свойстве <xref:System.Windows.Forms.ProgressBar.Step%2A>.  
+3. Вызовите <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> метод, чтобы изменить значение, отображаемое суммой, установленной в свойстве. <xref:System.Windows.Forms.ProgressBar.Step%2A>  
   
-     В следующем примере кода показано, как индикатор выполнения может поддерживать количество файлов в операции копирования.  
+     Следующий пример кода иллюстрирует, как панель прогресса может поддерживать подсчет файлов в операции копирования.  
   
-     В следующем примере, когда каждый файл считывается в память, индикатор выполнения и метка обновляются для отражения общего числа считываемых файлов. Для этого примера требуется, чтобы в форме был элемент управления <xref:System.Windows.Forms.Label> и элемент управления <xref:System.Windows.Forms.ProgressBar>.  
+     В следующем примере, когда каждый файл считывается в памяти, панель прогресса и метка обновляются, чтобы отразить общее количество прочитаных файлов. Этот пример требует, чтобы <xref:System.Windows.Forms.Label> ваша <xref:System.Windows.Forms.ProgressBar> форма имеет элемент управления и элемента управления.  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -149,30 +149,30 @@ ms.locfileid: "76743800"
     }  
     ```  
   
-     Наконец, можно увеличить значение, отображаемое индикатором выполнения, чтобы каждое увеличение было уникальным. Это полезно, если вы отслеживаете ряд уникальных операций, например запись файлов различных размеров на жесткий диск или измерение хода выполнения в процентах от целого.  
+     Наконец, можно увеличить значение, отображаемые баром прогресса, так что каждое увеличение является уникальной суммой. Это полезно, когда вы отслеживаете ряд уникальных операций, таких как написание файлов разных размеров на жесткий диск или измерение прогресса в процентах от целого.  
   
-### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Увеличение индикатора выполнения на динамическое значение  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Увеличить планку прогресса на динамическое значение  
   
-1. Задайте значения <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> элемента управления <xref:System.Windows.Forms.ProgressBar>.  
+1. Установите <xref:System.Windows.Forms.ProgressBar> элемент <xref:System.Windows.Forms.ProgressBar.Minimum%2A> управления <xref:System.Windows.Forms.ProgressBar.Maximum%2A> и значения.  
   
-2. Вызовите метод <xref:System.Windows.Forms.ProgressBar.Increment%2A>, чтобы изменить значение, отображаемое указанным целым числом.  
+2. Вызовите <xref:System.Windows.Forms.ProgressBar.Increment%2A> метод, чтобы изменить значение, отображаемые неопределивным вами.  
   
-     В следующем примере кода показано, как индикатор выполнения может вычислить, сколько места на диске использовалось во время операции копирования.  
+     Следующий пример кода иллюстрирует, как панель прогресса может вычислить, сколько дискового пространства было использовано во время операции копирования.  
   
-     В следующем примере, когда каждый файл записывается на жесткий диск, индикатор выполнения и метка обновляются с учетом объема доступного места на жестком диске. Для этого примера требуется, чтобы в форме был элемент управления <xref:System.Windows.Forms.Label> и элемент управления <xref:System.Windows.Forms.ProgressBar>.  
+     В следующем примере, когда каждый файл пишется на жесткий диск, панель прогресса и метка обновляются, чтобы отразить количество доступного пространства жесткого диска. Этот пример требует, чтобы <xref:System.Windows.Forms.Label> ваша <xref:System.Windows.Forms.ProgressBar> форма имеет элемент управления и элемента управления.  
   
     ```vb  
     Public Sub ReadFiles()  
-       ' Sets the progress bar's minimum value to a number   
+       ' Sets the progress bar's minimum value to a number
        ' representing the hard disk space before the files are read in.  
        ' You will most likely have to set this using a system call.  
        ' NOTE: The code below is meant to be an example and  
        ' will not compile.  
        ProgressBar1.Minimum = AvailableDiskSpace()  
-       ' Sets the progress bar's maximum value to a number   
+       ' Sets the progress bar's maximum value to a number
        ' representing the total hard disk space.  
        ' You will most likely have to set this using a system call.  
-       ' NOTE: The code below is meant to be an example   
+       ' NOTE: The code below is meant to be an example
        ' and will not compile.  
        ProgressBar1.Maximum = TotalDiskSpace()  
   
@@ -183,11 +183,11 @@ ms.locfileid: "76743800"
        ' so it will execute the loop 5 times.  
        For i = 1 To 5  
           ' Insert code to read a file into memory and update file size.  
-          ' Increases the progress bar's value based on the size of   
+          ' Increases the progress bar's value based on the size of
           ' the file currently being written.  
           ProgressBar1.Increment(FileSize)  
           ' Updates the label to show available drive space.  
-          Label1.Text = "Current Disk Space Used = " &_   
+          Label1.Text = "Current Disk Space Used = " &_
           ProgressBar1.Value.ToString()  
        Next i  
     End Sub  
@@ -196,16 +196,16 @@ ms.locfileid: "76743800"
     ```csharp  
     public void readFiles()  
     {  
-       // Sets the progress bar's minimum value to a number   
+       // Sets the progress bar's minimum value to a number
        // representing the hard disk space before the files are read in.  
        // You will most likely have to set this using a system call.  
-       // NOTE: The code below is meant to be an example and   
+       // NOTE: The code below is meant to be an example and
        // will not compile.  
        progressBar1.Minimum = AvailableDiskSpace();  
-       // Sets the progress bar's maximum value to a number   
+       // Sets the progress bar's maximum value to a number
        // representing the total hard disk space.  
        // You will most likely have to set this using a system call.  
-       // NOTE: The code below is meant to be an example   
+       // NOTE: The code below is meant to be an example
        // and will not compile.  
        progressBar1.Maximum = TotalDiskSpace();  
   
@@ -215,7 +215,7 @@ ms.locfileid: "76743800"
        for (int i = 1; i<= 5; i++)  
        {  
           // Insert code to read a file into memory and update file size.  
-          // Increases the progress bar's value based on the size of   
+          // Increases the progress bar's value based on the size of
           // the file currently being written.  
           progressBar1.Increment(FileSize);  
           // Updates the label to show available drive space.  

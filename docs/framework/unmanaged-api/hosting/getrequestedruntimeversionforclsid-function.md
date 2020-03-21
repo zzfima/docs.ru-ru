@@ -14,67 +14,67 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: ce0c6307defd93dcf63ac4e9051fc798041475f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6132e94544b30486b70ecfec49c1ddd5e3c0f50b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127058"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178115"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>Функция GetRequestedRuntimeVersionForCLSID
-Возвращает соответствующую информацию о версии среды CLR для класса с указанным `CLSID`.  
+Получает соответствующую информацию о времени выполнения общего языка (CLR) для класса с указанным `CLSID`.  
   
- Эта функция является устаревшей в .NET Framework 4.  
+ Эта функция была унесена в системе .NET 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
-    [in]  REFCLSID   rclsid,   
-    [out]  LPWSTR     pVersion,   
-    [in]  DWORD      cchBuffer,   
-    [out] DWORD*     dwLength,   
+    [in]  REFCLSID   rclsid,
+    [out]  LPWSTR     pVersion,
+    [in]  DWORD      cchBuffer,
+    [out] DWORD*     dwLength,
     [in]  CLSID_RESOLUTION_FLAGS dwResolutionFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `rclsid`  
- окне  `CLSID` компонента.  
+ (в)  Компонента. `CLSID`  
   
  `pVersion`  
- заполняет  Буфер, содержащий строку номера версии после успешного завершения.  
+ (ваут)  Буфер, содержащий строку номера версии после успешного завершения.  
   
  `cchBuffer`  
- окне  Размер `pVersion`ного буфера в расширенных символах.  
+ (в)  Размер буфера, `pVersion` в широком характере.  
   
  `dwLength`  
- заполняет Длина возвращенного буфера в байтах.  
+ (ваут) Длина, в байтах, возвращенного буфера.  
   
  `dwResolutionFlags`  
- окне  Одно из значений CLSID_RESOLUTION_FLAGS. Поддерживаются следующие значения:  
+ (в)  Одно из CLSID_RESOLUTION_FLAGS значений. Поддерживаются следующие значения.  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) указывает, что следует использовать режим взаимодействия по умолчанию.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) указывает на то, что поведение интерп по умолчанию должно быть использовано.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) указывает, что необходимо выполнять поиск в реестре и применять политику оболочки совместимости.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) Указывает на то, что реестр должен быть проведен поиск и политика оболья должна быть применена.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Функция возвращена успешно.|  
-|E_INVALIDARG|Один из параметров имеет недопустимый тип или формат.|  
-|ERROR_INSUFFICIENT_BUFFER|Буфер `pVersion` недостаточно велик для размещения всей строки версии.|  
-|REGDB_E_CLASSNOTREG|Отсутствует класс, зарегистрированный в указанном `CLSID`.|  
-|E_POINTER|`dwLength` имеет значение null, или `cchBuffer` достаточно большой для хранения строки версии, но `pVersion` имеет значение null.|  
+|S_OK|Функция успешно возвращается.|  
+|E_INVALIDARG|Один из параметров имеет недействительный тип или формат.|  
+|ERROR_INSUFFICIENT_BUFFER|Буфер `pVersion` недостаточно велик, чтобы удерживать всю строку версии.|  
+|REGDB_E_CLASSNOTREG|Нет класса, зарегистрированного `CLSID`с указанным .|  
+|E_POINTER|`dwLength`является нулевым, или `cchBuffer` достаточно большим, чтобы `pVersion` держать строку версии, но является недействительным.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Создание стандартных заданий печати
+title: Создание стандартных рабочих мест для печати
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 4850dc901630179cc44fefda7e25bbabcfb4725f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d9607de7c74132e0d7dce605b16d62c79b7dbccb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741517"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182570"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Практическое руководство. Создание стандартных задания печати в Windows Forms
-Основой печати в Windows Forms является компонент <xref:System.Drawing.Printing.PrintDocument> — точнее, <xref:System.Drawing.Printing.PrintDocument.PrintPage> событие. Написав код для работы с событием <xref:System.Drawing.Printing.PrintDocument.PrintPage>, можно указать, что печатать и как печатать.  
+Основой печати в формах <xref:System.Drawing.Printing.PrintDocument> Windows является компонент, в частности, <xref:System.Drawing.Printing.PrintDocument.PrintPage> событие. Написав код для <xref:System.Drawing.Printing.PrintDocument.PrintPage> обработки события, можно указать, что печатать и как его распечатать.  
   
-### <a name="to-create-a-print-job"></a>Создание задания печати  
+### <a name="to-create-a-print-job"></a>Для создания задания печати  
   
-1. Добавьте в форму компонент <xref:System.Drawing.Printing.PrintDocument>.  
+1. Добавьте <xref:System.Drawing.Printing.PrintDocument> компонент в форму.  
   
 2. Напишите код для обработки события <xref:System.Drawing.Printing.PrintDocument.PrintPage> .  
   
-     Вам потребуется выполнить код для собственной логики печати. Кроме того, необходимо указать материал, который будет напечатан.  
+     Вам придется кодировать свою собственную логику печати. Кроме того, вы должны будете указать материал, который будет напечатан.  
   
-     В следующем примере кода образец изображения в фигуре красного прямоугольника создается в обработчике событий <xref:System.Drawing.Printing.PrintDocument.PrintPage>, чтобы он выводился как материал для печати.  
+     В следующем примере кода образец изображения в форме красного прямоугольника создается в обработчике <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий, чтобы выступать в качестве материала, который будет напечатан.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -37,10 +37,10 @@ ms.locfileid: "76741517"
     ```  
   
     ```csharp  
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Red,   
+       e.Graphics.FillRectangle(Brushes.Red,
          new Rectangle(500, 500, 500, 500));  
     }  
     ```  
@@ -55,7 +55,7 @@ ms.locfileid: "76741517"
        }  
     ```  
   
-     (Визуальный C# элемент C++и визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C и Визуальный C ) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -69,12 +69,12 @@ ms.locfileid: "76741517"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     Также может потребоваться написать код для событий <xref:System.Drawing.Printing.PrintDocument.BeginPrint> и <xref:System.Drawing.Printing.PrintDocument.EndPrint>, возможно, в том числе целого числа, представляющего общее число страниц для печати, которое уменьшается при печати каждой страницы.  
+     Вы также можете написать <xref:System.Drawing.Printing.PrintDocument.BeginPrint> код <xref:System.Drawing.Printing.PrintDocument.EndPrint> для событий и событий, возможно, включая целый ряд, представляющий общее количество страниц для печати, которые decremented как каждая страница печатает.  
   
     > [!NOTE]
-    > Вы можете добавить в форму компонент <xref:System.Windows.Forms.PrintDialog>, чтобы предоставить пользователям чистый и эффективный пользовательский интерфейс. Установка свойства <xref:System.Windows.Forms.PrintDialog.Document%2A> компонента <xref:System.Windows.Forms.PrintDialog> позволяет задавать свойства, связанные с печатаемым документом, с которым ведется работа в форме. Дополнительные сведения о компоненте <xref:System.Windows.Forms.PrintDialog> см. в разделе [компонент PrintDialog](../controls/printdialog-component-windows-forms.md).  
+    > Вы можете <xref:System.Windows.Forms.PrintDialog> добавить компонент в форму, чтобы обеспечить пользователям чистый и эффективный пользовательский интерфейс (Пользовательского интерфейса). Установка <xref:System.Windows.Forms.PrintDialog.Document%2A> свойства <xref:System.Windows.Forms.PrintDialog> компонента позволяет устанавливать свойства, связанные с печатным документом, с которым вы работаете, на вашей форме. Для получения дополнительной <xref:System.Windows.Forms.PrintDialog> информации о компоненте, см [PrintDialog Компонент](../controls/printdialog-component-windows-forms.md).  
   
-     Дополнительные сведения о Windows Forms заданий печати, в том числе о создании задания печати программным способом, см. в разделе <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+     Для получения дополнительной информации о специфике Windows Формы печати рабочих мест, <xref:System.Drawing.Printing.PrintPageEventArgs>в том числе, как создать работу печати программно, см.  
   
 ## <a name="see-also"></a>См. также раздел
 

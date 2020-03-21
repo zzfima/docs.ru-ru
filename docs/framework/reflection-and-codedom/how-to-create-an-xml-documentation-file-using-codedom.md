@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: cdd1f173274b6bd33c4a67ed8eb0974c4c8e8e70
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130187"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180512"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Практическое руководство. Создание XML-файла документации с использованием CodeDOM
 CodeDOM можно использовать для создания кода, создающего XML-документацию. Этот процесс предполагает создание графа CodeDOM, содержащего комментарии XML-документации, создание кода, а также компиляцию созданного кода с параметром компилятора, при выборе которого в итоге создается XML-документация.  
@@ -51,22 +51,22 @@ CodeDOM можно использовать для создания кода, с
  В этом примере в файле HelloWorldDoc.xml создается следующая XML-документация.  
   
 ```xml  
-<?xml version="1.0" ?>   
+<?xml version="1.0" ?>
 <doc>  
   <assembly>  
-    <name>HelloWorld</name>   
+    <name>HelloWorld</name>
   </assembly>  
   <members>  
     <member name="T:Samples.Class1">  
       <summary>  
-        Create a Hello World application.   
-        <seealso cref="M:Samples.Class1.Main" />   
+        Create a Hello World application.
+        <seealso cref="M:Samples.Class1.Main" />
       </summary>  
     </member>  
     <member name="M:Samples.Class1.Main">  
       <summary>  
-        Main method for HelloWorld application.   
-        <para>Add a new paragraph to the description.</para>   
+        Main method for HelloWorld application.
+        <para>Add a new paragraph to the description.</para>
       </summary>  
     </member>  
   </members>  
@@ -77,8 +77,8 @@ CodeDOM можно использовать для создания кода, с
   
 - Для выполнения этого кода должно быть установлено разрешение `FullTrust`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Документирование кода с помощью XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Комментарии XML-документации](../../csharp/programming-guide/xmldoc/index.md)
+- [Комментарии к документации XML](../../csharp/programming-guide/xmldoc/index.md)
 - [Документация XML](/cpp/ide/xml-documentation-visual-cpp)

@@ -2,44 +2,44 @@
 title: Настраиваемое действие SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: e7cc64e68c3d78b9ee7ec813700e96a52c239141
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094609"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182780"
 ---
 # <a name="sendmail-custom-activity"></a>Настраиваемое действие SendMail
-В образце описывается создание настраиваемого действия, которое является производным от <xref:System.Activities.AsyncCodeActivity>, для отправки почты с помощью SMTP для работы в приложении рабочего процесса. Настраиваемое действие использует возможности <xref:System.Net.Mail.SmtpClient> для асинхронной отправки электронной почты и отправки почты с проверкой подлинности. При этом также обеспечивается возможность использования таких возможностей конечных пользователей, как тестовый режим, замена маркеров, шаблоны файлов и тестовый путь размещения файла.  
+В образце описывается создание настраиваемого действия, которое является производным от <xref:System.Activities.AsyncCodeActivity>, для отправки почты с помощью SMTP для работы в приложении рабочего процесса. Пользовательская деятельность использует <xref:System.Net.Mail.SmtpClient> возможности для асинхронного отправки электронной почты и отправки почты с аутентификацией. При этом также обеспечивается возможность использования таких возможностей конечных пользователей, как тестовый режим, замена маркеров, шаблоны файлов и тестовый путь размещения файла.  
   
  В следующей таблице представлены аргументы для действия `SendMail`.  
   
-|Имя|Тип|Description|  
+|Имя|Тип|Описание|  
 |-|-|-|  
-|Узел|String|Адрес узла SMTP-сервера.|  
-|Порт|String|Порт службы SMTP на узле.|  
+|Узел|Строка|Адрес узла SMTP-сервера.|  
+|Порт|Строка|Порт службы SMTP на узле.|  
 |EnableSsl|bool|Указывает, использует ли <xref:System.Net.Mail.SmtpClient> протокол SSL для шифрования соединения.|  
-|UserName|String|Имя пользователя для настройки учетных данных для проверки подлинности свойства <xref:System.Net.Mail.SmtpClient.Credentials%2A> отправителя.|  
-|Пароль|String|Пароль для настройки учетных данных для проверки подлинности свойства <xref:System.Net.Mail.SmtpClient.Credentials%2A> отправителя.|  
-|Тема|<xref:System.Activities.InArgument%601>строки \<>|Тема сообщения.|  
-|Текст|<xref:System.Activities.InArgument%601>строки \<>|Текст сообщения.|  
-|Вложения|<xref:System.Activities.InArgument%601>строки \<>|Коллекция вложений, используемая для хранения данных, вложенных в это сообщение электронной почты.|  
-|От|<xref:System.Net.Mail.MailAddress>|Адрес для этого сообщения электронной почты.|  
-|Чтобы|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Коллекция адресов, содержащая получателей данного сообщения электронной почты.|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Коллекция адресов, содержащая получателей копии (CC) для данного сообщения электронной почты.|  
-|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Коллекция адресов, содержащая получателей скрытой копии (BCC) для данного сообщения электронной почты.|  
-|Токены|<xref:System.Activities.InArgument%601>< IDictionary\<строка, строка > >|Маркеры для замены в тексте. Эта возможность позволяет пользователям указывать определенные значением в тексте сообщения, которые можно позднее заменить маркерами, предоставляемыми при использовании этого свойства.|  
-|BodyTemplateFilePath|String|Путь к шаблону текста. Действие `SendMail` копирует содержимое этого файла в свойство текста.<br /><br /> Этот шаблон может содержать токены, которые заменяются на содержимое свойства Tokens.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|Если это свойство задано, все сообщения электронной почты отправляются по адресу, указанному в нем.<br /><br /> Это свойство планируется использовать при тестировании рабочих процессов. Например, если нужно убедиться, что все сообщения электронной почты отправляются без отправки их реальным получателям.|  
-|TestDropPath|String|Если это свойство задано, все сообщения электронной почты также сохраняются в указанном файле.<br /><br /> Это свойство предназначено для использования при тестировании или отладке рабочих процессов, чтобы убедиться в правильности формата и содержимого исходящих сообщений электронной почты.|  
+|UserName|Строка|Имя пользователя для настройки учетных данных для проверки подлинности свойства <xref:System.Net.Mail.SmtpClient.Credentials%2A> отправителя.|  
+|Пароль|Строка|Пароль для настройки учетных данных для проверки подлинности свойства <xref:System.Net.Mail.SmtpClient.Credentials%2A> отправителя.|  
+|Тема|<xref:System.Activities.InArgument%601>\<струнная>|Тема сообщения.|  
+|Текст|<xref:System.Activities.InArgument%601>\<струнная>|Текст сообщения.|  
+|Вложения|<xref:System.Activities.InArgument%601>\<струнная>|Сбор приложений, используемый для хранения данных, прикрепленных к этому сообщению электронной почты.|  
+|От|<xref:System.Net.Mail.MailAddress>|С адреса для этого сообщения электронной почты.|  
+|Чтобы|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Коллекция адресов, содержащая получателей этого сообщения электронной почты.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Коллекция адресов, содержащая получателей копии углерода (CC) для этого сообщения электронной почты.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Коллекция адресов, содержащая получателей слепой копии углерода (BCC) для этого сообщения электронной почты.|  
+|Токены|<xref:System.Activities.InArgument%601><строка\<IDictionary, струнная>>|Маркеры для замены в тексте. Эта возможность позволяет пользователям указывать определенные значением в тексте сообщения, которые можно позднее заменить маркерами, предоставляемыми при использовании этого свойства.|  
+|BodyTemplateFilePath|Строка|Путь к шаблону текста. Действие `SendMail` копирует содержимое этого файла в свойство текста.<br /><br /> Этот шаблон может содержать токены, которые заменяются на содержимое свойства Tokens.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|Когда это свойство установлено, все электронные письма отправляются на указанный в нем адрес.<br /><br /> Это свойство планируется использовать при тестировании рабочих процессов. Например, если вы хотите убедиться, что все письма отправляются без отправки их фактическим получателям.|  
+|TestDropPath|Строка|Когда это свойство установлено, все сообщения электронной почты также сохраняются в указанном файле.<br /><br /> Это свойство предназначено для использования при тестировании или отладке рабочих процессов, чтобы убедиться, что формат и содержимые письма является подходящим.|  
   
 ## <a name="solution-contents"></a>Содержимое решения  
  Решение содержит два проекта.  
   
-|Проект|Description|Важные файлы|  
+|Проект|Описание|Важные файлы|  
 |-------------|-----------------|---------------------|  
-|SendMail|Действие SendMail|1. SendMail.cs: реализация для основного действия<br />2. Сендмаилдесигнер. XAML и SendMailDesigner.xaml.cs: конструктор для действия SendMail<br />3. Маилтемплатебоди. htm: шаблон для отправляемого сообщения электронной почты.|  
-|SendMailTestClient|Клиент для тестирования действий SendMail.  В этом проекте описываются два способа вызова действия SendMail: декларативно и программно.|1. Sequence1. XAML: рабочий процесс, вызывающий действие SendMail.<br />2. Program.cs: вызывает Sequence1, а также создает рабочий процесс программным способом, использующим SendMail.|  
+|SendMail|Действие SendMail|1. SendMail.cs: реализация для основного мероприятия<br />2. SendMailDesigner.xaml и SendMailDesigner.xaml.cs: конструктор для деятельности SendMail<br />3. MailTemplateBody.htm: шаблон для электронной почты, которая будет отправлена.|  
+|SendMailTestClient|Клиент для тестирования действий SendMail.  В этом проекте описываются два способа вызова действия SendMail: декларативно и программно.|1. Sequence1.xaml: рабочий процесс, который вызывает активность SendMail.<br />2. Program.cs: вызывает Sequence1, а также создает рабочий процесс программно, который использует SendMail.|  
   
 ## <a name="further-configuration-of-the-sendmail-activity"></a>Дополнительная настройка действия SendMail  
  Хотя она не показана в образце, пользователи могут выполнять дополнительную настройку действия SendMail. Эта дополнительная настройка описывается в следующих трех разделах.  
@@ -71,7 +71,7 @@ new SendMail
   
 ```csharp  
 new SendMail  
-{    
+{
     From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
     To = new LambdaValue<MailAddressCollection>(  
                     ctx => new MailAddressCollection() { new MailAddress("someone@microsoft.com") }),  
@@ -79,16 +79,16 @@ new SendMail
     Host = "localhost",  
     Port = 25,  
     Tokens = new LambdaValue<IDictionary<string, string>>(ctx => tokens),  
-    BodyTemplateFilePath = @"..\..\..\SendMail\Templates\MailTemplateBody.htm",   
+    BodyTemplateFilePath = @"..\..\..\SendMail\Templates\MailTemplateBody.htm",
 };  
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Отправка сообщений в тестовом режиме  
- В этом фрагменте кода показано, как задать два свойства тестирования: при установке `TestMailTo` все сообщения будут отправляться в `john.doe@contoso.con` (без учета значений to, CC, BCC). При задании TestDropPath все исходящие сообщения электронной почты будут также записываться по указанному пути. Эти свойства могут быть заданы независимо (они не связаны друг с другом).  
+ На этом фрагменте кода показано, как установить `TestMailTo` два свойства тестирования: при установке всех сообщений будет отправлено `john.doe@contoso.con` (без учета значений To, Cc, Bcc). При задании TestDropPath все исходящие сообщения электронной почты будут также записываться по указанному пути. Эти свойства могут быть заданы независимо (они не связаны друг с другом).  
   
 ```csharp  
 new SendMail  
-{    
+{
    From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
    To = new LambdaValue<MailAddressCollection>(  
                     ctx => new MailAddressCollection() { new MailAddress("someone@microsoft.com") }),  
@@ -105,11 +105,11 @@ new SendMail
 ## <a name="set-up-instructions"></a>Инструкции по установке  
  В этом образце необходим доступ к SMTP-серверу.  
   
- Дополнительные сведения о настройке SMTP-сервера см. по следующим ссылкам.  
+ Для получения дополнительной информации о настройке сервера SMTP см.  
   
-- [Настройка службы SMTP (IIS 6,0)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
+- [Настройка службы SMTP (IIS 6.0)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [IIS 7,0: Настройка электронной почты SMTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
+- [IIS 7.0: настройка протокола электронной почты SMTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
 - [Установка службы SMTP](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
@@ -117,13 +117,13 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Запуск образца  
   
-1. Откройте в Visual Studio 2010 файл решения SendMail. sln.  
+1. Используя Visual Studio 2010, откройте файл решения SendMail.sln.  
   
 2. Убедитесь, что имеется доступ к работающему SMTP-серверу. См. инструкции по настройке.  
   
-3. Настройте программу, указав адрес сервера, а также адреса электронной почты и.  
+3. Назначьте программу с помощью адреса сервера, а также адреса электронной почты From and To.  
   
-     Для правильного выполнения этого примера может потребоваться настроить значение в адресах электронной почты и адресе SMTP-сервера в Program.cs и в последовательности. XAML. Потребуется изменение адреса в обоих расположениях, поскольку программа отправляет сообщения двумя различными способами  
+     Чтобы правильно выполнить этот образец, может потребоваться настроить значение адресов электронной почты from and To и адреса сервера SMTP в Program.cs и в Sequence.xaml. Потребуется изменение адреса в обоих расположениях, поскольку программа отправляет сообщения двумя различными способами  
   
 4. Для построения решения нажмите CTRL+SHIFT+B.  
   
@@ -131,9 +131,9 @@ new SendMail
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

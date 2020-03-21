@@ -2,15 +2,15 @@
 title: Пользовательская публикация WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 173deaf280c052b76e6937b2cec44ebdeafc57f9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae6d5fdf243d5000090e993bd3353c6180d0ccaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714915"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145063"
 ---
 # <a name="custom-wsdl-publication"></a>Пользовательская публикация WSDL
-В данном образце демонстрируются указанные ниже возможности.  
+В этом примере показано, как:  
   
 - реализации <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> пользовательского атрибута <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> для экспорта свойств атрибута в виде заметок WSDL;  
   
@@ -18,16 +18,16 @@ ms.locfileid: "74714915"
   
 - Реализация <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> в пользовательском поведении контракта и пользовательском поведении операции соответственно для записи импортированных заметок в виде комментариев в CodeDom для импортированных контракта и операции.  
   
-- Используйте <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>, чтобы скачать WSDL-файл, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> импорта WSDL с помощью пользовательского средства импорта WSDL и <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> для создания Windows Communication Foundation (WCF) клиентского кода с аннотацией WSDL как///и комментариями "'" в C# и Visual Basic.  
+- Используйте <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> для загрузки WSDL, для <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> импорта WSDL с помощью пользовательского импортера WSDL, а также <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> для создания кода клиента Windows Communication Foundation (WCF) с аннотациями WSDL как /// и '' комментарии в C и Visual Basic.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
-## <a name="service"></a>Service  
+## <a name="service"></a>Служба  
  В этом образце служба помечена двумя пользовательскими атрибутами. Первый атрибут, `WsdlDocumentationAttribute`, принимает строку в конструкторе и может применяться для предоставления интерфейса контракта или операции со строкой, описывающей их использование. Второй атрибут, `WsdlParamOrReturnDocumentationAttribute`, может применяться для возврата значений или параметров, описывающих эти значения в операции. В следующем примере показан контракт службы `ICalculator`, описанный с помощью этих атрибутов.  
   
 ```csharp  
-// Define a service contract.      
+// Define a service contract.
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
 [WsdlDocumentation("The ICalculator contract performs basic calculation services.")]  
@@ -37,7 +37,7 @@ public interface ICalculator
     [WsdlDocumentation("The Add operation adds two numbers and returns the result.")]  
     [return:WsdlParamOrReturnDocumentation("The result of adding the two arguments together.")]  
     double Add(  
-      [WsdlParamOrReturnDocumentation("The first value to add.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The first value to add.")]double n1,
       [WsdlParamOrReturnDocumentation("The second value to add.")]double n2  
     );  
   
@@ -45,7 +45,7 @@ public interface ICalculator
     [WsdlDocumentation("The Subtract operation subtracts the second argument from the first.")]  
     [return:WsdlParamOrReturnDocumentation("The result of the second argument subtracted from the first.")]  
     double Subtract(  
-      [WsdlParamOrReturnDocumentation("The value from which the second is subtracted.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The value from which the second is subtracted.")]double n1,
       [WsdlParamOrReturnDocumentation("The value that is subtracted from the first.")]double n2  
     );  
   
@@ -53,7 +53,7 @@ public interface ICalculator
     [WsdlDocumentation("The Multiply operation multiplies two values.")]  
     [return:WsdlParamOrReturnDocumentation("The result of multiplying the first and second arguments.")]  
     double Multiply(  
-      [WsdlParamOrReturnDocumentation("The first value to multiply.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The first value to multiply.")]double n1,
       [WsdlParamOrReturnDocumentation("The second value to multiply.")]double n2  
     );  
   
@@ -61,7 +61,7 @@ public interface ICalculator
     [WsdlDocumentation("The Divide operation returns the value of the first argument divided by the second argument.")]  
     [return:WsdlParamOrReturnDocumentation("The result of dividing the first argument by the second.")]  
     double Divide(  
-      [WsdlParamOrReturnDocumentation("The numerator.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The numerator.")]double n1,
       [WsdlParamOrReturnDocumentation("The denominator.")]double n2  
     );  
 }  
@@ -144,7 +144,7 @@ for (int i = 0; i < args.Length; i++)
   
 ```xml  
 <services>  
-  <service   
+  <service
       name="Microsoft.ServiceModel.Samples.CalculatorService"  
       behaviorConfiguration="CalculatorServiceBehavior">  
     <!-- ICalculator is exposed at the base address provided by host: http://localhost/servicemodelsamples/service.svc  -->  
@@ -223,8 +223,8 @@ public void GenerateOperation(OperationContractGenerationContext context)
   
 ```xml  
 <client>  
-  <endpoint address="http://localhost/servicemodelsamples/service.svc"   
-  binding="wsHttpBinding"   
+  <endpoint address="http://localhost/servicemodelsamples/service.svc"
+  binding="wsHttpBinding"
   contract="ICalculator" />  
   <metadata>  
     <wsdlImporters>  
@@ -234,57 +234,57 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- После указания пользовательского средства импорта система метаданных WCF загружает пользовательский импортер в любую <xref:System.ServiceModel.Description.WsdlImporter>, созданную для этой цели. В этом образце используется <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных, правильно настроенный <xref:System.ServiceModel.Description.WsdlImporter> для импорта метаданных с помощью создаваемого образецом пользовательского импортера и <xref:System.ServiceModel.Description.ServiceContractGenerator> для компиляции измененных сведений контракта в клиентский код Visual Basic и C#, который можно использовать в Visual Studio для поддержки Intellisense или скомпилировать в XML-документацию.  
+ После того, как пользовательский импортер был указан, система метаданных WCF загружает пользовательский импортер в любой <xref:System.ServiceModel.Description.WsdlImporter> созданный для этой цели. В этом образце используется <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных, правильно настроенный <xref:System.ServiceModel.Description.WsdlImporter> для импорта метаданных с помощью создаваемого образецом пользовательского импортера и <xref:System.ServiceModel.Description.ServiceContractGenerator> для компиляции измененных сведений контракта в клиентский код Visual Basic и C#, который можно использовать в Visual Studio для поддержки Intellisense или скомпилировать в XML-документацию.  
   
 ```csharp
 /// From WSDL Documentation:  
-///   
-/// <summary>The ICalculator contract performs basic calculation   
-/// services.</summary>   
-///   
+///
+/// <summary>The ICalculator contract performs basic calculation
+/// services.</summary>
+///
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
 [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="ICalculator")]  
 public interface ICalculator  
 {  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Add operation adds two numbers and returns the   
-    /// result.</summary><returns>The result of adding the two arguments   
-    /// together.</returns><param name="n1">The first value to add.</param><param   
-    /// name="n2">The second value to add.</param>   
-    ///   
+    ///
+    /// <summary>The Add operation adds two numbers and returns the
+    /// result.</summary><returns>The result of adding the two arguments
+    /// together.</returns><param name="n1">The first value to add.</param><param
+    /// name="n2">The second value to add.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/AddResponse")]  
     double Add(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Subtract operation subtracts the second argument from the   
-    /// first.</summary><returns>The result of the second argument subtracted from the   
-    /// first.</returns><param name="n1">The value from which the second is   
-    /// subtracted.</param><param name="n2">The value that is subtracted from the   
-    /// first.</param>   
-    ///   
+    ///
+    /// <summary>The Subtract operation subtracts the second argument from the
+    /// first.</summary><returns>The result of the second argument subtracted from the
+    /// first.</returns><param name="n1">The value from which the second is
+    /// subtracted.</param><param name="n2">The value that is subtracted from the
+    /// first.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtract", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/SubtractResponse")]  
     double Subtract(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Multiply operation multiplies two values.</summary><returns>The   
-    /// result of multiplying the first and second arguments.</returns><param   
-    /// name="n1">The first value to multiply.</param><param name="n2">The second value   
-    /// to multiply.</param>   
-    ///   
+    ///
+    /// <summary>The Multiply operation multiplies two values.</summary><returns>The
+    /// result of multiplying the first and second arguments.</returns><param
+    /// name="n1">The first value to multiply.</param><param name="n2">The second value
+    /// to multiply.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/MultiplyResponse")]  
     double Multiply(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Divide operation returns the value of the first argument divided   
-    /// by the second argument.</summary><returns>The result of dividing the first   
-    /// argument by the second.</returns><param name="n1">The numerator.</param><param   
-    /// name="n2">The denominator.</param>   
-    ///   
+    ///
+    /// <summary>The Divide operation returns the value of the first argument divided
+    /// by the second argument.</summary><returns>The result of dividing the first
+    /// argument by the second.</returns><param name="n1">The numerator.</param><param
+    /// name="n2">The denominator.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Divide", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/DivideResponse")]  
     double Divide(double n1, double n2);  
 }  
@@ -292,17 +292,17 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

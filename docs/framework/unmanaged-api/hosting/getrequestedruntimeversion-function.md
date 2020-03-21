@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-ms.openlocfilehash: be7d6ce29a9c9c4e3e530df40432b1a4c3b2d389
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6be0bc5d08f612dcb8ed7d256711e0c4367b9274
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136344"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178140"
 ---
 # <a name="getrequestedruntimeversion-function"></a>Функция GetRequestedRuntimeVersion
-Возвращает номер версии общеязыковой среды выполнения (CLR), запрошенной указанным приложением. Если эта версия не установлена, возвращает последнюю версию, установленную до запрошенной версии.  
+Получает номер версии общего времени выполнения языка (CLR), запрошенный указанным приложением. Если эта версия не установлена, получает самую последняя версия, которая установлена до запрашиваемых версий.  
   
- Эта функция является устаревшей в .NET Framework 4.  
+ Эта функция была унесена в системе .NET 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersion (  
-    [in]  LPWSTR  pExe,   
-    [out] LPWSTR  pVersion,   
-    [in]  DWORD   cchBuffer,   
+    [in]  LPWSTR  pExe,
+    [out] LPWSTR  pVersion,
+    [in]  DWORD   cchBuffer,
     [out] DWORD  *pdwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pExe`  
- окне Имя приложения.  
+ (в) Название приложения.  
   
  `pVersion`  
- заполняет Буфер, содержащий строку номера версии после успешного завершения.  
+ (ваут) Буфер, содержащий строку номера версии после успешного завершения.  
   
  `cchBuffer`  
- окне Длина буфера версии.  
+ (в) Длина буфера версии.  
   
  `pdwLength`  
- заполняет Указатель на длину строки номера версии.  
+ (ваут) Указатель на длину строки номера версии.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает коды стандартных ошибок модели COM, как определено в файле WinError. h, в дополнение к следующим значениям.  
+ Этот метод возвращает стандартные коды ошибок компонентной модели объектов (COM), как это определено в WinError.h, в дополнение к следующим значениям.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |ERROR_INSUFFICIENT_BUFFER|Буфер версии недостаточно велик для хранения строки версии.|  
-|E_POINTER|Параметр `pdwLength` имеет значение null.|  
+|E_POINTER|Параметр `pdwLength` имеет значение NULL.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
- **Библиотека:** MSCorEE. dll  
+ **Библиотека:** MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Функция GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [Функция GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)

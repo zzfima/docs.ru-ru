@@ -2,12 +2,12 @@
 title: Использование клиентского канала обнаружения
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: 05ca54d62179d024e619bc5c9c70a4e08b9dd62f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2d9dd68d233541f4d8cb3185adc1023cd5a19de1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975943"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184266"
 ---
 # <a name="using-the-discovery-client-channel"></a>Использование клиентского канала обнаружения
 При написании клиентского приложения WCF необходимо знать адрес конечной точки вызываемой службы. Во многих случаях адрес конечной точки службы неизвестен заранее или может измениться со временем. Клиентский канал обнаружения позволяет создать клиентское приложение WCF, описать службу, которую необходимо вызвать, после чего клиентский канал автоматически отправит зондирующий запрос. После ответа службы клиентский канал обнаружения извлекает адрес конечной точки службы из ответа запроса и пользуется им для вызова службы.  
@@ -22,9 +22,9 @@ ms.locfileid: "73975943"
   
 1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, которое используется для описания вызываемой службы.  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>, указывающий конечную точку обнаружения, в которую отправляются сообщения обнаружения.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>которая определяет конечную точку открытия для отправки сообщений об обнаружении.  
   
- Свойство <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> позволяет указать искомый контракт службы, все необходимые URI области и максимальное количество попыток открытия канала. Тип контракта указывается путем вызова конструктора <xref:System.ServiceModel.Discovery.FindCriteria>. URI области могут быть добавлены в свойство <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. Свойство <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> позволяет задать максимальное количество результатов, с которыми клиент пытается установить соединение. При получении ответа на зондирующий запрос клиент выполняет попытку открытия канала по адресу конечной точки, полученному из ответа запроса. Если возникло исключение, то клиент переходит к следующему ответу зондирующего запроса и при необходимости ожидает получения дополнительных ответов. Это продолжается до тех пор, пока не будет успешно открыт канал или достигнуто максимальное количество результатов. Дополнительные сведения об этих параметрах см. в разделе <xref:System.ServiceModel.Discovery.FindCriteria>.  
+ Свойство <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> позволяет указать искомый контракт службы, все необходимые URI области и максимальное количество попыток открытия канала. Тип контракта указан при вызове <xref:System.ServiceModel.Discovery.FindCriteria>конструктора. URI области могут быть добавлены в свойство <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. Свойство <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> позволяет задать максимальное количество результатов, с которыми клиент пытается установить соединение. При получении ответа на зондирующий запрос клиент выполняет попытку открытия канала по адресу конечной точки, полученному из ответа запроса. Если возникло исключение, то клиент переходит к следующему ответу зондирующего запроса и при необходимости ожидает получения дополнительных ответов. Это продолжается до тех пор, пока не будет успешно открыт канал или достигнуто максимальное количество результатов. Дополнительные сведения об этих параметров см. в разделе <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
  Свойство <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> позволяет указать конечную точку обнаружения для использования. Обычно это <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, но может быть также использована любая действительная конечная точка.  
   
@@ -41,7 +41,7 @@ bindingElement.FindCriteria = new FindCriteria(typeof(ICalculator)) { MaxResults
 // Use the UdpDiscoveryEndpoint  
 bindingElement.DiscoveryEndpoint = new UdpDiscoveryEndpoint();  
   
-// The service uses the BasicHttpBinding, so use that and insert the DiscoveryClientBindingElement at the   
+// The service uses the BasicHttpBinding, so use that and insert the DiscoveryClientBindingElement at the
 // top of the stack  
 CustomBinding binding = new CustomBinding(new BasicHttpBinding());  
 binding.Elements.Insert(0,bindingElement);  
@@ -60,4 +60,4 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>Безопасность и клиентский канал обнаружения  
- При использовании клиентского канала обнаружения указываются две конечные точки. Одна из этих точек служит для передачи сообщений обнаружения (обычно это <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>), а другая является конечной точкой приложения. При реализации службы безопасности необходимо соблюдать предосторожность и защищать обе конечные точки. Дополнительные сведения о безопасности см. в разделе [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).
+ При использовании клиентского канала обнаружения указываются две конечные точки. Одна из этих точек служит для передачи сообщений обнаружения (обычно это <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>), а другая является конечной точкой приложения. При реализации службы безопасности необходимо соблюдать предосторожность и защищать обе конечные точки. Для получения дополнительной информации о [безопасности](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)см.

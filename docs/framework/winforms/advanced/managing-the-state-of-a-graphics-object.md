@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: ce645133af35271fe1de969621907c53183d9a54
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: d1e7e6eac775ca779fb68605adcc9bc2b9915e49
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505592"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182452"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Управление состоянием объекта Graphics
-<xref:System.Drawing.Graphics> Класс лежит в GDI +. Чтобы нарисовать что-либо, необходимо получить <xref:System.Drawing.Graphics> , задать его свойства и вызывать его методы <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>и ей подобные).  
+Класс <xref:System.Drawing.Graphics> находится в центре GDI. Чтобы нарисовать что-нибудь, <xref:System.Drawing.Graphics> вы получаете объект, устанавливаете его свойства и называете его методы <xref:System.Drawing.Graphics.DrawLine%2A> <xref:System.Drawing.Graphics.DrawImage%2A>и <xref:System.Drawing.Graphics.DrawString%2A>тому подобное).  
   
- В следующем примере вызывается <xref:System.Drawing.Graphics.DrawRectangle%2A> метод <xref:System.Drawing.Graphics> объекта. Первый аргумент, переданный <xref:System.Drawing.Graphics.DrawRectangle%2A> метод <xref:System.Drawing.Pen> объекта.  
+ Следующий пример <xref:System.Drawing.Graphics.DrawRectangle%2A> называет метод <xref:System.Drawing.Graphics> объекта. Первым аргументом, <xref:System.Drawing.Graphics.DrawRectangle%2A> передаваемым методу, <xref:System.Drawing.Pen> является объект.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -33,18 +33,18 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ```  
   
 ## <a name="graphics-state"></a>Состояние графики  
- Объект <xref:System.Drawing.Graphics> объекта более чем функции рисования, такие как <xref:System.Drawing.Graphics.DrawLine%2A> и <xref:System.Drawing.Graphics.DrawRectangle%2A>. Объект <xref:System.Drawing.Graphics> объект также хранит состояние графики, которое можно разделить на следующие категории:  
+ Объект <xref:System.Drawing.Graphics> делает больше, чем предоставляет методы рисования, такие как <xref:System.Drawing.Graphics.DrawLine%2A> и <xref:System.Drawing.Graphics.DrawRectangle%2A>. Объект <xref:System.Drawing.Graphics> также поддерживает графическое состояние, которое можно разделить на следующие категории:  
   
-- Параметры качества  
+- Настройки качества  
   
 - Преобразования  
   
-- Отсеченная область  
+- Область отсечения  
   
-### <a name="quality-settings"></a>Параметры качества  
- Объект <xref:System.Drawing.Graphics> имеет несколько свойств, которые влияют на качество рисуемых объектов. Например, можно задать <xref:System.Drawing.Graphics.TextRenderingHint%2A> свойство, чтобы указать тип сглаживания (если таковые имеются), примененный к тексту. Другие свойства, которые влияют на качество являются <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, и <xref:System.Drawing.Graphics.InterpolationMode%2A>.  
+### <a name="quality-settings"></a>Настройки качества  
+ Объект <xref:System.Drawing.Graphics> имеет несколько свойств, влияющих на качество нарисованных элементов. Например, можно установить свойство <xref:System.Drawing.Graphics.TextRenderingHint%2A> для указания типа антиалиазинга (если таковой имеется) к тексту. Другие свойства, <xref:System.Drawing.Graphics.SmoothingMode%2A>которые <xref:System.Drawing.Graphics.CompositingMode%2A> <xref:System.Drawing.Graphics.CompositingQuality%2A>влияют <xref:System.Drawing.Graphics.InterpolationMode%2A>на качество, и .  
   
- В следующем примере рисуется два эллипса, один с режимом сглаживания <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> и один с режимом сглаживания <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:  
+ Следующий пример рисует два эллипса, один <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> с режимом сглаживания <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>установлен на и один с сглаживающим режимом, установленным на:  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -67,9 +67,9 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Преобразования  
- Объект <xref:System.Drawing.Graphics> поддерживает два преобразования (мировое и страничное), которые применяются ко всем элементам, отображаемым <xref:System.Drawing.Graphics> объекта. Любой аффинного преобразования могут храниться в мировое преобразование. Аффинные преобразования включают масштабирование, поворот, отражение, наклон и преобразования. Преобразование страницы может использоваться для масштабирования и преобразования единиц измерения (например, точек в дюймах). Дополнительные сведения см. в разделе [системы координат и преобразования](coordinate-systems-and-transformations.md).  
+ Объект <xref:System.Drawing.Graphics> поддерживает два преобразования (мир и страница), которые применяются <xref:System.Drawing.Graphics> ко всем элементам, нарисованным этим объектом. Любая трансформация аффин может храниться в мировой трансформации. Преобразований Affine включают масштабирование, вращание, отражение, перекос и перевод. Преобразование страницы может быть использовано для масштабирования и для изменения единиц (например, пикселей на дюймы). Для получения дополнительной [информации см.](coordinate-systems-and-transformations.md)  
   
- В следующем примере задается мировое и страничное преобразования из <xref:System.Drawing.Graphics> объекта. Мировое преобразование присваивается поворот на 30 градусов. Преобразование страницы устанавливается таким образом, координаты передать второй <xref:System.Drawing.Graphics.DrawEllipse%2A> будет рассматриваться как миллиметрах вместо пикселей. Код вызывает два идентичных <xref:System.Drawing.Graphics.DrawEllipse%2A> метод. Мировое преобразование применяется к первому <xref:System.Drawing.Graphics.DrawEllipse%2A> вызов и оба вида преобразований (мировое и страничное) применяются к второй <xref:System.Drawing.Graphics.DrawEllipse%2A> вызова.  
+ Следующий пример устанавливает преобразования мира и <xref:System.Drawing.Graphics> страницы объекта. Преобразование мира настроено на 30-градусную ротацию. Преобразование страницы настроено таким образом, <xref:System.Drawing.Graphics.DrawEllipse%2A> что координаты, передаваемые второй, будут рассматриваться как миллиметры вместо пикселей. Код делает два одинаковых <xref:System.Drawing.Graphics.DrawEllipse%2A> вызова метода. Преобразование мира применяется <xref:System.Drawing.Graphics.DrawEllipse%2A> к первому вызову, и оба преобразования <xref:System.Drawing.Graphics.DrawEllipse%2A> (мир и страница) применяются ко второму вызову.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -84,7 +84,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50)
   
 ```csharp  
 Graphics graphics = e.Graphics;  
-Pen pen = new Pen(Color.Red);   
+Pen pen = new Pen(Color.Red);
   
 graphics.ResetTransform();  
 graphics.RotateTransform(30);                    // world transformation  
@@ -93,14 +93,14 @@ graphics.PageUnit = GraphicsUnit.Millimeter;     // page transformation
 graphics.DrawEllipse(pen, 0, 0, 100, 50);  
 ```  
   
- На следующем рисунке двух эллипсов. Обратите внимание, что поворот на 30 градусов относительно начала координат (в левом верхнем углу клиентской области), не о центров эллипсов. Обратите внимание на то, что толщина пера, равная 1, означает 1 пиксель для первого эллипса и 1 миллиметр второго эллипса.  
+ На следующей иллюстрации показаны два эллипса. Отметим, что 30-градусное вращение связано с происхождением системы координат (вверху-левом углу клиентской зоны), а не о центрах эллипсов. Также обратите внимание, что ширина пера 1 означает 1 пиксель для первого эллипса и 1 миллиметр для второго эллипса.  
   
- ![Рисунок, показывающий двух эллипсов: ширина поворота и пера.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
+ ![Иллюстрация, на рисунке два эллипса: вращение и ширина пера.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
-### <a name="clipping-region"></a>Отсеченная область  
- Объект <xref:System.Drawing.Graphics> объект поддерживает область обрезки, применяются ко всем элементам, отображаемым <xref:System.Drawing.Graphics> объекта. Можно задать области обрезки, вызвав <xref:System.Drawing.Graphics.SetClip%2A> метод.  
+### <a name="clipping-region"></a>Область отсечения  
+ Объект <xref:System.Drawing.Graphics> поддерживает область отсечения, которая применяется ко всем элементам, нарисованным этим <xref:System.Drawing.Graphics> объектом. Можно настроить область отсечения, позвонив по методу. <xref:System.Drawing.Graphics.SetClip%2A>  
   
- В следующем примере создается область креста, являющаяся объединением двух прямоугольников. Этот регион используется в качестве отсеченной области объекта <xref:System.Drawing.Graphics> объекта. Затем код выводит две строки, которые ограничены внутренней области отсечения.  
+ Следующий пример создает область плюс-образной, образуя объединение двух прямоугольников. Этот регион обозначен как область отсечения <xref:System.Drawing.Graphics> объекта. Затем код рисует две линии, которые ограничены внутренней частью области отсечения.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -128,10 +128,10 @@ graphics.DrawLine(pen, 40, 20, 190, 150)
 Graphics graphics = e.Graphics;  
   
 // Opaque red, width 5  
-Pen pen = new Pen(Color.Red, 5);    
+Pen pen = new Pen(Color.Red, 5);
   
 // Opaque aqua  
-SolidBrush brush = new SolidBrush(Color.FromArgb(255, 180, 255, 255));    
+SolidBrush brush = new SolidBrush(Color.FromArgb(255, 180, 255, 255));
   
 // Create a plus-shaped region by forming the union of two rectangles.  
 Region region = new Region(new Rectangle(50, 0, 50, 150));  
@@ -146,11 +146,11 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- На следующем рисунке показан усеченные строки:  
+ На следующей иллюстрации показаны обрезанные строки:  
   
- ![Схема, показывающая ограниченная область обрезки.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
+ ![Диаграмма, отображая область ограниченного клипа.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Использование вложенных графических контейнеров](using-nested-graphics-containers.md)

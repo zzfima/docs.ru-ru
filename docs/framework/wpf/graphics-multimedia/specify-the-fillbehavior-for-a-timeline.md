@@ -1,32 +1,32 @@
 ---
-title: Практическое руководство. Определение режима FillBehavior для временной шкалы, достигшей конца периода активности
+title: Практическое руководство. Указание режима FillBehavior для временной шкалы, достигшей конца периода активности
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f54f2c1bb49bb7a0301f112a109194ab1a8658e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973671"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141177"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Практическое руководство. Определение режима FillBehavior для временной шкалы, достигшей конца периода активности
-В этом примере показано, как указать <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> для неактивного <xref:System.Windows.Media.Animation.Timeline> анимированного свойства.  
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Практическое руководство. Указание режима FillBehavior для временной шкалы, достигшей конца периода активности
+В этом примере <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> показано, как <xref:System.Windows.Media.Animation.Timeline> указать для неактивного анимированного свойства.  
   
 ## <a name="example"></a>Пример  
- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Свойство <xref:System.Windows.Media.Animation.Timeline> определяет, что происходит с значение анимированного свойства, если оно не анимировано, то есть когда <xref:System.Windows.Media.Animation.Timeline> неактивна, но его родительский <xref:System.Windows.Media.Animation.Timeline> находится в своем активном периоде или периоде удержания. Например, она анимированного свойства по-прежнему со своей стороны значение после окончания анимации или делает это вернуться к значению, которое было до начала анимации?  
+ Свойство <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойства <xref:System.Windows.Media.Animation.Timeline> определяет, что происходит со значением анимированного свойства, когда <xref:System.Windows.Media.Animation.Timeline> оно не анимируется, то есть, когда оно неактивно, но его родитель <xref:System.Windows.Media.Animation.Timeline> находится внутри своего активного или удерживаемого периода. Например, остается ли анимированное свойство в конечном значении после окончания анимации или возвращается к значению, имевачтому до начала анимации?  
   
- В следующем примере используется <xref:System.Windows.Media.Animation.DoubleAnimation> для анимации <xref:System.Windows.FrameworkElement.Width%2A> двух прямоугольников. Каждый прямоугольник использует другое <xref:System.Windows.Media.Animation.Timeline> объекта.  
+ В следующем примере <xref:System.Windows.Media.Animation.DoubleAnimation> используется для <xref:System.Windows.FrameworkElement.Width%2A> анимировать два прямоугольника. В каждом прямоугольнике используется другой <xref:System.Windows.Media.Animation.Timeline> объект.  
   
- Один <xref:System.Windows.Media.Animation.Timeline> имеет <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> , имеет значение <xref:System.Windows.Media.Animation.FillBehavior.Stop>, чего ширина прямоугольника, вернуться к его не анимированное значение, если <xref:System.Windows.Media.Animation.Timeline> заканчивается. Другой <xref:System.Windows.Media.Animation.Timeline> имеет <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> из <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, чего ширина оставаться в конце значения при <xref:System.Windows.Media.Animation.Timeline> заканчивается.  
+ Один <xref:System.Windows.Media.Animation.Timeline> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> имеет, что <xref:System.Windows.Media.Animation.FillBehavior.Stop>установлен на , что приводит к ширине прямоугольника, чтобы <xref:System.Windows.Media.Animation.Timeline> вернуться к своей неанимированной значение, когда заканчивается. Другой <xref:System.Windows.Media.Animation.Timeline> имеет <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>из, что приводит к ширине, чтобы <xref:System.Windows.Media.Animation.Timeline> остаться в его конечное значение, когда заканчивается.  
   
  [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
   
- Полный пример см. в разделе [Коллекция примеров анимации](https://go.microsoft.com/fwlink/?LinkID=159969).  
+ Для полного примера, см [Анимация Пример Галерея](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationExamples).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.Animation.DoubleAnimation>
 - <xref:System.Windows.FrameworkElement.Width%2A>
@@ -35,4 +35,4 @@ ms.locfileid: "61973671"
 - <xref:System.Windows.Media.Animation.FillBehavior.Stop>
 - <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Анимации и практические руководства](animation-and-timing-how-to-topics.md)
+- [Разделы руководства по анимации и таймерам](animation-and-timing-how-to-topics.md)

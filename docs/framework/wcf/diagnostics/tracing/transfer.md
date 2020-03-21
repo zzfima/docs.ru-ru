@@ -2,18 +2,18 @@
 title: Transfer
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: c3f9420ac798bf2722f825d14ca64653127432b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662889"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185708"
 ---
 # <a name="transfer"></a>Transfer
-В этом разделе описывается передачи в модели трассировки действий Windows Communication Foundation (WCF).  
+Эта тема описывает передачу в модели отслеживания активности Фонда связи Windows (WCF).  
   
 ## <a name="transfer-definition"></a>Определение перенаправления  
- Перенаправления между действиями передают причинно-следственную связь между событиями в связанных действиях внутри конечных точек. Два действия связываются перенаправлениями при потоке управления от одного из этих действий к другому, например когда вызов метода пересекает границы действия. В WCF когда байт службой, действие Listen At передается действие Receive Bytes которой создается объект сообщения. Список сценариев трассировки end-to-end, соответствующих действий и трассировки разработки, см. в разделе [сценариев трассировки End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Перенаправления между действиями передают причинно-следственную связь между событиями в связанных действиях внутри конечных точек. Два действия связываются перенаправлениями при потоке управления от одного из этих действий к другому, например когда вызов метода пересекает границы действия. В WCF, когда байты входят в службу, действие Listen At is передается в действие Receive Bytes, где создается объект сообщения. Список сценариев сквозного отслеживания и их соответствующей деятельности и проектирования трассировки можно узнать в [сценариях отслеживания от end-to-End.](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
   
  Для выдачи трассировки перенаправлений задайте параметр `ActivityTracing` в источнике трассировки, как показано в предыдущем примере кода.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "64662889"
   
  Трассировка перенаправления выдается от действия M на действие N при передаче управления от M к N. Например, N выполняет некоторую обработку для M в связи с тем, что вызов метода пересекает границы действий. Действие N может уже существовать или быть создано. Действие N порождается действием M, когда N представляет собой новое действие, выполняющее некоторую обработку для M.  
   
- За перенаправлением от M на N не обязательно следует перенаправление обратно от N на M. Это связано с тем, что M может породить некоторую обработку в N и не следит за тем, когда N завершит эту обработку. Фактически действие M может быть прекращено до того, как N завершит свою задачу. Это происходит в действии «Open ServiceHost» (M), которое порождает действия прослушивателя (N) и затем прекращает работу. Перенаправление обратно от N на M означает, что действие N завершило обработку, относящуюся к действию M.  
+ За перенаправлением от M на N не обязательно следует перенаправление обратно от N на M. Это связано с тем, что M может породить некоторую обработку в N и не следит за тем, когда N завершит эту обработку. Фактически действие M может быть прекращено до того, как N завершит свою задачу. Это происходит в "Open ServiceHost" деятельности (M), которая порождает действия слушателя (N), а затем завершает. Перенаправление обратно от N на M означает, что действие N завершило обработку, относящуюся к действию M.  
   
  Действие N может продолжать выполнять другую обработку, не относящуюся к действию M, например существующее действие структуры проверки подлинности (N) продолжит получать запросы на вход (M) от других действий входа.  
   
@@ -67,7 +67,7 @@ TraceSource ts = new TraceSource("myTS");
 // 1. remember existing ("ambient") activity for clean up  
 Guid oldGuid = Trace.CorrelationManager.ActivityId;  
 // this will be our new activity  
-Guid newGuid = Guid.NewGuid();   
+Guid newGuid = Guid.NewGuid();
 
 // 2. call transfer, indicating that we are switching to the new AID  
 ts.TraceTransfer(667, "Transferring.", newGuid);  
@@ -87,7 +87,7 @@ ts.TraceEvent(TraceEventType.Information, 667, "Hello from activity " + i);
 // Perform Work  
 // some work.  
 // Return  
-ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);   
+ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);
 
 // 6. Emit the transfer returning to the original activity  
 ts.TraceTransfer(667, "Transferring Back.", oldGuid);  
@@ -96,13 +96,13 @@ ts.TraceTransfer(667, "Transferring Back.", oldGuid);
 ts.TraceEvent(TraceEventType.Stop, 667, "Boundary: Activity " + i);  
 
 // 8. Change the tls variable to the original AID  
-Trace.CorrelationManager.ActivityId = oldGuid;    
+Trace.CorrelationManager.ActivityId = oldGuid;
 
 // 9. Resume the old activity  
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Настройка трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

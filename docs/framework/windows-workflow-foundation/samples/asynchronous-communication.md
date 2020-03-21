@@ -2,17 +2,17 @@
 title: Асинхронное взаимодействие
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: 28b325a6bd870282577a2989b616628d52262deb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: e1bc63b5d3178b8e98350dedd8eb0791e0e35589
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711865"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142880"
 ---
 # <a name="asynchronous-communication"></a>Асинхронное взаимодействие
-В этом примере демонстрируется асинхронное выполнение обмена данными между двумя различными службами Windows Workflow Foundation (WF) по умолчанию.  
+Этот пример показывает, как связь между двумя различными службами Windows Workflow Flowflow Foundation (WF) осуществляется асинхронно по умолчанию.  
   
-## <a name="demonstrates"></a>Демонстрации  
+## <a name="demonstrates"></a>Что демонстрирует  
  Асинхронное взаимодействие между службами [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  
   
 ## <a name="discussion"></a>Обсуждение  
@@ -26,24 +26,24 @@ ms.locfileid: "74711865"
  RentalApprovalService  
  Эта служба получает заявление от лица, которому требуется кредит. Эта служба взаимодействует в асинхронном режиме со службой `CreditCheckService` для принятия решения об одобрении заявки на кредит.  
   
- Клиент  
+ клиент  
  Клиент связывается в синхронном режиме со службой `RentalApprovalService`, чтобы узнать, одобрено ли заявление на получение кредита.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Щелкните правой кнопкой мыши решение **асинчронаускоммуникатион** и выберите пункт **свойства**.  
+1. Нажмите правой кнопкой мыши на решение **AsynchronousCommunication** и выберите **Свойства.**  
   
-2. В окне **Общие свойства**выберите **запускаемый проект**и выберите **Несколько запускаемых проектов**.  
+2. В **общих свойствах**выберите **Startup Project**и выберите **несколько проектов запуска.**  
   
-3. Переместите **ренталаппровалсервице** в первую точку в списке, за которой следует **кредитчекксервице**, а затем — **клиент**. Задайте действие **запуска** для всех трех проектов.  
+3. Переместить **RentalApprovalService** на первую позицию в списке, а затем **CreditCheckService**, а затем **клиент**. Установите действие **«Пуск»** по всем трем проектам.  
   
-4. Нажмите кнопку **ОК**и нажмите клавишу F5, чтобы запустить пример.  
+4. Нажмите **OK**, и нажмите F5 для запуска образца.  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`

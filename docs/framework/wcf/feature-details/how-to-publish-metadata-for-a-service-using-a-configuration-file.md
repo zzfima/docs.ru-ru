@@ -2,20 +2,20 @@
 title: Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 26894a3951b91879a7b3e6f66731891113394082
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7ea0a2aa386f747b89f56f21d75a97e4409140a1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045295"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184872"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
-Это один из двух инструкций, демонстрирующих публикацию метаданных для службы Windows Communication Foundation (WCF). Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода. В этом разделе показано, как публиковать метаданные для службы с помощью файла конфигурации.  
+Это одна из двух тем, демонстрирующих публикацию метаданных для службы Windows Communication Foundation (WCF). Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода. В этом разделе показано, как публиковать метаданные для службы с помощью файла конфигурации.  
   
 > [!CAUTION]
-> В этом разделе показано, как опубликовать метаданные незащищенным образом. Любой клиент может получить метаданные из службы. Если требуется безопасная публикация метаданных в службе, см. раздел Настраиваемая [Конечная точка безопасных метаданных](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+> В этом разделе показано, как опубликовать метаданные незащищенным образом. Любой клиент может получить метаданные из службы. Если вам требуется, чтобы служба безопасно публиковала метаданные, [см.](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
   
- Дополнительные сведения о публикации метаданных в коде см. в [разделе как Публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Публикация метаданных позволяет клиентам извлекать метаданные с помощью запроса WS-Transfer GET или запроса HTTP/GET, используя строку запроса `?wsdl`. Чтобы убедиться в том, что код работает, создайте базовую службу WCF. Для упрощения в следующем коде представлена несложная резидентная служба.  
+ Для получения дополнительной информации о публикации метаданных в коде [см.](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md) Публикация метаданных позволяет клиентам извлекать метаданные с помощью запроса WS-Transfer GET или запроса HTTP/GET, используя строку запроса `?wsdl`. Чтобы убедиться, что код работает, создайте базовый сервис WCF. Для упрощения в следующем коде представлена несложная резидентная служба.  
   
 ```csharp  
 using System;  
@@ -46,7 +46,7 @@ namespace Metadata.Samples
         static void Main(string[] args)  
         {  
             ServiceHost host = new ServiceHost(typeof(SimpleService),  
-                new Uri("http://localhost:8001/MetadataSample"));   
+                new Uri("http://localhost:8001/MetadataSample"));
             try  
             {  
                 // Open the service host to accept incoming calls  
@@ -92,15 +92,15 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Публикация метаданных для службы WCF с помощью файла конфигурации приложения  
   
-1. В файле App.config после закрывающего элемента `</services>`behaviors&gt; создайте элемент`<behaviors>`.  
+1. В файле App.config после закрывающего элемента `</services>`.  
 
-2. Внутри элемента `<behaviors>` добавьте элемент `<serviceBehaviors>`.  
+2. В элемент `<behaviors>` добавьте элемент `<serviceBehaviors>`.  
 
-3. Добавить `<behavior>` элемент `<serviceBehaviors>` элемент и указать значение для `name` атрибут `<behavior>` элемента.  
+3. Добавьте элемент `<behavior>``<serviceBehaviors>` элемента .  
 
 4. Добавьте элемент `<serviceMetadata>` в элемент `<behavior>`. Задайте атрибуту `httpGetEnabled` значение `true`, а атрибуту `policyVersion` значение Policy15. `httpGetEnabled` позволяет службе отвечать на запросы метаданных, переданные с помощью запроса HTTP GET. `policyVersion` сообщает службе, что формируемые метаданные должны соответствовать спецификации WS-Policy 1.5.  
 
-5. Добавьте атрибут `behaviorConfiguration` элементу `<service>`name и задайте атрибут`name`&lt;behavior&gt; элемента`<behavior>`, добавленного на шаге 1, как показано в следующем примере кода.  
+5. Добавьте атрибут `behaviorConfiguration` элементу `<service>``name`, добавленного на шаге 1, как показано в следующем примере кода.  
   
     ```xml  
     <services>  
@@ -119,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6. Добавьте один или несколько элементов `<endpoint>`IMetadataExchange с контрактом`IMetadataExchange`, как показано в следующем примере кода.  
+6. Добавьте один или несколько элементов `<endpoint>`, как показано в следующем примере кода.  
   
     ```xml  
     <services>  
@@ -156,9 +156,9 @@ namespace Metadata.Samples
   
     - абсолютный адрес.  
   
-9. Постройте и запустите консольное приложение.  
+9. Скомпилируйте и запустите консольное приложение.  
   
-10. С помощью Internet Explorer перейдите к базовому адресу службы (http://localhost:8001/MetadataSample в этом примере) и убедитесь, что публикация метаданных включена. Если нет, появится сообщение в верхней части полученной страницы: "Публикация метаданных для этой службы сейчас отключена".  
+10. Используйте Internet Explorer, чтобы просмотретьhttp://localhost:8001/MetadataSample базовый адрес службы (в этом примере) и убедиться, что публикация метаданных включена. В противном случае вверху страницы отображается сообщение "Публикация метаданных для этой службы в настоящее время отключена".  
   
 ### <a name="to-use-default-endpoints"></a>Использование конечных точек по умолчанию  
   
@@ -182,7 +182,7 @@ namespace Metadata.Samples
      Поскольку служба имеет <xref:System.ServiceModel.Description.ServiceMetadataBehavior> со свойством `httpGetEnabled`, установленным в значение `true`, то для службы включена публикация метаданных, а поскольку конечные точки не были добавлены явно, среда выполнения добавляет конечные точки по умолчанию. Дополнительные сведения о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Упрощенная конфигурация](../../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показана реализация базовой службы WCF и файла конфигурации, который публикует метаданные для службы.  
+ Следующий пример кода показывает реализацию базовой службы WCF и файла конфигурации, который публикует метаданные для службы.  
   
 ```csharp  
 using System;  
@@ -213,7 +213,7 @@ namespace Metadata.Samples
         static void Main(string[] args)  
         {  
             ServiceHost host = new ServiceHost(typeof(SimpleService),  
-                new Uri("http://localhost:8001/MetadataSample"));   
+                new Uri("http://localhost:8001/MetadataSample"));
             try  
             {  
                 // Open the service host to accept incoming calls  
@@ -253,11 +253,11 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [Практическое руководство. Размещение службы WCF в управляемом приложении](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Практическое руководство. Размещение службы WCF в управляемом приложении](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Резидентное размещение](../../../../docs/framework/wcf/samples/self-host.md)
 - [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Практическое руководство. Публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Практическое руководство. Публикация метаданных для службы с использованием кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

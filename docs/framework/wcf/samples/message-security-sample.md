@@ -2,15 +2,15 @@
 title: Пример безопасности сообщений
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: df23bf79f105cd17177cc4f67e4574dcedf20656
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 43e1a9104bdd44509d86bd198559c5e7477a9964
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714850"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183518"
 ---
 # <a name="message-security-sample"></a>Пример безопасности сообщений
-Данный образец демонстрирует реализацию приложения, в котором используется привязка `basicHttpBinding` и безопасность сообщений. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) , который реализует службу калькулятора.  
+Данный образец демонстрирует реализацию приложения, в котором используется привязка `basicHttpBinding` и безопасность сообщений. Этот пример основан на [getting Started,](../../../../docs/framework/wcf/samples/getting-started-sample.md) который реализует услугу калькулятора.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -26,7 +26,7 @@ ms.locfileid: "74714850"
      <!-- host: http://localhost:8000/ServiceModelSamples/service.-->  
      <endpoint address=""  
                binding="basicHttpBinding"  
-               bindingConfiguration="Binding1"   
+               bindingConfiguration="Binding1"
                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
     </service>  
   </services>  
@@ -34,7 +34,7 @@ ms.locfileid: "74714850"
 </system.serviceModel>  
 ```  
   
- Конфигурация привязки задает атрибуту `mode` [> безопасности\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) `Message` и устанавливает атрибут `clientCredentialType`\<ного [сообщения](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) в >, как показано в следующем образце конфигурации:  
+ Связывающая конфигурация устанавливает `mode` атрибут `Message` `clientCredentialType` [ \<>безопасности](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) и устанавливает `Certificate` атрибут [ \<сообщения,>,](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) как показано в следующей конфигурации образца:  
   
 ```xml  
 <bindings>  
@@ -68,7 +68,7 @@ ms.locfileid: "74714850"
       <!--certificate installed during the setup instructions. -->  
       <serviceCredentials>  
         <serviceCertificate findValue="localhost"  
-               storeLocation="LocalMachine"   
+               storeLocation="LocalMachine"
                storeName="My" x509FindType="FindBySubjectName" />  
         <clientCertificate>  
           <!-- Setting the certificateValidationMode to -->  
@@ -83,7 +83,7 @@ ms.locfileid: "74714850"
           <!-- ChainTrust. The security implications of this -->  
           <!-- setting should be carefully considered before using -->  
           <!-- PeerOrChainTrust in production code. -->  
-          <authentication   
+          <authentication
                        certificateValidationMode="PeerOrChainTrust" />  
         </clientCertificate>  
       </serviceCredentials>  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-and-build-the-sample"></a>Настройка и сборка образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 3. Запустите клиентское приложение из \service\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 5. После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты. В других образцах обеспечения безопасности используются те же сертификаты.  
   
@@ -141,15 +141,15 @@ Press <ENTER> to terminate client.
   
 4. Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента. Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.  
   
-5. На сервере выполните команду `setup.bat service`. При запуске `setup.bat` с аргументом `service` создается сертификат службы с полным доменным именем компьютера и экспортируется сертификат службы в файл с именем Service. cer.  
+5. На сервере выполните команду `setup.bat service`. Запуск `setup.bat` с `service` аргументом создает сертификат обслуживания с полностью квалифицированным доменным именем машины и экспортирует сертификат обслуживания в файл под названием Service.cer.  
   
-6. Измените файл Service. exe. config в соответствии с новым именем сертификата (в атрибуте `findValue` в элементе [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), который совпадает с полным доменным именем компьютера. Также измените значение базового адреса для указания полного доменного имени компьютера вместо localhost`.`  
+6. Edit Service.exe.config, чтобы отразить новое `findValue` имя сертификата (в атрибуте в [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) элемент), который является таким же, как полностью квалифицированное доменное имя машины. Также измените значение базового адреса для указания полного доменного имени компьютера вместо localhost`.`  
   
 7. Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   
 8. На клиенте выполните команду `setup.bat client`. При выполнении команды `setup.bat`с аргументом `client` создается сертификат клиента с именем client.com, который экспортируется в файл с именем Client.cer.  
   
-9. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы. Для этого замените имя localhost полным именем домена сервера. Также измените атрибут `findValue` [\<дефаултцертификате >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) на новое имя сертификата службы, которое является полным доменным именем сервера.  
+9. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы. Для этого замените имя localhost полным именем домена сервера. Также измените `findValue` атрибут [ \<>по умолчанию](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) на новое имя сертификата обслуживания, которое является полностью квалифицированным доменным именем сервера.  
   
 10. Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.  
   
@@ -161,20 +161,20 @@ Press <ENTER> to terminate client.
   
 14. На клиентском компьютере из окна командной строки запустите программу Client.exe.  
   
-    1. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+    1. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 ### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
 - После завершения работы примера запустите в папке примеров файл Cleanup.bat.  
   
     > [!NOTE]
-    > Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах. Если вы выполнили примеры Windows Communication Foundation (WCF), использующие сертификаты на разных компьютерах, обязательно очистите сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Пример: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
+    > Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах. Если вы используете образцы Windows Communication Foundation (WCF), которые используют сертификаты в разных машинах, обязательно очистите сертификаты обслуживания, установленные в магазине CurrentUser - TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Пример: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  

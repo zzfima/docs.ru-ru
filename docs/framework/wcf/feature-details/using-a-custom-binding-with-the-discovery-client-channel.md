@@ -2,22 +2,22 @@
 title: Использование пользовательской привязки для клиентского канала обнаружения
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 406a53dece6370fbb56daa5a30b52621ca1dcd6d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5f3f5fe24d1f19ce503b793d9aad870d882c7971
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975983"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184291"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Использование пользовательской привязки для клиентского канала обнаружения
 При использовании пользовательской привязки к <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> необходимо определить поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который будет создавать экземпляры <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.  
   
 ## <a name="creating-a-discoveryendpointprovider"></a>Создание DiscoveryEndpointProvider  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> отвечает за создание экземпляров <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> по запросу. Чтобы определить поставщика конечной точки обнаружения, создайте класс из <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, переопределив метод <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A>, а затем вернув новую конечную точку обнаружения. В следующем примере показан процесс создания поставщика конечной точки обнаружения.  
+ Отвечает <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> за создание <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> экземпляров по требованию. Чтобы определить поставщика конечной точки обнаружения, создайте класс из <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, переопределив метод <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A>, а затем вернув новую конечную точку обнаружения. В следующем примере показан процесс создания поставщика конечной точки обнаружения.  
   
 ```csharp
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
-// to the DiscoveryClientBindingElement. The Discovery ClientChannel   
+// to the DiscoveryClientBindingElement. The Discovery ClientChannel
 // uses this endpoint to send Probe message.  
 public class UdpDiscoveryEndpointProvider : DiscoveryEndpointProvider  
 {  
@@ -43,9 +43,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- Дополнительные сведения об использовании канала клиента обнаружения см. в разделе [Использование клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md). 
+ Для получения дополнительной информации об использовании канала клиента обнаружения [см.](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Использование клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)

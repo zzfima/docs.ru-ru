@@ -1,15 +1,15 @@
 ---
-title: Как Динамическое обновление
+title: Как проводить динамическое обновление
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834725"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184969"
 ---
-# <a name="how-to-dynamic-update"></a>Как Динамическое обновление
+# <a name="how-to-dynamic-update"></a>Как проводить динамическое обновление
 В этом разделе описаны основные действия по созданию и динамическому обновлению конфигурации маршрутизации. В данном примере первоначальная конфигурация маршрутизации получена из файла конфигурации, согласно этой конфигурации все сообщения направляются службе калькулятора regularCalc. Однако впоследствии она будет программно обновлена, чтобы изменить конечную точку назначения на службу roundingCalc.  
   
 > [!NOTE]
@@ -64,7 +64,7 @@ ms.locfileid: "71834725"
     </filterTables>  
     ```  
   
-3. Для оценки входящих сообщений с помощью фильтров, содержащихся в таблице фильтров, следует связать таблицу фильтров с конечными точками службы при помощи поведения маршрутизации. В следующем примере демонстрируется связывание "filterTable1" с конечной точкой службы.  
+3. Для оценки входящих сообщений с помощью фильтров, содержащихся в таблице фильтров, следует связать таблицу фильтров с конечными точками службы при помощи поведения маршрутизации. Следующий пример демонстрирует связь "filterTable1" с конечной точкой службы.  
   
     ```xml  
     <behaviors>  
@@ -102,7 +102,7 @@ ms.locfileid: "71834725"
         using (ServiceHost serviceHost =  
             new ServiceHost(typeof(RoutingService)))  
         {  
-            // Open the ServiceHost to create listeners           
+            // Open the ServiceHost to create listeners
             // and start listening for messages.  
             Console.WriteLine("The Routing Service configured, opening....");  
             serviceHost.Open();  
@@ -164,7 +164,7 @@ ms.locfileid: "71834725"
   
 ## <a name="example"></a>Пример  
 
-Ниже приведен полный список консольного приложения, используемого в этом примере.
+Ниже приводится полный список консольного приложения, используемого в этом примере:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -185,12 +185,12 @@ namespace Microsoft.Samples.AdvancedFilters
     {  
         // Host the service within this EXE console application.  
         public static void Main()  
-        {             
+        {
             // Create a ServiceHost for the CalculatorService type.  
             using (ServiceHost serviceHost =  
                 new ServiceHost(typeof(RoutingService)))  
             {  
-                // Open the ServiceHost to create listeners           
+                // Open the ServiceHost to create listeners
                 // and start listening for messages.  
                 Console.WriteLine("The Routing Service configured, opening....");  
                 serviceHost.Open();  
@@ -242,8 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Пример  
- 
-Ниже приведен полный список файлов конфигурации, используемых в этом примере.
+
+Ниже приводится полный список файла конфигурации, используемого в этом примере:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,6 +298,6 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Службы маршрутизации](../samples/routing-services.md)

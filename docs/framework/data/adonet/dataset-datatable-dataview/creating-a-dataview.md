@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: 3e1c31dac458594eee70ddd99469aca7cf63b848
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d21b17068ff3ce5b0bd3990144383d7f9ded2f9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785484"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151342"
 ---
 # <a name="creating-a-dataview"></a>Создание DataView
-Есть два способа создания представления данных <xref:System.Data.DataView>. Можно использовать конструктор **DataView** или можно создать ссылку на <xref:System.Data.DataTable.DefaultView%2A> свойство объекта. <xref:System.Data.DataTable> Конструктор **DataView** может быть пустым или может принимать либо **DataTable** в виде одного аргумента, либо **DataTable** вместе с условиями фильтра, критерием сортировки и фильтром состояния строки. Дополнительные сведения о дополнительных аргументах, доступных для использования с **DataView**, см. в разделе [Сортировка и фильтрация данных](sorting-and-filtering-data.md).  
+Есть два способа создания представления данных <xref:System.Data.DataView>. Вы можете использовать конструктор **DataView,** или вы можете <xref:System.Data.DataTable.DefaultView%2A> создать <xref:System.Data.DataTable>ссылку на свойство . Конструктор **DataView** может быть пустым, или он может принять либо **DataTable** в качестве одного аргумента, либо **DataTable** вместе с критериями фильтра, критериями сортировки и фильтром состояния строки. Для получения дополнительной информации о дополнительных аргументах, доступных для использования в **DataView,** [см.](sorting-and-filtering-data.md)  
   
- Поскольку индекс для **объекта DataView** строится как при создании **DataView** , так и при изменении любого из свойств **Sort**, **RowFilter**или **RowStateFilter** , достижение лучшей производительности достигается за счет предоставления всех начальных порядок сортировки или критерий фильтрации в качестве аргументов конструктора при создании **DataView**. Создание **объекта DataView** без указания условия сортировки или фильтра, а затем Установка **свойств Sort**, **RowFilter**или **RowStateFilter** в дальнейшем приводит к тому, что индекс будет построен по крайней мере дважды: один раз, когда **DataView** создаются и снова при изменении любого свойства сортировки или фильтрации.  
+ Поскольку индекс **DataView** создается как при создании **DataView,** так и при изменении свойств **Sort,** **RowFilter**или **RowStateFilter,** вы достигаете наилучшей производительности, предоставляя какой-либо первоначальный порядок сортировки или критерии фильтрации в качестве аргументов конструктора при создании **DataView.** Создание **DataView** без указания критериев сортировки или фильтра, а затем настройки свойств **Sort,** **RowFilter**или **RowStateFilter** позже приводит к тому, что индекс будет построен по крайней мере дважды: один раз при создании **DataView** и снова, когда какие-либо свойства сортировки или фильтра изменяются.  
   
- Обратите внимание, что при создании **DataView** с помощью конструктора, который не принимает никаких аргументов, вы не сможете использовать **DataView** до тех пор, пока не будет задано свойство **Table** .  
+ Обратите внимание, что если вы создаете **DataView** с помощью конструктора, который не принимает никаких аргументов, вы не сможете использовать **DataView,** пока не установите свойство **таблицы.**  
   
- В следующем примере кода показано, как создать объект **DataView** с помощью конструктора **DataView** . **RowFilter**, столбец **сортировки** и **DataViewRowState** предоставляются вместе с **таблицей**данных.  
+ Следующий пример кода показывает, как создать **DataView** с помощью конструктора **DataView.** **СтрокаФильтр,** **Колонка сортировки** и **DataViewRowState** поставляются вместе с **DataTable.**  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
@@ -29,13 +29,13 @@ Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _
 ```  
   
 ```csharp  
-DataView custDV = new DataView(custDS.Tables["Customers"],   
-    "Country = 'USA'",   
-    "ContactName",   
+DataView custDV = new DataView(custDS.Tables["Customers"],
+    "Country = 'USA'",
+    "ContactName",
     DataViewRowState.CurrentRows);  
 ```  
   
- В следующем примере кода показано, как получить ссылку на **представление DataView** по умолчанию объекта **DataTable** с помощью свойства **DefaultView** таблицы.  
+ Следующий пример кода показывает, как получить ссылку на **DataView DataView** **DataTable** с помощью свойства **таблицы DefaultView.**  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  
@@ -45,7 +45,7 @@ Dim custDV As DataView = custDS.Tables("Customers").DefaultView
 DataView custDV = custDS.Tables["Customers"].DefaultView;  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>

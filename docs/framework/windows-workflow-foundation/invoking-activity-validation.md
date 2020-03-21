@@ -2,15 +2,15 @@
 title: Вызов проверки действия
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: b45840081f5fc142cf3ec88853dea984b204c9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1241e6445cde20a192581e8132e563e0f7ca8d93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934988"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182888"
 ---
 # <a name="invoking-activity-validation"></a>Вызов проверки действия
-Проверка действия предоставляет метод выявления ошибок и сообщения о них в конфигурации любого действия до его выполнения. Когда рабочий процесс модифицируется в конструкторе, выполняется проверка и любые ошибки или предупреждения, выявленные в ее ходе, отображаются в конструкторе. Также проверка происходит во время выполнения, когда вызывается рабочий процесс, и при появлении каких-либо ошибок проверки логикой проверки по умолчанию выдается исключение <xref:System.Activities.InvalidWorkflowException>. Windows Workflow Foundation (WF) предоставляет <xref:System.Activities.Validation.ActivityValidationServices> класс, который может использоваться приложениями рабочего процесса и разработчиками инструментов для явной проверки действия. В этом разделе описывается, как использовать <xref:System.Activities.Validation.ActivityValidationServices> для выполнения проверки действия.  
+Проверка действия предоставляет метод выявления ошибок и сообщения о них в конфигурации любого действия до его выполнения. Когда рабочий процесс модифицируется в конструкторе, выполняется проверка и любые ошибки или предупреждения, выявленные в ее ходе, отображаются в конструкторе. Также проверка происходит во время выполнения, когда вызывается рабочий процесс, и при появлении каких-либо ошибок проверки логикой проверки по умолчанию выдается исключение <xref:System.Activities.InvalidWorkflowException>. Фонд рабочего процесса Windows (WF) предоставляет <xref:System.Activities.Validation.ActivityValidationServices> класс, который может быть использован приложением рабочего процесса и инструментарием разработчиков для явной проверки действия. В этом разделе описывается, как использовать <xref:System.Activities.Validation.ActivityValidationServices> для выполнения проверки действия.  
   
 ## <a name="using-activityvalidationservices"></a>Использование служб ActivityValidationServices  
  В <xref:System.Activities.Validation.ActivityValidationServices> есть две перегруженные формы <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, используемые для вызова логики проверки действия. Первая перегруженная форма получает проверяемое корневое действие и возвращает коллекцию ошибок и предупреждений. В следующем примере использовано пользовательское действие `Add` с двумя обязательными аргументами.  
@@ -41,7 +41,7 @@ Variable<int> Result = new Variable<int>();
 Activity wf = new Sequence  
 {  
     Variables = { Operand1, Operand2, Result },  
-    Activities =   
+    Activities =
     {  
         new Add(),  
         new WriteLine  
@@ -76,8 +76,8 @@ else
   
  Когда <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> вызывается для данного образца рабочего процесса, возвращаются две выявленные при проверке ошибки.  
   
- **Ошибка: Не указано значение обязательного аргумента действия "Операнд2".**  
-**Ошибка: Не указано значение обязательного аргумента действия "Операнд1".**  Если этот рабочий процесс был вызван, будет сформировано исключение <xref:System.Activities.InvalidWorkflowException>, как показано в следующем примере.  
+ **Ошибка: Не указано значение необходимого аргумента действия Operand2.**  
+**Ошибка: Не указано значение необходимого аргумента действия Operand1.**  Если этот рабочий процесс был вызван, будет сформировано исключение <xref:System.Activities.InvalidWorkflowException>, как показано в следующем примере.  
   
 ```csharp  
 try  
@@ -90,10 +90,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System. Activitys. Инвалидворкфловексцептион:**  
-**При обработке дерева рабочих процессов обнаружены следующие ошибки:**    
-**"Добавить": Не указано значение обязательного аргумента действия "Операнд2".**    
-**"Добавить": Не указано значение обязательного аргумента действия "Операнд1".**  Чтобы данный образец рабочего процесса был действительным, два обязательных аргумента действия `Add` должны быть связаны. В следующем примере два обязательных аргумента связаны с переменными рабочего процесса и со значением результата. В данном примере аргумент <xref:System.Activities.Activity%601.Result%2A> связан вместе с двумя обязательными аргументами. Аргумент <xref:System.Activities.Activity%601.Result%2A> связывать необязательно. Если он не связан, то при проверке это не вызовет ошибку. В обязанности автора рабочего процесса входит связать <xref:System.Activities.Activity%601.Result%2A>, если его значение используется в другом месте рабочего процесса.  
+ **System.Activities.InvalidWorkflowException:**  
+**При обработке дерева рабочего процесса были обнаружены следующие ошибки:**
+ **'Добавить': Значение для требуемого аргумента действия 'Operand2' не было поставлено.** 
+ **'Добавить': Значение для требуемого аргумента деятельности 'Operand1' не было поставлено.**  Чтобы данный образец рабочего процесса был действительным, два обязательных аргумента действия `Add` должны быть связаны. В следующем примере два обязательных аргумента связаны с переменными рабочего процесса и со значением результата. В данном примере аргумент <xref:System.Activities.Activity%601.Result%2A> связан вместе с двумя обязательными аргументами. Аргумент <xref:System.Activities.Activity%601.Result%2A> связывать необязательно. Если он не связан, то при проверке это не вызовет ошибку. В обязанности автора рабочего процесса входит связать <xref:System.Activities.Activity%601.Result%2A>, если его значение используется в другом месте рабочего процесса.  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException: Неправильные параметры аргумента корневого действия.**  
-**Исправьте определение рабочего процесса или укажите входные значения, чтобы устранить эти ошибки:**    
-**"Добавить": Не указано значение обязательного аргумента действия "Операнд2".**    
-**"Добавить": Не указано значение обязательного аргумента действия "Операнд1".**  После передачи требуемых аргументов рабочий процесс будет успешно выполнен, как показано в следующем примере.  
+ **System.ArgumentException: параметры аргументов корневого действия заданы неверно.**  
+**Либо исправить определение рабочего процесса, либо ввести значения предложения, чтобы исправить эти ошибки:**
+ **'Добавить': Значение для требуемого аргумента действия 'Operand2' не было поставлено.** 
+ **'Добавить': Значение для требуемого аргумента деятельности 'Operand1' не было поставлено.**  После передачи требуемых аргументов рабочий процесс будет успешно выполнен, как показано в следующем примере.  
   
 ```csharp  
 Add wf = new Add();  
@@ -166,7 +166,7 @@ public sealed class CreateProduct : CodeActivity
     public double Price { get; set; }  
     public double Cost { get; set; }  
   
-    // [RequiredArgument] attribute will generate a validation error   
+    // [RequiredArgument] attribute will generate a validation error
     // if the Description argument is not set.  
     [RequiredArgument]  
     public InArgument<string> Description { get; set; }  
@@ -194,7 +194,7 @@ public sealed class CreateProduct : CodeActivity
 ```csharp  
 Activity wf = new Sequence  
 {  
-    Activities =   
+    Activities =
     {  
         new CreateProduct  
         {  
@@ -228,13 +228,13 @@ else
 }  
 ```  
   
- **Ошибка: Стоимость должна быть меньше или равна цене.**  
-**Ошибка: Не указано значение обязательного аргумента действия "Description".**    
+ **Ошибка: стоимость должна быть меньше цены или равна ей.**  
+**Ошибка: не указано значение необходимого аргумента действия Description.**
 > [!NOTE]
 > Авторы настраиваемых действий могут размещать логику проверки в переопределенном методе <xref:System.Activities.CodeActivity.CacheMetadata%2A> действия. Исключения, вызванные в методе <xref:System.Activities.CodeActivity.CacheMetadata%2A>, не считаются ошибками проверки. Эти исключения перейдут из метода <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> к вызывающему объекту, который должен их обработать.  
   
 ## <a name="using-validationsettings"></a>Использование ValidationSettings  
- По умолчанию все действия из дерева действий вычисляются при вызове проверки службой <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> позволяет настраивать проверку несколькими способами посредством трех ее свойств. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> указывает, должен проверяющий элемент управления пройти по всему дереву действий или применить логику проверки только к предоставленному действию. Значение по умолчанию для этого свойства - `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> задает дополнительное сопоставление ограничений от типа к списку ограничений. В <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> имеется уточняющий запрос для базового типа каждого действия из проверяемого дерева действий. Если найден подходящий список ограничений, то все ограничения в нем вычисляются для действия. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> указывает, должен проверяющий элемент управления вычислять все ограничения или только указанные в <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Значение по умолчанию — `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> и <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> помогают авторам узлов рабочих процессов добавлять дополнительные проверки рабочих процессов, например ограничения политики для таких инструментов, как FxCop. Дополнительные сведения об ограничениях см. в разделе [декларативные ограничения](declarative-constraints.md).  
+ По умолчанию все действия из дерева действий вычисляются при вызове проверки службой <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> позволяет настраивать проверку несколькими способами посредством трех ее свойств. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> указывает, должен проверяющий элемент управления пройти по всему дереву действий или применить логику проверки только к предоставленному действию. Значение по умолчанию для этого свойства - `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> задает дополнительное сопоставление ограничений от типа к списку ограничений. В <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> имеется уточняющий запрос для базового типа каждого действия из проверяемого дерева действий. Если найден подходящий список ограничений, то все ограничения в нем вычисляются для действия. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> указывает, должен проверяющий элемент управления вычислять все ограничения или только указанные в <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Значение по умолчанию — `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> и <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> помогают авторам узлов рабочих процессов добавлять дополнительные проверки рабочих процессов, например ограничения политики для таких инструментов, как FxCop. Для получения дополнительной информации об ограничениях [см.](declarative-constraints.md)  
   
  Чтобы использовать <xref:System.Activities.Validation.ValidationSettings>, настройте требуемые свойства и передайте этот объект в вызове <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. В данном примере проверяется рабочий процесс, состоящий из <xref:System.Activities.Statements.Sequence> с пользовательским действием `Add`. У действия `Add` есть два обязательных аргумента.  
   
@@ -264,7 +264,7 @@ Variable<int> Result = new Variable<int>();
 Activity wf = new Sequence  
 {  
     Variables = { Operand1, Operand2, Result },  
-    Activities =   
+    Activities =
     {  
         new Add(),  
         new WriteLine  
@@ -304,4 +304,4 @@ else
   
  Этот код отображает следующие данные.  
   
- **Нет предупреждений или ошибок** Несмотря на то `Add` , что действие содержит необходимые аргументы, которые не привязаны, проверка прошла успешно, так как вычисляется только корневое действие. Такой тип проверки полезен, когда нужно проверить только определенные элементы дерева действий, например изменение свойства отдельного действия в конструкторе. Обратите внимание, что если этот рабочий процесс вызван, то выполняется полная проверка, настроенная в рабочем процессе, и создается исключение <xref:System.Activities.InvalidWorkflowException>. <xref:System.Activities.Validation.ActivityValidationServices> и <xref:System.Activities.Validation.ValidationSettings> настраивают только проверку, явно вызываемую узлом, но невыполняемую при вызове рабочего процесса.
+ **Нет предупреждений или ошибок** Несмотря `Add` на то, что действие требует аргументов, которые не связаны, проверка является успешной, поскольку оценивается только корневая активность. Такой тип проверки полезен, когда нужно проверить только определенные элементы дерева действий, например изменение свойства отдельного действия в конструкторе. Обратите внимание, что если этот рабочий процесс вызван, то выполняется полная проверка, настроенная в рабочем процессе, и создается исключение <xref:System.Activities.InvalidWorkflowException>. <xref:System.Activities.Validation.ActivityValidationServices> и <xref:System.Activities.Validation.ValidationSettings> настраивают только проверку, явно вызываемую узлом, но невыполняемую при вызове рабочего процесса.

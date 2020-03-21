@@ -11,12 +11,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123870"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181395"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Практическое руководство. Сопоставление значений HRESULT и исключений
 Методы COM сообщают об ошибках, возвращая значения HRESULT. Методы .NET в этом случае вызывают исключения. Среда выполнения обеспечивает сопоставление этих двух элементов. Каждый класс платформы .NET Framework сопоставляется со значением HRESULT.  
@@ -35,7 +35,7 @@ ms.locfileid: "73123870"
     Class NoAccessException : public ApplicationException  
     {  
         NoAccessException () {  
-        HResult = E_ACCESSDENIED;   
+        HResult = E_ACCESSDENIED;
     }  
     }  
     CMyClass::MethodThatThrows  
@@ -44,7 +44,7 @@ ms.locfileid: "73123870"
     }  
     ```  
   
- На любом языке программирования могут встречаться программы, в которых одновременно используется управляемый и неуправляемый код. Например, в настраиваемом маршалере в следующем коде используется метод **Marshal.ThrowExceptionForHR(int HResult)** , который вызывает исключение с заданным значением HRESULT. Этот метод выполняет поиск значения HRESULT и создает исключение соответствующего типа. Например, в следующем коде для заданного значения HRESULT создается **ArgumentException**.  
+ На любом языке программирования могут встречаться программы, в которых одновременно используется управляемый и неуправляемый код. Например, в настраиваемом маршалере в следующем коде используется метод **Marshal.ThrowExceptionForHR(int HResult)**, который вызывает исключение с заданным значением HRESULT. Этот метод выполняет поиск значения HRESULT и создает исключение соответствующего типа. Например, в следующем коде для заданного значения HRESULT создается **ArgumentException**.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -59,9 +59,9 @@ CMyClass::MethodThatThrows
 |-------------|--------------------|  
 |**MSEE_E_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
 |**COR_E_APPLICATION**|**ApplicationException**|  
-|**COR_E_ARGUMENT или E_INVALIDARG**|**ArgumentException**|  
+|**COR_E_ARGUMENT or E_INVALIDARG**|**ArgumentException**|  
 |**COR_E_ARGUMENTOUTOFRANGE**|**ArgumentOutOfRangeException**|  
-|**COR_E_ARITHMETIC или ERROR_ARITHMETIC_OVERFLOW**|**ArithmeticException**|  
+|**COR_E_ARITHMETIC or ERROR_ARITHMETIC_OVERFLOW**|**ArithmeticException**|  
 |**COR_E_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
 |**COR_E_BADIMAGEFORMAT или ERROR_BAD_FORMAT**|**BadImageFormatException**|  
 |**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
@@ -73,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXCEPTION**|**Исключение**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND или ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -93,7 +93,7 @@ CMyClass::MethodThatThrows
 |**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
 |**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
-|**E_NOTIMPL**|**NotImplementedException**|  
+|**E_notimpl**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
 |**COR_E_NULLREFERENCE или E_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY или**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
@@ -130,17 +130,17 @@ CMyClass::MethodThatThrows
   
 |Поле Exception|Источник сведений из модели COM|  
 |---------------------|------------------------------------|  
-|**ErrorCode**|Значение HRESULT, возвращенное из вызова.|  
+|**Errorcode**|Значение HRESULT, возвращенное из вызова.|  
 |**HelpLink**|Если **IErrorInfo->HelpContext** не равно нулю, строка формируется путем сцепления строк **IErrorInfo->GetHelpFile**, "#" и **IErrorInfo->GetHelpContext**. В противном случае возвращается строка из **IErrorInfo->GetHelpFile**.|  
-|**InnerException**|Всегда ссылка NULL (**Nothing** в Visual Basic).|  
+|**InnerException**|Всегда нулевая ссылка (**Ничего** в Visual Basic).|  
 |**Сообщение**|Строка, возвращаемая из **IErrorInfo->GetDescription**.|  
-|**Source**|Строка, возвращаемая из **IErrorInfo->GetSource**.|  
-|**StackTrace**|Трассировка стека.|  
+|**Источник**|Строка, возвращаемая из **IErrorInfo->GetSource**.|  
+|**СтекТТрейс**|Трассировка стека.|  
 |**TargetSite**|Имя метода, который вернул значение HRESULT со сбоем.|  
   
  Поля исключения **Message**, **Source** и **StackTrace** недоступны для **StackOverflowException**.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Расширенное COM-взаимодействие](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Исключения](../../standard/exceptions/index.md)

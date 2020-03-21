@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 644b5ed751caaf1809250244b37badc8037b0f57
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792343"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178593"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>Метод ICorDebugProcess5::GetTypeFields
-Предоставляет сведения о полях, принадлежащих типу.  
+Предоставляет информацию о полях, которые принадлежат к типу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,26 +31,26 @@ ms.locfileid: "76792343"
 HRESULT GetTypeFields(  
     [in] COR_TYPEID id,  
     [in] ULONG32 celt,  
-    [out] COR_FIELD fields[],   
+    [out] COR_FIELD fields[],
     [out] ULONG32 *pceltNeeded  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `id`  
- окне Идентификатор типа, сведения о поле которого извлекаются.  
+ (в) Идентификатор типа, информация о поле которого извлекается.  
   
  `celt`  
- окне Число объектов [COR_FIELD](cor-field-structure.md) , сведения о полях которых нужно получить.  
+ (в) Количество [COR_FIELD](cor-field-structure.md) объектов, информация о поле которых должна быть извлечена.  
   
  `fields`  
- заполняет Массив объектов [COR_FIELD](cor-field-structure.md) , которые предоставляют сведения о полях, принадлежащих типу.  
+ (ваут) Массив [COR_FIELD](cor-field-structure.md) объектов, предоставляющих информацию о полях, принадлежащих к типу.  
   
  `pceltNeeded`  
- заполняет Указатель на число объектов [COR_FIELD](cor-field-structure.md) , включаемых в `fields`.  
+ (ваут) Указатель на количество [COR_FIELD](cor-field-structure.md) объектов, включенных в `fields`.  
   
-## <a name="remarks"></a>Заметки  
- Параметр `celt`, который указывает количество полей, сведения о полях которых использует метод для заполнения `fields`, должны соответствовать значению поля `COR_TYPE_LAYOUT::numFields`.  
+## <a name="remarks"></a>Remarks  
+ Параметр, `celt` который определяет количество полей, поле информации метод `fields`использует для заполнения, должен `COR_TYPE_LAYOUT::numFields` соответствовать значению поля.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -61,7 +61,7 @@ HRESULT GetTypeFields(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorDebugProcess5](icordebugprocess5-interface.md)
 - [Интерфейсы отладки](debugging-interfaces.md)

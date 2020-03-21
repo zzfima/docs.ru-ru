@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 287e36dce65be7a002499d2cd22481018a1f4742
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 39ce85c3c15a2d4bdfce801a35e9ca088bd5091b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089169"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154742"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<удалить элемент > для элемент connectionManagement (параметры сети)
-Удаляет IP-адрес или DNS-имя из списка управления подключениями.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<удалить элемент> для управления подключением (Настройки сети)
+Удаляет IP-адрес или имя DNS из списка управления подключением.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<элемент connectionmanagement >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<удалить >**
+[**\<конфигурация>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<подключениеУправление>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<удалить>**
 
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<remove   
-  address="server name or IP address"   
+<remove
+  address="server name or IP address"
 />  
 ```  
   
@@ -38,29 +38,29 @@ ms.locfileid: "74089169"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|**Атрибут**|**Описание**|  
 |-------------------|---------------------|  
 |`address`|IP-адрес или имя DNS.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[Элемент connectionManagement](connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
   
-## <a name="remarks"></a>Заметки  
- Элемент `remove` удаляет запись списка управления подключениями для указанного сервера.  
+## <a name="remarks"></a>Remarks  
+ Элемент `remove` удаляет запись списка управления подключением для указанного сервера.  
   
- Значение атрибута `address` должно быть допустимым IP-адресом или именем узла.  
+ Значение атрибута `address` должно быть действительным IP-адресом или именем хоста.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере удаляются все записи списка управления подключениями для сервера `www.adventure-works.com` а затем настраивается использование четырех подключений к серверу `www.contoso.com` и двух подключений ко всем остальным серверам.  
+ Следующий пример удаляет любые записи списка `www.adventure-works.com` управления подключением для сервера, а `www.contoso.com` затем настраивает приложение на использование четырех подключений к серверу и двух подключений ко всем другим серверам.  
   
 ```xml  
 <configuration>  
@@ -74,8 +74,8 @@ ms.locfileid: "74089169"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Схема параметров сети](index.md)
+- [Схема настройки сети](index.md)

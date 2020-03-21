@@ -1,46 +1,46 @@
 ---
-title: Практическое руководство. Установка размера плитки для объекта TileBrush
+title: Как установить размер мозаики для TileBrush
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af7bab59a292549b29dad9b6a7417f22b1b84e48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804212"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186838"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Практическое руководство. Установка размера плитки для объекта TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Как установить размер мозаики для TileBrush
 
-В этом примере показано, как установить размер мозаики для <xref:System.Windows.Media.TileBrush>. По умолчанию <xref:System.Windows.Media.TileBrush> создает один фрагмент, который полностью заполняет область закрашивания. Это поведение можно переопределить, задав <xref:System.Windows.Media.TileBrush.Viewport%2A> и <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> свойства.
+В этом примере показано, как <xref:System.Windows.Media.TileBrush>установить размер плитки для . По умолчанию, <xref:System.Windows.Media.TileBrush> производит одну плитку, которая полностью заполняет область, которую вы рисуете. Это поведение можно переопределить, <xref:System.Windows.Media.TileBrush.Viewport%2A> <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> установив и свойства.
 
-<xref:System.Windows.Media.TileBrush.Viewport%2A> Свойство определяет размер мозаики для <xref:System.Windows.Media.TileBrush>. По умолчанию значение <xref:System.Windows.Media.TileBrush.Viewport%2A> свойство является относительно размера закрашиваемой области. Чтобы сделать <xref:System.Windows.Media.TileBrush.Viewport%2A> свойство указывать абсолютный размер мозаики, задайте <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> свойства <xref:System.Windows.Media.BrushMappingMode.Absolute>.
+Свойство <xref:System.Windows.Media.TileBrush.Viewport%2A> определяет размер плитки для <xref:System.Windows.Media.TileBrush>. По умолчанию значение <xref:System.Windows.Media.TileBrush.Viewport%2A> свойства относительно размера окрашенной площади. Чтобы сделать свойство <xref:System.Windows.Media.TileBrush.Viewport%2A> указать абсолютный размер плитки, установите свойство <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> на <xref:System.Windows.Media.BrushMappingMode.Absolute>.
 
 ## <a name="example"></a>Пример
 
-В следующем примере используется <xref:System.Windows.Media.ImageBrush>, тип <xref:System.Windows.Media.TileBrush>, для заполнения прямоугольника мозаикой. В примере каждая Плитка 50% на 50 процентов от области вывода (прямоугольник). В результате прямоугольник заполняется четырьмя проекциями изображения.
+Следующий пример <xref:System.Windows.Media.ImageBrush>использует, тип <xref:System.Windows.Media.TileBrush>, для рисования прямоугольника с плиткой. Пример устанавливает каждую плитку до 50 процентов на 50 процентов от выходной области (прямоугольник). В результате прямоугольник заполняется четырьмя проекциями изображения.
 
-На следующем рисунке показан результат выполнения этого примера:
+На следующей иллюстрации показан выход, который приводит пример:
 
-![Прямоугольник с четырьмя вишнями Демонстрация мозаики с использованием кисти изображения.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
+![Прямоугольник с четырьмя вишнями, демонстрирующими плитку с изображением кисти.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
-В следующем примере создается <xref:System.Windows.Media.ImageBrush>, задает его <xref:System.Windows.Media.TileBrush.Viewport%2A> для `0,0,25,25` и его <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> для <xref:System.Windows.Media.BrushMappingMode.Absolute>и используется для закрашивания другого прямоугольника. В результате кисть создает мозаику размером 25 пикселей в ширину и 25 пикселей в высоту.
+Следующий пример <xref:System.Windows.Media.ImageBrush>создает, <xref:System.Windows.Media.TileBrush.Viewport%2A> устанавливает `0,0,25,25` его <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> <xref:System.Windows.Media.BrushMappingMode.Absolute>к и его к, и использует его для того чтобы покрасить другой прямоугольник. В результате кисть создает мозаику размером 25 пикселей в ширину и 25 пикселей в высоту.
 
-На следующем рисунке показан результат выполнения этого примера:
+На следующей иллюстрации показан выход, который приводит пример:
 
-![Прямоугольник с вишнями сорок восемь, демонстрирующий Мозаичная кисть TileBrush с окном просмотра.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
+![Прямоугольник с сорока восемью вишнями, демонстрирующими черепицу TileBrush с Viewport.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 
-Следующий пример является частью большого примера. Полный пример см. в разделе [пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005).
+Следующий пример является частью большого примера. Для полного образца [см.](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ImageBrush)
 
-Несмотря на то, что в этом примере используется <xref:System.Windows.Media.ImageBrush> класс, <xref:System.Windows.Media.TileBrush.Viewport%2A> и <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> свойства ведут себя идентично для других <xref:System.Windows.Media.TileBrush> объектов, то есть для <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush>. Дополнительные сведения о <xref:System.Windows.Media.ImageBrush> , а другой <xref:System.Windows.Media.TileBrush> объектов, см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md).
+Хотя этот пример <xref:System.Windows.Media.ImageBrush> использует <xref:System.Windows.Media.TileBrush.Viewport%2A> класс, <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> и свойства ведут <xref:System.Windows.Media.TileBrush> себя одинаково для <xref:System.Windows.Media.DrawingBrush> других <xref:System.Windows.Media.VisualBrush>объектов, то есть для и . Для получения <xref:System.Windows.Media.ImageBrush> дополнительной информации о и других <xref:System.Windows.Media.TileBrush> объектов, см Картина с [изображениями, рисунки, и визуальные эффекты](painting-with-images-drawings-and-visuals.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.TileBrush>
 - [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)

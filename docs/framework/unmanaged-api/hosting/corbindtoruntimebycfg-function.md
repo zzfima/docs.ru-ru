@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 3802354bf52cd2aab2a4149d565993b9965e8312
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4fbc6e7ea531f65a6b1cd0ec93f4847ab8e4fe83
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138300"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178246"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>Функция CorBindToRuntimeByCfg
-Загружает среду CLR в процесс с использованием сведений о версии, считываемых из XML-файла.  
+Загружает время выполнения общего языка (CLR) в процесс, используя информацию о версии, которая читается из файла XML.  
   
- Эта функция является устаревшей в .NET Framework 4.  
+ Эта функция была унесена в системе .NET 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,43 +34,43 @@ HRESULT CorBindToRuntimeByCfg (
     [in]  DWORD        reserved,  
     [in]  DWORD        startupFlags,  
     [in]  REFCLSID     rclsid,  
-    [in]  REFIID       riid,   
+    [in]  REFIID       riid,
     [out] LPVOID FAR*  ppv  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pCfgStream`  
- окне Указатель на объект `IStream`, который считывает XML-файл.  
+ (в) Указатель на `IStream` объект, который читает файл XML.  
   
  `reserved`  
- окне Зарезервировано для будущего использования. Используйте 0 (нуль) в качестве значения.  
+ [in] Зарезервирован для будущего использования. Используйте 0 (ноль) в качестве значения.  
   
  `startupFlags`  
- окне Значение перечисления [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) , указывающее поведение среды CLR при запуске.  
+ (в) Значение [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) перечисления, которое определяет поведение стартапа CLR.  
   
  `rclsid`  
- окне `CLSID` компонентного класса, реализующего интерфейс [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) или [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . Поддерживаемые значения: CLSID_CorRuntimeHost или CLSID_CLRRuntimeHost.  
+ (в) Кокласс, `CLSID` который реализует либо [iCorRuntimeHost,](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) либо интерфейс [ICLRRuntimeHost.](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) Поддерживаемые значения являются CLSID_CorRuntimeHost или CLSID_CLRRuntimeHost.  
   
  `riid`  
- окне `IID` либо `ICorRuntimeHost`, либо интерфейса `ICLRRuntimeHost`. Поддерживаемые значения: IID_ICorRuntimeHost или IID_ICLRRuntimeHost.  
+ (в) Либо `IID` или `ICorRuntimeHost` `ICLRRuntimeHost` интерфейс. Поддерживаемые значения IID_ICorRuntimeHost или IID_ICLRRuntimeHost.  
   
  `ppv`  
- заполняет Указатель на адрес возвращенного интерфейса.  
+ (ваут) Указатель на адрес возвращенного интерфейса.  
   
-## <a name="remarks"></a>Заметки  
- Формат XML-файла моделируется после стандартного файла конфигурации приложения. Дополнительные сведения о XML-файлах см. в разделе [Схема файла конфигурации](../../../../docs/framework/configure-apps/file-schema/index.md).  
+## <a name="remarks"></a>Remarks  
+ Формат файла XML моделируется после стандартного файла конфигурации приложения. Для получения дополнительной информации о файлах XML [см.](../../../../docs/framework/configure-apps/file-schema/index.md)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
- **Библиотека:** MSCorEE. dll  
+ **Библиотека:** MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Функция CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
 - [Функция CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)

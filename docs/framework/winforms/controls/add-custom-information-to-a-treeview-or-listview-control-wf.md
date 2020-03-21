@@ -1,5 +1,5 @@
 ---
-title: Инструкции. Добавление пользовательских сведений в элемент управления TreeView или ListView
+title: 'Как: Добавление пользовательской информации в управление TreeView или ListView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: fe507c41de97e9332f3f27e453a476d992f86627
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: faed586a5814526b0169ea46c8bb452e3777d8ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732220"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182425"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)
-Можно создать производный узел в элементе управления Windows Forms <xref:System.Windows.Forms.TreeView> или производном элементе в элементе управления <xref:System.Windows.Forms.ListView>. Наследование позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки. Эту возможность можно использовать для присоединения объекта Customer к каждому узлу дерева или элементу списка. Ниже приведены примеры для элемента управления <xref:System.Windows.Forms.TreeView>, но такой же подход можно использовать и для элемента управления <xref:System.Windows.Forms.ListView>.  
+Можно создать производный узло <xref:System.Windows.Forms.TreeView> в элементе управления форм <xref:System.Windows.Forms.ListView> Windows или элемент производное в элементе управления. Наследование позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки. Эту возможность можно использовать для присоединения объекта Customer к каждому узлу дерева или элементу списка. Примеры здесь для <xref:System.Windows.Forms.TreeView> управления, но тот же подход <xref:System.Windows.Forms.ListView> может быть использован для управления.  
   
 ### <a name="to-derive-a-tree-node"></a>Наследование узла дерева  
   
-- Создайте новый класс Node, производный от класса <xref:System.Windows.Forms.TreeNode>, который содержит настраиваемое поле для записи пути к файлу.  
+- Создайте новый класс узлов, <xref:System.Windows.Forms.TreeNode> полученный из класса, который имеет пользовательское поле для записи пути файла.  
   
     ```vb  
     Class myTreeNode  
@@ -75,7 +75,7 @@ ms.locfileid: "76732220"
      В следующем примере в качестве расположения текстового файла выбрана папка "Мои документы". Это сделано, поскольку предполагается, что большинство компьютеров, работающих под управлением операционной системы Windows, содержат эту папку. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение.  
   
     ```vb  
-    ' You should replace the bold text file   
+    ' You should replace the bold text file
     ' in the sample below with a text file of your own choosing.  
     TreeView1.Nodes.Add(New myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
@@ -83,7 +83,7 @@ ms.locfileid: "76732220"
     ```  
   
     ```csharp  
-    // You should replace the bold text file   
+    // You should replace the bold text file
     // in the sample below with a text file of your own choosing.  
     // Note the escape character used (@) when specifying the path.  
     treeView1.Nodes.Add(new myTreeNode(System.Environment.GetFolderPath
@@ -92,7 +92,7 @@ ms.locfileid: "76732220"
     ```  
   
     ```cpp  
-    // You should replace the bold text file   
+    // You should replace the bold text file
     // in the sample below with a text file of your own choosing.  
     treeView1->Nodes->Add(new myTreeNode(String::Concat(  
        System::Environment::GetFolderPath  
@@ -100,7 +100,7 @@ ms.locfileid: "76732220"
        "\\TextFile.txt")));  
     ```  
   
-2. Если вы передали узел дерева, а он типизирован как класс <xref:System.Windows.Forms.TreeNode>, необходимо привести его к производному классу. Приведение представляет собой явное преобразование из одного типа объекта в другой. Дополнительные сведения о приведении см. в разделе явные [и](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) неявные преобразования (Visual Basic), [приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md) (визуальный C#элемент) или [оператор приведения: ()](/cpp/cpp/cast-operator-parens) (визуальный C++элемент).  
+2. Если вы прошли узла дерева, и <xref:System.Windows.Forms.TreeNode> он набран как класс, то вам нужно будет бросить в ваш производный класс. Приведение представляет собой явное преобразование из одного типа объекта в другой. Для получения дополнительной информации о литье, см [Неявные и явные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [Литье и тип конверсии](../../../csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C ) или [Cast Operator: ()](/cpp/cpp/cast-operator-parens) (Visual C ).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -125,7 +125,7 @@ ms.locfileid: "76732220"
           System::Windows::Forms::TreeViewEventArgs ^  e)  
        {  
           myTreeNode ^ myNode = safe_cast<myTreeNode^>(e->Node);  
-          MessageBox::Show(String::Concat("Node selected is ",   
+          MessageBox::Show(String::Concat("Node selected is ",
              myNode->FilePath));  
        }  
     ```  

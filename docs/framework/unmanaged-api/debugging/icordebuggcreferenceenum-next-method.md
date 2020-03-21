@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: 3a8e967a3ecc452ebda08872d8bcd9e9d08c766f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d87f414e9dfd05a519b60efc7ecdd5328a6dd86f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777694"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178868"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>Метод ICorDebugGCReferenceEnum::Next
-Возвращает указанное число экземпляров [COR_GC_REFERENCE](cor-gc-reference-structure.md) , содержащих сведения об объектах, которые будут собираться сборщиком мусора.  
+Получает указанное количество [COR_GC_REFERENCE](cor-gc-reference-structure.md) экземпляров, содержащих информацию об объектах, которые будут собраны мусором.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT Next(  
-    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_GC_REFERENCE roots[],   
+    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_GC_REFERENCE roots[],
     [out] ULONG *pceltFetched  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  celt  
- окне Число извлекаемых корневых элементов.  
+ (в) Количество корней, которые необходимо извлечь.  
   
- корня  
- заполняет Массив указателей, каждый из которых указывает на объект [COR_GC_REFERENCE](cor-gc-reference-structure.md) , представляющий корень объекта, который должен быть собран сборщиком мусора.  
+ Корни  
+ (ваут) Массив указателей, каждый из которых указывает на [COR_GC_REFERENCE](cor-gc-reference-structure.md) объект, представляющий корень объекта, который будет собран мусором.  
   
  pceltFetched  
- заполняет Указатель на число объектов [COR_GC_REFERENCE](cor-gc-reference-structure.md) , фактически возвращаемых в `roots`. Это значение может быть `null`, если параметр `celt` имеет значение 1.  
+ (ваут) Указатель на количество [COR_GC_REFERENCE](cor-gc-reference-structure.md) объектов `roots`фактически вернулся в . Это значение может быть `null`, если параметр `celt` имеет значение 1.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -55,7 +55,7 @@ HRESULT Next(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)
 - [Интерфейсы отладки](debugging-interfaces.md)

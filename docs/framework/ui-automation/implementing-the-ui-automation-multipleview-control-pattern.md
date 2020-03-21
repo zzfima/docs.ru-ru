@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: c9199e0ea1971c22bfc1f6334b9d2d9d73bb048c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9decb617e30a340d3e73e911f7848110de5599e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435058"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180168"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Реализация шаблона элемента управления MultipleView модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -21,9 +21,9 @@ ms.locfileid: "74435058"
   
  Шаблон элемента управления <xref:System.Windows.Automation.MultipleViewPattern> используется для поддержки элементов управления, которые предоставляют несколько представлений одного набора сведений или дочерних элементов управления и способны переключаться между ними.  
   
- Примеры элементов управления, которые могут представлять несколько представлений, включают представление списка (которое может отображать его содержимое как эскизы, плитки, значки или сведения), диаграммы Microsoft Excel (круговые, линейные, линейчатые, значения ячеек с формулой), документы Microsoft Word (обычные, веб-макеты, печать макет, макет для чтения, структура), календарь Microsoft Outlook (год, месяц, неделя, день) и обложки проигрывателя Microsoft Windows Media. Поддерживаемые представления определяются разработчиками элементов управления и относятся к конкретному элементу управления.  
+ Примеры элементов управления, которые могут представлять несколько представлений, включают представление списка (которое может отображать его содержимое в виде эскизов, плиток, иконок или деталей), диаграммы Microsoft Excel (пирог, строка, бар, значение ячейки с формулой), документы Microsoft Word (нормальный, веб-макет, печать макет, макет чтения, наброски), календарь Microsoft Outlook (год, месяц, неделя, день) и сконы Microsoft Windows Media Player. Поддерживаемые представления определяются разработчиками элементов управления и относятся к конкретному элементу управления.  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
  При реализации шаблона элемента управления Multiple View обратите внимание на следующие правила и соглашения.  
   
@@ -35,20 +35,20 @@ ms.locfileid: "74435058"
   
 - Имена представлений должны быть подходящими для использования в приложениях преобразования текста в речь, шрифта Брайля и других приложениях для удобства чтения.  
   
-<a name="Required_Members_for_IMultipleViewProvider"></a>   
+<a name="Required_Members_for_IMultipleViewProvider"></a>
 ## <a name="required-members-for-imultipleviewprovider"></a>Обязательные члены для IMultipleViewProvider  
  Следующие свойства и методы обязательны для реализации IMultipleViewProvider.  
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|Свойство|None|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|Метод|None|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|Метод|None|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|Метод|None|  
   
  Отсутствуют события, связанные с этим шаблоном элемента управления.  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Исключения  
  Поставщик должен вызывать следующие исключения.  
   
@@ -56,10 +56,10 @@ ms.locfileid: "74435058"
 |--------------------|---------------|  
 |<xref:System.ArgumentException>|Когда метод <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> или <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> вызывается с параметром, который не является членом коллекции поддерживаемых представлений.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
-- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](ui-automation-control-patterns-for-clients.md)
-- [Общие сведения о дереве модели автоматизации пользовательского интерфейса](ui-automation-tree-overview.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](use-caching-in-ui-automation.md)

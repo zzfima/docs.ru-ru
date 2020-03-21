@@ -2,12 +2,12 @@
 title: Атрибут KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 6e3708fb386760ae067de0e86e4315114c85113c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714907"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183561"
 ---
 # <a name="knownassemblyattribute"></a>Атрибут KnownAssemblyAttribute
 В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>. В этом образце показано, как динамически добавлять известные типы во время сериализации и десериализации.  
@@ -245,7 +245,7 @@ public class MyDataContractResolver : DataContractResolver
        }  
   
        // Used at deserialization  
-        // Allows users to map xsi:type name to any Type   
+        // Allows users to map xsi:type name to any Type
         public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)  
        {  
            XmlDictionaryString tName;  
@@ -277,7 +277,7 @@ public class MyDataContractResolver : DataContractResolver
   
  Библиотека типов, которая используется в этом образце, показана в следующем фрагменте кода.  
   
-```csharp 
+```csharp
  [DataContract]  
  public class ComplexNumber  
  {  
@@ -346,27 +346,27 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>Настройка, выполнение и сборка образца  
   
-1. Щелкните правой кнопкой мыши решение **кновнассембляттрибуте** и выберите пункт **свойства**.  
+1. Право нажмите на решение **KnownAssemblyAttribute** и выберите **Свойства**.  
   
-2. В окне **Общие свойства**выберите **запускаемый проект**и щелкните **Несколько запускаемых проектов**.  
+2. В **общие свойства**, выберите запуск **проекта**, а затем нажмите **Несколько проектов запуска**.  
   
-3. Добавьте действие **Start** в проекты **службы** и **клиента** .  
+3. Добавьте действие **«Пуск»** в проекты **Службы** и **Клиента.**  
   
-4. Нажмите кнопку **ОК**и нажмите клавишу **F5** , чтобы запустить пример.  
+4. Нажмите **OK**, и нажмите **F5** для запуска образца.  
   
 5. Если приложение выполняется неправильно, убедитесь в правильности настройки среды, выполнив следующие шаги.  
   
-6. Убедитесь, что выполнена [однократная настройка процедуры для Windows Communication Foundation примеров](https://go.microsoft.com/fwlink/?LinkId=150774).  
+6. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](https://go.microsoft.com/fwlink/?LinkId=150774)  
   
-7. Чтобы выполнить сборку решения, следуйте инструкциям в разделе [Создание примера Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Чтобы создать решение, следуйте инструкциям по [созданию образца Windows Communication Foundation.](https://go.microsoft.com/fwlink/?LinkId=150775)  
   
-8. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
+8. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](https://go.microsoft.com/fwlink/?LinkId=150776)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a0b888e8ecc80e3739c583931a86da3cdb7242d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741390"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179453"
 ---
 # <a name="ui-automation-tree-overview"></a>Общие сведения о дереве модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -18,13 +18,13 @@ ms.locfileid: "75741390"
   
  Продукты и скрипты тестов специальных возможностей выполняют навигацию по дереву [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для сбора сведений о [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] и его элементах.  
   
- В дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] есть корневой элемент (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>), представляющий текущий рабочий стол, а дочерние элементы — окна приложения. Каждый из этих дочерних элементов может содержать элементы, представляющие части [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], такие как меню, кнопки, панели инструментов и списки. В свою очередь эти элементы тоже могут содержать элементы, такие как элементы списка.  
+ Внутри [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] дерева есть корневой элемент (),<xref:System.Windows.Automation.AutomationElement.RootElement%2A>который представляет текущий рабочий стол и элементы детского ребенка представляют окна приложений. Каждый из этих дочерних элементов может содержать элементы, представляющие части [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], такие как меню, кнопки, панели инструментов и списки. В свою очередь эти элементы тоже могут содержать элементы, такие как элементы списка.  
   
  Дерево [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] не является фиксированной структурой и редко отображается полностью, так как оно может содержать тысячи элементов. Его части создаются по необходимости, и дерево может претерпевать изменения при добавлении, перемещении или удалении элементов.  
   
  Поставщики автоматизации пользовательского интерфейса поддерживают дерево [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], реализуя навигацию между элементами внутри фрагмента, который состоит из корня (как правило, размещенного в окне) и поддерева. Однако поставщики не интересуются переходами из одного элемента управления в другой. Такие переходы управляются ядром [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью сведений из поставщиков окна по умолчанию.  
   
-<a name="uiautomation_tree_view"></a>   
+<a name="uiautomation_tree_view"></a>
 ## <a name="views-of-the-automation-tree"></a>Представления дерева автоматизации  
  Дерево [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] может быть отфильтровано для создания представлений, содержащих только те объекты <xref:System.Windows.Automation.AutomationElement>, которые соответствуют конкретному клиенту. Такой подход позволяет клиентам настроить структуру, представленную с помощью [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], для их конкретных нужд.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "75741390"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляет три представления по умолчанию. Эти представления определяются типом выполняемой фильтрации; область любого представления задается приложением. Кроме того, приложение может применять к свойствам другие фильтры; например, чтобы включить только включенные элементы управления в представление элемента управления.  
   
-<a name="uiautomation_raw_view"></a>   
+<a name="uiautomation_raw_view"></a>
 ### <a name="raw-view"></a>Базовое представление  
- Базовое представление дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — это полное дерево объектов <xref:System.Windows.Automation.AutomationElement>, для которого корнем является рабочий стол. Базовое представление точно следует собственной программной структуре приложения и таким образом является наиболее подробным доступным представлением. Оно также является основой, на которой строятся другие представления дерева. Поскольку это представление зависит от базовой [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Framework, необработанное представление кнопки [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] будет иметь другое представление RAW, чем кнопка Win32.  
+ Базовое представление дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — это полное дерево объектов <xref:System.Windows.Automation.AutomationElement>, для которого корнем является рабочий стол. Базовое представление точно следует собственной программной структуре приложения и таким образом является наиболее подробным доступным представлением. Оно также является основой, на которой строятся другие представления дерева. Поскольку это представление зависит [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] от базовой платформы, необработанное представление [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] кнопки будет иметь другой необработанный вид, чем кнопка Win32.  
   
  Базовое представление можно получить путем поиска элементов без указания свойств или с помощью <xref:System.Windows.Automation.TreeWalker.RawViewWalker> для навигации по дереву.  
   
-<a name="uiautomation_control_view"></a>   
+<a name="uiautomation_control_view"></a>
 ### <a name="control-view"></a>Представление элемента управления  
  Представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] дерева упрощает задачу продукта поддержки специальных возможностей по описанию [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] и помощи ему по взаимодействию с приложением, поскольку оно точно сопоставлено со структурой [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], воспринимаемой конечным пользователем.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "75741390"
   
  Представление элемента управления можно получить путем поиска элементов, свойство <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> которых имеет значение `true`, или используя <xref:System.Windows.Automation.TreeWalker.ControlViewWalker> для навигации по дереву.  
   
-<a name="uiautomation_content_view"></a>   
-### <a name="content-view"></a>Представление контента  
+<a name="uiautomation_content_view"></a>
+### <a name="content-view"></a>Представление содержимого  
  Представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] является подмножеством представления элемента управления. Оно содержит элементы [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], которые передают достоверную информацию в пользовательский интерфейс, включая элементы [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], которые могут получать фокус клавиатуры, и текст, который не является меткой элемента [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Например, значения в раскрывающемся поле со списком будут отображаться в представлении содержимого, так как они представляют информацию конечному пользователю. В представлении содержимого поле со списком и список представляются в виде коллекции элементов [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], в которой можно выбрать один или несколько элементов. Тот факт, что один их них всегда открыт, а другой можно развернуть и свернуть, не имеет значения в представлении содержимого, поскольку оно предназначено для отображения данных или содержимого для пользователя.  
   
  Представление содержимого можно получить путем поиска элементов, свойство <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> которых имеет значение `true`, или используя <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> для навигации по дереву.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Automation.AutomationElement>
 - [Общие сведения о модели автоматизации пользовательского интерфейса](ui-automation-overview.md)

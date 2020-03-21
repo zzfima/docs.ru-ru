@@ -10,12 +10,12 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: cb0ba120eeb57788c0525d45b714ad8edd2c39ed
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 634388e3920e0b9dbee85aa3ea555471cee604ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216976"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181121"
 ---
 # <a name="security-and-serialization"></a>Безопасность и сериализация
 Поскольку сериализация может разрешить другому коду просматривать или изменять данные экземпляра объекта, которые могут быть недоступны другим способом, требуется специальное разрешение кода, выполняющего сериализацию: <xref:System.Security.Permissions.SecurityPermission> с указанным флагом <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> . При политике безопасности по умолчанию такое разрешение не предоставляется коду, загруженному из Интернета или интрасети, и дается только коду на локальном компьютере.  
@@ -26,7 +26,7 @@ ms.locfileid: "77216976"
   
  Интерфейс <xref:System.Runtime.Serialization.ISerializable> предназначен для использования только инфраструктурой сериализации. Однако если он не защищен, то потенциально может раскрыть конфиденциальные сведения. Если вы обеспечиваете настраиваемую сериализацию путем реализации **ISerializable**, убедитесь, что вы приняли следующие меры предосторожности.  
   
-- Вы должны явно защитить метод <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> , либо требуя **SecurityPermission** с указанным разрешением **SerializationFormatter** , либо убедившись, что никакие конфиденциальные сведения не раскрываются в выходных данных метода. Например:  
+- Вы должны явно защитить метод <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> , либо требуя **SecurityPermission** с указанным разрешением **SerializationFormatter** , либо убедившись, что никакие конфиденциальные сведения не раскрываются в выходных данных метода. Пример:  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -35,9 +35,9 @@ ms.locfileid: "77216976"
     ```  
   
     ```csharp  
-    [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter   
+    [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter
     =true)]  
-    public override void GetObjectData(SerializationInfo info,   
+    public override void GetObjectData(SerializationInfo info,
     StreamingContext context)  
     {  
     }  
@@ -45,6 +45,6 @@ ms.locfileid: "77216976"
   
 - Специальный конструктор, используемый для сериализации, также должен выполнять тщательную проверку входных данных и должен быть либо защищенным, либо закрытым, чтобы предотвратить несанкционированное использование вредоносным кодом. Следует обеспечить те же проверки безопасности и разрешения, необходимые для получения экземпляра подобного класса любыми другими методами, например путем явного создания класса или его неявного создания через какую-либо фабрику.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Правила написания безопасного кода](../../standard/security/secure-coding-guidelines.md)

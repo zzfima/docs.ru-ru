@@ -13,19 +13,19 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004594"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186212"
 ---
 # <a name="commanding-overview"></a>Общие сведения о системе команд
 Система команд <a name="introduction"></a> представляет собой механизм ввода в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], обеспечивающий обработку входных данных на более семантическом уровне по сравнению с вводом устройств. Примеры команд включают операции **Копировать**, **Вырезать** и **Вставить**, доступные во многих приложениях.  
   
  В этом обзоре определяется понятие команд в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], классы, входящие в модель команд, и способы использования и создания команд в приложениях.  
   
- В этом разделе содержатся следующие подразделы:  
+ Этот раздел состоит из следующих подразделов.  
   
 - [Что представляют собой команды?](#commands_at_10000_feet)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72004594"
   
 - [Создание настраиваемых команд](#creating_commands)  
   
-<a name="commands_at_10000_feet"></a>   
+<a name="commands_at_10000_feet"></a>
 ## <a name="what-are-commands"></a>Что представляют собой команды?  
  Команды применяются в различных целях. Первой задачей является отделение семантики и объекта, вызывающего команду, от логики, которая выполняет команду. Это позволяет нескольким и разнородным источникам вызывать одну логику команды, а также настраивать логику команды для различных целевых объектов. Например, операции редактирования **Копировать**, **Вырезать** и **Вставить**, которые встречаются во многих приложениях, могут вызываться с помощью разных действий пользователя, если они реализованы с помощью команд. Приложение может поддерживать вырезание выделенных объектов или текста путем нажатия определенной кнопки, выбора пункта меню или сочетания клавиш, например CTRL+X. С помощью команд можно привязать разные типы действий пользователя к одной логике.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72004594"
   
  Семантика команды может быть согласованной в разных приложениях и классах, однако логика действия зависит от конкретного объекта, к которому она применяется. Сочетание клавиш CTRL+X вызывает команду **Вырезать** в классах текста, классах изображений и веб-браузерах, однако фактическая логика для выполнения операции **Вырезать** определяется приложением, которое ее выполняет. <xref:System.Windows.Input.RoutedCommand> позволяет клиентам реализовать логику. Текстовый объект может вырезать выделенный текст в буфер обмена, а объект изображения может вырезать выбранное изображение. Когда приложение обрабатывает событие <xref:System.Windows.Input.CommandManager.Executed>, оно имеет доступ к целевому объекту команды и может выполнить соответствующее действие в зависимости от типа целевого объекта.  
   
-<a name="simple_command"></a>   
+<a name="simple_command"></a>
 ## <a name="simple-command-example-in-wpf"></a>Пример простой команды в WPF  
  Самый простой способ использования команды в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] — использовать предопределенную команду <xref:System.Windows.Input.RoutedCommand> из одного из классов библиотеки команд, элемент управления с собственной поддержкой обработки команд или элемент управления с собственной поддержкой вызова команд.  Команда <xref:System.Windows.Input.ApplicationCommands.Paste%2A> является одной из предопределенных команд в классе <xref:System.Windows.Input.ApplicationCommands>.  Элемент управления <xref:System.Windows.Controls.TextBox> содержит встроенную логику для обработки команды <xref:System.Windows.Input.ApplicationCommands.Paste%2A>.  Класс <xref:System.Windows.Controls.MenuItem> включает собственную поддержку для вызова команд.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72004594"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
-<a name="Four_main_Concepts"></a>   
+<a name="Four_main_Concepts"></a>
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Четыре основных понятия в системе команд WPF  
  Модель перенаправляемых команд [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] можно разбить на четыре основных понятия: команда, источник команды, цель команды и привязка команды.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72004594"
   
  В предыдущем примере команда <xref:System.Windows.Input.ApplicationCommands.Paste%2A> является командой, <xref:System.Windows.Controls.MenuItem> — источником команды, <xref:System.Windows.Controls.TextBox> — целевым объектом команды, а привязка команды предоставляется элементом управления <xref:System.Windows.Controls.TextBox>.  Следует отметить, что привязка <xref:System.Windows.Input.CommandBinding> не всегда предоставляется элементом управления, который является целевым классом команды.  Довольно часто <xref:System.Windows.Input.CommandBinding> должен создаваться разработчиком приложения, кроме того, <xref:System.Windows.Input.CommandBinding> может быть присоединен к предку целевого объекта команды.  
   
-<a name="Commands"></a>   
+<a name="Commands"></a>
 ### <a name="commands"></a>Команды  
  Команды в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] создаются путем реализации интерфейса <xref:System.Windows.Input.ICommand>.  <xref:System.Windows.Input.ICommand> предоставляет два метода, <xref:System.Windows.Input.ICommand.Execute%2A> и <xref:System.Windows.Input.ICommand.CanExecute%2A>, и событие <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A> выполняет действия, связанные с командой. <xref:System.Windows.Input.ICommand.CanExecute%2A> определяет, может ли команда выполняться для текущего целевого объекта команды. Событие <xref:System.Windows.Input.ICommand.CanExecuteChanged> вызывается, если диспетчер команд, управляющий операциями системы команд, обнаруживает изменения в источнике команды, которые могут сделать недействительной команду, которая вызвана, но еще не выполнена привязкой команды.  Реализация [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] класса <xref:System.Windows.Input.ICommand> — класс <xref:System.Windows.Input.RoutedCommand>, который рассматривается в этом обзоре.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72004594"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет набор общих перенаправленных команд, которые охватывают несколько классов: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands> и <xref:System.Windows.Documents.EditingCommands>.  Эти классы состоят только из объектов <xref:System.Windows.Input.RoutedCommand> и не реализуют логику команды.  За реализацию логики команды отвечает объект, для которого выполняется команда.  
   
-<a name="Command_Sources"></a>   
+<a name="Command_Sources"></a>
 ### <a name="command-sources"></a>Источники команд  
  Источник команды — это объект, который вызывает команду.  Примерами источников команды являются <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.Button> и <xref:System.Windows.Input.KeyGesture>.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72004594"
   
 - <xref:System.Windows.Input.ICommandSource.Command%2A> — это команда, которая будет выполняться при вызове источника команды.  
   
-- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — это объект, для которого выполняется команда.  Следует отметить, что в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> задано значение <xref:System.Windows.Input.ICommandSource>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается. Если <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> не задан, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — это объект, для которого выполняется команда.  Следует отметить, что в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource> задано значение <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается. Если <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> не задан, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  
   
 - <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> — это определяемый пользователем тип данных, который используется для передачи данных обработчикам, реализующим команду.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "72004594"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
   
-<a name="Command_Binding"></a>   
+<a name="Command_Binding"></a>
 ### <a name="commandbinding"></a>CommandBinding  
  <xref:System.Windows.Input.CommandBinding> привязывает команду к обработчикам событий, которые реализуют команду.  
   
@@ -150,9 +150,9 @@ ms.locfileid: "72004594"
   
  В некоторых случаях <xref:System.Windows.Input.CommandBinding> присоединяется к целевому объекту команды напрямую, например с помощью класса <xref:System.Windows.Controls.TextBox> и команд <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A> и <xref:System.Windows.Input.ApplicationCommands.Paste%2A>. Довольно часто, однако, более удобным будет подключение <xref:System.Windows.Input.CommandBinding> к предку целевого объекта команды, такому как главное окно <xref:System.Windows.Window> или объект приложения, особенно в том случае, если одну привязку <xref:System.Windows.Input.CommandBinding> можно использовать для нескольких целей команды.  Это необходимо учитывать при создании инфраструктуры системы команд.  
   
-<a name="Commane_Target"></a>   
+<a name="Commane_Target"></a>
 ### <a name="command-target"></a>Цель команды  
- Целью команды является элемент, для которого выполняется команда.  По отношению к <xref:System.Windows.Input.RoutedCommand> целевой объект команды — это элемент, с которого начинается перенаправление <xref:System.Windows.Input.CommandManager.Executed> и <xref:System.Windows.Input.CommandManager.CanExecute>.  Как было отмечено ранее, в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> задано значение <xref:System.Windows.Input.ICommandSource>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается.  
+ Целью команды является элемент, для которого выполняется команда.  По отношению к <xref:System.Windows.Input.RoutedCommand> целевой объект команды — это элемент, с которого начинается перенаправление <xref:System.Windows.Input.CommandManager.Executed> и <xref:System.Windows.Input.CommandManager.CanExecute>.  Как было отмечено ранее, в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource> задано значение <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается.  
   
  Источник команды может явно задавать целевой объект команды.  Если цель команды не определена, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  Одно из преимуществ использования элемента с фокусом клавиатуры в качестве цели команды является то, что это позволяет разработчику приложения использовать один источник команды для вызова команд для нескольких целей без необходимости отслеживания целевого объекта команды.  Например, если <xref:System.Windows.Controls.MenuItem> вызывает команду **Вставить** в приложении, которое имеет элемент управления <xref:System.Windows.Controls.TextBox> и элемент управления <xref:System.Windows.Controls.PasswordBox>, целевым объектом может быть <xref:System.Windows.Controls.TextBox> или <xref:System.Windows.Controls.PasswordBox> в зависимости от того, какой элемент управления имеет фокус клавиатуры.  
   
@@ -163,27 +163,27 @@ ms.locfileid: "72004594"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
-<a name="Command_Manager"></a>   
+<a name="Command_Manager"></a>
 ### <a name="the-commandmanager"></a>Диспетчер команд CommandManager  
  <xref:System.Windows.Input.CommandManager> выполняет ряд функций, связанных с командами.  Он предоставляет набор статических методов для добавления обработчиков событий <xref:System.Windows.Input.CommandManager.PreviewExecuted>, <xref:System.Windows.Input.CommandManager.Executed>, <xref:System.Windows.Input.CommandManager.PreviewCanExecute> и <xref:System.Windows.Input.CommandManager.CanExecute> в конкретный элемент и их удаления из него.  Он предоставляет средства для регистрации объектов <xref:System.Windows.Input.CommandBinding> и <xref:System.Windows.Input.InputBinding> для определенного класса.  <xref:System.Windows.Input.CommandManager> также предоставляет средства (с помощью события <xref:System.Windows.Input.CommandManager.RequerySuggested>) для уведомления команды о необходимости вызова события <xref:System.Windows.Input.ICommand.CanExecuteChanged>.  
   
  Метод <xref:System.Windows.Input.CommandManager.InvalidateRequerySuggested%2A> вынуждает <xref:System.Windows.Input.CommandManager> вызвать событие <xref:System.Windows.Input.CommandManager.RequerySuggested>.  Это удобно для ситуаций, когда требуется отключить или включить команду, но отсутствуют условия, о которых известно <xref:System.Windows.Input.CommandManager>.  
   
-<a name="Command_Library"></a>   
+<a name="Command_Library"></a>
 ## <a name="command-library"></a>Библиотека команд  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет набор стандартных команд.  Библиотека команд включает следующие классы: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> и <xref:System.Windows.Input.ComponentCommands>.  Эти классы предоставляют команды, такие как <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> и <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> и <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Многие из этих команд содержат набор привязок ввода по умолчанию.  Например, если вы укажете, что приложение обрабатывает команду копирования, вы автоматически получаете привязку клавиатуры "CTRL + C", а также получаете привязки для других устройств ввода, таких как жесты пера планшетного ПК и речевые сведения.  
+ Многие из этих команд содержат набор привязок ввода по умолчанию.  Например, если вы укажете, что приложение обрабатывает команду копий, вы автоматически получаете привязку клавиатуры "CTRL-C", вы также получаете привязки для других устройств ввода, таких как жесты пера планшетного ПК и речевой информации.  
   
- При ссылке на команды в различных библиотеках команд с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], обычно можно опустить имя класса библиотеки, который предоставляет статическое свойство команды. Как правило, имена команд задаются однозначно в виде строк и существуют типы владельца, которые обеспечивает логическую группировку команд, однако они не являются необходимыми для устранения неоднозначности. Например, можно указать `Command="Cut"` вместо более подробной команды `Command="ApplicationCommands.Cut"`. Этот удобный механизм встроен в обработчик команд [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (точнее, это поведение преобразователя типов <xref:System.Windows.Input.ICommand>, на который обработчик [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ссылается во время загрузки).  
+ При ссылке на команды в различных библиотеках команд с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], обычно можно опустить имя класса библиотеки, который предоставляет статическое свойство команды. Как правило, имена команд задаются однозначно в виде строк и существуют типы владельца, которые обеспечивает логическую группировку команд, однако они не являются необходимыми для устранения неоднозначности. Например, можно указать `Command="Cut"` вместо более подробной команды `Command="ApplicationCommands.Cut"`. Это удобный механизм, встроенный [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в процессор для команд (точнее, это поведение <xref:System.Windows.Input.ICommand>преобразователя типа, который [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессор ссылается во время загрузки).  
   
-<a name="creating_commands"></a>   
+<a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>Создание настраиваемых команд  
  Если команды в классах библиотеки команд не соответствуют вашим потребностям, вы можете создать собственные команды.  Настраиваемые команды можно создать двумя способами.  Первый способ подразумевает создание с нуля и реализацию интерфейса <xref:System.Windows.Input.ICommand>.  Другой способ, а также наиболее распространенный подход, — создание <xref:System.Windows.Input.RoutedCommand> или <xref:System.Windows.Input.RoutedUICommand>.  
   
  Пример создания настраиваемой команды <xref:System.Windows.Input.RoutedCommand> см. в разделе [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) (Создание примера настраиваемой команды RoutedCommand).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Input.RoutedCommand>
 - <xref:System.Windows.Input.CommandBinding>

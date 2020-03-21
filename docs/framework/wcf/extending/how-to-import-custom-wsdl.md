@@ -2,12 +2,12 @@
 title: Практическое руководство. Импорт пользовательской информации WSDL
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 10fc3282560d35e61044a367f8172571096d76bd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 614842f2d77d967e0a6d4841e5e5e4fcc8805580
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975890"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185550"
 ---
 # <a name="how-to-import-custom-wsdl"></a>Практическое руководство. Импорт пользовательской информации WSDL
 В этом разделе описывается, как импортировать пользовательский код WSDL. Для работы с пользовательским кодом WSDL необходимо реализовать интерфейс <xref:System.ServiceModel.Description.IWsdlImportExtension>.  
@@ -57,8 +57,8 @@ ms.locfileid: "73975890"
     ```xml  
     <system.serviceModel>  
           <client>  
-            <endpoint   
-              address="http://localhost:8000/Fibonacci"   
+            <endpoint
+              address="http://localhost:8000/Fibonacci"
               binding="wsHttpBinding"  
               contract="IFibonacci"  
             />  
@@ -78,8 +78,8 @@ ms.locfileid: "73975890"
     System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Метаданные](../feature-details/metadata.md)
+- [Метаданных](../feature-details/metadata.md)
 - [Экспорт и импорт метаданных](../feature-details/exporting-and-importing-metadata.md)
 - [Пользовательская публикация WSDL](../samples/custom-wsdl-publication.md)

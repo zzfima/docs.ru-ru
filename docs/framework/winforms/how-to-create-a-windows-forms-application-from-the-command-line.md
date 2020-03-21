@@ -1,5 +1,5 @@
 ---
-title: Создание Windows Forms приложения из командной строки
+title: Создание приложения Windows Forms из командной строки
 titleSuffix: ''
 ms.date: 03/14/2018
 dev_langs:
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-ms.openlocfilehash: da6b9da53a36a44233dde4f0d1c4f147d913c7cf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7bd3add526a6b60d628b05d46eca22ce407c36b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739521"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181987"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Как создать Windows Forms приложение из командной строки
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Как: Создать приложение Windows Forms из командной строки
 
-В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  См. также раздел [Пошаговое руководство. размещение элемента управления Windows Forms в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  Также смотрите [Пошагово: Хостинг Управления формами Windows в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
   
 ## <a name="procedure"></a>Процедура  
   
 #### <a name="to-create-the-form"></a>Создание формы  
   
-1. В пустом файле кода введите следующие инструкции `Imports` или `using`:  
+1. В пустом файле кода `Imports` `using` введите следующие или операторы:  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2. Объявите класс с именем `Form1`, который наследуется от класса Form:
+2. Объявить класс, названный, `Form1` который наследует от класса формы:
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. Создайте конструктор без параметров для `Form1`.
+3. Создайте безпаралисастого конструктора для. `Form1`
   
      В следующий процедуре будет добавлен дополнительный код конструктора.
   
@@ -44,9 +44,9 @@ ms.locfileid: "76739521"
   
 4. Добавьте в класс метод `Main`.
   
-    1. Примените <xref:System.STAThreadAttribute> к методу C# `Main`, чтобы указать, что приложение Windows Forms является однопотоковым апартаментом. (Атрибут не является обязательным в Visual Basic, так как приложения Windows Forms, разработанные с помощью Visual Basic, по умолчанию используют модель апартамента с одним потоком.)  
+    1. Примените <xref:System.STAThreadAttribute> метод `Main` C,, чтобы указать, что ваше приложение Windows Forms является однопоточной квартирой. (Атрибут не является необходимым в Visual Basic, так как Windows формирует приложения, разработанные с Visual Basic, используют однопонищенную модель апартаментов по умолчанию.)  
   
-    2. Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, чтобы применить стили операционной системы к приложению.  
+    2. Вызов <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> для применения стилей операционной системы в приложении.  
   
     3. Создайте экземпляр формы и запустите его.  
   
@@ -59,19 +59,19 @@ ms.locfileid: "76739521"
   
 2. Скомпилируйте форму.  
   
-    - При использовании C#введите: `csc form1.cs`  
+    - Если вы используете C q, введите:`csc form1.cs`  
   
          `-or-`  
   
-    - Если используется Visual Basic, введите: `vbc form1.vb`  
+    - Если вы используете Visual Basic, введите:`vbc form1.vb`  
   
 3. В командной строке введите следующий текст: `Form1.exe`.  
   
-## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработка события
+## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработки события
 
-В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее. В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него. Дополнительные сведения об элементах управления, которые можно добавить в Windows Forms, см. в разделе [элементы управления Windows Forms](./controls/index.md).
+В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее. В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него. Для получения дополнительной информации об элементах [Windows Forms Controls](./controls/index.md)управления, которые можно добавить в формы Windows, см.
   
- Помимо понимания способов создания приложений Windows Forms, следует обладать общими знаниями о программировании на основе событий и способах обработки данных, введенных пользователем. Дополнительные сведения см. в статьях [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)и [обработка входных данных пользователя](./controls/handling-user-input.md) .  
+ Помимо понимания способов создания приложений Windows Forms, следует обладать общими знаниями о программировании на основе событий и способах обработки данных, введенных пользователем. Для получения дополнительной информации [Handling User Input](./controls/handling-user-input.md) см. [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md)  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>Объявление элемента управления типа "Кнопка" и обработка событий щелчка мышью для нее  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76739521"
   
 3. Добавьте кнопку в форму.  
   
-     В следующем примере кода показано, как объявить элемент управления Button:
+     Следующий пример кода показывает, как объявить управление кнопкой:
   
      [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
@@ -90,7 +90,7 @@ ms.locfileid: "76739521"
   
 5. В обработчике событий щелчка мышью выведите элемент управления <xref:System.Windows.Forms.MessageBox> с сообщением "Здравствуй, мир".  
   
-     В следующем примере кода показано, как обрабатывается событие Click элемента управления Button:
+     Следующий пример кода демонстрирует, как обрабатывать событие нажатия кнопки:
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
@@ -105,8 +105,8 @@ ms.locfileid: "76739521"
 7. Скомпилируйте и запустите приложение, как описано в предыдущей процедуре.  
   
 ## <a name="example"></a>Пример  
- 
-В следующем примере кода приведен полный пример из предыдущих процедур.
+
+Следующий пример кода является полным примером из предыдущих процедур:
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  

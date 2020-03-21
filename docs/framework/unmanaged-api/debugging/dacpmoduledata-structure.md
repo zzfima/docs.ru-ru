@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c24bdce64eb7e208bf3830940d7beab1ebf92e78
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793808"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179188"
 ---
 # <a name="dacpmoduledata-structure"></a>Структура DacpModuleData
 
-Определяет транспортный буфер для сведений о среде выполнения модуля.
+Определяет транспортный буфер для информации о времени выполнения модуля.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -34,32 +34,32 @@ ms.locfileid: "76793808"
 struct DacpModuleData
 {
     CLRDATA_ADDRESS Address;
-    CLRDATA_ADDRESS File; 
+    CLRDATA_ADDRESS File;
     CLRDATA_ADDRESS  ilBase;
     char payLoad[132];
 };
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-| Член    | Описание                                                             |
+| Участник    | Описание                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | Адрес объекта модуля.                                           |
-| `File`    | Указатель на переносимый исполняемый файл (PE).                       |
-| `ilBase`  | Адрес базы загруженного образа.                                 |
-| `payLoad` | Буфер полезных данных для дополнительных сведений о модулях, используемых средой выполнения. |
+| `File`    | Указатель на портативный исполняемый (PE) файл.                       |
+| `ilBase`  | Адрес базы загруженного изображения.                                 |
+| `payLoad` | Буфер полезной нагрузки для дополнительной информации о модуле, используемой временем выполнения. |
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Эта структура находится внутри среды выполнения и не предоставляется через все файлы заголовков или библиотек. Чтобы использовать его, определите структуру, как указано выше.
+Эта структура живет в времени выполнения и не подвергается воздействию каких-либо заголовков или файлов библиотек. Чтобы использовать его, определите структуру, указанную выше.
 
 ## <a name="requirements"></a>Требования
 **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок:** None  
-**Библиотека:** None  
+**Заголовок:** Ни один  
+**Библиотека:** Ни один  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Отладка](index.md)
+- [Отладки](index.md)
 - [Структуры отладки](debugging-structures.md)

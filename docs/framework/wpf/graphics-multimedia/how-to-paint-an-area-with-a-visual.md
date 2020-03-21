@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Закрашивание области с помощью Visual
+title: Как раскрасить область с визуальным элементом
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: b5376085dc36549cd2d3d72835ec291454124267
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 793a14f0d395a60bf73ca7dc173b82237a139f35
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921710"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78849371"
 ---
-# <a name="how-to-paint-an-area-with-a-visual"></a>Практическое руководство. Закрашивание области с помощью Visual
-В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> класс для закраски области с <xref:System.Windows.Media.Visual>.  
+# <a name="how-to-paint-an-area-with-a-visual"></a>Как раскрасить область с визуальным элементом
+В этом примере <xref:System.Windows.Media.VisualBrush> показано, как использовать <xref:System.Windows.Media.Visual>класс для нарисования области с помощью .  
   
- В следующем примере несколько элементов управления и панель используются в качестве фона для прямоугольника.  
+ В следующем примере в качестве фона прямоугольника используются несколько элементов управления и панель.  
   
 ## <a name="example"></a>Пример  
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
@@ -27,10 +27,10 @@ ms.locfileid: "61921710"
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- Дополнительные сведения о <xref:System.Windows.Media.VisualBrush> и Дополнительные примеры см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md) Обзор.  
+ Для получения <xref:System.Windows.Media.VisualBrush> дополнительной информации и дополнительных примеров смотрите обзор [картины с изображениями, рисунками и визуальными изображениями.](painting-with-images-drawings-and-visuals.md)  
   
- Данный пример кода является частью большего примера для <xref:System.Windows.Media.VisualBrush> класса. Полный пример см. в разделе [пример VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
+ Этот пример кода является частью более <xref:System.Windows.Media.VisualBrush> крупного примера, предусмотренного для класса. Для полного образца [VisualBrush Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/VisualBrush)см.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)

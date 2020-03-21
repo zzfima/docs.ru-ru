@@ -1,5 +1,5 @@
 ---
-title: Группирование элементов в элементе управления ListView
+title: Элементы группы в управлении ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: 45846751780f433c29b186fe8b9a908f5d295ab3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a1754d10de2bbb5895ae861cd17f4af1f18810e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736624"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141995"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms
-Функция группирования элемента управления <xref:System.Windows.Forms.ListView> позволяет отображать связанные наборы элементов в группах. Эти группы разделяются на экране горизонтальными заголовками групп, которые содержат заголовки групп. Вы можете использовать группы <xref:System.Windows.Forms.ListView>, чтобы упростить навигацию по большим спискам, группируя элементы по алфавиту, по датам или по любой другой логической группировке. На следующем рисунке показаны некоторые сгруппированные элементы.  
+С функцией группировки <xref:System.Windows.Forms.ListView> элемента управления можно отображать связанные наборы элементов в группах. Эти группы разделены на экране горизонтальными заголовками групп, содержащими названия групп. Группы <xref:System.Windows.Forms.ListView> можно использовать для облегчения навигации по большим спискам, группируя элементы в алфавитном порядке, по дате или по любой другой логической группировке. На следующем изображении показаны некоторые сгруппированные элементы.  
   
- ![Снимок экрана с четными и даже группами ListView.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
-   
- Чтобы включить группирование, необходимо сначала создать одну или несколько групп либо в конструкторе, либо программно. После определения группы можно назначить элементы <xref:System.Windows.Forms.ListView> группам. Можно также перемещать элементы из одной группы в другую программным способом.  
+ ![Скриншот нечетных и четных групп ListView.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
+
+ Для обеспечения группировки необходимо сначала создать одну или несколько групп в составе дизайнера или в программном плане. После определения группы можно назначить <xref:System.Windows.Forms.ListView> элементы группам. Вы также можете перемещать элементы из одной группы в другую в программном плане.  
   
 ### <a name="to-add-groups"></a>Добавление групп  
   
@@ -35,19 +35,19 @@ ms.locfileid: "76736624"
   
 ### <a name="to-remove-groups"></a>Удаление групп  
   
-1. Используйте метод <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> или <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> коллекции <xref:System.Windows.Forms.ListView.Groups%2A>.  
+1. Используйте <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> или метод <xref:System.Windows.Forms.ListView.Groups%2A> сбора.  
   
-     Метод <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> удаляет одну группу; метод <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> удаляет все группы из списка.  
+     Метод <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> удаляет одну группу; <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> метод удаляет все группы из списка.  
   
     > [!NOTE]
-    > При удалении группы элементы в этой группе не удаляются.  
+    > Удаление группы не удаляет элементы в этой группе.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#22)]  
   
-### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>Назначение элементов группам или перемещение элементов между группами  
+### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>Назначать элементы группам или перемещать элементы между группами  
   
-1. Задайте свойство <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> отдельных элементов.  
+1. Установите <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> свойство отдельных элементов.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#23)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#23)]  

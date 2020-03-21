@@ -6,19 +6,19 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: be9bc6e0cddc0581b9acb319f7d1fc1c81dae268
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 30cb69fcf05108822e8f3e2d45c9e79dbced26ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095116"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181909"
 ---
 # <a name="sample-opentype-font-pack"></a>Образец пакета шрифтов OpenType
-В этом разделе приводятся общие сведения о примерах шрифтов OpenType, распространяемых вместе с Windows SDK. Образцы шрифтов поддерживают расширенные функции OpenType, которые могут использоваться приложениями [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+В этой теме представлен обзор образца шрифтов OpenType, которые распространяются с помощью Windows SDK. Образец шрифтов поддерживает расширенные функции [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] OpenType, которые могут быть использованы приложениями.  
 
-<a name="overview"></a>   
+<a name="overview"></a>
 ## <a name="fonts-in-the-opentype-font-pack"></a>Шрифты в пакете шрифтов OpenType  
- Windows SDK предоставляет набор образцов шрифтов OpenType, которые можно использовать при создании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений. Образцы шрифтов предоставляются по лицензии от Ascender Corporation. Эти шрифты реализуют только подмножество всех функций, определенных в формате OpenType. В следующей таблице перечислены имена образцов шрифтов OpenType.  
+ SDK Windows предоставляет набор примеров шрифтов OpenType, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] которые можно использовать при создании приложений. Образцы шрифтов предоставляются по лицензии от Ascender Corporation. Эти шрифты реализуют только подмножество общих функций, определенных форматом OpenType. В следующей таблице перечислены имена шрифтов OpenType.  
   
 |**Название**|**Файл**|  
 |--------------|--------------|  
@@ -31,7 +31,7 @@ ms.locfileid: "77095116"
 |Pescadero|Pesca.ttf|  
 |Pescadero Bold|Pescab.ttf|  
   
- На следующем рисунке показано, как выглядят примеры шрифтов OpenType.  
+ На следующей иллюстрации показано, как выглядят образцы шрифтов OpenType.  
   
  ![Список имен шрифтов в примере пакета шрифтов](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
@@ -40,14 +40,14 @@ ms.locfileid: "77095116"
 > [!NOTE]
 > Являясь разработчиком, вы несете ответственность за наличие у вас необходимых лицензионных прав на любой шрифт, который вы включаете в приложение или распространяете иным образом.  
   
-<a name="installing_the_fonts"></a>   
+<a name="installing_the_fonts"></a>
 ## <a name="installing-the-fonts"></a>Установка шрифтов  
- Вы можете установить образцы шрифтов OpenType в каталог шрифтов Windows по умолчанию **\виндовс\фонтс**. Для установки шрифтов используйте панель управления Fonts. После того как эти шрифты будут установлены на компьютере, они будут доступны для всех приложений, которые ссылаются на шрифты Windows по умолчанию. Можно отобразить характерный набор символов в нескольких размерах шрифта, дважды нажав файл шрифта. На следующем снимке экрана показан файл шрифта Lindsey, Linds.ttf.  
+ У вас есть возможность установки образца шрифтов OpenType в каталог шрифтов Windows по умолчанию, **sWINDOWS-Fonts.** Для установки шрифтов используйте панель управления Fonts. После того, как эти шрифты находятся на вашем компьютере, они доступны для всех приложений, которые ссылаются на шрифты Windows по умолчанию. Можно отобразить характерный набор символов в нескольких размерах шрифта, дважды нажав файл шрифта. На следующем снимке экрана показан файл шрифта Lindsey, Linds.ttf.  
   
  ![Lindsey font &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Отображение шрифта Lindsey  
   
-<a name="using_the_fonts"></a>   
+<a name="using_the_fonts"></a>
 ## <a name="using-the-fonts"></a>Использование шрифтов  
  Есть два способа использования шрифтов в вашем приложении. Можно добавить шрифты в приложение в виде элементов содержимого проекта, которые не внедряются в качестве ресурсов в сборку. Кроме того, можно добавить шрифты в приложение в виде элементов ресурсов проекта, которые внедряются в файлы сборки приложения. Дополнительные сведения см. в разделе [Упаковка шрифтов с приложениями](packaging-fonts-with-applications.md).  
   

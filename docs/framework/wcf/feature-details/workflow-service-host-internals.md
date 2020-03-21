@@ -2,59 +2,59 @@
 title: Внутренние особенности размещения службы рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: 0596e15e27460a08f859ec3398afbeae752c86fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b95a59b0e1715b3cc18ccfea44d6c4ccd04ca5ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984242"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184165"
 ---
 # <a name="workflow-service-host-internals"></a>Внутренние особенности размещения службы рабочего процесса
 Объект <xref:System.ServiceModel.WorkflowServiceHost> предоставляет возможность размещения служб рабочего процесса. Он отвечает за прослушивание входящих сообщений и перенаправление их соответствующему экземпляру службы рабочего процесса, управляет выгрузкой и сохранением бездействующих рабочих процессов, а также выполняет другие функции. В этом разделе описано, как объект WorkflowServiceHost обрабатывает входящие сообщения.  
   
 ## <a name="workflowservicehost-overview"></a>Обзор WorkflowServiceHost  
 
-Класс <xref:System.ServiceModel.WorkflowServiceHost> используется для размещения служб рабочего процесса. Он прослушивает входящие сообщения и перенаправляет их соответствующему экземпляру службы рабочих процессов, создавая при необходимости новые экземпляры или загружая существующие из долговременного хранилища. На следующей схеме показана высокоуровневая о <xref:System.ServiceModel.WorkflowServiceHost> работает: 
+Класс <xref:System.ServiceModel.WorkflowServiceHost> используется для размещения служб рабочего процесса. Он прослушивает входящие сообщения и перенаправляет их соответствующему экземпляру службы рабочих процессов, создавая при необходимости новые экземпляры или загружая существующие из долговременного хранилища. Следующая диаграмма иллюстрирует на высоком <xref:System.ServiceModel.WorkflowServiceHost> уровне, как работает:
   
- ![Схема, показывающая Общие сведения о службе рабочего процесса.](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
+ ![Диаграмма, отображающая обзор хоста службы рабочего процесса.](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
   
- Из схемы видно, что объект <xref:System.ServiceModel.WorkflowServiceHost> загружает определения служб рабочих процессов из XAMLX-файлов, а сведения о конфигурации из файла конфигурации. Кроме того, он загружает конфигурацию отслеживания из профиля отслеживания. <xref:System.ServiceModel.WorkflowServiceHost> предоставляет конечную точку управления рабочим процессом, которая позволяет отправлять экземплярам рабочих процессов команды управления.  Дополнительные сведения см. в разделе [образец конечной точки управления рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md).  
+ Из схемы видно, что объект <xref:System.ServiceModel.WorkflowServiceHost> загружает определения служб рабочих процессов из XAMLX-файлов, а сведения о конфигурации из файла конфигурации. Кроме того, он загружает конфигурацию отслеживания из профиля отслеживания. <xref:System.ServiceModel.WorkflowServiceHost> предоставляет конечную точку управления рабочим процессом, которая позволяет отправлять экземплярам рабочих процессов команды управления.  Для получения дополнительной [информации](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)см.  
   
  Объект <xref:System.ServiceModel.WorkflowServiceHost> предоставляет также конечные точки приложений, которые прослушивают входящие сообщения приложений. При поступлении входящего сообщения оно перенаправляется соответствующему экземпляру службы рабочих процессов (если он в данный момент загружен). При необходимости создается новый экземпляр рабочего процесса. Если имеется сохраненный экземпляр, он загружается из хранилища.  
   
 ## <a name="workflowservicehost-details"></a>Подробные сведения о классе WorkflowServiceHost  
- На следующей схеме показано, как <xref:System.ServiceModel.WorkflowServiceHost> обрабатывает сообщения немного более подробно:  
+ Следующая диаграмма <xref:System.ServiceModel.WorkflowServiceHost> показывает, как обрабатывает сообщения более подробно:  
   
- ![Схема, показывающая поток сообщений узел службы рабочего процесса.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  
+ ![Диаграмма, отображающая поток сообщений рабочего потока службы.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  
   
- На схеме изображены три различные конечные точки: конечная точка приложения, конечная точка управления рабочим процессом и конечная точка размещения рабочего процесса. Конечная точка приложения получает сообщения, связанные с конкретным экземпляром рабочего процесса. Конечная точка управления рабочим процессом прослушивает команды управления. Конечная точка размещения рабочего процесса прослушивает сообщения, при поступлении которых объект <xref:System.ServiceModel.WorkflowServiceHost> загружает и выполняет рабочие процессы, не относящиеся к службе. Как показано на схеме, все сообщения обрабатываются средой выполнения WCF.  Регулирование экземпляра службы рабочих процессов осуществляется с помощью свойства <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Это свойство ограничивает количество одновременно функционирующих экземпляров службы рабочих процессов. После превышения этого ограничения все дополнительные запросы на создание новых экземпляров службы рабочего процесса или на активацию постоянных экземпляров службы заносятся в очередь. Поставленные в очередь запросы обрабатываются в последовательном порядке без учета того, являются ли они запросами к новому экземпляру или к работающему, постоянному экземпляру. Загруженные сведения о политике узла определяют, что происходит с необработанными исключениями, а также задают порядок выгрузки и сохранения бездействующих служб Workflow Services. Дополнительные сведения об этих темах см. в разделе [как: Настройка рабочего процесса поведение необработанного исключения с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) и [как: Настроить неактивное поведение с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Экземпляры рабочих процессов сохраняются в соответствии с политиками узла размещения и повторно загружаются при необходимости. Дополнительные сведения см. в разделе сохраняемости рабочего процесса: [Практическое руководство. Настроить сохраняемость с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [создания длительные службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), и [сохранение рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ На схеме изображены три различные конечные точки: конечная точка приложения, конечная точка управления рабочим процессом и конечная точка размещения рабочего процесса. Конечная точка приложения получает сообщения, связанные с конкретным экземпляром рабочего процесса. Конечная точка управления рабочим процессом прослушивает команды управления. Конечная точка размещения рабочего процесса прослушивает сообщения, при поступлении которых объект <xref:System.ServiceModel.WorkflowServiceHost> загружает и выполняет рабочие процессы, не относящиеся к службе. Как показано на схеме, все сообщения обрабатываются средой выполнения WCF.  Регулирование экземпляра службы рабочих процессов осуществляется с помощью свойства <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Это свойство ограничивает количество одновременно функционирующих экземпляров службы рабочих процессов. После превышения этого ограничения все дополнительные запросы на создание новых экземпляров службы рабочего процесса или на активацию постоянных экземпляров службы заносятся в очередь. Поставленные в очередь запросы обрабатываются в последовательном порядке без учета того, являются ли они запросами к новому экземпляру или к работающему, постоянному экземпляру. Загруженные сведения о политике узла определяют, что происходит с необработанными исключениями, а также задают порядок выгрузки и сохранения бездействующих служб Workflow Services. Для получения дополнительной информации по этим темам [см. Как: Настроить рабочего процесса необработанного исключения поведение с WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) и [как: Настроить поведение простоя с WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Экземпляры рабочих процессов сохраняются в соответствии с политиками узла размещения и повторно загружаются при необходимости. Для получения дополнительной информации о сохранении рабочего процесса см.: [Как: Настроить настойчивость с помощью WorkflowServiceHost,](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md) [Создание долгосрочной службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)и [стойкость рабочего процесса.](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
   
- Ниже показан поток, при вызове WorkflowServiceHost.Open:  
+ Следующая иллюстрация показывает поток, когда WorkflowServiceHost.Open называется:  
   
- ![Схема, который показывает поток, при вызове WorkflowServiceHost.Open.](./media/workflow-service-host-internals/workflow-service-host-open.gif)  
+ ![Диаграмма, отображающая поток при вызове WorkflowServiceHost.Open.](./media/workflow-service-host-internals/workflow-service-host-open.gif)  
   
  Рабочий процесс загружается из XAML, и создается дерево действий. Объект <xref:System.ServiceModel.WorkflowServiceHost> проходит по дереву действий и создает описание службы. К узлу размещения применяются параметры конфигурации. По завершении этих действий узел начинает прослушивать входящие сообщения.  
   
- На следующем рисунке показано, что <xref:System.ServiceModel.WorkflowServiceHost> при получении сообщения, привязанного к действию Receive, свойство CanCreateInstance имеет значение `true`:  
+ Следующая иллюстрация <xref:System.ServiceModel.WorkflowServiceHost> показывает, что делает, когда он получает сообщение, связанное для получения деятельности, которая CanCreateInstance установлен `true`на:  
   
- ![Дере, используемых узлом WFS при получении сообщения и свойство CanCreateInstance имеет значение true.](./media/workflow-service-host-internals/workflow-service-host-receive-message-cancreateinstance.gif)  
+ ![Дерево решений, используемое wFS Host, когда оно получает сообщение, и CanCreateInstance верно.](./media/workflow-service-host-internals/workflow-service-host-receive-message-cancreateinstance.gif)  
   
  Сообщение поступает и обрабатывается стеком каналов WCF. Производится проверка ограничений, и выполняются запросы корреляции. Если сообщение привязано к существующему экземпляру, производится его доставка. Если необходимо создать новый экземпляр, производится проверка свойства CanCreateInstance действия Receive. Если оно имеет значение true, создается новый экземпляр, которому и перенаправляется сообщение.  
   
  На следующем рисунке показано, что делает объект <xref:System.ServiceModel.WorkflowServiceHost> при получении сообщения, привязанного к действию Receive, если его свойство CanCreateInstance имеет значение false.  
   
- ![Дере, используемых узлом WFS при получении сообщения и свойство CanCreateInstance имеет значение false.](./media/workflow-service-host-internals/workflow-service-host-receive-message.gif)  
+ ![Дерево решений, используемое host WFS, когда оно получает сообщение, и CanCreateInstance является ложным.](./media/workflow-service-host-internals/workflow-service-host-receive-message.gif)  
   
  Сообщение поступает и обрабатывается стеком каналов WCF. Производится проверка ограничений, и выполняются запросы корреляции. Сообщение привязывается к существующему экземпляру (так как свойство CanCreateInstance имеет значение false), для чего экземпляр загружается из хранилища, возобновляется закладка и выполняется рабочий процесс.  
   
 > [!WARNING]
 > Открытие узла размещения служб рабочих процессов завершится с ошибкой, если SQL Server настроен для прослушивания только по протоколу NamedPipe.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Размещение служб рабочих процессов](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)
+- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Размещение службы рабочего процесса](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)
 - [Конечная точка элемента управления рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)
-- [Практическое руководство. Настройка рабочего процесса поведение необработанного исключения с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)
+- [Как настроить поведение необработанного исключения рабочего процесса при помощи WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)
 - [Создание службы долго выполняющегося рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
 - [Сохраняемость рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

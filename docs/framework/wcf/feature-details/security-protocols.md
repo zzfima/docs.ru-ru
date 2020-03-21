@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 6212fd911bd5b255347459a1b5a7b2f46e31963e
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b9faa4b7422419af9283ab52325e878db3d6f19f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425087"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184507"
 ---
 # <a name="security-protocols"></a>Протоколы безопасности
-Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии. В этом разделе подробно описано, Windows Communication Foundation (WCF) (реализованный в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов ws-security.  
+Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии. В этом разделе описаны сведения о Windows Communication <xref:System.ServiceModel.Channels.SecurityBindingElement>Foundation (WCF) (реализованы в ) для следующих протоколов безопасности Web-сервисов.  
   
 |Спецификация/документ|Ссылка|  
 |-|-|  
-|WSS: Безопасность сообщений SOAP 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
+|WSS: SOAP Message Security 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
 |WSS: Username Token Profile 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: X509 token Profile 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
+|WSS: X509 Token Profile 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
 |WSS: SAML 1.1 Token Profile 1,0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS: Безопасность сообщений SOAP 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
+|WSS: SOAP Message Security 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
 |WSS Username Token Profile 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
 |WSS: X.509 Token Profile 1,1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
 |WSS: Kerberos Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
@@ -32,7 +32,7 @@ ms.locfileid: "67425087"
 |Замечания по применению.<br /><br /> Ссылки и идентификация конечной точки адресации веб-служб|Готовится к публикации|  
 |WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
   
- WCF, версии 1, предусмотрено 17 режимов проверки подлинности, которые могут использоваться в качестве основы для Настройка безопасности веб-служб. Каждый из режимов оптимизирован для того или иного типичного набора требований к развертыванию, например следующих:  
+ WCF, версия 1, предоставляет 17 режимов аутентификации, которые могут быть использованы в качестве основы для конфигурации безопасности Web-сервисов. Каждый из режимов оптимизирован для того или иного типичного набора требований к развертыванию, например следующих:  
   
 - учетные данные, используемые для проверки подлинности клиента и службы;  
   
@@ -40,39 +40,39 @@ ms.locfileid: "67425087"
   
 - шаблоны обмена сообщениями.  
   
-|Режим проверки подлинности|Аутентификация клиента|Проверка подлинности сервера|Mode|  
+|Режим проверки подлинности|Аутентификация клиента|Проверка подлинности сервера|Режим|  
 |-------------------------|---------------------------|---------------------------|----------|  
-|UserNameOverTransport|Имя пользователя/пароль|X509|Transport|  
-|CertificateOverTransport|X509|X509|Transport|  
-|KerberosOverTransport|Windows|X509|Transport|  
-|IssuedTokenOverTransport|Федеративная|X509|Transport|  
-|SspiNegotiatedOverTransport|Согласование Windows Sspi|Согласование Windows Sspi|Transport|  
-|AnonymousForCertificate|Нет|X509|Сообщение|  
+|UserNameOverTransport|Имя пользователя/пароль|X509|Транспортировка|  
+|CertificateOverTransport|X509|X509|Транспортировка|  
+|KerberosOverTransport|Windows|X509|Транспортировка|  
+|IssuedTokenOverTransport|Федеративные|X509|Транспортировка|  
+|SspiNegotiatedOverTransport|Согласование Windows Sspi|Согласование Windows Sspi|Транспортировка|  
+|AnonymousForCertificate|None|X509|Сообщение|  
 |UserNameForCertificate|Имя пользователя/пароль|X509|Сообщение|  
 |MutualCertificate|X509|X509|Сообщение|  
 |MutualCertificateDuplex|X509|X509|Сообщение|  
-|IssuedTokenForCertificate|Федеративная|X509|Сообщение|  
+|IssuedTokenForCertificate|Федеративные|X509|Сообщение|  
 |Kerberos|Windows|Windows|Сообщение|  
-|IssuedToken|Федеративная|Федеративная|Сообщение|  
+|IssuedToken|Федеративные|Федеративные|Сообщение|  
 |SspiNegotiation|Согласование Windows Sspi|Согласование Windows Sspi|Сообщение|  
-|AnonymousForSslNegotiated|Нет|X509, TLS-Nego|Сообщение|  
+|AnonymousForSslNegotiated|None|X509, TLS-Nego|Сообщение|  
 |UserNameForSslNegotiated|Имя пользователя/пароль|X509, TLS-Nego|Сообщение|  
 |MutualSslNegotiated|X509|X509, TLS-Nego|Сообщение|  
-|IssuedTokenForSslNegotiated|Федеративная|X509, TLS-Nego|Сообщение|  
+|IssuedTokenForSslNegotiated|Федеративные|X509, TLS-Nego|Сообщение|  
   
  Конечные точки, использующие такие режимы проверки подлинности, могут выражать свои требования безопасности с помощью WS-SecurityPolicy (WS-SP). В этом документе описывается структура заголовка безопасности и инфраструктурные сообщения для каждого режима проверки подлинности, а также приводятся примеры политик и сообщений.  
   
- WCF использует WS-SecureConversation, чтобы обеспечить поддержку безопасные сеансы для защиты обмена сообщениями между приложениями.  Сведения о реализации см. ниже в подразделе "Безопасные сеансы".  
+ WCF использует WS-SecureConversation для обеспечения надежной поддержки сеансов для защиты обмена мультисообщениями между приложениями.  Сведения о реализации см. ниже в подразделе "Безопасные сеансы".  
   
- Помимо режимов проверки подлинности, WCF предоставляет параметры для управления распространенными механизмами защиты, которые применяются в большинстве режимов проверки подлинности на основе безопасности сообщений, например: порядок подписывания относительно операций шифрования, наборы алгоритмов, формирование ключей и подтверждение подписи.  
+ В дополнение к режимам аутентификации, WCF предоставляет настройки для управления общими механизмами защиты, которые применяются к большинству режимов проверки подлинности на основе сообщений, например: порядок операций шифрования по сравнению с шифрованием, наборы алгоритмов, производные ключевые элементы , и подтверждение подписи.  
   
  В данном документе используются перечисленные ниже префиксы и пространства имен.  
   
-|Префикс|Пространство имен|  
+|Prefix|Пространство имен|  
 |------------|---------------|  
 |s|http://www.w3.org/2003/05/soap-envelope|  
 |sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
-|пример|http://www.w3.org/2005/08/addressing|  
+|a|http://www.w3.org/2005/08/addressing|  
 |wsse|Подлежит определению - универсальный код ресурса (URI) OASIS WSS 1,0|  
 |wsse11|Подлежит определению - универсальный код ресурса (URI) OASIS WSS 1.1|  
 |wsu|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd|  
@@ -83,19 +83,19 @@ ms.locfileid: "67425087"
 |wsp|http://schemas.xmlsoap.org/ws/2004/09/policy|  
 |mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
   
-## <a name="1-token-profiles"></a>1. Профили маркеров  
+## <a name="1-token-profiles"></a>1. Профили токенов  
  В спецификациях WS-Security учетные данные представляются в виде токенов безопасности. WCF поддерживает следующие типы токенов:  
   
 ### <a name="11-usernametoken"></a>1.1 Маркер UsernameToken  
- WCF ниже профили UsernameToken10 и UsernameToken11 со следующими ограничениями:  
+ WCF следует профилям UsernameToken10 и UsernameToken11с со следующими ограничениями:  
   
  R1101 Атрибут PasswordType элемента UsernameToken\Password ДОЛЖЕН быть либо опущен, либо иметь значение #PasswordText (по умолчанию).  
   
- Можно реализовать #PasswordDigest с помощью расширяемости. Замечено, что #PasswordDigest часто ошибочно считается достаточно безопасным механизмом защиты пароля. Однако #PasswordDigest не может служить заменой шифрованию маркера UsernameToken. Основной целью #PasswordDigest является защита от атак с повторением. В режимах проверки подлинности WCF угрозы атак с повторением устраняются с помощью подписи сообщений.  
+ Можно реализовать #PasswordDigest с помощью расширяемости. Замечено, что #PasswordDigest часто ошибочно считается достаточно безопасным механизмом защиты пароля. Однако #PasswordDigest не может служить заменой шифрованию маркера UsernameToken. Основной целью #PasswordDigest является защита от атак с повторением. В режимах проверки подлинности WCF угрозы повторного воспроизведения смягчаются с помощью подписей сообщений.  
   
- B1102 WCF никогда не создает вложенные элементы Nonce и Created маркера UserNameToken.  
+ B1102 WCF никогда не излучает Nonce и не создает подэлементы UsernameToken.  
   
- Эти подэлементы предназначены для упрощения обнаружения атак с повторением. WCF использует подписи сообщений.  
+ Эти подэлементы предназначены для упрощения обнаружения атак с повторением. Вместо этого WCF использует подписи сообщений.  
   
  В профиле OASIS WSS SOAP Message Security UsernameToken Profile 1.1 (UsernameToken11) введена возможность создания производного ключа из пароля.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "67425087"
  Обоснование: пароли обычно считаются слишком слабой защитой, для того чтобы использовать их в операциях шифрования.  
   
 ### <a name="12-x509-token"></a>1.2 Маркер X509  
- WCF поддерживает сертификаты X509v3 в качестве типа учетных данных и соответствует X509TokenProfile1.0 и X509TokenProfile1.1 со следующими ограничениями:  
+ WCF поддерживает сертификаты X509v3 в качестве типока и следует X509TokenProfile1.0 и X509TokenProfile1.1 со следующими ограничениями:  
   
  R1201 Атрибут ValueType элемента BinarySecurityToken должен иметь значение #X509v3, если он содержит сертификат X509v3.  
   
@@ -118,37 +118,37 @@ ms.locfileid: "67425087"
   
  R1204 Если используется профиль X509TokenProfile1.1, внешняя ссылка на маркер безопасности X509 ДОЛЖНА использовать отпечаток, введенный в протоколе WS-Security 1.1.  
   
- WCF поддерживает X509IssuerSerial. Тем не менее существуют проблемы с X509IssuerSerial: WCF использует строку для сравнения двух значений X509IssuerSerial. Поэтому если изменить порядок компонентов имени субъекта и отправляет в службу WCF ссылку на сертификат, он может не найден.  
+ WCF поддерживает X509IssuerSerial. Однако есть проблемы сосовместимости с X509IssuerSerial: WCF использует строку для сравнения двух значений X509IssuerSerial. Поэтому, если один перезаказ компонентов имя субъекта и отправляет в службу WCF ссылку на сертификат, он не может быть найден.  
   
 ### <a name="13-kerberos-token"></a>1.3 Маркер Kerberos  
- WCF поддерживает использование профиля KerberosTokenProfile1.1 для проверки подлинности Windows со следующими ограничениями:  
+ WCF поддерживает KerberosTokenProfile1.1 для проверки подлинности Windows со следующими ограничениями:  
   
  R1301 Маркер Kerberos должен содержать значение GSS в оболочке Kerberos v4 AP_REQ, как определено в GSS_API и спецификации Kerberos, и должен иметь атрибут ValueType со значением #GSS_Kerberosv5_AP_REQ.  
   
- WCF используется GSS в оболочке Kerberos AP-REQ, а не исходного AP-REQ. Это рекомендуется в целях безопасности.  
+ WCF использует GSS обернутые Kerberos AP-RE, а не голые AP-RE. Это рекомендуется в целях безопасности.  
   
 ### <a name="14-saml-v11-token"></a>1.4 Маркер SAML 1.1  
- WCF поддерживает профили маркеров WSS SAML 1.0 и 1.1 для маркеров SAML 1.1. Возможна реализация других версий форматов маркеров SAML.  
+ WCF поддерживает профили ТОкенов WSS SAML 1.0 и 1.1 для токенов SAML v1.1. Возможна реализация других версий форматов маркеров SAML.  
   
 ### <a name="15-security-context-token"></a>1.5 Маркер контекста безопасности  
- WCF поддерживает маркера контекста безопасности (SCT) в WS-SecureConversation. Маркер контекста безопасности служит для представления контекста безопасности, установленного в спецификации SecureConversation, а также протоколов двоичного согласования TLS и SSPI, описываемых ниже.  
+ WCF поддерживает токен контекста безопасности (SCT), представленный в WS-SecureConversation. Маркер контекста безопасности служит для представления контекста безопасности, установленного в спецификации SecureConversation, а также протоколов двоичного согласования TLS и SSPI, описываемых ниже.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Общие параметры безопасности сообщений  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- Наличие отметки времени определяется с помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF timestamp всегда сериализуется с wsse: создан и wsse: срок действия истекает поля. Если используется подписывание, wsse:TimeStamp всегда подписывается.  
+ Наличие отметки времени определяется с помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF всегда serializes wsse:TimeStamp с wsse:Created и wsse:Expires поля. Если используется подписывание, wsse:TimeStamp всегда подписывается.  
   
 ### <a name="22-protection-order"></a>2.2. Порядок защиты  
- WCF поддерживает порядки защиты сообщений «Подпись перед шифрованием» и «Шифрование перед подписью» (Security Policy 1.2). По ряду причин рекомендуется использовать порядок «подпись перед шифрованием», в том числе по следующим причинам: если не используется механизм WS-Security 1.1 SignatureConfirmation, сообщения, защищенные в порядке «шифрование перед подписью», подвержены атакам подмены подписи и при подписывании зашифрованного содержимого сложнее производить аудит.  
+ WCF поддерживает приказ о защите сообщений "Подписать перед шифрованием" и "Шифсование перед знаком" (Политика безопасности 1.2). По ряду причин рекомендуется использовать порядок «подпись перед шифрованием», в том числе по следующим причинам: если не используется механизм WS-Security 1.1 SignatureConfirmation, сообщения, защищенные в порядке «шифрование перед подписью», подвержены атакам подмены подписи и при подписывании зашифрованного содержимого сложнее производить аудит.  
   
 ### <a name="23-signature-protection"></a>2.3 Защита сигнатуры  
  Если используется порядок "шифрование перед сигнатурой", рекомендуется защищать сигнатура, чтобы предотвратить атаки методом подбора для угадывания зашифрованного содержимого или ключа сигнатуры (особенно при использовании пользовательского маркера с ненадежным ключевым материалом).  
   
 ### <a name="24-algorithm-suite"></a>2.4 Набор алгоритмов  
- WCF поддерживает все наборы алгоритмов, перечисленные в Security Policy 1.2.  
+ WCF поддерживает все наборы алгоритмов, перечисленные в политике безопасности 1.2.  
   
 ### <a name="25-key-derivation"></a>2.5 Формирование ключей  
- WCF использует «Формирование симметричных ключей», как описано в спецификации WS-SecureConversation.  
+ WCF использует "Ключевая производние для симметричных ключей", как описано в WS-SecureConversation.  
   
 ### <a name="26-signature-confirmation"></a>2.6 Подтверждение сигнатуры  
  Подтверждение сигнатуры может использоваться в качестве защиты от атак типа "злоумышленник в середине", чтобы защитить набор сигнатур.  
@@ -159,17 +159,17 @@ ms.locfileid: "67425087"
 |||  
 |-|-|  
 |Strict|Элементы добавляются в заголовок безопасности в соответствии с правилами нумерованной структуры, описанными в разделе 7.7.1 спецификаций Security Policy, на основе общего принципа "объявить перед использованием".|  
-|Lax|Элементы добавляются в заголовок безопасности в любом порядке, который соответствует WSS: Безопасность сообщений SOAP.|  
+|Lax|Элементы добавляются в заголовок безопасности в любом порядке, отвечающем требованиям безопасности сообщений WSS: SOAP Message Security.|  
 |LaxTimestampFirst|Аналогично Lax, но первым элементом в заголовке безопасности должен быть элемент wsse:Timestamp.|  
 |LaxTimestampLast|Аналогично Lax, но последним элементом в заголовке безопасности должен быть элемент wsse:Timestamp.|  
   
- WCF поддерживает все четыре режима структуры заголовка безопасности. В приведенных ниже структурах заголовков безопасности и примерах сообщений для режимов проверки подлинности используется режим "Strict".  
+ WCF поддерживает все четыре режима для компоновки заголовка безопасности. В приведенных ниже структурах заголовков безопасности и примерах сообщений для режимов проверки подлинности используется режим "Strict".  
   
 ## <a name="3-common-message-security-parameters"></a>3. Общие параметры безопасности сообщений  
  В этом подразделе приведены примеры политик для каждого режима проверки подлинности, а также примеры, показывающие структуру заголовка безопасности в сообщениях, которыми обмениваются клиент и служба.  
   
 ### <a name="31-transport-protection"></a>3.1 Защита транспорта  
- WCF предоставляет пять режимов проверки подлинности, использующие защищенное средство передачи данных для защиты сообщений; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport и SspiNegotiatedOverTransport.  
+ WCF предоставляет пять режимов аутентификации, которые используют безопасный транспорт для защиты сообщений; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport и SspiNegotiatedOverTransport.  
   
  Эти режимы проверки подлинности построены с использованием привязок транспорта, описанных в спецификации SecurityPolicy. Для режима проверки подлинности UserNameOverTransport маркер UsernameToken является подписанным поддерживающим маркером. Для других режимов проверки подлинности этот маркер является подписанным подтверждающим маркером. В приложениях C.1.2 и C.1.3 спецификации SecurityPolicy подробно описана структура заголовка безопасности. В приведенных ниже примерах заголовки безопасности для определенного режима проверки подлинности показаны со структурой Strict.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "67425087"
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- В этом режиме для проверки подлинности клиента и сервера используется протокол согласования. Если это возможно, используется протокол Kerberos, в противном случае - протокол NTLM. Итоговый маркер контекста безопасности доступен на уровне SOAP в качестве подтверждающего поддерживающего маркера, всегда отправляемого от инициатора получателю. Служба проходит дополнительную проверку подлинности на транспортном уровне с использованием сертификата X.509. Используется привязка транспорта. Спецификация «SPNEGO» (согласование) описывает, как WCF использует протокол двоичного согласования SSPI со спецификацией WS-Trust. В этом разделе приведены примеры заголовков безопасности после установления маркера контекста безопасности с помощью подтверждения SPNEGO.  
+ В этом режиме для проверки подлинности клиента и сервера используется протокол согласования. Если это возможно, используется протокол Kerberos, в противном случае - протокол NTLM. Итоговый маркер контекста безопасности доступен на уровне SOAP в качестве подтверждающего поддерживающего маркера, всегда отправляемого от инициатора получателю. Служба проходит дополнительную проверку подлинности на транспортном уровне с использованием сертификата X.509. Используется привязка транспорта. "SPNEGO" (переговоры) описывает, как WCF использует двоичный протокол переговоров SSPI с WS-Trust. В этом разделе приведены примеры заголовков безопасности после установления маркера контекста безопасности с помощью подтверждения SPNEGO.  
   
  Политика  
   
@@ -299,8 +299,8 @@ ms.locfileid: "67425087"
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 с использованием сертификатов X.509 для проверки подлинности службы  
- В этом разделе описаны следующие режимы проверки подлинности. MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate и IssuedTokenForCertificate.  
+### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 Использование сертификатов X.509 для проверки подлинности услуг  
+ В этом разделе рассматриваются следующие режимы проверки подлинности: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate и IssuedTokenForCertificate.  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
  В этом режиме проверка подлинности клиента осуществляется с использованием сертификата X.509, который доступен на уровне SOAP в качестве маркера инициатора. Служба также проходит проверку подлинности с использованием сертификата X.509. Подписываются как заголовки, так и тело сообщений протокола SOAP. Симметричный ключ создается и шифруется с помощью сертификата транспорта для получателя.  
@@ -309,11 +309,11 @@ ms.locfileid: "67425087"
   
  Маркер инициатора: сертификат X.509 клиента, задан режим включения …/IncludeToken/AlwaysToRecipient  
   
- Маркер получателя: Сертификат X.509 сервера, с помощью режим включения имеет значение .../IncludeToken/Never  
+ Маркер получателя: сертификат X.509 сервера, задан режим включения …/IncludeToken/Never  
   
  Защита маркера: False  
   
- Всего заголовка и текста подписи: True  
+ Сигнатуры всего заголовка и тела: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -362,13 +362,13 @@ ms.locfileid: "67425087"
   
  Используется асимметричная привязка со следующими значениями свойств.  
   
- Маркер инициатора: X509 клиента сертификат, режим включения имеет значение .../IncludeToken/AlwaysToRecipient  
+ Маркер инициатора: сертификат X.509 клиента, задан режим включения …/IncludeToken/AlwaysToRecipient  
   
- Маркер получателя: X509 сервера сертификатов, режим включения имеет значение .../IncludeToken/AlwaysToInitiator  
+ Маркер получателя: сертификат X.509 сервера, задан режим включения …/IncludeToken/AlwaysToInitiator  
   
  Защита маркера: False  
   
- Всего заголовка и текста подписи: True  
+ Сигнатуры всего заголовка и тела: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -401,16 +401,16 @@ ms.locfileid: "67425087"
 ```  
   
 #### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 Использование SymmetricBinding с проверкой подлинности службы X.509  
- Спецификация "WSS10" обеспечивает ограниченную поддержку сценариев с маркерами X509. Например, в этой версии не было способа обеспечить защиту сообщений сигнатурой и шифрованием, используя только маркер X509 службы. В спецификации "WSS11" вводится использование EncryptedKey в качестве симметричного маркера. Теперь временный ключ, зашифрованный для сертификата X.509 службы, может использоваться для защиты как сообщений запроса, так и сообщений ответа. Режимы проверки подлинности, описанных далее в разделе 3.4 используйте этот шаблон.  
+ Спецификация "WSS10" обеспечивает ограниченную поддержку сценариев с маркерами X509. Например, в этой версии не было способа обеспечить защиту сообщений сигнатурой и шифрованием, используя только маркер X509 службы. В спецификации "WSS11" вводится использование EncryptedKey в качестве симметричного маркера. Теперь временный ключ, зашифрованный для сертификата X.509 службы, может использоваться для защиты как сообщений запроса, так и сообщений ответа. Режимы проверки подлинности, описанные в разделе 3.4 ниже, используют этот шаблон.  
   
  В спецификации WS-SecurityPolicy эта схема описывается с помощью привязки SymmetricBinding с маркером X509 службы в качестве маркера защиты.  
   
  В режимах проверки подлинности AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 и IssuedTokenForCertificate используется аналогичный экземпляр sp:SymmetricBinding со следующими значениями свойств.  
   
- Токен защиты: X509 сервера сертификатов, режим включения имеет значение .../IncludeToken/Never  
+ Токен защиты: сертификат X.509 сервера, задан режим включения …/IncludeToken/Never  
 Защита маркера: False  
   
- Всего заголовка и текста подписи: True  
+ Сигнатуры всего заголовка и тела: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -582,13 +582,13 @@ ms.locfileid: "67425087"
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-96c5e80a-9b87-4c6f-af77-752ca65cf607-21"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-## <a name="33-kerberos"></a>3.3 Kerberos  
+## <a name="33-kerberos"></a>3.3 Керберос  
  В этом режиме проверка подлинности клиента на стороне службы осуществляется с использованием билета Kerberos. Этот же билет обеспечивает проверку подлинности сервера. Используется симметричная привязка со следующими свойствами.  
   
- Токен защиты: Билет Kerberos, режим включения имеет значение .../IncludeToken/Once  
+ Токен защиты: билет kerberos, задан режим включения …/IncludeToken/Once  
 Защита маркера: False  
   
- Всего заголовка и текста подписи: True  
+ Сигнатуры всего заголовка и тела: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -632,13 +632,13 @@ ms.locfileid: "67425087"
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9025b930-4f15-42fe-8e78-35d3a3480177-2"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="34-issuedtoken"></a>3.4 IssuedToken  
+#### <a name="34-issuedtoken"></a>3.4 Выпущенныйтокен  
  В этом режиме проверки подлинности клиент не проходит как таковую проверку подлинности на стороне службы; вместо этого клиент предоставляет маркер, выданный службой маркеров безопасности и подтверждает знание общего ключа. Служба не проходит как таковую проверку подлинности на стороне клиента, но служба маркеров безопасности шифрует общий ключ как часть выдаваемого маркера, чтобы только служба могла расшифровать этот ключ. Используется симметричная привязка со следующими свойствами.  
   
- Токен защиты: Выданный маркер, режим включения имеет значение .../IncludeToken/AlwaysToRecipient  
+ Токен защиты: выданный токен, задан режим включения .../IncludeToken/AlwaysToRecipient  
 Защита маркера: False  
   
- Всего заголовка и текста подписи: True  
+ Сигнатуры всего заголовка и тела: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -660,7 +660,7 @@ ms.locfileid: "67425087"
  Ответ  
   
 ```xml  
-<o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e2d2617-1c28-465a-be30-de4a78cfc0e2-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>    
+<o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e2d2617-1c28-465a-be30-de4a78cfc0e2-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>
 ```  
   
  Политика  
@@ -682,15 +682,15 @@ ms.locfileid: "67425087"
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> </c:DerivedKeyToken> ... <c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 с помощью SslNegotiated для проверки подлинности службы  
+### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 Использование SslNegotiated для проверки подлинности службы  
  В этом разделе рассматривается группа режимов проверки подлинности, в которых используется симметричная привязка с маркером защиты, являющимся маркером контекста безопасности в соответствии со спецификацией WS-SecureConversation (WS-SC), значение ключа которого согласовывается путем выполнения протокола TLS с помощью сообщений RST/RSTR спецификации WS-Trust (WS-T). Сведения о реализации подтверждения TLS с помощью спецификации WS-Trust приведены в спецификации TLSNEGO. В приведенных ниже примерах сообщений предполагается, что маркер контекста безопасности со связанным контекстом безопасности уже установлен путем подтверждения.  
   
  Используется симметричная привязка со следующими свойствами.  
   
- Токен защиты: Sslcontexttoken, задан режим включения имеет значение .../IncludeToken/Never  
+ Токен защиты: SslContextToken, задан режим включения .../IncludeToken/Never  
 Защита маркера: False  
   
- Всего заголовка и текста подписи: True  
+ Сигнатуры всего заголовка и тела: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -806,7 +806,7 @@ ms.locfileid: "67425087"
  Политика  
   
 ```xml  
-<wsp:Policy wsu:Id="IssuedTokenForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ... </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>    
+<wsp:Policy wsu:Id="IssuedTokenForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ... </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Примеры заголовков безопасности: EncryptBeforeSign  
@@ -847,7 +847,7 @@ ms.locfileid: "67425087"
  Политика  
   
 ```xml  
-<wsp:Policy wsu:Id="MutualSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><mssp:RequireClientCertificate/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>   
+<wsp:Policy wsu:Id="MutualSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><mssp:RequireClientCertificate/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Примеры заголовков безопасности: EncryptBeforeSign  
@@ -866,10 +866,10 @@ ms.locfileid: "67425087"
 ### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
  В этом режиме для проверки подлинности клиента и сервера используется протокол согласования. Если это возможно, используется протокол Kerberos, в противном случае - протокол NTLM. Используется симметричная привязка со следующими свойствами.  
   
- Токен защиты: Spnegocontexttoken, задан режим включения имеет значение .../IncludeToken/AlwaysToRecipient  
+ Токен защиты: SpnegoContextToken, задан режим включения .../IncludeToken/AlwaysToRecipient  
 Защита маркера: False  
   
- Всего заголовка и текста подписи: True  
+ Сигнатуры всего заголовка и тела: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -891,7 +891,7 @@ ms.locfileid: "67425087"
  Ответ  
   
 ```xml  
-<o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-554d8cfc-e956-43db-9abb-afcafd024347-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>   
+<o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-554d8cfc-e956-43db-9abb-afcafd024347-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>
 ```  
   
  Политика  
@@ -913,7 +913,7 @@ ms.locfileid: "67425087"
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e0aabc81-6942-4fe6-81bc-9def184565ea-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### <a name="37-secureconversation"></a>3.7 SecureConversation  
+### <a name="37-secureconversation"></a>3.7 БезопасныйРазговор  
  Используется симметричная привязка, в которой маркером защиты является маркер контекста безопасности в соответствии со спецификацией WS-SecureConversation (WS-SC). Согласование маркера контекста безопасности производится с использованием спецификации WS-Trust (WS-Trust) или WS-SecureConversation (WS-SC) в соответствии с вложенной привязкой, которая сама является симметричной привязкой, использующей протокол согласования. При возможности в протоколе согласования для проверки подлинности клиента и сервера используется протокол Kerberos. Если использование протокола Kerberos невозможно, используется резервный протокол NTLM.  
   
  Политика  

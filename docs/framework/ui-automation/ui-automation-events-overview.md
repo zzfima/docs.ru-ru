@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 495e7d29c814164f4235d18569477b856cb09045
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441490"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179898"
 ---
 # <a name="ui-automation-events-overview"></a>Обзор событий автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "74441490"
   
  Повысить эффективность можно, позволяя приложениям поставщика вызывать события выборочно в зависимости от того, было ли все клиенты подписаны на эти события или прослушивают ли клиенты события.  
   
-<a name="Types_of_Events"></a>   
+<a name="Types_of_Events"></a>
 ## <a name="types-of-events"></a>Типы событий  
  События[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] делятся на следующие категории.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74441490"
   
 - `TextChangedEvent`  
   
-<a name="UI_Automation_Event_Identifiers"></a>   
+<a name="UI_Automation_Event_Identifiers"></a>
 ## <a name="ui-automation-event-identifiers"></a>Идентификаторы событий автоматизации пользовательского интерфейса  
  События[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] идентифицируются объектами <xref:System.Windows.Automation.AutomationEvent> . Свойство <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> содержит значение, которое однозначно определяет тип события.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74441490"
 |<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.StructureChangedEventArgs>|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
-<a name="UI_Automation_Event_Arguments"></a>   
+<a name="UI_Automation_Event_Arguments"></a>
 ## <a name="ui-automation-event-arguments"></a>Аргументы событий автоматизации пользовательского интерфейса  
  Следующие классы инкапсулируют аргументы событий.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74441490"
   
  Список идентификаторов событий см. в разделе [UI Automation Events for Clients](ui-automation-events-for-clients.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [События модели автоматизации пользовательского интерфейса для клиентов](ui-automation-events-for-clients.md)
 - [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](server-side-ui-automation-provider-implementation.md)

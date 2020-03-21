@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: a55e460f565c33731c5b0b29ab42b8263d3690e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125160"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181315"
 ---
 # <a name="specifying-an-entry-point"></a>Задание точки входа
 
 Точка входа определяет расположение функции в библиотеке DLL. В управляемом проекте исходное имя или порядковый номер точки входа целевой функции определяет эту функцию в границах взаимодействия. Вы можете сопоставить точку входа с другим именем, чтобы фактически переименовать функцию.  
   
- Ниже приведен список возможных причин переименования функции DLL.  
+ Ниже приводится список возможных причин переименования функции DLL:  
   
 - чтобы избежать использования имен функций API, в которых учитывается регистр символов;  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73125160"
  В этом разделе показано, как переименовать функцию DLL в управляемом коде.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Переименование функции в Visual Basic  
- 
+
 В Visual Basic для установки поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> используется ключевое слово **Function** в операторе **Declare**. В приведенном ниже примере показан базовый вариант объявления.  
   
 ```vb
@@ -90,7 +90,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Создание прототипов в управляемом коде](creating-prototypes-in-managed-code.md)

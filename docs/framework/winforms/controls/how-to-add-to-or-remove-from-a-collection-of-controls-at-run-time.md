@@ -12,15 +12,15 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 87ad4c957ac5b99438684d398a0c5ad7d126c406
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 369946581847b4bdcf8bc658aeb94b14c529061c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925043"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182291"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения
-Распространенные задачи при разработке приложений — это добавление элементов управления и удаление элементов управления из любого контейнера в формах (например <xref:System.Windows.Forms.Panel> , или <xref:System.Windows.Forms.GroupBox> , или даже самой формы). Во время разработки элементы управления можно перетаскивать непосредственно на панель или в группу. Во время выполнения эти элементы управления поддерживают коллекцию `Controls`, которая отслеживает размещенные в них элементы управления.  
+Общие задачи в разработке приложений — добавление элементов управления и удаление <xref:System.Windows.Forms.Panel> <xref:System.Windows.Forms.GroupBox> элементов управления любым и снимаемым элементом управления на формах (например, элемент управления или даже сама форма). Во время разработки элементы управления можно перетаскивать непосредственно на панель или в группу. Во время выполнения эти элементы управления поддерживают коллекцию `Controls`, которая отслеживает размещенные в них элементы управления.  
   
 > [!NOTE]
 > Следующий пример кода применяется к любому элементу управления, который поддерживает внутри себя коллекцию элементов управления.  
@@ -33,7 +33,7 @@ ms.locfileid: "69925043"
   
 3. Добавьте этот элемент управления в коллекцию `Controls` родительского элемента управления.  
   
-     В следующем примере кода показано, как создать экземпляр <xref:System.Windows.Forms.Button> элемента управления. Для этого требуется форма с <xref:System.Windows.Forms.Panel> элементом управления и метод обработки событий для `NewPanelButton_Click`создаваемой кнопки, уже существует.  
+     Следующий пример кода показывает, как <xref:System.Windows.Forms.Button> создать экземпляр элемента управления. Для этого требуется <xref:System.Windows.Forms.Panel> форма с управлением и что метод `NewPanelButton_Click`обработки событий для создаваемых кнопки, уже существует.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -42,7 +42,7 @@ ms.locfileid: "69925043"
        ' The Add method will accept as a parameter any object that derives  
        ' from the Control class. In this case, it is a Button control.  
        Panel1.Controls.Add(NewPanelButton)  
-       ' The event handler indicated for the Click event in the code   
+       ' The event handler indicated for the Click event in the code
        ' below is used as an example. Substite the appropriate event  
        ' handler for your application.  
        AddHandler NewPanelButton.Click, AddressOf NewPanelButton_Click  
@@ -53,11 +53,11 @@ ms.locfileid: "69925043"
     public Button newPanelButton = new Button();  
   
     public void addNewControl()  
-    {   
+    {
        // The Add method will accept as a parameter any object that derives  
        // from the Control class. In this case, it is a Button control.  
        panel1.Controls.Add(newPanelButton);  
-       // The event handler indicated for the Click event in the code   
+       // The event handler indicated for the Click event in the code
        // below is used as an example. Substitute the appropriate event  
        // handler for your application.  
        this.newPanelButton.Click += new System.EventHandler(this. NewPanelButton_Click);  
@@ -66,7 +66,7 @@ ms.locfileid: "69925043"
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Программное удаление элементов управления из коллекции  
   
-1. Удалите обработчик событий из события. В Visual Basic используйте ключевое слово [оператора RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md) . в C#используйте [оператор-=](../../../csharp/language-reference/operators/subtraction-operator.md).  
+1. Удалите обработчик событий из события. В Visual Basic используйте ключевое слово [заявление Удаления;](../../../visual-basic/language-reference/statements/removehandler-statement.md) в СЗ используйте [оператор -'](../../../csharp/language-reference/operators/subtraction-operator.md).  
   
 2. Используйте метод `Remove` для удаления требуемого элемента управления из коллекции `Controls` панели.  
   
@@ -74,10 +74,10 @@ ms.locfileid: "69925043"
   
     ```vb  
     Public Sub RemoveControl()  
-    ' NOTE: The code below uses the instance of   
+    ' NOTE: The code below uses the instance of
     ' the button (NewPanelButton) from the previous example.  
        If Panel1.Controls.Contains(NewPanelButton) Then  
-          RemoveHandler NewPanelButton.Click, AddressOf _   
+          RemoveHandler NewPanelButton.Click, AddressOf _
              NewPanelButton_Click  
           Panel1.Controls.Remove(NewPanelButton)  
           NewPanelButton.Dispose()  
@@ -88,11 +88,11 @@ ms.locfileid: "69925043"
     ```csharp  
     private void removeControl(object sender, System.EventArgs e)  
     {  
-    // NOTE: The code below uses the instance of   
+    // NOTE: The code below uses the instance of
     // the button (newPanelButton) from the previous example.  
        if(panel1.Controls.Contains(newPanelButton))  
        {  
-          this.newPanelButton.Click -= new System.EventHandler(this.   
+          this.newPanelButton.Click -= new System.EventHandler(this.
              NewPanelButton_Click);  
           panel1.Controls.Remove(newPanelButton);  
           newPanelButton.Dispose();  
@@ -100,7 +100,7 @@ ms.locfileid: "69925043"
     }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.Panel>
 - [Элемент управления Panel](panel-control-windows-forms.md)

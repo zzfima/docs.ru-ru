@@ -1,20 +1,20 @@
 ---
-title: Практическое руководство. Получение метаданных через привязку, не использующую MEX
+title: Как получить метаданные через привязку, не использующую MEX
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a006795c87a2ae845d03db90dce296692c4339fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856034"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186449"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Практическое руководство. Получение метаданных через привязку, не использующую MEX
-В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX. Код в этом примере основан на образце [пользовательской защищенной конечной точки метаданных](../samples/custom-secure-metadata-endpoint.md) .  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Как получить метаданные через привязку, не использующую MEX
+В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX. Код в этом примере основан на примере [конечных точек Custom Secure Metadata.](../samples/custom-secure-metadata-endpoint.md)  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Получение метаданных через привязку, не использующую MEX  
   
-1. Определите привязку, используемую конечной точкой MEX. Для служб Windows Communication Foundation (WCF) можно определить привязку MEX, обратившись к файлу конфигурации службы. В этом случае привязка MEX определяется в следующей конфигурации службы.  
+1. Определите привязку, используемую конечной точкой MEX. Для служб Windows Communication Foundation (WCF) можно определить привязку MEX, одоступившись от файла конфигурации службы. В этом случае привязка MEX определяется в следующей конфигурации службы.  
   
     ```xml  
     <services>  
@@ -79,7 +79,7 @@ ms.locfileid: "70856034"
             </clientCredentials>  
           </behavior>  
         </endpointBehaviors>  
-      </behaviors>    
+      </behaviors>
     </system.serviceModel>  
     ```  
   
@@ -121,8 +121,8 @@ ms.locfileid: "70856034"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. На данном этапе имеется коллекция конечных точек службы. Дополнительные сведения об импорте метаданных см. [в разделе как Импорт метаданных в конечные](../feature-details/how-to-import-metadata-into-service-endpoints.md)точки службы.  
+5. На данном этапе имеется коллекция конечных точек службы. Для получения дополнительной информации об импорте метаданных [см.](../feature-details/how-to-import-metadata-into-service-endpoints.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Метаданные](../feature-details/metadata.md)
+- [Метаданных](../feature-details/metadata.md)

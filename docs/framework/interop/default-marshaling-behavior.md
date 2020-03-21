@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: abb8b507b21ca8f40461192c37e6c2fbe73b684e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123605"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181480"
 ---
 # <a name="default-marshaling-behavior"></a>Поведение маршалинга по умолчанию
 Маршалинг взаимодействия работает по правилам, которые определяют поведение данных, связанных с параметрами метода, при их передаче между управляемой и неуправляемой памятью. Эти встроенные правила определяют такие операции маршалинга, как преобразования типов данных, возможность изменения вызываемым объектом переданных ему данных и возврата этих изменений вызывающему объекту, а также обстоятельства, при которых упаковщик обеспечивает оптимизацию производительности.  
@@ -90,10 +90,10 @@ using System.Runtime.InteropServices;
   
 public interface DelegateTest {  
 void m1(Delegate d);  
-void m2([MarshalAs(UnmanagedType.Interface)] Delegate d);     
-void m3([MarshalAs(UnmanagedType.Interface)] ref Delegate d);    
-void m4([MarshalAs(UnmanagedType.FunctionPtr)] Delegate d);   
-void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);     
+void m2([MarshalAs(UnmanagedType.Interface)] Delegate d);
+void m3([MarshalAs(UnmanagedType.Interface)] ref Delegate d);
+void m4([MarshalAs(UnmanagedType.FunctionPtr)] Delegate d);
+void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
 }  
 ```  
   
@@ -132,10 +132,10 @@ public class CallBackClass {
 internal class DelegateTest {  
    public static void Test() {  
       CallBackClass cb = new CallBackClass();  
-      // Caution: The following reference on the cb object does not keep the   
-      // object from being garbage collected after the Main method   
+      // Caution: The following reference on the cb object does not keep the
+      // object from being garbage collected after the Main method
       // executes.  
-      ExternalAPI.SetChangeHandler(new ChangeDelegate(cb.OnChange));     
+      ExternalAPI.SetChangeHandler(new ChangeDelegate(cb.OnChange));
    }  
 }  
 ```  
@@ -152,7 +152,7 @@ internal class DelegateTest {
    }  
    // Called after using the callback function for the last time.  
    public static void RemoveChangeHandler() {  
-      // The cb object can be collected now. The unmanaged code is   
+      // The cb object can be collected now. The unmanaged code is
       // finished with the callback function.  
       cb = null;  
    }  
@@ -166,7 +166,7 @@ internal class DelegateTest {
   
 - [Типы значений, используемые в вызове неуправляемого кода](#value-types-used-in-platform-invoke)  
   
-- [Типы значений, используемые в COM-взаимодействии](#value-types-used-in-com-interop)  
+- [Типы значений, используемые во COM-взаимодействии](#value-types-used-in-com-interop)  
   
  Кроме описания форматированных типов, в этом разделе определяются [системные типы значений](#system-value-types), имеющие нестандартное поведение маршалинга.  
   
@@ -207,7 +207,7 @@ using System.Runtime.InteropServices;
 public struct Point {  
    public int x;  
    public int y;  
-}     
+}
   
 [StructLayout(LayoutKind.Explicit)]  
 public struct Rect {  
@@ -269,14 +269,14 @@ End Class
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
    public class SystemTime {  
-   public ushort wYear;   
+   public ushort wYear;
    public ushort wMonth;  
-   public ushort wDayOfWeek;   
-   public ushort wDay;   
-   public ushort wHour;   
-   public ushort wMinute;   
-   public ushort wSecond;   
-   public ushort wMilliseconds;   
+   public ushort wDayOfWeek;
+   public ushort wDay;
+   public ushort wHour;
+   public ushort wMinute;
+   public ushort wSecond;
+   public ushort wMilliseconds;
 }  
 ```  
   
@@ -321,7 +321,7 @@ End Class
 [StructLayout(LayoutKind.Sequential)]  
 public class Point {  
    int x, y;  
-   public void SetXY(int x, int y){   
+   public void SetXY(int x, int y){
       this.x = x;  
       this.y = y;  
    }  
@@ -346,7 +346,7 @@ interface _Graphics {
 }  
 ```  
   
- Те же самые правила, которые используются для маршалинга значений и ссылок в вызовы неуправляемого кода, применяются и при маршалинге через COM-интерфейсы. Например, когда экземпляр типа значения `Point` передается из .NET Framework в COM, `Point` передается по значению. Если тип значения `Point` передается по ссылке, указатель на `Point` передается в стеке. Упаковщик взаимодействия не поддерживает более высокие уровни косвенного обращения (**Point** \*\*) в любом направлении.  
+ Те же самые правила, которые используются для маршалинга значений и ссылок в вызовы неуправляемого кода, применяются и при маршалинге через COM-интерфейсы. Например, когда экземпляр типа значения `Point` передается из .NET Framework в COM, `Point` передается по значению. Если тип значения `Point` передается по ссылке, указатель на `Point` передается в стеке. Упаковщик взаимодействия не поддерживает более высокие уровни косвенного обращения (**Point ** \*\*) в любом направлении.  
   
 > [!NOTE]
 > Структуры, для которых значение перечисления <xref:System.Runtime.InteropServices.LayoutKind> установлено равным **Explicit**, не могут использоваться в COM-взаимодействии, так как экспортированная библиотека типов не может представлять явное размещение.  
@@ -376,9 +376,9 @@ interface _Graphics {
   
 |Системный тип значения|Тип IDL|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**Дата**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**Десятичных**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  В приведенном ниже коде показано определение неуправляемых типов **DATE**, **GUID**, **DECIMAL** и **OLE_COLOR** в библиотеке типов Stdole2.  
@@ -437,7 +437,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Преобразуемые и непреобразуемые типы](blittable-and-non-blittable-types.md)
 - [Копирование и закрепление](copying-and-pinning.md)

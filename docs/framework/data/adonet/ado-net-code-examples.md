@@ -5,41 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 4f0cbc06c03c0d122fc69b8a396570919ac14970
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980292"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111807"
 ---
-# <a name="adonet-code-examples"></a>Примеры кода ADO.NET
-В листингах кода, приведенных в данном разделе, демонстрируется извлечение данных из базы данных с помощью следующих технологий ADO.NET.
+# <a name="adonet-code-examples"></a>ADO.NET примеры кода
+
+В объявлениях кода на этой странице показано, как получить данные из базы данных с помощью следующих ADO.NET технологий:
 
 - Поставщики данных ADO.NET:
 
-  - [SqlClient](#sqlclient) (`System.Data.SqlClient`)
+  - [SqlКлиент](#sqlclient) `System.Data.SqlClient`()
 
-  - [OLEDB](#oledb) (`System.Data.OleDb`)
+  - [ОлеДб](#oledb) `System.Data.OleDb`( )
 
-  - [ODBC](#odbc) (`System.Data.Odbc`)
+  - [Одбк](#odbc) (`System.Data.Odbc`)
 
-  - [OracleClient](#oracleclient) (`System.Data.OracleClient`)
+  - [OracleClient](#oracleclient) `System.Data.OracleClient`( )
 
 - Платформа ADO.NET Entity Framework:
 
-  - [LINQ to Entities](#linq-to-entities)
+  - [ЛИНЗ для юридических лиц](#linq-to-entities)
 
-  - [Типизированный ObjectQuery](#typed-objectquery)
+  - [Типизированный запрос ObjectQuery](#typed-objectquery)
 
-  - [EntityClient](#entityclient) (`System.Data.EntityClient`)
+  - [СущностьКлиент](#entityclient) ()`System.Data.EntityClient`
 
 - [LINQ to SQL](#linq-to-sql)
 
-## <a name="adonet-data-provider-examples"></a>Примеры поставщика данных ADO.NET
-В приведенных ниже листингах кода демонстрируется извлечение данных из базы данных с помощью поставщиков данных ADO.NET. Данные возвращаются в классе `DataReader`. Дополнительные сведения см. [в разделе Получение данных с помощью DataReader](retrieving-data-using-a-datareader.md).
+## <a name="adonet-data-provider-examples"></a>примеры ADO.NET поставщика данных
+В приведенных ниже листингах кода демонстрируется извлечение данных из базы данных с помощью поставщиков данных ADO.NET. Данные возвращаются в классе `DataReader`. Для получения дополнительной [информации см.](retrieving-data-using-a-datareader.md)
 
 ### <a name="sqlclient"></a>SqlClient
-Код в этом примере предполагает, что вы можете подключиться к `Northwind` образцу базы данных на Microsoft SQL Server. Код создает команду <xref:System.Data.SqlClient.SqlCommand> для выборки строк из таблицы Products, к которой добавляется параметр <xref:System.Data.SqlClient.SqlParameter>, ограничивающий результат строками, для которых значение UnitPrice превышает указанное значение параметра, в данном случае 5. <xref:System.Data.SqlClient.SqlConnection> открывается внутри блока `using`, что гарантирует, что ресурсы будут закрыты и уничтожены при выходе из кода. Команда выполняется с помощью объекта <xref:System.Data.SqlClient.SqlDataReader>, а результаты выводятся в окно консоли.
+Код в этом примере предполагает, что `Northwind` вы можете подключиться к выборочной базе данных на сервере Microsoft S'L. Код создает команду <xref:System.Data.SqlClient.SqlCommand> для выборки строк из таблицы Products, к которой добавляется параметр <xref:System.Data.SqlClient.SqlParameter>, ограничивающий результат строками, для которых значение UnitPrice превышает указанное значение параметра, в данном случае 5. Открывается <xref:System.Data.SqlClient.SqlConnection> внутри `using` блока, что гарантирует, что ресурсы будут закрыты и удалены при выходе кода. Команда выполняется с помощью объекта <xref:System.Data.SqlClient.SqlDataReader>, а результаты выводятся в окно консоли.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -50,11 +51,11 @@ ms.locfileid: "76980292"
  [!code-csharp[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
-### <a name="odbc"></a>Odbc
-Данный образец кода предполагает возможность подключения к образцу базы данных Northwind из Microsoft Access. Код создает команду <xref:System.Data.Odbc.OdbcCommand> для выборки строк из таблицы Products, к которой добавляется параметр <xref:System.Data.Odbc.OdbcParameter>, ограничивающий результат строками, для которых значение UnitPrice превышает указанное значение параметра, в данном случае 5. <xref:System.Data.Odbc.OdbcConnection> открывается внутри блока `using`, что гарантирует, что ресурсы будут закрыты и уничтожены при выходе из кода. Команда выполняется с помощью объекта <xref:System.Data.Odbc.OdbcDataReader>, а результаты выводятся в окно консоли.
+### <a name="odbc"></a>ODBC
+Данный образец кода предполагает возможность подключения к образцу базы данных Northwind из Microsoft Access. Код создает команду <xref:System.Data.Odbc.OdbcCommand> для выборки строк из таблицы Products, к которой добавляется параметр <xref:System.Data.Odbc.OdbcParameter>, ограничивающий результат строками, для которых значение UnitPrice превышает указанное значение параметра, в данном случае 5. Открывается <xref:System.Data.Odbc.OdbcConnection> внутри `using` блока, что гарантирует, что ресурсы будут закрыты и удалены при выходе кода. Команда выполняется с помощью объекта <xref:System.Data.Odbc.OdbcDataReader>, а результаты выводятся в окно консоли.
 
-[!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
-[!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
+[!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)]
+[!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)]
 
 ### <a name="oracleclient"></a>OracleClient
 Данный пример кода предполагает наличие соединения с базой данных DEMO.CUSTOMER на сервере Oracle. Кроме того, необходимо добавить ссылку на файл System.Data.OracleClient.dll. Этот код возвращает данные в объекте <xref:System.Data.OracleClient.OracleDataReader>.
@@ -62,11 +63,11 @@ ms.locfileid: "76980292"
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
-## <a name="entity-framework-examples"></a>Примеры Entity Framework
-В приведенных ниже листингах кода демонстрируется извлечение данных из источника данных путем выполнения запросов к сущностям модели EDM. В этих примерах используется модель, основанная на образце базы данных Northwind. Дополнительные сведения о Entity Framework см. в разделе Общие сведения о [Entity Framework](./ef/overview.md).
+## <a name="entity-framework-examples"></a>Примеры рамочных систем
+В приведенных ниже листингах кода демонстрируется извлечение данных из источника данных путем выполнения запросов к сущностям модели EDM. В этих примерах используется модель, основанная на базе данных образца Northwind. Для получения дополнительной информации [Entity Framework Overview](./ef/overview.md)о рамочной базе сущности см.
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Дополнительные сведения см. в разделе [LINQ to Entities обзор](./ef/language-reference/linq-to-entities.md).
+В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Для получения дополнительной [LINQ to Entities Overview](./ef/language-reference/linq-to-entities.md)информации см.
 
 ```csharp
 using System;
@@ -136,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>Типизированный запрос ObjectQuery
-В данном примере кода для возврата данных в виде объектов Categories используется запрос <xref:System.Data.Objects.ObjectQuery%601>. Дополнительные сведения см. в разделе [запросы объектов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
+В данном примере кода для возврата данных в виде объектов Categories используется запрос <xref:System.Data.Objects.ObjectQuery%601>. Для получения дополнительной [информации см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))
 
 ```csharp
 using System;
@@ -151,7 +152,7 @@ class ObjectQuerySample
         {
             ObjectQuery<Categories> categoryQuery = context.Categories;
 
-            foreach (Categories category in 
+            foreach (Categories category in
                 categoryQuery.Execute(MergeOption.AppendOnly))
             {
                 Console.WriteLine("\t{0}\t{1}",
@@ -185,7 +186,7 @@ End Class
 ```
 
 ### <a name="entityclient"></a>EntityClient
-В данном примере кода для выполнения запроса Entity SQL используется команда <xref:System.Data.EntityClient.EntityCommand>. Этот запрос возвращает список записей, представляющих экземпляры типа сущности Categories. Для доступа к записям данных в результирующем наборе используется объект <xref:System.Data.EntityClient.EntityDataReader>. Дополнительные сведения см. [в разделе Поставщик EntityClient для Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).
+В данном примере кода для выполнения запроса Entity SQL используется команда <xref:System.Data.EntityClient.EntityCommand>. Этот запрос возвращает список записей, представляющих экземпляры типа сущности Categories. Для доступа к записям данных в результирующем наборе используется объект <xref:System.Data.EntityClient.EntityDataReader>. Для получения дополнительной [EntityClient Provider for the Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md)информации см.
 
 ```csharp
 using System;
@@ -199,7 +200,7 @@ class EntityClientSample
     public static void ExecuteQuery()
     {
         string queryString =
-            @"SELECT c.CategoryID, c.CategoryName 
+            @"SELECT c.CategoryID, c.CategoryName
                 FROM NorthwindEntities.Categories AS c";
 
         using (EntityConnection conn =
@@ -210,7 +211,7 @@ class EntityClientSample
                 conn.Open();
                 using (EntityCommand query = new EntityCommand(queryString, conn))
                 {
-                    using (DbDataReader rdr = 
+                    using (DbDataReader rdr =
                         query.ExecuteReader(CommandBehavior.SequentialAccess))
                     {
                         while (rdr.Read())
@@ -262,13 +263,13 @@ Class EntityClientSample
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
             End Try
-        End Using 
+        End Using
     End Sub
 End Class
 ```
 
 ## <a name="linq-to-sql"></a>LINQ to SQL
-В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Этот пример основан на контексте данных Northwind. Дополнительные сведения см. в разделе [Начало работы](./sql/linq/getting-started.md).
+В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Этот пример основан на контексте данных Northwind. Для получения дополнительной информации, [см.](./sql/linq/getting-started.md)
 
 ```csharp
 using System;
@@ -334,15 +335,15 @@ Class LinqSqlSample
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
             End Try
-            End Using 
+            End Using
     End Sub
 End Class
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения об ADO.NET](ado-net-overview.md)
 - [Извлечение и изменение данных в ADO.NET](retrieving-and-modifying-data.md)
 - [Создание приложений для работы с данными](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [Запрос EDM (задачи Entity Framework)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
-- [Инструкции. выполнение запроса, возвращающего объекты анонимного типа](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
+- [Запросы к модели EDM (задачи Entity Framework)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [Практическое руководство. Выполнение запроса, возвращающего объекты анонимного типа](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))

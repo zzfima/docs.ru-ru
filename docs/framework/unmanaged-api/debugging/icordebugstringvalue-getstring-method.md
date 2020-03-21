@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: c4b01b2c346d3173b2a5ecc144474d7fb1e6dce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138972"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178499"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>Метод ICorDebugStringValue::GetString
-Возвращает строку, на которую ссылается этот ICorDebugStringValue.  
+Получает строку, на которую ссылается этот ICorDebugStringValue.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73138972"
 HRESULT GetString (  
     [in] ULONG32    cchString,  
     [out] ULONG32   *pcchString,  
-    [out, size_is(cchString), length_is(*pcchString)]   
+    [out, size_is(cchString), length_is(*pcchString)]
         WCHAR       szString[]  
 );  
 ```  
@@ -41,10 +41,10 @@ HRESULT GetString (
  [in] Размер массива `szString`.  
   
  `pcchString`  
- заполняет Указатель на число символов, возвращаемых в массиве `szString`.  
+ (ваут) Указатель на количество символов, возвращенных в `szString` массиве.  
   
  `szString`  
- заполняет Массив, в котором хранится извлеченная строка.  
+ (ваут) Массив, в течение которого хранится извлеченная строка.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

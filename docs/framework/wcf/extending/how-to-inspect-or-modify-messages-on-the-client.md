@@ -2,23 +2,23 @@
 title: Практическое руководство. Проверка или изменение сообщений на клиенте
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 14c24c16a36be600881de402de50086dd18b30b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db1a99d2ed1f765e39815e6b6c70d6ada1db1d15
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796982"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185539"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Практическое руководство. Проверка или изменение сообщений на клиенте
-Вы можете проверить или изменить входящие или исходящие сообщения в клиенте WCF, реализовав <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> и вставив его в клиентскую среду выполнения. Дополнительные сведения см. в разделе [расширение клиентов](extending-clients.md). Эквивалентную функцию в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Полный пример кода см. в примере [инспекторов сообщений](../samples/message-inspectors.md) .  
+Вы можете проверить или изменить входящие или исходящие сообщения <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> через клиента WCF, реализовав и вставив их в время выполнения клиента. Для получения дополнительной [информации см.](extending-clients.md) Эквивалентную функцию в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Для полного примера кода [см.](../samples/message-inspectors.md)  
   
 ### <a name="to-inspect-or-modify-messages"></a>Проверка или изменение сообщений  
   
-1. Реализовать интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
+1. Реализуйте интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
-2. Реализуйте интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> в зависимости от области, в которую нужно вставить инспектор сообщений клиентов. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>позволяет изменять поведение на уровне конечной точки. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>позволяет изменять поведение на уровне контракта.  
+2. Реализуйте интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> в зависимости от области, в которую нужно вставить инспектор сообщений клиентов. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>позволяет изменить поведение на уровне конечных точек. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>позволяет изменить поведение на уровне контракта.  
   
-3. Вставьте поведение до вызова метода <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> или метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> фабрики каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Дополнительные сведения см. [в разделе Настройка и расширение среды выполнения с помощью поведений](configuring-and-extending-the-runtime-with-behaviors.md).  
+3. Вставьте поведение до вызова метода <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> или метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> фабрики каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Для получения подробной информации [см.](configuring-and-extending-the-runtime-with-behaviors.md)  
   
 ## <a name="example"></a>Пример  
  В следующих примерах кода показаны, по порядку:  
@@ -38,13 +38,13 @@ public class SimpleMessageInspector : IClientMessageInspector
     public void AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
     {  
         // Implement this method to inspect/modify messages after a message  
-        // is received but prior to passing it back to the client   
+        // is received but prior to passing it back to the client
         Console.WriteLine("AfterReceiveReply called");  
     }  
   
     public object BeforeSendRequest(ref System.ServiceModel.Channels.Message request, IClientChannel channel)  
     {  
-        // Implement this method to inspect/modify messages before they   
+        // Implement this method to inspect/modify messages before they
         // are sent to the service  
         Console.WriteLine("BeforeSendRequest called");  
         return null;  
@@ -79,7 +79,7 @@ public class SimpleEndpointBehavior : IEndpointBehavior
 ```  
   
 ```csharp  
-// Configuration element   
+// Configuration element
 public class SimpleBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public override Type BehaviorType  
@@ -101,7 +101,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 <configuration>  
     <system.serviceModel>  
         <client>  
-            <endpoint address="http://localhost:8080/SimpleService/"   
+            <endpoint address="http://localhost:8080/SimpleService/"
                       binding="wsHttpBinding"
                       behaviorConfiguration="clientInspectorsAdded"
                       contract="ServiceReference1.IService1"  
@@ -126,7 +126,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>

@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-ms.openlocfilehash: 0368349e6c6a566cb569738bf3bda40eb9f5de96
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 46f047dbec7ff008873540806b76ffe7085086b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790738"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178424"
 ---
 # <a name="icorpublishgetprocess-method"></a>Метод ICorPublish::GetProcess
-Возвращает экземпляр [ICorPublishProcess](icorpublishprocess-interface.md) , представляющий процесс с указанным идентификатором.  
+Получает экземпляр [ICorPublishProcess,](icorpublishprocess-interface.md) представляющий процесс с указанным идентификатором.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetProcess(  
-    [in] unsigned              pid,   
+    [in] unsigned              pid,
     [out] ICorPublishProcess   **ppProcess  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pid`  
- окне Идентификатор процесса.  
+ (в) Идентификатор процесса.  
   
  `ppProcess`  
- заполняет Указатель на адрес экземпляра `ICorPublishProcess`, который представляет процесс.  
+ (ваут) Указатель на адрес `ICorPublishProcess` экземпляра, представляющего процесс.  
   
-## <a name="remarks"></a>Заметки  
- `GetProcess` завершается ошибкой, если процесс не существует или не является управляемым процессом, который может быть отлажен текущим пользователем.  
+## <a name="remarks"></a>Remarks  
+ `GetProcess`сбой, если процесс не существует, или не является управляемым процессом, который может быть отдигирован текущим пользователем.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Корпуб. idl, Корпуб. h  
+ **Заголовок:** CorPub.idl, CorPub.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorPublish](icorpublish-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Функция Форвардтранслатеакцелератор — Справочник по неуправляемым API в WPF
+title: Функция ForwardTranslateAccelerator - ссылка на Неуправляемый API WPF
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,44 +9,44 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a0a01be3000dc53df7855cb74015ba1164206838
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747037"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186621"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Функция Форвардтранслатеакцелератор (Справочник по неуправляемым интерфейсам API WPF)
-Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для непосредственного использования из кода.  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Функция ForwardTranslateAccelerator (Ссылка на Неуправляемый API WPF)
+Этот API поддерживает инфраструктуру Фонда презентаций Windows (WPF) и не предназначен для использования непосредственно из вашего кода.  
   
- Используется инфраструктурой Windows Presentation Foundation (WPF) для управления Windows.  
+ Используется инфраструктурой Windows Presentation Foundation (WPF) для управления окнами.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT ForwardTranslateAccelerator(  
-   MSG* pMsg,   
+   MSG* pMsg,
    VARIANT_BOOL appUnhandled  
 )  
 ```  
   
 ## <a name="parameters"></a>Параметры  
- пмсг  
+ pMsg  
  Указатель на сообщение.  
   
- аппунхандлед  
- `true`, когда приложению уже предоставлен шанс обработать входное сообщение, но оно не обработано. в противном случае `false`.  
+ appUnhandled  
+ `true`когда приложению уже была предоставлена возможность обрабатывать входное сообщение, но оно не обрабатывается; в `false`противном случае, .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. [.NET Framework требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** Смотрите [требования рамочной системы .NET](../../get-started/system-requirements.md).  
   
- **КОМПОНОВКИ**  
+ **Dll:**  
   
- В .NET Framework 3,0 и 3,5: Пресентатионхостдлл. dll  
+ В рамках .NET 3.0 и 3.5: PresentationHostDLL.dll  
   
- В .NET Framework 4 и более поздних версиях: PresentationHost_v0400. dll  
+ В рамках .NET 4 и позже: PresentationHost_v0400.dll  
   
- **Версия .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Рамочная версия .NET:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>См. также раздел
 

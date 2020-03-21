@@ -2,23 +2,23 @@
 title: Проверяющий элемент управления для имен пользователей и паролей
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 5e128c8dde14d67a77eeb6f33a99723ddbdfbd9a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 202c7bfc7f60afbad8220950e46c08c0a71eb001
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715321"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183249"
 ---
 # <a name="user-name-password-validator"></a>Проверяющий элемент управления для имен пользователей и паролей
 В этом образце показано, как реализовать пользовательский проверяющий элемент управления UserNamePassword. Это бывает полезно в случаях, когда ни один из встроенных режимов проверки имени пользователя и пароля не соответствует требования приложениям, например, когда пары "имя пользователя-пароль" хранятся во внешнем хранилище, например в базе данных. В этом образце показана служба, имеющая пользовательский проверяющий элемент управления, который проверяет две конкретных пары "имя пользователя-пароль". Клиент использует такие пары "имя пользователя-пароль" для проверки подлинности у службы.
 
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "74715321"
 
 - Сервер проходит проверку подлинности с использованием сертификата X.509 сервера.
 
- Служба предоставляет одну конечную точку для взаимодействия с нею; она определена в файле конфигурации App.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настраивается с помощью стандартного `wsHttpBinding`, который по умолчанию использует WS-Security и проверку подлинности имени пользователя. В поведении службы задается режим `Custom` проверки пар "имя пользователя-пароль" клиента, а также тип класса проверяющего элемента управления. Коме того, поведение с помощью элемента `serviceCertificate` задает сертификат сервера. Сертификат сервера должен содержать то же значение для `SubjectName`, что и `findValue` в [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ Служба предоставляет одну конечную точку для взаимодействия с нею; она определена в файле конфигурации App.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настроена со `wsHttpBinding` стандартом, который по умолчанию использует WS-Security и проверку подлинности имени пользователя. В поведении службы задается режим `Custom` проверки пар "имя пользователя-пароль" клиента, а также тип класса проверяющего элемента управления. Коме того, поведение с помощью элемента `serviceCertificate` задает сертификат сервера. Сертификат сервера должен содержать такое `SubjectName` же `findValue` значение, как и в [ \<>сертификата. ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)
 
 ```xml
 <system.serviceModel>
@@ -278,22 +278,22 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Настройка и сборка образца
 
-1. Чтобы выполнить сборку решения, следуйте инструкциям в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Чтобы создать решение, следуйте инструкциям по [созданию образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/building-the-samples.md)
 
 2. Чтобы выполнить образец на одном или нескольких компьютерах, выполните следующие инструкции.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Запуск образца на том же компьютере
 
-1. Запустите setup. bat из папки образцов установки в командной строке Visual Studio 2012. При этом устанавливаются все сертификаты, необходимые для выполнения образца.
+1. Выполнить Setup.bat из папки установки образца внутри команды Visual Studio 2012 запрос. При этом устанавливаются все сертификаты, необходимые для выполнения образца.
 
     > [!NOTE]
-    > Пакетный файл Setup. bat предназначен для запуска из командной строки Visual Studio 2012. Переменная среды PATH, заданная в командной строке Visual Studio 2012, указывает на каталог, содержащий исполняемые файлы, необходимые для сценария Setup. bat.  
+    > Setup.bat пакет файл предназначен для запуска из Визуальной студии 2012 Командный запрос. Переменная среды PATH, установленная в команде Visual Studio 2012, указывает на каталог, содержащий исполняемые документы, требуемые сценарием Setup.bat.  
   
 2. Запустите программу Service.exe из папки service\bin.  
   
 3. Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 #### <a name="to-run-the-sample-across-machines"></a>Выполнение примера на нескольких компьютерах  
   
@@ -315,7 +315,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. На клиентском компьютере из окна командной строки запустите программу Client.exe.  
   
-10. Если клиент и служба не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Если клиент и служба не в состоянии общаться, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

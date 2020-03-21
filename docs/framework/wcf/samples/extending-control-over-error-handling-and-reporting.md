@@ -2,22 +2,22 @@
 title: Повышение управляемости обработки ошибок и формирования сообщений об ошибках
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: b7a3e0fa9b0799d98ea3df8df760e26851febf90
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 68f3381e8db9d7c0222720dda335b47e30f57ac7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716415"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183671"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Повышение управляемости обработки ошибок и формирования сообщений об ошибках
-В этом примере показано, как расширить контроль над обработкой ошибок и отчетами об ошибках в службе Windows Communication Foundation (WCF) с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) с дополнительным кодом, добавленным в службу для обработке ошибок. Клиент вызывает несколько ошибок. Служба перехватывает эти ошибки и регистрирует их в файле.  
+Этот пример демонстрирует, как расширить контроль над обработкой ошибок и отчетностью <xref:System.ServiceModel.Dispatcher.IErrorHandler> об ошибках в службе Windows Communication Foundation (WCF) с помощью интерфейса. Выборка основана на [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) с некоторым дополнительным кодом, добавленным в службу для обработки ошибок. Клиент вызывает несколько ошибок. Служба перехватывает эти ошибки и регистрирует их в файле.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
  Интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> позволяет службам перехватывать ошибки, обрабатывать их и определять, каким образом будут создаваться отчеты об этих ошибках. Интерфейс позволяет реализовать два метода: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> и <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. Метод <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> служит для добавления, изменения и подавления сообщений ошибках, создаваемых в результате исключений. Метод <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> служит для обработки ошибки в случае ее возникновения и позволяет определять, требуется ли дополнительная обработка ошибок.  
   
- В этом образце тип `CalculatorErrorHandler` реализует интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler>. В раздел  
+ В этом образце тип `CalculatorErrorHandler` реализует интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler>. В поле  
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> обработчик `CalculatorErrorHandler` записывает ошибку в текстовый файл Error.txt в папке c:\logs. Обратите внимание, что этот образец регистрирует ошибку в журнале и не подавляет ее, чтобы о ней можно было уведомить клиент.  
   
@@ -91,7 +91,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
         {  
             ChannelDispatcher channelDispatcher = channelDispatcherBase as ChannelDispatcher;  
             channelDispatcher.ErrorHandlers.Add(errorHandler);  
-        }                                                  
+        }
     }  
 }  
 ```  
@@ -132,7 +132,7 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- Файл c:\logs\errors.txt содержит записанные службой сведения об ошибках. Обратите внимание, что для записи в каталог в службе необходимо убедиться в том, что процесс, в котором запущена служба (обычно ASP.NET или Network Service), имеет разрешение на запись в каталог.  
+ Файл c:\logs\errors.txt содержит записанные службой сведения об ошибках. Обратите внимание, что для записи службы в каталог необходимо убедиться, что процесс, в рамках которого работает служба (обычно ASP.NET или сетевая служба) имеет разрешение на запись в каталог.  
   
 ```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
@@ -141,19 +141,19 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
-2. Чтобы выполнить сборку решения, следуйте инструкциям в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы создать решение, следуйте инструкциям по [созданию образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
 3. Проверьте, что создан каталог c:\logs для файла error.txt. Либо измените имя файла, используемое в `CalculatorErrorHandler.HandleError`.  
   
-4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

@@ -1,5 +1,5 @@
 ---
-title: Метод ICorDebugProcess4::ProcessStateChanged
+title: ICorDebugПроцесс4::ProcessStateChanged Метод
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767185"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178632"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>Метод ICorDebugProcess4::ProcessStateChanged
+# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugПроцесс4::ProcessStateChanged Метод
 
-Уведомляет конвейера ICorDebug о том, что внепроцессные отладчик процесс продолжает выполнение отлаживаемого кода.
+Уведомляет конвейер ICorDebug о том, что недогибающий процесс продолжает выполнение debugee.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,24 +37,24 @@ HRESULT ProcessStateChanged(
 ## <a name="parameters"></a>Параметры
 
  `eChange`\
-[in] Является членом [перечисление CorDebugStateChange](cordebugstatechange-enumeration.md) описывающие изменения в состоянии выполнения процесса.
+(в) Участник [перечисления CorDebugStateChange,](cordebugstatechange-enumeration.md) описывающий состояние выполнения процесса.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Указанный метод является частью `ICorDebugProcess4` интерфейса и соответствует четвертый слот в таблице виртуального метода.
+Предоставленный метод является `ICorDebugProcess4` частью интерфейса и соответствует четвертому слоту таблицы виртуального метода.
 
 ## <a name="requirements"></a>Требования
 
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
- **Заголовок.** None
+ **Заголовок:** Ни один
 
- **Библиотека:** None
- 
+ **Библиотека:** Ни один
+
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorDebugProcess4](icordebugprocess4-interface.md)
 - [Интерфейсы отладки](debugging-interfaces.md)
-- [Отладка](index.md)
+- [Отладки](index.md)

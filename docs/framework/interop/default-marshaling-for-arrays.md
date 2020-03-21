@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: 8505f4c742fb002be249ab069708f7f768c672df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123581"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181450"
 ---
 # <a name="default-marshaling-for-arrays"></a>Маршалинг по умолчанию для массивов
 Если приложение полностью состоит из управляемого кода, общеязыковая среда выполнения (CLR) передает типы массивов в качестве параметров ввода-вывода. В отличие от этого, маршалер взаимодействия по умолчанию передает массив в качестве параметров ввода.  
@@ -29,11 +29,11 @@ ms.locfileid: "73123581"
   
  Как показано в следующей таблице, любой экземпляр управляемого массива должен иметь заданные тип элементов, ранг и нижнюю границу.  
   
-|Тип управляемого массива|Тип элемента|Ранг|Нижняя граница|Нотация сигнатуры|  
+|Тип управляемого массива|Тип элемента|Rank|Нижняя граница|Нотация сигнатуры|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Задается по типу.|Задается по рангу.|При необходимости задается границами.|*type* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Задается по типу.|Задается по рангу.|При необходимости задается границами.|*тип* **n,** *n**m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Неизвестно|Неизвестно|Неизвестно|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Задается по типу.|1|0|*type* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|Задается по типу.|1|0|*тип* **ю** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>Неуправляемые массивы  
  Неуправляемыми могут быть безопасные массивы в стиле COM или массивы в стиле C фиксированной или переменной длины. Безопасный массив — это описывающий сам себя массив, передающий тип, ранг и границы соответствующего массива данных. Массивы в стиле C — это одномерные типизированные массивы с фиксированной нижней границей, равной 0. Служба маршалинга обеспечивает ограниченную поддержку обоих типов массивов.  
@@ -43,8 +43,8 @@ ms.locfileid: "73123581"
   
 |Неуправляемый тип|Импортируемый тип|  
 |--------------------|-------------------|  
-|**SafeArray(** *Type* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ранг = 1, нижняя граница = 0. Размер известен только в том случае, если он предоставлен в управляемой сигнатуре. Безопасные массивы, ранг которых не равен 1, а нижняя граница не равна 0, не поддерживают маршалинг в виде **SZARRAY**.|  
-|*Type*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ранг = 1, нижняя граница = 0. Размер известен только в том случае, если он предоставлен в управляемой сигнатуре.|  
+|**SafeArray** *(Тип)* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ПреобразованныйТип***>**<br /><br /> Ранг = 1, нижняя граница = 0. Размер известен только в том случае, если он предоставлен в управляемой сигнатуре. Безопасные массивы, ранг которых не равен 1, а нижняя граница не равна 0, не поддерживают маршалинг в виде **SZARRAY**.|  
+|*Тип (тип)***[]**  |**ELEMENT_TYPE_SZARRAY** **\<** *ПреобразованныйТип***>**<br /><br /> Ранг = 1, нижняя граница = 0. Размер известен только в том случае, если он предоставлен в управляемой сигнатуре.|  
   
 ### <a name="safe-arrays"></a>Безопасные массивы  
  При импорте безопасного массива из библиотеки типов в сборку .NET он преобразуется в одномерный массив известного типа (например, **int**). К элементам массива применяются те же правила преобразования типов, что и к параметрам. Например, безопасный массив типов **BSTR** преобразуется в управляемый массив строк, а безопасный массив вариантов — в управляемый массив объектов. Тип элементов **SAFEARRAY** получается из библиотеки типов и сохраняется в значении **SAFEARRAY** перечисления <xref:System.Runtime.InteropServices.UnmanagedType>.  
@@ -64,17 +64,17 @@ HRESULT New3([in, out] SAFEARRAY( BSTR ) *ar);
 ```vb  
 Sub New1(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_I4)> _  
    ar() As Integer)  
-Sub New2(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_DATE)> _   
+Sub New2(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_DATE)> _
    ar() As DateTime)  
-Sub New3(ByRef <MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_BSTR)> _   
+Sub New3(ByRef <MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_BSTR)> _
    ar() As String)  
 ```  
   
 ```csharp  
 void New1([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_I4)] int[] ar) ;  
-void New2([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_DATE)]   
+void New2([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_DATE)]
    DateTime[] ar);  
-void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]   
+void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
@@ -114,7 +114,7 @@ Sub New2(<MarshalAs(UnmanagedType.LPArray, _
 ```csharp  
 void New1([MarshalAs(UnmanagedType.LPArray, SizeConst=10)] int[] ar);  
 void New2([MarshalAs(UnmanagedType.LPArray, SizeConst=200)] double[] ar);  
-void New2([MarshalAs(UnmanagedType.LPArray,   
+void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
@@ -137,14 +137,14 @@ Sub New3(ByRef ar As String)
 ```  
   
 ```csharp  
-void New1(ref int ar);    
-void New2(ref double ar);    
-void New3(ref String ar);   
+void New1(ref int ar);
+void New2(ref double ar);
+void New3(ref String ar);
 ```  
   
  Чтобы предоставить размер массива маршалеру, можно изменить код на языке MSIL, создаваемый программой Tlbimp.exe, после чего повторно скомпилировать его. Дополнительные сведения об изменении кода MSIL см. в разделе [Настройка вызываемых оболочек времени выполнения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Чтобы указать число элементов в массиве, примените тип <xref:System.Runtime.InteropServices.MarshalAsAttribute> к параметру массива в определении управляемого метода одним из следующих способов:  
   
-- Определите еще один параметр, который содержит число элементов в массиве. Параметры определяются по позиции, начиная с первого, который получает номер 0.     
+- Определите еще один параметр, который содержит число элементов в массиве. Параметры определяются по позиции, начиная с первого, который получает номер 0.
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -154,7 +154,7 @@ void New3(ref String ar);
   
     ```csharp  
     void New(  
-       int ElemCnt,   
+       int ElemCnt,
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
@@ -182,9 +182,9 @@ void New3(ref String ar);
   
 |Тип управляемого массива|Экспортируется как|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип предоставляется в сигнатуре. Ранг всегда равен 1, а нижняя граница всегда — 0. Размер всегда известен во время выполнения.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип, ранг и границы предоставляются в сигнатуре. Размер всегда известен во время выполнения.|  
-|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Тип, ранг, границы и размер всегда известны во время выполнения.|  
+|**тип ELEMENT_TYPE_SZARRAY** **\<** *type***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип предоставляется в сигнатуре. Ранг всегда равен 1, а нижняя граница всегда — 0. Размер всегда известен во время выполнения.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *ранга типа* **>** **\<** *(замыкает* **>****\<** *границу)* **>**|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип, ранг и границы предоставляются в сигнатуре. Размер всегда известен во время выполнения.|  
+|**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Тип, ранг, границы и размер всегда известны во время выполнения.|  
   
  В OLE-автоматизации существует ограничение в отношении массивов структур, которые содержат LPSTR или LPWSTR.  Таким образом, поля **String** должны маршалироваться как **UnmanagedType.BSTR**. В противном случае будет создаваться исключение.  
   
@@ -227,12 +227,12 @@ Sub [New](<MarshalAs(UnmanagedType.LPArray, _
 ```  
   
 ```csharp  
-void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]
    long [] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]
    String [] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=   
-   UnmanagedType.LPStr, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=
+   UnmanagedType.LPStr, SizeParamIndex=1)]
    String [] ar, int size );  
 ```  
   
@@ -283,10 +283,10 @@ Sub [New](<MarshalAs(UnmanagedType.LPARRAY, _
 ```  
   
 ```csharp  
-void New([MarshalAs(UnmanagedType.LPARRAY, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPARRAY, SizeParamIndex=1)]
    long [,] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPARRAY,   
-   ArraySubType= UnmanagedType.LPStr, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPARRAY,
+   ArraySubType= UnmanagedType.LPStr, SizeParamIndex=1)]
    String [,] ar, int size );  
 ```  
   
@@ -358,7 +358,7 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Характеристики маршалинга по умолчанию](default-marshaling-behavior.md)
 - [Преобразуемые и непреобразуемые типы](blittable-and-non-blittable-types.md)

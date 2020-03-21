@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9f603efdb4b4a5f68154da9c6a8bd05b55b8f46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935367"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182212"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Практическое руководство. Пользовательская прорисовка элемента управления ToolStrip
 Элементы управления <xref:System.Windows.Forms.ToolStrip> имеют следующие связанные классы отрисовки:  
@@ -60,7 +60,7 @@ ms.locfileid: "69935367"
         ToolStrip1.Renderer = New ToolStripProfessionalRenderer(t)  
     End Sub  
   
-    Class MyColorTable   
+    Class MyColorTable
     Inherits ProfessionalColorTable  
   
     Public Overrides ReadOnly Property ButtonPressedGradientBegin() As Color  
@@ -115,7 +115,7 @@ ms.locfileid: "69935367"
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Отключение цветов в стиле Microsoft Office для всего приложения  
   
-- Задайте для параметра <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> значение `false`.  
+- Присвойте параметру <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> значение `false`.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Отключение цветов в стиле Microsoft Office для одного элемента управления ToolStrip  
   
@@ -133,11 +133,11 @@ ms.locfileid: "69935367"
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Элементы управления со встроенной поддержкой рисования владельцем](controls-with-built-in-owner-drawing-support.md)
-- [Практическое руководство. Создание и настройка пользовательского модуля отрисовки для элемента управления ToolStrip в Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: b4a4005a23c8c74edecb00475669e019b50a17af
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851224"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185596"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
-В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Windows Communication Foundation (WCF) включает четыре определяемые системой привязки метаданных, но метаданные можно публиковать с помощью любой требуемой привязки. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [Начало работы](../samples/getting-started-sample.md).  
+В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Фонд связи Windows (WCF) включает в себя четыре системно-определяемые привязки метаданных, но вы можете публиковать метаданные с помощью любой необходимой привязки. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [начало](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Использование файла конфигурации  
   
@@ -33,7 +33,7 @@ ms.locfileid: "70851224"
   
     ```xml  
     <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">   
+    behaviorConfiguration="CalculatorServiceBehavior">
     ```  
   
 3. Добавьте конечную точку метаданных, указав mex в качестве адреса, `wsHttpBinding` как привязку и <xref:System.ServiceModel.Description.IMetadataExchange> как контракт:  
@@ -113,10 +113,10 @@ ms.locfileid: "70851224"
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Поведение публикации метаданных](../samples/metadata-publishing-behavior.md)
 - [Извлечение метаданных](../samples/retrieve-metadata.md)
-- [Метаданные](../feature-details/metadata.md)
+- [Метаданных](../feature-details/metadata.md)
 - [Публикация метаданных](../feature-details/publishing-metadata.md)
 - [Публикация конечных точек метаданных](../publishing-metadata-endpoints.md)

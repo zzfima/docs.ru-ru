@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790650"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178402"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Метод ICorPublishAppDomainEnum::Next
-Возвращает указанное количество доменов приложений, которые в данный момент существуют в процессе, начиная с текущей позиции.  
+Получает указанное количество доменов приложений, которые в настоящее время существуют в процессе, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]   
+    [out, size_is(celt), length_is(*pceltFetched)]
         ICorPublishAppDomain **objects,  
     [out] ULONG *pceltFetched  
 );  
@@ -38,23 +38,23 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- окне Число извлекаемых элементов.  
+ (в) Количество элементов, которые необходимо получить.  
   
  `objects`  
- заполняет Указатель на массив полученных объектов [ICorPublishAppDomain](icorpublishappdomain-interface.md) , каждый из которых представляет домен приложения.  
+ (ваут) Указатель на массив извлеченных объектов [ICorPublishAppDomain,](icorpublishappdomain-interface.md) каждый из которых представляет собой домен приложения.  
   
  `pceltFetched`  
- заполняет Указатель на число фактически возвращенных доменов приложений. Это значение может быть равно null, если `celt` является одним.  
+ (ваут) Указатель на количество доменов приложений фактически вернулся. Это значение может `celt` быть нулевым, если он один.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Корпуб. idl, Корпуб. h  
+ **Заголовок:** CorPub.idl, CorPub.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)

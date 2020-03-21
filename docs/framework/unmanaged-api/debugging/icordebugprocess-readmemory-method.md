@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: dca2a4e5ee869346108137a8ba01ab8855756725
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 383e3f8990a1f355c94ff5e9f9daa69bdbdd97bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792557"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178652"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>Метод ICorDebugProcess::ReadMemory
-Считывает указанную область памяти для этого процесса.  
+Читает указанную область памяти для этого процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT ReadMemory(  
-    [in]  CORDB_ADDRESS address,   
+    [in]  CORDB_ADDRESS address,
     [in]  DWORD size,  
     [out, size_is(size), length_is(size)] BYTE buffer[],  
     [out] SIZE_T *read);  
@@ -37,21 +37,21 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- окне Значение `CORDB_ADDRESS`, указывающее базовый адрес памяти для чтения.  
+ (в) Значение, `CORDB_ADDRESS` опоглавивававаев базовое адрес прочитанной памяти.  
   
  `size`  
- окне Число байтов, считываемых из памяти.  
+ (в) Количество байтов, которые можно считывать по памяти.  
   
  `buffer`  
- заполняет Буфер, который получает содержимое памяти.  
+ (ваут) Буфер, который получает содержимое памяти.  
   
  `read`  
- заполняет Указатель на число байтов, передаваемых в указанный буфер.  
+ (ваут) Указатель на количество байтов, переведенных в указанный буфер.  
   
-## <a name="remarks"></a>Заметки  
- Метод `ReadMemory` в основном предназначен для использования в отладке взаимодействия для проверки областей памяти, используемых неуправляемой частью отлаживаемого кода. Этот метод также можно использовать для считывания кода на языке MSIL и собственного JIT-скомпилированного кода.  
+## <a name="remarks"></a>Remarks  
+ Метод `ReadMemory` в первую очередь предназначен для использования межопомнейной отладки для проверки областей памяти, которые используются неуправляемой частью отладки. Этот метод также может быть использован для чтения промежуточных языков Microsoft (MSIL) код и родной JIT-компилированный код.  
   
- Все управляемые точки останова будут удалены из данных, возвращаемых в параметре `buffer`. Никакие изменения для собственных точек останова, заданных [ICorDebugProcess2:: сетунманажедбреакпоинт](icordebugprocess2-setunmanagedbreakpoint-method.md), не выполняются.  
+ Любые управляемые точки разрыва будут удалены `buffer` из данных, которые возвращаются в параметре. Никакие корректировки не будут внесены для родных брейк-пойнтов, установленных [ICorDebugProcess2::SetUnmanagedBreakpoint.](icordebugprocess2-setunmanagedbreakpoint-method.md)  
   
  Кэширование памяти процесса не выполняется.  
   

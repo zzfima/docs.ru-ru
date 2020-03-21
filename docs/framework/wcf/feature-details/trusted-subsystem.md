@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 4f3166b8f1e59a100f54574ab548f5dae88eb5cd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b226eed9218207cde99add61ef1f3eb64b459009
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742638"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184295"
 ---
 # <a name="trusted-subsystem"></a>Доверенная подсистема
 Клиент обращается к одной или нескольким веб-службам, распределенным по сети. Веб-службы устроены так, что доступ к дополнительным ресурсам (таким как базы данных или другие веб-службы) инкапсулируется в бизнес-логике веб-службы. Эти ресурсы должны быть защищены от несанкционированного доступа. На следующем рисунке показан процесс доверенной подсистемы.  
   
- ![Доверенная подсистема](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![Надежная подсистема](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  Показанный на рисунке процесс доверенной подсистемы пошагово описан ниже.  
   
@@ -29,16 +29,16 @@ ms.locfileid: "76742638"
   
 5. Доверенная подсистема обрабатывает ответ и отправляет свой ответ клиенту.  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
-|Совместимость|Только Windows Communication Foundation (WCF).|  
+|Совместимость|Фонд связи Windows (WCF) только.|  
 |Проверка подлинности (служба)|Служба маркеров безопасности проверяет подлинность клиентов и авторизует их.|  
 |Проверка подлинности (клиент)|Доверенная подсистема проверяет подлинность клиента, а ресурс проверяет подлинность службы доверенной подсистемы.|  
 |Целостность|Да|  
 |Конфиденциальность|Да|  
 |Транспортировка|HTTP между клиентом и службой доверенной подсистемы.<br /><br /> NET.TCP между службой доверенной подсистемы и ресурсом (внутренней службой).|  
-|Привязка|<xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Привязка|<xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.NetTcpBinding> [и \<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Ресурс (внутренняя служба)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "76742638"
       </service>  
     </services>  
     <client>  
-      <endpoint name=""   
+      <endpoint name=""
                 address="net.tcp://contoso.com:8001/BackendService"  
                 binding="customBinding"  
                 bindingConfiguration="ClientBinding"  
@@ -179,7 +179,7 @@ ms.locfileid: "76742638"
 <configuration>  
   <system.serviceModel>  
     <client>  
-        <endpoint name=""   
+        <endpoint name=""
                   address="http://www.cohowinery.com:8000/FacadeService"  
                   binding="wsHttpBinding"  
                   bindingConfiguration="Binding1"  
@@ -212,5 +212,5 @@ ms.locfileid: "76742638"
   
 ## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Обзор безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

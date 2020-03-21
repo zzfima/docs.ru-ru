@@ -15,32 +15,32 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c6d1905cdbd12b960014e687034ea9d163b68d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088689"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179038"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>Метод ICorDebugArrayValue::GetBaseIndicies
-Возвращает базовый индекс каждого измерения в массиве.  
+Получает базовый индекс каждого измерения в массиве.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetBaseIndicies (  
     [in] ULONG32          cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32           indicies[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `cdim`  
- окне Число измерений данного объекта `ICorDebugArrayValue`. Это значение также является размером массива `indicies`, так как его размер равен числу измерений объекта `ICorDebugArrayValue`.  
+ (в) Количество размеров этого `ICorDebugArrayValue` объекта. Это значение также является `indicies` размером массива, поскольку его размер `ICorDebugArrayValue` равен количеству размеров объекта.  
   
  `indicies`  
- заполняет Массив целых чисел, каждый из которых является базовым индексом (т. е. начальным индексом) измерения данного объекта `ICorDebugArrayValue`.  
+ (ваут) Массив целых чиб, каждый из которых является базовым индексом (т.е. стартовым индексом) измерения этого `ICorDebugArrayValue` объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

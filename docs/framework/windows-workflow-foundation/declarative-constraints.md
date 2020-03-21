@@ -2,12 +2,12 @@
 title: Декларативные ограничения
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 321021e3d73daecae07268f33807c992414a7b4c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945825"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182966"
 ---
 # <a name="declarative-constraints"></a>Декларативные ограничения
 Декларативные ограничения - это мощный метод проверки допустимости действия и его связей с другими действиями. Ограничения для действий настраиваются во время процесса создания, однако дополнительные ограничения также могут задаваться ведущим приложением рабочего процесса. В этом разделе приводятся общие сведения об использовании декларативных ограничений для обеспечения проверки допустимости действий.  
@@ -71,58 +71,58 @@ public sealed class CreateState : CodeActivity
     public CreateState()  
     {  
         base.Constraints.Add(CheckParent());  
-        this.Cities = new List<Activity>();              
+        this.Cities = new List<Activity>();
     }  
   
     public List<Activity> Cities { get; set; }  
   
-    public string Name { get; set; }    
+    public string Name { get; set; }
   
     static Constraint CheckParent()  
     {  
         DelegateInArgument<CreateState> element = new DelegateInArgument<CreateState>();  
-        DelegateInArgument<ValidationContext> context = new DelegateInArgument<ValidationContext>();                          
+        DelegateInArgument<ValidationContext> context = new DelegateInArgument<ValidationContext>();
         Variable<bool> result = new Variable<bool>();  
         DelegateInArgument<Activity> parent = new DelegateInArgument<Activity>();  
   
         return new Constraint<CreateState>  
-        {                                     
+        {
             Body = new ActivityAction<CreateState,ValidationContext>  
-            {                      
+            {
                 Argument1 = element,  
                 Argument2 = context,  
                 Handler = new Sequence  
                 {  
                     Variables =  
                     {  
-                        result   
+                        result
                     },  
                     Activities =  
                     {  
                         new ForEach<Activity>  
-                        {                                  
+                        {
                             Values = new GetParentChain  
                             {  
-                                ValidationContext = context                                      
+                                ValidationContext = context
                             },  
                             Body = new ActivityAction<Activity>  
-                            {     
-                                Argument = parent,   
+                            {
+                                Argument = parent,
                                 Handler = new If()  
-                                {                                            
-                                    Condition = new InArgument<bool>((env) => object.Equals(parent.Get(env).GetType(),typeof(CreateCountry))),                                          
+                                {
+                                    Condition = new InArgument<bool>((env) => object.Equals(parent.Get(env).GetType(),typeof(CreateCountry))),
                                     Then = new Assign<bool>  
                                     {  
                                         Value = true,  
                                         To = result  
                                     }  
                                 }  
-                            }                                  
+                            }
                         },  
                         new AssertValidation  
                         {  
                             Assertion = new InArgument<bool>(result),  
-                            Message = new InArgument<string> ("CreateState has to be inside a CreateCountry activity"),                                                                  
+                            Message = new InArgument<string> ("CreateState has to be inside a CreateCountry activity"),
                         }  
                     }  
                 }  
@@ -151,7 +151,7 @@ ValidationSettings settings = new ValidationSettings()
   
     AdditionalConstraints =  
     {  
-        {typeof(Activity), new List<Constraint> {ActivityDisplayNameIsNotSetWarning()}},       
+        {typeof(Activity), new List<Constraint> {ActivityDisplayNameIsNotSetWarning()}},
     }  
 };  
   
@@ -176,4 +176,4 @@ else
 }  
 ```  
   
- Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. Дополнительные сведения о вызове проверки см. в разделе [вызов проверки действия](invoking-activity-validation.md).
+ Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. Для получения дополнительной информации о вызывая проверку [см.](invoking-activity-validation.md)

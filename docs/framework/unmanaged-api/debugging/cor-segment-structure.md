@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-ms.openlocfilehash: 0370c74bde9ca5bdbd0fd03515f4b174ddd0a39a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c743064b8ca645cf45d02b8800c88187bf4c6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132323"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179284"
 ---
 # <a name="cor_segment-structure"></a>Структура COR_SEGMENT
 Содержит сведения об области памяти в управляемой куче.  
@@ -28,23 +28,23 @@ ms.locfileid: "73132323"
   
 ```cpp  
 typedef struct _COR_SEGMENT {  
-    CORDB_ADDRESS start;            
-    CORDB_ADDRESS end;              
-    CorDebugGenerationTypes gen;    
-    ULONG heap;                     
+    CORDB_ADDRESS start;
+    CORDB_ADDRESS end;
+    CorDebugGenerationTypes gen;
+    ULONG heap;
 } COR_SEGMENT;  
 ```  
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
 |`start`|Начальный адрес области памяти.|  
 |`end`|Конечный адрес области памяти.|  
 |`gen`|Элемент перечисления [CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md), который указывает на создание области памяти.|  
-|`heap`|Номер кучи, в которой находится область памяти. Дополнительные сведения см. в разделе "Примечания".|  
+|`heap`|Номер кучи, в которой находится область памяти. Дополнительные сведения см. в разделе «Примечания».|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
  Структура `COR_SEGMENTS` представляет область памяти в управляемой куче.  Объекты `COR_SEGMENTS` являются членами объекта коллекции [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md), которая заполняется путем вызова метода [ICorDebugProcess5::EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md).  
   
  В поле `heap` указан номер обработчика, который соответствует определенной куче. Для сборщиков мусора на рабочей станции это значение всегда равно нулю, ведь на рабочих станциях только одна куча сборки мусора. Для сборщиков мусора на сервере это значение соответствует обработчику, к которому привязана куча. Куч сборки мусора может быть больше или меньше фактического числа обработчиков в связи с особенностями реализации сборщика мусора.  
@@ -58,7 +58,7 @@ typedef struct _COR_SEGMENT {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Структуры отладки](debugging-structures.md)
-- [Отладка](index.md)
+- [Отладки](index.md)

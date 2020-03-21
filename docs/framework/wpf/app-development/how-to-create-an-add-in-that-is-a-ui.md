@@ -12,85 +12,85 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: b0e847061a30e93d36997ab603c52715e2730765
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 339231031b9e57b9f00a2aeb6fbbde8ad66c1ad9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182639"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141033"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом
-В этом примере показано, как создать надстройку, которая является Windows Presentation Foundation (WPF), размещенной в автономном приложении WPF.  
+В этом примере показано, как создать надстройку, которая является Фондом презентаций Windows (WPF), который размещается автономным приложением WPF.  
   
- Надстройка — это пользовательский интерфейс, который является пользовательским элементом управления WPF. Содержимое пользовательского элемента управления составляет одна кнопка, при нажатии которой отображается окно сообщения. Автономное приложение WPF размещает Пользовательский интерфейс надстройки как содержимое главного окна приложения.  
+ Надстройка — это пользовательский интерфейс, который является пользовательским контролем WPF. Содержимое пользовательского элемента управления составляет одна кнопка, при нажатии которой отображается окно сообщения. Автономное приложение WPF размещает uI надстройки в качестве содержимого основного окна приложения.  
   
- **Необходимые компоненты**  
+ **Предварительные требования**  
   
- В этом примере расширения WPF выделены для модели надстройки .NET Framework, которая включает этот сценарий и предполагает следующее:  
+ В этом примере выделены расширения WPF к модели надстройки .NET, которая позволяет этот сценарий, и предполагается следующее:  
   
-- Знание модели надстроек .NET Framework, включая конвейер, надстройку и разработку на узле. Если вы не знакомы с этими понятиями, см. раздел [надстройки и расширяемость](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Руководство, в котором демонстрируется реализация конвейера, надстройки и ведущего приложения, см. в разделе [пошаговое руководство. Создание расширяемого приложения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Знание модели надстройки .NET Framework, включая конвейер, надстройку и разработку хоста. Если вы не знакомы с этими понятиями, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Для руководства, демонстрирующего реализацию конвейера, надстройки и приложения-хоста, [см.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))  
   
-- Знание расширений WPF для модели надстройки .NET Framework. См. раздел [Общие сведения о надстройках WPF](wpf-add-ins-overview.md).  
+- Знание расширений WPF в модели надстройки .NET. Смотрите [обзор WPF Add-Ins.](wpf-add-ins-overview.md)  
   
 ## <a name="example"></a>Пример  
- Чтобы создать надстройку, которая является пользовательским интерфейсом WPF, требуется специальный код для каждого сегмента конвейера, надстройки и ведущего приложения.  
+ Для создания надстройки, которая является UI WPF, требуется определенный код для каждого сегмента конвейера, надстройки и приложения для узла.  
 
-<a name="Contract"></a>   
+<a name="Contract"></a>
 ## <a name="implementing-the-contract-pipeline-segment"></a>Реализация сегмента конвейера контракта
 
-Когда надстройка является пользовательским интерфейсом, контракт для надстройки должен реализовать <xref:System.AddIn.Contract.INativeHandleContract>. В примере `IWPFAddInContract` реализует <xref:System.AddIn.Contract.INativeHandleContract>, как показано в следующем коде.  
+Когда надстройка — это ui, контракт на надстройку должен быть реализован. <xref:System.AddIn.Contract.INativeHandleContract> В примере `IWPFAddInContract` <xref:System.AddIn.Contract.INativeHandleContract>реализуется, как показано в следующем коде.  
   
 [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
 [!code-vb[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]
 
-<a name="AddInViewPipeline"></a>   
+<a name="AddInViewPipeline"></a>
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Реализация сегмента конвейера представления надстройки
 
-Поскольку надстройка реализуется как подкласс <xref:System.Windows.FrameworkElement> типа, представление надстройки также должно быть подклассом. <xref:System.Windows.FrameworkElement> В следующем коде показано представление надстройки контракта, реализованное как `WPFAddInView` класс.  
+Поскольку надстройка реализована как подкласс <xref:System.Windows.FrameworkElement> типа, представление надстройки <xref:System.Windows.FrameworkElement>также должно подклассифицироваться. Следующий код показывает надстройку контракта, реализованную `WPFAddInView` как класс.  
   
 [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
 [!code-vb[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/AddInViews/WPFAddInView.vb#AddInViewCode)]  
   
-Здесь представление надстройки является производным от <xref:System.Windows.Controls.UserControl>. Следовательно, Пользовательский интерфейс надстройки также должен быть производным от <xref:System.Windows.Controls.UserControl>.  
+Здесь приведен вид надстройки, <xref:System.Windows.Controls.UserControl>полученный из . Следовательно, надстройка uI должна <xref:System.Windows.Controls.UserControl>также вытекать из .  
   
 <a name="AddInSideAdapter"></a>
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Реализация сегмента конвейера адаптера надстройки
 
-Хотя контракт является <xref:System.AddIn.Contract.INativeHandleContract>, надстройка представляет собой <xref:System.Windows.FrameworkElement> (как указано в сегменте конвейера представления надстройки). Поэтому перед<xref:System.AddIn.Contract.INativeHandleContract> пересечением границы изоляции <xref:System.Windows.FrameworkElement> необходимо преобразовать в. Эта работа выполняется с помощью адаптера надстройки путем вызова <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, как показано в следующем коде.  
+В то время <xref:System.AddIn.Contract.INativeHandleContract>как контракт является <xref:System.Windows.FrameworkElement> дополнением (как указано в сегменте простройки представления конвейера). Таким образом, <xref:System.Windows.FrameworkElement> должны быть <xref:System.AddIn.Contract.INativeHandleContract> преобразованы в перед пересечением границы изоляции. Эта работа выполняется адаптером-подрабатывал по вызову, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>как показано в следующем коде.  
   
 [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
 [!code-vb[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]
 
-В модели надстройки, где надстройка возвращает пользовательский интерфейс (см. раздел [Создание надстройки, возвращающей пользовательский интерфейс](how-to-create-an-add-in-that-returns-a-ui.md)), адаптер надстройки преобразует <xref:System.Windows.FrameworkElement> в <xref:System.AddIn.Contract.INativeHandleContract> в с помощью вызова <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>также должен вызываться в этой модели, хотя необходимо реализовать метод для написания кода для его вызова. <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> Это делается путем переопределения и реализации кода, который вызывает <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> , если вызывающий <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> код ожидает <xref:System.AddIn.Contract.INativeHandleContract>. В этом случае вызывающий объект будет адаптером приложения, который рассматривается в следующем подразделе.  
+В модели надстройки, где надстройка возвращает uI (см. [Создать надстройку,](how-to-create-an-add-in-that-returns-a-ui.md)которая <xref:System.Windows.FrameworkElement> возвращает <xref:System.AddIn.Contract.INativeHandleContract> uI), адаптер надстройки преобразовал сяочку, позвонив. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>также должны быть вызваны в этой модели, хотя вам нужно реализовать метод, из которого написать код, чтобы вызвать его. Вы делаете это, <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> переопределяя <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> и реализуя <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> код, <xref:System.AddIn.Contract.INativeHandleContract>который вызывает, если код, который вызывает ожидает . В этом случае вызывающий объект будет адаптером приложения, который рассматривается в следующем подразделе.  
   
 > [!NOTE]
-> Также необходимо переопределить <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> в этой модели, чтобы обеспечить переход между интерфейсом пользователя ведущего приложения и надстройкой пользовательского интерфейса. Дополнительные сведения см. в разделе "ограничения надстроек WPF" раздела [Общие сведения о](wpf-add-ins-overview.md)надстройках WPF.  
+> Кроме того, необходимо <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> переопределить в этой модели, чтобы включить табуирование между uI-разновидномых приложений-хоста и uI надстройки. Для получения дополнительной информации см. [WPF Add-Ins Overview](wpf-add-ins-overview.md)  
   
-Так как адаптер надстройки реализует интерфейс, производный от <xref:System.AddIn.Contract.INativeHandleContract>, также необходимо реализовать <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, хотя он игнорируется при <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> переопределении.  
+Поскольку надстройка адаптера реализует интерфейс, <xref:System.AddIn.Contract.INativeHandleContract>который вытекает из, вы также должны реализовать, <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>хотя это игнорируется, когда <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> переопределяется.  
   
-<a name="HostViewPipeline"></a>   
-## <a name="implementing-the-host-view-pipeline-segment"></a>Реализация сегмента конвейера представления в основном приложении
+<a name="HostViewPipeline"></a>
+## <a name="implementing-the-host-view-pipeline-segment"></a>Реализация сегмента конвейера представления в ведущем приложении
 
-В этой модели ведущее приложение обычно принимает представление главного приложения в <xref:System.Windows.FrameworkElement> подкласс. Адаптер на стороне главного приложения должен преобразовать <xref:System.AddIn.Contract.INativeHandleContract> в объект <xref:System.Windows.FrameworkElement> после <xref:System.AddIn.Contract.INativeHandleContract> пересечения границы изоляции. Так как метод не вызывается ведущим приложением для получения <xref:System.Windows.FrameworkElement>, представление главного приложения должно "возвращать" объект <xref:System.Windows.FrameworkElement> , содержащий его. Следовательно, представление главного приложения должно быть производным от подкласса <xref:System.Windows.FrameworkElement> , который может содержать другие пользовательские интерфейсы, <xref:System.Windows.Controls.UserControl>такие как. В следующем коде показано ведущее представление контракта, реализованное как `WPFAddInHostView` класс.  
+В этой модели приложение хоста обычно ожидает, <xref:System.Windows.FrameworkElement> что представление узла будет подклассом. Адаптер стороны хоста <xref:System.AddIn.Contract.INativeHandleContract> должен <xref:System.Windows.FrameworkElement> преобразовать его в после пересечения <xref:System.AddIn.Contract.INativeHandleContract> границы изоляции. Поскольку метод не вызывается хост-приложением для <xref:System.Windows.FrameworkElement>получения, представление <xref:System.Windows.FrameworkElement> узла должно "вернуть" его, содержа его. Следовательно, представление узла должно вытекать <xref:System.Windows.FrameworkElement> из подкласса, который <xref:System.Windows.Controls.UserControl>может содержать другие uIs, такие как . Следующий код показывает представление узла контракта, `WPFAddInHostView` реализованного как класс.  
 
 [!code-csharp[WPFAddInHostView class](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/HostViews/WPFAddInHostView.cs#HostViewCode)]
 [!code-vb[WPFAddInHostView class](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/HostViews/WPFAddInHostView.vb#HostViewCode)]
 
-<a name="HostSideAdapter"></a>   
+<a name="HostSideAdapter"></a>
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Реализация сегмента конвейера адаптера приложения
 
-Хотя контракт является <xref:System.AddIn.Contract.INativeHandleContract>, ведущее приложение ждет <xref:System.Windows.Controls.UserControl> (как указано представлением главного приложения). Следовательно, <xref:System.Windows.FrameworkElement>необходимопреобразовать в после пересечения границы изоляции до того, как будет задано содержимое представления узла (которое является производным от <xref:System.Windows.Controls.UserControl>). <xref:System.AddIn.Contract.INativeHandleContract>  
+В то время <xref:System.AddIn.Contract.INativeHandleContract>как контракт является, хост приложение ожидает <xref:System.Windows.Controls.UserControl> (как указано в представлении хоста). Следовательно, <xref:System.AddIn.Contract.INativeHandleContract> необходимо преобразовать <xref:System.Windows.FrameworkElement> в после пересечения границы изоляции, прежде чем установить <xref:System.Windows.Controls.UserControl>в качестве содержания вида хоста (который вытекает из).  
   
 Эту работу выполняет адаптер приложения, как показано в следующем коде.  
 
 [!code-csharp[Host-side adapter](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#HostSideAdapterCode)]
 [!code-vb[Host-side adapter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#HostSideAdapterCode)]
 
-Как видите, адаптер на стороне главного приложения получает объект <xref:System.AddIn.Contract.INativeHandleContract> , вызывая <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> метод адаптера надстройки (это точка <xref:System.AddIn.Contract.INativeHandleContract> пересечения границы изоляции).  
+Как вы можете видеть, адаптер на <xref:System.AddIn.Contract.INativeHandleContract> стороне хоста приобретает, вызывая <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> метод адаптера надстройки (это точка, где <xref:System.AddIn.Contract.INativeHandleContract> пересекает границу изоляции).  
   
-Затем адаптер на стороне узла преобразует <xref:System.AddIn.Contract.INativeHandleContract> <xref:System.Windows.FrameworkElement> в в, вызвав <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Наконец, <xref:System.Windows.FrameworkElement> задается как содержимое представления главного приложения.  
+Адаптер на стороне хоста <xref:System.AddIn.Contract.INativeHandleContract> преобразует <xref:System.Windows.FrameworkElement> сярприз в вызов. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> Наконец, <xref:System.Windows.FrameworkElement> настроен как содержимое представления узла.  
   
-<a name="AddIn"></a>   
+<a name="AddIn"></a>
 ## <a name="implementing-the-add-in"></a>Реализация надстройки
 
 При наличии адаптера надстройки и представления надстройки можно реализовать надстройку, производя ее от представления надстройки, как показано в следующем коде.  
@@ -98,27 +98,27 @@ ms.locfileid: "71182639"
 [!code-csharp[Add-in implementation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#AddInCodeBehind)]
 [!code-vb[Add-in implementation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#AddInCodeBehind)]
 
-В этом примере можно увидеть одно интересное преимущество этой модели: разработчикам надстроек требуется только реализовать надстройку (поскольку это также пользовательский интерфейс), а не как класс надстройки, так и пользовательский интерфейс надстройки.  
+В этом примере можно увидеть одно интересное преимущество этой модели: разработчикам надстройки нужно реализовать только надстройку (поскольку это также используется пользовательский доступ), а не как класс надстройки, так и надстройку.  
   
 <a name="HostApp"></a>
 ## <a name="implementing-the-host-application"></a>Реализация ведущего приложения
 
-При создании адаптера на стороне узла и представления главного приложения ведущее приложение может использовать модель надстройки .NET Framework, чтобы открыть конвейер и получить представление надстройки в основном приложении. Эти действия показаны в следующем коде.  
+При создании адаптера-хоста и представления хоста приложение может использовать модель надстройки .NET Framework для открытия конвейера и получения представления о надстройке. Эти действия показаны в следующем коде.  
 
 [!code-csharp[Acquiring a host view of the add-in](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Host/MainWindow.xaml.cs#GetUICode)]
 [!code-vb[Acquiring a host view of the add-in](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/Host/MainWindow.xaml.vb#GetUICode)]
 
-Ведущее приложение использует стандартный код модели надстройки .NET Framework для активации надстройки, которая неявно возвращает ведущее представление ведущему приложению. Ведущее приложение впоследствии отображает представление узла (то есть <xref:System.Windows.Controls.UserControl>) <xref:System.Windows.Controls.Grid>из.  
+Для активации надстройки, которая неявно возвращает представление хоста в приложение хоста, используется типовой код модели надстройки .NET Framework. Впоследствии хост-приложение отображает представление <xref:System.Windows.Controls.UserControl>хоста <xref:System.Windows.Controls.Grid>(который является) от .  
   
- Код для обработки взаимодействия с пользовательским интерфейсом надстройки выполняется в домене приложения надстройки. Эти взаимодействия включают следующее.  
+ Код для обработки взаимодействий с uI надстройки работает в домене приложения надстройки. Эти взаимодействия включают следующее.  
   
-- <xref:System.Windows.Controls.Button> Обработка<xref:System.Windows.Controls.Primitives.ButtonBase.Click> события.  
+- Обработка <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> события.  
   
-- <xref:System.Windows.MessageBox>Отображение.  
+- Отображение <xref:System.Windows.MessageBox>.  
   
  Это действие полностью изолировано от ведущего приложения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Надстройки и расширения среды](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Общие сведения о надстройках WPF](wpf-add-ins-overview.md)

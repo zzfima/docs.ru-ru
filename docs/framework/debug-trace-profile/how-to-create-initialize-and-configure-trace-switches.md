@@ -11,17 +11,17 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 358e34b2ce5d896ba02b343ce060604f2d42eeeb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8bf3b974ff0ef9f719274ab684b3dce85295c917
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216480"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181829"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Практическое руководство. Создание, инициализация и настройка переключателей трассировки
 Переключатели трассировки позволяют включать, отключать и фильтровать выходные данные трассировки.  
   
-<a name="create"></a>   
+<a name="create"></a>
 ## <a name="creating-and-initializing-a-trace-switch"></a>Создание и инициализация переключателей трассировки  
  Чтобы использовать переключатели трассировки, необходимо сначала создать их и разместить в коде. Существуют два предварительно определенных класса, с помощью которых можно создавать объекты переключателей: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> и <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>. Класс <xref:System.Diagnostics.BooleanSwitch> используется, когда требуется определить лишь факт отображения сообщений трассировки; если необходимо различать уровни трассировки, используется класс <xref:System.Diagnostics.TraceSwitch>. При использовании класса <xref:System.Diagnostics.TraceSwitch> можно определить собственные сообщения отладки и связать их с различными уровнями трассировки. Оба типа переключателей можно использовать как с трассировкой, так и с отладкой. По умолчанию класс <xref:System.Diagnostics.BooleanSwitch> отключен, а класс <xref:System.Diagnostics.TraceSwitch> имеет значение <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. Переключатели трассировки можно создавать и помещать в любую часть кода, которая может их использовать.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "77216480"
   
 1. Определите тип переключателя (<xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> или <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>) и задайте его имя и описание.  
   
-2. Настройте переключатель трассировки. Дополнительные сведения см. в разделе [Настройка переключателей трассировки](#configure).  
+2. Настройте переключатель трассировки. Для получения дополнительной информации [см.](#configure)  
   
      Следующий код создает два переключателя, по одному для каждого типа.  
   
@@ -41,18 +41,18 @@ ms.locfileid: "77216480"
     ```  
   
     ```csharp  
-    System.Diagnostics.BooleanSwitch dataSwitch =   
+    System.Diagnostics.BooleanSwitch dataSwitch =
        new System.Diagnostics.BooleanSwitch("Data", "DataAccess module");  
-    System.Diagnostics.TraceSwitch generalSwitch =   
-       new System.Diagnostics.TraceSwitch("General",   
+    System.Diagnostics.TraceSwitch generalSwitch =
+       new System.Diagnostics.TraceSwitch("General",
        "Entire application");  
     ```  
   
-<a name="configure"></a>   
+<a name="configure"></a>
 ## <a name="configuring-trace-switches"></a>Настройка переключателей трассировки  
  После распределения приложения можно по-прежнему включать или отключать вывод трассировки путем настройки в приложении переключателей трассировки. Настройка переключателя означает изменение его значения от внешнего источника после его инициализации. Можно изменить значения объектов переключателей с помощью файла конфигурации. Настройка переключателя трассировки выполняется для ее включения и отключения или для задания ее уровня, определяющего количество и тип сообщений, передаваемых в прослушиватели.  
   
- Настройка переключателей выполняется с помощью файла конфигурации. Для веб-приложения это файл Web.config, связанный с проектом. В приложении Windows этот файл называется (имя приложения). exe. config. В развернутом приложении этот файл должен находиться в той же папке, что и исполняемый объект.  
+ Настройка переключателей выполняется с помощью файла конфигурации. Для веб-приложения это файл Web.config, связанный с проектом. В приложении Windows этот файл называется (имя приложения). В развернутом приложении этот файл должен находиться в той же папке, что и исполняемая.  
   
  Когда приложение выполняет код, который создает экземпляр переключателя в первый раз, оно проверяет в файле конфигурации сведения уровня трассировки для именованного переключателя. Система трассировки проверяет файл конфигурации для каждого конкретного переключателя только один раз — при первом создании переключателя приложением.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "77216480"
   
          Файл конфигурации приложения создается и открывается. Это документ XML с корневым элементом `<configuration>.`  
   
-    - **Visual C#:** в диалоговом окне **Добавление нового элемента** выберите элемент **XML-файл**. Назовите этот файл **app. config**. В редакторе XML после объявления XML добавьте следующий код XML:  
+    - **Visual C#:** в диалоговом окне **Добавление нового элемента** выберите элемент **XML-файл**. Назовите этот файл **app.config**. В редакторxML после декларации XML добавьте следующее XML:  
   
         ```xml  
         <configuration>  
@@ -123,9 +123,9 @@ ms.locfileid: "77216480"
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Трассировка и инструментирование приложений](tracing-and-instrumenting-applications.md)
+- [Трассировка и оборудование приложений](tracing-and-instrumenting-applications.md)
 - [Практическое руководство. Добавление операторов трассировки в код приложения](how-to-add-trace-statements-to-application-code.md)
 - [Переключатели трассировки](trace-switches.md)
-- [Схема параметров трассировки и отладки](../configure-apps/file-schema/trace-debug/index.md)
+- [Схема настроек трассировки и отпараги](../configure-apps/file-schema/trace-debug/index.md)

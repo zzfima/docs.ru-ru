@@ -14,39 +14,39 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4932e1fd6294f4a01264e982835dd0707324082a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136923"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178231"
 ---
 # <a name="_corimageunloading-function"></a>Функция _CorImageUnloading
-Уведомляет загрузчик об выгрузке образов управляемого модуля.  
+Уведомляет погрузчик при разгрузке управляемых изображений модуля.  
   
- Эта функция не реализована. При вызове возвращается значение E_NOTIMPL.  
+ Эта функция не реализована. Если вызов, он возвращает E_NOTIMPL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-STDAPI (VOID) _CorImageUnloading(   
+STDAPI (VOID) _CorImageUnloading(
    [in] PVOID* ImageBase  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `ImageBase`  
- окне Указатель на начальное расположение изображения для выгрузки.  
+ (в) Указатель на исходное местоположение изображения для разгрузки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

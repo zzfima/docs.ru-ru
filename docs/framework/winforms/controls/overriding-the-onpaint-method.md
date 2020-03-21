@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 863726a6264f01de9f00296b4a64b9fd1bb96765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506197"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182034"
 ---
 # <a name="overriding-the-onpaint-method"></a>Переопределение метода OnPaint
-Основные шаги для переопределения любого события, определенные в .NET Framework, идентичны и обобщены в следующем списке.  
+Основные шаги для переопределения любого события, определяемого в рамочном варианте .NET, идентичны и суммируются в следующем списке.  
   
-#### <a name="to-override-an-inherited-event"></a>Чтобы переопределить наследуемое событие  
+#### <a name="to-override-an-inherited-event"></a>Переопределить унаследованный случай  
   
-1. Переопределите защищенный `On` *EventName* метод.  
+1. Переопределить защищенный `On`метод *EventName.*  
   
-2. Вызовите `On` *EventName* метод базового класса из переопределенного `On` *EventName* метод, чтобы зарегистрированные делегаты получили событие.  
+2. Вызовите `On`метод *EventName* базового класса `On`из переочерванного метода *EventName,* чтобы зарегистрированные делегаты получили событие.  
   
- <xref:System.Windows.Forms.Control.Paint> Событий описано здесь подробно, так как каждый элемент управления Windows Forms необходимо переопределить <xref:System.Windows.Forms.Control.Paint> событие, он наследует от <xref:System.Windows.Forms.Control>. Базовый <xref:System.Windows.Forms.Control> класс не знает, как производный элемент управления должен быть нарисован и не обеспечивает логику рисования в <xref:System.Windows.Forms.Control.OnPaint%2A> метод. <xref:System.Windows.Forms.Control.OnPaint%2A> Метод <xref:System.Windows.Forms.Control> просто отправляет <xref:System.Windows.Forms.Control.Paint> событий для приемников зарегистрированных событий.  
+ Событие <xref:System.Windows.Forms.Control.Paint> подробно обсуждается здесь, потому что каждый элемент управления Windows Forms должен переопределить <xref:System.Windows.Forms.Control.Paint> событие, которое оно наследует. <xref:System.Windows.Forms.Control> Базовый <xref:System.Windows.Forms.Control> класс не знает, как необходимо нарисовать производный элемент <xref:System.Windows.Forms.Control.OnPaint%2A> управления, и не дает никакой логики рисования в методе. Метод <xref:System.Windows.Forms.Control.OnPaint%2A> <xref:System.Windows.Forms.Control> просто отправляет <xref:System.Windows.Forms.Control.Paint> событие зарегистрированным приемникам событий.  
   
- Если вы работали с образцом в [как: Разработка простого элемента управления Windows Forms](how-to-develop-a-simple-windows-forms-control.md), вы видели пример переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Следующий фрагмент кода взят из этого примера.  
+ Если вы работали над образцом в [Как: Разработка простого управления формами Windows,](how-to-develop-a-simple-windows-forms-control.md)вы видели пример переопределения метода. <xref:System.Windows.Forms.Control.OnPaint%2A> Из этого образца взят следующий фрагмент кода.  
   
 ```vb  
 Public Class FirstControl  
@@ -41,7 +41,7 @@ Public Class FirstControl
       ' Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, New SolidBrush(ForeColor), RectangleF.op_Implicit(ClientRectangle))  
    End Sub  
-End Class   
+End Class
 ```  
   
 ```csharp  
@@ -52,11 +52,11 @@ public class FirstControl : Control {
       base.OnPaint(e);  
       // Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle);  
-   }   
-}   
+   }
+}
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs> Класс содержит данные для <xref:System.Windows.Forms.Control.Paint> событий. Он имеет два свойства, как показано в следующем коде.  
+ Класс <xref:System.Windows.Forms.PaintEventArgs> содержит данные <xref:System.Windows.Forms.Control.Paint> для события. Он имеет два свойства, как показано в следующем коде.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -68,7 +68,7 @@ Public Class PaintEventArgs
   
    Public ReadOnly Property Graphics() As System.Drawing.Graphics  
       ...  
-   End Property   
+   End Property
    ...  
 End Class  
 ```  
@@ -82,11 +82,11 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Указывает на прямоугольник для рисования и <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> свойство ссылается на <xref:System.Drawing.Graphics> объекта. Классы в <xref:System.Drawing?displayProperty=nameWithType> управляются пространство имен классов, предоставляющих доступ к набору функций GDI +, новой библиотеки графики Windows. <xref:System.Drawing.Graphics> Объект имеет методы для рисования точек, строк, линий, дуг, кнопку с многоточием и многих других форм.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>прямоугольник, который должен быть <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> окрашен, и <xref:System.Drawing.Graphics> свойство относится к объекту. Классы в <xref:System.Drawing?displayProperty=nameWithType> пространстве имен являются управляемыми классами, которые обеспечивают доступ к функциональности GDI, новой графической библиотеки Windows. Объект <xref:System.Drawing.Graphics> имеет методы рисования точек, строк, линий, дуг, эллипсов и многих других форм.  
   
- Элемент управления вызывает его <xref:System.Windows.Forms.Control.OnPaint%2A> метод всякий раз, когда ему необходимо изменить его визуального отображения. Этот метод в свою очередь вызывает <xref:System.Windows.Forms.Control.Paint> событий.  
+ Элемент управления вызывает <xref:System.Windows.Forms.Control.OnPaint%2A> свой метод всякий раз, когда ему необходимо изменить свой визуальный дисплей. Этот метод, в <xref:System.Windows.Forms.Control.Paint> свою очередь, поднимает событие.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [События](../../../standard/events/index.md)
 - [Отрисовка элементов управления Windows Forms](rendering-a-windows-forms-control.md)

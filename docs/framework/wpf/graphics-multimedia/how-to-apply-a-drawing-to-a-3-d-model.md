@@ -1,37 +1,37 @@
 ---
-title: Практическое руководство. Применение рисования к трехмерной модели
+title: 'Как: Применить рисунок к 3D-модели'
 ms.date: 03/30/2017
 helpviewer_keywords:
-- drawings [WPF], applying to 3-D models
-- 3-D models [WPF], applying drawings to
+- drawings [WPF], applying to 3D models
+- 3D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
-ms.openlocfilehash: 311a3ac1d9fa219a3a365d506d9d0c3e8b6bc229
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5b10630ab674fa9489cdf7ad53516a680f19da08
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459364"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112184"
 ---
-# <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>Практическое руководство. Применение рисования к трехмерной модели
+# <a name="how-to-apply-a-drawing-to-a-3d-model"></a>Как: Применить рисунок к 3D-модели
 
-В этом примере показано, как использовать <xref:System.Windows.Media.DrawingBrush> в качестве <xref:System.Windows.Media.Media3D.Material>, применяемого к трехмерной модели.
+В этом примере <xref:System.Windows.Media.DrawingBrush> показано, <xref:System.Windows.Media.Media3D.Material> как использовать применяемый к 3D-модели.
 
-Следующий код определяет <xref:System.Windows.Media.DrawingGroup> как содержимое <xref:System.Windows.Media.DrawingBrush>.  <xref:System.Windows.Media.DrawingBrush> задается как свойство <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> <xref:System.Windows.Media.Media3D.DiffuseMaterial>, применяемое к трехмерной плоскости.
+Следующий код определяет <xref:System.Windows.Media.DrawingGroup> как содержимое <xref:System.Windows.Media.DrawingBrush>.  Устанавливается <xref:System.Windows.Media.DrawingBrush> как <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> свойство <xref:System.Windows.Media.Media3D.DiffuseMaterial> прикладного к 3D плоскости.
 
 > [!NOTE]
-> Часто желательно определить сложные объекты и значения, такие как рисунок ниже, как ресурсы, которые можно использовать повторно и упростить код. Дополнительные сведения см. в разделе [ресурсы XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md) .
+> Часто желательно определить сложные объекты и значения, такие как приведенный ниже рисунок, как ресурсы, которые могут быть повторно использованы и упростить код. Дополнительную информацию можно узнать на [примере XAML Resources.](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 
 [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialinline1)]
 
 ## <a name="example"></a>Пример
 
-В следующем коде показан весь пример.
+Следующий код показывает весь образец.
 
 [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialexamplewholepage)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Ресурсы XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
-- [Создание трехмерной сцены](how-to-create-a-3-d-scene.md)
-- [Обзор объектов Drawing](drawing-objects-overview.md)
-- [Обзор трехмерной графики](3-d-graphics-overview.md)
+- [Создание 3D-сцены](how-to-create-a-3-d-scene.md)
+- [Общие сведения об объектах Drawing](drawing-objects-overview.md)
+- [3D Графика Обзор](3-d-graphics-overview.md)

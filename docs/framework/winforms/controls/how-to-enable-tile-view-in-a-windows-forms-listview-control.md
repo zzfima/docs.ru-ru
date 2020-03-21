@@ -1,5 +1,5 @@
 ---
-title: Включить мозаичное представление в элементе управления ListView
+title: Включить представление плитки в управлении ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 8ccbd42d870e44fc6fd80169327922409ea4f6e7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1478ba5e4f175cd7d9ec7ab5c3c4bc9050ce02fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745466"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182152"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Практическое руководство. Отображение содержимого элемента управления ListView в Windows Forms в виде мозаичного представления
 Функция мозаичного представления элемента управления <xref:System.Windows.Forms.ListView> обеспечивает визуальный баланс между графическими и текстовыми представлениями информации. Текстовые данные, отображаемые для мозаичного представления элемента совпадают с данными о столбцах, определенных для подробного представления. Мозаичное представление работает в сочетании с возможностями группирования или вставки метки элемента управления <xref:System.Windows.Forms.ListView>.  
@@ -24,7 +24,7 @@ ms.locfileid: "76745466"
  Мозаичное представление использует значок размером 32 x 32 пикселя и несколько строк текста, как показано на следующих рисунках.  
   
  ![Мозаичное представление в элементе управления ListView](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Значки и текст мозаичного представления")  
- 
+
  Чтобы включить мозаичное представление, присвойте свойству <xref:System.Windows.Forms.ListView.View%2A> значение <xref:System.Windows.Forms.View.Tile>. Размер элементов мозаики можно настроить, задав свойство <xref:System.Windows.Forms.ListView.TileSize%2A> и количество отображаемых строк текста в плитке путем настройки коллекции <xref:System.Windows.Forms.ListView.Columns%2A>.  
   
 ### <a name="to-set-tile-view-programmatically"></a>Выбор мозаичного представления программными средствами  
@@ -49,7 +49,7 @@ ms.locfileid: "76745466"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
-- ссылки на сборки System и System.Windows.Forms.  
+- ссылки на сборки System и System.Windows.Forms;  
   
 - файл значка с именем book.ico в том же каталоге, что и исполняемый файл.  
   

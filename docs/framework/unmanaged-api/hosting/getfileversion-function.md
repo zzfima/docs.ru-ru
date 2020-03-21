@@ -14,49 +14,49 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: f197c8802bd9e55391b3e3e20c64398736070a16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f3b51c1b376fa9c664de53aa76ec724ca305ae6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136338"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178181"
 ---
 # <a name="getfileversion-function"></a>Функция GetFileVersion
-Возвращает сведения о версии среды CLR указанного файла, используя указанный буфер.  
+Получает информацию о версии общего времени выполнения языка (CLR) указанного файла с использованием указанного буфера.  
   
- Эта функция является устаревшей в .NET Framework 4.  
+ Эта функция была унесена в системе .NET 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetFileVersion (  
-    [in]  LPCWSTR      szFilename,   
-    [in, out] LPWSTR   szBuffer,   
-    [in]  DWORD        cchBuffer,   
+    [in]  LPCWSTR      szFilename,
+    [in, out] LPWSTR   szBuffer,
+    [in]  DWORD        cchBuffer,
     [out] DWORD        *dwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `szFilename`  
- окне Путь к файлу, который необходимо проверить.  
+ (в) Путь изучения файла.  
   
  `szBuffer`  
- [вход, выход] Буфер, выделенный для возвращаемой информации о версии.  
+ (в, вне) Буфер, выделенный для возвращенной информации версии.  
   
  `cchBuffer`  
- окне Размер в расширенных символах `szBuffer`.  
+ (в) Размер, в широких символов, из `szBuffer`.  
   
  `dwLength`  
- заполняет Размер возвращаемого `szBuffer`в байтах.  
+ (ваут) Размер, в байтах, `szBuffer`возвращенного .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE. h  
+ **Заголовок:** MSCorEE.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

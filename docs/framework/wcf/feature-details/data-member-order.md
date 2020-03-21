@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: d717673139ba810c1593e5c60e488537426f1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a5d7430953bdc31644e92b9207cd2865209cce5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754409"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185201"
 ---
 # <a name="data-member-order"></a>Порядок членов данных
 В некоторых приложениях полезно знать порядок передачи или предполагаемого приема данных от различных элементов данных (например, порядок, в котором данные появляются в сериализованной форме XML). Иногда может потребоваться изменить этот порядок. В этом разделе рассматриваются правила упорядочивания.  
@@ -39,13 +39,13 @@ ms.locfileid: "64754409"
 ```xml  
 <DerivedType>  
     <!-- Zebra is a base data member, and appears first. -->  
-    <zebra/>   
+    <zebra/>
   
     <!-- Cat has no Order, appears alphabetically first. -->  
     <cat/>  
   
    <!-- Dog has no Order, appears alphabetically last. -->  
-    <dog/>   
+    <dog/>
   
     <!-- Bird is the member with the smallest Order value -->  
     <bird/>  
@@ -58,12 +58,12 @@ ms.locfileid: "64754409"
   
     <!-- Antelope is the member with the highest Order value. Note that   
     Order=2 is skipped -->  
-     <antelope/>   
+     <antelope/>
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

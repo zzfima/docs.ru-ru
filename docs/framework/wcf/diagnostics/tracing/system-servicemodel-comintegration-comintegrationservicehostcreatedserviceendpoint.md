@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 ms.date: 03/30/2017
 ms.assetid: d75d39da-7502-4a6a-91b9-eaa05b8e24d5
-ms.openlocfilehash: d56bbf145c85902d8e5f1fd21f760633121da6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f89dd1373d67714046f8cb958582c3a5dea04456
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939225"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674780"
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a>System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 Не удается переместить или удалить сообщение.  
@@ -15,12 +15,12 @@ ms.locfileid: "61939225"
 ## <a name="description"></a>Описание  
  Эта трассировка показывает, что при попытке переместить, удалить или отклонить сообщение MSMQ произошел сбой.  
   
- Сообщения MSMQ используются в Windows Communication Foundation (WCF) (при использовании с привязкой NetMsmqBinding или MsmqIntegrationBinding). Эта трассировка относится к выбранному значению `ReceiveErrorHandling` свойство класса NetMsmqBinding или MsmqIntegrationBinding.  
+ Сообщения МСМЗ используются Фондом связи Windows (WCF) (при использовании либо с NetMsmqBinding, либо с MsmqIntegrationBinding). Этот след связан с выбранной `ReceiveErrorHandling` стоимостью свойства на NetMsmqBinding или MsmqIntegrationBinding.  
   
- Эта трассировка не указывает на общий сбой системы. Однако она показывает, что выбранное средство удаления подозрительного сообщения не подходит для сообщения. См. в разделе [обработка подозрительных сообщений](https://go.microsoft.com/fwlink/?LinkID=99546) узнать больше о при сообщения становятся подозрительными и как настроить службу для их правильной обработки.  
+ Эта трассировка не указывает на общий сбой системы. Однако она показывает, что выбранное средство удаления подозрительного сообщения не подходит для сообщения. Для получения дополнительной информации о том, когда сообщения становятся ядом и как настроить свой сервис для их надлежащей обработки, [см.](../../feature-details/poison-message-handling.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)

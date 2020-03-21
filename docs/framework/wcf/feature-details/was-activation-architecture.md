@@ -2,12 +2,12 @@
 title: Архитектура активации WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 01c30db1182ece6dd968b69cc4efcaa2d9fabd79
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737512"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184242"
 ---
 # <a name="was-activation-architecture"></a>Архитектура активации WAS
 В настоящем разделе перечисляются и обсуждаются компоненты службы активации процесса Windows (также известной как WAS).  
@@ -27,17 +27,17 @@ ms.locfileid: "76737512"
   
  Когда служба WAS активирует экземпляр рабочего процесса, она загружает требуемые обработчики протоколов процесса в рабочей процесс и использует диспетчер приложения для создания домена приложения, в котором будет размещено это приложение. Домен приложения загружает код приложения, а также обработчики протоколов домена приложения, которые требуются для используемых приложением сетевых протоколов.  
   
- ![Снимок экрана, на котором показана архитектура WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
+ ![Скриншот, который показывает архитектуру WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Адаптеры прослушивателя  
- Адаптеры прослушивателя - это отдельные службы Windows, реализующие логику сетевого взаимодействия, используемую для приема сообщений по сетевому протоколу, по которому они ожидают передачи данных. В следующей таблице перечислены Адаптеры прослушивателя для протоколов Windows Communication Foundation (WCF).  
+ Адаптеры прослушивателя - это отдельные службы Windows, реализующие логику сетевого взаимодействия, используемую для приема сообщений по сетевому протоколу, по которому они ожидают передачи данных. В следующей таблице перечислены адаптеры слушателя для протоколов Windows Communication Foundation (WCF).  
   
 |Имя службы адаптера прослушивателя|Протокол|Примечания|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Общий компонент, обеспечивающий активацию HTTP как для IIS 7,0, так и для WCF.|  
+|W3SVC|http|Общий компонент, обеспечивающий активацию HTTP как для IIS 7.0, так и для WCF.|  
 |NetTcpActivator|net.tcp|Зависит от службы NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Для использования с приложениями очереди сообщений на основе WCF.|  
+|NetMsmqActivator|net.msmq|Для использования с wCF основе сообщения queuing приложений.|  
 |NetMsmqActivator|msmq.formatname|Обеспечивает обратную совместимость с существующими приложениями очереди сообщений.|  
   
  Адаптеры прослушивателя для отдельных протоколов регистрируются во время установки в файле applicationHost.config, как показано в следующем примере XML.  
@@ -46,13 +46,13 @@ ms.locfileid: "76737512"
 <system.applicationHost>  
     <listenerAdapters>  
         <add name="http" />  
-        <add name="net.tcp"   
+        <add name="net.tcp"
           identity="S-1-5-80-3579033775-2824656752-1522793541-1960352512-462907086" />  
-         <add name="net.pipe"   
+         <add name="net.pipe"
            identity="S-1-5-80-2943419899-937267781-4189664001-1229628381-3982115073" />  
-          <add name="net.msmq"   
+          <add name="net.msmq"
             identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
-           <add name="msmq.formatname"   
+           <add name="msmq.formatname"
              identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
     </listenerAdapters>  
 </system.applicationHost>  
@@ -64,13 +64,13 @@ ms.locfileid: "76737512"
 ```xml  
 <system.web>  
    <protocols>  
-      <add name="net.tcp"   
+      <add name="net.tcp"
         processHandlerType=  
          "System.ServiceModel.WasHosting.TcpProcessProtocolHandler"  
         appDomainHandlerType=  
          "System.ServiceModel.WasHosting.TcpAppDomainProtocolHandler"  
         validate="false" />  
-      <add name="net.pipe"   
+      <add name="net.pipe"
         processHandlerType=  
          "System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler"  
           appDomainHandlerType=  

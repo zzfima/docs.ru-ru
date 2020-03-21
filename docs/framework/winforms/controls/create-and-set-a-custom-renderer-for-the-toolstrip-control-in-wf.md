@@ -1,5 +1,5 @@
 ---
-title: Как создать и задать пользовательский модуль отрисовки для элемента управления ToolStrip
+title: 'Как: Создать и установить пользовательский рендерер для управления ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: ad5ced42754fba6a714452220dd824c4f54fb5e5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 49db0d785155f19b7220ac64011eaf4253aaa7e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743420"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182408"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms
-<xref:System.Windows.Forms.ToolStrip> элементы управления обеспечивают простую поддержку тем и стилей. Можно добиться абсолютного внешнего вида и поведения (внешнего вида), задав для свойства <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> или свойства <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> настраиваемый модуль подготовки отчетов.  
+<xref:System.Windows.Forms.ToolStrip>элементы управления дают легкую поддержку темам и стилям. Вы можете достичь полностью пользовательский внешний вид <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> и поведение <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> (смотреть и чувствовать), установив либо свойство или свойство пользовательских рендеров.  
   
- Можно назначать модули подготовки отчетов каждому отдельному <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>или <xref:System.Windows.Forms.StatusStrip> или использовать свойство <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> для влияния на все объекты, установив для свойства <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> значение <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
+ Вы можете назначить рендеры <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.ContextMenuStrip>каждому <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> человеку, <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType> <xref:System.Windows.Forms.ToolStrip>или управления, или вы можете использовать свойство, чтобы повлиять на все объекты, установив свойство.  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> возвращает <xref:System.Windows.Forms.ToolStripRenderMode.Custom> только в том случае, если значение <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> не `null`.  
+> <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>возвращается <xref:System.Windows.Forms.ToolStripRenderMode.Custom> только в <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> том `null`случае, если стоимость не является.  
   
-### <a name="to-create-a-custom-renderer"></a>Создание пользовательского модуля подготовки отчетов  
+### <a name="to-create-a-custom-renderer"></a>Создание пользовательского рендерера  
   
-1. Расширьте класс <xref:System.Windows.Forms.ToolStripRenderer>.  
+1. Расширьте <xref:System.Windows.Forms.ToolStripRenderer> класс.  
   
-2. Реализуйте требуемую пользовательскую отрисовку, переопределив подходящую *для...* members  
+2. Реализация желаемого пользовательского рендеринга, переопределяя соответствующие *On...* members  
   
     ```vb  
     Public Class RedTextRenderer  
         Inherits System.Windows.Forms.ToolStripRenderer  
         Protected Overrides Sub OnRenderItemText(ByVal e As _  
-            ToolStripItemTextRenderEventArgs)   
+            ToolStripItemTextRenderEventArgs)
             e.TextColor = Color.Red  
             e.TextFont = New Font("Helvetica", 7, FontStyle.Bold)  
             MyBase.OnRenderItemText(e)  
@@ -57,9 +57,9 @@ ms.locfileid: "76743420"
     }  
     ```  
   
-### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Задание пользовательского модуля подготовки отчетов в качестве текущего модуля подготовки отчетов  
+### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Установить пользовательский рендерер в текущем рендере  
   
-1. Чтобы задать пользовательский модуль подготовки отчетов для одного <xref:System.Windows.Forms.ToolStrip>, задайте для свойства <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> настраиваемый модуль подготовки отчетов.  
+1. Чтобы установить пользовательский <xref:System.Windows.Forms.ToolStrip>рендер <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> для одного, установите свойство к пользовательскому рендереру.  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
@@ -69,7 +69,7 @@ ms.locfileid: "76743420"
     toolStrip1.Renderer = new RedTextRenderer();  
     ```  
   
-2. Или, чтобы задать пользовательский модуль подготовки отчетов для всех <xref:System.Windows.Forms.ToolStrip> классов, содержащихся в приложении: задайте для свойства <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> настраиваемый модуль подготовки отчетов и задайте для свойства <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> значение <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
+2. Или установить пользовательский рендер для <xref:System.Windows.Forms.ToolStrip> всех классов, <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> содержащихся в приложении: <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> Установите свойство в пользовательском рендере редераторе и установите свойство для <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  

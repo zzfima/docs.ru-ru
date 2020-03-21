@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123668"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181465"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
@@ -42,10 +42,10 @@ ms.locfileid: "73123668"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="msil"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="msil"
       />  
     ```  
   
@@ -54,18 +54,18 @@ ms.locfileid: "73123668"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="x86"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="x86"
                         publicKeyToken="8275b28176rcbbef"  
       />  
       <dependency>  
         <dependentAssembly>  
-          <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myManagedComp"   
-                        version="6.0.0.0"   
-                        processorArchitecture="X86"   
+          <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myManagedComp"
+                        version="6.0.0.0"
+                        processorArchitecture="X86"
                         publicKeyToken="8275b28176rcbbef"  
           />  
         </dependentAssembly>  
@@ -103,15 +103,15 @@ ms.locfileid: "73123668"
   
 4. Определите каждый класс в сборке. Используйте `<clrClass>` элемент для уникальной идентификации каждого класса в управляемой сборке. Атрибуты элемента, вложенного в `<assembly>`, определены в следующей таблице.  
   
-    |Атрибут|Описание|Обязательное значение|  
+    |attribute|Описание|Обязательно|  
     |---------------|-----------------|--------------|  
     |`clsid`|Идентификатор, который задает активируемый класс.|Да|  
-    |`description`|Строка, которая сообщает пользователю о компоненте. По умолчанию используется пустая строка.|Нет|  
+    |`description`|Строка, которая сообщает пользователю о компоненте. По умолчанию используется пустая строка.|нет|  
     |`name`|Строка, представляющая управляемый класс.|Да|  
-    |`progid`|Идентификатор, который используется для отложенной активации.|Нет|  
-    |`threadingModel`|Потоковая модель COM. По умолчанию используется значение "Both" (Оба).|Нет|  
-    |`runtimeVersion`|Используемая версия среды CLR. Если этот атрибут не задан, а среда CLR еще не загружена, компонент загружает последнюю установленную версию среды CLR, предшествующую версии 4. Если указать v1.0.3705, v1.1.4322 или v2.0.50727, автоматически выполняется накат версии до последней установленной версии среды CLR, предшествующей версии 4 (как правило, v2.0.50727). Если уже загружена другая версия среды CLR и не удается загрузить указанную версию в рамках параллельного процесса, загружается указанная версия. В противном случае используется загруженная версия CLR. Это может привести к сбою загрузки.|Нет|  
-    |`tlbid`|Идентификатор библиотеки типов, содержащей сведения о типе класса.|Нет|  
+    |`progid`|Идентификатор, который используется для отложенной активации.|нет|  
+    |`threadingModel`|Потоковая модель COM. По умолчанию используется значение "Both" (Оба).|нет|  
+    |`runtimeVersion`|Используемая версия среды CLR. Если этот атрибут не задан, а среда CLR еще не загружена, компонент загружает последнюю установленную версию среды CLR, предшествующую версии 4. Если указать v1.0.3705, v1.1.4322 или v2.0.50727, автоматически выполняется накат версии до последней установленной версии среды CLR, предшествующей версии 4 (как правило, v2.0.50727). Если уже загружена другая версия среды CLR и не удается загрузить указанную версию в рамках параллельного процесса, загружается указанная версия. В противном случае используется загруженная версия CLR. Это может привести к сбою загрузки.|нет|  
+    |`tlbid`|Идентификатор библиотеки типов, содержащей сведения о типе класса.|нет|  
   
      Во всех тегах атрибутов учитывается регистр символов. Просматривая библиотеку типов, экспортированную для сборки с помощью средства ObjectViewer OLE/COM (Oleview.exe), можно получить идентификаторы классов (CLSID), программ (ProgID), потоковые модели и версию среды выполнения.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73123668"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4"   
+                        version="1.2.3.4"
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -168,7 +168,7 @@ ms.locfileid: "73123668"
   
      Файл, содержащий внедренные ресурсы, также носит имя `myresource.res`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [COM-взаимодействие без регистрации](registration-free-com-interop.md)
 - [Требования для COM-взаимодействия без регистрации](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))

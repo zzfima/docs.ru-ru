@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 547c23509096b66c1fdbd46117a10f4de1692387
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 3dd21268d4ea7dc59c74889ac94dc86678e91865
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212049"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184635"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Безопасность сообщений при использовании клиентом учетных данных пользователя
-На следующем рисунке показана служба Windows Communication Foundation (WCF) и клиент защищены с помощью безопасности на уровне сообщений. Служба проходит проверку подлинности с использованием сертификата X.509. Подлинность клиента проверяется с помощью имени и пароля пользователя.  
+На следующей иллюстрации показана служба Windows Communication Foundation (WCF) и клиент, защищенный с помощью безопасности на уровне сообщений. Служба проходит проверку подлинности с использованием сертификата X.509. Подлинность клиента проверяется с помощью имени и пароля пользователя.  
   
- Пример приложения см. в разделе [Message Security имя пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ Для примера приложения [см.](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
  ![Безопасность сообщений с использованием проверки подлинности имени пользователя](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Режим безопасности|Message|  
-|Взаимодействие|Только Windows Communication Foundation (WCF)|  
+|Режим безопасности|Сообщение|  
+|Совместимость|Фонд связи Windows (WCF)|  
 |Проверка подлинности (сервера)|Первоначальное согласование возможно только после проверки подлинности сервера|  
 |Проверка подлинности (клиента)|Имя пользователя/пароль|  
 |Целостность|Да, используется общий контекст безопасности|  
 |Конфиденциальность|Да, используется общий контекст безопасности|  
-|Transport|HTTP|  
+|Транспортировка|HTTP|  
 |Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Service  
+## <a name="service"></a>Служба  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономную службу, используя код без конфигурации.  
@@ -54,9 +54,9 @@ ms.locfileid: "76212049"
       <serviceBehaviors>  
         <behavior name="ServiceCredentialsBehavior">  
           <serviceCredentials>  
-            <serviceCertificate findValue="Contoso.com"   
+            <serviceCertificate findValue="Contoso.com"
                                 storeLocation="LocalMachine"  
-                                storeName="My"     
+                                storeName="My"
                                 x509FindType="FindBySubjectName" />  
           </serviceCredentials>  
         </behavior>  
@@ -75,7 +75,7 @@ ms.locfileid: "76212049"
     <bindings>  
       <wsHttpBinding>  
         <binding name="MessageAndUserName">  
-          <security mode="Message">              
+          <security mode="Message">
             <message clientCredentialType="UserName" />  
           </security>  
         </binding>  
@@ -86,7 +86,7 @@ ms.locfileid: "76212049"
 </configuration>  
 ```  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>клиент  
   
 ### <a name="code"></a>Код  
  Следующий код служит для создания клиента. Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`. Указать имя пользователя и пароль можно только с помощью кода (они не подлежат настройке). Здесь не показан код, который возвращает имя пользователя и пароль, потому что это происходит на уровне приложения. Например, диалоговое окно Windows Forms используется для того, чтобы запросить пользователя о данных.  
@@ -111,9 +111,9 @@ ms.locfileid: "76212049"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="http://machineName/Calculator"   
+      <endpoint address="http://machineName/Calculator"
                 binding="wsHttpBinding"  
-                bindingConfiguration="WSHttpBinding_ICalculator"   
+                bindingConfiguration="WSHttpBinding_ICalculator"
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator">  
         <identity>  
@@ -125,10 +125,10 @@ ms.locfileid: "76212049"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Обзор безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Безопасность сообщений с использованием имени пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [> удостоверения \<](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [\<>идентификации](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

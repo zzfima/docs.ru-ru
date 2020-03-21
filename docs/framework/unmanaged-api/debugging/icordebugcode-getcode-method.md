@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: 14a72e4622aac09840e43f8bcdcf8a8c8d6e6892
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777916"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178995"
 ---
 # <a name="icordebugcodegetcode-method"></a>Метод ICorDebugCode::GetCode
-Возвращает весь код для указанной функции, отформатированный для дизассемблирования. Этот метод не рекомендуется к использованию в .NET Framework версии 2,0. Вместо этого используйте [ICorDebugCode2:: жеткодечункс](icordebugcode2-getcodechunks-method.md) .  
+Получает весь код для указанной функции, отформатированный для разборки. Этот метод был унесена в версии .NET Framework 2.0. Вместо этого используйте [ICorDebugCode2::GetCodeChunks.](icordebugcode2-getcodechunks-method.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetCode (  
-    [in] ULONG32     startOffset,   
+    [in] ULONG32     startOffset,
     [in] ULONG32     endOffset,  
     [in] ULONG32     cBufferAlloc,  
     [out, size_is(cBufferAlloc),  
@@ -40,22 +40,22 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Параметры  
  `startOffset`  
- окне Смещение начала функции.  
+ (в) Смещение начала функции.  
   
  `endOffset`  
- окне Смещение конца функции.  
+ (в) Смещение конца функции.  
   
  `cBufferAlloc`  
- окне Размер массива `buffer`, в который будет возвращен код.  
+ (в) Размер массива, `buffer` в который будет возвращен код.  
   
  `buffer`  
- заполняет Массив, в который будет возвращен код.  
+ (ваут) Массив, в который код будет возвращен.  
   
  `pcBufferSize`  
- заполняет Число возвращаемых байтов.  
+ (ваут) Число байтов вернулось.  
   
-## <a name="remarks"></a>Заметки  
- Если код функции делится на несколько блоков, они объединяются в порядке возрастания смещения в машинном коде. Границы инструкций не проверяются.  
+## <a name="remarks"></a>Remarks  
+ Если код функции был разделен на несколько фрагментов, они скатированы в порядке увеличения родной смещения. Границы инструкций не проверяются.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -64,8 +64,8 @@ HRESULT GetCode (
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework версии:** 1,1, 1,0  
+ **Рамочные версии .NET:** 1.1, 1.0  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Метод GetCodeChunks](icordebugcode2-getcodechunks-method.md)

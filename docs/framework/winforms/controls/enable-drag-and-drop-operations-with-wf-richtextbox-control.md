@@ -1,5 +1,5 @@
 ---
-title: Включение операций перетаскивания с помощью элемента управления RichTextBox
+title: Включить операции перетаскивания с помощью управления RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: 3c17560dee012912aea2938654f1dc4dc56e0725
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 27e5c18598552c465ef17f5e58069bc10e401c09
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745818"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182351"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms
 Операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> Windows Forms выполняются путем обработки событий <xref:System.Windows.Forms.RichTextBox.DragEnter> и <xref:System.Windows.Forms.RichTextBox.DragDrop> . Таким образом, операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> являются очень простыми.  
@@ -28,8 +28,8 @@ ms.locfileid: "76745818"
 2. Напишите код в обработчике событий для события <xref:System.Windows.Forms.RichTextBox.DragEnter> . Используйте инструкцию `if` , чтобы проверить допустимость типа перетаскиваемых данных (в данном случае это текст). Свойство <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> может иметь одно из значений перечисления <xref:System.Windows.Forms.DragDropEffects> .  
   
     ```vb  
-    Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
-       ByVal e As System.Windows.Forms.DragEventArgs) _   
+    Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _
+       ByVal e As System.Windows.Forms.DragEventArgs) _
        Handles RichTextBox1.DragEnter  
        If (e.Data.GetDataPresent(DataFormats.Text)) Then  
           e.Effect = DragDropEffects.Copy  
@@ -40,10 +40,10 @@ ms.locfileid: "76745818"
     ```  
   
     ```csharp  
-    private void richTextBox1_DragEnter(object sender,   
+    private void richTextBox1_DragEnter(object sender,
     System.Windows.Forms.DragEventArgs e)  
     {  
-       if (e.Data.GetDataPresent(DataFormats.Text))   
+       if (e.Data.GetDataPresent(DataFormats.Text))
           e.Effect = DragDropEffects.Copy;  
        else  
           e.Effect = DragDropEffects.None;  
@@ -62,7 +62,7 @@ ms.locfileid: "76745818"
        }  
     ```  
   
-     (Визуальный C# элемент C++и визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C и Визуальный C ) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -81,10 +81,10 @@ ms.locfileid: "76745818"
      В примере ниже код задает перетаскиваемые данные в свойстве <xref:System.Windows.Forms.RichTextBox.Text%2A> элемента управления <xref:System.Windows.Forms.RichTextBox> . Если в элементе управления <xref:System.Windows.Forms.RichTextBox> уже существует текст, перетаскиваемый текст вставляется в точку вставки.  
   
     ```vb  
-    Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
-       ByVal e As System.Windows.Forms.DragEventArgs) _   
+    Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _
+       ByVal e As System.Windows.Forms.DragEventArgs) _
        Handles RichTextBox1.DragDrop  
-       Dim i As Int16   
+       Dim i As Int16
        Dim s As String  
   
        ' Get start position to drop the text.  
@@ -100,7 +100,7 @@ ms.locfileid: "76745818"
     ```  
   
     ```csharp  
-    private void richTextBox1_DragDrop(object sender,   
+    private void richTextBox1_DragDrop(object sender,
     System.Windows.Forms.DragEventArgs e)  
     {  
        int i;  
@@ -112,7 +112,7 @@ ms.locfileid: "76745818"
        richTextBox1.Text = richTextBox1.Text.Substring(0,i);  
   
        // Drop the text on to the RichTextBox.  
-       richTextBox1.Text = richTextBox1.Text +   
+       richTextBox1.Text = richTextBox1.Text +
           e.Data.GetData(DataFormats.Text).ToString();  
        richTextBox1.Text = richTextBox1.Text + s;  
     }  
@@ -133,12 +133,12 @@ ms.locfileid: "76745818"
   
        // Drop the text on to the RichTextBox.  
        String ^str = String::Concat(richTextBox1->Text, e->Data  
-       ->GetData(DataFormats->Text)->ToString());   
+       ->GetData(DataFormats->Text)->ToString());
        richTextBox1->Text = String::Concat(str, s);  
        }  
     ```  
   
-     (Визуальный C# элемент C++и визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C и Визуальный C ) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -147,7 +147,7 @@ ms.locfileid: "76745818"
     ```  
   
     ```cpp  
-    this->richTextBox1->DragDrop += gcnew   
+    this->richTextBox1->DragDrop += gcnew
        System::Windows::Forms::DragEventHandler  
        (this, &Form1::richTextBox1_DragDrop);  
     ```  
@@ -169,4 +169,4 @@ ms.locfileid: "76745818"
 - <xref:System.Windows.Forms.RichTextBox>
 - [Практическое руководство. Выполнение операции перетаскивания между приложениями](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows](controls-to-use-on-windows-forms.md)

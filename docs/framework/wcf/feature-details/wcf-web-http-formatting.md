@@ -1,15 +1,15 @@
 ---
-title: WCF Web HTTP форматирование
+title: ФорматИрование WCF Web HTTP
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 884193dc26794be5e8a3c95e05be2ca43a90f6e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c9728fe40e26977366b73337e72b1514a12a19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643480"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184200"
 ---
-# <a name="wcf-web-http-formatting"></a>WCF Web HTTP форматирование
+# <a name="wcf-web-http-formatting"></a>ФорматИрование WCF Web HTTP
 Модель веб-программирования HTTP WCF позволяет динамически определять лучший формат возвращаемого ответа операции службы. Поддерживается два метода для определения формата: автоматический и явный.  
   
 ## <a name="automatic-formatting"></a>Автоматическое форматирование  
@@ -23,10 +23,10 @@ ms.locfileid: "64643480"
   
 4. Параметр формата по умолчанию в WebHttpBehavior.  
   
- Если сообщение запроса содержит заголовок Accept инфраструктуре Windows Communication Foundation (WCF) выполняет поиск поддерживаемого им типа. Если заголовок `Accept` указывает приоритеты типов носителей, то они учитываются. Если в заголовке `Accept` не найден подходящий формат, используется тип содержимого сообщения запроса. Если не указан подходящий тип содержимого, используется параметр формата по умолчанию для операции. Формат по умолчанию задается с помощью параметра `ResponseFormat` атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Если не указан формат по умолчанию для операции, используется значение свойства <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. Автоматическое форматирование основано на свойстве <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Если это свойство имеет значение `true`, то инфраструктура WCF определяет лучший формат для использования. Автоматический выбор формата отключен по умолчанию в целях обратной совместимости. Автоматический выбор формата можно включить программно или через конфигурацию. В следующем примере показано включение автоматического выбора формата в коде.  
+ Если сообщение запроса содержит заголовок Accept, инфраструктура Windows Communication Foundation (WCF) выполняет поиск типа, который он поддерживает. Если заголовок `Accept` указывает приоритеты типов носителей, то они учитываются. Если в заголовке `Accept` не найден подходящий формат, используется тип содержимого сообщения запроса. Если не указан подходящий тип содержимого, используется параметр формата по умолчанию для операции. Формат по умолчанию задается с помощью параметра `ResponseFormat` атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Если не указан формат по умолчанию для операции, используется значение свойства <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. Автоматическое форматирование основано на свойстве <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Если это свойство имеет значение `true`, то инфраструктура WCF определяет лучший формат для использования. Автоматический выбор формата отключен по умолчанию в целях обратной совместимости. Автоматический выбор формата можно включить программно или через конфигурацию. В следующем примере показано включение автоматического выбора формата в коде.  
   
 ```csharp
-// This code assumes the service name is MyService and the service contract is IMyContract     
+// This code assumes the service name is MyService and the service contract is IMyContract
 Uri baseAddress = new Uri("http://localhost:8000");  
   
 WebServiceHost host = new WebServiceHost(typeof(MyService), baseAddress)  
@@ -47,7 +47,7 @@ try
       sep.Behaviors.Add(webBehavior);  
    }  
          // Open host to start listening for messages  
-   host.Open();        
+   host.Open();
   
   // ...  
 }  
@@ -163,11 +163,11 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
 - [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Объектная модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

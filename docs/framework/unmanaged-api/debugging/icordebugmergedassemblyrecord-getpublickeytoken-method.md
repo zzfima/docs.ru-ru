@@ -2,12 +2,12 @@
 title: Метод ICorDebugMergedAssemblyRecord::GetPublicKeyToken
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-ms.openlocfilehash: 543083703cd0cbbce9dc0660383713202fa2f0b8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 79df5c3e8b07879a26272f595664abab011101bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793107"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178721"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Метод ICorDebugMergedAssemblyRecord::GetPublicKeyToken
 Возвращает токен открытого ключа сборки.  
@@ -16,8 +16,8 @@ ms.locfileid: "76793107"
   
 ```cpp  
 HRESULT GetPublicKeyToken(  
-   [in] ULONG32 cbPublicKeyToken,   
-   [out] ULONG32 *pcbPublicKeyToken,   
+   [in] ULONG32 cbPublicKeyToken,
+   [out] ULONG32 *pcbPublicKeyToken,
    [out, size_is(cbPublicKeyToken), length_is(*pcbPublicKeyToken)] BYTE pbPublicKeyToken[]  
 );  
 ```  
@@ -32,7 +32,7 @@ HRESULT GetPublicKeyToken(
  `pbPublicKeyToken`  
  [out] Указатель на массив байтов, содержащий токен открытого ключа сборки.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
  Токен открытого ключа сборки — это последние восемь байтов хэша SHA1 ее открытого ключа.  
   
 > [!NOTE]
@@ -47,7 +47,7 @@ HRESULT GetPublicKeyToken(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
 - [Интерфейсы отладки](debugging-interfaces.md)

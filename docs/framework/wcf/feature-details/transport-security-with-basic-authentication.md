@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: eace5ce9a84d99cb2526896cca36a9e2a13fd5f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1b2b451eb1ea6a1a49ce1ba8cc1edef1fe72d01b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742700"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184356"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Безопасность транспорта с обычной проверкой подлинности
-На следующем рисунке показана служба Windows Communication Foundation (WCF) и клиент. Серверу требуется действительный сертификат X.509, который можно использовать для протокола SSL, а клиенты должны доверять сертификату сервера. Кроме того, у веб-службы уже имеется сертификат SSL, который можно использовать. Дополнительные сведения о включении обычной проверки подлинности для службы IIS (IIS) см. в разделе <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>.  
+На следующей иллюстрации показана служба и клиент Фонда связи Windows (WCF). Серверу требуется действительный сертификат X.509, который можно использовать для протокола SSL, а клиенты должны доверять сертификату сервера. Кроме того, у веб-службы уже имеется сертификат SSL, который можно использовать. Для получения дополнительной информации о возможности базовой <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>аутентификации на Интернет информационных услуг (IIS), см.  
   
- ![Снимок экрана, показывающий безопасность транспорта с обычной проверкой подлинности.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
+ ![Скриншот, который показывает транспортную безопасность с базовой аутентификацией.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Режим безопасности|Транспортировка|  
 |Совместимость|С существующими службами и клиентами веб-служб|  
@@ -35,7 +35,7 @@ ms.locfileid: "76742700"
 - Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.  
   
 ### <a name="code"></a>Код  
- В следующем примере кода показано, как создавать конечную точку службы, использующую имя и пароль пользователя в домене Windows для безопасности передачи. Обратите внимание, что для проверки подлинности клиента службе требуется сертификат X.509. Дополнительные сведения см. в статьях [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [инструкции. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ В следующем примере кода показано, как создавать конечную точку службы, использующую имя и пароль пользователя в домене Windows для безопасности передачи. Обратите внимание, что для проверки подлинности клиента службе требуется сертификат X.509. Для получения дополнительной информации [см. Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [как: Нанастройка порта с сертификатом SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -59,9 +59,9 @@ ms.locfileid: "76742700"
         <services>  
             <service name="BasicAuthentication.Calculator">  
                 <endpoint address="https://localhost/Calculator"  
-                          binding="wsHttpBinding"   
+                          binding="wsHttpBinding"
                           bindingConfiguration="UsernameWithTransport"  
-                          name="BasicEndpoint"   
+                          name="BasicEndpoint"
                           contract="BasicAuthentication.ICalculator" />  
             </service>  
         </services>  
@@ -100,9 +100,9 @@ ms.locfileid: "76742700"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="https://machineName/Calculator"   
+      <endpoint address="https://machineName/Calculator"
                 binding="wsHttpBinding"  
-                bindingConfiguration="WSHttpBinding_ICalculator"   
+                bindingConfiguration="WSHttpBinding_ICalculator"
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator" />  
     </client>  
@@ -116,6 +116,6 @@ ms.locfileid: "76742700"
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Практическое руководство. Настройка порта с использованием SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [Обзор безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [\<клиентАли>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

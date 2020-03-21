@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adcb7b5a27f3b8c63dbbb660a23b5c891f84ac46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088491"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179012"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>Метод ICorDebugArrayValue::GetElement
-Возвращает значение заданного элемента массива.  
+Получает значение данного элемента массива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetElement (  
     [in]  ULONG32          cdim,  
-    [in, size_is(cdim), length_is(cdim)]   
+    [in, size_is(cdim), length_is(cdim)]
          ULONG32           indices[],  
     [out] ICorDebugValue   **ppValue  
 );  
@@ -38,17 +38,17 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Параметры  
  `cdim`  
- окне Число измерений данного объекта `ICorDebugArrayValue`.  
+ (в) Количество размеров этого `ICorDebugArrayValue` объекта.  
   
- Это значение также является размером массива `indices`, так как его размер равен числу измерений объекта `ICorDebugArrayValue`.  
+ Это значение также является `indices` размером массива, поскольку его размер `ICorDebugArrayValue` равен количеству размеров объекта.  
   
  `indices`  
- окне Массив значений индекса, каждый из которых задает позиции в измерении объекта `ICorDebugArrayValue`.  
+ (в) Массив значений индекса, каждое из которых определяет положение в `ICorDebugArrayValue` измерении объекта.  
   
- Это значение не должно быть равно null.  
+ Это значение не должно быть нулевым.  
   
  `ppValue`  
- заполняет Указатель на адрес объекта ICorDebugValue, представляющий значение указанного элемента.  
+ (ваут) Указатель на адрес объекта ICorDebugValue, представляющий значение указанного элемента.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

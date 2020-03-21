@@ -2,16 +2,16 @@
 title: Интеграция транзакционных компонентов служб Enterprise Services
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 5914f76639adc3ff569a3bfb8d6eb1db14313e76
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 292573f911459d8a8419e09d81fd1e54dbc6c70b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211939"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184740"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Интеграция транзакционных компонентов служб Enterprise Services
 
-Windows Communication Foundation (WCF) предоставляет автоматический механизм интеграции с корпоративными службами (см. раздел [Интеграция с приложениями COM+](integrating-with-com-plus-applications.md)). Однако для разработки служб, которые внутренне используют транзакционные компоненты, размещенные внутри служб Enterprise Services, может потребоваться гибкость. Поскольку функции транзакций WCF основаны на инфраструктуре <xref:System.Transactions>, процесс интеграции корпоративных служб с WCF идентичен тому, что позволяет указать взаимодействие между <xref:System.Transactions> и корпоративными службами, как описано в области [взаимодействия с корпоративными службами и транзакциями COM+](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85)).  
+Фонд связи Windows (WCF) предоставляет автоматический механизм интеграции с корпоративными службами [(см. Интеграцию с приложениями КОМЗ).](integrating-with-com-plus-applications.md) Однако для разработки служб, которые внутренне используют транзакционные компоненты, размещенные внутри служб Enterprise Services, может потребоваться гибкость. Поскольку функция WCF Transactions <xref:System.Transactions> построена на инфраструктуре, процесс интеграции корпоративных служб с WCF <xref:System.Transactions> идентичен процессу для определения совместимости между корпоративными службами и корпоративными услугами, как указано в [совместимости с корпоративными услугами и транзакциями КОМЗ.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))  
   
  Чтобы обеспечить требуемый уровень взаимодействия между входящей поточной транзакцией и транзакцией контекста COM+, реализация службы должна создать экземпляр <xref:System.Transactions.TransactionScope> и использовать соответствующее значение из перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
@@ -46,11 +46,11 @@ public class CustomerService : ICustomerServiceContract
                      EnterpriseServicesInteropOption.Full))  
       {  
          // Create an Enterprise Services component  
-         // Call UpdateCustomer method on an Enterprise Services   
-         // component   
+         // Call UpdateCustomer method on an Enterprise Services
+         // component
   
-         // Call UpdateOtherCustomerData method on an Enterprise   
-         // Services component   
+         // Call UpdateOtherCustomerData method on an Enterprise
+         // Services component
          ts.Complete();  
       }  
   
@@ -81,19 +81,19 @@ static void Main()
   
         // Create an Enterprise Services component  
   
-        // Call UpdateCustomer method on an Enterprise Services   
-        // component   
+        // Call UpdateCustomer method on an Enterprise Services
+        // component
   
         ts.Complete();  
     }  
   
-    // Closing the client gracefully closes the connection and   
+    // Closing the client gracefully closes the connection and
     // cleans up resources  
     client.Close();  
 }  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [Интеграция с приложениями COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Интеграция с приложениями КОМЗ](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
 - [Интеграция с приложениями COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

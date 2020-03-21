@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137181"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178649"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>Метод ICorDebugProcess2::SetUnmanagedBreakpoint
-Задает неуправляемую точку останова в указанном смещении машинного образа.  
+Устанавливает неуправляемую точку разрыва в указанном смещении родного изображения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73137181"
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
-    [out, size_is(bufsize), length_is(*bufLen)]   
+    [out, size_is(bufsize), length_is(*bufLen)]
         BYTE               buffer[],  
     [out] ULONG32          *bufLen  
 );  
@@ -39,19 +39,19 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- окне Объект `CORDB_ADDRESS`, указывающий смещение машинного образа.  
+ (в) Объект, `CORDB_ADDRESS` опознававательный смещение родного изображения.  
   
  `bufsize`  
- окне Размер массива `buffer` в байтах.  
+ (в) Размер массива, `buffer` в байтах.  
   
  `buffer`  
- заполняет Массив, содержащий код операции, который заменяется точкой останова.  
+ (ваут) Массив, содержащий opcode, который заменяется точкой разрыва.  
   
  `bufLen`  
- заполняет Указатель на число байтов, возвращенных в массиве `buffer`.  
+ (ваут) Указатель на количество байтов, `buffer` возвращенных в массиве.  
   
-## <a name="remarks"></a>Заметки  
- Если смещение машинного образа находится в среде CLR, точка останова будет пропущена. Это позволяет среде CLR избежать диспетчеризации точки останова по внешнему каналу, когда точка останова задается отладчиком.  
+## <a name="remarks"></a>Remarks  
+ Если смещение изображения нативного изображения находится в пределах общего времени выполнения языка (CLR), точка разрыва будет проигнорирована. Это позволяет CLR избежать отправки внеполосной точки разрыва, когда точка разрыва устанавливается отладчиком.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

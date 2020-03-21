@@ -2,19 +2,19 @@
 title: Руководство по программированию
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: c33c7749599de0450a9f969e5802485d154a61e1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 542567cf07e86b642a23a879fa6e5476253005b8
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781253"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848942"
 ---
 # <a name="programming-guide"></a>Руководство по программированию
-В этом разделе содержатся сведения о создании и использовании объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. При использовании Visual Studio можно также использовать реляционный конструктор объектов для выполнения многих из этих задач.  
+В этом разделе содержатся сведения о создании и использовании объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если вы используете Visual Studio, вы также можете использовать объект реляционный конструктор для выполнения многих из этих же задач.  
   
- Можно также выполнить поиск по Документация Майкрософт для конкретных проблем, и вы можете принять участие в [форуме LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), где вы сможете обсуждать более сложные темы подробно с экспертами. Наконец, [LINQ to SQL: запрос к языку .NET для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205) , содержащий технические сведения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] о технологии, завершенный с C# Visual Basic и примерами кода.  
+ Вы также можете искать документы Майкрософт по конкретным вопросам, и вы можете принять участие в [форуме LIN's,](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)где вы можете подробно обсудить более сложные темы с экспертами. Наконец, [LIN-к S'L: .NET Язык-интегрированный запрос для реляционных данных](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10)) белой бумаги детали технологии, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в комплекте с Visual Basic и C q код примеры.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Создание модели объектов](creating-the-object-model.md)  
  Описывается создание объектной модели.  
   
@@ -27,21 +27,21 @@ ms.locfileid: "70781253"
  [Внесение и отправка изменений данных](making-and-submitting-data-changes.md)  
  Описывается, как изменять данные в базе данных.  
   
- [Поддержка отладки](debugging-support.md)  
+ [Отладка службы поддержки](debugging-support.md)  
  Описывается поддержка, доступная для отладки проектов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Основные сведения](background-information.md)  
+ [Справочная информация](background-information.md)  
  Включает дополнительные вопросы для более опытных пользователей, такие как разрешение конфликтов параллелизма, создание новых баз данных и многое другое.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [LINQ to SQL](index.md)  
  Ссылки на разделы, в которых объясняется технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и демонстрируются ее возможности.  
   
- [Хранимые процедуры](stored-procedures.md)  
+ [Сохраненные процедуры](stored-procedures.md)  
  Ссылки на разделы, в которых демонстрируется использование хранимых процедур.  
   
  [Введение в LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
- Содержит ресурсы, помогающие начать изучение LINQ to SQL с помощью C#.
+ Предоставляет ресурсы, которые помогут вам начать узнавать о LIN-L с помощью СЗЛ.
 
  [Знакомство с LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- Содержит ресурсы, помогающие начать изучение LINQ to SQL с помощью Visual Basic.
+ Предоставляет ресурсы, которые помогут вам начать узнавать о КОМПАНИИ с помощью Visual Basic.

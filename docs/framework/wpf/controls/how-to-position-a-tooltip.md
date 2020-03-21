@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение положения всплывающей подсказки
+title: Практическое руководство. Задание положения всплывающей подсказки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: 811818fe6e7c0d8ce9e2aa058b42bf592ada4b92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f52703e4fe127daa40f220280f084b2026580cc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770928"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186941"
 ---
-# <a name="how-to-position-a-tooltip"></a>Практическое руководство. Определение положения всплывающей подсказки
-В этом примере показано, как для указания положения всплывающей подсказки на экране.  
+# <a name="how-to-position-a-tooltip"></a>Практическое руководство. Задание положения всплывающей подсказки
+В этом примере показано, как указать положение инструмента на экране.  
   
 ## <a name="example"></a>Пример  
- Можно положения всплывающей подсказки с помощью набора пять свойств, которые определены в обоих <xref:System.Windows.Controls.ToolTip> и <xref:System.Windows.Controls.ToolTipService> классы. В следующей таблице показаны эти два набора пять свойств и ссылки на справочную документацию в соответствии с классом.  
+ Вы можете расположить набор инструментов, используя набор из <xref:System.Windows.Controls.ToolTip> пяти <xref:System.Windows.Controls.ToolTipService> свойств, которые определяются как в классах, так и в классах. В следующей таблице показаны эти два набора из пяти свойств и приведены ссылки на их справочную документацию в соответствии с классом.  
   
-### <a name="corresponding-tooltip-properties-according-to-class"></a>Соответствующие свойства всплывающей подсказки в соответствии с классом  
+### <a name="corresponding-tooltip-properties-according-to-class"></a>Соответствующие свойства инструментария в зависимости от класса  
   
-|<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType> свойства класса|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType> свойства класса|  
+|<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType>свойства класса|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType>свойства класса|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.ToolTip.Placement%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.Placement%2A?displayProperty=nameWithType>|  
 |<xref:System.Windows.Controls.ToolTip.PlacementTarget%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.PlacementTarget%2A?displayProperty=nameWithType>|  
@@ -31,39 +31,39 @@ ms.locfileid: "61770928"
 |<xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.HorizontalOffset%2A?displayProperty=nameWithType>|  
 |<xref:System.Windows.Controls.ToolTip.VerticalOffset%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.VerticalOffset%2A?displayProperty=nameWithType>|  
   
- Если определить содержимое всплывающей подсказки с помощью <xref:System.Windows.Controls.ToolTip> объекта, можно использовать свойства любого класса, однако <xref:System.Windows.Controls.ToolTipService> свойства имеют приоритет. Используйте <xref:System.Windows.Controls.ToolTipService> свойства для подсказки, которые не определены как <xref:System.Windows.Controls.ToolTip> объектов.  
+ Если вы определяете содержимое инструментария с помощью <xref:System.Windows.Controls.ToolTip> объекта, можно использовать свойства любого класса; однако <xref:System.Windows.Controls.ToolTipService> свойства имеют приоритет. Используйте <xref:System.Windows.Controls.ToolTipService> свойства для инструментов, <xref:System.Windows.Controls.ToolTip> которые не определены как объекты.  
   
- На следующих рисунках положения всплывающей подсказки с помощью этих свойств. Несмотря на то что, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] примерах в этих примерах показано, как задать свойства, которые определяются <xref:System.Windows.Controls.ToolTip> класса, соответствующего свойства <xref:System.Windows.Controls.ToolTipService> класс следуют тем же правилам макета. Дополнительные сведения о возможных значениях свойства размещения см. в разделе [поведение при размещении контекстного меню](popup-placement-behavior.md).  
- 
- На следующем рисунке показано положение подсказки с помощью свойства размещения:  
-  
- ![Схема, показывающая положение подсказки с помощью свойства размещения.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
- 
- На следующем рисунке показано положение подсказки с помощью свойства размещения и PlacementRectangle:   
+ Следующие иллюстрации показывают, как позиционировать набор инструментов с помощью этих свойств. Хотя [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] примеры на этих иллюстрациях показывают, как установить свойства, определяемые <xref:System.Windows.Controls.ToolTip> классом, соответствующие свойства <xref:System.Windows.Controls.ToolTipService> класса следуют тем же правилам макета. Для получения дополнительной информации о возможных [Popup Placement Behavior](popup-placement-behavior.md)значениях для свойства размещения см.  
 
- ![Схема, показывающая положение подсказки с помощью свойства PlacementRectangle.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
- 
- На следующем рисунке показано положение подсказки с помощью свойств Placement, PlacementRectangle и смещение:   
+ Следующее изображение показывает размещение инструментария с помощью свойства размещения:  
   
- ![Схема, показывающая положение подсказки с помощью свойства смещение.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+ ![Диаграмма, показывающая размещение ToolTip с помощью свойства размещения.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
 
- В следующем примере показано, как использовать <xref:System.Windows.Controls.ToolTip> свойства для указания положения всплывающей подсказки, содержимое которых <xref:System.Windows.Controls.ToolTip> объекта.  
+ Следующее изображение показывает размещение инструментария с помощью свойств размещения и размещенияRectangle:
+
+ ![Диаграмма, показывающая размещение ToolTip с помощью свойства PlacementRectangle.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+
+ Следующее изображение показывает размещение инструментария с помощью свойств размещения, размещения Rectangle и Offset:
+  
+ ![Диаграмма, показывающая размещение ToolTip с помощью свойства Offset.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
+ В следующем примере показано, как использовать <xref:System.Windows.Controls.ToolTip> свойства для определения позиции <xref:System.Windows.Controls.ToolTip> инструмента, содержание которого является объектом.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
  [!code-csharp[ToolTipService#ToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
  [!code-vb[ToolTipService#ToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
   
- В следующем примере показано, как использовать <xref:System.Windows.Controls.ToolTipService> свойства для указания положения всплывающей подсказки, содержимое которых не <xref:System.Windows.Controls.ToolTip> объекта.  
+ В следующем примере показано, как использовать <xref:System.Windows.Controls.ToolTipService> свойства для определения позиции <xref:System.Windows.Controls.ToolTip> инструмента, содержимое которого не является объектом.  
   
  [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
  [!code-csharp[ToolTipService#NoToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#notooltipcode)]
  [!code-vb[ToolTipService#NoToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Разделы практического руководства](tooltip-how-to-topics.md)
+- [Как-к темам](tooltip-how-to-topics.md)
 - [Общие сведения о всплывающих подсказках](tooltip-overview.md)

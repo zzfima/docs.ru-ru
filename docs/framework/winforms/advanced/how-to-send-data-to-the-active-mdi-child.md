@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 563be8494cb84dc74b45985d3ba74e4b6a07eb8a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947846"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182498"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Практическое руководство. Отправка данных в активную дочернюю MDI-форму
-Часто в контексте приложений с многодокументным [интерфейсом (MDI)](multiple-document-interface-mdi-applications.md)необходимо отправить данные в активное дочернее окно, например когда пользователь вставил данные из буфера обмена в приложение MDI.  
+Часто в контексте [приложений с многопользовательским интерфейсом (MDI)](multiple-document-interface-mdi-applications.md)необходимо отправлять данные в активное окно дочернего ребенка, например, когда пользователь вставляет данные из Clipboard в приложение MDI.  
   
 > [!NOTE]
-> Сведения о проверке того, какое дочернее окно имеет фокус и отправляет свое содержимое в буфер обмена, см. в разделе [Определение активной дочерней MDI-формы](how-to-determine-the-active-mdi-child.md).  
+> Для получения информации о проверке того, какое окно ребенка имеет фокус и отправки его содержимого в Clipboard, [см. Определение активного ребенка MDI](how-to-determine-the-active-mdi-child.md).  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Отправка данных в активное дочернее окно MDI из буфера обмена  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Отправка данных в активное окно ребенка MDI из буфера обмена  
   
-1. В методе скопируйте текст из буфера обмена в активный элемент управления активной дочерней формы.  
+1. В рамках метода скопируйте текст на Clipboard для активного контроля активной детской формы.  
   
     > [!NOTE]
-    > В этом примере предполагается, что имеется родительская`Form1`форма MDI () с одним или несколькими дочерними <xref:System.Windows.Forms.RichTextBox> окнами MDI, содержащими элемент управления. Дополнительные сведения см. в разделе [Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md).  
+    > Этот пример предполагает, что есть родительская форма MDI (),`Form1`которая <xref:System.Windows.Forms.RichTextBox> имеет одно или несколько детских окон MDI, содержащих элемент управления. Для получения дополнительной информации [см.](how-to-create-mdi-parent-forms.md)  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -45,7 +45,7 @@ ms.locfileid: "69947846"
              If (Not theBox Is Nothing) Then  
                 ' Create a new instance of the DataObject interface.  
                 Dim data As IDataObject = Clipboard.GetDataObject()  
-                ' If the data is text, then set the text of the   
+                ' If the data is text, then set the text of the
                 ' RichTextBox to the text in the clipboard.  
                 If (data.GetDataPresent(DataFormats.Text)) Then  
                    theBox.SelectedText = data.GetData(DataFormats.Text).ToString()  
@@ -68,22 +68,22 @@ ms.locfileid: "69947846"
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
        {  
-          try   
+          try
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
              if (theBox != null)  
              {  
                 // Create a new instance of the DataObject interface.  
                 IDataObject data = Clipboard.GetDataObject();  
-                // If the data is text, then set the text of the   
+                // If the data is text, then set the text of the
                 // RichTextBox to the text in the clipboard.  
                 if (data.GetDataPresent(DataFormats.Text))  
                 {  
-                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();                 
+                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();
                 }  
              }  
           }  
-          catch   
+          catch
           {  
              MessageBox.Show("You need to select a RichTextBox.");  
           }  
@@ -91,10 +91,10 @@ ms.locfileid: "69947846"
     }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Приложения с интерфейсом MDI](multiple-document-interface-mdi-applications.md)
 - [Практическое руководство. Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних форм MDI](how-to-create-mdi-child-forms.md)
+- [Практическое руководство. Создание дочерних MDI-форм](how-to-create-mdi-child-forms.md)
 - [Практическое руководство. Определение активной дочерней MDI-формы](how-to-determine-the-active-mdi-child.md)
-- [Практическое руководство. Расположить дочерние формы MDI](how-to-arrange-mdi-child-forms.md)
+- [Практическое руководство. Упорядочение дочерних форм интерфейса MDI](how-to-arrange-mdi-child-forms.md)

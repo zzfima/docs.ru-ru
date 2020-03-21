@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 265344cb100a41cde5443cd0914dc66271aabf93
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216116"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181751"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 Помощник по отладке управляемого кода (MDA) `releaseHandleFailed` активируется для уведомления разработчиков, когда метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> класса, производного от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>, возвращает значение `false`.  
@@ -50,14 +50,14 @@ ms.locfileid: "77216116"
 ## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
  Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.  
   
-## <a name="output"></a>Вывод  
- Сообщение, указывающее, что <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> не удалось должным образом освободить дескриптор. Например:  
+## <a name="output"></a>Выходные данные  
+ Сообщение, указывающее, что <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> не удалось должным образом освободить дескриптор. Пример:  
   
 ```output
-"A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
-failed to properly release the handle with value 0x0000BEEF. This   
-usually indicates that the handle was released incorrectly via   
-another means (such as extracting the handle using DangerousGetHandle   
+"A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'
+failed to properly release the handle with value 0x0000BEEF. This
+usually indicates that the handle was released incorrectly via
+another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
@@ -77,18 +77,18 @@ and closing it directly or building another SafeHandle around it."
 ```csharp
 bool ReleaseHandle()  
 {  
-    // Calling the Win32 CloseHandle function to release the   
-    // native handle wrapped by this SafeHandle. This method returns   
-    // false on failure, but should only fail if the input is invalid   
-    // (which should not happen here). The method specifically must not   
-    // fail simply because of lack of resources or other transient   
-    // failures beyond the user’s control. That would make it unacceptable   
+    // Calling the Win32 CloseHandle function to release the
+    // native handle wrapped by this SafeHandle. This method returns
+    // false on failure, but should only fail if the input is invalid
+    // (which should not happen here). The method specifically must not
+    // fail simply because of lack of resources or other transient
+    // failures beyond the user’s control. That would make it unacceptable
     // to call CloseHandle as part of the implementation of this method.  
     return CloseHandle(handle);  
 }  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

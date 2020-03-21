@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 89ce4eafa46be3e9ba7cdb06884034a521e43bca
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8a267ec7123edb73ad51f0781a78344119ec6f21
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777538"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178898"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>Метод ICorDebugHeapSegmentEnum::Next
-Возвращает указанное число экземпляров [COR_HEAPOBJECT](cor-heapobject-structure.md) , содержащих сведения о регионах памяти управляемой кучи.  
+Получает указанное количество [COR_HEAPOBJECT](cor-heapobject-structure.md) экземпляров, содержащих информацию о регионах памяти управляемой кучи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT Next(  
-    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_SEGMENT segments[],   
+    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_SEGMENT segments[],
     [out] ULONG *pceltFetched  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  celt  
- окне Число извлекаемых сегментов.  
+ (в) Количество сегментов, которые необходимо получить.  
   
  сегменты  
- заполняет Массив указателей, каждый из которых указывает на объект [COR_HEAPOBJECT](cor-heapobject-structure.md) , который предоставляет сведения о области памяти в управляемой куче.  
+ (ваут) Массив указателей, каждый из которых указывает на [COR_HEAPOBJECT](cor-heapobject-structure.md) объект, предоставляющий информацию о области памяти в управляемой куче.  
   
  pceltFetched  
- заполняет Указатель на число объектов [COR_HEAPOBJECT](cor-heapobject-structure.md) , фактически возвращаемых в `segments`. Это значение может быть `null`, если параметр `celt` имеет значение 1.  
+ (ваут) Указатель на количество [COR_HEAPOBJECT](cor-heapobject-structure.md) объектов `segments`фактически вернулся в . Это значение может быть `null`, если параметр `celt` имеет значение 1.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -55,7 +55,7 @@ HRESULT Next(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)
 - [Интерфейсы отладки](debugging-interfaces.md)

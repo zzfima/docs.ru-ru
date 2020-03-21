@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 9ac563ad237749665e9cc53c15aec35f461abfc0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ad2f0922afbd94e1699b383cf2fc9762771b637d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742663"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184332"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Безопасность транспорта с проверкой подлинности с использованием сертификатов
 
-В этой статье рассматривается использование сертификатов X. 509 для проверки подлинности сервера и клиента при использовании безопасности транспорта. Дополнительные сведения о сертификатах X.509 см. в разделе [Сертификаты открытого ключа X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Сертификаты должны выдаваться центром сертификации, который часто является сторонним издателем сертификатов. В домене Windows Server для выдачи сертификатов клиентским компьютерам домена можно использовать службу сертификации Active Directory. В этом сценарии служба размещена в службах IIS, которые используют протокол SSL. В службе задано использование сертификата SSL (X.509), чтобы клиенты могли проверять подлинность сервера. В клиенте также задано использование сертификата X.509, что позволяет службе проверять подлинность клиента. Клиент должен доверять сертификату сервера, а сервер ― сертификату клиента. Фактический механизм, с помощью которого служба и клиент проверяют удостоверение другого пользователя, выходит за рамки этой статьи. Дополнительные сведения см. в статье [Цифровая подпись](https://en.wikipedia.org/wiki/Digital_signature) в Википедии.
+В этой статье обсуждается использование сертификатов X.509 для проверки подлинности сервера и клиента при использовании транспортной безопасности. Дополнительные сведения о сертификатах X.509 см. в разделе [Сертификаты открытого ключа X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Сертификаты должны выдаваться сертификационным органом, который часто является сторонним эмитентом сертификатов. В домене Windows Server для выдачи сертификатов клиентским компьютерам домена можно использовать службу сертификации Active Directory. В этом сценарии служба размещена в службах IIS, которые используют протокол SSL. В службе задано использование сертификата SSL (X.509), чтобы клиенты могли проверять подлинность сервера. В клиенте также задано использование сертификата X.509, что позволяет службе проверять подлинность клиента. Клиент должен доверять сертификату сервера, а сервер ― сертификату клиента. Фактическая механика проверки личности службы и клиента выходит за рамки данной статьи. Для получения дополнительной информации смотрите [цифровую подпись](https://en.wikipedia.org/wiki/Digital_signature) в Википедии.
   
  В этом сценарии реализуется шаблон обмена сообщениями «запрос-ответ», показанный на следующей схеме.  
   
- ![Безопасная перенаправление с помощью сертификатов](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
+ ![Безопасный перевод с помощью сертификатов](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- Дополнительные сведения об использовании сертификата со службой см. в разделе [Работа с](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) сертификатами и [инструкции. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). В следующей таблице описываются различные особенности этого сценария.  
+ Для получения дополнительной информации об использовании сертификата [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)с услугой [см.](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) В следующей таблице описываются различные особенности этого сценария.  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Режим безопасности|Транспортировка|  
 |Совместимость|С существующими службами и клиентами веб-служб.|  
@@ -45,7 +45,7 @@ ms.locfileid: "76742663"
         <!-- configure wsHttp binding with Transport security mode and clientCredentialType as Certificate -->  
         <binding>  
           <security mode="Transport">  
-            <transport clientCredentialType="Certificate"/>              
+            <transport clientCredentialType="Certificate"/>
           </security>  
         </binding>  
       </wsHttpBinding>  
@@ -53,7 +53,7 @@ ms.locfileid: "76742663"
     <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
     <behaviors>  
       <serviceBehaviors>  
-        <behavior>            
+        <behavior>
            <serviceDebug includeExceptionDetailInFaults="True" />  
         </behavior>  
       </serviceBehaviors>  
@@ -72,13 +72,13 @@ myBinding.Security.Mode = SecurityMode.Transport;
 myBinding.Security.Transport.ClientCredentialType =  
    HttpClientCredentialType.Certificate;  
   
-// Create the endpoint address. Note that the machine name   
+// Create the endpoint address. Note that the machine name
 // must match the subject or DNS field of the X.509 certificate  
-// used to authenticate the service.   
+// used to authenticate the service.
 var ea = new  
    EndpointAddress("https://localhost/CalculatorService/service.svc");  
   
-// Create the client. The code for the calculator   
+// Create the client. The code for the calculator
 // client is not shown here. See the sample applications  
 // for examples of the calculator code.  
 var cc =  
@@ -104,10 +104,10 @@ cc.Close();
   <system.serviceModel>  
     <client>  
       <!-- this endpoint has an https: address -->  
-      <endpoint address=" https://localhost/CalculatorService/service.svc "   
+      <endpoint address=" https://localhost/CalculatorService/service.svc "
                 behaviorConfiguration="endpointCredentialBehavior"  
-                binding="wsHttpBinding"   
-                bindingConfiguration="Binding1"   
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
                 contract="Microsoft.Samples.TransportSecurity.ICalculator"/>  
     </client>  
     <behaviors>  
@@ -140,5 +140,5 @@ cc.Close();
   
 ## <a name="see-also"></a>См. также раздел
 
-- [Общие сведения о безопасности для служб R SQL Server](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Обзор безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 91100b37e4cae9041479b209e40034efe376df5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 57491faa10c182630d41565ba236d65e393929b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946218"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182548"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Практическое руководство. Определение активной дочерней MDI-формы
-Иногда требуется указать команду, которая будет работать с элементом управления, который имеет фокус на текущей активной дочерней форме. Например, предположим, что нужно скопировать выбранный текст из текстового поля дочерней формы в буфер обмена. Вы создадите процедуру, которая копирует выбранный текст в буфер обмена с помощью <xref:System.Windows.Forms.Control.Click> события пункта меню Копировать в стандартном меню "Правка".  
+В некоторых случаях вы хотите предоставить команду, которая работает на элементе управления, который фокусируется на активной форме ребенка. Например, предположим, что вы хотите скопировать выбранный текст из текстового ящика детской формы на Clipboard. Можно создать процедуру, которая копирует выбранный текст <xref:System.Windows.Forms.Control.Click> в Clipboard, используя событие элемента меню Copy в стандартном меню Редактирования.  
   
- Поскольку приложение MDI может иметь много экземпляров одной и той же дочерней формы, процедура должна иметь представление о том, какую форму использовать. Чтобы указать правильную форму, используйте <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> свойство, которое возвращает дочернюю форму, имеющую фокус или которая была недавно активна.  
+ Поскольку приложение MDI может иметь много экземпляров одной и той же формы ребенка, процедура должна знать, какую форму использовать. Чтобы указать правильную <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> форму, используйте свойство, которое возвращает детскую форму, которая имеет фокус или которая была совсем недавно активной.  
   
- Если в форме имеется несколько элементов управления, необходимо также указать, какой элемент управления является активным. Как и <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> свойство, свойство возвращает элемент управления с фокусом на активную дочернюю форму. <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> Приведенная ниже процедура иллюстрирует процедуру копирования, которую можно вызвать из меню дочерней формы, меню в форме MDI или кнопки на панели инструментов.  
+ Если у вас есть несколько элементов управления на форме, вы также должны указать, какой элемент управления активен. Как <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> и имущество, <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> имущество возвращает контроль с акцентом на активную форму ребенка. Ниже приведенная процедура иллюстрирует процедуру копирования, которую можно вызвать из меню детской формы, меню в форме MDI или кнопки панели инструментов.  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Определение активной дочерней MDI-формы (для копирования ее текста в буфер обмена)  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Определить активный ребенок MDI (скопировать его текст в Clipboard)  
   
-1. В методе скопируйте текст активного элемента управления активной дочерней формы в буфер обмена.  
+1. В рамках метода скопируйте текст активного управления активной детской формой в Clipboard.  
   
     > [!NOTE]
-    > В этом примере предполагается, что имеется родительская`Form1`форма MDI () с одним или несколькими дочерними <xref:System.Windows.Forms.RichTextBox> окнами MDI, содержащими элемент управления. Дополнительные сведения см. в разделе [Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md).  
+    > Этот пример предполагает, что есть родительская форма MDI (),`Form1`которая <xref:System.Windows.Forms.RichTextBox> имеет одно или несколько детских окон MDI, содержащих элемент управления. Для получения дополнительной информации [см.](how-to-create-mdi-parent-forms.md)  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -64,7 +64,7 @@ ms.locfileid: "69946218"
        // If there is an active child form, find the active control, which  
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
-       {    
+       {
           try  
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
@@ -83,10 +83,10 @@ ms.locfileid: "69946218"
     }  
     ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Приложения с интерфейсом MDI](multiple-document-interface-mdi-applications.md)
 - [Практическое руководство. Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних форм MDI](how-to-create-mdi-child-forms.md)
+- [Практическое руководство. Создание дочерних MDI-форм](how-to-create-mdi-child-forms.md)
 - [Практическое руководство. Отправка данных в активную дочернюю MDI-форму](how-to-send-data-to-the-active-mdi-child.md)
-- [Практическое руководство. Расположить дочерние формы MDI](how-to-arrange-mdi-child-forms.md)
+- [Практическое руководство. Упорядочение дочерних форм интерфейса MDI](how-to-arrange-mdi-child-forms.md)

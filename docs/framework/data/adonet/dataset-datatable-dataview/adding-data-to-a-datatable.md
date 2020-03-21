@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 2a001ac8b3d4b8cd9618b3ced7bdf578ebae2e22
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 02d7f94259cc56513be404c5539ca7015d5f3533
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786594"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151537"
 ---
 # <a name="adding-data-to-a-datatable"></a>Добавление данных в таблицу данных
-После создания объекта <xref:System.Data.DataTable> и определения его структуры с использованием столбцов и ограничений к созданной таблице можно добавлять новые строки данных. Чтобы добавить новую строку, объявите новую переменную типа <xref:System.Data.DataRow>. При вызове <xref:System.Data.DataTable.NewRow%2A> метода возвращается новый объект **DataRow** . Затем **Таблица** данных создает объект **DataRow** на основе структуры таблицы, как определено в <xref:System.Data.DataColumnCollection>.  
+После создания объекта <xref:System.Data.DataTable> и определения его структуры с использованием столбцов и ограничений к созданной таблице можно добавлять новые строки данных. Чтобы добавить новую строку, объявите новую переменную типа <xref:System.Data.DataRow>. При вызове метода возвращается <xref:System.Data.DataTable.NewRow%2A> новый объект **DataRow.** Затем **DataTable** создает объект **DataRow** на основе структуры таблицы, <xref:System.Data.DataColumnCollection>определяемой .  
   
- В следующем примере показано, как создать новую строку, вызвав метод **невров** .  
+ Следующий пример показывает, как создать новую строку, вызывая метод **NewRow.**  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- После вставки данных в новую строку метод **Add** используется для добавления строки <xref:System.Data.DataRowCollection>в, показанной в следующем коде.  
+ После вставки данных в новую строку используется метод <xref:System.Data.DataRowCollection> **Добавления** для добавления строки в строку, показанную в следующем коде.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Можно также вызвать метод **Add** , чтобы добавить новую строку, передав массив значений, типизированный как <xref:System.Object>, как показано в следующем примере.  
+ Вы также можете вызвать метод **добавления,** чтобы добавить новую <xref:System.Object>строку, перейдя в массив значений, набранных как, как показано в следующем примере.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Передача массива значений, типизированных как **Object**, в метод **Add** создает новую строку внутри таблицы и устанавливает для ее значений столбцов значения в массиве объектов. Обратите внимание, что значения в массиве сопоставляются со столбцами последовательно, с учетом порядка этих столбцов в таблице.  
+ Передавая массив значений, набранный как **объект,** метод **добавления** создает новую строку внутри таблицы и устанавливает значения столбца к значениям в массиве объекта. Обратите внимание, что значения в массиве сопоставляются со столбцами последовательно, с учетом порядка этих столбцов в таблице.  
   
- В следующем примере в созданную таблицу **Customers** добавляется 10 строк.  
+ Следующий пример добавляет 10 строк в недавно созданную таблицу **Клиентов.**  
   
 ```vb  
 Dim workRow As DataRow  
@@ -76,7 +76,7 @@ Next
 ```csharp  
 DataRow workRow;  
   
-for (int i = 0; i <= 9; i++)   
+for (int i = 0; i <= 9; i++)
 {  
   workRow = workTable.NewRow();  
   workRow[0] = i;  
@@ -85,11 +85,11 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Управление данными в DataTable](manipulating-data-in-a-datatable.md)
+- [Управление данными в таблице данных](manipulating-data-in-a-datatable.md)
 - [Общие сведения об ADO.NET](../ado-net-overview.md)

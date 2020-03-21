@@ -2,12 +2,12 @@
 title: Использование контекста редактирования ModelItem
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: a47cb53e50d221c0ae07cf0841688fe4f8ced7d4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e1481d96e39f837d72834222d2839c520e880cc6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988922"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142518"
 ---
 # <a name="using-the-modelitem-editing-context"></a>Использование контекста редактирования ModelItem
 Контекст редактирования <xref:System.Activities.Presentation.Model.ModelItem> является объектом, используемым ведущим приложением для взаимодействия с конструктором. <xref:System.Activities.Presentation.EditingContext> предоставляет два метода, <xref:System.Activities.Presentation.EditingContext.Items%2A> и <xref:System.Activities.Presentation.EditingContext.Services%2A>, которые могут использоваться  
@@ -57,8 +57,8 @@ public interface IMyService
     {  
         public IEnumerable<string> GetValues(string DisplayName)  
         {  
-            return new string[]  {   
-                DisplayName + " One",   
+            return new string[]  {
+                DisplayName + " One",
                 DisplayName + " Two",  
                 "Three " + DisplayName  
             } ;  
@@ -87,7 +87,7 @@ protected override void OnModelItemChanged(object newItem)
                 listBox1.ItemsSource = servInstance.GetValues(this.ModelItem.Properties["DisplayName"].ComputedValue.ToString());  
             }  
             );  
-        subscribed = true;   
+        subscribed = true;
     }  
 }  
 ```  
@@ -96,52 +96,52 @@ protected override void OnModelItemChanged(object newItem)
  Работа с коллекцией элементов похожа на работу с коллекцией служб, за исключением того, что вместо Publish вызывается <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>. Эта коллекция больше подходит для обмена простыми данными между конструкторами и узлом, чем для выполнения сложных функций.  
   
 ## <a name="editingcontext-host-items-and-services"></a>Ведущие элементы узла EditingContext и службы  
- .NET Framework предоставляет ряд встроенных элементов и служб, доступ к которым осуществляется через контекст редактирования.  
+ Рамочный режим .NET предоставляет ряд встроенных элементов и услуг, доступ к которых осуществляется в контексте редактирования.  
   
  Элементы:  
   
-- <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: Управляет списком локальных сборок, на которые имеются ссылки, которые будут использоваться в рабочем процессе для элементов управления (например, редактор выражений).  
+- <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem> - управляет списком локальных сборок, на которые указывают ссылки и которые будут использоваться в рабочем процессе для элементов управления (например, в редакторе выражений).  
   
-- <xref:System.Activities.Presentation.Hosting.ReadOnlyState>: Указывает, находится ли конструктор в состоянии только для чтения.  
+- <xref:System.Activities.Presentation.Hosting.ReadOnlyState> - указывает, находится ли конструктор в режиме только для чтения.  
   
-- <xref:System.Activities.Presentation.View.Selection>: Определяет коллекцию объектов, которые выбраны в данный момент.  
+- <xref:System.Activities.Presentation.View.Selection> - определяет коллекцию выбранных в настоящий момент объектов.  
   
 - <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
   
-- <xref:System.Activities.Presentation.WorkflowFileItem>: Предоставляет сведения о файле, на котором основан текущий сеанс редактирования.  
+- <xref:System.Activities.Presentation.WorkflowFileItem> - предоставляет сведения о файле, на основе которого выполняется текущий сеанс редактирования.  
   
- Службы:  
+ Службы.  
   
-- <xref:System.Activities.Presentation.Model.AttachedPropertiesService>: Позволяет добавлять свойства в текущий экземпляр с помощью <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.  
+- <xref:System.Activities.Presentation.Model.AttachedPropertiesService> - позволяет добавлять свойства в текущий экземпляр с помощью <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.  
   
-- <xref:System.Activities.Presentation.View.DesignerView>: Разрешает доступ к свойствам холста конструктора.  
+- <xref:System.Activities.Presentation.View.DesignerView> - разрешает доступ к свойствам полотна конструктора.  
   
-- <xref:System.Activities.Presentation.IActivityToolboxService>: Позволяет обновлять содержимое панели элементов.  
+- <xref:System.Activities.Presentation.IActivityToolboxService> - позволяет обновлять содержимое области элементов.  
   
-- <xref:System.Activities.Presentation.Hosting.ICommandService>: Используется для интеграции команд конструктора (например, контекстного меню) с пользовательскими реализациями служб.  
+- <xref:System.Activities.Presentation.Hosting.ICommandService> - предназначен для интеграции команд конструктора (например, пунктов контекстного меню) с пользовательскими реализациями службы.  
   
-- <xref:System.Activities.Presentation.Debug.IDesignerDebugView>: Предоставляет функциональные возможности отладчика конструктора.  
+- <xref:System.Activities.Presentation.Debug.IDesignerDebugView> - обеспечивает функциональность отладчика конструктора.  
   
-- <xref:System.Activities.Presentation.View.IExpressionEditorService>: Предоставляет доступ к диалоговому окну редактора выражений.  
+- <xref:System.Activities.Presentation.View.IExpressionEditorService> - обеспечивает доступ к диалоговому окну редактора выражений.  
   
-- <xref:System.Activities.Presentation.IIntegratedHelpService>: Предоставляет конструктор со встроенными функциями справки.  
+- <xref:System.Activities.Presentation.IIntegratedHelpService> - реализует в конструкторе функциональность встроенной справки.  
   
-- <xref:System.Activities.Presentation.Validation.IValidationErrorService>: Предоставляет доступ к ошибкам проверки <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>с помощью.  
+- <xref:System.Activities.Presentation.Validation.IValidationErrorService> - обеспечивает доступ к ошибкам проверки через <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.  
   
-- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: Предоставляет внутреннюю службу для хранения и извлечения данных. Эта служба используется на внутреннем уровне .NET Framework и не предназначена для внешнего использования.  
+- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService> - реализует внутреннюю службу для хранения и извлечения данных. Эта услуга используется внутри системы .NET и не предназначена для внешнего использования.  
   
-- <xref:System.Activities.Presentation.IXamlLoadErrorService>: Предоставляет доступ к коллекции ошибок загрузки XAML с помощью <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
+- <xref:System.Activities.Presentation.IXamlLoadErrorService> - предоставляет доступ к коллекции ошибок загрузки XAML через <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
   
-- <xref:System.Activities.Presentation.Services.ModelService>: Используется конструктором для взаимодействия с моделью редактируемого рабочего процесса.  
+- <xref:System.Activities.Presentation.Services.ModelService> - используется конструктором для взаимодействия с редактируемой моделью рабочего процесса.  
   
-- <xref:System.Activities.Presentation.Model.ModelTreeManager>: Предоставляет доступ к корню дерева элементов модели с помощью <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.  
+- <xref:System.Activities.Presentation.Model.ModelTreeManager> - обеспечивает доступ к корневому элементу дерева элементов модели через <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.  
   
-- <xref:System.Activities.Presentation.UndoEngine>: Предоставляет функции отмены и повтора.  
+- <xref:System.Activities.Presentation.UndoEngine> - реализует функциональность отмены и повтора операций.  
   
-- <xref:System.Activities.Presentation.Services.ViewService>: Сопоставляет визуальные элементы с базовыми элементами модели.  
+- <xref:System.Activities.Presentation.Services.ViewService> - сопоставляет визуальные элементы с элементами базовой модели.  
   
-- <xref:System.Activities.Presentation.View.ViewStateService>: Сохраняет состояния представления для элементов модели.  
+- <xref:System.Activities.Presentation.View.ViewStateService> - сохраняет состояния представления для элементов модели.  
   
-- <xref:System.Activities.Presentation.View.VirtualizedContainerService>: Используется для настройки поведения пользовательского интерфейса виртуального контейнера.  
+- <xref:System.Activities.Presentation.View.VirtualizedContainerService> - используется для настройки поведения пользовательского интерфейса виртуального контейнера.  
   
-- <xref:System.Activities.Presentation.Hosting.WindowHelperService>: Используется для регистрации и отмены регистрации делегатов для уведомлений о событиях. Кроме того, позволяет задавать владельца окна.
+- <xref:System.Activities.Presentation.Hosting.WindowHelperService> - служит для регистрации и отмены регистрации делегатов для уведомления о событиях. Кроме того, позволяет задавать владельца окна.

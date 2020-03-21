@@ -2,12 +2,12 @@
 title: Метод ICorDebugMergedAssemblyRecord::GetCulture
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: 77ad8ee7977096e87b9fd2e131920a042243560e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ad54a93b16e803170987dd56d8063669f7e67f94
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793156"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178752"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>Метод ICorDebugMergedAssemblyRecord::GetCulture
 Возвращает строку с названием языка и региональных параметров сборки.  
@@ -16,8 +16,8 @@ ms.locfileid: "76793156"
   
 ```cpp  
 HRESULT GetCulture(  
-   [in] ULONG32 cchCulture,   
-   [out] ULONG32 *pcchCulture,   
+   [in] ULONG32 cchCulture,
+   [out] ULONG32 *pcchCulture,
    [out, size_is(cchCulture), length_is(*pcchCulture)] WCHAR szCulture[]  
 );  
 ```  
@@ -32,7 +32,7 @@ HRESULT GetCulture(
  `szCulture`  
  [выходной] Массив символов, содержащий название языка и региональных параметров.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
  Название языка и региональных параметров — это уникальная строка, определяющая язык и региональные параметры, например "en-US" (для английского языка (США)) или "neutral" (для нейтрального языка и региональных параметров).  
   
 > [!NOTE]
@@ -47,7 +47,7 @@ HRESULT GetCulture(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
 - [Интерфейсы отладки](debugging-interfaces.md)

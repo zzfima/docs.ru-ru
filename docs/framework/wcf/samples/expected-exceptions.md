@@ -2,30 +2,30 @@
 title: Ожидаемые исключения
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 24bb9b483a3f26241f895d68b763a1974b02151b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f250e526b528adf0b67365ceb07f13e4087d773d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716444"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144713"
 ---
 # <a name="expected-exceptions"></a>Ожидаемые исключения
-В этом образце показано, как перехватывать ожидаемые исключения при использовании типизированного клиента. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) , который реализует службу калькулятора. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
+В этом образце показано, как перехватывать ожидаемые исключения при использовании типизированного клиента. Этот пример основан на [getting Started,](../../../../docs/framework/wcf/samples/getting-started-sample.md) который реализует услугу калькулятора. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
  В этом образце показано кэширование и обработка ожидаемых исключений двух типов, которые должны обрабатываться правильно работающими программами: `TimeoutException` и `CommunicationException`.  
   
- Исключения, вызванные методами связи в клиенте Windows Communication Foundation (WCF), являются ожидаемыми или непредвиденными. Неожиданные исключения включают разрушительный сбой, например `OutOfMemoryException`, и ошибки программирования, например `ArgumentNullException` или `InvalidOperationException`. Обычно не существует удобного способа решения непредвиденных ошибок, поэтому обычно не следует перехватывать их при вызове метода связи клиента WCF.  
+ Исключения, которые выбрасываются из методов коммуникации на клиенте Windows Communication Foundation (WCF), являются либо ожидаемыми, либо неожиданными. Неожиданные исключения включают разрушительный сбой, например `OutOfMemoryException`, и ошибки программирования, например `ArgumentNullException` или `InvalidOperationException`. Как правило, нет полезного способа обработки неожиданных ошибок, поэтому обычно вы не должны ловить их при вызове метода связи клиента WCF.  
   
- Ожидаемые исключения из методов связи в клиенте WCF включают `TimeoutException`, `CommunicationException`и любой производный класс `CommunicationException`. Они указывают на проблему во время обмена данными, которая может быть безопасно обработана путем прерывания работы клиента WCF и сообщения об ошибке связи. Поскольку внешние факторы могут вызывать появление таких ошибок в любом приложении, правильно разработанные приложения должны перехватывать эти исключения и предпринимать соответствующие восстановительные меры.  
+ Ожидаемые исключения из методов связи на `TimeoutException` `CommunicationException`клиенте WCF включают, и любой полученный `CommunicationException`класс . Они указывают на проблему во время общения, которые могут быть безопасно обработаны путем прерывания wCF клиента и отчетности сбоя связи. Поскольку внешние факторы могут вызывать появление таких ошибок в любом приложении, правильно разработанные приложения должны перехватывать эти исключения и предпринимать соответствующие восстановительные меры.  
   
  Имеется несколько классов, производных от `CommunicationException`, которые могут создаваться клиентом. В некоторых случаях приложение может также перехватывать определенные исключения, чтобы выполнять специальную обработку, и обрабатывать оставшиеся исключения как исключения типа `CommunicationException`. Чтобы реализовать это, необходимо в первую очередь перехватывать более узкие виды исключений, а лишь затем перехватывать исключение `CommunicationException` в более позднем предложении catch.  
   
  Код, вызывающий методы взаимодействия, должен перехватывать исключения `TimeoutException` и `CommunicationException`. Один из способов обработки таких ошибок заключается в прерывании работы клиента и создании сообщения о сбое взаимодействия.  
   
-```csharp   
+```csharp
 try  
 {  
     ...  
@@ -65,17 +65,17 @@ Got System.TimeoutException
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  

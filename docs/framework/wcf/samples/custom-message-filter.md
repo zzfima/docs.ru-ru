@@ -2,15 +2,15 @@
 title: Пользовательский фильтр сообщений
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 79edba14eff5403591cf43592415d923dbd321be
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 896407a218073eba53676baa4bcbd125593c80ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716828"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183888"
 ---
 # <a name="custom-message-filter"></a>Пользовательский фильтр сообщений
-В этом примере показано, как заменить фильтры сообщений, которые Windows Communication Foundation (WCF) используют для отправки сообщений конечным точкам.  
+В этом примере показано, как заменить фильтры сообщений, которые Windows Communication Foundation (WCF) использует для отправки сообщений в конечные точки.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -19,7 +19,7 @@ ms.locfileid: "74716828"
   
  У каждой конечной точки службы имеется один диспетчер <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. У диспетчера <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> имеются как фильтр <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>, так и фильтр <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. Объединение этих двух фильтров является фильтром сообщений, используемым для данной конечной точки.  
   
- По умолчанию фильтр <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> для конечной точки соответствует любому сообщению, передаваемому по адресу, который соответствует адресу <xref:System.ServiceModel.EndpointAddress> конечной точки службы. По умолчанию <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> для конечной точки проверяет действие входящего сообщения и соответствует любому сообщению с действием, которое соответствует одному из действий операций контракта конечной точки службы (только `IsInitiating`=`true`ных действий). В результате по умолчанию соответствие фильтру для конечной точки обеспечивается, только если в заголовках "To" обоих сообщений задан адрес <xref:System.ServiceModel.EndpointAddress> конечной точки и действие сообщения соответствует одному из действий операции конечной точки.  
+ По умолчанию фильтр <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> для конечной точки соответствует любому сообщению, передаваемому по адресу, который соответствует адресу <xref:System.ServiceModel.EndpointAddress> конечной точки службы. По умолчанию <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> конечная точка проверяет действие входящего сообщения и сопоставляет любое сообщение с действием, которое соответствует одному из `IsInitiating` = `true` действий операций конечной точки контракта службы (рассматриваются только действия). В результате по умолчанию соответствие фильтру для конечной точки обеспечивается, только если в заголовках "To" обоих сообщений задан адрес <xref:System.ServiceModel.EndpointAddress> конечной точки и действие сообщения соответствует одному из действий операции конечной точки.  
   
  Эти фильтры можно изменить с помощью поведения. В этом образце служба создает интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior>, который заменяет фильтры <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> и <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> в диспетчере <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:  
   
@@ -63,7 +63,7 @@ else
     <behaviorExtensions>  
         <add name="filteringEndpointBehavior" type="Microsoft.ServiceModel.Samples.FilteringEndpointBehaviorExtension, service" />  
     </behaviorExtensions>  
-</extensions>      
+</extensions>
 ```  
   
  Затем служба создает конфигурации `endpointBehavior` для каждого варианта:  
@@ -84,9 +84,9 @@ else
 ```xml  
 <endpoint address=""  
         bindingConfiguration="ws"  
-        listenUri=""   
+        listenUri=""
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IHello"   
+        contract="Microsoft.ServiceModel.Samples.IHello"
         behaviorConfiguration="endpoint2" />  
 ```  
   
@@ -105,28 +105,28 @@ Hello
 ```xml  
 <endpoint address=""  
           bindingConfiguration="ws"  
-          listenUri=""   
+          listenUri=""
           binding="wsHttpBinding"  
-          contract="Microsoft.ServiceModel.Samples.IHello"   
+          contract="Microsoft.ServiceModel.Samples.IHello"
           behaviorConfiguration="endpoint1" />  
 ```  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Чтобы выполнить сборку решения, следуйте инструкциям в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Чтобы создать решение, следуйте инструкциям по [созданию образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. Чтобы запустить пример в конфигурации с одним компьютером, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Чтобы запустить образец в одномашинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
-3. Чтобы запустить пример в конфигурации с несколькими компьютерами, следуйте инструкциям в разделе [Запуск примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md) и измените следующую строку в Client.cs.  
+3. Чтобы запустить образец в конфигурации кросс-машины, следуйте инструкциям в [Запуске Windows Communication Foundation Образцы](../../../../docs/framework/wcf/samples/running-the-samples.md) и изменить следующую строку в Client.cs.  
   
     ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

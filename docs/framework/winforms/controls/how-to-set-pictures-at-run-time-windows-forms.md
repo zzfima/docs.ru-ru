@@ -13,25 +13,25 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: bd0509c05fd9c1cfc0c631fcd613c64d20296f6b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cd599ac7e07b5210f8bcff1ffbc76b3d9ee563d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746746"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182119"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Практическое руководство. Установка изображений во время выполнения (Windows Forms)
-Можно программно задать изображение, отображаемое Windows Forms элементом управления <xref:System.Windows.Forms.PictureBox>.  
+Можно программно установить изображение, отображаемые элементом управления формами <xref:System.Windows.Forms.PictureBox> Windows.  
   
-### <a name="to-set-a-picture-programmatically"></a>Установка рисунка программным способом  
+### <a name="to-set-a-picture-programmatically"></a>Установить картинку программно  
   
-- Задайте свойство <xref:System.Windows.Forms.PictureBox.Image%2A> с помощью метода <xref:System.Drawing.Image.FromFile%2A> класса <xref:System.Drawing.Image>.  
+- Установите <xref:System.Windows.Forms.PictureBox.Image%2A> свойство <xref:System.Drawing.Image.FromFile%2A> методом <xref:System.Drawing.Image> класса.  
   
-     В приведенном ниже примере путь, заданный для расположения изображения, является папкой "Мои документы". Это делается, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут включать этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма с уже добавленным элементом управления <xref:System.Windows.Forms.PictureBox>.  
+     В приведенном ниже примере путь, установленный для расположения изображения, представляет собой папку «Мои документы». Это делается, потому что можно предположить, что большинство компьютеров под управлением операционной системы Windows будет включать в себя этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. Приведенный ниже пример предполагает <xref:System.Windows.Forms.PictureBox> форму с уже добавленным элементом управления.  
   
     ```vb  
     Private Sub LoadNewPict()  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -42,7 +42,7 @@ ms.locfileid: "76746746"
   
     ```csharp  
     private void LoadNewPict(){  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        pictureBox1.Image = Image.FromFile  
@@ -56,7 +56,7 @@ ms.locfileid: "76746746"
     private:  
        void LoadNewPict()  
        {  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  
@@ -65,9 +65,9 @@ ms.locfileid: "76746746"
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a>Очистка графического изображения  
+### <a name="to-clear-a-graphic"></a>Чтобы очистить графический  
   
-- Сначала освободите память, используемую изображением, а затем очистите изображение. Если управление памятью становится проблемой, сборка мусора освободит память позже.  
+- Во-первых, отпустите память, используемую изображением, а затем очистите графику. Сбор мусора высвободит память позже, если управление памятью станет проблемой.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -77,7 +77,7 @@ ms.locfileid: "76746746"
     ```  
   
     ```csharp  
-    if (pictureBox1.Image != null)   
+    if (pictureBox1.Image != null)
     {  
        pictureBox1.Image.Dispose();  
        pictureBox1.Image = null;  
@@ -93,9 +93,9 @@ ms.locfileid: "76746746"
     ```  
   
     > [!NOTE]
-    > Дополнительные сведения о том, почему следует использовать метод <xref:System.Drawing.Image.Dispose%2A> таким образом, см. в разделе [Очистка неуправляемых ресурсов](../../../standard/garbage-collection/unmanaged.md).  
+    > Для получения дополнительной информации <xref:System.Drawing.Image.Dispose%2A> о том, почему вы должны использовать метод таким образом, см. [Очистка неуправляемых ресурсов.](../../../standard/garbage-collection/unmanaged.md)  
   
-     Этот код очистит изображение, даже если изображение было загружено в элемент управления во время разработки.  
+     Этот код очистит изображение, даже если графический был загружен в управление во время проектирования.  
   
 ## <a name="see-also"></a>См. также раздел
 

@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744572"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180478"
 ---
 # <a name="reflection-in-net"></a>Отражение в .NET
 
-Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType>позволяют получать сведения о загруженных [сборках](../../standard/assembly/index.md) и определенных в них типах, таких как [классы](../../standard/base-types/common-type-system.md#classes), [интерфейсы](../../standard/base-types/common-type-system.md#interfaces)и типы значений (т. е. [структуры](../../standard/base-types/common-type-system.md#structures) и [перечисления](../../standard/base-types/common-type-system.md#enumerations)). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.
+Классы в <xref:System.Reflection> пространстве имен, <xref:System.Type?displayProperty=nameWithType>вместе с, позволяют получить информацию о загруженных [сборках](../../standard/assembly/index.md) и типах, определенных в них, таких как [классы,](../../standard/base-types/common-type-system.md#classes)интерфейсы и [типы](../../standard/base-types/common-type-system.md#interfaces)значений (т.е. [структуры](../../standard/base-types/common-type-system.md#structures) и [перечисления).](../../standard/base-types/common-type-system.md#enumerations) Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.
   
 Загрузчик [среды CLR](../../standard/clr.md) управляет [доменами приложений](../app-domains/application-domains.md), которые образуют определенные границы вокруг объектов с одной и той же областью приложения. В частности, он загружает каждую сборку в соответствующий домен приложения и контролирует распределение памяти для иерархии типов в каждой сборке.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "76744572"
   
 Эти классы среды выполнения являются `internal` (`Friend` в Visual Basic). Они не документируются отдельно от своих базовых классов, так как их поведение описывается в документации базового класса.  
   
-<a name="related_topics"></a>   
+<a name="related_topics"></a>
 
 ## <a name="related-topics"></a>См. также  
   
-|Title|Description|  
+|Title|Описание|  
 |-----------|-----------------|  
 |[Просмотр сведений о типах](viewing-type-information.md)|Описывается класс <xref:System.Type> и приводятся примеры кода, иллюстрирующие использование <xref:System.Type> с несколькими классами отражения для получения информации о конструкторах, методах, полях, свойствах и событиях.|  
 |[Отражение и универсальные типы](reflection-and-generic-types.md)|Объясняется обработка отражением параметров и аргументов типа для универсальных типов и методов.|  

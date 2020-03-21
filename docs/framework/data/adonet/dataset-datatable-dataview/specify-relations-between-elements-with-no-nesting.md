@@ -2,21 +2,21 @@
 title: Указание отношений между элементами без вложенности
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bee427c6cdf76792773ea827c8772b276ff29c31
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040053"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150822"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Указание отношений между элементами без вложенности
-Если элементы не вложены, какие-либо неявные связи не создаются. Однако можно явно указать связи между элементами, которые не вложены с помощью аннотации **msdata: relationship** .  
+Если элементы не вложены, какие-либо неявные связи не создаются. Однако можно четко указать отношения между элементами, которые не вложены, используя аннотацию **msdata:Relationship.**  
   
- В следующем примере показана схема XML, в которой заметка **msdata: relationship** задается между элементами **Order** и **OrderDetail** , которые не являются вложенными. Аннотация **msdata: relationship** указывается как дочерний элемент элемента **Schema** .  
+ В следующем примере показана схема XML, в которой аннотация **msdata:Relationship** указана между элементами **Заказа** и **OrderDetail,** которые не вложены. Аннотация **msdata:Relationship** указана как элемент ребенка **элемента Schema.**  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
   <xs:complexType>  
@@ -44,28 +44,28 @@ ms.locfileid: "73040053"
    <xs:annotation>  
      <xs:appinfo>  
        <msdata:Relationship name="OrdOrderDetailRelation"  
-                            msdata:parent="Order"   
-                            msdata:child="OrderDetail"   
-                            msdata:parentkey="OrderNumber"   
+                            msdata:parent="Order"
+                            msdata:child="OrderDetail"
+                            msdata:parentkey="OrderNumber"
                             msdata:childkey="OrderNo"/>  
      </xs:appinfo>  
   </xs:annotation>  
 </xs:schema>  
 ```  
   
- В процессе сопоставления схем на языке определения схем XML (XSD) создается <xref:System.Data.DataSet> с таблицами **Order** и **OrderDetail** , а также связь, указанная между этими двумя таблицами, как показано ниже.  
+ Процесс определения схемы XML Schema (XSD) создает <xref:System.Data.DataSet> таблицы с **order** и **OrderDetail** и отношения, указанные между этими двумя таблицами, как показано ниже.  
   
 ```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
-ParentColumns: OrderNumber   
+ParentColumns: OrderNumber
 ChildTable: OrderDetail  
-ChildColumns: OrderNo   
+ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Создание отношений DataSet из схемы XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Создание отношений наборов данных из схемы XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Общие сведения об ADO.NET](../ado-net-overview.md)

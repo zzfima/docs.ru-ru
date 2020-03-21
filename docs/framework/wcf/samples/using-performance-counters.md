@@ -2,15 +2,15 @@
 title: Использование счетчиков производительности
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 6c125ecd0f6cef10b62e7e451eb37bba1ce89b65
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7ffd9f5de5efb4be22968958246839e804daf23d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094843"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143581"
 ---
 # <a name="using-performance-counters"></a>Использование счетчиков производительности
-В этом образце показано, как получить доступ к счетчикам производительности Windows Communication Foundation (WCF) и как создавать определяемые пользователем счетчики производительности. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+В этом примере показано, как получить доступ к счетчикам производительности Windows Communication Foundation (WCF) и как создавать счетчики производительности, определяемые пользователем. Этот пример основан на [получении начала](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -22,60 +22,60 @@ ms.locfileid: "77094843"
 ```xml  
 <configuration>  
   <system.serviceModel>  
-    <diagnostics performanceCounters="All" />   
+    <diagnostics performanceCounters="All" />
   </system.serviceModel>  
 </configuration>  
 ```  
   
- Эту задачу можно также выполнить с помощью [средства редактора конфигурации (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Эта задача также может быть выполнена с помощью [инструмента редактора конфигурации (SvcConfigEditor.exe).](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
   
- Если счетчики производительности включены, для службы включается весь набор счетчиков производительности WCF. Платформа .NET Framework автоматически поддерживает данные о производительности на трех уровнях: `ServiceModelService`, `ServiceModelEndpoint` и `ServiceModelOperation`. На каждом из этих уровней имеются счетчики производительности, например "Calls", "Calls per Second" и "Security Calls Not Authorized".  
+ При включении счетчиков производительности для службы включен весь набор счетчиков производительности WCF. Платформа .NET Framework автоматически поддерживает данные о производительности на трех уровнях: `ServiceModelService`, `ServiceModelEndpoint` и `ServiceModelOperation`. На каждом из этих уровней имеются счетчики производительности, например "Calls", "Calls per Second" и "Security Calls Not Authorized".  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-компьютерной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 ### <a name="to-view-performance-data"></a>Просмотр данных о производительности  
   
-1. Запустите средство "монитор производительности", нажав кнопку **Пуск**, **выполните...** , введите `perfmon` и нажмите кнопку **ОК,** а затем на панели управления выберите пункт **Администрирование** и дважды щелкните элемент **производительность**.  
+1. Запустите инструмент монитора производительности, нажав **кнопку Start,** **Run...** `perfmon` , введите и нажмите **OK,** или с панели управления, выберите **административные инструменты** и дважды нажмите **производительность.**  
   
     > [!NOTE]
     > Пока не начнется выполнение кода образца, добавить счетчики невозможно.  
   
 2. Удалите доступные счетчики производительности, выбирая их и нажимая клавишу DELETE.  
   
-3. Добавьте счетчики WCF, щелкнув правой кнопкой мыши панель графа и выбрав пункт **Добавить счетчики**. В диалоговом окне **Добавление счетчиков** выберите **Сервицемоделоператион 3.0.0.0, Сервицемоделендпоинт 3.0.0.0 или сервицемоделсервице 3.0.0.0** в раскрывающемся списке Объект производительности. Выберите в списке нужные счетчики.  
+3. Добавьте счетчики WCF, нажав на панель графика и выбрав **Счетчики добавления.** В диалоговом окне **Add Counters** выберите **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 или ServiceModelService 3.0.0.0** в поле списка объектов производительности. Выберите в списке нужные счетчики.  
   
     > [!NOTE]
-    > Нет счетчиков производительности WCF для службы, если на компьютере не выполняются службы WCF.  
+    > Нет счетчиков производительности WCF для службы, если на компьютере нет служб WCF.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Включение счетчиков с помощью редактора конфигураций  
   
 1. Откройте экземпляр программы SvcConfigEditor.exe.  
   
-2. В меню Файл выберите команду **Открыть** , а затем щелкните **файл конфигурации.** ...  
+2. В меню файла нажмите **Открыть,** а затем нажмите **Config файл ...**.  
   
 3. Перейдите в папку службы примера приложения и откройте файл Web.config.  
   
-4. Щелкните **Диагностика** в дереве конфигурации.  
+4. Нажмите **Диагностика** на дереве конфигурации.  
   
-5. Чтобы отобразить "все", переключите **Счетчик производительности** в окне " **Диагностика** ".  
+5. Переключить **счетчик производительности** в окне **диагностики,** чтобы показать "Все".  
   
 6. Сохраните файл конфигурации и закройте редактор.  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>См. также раздел
 
-- [Примеры мониторинга AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [Образцы наблюдения за AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

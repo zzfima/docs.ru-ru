@@ -5,41 +5,41 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d954f68747be9eedc0ef71634e0c18b411d260
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942079"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112054"
 ---
 # <a name="how-to-scale-an-element"></a>Практическое руководство. Масштабирование элемента
-В этом примере показано, как использовать <xref:System.Windows.Media.ScaleTransform> для масштабирования элемента.  
+В этом примере <xref:System.Windows.Media.ScaleTransform> показано, как использовать элемент для масштабирования.  
   
- Используйте <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> свойства для изменения размеров элемента с определенным коэффициентом. Например <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> значение 1,5 увеличивает элемент на 150 процентов от его исходной ширины. Объект <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> значение 0,5 уменьшает элемент на 50 процентов.  
+ Используйте <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> и свойства для изобрагивания элемента по указанному фактору. Например, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> значение 1,5 растягивает элемент до 150 процентов от его первоначальной ширины. Значение <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 0,5 сжимает высоту элемента на 50 процентов.  
   
- Используйте <xref:System.Windows.Media.ScaleTransform.CenterX%2A> и <xref:System.Windows.Media.ScaleTransform.CenterY%2A> свойства для указания точки, которая будет центром операции масштабирования. По умолчанию <xref:System.Windows.Media.ScaleTransform> центрируется в точке (0,0), который соответствует верхнего левого угла прямоугольника. Это приводит к перемещению элемента, а также делает его размер больше, поскольку при применении <xref:System.Windows.Media.Transform>, измените пространство координат, в которой находится объект.  
+ Используйте <xref:System.Windows.Media.ScaleTransform.CenterX%2A> <xref:System.Windows.Media.ScaleTransform.CenterY%2A> и свойства, чтобы указать точку, которая является центром операции масштаба. По умолчанию <xref:System.Windows.Media.ScaleTransform> a центрируется в точке (0,0), что соответствует верхнему левому углу прямоугольника. Это приводит к перемещению элемента, а также к тому, чтобы он казался больше, потому что при <xref:System.Windows.Media.Transform>применении, вы изменяете пространство координат, в котором находится объект.  
   
- В следующем примере используется <xref:System.Windows.Media.ScaleTransform> размера 50 на 50 <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Media.ScaleTransform> Имеет значение 0 (по умолчанию) для <xref:System.Windows.Media.ScaleTransform.CenterX%2A> и <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.  
+ В следующем примере используется удвоение <xref:System.Windows.Media.ScaleTransform> размера 50 <xref:System.Windows.Shapes.Rectangle>на 50 . Имеет <xref:System.Windows.Media.ScaleTransform> значение 0 (по умолчанию) <xref:System.Windows.Media.ScaleTransform.CenterX%2A> <xref:System.Windows.Media.ScaleTransform.CenterY%2A>для обоих и .  
   
 ## <a name="example"></a>Пример  
  [!code-xaml[transformsSample#21](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
- Обычно задается <xref:System.Windows.Media.ScaleTransform.CenterX%2A> и <xref:System.Windows.Media.ScaleTransform.CenterY%2A> относительно центральной части масштабируемого объекта: (<xref:System.Windows.FrameworkElement.Width%2A>/2,  <xref:System.Windows.FrameworkElement.Height%2A> /2).  
+ Как правило, <xref:System.Windows.Media.ScaleTransform.CenterX%2A> <xref:System.Windows.Media.ScaleTransform.CenterY%2A> вы устанавливаете и к центру<xref:System.Windows.FrameworkElement.Width%2A>объекта, <xref:System.Windows.FrameworkElement.Height%2A>который масштабируется: ( /2, /2).  
   
- В следующем примере показан другой <xref:System.Windows.Shapes.Rectangle> который удваивается в размере; Однако это <xref:System.Windows.Media.ScaleTransform> имеет значение 25 для <xref:System.Windows.Media.ScaleTransform.CenterX%2A> и <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, что соответствует центру прямоугольника.  
+ Следующий пример <xref:System.Windows.Shapes.Rectangle> показывает другой, который удваивается в размерах; однако, <xref:System.Windows.Media.ScaleTransform> это имеет значение 25 для обоих <xref:System.Windows.Media.ScaleTransform.CenterX%2A> и, <xref:System.Windows.Media.ScaleTransform.CenterY%2A>которое соответствует к центру прямоугольника.  
   
  [!code-xaml[transformsSample#22](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
   
- Ниже показано различие между двумя <xref:System.Windows.Media.ScaleTransform> операций. Пунктирная линия показывает размер и положение прямоугольника до масштабирования.  
+ Следующая иллюстрация показывает разницу между двумя <xref:System.Windows.Media.ScaleTransform> операциями. Пунктирная линия показывает размер и положение прямоугольника до масштабирования.  
   
- ![двукратное масштабирование с разными центральными точками](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
+ ![Двукратное масштабирование с разными центральными точками](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
 Две операции ScaleTransform с одинаковыми значениями свойств ScaleX и ScaleY, но с разными центрами  
   
- Полный пример см. в разделе [Примеры двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Для полного образца [см.](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Общие сведения о классах Transform](transforms-overview.md)
-- [Разделы практического руководства](transformations-how-to-topics.md)
+- [Как-к темам](transformations-how-to-topics.md)

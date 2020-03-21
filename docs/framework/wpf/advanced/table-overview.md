@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: fa7106207c69f19b647ba80ab7e724e9aad174c1
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 4bd747cea43755116c56b16f1de9a6ffb59935ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005075"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187272"
 ---
 # <a name="table-overview"></a>Общие сведения о таблицах
-<xref:System.Windows.Documents.Table> — это элемент уровня блока, поддерживающий представление содержимого нефиксированного документа на основе сетки. Гибкость этого элемента делает его очень полезным, но также и более сложным для понимания и правильного использования.  
+<xref:System.Windows.Documents.Table>— это элемент уровня блока, поддерживающий презентацию содержимого документа Flow на основе сетки. Гибкость этого элемента делает его очень полезным, но также и более сложным для понимания и правильного использования.  
   
- В этом разделе содержатся следующие подразделы:  
+ Эта тема описана в следующих разделах.  
   
 - [Основные сведения о таблицах](#table_basics)  
   
@@ -35,20 +35,20 @@ ms.locfileid: "72005075"
   
 - [Объединение строк или столбцов](#spanning_rows_or_columns)  
   
-- [Создание таблицы с помощью кода](#building_a_table_with_code)  
+- [Построение таблицы с помощью кода](#building_a_table_with_code)  
   
-- [Связанные разделы] 
+- [Связанные разделы]
   
-<a name="table_basics"></a>   
-## <a name="table-basics"></a>Основы таблиц  
+<a name="table_basics"></a>
+## <a name="table-basics"></a>Основные сведения о таблицах  
   
-<a name="table_vs_Grid"></a>   
+<a name="table_vs_Grid"></a>
 ### <a name="how-is-table-different-then-grid"></a>Отличие таблицы от сетки  
- <xref:System.Windows.Documents.Table> и <xref:System.Windows.Controls.Grid> обладают некоторыми общими функциями, но они лучше всего подходят для различных сценариев. <xref:System.Windows.Documents.Table> предназначен для использования в содержимом нефиксированного формата (Дополнительные сведения о содержимом нефиксированного формата см. в разделе [Общие сведения о документе](flow-document-overview.md) ). Сетки лучше всего использовать внутри форм (по сути в любом месте вне потокового содержимого). В <xref:System.Windows.Documents.FlowDocument><xref:System.Windows.Documents.Table> поддерживает поведение нефиксированного содержимого, например разбивку на страницы, перекомпоновку столбцов и выбор содержимого, когда в <xref:System.Windows.Controls.Grid> нет. <xref:System.Windows.Controls.Grid> с другой стороны лучше использовать за пределами <xref:System.Windows.Documents.FlowDocument> по многим причинам, включая <xref:System.Windows.Controls.Grid> добавляет элементы на основе индекса строки и столбца, <xref:System.Windows.Documents.Table> — нет. Элемент <xref:System.Windows.Controls.Grid> позволяет разложить разслойировать дочернее содержимое, разрешив существование в одной "ячейке" более одного элемента. <xref:System.Windows.Documents.Table> не поддерживает многоуровневые слои. Дочерние элементы <xref:System.Windows.Controls.Grid> могут быть абсолютно расположены относительно области их границ "ячейка". <xref:System.Windows.Documents.Table> не поддерживает эту функцию. Наконец, <xref:System.Windows.Controls.Grid> требует меньше ресурсов, а <xref:System.Windows.Documents.Table> поэтому рекомендуется использовать <xref:System.Windows.Controls.Grid> для повышения производительности.  
+ <xref:System.Windows.Documents.Table>и <xref:System.Windows.Controls.Grid> имеют некоторые общие функциональные возможности, но каждый из них лучше всего подходит для различных сценариев. A <xref:System.Windows.Documents.Table> предназначен для использования в содержимом потока (см. [Обзор документов потока](flow-document-overview.md) для получения дополнительной информации о содержимом потока). Сетки лучше всего использовать внутри форм (по сути, в любом месте вне потокового содержимого). <xref:System.Windows.Documents.FlowDocument>В рамках, <xref:System.Windows.Documents.Table> поддерживает поведение содержимого потока, как pagination, колонка reflow, и выбор содержимого в то время как <xref:System.Windows.Controls.Grid> нет. A <xref:System.Windows.Controls.Grid> с другой стороны, лучше <xref:System.Windows.Documents.FlowDocument> всего использовать <xref:System.Windows.Controls.Grid> за пределами по многим <xref:System.Windows.Documents.Table> причинам, включая добавленные элементы, основанные на строке и индексе столбца, не делает. Элемент <xref:System.Windows.Controls.Grid> позволяет наслоение содержимого ребенка, позволяя более чем одному элементу существовать в одной "клетке". <xref:System.Windows.Documents.Table>не поддерживает наслоение. Детские элементы а <xref:System.Windows.Controls.Grid> могут быть абсолютно расположены относительно области их "клеточных" границ. <xref:System.Windows.Documents.Table>не поддерживает эту функцию. Наконец, <xref:System.Windows.Controls.Grid> требуется меньше <xref:System.Windows.Documents.Table> ресурсов, <xref:System.Windows.Controls.Grid> то так рассмотреть возможность использования для повышения производительности.  
   
-<a name="basic_table_structure"></a>   
+<a name="basic_table_structure"></a>
 ### <a name="basic-table-structure"></a>Основная структура таблицы  
- <xref:System.Windows.Documents.Table> предоставляет представление на основе сетки, состоящее из столбцов (представленных <xref:System.Windows.Documents.TableColumn> элементами) и строк (представленных элементами <xref:System.Windows.Documents.TableRow>). элементы <xref:System.Windows.Documents.TableColumn> не размещают содержимое; они просто определяют столбцы и характеристики столбцов. <xref:System.Windows.Documents.TableRow> элементы должны размещаться в элементе <xref:System.Windows.Documents.TableRowGroup>, который определяет группирование строк для таблицы. <xref:System.Windows.Documents.TableCell> элементы, которые содержат реальное содержимое, которое должно быть представлено таблицей, должны размещаться в элементе <xref:System.Windows.Documents.TableRow>. <xref:System.Windows.Documents.TableCell> могут содержать только элементы, производные от <xref:System.Windows.Documents.Block>.  Допустимые дочерние элементы для <xref:System.Windows.Documents.TableCell> включают.  
+ <xref:System.Windows.Documents.Table>обеспечивает представление на основе сетки, состоящее <xref:System.Windows.Documents.TableColumn> из столбцов (представленных <xref:System.Windows.Documents.TableRow> элементами) и строк (представленных элементами). <xref:System.Windows.Documents.TableColumn>элементы не размещают контент; они просто определяют столбцы и характеристики столбцов. <xref:System.Windows.Documents.TableRow>элементы должны размещаться в элементе, <xref:System.Windows.Documents.TableRowGroup> который определяет группировку строк для таблицы. <xref:System.Windows.Documents.TableCell>элементы, содержащие фактическое содержание, представленное таблицей, <xref:System.Windows.Documents.TableRow> должны быть размещены в элементе. <xref:System.Windows.Documents.TableCell>может содержать только элементы, которые вытекают из <xref:System.Windows.Documents.Block>.  Действительные элементы <xref:System.Windows.Documents.TableCell> ребенка для включения.  
   
 - <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -61,22 +61,22 @@ ms.locfileid: "72005075"
 - <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
-> элементы <xref:System.Windows.Documents.TableCell> могут не размещать текстовое содержимое напрямую. Дополнительные сведения о правилах включения для элементов содержимого нефиксированного формата, таких как <xref:System.Windows.Documents.TableCell>, см. в разделе [Общие сведения о потоковых документах](flow-document-overview.md).  
+> <xref:System.Windows.Documents.TableCell>элементы не могут напрямую размещать текстовое содержимое. Для получения дополнительной информации о правилах <xref:System.Windows.Documents.TableCell>сдерживания для элементов содержания потока, таких как, [см.](flow-document-overview.md)  
   
 > [!NOTE]
-> <xref:System.Windows.Documents.Table> похож на элемент <xref:System.Windows.Controls.Grid>, но имеет больше возможностей и, следовательно, требует большего объема ресурсов.  
+> <xref:System.Windows.Documents.Table>похож на <xref:System.Windows.Controls.Grid> элемент, но имеет больше возможностей и, следовательно, требует больших накладных расходов ресурсов.  
   
- В следующем примере определяется простая таблица 2 x 3 с XAML.  
+ Следующий пример определяет простую таблицу 2 x 3 с XAML.  
   
  [!code-xaml[TableSnippets2#_Table_BasicLayout](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
   
- На следующем рисунке показана отрисовка этого примера.  
+ На следующем рисунке показано, как этот пример отрисовывается.  
   
- ![Снимок экрана, показывающий, как отображается базовая таблица.](./media/table-overview/basic-table-render-example.png)  
+ ![Скриншот, который показывает, как отображается базовая таблица.](./media/table-overview/basic-table-render-example.png)  
   
-<a name="table_containment"></a>   
+<a name="table_containment"></a>
 ### <a name="table-containment"></a>Вложения таблицы  
- <xref:System.Windows.Documents.Table> является производным от элемента <xref:System.Windows.Documents.Block> и соответствует общим правилам для элементов <xref:System.Windows.Documents.Block> уровня.  Элемент <xref:System.Windows.Documents.Table> может содержаться в одном из следующих элементов:  
+ <xref:System.Windows.Documents.Table>вытекает из <xref:System.Windows.Documents.Block> элемента и придерживается общих правил для <xref:System.Windows.Documents.Block> элементов уровня.  Элемент <xref:System.Windows.Documents.Table> может содержаться любым из следующих элементов:  
   
 - <xref:System.Windows.Documents.FlowDocument>  
   
@@ -92,19 +92,19 @@ ms.locfileid: "72005075"
   
 - <xref:System.Windows.Documents.Figure>  
   
-<a name="row_groupings"></a>   
+<a name="row_groupings"></a>
 ### <a name="row-groupings"></a>Группирование строк  
- Элемент <xref:System.Windows.Documents.TableRowGroup> предоставляет возможность произвольного группирования строк в таблице; Каждая строка в таблице должна принадлежать к группированию строк.  Строки в группе часто имеют общее назначение и могут быть стилизованы в виде группы.  Обычно группирование строк используется для отделения строк специального назначения, например строк названия, заголовка и нижнего колонтитула, от основного содержимого, находящегося в таблице.  
+ Элемент <xref:System.Windows.Documents.TableRowGroup> обеспечивает способ произвольного группового ряда в таблице; каждая строка в таблице должна принадлежать группе строки.  Строки в группе часто имеют общее назначение и могут быть стилизованы в виде группы.  Обычно группирование строк используется для отделения строк специального назначения, например строк названия, заголовка и нижнего колонтитула, от основного содержимого, находящегося в таблице.  
   
- В следующем примере XAML используется для определения таблицы со строками верхнего и нижнего колонтитулов.  
+ В следующем примере используется XAML для определения таблицы со стилизованными строками заголовка и колонтитула.  
   
  [!code-xaml[TableSnippets2#_Table_RowGroups](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
   
- На следующем рисунке показана отрисовка этого примера.  
+ На следующем рисунке показано, как этот пример отрисовывается.  
   
  ![Снимок экрана: группы строк таблицы](./media/table-rowgroups.png "Table_RowGroups")  
   
-<a name="rendering_precedence"></a>   
+<a name="rendering_precedence"></a>
 ### <a name="background-rendering-precedence"></a>Приоритет отрисовки фона  
  Элементы таблицы отрисовываются в следующем порядке (z-порядок от нижнего к верхнему). Этот порядок нельзя изменить. Например, для этих элементов не существует свойства "Z-порядок", которое можно использовать для переопределения этого установленного порядка.  
   
@@ -124,33 +124,33 @@ ms.locfileid: "72005075"
   
  На следующем рисунке показана отрисовка этого примера (показаны только фоновые цвета).  
   
- ![Снимок экрана: Z-порядок таблицы](./media/table-zorder.png "Table_ZOrder")  
+ ![Скриншот: Таблица z&#45;заказ](./media/table-zorder.png "Table_ZOrder")  
   
-<a name="spanning_rows_or_columns"></a>   
+<a name="spanning_rows_or_columns"></a>
 ### <a name="spanning-rows-or-columns"></a>Объединение строк или столбцов  
- Ячейки таблицы могут быть настроены на охват нескольких строк или столбцов с помощью <xref:System.Windows.Documents.TableCell.RowSpan%2A> или <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> атрибутов соответственно.  
+ Ячейки таблицы могут быть настроены для охвата <xref:System.Windows.Documents.TableCell.RowSpan%2A> <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> нескольких строк или столбцов с помощью или атрибутов, соответственно.  
   
  Рассмотрим следующий пример, в котором ячейка включает три столбца.  
   
  [!code-xaml[TableSnippets2#_Table_ColumnSpan](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
   
- На следующем рисунке показана отрисовка этого примера.  
+ На следующем рисунке показано, как этот пример отрисовывается.  
   
- ![Снимок экрана: ячейка, охватывающая три столбца](./media/table-columnspan.png "Table_ColumnSpan")  
+ ![Снимок экрана: интервал ячеек в трех столбцах](./media/table-columnspan.png "Table_ColumnSpan")  
   
-<a name="building_a_table_with_code"></a>   
+<a name="building_a_table_with_code"></a>
 ## <a name="building-a-table-with-code"></a>Построение таблицы с помощью кода  
- В следующих примерах показано, как программным способом создать <xref:System.Windows.Documents.Table> и заполнить его содержимым. Содержимое таблицы делится на пять строк (представленные <xref:System.Windows.Documents.TableRow> объектами, содержащимися в <xref:System.Windows.Documents.Table.RowGroups%2A> объекте) и шесть столбцов (представленных <xref:System.Windows.Documents.TableColumn>ными объектами). Строки используются для различных целей представления, включая строку названия, предназначенную для заголовка всей таблицы, строку заголовка для описания столбцов данных в таблице, и строку нижнего колонтитула для сводных данных.  Обратите внимание, что понятия "название", "заголовок" и "нижний колонтитул" строк, не встроены в таблицу. Это просто строки с разными характеристиками. Ячейки таблицы содержат фактическое содержимое, которое может состоять из текста, изображений или практически любого другого элемента [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Следующие примеры показывают, как <xref:System.Windows.Documents.Table> программно создать и заселить его с содержанием. Содержимое таблицы распределяется по пяти рядам (представленным <xref:System.Windows.Documents.TableRow> объектами, содержащимися в <xref:System.Windows.Documents.Table.RowGroups%2A> объекте) и шести столбцов (представленных <xref:System.Windows.Documents.TableColumn> объектами). Строки используются для различных целей представления, включая строку названия, предназначенную для заголовка всей таблицы, строку заголовка для описания столбцов данных в таблице и строку нижнего колонтитула для сводной информации.  Обратите внимание, что строки "title", "header" и "footer" не встроены в таблицу. Это просто строки с разными характеристиками. Ячейки таблиц содержат фактическое содержимое, которое может состоять [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] из текста, изображений или почти любого другого элемента.  
   
- Сначала создается <xref:System.Windows.Documents.FlowDocument> для размещения <xref:System.Windows.Documents.Table>, а также создается новая <xref:System.Windows.Documents.Table> и добавляется к содержимому <xref:System.Windows.Documents.FlowDocument>.  
+ Во-первых, <xref:System.Windows.Documents.FlowDocument> создается <xref:System.Windows.Documents.Table>для размещения, <xref:System.Windows.Documents.Table> и новый создается <xref:System.Windows.Documents.FlowDocument>и добавляется к содержимому .  
   
  [!code-csharp[TableSnippets#_TableCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
- Затем создаются шесть <xref:System.Windows.Documents.TableColumn>ных объектов и добавляются в коллекцию <xref:System.Windows.Documents.Table.Columns%2A> таблицы с применением определенного форматирования.  
+ Далее <xref:System.Windows.Documents.TableColumn> создаются и добавляются шесть <xref:System.Windows.Documents.Table.Columns%2A> объектов в коллекцию таблицы, при этом применяется некоторая форманформа.  
   
 > [!NOTE]
-> Обратите внимание, что коллекция <xref:System.Windows.Documents.Table.Columns%2A> таблицы использует нулевое индексирование, начинающееся с нуля.  
+> Обратите внимание, что <xref:System.Windows.Documents.Table.Columns%2A> в коллекции таблицы используется стандартная индексация на нулевой основе.  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
@@ -175,7 +175,7 @@ ms.locfileid: "72005075"
  [!code-csharp[TableSnippets#_TableAddFooterRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Общие сведения о документах нефиксированного формата](flow-document-overview.md)
 - [Определение таблицы с помощью XAML](how-to-define-a-table-with-xaml.md)

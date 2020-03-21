@@ -2,26 +2,26 @@
 title: Образец конфигурации
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: eb02b5d01b3f95ef741aa689cc66616fd598577b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5ac72db1fce0862381cd614499b5db4b9d95b2d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741958"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183906"
 ---
 # <a name="configuration-sample"></a>Образец конфигурации
 Этот образец демонстрирует, как при помощи файла конфигурации можно сделать службу доступной для обнаружения.  
   
 > [!NOTE]
-> Данный образец реализует возможность обнаружения в конфигурации. Пример, в котором реализовано обнаружение в коде, см. в разделе [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).  
+> Данный образец реализует возможность обнаружения в конфигурации. Для примера, который реализует открытие в коде, [см.](../../../../docs/framework/wcf/samples/basic-sample.md)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>Конфигурация службы  
@@ -47,8 +47,8 @@ ms.locfileid: "76741958"
                     binding="wsHttpBinding"  
                     contract="Microsoft.Samples.Discovery.ICalculatorService"  
                     behaviorConfiguration="endpointBehaviorConfiguration" />  
-          <endpoint name="udpDiscovery"   
-                    kind="udpDiscoveryEndpoint"   
+          <endpoint name="udpDiscovery"
+                    kind="udpDiscoveryEndpoint"
                 endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
 ```  
@@ -81,18 +81,18 @@ ms.locfileid: "76741958"
               </scopes>  
             </endpointDiscovery>  
   
-          </behavior>            
+          </behavior>
         </endpointBehaviors>  
 ```  
   
- Дополнительные сведения об областях см. в разделе [Обнаружение Find и FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
+ Для получения дополнительной информации о области, см [Discovery Найти и найтиCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
   
  Можно также управлять определенными сведениями о конечной точке обнаружения. Это выполняется с помощью объекта <xref:System.ServiceModel.Configuration.StandardEndpointsSection>. В данном образце изменяется версия используемого протокола, а также добавляется атрибут `maxResponseDelay`, как показано в следующем примере кода.  
   
 ```xml  
 <standardEndpoints>  
    <udpDiscoveryEndpoint>  
-      <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
+      <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />
    </udpDiscoveryEndpoint>  
 </standardEndpoints>  
 ```  
@@ -110,7 +110,7 @@ ms.locfileid: "76741958"
                     binding="wsHttpBinding"  
                     contract="Microsoft.Samples.Discovery.ICalculatorService"  
                     behaviorConfiguration="endpointBehaviorConfiguration" />  
-         <!-- Define the discovery endpoint -->            
+         <!-- Define the discovery endpoint -->
 <endpoint name="udpDiscovery" kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
   
@@ -138,7 +138,7 @@ ms.locfileid: "76741958"
               </scopes>  
             </endpointDiscovery>  
   
-          </behavior>            
+          </behavior>
         </endpointBehaviors>  
   
       </behaviors>  
@@ -146,7 +146,7 @@ ms.locfileid: "76741958"
       <standardEndpoints>  
         <udpDiscoveryEndpoint>  
          <!-- Configure the UDP discovery endpoint -->  
-          <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
+          <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />
         </udpDiscoveryEndpoint>  
       </standardEndpoints>  
   
@@ -193,14 +193,14 @@ ms.locfileid: "76741958"
  Данный образец расширяет эту возможность и изменяет используемый клиентом объект <xref:System.ServiceModel.Discovery.FindCriteria>, а также некоторые свойства стандартной конечной точки `updDiscoveryEndpoint`, применяемой для обнаружения. Измененный объект <xref:System.ServiceModel.Discovery.FindCriteria> использует область и указанный алгоритм `scopeMatchBy`, а также пользовательские критерии завершения. Кроме того, образец также показывает, как клиент может отправлять XML-элементы с помощью сообщений `Probe`. Наконец, вносятся некоторые изменения в конечную точку <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. В частности, меняется версия используемого протокола и параметры UDP, как показано в приведенном далее файле конфигурации.  
   
 ```xml  
-<udpDiscoveryEndpoint>    
-        <!-- Specify the discovery protocol version and UDP transport settings. -->   
+<udpDiscoveryEndpoint>
+        <!-- Specify the discovery protocol version and UDP transport settings. -->
         <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11">  
           <transportSettings duplicateMessageHistoryLength="2048"  
                              maxPendingMessageCount="5"  
                              maxReceivedMessageSize="8192"  
                              maxBufferPoolSize="262144"/>  
-        </standardEndpoint>        
+        </standardEndpoint>
       </udpDiscoveryEndpoint>  
 ```  
   
@@ -222,7 +222,7 @@ ms.locfileid: "76741958"
   
     <standardEndpoints>  
   
-      <dynamicEndpoint>        
+      <dynamicEndpoint>
         <standardEndpoint name="dynamicEndpointConfiguration">  
           <discoveryClientSettings>  
             <!-- Controls where the discovery happens. In this case, Probe message is sent over UdpDiscoveryEndpoint. -->  
@@ -239,17 +239,17 @@ ms.locfileid: "76741958"
               </extensions>  
             </findCriteria>  
           </discoveryClientSettings>  
-        </standardEndpoint>     
+        </standardEndpoint>
       </dynamicEndpoint>  
   
-      <udpDiscoveryEndpoint>    
-        <!-- Specify the discovery protocol version and UDP transport settings. -->   
+      <udpDiscoveryEndpoint>
+        <!-- Specify the discovery protocol version and UDP transport settings. -->
         <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11">  
           <transportSettings duplicateMessageHistoryLength="2048"  
                              maxPendingMessageCount="5"  
                              maxReceivedMessageSize="8192"  
                              maxBufferPoolSize="262144"/>  
-        </standardEndpoint>        
+        </standardEndpoint>
       </udpDiscoveryEndpoint>  
   
     </standardEndpoints>  
@@ -259,7 +259,7 @@ ms.locfileid: "76741958"
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  
   
-1. В этом образце используются конечные точки HTTP, и для работы этого образца необходимо добавить соответствующие списки управления доступом по URL-адресу. Дополнительные сведения см. в разделе [Настройка HTTP и HTTPS](../feature-details/configuring-http-and-https.md). Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями. Если команда не работает, следует указать домен и имя пользователя в следующих аргументах. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. В этом образце используются конечные точки HTTP, и для работы этого образца необходимо добавить соответствующие списки управления доступом по URL-адресу. Для получения дополнительной информации смотрите [Настройка HTTP и HTTPS](../feature-details/configuring-http-and-https.md). Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями. Если команда не работает, следует указать домен и имя пользователя в следующих аргументах. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. Создайте решение.  
   

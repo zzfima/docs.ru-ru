@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 4a84b32664c16dad48dd415e430134c5fb98303a
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 7eb640576bc00bc767ba16f8dc4a5d5952a479c6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211931"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184729"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Незащищенные интернет-клиент и служба
-На следующем рисунке показан пример общедоступного, незащищенного Windows Communication Foundation (WCF) клиента и службы.  
+На следующей иллюстрации показан пример публичного, незащищенного клиента и сервиса Windows Communication Foundation (WCF):  
   
- ![Снимок экрана, на котором показан незащищенный Интернет](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
+ ![Скриншот, на который показан незащищенный интернет-сценарий](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Режим безопасности|Нет|  
-|Transport|HTTP|  
-|Привязка|<xref:System.ServiceModel.BasicHttpBinding> в коде или элемент [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) в конфигурации.|  
-|Взаимодействие|С существующими службами и клиентами веб-служб|  
-|Проверка подлинности|Нет|  
-|Целостность|Нет|  
-|Конфиденциальность|Нет|  
+|Режим безопасности|None|  
+|Транспортировка|HTTP|  
+|Привязка|<xref:System.ServiceModel.BasicHttpBinding>в коде, [ \<или basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элементом в конфигурации.|  
+|Совместимость|С существующими службами и клиентами веб-служб|  
+|Аутентификация|None|  
+|Целостность|None|  
+|Конфиденциальность|None|  
   
-## <a name="service"></a>Service  
+## <a name="service"></a>Служба  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономную службу, используя код без конфигурации.  
@@ -40,7 +40,7 @@ ms.locfileid: "76211931"
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
   
-### <a name="service-configuration"></a>Настройка службы  
+### <a name="service-configuration"></a>Конфигурация службы  
  В следующем коде настраивается та же конечная точка с использованием конфигурации.  
   
 ```xml  
@@ -50,9 +50,9 @@ ms.locfileid: "76211931"
     <behaviors />  
     <services>  
       <service behaviorConfiguration="" name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
+        <endpoint address="http://localhost/Calculator"
                   binding="basicHttpBinding"  
-                  bindingConfiguration="Basic_Unsecured"   
+                  bindingConfiguration="Basic_Unsecured"
                   name="BasicHttp_ICalculator"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -67,18 +67,18 @@ ms.locfileid: "76211931"
 </configuration>  
 ```  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>клиент  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономный клиент, используя код (и код клиента).  
   
-- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
+- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Пример:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Код  
- В следующем коде показан базовый клиент WCF, обращающийся к незащищенной конечной точке.  
+ Следующий код показывает основного клиента WCF, который получает доступ к незащищенной конечной точке.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
@@ -100,17 +100,17 @@ ms.locfileid: "76211931"
     </bindings>  
     <client>  
       <endpoint address="http://localhost/Calculator/Unsecured"  
-          binding="basicHttpBinding"   
+          binding="basicHttpBinding"
           bindingConfiguration="BasicHttpBinding_ICalculator"  
-          contract="ICalculator"   
+          contract="ICalculator"
           name="BasicHttpBinding_ICalculator" />  
     </client>  
   </system.serviceModel>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Обзор безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

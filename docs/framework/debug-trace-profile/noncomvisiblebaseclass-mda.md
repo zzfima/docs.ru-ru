@@ -9,12 +9,12 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-ms.openlocfilehash: b46d5c6ffbf12efbae113a95bbfccd5742ec9ec9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 4c16432df201d19b65c91206ec529d07605e979a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217302"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181786"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
 Помощник по отладке управляемого кода (MDA) `nonComVisibleBaseClass` активируется при вызове `QueryInterface` машинным или управляемым кодом в вызываемой оболочке COM (CSW) видимого для COM управляемого класса, производного от базового класса, невидимого для COM.  Вызов `QueryInterface` приводит к активации MDA только в тех случаях, когда вызов запрашивает интерфейс класса или `IDispatch` по умолчанию управляемого класса, видимого для COM.  MDA не активируется, когда `QueryInterface` предназначен для явного интерфейса, который имеет примененный атрибут <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> и явно реализован классом, видимым для COM.  
@@ -31,15 +31,15 @@ ms.locfileid: "77217302"
 ## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
  Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.  
   
-## <a name="output"></a>Вывод  
+## <a name="output"></a>Выходные данные  
  Далее приводится пример сообщения для вызова `QueryInterface` в видимом для COM классе `Derived`, производном от невидимого для COM класса `Base`.  
   
 ```output
-A QueryInterface call was made requesting the class interface of COM   
-visible managed class 'Derived'. However since this class derives from   
-non COM visible class 'Base', the QueryInterface call will fail. This   
-is done to prevent the non COM visible base class from being   
-constrained by the COM versioning rules.   
+A QueryInterface call was made requesting the class interface of COM
+visible managed class 'Derived'. However since this class derives from
+non COM visible class 'Base', the QueryInterface call will fail. This
+is done to prevent the non COM visible base class from being
+constrained by the COM versioning rules.
 ```  
   
 ## <a name="configuration"></a>Конфигурация  
@@ -52,7 +52,7 @@ constrained by the COM versioning rules.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

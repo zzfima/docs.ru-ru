@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: 14a9694708b36b23ecef453d530ad3b939a046ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d748d9f8bdd0b4d831880548d4aceb1c77a0b0c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130120"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180504"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Практическое руководство. Подключение делегата с помощью отражения
 При использовании отражения для загрузки и запуска сборок невозможно использовать функциональные возможности языка, такие как оператор C# `+=` или [оператор AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) в Visual Basic. В следующих процедурах показано, как подключить существующий метод к событию посредством получения всех необходимых типов через отражение и как создать динамический метод с помощью порожденного отражения и подключить этот метод к событию.  
@@ -67,7 +67,7 @@ ms.locfileid: "73130120"
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
-<a name="procedureSection1"></a>   
+<a name="procedureSection1"></a>
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>Создание обработчика событий во время выполнения с помощью динамического метода  
   
 1. Методы обработчика события могут быть созданы во время выполнения с помощью облегченных динамических методов и порождения отражения. Чтобы создать обработчик событий, будут необходимы тип возвращаемого значения и типы параметров делегата. Их можно получить, просмотрев метод `Invoke`, относящийся к делегату. В следующем примере кода используются методы `GetDelegateReturnType` и `GetDelegateParameterTypes` для получения этих сведений. Код для этих методов можно найти в подразделе "Пример" этого раздела.  
@@ -103,7 +103,7 @@ ms.locfileid: "73130120"
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>

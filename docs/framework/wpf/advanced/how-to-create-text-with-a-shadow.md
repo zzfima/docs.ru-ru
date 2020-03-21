@@ -6,33 +6,33 @@ helpviewer_keywords:
 - shadow effects in text [WPF]
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-ms.openlocfilehash: 0fe64e4e9e7aadbd30a38743647251f9fa49ba95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3e8135372ce4a092552c812cd971cb70bc49bf3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960443"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186851"
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>Практическое руководство. Создание текста с тенью
 Примеры в этом разделе демонстрируют создание эффекта тени для отображаемого текста.  
   
 ## <a name="example"></a>Пример  
- Объект позволяет создавать разнообразные эффекты тени для [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] объектов. <xref:System.Windows.Media.Effects.DropShadowEffect> В следующем примере показано применение эффекта тени к тексту. В этом случае используется мягкая тень, то есть цвет тени размывается.  
+ Объект <xref:System.Windows.Media.Effects.DropShadowEffect> позволяет создавать различные эффекты тени [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] падения для объектов. В следующем примере показано применение эффекта тени к тексту. В этом случае используется мягкая тень, то есть цвет тени размывается.  
   
- ![Тень текста с мягкостью &#61; 0,25](./media/how-to-create-text-with-a-shadow/drop-shadow-text-effect.jpg) 
+ ![Текстовая тень с мягкостью &#61; 0,25](./media/how-to-create-text-with-a-shadow/drop-shadow-text-effect.jpg)
   
- Можно управлять шириной тени, задавая <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> свойство. Значение `4.0` указывает, что ширина тени равна 4 пикселям. Можно управлять мягкостью тени или размытием, изменяя <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> свойство. Значение `0.0` указывает на отсутствие размытия. В следующем примере кода показано создание мягкой тени.  
+ Вы можете управлять шириной тени, <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> установив свойство. Значение `4.0` указывает на ширину тени 4 пикселя. Вы можете контролировать мягкость, или размытие, <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> тени, изменяя свойство. Значение `0.0` указывает на отсутствие размытия. В следующем примере кода показано создание мягкой тени.  
   
  [!code-xaml[TextShadowSnippets#TextShadowSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet1)]  
   
 > [!NOTE]
-> Эти эффекты тени не проходят через [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] конвейер отрисовки текста. Следовательно, тип ClearType при использовании этих эффектов отключен.  
+> Эти эффекты теней [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не проходят через конвейер визуализации текста. Следовательно, тип ClearType при использовании этих эффектов отключен.  
   
  В следующем примере показано применение эффекта жесткой тени к тексту. В этом случае тень не размыта.  
   
- ![Тень текста с мягкостью &#61; 0](./media/how-to-create-text-with-a-shadow/text-shadow-softness.jpg) 
+ ![Текстовая тень с мягкостью &#61; 0](./media/how-to-create-text-with-a-shadow/text-shadow-softness.jpg)
   
- Можно создать жесткую тень, присвоив <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> `0.0`свойству значение, которое указывает, что размытие не используется. Можно управлять направлением тени, изменяя <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> свойство. Задайте в качестве значения для этого свойства степень между `0` и. `360` На следующем рисунке показаны направленные значения <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> параметра свойства.  
+ Можно создать твердую тень, <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> установив `0.0`свойство, что указывает на то, что размытие не используется. Вы можете управлять направлением тени, <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> изменяя свойство. Установите направленную стоимость этого свойства `0` в `360`определенной степени между и . На следующей иллюстрации показаны <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> значения направления настройки свойства.  
   
  ![Параметр степени тени DropShadow](./media/how-to-create-text-with-a-shadow/drop-shadow-degree-setting.png)
   
@@ -41,7 +41,7 @@ ms.locfileid: "69960443"
  [!code-xaml[TextShadowSnippets#TextShadowSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet2)]  
   
 ## <a name="using-a-blur-effect"></a>Использование эффекта размытия  
- <xref:System.Windows.Media.Effects.BlurBitmapEffect> Можно использовать, чтобы создать эффект, подобный тени, который можно поместить позади текстового объекта. Если к тексту применяется эффект размытия для точечных рисунков, текст равномерно размывается во всех направлениях.  
+ A <xref:System.Windows.Media.Effects.BlurBitmapEffect> может быть использован для создания эффекта, похожего на тени, который может быть размещен за текстовым объектом. Если к тексту применяется эффект размытия для точечных рисунков, текст равномерно размывается во всех направлениях.  
   
  В следующем примере показан эффект размытия, примененный к тексту.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "69960443"
  [!code-xaml[TextShadowSnippets#TextShadowSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/BlurShadows.xaml#textshadowsnippet6)]  
   
 ## <a name="using-a-translate-transform"></a>Использование преобразования переноса  
- <xref:System.Windows.Media.TranslateTransform> Можно использовать, чтобы создать эффект, подобный тени, который можно поместить позади текстового объекта.  
+ A <xref:System.Windows.Media.TranslateTransform> может быть использован для создания эффекта, похожего на тени, который может быть размещен за текстовым объектом.  
   
- В следующем примере кода используется <xref:System.Windows.Media.TranslateTransform> для смещения текста. В этом примере слегка смещенная копия текста под основным текстом создает эффект тени.  
+ В следующем примере <xref:System.Windows.Media.TranslateTransform> кода используется для смещения текста. В этом примере слегка смещенная копия текста под основным текстом создает эффект тени.  
   
- ![Тень текста с использованием TranslateTransform](./media/how-to-create-text-with-a-shadow/text-transform-shadow-effect.jpg)    
+ ![Тень текста с использованием TranslateTransform](./media/how-to-create-text-with-a-shadow/text-transform-shadow-effect.jpg)
   
  В следующем примере кода показано создание эффекта тени с помощью преобразования.  
   

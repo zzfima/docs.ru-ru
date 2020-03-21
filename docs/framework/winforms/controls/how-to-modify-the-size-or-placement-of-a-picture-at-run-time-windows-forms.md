@@ -11,38 +11,38 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 9bb094ce0b7945f23a2e9b8614e56c9492d5f832
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fea813d7b9fe585e35b729b8b64e3a5f414ef76d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736034"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141970"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
-Если в форме используется элемент управления <xref:System.Windows.Forms.PictureBox> Windows Forms, можно задать для него свойство <xref:System.Windows.Forms.PictureBox.SizeMode%2A>:  
+Если вы используете <xref:System.Windows.Forms.PictureBox> элемент управления формами Windows <xref:System.Windows.Forms.PictureBox.SizeMode%2A> в форме, вы можете установить свойство на ней:  
   
-- Выровняйте верхний левый угол изображения по левому верхнему углу элемента управления  
+- Выровняйте верхний левый угол изображения с верхним левым углом управления  
   
-- Центрирование рисунка внутри элемента управления  
+- Центр изображения в элементе управления  
   
-- Настройка размера элемента управления в соответствии с отображаемым изображением  
+- Отрегулируйте размер элемента управления, чтобы соответствовать изображению, который он отображает  
   
-- Растяжение всех рисунков, которые отображаются в соответствии с элементом управления  
+- Растянуть любую картинку, которую он отображает, чтобы соответствовать элементу управления  
   
- Растяжение изображения (особенно в формате точечного рисунка) может привести к ухудшению качества изображения. Метафайлы, представляющие собой списки графических инструкций для рисования изображений во время выполнения, лучше подходят для растяжения по сравнению с точечными рисунками.  
+ Растяжка изображения (особенно в формате bitmap) может привести к потере качества изображения. Metafiles, которые представляют собой списки графических инструкций для рисования изображений во время выполнения, лучше подходят для растяжения, чем bitmaps.  
   
-### <a name="to-set-the-sizemode-property-at-run-time"></a>Задание свойства Сиземоде во время выполнения  
+### <a name="to-set-the-sizemode-property-at-run-time"></a>Установить свойство SizeMode во время выполнения  
   
-1. Задайте для <xref:System.Windows.Forms.PictureBox.SizeMode%2A> значение <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (по умолчанию), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>или <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> означает, что изображение помещается в левый верхний угол элемента управления; Если изображение больше элемента управления, его нижний и правый края обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> означает, что изображение центрируется в элементе управления; Если изображение больше элемента управления, внешние края рисунка обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> означает, что размер элемента управления изменяется в соответствии с размером изображения. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> является обратным и означает, что размер изображения корректируется до размера элемента управления.  
+1. <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Установить <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (по <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>умолчанию), <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>, , или . <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>означает, что изображение помещается в верхнем левом углу управления; если изображение больше элемента управления, его нижние и правые края обрезаны. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>означает, что изображение сосредоточено внутри элемента управления; если изображение больше элемента управления, внешние края изображения обрезаны. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>означает, что размер элемента управления регулируется с размером изображения. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>является обратным, и означает, что размер изображения регулируется размером элемента управления.  
   
-     В приведенном ниже примере путь, заданный для расположения изображения, является папкой "Мои документы". Это делается, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут включать этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма с уже добавленным элементом управления <xref:System.Windows.Forms.PictureBox>.  
+     В приведенном ниже примере путь, установленный для расположения изображения, представляет собой папку «Мои документы». Это делается, потому что можно предположить, что большинство компьютеров под управлением операционной системы Windows будет включать в себя этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. Приведенный ниже пример предполагает <xref:System.Windows.Forms.PictureBox> форму с уже добавленным элементом управления.  
   
     ```vb  
     Private Sub StretchPic()  
        ' Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage  
        ' Load the picture into the control.  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -56,7 +56,7 @@ ms.locfileid: "76736034"
        // Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;  
        // Load the picture into the control.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        PictureBox1.Image = Image.FromFile _  
@@ -73,7 +73,7 @@ ms.locfileid: "76736034"
           // Stretch the picture to fit the control.  
           pictureBox1->SizeMode = PictureBoxSizeMode::StretchImage;  
           // Load the picture into the control.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  

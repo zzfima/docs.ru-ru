@@ -8,12 +8,12 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 1490171c4dd423baa3b6c5f5e00cf133c2584cae
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124399"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181366"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Маршалинг различных типов массивов
 Массив является ссылочным типом в управляемом коде, содержащим один или несколько элементов одного и того же типа. Несмотря на то, что массивы являются ссылочными типами, они передаются в неуправляемые функции в виде параметров In. Это поведение не согласуется со способом передачи управляемых массивов в управляемые объекты в виде параметров In/Out. Подробнее см. в разделе [Копирование и закрепление](copying-and-pinning.md).  
@@ -89,14 +89,14 @@ ms.locfileid: "73124399"
 ```cpp
 typedef struct _MYPOINT  
 {  
-   int x;   
-   int y;   
+   int x;
+   int y;
 } MYPOINT;  
   
 typedef struct _MYPERSON  
 {  
-   char* first;   
-   char* last;   
+   char* first;
+   char* last;
 } MYPERSON;  
 ```  
   
@@ -112,7 +112,7 @@ typedef struct _MYPERSON
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Типы данных в вызове неуправляемого кода](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Создание прототипов в управляемом коде](creating-prototypes-in-managed-code.md)

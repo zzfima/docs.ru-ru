@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 193049aed6da3375b687e465678dca4dc90e6b39
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1ee0df5b133f08ec3cf6ba617c80c480e207ddf6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448810"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179962"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "74448810"
   
  Полный список шаблонов элементов управления см. в разделе [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
-<a name="uiautomation_getting_control_patterns"></a>   
+<a name="uiautomation_getting_control_patterns"></a>
 ## <a name="getting-control-patterns"></a>Получение шаблонов элементов управления  
  Клиенты получают шаблон элемента управления из <xref:System.Windows.Automation.AutomationElement> , вызывая <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> или <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.  
   
@@ -32,25 +32,25 @@ ms.locfileid: "74448810"
   
  [!code-csharp[UIATextPattern_snip#1037](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1037)]  
   
-<a name="uiautomation_properties_on_control_patterns"></a>   
+<a name="uiautomation_properties_on_control_patterns"></a>
 ## <a name="retrieving-properties-on-control-patterns"></a>Получение свойств в шаблонах элементов управления  
- Клиенты могут получать значения свойств в шаблонах элементов управления, вызывая <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> или <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> и преобразуя возвращаемый объекта в соответствующий тип. Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойствах см. в разделе [Свойства модели автоматизации пользовательского интерфейса для клиентов](ui-automation-properties-for-clients.md).  
+ Клиенты могут получать значения свойств в шаблонах элементов управления, вызывая <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> или <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> и преобразуя возвращаемый объекта в соответствующий тип. Для получения [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] дополнительной информации о свойствах [см.](ui-automation-properties-for-clients.md)  
   
- Кроме `GetPropertyValue`, значения свойств можно получить с помощью методов доступа среды CLR для доступа к свойствам [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в шаблоне.  
+ В дополнение `GetPropertyValue` к методам значения свойств могут быть извлечены через общие языковые пережиты [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] времени выполнения (CLR) для доступа к свойствам по шаблону.  
   
-<a name="uiautomation_with_variable_patterns"></a>   
+<a name="uiautomation_with_variable_patterns"></a>
 ## <a name="controls-with-variable-patterns"></a>Элементы управления с переменными шаблонами  
- Некоторые типы элементов управления поддерживают различные шаблоны в зависимости от их состояния или способа использования элемента управления. К примерам элементов управления, которые могут иметь шаблоны переменных, относятся представления списков (эскизы, плитки, значки, список, сведения), диаграммы Microsoft Excel (круговые, линейные, линейчатые, значения ячеек с формулой), область документа Microsoft Word (обычная, веб-макет, структура, макет печати, печать Предварительная версия) и обложки проигрывателя Microsoft Windows Media.  
+ Некоторые типы элементов управления поддерживают различные шаблоны в зависимости от их состояния или способа использования элемента управления. Примерами элементов управления, которые могут иметь переменные шаблоны, являются представления списков (эскизы, плитки, значки, список, детали), Microsoft Excel Charts (Pie, Line, Bar, Cell Value с формулой), область документов Microsoft Word (Normal, Web Layout, Outline, Print Layout, Print Предварительный просмотр), и Microsoft Windows Media Player скины.  
   
  Элементы управления, реализующие настраиваемые типы элементов управления, могут содержать любой набор шаблонов элементов управления, необходимых для представления их возможностей.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Шаблоны модели автоматизации пользовательского интерфейса](ui-automation-control-patterns.md)
 - [Шаблон текста модели автоматизации пользовательского интерфейса](ui-automation-text-pattern.md)
 - [Вызов элемента управления с помощью модели автоматизации пользовательского интерфейса](invoke-a-control-using-ui-automation.md)
-- [Получение состояния флажка с использованием модели автоматизации пользовательского интерфейса](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [Получение состояния флажка с использованием автоматизации пользовательского интерфейса](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
 - [Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса](control-pattern-mapping-for-ui-automation-clients.md)
-- [Пример вставки текста TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [TextPattern Вставить образец текста](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [Пример поиска и выбора TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
-- [Пример InvokePattern, ExpandCollapsePattern и Тогглепаттерн](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [Вызватьшаблон, ExpandCollapsePattern, и TogglePattern Образец](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

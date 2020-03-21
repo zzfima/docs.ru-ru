@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: 5a94eff021074a24df5b8891fe7b418b1fcf3c35
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a38738c369db3d3f8242bd71ee04a19a669b2cf4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094921"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144153"
 ---
 # <a name="self-host"></a>Резидентное размещение
-В этом образце показано, как реализовать резидентную службу в консольном приложения. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md). Файл конфигурации приложения был переименован из Web.config в App.config, и в нем был указан базовый адрес, используемый ведущим приложением. Исходный код службы был изменен, чтобы он реализовывал статическую функцию `Main`, которая создает и открывает узел службы, предоставляющее настроенный базовый адрес. Реализация службы была изменена, чтобы для каждой операции выводить результат на консоль. Клиент остался неизменным, но для него был задан правильный конечный адрес службы.  
+В этом образце показано, как реализовать резидентную службу в консольном приложения. Этот пример основан на [получении начала](../../../../docs/framework/wcf/samples/getting-started-sample.md). Файл конфигурации приложения был переименован из Web.config в App.config, и в нем был указан базовый адрес, используемый ведущим приложением. Исходный код службы был изменен, чтобы он реализовывал статическую функцию `Main`, которая создает и открывает узел службы, предоставляющее настроенный базовый адрес. Реализация службы была изменена, чтобы для каждой операции выводить результат на консоль. Клиент остался неизменным, но для него был задан правильный конечный адрес службы.  
   
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -25,10 +25,10 @@ ms.locfileid: "77094921"
 public static void Main()  
 {  
     // Create a ServiceHost for the CalculatorService type.  
-    using (ServiceHost serviceHost =   
+    using (ServiceHost serviceHost =
            new ServiceHost(typeof(CalculatorService)))  
     {  
-        // Open the ServiceHost to create listeners   
+        // Open the ServiceHost to create listeners
         // and start listening for messages.  
         serviceHost.Open();  
   
@@ -41,10 +41,10 @@ public static void Main()
 }  
 ```  
   
- Если служба размещается в службах IIS или службе активации Windows (WAS), базовый адрес службы предоставляется средой размещения. В случае резидентного размещения базовый адрес необходимо указывать самостоятельно. Это делается с помощью элемента `add`, дочернего элемента [\<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), дочернего элемента [\<узла](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)>, дочернего\<[службы](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) >, как показано в следующем примере конфигурации.  
+ Если служба размещается в службах IIS или службе активации Windows (WAS), базовый адрес службы предоставляется средой размещения. В случае резидентного размещения базовый адрес необходимо указывать самостоятельно. Это делается `add` с использованием элемента, ребенка [ \<baseAddresses>, ](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)ребенка [ \<>хозяина, ](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)ребенка [ \<службы>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) как показано в следующей конфигурации образца.  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService"  
     behaviorConfiguration="CalculatorServiceBehavior">  
   <host>  
@@ -60,21 +60,21 @@ public static void Main()
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в одно- или кросс-компьютерной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
+>
+> Если этого каталога не существует, перейдите в [Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) Образцы для .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцы. Этот образец расположен в следующем каталоге.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
 ## <a name="see-also"></a>См. также раздел
 
-- [Примеры размещения и сохраняемости AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [Образцы размещения и сохраняемости AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

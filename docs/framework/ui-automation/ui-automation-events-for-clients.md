@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 497c05740fd9e1c05d877cfdb72881168fff6e2e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778754"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179906"
 ---
 # <a name="ui-automation-events-for-clients"></a>События модели автоматизации пользовательского интерфейса для клиентов
 > [!NOTE]
@@ -23,11 +23,11 @@ ms.locfileid: "76778754"
  Эффективность также повышается благодаря возможности прослушивания событий только в заданной области. Например, клиент может прослушивать события изменения фокуса во всех элементах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в дереве или только в одном элементе и его потомках.  
   
 > [!NOTE]
-> Не следует думать, что все возможные события вызываются поставщиком [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Например, не все изменения свойств приводят к возникновению событий стандартными поставщиками прокси для Windows Forms и элементов управления Win32.  
+> Не следует думать, что все возможные события вызываются поставщиком [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Например, не все изменения свойств приводят к тому, что события будут подняты стандартными прокси-провайдерами для Windows Forms и Win32.  
   
- Более широкое представление [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] событий см. в разделе [Общие сведения о событиях модели автоматизации пользовательского интерфейса](ui-automation-events-overview.md).  
+ Для более широкого [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] просмотра событий [см.](ui-automation-events-overview.md)  
   
-<a name="Subscribing_to_Events"></a>   
+<a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>Подписка на события  
  Клиентские приложения подписываются на события определенного типа, регистрируя обработчик событий с помощью одного из следующих методов.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "76778754"
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Изменение фокуса|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Изменение свойства|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Изменение структуры|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Все прочие события, идентифицированные <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> или <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Все прочие события, идентифицированные <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> либо <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   
  Перед вызовом метода вы должны создать метод делегата для обработки события. При желании можно обрабатывать различные типы событий в одном методе и передавать этот метод в несколько вызовов одного из методов в таблице. Например, один <xref:System.Windows.Automation.AutomationEventHandler> можно настроить для обработки различных событий по-разному, в зависимости от <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "76778754"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Отменяет регистрацию обработчика событий, который был зарегистрирован с помощью <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Отменяет регистрацию всех зарегистрированных обработчиков событий.|  
   
- Пример кода см. [в разделе Подписка на события модели автоматизации пользовательского интерфейса](subscribe-to-ui-automation-events.md).  
+ Например, код, [см. Подписка на события автоматизации uI](subscribe-to-ui-automation-events.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Подписка на события модели автоматизации пользовательского интерфейса](subscribe-to-ui-automation-events.md)
-- [Общие сведения о событиях модели автоматизации пользовательского интерфейса](ui-automation-events-overview.md)
-- [Общие сведения о свойствах модели автоматизации пользовательского интерфейса](ui-automation-properties-overview.md)
-- [Пример Траккфокус](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [Обзор событий автоматизации пользовательского интерфейса](ui-automation-events-overview.md)
+- [Общие сведения о свойствах автоматизированного пользовательского интерфейса](ui-automation-properties-overview.md)
+- [Пример TrackFocus](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
