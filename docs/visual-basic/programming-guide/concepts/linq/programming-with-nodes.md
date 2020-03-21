@@ -2,14 +2,14 @@
 title: Программирование с узлами
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 447c462f95536cd40291f9b0d54ab85dcde200db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b2c9022cb57cf122af47bbe6d1a7fe2b4d41327c
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346643"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266967"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>Программирование с использованием узлов (Visual Basic)
+# <a name="programming-with-nodes-visual-basic"></a>Программирование с узлами (Visual Basic)
 Разработчикам [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], которым требуется написать такие программы, как XML-редактор, система преобразования или модуль формирования отчетов, часто приходится писать программы, которые работают на более высоком уровне гранулярности по сравнению с элементами и атрибутами. Им часто приходится работать на уровне узлов, обрабатывая текстовые узлы, инструкции по обработке и комментарии. В этом разделе приводятся некоторые сведения о программировании на уровне узлов.  
   
 ## <a name="node-details"></a>Сведения об узле  
@@ -104,7 +104,7 @@ Console.WriteLine(child2)
  Свойство <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> указывает, является ли атрибут декларацией пространства имен.  
   
 ```vb  
-Dim root As XElement = _   
+Dim root As XElement = _
 <Root  
     xmlns='http://www.adventure-works.com'  
     xmlns:fc='www.fourthcoffee.com'  
@@ -124,7 +124,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Методы оси XPath не возвращают дочерние пробелы XDocument  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] допускает дочерние текстовые узлы <xref:System.Xml.Linq.XDocument>, если текстовые узлы содержат только пробелы. Однако модель объектов XPath не включает пробелы как дочерние узлы документа, поэтому при прохождении по дочерним узлам объекта <xref:System.Xml.Linq.XDocument> при помощи оси <xref:System.Xml.Linq.XContainer.Nodes%2A> возвращаются текстовые узлы с пробелами. Однако при прохождении по дочерним узлам объекта <xref:System.Xml.Linq.XDocument> при помощи методов оси XPath текстовые узлы с пробелами возвращены не будут.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] допускает дочерние текстовые узлы объекта <xref:System.Xml.Linq.XDocument>, если эти текстовые узлы содержат только пробелы. Однако модель объектов XPath не включает пробелы как дочерние узлы документа, поэтому при прохождении по дочерним узлам объекта <xref:System.Xml.Linq.XDocument> при помощи оси <xref:System.Xml.Linq.XContainer.Nodes%2A> возвращаются текстовые узлы с пробелами. Однако при прохождении по дочерним узлам объекта <xref:System.Xml.Linq.XDocument> при помощи методов оси XPath текстовые узлы с пробелами возвращены не будут.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -171,6 +171,6 @@ Console.WriteLine(doc.Nodes().Count())
 1  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-- [Расширенное программирование LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Расширенный LIN' к XML программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

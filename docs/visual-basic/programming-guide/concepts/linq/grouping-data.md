@@ -2,14 +2,14 @@
 title: Группировка данных
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 6e84ccfbd6a2193ac5ab368d7526da2de29a3c47
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9a4011b77f91ff241d23f7aeca95925a1e170483
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353388"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266824"
 ---
-# <a name="grouping-data-visual-basic"></a>Группирование данных (Visual Basic)
+# <a name="grouping-data-visual-basic"></a>Данные по группировке (Visual Basic)
 Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.  
   
  На следующем рисунке показаны результаты операции группирования последовательности символов. Ключ для каждой группы — это символ.  
@@ -20,7 +20,7 @@ ms.locfileid: "74353388"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание:|Синтаксис выражения визуальных основных запросов|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|Группирует элементы с общим атрибутом. Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.|Неприменимо.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -32,7 +32,7 @@ ms.locfileid: "74353388"
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
      New Integer() {35, 44, 200, 84, 3987, 4, 199, 329, 446, 208})  
   
-Dim query = From number In numbers   
+Dim query = From number In numbers
             Group By Remainder = (number Mod 2) Into Group  
   
 Dim sb As New System.Text.StringBuilder()  
@@ -63,10 +63,10 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Предложение Group By](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [Пошаговое руководство. Группировка файлов по расширению (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [Инструкции. Разбиение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Группа по пункту](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Как: Групповые файлы по расширению (LIN) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [Как: Разделите файл на многие файлы с помощью групп (LIN) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

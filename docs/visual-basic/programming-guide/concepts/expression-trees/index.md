@@ -2,12 +2,12 @@
 title: Expression Trees
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: 4ca3b56f48368e465560fc5edd60c0df8dd4e1c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b2266cbae0a9a8a07c2a3569efa33d162ffedd1d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344706"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266421"
 ---
 # <a name="expression-trees-visual-basic"></a>Деревья выражений (Visual Basic)
 Деревья выражений представляют код в виде древовидной структуры, где каждый узел является выражением, например, вызовом метода или двоичной операцией, такой как `x < y`.  
@@ -55,7 +55,7 @@ Dim lambda1 As Expression(Of Func(Of Integer, Boolean)) =
 Dim value As ParameterExpression =  
     Expression.Parameter(GetType(Integer), "value")  
   
-' Creating an expression to hold a local variable.   
+' Creating an expression to hold a local variable.
 Dim result As ParameterExpression =  
     Expression.Parameter(GetType(Integer), "result")  
   
@@ -141,11 +141,11 @@ Console.WriteLine(expr.Compile()(4))
   
  Дополнительные сведения см. в разделе [Практическое руководство. Выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Linq.Expressions>
-- [Инструкции. Выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Руководство. изменение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
-- [Лямбда-выражения](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Общие сведения о среде DLR](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [Практическое руководство. Выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Практическое руководство. Изменение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [ Лямбда-выражения](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Динамический язык Runtime Обзор](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [Основные понятия программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)

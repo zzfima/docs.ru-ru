@@ -2,14 +2,14 @@
 title: Практическое руководство. Группировка файлов по расширению (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 67beec0d3681bf7f0b04d9a402566076fd27ceba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4d2c51fa62b3ec144bc5ad51b4a9f8305476645e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347485"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267032"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Пошаговое руководство. Группировка файлов по расширению (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Как: Групповые файлы по расширению (LIN) (Visual Basic)
 В этом примере показано, как можно использовать LINQ для выполнения расширенного группирования и сортировки списков файлов или папок. Кроме того, здесь показывается, как разбить на страницы выходные данные в окне консоли с помощью методов <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Пример  
@@ -39,7 +39,7 @@ Module GroupByExtension
         ' page the display with good performance.  
         Dim groupByExtList = queryGroupByExt.ToList()  
   
-        ' Display one group at a time. If the number of   
+        ' Display one group at a time. If the number of
         ' entries is greater than the number of lines  
         ' in the console window, then page the output.  
         Dim trimLength = startFolder.Length  
@@ -94,9 +94,9 @@ End Module
  Вывод этой программы может быть длинным в зависимости от объема данных локальной файловой системы и значения `startFolder`. В этом примере демонстрируется постраничный просмотр, который позволяет просматривать все результаты. Те же методы могут применяться для приложений Windows и веб-приложений. Обратите внимание, что поскольку код разбивает элементы в группе на страницы, требуется вложенный цикл `For Each`. Также существует некоторая дополнительная логика для вычисления текущей позиции в списке и предоставления пользователю возможности остановить разбиение по страницам и выйти из программы. В данном конкретном случае запрос разбиения на страницы выполняется для кэшированных результатов исходного запроса. В других контекстах, например LINQ to SQL, подобное кэширование не требуется.  
   
 ## <a name="compile-the-code"></a>Компиляция кода  
-Создайте Visual Basic проект консольного приложения, используя инструкцию `Imports` для пространства имен System. LINQ.
+Создайте проект приложения Visual Basic `Imports` с заявлением для пространства имен System.Linq.
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

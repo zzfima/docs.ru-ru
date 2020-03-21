@@ -2,21 +2,21 @@
 title: Практическое руководство. Фильтрация по необязательным элементам
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: e67cb58710d49a19f322b3555efa96ac69b9f654
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6db377ae30582ef010d5af467e88c52b008483ed
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353045"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267058"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Как выполнить фильтрацию по необязательному элементу (Visual Basic)
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Как: Фильтр на факультативном элементе (Visual Basic)
 Иногда необходимо выполнить фильтрацию элемента, даже если неизвестно, существует ли он в документе XML. Поиск должен быть выполнен, чтобы, если конкретный элемент не имеет дочернего узла, при фильтрации по этому элементу не возникло исключение null reference. В следующем примере элемент `Child5` не имеет дочернего узла `Type`, тем не менее запрос выполняется правильно.  
   
 ## <a name="example"></a>Пример  
  Этот пример использует метод расширений <xref:System.Xml.Linq.Extensions.Elements%2A>.  
   
 ```vb  
-Dim root As XElement = _   
+Dim root As XElement = _
     <Root>  
         <Child1>  
             <Text>Child One Text</Text>  
@@ -57,7 +57,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Для получения дополнительной информации см. Обзор [имен (LIN' к XML) (Visual Basic).](namespaces-overview-linq-to-xml.md)  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -106,14 +106,14 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Основные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Основные запросы (LIN' к XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [Свойство дочерней оси XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [Свойство оси атрибута XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [Свойство значения XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Операции проекции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Проекционные операции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

@@ -2,14 +2,14 @@
 title: Практическое руководство. Заполнение дерева XML с помощью XmlWriter (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-ms.openlocfilehash: ec44f6e21453a1333f842030bae0c4f80dedb9c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fecf57eac570a9ca57dd1fe2f7a0b54cd78c33b5
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333773"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267006"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Как заполнить дерево XML с помощью XmlWriter (LINQ to XML) (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Как: Заполнить XML дерево с XmlWriter (LIN' к XML) (Visual Basic)
 Одним из вариантов заполнения XML-дерева является использование <xref:System.Xml.Linq.XContainer.CreateWriter%2A> для создания объекта <xref:System.Xml.XmlWriter>, а затем запись в объект <xref:System.Xml.XmlWriter>. XML-дерево заполняется всеми узлами, которые записаны в объект <xref:System.Xml.XmlWriter>.  
   
  Обычно этот метод применяется при использовании [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] с другим классом, который предназначен для записи в объект <xref:System.Xml.XmlWriter>, например <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -19,7 +19,7 @@ ms.locfileid: "74333773"
   
 ```vb  
 Dim xslMarkup As XDocument = _  
-    <?xml version='1.0'?>   
+    <?xml version='1.0'?>
     <xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version='1.0'>  
         <xsl:template match='/Parent'>  
             <Root>  
@@ -62,7 +62,7 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>

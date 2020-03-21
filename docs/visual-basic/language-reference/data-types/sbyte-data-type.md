@@ -15,38 +15,38 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: 01a0a4a261213d7e6e2016bf49128092e5b22308
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343951"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401385"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>Тип данных SByte (Visual Basic)
 
-Содержит 8-битные (1-байтные) целые числа со знаком в диапазоне от-128 до 127.
+Держит подписанные 8-битные (1-байт) целые столбы, которые варьируются в цене от -128 до 127.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Используйте тип данных `SByte` для хранения целочисленных значений, не требующих полной ширины данных `Integer` или даже половины ширины данных `Short`. В некоторых случаях среда CLR может одновременно упаковать переменные `SByte` и сэкономить потребление памяти.
+Используйте `SByte` тип данных, чтобы содержать целые значения, которые `Integer` не требуют полной `Short`ширины данных или даже половины ширины данных. В некоторых случаях время выполнения общего языка `SByte` может быть в состоянии упаковать переменные близко друг к другу и сохранить потребление памяти.
 
 Значение по умолчанию для типа `SByte` — 0.
 
-## <a name="literal-assignments"></a>Присваивания литералов
+## <a name="literal-assignments"></a>Литературные задания
 
-Можно объявить и инициализировать переменную `SByte`, назначив ей десятичный литерал, шестнадцатеричный литерал, Восьмеричный литерал или (начиная с Visual Basic 2017) двоичный литерал.
+Вы можете объявить `SByte` и инициализировать переменную, назначив ей десятичную буквальную, гексадецичную буквальную, октальную буквальную или (начиная с Visual Basic 2017) двоичный буквальный.
 
-В следующем примере целые числа, равные-102, представленные в виде десятичного, шестнадцатеричного и двоичного литерала, присваиваются `SByte` значениям. В этом примере требуется компиляция с параметром компилятора `/removeintchecks`.
+В следующем примере значениям присваиваются `SByte` целые столбы, равные -102, которые представлены как десятичные, гексадецимальные и бинарные буквальные значения. Этот пример требует компиляции с коммутатором компилятора. `/removeintchecks`
 
 [!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]
 
 > [!NOTE]
-> Префикс `&h` или `&H` можно использовать для обозначения шестнадцатеричного литерала, префикс `&b` или `&B` для обозначения двоичного литерала, а префикс `&o` или `&O` — для обозначения восьмеричного литерала. У десятичных литералов префиксов нет.
+> Вы используете `&h` приставку или `&H` для обозначения гексадецимального буквального, приставки `&b` или `&B` для `&o` `&O` обозначения двоичного буквального, и приставки или для обозначения октал буквального. У десятичных литералов префиксов нет.
 
-Начиная с Visual Basic 2017 можно также использовать символ подчеркивания `_`в качестве разделителя цифр для повышения удобочитаемости, как показано в следующем примере.
+Начиная с Visual Basic 2017, вы также `_`можете использовать символ подчеркивания, как цифровой сепаратор для повышения читаемости, как показано в следующем примере.
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]
 
-Начиная с Visual Basic 15,5 можно также использовать символ подчеркивания (`_`) в качестве начального разделителя между префиксом и шестнадцатеричными, двоичными или восьмеричными цифрами. Пример.
+Начиная с Visual Basic 15.5, вы также`_`можете использовать символ подчеркивателя ( ) в качестве ведущего сепаратора между приставкой и гексадецичными, бинарными или октальными цифрами. Пример:
 
 ```vb
 Dim number As SByte = &H_F9
@@ -54,31 +54,31 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Если целочисленный литерал выходит за пределы диапазона `SByte` (то есть, если он меньше <xref:System.SByte.MinValue?displayProperty=nameWithType> или больше <xref:System.SByte.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции. Если у целочисленного литерала нет суффикса, выводится [целое число](integer-data-type.md) . Если целочисленный литерал находится вне диапазона `Integer` типа, выводится [Long](long-data-type.md) . Это означает, что в предыдущих примерах числовые литералы `0x9A` и `0b10011010` интерпретируется как 32-разрядные целые числа со знаком со значением 156, что превышает <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Чтобы успешно скомпилировать код, подобный этому, который присваивает `SByte`недесятичное целое числом, можно выполнить одно из следующих действий.
+Если целочисленный литерал выходит за пределы диапазона `SByte` (то есть, если он меньше <xref:System.SByte.MinValue?displayProperty=nameWithType> или больше <xref:System.SByte.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции. Когда в буквальном смысле нет суффикса, выводит [integer.](integer-data-type.md) Если целый буквальный находится за пределами диапазона `Integer` типа, [Лонг](long-data-type.md) выводит. Это означает, что в предыдущих примерах, `0x9A` `0b10011010` числовы и интерпретируются как 32-битные подписанные целые числа со значением 156, что превышает <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Для успешной компиляции кода, как это, что присваивает не-десятичной целый `SByte`ряд, вы можете сделать любой из следующих:
 
-- Отключает проверку целочисленных границ путем компиляции с параметром компилятора `/removeintchecks`.
+- Отключение рядовых границ проверяется путем `/removeintchecks` компиляции с компилятором.
 
-- Используйте [символ типа](../../programming-guide/language-features/data-types/type-characters.md) , чтобы явно определить литеральное значение, которое необходимо назначить `SByte`. В следующем примере для `SByte`присваивается отрицательное литеральное значение `Short`. Обратите внимание, что для отрицательных чисел необходимо задать старшие разрядные слова в числовом литерале с высоким порядком. В нашем примере это бит 15 литерала `Short` value.
+- Используйте [символ типа,](../../programming-guide/language-features/data-types/type-characters.md) чтобы точно определить буквальное значение, `SByte`которое вы хотите присвоить . Следующий пример присваивает отрицательное буквальное `Short` значение . `SByte` Обратите внимание, что для отрицательных чисел необходимо установить бит высокого порядка слова в цифровом букве. В случае нашего примера, это бит 15 `Short` буквального значения.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>Советы по программированию
 
-- **Соответствие CLS.** Тип данных `SByte` не является частью [спецификации](https://www.ecma-international.org/publications/standards/Ecma-335.htm) CLS, поэтому CLS-совместимый код не может использовать компонент, который его использует.
+- **Соответствие требованиям CLS.** Тип `SByte` данных не является частью [спецификации общего языка](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому код, совместимый с CLS, не может потреблять компонент, который его использует.
 
-- **Расширяющие.** Тип данных `SByte` расширяется до `Short`, `Integer`, `Long`, `Decimal`, `Single`и `Double`. Это означает, что можно преобразовать `SByte` в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.
+- **Расширение.** Тип `SByte` данных расширяется `Integer` `Long`до `Decimal` `Short` `Single`, `Double`, , и . Это означает, `SByte` что вы можете преобразовать <xref:System.OverflowException?displayProperty=nameWithType> в любой из этих типов, не сталкиваясь с ошибкой.
 
-- **Символы типа.** `SByte` не имеет символа типа литерала или символа типа идентификатора.
+- **Тип символов.** `SByte`не имеет буквального символа типа или символа типа идентификатора.
 
-- **Тип платформы.** В .NET Framework данный тип соответствует структуре <xref:System.SByte?displayProperty=nameWithType>.
+- **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.SByte?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.SByte?displayProperty=nameWithType>
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
-- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Тип данных Short](../../../visual-basic/language-reference/data-types/short-data-type.md)
-- [Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Тип данных негров](../../../visual-basic/language-reference/data-types/integer-data-type.md)
 - [Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)
 - [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

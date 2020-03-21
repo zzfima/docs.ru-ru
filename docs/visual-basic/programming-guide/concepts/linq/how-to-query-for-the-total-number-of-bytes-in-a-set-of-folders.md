@@ -2,14 +2,14 @@
 title: Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ)
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: c32985d7b1d87a45107159726d6ee24aea0b59b7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 25e2c2894d9feccf42ee92bdddd17d8558779e6c
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346025"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266980"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Как запросить общее число байтов в наборе папок (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Как: Запрос на общее количество байтов в наборе фолдеров (LIN) (Visual Basic)
 В этом примере показано, как получить общее число байтов, используемое всеми файлами в указанной папке и всех ее вложенных папках.  
   
 ## <a name="example"></a>Пример  
@@ -58,7 +58,7 @@ Module QueryTotalBytes
             retval = fi.Length  
         Catch ex As System.IO.FileNotFoundException  
             ' If a file is no longer present,  
-            ' just return zero bytes.   
+            ' just return zero bytes.
             retval = 0  
         End Try  
   
@@ -72,9 +72,9 @@ End Module
  Для получения длины файла запрос вызывает отдельный метод. Это необходимо для обработки возможных исключений, которые могут возникнуть из-за удаления файла в другом потоке после создания объекта <xref:System.IO.FileInfo> вызовом `GetFiles`. Даже если объект <xref:System.IO.FileInfo> уже создан, может возникнуть исключение, так как объект <xref:System.IO.FileInfo> будет пытаться обновить свойство <xref:System.IO.FileInfo.Length%2A>, используя самую последнюю длину при первом обращении к свойству. При помещении этой операции в блок try-catch вне запроса будет выполнено правило исключения использования в запросах операций, которые могут вызвать побочные эффекты. В целом необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться, что приложение не остается в неизвестном состоянии.  
   
 ## <a name="compile-the-code"></a>Компиляция кода  
-Создайте Visual Basic проект консольного приложения, используя инструкцию `Imports` для пространства имен System. LINQ.
+Создайте проект приложения Visual Basic `Imports` с заявлением для пространства имен System.Linq.
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

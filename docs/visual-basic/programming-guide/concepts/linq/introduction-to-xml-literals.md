@@ -1,20 +1,20 @@
 ---
-title: Общие сведения о литералах XML в Visual Basic2
+title: Введение в XML Литературы в visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834994"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266954"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Знакомство с литералами XML в Visual Basic
-В этом разделе содержатся сведения о создании деревьев XML в Visual Basic.  
+В этом разделе содержится информация о создании деревьев XML в Visual Basic.  
   
- Сведения об использовании результатов запросов LINQ в качестве содержимого XML-дерева см. в разделе [функциональное построение (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Для получения информации об использовании результатов запросов LIN' в качестве содержимого для дерева XML [см. Функциональное строительство (LIN' к XML) (Visual Basic).](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)  
   
- Дополнительные сведения о литералах XML в Visual Basic см. в разделе [обзор LINQ to XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Для получения более подробной информации о [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)буквах XML в Visual Basic см.  
   
 ## <a name="creating-xml-trees"></a>Создание деревьев XML  
  В следующем примере показано, как создать объект <xref:System.Xml.Linq.XElement>. В этом случае дерево `contacts`:  
@@ -40,10 +40,10 @@ Dim contacts As XElement = _
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
-Console.WriteLine(n)   
+Console.WriteLine(n)
 ```  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
@@ -57,7 +57,7 @@ Dim n As XElement = <Customer/>
 Console.WriteLine(n)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
 ```xml  
 <Customer />  
@@ -84,7 +84,7 @@ Dim xmlTree2 As XElement = _
 Console.WriteLine(xmlTree2)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
 ```xml  
 <Root>  
@@ -102,7 +102,7 @@ Dim root As XElement = <Root><%= str %></Root>
 Console.WriteLine(root)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
 ```xml  
 <Root>Some content</Root>  
@@ -122,7 +122,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
 ```xml  
 <Root>  
@@ -149,7 +149,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
 ```xml  
 <Root att="aValue">  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>Сравнение клонирования и присоединения  
+### <a name="cloning-vs-attaching"></a>Клонирование и присоединение  
  Как уже было сказано, если использовать внедренное выражение для добавления существующих узлов (включая элементы) и атрибутов в новое XML-дерево и если существующие узлы уже имеют родителей, узлы копируются и присоединяются к новому XML-дереву. Если существующие узлы не имеют родителей, узлы просто присоединяются к новому XML-дереву.  
   
 ```vb  
@@ -188,13 +188,13 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
 ```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Создание деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

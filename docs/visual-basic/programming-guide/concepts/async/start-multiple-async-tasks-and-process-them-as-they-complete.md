@@ -2,14 +2,14 @@
 title: Запуск нескольких асинхронных задач и их обработка по мере завершения
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 5293c2f6e1a17d3645fd1ce5a4ba61eac4d8b3a2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b14171196a95e9a6a12f6b13f6f17d3cfe352bce
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346679"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266850"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Запуск нескольких асинхронных задач и их обработка по мере их завершения (Visual Basic)
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Start Multiple Async Tasks and Process Them As They Complete (Visual Basic) (Запуск нескольких асинхронных задач и их обработка по мере завершения в Visual Basic)
 С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> можно запускать несколько задач одновременно и обрабатывать их по одной по мере завершения, а не в порядке их запуска.  
   
  В следующем примере используется запрос для создания коллекции задач. Каждая задача загружает содержимое указанного веб-сайта. В каждой итерации цикла while ожидаемый вызов `WhenAny` возвращает задачу из коллекции задач, которая первой завершает свою загрузку. Эта задача удаляется из коллекции и обрабатывается. Цикл выполняется до тех пор, пока в коллекции еще есть задачи.  
@@ -37,7 +37,7 @@ ms.locfileid: "74346679"
  Если вы не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.vb в конце этого раздела.  
   
 ## <a name="building-the-example"></a>Построение примера  
- В этом примере добавляется код, разработанный в случае [отмены оставшихся асинхронных задач после завершения одной (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) и использующего тот же пользовательский интерфейс.  
+ Этот пример добавляется к коду, разработанному в [заданиях Cancel Remaining Async после one Is Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) и использует тот же итот и тот же uI.  
   
  Для самостоятельной сборки примера шаг за шагом следуйте инструкциям в разделе "Загрузка примера", но выберите **CancelAfterOneTask** как **запускаемый проект**. Добавьте изменения в данном разделе в метод `AccessTheWebAsync` в этом проекте. Изменения помечены звездочками.  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- В файле MainWindow. XAML проекта внесите следующие изменения в метод `AccessTheWebAsync`.  
+ В файле Проекта MainWindow.xaml.vb внести следующие `AccessTheWebAsync` изменения в метод.  
   
 - Выполните запрос, применяя <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> вместо <xref:System.Linq.Enumerable.ToArray%2A>.  
   
@@ -80,9 +80,9 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
  Следует запустить проект несколько раз для проверки, что загруженные размеры не всегда отображаются в одинаковом порядке.  
   
 > [!CAUTION]
-> Можно использовать `WhenAny` в цикле, как описано в примере, для решения проблем, которые включают небольшое число задач. Однако когда требуется обработка большого числа задач, другие методы будут более эффективны. Дополнительные сведения и примеры см. в разделе [Обработка задач по мере их завершения](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).  
+> Можно использовать `WhenAny` в цикле, как описано в примере, для решения проблем, которые включают небольшое число задач. Однако когда требуется обработка большого числа задач, другие методы будут более эффективны. Для получения дополнительной информации и примеров см. [Задачи обработки по мере их завершения.](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)  
   
-## <a name="complete-example"></a>Полный пример  
+## <a name="complete-example"></a>Пример целиком  
  Приведенный ниже код — полный текст файла MainWindow.xaml.vb для примера. Звездочками помечаются элементы, добавленные для этого примера.  
   
  Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.  
@@ -144,7 +144,7 @@ Class MainWindow
         Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
             From url In urlList Select ProcessURLAsync(url, client, ct)  
   
-        ' ***Use ToList to execute the query and start the download tasks.   
+        ' ***Use ToList to execute the query and start the download tasks.
         Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
   
         ' ***Add a loop to process the tasks one at a time until none remain.  
@@ -166,7 +166,7 @@ Class MainWindow
     ' Bundle the processing steps for a website into one async method.  
     Async Function ProcessURLAsync(url As String, client As HttpClient, ct As CancellationToken) As Task(Of Integer)  
   
-        ' GetAsync returns a Task(Of HttpResponseMessage).   
+        ' GetAsync returns a Task(Of HttpResponseMessage).
         Dim response As HttpResponseMessage = Await client.GetAsync(url, ct)  
   
         ' Retrieve the website contents from the HttpResponseMessage.  
@@ -205,9 +205,9 @@ End Class
 ' Downloads complete.  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Пример использования Async. Тонкая настройка асинхронного приложения)
+- [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
