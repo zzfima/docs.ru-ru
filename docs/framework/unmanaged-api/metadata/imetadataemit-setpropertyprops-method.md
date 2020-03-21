@@ -15,66 +15,66 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440549"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177476"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>Метод IMetaDataEmit::SetPropertyProps
-Задает функции, хранимые в метаданных для свойства, определенного при предыдущем вызове [метода DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Устанавливает функции, хранящиеся в метаданных, для свойства, определяемого предыдущим вызовом [методу DefineProperty.](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT SetPropertyProps (   
-    [in]  mdProperty      pr,   
-    [in]  DWORD           dwPropFlags,   
-    [in]  DWORD           dwCPlusTypeFlag,   
-    [in]  void const      *pValue,   
-    [in]  ULONG           cchValue,   
-    [in]  mdMethodDef     mdSetter,   
-    [in]  mdMethodDef     mdGetter,   
-    [in]  mdMethodDef     rmdOtherMethods[]   
+HRESULT SetPropertyProps (
+    [in]  mdProperty      pr,
+    [in]  DWORD           dwPropFlags,
+    [in]  DWORD           dwCPlusTypeFlag,
+    [in]  void const      *pValue,
+    [in]  ULONG           cchValue,
+    [in]  mdMethodDef     mdSetter,
+    [in]  mdMethodDef     mdGetter,
+    [in]  mdMethodDef     rmdOtherMethods[]
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pr`  
- окне Токен изменяемого свойства  
+ (в) Токен для изменения свойства  
   
  `dwPropFlags`  
- окне Флаги свойств.  
+ (в) Флаги свойств.  
   
  `dwCPlusTypeFlag`  
- окне Тип значения свойства по умолчанию.  
+ (в) Тип значения по умолчанию.  
   
  `pValue`  
- окне Значение по умолчанию для свойства.  
+ (в) Значение значения по умолчанию для свойства.  
   
  `cchValue`  
- окне Число символов Юникода в `pValue`.  
+ (в) Количество символов (Unicode) `pValue`в .  
   
  `mdSetter`  
- окне Метод, который задает значение свойства.  
+ (в) Метод, устанавливающие значение свойства.  
   
  `mdGetter`  
- окне Метод, который получает значение свойства.  
+ (в) Метод, который получает значение свойства.  
   
  `rmdOtherMethods[]`  
- окне Массив других методов, связанных со свойством. Завершите этот массив маркером `mdTokenNil`.  
+ (в) Массив других методов, связанных с свойством. Прекратите этот `mdTokenNil` массив с помощью маркера.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

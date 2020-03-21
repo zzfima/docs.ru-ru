@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437992"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177238"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>Метод IMetaDataImport::GetFieldProps
 Возвращает метаданные, связанные с полем, на которое ссылается указанный токен FieldDef.  
@@ -29,15 +29,15 @@ ms.locfileid: "74437992"
   
 ```cpp  
 HRESULT GetFieldProps (  
-   [in]  mdFieldDef        mb,   
+   [in]  mdFieldDef        mb,
    [out] mdTypeDef         *pClass,  
    [out] LPWSTR            szField,  
-   [in]  ULONG             cchField,   
+   [in]  ULONG             cchField,
    [out] ULONG             *pchField,  
    [out] DWORD             *pdwAttr,  
-   [in]  PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [in]  PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Параметры  
  `mb`  
- окне Токен FieldDef, представляющий поле, для которого нужно получить связанные метаданные.  
+ (в) Токен FieldDef, представляющий поле для получения связанных метаданных.  
   
  `pClass`  
- заполняет Указатель на маркер TypeDef, представляющий тип класса, которому принадлежит поле.  
+ (ваут) Указатель на маркер TypeDef, представляющий тип класса, к которому принадлежит поле.  
   
  `szField`  
- заполняет Имя поля.  
+ (ваут) Название поля.  
   
  `cchField`  
- окне Размер в расширенных символах буфера для *сзфиелд*.  
+ (в) Размер в широких символах буфера для *szField*.  
   
  `pchField`  
- заполняет Фактический размер возвращаемого буфера.  
+ (ваут) Фактический размер возвращенного буфера.  
   
  `pdwAttr`  
- заполняет Флаги, связанные с метаданными поля.  
+ (ваут) Флаги, связанные с метаданными поля.  
   
  `ppvSigBlob`  
- окне Указатель на двоичное значение метаданных, описывающее поле.  
+ (в) Указатель на двоичное значение метаданных, описывающий поле.  
   
  `pcbSigBlob`  
- заполняет Размер в байтах `ppvSigBlob`.  
+ (ваут) Размер байтов `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- заполняет Флаг, указывающий тип значения поля.  
+ (ваут) Флаг, описавательный тип значения поля.  
   
  `ppValue`  
- заполняет Постоянное значение для поля.  
+ (ваут) Постоянное значение для поля.  
   
  `pcchValue`  
- заполняет Размер в символах `ppValue`или нуль, если строка не существует.  
+ (ваут) Размер в символах, или ноль, если строка `ppValue`не существует.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: add89fe81fccbd5e6f5ad5d27f0ab3ace489963e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5346792cb2a1309268cb4ba48625aa559777fbaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868529"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176998"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>Метод ICorProfilerInfo3::GetFunctionTailcall3Info
-Предоставляет кадр стека функции, о которой сообщается профилировщику функцией [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) . Этот метод может быть вызван только во время обратного вызова `FunctionTailcall3WithInfo`.  
+Обеспечивает стек кадр функции, которая сообщается профайлеру функцией [FunctionTailcall3WithInfo.](functiontailcall3withinfo-function.md) Этот метод может быть вызван только во время обратного вызова `FunctionTailcall3WithInfo`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT GetFunctionTailcall3Info(   
-            [in]  FunctionID functionId,   
+HRESULT GetFunctionTailcall3Info(
+            [in]  FunctionID functionId,
             [in]  COR_PRF_ELT_INFO eltInfo,  
             [out] COR_PRF_FRAME_INFO *pFrameInfo);  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- окне `FunctionID` возвращаемой функции.  
+ (в) Функция, `FunctionID` которая возвращается.  
   
  `eltInfo`  
- [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. Профилировщик должен предоставлять те же `eltInfo`, которые были переданы профилировщику функцией `FunctionTailcall3WithInfo`.  
+ [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. Профайлер должен предоставить то же `eltInfo` самое, `FunctionTailcall3WithInfo` что было дано профайлеру функцией.  
   
  `pFrameInfo`  
  [out] Непрозрачный дескриптор, представляющий универсальные сведения об указанном кадре стека. Этот дескриптор допустим только во время обратного вызова `FunctionTailcall3WithInfo`, в котором профилировщик вызывал метод `GetFunctionTailcall3Info`.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -55,11 +55,11 @@ HRESULT GetFunctionTailcall3Info(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
-- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
-- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [ФункцияEnter3WithInfo](functionenter3withinfo-function.md)
+- [ФункцияLeave3WithInfo](functionleave3withinfo-function.md)
+- [ФункцияTailcall3WithInfo](functiontailcall3withinfo-function.md)
 - [Интерфейс ICorProfilerInfo3](icorprofilerinfo3-interface.md)
-- [Интерфейсы профилирования](profiling-interfaces.md)
-- [Профилирование](index.md)
+- [Профилирующие интерфейсы](profiling-interfaces.md)
+- [Профилирование](index.md).

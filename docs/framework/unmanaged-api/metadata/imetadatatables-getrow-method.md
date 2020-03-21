@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: a7408d51-0bce-45a2-b58f-da4660bbc039
 topic_type:
 - apiref
-ms.openlocfilehash: 9ac6eba18ae23dc80a8dc90383aa67cfe41b39ff
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 71f6c496816fec1a7537f5ccdfdc1b47d17da871
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937404"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177107"
 ---
 # <a name="imetadatatablesgetrow-method"></a>Метод IMetaDataTables::GetRow
-Возвращает строку по указанному индексу строки в таблице по указанному индексу таблицы.  
+Получает строку в указанном индексе строки, в таблице в указанном индексе таблицы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT GetRow (   
+HRESULT GetRow (
     [in]  ULONG   ixTbl,  
     [in]  ULONG   rid,  
     [out] void    **ppRow  
@@ -37,28 +37,28 @@ HRESULT GetRow (
   
 ## <a name="parameters"></a>Параметры  
  `ixTbl`  
- окне Индекс таблицы, из которой будет извлечена строка.  
+ (в) Индекс таблицы, из которой будет извлечен ряд.  
   
  `rid`  
- окне Индекс получаемой строки.  
+ (в) Индекс строки, чтобы получить.  
   
  `ppRow`  
- заполняет Указатель на указатель на строку.  
+ (ваут) Указатель на указатель на строку.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Remarks  
 
-  Мы не рекомендуем использовать этот метод, так как он не возвращает последовательные результаты. Сведения о таблице GUID см. в документации по Common Language Infrastructure (CLI), особенно в разделе "Partition II: определение метаданных и семантика". Документация доступна в Интернете; см. раздел [стандарты C# ECMA и Common Language INFRASTRUCTURE](../../../standard/components.md#applicable-standards) и [стандарт ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+  Мы не рекомендуем использовать этот метод, потому что он не возвращает последовательные результаты. Для получения информации о таблице GUID см. Документация доступна в Интернете; [см. ECMA C и общие стандарты языковой инфраструктуры](../../../standard/components.md#applicable-standards) и [стандартные ECMA-335 - Общая языковая инфраструктура (CLI).](http://www.ecma-international.org/publications/standards/Ecma-335.htm)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
- **.NET Framework версии**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Рамочные версии .NET**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

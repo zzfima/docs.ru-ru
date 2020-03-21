@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: a34648bece3b14d6175168f45916ca04aeeef71d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109242"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176608"
 ---
 # <a name="asm_display_flags-enumeration"></a>Перечисление ASM_DISPLAY_FLAGS
-Указывает версию, сборку, язык и региональные параметры, сигнатуру и т. д. для сборки, отображаемое имя которого будет извлечено методом [IAssemblyName:: DisplayName](iassemblyname-getdisplayname-method.md) .  
+Отображает версию, сборку, культуру, подпись и так далее сборки, имя отображения которой будет получено методом [IAssemblyName::GetDisplayName.](iassemblyname-getdisplayname-method.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,29 +39,29 @@ typedef enum {
     ASM_DISPLAYF_RETARGET                = 0x80,  
     ASM_DISPLAYF_CONFIG_MASK             = 0x100,  
     ASM_DISPLAYF_MVID                    = 0x200,  
-    ASM_DISPLAYF_FULL                    =   
-                      ASM_DISPLAYF_VERSION           |   
-                      ASM_DISPLAYF_CULTURE           |   
-                      ASM_DISPLAYF_PUBLIC_KEY_TOKEN  |   
-                      ASM_DISPLAYF_RETARGET          |   
+    ASM_DISPLAYF_FULL                    =
+                      ASM_DISPLAYF_VERSION           |
+                      ASM_DISPLAYF_CULTURE           |
+                      ASM_DISPLAYF_PUBLIC_KEY_TOKEN  |
+                      ASM_DISPLAYF_RETARGET          |
                       ASM_DISPLAYF_PROCESSORARCHITECTURE  
   
 } ASM_DISPLAY_FLAGS;  
 ```  
   
-## <a name="remarks"></a>Заметки  
- `ASM_DISPLAYF_FULL` отражает все изменения, внесенные в версию объекта [IAssemblyName](iassemblyname-interface.md) . Не считайте, что возвращаемое значение является неизменяемым.  
+## <a name="remarks"></a>Remarks  
+ `ASM_DISPLAYF_FULL`отражает любые изменения, внесенные в версию объекта [IAssemblyName.](iassemblyname-interface.md) Не думайте, что возвращенное значение неизменяемо.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** Fusion. h  
+ **Заголовок:** Fusion.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IAssemblyName](iassemblyname-interface.md)
 - [Перечисления Fusion](fusion-enumerations.md)

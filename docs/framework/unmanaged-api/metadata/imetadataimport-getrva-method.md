@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-ms.openlocfilehash: a3a5cadc1b5a9df7967aae271ff10296843121dd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 190bcacc84646cfd9294cf2b6b53b0474f38758f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436955"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177220"
 ---
 # <a name="imetadataimportgetrva-method"></a>Метод IMetaDataImport::GetRVA
-Возвращает относительный виртуальный адрес (RVA) и флаги реализации метода или поля, представленного указанным токеном.  
+Получает относительный виртуальный адрес (RVA) и флаги реализации метода или поля, представленные указанным маркером.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 HRESULT GetRVA (  
-   [in]  mdToken     tk,   
-   [out] ULONG       *pulCodeRVA,   
+   [in]  mdToken     tk,
+   [out] ULONG       *pulCodeRVA,
    [out]  DWORD      *pdwImplFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- окне Токен метаданных MethodDef или FieldDef, представляющий объект кода, для которого возвращается RVA. Если токен является FieldDef, поле должно быть глобальной переменной.  
+ (в) Метаданный MethodDef или FieldDef, представляющий объект кода для возврата RVA. Если токен является FieldDef, поле должно быть глобальной переменной.  
   
  `pulCodeRVA`  
- заполняет Указатель на относительный виртуальный адрес объекта кода, представленного токеном.  
+ (ваут) Указатель на относительный виртуальный адрес объекта кода, представленного маркером.  
   
  `pdwImplFlags`  
- заполняет Указатель на флаги реализации для метода. Это значение является битовой маской из перечисления [кормесодимпл](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) . Значение `pdwImplFlags` допустимо, только если `tk` является токеном MethodDef.  
+ (ваут) Указатель на флаги реализации для метода. Это значение битмаска из [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration. Значение `pdwImplFlags` действительно только в `tk` том случае, если это токен MethodDef.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

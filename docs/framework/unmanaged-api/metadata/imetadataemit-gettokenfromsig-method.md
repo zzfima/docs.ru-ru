@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: f1262181fa745e1b6d3fc48a4ad728c1020705b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02943f28435fc00aad8e319aa260a24cca5e307
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434319"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177593"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>Метод IMetaDataEmit::GetTokenFromSig
-Возвращает токен для указанной сигнатуры метаданных.  
+Получает токен для указанной подписи метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT GetTokenFromSig (   
-    [in]  PCCOR_SIGNATURE pvSig,   
-    [in]  ULONG       cbSig,   
-    [out] mdSignature *pmsig   
+HRESULT GetTokenFromSig (
+    [in]  PCCOR_SIGNATURE pvSig,
+    [in]  ULONG       cbSig,
+    [out] mdSignature *pmsig
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pvSig`  
- окне Сохраняемая и хранимая сигнатура.  
+ (в) Подпись, которая будет сохранена и сохранена.  
   
  `cbSig`  
- окне Число байтов в `pvSig`.  
+ (в) Количество байтов `pvSig`в .  
   
  `pmsig`  
- заполняет Назначенный маркер `mdSignature`.  
+ (ваут) Назначенный `mdSignature` маркер.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

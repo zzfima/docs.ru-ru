@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440012"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177369"
 ---
 # <a name="imetadataimportenumevents-method"></a>Метод IMetaDataImport::EnumEvents
 Перечисляет токены определений событий для указанного токена TypeDef.  
@@ -28,10 +28,10 @@ ms.locfileid: "74440012"
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT EnumEvents (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdEvent     rEvents[],   
+HRESULT EnumEvents (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdEvent     rEvents[],
    [in]      ULONG       cMax,  
    [out]    ULONG        *pcEvents  
 );  
@@ -39,37 +39,37 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [вход, выход] Указатель на перечислитель.  
+ (в, вне) Указатель на регистратор.  
   
  `td`  
- окне Токен TypeDef, определения событий которого должны быть перечислены.  
+ (в) Токен TypeDef, определения событий которого должны быть перечислены.  
   
  `rEvents`  
- заполняет Массив возвращаемых событий.  
+ (ваут) Массив возвращенных событий.  
   
  `cMax`  
  [in] Максимальный размер массива `rEvents`.  
   
  `pcEvents`  
- заполняет Фактическое число событий, возвращаемых в `rEvents`.  
+ (ваут) Фактическое количество событий `rEvents`вернулось в .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` успешно возвращено.|  
-|`S_FALSE`|Нет событий для перечисления. В этом случае `pcEvents` равно нулю.|  
+|`S_OK`|`EnumEvents`вернулся успешно.|  
+|`S_FALSE`|Нет событий, которые можно перечислить. В этом `pcEvents` случае, равна нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включено в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

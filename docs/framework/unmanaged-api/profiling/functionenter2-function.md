@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 6cd35c180b8a322b3402b050c6d6840073010b1f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9aeb7a294beb10f9c2968e6161c72fdc362c4991
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866987"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177063"
 ---
 # <a name="functionenter2-function"></a>Функция FunctionEnter2
-Уведомляет профилировщик о передаче управления в функцию и предоставляет сведения о кадре стека и аргументах функции. Эта функция заменяет функцию [FunctionEnter](functionenter-function.md) .  
+Уведомляет профайлера о том, что элемент управления передается функции, и предоставляет информацию о кадровом штабе и аргументах функции. Эта функция заменяет функцию [FunctionEnter.](functionenter-function.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 void __stdcall FunctionEnter2 (  
-    [in]  FunctionID                       funcId,   
-    [in]  UINT_PTR                         clientData,   
-    [in]  COR_PRF_FRAME_INFO               func,   
+    [in]  FunctionID                       funcId,
+    [in]  UINT_PTR                         clientData,
+    [in]  COR_PRF_FRAME_INFO               func,
     [in]  COR_PRF_FUNCTION_ARGUMENT_INFO  *argumentInfo  
 );  
 ```  
@@ -39,49 +39,49 @@ void __stdcall FunctionEnter2 (
 
 - `funcId`
 
-  \[в] идентификатор функции, для которой передается элемент управления.
+  \[в» Идентификатор функции, к которой передается контроль.
 
 - `clientData`
 
-  \[in] идентификатор повторно сопоставленной функции, которую профилировщик указал ранее с помощью функции [FunctionIDMapper](functionidmapper-function.md) .
+  \[в идентификаторе remapped функции, который профайлер ранее указал с помощью функции [FunctionIDMapper.](functionidmapper-function.md)
   
 - `func`
 
-  \[in] `COR_PRF_FRAME_INFO` значение, указывающее на сведения о кадре стека.
+  \[в `COR_PRF_FRAME_INFO` значении, которое указывает на информацию о кадре стека.
   
-  Профилировщик должен рассматривать это как непрозрачный маркер, который можно передать обратно в подсистему выполнения метода [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .  
+  Профайлер должен рассматривать это как непрозрачную ручку, которая может быть передана обратно в двигатель исполнения в методе [ICorProfilerInfo2::GetFunctionInfo2.](icorprofilerinfo2-getfunctioninfo2-method.md)  
   
 - `argumentInfo`
 
-  \[в] указатель на структуру [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) , указывающую расположения в памяти аргументов функции.
+  \[в» указатель на [структуру COR_PRF_FUNCTION_ARGUMENT_INFO,](cor-prf-function-argument-info-structure.md) которая определяет местоположения в памяти аргументов функции.
 
-  Чтобы получить доступ к сведениям об аргументах, необходимо установить флаг `COR_PRF_ENABLE_FUNCTION_ARGS`. Профилировщик может использовать метод [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) для установки флагов событий.
+  Для того, чтобы получить `COR_PRF_ENABLE_FUNCTION_ARGS` доступ к информации аргумент, флаг должен быть установлен. Профайлер может использовать метод [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) для установки флагов событий.
 
-## <a name="remarks"></a>Заметки  
- Значения параметров `func` и `argumentInfo` недопустимы после возврата функции `FunctionEnter2`, поскольку значения могут измениться или быть уничтожены.  
+## <a name="remarks"></a>Remarks  
+ Значения `func` и `argumentInfo` параметры недействительны после возвращения `FunctionEnter2` функции, поскольку значения могут изменяться или быть уничтожены.  
   
- Функция `FunctionEnter2` является обратным вызовом. его необходимо реализовать. Реализация должна использовать атрибут класса хранения `__declspec`(`naked`).  
+ Функция `FunctionEnter2` является обратным вызовом; вы должны реализовать его. Реализация должна использовать `__declspec``naked`атрибут типа хранения .  
   
- Подсистема выполнения не сохраняет никакие регистры перед вызовом этой функции.  
+ Двигатель выполнения не сохраняет регистров перед вызовом этой функции.  
   
-- Во время записи необходимо сохранить все используемые регистры, включая те, которые находятся в блоке с плавающей запятой (FPU).  
+- При входе необходимо сохранить все регистры, которые вы используете, в том числе в блоке плавающей точки (FPU).  
   
-- При выходе необходимо восстановить стек, выключив все параметры, которые были переданы его вызывающим.  
+- На выходе необходимо восстановить стек, выскочив все параметры, которые были проталкиваются абонентом.  
   
- Реализация `FunctionEnter2` не должна блокироваться, так как она приведет к задержке сборки мусора. Реализация не должна пытаться выполнить сборку мусора, так как стек может не находиться в состоянии, понятном для сборки мусора. Если выполняется сборка мусора, среда выполнения блокируется до тех пор, пока не будет возвращено `FunctionEnter2`.  
+ Реализация не `FunctionEnter2` должна блокироваться, так как это приведет к задержке сбора мусора. Реализация не должна пытаться выбросить мусор, поскольку стек может быть не в удобном для сбора мусора состоянии. При попытке сбора мусора время выполнения `FunctionEnter2` будет блокироваться до возвращения.  
   
- Кроме того, функция `FunctionEnter2` не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
+ Кроме того, `FunctionEnter2` функция не должна вызывать управляемый код или каким-либо образом вызывать управляемое распределение памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf. idl  
+ **Заголовок:** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Функция FunctionLeave2](functionleave2-function.md)
 - [Функция FunctionTailcall2](functiontailcall2-function.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443873"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176205"
 ---
 # <a name="corattributetargets-enumeration"></a>Перечисление CorAttributeTargets
 Задает элементы приложения, в которых допустимо применять аргумент.  
@@ -44,15 +44,15 @@ typedef enum CorAttributeTargets
     catDelegate            = 0x1000,  
     catGenericParameter    = 0x4000,  
   
-    catAll                 =   
-        catAssembly | catModule | catClass | catStruct |   
-        catEnum | catConstructor | catMethod | catProperty |   
-        catField | catEvent | catInterface | catParameter |   
+    catAll                 =
+        catAssembly | catModule | catClass | catStruct |
+        catEnum | catConstructor | catMethod | catProperty |
+        catField | catEvent | catInterface | catParameter |
         catDelegate | catGenericParameter,  
   
-    catClassMembers        =   
-        catClass | catStruct | catEnum | catConstructor |   
-        catMethod | catProperty | catField | catEvent |   
+    catClassMembers        =
+        catClass | catStruct | catEnum | catConstructor |
+        catMethod | catProperty | catField | catEvent |
         catDelegate | catInterface  
   
 } CorAttributeTargets;  
@@ -60,37 +60,37 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
 |`catAssembly`|Атрибут может быть применен к сборке.|  
-|`catModule`|Атрибут может применяться к переносимому исполняемому модулю (DLL или exe).|  
-|`catClass`|Атрибут может применяться к классу.|  
-|`catStruct`|Атрибут может быть применен к структуре; то есть тип значения.|  
-|`catEnum`|Атрибут может применяться к перечислению.|  
-|`catConstructor`|Атрибут может применяться к конструктору.|  
-|`catMethod`|Атрибут может применяться к методу.|  
-|`catProperty`|Атрибут может применяться к свойству.|  
-|`catField`|Атрибут может применяться к полю.|  
-|`catEvent`|Атрибут может применяться к событию.|  
-|`catInterface`|Атрибут может применяться к интерфейсу.|  
-|`catParameter`|Атрибут может применяться к параметру.|  
-|`catDelegate`|Атрибут может применяться к делегату.|  
-|`catGenericParameter`|Атрибут может применяться к универсальному параметру.|  
-|`catAll`|Атрибут может применяться к любому элементу Application.|  
-|`catClassMembers`|Атрибут может применяться к члену класса.|  
+|`catModule`|Атрибут может быть применен к переносному исполняемому (.dll или .exe) модулю.|  
+|`catClass`|Атрибут может быть применен к классу.|  
+|`catStruct`|Атрибут может быть применен к структуре, т.е. может являться типом значения.|  
+|`catEnum`|Атрибут может быть применен к перечислению.|  
+|`catConstructor`|Атрибут может быть применен к конструктору.|  
+|`catMethod`|Атрибут может быть применен к методу.|  
+|`catProperty`|Атрибут может быть применен к свойству.|  
+|`catField`|Атрибут может быть применен к полю.|  
+|`catEvent`|Атрибут может быть применен к событию.|  
+|`catInterface`|Атрибут может быть применен к интерфейсу.|  
+|`catParameter`|Атрибут может быть применен к параметру.|  
+|`catDelegate`|Атрибут может быть применен к делегату.|  
+|`catGenericParameter`|Атрибут может быть применен к универсальному параметру.|  
+|`catAll`|Атрибут может быть применен к любому элементу приложения.|  
+|`catClassMembers`|Атрибут может быть применен к члену класса.|  
   
-## <a name="remarks"></a>Примечания  
- Значения перечисления `CorAttributeTargets` можно сочетать с битовой операцией OR для получения предпочтительного сочетания.  
+## <a name="remarks"></a>Remarks  
+ Значения `CorAttributeTargets` перечисления могут быть объединены с bitwise или операции, чтобы получить предпочтительную комбинацию.  
   
- `CorAttributeTargets` параллельно перечисление управляемых <xref:System.AttributeTargets?displayProperty=nameWithType>.  
+ Параллели `CorAttributeTargets` управляемого <xref:System.AttributeTargets?displayProperty=nameWithType> перечисления.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Корхдр. h  
+ **Заголовок:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

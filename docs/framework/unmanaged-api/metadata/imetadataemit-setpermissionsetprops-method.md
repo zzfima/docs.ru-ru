@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: 53a75b8e7edd15cd233577e0a3714fb5d981495f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: de4cfdf2a9353eebdebaf4df9e481d06d776ff04
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432327"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177490"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>Метод IMetaDataEmit::SetPermissionSetProps
-Задает или обновляет функции сигнатуры метаданных набора разрешений, определенного при предыдущем вызове метода [IMetaDataEmit::D ефинепермиссионсет](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Устанавливает или обновляет функции подписи метаданных разрешения, определенного предыдущим вызовом на [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-HRESULT SetPermissionSetProps (   
-    [in]  mdToken         tk,   
-    [in]  DWORD           dwAction,   
-    [in]  void const      *pvPermission,   
-    [in]  ULONG           cbPermission,   
-    [out] mdPermission    *ppm   
+HRESULT SetPermissionSetProps (
+    [in]  mdToken         tk,
+    [in]  DWORD           dwAction,
+    [in]  void const      *pvPermission,
+    [in]  ULONG           cbPermission,
+    [out] mdPermission    *ppm
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- окне Токен метаданных, представляющий объект для декорирования.  
+ (в) Токен метаданных, представляющий объект, который должен быть оформлен.  
   
  `dwAction`  
- окне Значение [кордеклсекурити](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) , указывающее тип используемой декларативной безопасности.  
+ (в) Значение [CorDeclSecurity,](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) которое определяет тип декларативной безопасности, которая будет использоваться.  
   
  `pvPermission`  
- окне Большой двоичный объект разрешений.  
+ (в) Разрешение BLOB.  
   
  `cbPermission`  
- окне Размер `pvPermission`в байтах.  
+ (в) Размер, в байтах, из `pvPermission`.  
   
  `ppm`  
- заполняет Маркер метаданных `mdPermission`, представляющий обновленные разрешения.  
+ (ваут) Токен `mdPermission` метаданных, представляющий обновленные разрешения.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

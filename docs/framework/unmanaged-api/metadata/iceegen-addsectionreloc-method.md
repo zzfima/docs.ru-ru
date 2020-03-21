@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: e5940f229e86b46bb8c5d5b2f9920a8261359f65
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436408"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176114"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>Метод ICeeGen::AddSectionReloc
-Добавляет инструкцию. reloc в базу кода.  
+Добавляет инструкцию .reloc в базу кода.  
   
  Этот метод устарел и не должен использоваться.  
   
@@ -33,33 +33,33 @@ ms.locfileid: "74436408"
 HRESULT AddSectionReloc (  
    [in] HCEESECTION            section,  
    [in] ULONG                  offset,  
-   [in] HCEESECTION            relativeTo,   
+   [in] HCEESECTION            relativeTo,
    [in] CeeSectionRelocType    relocType  
 );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `section`  
- окне Раздел кода в памяти, к которому добавляется инструкция. reloc.  
+ (в) Раздел кода в памяти, к которому можно добавить инструкцию .reloc.  
   
  `offset`  
- окне Смещение раздела.  
+ (в) Смещение раздела.  
   
  `relativeTo`  
- окне Раздел, к которому относится `offset`.  
+ (в) Раздел, к `offset` которому относится.  
   
  `relocType`  
- окне Одно из значений [цеесектионрелоктипе](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) , указывающее тип добавляемой инструкции. reloc.  
+ (в) Одно из значений [CeeSectionRelocType,](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) указывающе вид инструкции .reloc для добавления.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** COR. h  
+ **Заголовок:** Cor.h  
   
- **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
