@@ -177,7 +177,7 @@
               href: loading-data-into-a-dataset.md
             - name: Загрузка примеров баз данных
               href: downloading-sample-databases-linq-to-dataset.md
-            - name: Как выполнить Создание проектов LINQ to DataSet в Visual Studio
+            - name: Практическое руководство. Создание проектов LINQ to DataSet в Visual Studio
               href: how-to-create-a-linq-to-dataset-project-in-vs.md
         - name: Руководство по программированию
           href: programming-guide-linq-to-dataset.md
@@ -197,7 +197,7 @@
               href: comparing-datarows-linq-to-dataset.md
             - name: Создание DataTable из запроса
               href: creating-a-datatable-from-a-query-linq-to-dataset.md
-            - name: 'Как выполнить Реализация CopyToDataTable<T>, где универсальный тип T не является объектом DataRow'
+            - name: 'Практическое руководство. Реализация CopyToDataTable<T>, где универсальный тип T не является объектом DataRow'
               href: implement-copytodatatable-where-type-not-a-datarow.md
             - name: Универсальные методы Field и SetField
               href: generic-field-and-setfield-methods-linq-to-dataset.md
@@ -214,7 +214,7 @@
                   href: querying-the-datarowview-collection-in-a-dataview.md
                 - name: Производительность объекта DataView
                   href: dataview-performance.md
-                - name: Как выполнить Связывание объекта DataView с элементом управления DataGridView в Windows Forms
+                - name: Практическое руководство. Связывание объекта DataView с элементом управления DataGridView в Windows Forms
                   href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
             - name: Отладка запросов в LINQ to DataSet
               href: debugging-linq-to-dataset-queries.md
@@ -236,7 +236,7 @@
                       href: query-expression-syntax-examples-ordering-linq-to-dataset.md
                     - name: Операторы элементов
                       href: query-expression-syntax-examples-element-operators.md
-                    - name: Статистические операторы
+                    - name: Операторы статистических выражений
                       href: query-expression-syntax-examples-aggregate-operators.md
                     - name: Операторы соединения
                       href: query-expression-syntax-examples-join-operators.md
@@ -255,7 +255,7 @@
                       href: method-based-query-syntax-examples-conversion-operators.md
                     - name: Операторы элементов
                       href: method-based-query-syntax-examples-element-operators.md
-                    - name: Статистические операторы
+                    - name: Операторы статистических выражений
                       href: method-based-query-syntax-examples-aggregate-operators.md
                     - name: Join
                       href: method-based-query-syntax-examples-join-linq-to-dataset.md

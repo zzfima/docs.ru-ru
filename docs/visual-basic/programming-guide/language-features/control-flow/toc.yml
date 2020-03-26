@@ -11,7 +11,7 @@
     - name: Другие структуры управления
       href: other-control-structures.md
       items:
-        - name: Как выполнить Удаление системного ресурса
+        - name: Практическое руководство. Удаление системного ресурса
           href: how-to-dispose-of-a-system-resource.md
     - name: Вложенные структуры управления
       href: nested-control-structures.md

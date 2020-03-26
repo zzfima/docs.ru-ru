@@ -10,40 +10,40 @@
     - name: Доступ к клавиатуре
       href: accessing-the-keyboard.md
       items:
-        - name: Как выполнить Запуск приложения и отправка ему нажатий клавиш
+        - name: Практическое руководство. Запуск приложения и отправка ему нажатий клавиш
           href: how-to-start-an-application-and-send-it-keystrokes.md
     - name: Доступ к мыши
       href: accessing-the-mouse.md
     - name: Выполнение сетевых операций
       href: performing-network-operations.md
       items:
-        - name: Как выполнить Отправка файла
+        - name: Практическое руководство. Отправка файла
           href: how-to-upload-a-file.md
-        - name: Как выполнить Скачивание файла
+        - name: Практическое руководство. Скачивание файла
           href: how-to-download-a-file.md
-        - name: Как выполнить Проверка состояния подключения
+        - name: Практическое руководство. Проверка состояния подключения
           href: how-to-check-connection-status.md
     - name: Доступ к портам компьютера
       href: accessing-the-computer-s-ports.md
       items:
-        - name: Как выполнить Отображение доступных последовательных портов
+        - name: Практическое руководство. Отображение доступных последовательных портов
           href: how-to-show-available-serial-ports.md
-        - name: 'Как выполнить Дозвон при помощи модема, подключенного к последовательному порту компьютера'
+        - name: 'Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера'
           href: how-to-dial-modems-attached-to-serial-ports.md
-        - name: Как выполнить Отправка строк в последовательные порты
+        - name: Практическое руководство. Отправка строк в последовательные порты
           href: how-to-send-strings-to-serial-ports.md
-        - name: Как выполнить Получение строк из последовательных портов
+        - name: Практическое руководство. Получение строк из последовательных портов
           href: how-to-receive-strings-from-serial-ports.md
         - name: Операции с портами в .NET Framework
           href: port-operations-in-the-net-framework.md
     - name: Чтение данных из реестра и запись в реестр (Visual Basic)
       href: reading-from-and-writing-to-the-registry.md
       items:
-        - name: Как выполнить Создание раздела реестра и задание его значения
+        - name: Практическое руководство. Создание раздела реестра и задание его значения
           href: how-to-create-a-registry-key-and-set-its-value.md
-        - name: Как выполнить Чтение значения из раздела реестра
+        - name: Практическое руководство. Чтение значения из раздела реестра
           href: how-to-read-a-value-from-a-registry-key.md
-        - name: Как выполнить Удаление раздела реестра
+        - name: Практическое руководство. Удаление раздела реестра
           href: how-to-delete-a-registry-key.md
         - name: Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32
           href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md

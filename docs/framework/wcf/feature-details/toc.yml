@@ -10,7 +10,7 @@
           href: creating-a-long-running-workflow-service.md
         - name: Действия обмена сообщениями
           href: messaging-activities.md
-        - name: Как выполнить Как создать службу рабочего процесса с помощью действий обмена сообщениями
+        - name: Практическое руководство. Как создать службу рабочего процесса с помощью действий обмена сообщениями
           href: how-to-create-a-workflow-service-with-messaging-activities.md
         - name: Использование контрактов в рабочих процессах
           href: using-contracts-in-workflow.md
@@ -25,18 +25,18 @@
               href: workflow-service-host-extensibility.md
             - name: Конечная точка элемента управления рабочего процесса
               href: workflow-control-endpoint.md
-            - name: Как выполнить Как разместить службу рабочего процесса с помощью Windows Server App Fabric
+            - name: Практическое руководство. Как разместить службу рабочего процесса с помощью Windows Server App Fabric
               href: how-to-host-a-workflow-service-with-windows-server-app-fabric.md
             - name: Настройка WorkflowServiceHost
               href: configuring-workflowservicehost.md
               items:
-                - name: Как выполнить Как настроить сохраняемость с помощью WorkflowServiceHost
+                - name: Практическое руководство. Как настроить сохраняемость с помощью WorkflowServiceHost
                   href: how-to-configure-persistence-with-workflowservicehost.md
-                - name: Как выполнить Как настроить отслеживание с помощью WorkflowServiceHost
+                - name: Практическое руководство. Как настроить отслеживание с помощью WorkflowServiceHost
                   href: how-to-configure-tracking-with-workflowservicehost.md
-                - name: Как выполнить Как настроить неактивное поведение с помощью WorkflowServiceHost
+                - name: Практическое руководство. Как настроить неактивное поведение с помощью WorkflowServiceHost
                   href: how-to-configure-idle-behavior-with-workflowservicehost.md
-                - name: Как выполнить Как настроить поведение необработанного исключения рабочего процесса при помощи WorkflowServiceHost
+                - name: Практическое руководство. Как настроить поведение необработанного исключения рабочего процесса при помощи WorkflowServiceHost
                   href: config-workflow-unhandled-exception-workflowservicehost.md
         - name: Корреляция
           href: correlation.md
@@ -84,27 +84,27 @@
               href: servicemodel-attributes-and-servicedescription-reference.md
             - name: Службы типа "запрос-ответ"
               href: request-reply-services.md
-            - name: Как выполнить Создание контракта типа "запрос — ответ"
+            - name: Практическое руководство. Создание контракта типа "запрос — ответ"
               href: how-to-create-a-request-reply-contract.md
             - name: Односторонние службы
               href: one-way-services.md
-            - name: Как выполнить Создание одностороннего контракта
+            - name: Практическое руководство. Создание одностороннего контракта
               href: how-to-create-a-one-way-contract.md
             - name: Дуплексные службы
               href: duplex-services.md
-            - name: Как выполнить Создание двухстороннего контракта
+            - name: Практическое руководство. Создание двухстороннего контракта
               href: how-to-create-a-duplex-contract.md
-            - name: Как выполнить Создание службы с помощью класса контракта
+            - name: Практическое руководство. Создание службы с помощью класса контракта
               href: how-to-create-a-wcf-contract-with-a-class.md
-            - name: Как выполнить Создание службы с помощью интерфейса контракта
+            - name: Практическое руководство. Создание службы с помощью интерфейса контракта
               href: how-to-create-a-service-with-a-contract-interface.md
             - name: Использование ServiceThrottlingBehavior для управления производительностью службы WCF
               href: using-servicethrottlingbehavior-to-control-wcf-service-performance.md
-        - name: Как выполнить Создание конечной точки службы в конфигурации
+        - name: Практическое руководство. Создание конечной точки службы в конфигурации
           href: how-to-create-a-service-endpoint-in-configuration.md
-        - name: Как выполнить Создание конечной точки службы в коде
+        - name: Практическое руководство. Создание конечной точки службы в коде
           href: how-to-create-a-service-endpoint-in-code.md
-        - name: Как выполнить Использование программы Svcutil.exe для проверки скомпилированного кода службы
+        - name: Практическое руководство. Использование программы Svcutil.exe для проверки скомпилированного кода службы
           href: how-to-use-svcutil-exe-to-validate-compiled-service-code.md
         - name: Стандартные конечные точки
           href: standard-endpoints.md
@@ -116,7 +116,7 @@
         - name: Использование контрактов данных
           href: using-data-contracts.md
           items:
-            - name: Как выполнить Создание базового контракта данных для класса или структуры
+            - name: Практическое руководство. Создание базового контракта данных для класса или структуры
               href: how-to-create-a-basic-data-contract-for-a-class-or-structure.md
             - name: Сериализуемые типы
               href: serializable-types.md
@@ -166,7 +166,7 @@
         - name: Использование класса XmlSerializer
           href: using-the-xmlserializer-class.md
           items:
-            - name: Как выполнить Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer
+            - name: Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer
               href: startup-time-of-wcf-client-applications-using-the-xmlserializer.md
         - name: Использование контрактов сообщений
           href: using-message-contracts.md
@@ -179,7 +179,7 @@
         - name: Большие наборы данных и потоковая передача
           href: large-data-and-streaming.md
           items:
-            - name: Как выполнить Включение потоковой передачи
+            - name: Практическое руководство. Включение потоковой передачи
               href: how-to-enable-streaming.md
         - name: Вопросы безопасности для данных
           href: security-considerations-for-data.md
@@ -188,9 +188,9 @@
     - name: 'Сеансы, экземпляры и параллелизм'
       href: sessions-instancing-and-concurrency.md
       items:
-        - name: 'Как выполнить Создание службы, для которой требуются сеансы'
+        - name: 'Практическое руководство. Создание службы, для которой требуются сеансы'
           href: how-to-create-a-service-that-requires-sessions.md
-        - name: Как выполнить Управление созданием экземпляров служб
+        - name: Практическое руководство. Управление созданием экземпляров служб
           href: how-to-control-service-instancing.md
         - name: Упорядоченная обработка сообщений в режиме единого параллелизма
           href: ordered-processing-of-messages-in-single-concurrency-mode.md
@@ -205,7 +205,7 @@
           href: streaming-message-transfer.md
         - name: Настройка HTTP и HTTPS
           href: configuring-http-and-https.md
-        - name: Как выполнить Как заменить URL-резервирование WCF на ограниченное резервирование
+        - name: Практическое руководство. Как заменить URL-резервирование WCF на ограниченное резервирование
           href: how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md
         - name: Квоты транспорта
           href: transport-quotas.md
@@ -214,9 +214,9 @@
         - name: Совместное использование портов Net.TCP
           href: net-tcp-port-sharing.md
           items:
-            - name: Как выполнить Включение службы совместного использования портов Net.TCP
+            - name: Практическое руководство. Включение службы совместного использования портов Net.TCP
               href: how-to-enable-the-net-tcp-port-sharing-service.md
-            - name: Как выполнить Настройка службы WCF для совместного использования портов
+            - name: Практическое руководство. Настройка службы WCF для совместного использования портов
               href: how-to-configure-a-wcf-service-to-use-port-sharing.md
             - name: Настройка службы совместного использования портов Net.TCP
               href: configuring-the-net-tcp-port-sharing-service.md
@@ -230,11 +230,11 @@
           items:
             - name: Общие сведения о надежных сеансах
               href: reliable-sessions-overview.md
-            - name: Как выполнить Обмен сообщениями в рамках надежного сеанса
+            - name: Практическое руководство. Обмен сообщениями в рамках надежного сеанса
               href: how-to-exchange-messages-within-a-reliable-session.md
-            - name: Как выполнить Защита сообщений с помощью надежных сеансов
+            - name: Практическое руководство. Защита сообщений с помощью надежных сеансов
               href: how-to-secure-messages-within-reliable-sessions.md
-            - name: Как выполнить Создание пользовательской привязки надежного сеанса с использованием HTTPS
+            - name: Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS
               href: how-to-create-a-custom-reliable-session-binding-with-https.md
             - name: Рекомендации по работе с надежными сеансами
               href: best-practices-for-reliable-sessions.md
@@ -250,9 +250,9 @@
                   href: service-endpoints-and-queue-addressing.md
                 - name: 'Размещение веб-узлов в приложении, использующем очереди'
                   href: web-hosting-a-queued-application.md
-            - name: Как выполнить Обмен сообщениями в очереди с конечными точками WCF
+            - name: Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF
               href: how-to-exchange-queued-messages-with-wcf-endpoints.md
-            - name: Как выполнить Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений
+            - name: Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений
               href: how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md
             - name: Группирование сообщений в очереди в рамках сеанса
               href: grouping-queued-messages-in-a-session.md
@@ -288,7 +288,7 @@
               href: servicemodel-transaction-configuration.md
             - name: Включение потока транзакций
               href: enabling-transaction-flow.md
-            - name: Как выполнить Создание транзакционной службы
+            - name: Практическое руководство. Создание транзакционной службы
               href: how-to-create-a-transactional-service.md
             - name: Диагностика транзакционных приложений
               href: diagnosing-transactional-applications.md
@@ -356,21 +356,21 @@
               items:
                 - name: Режимы проверки подлинности SecurityBindingElement
                   href: securitybindingelement-authentication-modes.md
-                - name: Как выполнить Создание пользовательской привязки с использованием элемента SecurityBindingElement
+                - name: Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
                   href: how-to-create-a-custom-binding-using-the-securitybindingelement.md
-                - name: Как выполнить Создание SecurityBindingElement для заданного режима проверки подлинности
+                - name: Практическое руководство. Создание SecurityBindingElement для заданного режима проверки подлинности
                   href: how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md
-                - name: Как выполнить Порядок отключения безопасных сеансов в WSFederationHttpBinding
+                - name: Практическое руководство. Порядок отключения безопасных сеансов в WSFederationHttpBinding
                   href: how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md
-                - name: Как выполнить Включение обнаружения повтора сообщений
+                - name: Практическое руководство. Включение обнаружения повтора сообщений
                   href: how-to-enable-message-replay-detection.md
-                - name: Как выполнить Создание подтверждающих учетных данных
+                - name: Практическое руководство. Создание подтверждающих учетных данных
                   href: how-to-create-a-supporting-credential.md
-                - name: Как выполнить Настройка подтверждения сигнатуры
+                - name: Практическое руководство. Настройка подтверждения сигнатуры
                   href: how-to-set-up-a-signature-confirmation.md
-                - name: Как выполнить Установка максимальной разницы в показаниях часов
+                - name: Практическое руководство. Установка максимальной разницы в показаниях часов
                   href: how-to-set-a-max-clock-skew.md
-                - name: Как выполнить Выключение шифрования цифровых сигнатур
+                - name: Практическое руководство. Выключение шифрования цифровых сигнатур
                   href: how-to-disable-encryption-of-digital-signatures.md
         - name: Защита служб и клиентов
           href: securing-services-and-clients.md
@@ -380,7 +380,7 @@
               items:
                 - name: Выбор типа учетных данных
                   href: selecting-a-credential-type.md
-                - name: Как выполнить Проверка подлинности с использованием имени и пароля пользователя
+                - name: Практическое руководство. Проверка подлинности с использованием имени и пароля пользователя
                   href: how-to-authenticate-with-a-user-name-and-password.md
             - name: Безопасность транспорта
               href: transport-security.md
@@ -393,16 +393,16 @@
                   href: understanding-http-authentication.md
                 - name: Использование олицетворения при обеспечении безопасности транспорта
                   href: using-impersonation-with-transport-security.md
-                - name: Как выполнить Настройка порта с использованием SSL-сертификата
+                - name: Практическое руководство. Настройка порта с использованием SSL-сертификата
                   href: how-to-configure-a-port-with-an-ssl-certificate.md
-                - name: 'Как выполнить Как настраивать протокол SSL в службе WCF, размещенной в IIS'
+                - name: 'Практическое руководство. Как настраивать протокол SSL в службе WCF, размещенной в IIS'
                   href: how-to-configure-an-iis-hosted-wcf-service-with-ssl.md
             - name: Безопасность сообщений
               href: message-security-in-wcf.md
               items:
-                - name: Как выполнить Защита службы с использованием сертификата X.509
+                - name: Практическое руководство. Защита службы с использованием сертификата X.509
                   href: how-to-secure-a-service-with-an-x-509-certificate.md
-                - name: Как выполнить Использование средств обеспечения безопасности транспорта и учетных данных сообщения
+                - name: Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
                   href: how-to-use-transport-security-and-message-credentials.md
                 - name: 'Предотвращение атак воспроизведения, когда служба WCF размещена на веб-ферме'
                   href: preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm.md
@@ -411,41 +411,41 @@
               items:
                 - name: Безопасные диалоги и безопасные сеансы
                   href: secure-conversations-and-secure-sessions.md
-                - name: Как выполнить Создание сеанса безопасности
+                - name: Практическое руководство. Создание сеанса безопасности
                   href: how-to-create-a-secure-session.md
-                - name: Как выполнить Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса
+                - name: Практическое руководство. Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса
                   href: how-to-create-a-security-context-token-for-a-secure-session.md
                 - name: Соображения о защите безопасных сеансов
                   href: security-considerations-for-secure-sessions.md
             - name: Работа с сертификатами
               href: working-with-certificates.md
               items:
-                - name: Как выполнить Получение сертификата
+                - name: Практическое руководство. Получение сертификата
                   href: how-to-obtain-a-certificate-wcf.md
-                - name: Как выполнить Просмотр сертификатов с помощью оснастки консоли MMC
+                - name: Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC
                   href: how-to-view-certificates-with-the-mmc-snap-in.md
-                - name: Как выполнить Получение отпечатка сертификата
+                - name: Практическое руководство. Получение отпечатка сертификата
                   href: how-to-retrieve-the-thumbprint-of-a-certificate.md
-                - name: Как выполнить Предоставление доступа к сертификатам X.509 для WCF
+                - name: Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
                   href: how-to-make-x-509-certificates-accessible-to-wcf.md
-                - name: Как выполнить Создание временных сертификатов для использования во время разработки
+                - name: Практическое руководство. Создание временных сертификатов для использования во время разработки
                   href: how-to-create-temporary-certificates-for-use-during-development.md
-                - name: 'Как выполнить Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур'
+                - name: 'Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур'
                   href: specify-the-certificate-authority-chain-verify-signatures-wcf.md
                 - name: 'Различия проверки сертификатов с использованием средств обеспечения безопасности HTTPS, SSL по TCP и SOAP'
                   href: cert-val-diff-https-ssl-over-tcp-and-soap.md
                 - name: Различия проверки сертификатов службы с использованием Internet Explorer и WCF
                   href: diff-service-certificate-validation-ie-and-wcf.md
-                - name: Как выполнить Согласованное обращение к сертификатам X.509
+                - name: Практическое руководство. Согласованное обращение к сертификатам X.509
                   href: how-to-consistently-reference-x-509-certificates.md
         - name: Проверка подлинности
           href: authentication-in-wcf.md
           items:
-            - name: Как выполнить Использование поставщика членства ASP.NET
+            - name: Практическое руководство. Использование поставщика членства ASP.NET
               href: how-to-use-the-aspnet-membership-provider.md
-            - name: Как выполнить Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
+            - name: Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
               href: how-to-use-a-custom-user-name-and-password-validator.md
-            - name: Как выполнить Использование нескольких маркеров безопасности одного типа
+            - name: Практическое руководство. Использование нескольких маркеров безопасности одного типа
               href: how-to-use-multiple-security-tokens-of-the-same-type.md
             - name: Идентификация и проверка подлинности службы
               href: service-identity-and-authentication.md
@@ -460,9 +460,9 @@
           items:
             - name: Механизмы управления доступом
               href: access-control-mechanisms.md
-            - name: Как выполнить Использование поставщика ролей ASP.NET со службой
+            - name: Практическое руководство. Использование поставщика ролей ASP.NET со службой
               href: how-to-use-the-aspnet-role-provider-with-a-service.md
-            - name: Как выполнить Использование поставщика ролей диспетчера авторизации ASP.NET со службой
+            - name: Практическое руководство. Использование поставщика ролей диспетчера авторизации ASP.NET со службой
               href: how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md
             - name: Управление утверждениями и авторизацией с помощью модели удостоверения
               href: managing-claims-and-authorization-with-the-identity-model.md
@@ -482,24 +482,24 @@
               href: federation.md
             - name: Федерация и доверие
               href: federation-and-trust.md
-            - name: Как выполнить Создание федеративного клиента
+            - name: Практическое руководство. Создание федеративного клиента
               href: how-to-create-a-federated-client.md
-            - name: Как выполнить Настройка учетных данных службы федерации
+            - name: Практическое руководство. Настройка учетных данных службы федерации
               href: how-to-configure-credentials-on-a-federation-service.md
-            - name: Как выполнить Создание WSFederationHttpBinding
+            - name: Практическое руководство. Создание WSFederationHttpBinding
               href: how-to-create-a-wsfederationhttpbinding.md
-            - name: Как выполнить Создание службы маркеров безопасности
+            - name: Практическое руководство. Создание службы маркеров безопасности
               href: how-to-create-a-security-token-service.md
             - name: Утверждения и маркеры языка SAML (Security Assertions Markup Language)
               href: saml-tokens-and-claims.md
-            - name: Как выполнить Настройка локального издателя
+            - name: Практическое руководство. Настройка локального издателя
               href: how-to-configure-a-local-issuer.md
-            - name: Как выполнить Создание дуплексной федеративной привязки
+            - name: Практическое руководство. Создание дуплексной федеративной привязки
               href: how-to-create-a-duplex-federated-binding.md
         - name: Аудит
           href: auditing-security-events.md
           items:
-            - name: Как выполнить Аудит событий безопасности
+            - name: Практическое руководство. Аудит событий безопасности
               href: how-to-audit-wcf-security-events.md
         - name: Руководство и рекомендации по безопасности
           href: security-guidance-and-best-practices.md
@@ -573,43 +573,43 @@
         - name: Экспорт и импорт метаданных
           href: exporting-and-importing-metadata.md
           items:
-            - name: Как выполнить Импорт метаданных в конечные точки службы
+            - name: Практическое руководство. Импорт метаданных в конечные точки службы
               href: how-to-import-metadata-into-service-endpoints.md
-            - name: Как выполнить Экспорт метаданных из конечных точек службы
+            - name: Практическое руководство. Экспорт метаданных из конечных точек службы
               href: how-to-export-metadata-from-service-endpoints.md
             - name: ServiceDescription и справочная информация о WSDL
               href: servicedescription-and-wsdl-reference.md
-            - name: Как выполнить Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы
+            - name: Практическое руководство. Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы
               href: how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md
         - name: Публикация метаданных
           href: publishing-metadata.md
           items:
-            - name: Как выполнить Публикация метаданных для службы с использованием файла конфигурации
+            - name: Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
               href: how-to-publish-metadata-for-a-service-using-a-configuration-file.md
-            - name: Как выполнить Публикация метаданных для службы с использованием кода
+            - name: Практическое руководство. Публикация метаданных для службы с использованием кода
               href: how-to-publish-metadata-for-a-service-using-code.md
         - name: Извлечение метаданных
           href: retrieving-metadata.md
           items:
-            - name: Как выполнить Использование Svcutil.exe для загрузки документов метаданных
+            - name: Практическое руководство. Использование Svcutil.exe для загрузки документов метаданных
               href: how-to-use-svcutil-exe-to-download-metadata-documents.md
-            - name: Как выполнить Использование MetadataResolver для динамического получения метаданных привязки
+            - name: Практическое руководство. Использование MetadataResolver для динамического получения метаданных привязки
               href: how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md
-            - name: Как выполнить Использование MetadataExchangeClient для получения метаданных
+            - name: Практическое руководство. Использование MetadataExchangeClient для получения метаданных
               href: how-to-use-metadataexchangeclient-to-retrieve-metadata.md
         - name: Использование метаданных
           href: using-metadata.md
           items:
             - name: Основные сведения о созданном коде клиента
               href: understanding-generated-client-code.md
-            - name: Как выполнить Извлечение данных и реализация совместимой службы
+            - name: Практическое руководство. Извлечение данных и реализация совместимой службы
               href: how-to-retrieve-metadata-and-implement-a-compliant-service.md
             - name: Создание клиента WCF из метаданных службы
               href: generating-a-wcf-client-from-service-metadata.md
         - name: Вопросы безопасности при использовании метаданных
           href: security-considerations-with-metadata.md
           items:
-            - name: Как выполнить Защита конечных точек метаданных
+            - name: Практическое руководство. Защита конечных точек метаданных
               href: how-to-secure-metadata-endpoints.md
             - name: 'Как выполнить: Разрешение запросов метаданных в процессе авторизации'
               href: how-to-allow-metadata-requests-while-authorizing.md
@@ -621,25 +621,25 @@
         - name: Обращение к службам с использованием клиента WCF
           href: accessing-services-using-a-client.md
           items:
-            - name: Как выполнить Доступ к службам с односторонним контрактом и контрактом типа "запрос — ответ"
+            - name: Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа "запрос — ответ"
               href: how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md
-            - name: Как выполнить Доступ к службам с дуплексным контрактом
+            - name: Практическое руководство. Доступ к службам с дуплексным контрактом
               href: how-to-access-services-with-a-duplex-contract.md
-            - name: Как выполнить Доступ к службе WSE 3.0
+            - name: Практическое руководство. Доступ к службе WSE 3.0
               href: how-to-access-a-wse-3-0-service-with-a-wcf-client.md
-            - name: Как выполнить Использование ChannelFactory
+            - name: Практическое руководство. Использование ChannelFactory
               href: how-to-use-the-channelfactory.md
             - name: Производство каналов и кэширование
               href: channel-factory-and-caching.md
-            - name: Как выполнить Асинхронный вызов операций службы
+            - name: Практическое руководство. Асинхронный вызов операций службы
               href: how-to-call-wcf-service-operations-asynchronously.md
             - name: Клиентские приложения среднего уровня
               href: middle-tier-client-applications.md
-            - name: Как выполнить Асинхронный вызов операций с использованием фабрики каналов
+            - name: Практическое руководство. Асинхронный вызов операций с использованием фабрики каналов
               href: how-to-call-operations-asynchronously-using-a-channel-factory.md
             - name: Доступ к службам WCF из клиентского приложения Магазина Windows
               href: accessing-wcf-services-with-a-windows-store-client-app.md
-            - name: Как выполнить Создание фабрики каналов и ее использование для создания каналов и управления ими
+            - name: Практическое руководство. Создание фабрики каналов и ее использование для создания каналов и управления ими
               href: how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md
         - name: Конфигурация клиента WCF
           href: client-configuration.md
@@ -655,7 +655,7 @@
               href: wcf-services-and-aspnet.md
             - name: Рекомендации по размещению в службах IIS
               href: internet-information-services-hosting-best-practices.md
-            - name: Как выполнить Размещение службы WCF в IIS
+            - name: Практическое руководство. Размещение службы WCF в IIS
               href: how-to-host-a-wcf-service-in-iis.md
             - name: Настройка IIS 7.0 для Windows Communication Foundation
               href: configuring-iis-for-wcf.md
@@ -666,14 +666,14 @@
               href: was-activation-architecture.md
             - name: Настройка WAS для использования с WCF
               href: configuring-the-wpa--service-for-use-with-wcf.md
-            - name: Как выполнить Установка и настройка компонентов активации WCF
+            - name: Практическое руководство. Установка и настройка компонентов активации WCF
               href: how-to-install-and-configure-wcf-activation-components.md
-            - name: Как выполнить Размещение службы WCF в WAS
+            - name: Практическое руководство. Размещение службы WCF в WAS
               href: how-to-host-a-wcf-service-in-was.md
         - name: Размещение в приложении службы Windows
           href: hosting-in-a-windows-service-application.md
           items:
-            - name: Как выполнить Размещение службы WCF в управляемой службе Windows
+            - name: Практическое руководство. Размещение службы WCF в управляемой службе Windows
               href: how-to-host-a-wcf-service-in-a-managed-windows-service.md
         - name: Размещение в управляемом приложении
           href: hosting-in-a-managed-application.md
@@ -727,42 +727,42 @@
           items:
             - name: Общие сведения об интеграции с приложениями COM+
               href: integrating-with-com-plus-applications-overview.md
-            - name: Как выполнить Использование программы командной строки настройки модели служб COM+
+            - name: Практическое руководство. Использование программы командной строки настройки модели служб COM+
               href: how-to-use-the-com-service-model-configuration-tool.md
-            - name: Как выполнить Настройка параметров службы COM+
+            - name: Практическое руководство. Настройка параметров службы COM+
               href: how-to-configure-com-service-settings.md
-            - name: Как выполнить Развертывание приложения интеграции COM+
+            - name: Практическое руководство. Развертывание приложения интеграции COM+
               href: how-to-deploy-a-com-integration-application.md
         - name: Интеграция с приложениями COM
           href: integrating-with-com-applications.md
           items:
             - name: Общие сведения об интеграции с приложениями COM
               href: integrating-with-com-applications-overview.md
-            - name: Как выполнить Регистрация и настройка моникера службы
+            - name: Практическое руководство. Регистрация и настройка моникера службы
               href: how-to-register-and-configure-a-service-moniker.md
-            - name: Как выполнить Использование моникера службы Windows Communication Foundation без регистрации
+            - name: Практическое руководство. Использование моникера службы Windows Communication Foundation без регистрации
               href: use-the-wcf-service-moniker-without-registration.md
-            - name: Как выполнить Использование моникера службы с контрактами WSDL
+            - name: Практическое руководство. Использование моникера службы с контрактами WSDL
               href: how-to-use-a-service-moniker-with-wsdl-contracts.md
-            - name: Как выполнить Использование моникера службы с контрактами обмена метаданными
+            - name: Практическое руководство. Использование моникера службы с контрактами обмена метаданными
               href: how-to-use-a-service-moniker-with-metadata-exchange-contracts.md
-            - name: Как выполнить Задание учетных данных безопасности канала
+            - name: Практическое руководство. Задание учетных данных безопасности канала
               href: how-to-specify-channel-security-credentials.md
         - name: Перенос приложений удаленного взаимодействия .NET на платформу WCF
           href: migrating-net-remoting-applications-to-wcf.md
         - name: Взаимодействие с расширениями веб-служб 3.0
           href: interoperability-with-web-services-enhancements-3-0.md
           items:
-            - name: Как выполнить Настройка служб WCF для взаимодействия с клиентами WSE 3.0
+            - name: Практическое руководство. Настройка служб WCF для взаимодействия с клиентами WSE 3.0
               href: how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md
-            - name: Как выполнить Настройка клиента WCF для взаимодействия со службами WSE 3.0
+            - name: Практическое руководство. Настройка клиента WCF для взаимодействия со службами WSE 3.0
               href: how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md
         - name: Миграция веб-служб WSE 3.0 на платформу WCF
           href: migrating-wse-3-0-web-services-to-wcf.md
         - name: Взаимодействие с веб-службами ASP.NET
           href: interop-with-aspnet-web-services.md
           items:
-            - name: Как выполнить Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET
+            - name: Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET
               href: config-wcf-service-with-aspnet-web-service.md
         - name: Миграция веб-служб ASP.NET на платформу WCF
           href: migrating-aspnet-web-services-to-wcf.md
@@ -786,15 +786,15 @@
           href: wcf-web-http-programming-model-overview.md
         - name: Объектная модель программирования WCF Web HTTP
           href: wcf-web-http-programming-object-model.md
-        - name: Как выполнить Как создать простую веб-службу WCF HTTP
+        - name: Практическое руководство. Как создать простую веб-службу WCF HTTP
           href: how-to-create-a-basic-wcf-web-http-service.md
-        - name: Как выполнить Предоставление контрактов SOAP- и веб-клиентам
+        - name: Практическое руководство. Предоставление контрактов SOAP- и веб-клиентам
           href: how-to-expose-a-contract-to-soap-and-web-clients.md
         - name: UriTemplate и UriTemplateTable
           href: uritemplate-and-uritemplatetable.md
-        - name: 'Как выполнить Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP'
+        - name: 'Практическое руководство. Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP'
           href: service-returns-arbitrary-data-using-the-wcf-web.md
-        - name: 'Как выполнить Как создать службу, принимающую произвольные данные, с использованием модели программирования WCF REST'
+        - name: 'Практическое руководство. Как создать службу, принимающую произвольные данные, с использованием модели программирования WCF REST'
           href: create-a-service-arbitrary-data-using-wcf.md
         - name: Поддержка кэширования для веб-служб HTTP WCF
           href: caching-support-for-wcf-web-http-services.md
@@ -817,11 +817,11 @@
           href: architecture-of-syndication.md
         - name: Сопоставление объектной модели синдикации WCF моделям Atom и RSS
           href: how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md
-        - name: Как выполнить Создание базового RSS-канала
+        - name: Практическое руководство. Создание базового RSS-канала
           href: how-to-create-a-basic-rss-feed.md
-        - name: Как выполнить Создание базового канала Atom
+        - name: Практическое руководство. Создание базового канала Atom
           href: how-to-create-a-basic-atom-feed.md
-        - name: Как выполнить Как предоставить доступ к каналу в форматах Atom и RSS
+        - name: Практическое руководство. Как предоставить доступ к каналу в форматах Atom и RSS
           href: how-to-expose-a-feed-as-both-atom-and-rss.md
         - name: Расширяемость синдикации
           href: syndication-extensibility.md
@@ -831,13 +831,13 @@
         - name: Создание служб WCF для ASP.NET AJAX
           href: creating-wcf-services-for-aspnet-ajax.md
           items:
-            - name: Как выполнить Создание службы WCF с поддержкой AJAX и обращение к ней
+            - name: Практическое руководство. Создание службы WCF с поддержкой AJAX и обращение к ней
               href: create-an-ajax-wcf-asp-net-client.md
-            - name: Как выполнить Добавление конечной точки ASP.NET AJAX без использования конфигурации
+            - name: Практическое руководство. Добавление конечной точки ASP.NET AJAX без использования конфигурации
               href: how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md
-            - name: Как выполнить Использование конфигурации для добавления конечной точки ASP.NET AJAX
+            - name: Практическое руководство. Использование конфигурации для добавления конечной точки ASP.NET AJAX
               href: how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md
-            - name: Как выполнить Выбор между запросами HTTP POST и HTTP GET для конечных точек ASP.NET AJAX
+            - name: Практическое руководство. Выбор между запросами HTTP POST и HTTP GET для конечных точек ASP.NET AJAX
               href: http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md
         - name: Создание служб WCF AJAX без использования ASP.NET
           href: creating-wcf-ajax-services-without-aspnet.md
@@ -846,13 +846,13 @@
           items:
             - name: Автономная сериализация JSON
               href: stand-alone-json-serialization.md
-            - name: Как выполнить Сериализация и десериализация данных JSON
+            - name: Практическое руководство. Сериализация и десериализация данных JSON
               href: how-to-serialize-and-deserialize-json-data.md
             - name: Сопоставление JSON и XML.
               href: mapping-between-json-and-xml.md
             - name: Сериализация в Json с помощью программирования на уровне сообщений
               href: serializing-in-json-with-message-level-programming.md
-        - name: Как выполнить Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
+        - name: Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
           href: how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md
     - name: Обнаружение WCF
       href: wcf-discovery.md
@@ -863,18 +863,18 @@
           href: wcf-discovery-object-model.md
         - name: Объекты обнаружения Find и FindCriteria
           href: discovery-find-and-findcriteria.md
-        - name: Как выполнить Как программно добавить возможность обнаружения к службе и клиенту WCF
+        - name: Практическое руководство. Как программно добавить возможность обнаружения к службе и клиенту WCF
           href: how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md
         - name: Реализация прокси-сервера обнаружения
           href: implementing-a-discovery-proxy.md
           items:
-            - name: Как выполнить Как реализовать прокси-сервер обнаружения
+            - name: Практическое руководство. Как реализовать прокси-сервер обнаружения
               href: how-to-implement-a-discovery-proxy.md
-            - name: 'Как выполнить Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения'
+            - name: 'Практическое руководство. Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения'
               href: discoverable-service-that-registers-with-the-discovery-proxy.md
-            - name: 'Как выполнить Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения'
+            - name: 'Практическое руководство. Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения'
               href: client-app-discovery-proxy-to-find-a-service.md
-            - name: Как выполнить Как проверить прокси-сервер обнаружения
+            - name: Практическое руководство. Как проверить прокси-сервер обнаружения
               href: how-to-test-the-discovery-proxy.md
             - name: Как определить версию обнаружения зондирующего запроса
               href: how-to-determine-the-discovery-version-of-a-probe-request.md
@@ -926,7 +926,7 @@
       items:
         - name: Использование NetHttpBinding
           href: using-the-nethttpbinding.md
-        - name: 'Как выполнить Создание службы WCF, обменивающейся данными через WebSockets'
+        - name: 'Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets'
           href: how-to-create-a-wcf-service-that-communicates-over-websockets.md
     - name: Обработка ошибок
       href: error-handling.md

@@ -59,8 +59,6 @@
           href: xml-language-handling.md
         - name: 'Обработка xml:space в языке XAML'
           href: xml-space-handling.md
-    - name: 'Типы, перенесенные из WPF в System.Xaml'
-      href: types-migrated-from-wpf-to-system.md
     - name: Общее представление о понятиях и структурах потока узлов XAML
       href: understanding-xaml-node-stream-structures-and-concepts.md
     - name: Класс XAMLServices и чтение или запись базового кода XAML

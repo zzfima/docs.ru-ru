@@ -1,4 +1,4 @@
-- name: "Схема конфигурации\_WIF"
+- name: Схема настройки WIF
   href: index.md
   items:
     - name: <system.identityModel>

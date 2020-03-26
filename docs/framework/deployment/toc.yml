@@ -10,11 +10,11 @@
           href: guide-for-administrators.md
         - name: Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5
           href: reducing-system-restarts.md
-        - name: "Как выполнить Получение хода выполнения установщика .NET Framework\_4.5"
+        - name: "Практическое руководство. Получение хода выполнения установщика .NET Framework\_4.5"
           href: how-to-get-progress-from-the-dotnet-installer.md
         - name: 'Ошибки инициализации платформы .NET Framework: управление пользовательской средой'
           href: initialization-errors-managing-the-user-experience.md
-        - name: Как выполнить Отладка проблем при активации среды CLR
+        - name: Практическое руководство. Отладка проблем при активации среды CLR
           href: how-to-debug-clr-activation-issues.md
     - name: Развертывание приложений .NET Framework
       href: net-framework-applications.md

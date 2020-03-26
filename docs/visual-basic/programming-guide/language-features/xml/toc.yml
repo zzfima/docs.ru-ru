@@ -16,27 +16,27 @@
           href: xml-literals-and-the-xml-1-0-specification.md
         - name: Пробелы в XML-литералах
           href: white-space-in-xml-literals.md
-        - name: Как выполнить Создание XML-литералов
+        - name: Практическое руководство. Создание XML-литералов
           href: how-to-create-xml-literals.md
-        - name: Как выполнить Внедрение выражений в XML-литералы
+        - name: Практическое руководство. Внедрение выражений в XML-литералы
           href: how-to-embed-expressions-in-xml-literals.md
     - name: Управление XML
       href: manipulating-xml.md
       items:
-        - name: 'Как выполнить Загрузка XML-кода из файла, строки или потока'
+        - name: 'Практическое руководство. Загрузка XML-кода из файла, строки или потока'
           href: how-to-load-xml-from-a-file-string-or-stream.md
-        - name: Как выполнить Преобразование XML с помощью LINQ
+        - name: Практическое руководство. Преобразование XML с помощью LINQ
           href: how-to-transform-xml-by-using-linq.md
-        - name: Как выполнить Изменение XML-литералов
+        - name: Практическое руководство. Изменение XML-литералов
           href: how-to-modify-xml-literals.md
     - name: Доступ к XML
       href: accessing-xml.md
       items:
-        - name: Как выполнить Доступ к элементам-потомкам XML
+        - name: Практическое руководство. Доступ к элементам-потомкам XML
           href: how-to-access-xml-descendant-elements.md
-        - name: Как выполнить Доступ к дочерним XML-элементам
+        - name: Практическое руководство. Доступ к дочерним XML-элементам
           href: how-to-access-xml-child-elements.md
-        - name: Как выполнить Доступ к XML-атрибутам
+        - name: Практическое руководство. Доступ к XML-атрибутам
           href: how-to-access-xml-attributes.md
-        - name: Как выполнить Объявление и использование префиксов пространств имен XML
+        - name: Практическое руководство. Объявление и использование префиксов пространств имен XML
           href: how-to-declare-and-use-xml-namespace-prefixes.md

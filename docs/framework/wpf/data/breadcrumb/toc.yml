@@ -14,7 +14,7 @@
               tocHref: /dotnet/framework/wpf/
               topicHref: /dotnet/framework/wpf/index
               items:
-                - name: Data
+                - name: Данные
                   tocHref: /dotnet/framework/wpf/data/
                   topicHref: /dotnet/framework/wpf/data/index
 - name: Docs
@@ -33,6 +33,6 @@
               tocHref: /dotnet/desktop-wpf/
               topicHref: /dotnet/framework/wpf/index
               items:
-                - name: Data
+                - name: Данные
                   tocHref: /dotnet/desktop-wpf/data/
                   topicHref: /dotnet/framework/wpf/data/index

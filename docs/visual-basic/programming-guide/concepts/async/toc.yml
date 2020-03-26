@@ -3,9 +3,9 @@
   items:
     - name: Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await
       href: walkthrough-accessing-the-web-by-using-async-and-await.md
-    - name: Как выполнить Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll
+    - name: Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll
       href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-    - name: Как выполнить Параллельное выполнение нескольких веб-запросов с использованием Async и Await
+    - name: Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await
       href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
     - name: Асинхронные типы возвращаемых значений
       href: async-return-types.md

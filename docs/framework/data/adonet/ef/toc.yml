@@ -8,15 +8,15 @@
     - name: Генератор модели EDM (EdmGen.exe)
       href: edm-generator-edmgen-exe.md
       items:
-        - name: Как выполнить Использование EdmGen.exe для создания файлов модели и сопоставления
+        - name: Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления
           href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
-        - name: Как выполнить Использование EdmGen.exe для создания кода объектного уровня
+        - name: Практическое руководство. Использование EdmGen.exe для создания кода объектного уровня
           href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
-        - name: Как выполнить Использование EdmGen.exe для проверки файлов модели и сопоставления
+        - name: Практическое руководство. Использование EdmGen.exe для проверки файлов модели и сопоставления
           href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
-    - name: Как выполнить Определение строки соединения
+    - name: Практическое руководство. Определение строки соединения
       href: how-to-define-the-connection-string.md
-    - name: Как выполнить Создание встроенных ресурсов файлов модели и сопоставления
+    - name: Практическое руководство. Создание встроенных ресурсов файлов модели и сопоставления
       href: how-to-make-model-and-mapping-files-embedded-resources.md
     - name: Работа с языком описания данных DDL
       href: working-with-data-definition-language.md
@@ -35,25 +35,25 @@
         - name: Поставщик EntityClient для Entity Framework
           href: entityclient-provider-for-the-entity-framework.md
           items:
-            - name: Как выполнить Сборка строки соединения EntityConnection
+            - name: Практическое руководство. Сборка строки соединения EntityConnection
               href: how-to-build-an-entityconnection-connection-string.md
-            - name: 'Как выполнить Выполнение запроса, возвращающего типы-примитивы'
+            - name: 'Практическое руководство. Выполнение запроса, возвращающего типы-примитивы'
               href: how-to-execute-a-query-that-returns-primitivetype-results.md
-            - name: 'Как выполнить Выполнение запроса, возвращающего результаты типа StructuralType'
+            - name: 'Практическое руководство. Выполнение запроса, возвращающего результаты типа StructuralType'
               href: how-to-execute-a-query-that-returns-structuraltype-results.md
-            - name: 'Как выполнить Выполнение запроса, возвращающего результаты RefType'
+            - name: 'Практическое руководство. Выполнение запроса, возвращающего результаты RefType'
               href: how-to-execute-a-query-that-returns-reftype-results.md
-            - name: 'Как выполнить Выполнение запроса, возвращающего сложные типы'
+            - name: 'Практическое руководство. Выполнение запроса, возвращающего сложные типы'
               href: how-to-execute-a-query-that-returns-complex-types.md
-            - name: 'Как выполнить Выполнение запроса, возвращающего вложенные коллекции'
+            - name: 'Практическое руководство. Выполнение запроса, возвращающего вложенные коллекции'
               href: how-to-execute-a-query-that-returns-nested-collections.md
-            - name: Как выполнить Выполнение SQL-запроса к параметрическому объекту с использованием EntityCommand
+            - name: Практическое руководство. Выполнение SQL-запроса к параметрическому объекту с использованием EntityCommand
               href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
-            - name: Как выполнить Выполнение параметризованной хранимой процедуры с использованием EntityCommand
+            - name: Практическое руководство. Выполнение параметризованной хранимой процедуры с использованием EntityCommand
               href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
-            - name: Как выполнить Выполнение полиморфного запроса
+            - name: Практическое руководство. Выполнение полиморфного запроса
               href: how-to-execute-a-polymorphic-query.md
-            - name: Как выполнить Переход по отношениям с помощью оператора Navigate
+            - name: Практическое руководство. Переход по отношениям с помощью оператора Navigate
               href: how-to-navigate-relationships-with-the-navigate-operator.md
         - name: SqlClient для Entity Framework
           href: sqlclient-for-the-entity-framework.md

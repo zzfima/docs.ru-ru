@@ -497,9 +497,6 @@
                 - name: Пространства имен
                   tocHref: /dotnet/csharp/programming-guide/namespaces/
                   topicHref: /dotnet/csharp/programming-guide/namespaces/index
-                - name: 'Типы, допускающие значения NULL'
-                  tocHref: /dotnet/csharp/programming-guide/nullable-types/
-                  topicHref: /dotnet/csharp/programming-guide/nullable-types/index
                 - name: Основные понятия программирования
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
@@ -695,3 +692,10 @@
         - name: Руководство по .NET для Apache Spark
           tocHref: /dotnet/spark/
           topicHref: /dotnet/spark/index
+        - name: Azure
+          tocHref: /dotnet/azure/
+          topicHref: /dotnet/azure/index
+          items:
+            - name: Azure SDK для .NET
+              tocHref: /dotnet/azure/sdk/
+              topicHref: /dotnet/azure/sdk/index

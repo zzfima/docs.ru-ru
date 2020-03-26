@@ -21,11 +21,11 @@
           href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
         - name: 'Определение, когда следует реализовать асинхронную модель, основанную на событиях'
           href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
-        - name: 'Как выполнить Реализация компонента, поддерживающего асинхронную модель на основе событий'
+        - name: 'Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий'
           href: component-that-supports-the-event-based-asynchronous-pattern.md
-        - name: Как выполнить Реализация клиента асинхронной модели на основе событий
+        - name: Практическое руководство. Реализация клиента асинхронной модели на основе событий
           href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
-        - name: 'Как выполнить Использование компонентов, поддерживающих асинхронную модель, основанную на событиях'
+        - name: 'Практическое руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях'
           href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
     - name: Асинхронная модель программирования (APM)
       href: asynchronous-programming-model-apm.md

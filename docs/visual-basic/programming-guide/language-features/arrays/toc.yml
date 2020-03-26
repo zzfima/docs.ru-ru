@@ -3,11 +3,11 @@
   items:
     - name: Измерения массива
       href: array-dimensions.md
-    - name: Как выполнить Инициализация переменной массива
+    - name: Практическое руководство. Инициализация переменной массива
       href: how-to-initialize-an-array-variable.md
-    - name: Как выполнить Сортировка массива
+    - name: Практическое руководство. Сортировка массива
       href: how-to-sort-an-array.md
-    - name: Как выполнить Присвоение одного массива другому
+    - name: Практическое руководство. Присвоение одного массива другому
       href: how-to-assign-one-array-to-another-array.md
     - name: 'Устранение неполадок, связанных с массивами'
       href: troubleshooting-arrays.md

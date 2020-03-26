@@ -6,9 +6,9 @@
     - name: Начало работы
       href: getting-started-with-net-native.md
       items:
-        - name: Пример Устранение неполадок динамического программирования
+        - name: Пример. Устранение неполадок динамического программирования
           href: example-troubleshooting-dynamic-programming.md
-        - name: Пример Обработка исключений при привязке данных
+        - name: Пример. Обработка исключений при привязке данных
           href: example-handling-exceptions-when-binding-data.md
         - name: Исключения среды выполнения в собственных приложениях .NET
           href: runtime-exceptions-in-net-native-apps.md

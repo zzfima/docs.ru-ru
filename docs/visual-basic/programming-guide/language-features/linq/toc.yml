@@ -3,21 +3,21 @@
   items:
     - name: Введение в LINQ
       href: introduction-to-linq.md
-    - name: Как выполнить Выполнение запросов к базе данных с помощью LINQ
+    - name: Практическое руководство. Выполнение запросов к базе данных с помощью LINQ
       href: how-to-query-a-database-by-using-linq.md
-    - name: Как выполнить Вызов хранимой процедуры с помощью LINQ
+    - name: Практическое руководство. Вызов хранимой процедуры с помощью LINQ
       href: how-to-call-a-stored-procedure-by-using-linq.md
-    - name: Как выполнить Изменение данных в базе данных с помощью LINQ
+    - name: Практическое руководство. Изменение данных в базе данных с помощью LINQ
       href: how-to-modify-data-in-a-database-by-using-linq.md
-    - name: Как выполнить Объединение данных с помощью LINQ с использованием соединений
+    - name: Практическое руководство. Объединение данных с помощью LINQ с использованием соединений
       href: how-to-combine-data-with-linq-by-using-joins.md
-    - name: Как выполнить Сортировка результатов запроса с помощью LINQ
+    - name: Практическое руководство. Сортировка результатов запроса с помощью LINQ
       href: how-to-sort-query-results-by-using-linq.md
-    - name: Как выполнить Фильтрация результатов запроса с помощью LINQ
+    - name: Практическое руководство. Фильтрация результатов запроса с помощью LINQ
       href: how-to-filter-query-results-by-using-linq.md
-    - name: 'Как выполнить Выполнение над данными функций Count, Sum и Average с помощью LINQ'
+    - name: 'Практическое руководство. Выполнение над данными функций Count, Sum и Average с помощью LINQ'
       href: how-to-count-sum-or-average-data-by-using-linq.md
-    - name: Как выполнить Поиск минимального или максимального значения в результатах запроса с помощью LINQ
+    - name: Практическое руководство. Поиск минимального или максимального значения в результатах запроса с помощью LINQ
       href: how-to-find-the-minimum-or-maximum-value-in-a-query-result.md
-    - name: Как выполнить Возвращение результата запроса LINQ в виде определенного типа
+    - name: Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа
       href: how-to-return-a-linq-query-result-as-a-specific-type.md
