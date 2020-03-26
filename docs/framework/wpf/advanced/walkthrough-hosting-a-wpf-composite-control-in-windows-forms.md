@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4e98dd41606bff559abb981397acf2582a961cef
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111859"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291623"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако, когда у вас есть значительные инвестиции в код Windows Forms, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может быть более эффективным расширить существующее приложение Windows Forms, а не переписывать его с нуля. Распространенным сценарием является встраиваемый [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] один или несколько элементов управления, реализованных в приложении Windows Forms. Для получения дополнительной информации о [Control Customization](../controls/control-customization.md)настройке элементов управления WPF см.  
@@ -181,11 +181,11 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>
 ## <a name="implementing-the-windows-forms-host-application"></a>Реализация ведущего приложения Windows Forms  
- Хост-приложение Windows <xref:System.Windows.Forms.Integration.ElementHost> Forms использует [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объект для размещения композитного элемента управления. Приложение обрабатывает `OnButtonClick` событие для получения данных из композитного элемента управления. Приложение также содержит набор переключателей, которые можно использовать для изменения внешнего вида элемента управления. На рисунке ниже показано приложение.  
+ Хост-приложение Windows <xref:System.Windows.Forms.Integration.ElementHost> Forms использует [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объект для размещения композитного элемента управления. Приложение обрабатывает `OnButtonClick` событие для получения данных из композитного элемента управления. Приложение также имеет набор кнопок опции, которые можно использовать для изменения внешнего вида управления. На рисунке ниже показано приложение.  
 
 Следующее изображение показывает композитный элемент управления WPF, размещенный в приложении Windows Forms"  
 
- ![Scteenshot, который показывает Windows Form Хостинг Авалон управления.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![Скриншот, который показывает Windows Form Hosting Avalon управления.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Создание проекта  
  Для запуска проекта выполните указанные ниже действия.  
@@ -231,7 +231,7 @@ namespace MyControls
   
 4. Добавьте <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> в форму следующие элементы управления.  
   
-    |Имя|текст|  
+    |name|текст|  
     |----------|----------|  
     |groupBox1|Цвет фона|  
     |groupBox2|Цвет переднего плана|  
@@ -243,7 +243,7 @@ namespace MyControls
   
 5. Добавьте <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> в элементы <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> управления следующие элементы управления.  
   
-    |GroupBox|Имя|текст|  
+    |GroupBox|name|текст|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Исходное значение|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -264,7 +264,7 @@ namespace MyControls
   
 6. Добавьте <xref:System.Windows.Forms.Label?displayProperty=nameWithType> следующие элементы управления к последнему <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Эти элементы управления отображают данные, возвращенные композитным управлением. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
-    |GroupBox|Имя|текст|  
+    |GroupBox|name|текст|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Имя:|  
     |groupBox7|lblAddress|Почтовый адрес:|  
@@ -323,7 +323,7 @@ namespace MyControls
   
  Выполните сборку и запустите приложение. Щелкайте различные переключатели, чтобы увидеть соответствующий эффект в составном элементе управления WPF.  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

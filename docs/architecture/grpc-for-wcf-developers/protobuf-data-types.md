@@ -2,12 +2,12 @@
 title: Типы данных Protobuf scalar - gRPC для разработчиков WCF
 description: Узнайте об основных и хорошо известных типах данных, поддерживаемых Protobuf и gRPC в .NET Core.
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148131"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249439"
 ---
 # <a name="protobuf-scalar-data-types"></a>Скалярные типы данных Protobuf
 
@@ -125,7 +125,7 @@ Protobuf будет использовать `T?` простой `int?`(напр
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-Известные типы `Timestamp` `Duration` и представлены в .NET как классы, так что нет необходимости в необыденной версии. Но важно, чтобы проверить на нулевую свойства этих типов, когда вы преобразования `DateTimeOffset` или `TimeSpan`.
+Известные типы `Timestamp` `Duration` и представлены в .NET как классы. В C- 8 и далее можно использовать недействительные типы ссылок. Но важно, чтобы проверить на нулевую свойства этих типов, когда вы преобразования `DateTimeOffset` или `TimeSpan`.
 
 ## <a name="decimals"></a>Десятичные знаки
 

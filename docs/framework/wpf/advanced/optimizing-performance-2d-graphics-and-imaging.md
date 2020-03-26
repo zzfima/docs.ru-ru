@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 59ac7a5aa8b0591c51cdb6ee0d6435649e22fade
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: eb3686367873276587572addda436471cd1abf27
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111222"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291802"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Оптимизация производительности: двумерная графика и обработка изображений
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет широкий спектр функциональных возможностей двумерной графики и изображений, которые можно оптимизировать для требований приложения. Этот раздел содержит сведения об оптимизации производительности в этих областях.  
@@ -42,9 +42,9 @@ ms.locfileid: "80111222"
   
 - <xref:System.Windows.Media.DrawingGroup>Рисует другие рисунки. Для объединения рисунков в один составной рисунок используйте группирование рисунков.  
   
- Объект <xref:System.Windows.Media.GeometryDrawing> используется для визуализации содержимого геометрии. Класс <xref:System.Windows.Media.Geometry> и конкретные классы, которые <xref:System.Windows.Media.CombinedGeometry>вытекают из него, такие как , <xref:System.Windows.Media.EllipseGeometry>и <xref:System.Windows.Media.PathGeometry>, обеспечивают средства для рендеринга 2D графики, а также предоставление хит-тестирования и отсечения поддержки. Геометрические объекты можно использовать, например, для определения области элемента управления или для определения области усечения, применяемой к изображению. Геометрические объекты могут быть простыми, такими как прямоугольники и круги, или сложными, созданными из двух или более геометрических объектов. Более сложные геометрические области могут <xref:System.Windows.Media.PathSegment>быть созданы путем <xref:System.Windows.Media.BezierSegment>объединения <xref:System.Windows.Media.QuadraticBezierSegment>производных объектов, таких как <xref:System.Windows.Media.ArcSegment>, и .  
+ Объект <xref:System.Windows.Media.GeometryDrawing> используется для визуализации содержимого геометрии. Класс <xref:System.Windows.Media.Geometry> и конкретные классы, которые <xref:System.Windows.Media.CombinedGeometry>вытекают из него, такие как , <xref:System.Windows.Media.EllipseGeometry>и <xref:System.Windows.Media.PathGeometry>, обеспечивают средства для рендеринга 2D графики и предоставления хит-тестирования и отсечения поддержки. Геометрические объекты можно использовать, например, для определения области элемента управления или для определения области усечения, применяемой к изображению. Геометрические объекты могут быть простыми, такими как прямоугольники и круги, или сложными, созданными из двух или более геометрических объектов. Более сложные геометрические области могут <xref:System.Windows.Media.PathSegment>быть созданы путем <xref:System.Windows.Media.BezierSegment>объединения <xref:System.Windows.Media.QuadraticBezierSegment>производных объектов, таких как <xref:System.Windows.Media.ArcSegment>, и .  
   
- На первый <xref:System.Windows.Media.Geometry> взгляд класс <xref:System.Windows.Shapes.Shape> и класс очень похожи. Оба используются в визуализации 2D графики и оба имеют аналогичные <xref:System.Windows.Media.EllipseGeometry> конкретные классы, которые вытекают из них, например, и <xref:System.Windows.Shapes.Ellipse>. Однако существуют важные различия между этими двумя наборами классов. С одной <xref:System.Windows.Media.Geometry> из них классу не хватает <xref:System.Windows.Shapes.Shape> некоторых функциональных возможностей класса, таких как способность рисовать сам. Чтобы нарисовать геометрический объект, для выполнения операции рисования должен использоваться другой класс, например DrawingContext, Drawing или Path (стоит отметить, что Path является Shape). Свойства рендеринга, такие как заливка (fill), штрих (stroke) и толщина штриха (stroke thickness), находятся в классе, который рисует этот геометрический объект, в то время как объект Shape содержит эти свойства. Чтобы понять это различие, представьте, что геометрический объект определяет область, например круг, а объект Shape определяет область, определяет, как эта область заполняется и обводится, а также участвует в системе макета.  
+ На первый <xref:System.Windows.Media.Geometry> взгляд класс <xref:System.Windows.Shapes.Shape> и класс похожи. Оба используются в визуализации 2D графики и оба имеют аналогичные <xref:System.Windows.Media.EllipseGeometry> конкретные классы, которые вытекают из них, например, и <xref:System.Windows.Shapes.Ellipse>. Однако существуют важные различия между этими двумя наборами классов. С одной <xref:System.Windows.Media.Geometry> из них классу не хватает <xref:System.Windows.Shapes.Shape> некоторых функциональных возможностей класса, таких как способность рисовать сам. Чтобы нарисовать геометрический объект, для выполнения операции рисования должен использоваться другой класс, например DrawingContext, Drawing или Path (стоит отметить, что Path является Shape). Рендеринг свойств, таких как заполнение, штрих и толщина хода, находятся на классе, который рисует объект геометрии, в то время как объект формы содержит эти свойства. Один из способов думать об этом различии заключается в том, что объект геометрии определяет область, например, круг, в то время как объект формы определяет область, определяет, как этот регион заполняется и очерчен, и участвует в системе макета.  
   
  Поскольку <xref:System.Windows.Shapes.Shape> объекты <xref:System.Windows.FrameworkElement> вытекают из класса, их использование может значительно повысить потребление памяти в приложении. Если вам действительно не <xref:System.Windows.FrameworkElement> нужны функции для графического контента, рассмотрите возможность использования объектов с легким весом. <xref:System.Windows.Media.Drawing>  
   
@@ -66,7 +66,7 @@ ms.locfileid: "80111222"
   
 <a name="Images"></a>
 ## <a name="images"></a>Изображения  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]изображение обеспечивает значительное улучшение по сравнению с возможностями визуализации в предыдущих версиях Windows. Возможности обработки изображений, например вывод растрового изображения или использование изображения в общем элементе управления, в основном управлялись интерфейсом графических устройств (GDI) Microsoft Windows или Microsoft Windows GDI и программным интерфейсом (API). Эти API обеспечивали базовые функции обработки изображений, но в них отсутствовали такие возможности, как поддержка расширяемости кодеков и изображений высокого качества. API обработки изображений WPF был переработан для преодоления недостатков GDI и GDI+ и теперь предоставляет новый набор API для отображения и использования изображений в приложениях.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]изображение обеспечивает значительное улучшение по сравнению с возможностями визуализации в предыдущих версиях Windows. Возможности визуализации, такие как отображение битовой карты или использование изображения на общем элементе управления, в основном обрабатывались интерфейсом Microsoft Windows Graphics Device Interface (GDI) или интерфейсом программирования приложений Microsoft Windows GDI (API). Эти AA предоставили базовую функциональность изображений, но не имели таких функций, как поддержка расширяемости кодека и поддержка изображений высокой точности. AIMAGE-аДИ WPF Imaging были переработаны для преодоления недостатков GDI и GDI и предоставления нового набора AA для отображения и использования изображений в приложениях.  
   
  При использовании изображений учитывайте следующие рекомендации, позволяющие повысить производительность.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "80111222"
 - Для получения дополнительной информации смотрите [обзор изображений](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- При анимации масштабирования любого растрового изображения алгоритм повторной дискретизации изображения высокого качества по умолчанию иногда может использовать столько системных ресурсов, чтобы привести к снижению частоты кадров анимации и задержкам. Установив свойство <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> <xref:System.Windows.Media.RenderOptions> объекта, <xref:System.Windows.Media.BitmapScalingMode.LowQuality> можно создать более плавную анимацию при масштабировании битовой карты. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>режим уседает движку [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] рендеринга перейти от оптимизированного с точки контроля алгоритма к оптимизированного для скорости алгоритма при обработке изображений.  
+ При анимации масштаба любой битной карты, высококачественный алгоритм перевыборки изображений по умолчанию иногда может потреблять достаточно системных ресурсов, чтобы вызвать деградацию частоты кадров, что фактически приводит к заиканию анимации. Установив свойство <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> <xref:System.Windows.Media.RenderOptions> объекта, <xref:System.Windows.Media.BitmapScalingMode.LowQuality>можно создать более плавную анимацию при масштабировании битовой карты. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>режим уседает движку [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] рендеринга перейти от оптимизированного с точки контроля алгоритма к оптимизированного для скорости алгоритма при обработке изображений.  
   
  В следующем примере показано, как установить <xref:System.Windows.Media.BitmapScalingMode> объект изображения.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "80111222"
  [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] По умолчанию не кэширует отображеносодержимое содержимое <xref:System.Windows.Media.TileBrush> объектов, таких как <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush>. В статических сценариях, где <xref:System.Windows.Media.TileBrush> ни содержание, ни использование в сцене не меняется, это имеет смысл, так как он сохраняет видеопамять. Это не имеет большого <xref:System.Windows.Media.TileBrush> смысла, когда статическое содержимое используется нестатическим способом, например, когда статическое <xref:System.Windows.Media.DrawingBrush> или <xref:System.Windows.Media.VisualBrush> отображено на поверхности вращающегося 3D-объекта. Поведение по [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] умолчанию заключается в том, <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.VisualBrush> чтобы повторно передать все содержимое или для каждого кадра, даже если содержимое неменяется.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] По умолчанию не кэширует отображеносодержимое содержимое <xref:System.Windows.Media.TileBrush> объектов, таких как <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush>. В статических сценариях, где <xref:System.Windows.Media.TileBrush> содержимое или использование в сцене не изменяется, это имеет смысл, так как он сохраняет видеопамять. Это не имеет большого <xref:System.Windows.Media.TileBrush> смысла, когда статическое содержимое используется нестатическим способом, например, когда статическое <xref:System.Windows.Media.DrawingBrush> или <xref:System.Windows.Media.VisualBrush> отображено на поверхности вращающегося 3D-объекта. Поведение по [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] умолчанию заключается в том, <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.VisualBrush> чтобы повторно передать все содержимое или для каждого кадра, даже если содержимое неменяется.  
   
- Установив свойство <xref:System.Windows.Media.RenderOptions.CachingHint%2A> <xref:System.Windows.Media.RenderOptions> объекта, <xref:System.Windows.Media.CachingHint.Cache> можно повысить производительность, используя кэшированные версии объектов кисти.  
+ Установив свойство <xref:System.Windows.Media.RenderOptions.CachingHint%2A> <xref:System.Windows.Media.RenderOptions> объекта, <xref:System.Windows.Media.CachingHint.Cache>можно повысить производительность, используя кэшированные версии объектов кисти.  
   
  Значения <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> свойств представляют значения относительного размера, <xref:System.Windows.Media.TileBrush> определяющие, когда объект должен быть регенерирован из-за изменений в масштабе. Например, установив <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> свойство до 2.0, кэш для единственного <xref:System.Windows.Media.TileBrush> должен быть регенерирован, когда его размер превышает в два раза больше текущего кэша.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "80111222"
  [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
  [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Планирование производительности приложения](planning-for-application-performance.md)
@@ -107,6 +107,6 @@ ms.locfileid: "80111222"
 - [Поведение объекта](optimizing-performance-object-behavior.md)
 - [Ресурсы приложения](optimizing-performance-application-resources.md)
 - [Текст](optimizing-performance-text.md)
-- [Связывание данных](optimizing-performance-data-binding.md)
+- [Привязка данных](optimizing-performance-data-binding.md)
 - [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)
 - [Советы и рекомендации по анимации](../graphics-multimedia/animation-tips-and-tricks.md)

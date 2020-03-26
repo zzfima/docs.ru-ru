@@ -2,12 +2,12 @@
 title: Самохозня gRPC приложений - gRPC для разработчиков WCF
 description: Развертывание ASP.NET приложений Core gRPC в качестве самостоятельных сервисов.
 ms.date: 09/02/2019
-ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147806"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110910"
 ---
 # <a name="self-hosted-grpc-applications"></a>Самохлажен gRPC приложений
 
@@ -107,7 +107,7 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-Свойство `Type=notify` `systemd` сообщает, что приложение уведомит его о запуске и остановке. Настройка `WantedBy=multi-user.target` приведет к запуску службы, когда система Linux достигнет "уровня 2", что означает активную неграфическую многопользовательскую оболочку.
+Свойство `Type=notify` `systemd` сообщает, что приложение уведомит его о запуске и остановке. Настройка `WantedBy=multi-user.target` приведет к запуску службы, когда система Linux достигнет "уровня 2", что означает активную неграфическую, многопользовательскую оболочку.
 
 Прежде `systemd` чем распознать службу, ей необходимо перезагрузить конфигурацию. Вы `systemd` управляете `systemctl` с помощью команды. После перезагрузки `status` используйте подкоманду, чтобы подтвердить, что приложение успешно зарегистрировано.
 
@@ -152,7 +152,7 @@ sudo journalctl -u myapp
 > [!TIP]
 > Если у вас есть среда GUI, доступная на вашем хосте, несколько графических журналов зрителей доступны для Linux, таких как *«Journalctl»* и *гном-журналы.*
 
-Чтобы узнать больше о `systemd` запросе журнала из `journalctl`командной строки с помощью, см. [the man pages](https://manpages.debian.org/buster/systemd/journalctl.1)
+Чтобы узнать больше о `systemd` запросе журнала из `journalctl`командной строки с помощью, см. [the manpages](https://manpages.debian.org/buster/systemd/journalctl.1)
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>Сертификаты HTTPS для самоходного размещения приложений
 

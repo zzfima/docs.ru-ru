@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: a73a66313e7ca540711838c4d147d6bd163ec8d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625565"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249530"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Первый операнд в двоичном выражении If должен поддерживать значение NULL или быть ссылочного типа
-`If` Выражение может принимать два или три аргумента. При отправке только два аргумента, первый аргумент должен быть ссылочным типом или типом, допускающий значение NULL. Если первый аргумент принимает на любое другое, отличное от `Nothing`, возвращается его значение. Если первый аргумент принимает значение `Nothing`, второй аргумент вычисляется и возвращается.  
+Выражение `If` может занять два или три аргумента. При отправке только двух аргументов первым аргументом должен быть тип ссылки или необыдаенный тип значения. Если первый аргумент оценивается `Nothing`ни к чему, кроме, его значение возвращается. Если первый аргумент `Nothing`оценивается, второй аргумент оценивается и возвращается.  
   
- Например, следующий код содержит два `If` выражения: с тремя аргументами и с двумя аргументами. Выражения вычисления и возвращают одинаковое значение.  
+ Например, следующий код `If` содержит два выражения: одно с тремя аргументами и одно с двумя аргументами. Выражения вычисляют и возвращают одно и то же значение.  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -46,7 +46,7 @@ Dim booleanVar = True
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- Если не удается изменить код таким образом, первый аргумент является ссылочным типом или ссылочным типом, следует преобразовать с тремя аргументами `If` выражения, или к `If...Then...Else` инструкции.  
+- Если вы не можете изменить код таким образом, чтобы первый аргумент был необоснованной типом `If...Then...Else` значения или типом ссылки, рассмотрите возможность преобразования в выражение из трех аргументов `If` или в заявление.  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
@@ -56,5 +56,5 @@ Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
 ## <a name="see-also"></a>См. также
 
 - [Оператор If](../../../visual-basic/language-reference/operators/if-operator.md)
-- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Оператор If…Then…Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Типы значений, допускающие значение NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

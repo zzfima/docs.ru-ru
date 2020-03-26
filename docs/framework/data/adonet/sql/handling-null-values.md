@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c64f11c00174981925342f1493ef0b809a57ecb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148651"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249081"
 ---
 # <a name="handling-null-values"></a>Обработка значений NULL
 Значение NULL в реляционной базе данных используется, если значение в столбце неизвестно или отсутствует. NULL не является ни пустой строкой (для типов данных character или datetime), ни нулевым значением (для числовых типов данных). В спецификации ANSI SQL-92 указано, что значение NULL должно быть одинаковым для всех типов данных, чтобы все значения NULL обрабатывались согласованно. Пространство имен <xref:System.Data.SqlTypes> обеспечивает семантику со значением NULL, реализуя интерфейс <xref:System.Data.SqlTypes.INullable>. Каждый из типов данных в <xref:System.Data.SqlTypes> имеет собственное свойство `IsNull` и значение `Null`, которое может быть назначено экземпляру этого типа данных.  
   
 > [!NOTE]
-> В .NET Framework версии 2.0 введена поддержка типов данных, допускающих значения NULL, что дает программистам возможность расширить тип значения, чтобы могли быть представлены все значения базового типа. Эти типы CLR, допускающие значение NULL, представляют экземпляр структуры <xref:System.Nullable>. Эта возможность особенно полезна, если типы значений упакованы и распакованы, что обеспечивает улучшенную совместимость с типами объектов. Типы CLR, допускающие значение NULL, не предназначены для хранения значений NULL базы данных, так как значение NULL ANSI SQL не работает так же, как ссылка на `null` (или `Nothing` в Visual Basic). Для работы со значениями NULL в базе данных ANSI SQL используйте значения NULL <xref:System.Data.SqlTypes> вместо <xref:System.Nullable>. Для получения дополнительной информации о работе с недействительными типами CLR в Visual Basic см. [Недействительные типы значений,](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)а для СЗ см. [Nullable value types](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)  
+> Версия .NET Framework 2.0 ввела поддержку для недействительных типов значений, что позволяет программистам расширять тип значения, чтобы представлять все значения базового типа. Эти типы недействительных значений <xref:System.Nullable> CLR представляют собой экземпляр структуры. Эта возможность особенно полезна, если типы значений упакованы и распакованы, что обеспечивает улучшенную совместимость с типами объектов. Типы недействительных значений CLR не предназначены для хранения данных, так как null `null` ANSI `Nothing` S'L не ведет себя так же, как ссылка (или в Visual Basic). Для работы со значениями NULL в базе данных ANSI SQL используйте значения NULL <xref:System.Data.SqlTypes> вместо <xref:System.Nullable>. Для получения дополнительной информации о работе с значениями CLR недействительные типы в Visual Basic см. [Недействительные типы значений,](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)а для СЗ см. [Nullable value types](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)  
   
 ## <a name="nulls-and-three-valued-logic"></a>Значения NULL и тройственная логика  
  Разрешение значений NULL в определениях столбцов вводит в приложение логику трех значений. Результатом сравнения может быть одно из трех условий:  
@@ -141,7 +141,7 @@ String.Equals instance method:
   Two empty strings=True
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-- [Типы и ADO.NET серверных данных S'L](sql-server-data-types.md)
-- [Общие сведения об ADO.NET](../ado-net-overview.md)
+- [Типы данных SQL Server и ADO.NET](sql-server-data-types.md)
+- [Общие сведения о ADO.NET](../ado-net-overview.md)

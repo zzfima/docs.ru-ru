@@ -1,16 +1,16 @@
 ---
-title: Практическое руководство. Извлечение значений атрибута (LINQ to XML)
+title: Практическое руководство. Извлечение значения атрибута (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
-ms.openlocfilehash: 693746c24488029415e68a7c954143a86b7dbb16
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6593639dcdc234ddda808cfdb5e85ebe1a771b62
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352401"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248951"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Как получить значение атрибута (LINQ to XML) (Visual Basic)
-В этом разделе показано получение значений атрибутов. Существует два основных способа. Можно привести <xref:System.Xml.Linq.XAttribute> к требуемому типу, после этого оператор явного преобразования преобразует содержимое элемента или атрибута в указанный тип. Иначе можно использовать свойство <xref:System.Xml.Linq.XAttribute.Value%2A>. Однако приведение, как правило, является лучшим подходом. В частности, становится проще написание кода, обеспечивающего получение значения атрибута, который может существовать или не существовать, после приведения атрибута к типу, допускающему значение NULL. Примеры использования этого метода см. [в разделе как получить значение элемента (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Как: Получить значение атрибута (LIN' к XML) (Visual Basic)
+В этом разделе показано получение значений атрибутов. Существует два основных способа. Можно привести <xref:System.Xml.Linq.XAttribute> к требуемому типу, после этого оператор явного преобразования преобразует содержимое элемента или атрибута в указанный тип. Иначе можно использовать свойство <xref:System.Xml.Linq.XAttribute.Value%2A>. Однако приведение, как правило, является лучшим подходом. Если вы отбрасываете атрибут в необоснованное значение типа, код проще писать при получении значения атрибута, который может или не может существовать. Для примеров этого метода см. [Как: Получить значение элемента (LIN' к XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Пример  
  В Visual Basic для получения значения атрибута можно использовать встроенное свойство атрибута.  
@@ -46,7 +46,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как получить значение атрибута, если атрибут находится в пространстве имен. Дополнительные сведения см. в разделе [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ В следующем примере показано, как получить значение атрибута, если атрибут находится в пространстве имен. Для получения дополнительной информации см. Обзор [имен (LIN' к XML) (Visual Basic).](namespaces-overview-linq-to-xml.md)  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -60,7 +60,7 @@ Module Module1
 End Module  
 ```  
   
- В этом примере выводятся следующие данные:  
+ В примере получается следующий вывод.  
   
 ```console  
 abcde  

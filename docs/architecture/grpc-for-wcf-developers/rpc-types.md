@@ -2,12 +2,12 @@
 title: Типы RPC - gRPC для разработчиков WCF
 description: Обзор типов удаленного вызова процедуры, поддерживаемого WCF, и их эквивалентов в gRPC
 ms.date: 09/02/2019
-ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40c0779dc015904e9dabbb448075e3c5aa5dc49a
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401787"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111092"
 ---
 # <a name="types-of-rpc"></a>Типы RPC
 
@@ -125,7 +125,7 @@ public async Task TellTheTimeAsync(CancellationToken token)
 
 ## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>Операции с односторонним способом WCF и потоковая передача клиентов gRPC
 
-WCF предоставляет односторонние операции `[OperationContract(IsOneWay = true)]`(отмеченные), которые возвращают подтверждение транспортного специфичного. методы службы gRPC всегда возвращают ответ, даже если он пуст. Клиент всегда должен ждать этого ответа. Для "огонь и забыть" стиль обмена сообщениями в gRPC, вы можете создать клиент потокового сервиса.
+WCF предоставляет односторонние операции `[OperationContract(IsOneWay = true)]`(отмеченные), которые возвращают транспортно-специфическое подтверждение. методы службы gRPC всегда возвращают ответ, даже если он пуст. Клиент всегда должен ждать этого ответа. Для "огонь и забыть" стиль обмена сообщениями в gRPC, вы можете создать клиент потокового сервиса.
 
 ### <a name="thing_logproto"></a>thing_log.прото
 

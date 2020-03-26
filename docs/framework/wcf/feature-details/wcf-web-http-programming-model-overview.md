@@ -2,12 +2,12 @@
 title: Общие сведения о модели программирования WCF Web HTTP
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184187"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291743"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Общие сведения о модели программирования WCF Web HTTP
 Модель программирования Windows Communication Foundation (WCF) WEB HTTP предоставляет основные элементы, необходимые для создания услуг WEB HTTP с помощью WCF. Услуги WCF WEB HTTP предназначены для доступа к широкому кругу возможных клиентов, включая веб-браузеры, и имеют следующие уникальные требования:  
@@ -135,7 +135,7 @@ interface ICustomer
   
  Это означает, что модель программирования WCF WEB HTTP может обрабатывать <xref:System.IO.Stream>любые типы данных, но, возможно, вы будете программировать против .  
   
- .NET Framework 3.5 обеспечивает поддержку данных JSON (AJAX), а также каналов синдикации (включая ATOM и RSS). Для получения дополнительной информации об этих функциях, см [WCF Web HTTP Форматирование](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF Обзор синдикации](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) и [AJAX интеграции и поддержки JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
+ .NET Framework 3.5 обеспечивает поддержку данных JSON (AJAX), а также каналов синдикации (включая ATOM и RSS). Для получения дополнительной информации об этих функциях, см [WCF Web HTTP Форматирование](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md), [WCF Синдикации Обзор](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md), и [AJAX интеграции и поддержки JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>Модель программирования WCF WEB HTTP и безопасность  
 
@@ -144,7 +144,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Устранение неполадок в модели программирования WCF WEB HTTP  
  Когда службы WCF WEB HTTP вызываются с помощью <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> для создания канала, <xref:System.ServiceModel.Description.WebHttpBehavior> использует адрес <xref:System.ServiceModel.EndpointAddress>, заданный в файле конфигурации, даже в случае, когда в <xref:System.ServiceModel.EndpointAddress> передается другой <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Синдикация WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Объектная модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

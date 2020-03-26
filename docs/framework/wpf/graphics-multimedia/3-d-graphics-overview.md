@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: b8a3876030c533dd37eca0b00ebd50bccf309e53
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: e4918f7737bbe57a4f29c6c5cff1099f4f21674b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112392"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291807"
 ---
 # <a name="3d-graphics-overview"></a>3D Графика Обзор
 <a name="introduction"></a>Функциональность 3D [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] позволяет разработчикам рисовать, трансформировать и анимировать 3D-графику как в разметке, так и в процедурном коде. Разработчики могут комбинировать 2D и 3D-графики для создания богатых элементов управления, предоставлять сложные иллюстрации данных или улучшать пользовательский опыт интерфейса приложения. 3D-поддержка [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предназначена для обеспечения полнофункциональных игр-платформы развития. Эта тема содержит обзор 3D функциональности [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в графической системе.  
@@ -71,7 +71,7 @@ ms.locfileid: "80112392"
   
  Свойство <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> определяет коллекцию <xref:System.Windows.Point>s, которые говорят графической системе, как сопоставить координаты, которые определяют, как текстура обращается к вершинам сетки. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>указаны как значение от нуля до 1, включительно.  Как и <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> в случае с свойством, графическая система может вычислить координаты текстурпов по умолчанию, но можно настроить различные координаты текстуры для управления картографией текстуры, которая включает в себя часть повторяющегося шаблона, например. Дополнительные сведения о координатах текстуры можно найти в последующих разделах или в пакете Managed Direct3D SDK.  
   
- В следующем примере показано создание одной грани модели куба в процедурном коде. Обратите внимание, что можно нарисовать весь куб как один объект GeometryModel3D; в этом примере грань куба отображается как отдельная модель для того, чтобы далее применить отдельные текстуры для каждой грани.  
+ В следующем примере показано создание одной грани модели куба в процедурном коде. Вы можете нарисовать весь куб в виде одного GeometryModel3D; этот пример рисует лицо куба в качестве отдельной модели для того, чтобы применить отдельные текстуры к каждому лицу позже.  
   
  [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
  [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
@@ -105,7 +105,7 @@ ms.locfileid: "80112392"
   
 <a name="lights"></a>
 ## <a name="illuminating-the-scene"></a>Освещение сцены  
- Свет в 3D-графике делает то, что огни делают в реальном мире: они делают поверхности видимыми. Более того, источники света определяют, какая часть сцены будет включена в проекцию. Объекты источников света в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] создают различные эффекты света и тени. Они смоделированы на основе поведения различных реальных источников света. Сцена должна включать как минимум один источник света, иначе модели будут невидимыми.  
+ Свет в 3D-графике делает то, что огни делают в реальном мире: они делают поверхности видимыми. Более того, источники света определяют, какая часть сцены будет включена в проекцию. Объекты источников света в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] создают различные эффекты света и тени. Они смоделированы на основе поведения различных реальных источников света. Включите по крайней мере один свет в вашей сцене, или никакие модели не будут видны.  
   
  Следующие огни вытекают <xref:System.Windows.Media.Media3D.Light>из базового класса:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "80112392"
   
 - <xref:System.Windows.Media.Media3D.DirectionalLight>: Освещает, как далекий источник света.  Направленные огни <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> имеют указанный как Vector3D, но не указанное местоположение.  
   
-- <xref:System.Windows.Media.Media3D.PointLight>: Освещает, как близлежащий источник света. Источники света PointLights занимают определенное положение и испускают свет из этого положения. Объекты на сцене освещаются в зависимости от их положения и расстояния относительно источника света. <xref:System.Windows.Media.Media3D.PointLightBase>подвергает свойство, <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> которое определяет расстояние, за которым модели не будут освещены светом. Класс PointLight также предоставляет свойства затухания, определяющие интенсивность ослабления источника света в зависимости от расстояния. Можно указать константу, линейную или квадратичную интерполяцию затухания источника света.  
+- <xref:System.Windows.Media.Media3D.PointLight>: Освещает, как близлежащий источник света. Источники света PointLights занимают определенное положение и испускают свет из этого положения. Объекты на сцене освещаются в зависимости от их положения и расстояния относительно источника света. <xref:System.Windows.Media.Media3D.PointLightBase>подвергает свойство, <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> которое определяет расстояние, за которым модели не будут освещены светом. PointLight также разоблачает свойства ослабления, которые определяют, как интенсивность света уменьшается на расстоянии. Можно указать константу, линейную или квадратичную интерполяцию затухания источника света.  
   
 - <xref:System.Windows.Media.Media3D.SpotLight>: Наследует <xref:System.Windows.Media.Media3D.PointLight>от . Источники света Spotlight освещают сцену подобно источникам света и также имеют расположение и направление. Они проектировать свет в конусообразной <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> области, установленной и свойства, указанные в градусах.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "80112392"
 ## <a name="animating-models"></a>Анимация моделей  
  3D-реализация [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] участвует в той же системе синхронизации и анимации, что и 2D-графика. Другими словами, чтобы оживить 3D-сцену, оживить свойства своих моделей. Можно непосредственно анимировать свойства примитивов, но обычно проще анимировать преобразования, изменяющие позицию или внешний вид моделей. Поскольку преобразования могут <xref:System.Windows.Media.Media3D.Model3DGroup> быть применены к объектам, а также отдельным моделям, можно применить один набор анимаций к ребенку Model3DGroup и другой набор анимаций к группе детских объектов. Также можно добиться разнообразных визуальных эффектов, анимируя свойства элементов освещения сцены. Наконец, можно анимировать саму проекцию, изменяя положение камеры или поле зрения. Дополнительные сведения о системе времени и анимации в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] см. в разделах [Общие сведения об эффектах анимации](animation-overview.md), [Общие сведения о Storyboard](storyboards-overview.md) и [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md).  
   
- Для анимации объекта в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] создайте временную шкалу, определите анимацию (которая изменяет значение некоторого свойства во времени) и укажите свойство, к которому применяется анимация. Поскольку все объекты в 3D-сцене являются <xref:System.Windows.Controls.Viewport3D>детьми, свойства, на которые нацелена любая анимация, которую вы хотите применить к сцене, являются свойствами свойств Viewport3D.  
+ Для анимации объекта в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] создайте временную шкалу, определите анимацию (которая изменяет значение некоторого свойства во времени) и укажите свойство, к которому применяется анимация. Поскольку все объекты в 3D-сцене являются <xref:System.Windows.Controls.Viewport3D>детьми, свойства, на которые нацелена любая анимация, которую вы хотите применить к сцене, являются свойствами Viewport3D.  
   
  Предположим, требуется создать качающуюся на месте модель. Вы можете применить <xref:System.Windows.Media.Media3D.RotateTransform3D> к модели и оживить ось ее вращения от одного вектора к другому. В следующем примере кода демонстрируется применение Vector3DAnimation к свойству Axis преобразования элемента Rotation3D, при условии что RotateTransform3D будет одним из нескольких преобразований, применяемых к модели с TransformGroup.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "80112392"
   
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
@@ -174,6 +174,6 @@ ms.locfileid: "80112392"
 - <xref:System.Windows.Media.Media3D.Material>
 - [Обзор 3D трансформаций](3-d-transformations-overview.md)
 - [Достижение максимальной производительности WPF 3D](maximize-wpf-3d-performance.md)
-- [Как-к темам](3-d-graphics-how-to-topics.md)
+- [Практические руководства](3-d-graphics-how-to-topics.md)
 - [Общие сведения о фигурах и базовых средствах рисования в WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)

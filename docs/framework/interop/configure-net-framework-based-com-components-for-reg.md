@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181465"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291758"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
@@ -24,7 +24,7 @@ ms.locfileid: "79181465"
   
  В этом разделе описывается, как связать манифест приложения с приложением, манифест компонента с компонентом и внедрить манифест компонента в сборку.  
   
-### <a name="to-create-an-application-manifest"></a>Создание манифеста приложения  
+## <a name="create-an-application-manifest"></a>Создание манифеста приложения  
   
 1. С помощью редактора XML создайте (или измените) манифест приложения, принадлежащий COM-приложению, которое взаимодействует с одним или несколькими управляемыми компонентами.  
   
@@ -32,7 +32,8 @@ ms.locfileid: "79181465"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      Дополнительные сведения об элементах манифеста и их атрибутах см. в статье [Application Manifests](/windows/desktop/SbsCs/application-manifests) (Манифесты приложений).  
@@ -46,7 +47,8 @@ ms.locfileid: "79181465"
                         name="myOrganization.myDivision.myComApp"
                         version="1.0.0.0"
                         processorArchitecture="msil"
-      />  
+      />
+    </assembly>  
     ```  
   
 4. Определите зависимые сборки. В следующем примере `myComApp` зависит от `myManagedComp`.  
@@ -75,9 +77,9 @@ ms.locfileid: "79181465"
   
 5. Сохраните файл манифеста под соответствующим именем. Имя манифеста приложения состоит из имени исполняемого файла сборки и расширения manifest. Например, для приложения myComApp.exe файл манифеста будет носить имя myComApp.exe.manifest.  
   
- Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. Дополнительные сведения см. в статье о [параллельных сборках](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
+Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. Для получения дополнительной информации, [см.](/windows/desktop/SbsCs/about-side-by-side-assemblies-)  
   
-#### <a name="to-create-a-component-manifest"></a>Создание манифеста компонента  
+## <a name="create-a-component-manifest"></a>Создание компонентного манифеста  
   
 1. С помощью редактора XML создайте манифест компонента, описывающий управляемую сборку.  
   
@@ -85,7 +87,8 @@ ms.locfileid: "79181465"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. Определите владельца файла. Элемент `<assemblyIdentity>` элемента `<dependentAssembly>` в файле манифеста приложения должен соответствовать аналогичному элементу в манифесте компонента. В следующем примере владельцем файла манифеста является `myManagedComp` версии 1.2.3.4.  
@@ -98,12 +101,13 @@ ms.locfileid: "79181465"
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. Определите каждый класс в сборке. Используйте `<clrClass>` элемент для уникальной идентификации каждого класса в управляемой сборке. Атрибуты элемента, вложенного в `<assembly>`, определены в следующей таблице.  
   
-    |attribute|Описание|Обязательно|  
+    |Атрибут|Описание|Обязательно|  
     |---------------|-----------------|--------------|  
     |`clsid`|Идентификатор, который задает активируемый класс.|Да|  
     |`description`|Строка, которая сообщает пользователю о компоненте. По умолчанию используется пустая строка.|нет|  
@@ -168,7 +172,7 @@ ms.locfileid: "79181465"
   
      Файл, содержащий внедренные ресурсы, также носит имя `myresource.res`.  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [COM-взаимодействие без регистрации](registration-free-com-interop.md)
 - [Требования для COM-взаимодействия без регистрации](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
