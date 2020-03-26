@@ -31,11 +31,11 @@
         - name: Настройка службы данных
           href: configuring-the-data-service-wcf-data-services.md
           items:
-            - name: 'Как выполнить Разработка службы данных WCF Data Service, работающей на IIS'
+            - name: 'Практическое руководство. Разработка службы данных WCF Data Service, работающей на IIS'
               href: how-to-develop-a-wcf-data-service-running-on-iis.md
-            - name: Как выполнить Включение доступа к службе данных
+            - name: Практическое руководство. Включение доступа к службе данных
               href: how-to-enable-access-to-the-data-service-wcf-data-services.md
-            - name: Как выполнить Включение разбивки на страницы результатов службы данных
+            - name: Практическое руководство. Включение разбивки на страницы результатов службы данных
               href: how-to-enable-paging-of-data-service-results-wcf-data-services.md
         - name: Поставщики служб данных
           href: data-services-providers-wcf-data-services.md
@@ -43,14 +43,14 @@
             - name: Поставщик Entity Framework
               href: entity-framework-provider-wcf-data-services.md
               items:
-                - name: Как выполнить Создание службы данных с использованием источника данных Entity Framework ADO.NET
+                - name: Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET
                   href: create-a-data-service-using-an-adonet-ef-data-wcf.md
             - name: Поставщик отражения
               href: reflection-provider-wcf-data-services.md
               items:
-                - name: Как выполнить Создание службы данных с использованием поставщика отражений
+                - name: Практическое руководство. Создание службы данных с использованием поставщика отражений
                   href: create-a-data-service-using-rp-wcf-data-services.md
-                - name: Как выполнить Создание службы данных с использованием источника данных LINQ to SQL
+                - name: Практическое руководство. Создание службы данных с использованием источника данных LINQ to SQL
                   href: create-a-data-service-using-linq-to-sql-wcf.md
             - name: Специализированные поставщики служб данных
               href: custom-data-service-providers-wcf-data-services.md
@@ -59,19 +59,19 @@
         - name: Операции служб
           href: service-operations-wcf-data-services.md
           items:
-            - name: Как выполнить Определение операции службы
+            - name: Практическое руководство. Определение операции службы
               href: how-to-define-a-service-operation-wcf-data-services.md
         - name: Настройка канала
           href: feed-customization-wcf-data-services.md
           items:
-            - name: Как выполнить Настройка каналов с использованием поставщика Entity Framework
+            - name: Практическое руководство. Настройка каналов с использованием поставщика Entity Framework
               href: how-to-customize-feeds-with-ef-provider-wcf-data-services.md
-            - name: Как выполнить Настройка каналов с использованием поставщика отражения
+            - name: Практическое руководство. Настройка каналов с использованием поставщика отражения
               href: how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md
         - name: Перехватчики
           href: interceptors-wcf-data-services.md
           items:
-            - name: Как выполнить Перехват сообщений службы данных
+            - name: Практическое руководство. Перехват сообщений службы данных
               href: how-to-intercept-data-service-messages-wcf-data-services.md
         - name: Разработка и развертывание служб WCF Data Services
           href: developing-and-deploying-wcf-data-services.md
@@ -93,9 +93,9 @@
           items:
             - name: Служебная программа клиента служб данных WCF (DataSvcUtil.exe)
               href: wcf-data-service-client-utility-datasvcutil-exe.md
-            - name: Как выполнить Добавление ссылки на службу данных
+            - name: Практическое руководство. Добавление ссылки на службу данных
               href: how-to-add-a-data-service-reference-wcf-data-services.md
-            - name: Как выполнить Создание клиентских классов служб данных вручную
+            - name: Практическое руководство. Создание клиентских классов служб данных вручную
               href: how-to-manually-generate-client-data-service-classes-wcf-data-services.md
         - name: Выполнение запросов к службе данных
           href: querying-the-data-service-wcf-data-services.md
@@ -103,58 +103,58 @@
             - name: Проекции запросов
               href: query-projections-wcf-data-services.md
               items:
-                - name: Как выполнить Проекция результатов запроса
+                - name: Практическое руководство. Проекция результатов запроса
                   href: how-to-project-query-results-wcf-data-services.md
             - name: Рекомендации по LINQ
               href: linq-considerations-wcf-data-services.md
             - name: Материализация объектов
               href: object-materialization-wcf-data-services.md
-            - name: Как выполнить Выполнение запросов к службе данных
+            - name: Практическое руководство. Выполнение запросов к службе данных
               href: how-to-execute-data-service-queries-wcf-data-services.md
-            - name: Как выполнить Добавление параметров запроса к запросу службы данных
+            - name: Практическое руководство. Добавление параметров запроса к запросу службы данных
               href: how-to-add-query-options-to-a-data-service-query-wcf-data-services.md
-            - name: 'Как выполнить Определение количества сущностей, возвращаемых запросом'
+            - name: 'Практическое руководство. Определение количества сущностей, возвращаемых запросом'
               href: number-of-entities-returned-by-a-query-wcf.md
-            - name: Как выполнить Указание учетных данных клиента для запроса службы данных
+            - name: Практическое руководство. Указание учетных данных клиента для запроса службы данных
               href: specify-client-creds-for-a-data-service-request-wcf.md
-            - name: Как выполнить Установка заголовков в клиентском запросе
+            - name: Практическое руководство. Установка заголовков в клиентском запросе
               href: how-to-set-headers-in-the-client-request-wcf-data-services.md
         - name: Загрузка отложенного содержимого
           href: loading-deferred-content-wcf-data-services.md
           items:
-            - name: Как выполнить Загрузка связанных сущностей
+            - name: Практическое руководство. Загрузка связанных сущностей
               href: how-to-load-related-entities-wcf-data-services.md
-            - name: 'Как выполнить Загрузка результатов, разбитых на страницы'
+            - name: 'Практическое руководство. Загрузка результатов, разбитых на страницы'
               href: how-to-load-paged-results-wcf-data-services.md
         - name: Обновление службы данных
           href: updating-the-data-service-wcf-data-services.md
           items:
-            - name: 'Как выполнить Добавление, изменение и удаление сущностей'
+            - name: 'Практическое руководство. Добавление, изменение и удаление сущностей'
               href: how-to-add-modify-and-delete-entities-wcf-data-services.md
-            - name: Как выполнить Определение связей сущностей
+            - name: Практическое руководство. Определение связей сущностей
               href: how-to-define-entity-relationships-wcf-data-services.md
-            - name: Как выполнить Присоединение существующей сущности к контексту DataServiceContext
+            - name: Практическое руководство. Присоединение существующей сущности к контексту DataServiceContext
               href: attach-an-existing-entity-to-dc-wcf-data.md
         - name: Асинхронные операции
           href: asynchronous-operations-wcf-data-services.md
           items:
-            - name: Как выполнить Выполнение асинхронных запросов к службе данных
+            - name: Практическое руководство. Выполнение асинхронных запросов к службе данных
               href: how-to-execute-asynchronous-data-service-queries-wcf-data-services.md
-            - name: Как выполнить Создание асинхронного приложения Windows Presentation Framework
+            - name: Практическое руководство. Создание асинхронного приложения Windows Presentation Framework
               href: create-an-asynchronous-wpf-application-wcf-data-services.md
         - name: Пакетные операции
           href: batching-operations-wcf-data-services.md
           items:
-            - name: Как выполнить Пакетное выполнение запросов
+            - name: Практическое руководство. Пакетное выполнение запросов
               href: how-to-execute-queries-in-a-batch-wcf-data-services.md
         - name: Привязка данных к элементам управления
           href: binding-data-to-controls-wcf-data-services.md
           items:
-            - name: Как выполнить Привязка данных к элементам Windows Presentation Foundation
+            - name: Практическое руководство. Привязка данных к элементам Windows Presentation Foundation
               href: bind-data-to-wpf-elements-wcf-data-services.md
-            - name: Как выполнить Привязка данных с помощью источника данных проекта
+            - name: Практическое руководство. Привязка данных с помощью источника данных проекта
               href: how-to-bind-data-using-a-project-data-source-wcf-data-services.md
-            - name: Как выполнить Настройка поведения привязки данных
+            - name: Практическое руководство. Настройка поведения привязки данных
               href: how-to-customize-data-binding-behaviors-wcf-data-services.md
         - name: Вызов операций служб
           href: calling-service-operations-wcf-data-services.md

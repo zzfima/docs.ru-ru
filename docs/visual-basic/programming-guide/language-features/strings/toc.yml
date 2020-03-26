@@ -16,31 +16,31 @@
           href: interpolated-strings.md
         - name: 'Что лучше: отсчет строк с нуля или с единицы?'
           href: zero-based-vs-one-based-string-access.md
-    - name: Как выполнить Создание строк с помощью StringBuilder
+    - name: Практическое руководство. Создание строк с помощью StringBuilder
       href: how-to-create-strings-using-a-stringbuilder.md
-    - name: Как выполнить Поиск в строке
+    - name: Практическое руководство. Поиск в строке
       href: how-to-search-within-a-string.md
     - name: Преобразование между строками и другими типами данных
       href: converting-between-strings-and-other-data-types.md
       items:
-        - name: Как выполнить Преобразование массива байтов в строку
+        - name: Практическое руководство. Преобразование массива байтов в строку
           href: how-to-convert-an-array-of-bytes-into-a-string.md
-        - name: Как выполнить Преобразование строк в массив байтов
+        - name: Практическое руководство. Преобразование строк в массив байтов
           href: how-to-convert-strings-into-an-array-of-bytes.md
-        - name: Как выполнить Создание строки из значений массива символьного типа
+        - name: Практическое руководство. Создание строки из значений массива символьного типа
           href: how-to-create-a-string-from-an-array-of-char-values.md
-        - name: Как выполнить Преобразование шестнадцатеричных строк в числа
+        - name: Практическое руководство. Преобразование шестнадцатеричных строк в числа
           href: how-to-convert-hexadecimal-strings-to-numbers.md
-        - name: Как выполнить Преобразование строки в массив символов
+        - name: Практическое руководство. Преобразование строки в массив символов
           href: how-to-convert-a-string-to-an-array-of-characters.md
-        - name: Как выполнить Доступ к символам в строках
+        - name: Практическое руководство. Доступ к символам в строках
           href: how-to-access-characters-in-strings.md
     - name: Проверка строк
       href: validating-strings.md
       items:
-        - name: Как выполнить Проверка имен файлов и путей
+        - name: Практическое руководство. Проверка имен файлов и путей
           href: how-to-validate-file-names-and-paths.md
-        - name: 'Как выполнить Проверка строк, представляющих дату или время'
+        - name: 'Практическое руководство. Проверка строк, представляющих дату или время'
           href: how-to-validate-strings-that-represent-dates-or-times.md
         - name: Использование регулярных выражений в элементе управления MaskedTextBox
           href: using-regular-expressions-with-the-maskedtextbox-control.md

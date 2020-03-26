@@ -7,16 +7,16 @@
         - name: Расширение клиентов
           href: extending-clients.md
           items:
-            - name: Как выполнить Проверка или изменение сообщений на клиенте
+            - name: Практическое руководство. Проверка или изменение сообщений на клиенте
               href: how-to-inspect-or-modify-messages-on-the-client.md
-            - name: Как выполнить Проверка или изменение параметров
+            - name: Практическое руководство. Проверка или изменение параметров
               href: how-to-inspect-or-modify-parameters.md
         - name: Расширение диспетчеров
           href: extending-dispatchers.md
           items:
-            - name: Как выполнить Проверка и изменение сообщений в службе
+            - name: Практическое руководство. Проверка и изменение сообщений в службе
               href: how-to-inspect-and-modify-messages-on-the-service.md
-            - name: Как выполнить Блокировка конечных точек в среде предприятия
+            - name: Практическое руководство. Блокировка конечных точек в среде предприятия
               href: how-to-lock-down-endpoints-in-the-enterprise.md
         - name: Расширяемые объекты
           href: extensible-objects.md
@@ -32,7 +32,7 @@
         - name: Пользовательские привязки
           href: custom-bindings.md
           items:
-            - name: 'Как выполнить Изменение привязки, предоставляемой системой'
+            - name: 'Практическое руководство. Изменение привязки, предоставляемой системой'
               href: how-to-customize-a-system-provided-binding.md
         - name: Создание пользовательских привязок
           href: creating-user-defined-bindings.md
@@ -77,37 +77,37 @@
           items:
             - name: Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
               href: walkthrough-creating-custom-client-and-service-credentials.md
-            - name: 'Как выполнить Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов'
+            - name: 'Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов'
               href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
-            - name: Как выполнить Создание поставщика пользовательских маркеров безопасности
+            - name: Практическое руководство. Создание поставщика пользовательских маркеров безопасности
               href: how-to-create-a-custom-security-token-provider.md
-            - name: Как выполнить Создание пользовательской структуры проверки подлинности маркера безопасности
+            - name: Практическое руководство. Создание пользовательской структуры проверки подлинности маркера безопасности
               href: how-to-create-a-custom-security-token-authenticator.md
         - name: Пользовательские маркеры
           href: custom-tokens.md
           items:
-            - name: Как выполнить Создание пользовательского токена
+            - name: Практическое руководство. Создание пользовательского токена
               href: how-to-create-a-custom-token.md
         - name: Пользовательская авторизация
           href: custom-authorization.md
           items:
-            - name: Как выполнить Создание пользовательской политики авторизации
+            - name: Практическое руководство. Создание пользовательской политики авторизации
               href: how-to-create-a-custom-authorization-policy.md
-            - name: Как выполнить Создание пользовательского диспетчера авторизации для службы
+            - name: Практическое руководство. Создание пользовательского диспетчера авторизации для службы
               href: how-to-create-a-custom-authorization-manager-for-a-service.md
-            - name: Как выполнить Создание пользовательского утверждения
+            - name: Практическое руководство. Создание пользовательского утверждения
               href: how-to-create-a-custom-claim.md
-            - name: Как выполнить Сравнение утверждений
+            - name: Практическое руководство. Сравнение утверждений
               href: how-to-compare-claims.md
-            - name: Как выполнить Создание пользовательского идентификатора участника
+            - name: Практическое руководство. Создание пользовательского идентификатора участника
               href: how-to-create-a-custom-principal-identity.md
         - name: Переопределение идентификатора службы для проверки подлинности
           href: overriding-the-identity-of-a-service-for-authentication.md
-        - name: Как выполнить Создание пользовательского средства проверки идентификации клиентов
+        - name: Практическое руководство. Создание пользовательского средства проверки идентификации клиентов
           href: how-to-create-a-custom-client-identity-verifier.md
-        - name: Как выполнить Использование отдельных сертификатов X.509 для подписывания и шифрования
+        - name: Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования
           href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
-        - name: Как выполнить Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
+        - name: Практическое руководство. Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
           href: change-cryptographic-provider-x509-certificate-private-key.md
     - name: Расширение системы метаданных
       href: extending-the-metadata-system.md
@@ -115,27 +115,27 @@
         - name: Экспорт пользовательских метаданных для расширения WCF
           href: exporting-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: Как выполнить Экспорт пользовательской информации WSDL
+            - name: Практическое руководство. Экспорт пользовательской информации WSDL
               href: how-to-export-custom-wsdl.md
-            - name: Как выполнить Экспорт проверочных утверждений пользовательской политики
+            - name: Практическое руководство. Экспорт проверочных утверждений пользовательской политики
               href: how-to-export-custom-policy-assertions.md
         - name: Импорт пользовательских метаданных для расширения WCF
           href: importing-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: Как выполнить Импорт пользовательской информации WSDL
+            - name: Практическое руководство. Импорт пользовательской информации WSDL
               href: how-to-import-custom-wsdl.md
-            - name: Как выполнить Импорт проверочных утверждений пользовательской политики
+            - name: Практическое руководство. Импорт проверочных утверждений пользовательской политики
               href: how-to-import-custom-policy-assertions.md
-            - name: Как выполнить Разработка расширения для ServiceContractGenerator
+            - name: Практическое руководство. Разработка расширения для ServiceContractGenerator
               href: how-to-write-an-extension-for-the-servicecontractgenerator.md
         - name: Публикация и получение метаданных через пользовательскую привязку
           href: publishing-and-retrieving-metadata-over-a-custom-binding.md
           items:
             - name: Привязки WS-MetadataExchange
               href: ws-metadataexchange-bindings.md
-            - name: Как выполнить Настройка пользовательской привязки для обмена WS-Metadata
+            - name: Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
               href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
-            - name: 'Как выполнить Получение метаданных через привязку, не использующую MEX'
+            - name: 'Практическое руководство. Получение метаданных через привязку, не использующую MEX'
               href: how-to-retrieve-metadata-over-a-non-mex-binding.md
     - name: Расширение кодировщиков и сериализаторов
       href: extending-encoders-and-serializers.md

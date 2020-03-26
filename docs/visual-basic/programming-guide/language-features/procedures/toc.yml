@@ -1,23 +1,23 @@
 - name: Процедуры в Visual Basic
   href: index.md
   items:
-    - name: Как выполнить Создание процедуры
+    - name: Практическое руководство. Создание процедуры
       href: how-to-create-a-procedure.md
     - name: Подпрограммы
       href: sub-procedures.md
       items:
-        - name: 'Как выполнить Вызов процедуры, которая не возвращает значение'
+        - name: 'Практическое руководство. Вызов процедуры, которая не возвращает значение'
           href: how-to-call-a-procedure-that-does-not-return-a-value.md
-        - name: Как выполнить Вызов обработчика событий
+        - name: Практическое руководство. Вызов обработчика событий
           href: how-to-call-an-event-handler.md
     - name: Процедуры функций
       href: function-procedures.md
       items:
-        - name: 'Как выполнить Создание процедуры, возвращающей значение'
+        - name: 'Практическое руководство. Создание процедуры, возвращающей значение'
           href: how-to-create-a-procedure-that-returns-a-value.md
-        - name: Как выполнить Возврат значения из процедуры
+        - name: Практическое руководство. Возврат значения из процедуры
           href: how-to-return-a-value-from-a-procedure.md
-        - name: 'Как выполнить Вызов процедуры, возвращающей значение'
+        - name: 'Практическое руководство. Вызов процедуры, возвращающей значение'
           href: how-to-call-a-procedure-that-returns-a-value.md
     - name: Процедуры свойств
       href: property-procedures.md
@@ -26,37 +26,37 @@
           href: auto-implemented-properties.md
         - name: Различия между свойствами и переменными
           href: differences-between-properties-and-variables.md
-        - name: Как выполнить Создание свойства
+        - name: Практическое руководство. Создание свойства
           href: how-to-create-a-property.md
-        - name: Как выполнить Объявление свойства со смешанным уровнем доступа
+        - name: Практическое руководство. Объявление свойства со смешанным уровнем доступа
           href: how-to-declare-a-property-with-mixed-access-levels.md
-        - name: Как выполнить Вызов процедуры свойства
+        - name: Практическое руководство. Вызов процедуры свойства
           href: how-to-call-a-property-procedure.md
-        - name: Как выполнить Объявление и вызов свойства по умолчанию
+        - name: Практическое руководство. Объявление и вызов свойства по умолчанию
           href: how-to-declare-and-call-a-default-property.md
-        - name: Как выполнить Запись значения в свойство
+        - name: Практическое руководство. Запись значения в свойство
           href: how-to-put-a-value-in-a-property.md
-        - name: Как выполнить Получение значения из свойства
+        - name: Практическое руководство. Получение значения из свойства
           href: how-to-get-a-value-from-a-property.md
     - name: Процедуры операторов
       href: operator-procedures.md
       items:
-        - name: Как выполнить Определение оператора
+        - name: Практическое руководство. Определение оператора
           href: how-to-define-an-operator.md
-        - name: Как выполнить Определение оператора преобразования
+        - name: Практическое руководство. Определение оператора преобразования
           href: how-to-define-a-conversion-operator.md
-        - name: Как выполнить Вызов процедуры оператора
+        - name: Практическое руководство. Вызов процедуры оператора
           href: how-to-call-an-operator-procedure.md
-        - name: 'Как выполнить Использование класса, в котором определяются операторы'
+        - name: 'Практическое руководство. Использование класса, в котором определяются операторы'
           href: how-to-use-a-class-that-defines-operators.md
     - name: Параметры и аргументы процедуры
       href: procedure-parameters-and-arguments.md
       items:
         - name: Различия между параметрами и аргументами
           href: differences-between-parameters-and-arguments.md
-        - name: Как выполнить Определение параметра для процедуры
+        - name: Практическое руководство. Определение параметра для процедуры
           href: how-to-define-a-parameter-for-a-procedure.md
-        - name: Как выполнить Передача аргументов в процедуру
+        - name: Практическое руководство. Передача аргументов в процедуру
           href: how-to-pass-arguments-to-a-procedure.md
         - name: Передача аргументов по значению и по ссылке
           href: passing-arguments-by-value-and-by-reference.md
@@ -65,11 +65,11 @@
               href: differences-between-modifiable-and-nonmodifiable-arguments.md
             - name: Различия между передачей аргумента по значению и по ссылке
               href: differences-between-passing-an-argument-by-value-and-by-reference.md
-            - name: Как выполнить Изменение значения аргумента процедуры
+            - name: Практическое руководство. Изменение значения аргумента процедуры
               href: how-to-change-the-value-of-a-procedure-argument.md
-            - name: Как выполнить Защита аргумента процедуры от изменений значения
+            - name: Практическое руководство. Защита аргумента процедуры от изменений значения
               href: how-to-protect-a-procedure-argument-against-value-changes.md
-            - name: Как выполнить Принудительная передача аргумента по значению
+            - name: Практическое руководство. Принудительная передача аргумента по значению
               href: how-to-force-an-argument-to-be-passed-by-value.md
         - name: Передача аргументов по позиции и по имени
           href: passing-arguments-by-position-and-by-name.md
@@ -84,13 +84,13 @@
     - name: Перегрузка процедур
       href: procedure-overloading.md
       items:
-        - name: Как выполнить Определение различных версий процедуры
+        - name: Практическое руководство. Определение различных версий процедуры
           href: how-to-define-multiple-versions-of-a-procedure.md
-        - name: Как выполнить Вызов перегруженной процедуры
+        - name: Практическое руководство. Вызов перегруженной процедуры
           href: how-to-call-an-overloaded-procedure.md
-        - name: 'Как выполнить Перегрузка процедуры, которая принимает необязательные параметры'
+        - name: 'Практическое руководство. Перегрузка процедуры, которая принимает необязательные параметры'
           href: how-to-overload-a-procedure-that-takes-optional-parameters.md
-        - name: 'Как выполнить Перегрузка процедуры, принимающей неопределенное число параметров'
+        - name: 'Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров'
           href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
         - name: 'Вопросы, связанные с перегрузкой процедур'
           href: considerations-in-overloading-procedures.md
@@ -101,14 +101,14 @@
     - name: Методы расширения
       href: extension-methods.md
       items:
-        - name: Как выполнить Написание метода расширения
+        - name: Практическое руководство. Написание метода расширения
           href: how-to-write-an-extension-method.md
-        - name: Как выполнить Вызов метода расширения
+        - name: Практическое руководство. Вызов метода расширения
           href: how-to-call-an-extension-method.md
     - name: Лямбда-выражения
       href: lambda-expressions.md
       items:
-        - name: Как выполнить Создание лямбда-выражения
+        - name: Практическое руководство. Создание лямбда-выражения
           href: how-to-create-a-lambda-expression.md
     - name: Разделяемые методы
       href: partial-methods.md

@@ -4,9 +4,9 @@
     - name: Элемент <appSettings> для <configuration>
       href: appsettings-element-for-configuration.md
       items:
-        - name: Элемент <add>
+        - name: <add> - элемент
           href: add-element-for-appsettings.md
-        - name: Элемент <clear>
+        - name: <clear> - элемент
           href: clear-element-for-appsettings.md
         - name: Элемент <remove>
           href: remove-element-for-appsettings.md

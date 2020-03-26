@@ -12,19 +12,19 @@
           href: code-contracts.md
         - name: Переключатели трассировки
           href: trace-switches.md
-        - name: 'Как выполнить Создание, инициализация и настройка переключателей трассировки'
+        - name: 'Практическое руководство. Создание, инициализация и настройка переключателей трассировки'
           href: how-to-create-initialize-and-configure-trace-switches.md
         - name: Прослушиватели трассировки
           href: trace-listeners.md
-        - name: Как выполнить Использование TraceSource и фильтров с прослушивателями трассировки
+        - name: Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки
           href: how-to-use-tracesource-and-filters-with-trace-listeners.md
-        - name: Как выполнить Создание и инициализация прослушивателей трассировки
+        - name: Практическое руководство. Создание и инициализация прослушивателей трассировки
           href: how-to-create-and-initialize-trace-listeners.md
-        - name: Как выполнить Создание и инициализация источников трассировки
+        - name: Практическое руководство. Создание и инициализация источников трассировки
           href: how-to-create-and-initialize-trace-sources.md
-        - name: Как выполнить Добавление операторов трассировки в код приложения
+        - name: Практическое руководство. Добавление операторов трассировки в код приложения
           href: how-to-add-trace-statements-to-application-code.md
-        - name: Как выполнить Условная компиляция с использованием атрибутов Trace и Debug
+        - name: Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
           href: how-to-compile-conditionally-with-trace-and-debug.md
     - name: Диагностика ошибок посредством управляемых помощников по отладке
       href: diagnosing-errors-with-managed-debugging-assistants.md

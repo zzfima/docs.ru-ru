@@ -5,9 +5,9 @@
       href: walkthrough-declaring-and-raising-events.md
     - name: Пошаговое руководство. Обработка событий
       href: walkthrough-handling-events.md
-    - name: Как выполнить Объявление пользовательских событий для предотвращения блокировки
+    - name: Практическое руководство. Объявление пользовательских событий для предотвращения блокировки
       href: how-to-declare-custom-events-to-avoid-blocking.md
-    - name: Как выполнить Объявление пользовательских событий для экономии памяти
+    - name: Практическое руководство. Объявление пользовательских событий для экономии памяти
       href: how-to-declare-custom-events-to-conserve-memory.md
     - name: 'Устранение неполадок, связанных с унаследованными обработчиками событий'
       href: troubleshooting-inherited-event-handlers.md

@@ -7,9 +7,9 @@
       href: arithmetic-operators.md
     - name: Операторы сравнения
       href: comparison-operators.md
-    - name: Как выполнить Проверка совпадения двух объектов
+    - name: Практическое руководство. Проверка совпадения двух объектов
       href: how-to-test-whether-two-objects-are-the-same.md
-    - name: Как выполнить Сравнение строки на соответствие с шаблоном
+    - name: Практическое руководство. Сравнение строки на соответствие с шаблоном
       href: how-to-match-a-string-against-a-pattern.md
     - name: Операторы объединения
       href: concatenation-operators.md
@@ -17,7 +17,7 @@
       href: logical-and-bitwise-operators.md
     - name: Эффективное сочетание операторов
       href: efficient-combination-of-operators.md
-    - name: Как выполнить Вычисление числовых значений
+    - name: Практическое руководство. Вычисление числовых значений
       href: how-to-calculate-numeric-values.md
     - name: Сравнения значений
       href: value-comparisons.md

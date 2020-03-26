@@ -8,7 +8,7 @@
           href: attributeusage.md
     - name: Обращение к атрибутам с помощью отражения
       href: accessing-attributes-by-using-reflection.md
-    - name: "Как выполнить Создание объединения\_C/C++ с помощью атрибутов"
+    - name: "Практическое руководство. Создание объединения\_C/C++ с помощью атрибутов"
       href: how-to-create-a-c-cpp-union-by-using-attributes.md
     - name: Общие атрибуты
       href: common-attributes.md

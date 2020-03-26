@@ -7,61 +7,61 @@
         - name: Чтение из файлов
           href: reading-from-files.md
           items:
-            - name: Как выполнить Чтение из текстовых файлов
+            - name: Практическое руководство. Чтение из текстовых файлов
               href: how-to-read-from-text-files.md
-            - name: Как выполнить Чтение из текстовых файлов с разделителями-запятыми
+            - name: Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми
               href: how-to-read-from-comma-delimited-text-files.md
-            - name: Как выполнить Чтение из текстовых файлов с полями фиксированного размера
+            - name: Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера
               href: how-to-read-from-fixed-width-text-files.md
-            - name: Как выполнить Чтение из текстовых файлов различных форматов
+            - name: Практическое руководство. Чтение из текстовых файлов различных форматов
               href: how-to-read-from-text-files-with-multiple-formats.md
-            - name: Как выполнить Чтение из двоичных файлов
+            - name: Практическое руководство. Чтение из двоичных файлов
               href: how-to-read-from-binary-files.md
-            - name: Как выполнить Чтение текста из файлов с помощью StreamReader
+            - name: Практическое руководство. Чтение текста из файлов с помощью StreamReader
               href: how-to-read-text-from-files-with-a-streamreader.md
         - name: Запись в файлы
           href: writing-to-files.md
           items:
-            - name: Как выполнить Запись текста в файлы
+            - name: Практическое руководство. Запись текста в файлы
               href: how-to-write-text-to-files.md
-            - name: Как выполнить Дозапись в текстовый файл
+            - name: Практическое руководство. Дозапись в текстовый файл
               href: how-to-append-to-text-files.md
-            - name: Как выполнить Запись в двоичные файлы
+            - name: Практическое руководство. Запись в двоичные файлы
               href: how-to-write-to-binary-files.md
-            - name: Как выполнить Запись текста в файлы в каталоге "Мои документы"
+            - name: Практическое руководство. Запись текста в файлы в каталоге "Мои документы"
               href: how-to-write-text-to-files-in-the-my-documents-directory.md
-            - name: Как выполнить Запись текста в файлы с помощью StreamWriter
+            - name: Практическое руководство. Запись текста в файлы с помощью StreamWriter
               href: how-to-write-text-to-files-with-a-streamwriter.md
         - name: 'Создание, удаление и перемещение файлов и каталогов'
           href: creating-deleting-and-moving-files-and-directories.md
           items:
-            - name: Как выполнить Копирование файлов с определенным шаблоном в каталог
+            - name: Практическое руководство. Копирование файлов с определенным шаблоном в каталог
               href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
-            - name: Как выполнить Создание копии файла в том же каталоге
+            - name: Практическое руководство. Создание копии файла в том же каталоге
               href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
-            - name: Как выполнить Создание копии файла в другом каталоге
+            - name: Практическое руководство. Создание копии файла в другом каталоге
               href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
-            - name: Как выполнить Создание файла
+            - name: Практическое руководство. Создание файла
               href: how-to-create-a-file.md
-            - name: Как выполнить Удаление файла
+            - name: Практическое руководство. Удаление файла
               href: how-to-delete-a-file.md
-            - name: Как выполнить Поиск файлов по конкретному шаблону
+            - name: Практическое руководство. Поиск файлов по конкретному шаблону
               href: how-to-find-files-with-a-specific-pattern.md
-            - name: Как выполнить Перемещение файла
+            - name: Практическое руководство. Перемещение файла
               href: how-to-move-a-file.md
-            - name: Как выполнить Переименование файла
+            - name: Практическое руководство. Переименование файла
               href: how-to-rename-a-file.md
-            - name: Как выполнить Копирование каталога в другой каталог
+            - name: Практическое руководство. Копирование каталога в другой каталог
               href: how-to-copy-a-directory-to-another-directory.md
-            - name: Как выполнить Создание каталога
+            - name: Практическое руководство. Создание каталога
               href: how-to-create-a-directory.md
-            - name: Как выполнить Поиск подкаталогов по заданному шаблону
+            - name: Практическое руководство. Поиск подкаталогов по заданному шаблону
               href: how-to-find-subdirectories-with-a-specific-pattern.md
-            - name: Как выполнить Получение коллекции содержащихся в каталоге файлов
+            - name: Практическое руководство. Получение коллекции содержащихся в каталоге файлов
               href: how-to-get-the-collection-of-files-in-a-directory.md
-            - name: Как выполнить Извлечение содержимого каталога "Мои документы"
+            - name: Практическое руководство. Извлечение содержимого каталога "Мои документы"
               href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
-            - name: Как выполнить Анализ путей к файлам
+            - name: Практическое руководство. Анализ путей к файлам
               href: how-to-parse-file-paths.md
         - name: Анализ текстовых файлов с помощью объекта TextFieldParser
           href: parsing-text-files-with-the-textfieldparser-object.md

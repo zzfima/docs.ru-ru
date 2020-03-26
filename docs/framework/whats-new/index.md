@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143321"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249699"
 ---
 # <a name="whats-new-in-net-framework"></a>Новые возможности .NET Framework
 
@@ -427,7 +427,7 @@ c.SameSite = SameSiteMode.Lax
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
@@ -500,7 +500,7 @@ c.SameSite = SameSiteMode.Lax
 Начиная с .NET Framework 4.7.2, помощник по диагностике может находить словари  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>, созданные из указанного URI источника. (Эта функция предназначена для использования помощником по диагностике, а не приложением в производственной среде.) Помощник по диагностике, например средство "Изменить и продолжить" в Visual Studio, позволяет пользователям редактировать ResourceDictionary с целью применить изменения к запущенному приложению. Шагом к достижению этого является поиск всех ResourceDictionary, созданных запущенным приложением из редактируемого словаря. Например, приложение может объявить ResourceDictionary, содержимое которого копируется из определенного источника URI:
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 Помощник по диагностике, который изменяет исходную разметку в *MyRD.xaml* , может использовать новую функцию для поиска словаря. Эта функция реализуется новым статическим методом <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. Помощник по диагностике вызывает новый метод с помощью абсолютного URI, который определяет исходную разметку, как показано в следующем примере кода:
@@ -1976,7 +1976,7 @@ WPF включает [пакет NuGet](https://www.nuget.org/packages/Microsoft
 
 - [Заметки о выпуске ASP.NET and Web Tools для Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking-a-namenetworking-"></a>Сеть <a name="networking" />
+### <a name="networking"></a>Сеть <a name="networking" />
 
 .NET Framework 4.5 предоставляет новый интерфейс программирования для приложений HTTP. Дополнительные сведения см. в описании новых пространств имен <xref:System.Net.Http?displayProperty=nameWithType> и <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
@@ -2120,7 +2120,7 @@ WPF включает [пакет NuGet](https://www.nuget.org/packages/Microsoft
 
 Приложения для Магазина Windows 8.x разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Предоставляется подмножество .NET Framework 4.5 или 4.5.1 для разработки приложений для Магазина Windows 8.x с использованием C# или Visual Basic. Это подмножество называется .NET для Магазина Windows 8.x. Оно подробно рассматривается в [обзорной статье](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
-### <a name="portable-class-libraries-a-nameportable-"></a>Переносимые библиотеки классов <a name="portable" />
+### <a name="portable-class-libraries"></a>Переносимые библиотеки классов <a name="portable" />
 
 Проект "Переносимая библиотека классов" для Visual Studio 2012 (и более поздних версий) позволяет писать и собирать управляемые сборки, работающие на нескольких платформах .NET Framework. Используя проект "Переносимая библиотека классов", вы можете создавать приложения для конкретных платформ (например, для Windows Phone или .NET для приложений Магазина Windows 8.x). Доступные типы и члены в проекте автоматически ограничиваются типами и членами, общими для этих платформ. Дополнительные сведения см. в статье [Переносимая библиотека классов](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 

@@ -74,7 +74,7 @@
           href: monitoring-azure-kubernetes.md
         - name: Azure Monitor
           href: azure-monitor.md
-    - name: Удостоверение
+    - name: идентификации
       href: identity.md
       items:
         - name: 'Проверка подлинности и авторизация в приложениях, ориентированных на облако'
@@ -83,7 +83,7 @@
           href: azure-active-directory.md
         - name: Сервер удостоверений
           href: identity-server.md
-    - name: безопасность
+    - name: Безопасность
       href: security.md
       items:
         - name: 'Безопасность Azure для приложений, ориентированных на облако'

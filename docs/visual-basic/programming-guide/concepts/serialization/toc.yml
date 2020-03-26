@@ -1,9 +1,9 @@
 - name: Сериализация
   href: index.md
   items:
-    - name: Как выполнить Запись данных объекта в XML-файл
+    - name: Практическое руководство. Запись данных объекта в XML-файл
       href: how-to-write-object-data-to-an-xml-file.md
-    - name: Как выполнить Чтение данных объекта из XML-файла
+    - name: Практическое руководство. Чтение данных объекта из XML-файла
       href: how-to-read-object-data-from-an-xml-file.md
     - name: Пошаговое руководство. Сохранение объекта
       href: walkthrough-persisting-an-object-in-visual-studio.md

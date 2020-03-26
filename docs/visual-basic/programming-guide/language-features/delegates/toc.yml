@@ -1,9 +1,9 @@
 - name: Делегаты
   href: index.md
   items:
-    - name: Как выполнить Вызов метода делегата
+    - name: Практическое руководство. Вызов метода делегата
       href: how-to-invoke-a-delegate-method.md
-    - name: Как выполнить Передача процедур другой процедуре
+    - name: Практическое руководство. Передача процедур другой процедуре
       href: how-to-pass-procedures-to-another-procedure.md
     - name: Неявное преобразование делегата
       href: relaxed-delegate-conversion.md

@@ -3,12 +3,12 @@ title: Добро пожаловать в .NET
 description: Начало работы с семейством технологий .NET
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124225"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228788"
 ---
 # <a name="welcome-to-net"></a>Добро пожаловать в .NET
 
@@ -44,7 +44,7 @@ ms.locfileid: "77124225"
 
 - [Руководство по .NET](standard/index.md)
 - [Руководство по .NET Core](core/index.md)
-- [Руководство по .NET Framework](framework/index.md)
+- [Руководство по .NET Framework](framework/index.yml)
 - [Руководство по языку C#](csharp/index.yml)
 - [Руководство по F#](fsharp/index.yml)
 - [Руководство по Visual Basic](visual-basic/index.yml)

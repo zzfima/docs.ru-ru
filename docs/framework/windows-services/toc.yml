@@ -1,4 +1,4 @@
-﻿- name: Приложения служб Windows
+- name: Приложения служб Windows
   href: index.md
   items:
     - name: Знакомство с приложениями служб Windows

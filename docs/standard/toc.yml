@@ -141,7 +141,7 @@
   href: data/sqlite/
 - name: XML-документы и данные
   href: data/xml/
-- name: безопасность
+- name: Безопасность
   href: security/
 - name: Сериализация
   href: serialization/

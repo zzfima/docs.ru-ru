@@ -23,26 +23,26 @@
     - name: Учебник по началу работы
       href: getting-started-tutorial.md
       items:
-        - name: Как выполнить Создание действия
+        - name: Практическое руководство. Создание действия
           href: how-to-create-an-activity.md
-        - name: Как выполнить Создание рабочего процесса
+        - name: Практическое руководство. Создание рабочего процесса
           href: how-to-create-a-workflow.md
           items:
-            - name: Как выполнить Создание рабочего процесса c блок-схемой
+            - name: Практическое руководство. Создание рабочего процесса c блок-схемой
               href: how-to-create-a-flowchart-workflow.md
-            - name: Как выполнить Создание последовательного рабочего процесса
+            - name: Практическое руководство. Создание последовательного рабочего процесса
               href: how-to-create-a-sequential-workflow.md
-            - name: Как выполнить Создание рабочего процесса конечного автомата
+            - name: Практическое руководство. Создание рабочего процесса конечного автомата
               href: how-to-create-a-state-machine-workflow.md
-        - name: Как выполнить Запуск рабочего процесса
+        - name: Практическое руководство. Запуск рабочего процесса
           href: how-to-run-a-workflow.md
-        - name: Как выполнить Создание и запуск длительного рабочего процесса
+        - name: Практическое руководство. Создание и запуск длительного рабочего процесса
           href: how-to-create-and-run-a-long-running-workflow.md
-        - name: Как выполнить Создание настраиваемого участника отслеживания
+        - name: Практическое руководство. Создание настраиваемого участника отслеживания
           href: how-to-create-a-custom-tracking-participant.md
-        - name: Как выполнить Параллельное размещение множества версий рабочего процесса
+        - name: Практическое руководство. Параллельное размещение множества версий рабочего процесса
           href: how-to-host-multiple-versions-of-a-workflow-side-by-side.md
-        - name: Как выполнить Обновление определения выполняющегося экземпляра рабочего процесса
+        - name: Практическое руководство. Обновление определения выполняющегося экземпляра рабочего процесса
           href: how-to-update-the-definition-of-a-running-workflow-instance.md
     - name: Программирование в Windows Workflow Foundation
       href: programming.md
@@ -79,7 +79,7 @@
                   href: primitives-activities-in-wf.md
                 - name: Транзакция
                   href: transaction-activities-in-wf.md
-                - name: Коллекция
+                - name: Collection
                   href: collection-activities-in-wf.md
                 - name: Обработка ошибок
                   href: error-handling-activities-in-wf.md
@@ -177,7 +177,7 @@
           href: dynamic-update.md
         - name: Разработка службы рабочих процессов на основе контракта
           href: contract-first-workflow-service-development.md
-        - name: 'Как выполнить Создание службы рабочих процессов, использующей существующий контракт службы'
+        - name: 'Практическое руководство. Создание службы рабочих процессов, использующей существующий контракт службы'
           href: how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md
         - name: Сохраняемость рабочего процесса
           href: workflow-persistence.md
@@ -200,7 +200,7 @@
                       href: runnable-instances-detection-period.md
                     - name: Строка соединения и имя строки соединения
                       href: connection-string-and-connection-string-name.md
-                - name: "Как выполнить Включение сохраняемости для рабочих процессов и их служб в\_SQL"
+                - name: "Практическое руководство. Включение сохраняемости для рабочих процессов и их служб в\_SQL"
                   href: how-to-enable-sql-persistence-for-workflows-and-workflow-services.md
                 - name: Активация экземпляров
                   href: instance-activation.md
@@ -215,21 +215,21 @@
                   items:
                     - name: Схема базы данных постоянного хранения
                       href: persistence-database-schema.md
-                    - name: Как выполнить Десериализация свойств данных экземпляра
+                    - name: Практическое руководство. Десериализация свойств данных экземпляра
                       href: how-to-deserialize-instance-data-properties.md
-                    - name: Как выполнить Запросы для несохраняемых экземпляров
+                    - name: Практическое руководство. Запросы для несохраняемых экземпляров
                       href: how-to-query-for-non-persisted-instances.md
             - name: Хранилища экземпляров
               href: instance-stores.md
               items:
-                - name: Как выполнить Включение сохраняемости для рабочих процессов и служб рабочих процессов
+                - name: Практическое руководство. Включение сохраняемости для рабочих процессов и служб рабочих процессов
                   href: how-to-enable-persistence-for-workflows-and-workflow-services.md
-                - name: Как выполнить Создание настраиваемого хранилища экземпляров
+                - name: Практическое руководство. Создание настраиваемого хранилища экземпляров
                   href: how-to-create-a-custom-instance-store.md
             - name: Участники сохраняемости
               href: persistence-participants.md
               items:
-                - name: Как выполнить Создание настраиваемого участника сохраняемости
+                - name: Практическое руководство. Создание настраиваемого участника сохраняемости
                   href: how-to-create-a-custom-persistence-participant.md
             - name: Оптимальные методы сохраняемости
               href: persistence-best-practices.md
@@ -523,9 +523,9 @@
             - name: Использование шаблонов и конструкторов настраиваемых действий
               href: using-custom-activity-designers-and-templates.md
               items:
-                - name: Как выполнить Создание настраиваемого конструктора действий
+                - name: Практическое руководство. Создание настраиваемого конструктора действий
                   href: how-to-create-a-custom-activity-designer.md
-                - name: Как выполнить Создание настраиваемого шаблона действий
+                - name: Практическое руководство. Создание настраиваемого шаблона действий
                   href: how-to-create-a-custom-activity-template.md
                 - name: Использование контекста редактирования ModelItem
                   href: using-the-modelitem-editing-context.md
@@ -540,7 +540,7 @@
                   href: task-2-host-the-workflow-designer.md
                 - name: Задача 3. Создание области элементов и сетки свойств
                   href: task-3-create-the-toolbox-and-propertygrid-panes.md
-                - name: Как выполнить Отображение ошибок проверки в отдельно размещенном конструкторе
+                - name: Практическое руководство. Отображение ошибок проверки в отдельно размещенном конструкторе
                   href: how-to-display-validation-errors-in-a-rehosted-designer.md
                 - name: Поддержка новых возможностей Workflow Foundation 4.5 во вновь размещенном конструкторе рабочих процессов
                   href: wf-features-in-the-rehosted-workflow-designer.md

@@ -4,39 +4,39 @@
     - name: Объявление переменной
       href: variable-declaration.md
       items:
-        - name: Как выполнить Создание новой переменной
+        - name: Практическое руководство. Создание новой переменной
           href: how-to-create-a-new-variable.md
-        - name: 'Как выполнить Создание переменной, которая не изменяет значение'
+        - name: 'Практическое руководство. Создание переменной, которая не изменяет значение'
           href: how-to-create-a-variable-that-does-not-change-in-value.md
-        - name: Как выполнить Запись данных в переменную и их извлечение из переменной
+        - name: Практическое руководство. Запись данных в переменную и их извлечение из переменной
           href: how-to-move-data-into-and-out-of-a-variable.md
     - name: Объектные переменные
       href: object-variables.md
       items:
-        - name: Как выполнить Увеличение скорости доступа к объекту с длинным классификационным путем
+        - name: Практическое руководство. Увеличение скорости доступа к объекту с длинным классификационным путем
           href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
     - name: Объявление объектной переменной
       href: object-variable-declaration.md
       items:
-        - name: Как выполнить Доступ к членам объекта
+        - name: Практическое руководство. Доступ к членам объекта
           href: how-to-access-members-of-an-object.md
         - name: Присваивание объектных переменных
           href: object-variable-assignment.md
           items:
-            - name: Как выполнить Объявление объектной переменной и присвоение ей объекта
+            - name: Практическое руководство. Объявление объектной переменной и присвоение ей объекта
               href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
-            - name: 'Как выполнить Как сделать так, чтобы объектная переменная не указывала ни на какой экземпляр'
+            - name: 'Практическое руководство. Как сделать так, чтобы объектная переменная не указывала ни на какой экземпляр'
               href: how-to-make-an-object-variable-not-refer-to-any-instance.md
         - name: Значения объектных переменных
           href: object-variable-values.md
           items:
-            - name: Как выполнить Ссылка на текущий экземпляр объекта
+            - name: Практическое руководство. Ссылка на текущий экземпляр объекта
               href: how-to-refer-to-the-current-instance-of-an-object.md
-            - name: 'Как выполнить Определение типа, на который указывает объектная переменная'
+            - name: 'Практическое руководство. Определение типа, на который указывает объектная переменная'
               href: how-to-determine-what-type-an-object-variable-refers-to.md
-            - name: Как выполнить Определение наличия связи между двумя объектами
+            - name: Практическое руководство. Определение наличия связи между двумя объектами
               href: how-to-determine-whether-two-objects-are-related.md
-            - name: Как выполнить Определение идентичности двух объектов
+            - name: Практическое руководство. Определение идентичности двух объектов
               href: how-to-determine-whether-two-objects-are-identical.md
     - name: Вывод локального типа
       href: local-type-inference.md

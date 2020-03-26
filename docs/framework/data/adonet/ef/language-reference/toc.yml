@@ -33,7 +33,7 @@
               href: query-expression-syntax-examples-filtering.md
             - name: Примеры синтаксиса выражений запросов. Упорядочение
               href: query-expression-syntax-examples-ordering.md
-            - name: Примеры синтаксиса выражений запросов. Статистические операторы
+            - name: Примеры синтаксиса выражений запросов. Операторы статистических выражений
               href: query-expression-syntax-examples-aggregate-operators.md
             - name: Примеры синтаксиса выражений запросов. Секционирование
               href: query-expression-syntax-examples-partitioning.md
@@ -59,15 +59,15 @@
         - name: Вызов функций в запросах LINQ to Entities
           href: calling-functions-in-linq-to-entities-queries.md
           items:
-            - name: Как выполнить Вызов канонических функций
+            - name: Практическое руководство. Вызов канонических функций
               href: how-to-call-canonical-functions.md
-            - name: Как выполнить Вызов функций базы данных
+            - name: Практическое руководство. Вызов функций базы данных
               href: how-to-call-database-functions.md
-            - name: Как выполнить Вызов настраиваемых функций базы данных
+            - name: Практическое руководство. Вызов настраиваемых функций базы данных
               href: how-to-call-custom-database-functions.md
-            - name: Как выполнить Вызов определенных моделью функций в запросах
+            - name: Практическое руководство. Вызов определенных моделью функций в запросах
               href: how-to-call-model-defined-functions-in-queries.md
-            - name: Как выполнить Вызов определенных моделью функций как методов объектов
+            - name: Практическое руководство. Вызов определенных моделью функций как методов объектов
               href: how-to-call-model-defined-functions-as-object-methods.md
         - name: Компилированные запросы (LINQ to Entities)
           href: compiled-queries-linq-to-entities.md

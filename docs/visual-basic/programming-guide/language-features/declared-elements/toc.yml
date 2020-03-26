@@ -11,14 +11,14 @@
         - name: Область
           href: scope.md
           items:
-            - name: Как выполнить Управление областью действия переменной
+            - name: Практическое руководство. Управление областью действия переменной
               href: how-to-control-the-scope-of-a-variable.md
             - name: Повышение типа
               href: type-promotion.md
         - name: Уровни доступа
           href: access-levels.md
           items:
-            - name: Как выполнить Управление доступностью переменной
+            - name: Практическое руководство. Управление доступностью переменной
               href: how-to-control-the-availability-of-a-variable.md
         - name: References to Declared Elements
           href: references-to-declared-elements.md
@@ -27,9 +27,9 @@
           items:
             - name: Различия между удаленным управлением и переопределением
               href: differences-between-shadowing-and-overriding.md
-            - name: 'Как выполнить Сокрытие переменной с тем же именем, что и ваша переменная'
+            - name: 'Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная'
               href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
-            - name: Как выполнить Сокрытие наследуемой переменной
+            - name: Практическое руководство. Сокрытие наследуемой переменной
               href: how-to-hide-an-inherited-variable.md
-            - name: 'Как выполнить Доступ к переменной, скрытой производным классом'
+            - name: 'Практическое руководство. Доступ к переменной, скрытой производным классом'
               href: how-to-access-a-variable-hidden-by-a-derived-class.md

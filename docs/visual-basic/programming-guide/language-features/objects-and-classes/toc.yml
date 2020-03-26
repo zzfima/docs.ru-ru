@@ -12,12 +12,12 @@
     - name: 'Инициализаторы объектов: именованные и анонимные типы'
       href: object-initializers-named-and-anonymous-types.md
       items:
-        - name: Как выполнить Объявление объекта с помощью инициализатора объектов
+        - name: Практическое руководство. Объявление объекта с помощью инициализатора объектов
           href: how-to-declare-an-object-by-using-an-object-initializer.md
     - name: Анонимные типы
       href: anonymous-types.md
       items:
-        - name: Как выполнить Выведение имен свойств и типов в объявлениях анонимных типов
+        - name: Практическое руководство. Выведение имен свойств и типов в объявлениях анонимных типов
           href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
         - name: Определение анонимного типа
           href: anonymous-type-definition.md

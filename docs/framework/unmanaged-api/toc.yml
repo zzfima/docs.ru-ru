@@ -11,7 +11,7 @@
       href: constants-unmanaged-api-reference.md
     - name: Отладка
       href: debugging/
-    - name: Хранилище символов диагностики
+    - name: Хранилище диагностических символов
       href: diagnostics/
     - name: Слияние
       href: fusion/

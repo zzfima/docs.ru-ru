@@ -1,12 +1,12 @@
 - name: Настройка приложений
   href: index.md
   items:
-    - name: Как выполнить Поиск сборок с помощью DEVPATH
+    - name: Практическое руководство. Поиск сборок с помощью DEVPATH
       href: how-to-locate-assemblies-by-using-devpath.md
     - name: Перенаправление версий сборки
       href: redirect-assembly-versions.md
       items:
-        - name: Как выполнить Включение и отключение автоматического перенаправления привязки
+        - name: Практическое руководство. Включение и отключение автоматического перенаправления привязки
           href: how-to-enable-and-disable-automatic-binding-redirection.md
         - name: Разрешение безопасности перенаправления привязки сборок
           href: assembly-binding-redirection-security-permission.md
@@ -19,7 +19,7 @@
           href: map-algorithm-names-to-cryptography-classes.md
         - name: Отображение идентификаторов объектов на криптографические алгоритмы
           href: map-object-identifiers-to-cryptography-algorithms.md
-    - name: Как выполнить Создание политики издателя
+    - name: Практическое руководство. Создание политики издателя
       href: how-to-create-a-publisher-policy.md
     - name: Схема файла конфигурации
       href: file-schema/index.md

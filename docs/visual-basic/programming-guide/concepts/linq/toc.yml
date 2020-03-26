@@ -18,7 +18,7 @@
           href: walkthrough-writing-queries.md
         - name: Практическое руководство. Создание списка элементов
           href: how-to-create-a-list-of-items.md
-    - name: Общие сведения о стандартных операторах запросов
+    - name: Общие сведения о стандартных операторах запроса
       href: standard-query-operators-overview.md
       items:
         - name: Синтаксис выражений запроса для стандартных операторов запроса
@@ -142,7 +142,7 @@
         - name: Создание деревьев XML
           href: creating-xml-trees.md
           items:
-            - name: Функциональная сборка (LINQ to XML)
+            - name: Функциональное сборка (LINQ to XML)
               href: functional-construction-linq-to-xml.md
             - name: Знакомство с XML-литералами
               href: introduction-to-xml-literals.md
@@ -380,7 +380,7 @@
     - name: Изменение деревьев XML (LINQ to XML)
       href: modifying-xml-trees-linq-to-xml.md
       items:
-        - name: Сравнение изменения XML-дерева в памяти с Функциональная сборка (LINQ to XML)
+        - name: Сравнение изменения XML-дерева в памяти с Функциональное сборка (LINQ to XML)
           href: in-memory-xml-tree-modification-vs-functional-construction.md
         - name: 'Добавление элементов, атрибутов и узлов в дерево XML'
           href: adding-elements-attributes-and-nodes-to-an-xml-tree.md

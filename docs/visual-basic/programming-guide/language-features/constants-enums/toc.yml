@@ -4,26 +4,26 @@
     - name: Общие сведения о константах
       href: constants-overview.md
       items:
-        - name: Как выполнить Объявление константы
+        - name: Практическое руководство. Объявление константы
           href: how-to-declare-a-constant.md
         - name: 'Константы, определенные пользователем'
           href: user-defined-constants.md
         - name: Типы данных констант и литералов
           href: constant-and-literal-data-types.md
-        - name: Как выполнить Группирование значений связанных констант
+        - name: Практическое руководство. Группирование значений связанных констант
           href: how-to-group-related-constant-values-together.md
     - name: Общие сведения о перечислениях
       href: enumerations-overview.md
       items:
-        - name: Как выполнить Объявление перечислений
+        - name: Практическое руководство. Объявление перечислений
           href: how-to-declare-enumerations.md
-        - name: Как выполнить Ссылка на элемент перечисления
+        - name: Практическое руководство. Ссылка на элемент перечисления
           href: how-to-refer-to-an-enumeration-member.md
         - name: Перечисления и уточнение имен
           href: enumerations-and-name-qualification.md
-        - name: Как выполнить Перебор элементов перечисления
+        - name: Практическое руководство. Перебор элементов перечисления
           href: how-to-iterate-through-an-enumeration.md
-        - name: 'Как выполнить Определение строки, связанной со значением из перечисления'
+        - name: 'Практическое руководство. Определение строки, связанной со значением из перечисления'
           href: how-to-determine-the-string-associated-with-an-enumeration-value.md
         - name: Когда следует использовать перечисление
           href: when-to-use-an-enumeration.md

@@ -8,7 +8,7 @@
     - name: Отложенная инициализация
       href: lazy-initialization.md
       items:
-        - name: Как выполнить Неактивная инициализация объектов
+        - name: Практическое руководство. Неактивная инициализация объектов
           href: how-to-perform-lazy-initialization-of-objects.md
     - name: ETW Events in the .NET Framework
       href: etw-events.md

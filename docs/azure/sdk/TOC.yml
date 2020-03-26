@@ -1,0 +1,19 @@
+- name: Azure SDK для .NET
+  href: index.yml
+  items:
+    - name: Основные понятия
+      expanded: true
+      items:
+        - name: Проверка подлинности
+          href: authentication.md
+        - name: Ведение журнала
+          href: logging.md
+    - name: Загрузки
+      expanded: true
+      items:
+        - name: Пакеты
+          href: 'https://www.nuget.org/packages?q=windowsazureofficial'
+        - name: Инструменты
+          href: tools.md
+    - name: Справочник по интерфейсам API
+      href: 'https://docs.microsoft.com/dotnet/api/overview/azure/?view=azure-dotnet'
