@@ -1,0 +1,16 @@
+- name: Azure для разработчиков .NET
+  href: index.yml
+  items:
+    - name: Введение в Azure и .NET
+      href: intro.md
+    - name: Миграция в Azure
+      expanded: true
+      items:
+        - name: Выбор размещения в Azure
+          href: ./migration/choose.md
+        - name: Перенос веб-приложения или службы .NET в Службу приложений Azure
+          href: ./migration/app-service.md
+        - name: Перенос приложения ASP.NET на виртуальную машину Azure
+          href: ./migration/vm.md
+        - name: Перенос базы данных SQL Server в Azure
+          href: ./migration/sql.md

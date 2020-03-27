@@ -60,7 +60,7 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: Процесс разработки для приложений на основе Docker
+    - name: "Процесс разработки для приложений на основе\_Docker"
       href: docker-application-development-process/index.md
       items:
         - name: "Рабочий процесс разработки для приложений\_Docker"
@@ -136,9 +136,7 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: "Реализация устойчивых SQL-подключений Entity Framework\_Core"
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: Изучение настраиваемых повторных попыток HTTP-вызова с экспоненциальной выдержкой
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-        - name: Использование HttpClientFactory для реализации устойчивых HTTP-запросов
+        - name: Использование IHttpClientFactory для реализации устойчивых HTTP-запросов
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: "Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью библиотеки\_Polly"
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
@@ -146,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: Мониторинг работоспособности
           href: implement-resilient-applications/monitor-app-health.md
-    - name: Обеспечение безопасности веб-приложений и микрослужб .NET
+    - name: "Обеспечение безопасности микрослужб и веб-приложений\_.NET"
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: Об авторизации в веб-приложениях и микрослужбах .NET

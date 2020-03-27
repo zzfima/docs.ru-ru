@@ -1,0 +1,130 @@
+### YamlMime:Landing
+title: Документация по .NET Framework
+summary: Сведения о .NET Framework — платформе разработки для создания веб-приложений, приложений для Windows и Microsoft Azure.
+metadata:
+  title: Документация по .NET Framework
+  description: Узнайте подробнее о .NET Framework — платформе разработки для создания веб-приложений, приложений для Windows и Microsoft Azure.
+  ms.topic: landing-page
+  ms.custom: updateeachrelease
+  f1_keywords:
+  - f61f02f2-2f20-483d-8f56-a9c8f3a54986
+  helpviewer_keywords:
+  - .NET Framework guide
+  ms.date: 03/23/2020
+  ms.openlocfilehash: 5f362cff359800b0bffd2283819824b8660cfa24
+  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/24/2020
+  ms.locfileid: "80228855"
+landingContent:
+- title: Сведения о .NET Framework
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения о .NET Framework
+      url: get-started/overview.md
+    - text: Требования к системе
+      url: get-started/system-requirements.md
+  - linkListType: concept
+    links:
+    - text: Предыдущие версии .NET Framework
+      url: /previous-versions/dotnet/
+  - linkListType: deploy
+    links:
+    - text: Руководство по развертыванию для разработчиков
+      url: deployment/deployment-guide-for-developers.md
+- title: Установка .NET Framework
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Руководство по установке
+      url: install/index.md
+  - linkListType: concept
+    links:
+    - text: Версии .NET Framework и ОС Windows
+      url: migration-guide/versions-and-dependencies.md
+  - linkListType: how-to-guide
+    links:
+    - text: Определение установленных версий
+      url: migration-guide/how-to-determine-which-versions-are-installed.md
+    - text: Установка .NET Framework в Windows 10
+      url: install/on-windows-10.md
+    - text: Установка .NET Framework 3.5
+      url: install/dotnet-35-windows-10.md
+    - text: Установка пакета для разработчиков или распространяемого компонента
+      url: install/guide-for-developers.md
+    - text: Устранение неполадок заблокированных установок
+      url: install/troubleshoot-blocked-installations-and-uninstallations.md
+- title: Создание приложений-служб Windows
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Знакомство с приложениями-службами Windows
+      url: windows-services/introduction-to-windows-service-applications.md
+  - linkListType: tutorial
+    links:
+    - text: Создание приложения службы Windows
+      url: windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+  - linkListType: how-to-guide
+    links:
+    - text: Установка и удаление служб Windows
+      url: windows-services/how-to-install-and-uninstall-services.md
+- title: Создание приложений Windows Forms
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения о Windows Forms
+      url: winforms/index.md
+  - linkListType: tutorial
+    links:
+    - text: Начало работы с конструктором Windows Forms
+      url: /visualstudio/designers/walkthrough-windows-forms-designer
+    - text: Создание приложение Windows Forms из командной строки
+      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
+  - linkListType: how-to-guide
+    links:
+    - text: Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox
+      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
+    - text: Осуществление потокобезопасных вызовов элементов управления
+      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+- title: Создание приложений WPF
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения о WPF
+      url: wpf/index.md
+  - linkListType: tutorial
+    links:
+    - text: Создание первого приложения WPF в Visual Studio
+      url: wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md
+- title: Работа с данными с помощью ADO.NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения о технологии ADO.NET
+      url: data/adonet/ado-net-overview.md
+  - linkListType: tutorial
+    links:
+    - text: Разработка на основе моделей с помощью Entity Framework
+      url: /ef/ef6/modeling/designer/workflows/model-first
+    - text: Разработка на основе баз данных с помощью Entity Framework
+      url: /ef/ef6/modeling/designer/workflows/database-first
+  - linkListType: concept
+    links:
+    - text: Строки подключения и файлы конфигурации
+      url: data/adonet/connection-strings-and-configuration-files.md
+    - text: Объединение подключений в пул в SQL Server
+      url: data/adonet/sql-server-connection-pooling.md
+  - linkListType: how-to-guide
+    links:
+    - text: Извлечение данных с помощью объекта DataReader
+      url: data/adonet/retrieving-data-using-a-datareader.md
+    - text: Добавление данных в таблицу данных
+      url: data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md
+  - linkListType: reference
+    links:
+    - text: Синтаксис строки подключения
+      url: data/adonet/connection-string-syntax.md
+    - text: Примеры баз данных SQL Server
+      url: data/adonet/sql/linq/downloading-sample-databases.md

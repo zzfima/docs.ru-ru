@@ -3,12 +3,12 @@ title: Интерфейс командной строки .NET Core
 titleSuffix: ''
 description: Общие сведения о .NET Core CLI и его функциях.
 ms.date: 02/13/2020
-ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397602"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110845"
 ---
 # <a name="net-core-cli-overview"></a>Обзор .NET Core CLI
 
