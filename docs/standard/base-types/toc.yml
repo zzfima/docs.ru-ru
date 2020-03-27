@@ -116,9 +116,11 @@
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: Проверка строк на соответствие формату электронной почты
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
-        - name: Кодировка символов в .NET
-          href: character-encoding.md
-    - name: Анализ строк
+    - name: Кодировка символов в .NET
+      href: character-encoding-introduction.md
+    - name: Использование классов кодировки символов
+      href: character-encoding.md
+    - name: Разбор строк
       href: parsing-strings.md
       items:
         - name: Анализ числовых строк

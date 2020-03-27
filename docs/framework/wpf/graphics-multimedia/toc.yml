@@ -125,7 +125,7 @@
                   href: how-to-define-a-rectangle-using-a-rectanglegeometry.md
                 - name: Скругление углов объекта RectangleGeometry
                   href: how-to-round-the-corners-of-a-rectanglegeometry.md
-        - name: Изображения
+        - name: Образы
           href: images.md
           items:
             - name: Общие сведения об обработке изображений
@@ -226,9 +226,9 @@
               href: how-to-transform-points-and-vectors.md
             - name: Использование стеклянной рамки в приложении WPF
               href: extend-glass-frame-into-a-wpf-application.md
-            - name: Как выполнить Повышение производительности отрисовки за счет кэширования элемента
+            - name: Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента
               href: how-to-improve-rendering-performance-by-caching-an-element.md
-            - name: Как выполнить Использование кэшированного элемента в качестве кисти
+            - name: Практическое руководство. Использование кэшированного элемента в качестве кисти
               href: how-to-use-a-cached-element-as-a-brush.md
     - name: Обзор трехмерной графики
       href: 3-d-graphics-overview.md
@@ -246,7 +246,7 @@
               href: how-to-apply-a-drawing-to-a-3-d-model.md
             - name: Применение материала к лицевой и обратной стороне трехмерного объекта
               href: how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md
-            - name: Применение эмиссионного материала к трехмерному объекту
+            - name: Применение излучающего материала к трехмерному объекту
               href: how-to-apply-emissive-material-to-a-3-d-object.md
             - name: Преобразование масштаба трехмерной модели
               href: how-to-transform-the-scale-of-a-3-d-model.md
@@ -256,7 +256,7 @@
               href: how-to-animate-3-d-translations.md
             - name: Анимация трехмерного вращения с помощью раскадровки
               href: how-to-animate-a-3-d-rotation-using-storyboards.md
-            - name: Анимация трехмерного поворота с помощью Rotation3DAnimation
+            - name: Анимация трехмерного поворота с помощью класса Rotation3DAnimation
               href: how-to-animate-a-3-d-rotation-using-rotation3danimation.md
             - name: Анимация трехмерного вращения с помощью кватернионов
               href: how-to-animate-a-3-d-rotation-using-quaternions.md

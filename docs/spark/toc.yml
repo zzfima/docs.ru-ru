@@ -35,6 +35,8 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: Сборка приложения в Windows
       href: how-to-guides/windows-instructions.md
+    - name: Установка интерактивных записных книжек в Azure HDInsight
+      href: how-to-guides/hdinsight-notebook-installation.md
 - name: Справочник
   items:
     - name: Справочник по интерфейсам API
