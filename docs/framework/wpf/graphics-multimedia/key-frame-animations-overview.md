@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: be815ca522cf18ea2403ea7af5549ceaf922854e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8eb590b07eae3b76b3a206b9731997a6bc2c90d7
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186684"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344907"
 ---
 # <a name="key-frame-animations-overview"></a>Общие сведения об анимации по ключевым кадрам
 В этом разделе рассказывается об анимации по ключевым кадрам. Методика анимации по ключевым кадрам позволяет использовать более двух целевых значений и контролировать применяемый метод интерполяции.  
@@ -283,14 +283,14 @@ ms.locfileid: "79186684"
   
 8. Сортируйте ключевые кадры в порядке разрешенного времени (основной ключ) и порядке декларирования (вторичный ключ), т.е. используйте стабильный сорт, основанный на разрешенных значениях ключевой кадра. <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Пример анимации по ключевым кадрами сплайнами](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)
-- [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Пример анимации по ключевым кадрам](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Общие сведения о раскадровке](storyboards-overview.md)
+- [Общие сведения о Storyboard](storyboards-overview.md)
 - [Практические руководства, посвященные анимации по ключевым кадрам](key-frame-animation-how-to-topics.md)
 - [Общие сведения о характере поведения во времени](timing-behaviors-overview.md)

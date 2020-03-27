@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Анимация типа Double с помощью ключевых кадров
+title: Инструкция по Анимации типа Double с помощью ключевых кадров
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9eab794cc8411230226cddc97beaa13c1bdd9405
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010206"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344937"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>Практическое руководство. Анимация типа Double с помощью ключевых кадров
-В этом примере демонстрируется анимация значения свойства, которое принимает <xref:System.Double> с помощью ключевых кадров.  
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>Инструкция по Анимации типа Double с помощью ключевых кадров
+В этом примере показано, как оживить значение <xref:System.Double> свойства, которое принимается с помощью ключевых кадров.  
   
 ## <a name="example"></a>Пример  
- В следующем примере прямоугольник перемещается по экрану. В примере используется <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Media.TranslateTransform.X%2A> свойство <xref:System.Windows.Media.TranslateTransform> применяется к <xref:System.Windows.Shapes.Rectangle>. Эта анимация, которая бесконечно повторяется, использует три ключевых кадра следующим образом:  
+ В следующем примере прямоугольник перемещается по экрану. Пример использует <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> класс для анимировать свойство <xref:System.Windows.Media.TranslateTransform.X%2A> <xref:System.Windows.Media.TranslateTransform> прикладного к . <xref:System.Windows.Shapes.Rectangle> Эта анимация, которая бесконечно повторяется, использует три ключевых кадра следующим образом:  
   
-1. В течение первых трех секунд используется экземпляр <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> класс для перемещения прямоугольника вдоль пути с постоянной скоростью из его начальной позиции в позицию 500. Линейные ключевые кадры, например <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> создать плавный линейный переход между значениями.  
+1. В течение первых трех секунд используется <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> экземпляр класса для перемещения прямоугольника по пути с постоянной скоростью от исходного положения до положения 500. Линейные ключевые <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> кадры, такие как создание плавного линейного перехода между значениями.  
   
-2. В конце четвертой секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> класс для резкого перемещения прямоугольника в следующую позицию. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> , создают скачкообразные переходы между значениями. В этом примере прямоугольник находится в начальной позиции, а затем внезапно появляется в позиции 500.  
+2. В конце четвертой секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> класса для внезапного перемещения прямоугольника в следующую позицию. Дискретные ключевые <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> кадры, такие как создают внезапные скачки между значениями. В этом примере прямоугольник находится в начальной позиции, а затем внезапно появляется в позиции 500.  
   
-3. В последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> класс для перемещения прямоугольника обратно в исходное положение. Ключевые кадры сплайна, например <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> , создают переменный переход между значениями согласно значению <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> свойство. В этом примере прямоугольник начинает двигаться медленно и ускоряется экспоненциально к концу временного отрезка.  
+3. В последние две секунды используется <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> экземпляр класса для перемещения прямоугольника обратно в исходное положение. Сплайс-ключевые кадры, такие как <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> создание переменного перехода между значениями в зависимости от значения <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> свойства. В этом примере прямоугольник начинает двигаться медленно и ускоряется экспоненциально к концу временного отрезка.  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
   
- Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
- Для обеспечения согласованности с другими примерами анимации версии кода этого примера используют <xref:System.Windows.Media.Animation.Storyboard> объекта для применения <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Кроме того, при применении в коде одной анимации, проще использовать <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метода вместо использования <xref:System.Windows.Media.Animation.Storyboard>. Пример см. в разделе [Анимация свойства без использования раскадровки](how-to-animate-a-property-without-using-a-storyboard.md).  
+ Для согласованности с другими примерами анимации <xref:System.Windows.Media.Animation.Storyboard> в кодовых <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>версиях этого примера используется объект для применения . Кроме того, при применении одной анимации в коде проще <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> использовать <xref:System.Windows.Media.Animation.Storyboard>метод вместо использования . Например, [см. Animate a Property без использования раскадровки.](how-to-animate-a-property-without-using-a-storyboard.md)  
   
 ## <a name="see-also"></a>См. также
 

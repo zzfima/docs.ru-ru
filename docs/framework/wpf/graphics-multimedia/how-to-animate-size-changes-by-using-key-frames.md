@@ -6,28 +6,28 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 0629b6600444bd172af451fd7e970bff894d8047
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42cecfc9df4304be4033ea39edc0517016de4a92
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789263"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344655"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Практическое руководство. Анимация изменений размера с использованием ключевых кадров
 В этом примере показано, как можно анимировать изменения размера с использованием ключевых кадров.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Media.ArcSegment.Size%2A> свойство <xref:System.Windows.Media.ArcSegment>. Эта анимация использует три ключевых кадра следующим образом:  
+ В следующем примере <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> используется класс <xref:System.Windows.Media.ArcSegment.Size%2A> для анимировать свойство <xref:System.Windows.Media.ArcSegment>. Эта анимация использует три ключевых кадра следующим образом:  
   
-1. В течение первой половины секунды анимации используется экземпляр <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> класс для постепенного увеличения размера дуги. Линейные ключевые кадры, например <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> создать плавный линейный переход между значениями.  
+1. В первой половине второй анимации, использует <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> экземпляр класса постепенно увеличивать размер дуги. Линейные ключевые <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> кадры, такие как создание плавного линейного перехода между значениями.  
   
-2. В конце следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> класс для резкого увеличения размера дуги. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> , создают скачкообразные переходы между значениями, то есть, изменения размера происходят внезапно и не плавно.  
+2. В конце следующей половины секунды, <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> использует экземпляр класса, чтобы внезапно увеличить размер дуги. Дискретные ключевые <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> кадры, такие как создают внезапные скачки между значениями, то есть изменения размера происходят внезапно и не являются тонкими.  
   
-3. За последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> класс для увеличения размера дуги. Ключевые кадры сплайна, например <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> , создают переменный переход между значениями в соответствии со значениями из <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> свойство. В этом примере размер дуги сначала увеличивается медленно, а ближе к концу временного сегмента — экспоненциально.  
+3. В течение последних двух секунд, <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> использует экземпляр класса, чтобы увеличить размер дуги. Сплайс-ключевые кадры, такие как <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> создание переменного <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> перехода между значениями в зависимости от значений свойства. В этом примере размер дуги сначала увеличивается медленно, а ближе к концу временного сегмента — экспоненциально.  
   
  [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
- Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>См. также
 

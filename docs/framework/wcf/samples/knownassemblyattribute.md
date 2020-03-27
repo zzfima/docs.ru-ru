@@ -2,12 +2,12 @@
 title: Атрибут KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183561"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345235"
 ---
 # <a name="knownassemblyattribute"></a>Атрибут KnownAssemblyAttribute
 В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>. В этом образце показано, как динамически добавлять известные типы во время сериализации и десериализации.  
@@ -356,11 +356,11 @@ Lists combined:
   
 5. Если приложение выполняется неправильно, убедитесь в правильности настройки среды, выполнив следующие шаги.  
   
-6. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](https://go.microsoft.com/fwlink/?LinkId=150774)  
+6. Убедитесь, что вы выполнили [одноразовую процедуру настройки для образцов Фонда связи Windows.](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)  
   
-7. Чтобы создать решение, следуйте инструкциям по [созданию образца Windows Communication Foundation.](https://go.microsoft.com/fwlink/?LinkId=150775)  
+7. Чтобы создать решение, следуйте инструкциям по [созданию образца Windows Communication Foundation.](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples)  
   
-8. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](https://go.microsoft.com/fwlink/?LinkId=150776)  
+8. Чтобы запустить образец в одно- или кросс-машинной конфигурации, следуйте инструкциям в [Запуске образцов Фонда связи Windows.](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

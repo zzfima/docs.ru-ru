@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение пользовательского расположения контекстного меню
+title: Практическое руководство. Указание пользовательского расположения контекстного меню
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea8d73c51dd018608b95104f00bf341ff434225c
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911213"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344954"
 ---
-# <a name="how-to-specify-a-custom-popup-position"></a>Практическое руководство. Определение пользовательского расположения контекстного меню
-В этом примере показано, как указать положение условных <xref:System.Windows.Controls.Primitives.Popup> управления <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойству <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
+# <a name="how-to-specify-a-custom-popup-position"></a>Практическое руководство. Указание пользовательского расположения контекстного меню
+В этом примере показано, как <xref:System.Windows.Controls.Primitives.Popup> указать <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> пользовательское <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>положение для элемента управления, когда свойство настроено на управление.  
   
 ## <a name="example"></a>Пример  
- Когда <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойству <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>, <xref:System.Windows.Controls.Primitives.Popup> вызывает определенный экземпляр <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> делегировать. Этот делегат возвращает набор возможных точек относительно верхнего левого угла области назначения и в верхний левый угол <xref:System.Windows.Controls.Primitives.Popup>. <xref:System.Windows.Controls.Primitives.Popup> Размещения происходит в момент, который предоставляет наилучшую видимость.  
+ Когда <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойство настроено <xref:System.Windows.Controls.Primitives.PlacementMode.Custom> <xref:System.Windows.Controls.Primitives.Popup> на, вызовы <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> определенного экземпляра делегата. Этот делегат возвращает набор возможных точек, которые по отношению к верхнему <xref:System.Windows.Controls.Primitives.Popup>левому углу целевой области и верхнему левому углу . Размещение <xref:System.Windows.Controls.Primitives.Popup> происходит в точке, которая обеспечивает лучшую видимость.  
   
- В следующем примере показано, как определить положение <xref:System.Windows.Controls.Primitives.Popup> , задав <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойства <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Также показано, как создать и назначить <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> делегат для расположения <xref:System.Windows.Controls.Primitives.Popup>.  Делегат обратного вызова возвращает два <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> объектов.  Если <xref:System.Windows.Controls.Primitives.Popup> скрыта за границу экрана позиции первого <xref:System.Windows.Controls.Primitives.Popup> помещается во второе положение.  
+ Ниже приводится следующий <xref:System.Windows.Controls.Primitives.Popup> пример, как определить <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> положение <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>свойства, установив свойство для . Он также показывает, как создать <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> и назначить <xref:System.Windows.Controls.Primitives.Popup>делегата для того, чтобы позиционировать .  Делегат обратного вызова <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> возвращает два объекта.  <xref:System.Windows.Controls.Primitives.Popup> Если он скрыт краем экрана в <xref:System.Windows.Controls.Primitives.Popup> первом положении, то он помещается на втором.  
   
  [!code-xaml[PopupCustomPlacement#CustomPlacement](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml#customplacement)]  
   
@@ -30,10 +30,10 @@ ms.locfileid: "61911213"
  [!code-csharp[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml.cs#delegatedefinition)]
  [!code-vb[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupCustomPlacement/visualbasic/window1.xaml.vb#delegatedefinition)]  
   
- Полный пример см. в разделе [пример размещения всплывающего окна](https://go.microsoft.com/fwlink/?LinkID=160032).  
+ Для полного образца [см.](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Controls.Primitives.Popup>
 - [Общие сведения о контекстном меню](popup-overview.md)
-- [Разделы практического руководства](popup-how-to-topics.md)
+- [Практические руководства](popup-how-to-topics.md)

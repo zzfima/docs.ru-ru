@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Анимация логического значения с помощью ключевых кадров
+title: Практическое руководство. Анимация логического типа с помощью ключевых кадров
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 59a72916721cccbe66f704253f148828fa8cd418
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35704996dcf21fe463169dc13572941bcd8fbad1
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020209"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344944"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Практическое руководство. Анимация логического значения с помощью ключевых кадров
-В этом примере показано, как анимировать значение логического свойства <xref:System.Windows.Controls.Button> элемента управления с помощью ключевых кадров.  
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Практическое руководство. Анимация логического типа с помощью ключевых кадров
+В этом примере показано, как оживить значение <xref:System.Windows.Controls.Button> свойства Boolean элемента управления с помощью ключевых кадров.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.UIElement.IsEnabled%2A> свойство <xref:System.Windows.Controls.Button> элемента управления. Все ключевые кадры в этом примере использует экземпляр <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> класса. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> , создают скачкообразные переходы между значениями, то есть, перемещение анимация выполняется рывками.  
+ В следующем примере <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> используется класс <xref:System.Windows.UIElement.IsEnabled%2A> для анимировать свойство элемента <xref:System.Windows.Controls.Button> управления. Все ключевые кадры в этом примере используют экземпляр <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> класса. Дискретные ключевые <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> кадры, такие как создают резкие скачки между значениями, то есть движение анимации отрывисто.  
   
  [!code-csharp[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/BooleanAnimationUsingKeyFramesExample.cs#booleananimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/booleananimationusingkeyframesexample.vb#booleananimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/BooleanAnimationUsingKeyFramesExample.xaml#booleananimationusingkeyframeswholepage)]  
   
- Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>См. также
 

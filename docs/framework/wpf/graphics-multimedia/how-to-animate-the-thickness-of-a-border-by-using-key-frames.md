@@ -1,33 +1,33 @@
 ---
-title: Практическое руководство. Анимация толщины границы с помощью ключевых кадров
+title: Инструкция по Анимации толщины границы с помощью ключевых кадров
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], border thickness with key frames
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: 101fd077bf125faadbd9a0186c2282e4b20ee78f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 884b62e88c347449ae39caa9c028d09db39b9f4b
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699036"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344692"
 ---
-# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Практическое руководство. Анимация толщины границы с помощью ключевых кадров
-В этом примере демонстрируется анимация <xref:System.Windows.Controls.Control.BorderThickness%2A> свойство <xref:System.Windows.Controls.Border>.  
+# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Инструкция по Анимации толщины границы с помощью ключевых кадров
+Этот пример показывает, как <xref:System.Windows.Controls.Control.BorderThickness%2A> оживить свойство <xref:System.Windows.Controls.Border>.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Controls.Control.BorderThickness%2A> свойство <xref:System.Windows.Controls.Border>. Эта анимация использует три ключевых кадра следующим образом:  
+ В следующем примере <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> используется класс <xref:System.Windows.Controls.Control.BorderThickness%2A> для анимировать свойство <xref:System.Windows.Controls.Border>. Эта анимация использует три ключевых кадра следующим образом:  
   
-1. В течение первой половины секунды используется экземпляр <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> класс для постепенного увеличения толщины границы. В примере используется <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> для создания гладкого линейного увеличения между значениями.  
+1. В течение первой половины второй, <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> использует экземпляр класса постепенно увеличивать толщину границы. Пример использует <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> для создания плавного линейного увеличения между значениями.  
   
-2. В конце следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> класс для резкого увеличения толщины границы. Дискретные ключевые кадры, подобные производным от <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> , создают скачкообразные переходы между значениями, то есть, перемещение анимация выполняется рывками.  
+2. В конце следующей половины секунды, <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> использует экземпляр класса, чтобы внезапно увеличить толщину границы. Дискретные ключевые кадры, <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> подобные тем, которые получены в ходе создания резких скачков между значениями, то есть движение анимации отрывисто.  
   
-3. В течение последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> класс для уменьшения толщины границы. Ключевые кадры сплайна, подобные производным от <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> , создают переменный переход между значениями в соответствии со значениями из <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> свойство. В этом опорном кадре анимация начинается медленно и экспоненциально ускоряется к концу временного сегмента.  
+3. В течение последних двух секунд, <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> использует экземпляр класса, чтобы уменьшить толщину границы. Ключевые кадры Spline, <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> подобные тем, которые получены из создания <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> переменного перехода между значениями в соответствии со значениями свойства. В этом опорном кадре анимация начинается медленно и экспоненциально ускоряется к концу временного сегмента.  
   
  [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   
- Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>См. также
 

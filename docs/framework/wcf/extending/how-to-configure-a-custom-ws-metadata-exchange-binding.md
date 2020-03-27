@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185596"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345283"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
 В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Фонд связи Windows (WCF) включает в себя четыре системно-определяемые привязки метаданных, но вы можете публиковать метаданные с помощью любой необходимой привязки. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [начало](../samples/getting-started-sample.md).  
@@ -32,8 +32,8 @@ ms.locfileid: "79185596"
 2. Добавьте в тег службы, ссылающийся на новое поведение, атрибут `behaviorConfiguration`:  
   
     ```xml  
-    <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">
+    <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+    behaviorConfiguration="CalculatorServiceBehavior" />
     ```  
   
 3. Добавьте конечную точку метаданных, указав mex в качестве адреса, `wsHttpBinding` как привязку и <xref:System.ServiceModel.Description.IMetadataExchange> как контракт:  
@@ -113,10 +113,10 @@ ms.locfileid: "79185596"
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Поведение публикации метаданных](../samples/metadata-publishing-behavior.md)
 - [Извлечение метаданных](../samples/retrieve-metadata.md)
-- [Метаданных](../feature-details/metadata.md)
+- [Метаданные](../feature-details/metadata.md)
 - [Публикация метаданных](../feature-details/publishing-metadata.md)
 - [Публикация конечных точек метаданных](../publishing-metadata-endpoints.md)

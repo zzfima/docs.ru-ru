@@ -6,24 +6,24 @@ helpviewer_keywords:
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 4a37408ad90fda12a95e66c1b44018967b376837
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c954806ca901bbfc3ab6d4bbcc237cd0e404f154
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651432"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344672"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>Практическое руководство. Анимация строки с помощью ключевых кадров
-В этом примере демонстрируется анимация строку, которая в этом примере является <xref:System.Windows.Controls.ContentControl.Content%2A> свойство <xref:System.Windows.Controls.Button> элемента управления, с помощью ключевых кадров.  
+В этом примере показано, как анимировать строку, которая в данном примере является <xref:System.Windows.Controls.ContentControl.Content%2A> свойством <xref:System.Windows.Controls.Button> элемента управления, используя ключевые кадры.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Controls.ContentControl.Content%2A> свойство <xref:System.Windows.Controls.Button>.  
+ В следующем примере <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> используется класс <xref:System.Windows.Controls.ContentControl.Content%2A> для анимировать свойство <xref:System.Windows.Controls.Button>.  
   
- Все ключевые кадры в этом примере использует экземпляр <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> класса, так как анимация строки, которая создается по ключевым кадрам можно использовать только дискретные ключевые кадры. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> , создают скачкообразные переходы между значениями, то есть, изменения анимации происходят быстро, а не плавно.  
+ Все ключевые кадры в этом примере используют экземпляр <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> класса, потому что струнная анимация, созданная с помощью ключевых кадров, может использовать только дискретные ключевые кадры. Дискретные ключевые <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> кадры, такие как создают резкие скачки между значениями, то есть изменения в анимации происходят быстро и не являются тонкими.  
   
  [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
- Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>См. также
 

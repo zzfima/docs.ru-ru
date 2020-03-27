@@ -1,16 +1,16 @@
 ---
-title: Как программно добавить возможность обнаружения к службе и клиенту WCF
+title: Практическое руководство. Как программно добавить возможность обнаружения к службе и клиенту WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184885"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344978"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Как программно добавить возможность обнаружения к службе и клиенту WCF
-Эта тема объясняет, как сделать сервис Windows Communication Foundation (WCF) обнаруживаемым. Он основан на примере [Self-Host.](https://go.microsoft.com/fwlink/?LinkId=145523)  
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Практическое руководство. Как программно добавить возможность обнаружения к службе и клиенту WCF
+Эта тема объясняет, как сделать сервис Windows Communication Foundation (WCF) обнаруживаемым. Он основан на примере [Self-Host.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Настройка образца службы существующего резидентного размещения для обнаружения  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79184885"
   
      Этот метод использует для вызова службы калькулятора адрес конечной точки, возвращенной из `FindCalculatorServiceAddress`.  
   
-11. Внутри метода `InvokeCalculatorService` создайте экземпляр класса `CalculatorServiceClient`. Этот класс определяется выборкой [Self-Host.](https://go.microsoft.com/fwlink/?LinkId=145523) Он был сформирован с помощью программы Svcutil.exe.  
+11. Внутри метода `InvokeCalculatorService` создайте экземпляр класса `CalculatorServiceClient`. Этот класс определяется выборкой [Self-Host.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) Он был сформирован с помощью программы Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "79184885"
     ```  
   
 ## <a name="example"></a>Пример  
- Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на примере [Self-Host,](https://go.microsoft.com/fwlink/?LinkId=145523) перечислены только те файлы, которые изменены. Для получения дополнительной [информации](https://go.microsoft.com/fwlink/?LinkId=145522)о образце Self-Host см.  
+ Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на примере [Self-Host,](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) перечислены только те файлы, которые изменены. Для получения дополнительной [информации](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)о образце Self-Host см.  
   
 ```csharp  
 // Service.cs  
@@ -340,7 +340,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Модель объектов обнаружения WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
