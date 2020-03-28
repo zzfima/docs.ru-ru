@@ -1,4 +1,4 @@
-- name: Руководство по .NET Framework
+- name: Документация по .NET Framework
   href: index.yml
 - name: Общие сведения о платформе .NET
   href: get-started/overview.md

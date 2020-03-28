@@ -3,18 +3,28 @@
 - name: Обзор
   expanded: true
   items:
-    - name: API
-      items:
-        - name: API ML.NET
-          href: how-does-mldotnet-work.md
     - name: Построитель моделей и интерфейс командной строки
       items:
         - name: Средство построителя моделей ML.NET
           href: automate-training-with-model-builder.md
         - name: Интерфейс командной строки ML.NET
           href: automate-training-with-cli.md
+    - name: API
+      items:
+        - name: API ML.NET
+          href: how-does-mldotnet-work.md
 - name: Учебники
   items:
+    - name: Построитель моделей и интерфейс командной строки
+      items:
+        - name: Прогнозирование цен (построитель моделей и регрессия)
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: Анализ тональности с помощью интерфейса командной строки ML.NET
+          href: tutorials/sentiment-analysis-cli.md
+        - name: "Анализ тональности в Razor\_Pages (построитель моделей и двоичная классификация)"
+          href: tutorials/sentiment-analysis-model-builder.md
+        - name: Категоризация нарушения санитарных норм (построитель моделей и многоклассовая классификация)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: API
       items:
         - name: Обзор
@@ -41,16 +51,6 @@
           href: tutorials/object-detection-onnx.md
         - name: Классификация тональности с помощью TensorFlow (классификация текста)
           href: tutorials/text-classification-tf.md
-    - name: Построитель моделей и интерфейс командной строки
-      items:
-        - name: Прогнозирование цен (построитель моделей и регрессия)
-          href: tutorials/predict-prices-with-model-builder.md
-        - name: Анализ тональности с помощью интерфейса командной строки ML.NET
-          href: tutorials/sentiment-analysis-cli.md
-        - name: "Анализ тональности в Razor\_Pages (построитель моделей и двоичная классификация)"
-          href: tutorials/sentiment-analysis-model-builder.md
-        - name: Категоризация нарушения санитарных норм (построитель моделей и многоклассовая классификация)
-          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Вероятностное программирование с использованием Infer.NET
@@ -69,6 +69,16 @@
       href: resources/improve-machine-learning-model-ml-net.md
 - name: Практические руководства
   items:
+    - name: Построитель моделей и интерфейс командной строки
+      items:
+        - name: Загрузка данных в построитель моделей
+          href: how-to-guides/load-data-model-builder.md
+        - name: Установить построитель моделей
+          href: how-to-guides/install-model-builder.md
+        - name: Установка CLI
+          href: how-to-guides/install-ml-net-cli.md
+        - name: Использование API автоматизированного машинного обучения
+          href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
         - name: Загрузка данных
@@ -97,16 +107,6 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Развертывание модели в веб-API
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Построитель моделей и интерфейс командной строки
-      items:
-        - name: Загрузка данных в построитель моделей
-          href: how-to-guides/load-data-model-builder.md
-        - name: Установить построитель моделей
-          href: how-to-guides/install-model-builder.md
-        - name: Установка CLI
-          href: how-to-guides/install-ml-net-cli.md
-        - name: Использование API автоматизированного машинного обучения
-          href: how-to-guides/how-to-use-the-automl-api.md
 - name: Справочник
   items:
     - name: Справочник по API ML.NET

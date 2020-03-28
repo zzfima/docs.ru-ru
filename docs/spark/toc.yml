@@ -21,6 +21,8 @@
       href: tutorials/batch-processing.md
     - name: Структурированные потоки
       href: tutorials/streaming.md
+    - name: Анализ тональности
+      href: tutorials/ml-sentiment-analysis.md
 - name: Практические руководства
   items:
     - name: Отладка приложения

@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228800"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344085"
 ---
 # <a name="net-guide"></a>Руководство по .NET
 
-Руководство по .NET содержит информацию о .NET. В зависимости от вашего уровня знаний в области .NET вы можете изучить различные разделы данного руководства, а также другие руководства, например по [.NET Core](../core/index.md) или [.NET Framework](../framework/index.yml).
+Руководство по .NET содержит информацию о .NET. В зависимости от вашего уровня знаний в области .NET вы можете изучить различные разделы данного руководства, а также другие руководства, например по [.NET Core](../core/index.yml) или [.NET Framework](../framework/index.yml).
 
 ## <a name="new-to-net"></a>Не знакомы с .NET?
 
