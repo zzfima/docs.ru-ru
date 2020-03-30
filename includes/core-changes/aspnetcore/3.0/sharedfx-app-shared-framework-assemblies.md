@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937296"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549596"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Общая платформа. Из Microsoft.AspNetCore.App удалены сборки
 
@@ -36,7 +36,7 @@ ms.locfileid: "75937296"
 
 Подробную информацию см. на странице [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
-Entity Framework Core поставляется в формате пакетов NuGet. Это обновление приводит модель поставки в соответствие со схемой, принятой для всех остальных библиотек доступа к данным в .NET. Теперь в Entity Framework Core доступен самый простой способ продолжать разработку инноваций, пользуясь поддержкой любых платформ .NET. Несмотря на отделение от общей платформы Entity Framework Core остается библиотекой, разработанной, поддерживаемой и обслуживаемой корпорацией Майкрософт. На нее по-прежнему распространяется [политика поддержки .NET Core](https://www.microsoft.com/net/platform/support-policy).
+Entity Framework Core поставляется в формате пакетов NuGet. Это обновление приводит модель поставки в соответствие со схемой, принятой для всех остальных библиотек доступа к данным в .NET. Теперь в Entity Framework Core доступен самый простой способ продолжать разработку инноваций, пользуясь поддержкой любых платформ .NET. Несмотря на отделение от общей платформы Entity Framework Core остается библиотекой, разработанной, поддерживаемой и обслуживаемой корпорацией Майкрософт. На нее по-прежнему распространяется [политика поддержки .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
 Json.NET и Entity Framework Core будут и дальше работать с ASP.NET Core. Но теперь они не будут входить в состав общей платформы.
 

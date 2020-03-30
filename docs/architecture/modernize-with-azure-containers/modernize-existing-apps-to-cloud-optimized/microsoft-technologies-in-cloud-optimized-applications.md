@@ -2,12 +2,12 @@
 title: Технологии Майкрософт в приложениях, оптимизированных для облака
 description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows | Технологии Майкрософт в приложениях, оптимизированных для облака
 ms.date: 04/28/2018
-ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69578227"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546514"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Технологии Майкрософт в приложениях, оптимизированных для облака
 
@@ -19,7 +19,7 @@ ms.locfileid: "69578227"
 
 - **Управляемое облако**. Выбор управляемого облака позволяет избежать расходов и сложностей, связанных с управлением базовой инфраструктурой, виртуальными машинами, исправлениями ОС и конфигурацией сети, а также с их поддержкой. Если вы решите выполнить миграцию, используя инфраструктуру как услугу, вы будете нести ответственность за все эти задачи и связанные затраты. В управляемом облаке вы отвечаете только за разрабатываемые приложения и службы. Поставщик облачных служб обычно управляет всем остальным. К примерам управляемых облачных служб в Azure относятся [База данных SQL Azure](https://azure.microsoft.com/services/sql-database), [кэш Azure для Redis](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [служба хранилища Azure,](https://azure.microsoft.com/services/storage/)[База данных Azure для MySQL](https://azure.microsoft.com/services/mysql/), [База данных Azure для PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/), а также службы вычислений, такие как [масштабируемые наборы виртуальных машин](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Служба приложений Azure](https://azure.microsoft.com/services/app-service/) и [Служба Azure Kubernetes](https://azure.microsoft.com/services/container-service/).
 
-- **Разработка приложений**. При создании приложений, работающих в контейнерах, можно выбрать один из множества языков. В этом руководстве основное внимание уделяется [.NET](https://www.microsoft.com/net), но вы можете разрабатывать контейнерные приложения на других языках, таких как Node.js, Python, Spring/Java или Go.
+- **Разработка приложений**. При создании приложений, работающих в контейнерах, можно выбрать один из множества языков. В этом руководстве основное внимание уделяется [.NET](https://dotnet.microsoft.com), но вы можете разрабатывать контейнерные приложения на других языках, таких как Node.js, Python, Spring/Java или Go.
 
 - **Мониторинг, телеметрия, ведение журналов и аудит**. Возможность отслеживания и аудита приложений и контейнеров, работающих в облаке, очень важна для любого оптимизированного для облака приложения. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) и [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) являются основными средствами Майкрософт, обеспечивающими эту возможность для приложений, оптимизированных для облака.
 

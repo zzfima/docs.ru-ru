@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398175"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507091"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Операторы приведения и тестирования типов (справочник по C#)
 
@@ -113,7 +113,7 @@ E is T ? (T)(E) : (T)null
 
 ### <a name="other-usages-of-"></a>Другие данные об использовании ()
 
-Используйте скобки, чтобы [вызвать метод или делегат](member-access-operators.md#invocation-operator-).
+Используйте скобки, чтобы [вызвать метод или делегат](member-access-operators.md#invocation-expression-).
 
 Кроме того, с помощью круглых скобок можно настраивать порядок выполнения операций в выражении. Дополнительные сведения см. в разделе [Операторы C#](index.md).
 
