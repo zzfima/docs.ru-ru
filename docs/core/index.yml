@@ -1,0 +1,125 @@
+### YamlMime:Landing
+title: Документация по .NET Core
+summary: Узнайте о .NET Core — инфраструктуре разработки общего назначения с открытым кодом, предназначенной для создания кроссплатформенных приложений.
+metadata:
+  title: Документация по .NET Core
+  description: .NET Core — это платформа разработки общего назначения с открытым кодом, предназначенная для создания кроссплатформенных приложений.
+  ms.topic: landing-page
+  ms.date: 03/25/2020
+  ms.openlocfilehash: b11a41587e2b9eba2df744da3d8c19baa0936fb2
+  ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/27/2020
+  ms.locfileid: "80351689"
+landingContent:
+- title: Дополнительные сведения о .NET Core
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Введение в .NET Core
+      url: introduction.md
+    - text: Обзор .NET Core
+      url: about.md
+    - text: Обзор пакета SDK для .NET Core
+      url: sdk.md
+  - linkListType: get-started
+    links:
+    - text: Начало работы с .NET Core
+      url: get-started.md
+  - linkListType: concept
+    links:
+    - text: Политика поддержки .NET Core
+      url: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
+  - linkListType: whats-new
+    links:
+    - text: Новые возможности .NET Core 3.1
+      url: whats-new/dotnet-core-3-1.md
+    - text: Новые возможности .NET Core 3.0
+      url: whats-new/dotnet-core-3-0.md
+- title: Установка .NET Core
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Выбор версии .NET Core для использования
+      url: versions/selection.md
+  - linkListType: download
+    links:
+    - text: Скачиваемые файлы для .NET Core
+      url: https://dotnet.microsoft.com/download/dotnet-core
+  - linkListType: how-to-guide
+    links:
+    - text: Установка пакета SDK для .NET Core
+      url: install/sdk.md
+    - text: Установка среды выполнения для .NET Core
+      url: install/runtime.md
+    - text: Использование диспетчера пакетов Linux для установки
+      url: install/linux-package-manager-ubuntu-1904.md
+    - text: Проверка установленных версий
+      url: install/how-to-detect-installed-versions.md
+  - linkListType: reference
+    links:
+    - text: Зависимости пакета SDK для .NET Core и среды выполнения для .NET Core
+      url: install/dependencies.md
+- title: Начало работы с .NET Core
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Учебник. Создание программы Hello World за 10 минут
+      url: https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro
+  - linkListType: tutorial
+    links:
+    - text: Создание приложения Hello World в Visual Studio Code
+      url: tutorials/with-visual-studio-code.md
+    - text: Создание приложения Hello World в Visual Studio
+      url: tutorials/with-visual-studio.md
+    - text: Контейнеризация приложения .NET Core
+      url: docker/build-container.md
+  - linkListType: deploy
+    links:
+    - text: Публикация приложений
+      url: deploying/index.md
+- title: Миграция с .NET Framework
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Перенос кода из .NET Framework в .NET Core
+      url: porting/index.md
+- title: Использование .NET Core из командной строки
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Интерфейс командной строки .NET Core
+      url: tools/index.md
+  - linkListType: tutorial
+    links:
+    - text: Начало работы с CLI
+      url: tutorials/cli-create-console-app.md
+  - linkListType: deploy
+    links:
+    - text: Публикация приложений
+      url: deploying/deploy-with-cli.md
+  - linkListType: reference
+    links:
+    - text: dotnet new
+      url: tools/dotnet-new.md
+    - text: dotnet publish
+      url: tools/dotnet-publish.md
+- title: Модульное тестирование с помощью .NET Core
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Модульное тестирование в .NET Core и .NET Standard
+      url: testing/index.md
+  - linkListType: tutorial
+    links:
+    - text: Тестирование кода C# с помощью DotNet Test и xUnit
+      url: testing/unit-testing-with-dotnet-test.md
+    - text: Модульное тестирование с помощью NUnit
+      url: testing/unit-testing-with-nunit.md
+    - text: Модульное тестирование с помощью MSTest
+      url: testing/unit-testing-with-mstest.md
+  - linkListType: concept
+    links:
+    - text: Рекомендации по написанию модульных тестов
+      url: testing/unit-testing-best-practices.md
