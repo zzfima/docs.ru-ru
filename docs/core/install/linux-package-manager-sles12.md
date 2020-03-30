@@ -3,19 +3,21 @@ title: Установка .NET Core на SLES 12 — диспетчер пак�
 description: Используйте диспетчер пакетов для установки пакета SDK для .NET Core и среды выполнения на SLES 12.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: 8358107c682274fc2b75bf72689eaa4b168a86c5
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920733"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134220"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>Диспетчер пакетов SLES 12 — установка .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Эта статья описывает, как использовать диспетчер пакетов для установки .NET Core на SLES 12. Если вы устанавливаете среду выполнения, мы рекомендуем установить [среду выполнения ASP.NET Core](#install-the-aspnet-core-runtime), так как она включает в себя среды выполнения .NET Core и ASP.NET Core.
+Эта статья описывает, как использовать диспетчер пакетов для установки .NET Core на SLES 12.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Регистрация ключа Майкрософт и веб-канала
 

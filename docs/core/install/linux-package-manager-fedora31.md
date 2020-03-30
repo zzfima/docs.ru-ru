@@ -3,19 +3,21 @@ title: Установка .NET Core на Fedora 31 — диспетчер па
 description: Используйте диспетчер пакетов для установки пакета SDK для .NET Core и среды выполнения на Fedora 31.
 author: thraka
 ms.author: adegeo
-ms.date: 12/17/2019
-ms.openlocfilehash: 28bda3676f99037e565080e1ff3f9d89a67d0d69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: e6ead528c441c37d089ebb33719494353de41433
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920786"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134240"
 ---
 # <a name="fedora-31-package-manager---install-net-core"></a>Диспетчер пакетов Fedora 31 — установка .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-В этой статье описывается, как использовать диспетчер пакетов для установки .NET Core на Fedora 31. Если вы устанавливаете среду выполнения, мы рекомендуем установить [среду выполнения ASP.NET Core](#install-the-aspnet-core-runtime), так как она включает в себя среды выполнения .NET Core и ASP.NET Core.
+В этой статье описывается, как использовать диспетчер пакетов для установки .NET Core на Fedora 31.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Регистрация ключа Майкрософт и веб-канала
 
@@ -31,7 +33,7 @@ ms.locfileid: "76920786"
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/31/prod.repo
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/31/prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>Установка пакета SDK для .NET Core

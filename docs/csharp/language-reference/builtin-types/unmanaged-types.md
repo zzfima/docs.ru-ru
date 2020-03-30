@@ -3,12 +3,12 @@ title: Справочник по C#. Неуправляемые типы
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 8a4599514115aa21f17c32848ce203fea704072e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dd2ab4e044b8a86bfe72a6fcf2481b8e1e80bf4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846472"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507234"
 ---
 # <a name="unmanaged-types-c-reference"></a>Справочник по C#. Неуправляемые типы
 
@@ -33,10 +33,10 @@ ms.locfileid: "78846472"
 
 Дополнительные сведения см. в разделе [Типы указателей](~/_csharplang/spec/unsafe-code.md#pointer-types) в статье [Спецификации языка C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
 - [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Типы, связанные с памятью и диапазонами](../../../standard/memory-and-spans/index.md)
 - [Оператор sizeof](../operators/sizeof.md)
-- [Оператор stackalloc](../operators/stackalloc.md)
+- [stackalloc](../operators/stackalloc.md)

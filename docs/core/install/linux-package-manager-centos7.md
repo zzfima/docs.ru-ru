@@ -3,19 +3,21 @@ title: Установка .NET Core на CentOS 7 — диспетчер па�
 description: Используйте диспетчер пакетов для установки пакета SDK для .NET Core и среды выполнения на CentOS 7.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: 66e78aadf933d3e10b99e3d2c7258733e96164f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: d6cec51422dc59b7f667e36001b7db4742b53a6f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920854"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134354"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>Диспетчер пакетов CentOS 7 — установка .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Эта статья описывает, как использовать диспетчер пакетов для установки .NET Core на CentOS 7. Если вы устанавливаете среду выполнения, мы рекомендуем установить [среду выполнения ASP.NET Core](#install-the-aspnet-core-runtime), так как она включает в себя среды выполнения .NET Core и ASP.NET Core.
+Эта статья описывает, как использовать диспетчер пакетов для установки .NET Core на CentOS 7.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Регистрация ключа Майкрософт и веб-канала
 

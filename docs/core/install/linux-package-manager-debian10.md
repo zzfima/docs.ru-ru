@@ -3,19 +3,21 @@ title: Установка .NET Core на Debian 10 — диспетчер па
 description: Используйте диспетчер пакетов для установки пакета SDK для .NET Core и среды выполнения на Debian 10.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: 94bcb493536bdee71ba83053d9e671d529226ac3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: fd6f42684aa9fb3ea9429b80f858459698a1b825
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920838"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134316"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Диспетчер пакетов Debian 10 — установка .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Эта статья описывает, как использовать диспетчер пакетов для установки .NET Core на Debian 10. Если вы устанавливаете среду выполнения, мы рекомендуем установить [среду выполнения ASP.NET Core](#install-the-aspnet-core-runtime), так как она включает в себя среды выполнения .NET Core и ASP.NET Core.
+Эта статья описывает, как использовать диспетчер пакетов для установки .NET Core на Debian 10.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Регистрация ключа Майкрософт и веб-канала
 
@@ -30,9 +32,9 @@ ms.locfileid: "76920838"
 Откройте терминал и выполните приведенные ниже команды.
 
 ```bash
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
+wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget -q https://packages.microsoft.com/config/debian/10/prod.list
+wget https://packages.microsoft.com/config/debian/10/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list

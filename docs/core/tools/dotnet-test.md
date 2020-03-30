@@ -2,12 +2,12 @@
 title: Команда dotnet test
 description: Команда dotnet test служит для выполнения модульных тестов в проекте.
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157015"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507312"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,11 +20,13 @@ ms.locfileid: "78157015"
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
@@ -39,9 +41,9 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>Аргументы
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  Путь к тестовому проекту. Если значение не задано, по умолчанию используется текущий каталог.
+  Путь к тестовому проекту или решению. Если значение не задано, по умолчанию используется текущий каталог.
 
 ## <a name="options"></a>Параметры
 
@@ -49,11 +51,11 @@ dotnet test [-h|--help]
 
   Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.
 
-- **`-blame`**
+- **`--blame`**
 
   Выполнение тестов в режиме обвинения. Этот параметр полезен при изоляции проблемных тестов, которые приводят к аварийному завершению хоста для тестов. Он создает в текущем каталоге выходной файл *Sequence.xml*, который записывает порядок выполнения тестов перед сбоем.
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   Определяет конфигурацию сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
 
@@ -77,6 +79,10 @@ dotnet test [-h|--help]
 
   Выводит краткую справку по команде.
 
+- **`--interactive`**
+
+  Позволяет команде остановиться и дождаться, пока пользователь выполнит действие или введет данные. Например, чтобы завершить проверку подлинности. Доступно, начиная с пакета SDK для .NET Core 3.0.
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   Указывает средство ведения журнала для результатов тестирования.
@@ -84,6 +90,10 @@ dotnet test [-h|--help]
 - **`--no-build`**
 
   Не выполняет сборку тестового проекта перед запуском. Он также неявно задает флаг `--no-restore`.
+
+- **`--nologo`**
+
+  Запуск тестов без отображения баннера TestPlatform Майкрософт. Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 - **`--no-restore`**
 
@@ -96,6 +106,10 @@ dotnet test [-h|--help]
 - **`-r|--results-directory <PATH>`**
 
   Каталог для сохранения результатов тестов. Если указанный каталог не существует, он создается.
+
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  Целевая среда выполнения для тестирования.
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
