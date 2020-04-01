@@ -1,4 +1,4 @@
-- name: Руководство по .NET Standard
+- name: Документация по .NET
   href: index.md
 - name: Начало работы с .NET
   href: get-started.md
@@ -6,11 +6,10 @@
   href: tour.md
 - name: Архитектурные компоненты .NET
   href: components.md
-- name: .NET Standard
+- name: Обзор .NET Standard
   href: net-standard.md
-  items:
-    - name: Новые возможности .NET Standard
-      href: whats-new/whats-new-in-dotnet-standard.md
+- name: Новые возможности .NET Standard
+  href: whats-new/whats-new-in-dotnet-standard.md
 - name: Требуемые версии .NET Framework
   href: frameworks.md
 - name: Глоссарий по .NET
@@ -19,21 +18,24 @@
   href: library-guidance/
 - name: Выбор между .NET Core и .NET Framework для серверных приложений
   href: choosing-core-framework-server.md
-- name: Что такое управляемый код
-  href: managed-code.md
+- name: Управляемый код
   items:
-    - name: Automatic Memory Management
+    - name: Что такое управляемый код
+      href: managed-code.md
+    - name: Автоматическое управление памятью
       href: automatic-memory-management.md
 - name: Среда CLR
   href: clr.md
 - name: Независимость от языка
-  href: language-independence.md
   items:
-    - name: Независимость от языка и независимые от языка компоненты
+    - name: Обзор
+      href: language-independence.md
+    - name: Независимые от языка компоненты
       href: language-independence-and-language-independent-components.md
 - name: Библиотеки платформы
-  href: framework-libraries.md
   items:
+    - name: Обзор
+      href: framework-libraries.md
     - name: Общие сведения о библиотеке классов
       href: class-library-overview.md
     - name: Базовые типы
@@ -41,15 +43,17 @@
 - name: Библиотеки классов .NET
   href: class-libraries.md
 - name: Анализаторы
-  href: analyzers/index.md
   items:
+    - name: Обзор
+      href: analyzers/index.md
+      displayName: analyzers
     - name: Анализатор API
       href: analyzers/api-analyzer.md
     - name: Анализатор переносимости
       href: analyzers/portability-analyzer.md
     - name: Анализатор платформы
       href: analyzers/framework-analyzer.md
-- name: Обработка и создание исключений
+- name: Обработка исключений
   href: exceptions/
 - name: Сборки в .NET
   href: assembly/
@@ -64,11 +68,14 @@
 - name: Система общих типов CTS и спецификация CLS
   href: common-type-system.md
 - name: 'Параллельная обработка, параллелизм и асинхронное программирование'
-  href: parallel-processing-and-concurrency.md
   items:
+    - name: Обзор
+      href: parallel-processing-and-concurrency.md
+      displayName: 'Parallel processing, concurrency, async'
     - name: Асинхронное программирование
-      href: async.md
       items:
+        - name: Обзор
+          href: async.md
         - name: Асинхронное программирование в подробностях
           href: async-in-depth.md
         - name: Шаблоны асинхронного программирования
@@ -78,18 +85,21 @@
     - name: Потоки
       href: threading/
 - name: 'Типы, связанные с памятью и диапазонами'
-  href: memory-and-spans/index.md
   items:
+    - name: Обзор
+      href: memory-and-spans/index.md
     - name: Рекомендации по использованию структур Memory<T> и Span<T>
       href: memory-and-spans/memory-t-usage-guidelines.md
 - name: Взаимодействие на уровне машинного кода
-  href: native-interop/index.md
   items:
+    - name: Обзор
+      href: native-interop/index.md
+      displayName: Native interop
     - name: P/Invoke
       href: native-interop/pinvoke.md
     - name: Маршалинг типов
       href: native-interop/type-marshaling.md
-    - name: Настройка маршалинга структуры
+    - name: Настройка маршалинга структур
       href: native-interop/customize-struct-marshaling.md
     - name: Настройка маршалинга параметров
       href: native-interop/customize-parameter-marshaling.md
@@ -97,12 +107,16 @@
       href: native-interop/best-practices.md
     - name: Кодировки и маршалинг
       href: native-interop/charset.md
-    - name: COM-взаимодействие
-      href: native-interop/cominterop.md
+    - name: взаимодействие COM
       items:
+        - name: Обзор
+          href: native-interop/cominterop.md
+          displayName: COM interop
         - name: Оболочки COM
-          href: native-interop/com-wrappers.md
           items:
+            - name: Обзор
+              href: native-interop/com-wrappers.md
+              displayName: COM wrappers
             - name: Вызываемая оболочка времени выполнения
               href: native-interop/runtime-callable-wrapper.md
             - name: Вызываемая оболочка COM
@@ -125,7 +139,7 @@
   href: managed-execution-process.md
 - name: Метаданные и компоненты с самоописанием
   href: metadata-and-self-describing-components.md
-- name: Построение консольных приложений
+- name: Создание консольных приложений
   href: building-console-apps.md
 - name: Основные сведения о приложениях
   href: application-essentials.md
