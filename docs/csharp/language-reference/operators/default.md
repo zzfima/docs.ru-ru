@@ -1,25 +1,30 @@
 ---
-title: Справочник по C#. Оператор default
-description: Создания значения по умолчанию для типа с помощью оператора default
-ms.date: 08/01/2019
+title: Выражения default value. Справочник по C#
+description: Используйте выражения default value, чтобы получить значение по умолчанию для типа.
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398187"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507182"
 ---
-# <a name="default-operator-c-reference"></a>Оператор default (справочник по C#)
+# <a name="default-value-expressions-c-reference"></a>Выражения default value (справочник по C#)
 
-Оператор `default` создает значение [по умолчанию](../builtin-types/default-values.md) для типа. Оператор `default` принимает в качестве аргумента имя типа или параметр типа.
-
-В следующем примере показано применение оператора `default`.
-
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+Выражение default value создает [значение по умолчанию](../builtin-types/default-values.md) для типа. Выражения default value бывают двух видов: вызов [оператора default](#default-operator) и [литерал default](#default-literal).
 
 Также используется ключевое слово `default` в качестве метки варианта по умолчанию в [инструкции `switch`](../keywords/switch.md).
+
+## <a name="default-operator"></a>оператор default
+
+Оператор `default` принимает в качестве аргумента имя типа или параметр типа, как показано в следующем примере:
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>Литерал default
 
@@ -40,9 +45,9 @@ ms.locfileid: "79398187"
 
 Дополнительные сведения о литерале `default` см. в [примечании к предлагаемой функции](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Значения по умолчанию типов C#](../builtin-types/default-values.md)
-- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)
+- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)

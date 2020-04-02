@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 828543b95ed82f465c92212748c6250b7fc84051
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713911"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249387"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Введение в язык C# и платформу .NET Framework
 
@@ -66,6 +66,6 @@ C# является элегантным, типобезопасным объе�
   
  Дополнительные сведения см. в [обзоре платформы Microsoft .NET Framework](../../framework/get-started/overview.md).  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Начало работы с Visual C#](/visualstudio/ide/quickstart-csharp-console)

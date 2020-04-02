@@ -1,22 +1,22 @@
 ---
-title: Справочник по C#. Оператор stackalloc
-ms.date: 09/20/2019
+title: выражение stackalloc справочнике по C#
+ms.date: 03/13/2020
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
-- stackalloc operator [C#]
-ms.openlocfilehash: 9c9767e0c9945a9589d049fa7abba192cb928ad5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+- stackalloc expression [C#]
+ms.openlocfilehash: 2e99ce8b1e44dfa040c1acac799a3a55b375bd91
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846260"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546605"
 ---
-# <a name="stackalloc-operator-c-reference"></a>Оператор stackalloc (Справочник по C#)
+# <a name="stackalloc-expression-c-reference"></a>выражение stackalloc (справочник по C#)
 
-Оператор `stackalloc` выделяет блок памяти в стеке. Выделенный в стеке блок памяти, который создает этот метод, автоматически удаляется по завершении выполнения метода. Вы не можете явным образом освободить память, выделенную оператором `stackalloc`. Выделенный в стеке блок памяти не подвергается [сборке мусора](../../../standard/garbage-collection/index.md), поэтому его не нужно закреплять с помощью [инструкции `fixed`](../keywords/fixed-statement.md).
+Выражение `stackalloc` выделяет блок памяти в стеке. Выделенный в стеке блок памяти, который создает этот метод, автоматически удаляется по завершении выполнения метода. Вы не можете явным образом освободить память, выделенную `stackalloc`. Выделенный в стеке блок памяти не подвергается [сборке мусора](../../../standard/garbage-collection/index.md), поэтому его не нужно закреплять с помощью [инструкции `fixed`](../keywords/fixed-statement.md).
 
-Результат выполнения оператора `stackalloc` вы можете присвоить переменной любого из следующих типов:
+Результат выполнения выражения `stackalloc` можно присвоить переменной любого из следующих типов:
 
 - Начиная с версии C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> или <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, как показано в следующем примере:
 
@@ -43,13 +43,25 @@ ms.locfileid: "78846260"
 
   В случае типов указателей можно использовать выражение `stackalloc` только в объявлении локальной переменной для инициализации переменной.
 
-Содержимое только что выделенной памяти не определено. Начиная с версии C# 7.3, вы можете использовать синтаксис инициализатора массива, чтобы определить содержимое для только что выделенной памяти. В следующем примере показано несколько способов сделать это:
+Объем доступной памяти в стеке ограничен. При выделении слишком большого объема памяти в стеке возникает исключение <xref:System.StackOverflowException>. Чтобы избежать этого, следуйте приведенным ниже правилам.
+
+- Ограничьте объем памяти, выделенный `stackalloc`:
+
+  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+
+  Поскольку объем доступной памяти на стеке зависит от среды, в которой выполняется код, при определении фактического предельного значения следует использовать консервативное значение.
+
+- Старайтесь не использовать `stackalloc` в циклах. Выделяйте блок памяти за пределами цикла и используйте его повторно внутри цикла.
+
+Содержимое только что выделенной памяти не определено. Его следует инициализировать перед использованием. Например, вы можете использовать метод <xref:System.Span%601.Clear%2A?displayProperty=nameWithType>, который задает для всех элементов значение по умолчанию типа `T`.
+
+Начиная с версии C# 7.3, вы можете использовать синтаксис инициализатора массива, чтобы определить содержимое для только что выделенной памяти. В следующем примере показано несколько способов сделать это:
 
 [!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
 
-В выражении `stackalloc T[E]` элемент `T` должен быть [неуправляемым типом](../builtin-types/unmanaged-types.md), а элемент `E` — выражением типа [int](../builtin-types/integral-numeric-types.md).
+В выражении `stackalloc T[E]` `T` должен иметь [неуправляемый тип](../builtin-types/unmanaged-types.md), а `E` — неотрицательное значение [int](../builtin-types/integral-numeric-types.md).
 
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 
 При использовании `stackalloc` в среде CLR автоматически включается контроль переполнения буфера. Если буфер переполнен, процесс незамедлительно прерывается — это позволяет минимизировать риск исполнения вредоносного кода.
 
@@ -57,10 +69,11 @@ ms.locfileid: "78846260"
 
 См. сведения о [выделении памяти в стеке](~/_csharplang/spec/unsafe-code.md#stack-allocation) в [спецификации языка C#](~/_csharplang/spec/introduction.md) и [разрешении `stackalloc` во вложенных контекстах](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) в примечании.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Операторы, связанные с указателем](pointer-related-operators.md)
 - [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Типы, связанные с памятью и диапазонами](../../../standard/memory-and-spans/index.md)
+- [Правила stackalloc](https://vcsjones.dev/2020/02/24/stackalloc/)

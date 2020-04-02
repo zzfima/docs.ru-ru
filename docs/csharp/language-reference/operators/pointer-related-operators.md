@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036153"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507104"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Операторы, связанные с указателем (справочник по C#)
 
@@ -34,23 +34,23 @@ ms.locfileid: "73036153"
 - Унарный оператор [`&` (address-of)](#address-of-operator-): для получения адреса переменной
 - Унарный оператор [`*` (косвенное обращение к указателю)](#pointer-indirection-operator-): для получения переменной, на которую указывает указатель
 - Операторы [`->` (доступ к членам)](#pointer-member-access-operator--) и [`[]` (доступ к элементам)](#pointer-element-access-operator-)
-- Арифметические операторы [ `+`, `-`, `++` и `--`](#pointer-arithmetic-operators)
-- Операторы сравнения [ `==`, `!=`, `<`, `>`, `<=` и `>=`](#pointer-comparison-operators)
+- Арифметические операторы [`+`, `-`, `++` и `--`](#pointer-arithmetic-operators)
+- Операторы сравнения [`==`, `!=`, `<`, `>`, `<=` и `>=`](#pointer-comparison-operators)
 
 Сведения о типах указателей см. в разделе [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 > [!NOTE]
 > Для всех операций с указателями требуется [небезопасный](../keywords/unsafe.md) контекст. Код, содержащий небезопасные блоки, должен компилироваться с параметром компилятора [`-unsafe`](../compiler-options/unsafe-compiler-option.md).
 
-## <a name="address-of-operator-"></a> Оператор address-of &amp;
+## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a> Оператор address-of &amp;
 
 Унарный оператор `&` возвращает адрес своего операнда:
 
-[!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
 
 Операнд оператора `&` должен быть фиксированной переменной. *Фиксированные* переменные — это переменные в местах хранения, на которые не распространяется [сборка мусора](../../../standard/garbage-collection/index.md). В приведенном выше примере локальная переменная `number` — это фиксированная переменная, так как она находится в стеке. Переменные, которые находятся в местах хранения, обслуживаемых сборщиком мусора (например, перемещение), называются *перемещаемыми* переменными. Поля объекта и элементы массива являются примерами перемещаемых переменных. Вы можете получить адрес перемещаемой переменной, если зафиксируете или закрепите ее с помощью [ инструкции `fixed`](../keywords/fixed-statement.md). Полученный адрес действителен только в пределах блока инструкции `fixed`. В следующем примере показано, как использовать инструкцию `fixed` и оператор `&`:
 
-[!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
 
 Получить адрес константы или значения нельзя.
 
@@ -62,7 +62,7 @@ ms.locfileid: "73036153"
 
 Унарный оператор косвенного обращения указателя `*` получает переменную, на которую указывает операнд. Он также называется оператором разыменования. Операнд оператора `*` должен иметь тип указателя.
 
-[!code-csharp[pointer indirection](~/samples/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](snippets/PointerOperators.cs#PointerIndirection)]
 
 Невозможно применить оператор `*` к выражению типа `void*`.
 
@@ -70,7 +70,7 @@ ms.locfileid: "73036153"
 
 ## <a name="pointer-member-access-operator--"></a>Оператор доступа к члену указателя ->
 
-Оператор `->` объединяет [косвенное обращение к указателю](#pointer-indirection-operator-) и [доступ к члену](member-access-operators.md#member-access-operator-). То есть если `x` — это указатель типа `T*`, а `y` является доступным членом типа `T`, выражение формы
+Оператор `->` объединяет [косвенное обращение к указателю](#pointer-indirection-operator-) и [доступ к члену](member-access-operators.md#member-access-expression-). То есть если `x` — это указатель типа `T*`, а `y` является доступным членом типа `T`, выражение формы
 
 ```csharp
 x->y
@@ -84,7 +84,7 @@ x->y
 
 В следующем примере иллюстрируется использование оператора `->`.
 
-[!code-csharp[pointer member access](~/samples/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](snippets/PointerOperators.cs#MemberAccess)]
 
 Невозможно применить оператор `->` к выражению типа `void*`.
 
@@ -94,9 +94,9 @@ x->y
 
 Следующий пример демонстрирует доступ к элементам массива с указателем и оператором `[]`:
 
-[!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-В примере используется [оператор `stackalloc`](stackalloc.md) для выделения блока памяти в стеке.
+В предыдущем примере [выражение `stackalloc`](stackalloc.md) выделяет блок памяти в стеке.
 
 > [!NOTE]
 > Оператор доступа к элементу указателя не проверяет ошибки за пределами области.
@@ -128,7 +128,7 @@ x->y
 
 В следующем примере показано использование оператора `+` с указателем:
 
-[!code-csharp[pointer addition](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](snippets/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>Вычитание указателей
 
@@ -136,17 +136,17 @@ x->y
 
 В следующем примере показано вычитание указателей:
 
-[!code-csharp[pointer subtraction](~/samples/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](snippets/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>Инкремент и декремент указателя
 
-Оператор инкремента `++` [добавляет](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) 1 к своему операнду указателя. Оператор декремента `--` [вычитает](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) 1 из своего операнда указателя.
+Оператор инкремента `++`[добавляет](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) 1 к своему операнду указателя. Оператор декремента `--`[вычитает](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) 1 из своего операнда указателя.
 
 Оба оператора поддерживаются в двух формах: постфикс (`p++` и `p--`) и префикс (`++p` и `--p`). Результат `p++` и `p--` — это значение `p` *перед* операцией. Результат `++p` и `--p` — это значение `p` *после* операции.
 
 В следующем примере показано поведение постфиксных и префиксных операторов инкремента:
 
-[!code-csharp[pointer increment](~/samples/csharp/language-reference/operators/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](snippets/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>Операторы сравнения указателей
 
@@ -192,5 +192,5 @@ x->y
 - [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Ключевое слово unsafe](../keywords/unsafe.md)
 - [Ключевое слово fixed](../keywords/fixed-statement.md)
-- [Оператор stackalloc](stackalloc.md)
+- [stackalloc](stackalloc.md)
 - [Оператор sizeof](sizeof.md)

@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625869"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507260"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Значения по умолчанию типов C# (справка по C#)
 
@@ -21,13 +21,13 @@ ms.locfileid: "77625869"
 |любой ссылочный тип;|`null`|
 |Любой [встроенный целочисленный тип](integral-numeric-types.md)|Ноль (0)|
 |Любой [встроенный тип с плавающей запятой](floating-point-numeric-types.md)|Ноль (0)|
-|[bool](bool.md);|`false`|
+|[bool](bool.md)|`false`|
 |[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Значение, создаваемое выражением `(E)0`, где `E` — это идентификатор перечисления.|
 |[struct](struct.md)|Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.|
-|Любой [тип значения, допускающий значение NULL](nullable-value-types.md)|Экземпляр, свойство <xref:System.Nullable%601.HasValue%2A> которого имеет значение `false`, а свойство <xref:System.Nullable%601.Value%2A> не определено. Это значение по умолчанию также называется значением *NULL* типа значения, допускающего значение NULL.|
+|Любой [тип значения, допускающий значение NULL](nullable-value-types.md)|Экземпляр, свойство `false` которого имеет значение <xref:System.Nullable%601.HasValue%2A>, а свойство <xref:System.Nullable%601.Value%2A> не определено. Это значение по умолчанию также называется значением *NULL* типа значения, допускающего значение NULL.|
 
-Используйте [оператор по умолчанию](../operators/default.md), чтобы получить значение типа по умолчанию, как показано в следующем примере:
+Используйте [оператор `default`](../operators/default.md#default-operator), чтобы получить значение по умолчанию для типа, как показано в следующем примере:
 
 ```csharp
 int a = default(int);
@@ -55,7 +55,7 @@ Console.WriteLine(n);  // output: (0, 0)
 - [Значения по умолчанию](~/_csharplang/spec/variables.md#default-values)
 - [Конструкторы по умолчанию](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
 - [Конструкторы](../../programming-guide/classes-and-structs/constructors.md)

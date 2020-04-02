@@ -1,18 +1,18 @@
 ---
 title: Справочник по C#. Ключевое слово readonly
-ms.date: 06/21/2018
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398127"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345152"
 ---
 # <a name="readonly-c-reference"></a>readonly (Справочник по C#)
 
@@ -28,7 +28,7 @@ ms.locfileid: "79398127"
   > [!WARNING]
   > Видимый извне тип, который содержит видимое извне и доступное только для чтения поле с изменяемым ссылочным типом, может представлять уязвимость и приводить к предупреждению [CA2104](/visualstudio/code-quality/ca2104): Не объявляйте изменяющиеся ссылочные типы только для чтения.
 
-- В [определении `readonly struct`](#readonly-struct-example)`readonly` указывает на то, что `struct` является неизменяемым.
+- В определении типа `readonly struct` объект `readonly` указывает на то, что тип структуры является неизменяемым. Дополнительные сведения см. в описании [структуры `readonly`](../builtin-types/struct.md#readonly-struct) в статье [Типы структур](../builtin-types/struct.md).
 - В [определения элемента `readonly`](#readonly-member-examples)`readonly` указывает, что элемент `struct` не изменяет внутреннее состояние структуры.
 - В [возврате метода `ref readonly`](#ref-readonly-return-example) модификатор `readonly` указывает, что метод возвращает ссылку, и записи для этой ссылки не допускаются.
 
@@ -71,28 +71,6 @@ p2.y = 66;        // Error
 будет отображено сообщение об ошибке компилятора:
 
 **Присваивание значений доступному только для чтения полю допускается только в конструкторе и в инициализаторе переменных.**
-
-## <a name="readonly-struct-example"></a>Пример структуры только для чтения
-
-Модификатор `readonly` в определении `struct` объявляет, что структура является **неизменяемой**. Каждое поле экземпляра `struct` должно быть помечено `readonly`, как показано в следующем примере:
-
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
-
-В предыдущем примере используются [автоматические свойства только для чтения](../../properties.md#read-only) для объявления хранилища. Это указывает компилятору на необходимость создания резервных полей `readonly` для этих свойств. Можно также объявить поля `readonly` напрямую:
-
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-Добавление поля без отметки `readonly` вызывает ошибку компилятора `CS8340` с информацией о том, что поля экземпляров в структурах только для чтения должны быть доступными только для чтения.
 
 ## <a name="readonly-member-examples"></a>Примеры членов только для чтения
 
@@ -144,6 +122,7 @@ public string Message { readonly get; set; }
 Модификатор `readonly` в `ref return` указывает, что возвращаемую ссылку нельзя изменить. Следующий пример возвращает ссылку на источник. Он использует модификатор `readonly`, чтобы указать, что вызывающие объекты не могут изменять источник:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+
 Необязательно должен возвращаться тип `readonly struct`. Любой тип, возвращаемый из `ref`, может возвращаться из `ref readonly`.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#

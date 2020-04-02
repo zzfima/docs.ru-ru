@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6cca7330c10317129072b94c3973f5dec575363a
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344085"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523897"
 ---
 # <a name="net-guide"></a>Руководство по .NET
 
@@ -46,7 +46,6 @@ ms.locfileid: "80344085"
 * [.NET Standard](net-standard.md)
 * [Взаимодействие на уровне машинного кода](native-interop/index.md)
 * [Сборка мусора](garbage-collection/index.md)
-* [Базовые типы в .NET](base-types/index.md)
 * [Коллекции](collections/index.md)
 * [Даты, время и часовые пояса](datetime/index.md)
 * [Асинхронное программирование](async.md)

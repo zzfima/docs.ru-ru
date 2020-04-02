@@ -3,12 +3,12 @@ title: Создание типов смешения с помощью метод
 description: Используя элементы интерфейса по умолчанию, можно расширить интерфейсы дополнительными реализациями по умолчанию для средств реализации.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240110"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134378"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Учебник. Функциональные возможности смешения при создании классов с помощью методов интерфейса по умолчанию
 
@@ -117,7 +117,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
-Реализация по умолчанию предполагает питание от сети.
+Реализация по умолчанию предполагает отключение питания от сети.
 
 [!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 

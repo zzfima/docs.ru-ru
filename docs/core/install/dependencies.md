@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157818"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546566"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Зависимости и требования для .NET Core
 
@@ -41,6 +41,8 @@ ms.locfileid: "78157818"
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
+*Сейчас .NET Core 3.0 не поддерживается. Дополнительные сведения см. в статье о [политике поддержки .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
+
 .NET Core 3.0 поддерживает следующие версии Windows:
 
 > [!NOTE]
@@ -56,6 +58,8 @@ ms.locfileid: "78157818"
 Дополнительные сведения об операционных системах, дистрибутивах и политике жизненного цикла, поддерживаемых .NET Core 3.0, см. в статье [Поддерживаемые .NET Core 3.0 версии ОС](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+*Сейчас .NET Core 2.2 не поддерживается. Дополнительные сведения см. в статье о [политике поддержки .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 .NET Core 2.2 поддерживает следующие версии Windows:
 
@@ -132,7 +136,7 @@ ms.locfileid: "78157818"
 | Red Hat Enterprise Linux       | 6, 7, 8               | X64 |
 | CentOS                         | 7 или выше                    | X64 |
 | Oracle Linux                   | 7 или выше                    | X64 |
-| Fedora                         | 29+                   | X64 |
+| Fedora                         | 30 или выше                   | X64 |
 | Debian                         | 9+                    | x64, ARM32, ARM64 |
 | Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
 | Linux Mint                     | 18+                   | X64 |
@@ -148,6 +152,8 @@ ms.locfileid: "78157818"
 > Для поддержки ARM64 требуется ядро Linux 4.14 или более высокой версии. Некоторые дистрибутивы Linux отвечают этому требованию, а другие — нет. Например, Ubuntu 18.04 поддерживается, а Ubuntu 16.04 — нет.
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
+
+*Сейчас .NET Core 3.0 не поддерживается. Дополнительные сведения см. в статье о [политике поддержки .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 .NET Core 3.0 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
 
@@ -174,6 +180,8 @@ ms.locfileid: "78157818"
 Дополнительные сведения об установке .NET Core 3.0 в ARM64 см. в [этой статье](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+*Сейчас .NET Core 2.2 не поддерживается. Дополнительные сведения см. в статье о [политике поддержки .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 .NET Core 2.2 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
 
@@ -211,7 +219,7 @@ ms.locfileid: "78157818"
 | Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
 | CentOS                         |  7 или выше                     | X64 |
 | Oracle Linux                   |  7 или выше                     | X64 |
-| Fedora                         |  29+                    | X64 |
+| Fedora                         |  30 или выше                    | X64 |
 | Debian                         |  9                      | x64, ARM32 |
 | Ubuntu                         |  16.04, 18.04, 19.04, 19.10    | x64, ARM32 |
 | Linux Mint                     |  17+                    | X64 |

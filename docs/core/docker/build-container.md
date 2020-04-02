@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8be12792e4a9e8511dba87e657f700cc4ec97a16
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157834"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546579"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Учебник. Контейнеризация приложения .NET Core
 
@@ -26,8 +26,8 @@ ms.locfileid: "78157834"
 
 Вы также узнаете о задачах сборки и развертывания контейнера Docker для приложения .NET Core. *Платформа Docker* использует *модуль Docker* для быстрой сборки и упаковки приложений в качестве *образов Docker*. Эти образы имеют формат *Dockerfile* и предназначены для развертывания и запуска в многоуровневом контейнере.
 
-> [!TIP]
-> Если вы работаете с существующим приложением ASP.NET Core, см. [Учебник. Контейнеризация приложения .NET Core](/aspnet/core/host-and-deploy/docker/building-net-docker-images).
+> [!WARNING]
+> **Это руководство не относится к приложениям ASP.NET Core.** Если вы используете ASP.NET Core, см. руководство по [контейнеризации приложений ASP.NET Core](/aspnet/core/host-and-deploy/docker/building-net-docker-images).
 
 ## <a name="prerequisites"></a>Предварительные требования
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700202"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507052"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен. (Руководство по программированию в C#)
 
@@ -30,7 +30,7 @@ ms.locfileid: "75700202"
   
  [!code-csharp[csProgGuide#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#31)]  
   
- Вместо:  
+ вместо следующего кода:  
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75700202"
   
 ## <a name="using-namespaces-to-control-scope"></a>Использование пространств имен для управления областью действия
 
- Область действия объявляется с помощью ключевого слова `namespace`. Определяя области действия в проекте, вы можете упорядочивать код и создавать уникальные на глобальном уровне типы. В следующем примере класс `SampleClass` определяется в двух пространствах имен, одно из которых вложено в другое. [Оператор доступа к членам `.`](../../language-reference/operators/member-access-operators.md#member-access-operator-) используется для отличения вызываемого метода.  
+ Область действия объявляется с помощью ключевого слова `namespace`. Определяя области действия в проекте, вы можете упорядочивать код и создавать уникальные на глобальном уровне типы. В следующем примере класс `SampleClass` определяется в двух пространствах имен, одно из которых вложено в другое. Для определения конкретного вызываемого метода используется [маркер `.`](../../language-reference/operators/member-access-operators.md#member-access-expression-).  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -90,10 +90,10 @@ ms.locfileid: "75700202"
   
  Этот код будет работать, однако если впоследствии определить тип с именем `Alias`, выражение `Alias.` будет связываться с этим типом. Используя выражение `Alias::Exception`, вы гарантируете, что `Alias` будет обрабатываться как псевдоним пространства имен и не будет ошибочно связываться с типом.  
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../index.md)
 - [Пространства имен](./index.md)
-- [Оператор .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Выражение доступа к члену](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [Оператор ::](../../language-reference/operators/namespace-alias-qualifier.md)
 - [Псевдоним extern](../../language-reference/keywords/extern-alias.md)

@@ -3,12 +3,12 @@ title: Создание клиента REST с использованием .NET
 description: Это руководство раскроет для вас некоторые возможности .NET Core и языка C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156861"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249172"
 ---
 # <a name="rest-client"></a>Клиент REST
 
@@ -163,7 +163,7 @@ namespace WebAPIClient
 
 Теперь давайте выполним десериализацию созданного типа.
 
-Теперь вызовите сериализатор для преобразования пакета JSON в объекты C#. В методе `ProcessRepositories` замените вызов <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> следующими тремя строками:
+Теперь вызовите сериализатор для преобразования пакета JSON в объекты C#. В методе `ProcessRepositories` замените вызов <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> следующими строками.
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ foreach (var repo in repositories)
 2016-02-08T21:27:00Z
 ```
 
-Он не соответствует ни одному из стандартных форматов .NET для типа <xref:System.DateTime>. Поэтому нам нужен специализированный метод для преобразования. Кроме того, нежелательно предоставлять пользователям класса `Repository` доступ к необработанным строковым данным. И здесь нам снова помогут атрибуты. Сначала определите свойство `public`, которое будет содержать строковое представление даты и времени в вашем классе `Repository`, а также свойство `LastPush` `readonly`, которое возвращает отформатированную строку, которая представляет возвращенную дату:
+Этот формат имеет время в формате UTC, поэтому вы получаете значение <xref:System.DateTime>, свойство <xref:System.DateTime.Kind%2A> которого является <xref:System.DateTimeKind.Utc>. Если вы предпочитаете дату, представленную в вашем часовом поясе, вам необходимо написать пользовательский метод преобразования. Сначала определите свойство `public`, которое будет содержать представление даты и времени в формате UTC в вашем классе `Repository`, а также свойство `LastPush` `readonly`, которое возвращает дату, преобразованную в местное время:
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-Давайте подробнее рассмотрим новые конструкции, которые мы только что определили. Свойство `LastPush` определяется с помощью *члена, заданного выражением* для метода доступа `get`. Метод доступа `set` не существует. Именно так в C#, пропуская метод доступа `set`, определяется свойство*только для чтения*. (Да, вы можете создать в C# даже свойства *только для записи*, но для них трудно найти применение.) Метод <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> анализирует строку и создает объект <xref:System.DateTime>, используя указанный формат даты, а затем включает в `DateTime` дополнительные метаданные, используя объект `CultureInfo`. Если операция анализа завершается неудачей, акцессор этого свойства создает исключение.
-
-Чтобы использовать <xref:System.Globalization.CultureInfo.InvariantCulture>, нужно добавить пространство имен <xref:System.Globalization> в директивы `using` в файле `repo.cs`.
-
-```csharp
-using System.Globalization;
-```
+Давайте подробнее рассмотрим новые конструкции, которые мы только что определили. Свойство `LastPush` определяется с помощью *члена, заданного выражением* для метода доступа `get`. Метод доступа `set` не существует. Именно так в C#, пропуская метод доступа `set`, определяется свойство*только для чтения*. (Да, вы можете создать в C# даже свойства *только для записи*, но для них трудно найти применение.)
 
 Вам осталось только добавить одну инструкцию вывода данных в консоль, и можно будет заново собрать и запустить приложение:
 

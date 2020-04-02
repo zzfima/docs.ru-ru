@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345393"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249322"
 ---
 # <a name="switch-c-reference"></a>switch (справочник по C#)
+
+В этой статье рассматривается инструкция `switch`. Сведения о выражении `switch` (представлено в C# 8.0) см. в статье [Выражение `switch`](../operators/switch-expression.md) в разделе [Выражения и операторы](../operators/index.md).
 
 `switch` — это оператор выбора, который выбирает для выполнения один *раздел switch* из списка кандидатов, сравнивая их с *выражением соответствия*.
 
@@ -106,7 +108,7 @@ switch (caseSwitch)
 
 Метка case `default` может отображаться в операторе `switch` в любом порядке. Она всегда оценивается после оценки всех меток `case`, независимо от их порядка.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>Сопоставление шаблонов <a name="pattern" /> с оператором `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a>Сопоставление шаблонов <a name="pattern" /> с оператором `switch`
 
 Каждый оператор `case` определяет шаблон, который в случае совпадения с выражением соответствия вызывает выполнение входящего в него раздела switch. Шаблон константы поддерживают все версии C#. Остальные шаблоны поддерживаются начиная с C# 7.0.
 
@@ -183,7 +185,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> Оператор `case` и предложение `when`
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" /> Оператор `case` и предложение `when`
 
 Начиная с C# 7.0 операторы case необязательно должны быть взаимоисключающими. В связи с этим можно добавить предложение `when`, определяющее дополнительное условие, которому должен соответствовать оператор case, чтобы иметь значение true. Предложение `when` может быть любым выражением, возвращающим логическое значение.
 

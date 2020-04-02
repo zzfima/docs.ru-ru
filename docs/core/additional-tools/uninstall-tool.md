@@ -3,16 +3,16 @@ title: Средство удаления
 description: Обзор средства удаления .NET Core — интерактивного средства, позволяющего управлять очисткой пакетов SDK и сред выполнения .NET Core.
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714543"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507325"
 ---
 # <a name="net-core-uninstall-tool"></a>Средство удаления .NET Core
 
-[Средство удаления .NET Core](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) позволяет удалять пакеты SDK и среды выполнения .NET Core из системы. Указать версии, которые нужно удалить, можно с помощью ряда параметров.
+[Средство удаления .NET Core](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) позволяет удалять пакеты SDK и среды выполнения .NET Core из системы. Указать версии, которые нужно удалить, можно с помощью ряда параметров.
 
 Это средство поддерживают ОС Windows и macOS. ОС Linux сейчас не поддерживает это средство.
 
@@ -27,10 +27,10 @@ ms.locfileid: "75714543"
 
 ## <a name="install-the-tool"></a>Установка средства
 
-Средство удаления .NET Core можно скачать из репозитория GitHub [dotnet/cli-lab](https://github.com/dotnet/cli-lab/releases).
+Средство удаления .NET Core можно скачать по [этой ссылке](https://aka.ms/dotnet-core-uninstall-tool), а его исходный код доступен в репозитории GitHub [dotnet/cli-lab](https://github.com/dotnet/cli-lab).
 
 > [!NOTE]
-> Для удаления пакетов SDK и сред выполнения .NET Core средству требуются повышенные права. Следовательно, его нужно устанавливать в защищенном от записи каталоге, например *C:\Program Files* в ОС Windows или */usr/local/bin* в macOS. Ознакомьтесь также со статьей [Повышенные права доступа для команд dotnet](../tools/elevated-access.md). Подробные инструкции по установке доступны на [странице выпусков GitHub](https://github.com/dotnet/cli-lab/releases).
+> Для удаления пакетов SDK и сред выполнения .NET Core средству требуются повышенные права. Следовательно, его нужно устанавливать в защищенном от записи каталоге, например *C:\Program Files* в ОС Windows или */usr/local/bin* в macOS. Ознакомьтесь также со статьей [Повышенные права доступа для команд dotnet](../tools/elevated-access.md). Дополнительные сведения см. в [подробных инструкциях по установке](https://aka.ms/dotnet-core-uninstall-tool).
 
 ## <a name="run-the-tool"></a>Запуск программы
 
@@ -45,6 +45,9 @@ ms.locfileid: "75714543"
 
 Команда `dotnet-core-uninstall list` перечисляет установленные пакеты SDK и среды выполнения .NET Core, которые можно удалить с помощью этого средства. Некоторые пакеты SDK и среды выполнения могут требоваться для работы Visual Studio, и они отображаются с предупреждением о том, почему их не рекомендуется удалять.
 
+> [!NOTE]
+> В большинстве случаев выходные данные команды `dotnet-core-uninstall list` не будут соответствовать списку установленных версий в выходных данных `dotnet --info`. В частности, это средство не будет отображать версии, установленные ZIP-файлами или управляемые Visual Studio (любая версия, установленная с Visual Studio 2019 версии 16.3 или более поздней версии). Один из способов проверить, находится ли версия под управлением Visual Studio, — просмотреть ее в `Add or Remove Programs`, в которой управляемые версии Visual Studio помечены в отображаемых именах.
+
 **dotnet-core-uninstall list**
 
 #### <a name="synopsis"></a>Краткий обзор
@@ -55,7 +58,7 @@ dotnet-core-uninstall list [options]
 
 #### <a name="options"></a>Параметры
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--aspnet-runtime`**
 
@@ -85,7 +88,7 @@ dotnet-core-uninstall list [options]
 
   Перечисляет все пакеты SDK и среды выполнения .NET Core x86, которые можно удалить с помощью этого средства.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--runtime`**
 
@@ -148,7 +151,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 #### <a name="options"></a>Параметры
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -218,7 +221,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 2. Параметры `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` и `[<VERSION>...]` служат для исключения.
 3. Если `--x64` или `--x86` не указаны, будут удалены обе версии.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -328,7 +331,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 #### <a name="options"></a>Параметры
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -400,7 +403,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 2. Параметры `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` и `[<VERSION>...]` служат для исключения.
 3. Если `--x64` или `--x86` не указаны, будут удалены обе версии.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -511,13 +514,13 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ## <a name="uninstall-the-tool"></a>Удаление средства
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 1. Откройте окно **Установка и удаление программ**.
 2. Найдите `Microsoft .NET Core SDK Uninstall Tool`.
 3. Выберите **Удалить**.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 Удалите скачанный файл *dotnet-core-uninstall.tar.gz* из каталога, в котором он установлен. Если содержимое этого файла распаковано в другой каталог, необходимо также удалить это содержимое.
 

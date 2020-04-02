@@ -3,21 +3,21 @@ title: Начало работы с C# и Visual Studio Code
 description: Узнайте, как создать и отладить в Visual Studio Code свое первое приложение .NET Core на языке C#.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397887"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111066"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
 
 .NET Core предcтавляет собой быструю модульную платформу для создания приложений, работающих на ОС Windows, Linux и macOS. Visual Studio Code с расширением C# позволяет эффективно работать с кодом, а также обеспечивает полную поддержку IntelliSense (интеллектуальное завершение кода) и отладки для языка C#.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Предварительные требования
 
 1. Установите [Visual Studio Code](https://code.visualstudio.com/).
-2. Установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download).
+2. Установите [пакета SDK для .NET Core](https://dotnet.microsoft.com/download).
 3. Установите [расширение C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) для Visual Studio Code. См. дополнительные сведения об [установке расширений Visual Studio Code из Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Hello World
@@ -26,7 +26,7 @@ ms.locfileid: "79397887"
 
 1. Откройте проект.
 
-    - Откройте Visual Studio Code.
+    - Откройте Visual Studio Code.
     - Щелкните значок обозревателя в расположенном слева меню, затем щелкните**Открыть папку**.
     - Выберите **Файл** > **Открыть папку** в главном меню, чтобы открыть папку, в которой вы хотите разместить проект C#, и щелкните **Выбрать папку**. В нашем примере мы создаем для проекта папку с именем *HelloWorld*.
 
@@ -62,7 +62,7 @@ ms.locfileid: "79397887"
 
     ![Откройте файл Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code предлагает добавить недостающие ресурсы для сборки и отладки приложения. Выберите **Да**.
+2. Visual Studio Code предлагает добавить недостающие ресурсы для сборки и отладки приложения. Выберите ответ **Да**.
 
     ![Предупреждение о недостающих ресурсах](media/with-visual-studio-code/missing-assets.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "79397887"
 
 ## <a name="add-a-class"></a>Добавление класса
 
-1. Чтобы добавить новый класс, щелкните правой кнопкой мыши в обозревателе VSCode и выберите **Новый файл**. Так вы добавите новый файл в папку, открытую в VSCode.
+1. Чтобы добавить новый класс, щелкните правой кнопкой мыши в обозревателе VS Code и выберите **Новый файл**. Так вы добавите новый файл в папку, открытую в VSCode.
 2. Назовите файл *MyClass.cs*. Необходимо сохранить его с расширением `.cs`, чтобы он распознавался как файл С#.
 3. Добавьте приведенный ниже код для создания класса. Включите правильное пространство имен, на которое будет создана ссылка из файла *Program.cs*:
 
@@ -139,13 +139,13 @@ ms.locfileid: "79397887"
     Hello World! Happy coding!
     ```
 
-## <a name="faq"></a>ВОПРОСЫ И ОТВЕТЫ
+## <a name="faq"></a>часто задаваемые вопросы
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Мне не хватает ресурсов для выполнения сборки и отладки C# в Visual Studio Code. Отладчик выдает сообщение: "Конфигурация отсутствует".
 
-Ресурсы для сборки и отладки можно создать с помощью расширения Visual Studio Code C#. Visual Studio Code предложит создать эти ресурсы при первом открытии проекта C#. Если вы не создали ресурсы, то все равно сможете выполнить эту команду. Для этого откройте палитру команд (**Вид > Палитра команд**) и введите ">.NET: Создать ресурсы для сборки и отладки". После этого будут созданы необходимые файлы конфигурации *.vscode*, *launch.json* и *tasks.json*.
+Ресурсы для сборки и отладки можно создать с помощью расширения Visual Studio Code C#. Visual Studio Code предложит создать эти ресурсы при первом открытии проекта C#. Если вы не создали ресурсы, вы все равно сможете выполнить эту команду. Для этого откройте палитру команд (**Вид > Палитра команд**) и введите ">.NET: Generate Assets for Build and Debug" (.NET: создать ресурсы для сборки и отладки). После этого будут созданы необходимые файлы конфигурации *.vscode*, *launch.json* и *tasks.json*.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Настройка Visual Studio Code)
 - [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)

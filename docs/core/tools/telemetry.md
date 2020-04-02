@@ -3,12 +3,12 @@ title: Телеметрия пакета SDK для .NET Core
 description: Сведения о функциях телеметрии пакета SDK для .NET Core, позволяющих собирать сведения об использовании для анализа, а также о собираемых данных и способе отключения этих функций.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156690"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507286"
 ---
 # <a name="net-core-sdk-telemetry"></a>Телеметрия пакета SDK для .NET Core
 
@@ -45,6 +45,8 @@ The .NET Core tools collect usage data in order to help us improve your experien
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
+
+Чтобы отключить отображение этого сообщения и приветственного сообщения .NET Core, задайте для переменной среды `DOTNET_NOLOGO` значение `true`. Обратите внимание, что эта переменная не влияет на отказ от отправки данных телеметрии.
 
 ## <a name="data-points"></a>Точки данных
 
