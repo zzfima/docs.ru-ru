@@ -1,9 +1,0 @@
-- name: Атрибуты
-  href: index.md
-  items:
-    - name: Применение атрибутов
-      href: applying-attributes.md
-    - name: Написание настраиваемых атрибутов
-      href: writing-custom-attributes.md
-    - name: 'Извлечение информации, сохраненной в атрибуте'
-      href: retrieving-information-stored-in-attributes.md
