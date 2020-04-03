@@ -5,15 +5,16 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345283"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635783"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
-В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Фонд связи Windows (WCF) включает в себя четыре системно-определяемые привязки метаданных, но вы можете публиковать метаданные с помощью любой необходимой привязки. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [начало](../samples/getting-started-sample.md).  
+
+В этой статье объясняется, как настроить пользовательский привязку обмена WS-Metadata. Фонд связи Windows (WCF) включает в себя четыре системно-определяемые привязки метаданных, но вы можете публиковать метаданные с помощью любой необходимой привязки. В этой статье показано, как публиковать `wsHttpBinding`метаданные с помощью . Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [начало](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Использование файла конфигурации  
   
@@ -44,7 +45,7 @@ ms.locfileid: "80345283"
               contract="IMetadataExchange" />  
     ```  
   
-4. Чтобы проверить правильность работы конечной точки обмена метаданными, добавьте тег конечной точки в файл конфигурации клиента:  
+4. Чтобы проверить правильное работу конечная точка обмена метаданными, добавьте тег конечных точек в файл конфигурации клиента:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  

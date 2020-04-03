@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 0d765a9789ad566428b1fbda6c0863b10b98c363
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345067"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635398"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Пользовательский элемент для SingleTagSectionHandler
 
@@ -37,9 +37,9 @@ ms.locfileid: "80345067"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-None
+Отсутствуют
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 ** \<Элемент sectionName>** является пользовательским элементом, определяемым [** \<разделом>**](section-element.md) тегом [** \<в элементе configSections>.**](configsections-element-for-configuration.md) Система конфигурации <xref:System.Collections.IDictionary> возвращает объект <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>при вызове.
 
@@ -61,7 +61,7 @@ None
 
 ## <a name="configuration-file"></a>Файл конфигурации
 
-Этот элемент может быть использован в файле конфигурации приложения, файле конфигурации машины *(Machine.config)* и файлах *Web.config,* которые не находятся на уровне каталога приложений.
+Этот элемент может быть использован в файле конфигурации приложения, файле конфигурации машины *(Machine.config)* и файлах *Web.config,* которые не на уровне каталога приложений.
 
 ## <a name="see-also"></a>См. также
 
