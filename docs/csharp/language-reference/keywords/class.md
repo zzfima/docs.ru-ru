@@ -14,7 +14,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673099"
 ---
-# <a name="class-c-reference"></a>класс (Справочник по C#)
+# <a name="class-c-reference"></a>class (Справочник по C#)
 
 Классы объявляются с помощью ключевого слова `class`, как показано в следующем примере:
 
