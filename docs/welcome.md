@@ -3,12 +3,12 @@ title: Добро пожаловать в .NET
 description: Начало работы с семейством технологий .NET
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345308"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635961"
 ---
 # <a name="welcome-to-net"></a>Добро пожаловать в .NET
 
@@ -20,7 +20,7 @@ ms.locfileid: "80345308"
 
 Новости о .NET см. в следующих блогах:
 
-- [Блог .NET](https://devblogs.microsoft.com/dotnet/)
+- [Блог о .NET](https://devblogs.microsoft.com/dotnet/)
 - [Блог об ASP.NET](https://devblogs.microsoft.com/aspnet/)
 - [Блог Visual Studio](https://devblogs.microsoft.com/visualstudio/)
 - [Группа Visual Basic](https://devblogs.microsoft.com/vbteam/)
@@ -42,11 +42,11 @@ ms.locfileid: "80345308"
 
 Эта документация охватывает применение .NET для различных платформ и языков. Чтобы начать работу с .NET для различных языков, воспользуйтесь одним из следующих разделов.
 
-- [Руководство по .NET](standard/index.md)
+- [Руководство по .NET](standard/index.yml)
 - [Руководство по .NET Core](core/index.yml)
 - [Руководство по .NET Framework](framework/index.yml)
 - [Руководство по языку C#](csharp/index.yml)
-- [Руководство по F#](fsharp/index.yml)
+- [Руководство по языку F#](fsharp/index.yml)
 - [Руководство по Visual Basic](visual-basic/index.yml)
 - [Руководство по ML.NET](machine-learning/index.yml)
 - [.NET для Apache Spark](spark/index.yml)
@@ -66,7 +66,7 @@ ms.locfileid: "80345308"
 
 - [Домашняя страница .NET Core](https://github.com/dotnet/core)
 - [Среда выполнения .NET Core](https://github.com/dotnet/runtime)
-- [Базовый пакет SDK для .NET](https://github.com/dotnet/sdk)
+- [Пакет SDK для .NET Core](https://github.com/dotnet/sdk)
 - [Платформа компилятора Roslyn (C# и Visual Basic) и средства IDE](https://github.com/dotnet/roslyn)
 - [Компилятор F# и средства IDE](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)
