@@ -4,12 +4,12 @@ description: Основные концепции, позволяющие пон�
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 8a73a432bf8cc72cced77cf6c62a785b72032913
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43fb0d792ddeb20b8a141af452a86dd50f37ba43
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72303710"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523611"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Основные сведения о System.Runtime.Loader.AssemblyLoadContext
 
@@ -103,8 +103,8 @@ ms.locfileid: "72303710"
 a.GetType().Assembly
 b.GetType().Assembly
 // In debugger look at each AssemblyLoadContext's instance and name
-System.Runtime.AssemblyLoadContext.GetLoadContext(a.GetType().Assembly)
-System.Runtime.AssemblyLoadContext.GetLoadContext(b.GetType().Assembly)
+System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(a.GetType().Assembly)
+System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(b.GetType().Assembly)
 ```
 
 ### <a name="resolving-type-conversion-issues"></a>Устранение проблем с преобразованием типов

@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ccb987944af29c170b8d960d7112a13078b67dd1
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291553"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523579"
 ---
 # <a name="whats-new-in-net-core-30"></a>Новые возможности .NET Core 3.0
 
@@ -108,7 +108,7 @@ ms.locfileid: "80291553"
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-Дополнительные сведения о публикации однофайловых исполняемых файлов см. в [документе о разработке однофайловых пакетных установщиков](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design_3_0.md).
+Дополнительные сведения о публикации однофайловых исполняемых файлов см. в [документе о разработке однофайловых пакетных установщиков](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
 
 ### <a name="assembly-linking"></a>Связывание сборок
 
