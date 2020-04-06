@@ -14,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 8acf0886215c2d31f949e38401c4705ac9e2aef5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b553f44ebc512ffd1194254fe8ebc90bcb2f763
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124316"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523909"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Элементы языка регулярных выражений — краткий справочник
 
@@ -191,6 +191,5 @@ ms.locfileid: "77124316"
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Регулярные выражения](regular-expressions.md)
 - [Классы регулярных выражений](the-regular-expression-object-model.md)
-- [Примеры регулярных выражений](regular-expression-examples.md)
 - [Краткий справочник по регулярным выражениям (скачать в формате Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [Регулярные выражения — краткий справочник (загрузить в формате PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
