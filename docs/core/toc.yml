@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: Обновление версии среды выполнения автономного развертывания
       href: deploying/runtime-patch-selection.md
+    - name: Обрезка автономных развертываний и исполняемых файлов
+      href: deploying/trim-self-contained.md
     - name: Хранилище пакетов среды выполнения
       href: deploying/runtime-store.md
 - name: Docker

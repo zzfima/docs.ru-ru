@@ -1,0 +1,159 @@
+### YamlMime:Landing
+title: Документация по .NET
+summary: Сведения о .NET, платформе разработчика с открытым кодом для создания множества различных типов приложений.
+metadata:
+  title: Документация по .NET
+  description: Сведения о .NET, платформе разработчика с открытым кодом для создания множества различных типов приложений.
+  ms.topic: landing-page
+  ms.date: 03/27/2020
+  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
+  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/03/2020
+  ms.locfileid: "80636138"
+landingContent:
+- title: Сведения о .NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор .NET
+      url: tour.md
+    - text: Что такое .NET?
+      url: https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet
+  - linkListType: concept
+    links:
+    - text: .NET Standard
+      url: net-standard.md
+    - text: .NET Core
+      url: ../core/about.md
+    - text: Требуемые версии .NET Framework
+      url: frameworks.md
+    - text: Среда CLR
+      url: clr.md
+    - text: Выбор между .NET Core и .NET Framework для серверных приложений
+      url: choosing-core-framework-server.md
+  - linkListType: whats-new
+    links:
+    - text: Новые возможности .NET Standard
+      url: whats-new/whats-new-in-dotnet-standard.md
+    - text: Новые возможности .NET Core
+      url: ../core/whats-new/dotnet-core-3-1.md
+- title: Сериализация данных
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Сериализация и десериализация JSON
+      url: serialization/system-text-json-overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: Сериализация и десериализация JSON с помощью C#
+      url: serialization/system-text-json-how-to.md
+    - text: Миграция с Newtonsoft.Json на System.Text.Json
+      url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+    - text: Написание пользовательских преобразователей для сериализации JSON
+      url: serialization/system-text-json-converters-how-to.md
+  - linkListType: sample
+    links:
+    - text: Примеры сериализации XML
+      url: serialization/examples-of-xml-serialization.md
+- title: Форматирование и преобразование дат, чисел и строк
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Строки числовых форматов
+      url: base-types/standard-numeric-format-strings.md
+    - text: Строки форматов даты и времени
+      url: base-types/standard-date-and-time-format-strings.md
+    - text: Составное форматирование
+      url: base-types/composite-formatting.md
+    - text: Преобразование времени из одного часового пояса в другой
+      url: datetime/converting-between-time-zones.md
+    - text: Обрезка и удаление символов из строк
+      url: base-types/trimming.md
+    - text: Регулярные выражения в .NET
+      url: base-types/regular-expressions.md
+  - linkListType: how-to-guide
+    links:
+    - text: Преобразование строк в формат даты и времени
+      url: base-types/parsing-datetime.md
+    - text: Дополнение числа начальными нулями
+      url: base-types/how-to-pad-a-number-with-leading-zeros.md
+    - text: Отображение миллисекунд в значениях даты и времени
+      url: base-types/how-to-display-milliseconds-in-date-and-time-values.md
+  - linkListType: reference
+    links:
+    - text: Язык регулярных выражений
+      url: base-types/regular-expression-language-quick-reference.md
+- title: Создание классов и библиотек
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Рекомендации по разработке
+      url: design-guidelines/index.md
+  - linkListType: concept
+    links:
+    - text: Соглашения об именах
+      url: design-guidelines/general-naming-conventions.md
+    - text: Соглашения о написании прописными буквами
+      url: design-guidelines/capitalization-conventions.md
+- title: Использование событий и исключений
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Лучшие методики обработки исключений
+      url: exceptions/best-practices-for-exceptions.md
+    - text: Обработка и инициация событий
+      url: events/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: Использование блока try-catch для перехвата исключений
+      url: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - text: Вызов и обработка событий
+      url: events/how-to-raise-and-consume-events.md
+- title: Файловый и потоковый ввод-вывод
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Файловый и потоковый ввод-вывод
+      url: io/index.md
+    - text: Форматы путей к файлам в Windows
+      url: io/file-path-formats.md
+  - linkListType: how-to-guide
+    links:
+    - text: Запись текста в файл
+      url: io/how-to-write-text-to-a-file.md
+    - text: Чтение текста из файла
+      url: io/how-to-read-text-from-a-file.md
+    - text: Сжатие и извлечение файлов
+      url: io/how-to-compress-and-extract-files.md
+    - text: открытие файла журнала и добавление в него данных
+      url: io/how-to-open-and-append-to-a-log-file.md
+- title: Управление использованием
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Основы сборки мусора
+      url: garbage-collection/fundamentals.md
+    - text: Реализация метода Dispose
+      url: garbage-collection/implementing-dispose.md
+- title: Сведения о параллельном программировании
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Параллельное программирование в .NET
+      url: parallel-programming/index.md
+  - linkListType: concept
+    links:
+    - text: Библиотека параллельных задач (TPL)
+      url: parallel-programming/task-parallel-library-tpl.md
+    - text: Асинхронное программирование на основе задач
+      url: parallel-programming/task-based-asynchronous-programming.md
+    - text: Отмена задач
+      url: parallel-programming/task-cancellation.md
+  - linkListType: how-to-guide
+    links:
+    - text: Создание простой параллельной программы с использованием Parallel.ForEach
+      url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+    - text: Возврат значения из задачи
+      url: parallel-programming/how-to-return-a-value-from-a-task.md
