@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138223"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588637"
 ---
 # <a name="order-preservation-in-plinq"></a>Сохранение порядка в PLINQ
 PLINQ предназначен для повышения производительности при сохранении правильности вычислений. Запрос должен выполняться как можно быстрее, но всегда давать правильные результаты. В некоторых случаях для правильных расчетов нужно соблюдать порядок исходной последовательности, но упорядочение может требовать больших вычислительных ресурсов. Поэтому по умолчанию PLINQ не сохраняет порядок исходной последовательности. В этом PLINQ похож на [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], но отличается от LINQ to Objects, который строго сохраняет порядок.  
@@ -122,5 +122,5 @@ PLINQ предназначен для повышения производите�
   
 ## <a name="see-also"></a>См. также раздел
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)

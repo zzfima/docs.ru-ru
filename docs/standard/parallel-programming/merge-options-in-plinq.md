@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74204001"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588617"
 ---
 # <a name="merge-options-in-plinq"></a>Параметры слияние в PLINQ
 Когда запрос выполняется как параллельный, PLINQ разделяет исходную последовательность между несколькими потоками, чтобы они могли параллельно работать с разными частями. Если результаты будут использоваться в одном потоке, например в цикле `foreach` (`For Each` в Visual Basic), то полученные в каждом потоке результаты нужно объединить в одну последовательность. PLINQ может выполнять разные типы слияния в зависимости от операторов, которые присутствуют в запросе. Например, для операторов, изменяющих порядок результатов, необходимо собрать в буфер все элементы из всех потоков. Для потока ожидающего такой результат (и для пользователя приложения) может пройти достаточно большой период времени, пока появятся первые результаты полностью буферизованного запроса. Другие операторы по умолчанию используют частичную буферизацию, то есть возвращают результаты несколькими пакетами. Один оператор (<xref:System.Linq.ParallelEnumerable.ForAll%2A>) по умолчанию не использует буферизацию. Он немедленно выдает все элементы из всех потоков.  
@@ -65,5 +65,5 @@ ms.locfileid: "74204001"
   
 ## <a name="see-also"></a>См. также раздел
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

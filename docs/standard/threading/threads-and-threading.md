@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e29c131f8459179d0641ac9a0cb8234fbba0e7d0
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127503"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588445"
 ---
 # <a name="threads-and-threading"></a>Потоки и работа с ними
 
@@ -37,7 +37,7 @@ ms.locfileid: "73127503"
 
 ## <a name="how-to-use-multithreading-in-net"></a>Как использовать многопоточность в .NET
 
-Начиная с .NET Framework 4 для многопоточности рекомендуется использовать [библиотеку параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md) и [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md). Дополнительные сведения см. в разделе [Параллельное программирование](../parallel-programming/index.md).
+Начиная с .NET Framework 4 для многопоточности рекомендуется использовать [библиотеку параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md) и [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md). Дополнительные сведения см. в разделе [Параллельное программирование](../parallel-programming/index.md).
 
 Библиотека параллельных задач и PLINQ полагаются на потоки <xref:System.Threading.ThreadPool>. Класс <xref:System.Threading.ThreadPool?displayProperty=nameWithType> предоставляет приложения .NET с пулом рабочих потоков. Вы также можете использовать потоки из пула потоков. Дополнительные сведения см. в разделе [Управляемый пул потоков](the-managed-thread-pool.md).
 

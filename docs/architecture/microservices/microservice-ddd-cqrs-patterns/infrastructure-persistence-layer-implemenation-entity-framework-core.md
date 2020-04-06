@@ -2,12 +2,12 @@
 title: Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Сведения о реализации уровня сохраняемости инфраструктуры с помощью Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401499"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523328"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
 
@@ -141,11 +141,11 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
             return _context.Buyers.Add(buyer).Entity;
         }
 
-        public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
+        public async Task<Buyer> FindAsync(string buyerIdentityGuid)
         {
             var buyer = await _context.Buyers
                 .Include(b => b.Payments)
-                .Where(b => b.FullName == BuyerIdentityGuid)
+                .Where(b => b.FullName == buyerIdentityGuid)
                 .SingleOrDefaultAsync();
 
             return buyer;

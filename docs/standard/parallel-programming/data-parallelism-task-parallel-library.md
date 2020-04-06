@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0910ae928e94b487df5a3dfd456ee9d7c0fb7df
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123164"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587595"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Параллелизм данных (библиотека параллельных задач)
 Понятие *Параллелизм данных* относится к сценариям, в которых одна и та же операция выполняется одновременно (то есть параллельно) для элементов в исходной коллекции или массиве. В параллельных операциях с данными исходная коллекция секционируются таким образом, чтобы несколько потоков могли одновременно работать в разных сегментах.  
@@ -35,7 +35,7 @@ ms.locfileid: "73123164"
   
  Дополнительные сведения см. в статье [Шаблоны для параллельного программирования: описание и применение в .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222).  
   
- Параллелизм данных с декларативным или подобным запросу синтаксисом поддерживается в PLINQ. Дополнительные сведения см. в разделе [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Параллелизм данных с декларативным или подобным запросу синтаксисом поддерживается в PLINQ. Дополнительные сведения см. в разделе [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
   
 ## <a name="related-topics"></a>См. также  
   

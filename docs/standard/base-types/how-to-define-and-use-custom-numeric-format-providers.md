@@ -15,12 +15,12 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140062"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523939"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Практическое руководство. Определение и использование поставщиков настраиваемых числовых форматов
 .NET Framework обеспечивает расширенный контроль над строковым представлением числовых значений. Эта платформа поддерживает указанные далее возможности для настройки форматов числовых значений.  
@@ -84,8 +84,4 @@ ms.locfileid: "73140062"
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- В нашем примере метод, который реализует <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>, будет использоваться как метод обратного вызова для метода <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Это значит, что он должен проверить параметр `formatProvider` на наличие ссылки на текущий объект `TelephoneFormatter`. Тем не менее, метод можно также вызвать непосредственно из кода. В этом случае вы можете использовать параметр `formatProvider` для предоставления объекта <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo> со сведениями о форматировании для выбранного языка и региональных параметров.  
-  
-## <a name="see-also"></a>См. также
-
-- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)
+ В нашем примере метод, который реализует <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>, будет использоваться как метод обратного вызова для метода <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Это значит, что он должен проверить параметр `formatProvider` на наличие ссылки на текущий объект `TelephoneFormatter`. Тем не менее, метод можно также вызвать непосредственно из кода. В этом случае вы можете использовать параметр `formatProvider` для предоставления объекта <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo> со сведениями о форматировании для выбранного языка и региональных параметров.

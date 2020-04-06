@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 621d64183c1cacc14c2d432e4eef43f4d3ba5474
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711354"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588324"
 ---
 # <a name="selecting-a-collection-class"></a>Выбор класса коллекции
 
@@ -79,7 +79,7 @@ ms.locfileid: "75711354"
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects и PLINQ  
  Язык LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>. Запросы LINQ обеспечивают общий шаблон для доступа к данным, обычно являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, а также предоставляют возможности фильтрации, сортировки и группировки. Дополнительные сведения см. в разделах [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) и [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
   
- Язык PLINQ предоставляет параллельную реализацию языка LINQ to Objects, которая может обеспечить более быстрое выполнение запросов во многих сценариях за счет более эффективного использования многоядерных компьютеров. Дополнительные сведения см. в разделе [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Язык PLINQ предоставляет параллельную реализацию языка LINQ to Objects, которая может обеспечить более быстрое выполнение запросов во многих сценариях за счет более эффективного использования многоядерных компьютеров. Дополнительные сведения см. в разделе [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
   
 ## <a name="see-also"></a>См. также раздел
 

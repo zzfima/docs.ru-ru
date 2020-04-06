@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75936846"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588431"
 ---
 # <a name="using-threads-and-threading"></a>Использование потоков и работа с потоками
 
@@ -20,7 +20,7 @@ ms.locfileid: "75936846"
 Приложения, использующие многопоточность, более оперативно реагируют на действия пользователя, поскольку пользовательский интерфейс остается активным, в то время как задачи, требующие интенсивной работы процессора, выполняются в других потоках. Многопоточность также эффективна при создании масштабируемых приложений, поскольку пользователь может добавлять потоки при увеличении рабочей нагрузки.
 
 > [!NOTE]
-> Если требуется больший контроль над поведением потоков приложения, можно управлять потоками самостоятельно. Но начиная с .NET Framework 4 многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), новым классам параллельных коллекций из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в статье [Параллельное программирование в .NET](../parallel-programming/index.md) и [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+> Если требуется больший контроль над поведением потоков приложения, можно управлять потоками самостоятельно. Но начиная с .NET Framework 4 многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), новым классам параллельных коллекций из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в статье [Параллельное программирование в .NET](../parallel-programming/index.md) и [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>Практическое руководство. Создание и запуск нового потока
 

@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 3419afb36d73599b8fdb0417a8c0cc4057f60089
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187636"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438231"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Учебник. Анализ тональности комментариев на веб-сайте в веб-приложении с помощью построителя моделей ML.NET
 
@@ -302,6 +302,6 @@ ms.locfileid: "79187636"
 
 Дополнительные сведения см. в следующих статьях:
 
-- [Сценарии для построителя моделей](../automate-training-with-model-builder.md#scenarios)
+- [Сценарии для построителя моделей](../automate-training-with-model-builder.md#scenario)
 - [Двоичная классификация](../resources/glossary.md#binary-classification)
 - [Метрики модели двоичной классификации](../resources/metrics.md#evaluation-metrics-for-binary-classification)

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a36989f9453208e436ef8a4db2d4440aa0a1382
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185836"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438188"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Учебник. Классификация серьезности санитарных нарушений в ресторанах с помощью построителя моделей
 
@@ -150,6 +150,6 @@ ms.locfileid: "79185836"
 
 Дополнительные сведения см. в следующих статьях:
 
-- [Сценарии для построителя моделей](../automate-training-with-model-builder.md#scenarios)
+- [Сценарии для построителя моделей](../automate-training-with-model-builder.md#scenario)
 - [Многоклассовая классификация](../resources/glossary.md#multiclass-classification)
 - [Метрики модели многоклассовой классификации](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)
